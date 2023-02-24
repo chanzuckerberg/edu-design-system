@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Toast.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
+import styles from './Toast.module.css';
 
 export type Variant = 'success' | 'error';
 

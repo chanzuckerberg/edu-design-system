@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './Toolbar.module.css';
 import ToolbarItem from '../ToolbarItem';
+import styles from './Toolbar.module.css';
 
 export interface Props {
   /**

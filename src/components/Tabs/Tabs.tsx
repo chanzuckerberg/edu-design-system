@@ -11,7 +11,6 @@ import React, {
   type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
-import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -19,6 +18,7 @@ import {
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
 import Tab from '../Tab';
+import styles from './Tabs.module.css';
 
 export interface Props {
   /**

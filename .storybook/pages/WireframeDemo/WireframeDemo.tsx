@@ -1,9 +1,6 @@
 import clsx from 'clsx';
 import React, { useId, useState } from 'react';
 
-import globalStyles from './GlobalStyles.module.css';
-import styles from './WireframeDemo.module.css';
-
 import {
   Button,
   ButtonGroup,
@@ -20,6 +17,8 @@ import {
 
 import PlaceholderImage from '../../static/placeholder-image.svg';
 import PlaceholderVideo from '../../static/placeholder-video.svg';
+import globalStyles from './GlobalStyles.module.css';
+import styles from './WireframeDemo.module.css';
 
 const GlobalFooter = () => (
   <ul className={styles['wireframe-demo__footer']}>

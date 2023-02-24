@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './TableCard.module.css';
 
 import {
   Card,
@@ -19,6 +18,7 @@ import {
 } from '../../../src';
 
 import NumberIconList from '../NumberIconList';
+import styles from './TableCard.module.css';
 
 export interface Props {
   /**

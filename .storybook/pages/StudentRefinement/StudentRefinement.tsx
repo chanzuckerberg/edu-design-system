@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
-import styles from './StudentRefinement.module.css';
 
 import {
   Breadcrumbs,
@@ -30,6 +29,7 @@ import { EdsThemeColorIconUtilityWarning } from '../../../src/tokens-dist/ts/col
 
 import { DataSummaryCard } from '../../recipes/DataSummaryCard/DataSummaryCard';
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import styles from './StudentRefinement.module.css';
 
 export const StudentRefinement = () => {
   const [isTable, setIsTable] = useState(false);

@@ -86,6 +86,7 @@ export { default as TableRow } from './components/TableRow';
 export { default as Tabs } from './components/Tabs';
 export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
+export { default as TextareaField } from './components/TextareaField';
 export { default as TimelineNav } from './components/TimelineNav';
 export { default as TimelineNavPanel } from './components/TimelineNavPanel';
 export { default as Toast } from './components/Toast';

@@ -5,9 +5,9 @@ import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
 import { FiltersDrawer } from './FiltersDrawer';
-import styles from './FiltersDrawer.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
+import styles from './FiltersDrawer.stories.module.css';
 
 export default {
   title: 'Components/FiltersDrawer',

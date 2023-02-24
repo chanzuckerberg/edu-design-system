@@ -4,9 +4,9 @@ import React from 'react';
 
 import type { Variant } from './Banner';
 import { Banner } from './Banner';
-import styles from './Banner.stories.module.css';
 import Button from '../Button';
 import Heading from '../Heading';
+import styles from './Banner.stories.module.css';
 
 export default {
   title: 'Components/Banner',

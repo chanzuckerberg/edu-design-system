@@ -1,9 +1,6 @@
 import clsx from 'clsx';
 import React, { useId, useState } from 'react';
 
-import styles from './AlongDemo.module.css';
-import globalStyles from './GlobalStyles.module.css';
-
 import {
   Button,
   ButtonGroup,
@@ -25,6 +22,8 @@ import AlongUserIllustration2 from '../../static/along-user-illustration-2.png';
 import GoogleLogo from '../../static/google-logo.svg';
 import MicrosoftLogo from '../../static/microsoft-logo.svg';
 import Sprout from '../../static/sprout.svg';
+import styles from './AlongDemo.module.css';
+import globalStyles from './GlobalStyles.module.css';
 
 const GlobalFooter = ({ className }: { className?: string }) => (
   <ul className={clsx(styles['wireframe-demo__footer'], className)}>

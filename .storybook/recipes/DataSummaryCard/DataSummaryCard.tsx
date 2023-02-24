@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './DataSummaryCard.module.css';
 
 import { Card, Text } from '../../../src';
 import type { HeadingElement } from '../../../src/components/Heading';
 import Heading from '../../../src/components/Heading';
+import styles from './DataSummaryCard.module.css';
 
 export interface Props {
   /**

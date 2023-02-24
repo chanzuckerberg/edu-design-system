@@ -24,10 +24,19 @@
 /**
  * Label on top of the select trigger button to label the select field.
  */
-.label {
-  @mixin eds-theme-typography-label-md;
-  color: var(--eds-theme-color-form-label);
+.select__label {
+  @mixin eds-theme-typography-form-label;
+  display: inline-block;
+}
+
+/**
+ * Wraps the Label and the optional/required indicator.
+ */
+.select__overline {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: var(--eds-size-half);
+  color: var(--eds-theme-color-form-label);
 }
 
 /**

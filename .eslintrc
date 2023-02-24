@@ -36,7 +36,15 @@
         "alphabetize": {
           "order": "asc"
         },
-        "groups": ["builtin", "external", "sibling", "parent", "index"]
+        "groups": ["builtin", "external", "sibling", "parent", "index"],
+        "pathGroups": [
+          {
+            "pattern": "*.module.css",
+            "group": "index",
+            "patternOptions": { "matchBase": true },
+            "position": "after"
+          }
+        ]
       }
     ],
     "@typescript-eslint/no-unused-vars": "warn",

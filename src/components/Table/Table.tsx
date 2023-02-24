@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './Table.module.css';
 import TableBody from '../TableBody';
 import TableCaption from '../TableCaption';
 import TableCell from '../TableCell';
@@ -9,6 +8,7 @@ import TableFooter from '../TableFooter';
 import TableHeader from '../TableHeader';
 import TableHeaderCell from '../TableHeaderCell';
 import TableRow from '../TableRow';
+import styles from './Table.module.css';
 
 export type Props = React.TableHTMLAttributes<HTMLTableElement> & {
   /**

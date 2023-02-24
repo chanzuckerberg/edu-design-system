@@ -14,10 +14,8 @@
 
 /**
  * Primary disabled button styles
- *
- * Class is doubled to increase specificity.
  */
-.button--primary.button--primary {
+.button--primary {
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -28,10 +26,8 @@
 
 /**
  * Secondary disabled button styles
- *
- * Class is doubled to increase specificity.
  */
-.button--secondary.button--secondary {
+.button--secondary {
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -46,10 +42,8 @@
 
 /**
  * Link disabled button styles
- *
- * Class is doubled to increase specificity.
  */
-.button--link.button--link {
+.button--link {
   &:disabled,
   &:disabled:hover {
     color: var(--eds-theme-color-text-disabled);
@@ -59,10 +53,8 @@
 
 /**
  * Icon disabled button styles
- *
- * Class is doubled to increase specificity.
  */
-.button--icon.button--icon {
+.button--icon {
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-button-icon-brand-border);

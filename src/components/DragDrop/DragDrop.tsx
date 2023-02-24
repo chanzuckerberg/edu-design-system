@@ -8,9 +8,9 @@ import React, {
 } from 'react';
 import type { DropResult, DroppableProvided } from 'react-beautiful-dnd';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import styles from './DragDrop.module.css';
 import type { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
+import styles from './DragDrop.module.css';
 
 export interface Props {
   /**

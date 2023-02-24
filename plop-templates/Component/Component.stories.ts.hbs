@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import React from 'react';
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type React from 'react';
 
 import { {{pascalCase name}} } from './{{pascalCase name}}';
 
@@ -15,7 +15,5 @@ export default {
 type Args = React.ComponentProps<typeof {{pascalCase name}}>;
 
 export const Default: StoryObj<Args> = {
-  args: {
-
-  },
+  args: {},
 };

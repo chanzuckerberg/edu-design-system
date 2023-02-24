@@ -3,8 +3,8 @@ import type { Meta, Story, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
 import { Tooltip } from './Tooltip';
-import styles from './Tooltip.stories.module.css';
 import { Button } from '../Button/Button';
+import styles from './Tooltip.stories.module.css';
 
 const defaultArgs = {
   text: (

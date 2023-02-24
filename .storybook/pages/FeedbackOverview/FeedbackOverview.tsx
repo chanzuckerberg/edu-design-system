@@ -1,6 +1,5 @@
 import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
-import styles from './FeedbackOverview.module.css';
 import {
   Button,
   Breadcrumbs,
@@ -29,6 +28,7 @@ import {
 } from '../../../src/tokens-dist/ts/colors';
 import NumberIconList from '../../recipes/NumberIconList';
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import styles from './FeedbackOverview.module.css';
 
 export interface Props {
   /**
