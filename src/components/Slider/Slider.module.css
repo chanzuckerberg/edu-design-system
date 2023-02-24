@@ -17,6 +17,13 @@
 }
 
 /**
+ * Slider label disabled
+ */
+.slider__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
  * Slider Input
  */
 .slider__input {
@@ -154,4 +161,8 @@
   width: 0px;
   display: flex;
   justify-content: center;
+}
+
+.slider__marker--disabled {
+  color: var(--eds-theme-color-text-disabled);
 }

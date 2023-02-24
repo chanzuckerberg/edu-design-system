@@ -50,17 +50,46 @@ export const Default: StoryObj<Args> = {
   render: (args) => <InteractiveSlider {...args} />,
 };
 
-export const Disabled: StoryObj<Args> = {
+export const NoVisibleLabel: StoryObj<Args> = {
   args: {
-    label: 'Slider Label',
-    disabled: true,
+    'aria-label': 'Not visible slider label',
   },
   render: (args) => <InteractiveSlider {...args} />,
 };
 
-export const NoVisibleLabel: StoryObj<Args> = {
+export const GeneratedMarkers: StoryObj<Args> = {
   args: {
-    'aria-label': 'Not visible slider label',
+    label: 'Slider Label',
+    min: 1,
+    max: 5,
+    value: 3,
+    step: 1,
+    markers: 'number',
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+};
+
+export const NegativeNonIntegerMarkers: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+    min: -1,
+    max: 1,
+    value: 0,
+    step: 0.5,
+    markers: 'number',
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+};
+
+export const Disabled: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+    min: 1,
+    max: 5,
+    value: 3,
+    step: 1,
+    markers: 'number',
+    disabled: true,
   },
   render: (args) => <InteractiveSlider {...args} />,
 };
@@ -83,9 +112,16 @@ export const MarkersLargeValues: StoryObj<Args> = {
     max: 1000,
     value: 500,
     step: 250,
-    markers: ['0', '250', '500', '750', '1000'],
+    markers: ['10000', '10000', '10000', '10000', '10000'],
   },
   render: (args) => <InteractiveSlider {...args} />,
+  decorators: [
+    (Story) => (
+      <div className="w-80">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 // For visual regression test

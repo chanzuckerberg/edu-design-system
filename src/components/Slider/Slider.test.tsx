@@ -6,13 +6,31 @@ import Slider from './';
 
 describe('<Slider />', () => {
   generateSnapshots(stories);
-  it('throws an error if no label or aria-label', () => {
+  describe('error throws', () => {
     // expect console error from react, suppressed.
     const consoleErrorMock = jest.spyOn(console, 'error');
     consoleErrorMock.mockImplementation();
-    expect(() => {
-      render(<Slider max={5} min={0} step={1} value={2} />);
-    }).toThrow(/You must provide a visible label or aria-label/);
+    it('throws an error if no label or aria-label', () => {
+      expect(() => {
+        render(<Slider max={5} min={0} step={1} value={2} />);
+      }).toThrow(/You must provide a visible label or aria-label/);
+    });
+    it('throws an error if told to generate markers, but steps are not integers', () => {
+      expect(() => {
+        render(
+          <Slider
+            label="Test"
+            markers="number"
+            max={5}
+            min={0}
+            step={2}
+            value={2}
+          />,
+        );
+      }).toThrow(
+        /Number of markers is not an integer. Change step or supply custom markers/,
+      );
+    });
     consoleErrorMock.mockRestore();
   });
 });
