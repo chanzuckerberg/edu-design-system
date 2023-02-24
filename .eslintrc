@@ -39,7 +39,7 @@
         "groups": ["builtin", "external", "sibling", "parent", "index"],
         "pathGroups": [
           {
-            "pattern": "*.css",
+            "pattern": "*.module.css",
             "group": "index",
             "patternOptions": { "matchBase": true },
             "position": "after"
