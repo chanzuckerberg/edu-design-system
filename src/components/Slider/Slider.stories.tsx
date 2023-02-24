@@ -19,9 +19,8 @@ export default {
       </div>
     ),
   ],
+  render: (args) => <InteractiveSlider {...args} />,
 } as Meta<Args>;
-
-type Args = React.ComponentProps<typeof Slider>;
 
 const InteractiveSlider = ({
   min = 0,
@@ -43,18 +42,18 @@ const InteractiveSlider = ({
   );
 };
 
+type Args = React.ComponentProps<typeof Slider>;
+
 export const Default: StoryObj<Args> = {
   args: {
     label: 'Slider Label',
   },
-  render: (args) => <InteractiveSlider {...args} />,
 };
 
 export const NoVisibleLabel: StoryObj<Args> = {
   args: {
     'aria-label': 'Not visible slider label',
   },
-  render: (args) => <InteractiveSlider {...args} />,
 };
 
 export const GeneratedMarkers: StoryObj<Args> = {
@@ -66,7 +65,6 @@ export const GeneratedMarkers: StoryObj<Args> = {
     step: 1,
     markers: 'number',
   },
-  render: (args) => <InteractiveSlider {...args} />,
 };
 
 export const NegativeNonIntegerMarkers: StoryObj<Args> = {
@@ -78,7 +76,6 @@ export const NegativeNonIntegerMarkers: StoryObj<Args> = {
     step: 0.5,
     markers: 'number',
   },
-  render: (args) => <InteractiveSlider {...args} />,
 };
 
 export const Disabled: StoryObj<Args> = {
@@ -91,7 +88,6 @@ export const Disabled: StoryObj<Args> = {
     markers: 'number',
     disabled: true,
   },
-  render: (args) => <InteractiveSlider {...args} />,
 };
 
 export const MarkersSmallValues: StoryObj<Args> = {
@@ -102,7 +98,6 @@ export const MarkersSmallValues: StoryObj<Args> = {
     value: 3,
     markers: ['1', '2', '3', '4', '5'],
   },
-  render: (args) => <InteractiveSlider {...args} />,
 };
 
 export const MarkersLargeValues: StoryObj<Args> = {
@@ -114,7 +109,6 @@ export const MarkersLargeValues: StoryObj<Args> = {
     step: 250,
     markers: ['10000', '10000', '10000', '10000', '10000'],
   },
-  render: (args) => <InteractiveSlider {...args} />,
   decorators: [
     (Story) => (
       <div className="w-80">
