@@ -4,10 +4,11 @@ import React, {
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
-import styles from './Slider.module.css';
 import Label from '../Label';
+import Text from '../Text';
+import styles from './Slider.module.css';
 
-export type Props = {
+export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Aria-label to provide an accesible name for the text input if no visible label is provided.
    */
@@ -62,8 +63,6 @@ export type Props = {
  * Allows input of a value via dragging a thumb along a track.
  * Strict: This slider requires a visual indicator of value/markers.
  * Please check out our recipes for possible ideas.
- *
- * TODO: update this comment with a description of the component.
  */
 export const Slider = ({
   className,
@@ -102,12 +101,13 @@ export const Slider = ({
       {markers && (
         <div className={styles['slider__markers']}>
           {markers.map((marker) => (
-            <p
-              className={styles['slider__option']}
+            <Text
+              className={styles['slider__marker']}
               key={'slider-option-' + marker}
+              variant="neutral-medium"
             >
               {marker}
-            </p>
+            </Text>
           ))}
         </div>
       )}

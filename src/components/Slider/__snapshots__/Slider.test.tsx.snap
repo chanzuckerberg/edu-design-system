@@ -113,27 +113,27 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
       class="slider__markers"
     >
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         0
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         250
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         500
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         750
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         1000
       </p>
@@ -170,27 +170,27 @@ exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
       class="slider__markers"
     >
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         1
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         2
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         3
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         4
       </p>
       <p
-        class="slider__option"
+        class="text text--body text--neutral-medium slider__marker"
       >
         5
       </p>

@@ -132,7 +132,7 @@
 }
 
 /**
- * Slider Markers below the track
+ * Slider Markers wrapper below the track
  */
 .slider__markers {
   display: flex;
@@ -144,9 +144,11 @@
   padding-right: calc(var(--slider-thumb-size) / 2);
 }
 
-.slider__option {
+/**
+ * Slider Marker 
+ */
+.slider__marker {
   @mixin eds-theme-typography-caption-text-sm;
-  color: var(--eds-theme-color-text-neutral-default);
 
   /* Centers the text to the marker location */
   width: 0px;
