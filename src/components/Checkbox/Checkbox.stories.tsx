@@ -3,7 +3,6 @@ import React from 'react';
 import { Checkbox } from './Checkbox';
 import CheckboxInput from '../CheckboxInput';
 import CheckboxLabel from '../CheckboxLabel';
-import styles from './Checkbox.stories.module.css';
 
 const defaultArgs = {
   disabled: false,
@@ -24,9 +23,8 @@ export default {
   decorators: [
     (Story) => (
       <div
-        style={{
-          margin: '0.25rem', // Provides spacing to see focus indicator around checkbox.
-        }}
+        // Provides spacing to see focus indicator around checkbox.
+        className="m-1"
       >
         <Story />
       </div>
@@ -76,7 +74,7 @@ export const Indeterminate: StoryObj<Args> = {
 
 export const Disabled: StoryObj<Args> = {
   render: () => (
-    <table style={{ borderSpacing: '2rem' }}>
+    <table className="border-spacing-8">
       <tbody>
         {[false, true, 'indeterminate' as const].map((checked, i) => (
           // FIXME
@@ -122,7 +120,7 @@ export const LongLabels = {
     const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 
     return (
-      <div className={styles['longlabels--grid']}>
+      <div className="grid w-80 grid-cols-2 gap-4">
         <Checkbox label={label} readOnly />
         <Checkbox label={label} readOnly size="md" />
         <Checkbox disabled label={label} />
@@ -150,7 +148,7 @@ function CheckboxInputExample() {
 
 export const WithCustomPositioning = {
   render: () => (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div className="flex items-center">
       <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
       <CheckboxInputExample />
     </div>
