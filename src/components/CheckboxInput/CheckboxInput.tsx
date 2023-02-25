@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon from '../Icon';
 import styles from './CheckboxInput.module.css';
 
 type CheckboxHTMLElementProps = Omit<
@@ -25,37 +24,6 @@ export type CheckboxInputProps = CheckboxHTMLElementProps & {
   id: string;
 };
 
-const checkboxIconNameMap = {
-  indeterminate: 'checkbox-indeterminate',
-  true: 'checkbox-checked',
-  false: 'checkbox-unchecked',
-};
-const CheckboxSvg = ({
-  checked,
-  disabled,
-}: {
-  checked: boolean | 'indeterminate';
-  disabled?: boolean;
-}) => {
-  const iconClassName = clsx(
-    styles['checkbox__icon'],
-    disabled && styles['checkbox__icon--disabled'],
-  );
-  return (
-    <Icon
-      className={iconClassName}
-      name={
-        checkboxIconNameMap[`${checked}`] as
-          | 'checkbox-indeterminate'
-          | 'checkbox-checked'
-          | 'checkbox-unchecked'
-      }
-      purpose="decorative"
-      size="1.5rem"
-    />
-  );
-};
-
 /**
  * Checkbox input element, exported for greater flexibility.
  * You must provide an `id` prop and connect it to a visible label.
@@ -77,22 +45,14 @@ export const CheckboxInput = React.forwardRef<
         };
 
   return (
-    <span
-      className={clsx(
-        styles['input__wrapper'],
-        disabled && styles['input__wrapper--disabled'],
-      )}
-    >
-      <input
-        className={clsx(className, styles['checkbox__input'])}
-        disabled={disabled}
-        ref={ref}
-        type="checkbox"
-        {...checkedProps}
-        {...other}
-      />
-      <CheckboxSvg checked={checked} disabled={disabled} />
-    </span>
+    <input
+      className={clsx(className, styles['checkbox__input'])}
+      disabled={disabled}
+      ref={ref}
+      type="checkbox"
+      {...checkedProps}
+      {...other}
+    />
   );
 });
 

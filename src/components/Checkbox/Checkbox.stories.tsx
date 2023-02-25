@@ -40,6 +40,7 @@ export const Checked: StoryObj<Args> = {
   ...Default,
   args: {
     checked: true,
+    readOnly: true, // Prevent console warning about the field being read only
   },
 };
 
@@ -76,7 +77,7 @@ export const LargeChecked: StoryObj<Args> = {
 export const Indeterminate: StoryObj<Args> = {
   args: {
     checked: 'indeterminate',
-    readOnly: true,
+    readOnly: true, // Prevent console warning about the field being read only
   },
 };
 
@@ -112,14 +113,14 @@ export const WithoutVisibleLabel: StoryObj<Args> = {
     label: undefined,
   },
   render: (args) => (
-    <>
+    <div className="flex flex-col gap-2">
       <Checkbox {...args} readOnly />
       <Checkbox {...args} checked readOnly />
       <Checkbox {...args} checked="indeterminate" readOnly />
       <Checkbox {...args} disabled />
       <Checkbox {...args} checked disabled />
       <Checkbox {...args} checked="indeterminate" disabled />
-    </>
+    </div>
   ),
 };
 
@@ -146,7 +147,9 @@ export const LongLabels = {
 export const WithCustomPositioning = {
   render: () => (
     <div className="flex items-center">
-      <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
+      <CheckboxLabel className="mr-2" htmlFor="test">
+        Label on Left
+      </CheckboxLabel>
       <CheckboxInput id="test" />
     </div>
   ),
