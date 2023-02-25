@@ -19,4 +19,11 @@ export const WatchPage: StoryObj<Args> = {
     const nextPageButton = await canvas.findByText('Hogwarts');
     userEvent.click(nextPageButton);
   },
+  parameters: {
+    axe: {
+      // Don't run axe on this story. The video seems to cause asset preloading to fail (even when
+      // the video has preload="none").
+      skip: true,
+    },
+  },
 };

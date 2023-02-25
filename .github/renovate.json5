@@ -21,8 +21,6 @@
   },
 
   ignoreDeps: [
-    // axe-core starting v4.5 causes some axe-storybook tests to time out, ticket: EDS-779
-    'axe-core',
     // headlessui starting v1.7.6 causes some downstream feature tests to fail
     '@headlessui/react',
   ],
