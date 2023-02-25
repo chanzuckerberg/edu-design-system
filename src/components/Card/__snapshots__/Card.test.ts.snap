@@ -3,7 +3,6 @@
 exports[`<Card /> Default story renders snapshot 1`] = `
 <article
   class="card"
-  data-bootstrap-override="card"
 >
   <header
     class="card__header"
@@ -38,7 +37,6 @@ exports[`<Card /> Default story renders snapshot 1`] = `
 exports[`<Card /> Horizontal story renders snapshot 1`] = `
 <article
   class="card card--horizontal"
-  data-bootstrap-override="card"
 >
   <header
     class="card__header"
@@ -73,7 +71,6 @@ exports[`<Card /> Horizontal story renders snapshot 1`] = `
 exports[`<Card /> Raised story renders snapshot 1`] = `
 <article
   class="card card--raised"
-  data-bootstrap-override="card"
 >
   <header
     class="card__header"

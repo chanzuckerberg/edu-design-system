@@ -8,7 +8,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
     aria-controls="headlessui-popover-panel-:r2:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
     id="headlessui-popover-button-:r0:"
     type="button"
@@ -63,7 +62,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r5:"
                   type="checkbox"
                 />
@@ -84,7 +82,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r5:"
               >
                 Filters label 1
@@ -98,7 +95,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r6:"
                   type="checkbox"
                 />
@@ -119,7 +115,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r6:"
               >
                 Filters label 2
@@ -133,7 +128,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r7:"
                   type="checkbox"
                 />
@@ -154,7 +148,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r7:"
               >
                 Filters label 3
@@ -176,7 +169,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
     aria-controls="headlessui-popover-panel-:rq:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
     id="headlessui-popover-button-:ro:"
     type="button"
@@ -233,7 +225,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rt:"
                   type="checkbox"
                 />
@@ -254,7 +245,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rt:"
               >
                 Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -268,7 +258,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":ru:"
                   type="checkbox"
                 />
@@ -289,7 +278,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":ru:"
               >
                 Filters label 2
@@ -303,7 +291,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rv:"
                   type="checkbox"
                 />
@@ -324,7 +311,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rv:"
               >
                 Filters label 3
@@ -352,7 +338,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r10:"
                   type="checkbox"
                 />
@@ -373,7 +358,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r10:"
               >
                 Filters label 1
@@ -387,7 +371,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r11:"
                   type="checkbox"
                 />
@@ -408,7 +391,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r11:"
               >
                 Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -422,7 +404,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r12:"
                   type="checkbox"
                 />
@@ -443,7 +424,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r12:"
               >
                 Filters label 3
@@ -471,7 +451,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r13:"
                   type="checkbox"
                 />
@@ -492,7 +471,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r13:"
               >
                 Filters label 1
@@ -506,7 +484,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r14:"
                   type="checkbox"
                 />
@@ -527,7 +504,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r14:"
               >
                 Filters label 2
@@ -541,7 +517,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r15:"
                   type="checkbox"
                 />
@@ -562,7 +537,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r15:"
               >
                 Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -590,7 +564,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r16:"
                   type="checkbox"
                 />
@@ -611,7 +584,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r16:"
               >
                 Filters label 1
@@ -625,7 +597,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r17:"
                   type="checkbox"
                 />
@@ -646,7 +617,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r17:"
               >
                 Filters label 2
@@ -660,7 +630,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r18:"
                   type="checkbox"
                 />
@@ -681,7 +650,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r18:"
               >
                 Filters label 3
@@ -695,7 +663,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r19:"
                   type="checkbox"
                 />
@@ -716,7 +683,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r19:"
               >
                 Filters label 4
@@ -730,7 +696,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r1a:"
                   type="checkbox"
                 />
@@ -751,7 +716,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r1a:"
               >
                 Filters label 5
@@ -765,7 +729,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":r1b:"
                   type="checkbox"
                 />
@@ -786,7 +749,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":r1b:"
               >
                 Filters label 6
@@ -800,14 +762,12 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Clear All
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Apply
@@ -826,7 +786,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
     aria-controls="headlessui-popover-panel-:ri:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
     id="headlessui-popover-button-:rg:"
     type="button"
@@ -881,7 +840,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rl:"
                   type="checkbox"
                 />
@@ -902,7 +860,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rl:"
               >
                 Filters label 1
@@ -916,7 +873,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rm:"
                   type="checkbox"
                 />
@@ -937,7 +893,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rm:"
               >
                 Filters label 2
@@ -951,7 +906,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rn:"
                   type="checkbox"
                 />
@@ -972,7 +926,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rn:"
               >
                 Filters label 3
@@ -986,7 +939,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Apply
@@ -1005,7 +957,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
     aria-controls="headlessui-popover-panel-:ra:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
     id="headlessui-popover-button-:r8:"
     type="button"
@@ -1060,7 +1011,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rd:"
                   type="checkbox"
                 />
@@ -1081,7 +1031,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rd:"
               >
                 Filters label 1
@@ -1095,7 +1044,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":re:"
                   type="checkbox"
                 />
@@ -1116,7 +1064,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":re:"
               >
                 Filters label 2
@@ -1130,7 +1077,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               >
                 <input
                   class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id=":rf:"
                   type="checkbox"
                 />
@@ -1151,7 +1097,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               </span>
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
                 for=":rf:"
               >
                 Filters label 3
@@ -1165,7 +1110,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Clear All

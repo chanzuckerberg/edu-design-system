@@ -134,16 +134,7 @@ export const ClickableStyle = React.forwardRef(
       className,
     );
 
-    const dataAttribute = `clickable-style-${variant}`;
-
-    return (
-      <Component
-        className={componentClassName}
-        data-bootstrap-override={dataAttribute}
-        ref={ref}
-        {...other}
-      />
-    );
+    return <Component className={componentClassName} ref={ref} {...other} />;
   },
 );
 ClickableStyle.displayName = 'ClickableStyle';

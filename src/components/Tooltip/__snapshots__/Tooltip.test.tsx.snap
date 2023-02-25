@@ -6,7 +6,6 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-5"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-bottom trigger--spacing-left"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger
@@ -61,7 +60,6 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-2"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger
@@ -123,7 +121,6 @@ exports[`<Tooltip /> DisabledButton story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled"
-          data-bootstrap-override="clickable-style-primary"
           disabled=""
           tabindex="-1"
           type="button"
@@ -185,7 +182,6 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
       </p>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Tooltip trigger
@@ -211,7 +207,6 @@ exports[`<Tooltip /> InteractiveDisabledButton story renders snapshot 1`] = `
         >
           <button
             class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled"
-            data-bootstrap-override="clickable-style-primary"
             disabled=""
             tabindex="-1"
             type="button"
@@ -231,7 +226,6 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-3"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-top trigger--spacing-bottom trigger--spacing-left-large"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger
@@ -286,7 +280,6 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-1"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger
@@ -341,7 +334,6 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-7"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-top"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger with longer text to test placement
@@ -396,7 +388,6 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-6"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger
@@ -509,7 +500,6 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
     <button
       aria-describedby="tippy-4"
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-top trigger--spacing-left"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Tooltip trigger
