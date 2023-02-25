@@ -39,8 +39,7 @@ export const Default: StoryObj<Args> = {};
 export const Checked: StoryObj<Args> = {
   ...Default,
   args: {
-    checked: true,
-    readOnly: true, // Prevent console warning about the field being read only
+    defaultChecked: true,
   },
 };
 

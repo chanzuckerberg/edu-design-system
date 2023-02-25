@@ -31,7 +31,7 @@ export type CheckboxInputProps = CheckboxHTMLElementProps & {
 export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
->(({ checked = false, className, disabled, ...other }, ref) => {
+>(({ checked, className, disabled, ...other }, ref) => {
   // Make indeterminate checkbox visually match the colors of a
   // checked state, but announce itself as "mixed" to screen readers
   const checkedProps =

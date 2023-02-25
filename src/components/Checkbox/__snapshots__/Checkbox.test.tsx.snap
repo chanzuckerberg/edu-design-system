@@ -11,7 +11,6 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
       checked=""
       class="checkbox__input"
       id=":r1:"
-      readonly=""
       type="checkbox"
     />
     <label
@@ -256,7 +255,6 @@ exports[`<Checkbox /> LargeChecked story renders snapshot 1`] = `
       checked=""
       class="checkbox__input"
       id=":r5:"
-      readonly=""
       type="checkbox"
     />
     <label
@@ -377,7 +375,6 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
       checked=""
       class="checkbox__input"
       id=":r3:"
-      readonly=""
       type="checkbox"
     />
     <label
