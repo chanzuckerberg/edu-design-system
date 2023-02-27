@@ -4,28 +4,10 @@ import React, {
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
+import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
 import Label from '../Label';
 import Text from '../Text';
 import styles from './Slider.module.css';
-
-/**
- * Returns the lowest multiple of 10 that multiplies with all numbers in a list to make them integers.
- * Useful for floating point math.
- * @example
- * lowestTenMultiplier([-2.212, 0.1, 2.0, 100, 1000.01])
- * // returns 1000
- * @param numbers
- * @returns {number} Lowest multiple of 10.
- */
-const lowestTenMultiplier = (numbers: number[]): number => {
-  let multiplier = 1;
-  while (
-    numbers.some((number) => !Number.isInteger((number * multiplier) % 1))
-  ) {
-    multiplier *= 10;
-  }
-  return multiplier;
-};
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
@@ -102,7 +84,7 @@ export const Slider = ({
   }
 
   // Required due to 0.1 + 0.2 != 0.3
-  const multiplier = lowestTenMultiplier([max, min, step]);
+  const multiplier = findLowestTenMultiplier([max, min, step]);
   const markersCount =
     (max * multiplier - min * multiplier) / (step * multiplier) + 1;
   if (
