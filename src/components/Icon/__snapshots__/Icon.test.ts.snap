@@ -2763,7 +2763,6 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
    
   <a
     class="clickable-style clickable-style--link clickable-style--brand link--link"
-    data-bootstrap-override="clickable-style-link"
     href="https://material-ui.com/components/material-icons/"
     rel="noreferrer"
     target="_blank"

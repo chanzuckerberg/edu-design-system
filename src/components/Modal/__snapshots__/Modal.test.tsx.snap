@@ -59,14 +59,12 @@ exports[`Modal Brand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -125,14 +123,12 @@ exports[`Modal Default story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -206,14 +202,12 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 2
@@ -273,14 +267,12 @@ exports[`Modal Medium story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -339,14 +331,12 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -415,14 +405,12 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -481,14 +469,12 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -557,14 +543,12 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -698,14 +682,12 @@ exports[`Modal Small story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -764,14 +746,12 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -840,14 +820,12 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -939,14 +917,12 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 2
@@ -1040,14 +1016,12 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 2
@@ -1228,14 +1202,12 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
