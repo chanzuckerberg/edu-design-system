@@ -32,8 +32,14 @@ export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
 >(({ checked, className, disabled, ...other }, ref) => {
-  // Make indeterminate checkbox visually match the colors of a
-  // checked state, but announce itself as "mixed" to screen readers
+  // Make indeterminate checkbox visually match the colors of a checked state, but announce itself
+  // as "mixed" to screen readers
+  //
+  // However, https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)
+  // seems to consider `indeterminate` as a separate bit of information than `checked`. They can be
+  // in all 4 combinations (only 3 visual states, though).
+  //
+  // Should we make them separate props?
   const checkedProps =
     checked === 'indeterminate'
       ? {
