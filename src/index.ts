@@ -73,6 +73,7 @@ export { default as SearchField } from './components/SearchField';
 export { default as Section } from './components/Section';
 export { default as Select } from './components/Select';
 export { default as Skeleton } from './components/Skeleton';
+export { default as Slider } from './components/Slider';
 export { default as Tab } from './components/Tab';
 export { default as Table } from './components/Table';
 export { default as TableBody } from './components/TableBody';
