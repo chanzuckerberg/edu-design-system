@@ -106,11 +106,42 @@ export const WithShortButtonText: StoryObj<MenuProps> = {
     ),
   },
 };
-export const CustomButton: StoryObj<MenuProps> = {
+export const DotsVerticalButton: StoryObj<MenuProps> = {
   render: (args) => (
     <Menu {...args}>
       <Menu.Button status="neutral" variant="icon">
         <Icon name="dots-vertical" purpose="informative" title="show more" />
+      </Menu.Button>
+      <Menu.Items data-testid="menu-content">
+        <Menu.Item
+          href="https://headlessui.com/react/menu#menu-button"
+          icon="link"
+        >
+          Headless UI Docs
+        </Menu.Item>
+        <Menu.Item
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+          icon="link"
+        >
+          MDN: Menu
+        </Menu.Item>
+        {/* eslint-disable-next-line no-alert */}
+        <Menu.Item onClick={() => alert('Item clicked')}>
+          Trigger Action
+        </Menu.Item>
+        <Menu.Item disabled href="https://example.org/" icon="warning">
+          Not Possible (disabled)
+        </Menu.Item>
+      </Menu.Items>
+    </Menu>
+  ),
+};
+
+export const CustomButton: StoryObj<MenuProps> = {
+  render: (args) => (
+    <Menu {...args}>
+      <Menu.Button status="neutral" variant="icon">
+        <div className="fpo !py-0">Menu Button</div>
       </Menu.Button>
       <Menu.Items data-testid="menu-content">
         <Menu.Item
