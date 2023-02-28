@@ -5,6 +5,7 @@ import React, {
   type CSSProperties,
 } from 'react';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
+import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
 import styles from './Slider.module.css';
@@ -22,6 +23,11 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Disables the slider and prevents change.
    */
   disabled?: boolean;
+  /**
+   * Text under the text input used to describe the slider.
+   * Will override the markers if present.
+   */
+  fieldNote?: React.ReactNode;
   /**
    * HTML id for the component
    */
@@ -70,6 +76,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 export const Slider = ({
   className,
   disabled,
+  fieldNote,
   id,
   label,
   markers,
@@ -107,12 +114,18 @@ export const Slider = ({
   const generatedId = useId();
   const sliderId = id || generatedId;
 
+  const generatedAriaDescribedById = useId();
+  const ariaDescribedByVar = fieldNote
+    ? other['aria-describedby'] || generatedAriaDescribedById
+    : undefined;
+
   return (
     <div className={componentClassName}>
       {label && (
         <Label className={labelClassName} htmlFor={sliderId} text={label} />
       )}
       <input
+        aria-describedby={ariaDescribedByVar}
         className={styles['slider__input']}
         disabled={disabled}
         id={sliderId}
@@ -127,7 +140,12 @@ export const Slider = ({
         value={value}
         {...other}
       />
-      {markers === 'number' && (
+      {fieldNote && (
+        <FieldNote disabled={disabled} id={ariaDescribedByVar}>
+          {fieldNote}
+        </FieldNote>
+      )}
+      {!fieldNote && markers === 'number' && (
         <div aria-hidden className={styles['slider__markers']}>
           {Array(markersCount)
             .fill(null)
@@ -146,7 +164,7 @@ export const Slider = ({
             })}
         </div>
       )}
-      {Array.isArray(markers) && (
+      {!fieldNote && Array.isArray(markers) && (
         <div aria-hidden className={styles['slider__markers']}>
           {markers.map((marker) => (
             <Text

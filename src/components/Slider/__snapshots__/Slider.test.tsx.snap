@@ -37,7 +37,7 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
   >
     <label
       class="label slider__label--disabled"
-      for=":r4:"
+      for=":r8:"
     >
       Slider Label
        
@@ -45,7 +45,7 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
     <input
       class="slider__input"
       disabled=""
-      id=":r4:"
+      id=":r8:"
       max="5"
       min="1"
       step="1"
@@ -87,7 +87,7 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Slider /> Focus story renders snapshot 1`] = `
+exports[`<Slider /> FieldNote story renders snapshot 1`] = `
 <div
   class="w-96"
 >
@@ -96,14 +96,15 @@ exports[`<Slider /> Focus story renders snapshot 1`] = `
   >
     <label
       class="label"
-      for=":r7:"
+      for=":re:"
     >
       Slider Label
        
     </label>
     <input
+      aria-describedby=":rf:"
       class="slider__input"
-      id=":r7:"
+      id=":re:"
       max="100"
       min="0"
       step="1"
@@ -111,6 +112,12 @@ exports[`<Slider /> Focus story renders snapshot 1`] = `
       type="range"
       value="50"
     />
+    <div
+      class="field-note"
+      id=":rf:"
+    >
+      This is a fieldnote. It overrides the markers
+    </div>
   </div>
 </div>
 `;
@@ -124,14 +131,14 @@ exports[`<Slider /> GeneratedMarkers story renders snapshot 1`] = `
   >
     <label
       class="label"
-      for=":r2:"
+      for=":r4:"
     >
       Slider Label
        
     </label>
     <input
       class="slider__input"
-      id=":r2:"
+      id=":r4:"
       max="5"
       min="1"
       step="1"
@@ -185,20 +192,20 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
     >
       <label
         class="label"
-        for=":r6:"
+        for=":rc:"
       >
         Slider Label
          
       </label>
       <input
         class="slider__input"
-        id=":r6:"
-        max="1000"
+        id=":rc:"
+        max="10000"
         min="0"
-        step="250"
+        step="2500"
         style="--ratio: 0.5;"
         type="range"
-        value="500"
+        value="5000"
       />
       <div
         aria-hidden="true"
@@ -207,22 +214,22 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
         <p
           class="text text--body text--neutral-medium slider__marker"
         >
-          10000
+          0
         </p>
         <p
           class="text text--body text--neutral-medium slider__marker"
         >
-          10000
+          2500
         </p>
         <p
           class="text text--body text--neutral-medium slider__marker"
         >
-          10000
+          5000
         </p>
         <p
           class="text text--body text--neutral-medium slider__marker"
         >
-          10000
+          7500
         </p>
         <p
           class="text text--body text--neutral-medium slider__marker"
@@ -244,14 +251,14 @@ exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
   >
     <label
       class="label"
-      for=":r5:"
+      for=":ra:"
     >
       Slider Label
        
     </label>
     <input
       class="slider__input"
-      id=":r5:"
+      id=":ra:"
       max="5"
       min="1"
       step="1"
@@ -302,14 +309,14 @@ exports[`<Slider /> NegativeNonIntegerMarkers story renders snapshot 1`] = `
   >
     <label
       class="label"
-      for=":r3:"
+      for=":r6:"
     >
       Slider Label
        
     </label>
     <input
       class="slider__input"
-      id=":r3:"
+      id=":r6:"
       max="1"
       min="-1"
       step="0.5"
@@ -361,7 +368,7 @@ exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
     <input
       aria-label="Not visible slider label"
       class="slider__input"
-      id=":r1:"
+      id=":r2:"
       max="100"
       min="0"
       step="1"

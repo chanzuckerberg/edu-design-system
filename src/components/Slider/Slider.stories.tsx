@@ -104,10 +104,10 @@ export const MarkersLargeValues: StoryObj<Args> = {
   args: {
     label: 'Slider Label',
     min: 0,
-    max: 1000,
-    value: 500,
-    step: 250,
-    markers: ['10000', '10000', '10000', '10000', '10000'],
+    max: 10000,
+    value: 5000,
+    step: 2500,
+    markers: 'number',
   },
   decorators: [
     (Story) => (
@@ -118,12 +118,25 @@ export const MarkersLargeValues: StoryObj<Args> = {
   ],
 };
 
+export const FieldNote: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+    fieldNote: 'This is a fieldnote. It overrides the markers',
+    markers: 'number',
+  },
+};
+
 // For visual regression test
 export const Focus: StoryObj<Args> = {
   args: {
     label: 'Slider Label',
   },
-  render: (args) => <InteractiveSlider {...args} />,
+  parameters: {
+    /**
+     * No point snapping the button as this story is testing visual regression on the focus state (snap no difference than Default story).
+     */
+    snapshot: { skip: true },
+  },
   play: () => {
     userEvent.tab();
   },
