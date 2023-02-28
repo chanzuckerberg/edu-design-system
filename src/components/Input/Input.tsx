@@ -51,7 +51,7 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Function that fires when field value has changed
    */
-  onChange?: ChangeEventHandler;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
