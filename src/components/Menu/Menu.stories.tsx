@@ -4,7 +4,6 @@ import React from 'react';
 
 import { Menu } from './Menu';
 import type { MenuProps } from './Menu';
-import Icon from '../Icon';
 
 export default {
   title: 'Components/Menu',
@@ -115,49 +114,11 @@ export const WithShortButtonText: StoryObj<MenuProps> = {
   },
 };
 
-export const WithVerticalDotsButton: StoryObj<MenuProps> = {
-  args: {
-    children: (
-      <>
-        <Menu.Button showExpandIcon={false} variant="icon">
-          <Icon name="dots-vertical" purpose="informative" title="show more" />
-        </Menu.Button>
-        <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
-            Headless UI Docs
-          </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
-            MDN: Menu
-          </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
-            Trigger Action
-          </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
-            Not Possible (disabled)
-          </Menu.Item>
-        </Menu.Items>
-      </>
-    ),
-  },
-};
-
 export const WithCustomButton: StoryObj<MenuProps> = {
   args: {
     children: (
       <>
-        <Menu.Button
-          className="!border-transparent-white-0 !bg-transparent-white-0 hover:!bg-button-secondary-neutral-background-hover"
-          showExpandIcon={false}
-          status="neutral"
-          variant="icon"
-        >
+        <Menu.Button showExpandIcon={false} status="neutral" variant="icon">
           <div className="fpo !py-0">Menu Button</div>
         </Menu.Button>
         <Menu.Items data-testid="menu-content">

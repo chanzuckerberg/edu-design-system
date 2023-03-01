@@ -156,12 +156,12 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-:rp:"
+    aria-controls="headlessui-menu-items-:rj:"
     aria-expanded="true"
     aria-haspopup="true"
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon menu__button !border-transparent-white-0 !bg-transparent-white-0 hover:!bg-button-secondary-neutral-background-hover"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon menu__button"
     data-headlessui-state="open"
-    id="headlessui-menu-button-:ro:"
+    id="headlessui-menu-button-:ri:"
     type="button"
   >
     <div
@@ -171,11 +171,11 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
     </div>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-:ro:"
+    aria-labelledby="headlessui-menu-button-:ri:"
     class="popover-container menu__popover"
     data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-:rp:"
+    id="headlessui-menu-items-:rj:"
     role="menu"
     tabindex="0"
   >
@@ -183,7 +183,7 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-:rq:"
+      id="headlessui-menu-item-:rk:"
       role="menuitem"
       tabindex="-1"
     >
@@ -215,7 +215,7 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-:rr:"
+      id="headlessui-menu-item-:rl:"
       role="menuitem"
       tabindex="-1"
     >
@@ -246,7 +246,7 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
     <a
       class="menu__item"
       data-headlessui-state=""
-      id="headlessui-menu-item-:rs:"
+      id="headlessui-menu-item-:rm:"
       role="menuitem"
       tabindex="-1"
     >
@@ -263,7 +263,7 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
       data-headlessui-state="disabled"
-      id="headlessui-menu-item-:rt:"
+      id="headlessui-menu-item-:rn:"
       role="menuitem"
     >
       <div
@@ -564,155 +564,6 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
       class="popover-list-item popover-list-item--disabled"
       data-headlessui-state="disabled"
       id="headlessui-menu-item-:rh:"
-      role="menuitem"
-    >
-      <div
-        class="popover-list-item__icon"
-      >
-        <svg
-          aria-hidden="true"
-          class="icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
-          />
-        </svg>
-      </div>
-      Not Possible (disabled)
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Menu /> WithVerticalDotsButton story renders snapshot 1`] = `
-<div
-  class="menu"
-  data-headlessui-state="open"
->
-  <button
-    aria-controls="headlessui-menu-items-:rj:"
-    aria-expanded="true"
-    aria-haspopup="true"
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon menu__button"
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:ri:"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        show more
-      </title>
-      <path
-        d="M12 20C11.45 20 10.9793 19.8043 10.588 19.413C10.196 19.021 10 18.55 10 18C10 17.45 10.196 16.979 10.588 16.587C10.9793 16.1957 11.45 16 12 16C12.55 16 13.021 16.1957 13.413 16.587C13.8043 16.979 14 17.45 14 18C14 18.55 13.8043 19.021 13.413 19.413C13.021 19.8043 12.55 20 12 20ZM12 14C11.45 14 10.9793 13.804 10.588 13.412C10.196 13.0207 10 12.55 10 12C10 11.45 10.196 10.979 10.588 10.587C10.9793 10.1957 11.45 10 12 10C12.55 10 13.021 10.1957 13.413 10.587C13.8043 10.979 14 11.45 14 12C14 12.55 13.8043 13.0207 13.413 13.412C13.021 13.804 12.55 14 12 14ZM12 8C11.45 8 10.9793 7.804 10.588 7.412C10.196 7.02067 10 6.55 10 6C10 5.45 10.196 4.97933 10.588 4.588C10.9793 4.196 11.45 4 12 4C12.55 4 13.021 4.196 13.413 4.588C13.8043 4.97933 14 5.45 14 6C14 6.55 13.8043 7.02067 13.413 7.412C13.021 7.804 12.55 8 12 8Z"
-      />
-    </svg>
-  </button>
-  <div
-    aria-labelledby="headlessui-menu-button-:ri:"
-    class="popover-container menu__popover"
-    data-headlessui-state="open"
-    data-testid="menu-content"
-    id="headlessui-menu-items-:rj:"
-    role="menu"
-    tabindex="0"
-  >
-    <a
-      class="menu__item"
-      data-headlessui-state=""
-      href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-:rk:"
-      role="menuitem"
-      tabindex="-1"
-    >
-      <div
-        class="popover-list-item"
-      >
-        <div
-          class="popover-list-item__icon"
-        >
-          <svg
-            aria-hidden="true"
-            class="icon"
-            fill="currentColor"
-            height="1.5rem"
-            style="--icon-size: 1.5rem;"
-            viewBox="0 0 24 24"
-            width="1.5rem"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
-            />
-          </svg>
-        </div>
-        Headless UI Docs
-      </div>
-    </a>
-    <a
-      class="menu__item"
-      data-headlessui-state=""
-      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-:rl:"
-      role="menuitem"
-      tabindex="-1"
-    >
-      <div
-        class="popover-list-item"
-      >
-        <div
-          class="popover-list-item__icon"
-        >
-          <svg
-            aria-hidden="true"
-            class="icon"
-            fill="currentColor"
-            height="1.5rem"
-            style="--icon-size: 1.5rem;"
-            viewBox="0 0 24 24"
-            width="1.5rem"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
-            />
-          </svg>
-        </div>
-        MDN: Menu
-      </div>
-    </a>
-    <a
-      class="menu__item"
-      data-headlessui-state=""
-      id="headlessui-menu-item-:rm:"
-      role="menuitem"
-      tabindex="-1"
-    >
-      <div
-        class="popover-list-item"
-      >
-        <div
-          class="popover-list-item__no-icon"
-        />
-        Trigger Action
-      </div>
-    </a>
-    <div
-      aria-disabled="true"
-      class="popover-list-item popover-list-item--disabled"
-      data-headlessui-state="disabled"
-      id="headlessui-menu-item-:rn:"
       role="menuitem"
     >
       <div
