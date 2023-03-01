@@ -63,6 +63,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="1"
             >
               <div
@@ -104,6 +105,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="2"
             >
               <div
@@ -145,6 +147,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="3"
             >
               <div
@@ -186,6 +189,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="4"
             >
               <div
@@ -227,6 +231,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="5"
             >
               <div
@@ -520,6 +525,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="1"
             >
               <div
@@ -561,6 +567,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="2"
             >
               <div
@@ -602,6 +609,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="3"
             >
               <div
@@ -643,6 +651,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="4"
             >
               <div
@@ -684,6 +693,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="5"
             >
               <div
@@ -887,6 +897,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
                 <svg
@@ -942,6 +953,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="1"
             >
               <div
@@ -983,6 +995,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="2"
             >
               <div
@@ -1025,6 +1038,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="3"
             >
               <div
@@ -1066,6 +1080,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="4"
             >
               <div
@@ -1107,6 +1122,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             </div>
             <article
               class="card card--raised example-card"
+              data-bootstrap-override="card"
               number="5"
             >
               <div
@@ -1139,6 +1155,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
                 <svg
@@ -1190,6 +1207,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
                 <svg
@@ -1241,6 +1259,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
                 <svg

@@ -58,6 +58,7 @@ export const RadioInput = ({
       <input
         checked={checked}
         className={clsx(className, styles['radio__input'])}
+        data-bootstrap-override="radio"
         disabled={disabled}
         type="radio"
         {...other}

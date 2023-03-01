@@ -177,6 +177,7 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
           <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
+            data-bootstrap-override="inputfield"
             disabled={disabled}
             id={idVar}
             isError={isError}

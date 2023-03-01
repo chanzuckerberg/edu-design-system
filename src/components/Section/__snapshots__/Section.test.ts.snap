@@ -196,6 +196,7 @@ exports[`<Section /> WithRight story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand button button--primary"
+          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button

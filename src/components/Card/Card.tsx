@@ -54,7 +54,11 @@ export const Card = ({
     className,
   );
   return (
-    <article className={componentClassName} {...other}>
+    <article
+      className={componentClassName}
+      data-bootstrap-override="card"
+      {...other}
+    >
       {children}
     </article>
   );

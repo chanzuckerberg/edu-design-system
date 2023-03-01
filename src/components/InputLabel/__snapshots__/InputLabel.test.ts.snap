@@ -3,6 +3,7 @@
 exports[`<InputLabel /> Default story renders snapshot 1`] = `
 <label
   class="label label--lg"
+  data-bootstrap-override="label"
 >
   Label
 </label>
@@ -11,6 +12,7 @@ exports[`<InputLabel /> Default story renders snapshot 1`] = `
 exports[`<InputLabel /> LargeDisabled story renders snapshot 1`] = `
 <label
   class="label label--lg label--disabled"
+  data-bootstrap-override="label"
 >
   Label
 </label>
@@ -19,6 +21,7 @@ exports[`<InputLabel /> LargeDisabled story renders snapshot 1`] = `
 exports[`<InputLabel /> LongCopy story renders snapshot 1`] = `
 <label
   class="label label--lg"
+  data-bootstrap-override="label"
 >
   Long label lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id velit ut egestas arcu. Atmaecenas urna, risus donec praesent eu consectetur.
 </label>
@@ -27,6 +30,7 @@ exports[`<InputLabel /> LongCopy story renders snapshot 1`] = `
 exports[`<InputLabel /> Medium story renders snapshot 1`] = `
 <label
   class="label label--md"
+  data-bootstrap-override="label"
 >
   Label
 </label>
@@ -35,6 +39,7 @@ exports[`<InputLabel /> Medium story renders snapshot 1`] = `
 exports[`<InputLabel /> MediumDisabled story renders snapshot 1`] = `
 <label
   class="label label--md label--disabled"
+  data-bootstrap-override="label"
 >
   Label
 </label>

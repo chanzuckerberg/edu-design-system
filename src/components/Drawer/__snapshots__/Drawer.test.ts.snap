@@ -24,6 +24,7 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
       </h2>
       <button
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
         type="button"
       >
         <svg
@@ -62,12 +63,14 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 2
