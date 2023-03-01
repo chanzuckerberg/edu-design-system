@@ -22,148 +22,166 @@ export default {
 
 export const Default: StoryObj<MenuProps> = {
   args: {
-    buttonText: 'Documentation Links',
     children: (
-      <Menu.Items data-testid="menu-content">
-        <Menu.Item
-          href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
-        >
-          Headless UI Docs
-        </Menu.Item>
-        <Menu.Item
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
-        >
-          MDN: Menu
-        </Menu.Item>
-        {/* eslint-disable-next-line no-alert */}
-        <Menu.Item onClick={() => alert('Item clicked')}>
-          Trigger Action
-        </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
-          Not Possible (disabled)
-        </Menu.Item>
-      </Menu.Items>
+      <>
+        <Menu.Button>Documentation Links</Menu.Button>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
     ),
   },
 };
 
 export const WithLongButtonText: StoryObj<MenuProps> = {
   args: {
-    buttonText: 'Long Trigger Button Text to Demonstrate Popover Matching',
     children: (
-      <Menu.Items data-testid="menu-content">
-        <Menu.Item
-          href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
-        >
-          Headless UI Docs
-        </Menu.Item>
-        <Menu.Item
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
-        >
-          MDN: Menu
-        </Menu.Item>
-        {/* eslint-disable-next-line no-alert */}
-        <Menu.Item onClick={() => alert('Item clicked')}>
-          Trigger Action
-        </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
-          Not Possible (disabled)
-        </Menu.Item>
-      </Menu.Items>
+      <>
+        <Menu.Button>
+          Long Trigger Button Text to Demonstrate Popover Matching
+        </Menu.Button>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
     ),
   },
 };
 
 export const WithShortButtonText: StoryObj<MenuProps> = {
   args: {
-    buttonText: 'Menu',
     children: (
-      <Menu.Items data-testid="menu-content">
-        <Menu.Item
-          href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
-        >
-          Headless UI Docs
-        </Menu.Item>
-        <Menu.Item
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
-        >
-          MDN: Menu
-        </Menu.Item>
-        {/* eslint-disable-next-line no-alert */}
-        <Menu.Item onClick={() => alert('Item clicked')}>
-          Trigger Action
-        </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
-          Not Possible (disabled)
-        </Menu.Item>
-      </Menu.Items>
+      <>
+        <Menu.Button>Menu</Menu.Button>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
     ),
   },
 };
+
 export const DotsVerticalButton: StoryObj<MenuProps> = {
-  render: (args) => (
-    <Menu {...args}>
-      <Menu.Button status="neutral" variant="icon">
-        <Icon name="dots-vertical" purpose="informative" title="show more" />
-      </Menu.Button>
-      <Menu.Items data-testid="menu-content">
-        <Menu.Item
-          href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
-        >
-          Headless UI Docs
-        </Menu.Item>
-        <Menu.Item
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
-        >
-          MDN: Menu
-        </Menu.Item>
-        {/* eslint-disable-next-line no-alert */}
-        <Menu.Item onClick={() => alert('Item clicked')}>
-          Trigger Action
-        </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
-          Not Possible (disabled)
-        </Menu.Item>
-      </Menu.Items>
-    </Menu>
-  ),
+  args: {
+    children: (
+      <>
+        <Menu.Button showExpandIcon={false} variant="icon">
+          <Icon name="dots-vertical" purpose="informative" title="show more" />
+        </Menu.Button>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
+    ),
+  },
 };
 
 export const CustomButton: StoryObj<MenuProps> = {
-  render: (args) => (
-    <Menu {...args}>
-      <Menu.Button status="neutral" variant="icon">
-        <div className="fpo !py-0">Menu Button</div>
-      </Menu.Button>
-      <Menu.Items data-testid="menu-content">
-        <Menu.Item
-          href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
+  args: {
+    children: (
+      <>
+        <Menu.Button
+          className="!border-transparent-white-0 !bg-transparent-white-0 hover:!bg-button-secondary-neutral-background-hover"
+          showExpandIcon={false}
+          status="neutral"
+          variant="icon"
         >
-          Headless UI Docs
-        </Menu.Item>
-        <Menu.Item
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
-        >
-          MDN: Menu
-        </Menu.Item>
-        {/* eslint-disable-next-line no-alert */}
-        <Menu.Item onClick={() => alert('Item clicked')}>
-          Trigger Action
-        </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
-          Not Possible (disabled)
-        </Menu.Item>
-      </Menu.Items>
-    </Menu>
-  ),
+          <div className="fpo !py-0">Menu Button</div>
+        </Menu.Button>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
+    ),
+  },
 };

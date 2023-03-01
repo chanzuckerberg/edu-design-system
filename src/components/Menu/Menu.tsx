@@ -16,10 +16,6 @@ import styles from './Menu.module.css';
 // Note: added className here to prevent private interface collision within HeadlessUI
 export type MenuProps = ExtractProps<typeof HeadlessMenu> & {
   /**
-   * Text to be placed within the Button trigger to open the Menu.
-   */
-  buttonText?: React.ReactNode;
-  /**
    * Allow custom classes to be applied to the menu container.
    */
   className?: string;
@@ -44,8 +40,18 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export type MenuButtonProps = ExtractProps<typeof HeadlessMenu.Button> &
-  ButtonProps;
+export type MenuButtonProps = Omit<
+  ExtractProps<typeof HeadlessMenu.Button>,
+  // we want Button children
+  'children'
+> &
+  ButtonProps & {
+    /**
+     * Show decorative downward chevron icon after Menu Button content.
+     * Defaults to true.
+     */
+    showExpandIcon?: boolean;
+  };
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
 
 /**
@@ -55,60 +61,42 @@ export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
  *
  * A dropdown that reveals or hides a list of actions
  */
-export const Menu = ({
-  buttonText,
-  children,
-  className,
-  ...other
-}: MenuProps) => {
+export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);
-  if (typeof children === 'function') {
-    return (
-      <HeadlessMenu as="div" className={menuClassNames} {...other}>
-        {({ open, close }) => (
-          <>
-            {buttonText && (
-              <MenuButton className={styles['menu__button']}>
-                {buttonText}
-                <Icon
-                  className={styles['menu__button--icon']}
-                  name="expand-more"
-                  purpose="decorative"
-                  size="1.25rem"
-                />
-              </MenuButton>
-            )}
-            {children({ open, close })}
-          </>
-        )}
-      </HeadlessMenu>
-    );
-  }
-  return (
-    <HeadlessMenu as="div" className={menuClassNames} {...other}>
-      {buttonText && (
-        <MenuButton className={styles['menu__button']}>
-          {buttonText}
-          <Icon
-            className={styles['menu__button--icon']}
-            name="expand-more"
-            purpose="decorative"
-            size="1.25rem"
-          />
-        </MenuButton>
-      )}
-      {children}
-    </HeadlessMenu>
-  );
+  return <HeadlessMenu as="div" className={menuClassNames} {...other} />;
 };
 
 /**
  * A button that when clicked, shows or hides the Options
  * Refer to Button documentation for more style variants.
  */
-const MenuButton = ({ status, ...other }: MenuButtonProps) => {
+const MenuButton = ({
+  children,
+  className,
+  showExpandIcon = true,
+  status,
+  ...other
+}: MenuButtonProps) => {
+  const buttonClassNames = clsx(styles['menu__button'], className);
   return (
-    <HeadlessMenu.Button as={Button} status={status || 'neutral'} {...other} />
+    <HeadlessMenu.Button
+      as={Button}
+      className={buttonClassNames}
+      status={status || 'neutral'}
+      {...other}
+    >
+      <>
+        {children}
+        {showExpandIcon && (
+          <Icon
+            className={styles['menu__button--icon']}
+            name="expand-more"
+            purpose="decorative"
+            size="1.25rem"
+          />
+        )}
+      </>
+    </HeadlessMenu.Button>
   );
 };
 
