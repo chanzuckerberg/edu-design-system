@@ -42,7 +42,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
 
 export type MenuButtonProps = Omit<
   ExtractProps<typeof HeadlessMenu.Button>,
-  // we want Button children
+  // we want to use the 'children' type from ButtonProps
   'children'
 > &
   ButtonProps & {
@@ -74,7 +74,6 @@ const MenuButton = ({
   children,
   className,
   showExpandIcon = true,
-  status,
   ...other
 }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
@@ -82,14 +81,14 @@ const MenuButton = ({
     <HeadlessMenu.Button
       as={Button}
       className={buttonClassNames}
-      status={status || 'neutral'}
+      status="neutral"
       {...other}
     >
       <>
         {children}
         {showExpandIcon && (
           <Icon
-            className={styles['menu__button--icon']}
+            className={styles['menu__button--with-chevron']}
             name="expand-more"
             purpose="decorative"
             size="1.25rem"

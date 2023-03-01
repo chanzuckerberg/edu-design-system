@@ -115,7 +115,7 @@ export const WithShortButtonText: StoryObj<MenuProps> = {
   },
 };
 
-export const DotsVerticalButton: StoryObj<MenuProps> = {
+export const WithVerticalDotsButton: StoryObj<MenuProps> = {
   args: {
     children: (
       <>
@@ -148,7 +148,7 @@ export const DotsVerticalButton: StoryObj<MenuProps> = {
   },
 };
 
-export const CustomButton: StoryObj<MenuProps> = {
+export const WithCustomButton: StoryObj<MenuProps> = {
   args: {
     children: (
       <>

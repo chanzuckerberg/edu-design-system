@@ -28,7 +28,7 @@
   font-weight: var(--eds-font-weight-light);
 }
 
-.menu__button--icon {
+.menu__button--with-chevron {
   color: var(--eds-theme-color-icon-neutral-default);
 }
 
