@@ -1,4 +1,5 @@
 export { default as Accordion } from './components/Accordion';
+export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
 export { default as Banner } from './components/Banner';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
