@@ -137,8 +137,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             class="checkbox"
           >
             <input
-              aria-checked="mixed"
-              checked=""
               class="checkbox__input"
               disabled=""
               id=":rb:"
@@ -157,8 +155,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             class="checkbox"
           >
             <input
-              aria-checked="mixed"
-              checked=""
               class="checkbox__input"
               id=":rc:"
               readonly=""
@@ -205,11 +201,8 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
     class="checkbox"
   >
     <input
-      aria-checked="mixed"
-      checked=""
       class="checkbox__input"
       id=":r6:"
-      readonly=""
       type="checkbox"
     />
     <label
@@ -443,12 +436,9 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
       class="checkbox"
     >
       <input
-        aria-checked="mixed"
         aria-label="a checkbox has no name"
-        checked=""
         class="checkbox__input"
         id=":rf:"
-        readonly=""
         type="checkbox"
       />
     </div>
@@ -479,9 +469,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
       class="checkbox"
     >
       <input
-        aria-checked="mixed"
         aria-label="a checkbox has no name"
-        checked=""
         class="checkbox__input"
         disabled=""
         id=":ri:"
