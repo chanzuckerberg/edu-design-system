@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './FiltersCheckboxField.module.css';
 import Fieldset from '../Fieldset';
 import FieldsetLegend from '../FieldsetLegend';
+import styles from './FiltersCheckboxField.module.css';
 
 export type Props = {
   /**

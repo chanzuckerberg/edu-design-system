@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './ProjectOverview.module.css';
 
 import {
   Breadcrumbs,
@@ -22,6 +21,7 @@ import {
 import ButtonActionCalloutCard from '../../recipes/ButtonActionCalloutCard';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import styles from './ProjectOverview.module.css';
 
 export interface Props {
   /**

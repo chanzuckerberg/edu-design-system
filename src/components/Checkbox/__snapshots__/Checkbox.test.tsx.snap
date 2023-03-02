@@ -13,7 +13,6 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
       <input
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":r1:"
         type="checkbox"
       />
@@ -34,7 +33,6 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
     </span>
     <label
       class="label label--lg"
-      data-bootstrap-override="label"
       for=":r1:"
     >
       Checkbox
@@ -55,7 +53,6 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
     >
       <input
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":r0:"
         type="checkbox"
       />
@@ -76,7 +73,6 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
     </span>
     <label
       class="label label--lg"
-      data-bootstrap-override="label"
       for=":r0:"
     >
       Checkbox
@@ -103,7 +99,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             >
               <input
                 class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 disabled=""
                 id=":r5:"
                 type="checkbox"
@@ -125,7 +120,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg label--disabled"
-              data-bootstrap-override="label"
               for=":r5:"
             >
               Disabled
@@ -141,7 +135,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             >
               <input
                 class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 id=":r6:"
                 readonly=""
                 type="checkbox"
@@ -163,7 +156,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg"
-              data-bootstrap-override="label"
               for=":r6:"
             >
               Default
@@ -182,7 +174,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
               <input
                 checked=""
                 class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 disabled=""
                 id=":r7:"
                 type="checkbox"
@@ -204,7 +195,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg label--disabled"
-              data-bootstrap-override="label"
               for=":r7:"
             >
               Disabled
@@ -221,7 +211,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
               <input
                 checked=""
                 class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 id=":r8:"
                 readonly=""
                 type="checkbox"
@@ -243,7 +232,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg"
-              data-bootstrap-override="label"
               for=":r8:"
             >
               Default
@@ -263,7 +251,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 aria-checked="mixed"
                 checked=""
                 class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 disabled=""
                 id=":r9:"
                 type="checkbox"
@@ -285,7 +272,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg label--disabled"
-              data-bootstrap-override="label"
               for=":r9:"
             >
               Disabled
@@ -303,7 +289,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 aria-checked="mixed"
                 checked=""
                 class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 id=":ra:"
                 readonly=""
                 type="checkbox"
@@ -325,7 +310,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg"
-              data-bootstrap-override="label"
               for=":ra:"
             >
               Default
@@ -347,7 +331,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
   >
     <input
       class="checkbox__input"
-      data-bootstrap-override="checkbox"
       disabled=""
       id=":rl:"
       type="checkbox"
@@ -369,7 +352,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
   </span>
   <label
     class="label label--lg label--disabled"
-    data-bootstrap-override="label"
     for=":rl:"
   >
     Disabled
@@ -391,7 +373,6 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
         aria-checked="mixed"
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":r4:"
         readonly=""
         type="checkbox"
@@ -413,7 +394,6 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
     </span>
     <label
       class="label label--lg"
-      data-bootstrap-override="label"
       for=":r4:"
     >
       Checkbox
@@ -437,7 +417,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       >
         <input
           class="checkbox__input"
-          data-bootstrap-override="checkbox"
           id=":rh:"
           readonly=""
           type="checkbox"
@@ -459,7 +438,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </span>
       <label
         class="label label--lg"
-        data-bootstrap-override="label"
         for=":rh:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -473,7 +451,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       >
         <input
           class="checkbox__input"
-          data-bootstrap-override="checkbox"
           id=":ri:"
           readonly=""
           type="checkbox"
@@ -495,7 +472,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </span>
       <label
         class="label label--md checkbox__label--md"
-        data-bootstrap-override="label"
         for=":ri:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -509,7 +485,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       >
         <input
           class="checkbox__input"
-          data-bootstrap-override="checkbox"
           disabled=""
           id=":rj:"
           type="checkbox"
@@ -531,7 +506,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </span>
       <label
         class="label label--lg label--disabled"
-        data-bootstrap-override="label"
         for=":rj:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -545,7 +519,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       >
         <input
           class="checkbox__input"
-          data-bootstrap-override="checkbox"
           disabled=""
           id=":rk:"
           type="checkbox"
@@ -567,7 +540,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </span>
       <label
         class="label label--md label--disabled checkbox__label--md"
-        data-bootstrap-override="label"
         for=":rk:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -589,7 +561,6 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
     >
       <input
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":r2:"
         type="checkbox"
       />
@@ -610,7 +581,6 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
     </span>
     <label
       class="label label--md checkbox__label--md"
-      data-bootstrap-override="label"
       for=":r2:"
     >
       Checkbox
@@ -632,7 +602,6 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
       <input
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":r3:"
         type="checkbox"
       />
@@ -653,7 +622,6 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
     </span>
     <label
       class="label label--md checkbox__label--md"
-      data-bootstrap-override="label"
       for=":r3:"
     >
       Checkbox
@@ -671,7 +639,6 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
   >
     <label
       class="label label--lg"
-      data-bootstrap-override="label"
       for="test"
     >
       Label on Left
@@ -681,7 +648,6 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
     >
       <input
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id="test"
         type="checkbox"
       />
@@ -717,7 +683,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
       <input
         aria-label="a checkbox has no name"
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":rb:"
         readonly=""
         type="checkbox"
@@ -748,7 +713,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="a checkbox has no name"
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":rc:"
         readonly=""
         type="checkbox"
@@ -780,7 +744,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="a checkbox has no name"
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         id=":rd:"
         readonly=""
         type="checkbox"
@@ -810,7 +773,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
       <input
         aria-label="a checkbox has no name"
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         disabled=""
         id=":re:"
         type="checkbox"
@@ -841,7 +803,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="a checkbox has no name"
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         disabled=""
         id=":rf:"
         type="checkbox"
@@ -873,7 +834,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="a checkbox has no name"
         checked=""
         class="checkbox__input"
-        data-bootstrap-override="checkbox"
         disabled=""
         id=":rg:"
         type="checkbox"

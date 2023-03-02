@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import styles from './GlobalHeader.module.css';
 import { Button, Icon, Heading, Link, Popover } from '../../../src';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
 import { NotificationLists } from '../NotificationListPopover/NotificationListPopover';
 import { PrimaryNav } from '../PrimaryNav/PrimaryNav';
+import styles from './GlobalHeader.module.css';
 
 type HeaderProps = {
   /**

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './Grid.module.css';
 import GridItem from '../GridItem';
+import styles from './Grid.module.css';
 
 export interface Props {
   /**

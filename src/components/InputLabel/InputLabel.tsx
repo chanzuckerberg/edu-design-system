@@ -47,11 +47,7 @@ export const InputLabel = ({
     className,
   );
   return (
-    <label
-      className={componentClassName}
-      data-bootstrap-override="label"
-      htmlFor={htmlFor}
-    >
+    <label className={componentClassName} htmlFor={htmlFor}>
       {children}
     </label>
   );

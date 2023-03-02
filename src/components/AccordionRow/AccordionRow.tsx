@@ -1,8 +1,8 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
-import styles from './AccordionRow.module.css';
 import { AccordionContext } from '../Accordion';
+import styles from './AccordionRow.module.css';
 
 type Props = {
   /**

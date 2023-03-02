@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, { useId } from 'react';
-import styles from './DataBar.module.css';
 
 import DataBarSegment from '../DataBarSegment';
 import type { Variants } from '../DataBarSegment';
 import Text from '../Text';
+import styles from './DataBar.module.css';
 
 type Segment = {
   /**

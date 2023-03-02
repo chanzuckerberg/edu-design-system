@@ -34,7 +34,6 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -79,7 +78,6 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -89,7 +87,6 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -144,7 +141,6 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -156,7 +152,6 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -208,7 +203,6 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -220,7 +214,6 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -229,7 +222,6 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -284,7 +276,6 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -329,7 +320,6 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -339,7 +329,6 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -394,7 +383,6 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -406,7 +394,6 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--error button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -450,7 +437,6 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -495,7 +481,6 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -540,7 +525,6 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -550,7 +534,6 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -605,7 +588,6 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -617,7 +599,6 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -688,7 +669,6 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -733,7 +713,6 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -778,7 +757,6 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -788,7 +766,6 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -843,7 +820,6 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -855,7 +831,6 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--success button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -899,7 +874,6 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -944,7 +918,6 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -954,7 +927,6 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -1009,7 +981,6 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1021,7 +992,6 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -1030,7 +1000,6 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -1085,7 +1054,6 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1097,7 +1065,6 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -1141,7 +1108,6 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1186,7 +1152,6 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1196,7 +1161,6 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -1251,7 +1215,6 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1263,7 +1226,6 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates

@@ -7,7 +7,7 @@
 /**
  * Accordion Button, wraps the heading and open indicator icon.
  */
-.accordion-button.accordion-button {
+.accordion-button {
   display: flex;
   justify-content: space-between;
 
@@ -21,7 +21,7 @@
 /**
  * Small variant.
  */
-.accordion-button--sm.accordion-button--sm {
+.accordion-button--sm {
   padding: var(--eds-size-1);
   height: 2.25rem;
 }
@@ -29,7 +29,7 @@
 /**
  * Outline variant.
  */
-.accordion-button--outline.accordion-button--outline {
+.accordion-button--outline {
   padding: var(--eds-size-2) var(--eds-size-3);
 }
 
@@ -43,7 +43,7 @@
 /**
  * The heading text.
  */
-.accordion-button__heading.accordion-button__heading {
+.accordion-button__heading {
   @mixin eds-theme-typography-body-text-sm;
   color: var(--eds-theme-color-text-neutral-strong);
 }
@@ -51,7 +51,7 @@
 /**
  * Small variant of the heading text.
  */
-.accordion-button__heading--sm.accordion-button__heading--sm {
+.accordion-button__heading--sm {
   @mixin eds-theme-typography-body-text-xs;
 }
 

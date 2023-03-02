@@ -9,7 +9,6 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
   >
     <button
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Search
@@ -70,7 +69,6 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
     </div>
     <button
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Search
@@ -114,7 +112,6 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
     </div>
     <button
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
-      data-bootstrap-override="clickable-style-primary"
       type="button"
     >
       Search
@@ -159,7 +156,6 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
     </div>
     <button
       class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled search-button"
-      data-bootstrap-override="clickable-style-primary"
       disabled=""
       tabindex="-1"
       type="button"
@@ -176,7 +172,6 @@ exports[`<SearchField /> SearchButton story renders snapshot 1`] = `
 >
   <button
     class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
-    data-bootstrap-override="clickable-style-primary"
     type="button"
   >
     Search

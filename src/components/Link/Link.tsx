@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
-import styles from './Link.module.css';
 import ClickableStyle from '../ClickableStyle';
 import type { ClickableStyleProps, VariantStatus } from '../ClickableStyle';
+import styles from './Link.module.css';
 
 type LinkHTMLElementProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,

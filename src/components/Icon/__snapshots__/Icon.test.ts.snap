@@ -464,6 +464,26 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
+          d="M11 10.9667C9.53337 10.9667 8.33337 10.5 7.40004 9.56667C6.46671 8.63334 6.00004 7.43334 6.00004 5.96668C6.00004 4.50001 6.46671 3.30001 7.40004 2.36668C8.33337 1.43334 9.53337 0.966675 11 0.966675C12.4667 0.966675 13.6667 1.43334 14.6 2.36668C15.5334 3.30001 16 4.50001 16 5.96668C16 7.43334 15.5334 8.63334 14.6 9.56667C13.6667 10.5 12.4667 10.9667 11 10.9667ZM0.333374 21.6667V18.5333C0.333374 17.6889 0.544485 16.9667 0.966707 16.3667C1.38893 15.7667 1.93337 15.3111 2.60004 15C4.08893 14.3333 5.51671 13.8333 6.88337 13.5C8.25004 13.1667 9.62226 13 11 13C12.3778 13 13.7445 13.1722 15.1 13.5167C16.4556 13.8611 17.8778 14.3556 19.3667 15C20.0556 15.3111 20.6112 15.7667 21.0334 16.3667C21.4556 16.9667 21.6667 17.6889 21.6667 18.5333V21.6667H0.333374Z"
+        />
+      </svg>
+      <span
+        class="icon-grid__text"
+      >
+        avatar
+      </span>
+    </li>
+    <li
+      class="icon-grid__item"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon-grid__icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
           d="M4 22V2H20V22H4ZM11 4V11L13.5 9.5L16 11V4H11Z"
         />
       </svg>
@@ -2763,7 +2783,6 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
    
   <a
     class="clickable-style clickable-style--link clickable-style--brand link--link"
-    data-bootstrap-override="clickable-style-link"
     href="https://material-ui.com/components/material-icons/"
     rel="noreferrer"
     target="_blank"

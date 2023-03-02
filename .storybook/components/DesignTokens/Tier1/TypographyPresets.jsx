@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styles from './TypographyPresets.module.css';
 import { Grid } from '../../../../src';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
+import styles from './TypographyPresets.module.css';
 
 export const PRESET_SIZE_MAP = {
   '001': {

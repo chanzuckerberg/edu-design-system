@@ -4,10 +4,10 @@ import clsx from 'clsx';
 import React from 'react';
 import { useState, createContext, useContext } from 'react';
 import { usePopper } from 'react-popper';
-import styles from './Popover.module.css';
 import type { ExtractProps } from '../../util/utility-types';
 import { defaultPopoverModifiers } from '../PopoverContainer';
 import PopoverContainer from '../PopoverContainer';
+import styles from './Popover.module.css';
 
 export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
   /**

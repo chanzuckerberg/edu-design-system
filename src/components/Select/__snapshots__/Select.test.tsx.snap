@@ -394,13 +394,17 @@ exports[`<Select /> DefaultWithVisibleLabel story renders snapshot 1`] = `
   data-headlessui-state="open"
   data-testid="dropdown"
 >
-  <label
-    class="label"
-    data-headlessui-state="open"
-    id="headlessui-listbox-label-:r5:"
+  <div
+    class="select__overline"
   >
-    Favorite Animal
-  </label>
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:r5:"
+    >
+      Favorite Animal
+    </label>
+  </div>
   <button
     aria-controls="headlessui-listbox-options-:r7:"
     aria-expanded="true"
@@ -596,13 +600,17 @@ exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
   data-headlessui-state="open"
   data-testid="dropdown"
 >
-  <label
-    class="label"
-    data-headlessui-state="open"
-    id="headlessui-listbox-label-:rq:"
+  <div
+    class="select__overline"
   >
-    Favorite Animal
-  </label>
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:rq:"
+    >
+      Favorite Animal
+    </label>
+  </div>
   <button
     aria-controls="headlessui-listbox-options-:rs:"
     aria-expanded="true"
@@ -885,6 +893,131 @@ exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Select /> WithSelectedOption story renders snapshot 1`] = `
+<div
+  class="select select--non-compact"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <div
+    class="select__overline"
+  >
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:r1f:"
+    >
+      Favorite Animal
+    </label>
+  </div>
+  <button
+    aria-controls="headlessui-listbox-options-:r1h:"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-:r1f: headlessui-listbox-button-:r1g:"
+    class="select-button"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:r1g:"
+    type="button"
+  >
+    <span>
+      Dogs
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
+      />
+    </svg>
+  </button>
+  <div
+    aria-activedescendant="headlessui-listbox-option-:r1i:"
+    aria-labelledby="headlessui-listbox-label-:r1f:"
+    aria-orientation="vertical"
+    class="popover-container select__options select__options--full-width"
+    data-headlessui-state="open"
+    id="headlessui-listbox-options-:r1h:"
+    role="listbox"
+    tabindex="0"
+  >
+    <div
+      aria-selected="true"
+      class="popover-list-item popover-list-item--active select__option-item"
+      data-headlessui-state="active selected"
+      id="headlessui-listbox-option-:r1i:"
+      role="option"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item__icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.55001 17.9996L3.85001 12.2996L5.27501 10.8746L9.55001 15.1496L18.725 5.97461L20.15 7.39961L9.55001 17.9996Z"
+          />
+        </svg>
+      </div>
+      <span
+        class="select__option-text"
+      >
+        Dogs
+      </span>
+    </div>
+    <div
+      aria-selected="false"
+      class="popover-list-item select__option-item"
+      data-headlessui-state=""
+      id="headlessui-listbox-option-:r1j:"
+      role="option"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item__no-icon"
+      />
+      <span
+        class="select__option-text"
+      >
+        Cats
+      </span>
+    </div>
+    <div
+      aria-selected="false"
+      class="popover-list-item select__option-item"
+      data-headlessui-state=""
+      id="headlessui-listbox-option-:r1k:"
+      role="option"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item__no-icon"
+      />
+      <span
+        class="select__option-text"
+      >
+        Birds
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Select /> renders the OpenByDefault story 1`] = `
 <div
   class="select select--non-compact"
@@ -892,12 +1025,12 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r1i:"
+    aria-controls="headlessui-listbox-options-:r1o:"
     aria-expanded="true"
     aria-haspopup="true"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r1h:"
+    id="headlessui-listbox-button-:r1n:"
     type="button"
   >
     <span>
@@ -919,12 +1052,12 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
     </svg>
   </button>
   <div
-    aria-activedescendant="headlessui-listbox-option-:r1n:"
-    aria-labelledby="headlessui-listbox-button-:r1h:"
+    aria-activedescendant="headlessui-listbox-option-:r1t:"
+    aria-labelledby="headlessui-listbox-button-:r1n:"
     aria-orientation="vertical"
     class="popover-container select__options select__options--full-width"
     data-headlessui-state="open"
-    id="headlessui-listbox-options-:r1i:"
+    id="headlessui-listbox-options-:r1o:"
     role="listbox"
     tabindex="0"
   >
@@ -932,7 +1065,7 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
       aria-selected="false"
       class="popover-list-item select__option-item"
       data-headlessui-state=""
-      id="headlessui-listbox-option-:r1m:"
+      id="headlessui-listbox-option-:r1s:"
       role="option"
       tabindex="-1"
     >
@@ -949,7 +1082,7 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
       aria-selected="true"
       class="popover-list-item popover-list-item--active select__option-item"
       data-headlessui-state="active selected"
-      id="headlessui-listbox-option-:r1n:"
+      id="headlessui-listbox-option-:r1t:"
       role="option"
       tabindex="-1"
     >
@@ -981,7 +1114,7 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
       aria-selected="false"
       class="popover-list-item select__option-item"
       data-headlessui-state=""
-      id="headlessui-listbox-option-:r1o:"
+      id="headlessui-listbox-option-:r1u:"
       role="option"
       tabindex="-1"
     >

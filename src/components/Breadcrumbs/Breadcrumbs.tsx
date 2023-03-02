@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, { type ReactNode } from 'react';
-import styles from './Breadcrumbs.module.css';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
 import DropdownMenuItem from '../DropdownMenuItem';
+import styles from './Breadcrumbs.module.css';
 
 type Props = {
   /**

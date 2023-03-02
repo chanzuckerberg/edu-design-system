@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './RadioInput.module.css';
 import Icon from '../Icon';
+import styles from './RadioInput.module.css';
 
 export type RadioInputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -58,7 +58,6 @@ export const RadioInput = ({
       <input
         checked={checked}
         className={clsx(className, styles['radio__input'])}
-        data-bootstrap-override="radio"
         disabled={disabled}
         type="radio"
         {...other}

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './CheckboxInput.module.css';
 import Icon from '../Icon';
+import styles from './CheckboxInput.module.css';
 
 type CheckboxHTMLElementProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -85,7 +85,6 @@ export const CheckboxInput = React.forwardRef<
     >
       <input
         className={clsx(className, styles['checkbox__input'])}
-        data-bootstrap-override="checkbox"
         disabled={disabled}
         ref={ref}
         type="checkbox"

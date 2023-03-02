@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v9.1.0...v10.0.0) (2023-03-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove data-bootstrap-override EDS-850
+
+### Features
+
+* **Avatar:** add avatar component ([#1510](https://github.com/chanzuckerberg/edu-design-system/issues/1510)) ([bc21f85](https://github.com/chanzuckerberg/edu-design-system/commit/bc21f85baf6d906d40d24da7e7108d60aaadc2b5))
+* **slider:** create slider ([#1503](https://github.com/chanzuckerberg/edu-design-system/issues/1503)) ([e7ced34](https://github.com/chanzuckerberg/edu-design-system/commit/e7ced34ff5c80c0776682ba912b5a69fac4507d8))
+* **TextareaField:** add TextArea base component and TextareaField ([#1493](https://github.com/chanzuckerberg/edu-design-system/issues/1493)) ([f2ba31d](https://github.com/chanzuckerberg/edu-design-system/commit/f2ba31df82322e589c98b337da2cdde7184639a8))
+
+
+### Bug Fixes
+
+* remove data-bootstrap-override EDS-850 ([3b5d59b](https://github.com/chanzuckerberg/edu-design-system/commit/3b5d59b3cdf4abf2af1c6c6b5c765a2e7f4cdf70))
+* remove old, outdated, unnecessary snapshot ([fb63a34](https://github.com/chanzuckerberg/edu-design-system/commit/fb63a341872cac5c95a4b2800e6da714f6f520ab))
+* **Select:** sync label design with form fields ([#1506](https://github.com/chanzuckerberg/edu-design-system/issues/1506)) ([efe9330](https://github.com/chanzuckerberg/edu-design-system/commit/efe9330952180018cddf69de0463f76336d63640))
+* update deps ([9a80e7f](https://github.com/chanzuckerberg/edu-design-system/commit/9a80e7f6849d351c215ecda44b6102b9a6ebce6c))
+* upgrade axe-core from 4.4.3 to 4.6.3 ([af3f9c5](https://github.com/chanzuckerberg/edu-design-system/commit/af3f9c5ab47409e75dc16ddbecf0d3a3e74cc479))
+
 ## [9.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v9.0.0...v9.1.0) (2023-02-16)
 
 

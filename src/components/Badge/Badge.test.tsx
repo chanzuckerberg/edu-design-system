@@ -8,6 +8,9 @@ describe('<Badge />', () => {
   generateSnapshots(stories);
 
   test('throws an error if Badge.Text length is > 3', () => {
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(() => {
       render(
         <Badge>
@@ -16,5 +19,6 @@ describe('<Badge />', () => {
         </Badge>,
       );
     }).toThrow(/Max badge text length is 3/);
+    consoleErrorMock.mockRestore();
   });
 });

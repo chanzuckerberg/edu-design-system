@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { KeyboardEventHandler, ReactNode } from 'react';
 import React, { useCallback, useId, useEffect, useRef, useState } from 'react';
 import { allByType } from 'react-children-by-type';
-import styles from './TimelineNav.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -16,6 +15,7 @@ import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import type { TimelineNavPanelVariant } from '../TimelineNavPanel';
 import TimelineNavPanel from '../TimelineNavPanel';
+import styles from './TimelineNav.module.css';
 
 export interface Props {
   /**

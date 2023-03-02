@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
-import styles from './InputField.module.css';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
 import Label from '../Label';
 import Text from '../Text';
+import styles from './InputField.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
@@ -67,7 +67,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Function that runs on change of the input
    */
-  onChange?: ChangeEventHandler;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
@@ -177,7 +177,6 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
           <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
-            data-bootstrap-override="inputfield"
             disabled={disabled}
             id={idVar}
             isError={isError}

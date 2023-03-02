@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
-import styles from './ProgressBar.module.css';
 import Text from '../Text';
+import styles from './ProgressBar.module.css';
 
 export type Props = {
   /**

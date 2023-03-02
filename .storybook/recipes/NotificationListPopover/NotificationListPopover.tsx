@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import styles from './NotificationListPopover.module.css';
 import { Button, Heading, Popover } from '../../../src';
+import styles from './NotificationListPopover.module.css';
 
 type NotificationListItemProps = {
   /**

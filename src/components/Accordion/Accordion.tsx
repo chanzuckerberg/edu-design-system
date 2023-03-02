@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, { createContext } from 'react';
-import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
 import AccordionRow from '../AccordionRow';
 import type { HeadingElement } from '../Heading';
+import styles from './Accordion.module.css';
 
 type Props = {
   /**
