@@ -118,9 +118,9 @@ export const WithCustomButton: StoryObj<MenuProps> = {
   args: {
     children: (
       <>
-        <Menu.Button showExpandIcon={false} status="neutral" variant="icon">
-          <div className="fpo !py-0">Menu Button</div>
-        </Menu.Button>
+        <Menu.PlainButton>
+          <div className="fpo">Menu Button</div>
+        </Menu.PlainButton>
         <Menu.Items data-testid="menu-content">
           <Menu.Item
             href="https://headlessui.com/react/menu#menu-button"

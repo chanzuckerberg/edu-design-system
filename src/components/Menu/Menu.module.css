@@ -28,6 +28,19 @@
   font-weight: var(--eds-font-weight-light);
 }
 
+.menu__plain-button {
+  min-height: 44px;
+  min-width: 44px;
+}
+.menu__plain-button:focus-visible {
+  @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .menu__plain-button:focus {
+    @mixin focus;
+  }
+}
+
 .menu__button--with-chevron {
   color: var(--eds-theme-color-icon-neutral-default);
 }

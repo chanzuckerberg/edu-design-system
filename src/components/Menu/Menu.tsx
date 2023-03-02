@@ -5,7 +5,6 @@ import type { MouseEventHandler } from 'react';
 
 import type { ExtractProps } from '../../util/utility-types';
 
-import type { ButtonProps } from '../Button';
 import Button from '../Button';
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
@@ -40,18 +39,12 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export type MenuButtonProps = Omit<
-  ExtractProps<typeof HeadlessMenu.Button>,
-  // we want to use the 'children' type from ButtonProps
-  'children'
-> &
-  ButtonProps & {
-    /**
-     * Show decorative downward chevron icon after Menu Button content.
-     * Defaults to true.
-     */
-    showExpandIcon?: boolean;
-  };
+export type MenuButtonProps = ExtractProps<typeof HeadlessMenu.Button> & {
+  /**
+   * Allow custom classes to be applied to the menu button.
+   */
+  className?: string;
+};
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
 
 /**
@@ -67,15 +60,9 @@ export const Menu = ({ className, ...other }: MenuProps) => {
 };
 
 /**
- * A button that when clicked, shows or hides the Options
- * Refer to Button documentation for more style variants.
+ * A styled button that when clicked, shows or hides the Options.
  */
-const MenuButton = ({
-  children,
-  className,
-  showExpandIcon = true,
-  ...other
-}: MenuButtonProps) => {
+const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
   return (
     <HeadlessMenu.Button
@@ -86,17 +73,23 @@ const MenuButton = ({
     >
       <>
         {children}
-        {showExpandIcon && (
-          <Icon
-            className={styles['menu__button--with-chevron']}
-            name="expand-more"
-            purpose="decorative"
-            size="1.25rem"
-          />
-        )}
+        <Icon
+          className={styles['menu__button--with-chevron']}
+          name="expand-more"
+          purpose="decorative"
+          size="1.25rem"
+        />
       </>
     </HeadlessMenu.Button>
   );
+};
+
+/**
+ * A minimally styled button that when clicked, shows or hides the Options.
+ */
+const MenuPlainButton = ({ className, ...other }: MenuButtonProps) => {
+  const buttonClassNames = clsx(styles['menu__plain-button'], className);
+  return <HeadlessMenu.Button className={buttonClassNames} {...other} />;
 };
 
 /**
@@ -156,5 +149,6 @@ const MenuItem = ({
 };
 
 Menu.Button = MenuButton;
+Menu.PlainButton = MenuPlainButton;
 Menu.Items = MenuItems;
 Menu.Item = MenuItem;

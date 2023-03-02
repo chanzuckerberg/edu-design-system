@@ -159,13 +159,13 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
     aria-controls="headlessui-menu-items-:rj:"
     aria-expanded="true"
     aria-haspopup="true"
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon menu__button"
+    class="menu__plain-button"
     data-headlessui-state="open"
     id="headlessui-menu-button-:ri:"
     type="button"
   >
     <div
-      class="fpo !py-0"
+      class="fpo"
     >
       Menu Button
     </div>
