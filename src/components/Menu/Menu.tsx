@@ -5,7 +5,7 @@ import type { MouseEventHandler } from 'react';
 
 import type { ExtractProps } from '../../util/utility-types';
 
-import ClickableStyle from '../ClickableStyle';
+import Button from '../Button';
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
 import PopoverContainer from '../PopoverContainer';
@@ -39,7 +39,12 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export type MenuButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
+export type MenuButtonProps = ExtractProps<typeof HeadlessMenu.Button> & {
+  /**
+   * Allow custom classes to be applied to the menu button.
+   */
+  className?: string;
+};
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
 
 /**
@@ -55,13 +60,13 @@ export const Menu = ({ className, ...other }: MenuProps) => {
 };
 
 /**
- * A button that when clicked, shows or hides the Options
+ * A styled button that when clicked, shows or hides the Options.
  */
 const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
   return (
     <HeadlessMenu.Button
-      as={ClickableStyle}
+      as={Button}
       className={buttonClassNames}
       status="neutral"
       {...other}
@@ -69,7 +74,7 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
       <>
         {children}
         <Icon
-          className={styles['menu__button--icon']}
+          className={styles['menu__button--with-chevron']}
           name="expand-more"
           purpose="decorative"
           size="1.25rem"
@@ -77,6 +82,14 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
       </>
     </HeadlessMenu.Button>
   );
+};
+
+/**
+ * A minimally styled button that when clicked, shows or hides the Options.
+ */
+const MenuPlainButton = ({ className, ...other }: MenuButtonProps) => {
+  const buttonClassNames = clsx(styles['menu__plain-button'], className);
+  return <HeadlessMenu.Button className={buttonClassNames} {...other} />;
 };
 
 /**
@@ -136,5 +149,6 @@ const MenuItem = ({
 };
 
 Menu.Button = MenuButton;
+Menu.PlainButton = MenuPlainButton;
 Menu.Items = MenuItems;
 Menu.Item = MenuItem;
