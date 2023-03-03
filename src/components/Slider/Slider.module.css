@@ -1,0 +1,168 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # SLIDER
+\*------------------------------------*/
+
+/**
+ * Slider wrapping Label and Input
+ */
+.slider {
+  --slider-track-height: var(--eds-size-1);
+  --slider-thumb-size: var(--eds-size-3);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-1-and-half);
+}
+
+/**
+ * Slider label disabled
+ */
+.slider__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * Slider Input
+ */
+.slider__input {
+  /* increases vertical hitbox for target size accessibility */
+  padding-top: 22px;
+  padding-bottom: 22px;
+  /* fills left side of track as a percentage of the input value */
+  --slider-track-background: linear-gradient(
+    /* fill from left to right */ to right,
+    /* fill color */ var(--eds-theme-color-background-brand-primary-strong)
+      /* percent to fill */ calc(var(--ratio) * 100%),
+    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
+      /* don't blend the colors */ 0
+  );
+
+  appearance: none;
+  background: transparent;
+
+  height: var(--slider-thumb-size);
+}
+.slider__input:focus {
+  outline: none;
+}
+.slider__input:disabled {
+  --slider-track-background: linear-gradient(
+    /* fill from left to right */ to right,
+    /* fill color */ var(--eds-theme-color-background-disabled)
+      /* percent to fill */ calc(var(--ratio) * 100%),
+    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
+      /* don't blend the colors */ 0
+  );
+  cursor: not-allowed;
+}
+
+/* 
+ * Chrome, Safari, Edge Chromium
+ * Although redundant with Firefox, has to be separate or else Chrome ignores
+ */
+.slider__input::-webkit-slider-runnable-track {
+  background: var(--slider-track-background);
+  height: var(--slider-track-height);
+  border-radius: var(--eds-border-radius-full);
+}
+/**
+ * Slider Input Track
+ */
+/* Firefox */
+.slider__input::-moz-range-track {
+  background: var(--slider-track-background);
+  height: var(--slider-track-height);
+  border-radius: var(--eds-border-radius-full);
+}
+
+/* Chrome, Safari, Edge Chromium */
+.slider__input::-webkit-slider-thumb {
+  appearance: none;
+
+  height: var(--slider-thumb-size);
+  width: var(--slider-thumb-size);
+  background: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid
+    var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
+
+  margin-top: calc(
+    var(--slider-track-height) / 2 - var(--slider-thumb-size) / 2
+  ); /* Centers thumb on the track */
+}
+.slider__input:not(:disabled)::-webkit-slider-thumb {
+  cursor: grab;
+}
+.slider__input:not(:disabled)::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+/* Chrome, Safari, Edge Chromium Focus */
+.slider__input:focus-visible::-webkit-slider-thumb {
+  @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-webkit-slider-thumb {
+    @mixin focus;
+  }
+}
+
+/*
+ * Slider Input Thumb
+ */
+/* Firefox */
+.slider__input::-moz-range-thumb {
+  box-sizing: border-box;
+
+  height: var(--slider-thumb-size);
+  width: var(--slider-thumb-size);
+  background: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid
+    var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
+}
+.slider__input:not(:disabled)::-moz-range-thumb {
+  cursor: grab;
+}
+.slider__input:not(:disabled)::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+/* Firefox Focus */
+.slider__input:focus-visible::-moz-range-thumb {
+  @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-moz-range-thumb {
+    @mixin focus;
+  }
+}
+
+/**
+ * Slider Markers wrapper below the track
+ */
+.slider__markers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Calculates offset of the markers to align with actual values */
+  padding-left: calc(var(--slider-thumb-size) / 2);
+  padding-right: calc(var(--slider-thumb-size) / 2);
+}
+
+/**
+ * Slider Marker 
+ */
+.slider__marker {
+  @mixin eds-theme-typography-caption-text-sm;
+
+  /* Centers the text to the marker location */
+  width: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider__marker--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
