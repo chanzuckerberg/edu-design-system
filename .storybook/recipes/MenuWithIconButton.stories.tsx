@@ -25,7 +25,7 @@ export default {
 export const WithVerticalDotsButton: StoryObj<MenuProps> = {
   render: ({ iconName, args }) => (
     <Menu {...args}>
-      <Menu.PlainButton className="hover:bg-button-secondary-neutral-background-hover">
+      <Menu.PlainButton>
         <Icon
           name={iconName}
           purpose="informative"

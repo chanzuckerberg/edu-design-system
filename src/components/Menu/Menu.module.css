@@ -29,8 +29,16 @@
 }
 
 .menu__plain-button {
+  /* These min sizes are for target size accessibility */
   min-height: 44px;
   min-width: 44px;
+
+  border-radius: var(--eds-border-radius-md);
+}
+.menu__plain-button:hover {
+  background-color: var(
+    --eds-theme-color-button-secondary-neutral-background-hover
+  );
 }
 .menu__plain-button:focus-visible {
   @mixin focus;
