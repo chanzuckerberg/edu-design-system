@@ -15,6 +15,7 @@ EDS follows the process outlined in [this article](https://nvie.com/posts/a-succ
 ## Contribution workflow
 
 **Note**: For urgent hotfixes, use `main` instead of `next` as the base of your changes.
+**Note**: If you suspect your change will be breaking, flag the team ahead of time to discuss any conflicts with EDS release planning.
 
 In order to contribute to EDS, please follow this workflow:
 
@@ -23,3 +24,12 @@ In order to contribute to EDS, please follow this workflow:
 3. When work is ready for review, issue a pull request into `next` following the pull request guidelines. Tag `chanzuckerberg/edu-design-system` as reviewers for every PR.
 4. The library owners and trusted contributors will review the work and suggest revisions or approve the pull request
 5. Upon approval, feature gets **Squash and merged** into `next` to be slated for the next library release
+
+### Contributing Breaking Changes
+
+A few notes about breaking changes:
+
+- If you anticipate a breaking changes is inbound, let the team know as soon as possible. This is to give everyone a chance to double-check the sequence of commits or create a `release` branch if needed.
+- Not all breaking changes are equal! Changes removing deprecated components/APIs require careful communication. Changes affecting in-use components also require more scrutiny.
+- Consider writing a codemod (using [JSCodeShift](https://github.com/facebook/jscodeshift) for systematic changes.
+- There may be a way to make the change in a backwards-compatible way. Consider this during implementation, providing some rationale in cases where it is not feasible/practical to do so.
