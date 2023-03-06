@@ -62,29 +62,11 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r1:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r1:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r1:"
@@ -95,29 +77,11 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r2:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r2:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r2:"
@@ -128,29 +92,11 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r3:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r3:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r3:"
@@ -227,29 +173,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rd:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rd:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rd:"
@@ -260,29 +188,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":re:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":re:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":re:"
@@ -293,29 +203,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rf:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rf:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rf:"
@@ -340,29 +232,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rg:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rg:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rg:"
@@ -373,29 +247,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rh:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rh:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rh:"
@@ -406,29 +262,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":ri:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":ri:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":ri:"
@@ -453,29 +291,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rj:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rj:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rj:"
@@ -486,29 +306,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rk:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rk:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rk:"
@@ -519,29 +321,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rl:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rl:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rl:"
@@ -566,29 +350,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rm:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rm:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rm:"
@@ -599,29 +365,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rn:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rn:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rn:"
@@ -632,29 +380,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":ro:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":ro:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":ro:"
@@ -665,29 +395,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rp:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rp:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rp:"
@@ -698,29 +410,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rq:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rq:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rq:"
@@ -731,29 +425,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rr:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rr:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rr:"
@@ -850,29 +526,11 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r9:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r9:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r9:"
@@ -883,29 +541,11 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":ra:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":ra:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":ra:"
@@ -916,29 +556,11 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":rb:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":rb:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":rb:"
@@ -1029,29 +651,11 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r5:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r5:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r5:"
@@ -1062,29 +666,11 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r6:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r6:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r6:"
@@ -1095,29 +681,11 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r7:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r7:"
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r7:"

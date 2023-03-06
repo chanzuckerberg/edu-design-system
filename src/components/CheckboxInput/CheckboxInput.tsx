@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon from '../Icon';
 import styles from './CheckboxInput.module.css';
 
 type CheckboxHTMLElementProps = Omit<
@@ -25,37 +24,6 @@ export type CheckboxInputProps = CheckboxHTMLElementProps & {
   id: string;
 };
 
-const checkboxIconNameMap = {
-  indeterminate: 'checkbox-indeterminate',
-  true: 'checkbox-checked',
-  false: 'checkbox-unchecked',
-};
-const CheckboxSvg = ({
-  checked,
-  disabled,
-}: {
-  checked: boolean | 'indeterminate';
-  disabled?: boolean;
-}) => {
-  const iconClassName = clsx(
-    styles['checkbox__icon'],
-    disabled && styles['checkbox__icon--disabled'],
-  );
-  return (
-    <Icon
-      className={iconClassName}
-      name={
-        checkboxIconNameMap[`${checked}`] as
-          | 'checkbox-indeterminate'
-          | 'checkbox-checked'
-          | 'checkbox-unchecked'
-      }
-      purpose="decorative"
-      size="1.5rem"
-    />
-  );
-};
-
 /**
  * Checkbox input element, exported for greater flexibility.
  * You must provide an `id` prop and connect it to a visible label.
@@ -63,9 +31,15 @@ const CheckboxSvg = ({
 export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
->(({ checked = false, className, disabled, ...other }, ref) => {
-  // Make indeterminate checkbox visually match the colors of a
-  // checked state, but announce itself as "mixed" to screen readers
+>(({ checked, className, disabled, ...other }, ref) => {
+  // Make indeterminate checkbox visually match the colors of a checked state, but announce itself
+  // as "mixed" to screen readers
+  //
+  // However, https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)
+  // seems to consider `indeterminate` as a separate bit of information than `checked`. They can be
+  // in all 4 combinations (only 3 visual states, though).
+  //
+  // Should we make them separate props?
   const checkedProps =
     checked === 'indeterminate'
       ? {
@@ -77,22 +51,14 @@ export const CheckboxInput = React.forwardRef<
         };
 
   return (
-    <span
-      className={clsx(
-        styles['input__wrapper'],
-        disabled && styles['input__wrapper--disabled'],
-      )}
-    >
-      <input
-        className={clsx(className, styles['checkbox__input'])}
-        disabled={disabled}
-        ref={ref}
-        type="checkbox"
-        {...checkedProps}
-        {...other}
-      />
-      <CheckboxSvg checked={checked} disabled={disabled} />
-    </span>
+    <input
+      className={clsx(className, styles['checkbox__input'])}
+      disabled={disabled}
+      ref={ref}
+      type="checkbox"
+      {...checkedProps}
+      {...other}
+    />
   );
 });
 

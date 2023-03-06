@@ -2,35 +2,17 @@
 
 exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
     class="checkbox"
   >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        checked=""
-        class="checkbox__input"
-        id=":r1:"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r1:"
+      type="checkbox"
+    />
     <label
       class="label label--lg"
       for=":r1:"
@@ -43,34 +25,16 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Default story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
     class="checkbox"
   >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        class="checkbox__input"
-        id=":r0:"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-        />
-      </svg>
-    </span>
+    <input
+      class="checkbox__input"
+      id=":r0:"
+      type="checkbox"
+    />
     <label
       class="label label--lg"
       for=":r0:"
@@ -83,10 +47,10 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <table
-    style="border-spacing: 2rem;"
+    class="border-spacing-8"
   >
     <tbody>
       <tr>
@@ -94,105 +58,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-            >
-              <input
-                class="checkbox__input"
-                disabled=""
-                id=":r5:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon checkbox__icon--disabled"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg label--disabled"
-              for=":r5:"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                id=":r6:"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              for=":r6:"
-            >
-              Default
-            </label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-            >
-              <input
-                checked=""
-                class="checkbox__input"
-                disabled=""
-                id=":r7:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon checkbox__icon--disabled"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              disabled=""
+              id=":r7:"
+              type="checkbox"
+            />
             <label
               class="label label--lg label--disabled"
               for=":r7:"
@@ -205,31 +76,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                checked=""
-                class="checkbox__input"
-                id=":r8:"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
+            <input
+              class="checkbox__input"
+              id=":r8:"
+              readonly=""
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":r8:"
@@ -244,32 +96,13 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-            >
-              <input
-                aria-checked="mixed"
-                checked=""
-                class="checkbox__input"
-                disabled=""
-                id=":r9:"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon checkbox__icon--disabled"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
+            <input
+              checked=""
+              class="checkbox__input"
+              disabled=""
+              id=":r9:"
+              type="checkbox"
+            />
             <label
               class="label label--lg label--disabled"
               for=":r9:"
@@ -282,35 +115,58 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           <div
             class="checkbox"
           >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                aria-checked="mixed"
-                checked=""
-                class="checkbox__input"
-                id=":ra:"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
+            <input
+              checked=""
+              class="checkbox__input"
+              id=":ra:"
+              readonly=""
+              type="checkbox"
+            />
             <label
               class="label label--lg"
               for=":ra:"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              aria-checked="mixed"
+              checked=""
+              class="checkbox__input"
+              disabled=""
+              id=":rb:"
+              type="checkbox"
+            />
+            <label
+              class="label label--lg label--disabled"
+              for=":rb:"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              aria-checked="mixed"
+              checked=""
+              class="checkbox__input"
+              id=":rc:"
+              readonly=""
+              type="checkbox"
+            />
+            <label
+              class="label label--lg"
+              for=":rc:"
             >
               Default
             </label>
@@ -326,33 +182,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 <div
   class="checkbox"
 >
-  <span
-    class="input__wrapper input__wrapper--disabled"
-  >
-    <input
-      class="checkbox__input"
-      disabled=""
-      id=":rl:"
-      type="checkbox"
-    />
-    <svg
-      aria-hidden="true"
-      class="icon checkbox__icon checkbox__icon--disabled"
-      fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
-      viewBox="0 0 24 24"
-      width="1.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-      />
-    </svg>
-  </span>
+  <input
+    class="checkbox__input"
+    disabled=""
+    id=":rn:"
+    type="checkbox"
+  />
   <label
     class="label label--lg label--disabled"
-    for=":rl:"
+    for=":rn:"
   >
     Disabled
   </label>
@@ -361,37 +199,41 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 
 exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
     class="checkbox"
   >
-    <span
-      class="input__wrapper"
+    <input
+      aria-checked="mixed"
+      checked=""
+      class="checkbox__input"
+      id=":r6:"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r6:"
     >
-      <input
-        aria-checked="mixed"
-        checked=""
-        class="checkbox__input"
-        id=":r4:"
-        readonly=""
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Large story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r4:"
+      type="checkbox"
+    />
     <label
       class="label label--lg"
       for=":r4:"
@@ -402,110 +244,47 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
+exports[`<Checkbox /> LargeChecked story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
-    class="longlabels--grid"
+    class="checkbox"
+  >
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r5:"
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r5:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="grid w-80 grid-cols-2 gap-4"
   >
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":rh:"
-          readonly=""
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+      <input
+        class="checkbox__input"
+        id=":rj:"
+        readonly=""
+        type="checkbox"
+      />
       <label
         class="label label--lg"
-        for=":rh:"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":ri:"
-          readonly=""
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--md checkbox__label--md"
-        for=":ri:"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper input__wrapper--disabled"
-      >
-        <input
-          class="checkbox__input"
-          disabled=""
-          id=":rj:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon checkbox__icon--disabled"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--lg label--disabled"
         for=":rj:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -514,33 +293,47 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper input__wrapper--disabled"
+      <input
+        class="checkbox__input"
+        id=":rk:"
+        readonly=""
+        type="checkbox"
+      />
+      <label
+        class="label label--md checkbox__label--md"
+        for=":rk:"
       >
-        <input
-          class="checkbox__input"
-          disabled=""
-          id=":rk:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon checkbox__icon--disabled"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":rl:"
+        type="checkbox"
+      />
+      <label
+        class="label label--lg label--disabled"
+        for=":rl:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":rm:"
+        type="checkbox"
+      />
       <label
         class="label label--md label--disabled checkbox__label--md"
-        for=":rk:"
+        for=":rm:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -551,34 +344,16 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Medium story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
     class="checkbox"
   >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        class="checkbox__input"
-        id=":r2:"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-        />
-      </svg>
-    </span>
+    <input
+      class="checkbox__input"
+      id=":r2:"
+      type="checkbox"
+    />
     <label
       class="label label--md checkbox__label--md"
       for=":r2:"
@@ -591,35 +366,17 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
 
 exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
     class="checkbox"
   >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        checked=""
-        class="checkbox__input"
-        id=":r3:"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r3:"
+      type="checkbox"
+    />
     <label
       class="label label--md checkbox__label--md"
       for=":r3:"
@@ -632,202 +389,94 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
 
 exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
-    style="display: flex; align-items: center;"
+    class="flex items-center"
   >
     <label
-      class="label label--lg"
+      class="label label--lg mr-2"
       for="test"
     >
       Label on Left
     </label>
-    <span
-      class="input__wrapper"
-    >
-      <input
-        class="checkbox__input"
-        id="test"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-        />
-      </svg>
-    </span>
+    <input
+      class="checkbox__input"
+      id="test"
+      type="checkbox"
+    />
   </div>
 </div>
 `;
 
 exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <div
-    class="checkbox"
+    class="flex flex-col gap-2"
   >
-    <span
-      class="input__wrapper"
+    <div
+      class="checkbox"
     >
       <input
         aria-label="a checkbox has no name"
-        class="checkbox__input"
-        id=":rb:"
-        readonly=""
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-        />
-      </svg>
-    </span>
-  </div>
-  <div
-    class="checkbox"
-  >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        aria-label="a checkbox has no name"
-        checked=""
-        class="checkbox__input"
-        id=":rc:"
-        readonly=""
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
-  </div>
-  <div
-    class="checkbox"
-  >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        aria-checked="mixed"
-        aria-label="a checkbox has no name"
-        checked=""
         class="checkbox__input"
         id=":rd:"
         readonly=""
         type="checkbox"
       />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
-  </div>
-  <div
-    class="checkbox"
-  >
-    <span
-      class="input__wrapper input__wrapper--disabled"
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        checked=""
+        class="checkbox__input"
+        id=":re:"
+        readonly=""
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-checked="mixed"
+        aria-label="a checkbox has no name"
+        checked=""
+        class="checkbox__input"
+        id=":rf:"
+        readonly=""
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
     >
       <input
         aria-label="a checkbox has no name"
         class="checkbox__input"
         disabled=""
-        id=":re:"
+        id=":rg:"
         type="checkbox"
       />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon checkbox__icon--disabled"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-        />
-      </svg>
-    </span>
-  </div>
-  <div
-    class="checkbox"
-  >
-    <span
-      class="input__wrapper input__wrapper--disabled"
+    </div>
+    <div
+      class="checkbox"
     >
       <input
         aria-label="a checkbox has no name"
         checked=""
         class="checkbox__input"
         disabled=""
-        id=":rf:"
+        id=":rh:"
         type="checkbox"
       />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon checkbox__icon--disabled"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
-  </div>
-  <div
-    class="checkbox"
-  >
-    <span
-      class="input__wrapper input__wrapper--disabled"
+    </div>
+    <div
+      class="checkbox"
     >
       <input
         aria-checked="mixed"
@@ -835,24 +484,10 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         disabled=""
-        id=":rg:"
+        id=":ri:"
         type="checkbox"
       />
-      <svg
-        aria-hidden="true"
-        class="icon checkbox__icon checkbox__icon--disabled"
-        fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
-        viewBox="0 0 24 24"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-    </span>
+    </div>
   </div>
 </div>
 `;

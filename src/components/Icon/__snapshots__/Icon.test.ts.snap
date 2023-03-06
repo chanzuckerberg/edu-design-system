@@ -672,66 +672,6 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-      <span
-        class="icon-grid__text"
-      >
-        checkbox-checked
-      </span>
-    </li>
-    <li
-      class="icon-grid__item"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon-grid__icon"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-        />
-      </svg>
-      <span
-        class="icon-grid__text"
-      >
-        checkbox-indeterminate
-      </span>
-    </li>
-    <li
-      class="icon-grid__item"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon-grid__icon"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-        />
-      </svg>
-      <span
-        class="icon-grid__text"
-      >
-        checkbox-unchecked
-      </span>
-    </li>
-    <li
-      class="icon-grid__item"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon-grid__icon"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
           d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
         />
       </svg>

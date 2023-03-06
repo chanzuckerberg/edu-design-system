@@ -171,20 +171,6 @@ const icons = {
       <path d="M9.55001 17.9996L3.85001 12.2996L5.27501 10.8746L9.55001 15.1496L18.725 5.97461L20.15 7.39961L9.55001 17.9996Z" />
     ),
   },
-  'checkbox-checked': {
-    viewBox: '0 0 24 24',
-    content: (
-      <path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z" />
-    ),
-  },
-  'checkbox-indeterminate': {
-    viewBox: '0 0 24 24',
-    content: <path d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z" />,
-  },
-  'checkbox-unchecked': {
-    viewBox: '0 0 24 24',
-    content: <path d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z" />,
-  },
   'chevron-left': {
     viewBox: '0 0 24 24',
     content: (

@@ -3,7 +3,6 @@ import React from 'react';
 import { Checkbox } from './Checkbox';
 import CheckboxInput from '../CheckboxInput';
 import CheckboxLabel from '../CheckboxLabel';
-import styles from './Checkbox.stories.module.css';
 
 const defaultArgs = {
   disabled: false,
@@ -24,9 +23,8 @@ export default {
   decorators: [
     (Story) => (
       <div
-        style={{
-          margin: '0.25rem', // Provides spacing to see focus indicator around checkbox.
-        }}
+        // Provides spacing to see focus indicator around checkbox.
+        className="m-1"
       >
         <Story />
       </div>
@@ -36,47 +34,55 @@ export default {
 
 type Args = React.ComponentProps<typeof Checkbox>;
 
-/**
- * Controlled example to make checked stories interactive.
- */
-function CheckboxExample(args: Args) {
-  const [checked, setChecked] = React.useState<
-    boolean | 'indeterminate' | undefined
-  >(args.checked);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return <Checkbox checked={checked} onChange={handleChange} {...args} />;
-}
-
-export const Default: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} />,
-};
+export const Default: StoryObj<Args> = {};
 
 export const Checked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked />,
+  ...Default,
+  args: {
+    defaultChecked: true,
+  },
 };
 
 export const Medium: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} size="md" />,
+  ...Default,
+  args: {
+    size: 'md',
+  },
 };
 
 export const MediumChecked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked size="md" />,
+  ...Medium,
+  args: {
+    ...Checked.args,
+    ...Medium.args,
+  },
+};
+
+export const Large: StoryObj<Args> = {
+  ...Default,
+  args: {
+    size: 'lg',
+  },
+};
+
+export const LargeChecked: StoryObj<Args> = {
+  ...Large,
+  args: {
+    ...Checked.args,
+    ...Large.args,
+  },
 };
 
 export const Indeterminate: StoryObj<Args> = {
   args: {
     checked: 'indeterminate',
-    readOnly: true,
+    readOnly: true, // Prevent console warning about the field being read only
   },
-  render: (args) => <CheckboxExample {...args} />,
 };
 
 export const Disabled: StoryObj<Args> = {
   render: () => (
-    <table style={{ borderSpacing: '2rem' }}>
+    <table className="border-spacing-8">
       <tbody>
         {[false, true, 'indeterminate' as const].map((checked, i) => (
           // FIXME
@@ -106,14 +112,14 @@ export const WithoutVisibleLabel: StoryObj<Args> = {
     label: undefined,
   },
   render: (args) => (
-    <>
+    <div className="flex flex-col gap-2">
       <Checkbox {...args} readOnly />
       <Checkbox {...args} checked readOnly />
       <Checkbox {...args} checked="indeterminate" readOnly />
       <Checkbox {...args} disabled />
       <Checkbox {...args} checked disabled />
       <Checkbox {...args} checked="indeterminate" disabled />
-    </>
+    </div>
   ),
 };
 
@@ -122,7 +128,7 @@ export const LongLabels = {
     const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 
     return (
-      <div className={styles['longlabels--grid']}>
+      <div className="grid w-80 grid-cols-2 gap-4">
         <Checkbox label={label} readOnly />
         <Checkbox label={label} readOnly size="md" />
         <Checkbox disabled label={label} />
@@ -137,22 +143,13 @@ export const LongLabels = {
   },
 };
 
-function CheckboxInputExample() {
-  const [checked, setChecked] = React.useState<
-    boolean | 'indeterminate' | undefined
-  >(false);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return <CheckboxInput checked={checked} id="test" onChange={handleChange} />;
-}
-
 export const WithCustomPositioning = {
   render: () => (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
-      <CheckboxInputExample />
+    <div className="flex items-center">
+      <CheckboxLabel className="mr-2" htmlFor="test">
+        Label on Left
+      </CheckboxLabel>
+      <CheckboxInput id="test" />
     </div>
   ),
 };
