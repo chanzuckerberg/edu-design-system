@@ -36,7 +36,7 @@
   width: 24px;
 }
 
-.checkbox__input[aria-checked="mixed"]::before {
+.checkbox__input:indeterminate::before {
   background-color: currentColor;
   content: '';
 

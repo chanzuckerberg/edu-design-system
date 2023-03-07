@@ -13,13 +13,6 @@ export default {
   title: 'Components/Checkbox',
   component: Checkbox,
   args: defaultArgs,
-  argTypes: {
-    // For some reason Storybook does not infer all `checked` correctly;
-    checked: {
-      control: 'radio',
-      options: [true, false, 'indeterminate'],
-    },
-  },
   decorators: [
     (Story) => (
       <div
@@ -75,8 +68,7 @@ export const LargeChecked: StoryObj<Args> = {
 
 export const Indeterminate: StoryObj<Args> = {
   args: {
-    checked: 'indeterminate',
-    readOnly: true, // Prevent console warning about the field being read only
+    indeterminate: true,
   },
 };
 
@@ -84,18 +76,33 @@ export const Disabled: StoryObj<Args> = {
   render: () => (
     <table className="border-spacing-8">
       <tbody>
-        {[false, true, 'indeterminate' as const].map((checked, i) => (
-          // FIXME
-          // eslint-disable-next-line react/no-array-index-key
-          <tr key={i}>
-            <td>
-              <Checkbox checked={checked} disabled label="Disabled" />
-            </td>
-            <td>
-              <Checkbox checked={checked} label="Default" readOnly />
-            </td>
-          </tr>
-        ))}
+        {/* Un-checked */}
+        <tr>
+          <td>
+            <Checkbox checked={false} disabled label="Disabled" />
+          </td>
+          <td>
+            <Checkbox checked={false} label="Default" readOnly />
+          </td>
+        </tr>
+        {/* Checked */}
+        <tr>
+          <td>
+            <Checkbox checked disabled label="Disabled" />
+          </td>
+          <td>
+            <Checkbox checked label="Default" readOnly />
+          </td>
+        </tr>
+        {/* Indeterminate */}
+        <tr>
+          <td>
+            <Checkbox disabled indeterminate label="Disabled" />
+          </td>
+          <td>
+            <Checkbox indeterminate label="Default" readOnly />
+          </td>
+        </tr>
       </tbody>
     </table>
   ),
@@ -115,10 +122,10 @@ export const WithoutVisibleLabel: StoryObj<Args> = {
     <div className="flex flex-col gap-2">
       <Checkbox {...args} readOnly />
       <Checkbox {...args} checked readOnly />
-      <Checkbox {...args} checked="indeterminate" readOnly />
+      <Checkbox {...args} indeterminate />
       <Checkbox {...args} disabled />
       <Checkbox {...args} checked disabled />
-      <Checkbox {...args} checked="indeterminate" disabled />
+      <Checkbox {...args} disabled indeterminate />
     </div>
   ),
 };
