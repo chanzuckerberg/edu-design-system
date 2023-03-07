@@ -1695,7 +1695,6 @@ __metadata:
     eslint-plugin-testing-library: ^5.10.2
     husky: ^8.0.3
     identity-obj-proxy: ^3.0.0
-    intersection-observer: ^0.12.2
     jest: ^29.4.3
     jest-environment-jsdom: ^29.4.3
     jest-preset-stylelint: ^6.1.0
@@ -12135,13 +12134,6 @@ __metadata:
   version: 2.2.0
   resolution: "interpret@npm:2.2.0"
   checksum: f51efef7cb8d02da16408ffa3504cd6053014c5aeb7bb8c223727e053e4235bf565e45d67028b0c8740d917c603807aa3c27d7bd2f21bf20b6417e2bb3e5fd6e
-  languageName: node
-  linkType: hard
-
-"intersection-observer@npm:^0.12.2":
-  version: 0.12.2
-  resolution: "intersection-observer@npm:0.12.2"
-  checksum: d1fa9ebbb1e0baafe88ad95545bbb93f92bdcb8789912a2bd11b2463ab177ef185052c9c79c26187833d633f404acb077d4b1249353c5f6e2ca5cd64f50e216b
   languageName: node
   linkType: hard
 
