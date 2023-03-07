@@ -40,9 +40,8 @@ Each EDS component is documented in Storybook, which surfaces each component's A
 
 1. To create a component, run `yarn plop` in the command line.
 2. The command will ask, "What is your component name?" Add your component name (you can either type `PageHeader` or `page header` and it will automatically generate the proper casing).
-3. In `src/components/[component]/[component].stories.tsx`, change `title: 'Example/[ComponentName]'` to the location in the Storybook navigation where you want your component to live. For instance, `PageHeader` component you would change `title: 'Example/PageHeader'` to `title: 'Molecules/Text/PageHeader'`.
-4. Edit component source code in accordance with [EDS's code guidelines](./CODE_GUIDELINES.md)
-5. Create relevant stories for all component variants
+3. Edit component source code in accordance with [EDS's code guidelines](./CODE_GUIDELINES.md)
+4. Create relevant stories for all component variants
 
 ### Beta status
 
@@ -98,17 +97,17 @@ Pages
 
 ## Working with recipes
 
-**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system. Recipe components may be revisited and pulled into EDS at a later date if they are deemed to be reusable enough to move into the design system library.
+**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system.
 
 **Note**: Recipe components live in `.storybook/recipes` and take the following shape in Storybook:
 
 ```
 Recipes
---Component Name
-----Component Stories
+--Recipe Name
+----Recipe Stories
 ```
 
-Recipe components are not part of EDS. However, they should follow EDS [code conventions](./CODE_GUIDELINES.md) as closely as possible in order to make future migration into the design system as easy as possible.
+Recipe components are not part of EDS. However, they should follow EDS [code conventions](./CODE_GUIDELINES.md) as closely as possible in order to make future use across projects as easy as possible.
 
 ---
 
@@ -116,55 +115,24 @@ Recipe components are not part of EDS. However, they should follow EDS [code con
 
 ### Organizing components
 
-We're using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/#the-atomic-design-methodology) to cluster design system components into [Atoms](http://atomicdesign.bradfrost.com/chapter-2/#atoms), [Molecules](http://atomicdesign.bradfrost.com/chapter-2/#molecules), and [Organisms](http://atomicdesign.bradfrost.com/chapter-2/#organisms). Therefore the top-level navigation categories for Storybook are:
+We're using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/#the-atomic-design-methodology) to categorize our components, but grouping them under a single "Components" category in Storybook. Information about the component category will appear in its documentation, or as annotations. The top-level organization you can find in storybook is as follows:
 
 - Design tokens
-- Atoms
-- Molecules
-- Organisms
+- Documentation
+- Components
 - Pages
 - Recipes
 
 The component stucture is as follows:
 
 ```
-Atoms
---Design Tokens
---Component Category
-----Component Name
-------Component Stories
-Molecules
---Component Category
-----Component Name
-------Component Stories
-Organisms
---Component Category
-----Component Name
-------Component Stories
-Pages
---Page Name
-----Template Name
-Recipes
+Components
 --Component Name
 ----Component Stories
-```
-
-Components all follow a general pattern of:
-
-```
---Component Category
-----Individual Component Name
-------Individual Component Stories
-```
-
-For instance, `Molecules/Buttons/Button` would look something like:
-
-```
-Molecules
---Buttons
-----Button
-------Default
-------Primary
-------Small
-------[Other Variations]
+Pages
+--Page Category
+----Page Template Name
+Recipes
+--Recipe Name
+----Recipe Stories
 ```
