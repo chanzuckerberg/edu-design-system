@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import React from 'react';
 import { Link, Layout, LayoutContainer, LayoutSection } from '../../../src';
 
-import { GlobalHeader } from '../GlobalHeader/GlobalHeader';
 import styles from './PageShell.module.css';
 
 export interface Props {
@@ -46,7 +45,7 @@ export interface Props {
 }
 
 /**
- * A general wrapper for pages, comes with the GlobalHeader component baked in.
+ * A general wrapper for pages, comes with a stub for a header component baked in.
  */
 export const PageShell = ({
   children,
@@ -73,15 +72,7 @@ export const PageShell = ({
       </Link>
       <Layout gap="none">
         <LayoutSection region="sidebar">
-          <GlobalHeader
-            announcementsIsActive={announcementsIsActive}
-            curriculumIsActive={curriculumIsActive}
-            educatorToolsIsActive={educatorToolsIsActive}
-            mentoringIsActive={mentoringIsActive}
-            searchStudentsIsActive={searchStudentsIsActive}
-            studentProgressIsActive={studentProgressIsActive}
-            subjectIsActive={subjectIsActive}
-          />
+          <div className="fpo xl:fixed xl:h-full">Sidebar Goes Here</div>
         </LayoutSection>
         <LayoutSection region="main">
           <main className={styles['page-shell__main']}>
