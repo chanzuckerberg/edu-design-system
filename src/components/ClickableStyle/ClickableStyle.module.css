@@ -537,7 +537,7 @@ button:where(.clickable-style--link) {
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  height: 44px;
+  height: var(--eds-size-3);
   padding: 0 var(--eds-size-1);
 }
 
