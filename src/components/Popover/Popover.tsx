@@ -41,6 +41,11 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
    * If your trigger element is in a fixed container, use the fixed strategy.
    */
   strategy?: PopperJSOptions['strategy'];
+  /**
+   * Callback ran after Popper positions the element the first time.
+   * Refer to https://popper.js.org/docs/v2/lifecycle/#hook-into-the-lifecycle.
+   */
+  onFirstUpdate?: PopperJSOptions['onFirstUpdate'];
 };
 
 type PopoverContextType = {

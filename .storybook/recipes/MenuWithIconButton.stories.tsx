@@ -2,8 +2,8 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Icon } from '../../src';
-import { Menu, type MenuProps } from '../../src/components/Menu/Menu';
+import { Icon, type IconName } from '../../src';
+import { Menu } from '../../src/components/Menu/Menu';
 import icons from '../../src/icons/spritemap';
 
 export default {
@@ -20,11 +20,11 @@ export default {
       defaultValue: 'dots-vertical',
     },
   },
-} as Meta<MenuProps>;
+} as Meta<{ iconName: IconName }>;
 
-export const WithVerticalDotsButton: StoryObj<MenuProps> = {
-  render: ({ iconName, args }) => (
-    <Menu {...args}>
+export const WithVerticalDotsButton: StoryObj = {
+  render: ({ iconName }) => (
+    <Menu>
       <Menu.PlainButton>
         <Icon
           name={iconName}

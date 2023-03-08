@@ -20,11 +20,6 @@
     fetchReleaseNotes: true,
   },
 
-  ignoreDeps: [
-    // headlessui starting v1.7.6 causes some downstream feature tests to fail
-    '@headlessui/react',
-  ],
-
   packageRules: [
     {
       // Hold back from creating branches until 3 or more days have elapsed since the version

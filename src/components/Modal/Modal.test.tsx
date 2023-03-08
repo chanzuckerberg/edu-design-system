@@ -9,8 +9,11 @@ import '../../../jest/helpers/removeModalTransitionStylesJestSerializer';
 
 const { DefaultInteractive } = composeStories(stories);
 
-// Required because the modal uses react portal under the hood.
-require('intersection-observer');
+window.ResizeObserver = class FakeResizeObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
 
 describe('Modal', () => {
   generateSnapshots(stories, {

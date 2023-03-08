@@ -39,12 +39,19 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export type MenuButtonProps = ExtractProps<typeof HeadlessMenu.Button> & {
+export type MenuButtonProps = {
+  /**
+   * The button contents placed left of the chevron icon.
+   */
+  children: React.ReactNode;
   /**
    * Allow custom classes to be applied to the menu button.
    */
   className?: string;
 };
+
+export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
+
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
 
 /**
@@ -65,13 +72,8 @@ export const Menu = ({ className, ...other }: MenuProps) => {
 const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
   return (
-    <HeadlessMenu.Button
-      as={Button}
-      className={buttonClassNames}
-      status="neutral"
-      {...other}
-    >
-      <>
+    <HeadlessMenu.Button as={React.Fragment}>
+      <Button className={buttonClassNames} status="neutral" {...other}>
         {children}
         <Icon
           className={styles['menu__button--with-chevron']}
@@ -79,7 +81,7 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
           purpose="decorative"
           size="1.25rem"
         />
-      </>
+      </Button>
     </HeadlessMenu.Button>
   );
 };
@@ -87,7 +89,7 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
 /**
  * A minimally styled button that when clicked, shows or hides the Options.
  */
-const MenuPlainButton = ({ className, ...other }: MenuButtonProps) => {
+const MenuPlainButton = ({ className, ...other }: MenuPlainButtonProps) => {
   const buttonClassNames = clsx(styles['menu__plain-button'], className);
   return <HeadlessMenu.Button className={buttonClassNames} {...other} />;
 };
