@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
 import React, { useEffect } from 'react';
-import { LayoutContainer } from '../../../src/components/LayoutContainer/LayoutContainer';
-import { LayoutLinelengthContainer } from '../../../src/components/LayoutLinelengthContainer/LayoutLinelengthContainer';
+import { LayoutContainer } from '../../../../src/components/LayoutContainer/LayoutContainer';
+import { LayoutLinelengthContainer } from '../../../../src/components/LayoutLinelengthContainer/LayoutLinelengthContainer';
 // @ts-expect-error prism.js must be in JS
-import Prism from '../Docs/prism';
-import '../Docs/prism.css';
+import Prism from '../prism';
+import '../prism.css';
 
 export interface Props {
   /**
@@ -13,7 +13,7 @@ export interface Props {
   children?: ReactNode;
 }
 
-export const GettingStartedDocumentation: React.FC<Props> = ({ children }) => {
+export const RecipesDocumentation: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     Prism.highlightAll();
   }, []);

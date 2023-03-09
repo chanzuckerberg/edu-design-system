@@ -8,7 +8,6 @@
  */
 module.exports = {
   stories: [
-    './components/GettingStarted/GettingStarted.stories.tsx',
     '../docs',
     './components/**/*.stories.@(js|jsx|ts|tsx)',
     './components/**/*.stories.mdx',
