@@ -1,6 +1,13 @@
 const variableTokens = require('./src/tokens-dist/json/css-variables-nested.json');
 const staticTokens = require('./src/tokens-dist/json/variables-nested.json');
 
+const {
+  background: backgroundColorTokens,
+  border: borderColorTokens,
+  text: textColorTokens,
+  ...colorTokens
+} = variableTokens.eds.theme.color;
+
 module.exports = {
   /**
    * The main value in TW utility classes is for Storybook stories & recipes.
@@ -14,9 +21,16 @@ module.exports = {
   ],
   theme: {
     colors: {
-      transparent: 'transparent',
-      ...variableTokens.eds.color,
-      ...variableTokens.eds.theme.color,
+      ...colorTokens,
+    },
+    backgroundColor: {
+      ...backgroundColorTokens,
+    },
+    borderColor: {
+      ...borderColorTokens,
+    },
+    textColor: {
+      ...textColorTokens,
     },
     fontSize: {
       // provide values for both font-size and line-height
