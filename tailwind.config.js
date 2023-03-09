@@ -23,12 +23,15 @@ module.exports = {
       ...colorTokens,
     },
     backgroundColor: {
+      ...colorTokens,
       ...backgroundColorTokens,
     },
     borderColor: {
+      ...colorTokens,
       ...borderColorTokens,
     },
     textColor: {
+      ...colorTokens,
       ...textColorTokens,
     },
     fontSize: {
