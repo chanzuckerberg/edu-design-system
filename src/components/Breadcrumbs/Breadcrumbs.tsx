@@ -43,11 +43,7 @@ export const Breadcrumbs = ({
 
   const ref = React.useRef<HTMLUListElement>(null);
 
-  /**
-   * Needs useLayoutEffect over useEffect since it needs to be run before paint.
-   * Note: with React 18, might be able to use useEffect https://github.com/reactjs/reactjs.org/blob/d14cbdca2445cd676526c4c52e1e106342ff7bb3/content/docs/hooks-reference.md?plain=1#L155
-   */
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const updateShouldTruncate = () => {
       const willOverflow = ref.current
         ? ref.current.clientWidth < ref.current.scrollWidth
