@@ -1655,7 +1655,7 @@ __metadata:
     "@chanzuckerberg/story-utils": ^3.0.12
     "@commitlint/cli": ^17.4.4
     "@commitlint/config-conventional": ^17.4.4
-    "@geometricpanda/storybook-addon-badges": ^0.2.2
+    "@geometricpanda/storybook-addon-badges": ^1.1.1
     "@headlessui/react": ^1.7.13
     "@popperjs/core": ^2.11.6
     "@size-limit/file": ^8.2.4
@@ -2196,19 +2196,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@geometricpanda/storybook-addon-badges@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "@geometricpanda/storybook-addon-badges@npm:0.2.2"
-  dependencies:
-    "@storybook/addons": ^6.2.9
-    "@storybook/api": ^6.2.9
-    "@storybook/components": ^6.2.9
-    "@storybook/theming": ^6.2.9
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-is: ^17.0.2
-    styled-components: ^5.2.1
-  checksum: f78dbdd1b4c542d7819347ca6e48cca0b04b4f66f4f1358867ec2f4a1d2a6aea3f1368e9a4218830d619d0a85631ceff33e5ba0a9dc9ed58ffde1d4815eb6935
+"@geometricpanda/storybook-addon-badges@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@geometricpanda/storybook-addon-badges@npm:1.1.1"
+  peerDependencies:
+    "@storybook/addons": ^6.5.8
+    "@storybook/api": ^6.5.8
+    "@storybook/components": ^6.5.8
+    "@storybook/core-events": ^6.5.8
+    "@storybook/theming": ^6.5.8
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: d60a2368213019392355b980d635f28a9e4d21ab8a40a350048429a4967a42ba810a7a152ddb62151c48035968e1ca97314fd00d9327f6d671a5fc3f686e460b
   languageName: node
   linkType: hard
 
@@ -3310,7 +3314,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addons@npm:6.5.16, @storybook/addons@npm:^6.2.9":
+"@storybook/addons@npm:6.5.16":
   version: 6.5.16
   resolution: "@storybook/addons@npm:6.5.16"
   dependencies:
@@ -3332,7 +3336,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/api@npm:6.5.16, @storybook/api@npm:^6.2.9":
+"@storybook/api@npm:6.5.16":
   version: 6.5.16
   resolution: "@storybook/api@npm:6.5.16"
   dependencies:
@@ -3553,7 +3557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/components@npm:6.5.16, @storybook/components@npm:^6.2.9":
+"@storybook/components@npm:6.5.16":
   version: 6.5.16
   resolution: "@storybook/components@npm:6.5.16"
   dependencies:
@@ -4231,7 +4235,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:6.5.16, @storybook/theming@npm:^6.2.9":
+"@storybook/theming@npm:6.5.16":
   version: 6.5.16
   resolution: "@storybook/theming@npm:6.5.16"
   dependencies:
@@ -17409,19 +17413,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react-dom@npm:17.0.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-    scheduler: ^0.20.2
-  peerDependencies:
-    react: 17.0.2
-  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
-  languageName: node
-  linkType: hard
-
 "react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -17593,16 +17584,6 @@ __metadata:
     shallowequal: ^1.1.0
     throttle-debounce: ^3.0.1
   checksum: 97cb852c24bbd50acb310da89df564e0d069415f6635676dae3d3bdc583ece88090c0f2ee88a6b0dc36d2793af4a11e83bf6bbb41b86225dd0cf338e8f7e8552
-  languageName: node
-  linkType: hard
-
-"react@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 
@@ -18375,16 +18356,6 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: d3fa3e2aaf6c65ed52ee993aff1891fc47d5e47d515164b5449cbf5da2cbdc396137e55590472e64c5c436c14ae64a8a03c29b9e7389fc6f14035cf4e982ef3b
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.20.2":
-  version: 0.20.2
-  resolution: "scheduler@npm:0.20.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
   languageName: node
   linkType: hard
 
@@ -19529,7 +19500,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^5.2.1, styled-components@npm:^5.3.5":
+"styled-components@npm:^5.3.5":
   version: 5.3.6
   resolution: "styled-components@npm:5.3.6"
   dependencies:
