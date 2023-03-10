@@ -7,6 +7,12 @@
  */
 .loading-indicator {
   background-color: transparent;
+  padding: 3px; /* ported from react-loader-spinner */
+  display: flex;
+}
+
+.loading-indicator--invisible {
+  display: none;
 }
 
 /* override for `color` */
