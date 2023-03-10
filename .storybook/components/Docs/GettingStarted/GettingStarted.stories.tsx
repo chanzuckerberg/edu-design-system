@@ -1,22 +1,13 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
 import GettingStartedDocs from '../../../../docs/GETTING_STARTED.md';
-import { Documentation } from '../Documentation';
+import { markdownStorybookOptions } from '../MarkdownWrapper';
 export default {
   title: 'Getting Started',
   component: GettingStartedDocs,
-  parameters: {
-    chromatic: { disableSnapshot: true },
-    axe: {
-      skip: true,
-    },
-  },
+  ...markdownStorybookOptions,
 };
 
 export const GettingStarted: StoryObj = {
-  render: () => (
-    <Documentation>
-      <GettingStartedDocs />
-    </Documentation>
-  ),
+  render: () => <GettingStartedDocs />,
 };
