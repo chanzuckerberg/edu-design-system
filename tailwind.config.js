@@ -22,17 +22,16 @@ module.exports = {
     colors: {
       ...colorTokens,
     },
-    backgroundColor: {
-      ...colorTokens,
-      ...backgroundColorTokens,
-    },
-    borderColor: {
-      ...colorTokens,
-      ...borderColorTokens,
-    },
-    textColor: {
-      ...colorTokens,
-      ...textColorTokens,
+    extend: {
+      backgroundColor: {
+        ...backgroundColorTokens,
+      },
+      borderColor: {
+        ...borderColorTokens,
+      },
+      textColor: {
+        ...textColorTokens,
+      },
     },
     fontSize: {
       // provide values for both font-size and line-height
