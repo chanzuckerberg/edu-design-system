@@ -1,11 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import React, { useEffect } from 'react';
+import type { StoryObj } from '@storybook/react';
+import React from 'react';
 import ThemingDocs from '../../../../docs/THEMING.md';
-import { LayoutContainer } from '../../../../src/components/LayoutContainer/LayoutContainer';
-import { LayoutLinelengthContainer } from '../../../../src/components/LayoutLinelengthContainer/LayoutLinelengthContainer';
-// @ts-expect-error prism.js must be in JS
-import Prism from '../prism';
-import styles from '../markdown.module.css';
+import { Documentation } from '../Documentation';
 
 export default {
   title: 'Documentation/Theming',
@@ -16,28 +12,12 @@ export default {
       skip: true,
     },
   },
-  decorators: [
-    (Story) => (
-      <div className={styles['markdown']}>
-        <Story />
-      </div>
-    ),
-  ],
-} as Meta;
-
-const ThemingDocumentation: React.FC = () => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-  return (
-    <LayoutContainer>
-      <LayoutLinelengthContainer>
-        <ThemingDocs />
-      </LayoutLinelengthContainer>
-    </LayoutContainer>
-  );
 };
 
 export const Theming: StoryObj = {
-  render: () => <ThemingDocumentation />,
+  render: () => (
+    <Documentation>
+      <ThemingDocs />
+    </Documentation>
+  ),
 };

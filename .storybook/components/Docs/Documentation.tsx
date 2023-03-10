@@ -5,6 +5,7 @@ import Prism from './prism';
 import { LayoutContainer } from '../../../src/components/LayoutContainer/LayoutContainer';
 import { LayoutLinelengthContainer } from '../../../src/components/LayoutLinelengthContainer/LayoutLinelengthContainer';
 import './prism.css';
+import styles from './Documentation.module.css';
 
 export interface Props {
   /**
@@ -18,7 +19,7 @@ export const Documentation: React.FC<Props> = ({ children }) => {
     Prism.highlightAll();
   }, []);
   return (
-    <LayoutContainer>
+    <LayoutContainer className={styles['documentation']}>
       <LayoutLinelengthContainer>{children}</LayoutLinelengthContainer>
     </LayoutContainer>
   );
