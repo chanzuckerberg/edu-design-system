@@ -84,7 +84,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Lint Commit Messages 👕
-        uses: wagoid/commitlint-github-action@v1
+        uses: wagoid/commitlint-github-action@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
