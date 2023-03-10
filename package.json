@@ -102,7 +102,7 @@
     "@chanzuckerberg/story-utils": "^3.0.12",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "@geometricpanda/storybook-addon-badges": "^0.2.2",
+    "@geometricpanda/storybook-addon-badges": "^1.1.1",
     "@size-limit/file": "^8.2.4",
     "@storybook/addon-a11y": "^6.5.16",
     "@storybook/addon-docs": "^6.5.16",
