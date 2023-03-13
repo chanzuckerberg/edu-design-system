@@ -15,14 +15,14 @@ export type UserData = {
   /**
    * Additional data for an attached user (email, etc.)
    */
-  [k: string]: string | number | undefined;
+  [k: string]: string | number | boolean | undefined;
 };
 
 export interface Props {
   /**
    * Label for the given avatar. Defaults to a string using user data.
    */
-  ariaLabel: string;
+  ariaLabel?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -94,7 +94,7 @@ export const Avatar = ({
 
   const descriptiveLabel =
     ariaLabel ??
-    `Avatar for ${!user && 'unknown'} user ${user?.fullName || ''}`;
+    `Avatar for ${user ? '' : 'unknown '}user ${user?.fullName || ''}`;
 
   return (
     <div
