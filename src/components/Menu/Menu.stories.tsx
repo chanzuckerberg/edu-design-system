@@ -14,7 +14,7 @@ export default {
     'Menu.Item': Menu.Item,
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
     layout: 'centered',
   },
 } as Meta<MenuProps>;

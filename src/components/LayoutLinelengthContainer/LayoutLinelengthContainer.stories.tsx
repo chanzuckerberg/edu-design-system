@@ -6,6 +6,9 @@ import { LayoutLinelengthContainer } from './LayoutLinelengthContainer';
 export default {
   title: 'Components/Linelength Container',
   component: LayoutLinelengthContainer,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: (
       <>

@@ -11,6 +11,9 @@ import Text from '../Text';
 export default {
   title: 'Components/Tabs',
   component: Tabs,
+  parameters: {
+    badges: ['1.0'],
+  },
   subcomponents: { Tabs },
   args: {
     children: (

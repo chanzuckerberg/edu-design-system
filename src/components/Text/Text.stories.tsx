@@ -9,6 +9,9 @@ import styles from './Text.stories.module.css';
 export default {
   title: 'Components/Text',
   component: Text,
+  parameters: {
+    badges: ['1.0'],
+  },
   argTypes: {
     children: {
       control: {

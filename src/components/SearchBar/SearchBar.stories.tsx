@@ -8,7 +8,7 @@ export default {
   title: 'Components/SearchBar',
   component: SearchBar,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.1', BADGE.BETA],
   },
   decorators: [
     (Story) => (

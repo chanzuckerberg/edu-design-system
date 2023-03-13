@@ -9,6 +9,7 @@ export default {
   component: Toolbar,
   subcomponents: { ToolbarItem },
   parameters: {
+    badges: ['1.0'],
     axe: {
       skip: true,
     },

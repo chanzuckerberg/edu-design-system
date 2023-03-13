@@ -13,6 +13,10 @@ export default {
   title: 'Components/Checkbox',
   component: Checkbox,
   args: defaultArgs,
+  parameters: {
+    badges: ['1.0'],
+  },
+
   decorators: [
     (Story) => (
       <div

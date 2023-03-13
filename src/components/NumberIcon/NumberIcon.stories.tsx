@@ -6,6 +6,9 @@ import { NumberIcon } from './NumberIcon';
 export default {
   title: 'Components/NumberIcon',
   component: NumberIcon,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     'aria-label': 'Step 1',
     number: 1,

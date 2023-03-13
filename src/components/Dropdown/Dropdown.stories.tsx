@@ -13,7 +13,7 @@ export default {
   title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   decorators: [
     (Story) => (

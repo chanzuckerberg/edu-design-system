@@ -9,6 +9,9 @@ import Text from '../Text';
 export default {
   title: 'Components/PageHeader',
   component: PageHeader,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageHeader>;

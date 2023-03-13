@@ -12,7 +12,7 @@ export default {
     maxValue: 100,
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
   },
   decorators: [
     (Story) => (

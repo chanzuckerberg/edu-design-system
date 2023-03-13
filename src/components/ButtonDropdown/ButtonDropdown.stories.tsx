@@ -11,7 +11,7 @@ export default {
   title: 'Components/ButtonDropdown',
   parameters: {
     layout: 'centered',
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   component: ButtonDropdown,
   subcomponents: { DropdownMenuItem },

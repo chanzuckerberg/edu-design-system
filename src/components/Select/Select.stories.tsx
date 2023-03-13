@@ -18,7 +18,7 @@ export default {
     'Select.Option': Select.Option,
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
     layout: 'centered',
   },
 } as Meta;

@@ -9,6 +9,9 @@ import styles from './Section.stories.module.css';
 export default {
   title: 'Components/Section',
   component: Section,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children:
       'This is the section body, where you can put any content or include other components.',

@@ -16,6 +16,9 @@ export default {
       </>
     ),
   },
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ButtonGroup>;

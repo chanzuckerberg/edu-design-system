@@ -30,6 +30,9 @@ export default {
       </>
     ),
   },
+  parameters: {
+    badges: ['1.0'],
+  },
   component: Grid,
   subcomponents: { GridItem },
 } as Meta<Args>;

@@ -14,7 +14,7 @@ export default {
     'Skeleton.Text': Skeleton.Text,
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
     layout: 'centered',
     backgrounds: {
       default: 'eds-color-neutral-white',

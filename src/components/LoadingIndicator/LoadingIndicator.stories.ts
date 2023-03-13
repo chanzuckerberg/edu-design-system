@@ -9,7 +9,7 @@ export default {
   component: LoadingIndicator,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
   },
 } as Meta<Args>;
 

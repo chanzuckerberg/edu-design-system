@@ -8,7 +8,7 @@ export default {
   title: 'Components/PopoverListItem',
   component: PopoverListItem,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
   },
 } as Meta<Args>;
 

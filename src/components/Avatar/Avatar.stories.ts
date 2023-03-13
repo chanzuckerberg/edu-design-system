@@ -13,7 +13,7 @@ export default {
     variant: 'icon',
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.3', BADGE.BETA],
     layout: 'centered',
   },
 } as Meta<Args>;

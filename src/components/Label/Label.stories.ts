@@ -6,6 +6,9 @@ import { Label } from './Label';
 export default {
   title: 'Components/Label',
   component: Label,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Label>;
