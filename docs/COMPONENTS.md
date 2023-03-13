@@ -2,6 +2,14 @@
 
 This codebase contains all the components, [recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/), and pages to successfully build the presentation view of product screens.
 
+The top-level organization you can find in storybook is as follows:
+
+- Design tokens
+- Documentation
+- Components
+- Pages
+- Recipes
+
 ## Working with components
 
 ### Using components
@@ -32,7 +40,9 @@ From there, call EDS components in your React application and pass in the desire
 </Button>
 ```
 
-Each EDS component is documented in Storybook, which surfaces each component's API and provides copy-and-paste code snippets. If you have questions or are experiencing any issues when working with EDS's components, please reach out for support via slack and the team will be happy to help.
+Each EDS component is documented in Storybook, which surfaces each component's API and provides copy-and-paste code snippets. We're using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/#the-atomic-design-methodology) to categorize our components, but grouping them under a single "Components" category in Storybook. Information about the component category will appear in its documentation, or as annotations.
+
+If you have questions or are experiencing any issues when working with EDS's components, please reach out for support via slack and the team will be happy to help.
 
 ### Creating a component
 
@@ -43,7 +53,7 @@ Each EDS component is documented in Storybook, which surfaces each component's A
 3. Edit component source code in accordance with [EDS's code guidelines](./CODE_GUIDELINES.md)
 4. Create relevant stories for all component variants
 
-### Beta status
+### Component Beta status
 
 When components are first created using the `plop` feature, they're given a beta tag in the `.stories` file and a line is added to the component docstring stating that the component is in beta. When the component is first officially released/announced internally, the component will be in beta, but it will leave beta in the following release. We expect these releases to happen about once/month, and the removal of the beta information will happen as part of the release process.
 
@@ -69,7 +79,7 @@ Application developers can copy and paste page-level code into the application a
 4. Begin editing the page, importing any components and recipes required to successfully build the page.
 5. Create relevant stories for all page variants
 
-Note: pages live in the `.storybook` directory of the project. These do not live in `src` since they are not shipped with the EDS library.
+**Note**: pages live in the `.storybook` directory of the project. These do not live in `src` since they are not shipped with the EDS library.
 
 These take on the same structure as the components above:
 
@@ -97,31 +107,51 @@ Pages
 
 ## Working with recipes
 
-**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system.
+**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system. Recipes should follow EDS [code conventions](./CODE_GUIDELINES.md) as closely as possible in order to make future use across projects as easy as possible.
 
-**Note**: Recipe components live in `.storybook/recipes` and take the following shape in Storybook:
+### Using recipes
+
+Recipes aren't meant to be consumed directly, but rather referenced by application developers. The intention is for recipes represented in Storybook to faithfully represent how to compose core components in EDS to achieve common, useful user interface conventions.
+
+If you have any new ideas for recipes, feel free to reach out via slack to discuss! Or, contribute a new one using the steps below.
+
+### Creating a recipe
+
+1. Run `plop recipe` in the command line.
+2. Provide a name when asked "What is your recipe name?"
+3. Plop will generate a recipe and accompanying stories file at `./storybook/recipes/[YourRecipeName]/[YourRecipeName].tsx`
+4. Begin editing the recipe, importing any necessary components and other recipes.
+5. Create relevant stories for all recipe variants
+
+**Note**: Recipes live in `.storybook` directory of the project. These do not live in `src` since they are not shipped with the EDS library.
+
+These take on the same structure as the components above:
 
 ```
-Recipes
+.storybook
+--recipes
+----RecipeName
+------RecipeName.tsx
+------RecipeName.stories.ts
+------RecipeName.module.css
+```
+
+- `RecipeName.tsx` contains the HTML and components, and may define state and behaviors to demonstrate how the composed components work
+- `RecipeName.stories.tsx` contains all the [stories](https://storybook.js.org/basics/writing-stories/) for the recipe.
+- `RecipeName.module.css` may contain some light styling to control the composition (e.g., how to use TailwindCSS with the components)
+
+**Recipes** follow this organizational structure in Storybook:
+
+```
+Recipe
 --Recipe Name
-----Recipe Stories
+----Default
+----Additional States (as needed)
 ```
-
-Recipe components are not part of EDS. However, they should follow EDS [code conventions](./CODE_GUIDELINES.md) as closely as possible in order to make future use across projects as easy as possible.
 
 ---
 
 ## Directory structure <a name="directory"></a>
-
-### Organizing components
-
-We're using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/#the-atomic-design-methodology) to categorize our components, but grouping them under a single "Components" category in Storybook. Information about the component category will appear in its documentation, or as annotations. The top-level organization you can find in storybook is as follows:
-
-- Design tokens
-- Documentation
-- Components
-- Pages
-- Recipes
 
 The component stucture is as follows:
 
