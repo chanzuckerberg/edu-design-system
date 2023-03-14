@@ -11,7 +11,7 @@ export default {
     children: 'Label',
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
 } as Meta<Args>;
 

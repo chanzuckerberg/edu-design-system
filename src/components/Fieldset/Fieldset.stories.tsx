@@ -9,6 +9,9 @@ import FieldsetLegend from '../FieldsetLegend';
 export default {
   title: 'Components/Fieldset',
   component: Fieldset,
+  parameters: {
+    badges: ['1.0'],
+  },
   subcomponents: { FieldsetLegend, FieldsetItems },
 } as Meta<Args>;
 

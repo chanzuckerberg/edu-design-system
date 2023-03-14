@@ -17,7 +17,7 @@ export default {
     fieldNote: 'Longer Field description',
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.3', BADGE.BETA],
   },
 } as Meta<Args>;
 

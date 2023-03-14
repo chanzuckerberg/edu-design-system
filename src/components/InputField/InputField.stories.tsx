@@ -9,7 +9,7 @@ export default {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
   decorators: [
     (Story) => (

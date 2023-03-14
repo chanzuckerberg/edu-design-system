@@ -11,7 +11,7 @@ export default {
   component: DropdownMenu,
   subcomponents: { DropdownMenuItem },
   parameters: {
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
 } as Meta<Args>;
 

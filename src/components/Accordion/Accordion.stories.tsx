@@ -13,7 +13,7 @@ export default {
     'Accordion.Button': Accordion.Button,
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
   },
   args: {
     headingAs: 'h2',

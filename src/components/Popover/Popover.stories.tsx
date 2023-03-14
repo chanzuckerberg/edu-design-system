@@ -17,6 +17,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
+    badges: ['1.0'],
     chromatic: {
       // These stories are very flaky, though we're not sure why.
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.

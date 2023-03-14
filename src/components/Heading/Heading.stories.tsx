@@ -8,6 +8,9 @@ import styles from './Heading.stories.module.css';
 export default {
   title: 'Components/Heading',
   component: Heading,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Heading>;

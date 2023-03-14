@@ -10,7 +10,7 @@ export default {
   title: 'Components/FieldNote',
   component: FieldNote,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
 } as Meta<Args>;
 

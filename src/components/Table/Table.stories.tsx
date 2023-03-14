@@ -15,7 +15,7 @@ export default {
   component: Table,
   subcomponents: { TableBody, TableCell, TableHeader, TableRow },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.1', BADGE.BETA],
   },
   decorators: [
     (Story) => (

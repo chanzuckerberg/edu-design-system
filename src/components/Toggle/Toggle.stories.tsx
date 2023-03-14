@@ -27,7 +27,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
   render: (args) => <InteractiveToggle {...args} />,
 } as Meta<Args>;

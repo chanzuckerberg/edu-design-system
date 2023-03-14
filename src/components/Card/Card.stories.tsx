@@ -9,6 +9,9 @@ export default {
   title: 'Components/Card',
   component: Card,
   subcomponents: { CardHeader, CardBody, CardFooter },
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: (
       <>

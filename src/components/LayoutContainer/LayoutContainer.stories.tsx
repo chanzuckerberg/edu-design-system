@@ -10,6 +10,7 @@ export default {
     axe: {
       skip: true,
     },
+    badges: ['1.0'],
   },
   args: {
     children: <div className="fpo">Layout container</div>,

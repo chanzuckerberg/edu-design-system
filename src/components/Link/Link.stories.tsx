@@ -8,6 +8,9 @@ import Icon from '../Icon';
 export default {
   title: 'Components/Link',
   component: Link,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: 'Link',
     variant: 'secondary',

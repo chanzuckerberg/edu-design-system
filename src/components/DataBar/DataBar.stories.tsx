@@ -17,6 +17,9 @@ export default {
       { value: 15, text: 'Segment 3' },
     ],
   },
+  parameters: {
+    badges: ['1.0'],
+  },
   decorators: [
     (Story) => (
       <div
