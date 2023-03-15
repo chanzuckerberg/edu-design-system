@@ -196,14 +196,14 @@ Tier 3 component variables represent each component's specific values.
 
 ## Tailwind Class Tokens
 
-If the EDS tailwind config theme is being used, Tier 2 and tier 3 color tokens are available as a part of tailwind utility classes. Background, border, and text colors will only be available for themselves specifically. e.g.:
+If the EDS tailwind config theme is being used, Tier 2 and tier 3 color tokens are available as a part of tailwind utility classes, and can be used to apply to specific attributes to a component. Background(prefix: bg-), border(prefix: border-), and text(prefix: text-) colors will only be available for themselves specifically. e.g.:
 
 ```jsx
 <div
   className="
     bg-brand-grape-100 // will NOT work since tier 1 colors are not available
     bg-button-icon-brand // will work since button colors are available across all color utility classes
-    bg-link-neutral // will NOT work since border colors are available for only border color utility classes
+    bg-link-neutral // will NOT work since background utility classes don't have border colors
     border-link-neutral // will work since border colors are available for border color utility classes
 
     bg-brand-primary-strong
