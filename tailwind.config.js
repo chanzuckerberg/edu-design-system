@@ -20,6 +20,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
       ...colorTokens,
     },
     extend: {
