@@ -56,8 +56,6 @@
  * Ellipsis variant of the breadcrumbs list item.
  */
 .breadcrumbs__ellipsis {
-  /* Remove default browser styles for <button> and make more like a link. */
-  @mixin reset;
   border: none;
   background-color: transparent;
   cursor: pointer;

@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # PAGE HEADER
 \*------------------------------------*/
@@ -70,12 +68,8 @@
 /**
  * Page header title
  */
-.page-header__title {
-  @mixin reset;
-
-  .page-header--center & {
-    text-align: center;
-  }
+.page-header--center .page-header__title {
+  text-align: center;
 }
 
 /**
@@ -92,7 +86,6 @@
  * Page description
  */
 .page-header__description {
-  @mixin reset;
   color: var(--eds-theme-color-text-neutral-subtle);
   margin-top: var(--eds-size-1);
 

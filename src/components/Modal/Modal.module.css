@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # MODAL
 \*------------------------------------*/
@@ -130,7 +128,6 @@
  * The modal close button.
  */
 .modal__close-button {
-  @mixin reset;
   border: 0;
   background-color: transparent;
 

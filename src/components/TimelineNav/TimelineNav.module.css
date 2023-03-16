@@ -125,8 +125,6 @@
  * Actual unordered list of timeline-nav.
  */
 .timeline-nav__list {
-  @mixin reset;
-  list-style: none;
   @mixin eds-theme-typography-body-text;
 
   @media all and (min-width: $eds-bp-lg) {
