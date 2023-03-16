@@ -57,7 +57,6 @@
  * Actual unordered list of tabs.
  */
 .tabs__list {
-  @mixin reset;
   list-style: none;
   /* Set to display flex to place tabs side by side. */
   display: flex;

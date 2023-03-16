@@ -4,7 +4,7 @@ import React from 'react';
 import { PrimaryNav } from './PrimaryNav';
 
 export default {
-  title: 'Components/PrimaryNav',
+  title: 'Recipes/PrimaryNav',
   component: PrimaryNav,
   subcomponents: { 'PrimaryNav.Item': PrimaryNav.Item },
   decorators: [

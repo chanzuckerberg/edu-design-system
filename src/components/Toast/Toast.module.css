@@ -65,7 +65,6 @@
  * The text in the toast. Styled via mixins over using Text component.
  */
 .toast__text {
-  @mixin reset;
   @mixin eds-typography-preset-007;
 
   color: inherit;
