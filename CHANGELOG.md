@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v10.0.0...v11.0.0) (2023-03-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* add `indeterminate` prop to <Checkbox> that's separate from `checked` (#1520)
+
+### Features
+
+* add `indeterminate` prop to <Checkbox> that's separate from `checked` ([#1520](https://github.com/chanzuckerberg/edu-design-system/issues/1520)) ([d8e2cc4](https://github.com/chanzuckerberg/edu-design-system/commit/d8e2cc4bbf0c378a641d129ecbb8e2aa52c424f1))
+* **LoadingIndicator:** extract and use SVG animation directly ([#1540](https://github.com/chanzuckerberg/edu-design-system/issues/1540)) ([6e315ea](https://github.com/chanzuckerberg/edu-design-system/commit/6e315ea1402938682169d4b060f2e0039e3e8e63))
+* **menu:** add Menu.PlainButton as a minimally styled Menu button ([#1516](https://github.com/chanzuckerberg/edu-design-system/issues/1516)) ([8268d8e](https://github.com/chanzuckerberg/edu-design-system/commit/8268d8e5d21038410e632141f0c1fa1f28090ab9))
+
+
+### Bug Fixes
+
+* actually use our shared prettier config ([c98ea51](https://github.com/chanzuckerberg/edu-design-system/commit/c98ea5130929fd8852f3dcbff2acffead01a0044))
+* **Avatar:** loosen props for avatar aria-label component ([#1544](https://github.com/chanzuckerberg/edu-design-system/issues/1544)) ([4ab9183](https://github.com/chanzuckerberg/edu-design-system/commit/4ab918312739677bdfd5d30c3d2e1eb03290955a))
+* markdown story styling ([#1536](https://github.com/chanzuckerberg/edu-design-system/issues/1536)) ([89eba6b](https://github.com/chanzuckerberg/edu-design-system/commit/89eba6b255a34c47ca4c4a1edf4897c9085dcc55))
+
 ## [10.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v9.1.0...v10.0.0) (2023-03-02)
 
 
