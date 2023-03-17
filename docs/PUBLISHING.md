@@ -65,18 +65,18 @@ Merge the PR through a **merge commit**:
 
 ![github user interface showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
 
-7. Once that PR is merged, click "Restore branch" and open another pull request, this time merging the release branch into **`next`**. Again, merge the PR through a **merge commit**. This will make sure the release details are merged into `next` and keeps the contents of `next` and `main` in sync.
-
 #### Publishing the package
 
-8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
-9. Publish the package: `npm publish`
-10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). This will post to the following channels using the GitHub integration:
-    - #eng-n00bs in the CZI Education workspace
-    - #proj-edu-design-system in the CZI Education workspace
-11. Update the package in the main apps that use it (for major versions):
-    - [cra-template-edu](https://github.com/chanzuckerberg/frontend-libs/tree/main/packages/cra-template-edu) - in the template.json and package.json
-    - [edu-stack](https://github.com/chanzuckerberg/edu-stack) - in the package.json
+7. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
+8. Publish the package: `npm publish`
+9. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). This will automatically post to [relevant slack channels](https://slack.github.com/):
+10. Lastly, run the following to "back merge" release changes to `next`:
+    - git checkout main && git pull origin main && git checkout next && git merge main && git push
+
+Once complete, you can update the package in the main apps that use it (for major versions):
+
+- [cra-template-edu](https://github.com/chanzuckerberg/frontend-libs/tree/main/packages/cra-template-edu) - in the template.json and package.json
+- [edu-stack](https://github.com/chanzuckerberg/edu-stack) - in the package.json
 
 Take note of the details here, which will also be mentioned in that month's newsletter, and updates to ZeroHeight (What's New).
 
