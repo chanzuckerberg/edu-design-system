@@ -20,6 +20,7 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
+    for="headlessui-switch-:r2:"
     id="headlessui-label-:r3:"
   >
     Lorem ipsum
@@ -33,6 +34,7 @@ exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
 >
   <label
     class="toggle__label"
+    for="headlessui-switch-:r8:"
     id="headlessui-label-:r7:"
   >
     Custom positioned label
@@ -74,6 +76,7 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
+    for="headlessui-switch-:r0:"
     id="headlessui-label-:r1:"
   >
     Lorem ipsum
@@ -102,6 +105,7 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
+    for="headlessui-switch-:r4:"
     id="headlessui-label-:r5:"
   >
     Lorem ipsum

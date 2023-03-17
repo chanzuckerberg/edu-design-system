@@ -42,6 +42,9 @@ export default {
       control: 'boolean',
     },
   },
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Button>;

@@ -7,7 +7,6 @@ exports[`<LoadingIndicator /> Default story renders snapshot 1`] = `
   class="loading-indicator"
   data-testid="oval-loading"
   role="status"
-  style="display: flex; padding: 3px;"
 >
   <svg
     data-testid="oval-svg"
@@ -56,10 +55,9 @@ exports[`<LoadingIndicator /> Invisible story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator"
+  class="loading-indicator loading-indicator--invisible"
   data-testid="oval-loading"
   role="status"
-  style="display: none; padding: 3px;"
 >
   <svg
     data-testid="oval-svg"
@@ -111,7 +109,6 @@ exports[`<LoadingIndicator /> Large story renders snapshot 1`] = `
   class="loading-indicator"
   data-testid="oval-loading"
   role="status"
-  style="display: flex; padding: 3px;"
 >
   <svg
     data-testid="oval-svg"
@@ -163,7 +160,6 @@ exports[`<LoadingIndicator /> Medium story renders snapshot 1`] = `
   class="loading-indicator"
   data-testid="oval-loading"
   role="status"
-  style="display: flex; padding: 3px;"
 >
   <svg
     data-testid="oval-svg"
@@ -215,7 +211,6 @@ exports[`<LoadingIndicator /> Small story renders snapshot 1`] = `
   class="loading-indicator"
   data-testid="oval-loading"
   role="status"
-  style="display: flex; padding: 3px;"
 >
   <svg
     data-testid="oval-svg"
@@ -267,7 +262,6 @@ exports[`<LoadingIndicator /> WithAriaLabel story renders snapshot 1`] = `
   class="loading-indicator"
   data-testid="oval-loading"
   role="status"
-  style="display: flex; padding: 3px;"
 >
   <svg
     data-testid="oval-svg"

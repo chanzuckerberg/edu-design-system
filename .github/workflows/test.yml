@@ -6,7 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node 😻
         uses: actions/setup-node@v3
         with:
@@ -28,7 +28,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node 😻
         uses: actions/setup-node@v3
         with:
@@ -70,7 +70,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -83,8 +83,11 @@ jobs:
       - name: Install Dependencies ⬆️
         run: yarn install --immutable
 
+      - name: Build design tokens # required since there are references to built tokens
+        run: yarn build:tokens
+
       - name: Lint Commit Messages 👕
-        uses: wagoid/commitlint-github-action@v1
+        uses: wagoid/commitlint-github-action@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

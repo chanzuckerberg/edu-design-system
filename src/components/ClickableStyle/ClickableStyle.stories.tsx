@@ -12,6 +12,7 @@ export default {
     as: 'a',
   },
   parameters: {
+    badges: ['1.0'],
     layout: 'centered',
     controls: { expand: true },
   },

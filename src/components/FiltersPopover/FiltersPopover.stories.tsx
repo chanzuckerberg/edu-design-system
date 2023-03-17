@@ -14,7 +14,7 @@ export default {
   title: 'Components/FiltersPopover',
   component: FiltersPopover,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.1', BADGE.BETA],
     chromatic: { disableSnapshot: true },
   },
   args: {

@@ -16,7 +16,7 @@ export default {
       'New curriculum updates are available for one or more of your courses.',
   },
   parameters: {
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
 } as Meta<Args>;
 

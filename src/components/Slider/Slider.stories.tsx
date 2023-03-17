@@ -10,7 +10,7 @@ export default {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.BETA],
+    badges: ['1.3', BADGE.BETA],
   },
   decorators: [
     (Story) => (

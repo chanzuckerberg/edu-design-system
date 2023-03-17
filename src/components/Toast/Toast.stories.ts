@@ -5,6 +5,9 @@ import { Toast } from './Toast';
 export default {
   title: 'Components/Toast',
   component: Toast,
+  parameters: {
+    badges: ['1.0'],
+  },
   argTypes: { onDismiss: { action: 'dismissed' } },
   args: {
     children: "You've got toast!",

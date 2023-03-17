@@ -16,29 +16,11 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":r0:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+      <input
+        class="checkbox__input"
+        id=":r0:"
+        type="checkbox"
+      />
       <label
         class="label label--lg"
         for=":r0:"
@@ -49,29 +31,11 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":r1:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+      <input
+        class="checkbox__input"
+        id=":r1:"
+        type="checkbox"
+      />
       <label
         class="label label--lg"
         for=":r1:"
@@ -82,29 +46,11 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":r2:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+      <input
+        class="checkbox__input"
+        id=":r2:"
+        type="checkbox"
+      />
       <label
         class="label label--lg"
         for=":r2:"
@@ -115,29 +61,11 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":r3:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+      <input
+        class="checkbox__input"
+        id=":r3:"
+        type="checkbox"
+      />
       <label
         class="label label--lg"
         for=":r3:"
@@ -148,29 +76,11 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     <div
       class="checkbox"
     >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          id=":r4:"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
+      <input
+        class="checkbox__input"
+        id=":r4:"
+        type="checkbox"
+      />
       <label
         class="label label--lg"
         for=":r4:"

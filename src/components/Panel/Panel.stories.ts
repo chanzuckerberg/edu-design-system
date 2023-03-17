@@ -6,6 +6,9 @@ import { Panel } from './Panel';
 export default {
   title: 'Components/Panel',
   component: Panel,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: 'A Panel is a generic bordered container for content.',
   },

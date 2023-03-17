@@ -6,6 +6,9 @@ import { Hr } from './Hr';
 export default {
   title: 'Components/Hr',
   component: Hr,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof Hr>;

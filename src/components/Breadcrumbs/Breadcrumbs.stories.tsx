@@ -18,6 +18,9 @@ export default {
       </>
     ),
   },
+  parameters: {
+    badges: ['1.0'],
+  },
   decorators: [
     (Story) => (
       <div

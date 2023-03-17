@@ -17,6 +17,7 @@ export default {
   component: TimelineNav,
   subcomponents: { TimelineNavPanel },
   parameters: {
+    badges: ['1.0'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },

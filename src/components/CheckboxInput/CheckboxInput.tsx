@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon from '../Icon';
+import useForwardedRef from '../../util/useForwardedRef';
 import styles from './CheckboxInput.module.css';
 
 type CheckboxHTMLElementProps = Omit<
@@ -10,11 +10,9 @@ type CheckboxHTMLElementProps = Omit<
 
 export type CheckboxInputProps = CheckboxHTMLElementProps & {
   /**
-   * Whether checkbox is checked. Defaults to false.
-   * "indeterminate" can be used when a checkbox visually represents
-   * a list of checkboxes that is "partially" checked.
+   * Whether checkbox is checked.
    */
-  checked?: boolean | 'indeterminate';
+  checked?: boolean;
   /**
    * Additional classnames passed in for styling.
    */
@@ -23,37 +21,11 @@ export type CheckboxInputProps = CheckboxHTMLElementProps & {
    * Checkbox ID. Used to connect the input with a label for accessibility purposes.
    */
   id: string;
-};
-
-const checkboxIconNameMap = {
-  indeterminate: 'checkbox-indeterminate',
-  true: 'checkbox-checked',
-  false: 'checkbox-unchecked',
-};
-const CheckboxSvg = ({
-  checked,
-  disabled,
-}: {
-  checked: boolean | 'indeterminate';
-  disabled?: boolean;
-}) => {
-  const iconClassName = clsx(
-    styles['checkbox__icon'],
-    disabled && styles['checkbox__icon--disabled'],
-  );
-  return (
-    <Icon
-      className={iconClassName}
-      name={
-        checkboxIconNameMap[`${checked}`] as
-          | 'checkbox-indeterminate'
-          | 'checkbox-checked'
-          | 'checkbox-unchecked'
-      }
-      purpose="decorative"
-      size="1.5rem"
-    />
-  );
+  /**
+   * Whether the checkbox is "indeterminate". Neither checked nor unchecked. The most common use
+   * case for this is when a checkbox has sub-checkboxes, to represent a "partially checked" state.
+   */
+  indeterminate?: boolean;
 };
 
 /**
@@ -63,36 +35,26 @@ const CheckboxSvg = ({
 export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
->(({ checked = false, className, disabled, ...other }, ref) => {
-  // Make indeterminate checkbox visually match the colors of a
-  // checked state, but announce itself as "mixed" to screen readers
-  const checkedProps =
-    checked === 'indeterminate'
-      ? {
-          'aria-checked': 'mixed' as const,
-          checked: true,
-        }
-      : {
-          checked,
-        };
+>(({ checked, className, disabled, indeterminate, ...other }, ref) => {
+  const forwardedRef = useForwardedRef(ref);
+
+  // Make this checkbox indeterminate. Can only be done with JS for some reason.
+  // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes.
+  React.useEffect(() => {
+    if (forwardedRef.current) {
+      forwardedRef.current.indeterminate = !!indeterminate;
+    }
+  }, [forwardedRef, indeterminate]);
 
   return (
-    <span
-      className={clsx(
-        styles['input__wrapper'],
-        disabled && styles['input__wrapper--disabled'],
-      )}
-    >
-      <input
-        className={clsx(className, styles['checkbox__input'])}
-        disabled={disabled}
-        ref={ref}
-        type="checkbox"
-        {...checkedProps}
-        {...other}
-      />
-      <CheckboxSvg checked={checked} disabled={disabled} />
-    </span>
+    <input
+      checked={checked}
+      className={clsx(className, styles['checkbox__input'])}
+      disabled={disabled}
+      ref={forwardedRef}
+      type="checkbox"
+      {...other}
+    />
   );
 });
 

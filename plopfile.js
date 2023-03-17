@@ -92,7 +92,7 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'name',
-        message: 'What is your recipe name (e.g. GlobalHeader)?',
+        message: 'What is your recipe name (e.g. ComponentName)?',
       },
     ],
     actions: [

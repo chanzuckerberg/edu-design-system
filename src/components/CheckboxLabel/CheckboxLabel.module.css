@@ -1,12 +1,5 @@
-/*------------------------------------*\
-    # CHECKBOX LABEL
-\*------------------------------------*/
-
-/**
- * Checkbox medium variant.
- */
 .checkbox__label--md {
-  /* Centers the first line of the medium label with the checkbox. */
+  /* Center the first line of the medium label with the checkbox. */
   position: relative;
   top: 0.0625rem;
 }

@@ -10,6 +10,9 @@ import styles from './Icon.stories.module.css';
 export default {
   title: 'Components/Icon',
   component: Icon,
+  parameters: {
+    badges: ['1.0'],
+  },
   argTypes: {
     name: {
       control: {

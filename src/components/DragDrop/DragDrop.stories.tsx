@@ -17,6 +17,9 @@ import styles from './DragDrop.stories.module.css';
 export default {
   title: 'Components/Drag and Drop',
   component: DragDrop,
+  parameters: {
+    badges: ['1.0'],
+  },
   decorators: [
     (Story) => (
       <div

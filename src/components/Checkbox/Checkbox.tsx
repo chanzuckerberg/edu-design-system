@@ -57,10 +57,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     const generatedId = useId();
     const checkboxId = id || generatedId;
 
-    const componentClassName = clsx(styles['checkbox'], className);
-
     return (
-      <div className={componentClassName}>
+      <div className={clsx(className, styles.checkbox)}>
         <CheckboxInput
           disabled={disabled}
           id={checkboxId}

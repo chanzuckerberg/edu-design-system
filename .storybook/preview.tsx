@@ -24,6 +24,23 @@ export const decorators = [
   ),
 ];
 
+function createPaperReleaseConfig(usingLabel: string) {
+  return {
+    [usingLabel]: {
+      styles: {
+        backgroundColor: '#ffffff',
+        borderColor: '#000000',
+        color: '#000000',
+      },
+      title: `${usingLabel}+`,
+      tooltip: {
+        title: `Introduced in /paper ${usingLabel}`,
+        desc: `This component was introduced in /paper ${usingLabel}`,
+      },
+    },
+  };
+}
+
 export const parameters = {
   viewport: {
     viewports: storybookViewports,
@@ -43,5 +60,11 @@ export const parameters = {
         value: '#21272D',
       },
     ],
+  },
+  badgesConfig: {
+    ...createPaperReleaseConfig('1.3'),
+    ...createPaperReleaseConfig('1.2'),
+    ...createPaperReleaseConfig('1.1'),
+    ...createPaperReleaseConfig('1.0'),
   },
 };

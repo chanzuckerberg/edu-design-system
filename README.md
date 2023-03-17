@@ -32,6 +32,21 @@ html {
 }
 ```
 
+### Tailwind Config
+
+The EDS Tailwind theme provides EDS color [tokens](./docs/TOKENS.md) and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
+
+```js
+const edsConfig.theme = require('@chanzuckerberg/eds/tailwind.config');
+
+module.exports = {
+  content: ['./app/**/*.{ts,tsx,jsx,js}'],
+  theme: edsConfig.theme,
+};
+```
+
+Refer to the [tokens tailwind section](./docs/TOKENS.md#tailwind-class-tokens) for usage guide.
+
 ## Usage
 
 Import any of the components from this package

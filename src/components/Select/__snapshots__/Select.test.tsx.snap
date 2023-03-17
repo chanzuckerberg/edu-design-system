@@ -9,7 +9,7 @@ exports[`<Select /> Compact story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:rc:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button select-button--compact"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:rb:"
@@ -106,7 +106,7 @@ exports[`<Select /> CompactUsingChildrenPropAndNoVisibleLabel story renders snap
   <button
     aria-controls="headlessui-listbox-options-:r16:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button select-button--compact"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:r15:"
@@ -203,7 +203,7 @@ exports[`<Select /> CompactWithOptionsRightAligned story renders snapshot 1`] = 
   <button
     aria-controls="headlessui-listbox-options-:rh:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button select-button--compact"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:rg:"
@@ -300,7 +300,7 @@ exports[`<Select /> Default story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:r1:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:r0:"
@@ -408,7 +408,7 @@ exports[`<Select /> DefaultWithVisibleLabel story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:r7:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-:r5: headlessui-listbox-button-:r6:"
     class="select-button"
     data-headlessui-state="open"
@@ -506,7 +506,7 @@ exports[`<Select /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:rm:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:rl:"
@@ -614,7 +614,7 @@ exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:rs:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-:rq: headlessui-listbox-button-:rr:"
     class="select-button"
     data-headlessui-state="open"
@@ -712,7 +712,7 @@ exports[`<Select /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`
   <button
     aria-controls="headlessui-listbox-options-:r11:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:r10:"
@@ -810,7 +810,7 @@ exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:r1b:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="function-children__button"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:r1a:"
@@ -913,7 +913,7 @@ exports[`<Select /> WithSelectedOption story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:r1h:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-:r1f: headlessui-listbox-button-:r1g:"
     class="select-button"
     data-headlessui-state="open"
@@ -1027,7 +1027,7 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
   <button
     aria-controls="headlessui-listbox-options-:r1o:"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:r1n:"

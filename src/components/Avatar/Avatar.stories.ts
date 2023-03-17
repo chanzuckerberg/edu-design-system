@@ -13,7 +13,7 @@ export default {
     variant: 'icon',
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.3', BADGE.BETA],
     layout: 'centered',
   },
 } as Meta<Args>;
@@ -55,12 +55,19 @@ export const UsingImage: StoryObj<Args> = {
   },
 };
 
+export const WithCustomLabel: StoryObj<Args> = {
+  args: {
+    ariaLabel: 'Custom label for avatar',
+  },
+};
+
 export const UsingInitials: StoryObj<Args> = {
   args: {
     variant: 'initials',
     user: {
       fullName: 'John Smith',
       id: '12345',
+      hasArbitraryMetadata: true,
     },
   },
 };

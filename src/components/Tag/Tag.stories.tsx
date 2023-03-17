@@ -7,6 +7,9 @@ import styles from './Tag.stories.module.css';
 export default {
   title: 'Components/Tag',
   component: Tag,
+  parameters: {
+    badges: ['1.0'],
+  },
   argTypes: {
     variant: {
       control: {

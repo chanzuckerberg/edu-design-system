@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
+import { Menu } from './Menu';
 import * as stories from './Menu.stories';
 
 const { Default } = composeStories(stories);
@@ -54,5 +55,26 @@ describe('<Menu />', () => {
     await user.keyboard('{Escape}');
 
     expect(screen.queryByTestId('menu-content')).not.toBeInTheDocument();
+  });
+
+  it('should allow render prop usage', async () => {
+    const user = userEvent.setup();
+    render(
+      <Menu>
+        {({ open }) => (
+          <>
+            <Menu.Button>{open ? 'open' : 'closed'}</Menu.Button>
+            <Menu.Items>
+              <Menu.Item>Menu item 1</Menu.Item>
+              <Menu.Item>Menu item 2</Menu.Item>
+            </Menu.Items>
+          </>
+        )}
+      </Menu>,
+    );
+    const triggerButton = await screen.findByRole('button');
+    expect(triggerButton).toHaveAccessibleName('closed');
+    await user.click(triggerButton);
+    expect(triggerButton).toHaveAccessibleName('open');
   });
 });
