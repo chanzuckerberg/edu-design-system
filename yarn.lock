@@ -1651,7 +1651,7 @@ __metadata:
     "@chanzuckerberg/eslint-config-edu-ts": ^1.0.7
     "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.9
     "@chanzuckerberg/eslint-plugin-stories": ^3.2.12
-    "@chanzuckerberg/prettier-config-edu": ^1.0.3
+    "@chanzuckerberg/prettier-config-edu": ^1.0.4
     "@chanzuckerberg/story-utils": ^3.0.12
     "@commitlint/cli": ^17.4.4
     "@commitlint/config-conventional": ^17.4.4
@@ -1688,7 +1688,7 @@ __metadata:
     codecov: ^3.8.3
     copyfiles: ^2.4.1
     eslint: ^8.35.0
-    eslint-config-prettier: ^8.6.0
+    eslint-config-prettier: ^8.7.0
     eslint-plugin-jest: ^27.2.1
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-storybook: ^0.6.11
@@ -1777,14 +1777,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/prettier-config-edu@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@chanzuckerberg/prettier-config-edu@npm:1.0.3"
+"@chanzuckerberg/prettier-config-edu@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@chanzuckerberg/prettier-config-edu@npm:1.0.4"
   dependencies:
-    prettier-plugin-tailwindcss: ^0.2.2
+    prettier-plugin-tailwindcss: ^0.2.4
   peerDependencies:
     prettier: ">= 2"
-  checksum: 66d5f6527172f476d13e73df9bd17cb1915b0a1e297aa1b34c313fdd341ebde0509dca32f61acc75f2047b92a79dd9a04bc3c3cde80dc3bb36ec06de960b41a9
+  checksum: dce1bff399bf979806c4392890edbe4cc69760bd356b3006a8c40599075c607ea5447c47da2c7587f43e0fec7803bd0da577603af0ce24338bfb9d369c5359b9
   languageName: node
   linkType: hard
 
@@ -9615,14 +9615,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.6.0":
-  version: 8.6.0
-  resolution: "eslint-config-prettier@npm:8.6.0"
+"eslint-config-prettier@npm:^8.7.0":
+  version: 8.7.0
+  resolution: "eslint-config-prettier@npm:8.7.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: ff0d0dfc839a556355422293428637e8d35693de58dabf8638bf0b6529131a109d0b2ade77521aa6e54573bb842d7d9d322e465dd73dd61c7590fa3834c3fa81
+  checksum: b05bc7f2296ce3e0925c14147849706544870e0382d38af2352d709a6cf8521bdaff2bd8e5021f1780e570775a8ffa1d2bac28b8065d90d43a3f1f98fd26ce52
   languageName: node
   linkType: hard
 
@@ -16967,9 +16967,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.2.2":
-  version: 0.2.3
-  resolution: "prettier-plugin-tailwindcss@npm:0.2.3"
+"prettier-plugin-tailwindcss@npm:^0.2.4":
+  version: 0.2.5
+  resolution: "prettier-plugin-tailwindcss@npm:0.2.5"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-php": "*"
@@ -17018,7 +17018,7 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: f43599b2b03b80899c32e436a518a5c139aa8b6cc59c4d73f7c95222d99f3c3b418adb2d61145602c86b0827804fa2469a927ed696c5270d0a91dfeb18246509
+  checksum: 44ae325d40ad747dd8fb36e1d7986de1919b9bd912993628c18f4743c9287b1add6dd2d951ed336b1031a2ad49c7ba5eb50e4be6d3b9b37e0da7fd137d13ec53
   languageName: node
   linkType: hard
 
