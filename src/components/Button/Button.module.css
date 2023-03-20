@@ -68,25 +68,8 @@
 }
 
 /**
- * Loading icon rotiation style
+ * Loading icon rotation style
  */
-.eds-is-loading svg {
-  animation: rotateIcon 2s linear infinite;
-  overflow: visible;
-
-  @media screen and (prefers-reduced-motion) {
-    animation: none;
-  }
-}
-
-/**
- * Loading icon rotation animation
- */
-@keyframes rotateIcon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.button.eds-is-loading svg path {
+  stroke: var(--eds-theme-color-text-disabled);
 }

@@ -3,7 +3,8 @@ import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import ClickableStyle from '../ClickableStyle';
 import type { ClickableStyleProps, VariantStatus } from '../ClickableStyle';
-import Icon from '../Icon';
+import LoadingIndicator from '../LoadingIndicator';
+
 import styles from './Button.module.css';
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -25,6 +26,7 @@ export type ButtonProps = ButtonHTMLElementProps & {
   disabled?: boolean;
   /**
    * Loading state passed down from higher level used to trigger loader and text change
+   * @deprecated - This will be removed in a future release
    */
   loading?: boolean;
   /**
@@ -93,16 +95,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         variant={variant}
         {...other}
       >
-        {loading && (
-          <Icon
-            className={styles['eds-is-loading']}
-            name="spinner"
-            purpose="informative"
-            size="1.5em"
-            title="loading"
-          />
-        )}
-
+        {loading && <LoadingIndicator className="eds-is-loading" size="sm" />}
         {children}
       </ClickableStyle>
     );
