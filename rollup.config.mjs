@@ -1,5 +1,11 @@
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
+import packageJson from './package.json' assert { type: 'json' };
+
+const allDeps = {
+  ...packageJson.peerDependencies,
+  ...packageJson.dependencies,
+};
 
 export default {
   input: 'src/index.ts',
@@ -9,7 +15,7 @@ export default {
     preserveModules: true,
     preserveModulesRoot: 'src',
   },
-  external: ['react-children-by-type'],
+  external: [...Object.keys(allDeps)],
   plugins: [
     postcss({
       extract: true,
