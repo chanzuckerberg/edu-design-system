@@ -1,4 +1,3 @@
-import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 
@@ -10,9 +9,8 @@ export default {
     preserveModules: true,
     preserveModulesRoot: 'src',
   },
-  external: ['../../icons/spritemap/spritemap.svg', 'react-children-by-type'],
+  external: ['react-children-by-type'],
   plugins: [
-    commonjs(),
     postcss({
       extract: true,
       modules: true,
