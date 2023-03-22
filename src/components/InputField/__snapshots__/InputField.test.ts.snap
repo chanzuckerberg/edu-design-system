@@ -4,10 +4,36 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
-  <input
-    class="input-field"
-    placeholder="Placeholder"
-  />
+  <div>
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label"
+        for=":r0:"
+      >
+        Default input field
+         
+      </label>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-describedby=":r1:"
+        aria-invalid="false"
+        class="input"
+        id=":r0:"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":r1:"
+    >
+      This is a fieldnote.
+    </div>
+  </div>
 </div>
 `;
 
@@ -15,17 +41,251 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
-  <input
-    class="input-field"
-    disabled=""
-    style="margin-bottom: 0.5rem;"
-    value="Default Value"
-  />
-  <input
-    class="input-field"
-    disabled=""
-    placeholder="Placeholder"
-  />
+  <div>
+    <div
+      class="input-field__overline input-field__overline--disabled"
+    >
+      <label
+        class="label"
+        for=":r4:"
+      >
+        Disabled input field
+         
+      </label>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-describedby=":r5:"
+        aria-invalid="false"
+        class="input"
+        disabled=""
+        id=":r4:"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note field-note--disabled"
+      id=":r5:"
+    >
+      This InputField is disabled
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
+  >
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for=":r1c:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r1d:"
+          aria-invalid="false"
+          class="input"
+          disabled=""
+          id=":r1c:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id=":r1d:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for=":r1e:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r1f:"
+          aria-invalid="false"
+          class="input"
+          disabled=""
+          id=":r1e:"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id=":r1f:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for=":r1g:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input"
+          disabled=""
+          id=":r1g:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for=":r1i:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input"
+          disabled=""
+          id=":r1i:"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r1l:"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          disabled=""
+          id=":r1k:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id=":r1l:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r1n:"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          disabled=""
+          id=":r1m:"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id=":r1n:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          disabled=""
+          id=":r1o:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          disabled=""
+          id=":r1q:"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -33,13 +293,1110 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
-  <input
-    class="input-field error"
-    style="margin-bottom: 0.5rem;"
-  />
-  <input
-    class="input-field error"
-    placeholder="Placeholder"
-  />
+  <div>
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label"
+        for=":r2:"
+      >
+        Error input field
+         
+      </label>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-describedby=":r3:"
+        aria-invalid="true"
+        class="input error"
+        id=":r2:"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note field-note--error"
+      id=":r3:"
+    >
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          error
+        </title>
+        <path
+          d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+        />
+      </svg>
+      This is a fieldnote with an error.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
+  >
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":rs:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":rt:"
+          aria-invalid="true"
+          class="input error"
+          id=":rs:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id=":rt:"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":ru:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":rv:"
+          aria-invalid="true"
+          class="input error"
+          id=":ru:"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id=":rv:"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r10:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="true"
+          class="input error"
+          id=":r10:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r12:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="true"
+          class="input error"
+          id=":r12:"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r15:"
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input error"
+          id=":r14:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id=":r15:"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r17:"
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input error"
+          id=":r16:"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id=":r17:"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input error"
+          id=":r18:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input error"
+          id=":r1a:"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> InputWithin story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div>
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label"
+        for=":ra:"
+      >
+        Input field with button inside
+         
+      </label>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-invalid="false"
+        class="input"
+        id=":ra:"
+        type="text"
+      />
+      <div
+        class="input-field__input-within"
+      >
+        <button
+          class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
+  >
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":rc:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":rd:"
+          aria-invalid="false"
+          class="input"
+          id=":rc:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":rd:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":re:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":rf:"
+          aria-invalid="false"
+          class="input"
+          id=":re:"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":rf:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":rg:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input"
+          id=":rg:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":ri:"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input"
+          id=":ri:"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":rl:"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":rk:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":rl:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":rn:"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":rm:"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":rn:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":ro:"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":rq:"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div>
+    <div
+      class="input-field__overline input-field__overline--no-label"
+    >
+      <p
+        class="text text--sm"
+      >
+        Required
+      </p>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-describedby=":r9:"
+        aria-invalid="false"
+        aria-label="Input for no visible label"
+        class="input"
+        id=":r8:"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":r9:"
+    >
+      This input field has no visible label
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> Required story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div>
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label"
+        for=":r6:"
+      >
+        Input field with fieldNote
+         
+      </label>
+      <p
+        class="text text--sm"
+      >
+        Required
+      </p>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-describedby=":r7:"
+        aria-invalid="false"
+        class="input"
+        id=":r6:"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":r7:"
+    >
+      This is a fieldnote for a required input field.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
+  >
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r1s:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r1t:"
+          aria-invalid="false"
+          class="input"
+          id=":r1s:"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":r1t:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r1u:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r1v:"
+          aria-invalid="false"
+          class="input"
+          id=":r1u:"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":r1v:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r20:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input"
+          id=":r20:"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r22:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input"
+          id=":r22:"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r25:"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":r24:"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":r25:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r27:"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":r26:"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id=":r27:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":r28:"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input"
+          id=":r2a:"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, label, isError
+    </p>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r2c:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r2d:"
+          aria-invalid="true"
+          class="input error"
+          id=":r2c:"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id=":r2d:"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline"
+      >
+        <label
+          class="label"
+          for=":r2e:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r2f:"
+          aria-invalid="true"
+          class="input error"
+          id=":r2e:"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id=":r2f:"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      fieldNote, label, disabled
+    </p>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for=":r2g:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r2h:"
+          aria-invalid="false"
+          class="input"
+          disabled=""
+          id=":r2g:"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id=":r2h:"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="input-field__overline input-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for=":r2i:"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-describedby=":r2j:"
+          aria-invalid="false"
+          class="input"
+          disabled=""
+          id=":r2i:"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id=":r2j:"
+      >
+        fieldNote text
+      </div>
+    </div>
+  </div>
 </div>
 `;

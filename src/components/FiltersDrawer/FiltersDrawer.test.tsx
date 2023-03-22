@@ -1,54 +1,58 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './FiltersDrawer.stories';
 
 const { OverflowInteractive } = composeStories(stories);
 
 describe('<Filters />', () => {
+  jest.setTimeout(50000);
   generateSnapshots(stories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const toggleFiltersButton = screen.queryByRole('button', {
         name: 'Filters',
       });
       if (toggleFiltersButton) {
-        fireEvent.click(toggleFiltersButton);
+        await user.click(toggleFiltersButton);
       }
       const filters = await screen.findByRole('dialog');
       return filters.parentElement; // eslint-disable-line testing-library/no-node-access
     },
   });
 
-  it('saves filters appropriately', () => {
+  it('saves filters appropriately', async () => {
+    const user = userEvent.setup();
     render(<OverflowInteractive />);
     const openFiltersButton = screen.getByRole('button', {
       name: 'Filters',
     });
-    fireEvent.click(openFiltersButton);
+    await user.click(openFiltersButton);
 
     const checkboxes = screen.getAllByRole('checkbox');
-    fireEvent.click(checkboxes[0]);
-    fireEvent.click(checkboxes[4]);
-    fireEvent.click(checkboxes[9]);
+    await user.click(checkboxes[0]);
+    await user.click(checkboxes[4]);
+    await user.click(checkboxes[9]);
     const applyFiltersButton = screen.getByRole('button', {
       name: 'Apply',
     });
-    fireEvent.click(applyFiltersButton);
+    await user.click(applyFiltersButton);
     expect(openFiltersButton).toHaveAccessibleName('Filters (3)');
 
-    fireEvent.click(openFiltersButton);
+    await user.click(openFiltersButton);
     const closeFiltersButton = screen.getByRole('button', {
       name: 'close filters',
     });
-    fireEvent.click(closeFiltersButton);
+    await user.click(closeFiltersButton);
     expect(openFiltersButton).toHaveAccessibleName('Filters (3)');
 
-    fireEvent.click(openFiltersButton);
+    await user.click(openFiltersButton);
     const clearAllFiltersButton = screen.getByRole('button', {
       name: 'Clear All',
     });
-    fireEvent.click(clearAllFiltersButton);
+    await user.click(clearAllFiltersButton);
     expect(openFiltersButton).toHaveAccessibleName('Filters');
   });
 });

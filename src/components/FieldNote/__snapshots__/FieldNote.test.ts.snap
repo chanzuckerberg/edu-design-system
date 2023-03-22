@@ -15,12 +15,16 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
   id="field-1"
 >
   <div
-    class="layout-linelength-container text text--sm text-passage text-passage--sm"
+    class="max-w-xl"
   >
-    <p>
+    <p
+      class="text text--body mb-6"
+    >
       Here is a field note that involves:
     </p>
-    <ul>
+    <ul
+      class="ml-4 list-disc"
+    >
       <li>
         Multiple lines
       </li>
@@ -31,7 +35,6 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
         Even 
         <a
           class="clickable-style clickable-style--link clickable-style--brand link--link"
-          data-bootstrap-override="clickable-style-link"
           href="#"
         >
           text links

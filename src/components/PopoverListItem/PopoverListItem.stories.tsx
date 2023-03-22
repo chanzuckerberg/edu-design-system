@@ -5,10 +5,10 @@ import React from 'react';
 import { PopoverListItem } from './PopoverListItem';
 
 export default {
-  title: 'Molecules/Blocks/PopoverListItem',
+  title: 'Components/PopoverListItem',
   component: PopoverListItem,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
   },
 } as Meta<Args>;
 

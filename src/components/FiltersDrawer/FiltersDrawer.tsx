@@ -1,13 +1,12 @@
 import clsx from 'clsx';
 import type { ReactElement, ReactNode } from 'react';
-import React, { useRef, useEffect, useState } from 'react';
-import { useUID } from 'react-uid';
-import styles from './FiltersDrawer.module.css';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';
 import FiltersButton from '../FiltersButton';
 import Heading from '../Heading';
+import styles from './FiltersDrawer.module.css';
 
 export type FiltersDrawerProps = {
   /**
@@ -155,7 +154,7 @@ export const FiltersDrawer = ({
     footerButtonGroupClassName,
   );
 
-  const generatedId = useUID();
+  const generatedId = useId();
 
   return (
     <div>
@@ -163,7 +162,7 @@ export const FiltersDrawer = ({
       <Drawer
         aria-labelledby={generatedId}
         className={styles['filters-drawer']}
-        dismissible={true}
+        dismissible
         drawerContainerClassName={styles['filters-drawer__container']}
         isActive={isActive}
         onClose={closeFilters}

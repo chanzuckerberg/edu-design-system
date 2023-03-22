@@ -107,7 +107,6 @@ exports[`<PageHeader /> WithBreadcrumbs story renders snapshot 1`] = `
     <nav
       aria-label="breadcrumbs links"
       class="breadcrumbs"
-      id="1"
     >
       <ul
         class="breadcrumbs__list"
@@ -123,15 +122,14 @@ exports[`<PageHeader /> WithBreadcrumbs story renders snapshot 1`] = `
               class="icon breadcrumbs__back-icon"
               fill="currentColor"
               role="img"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title
-                id="2"
-              >
+              <title>
                 My Courses
               </title>
-              <use
-                xlink:href="test-file-stub#chevron-left"
+              <path
+                d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
               />
             </svg>
           </a>
@@ -218,11 +216,11 @@ exports[`<PageHeader /> WithOverline story renders snapshot 1`] = `
   <div
     class="page-header__left"
   >
-    <div
-      class="layout-linelength-container text text--overline text-passage text-passage--overline"
+    <p
+      class="text text--overline"
     >
       Overline above title
-    </div>
+    </p>
     <h1
       class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
     >

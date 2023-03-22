@@ -1,13 +1,13 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
-import styles from './AccordionButton.module.css';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import { AccordionContext } from '../Accordion';
 import Button from '../Button';
 import type { HeadingElement } from '../Heading';
 import Heading from '../Heading';
 import Icon from '../Icon';
+import styles from './AccordionButton.module.css';
 
 export type Props = {
   /**
@@ -32,7 +32,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * The button subcomponent that houses the heading text and open indicator icon for the EDS Accordion component.
+ * Contains the subject of hidden content and a down/up or chevron icon to signify that the row can expand or collapse.
  */
 export const AccordionButton = ({
   children,

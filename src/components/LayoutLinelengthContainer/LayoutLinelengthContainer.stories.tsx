@@ -4,8 +4,11 @@ import React from 'react';
 import { LayoutLinelengthContainer } from './LayoutLinelengthContainer';
 
 export default {
-  title: 'Molecules/Layout and Containers/Linelength Container',
+  title: 'Components/Linelength Container',
   component: LayoutLinelengthContainer,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: (
       <>

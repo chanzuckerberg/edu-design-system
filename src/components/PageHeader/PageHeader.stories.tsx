@@ -7,8 +7,11 @@ import Tag from '../Tag';
 import Text from '../Text';
 
 export default {
-  title: 'Molecules/Text/PageHeader',
+  title: 'Components/PageHeader',
   component: PageHeader,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageHeader>;
@@ -27,11 +30,7 @@ export const WithDescription: StoryObj<Args> = {
 };
 export const WithOverline: StoryObj<Args> = {
   args: {
-    overline: (
-      <Text as="div" size="overline">
-        Overline above title
-      </Text>
-    ),
+    overline: <Text size="overline">Overline above title</Text>,
     title: 'Page header title',
     description:
       'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',

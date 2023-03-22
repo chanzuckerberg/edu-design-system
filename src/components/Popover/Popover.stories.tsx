@@ -1,15 +1,23 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 import { Popover } from './Popover';
+import type { PopoverProps } from './Popover';
 import Button from '../Button';
 
 export default {
-  title: 'Organisms/Interactive/Popover',
+  title: 'Components/Popover',
   component: Popover,
+  subcomponents: {
+    'Popover.Button': Popover.Button,
+    'Popover.Content': Popover.Content,
+    'Popover.Group': Popover.Group,
+    'Popover.Overlay': Popover.Overlay,
+  },
   parameters: {
     layout: 'centered',
+    badges: ['1.0'],
     chromatic: {
       // These stories are very flaky, though we're not sure why.
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
@@ -23,125 +31,103 @@ export default {
           Open Popover
         </Popover.Button>
         <Popover.Content data-testid="popover-content">
-          <div style={{ width: '250px' }}>
-            My popover content Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod
-          </div>
+          <div className="fpo m-2 p-6">Popover Content goes here</div>
         </Popover.Content>
       </>
     ),
   },
-} as Meta<Args>;
+} as Meta<PopoverProps>;
 
-type Args = React.ComponentProps<typeof Popover>;
-
-export const Default: StoryObj<Args> = {
+export const Default: StoryObj<PopoverProps> = {
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };
 
-export const Arrow: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Popover.Button as={Button}>Open Popover</Popover.Button>
-        <Popover.Content showArrow>
-          <div style={{ width: '250px' }}>
-            My popover content Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod
-          </div>
-        </Popover.Content>
-      </>
-    ),
-  },
-  ...Default,
-};
-
-export const Top: StoryObj<Args> = {
+export const Top: StoryObj<PopoverProps> = {
   args: {
     placement: 'top',
   },
   ...Default,
 };
 
-export const Right: StoryObj<Args> = {
+export const Right: StoryObj<PopoverProps> = {
   args: {
     placement: 'right',
   },
   ...Default,
 };
 
-export const Bottom: StoryObj<Args> = {
+export const Bottom: StoryObj<PopoverProps> = {
   args: {
     placement: 'bottom',
   },
   ...Default,
 };
 
-export const Left: StoryObj<Args> = {
+export const Left: StoryObj<PopoverProps> = {
   args: {
     placement: 'left',
   },
   ...Default,
 };
 
-export const TopStart: StoryObj<Args> = {
+export const TopStart: StoryObj<PopoverProps> = {
   args: {
     placement: 'top-start',
   },
   ...Default,
 };
 
-export const TopEnd: StoryObj<Args> = {
+export const TopEnd: StoryObj<PopoverProps> = {
   args: {
     placement: 'top-end',
   },
   ...Default,
 };
 
-export const BottomStart: StoryObj<Args> = {
+export const BottomStart: StoryObj<PopoverProps> = {
   args: {
     placement: 'bottom-start',
   },
   ...Default,
 };
 
-export const BottomEnd: StoryObj<Args> = {
+export const BottomEnd: StoryObj<PopoverProps> = {
   args: {
     placement: 'bottom-end',
   },
   ...Default,
 };
 
-export const RightStart: StoryObj<Args> = {
+export const RightStart: StoryObj<PopoverProps> = {
   args: {
     placement: 'right-start',
   },
   ...Default,
 };
 
-export const RightEnd: StoryObj<Args> = {
+export const RightEnd: StoryObj<PopoverProps> = {
   args: {
     placement: 'right-end',
   },
   ...Default,
 };
 
-export const LeftStart: StoryObj<Args> = {
+export const LeftStart: StoryObj<PopoverProps> = {
   args: {
     placement: 'left-start',
   },
   ...Default,
 };
 
-export const LeftEnd: StoryObj<Args> = {
+export const LeftEnd: StoryObj<PopoverProps> = {
   args: {
     placement: 'left-end',
   },

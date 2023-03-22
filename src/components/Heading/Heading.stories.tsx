@@ -2,12 +2,15 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import Heading, { VARIANTS } from './Heading';
+import { Heading, VARIANTS } from './Heading';
 import styles from './Heading.stories.module.css';
 
 export default {
-  title: 'Atoms/Text/Heading',
+  title: 'Components/Heading',
   component: Heading,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Heading>;
@@ -110,8 +113,8 @@ export const Variants: StoryObj<Args> = {
 export const Sizes: StoryObj<Args> = {
   render: () => {
     const sizes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
-    const combinations = sizes.map((as: typeof sizes[number]) => {
-      const headings = sizes.map((size: typeof sizes[number]) => (
+    const combinations = sizes.map((as: (typeof sizes)[number]) => {
+      const headings = sizes.map((size: (typeof sizes)[number]) => (
         <Heading as={as} key={`as${as}size${size}`} size={size}>
           as: {as} size: {size}
         </Heading>

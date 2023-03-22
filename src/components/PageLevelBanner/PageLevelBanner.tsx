@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './PageLevelBanner.module.css';
 import Button from '../Button';
 import type { HeadingElement } from '../Heading';
 import Heading from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';
+import styles from './PageLevelBanner.module.css';
 
 export type Variant = 'brand' | 'success' | 'warning' | 'error';
 

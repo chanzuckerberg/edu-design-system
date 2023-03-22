@@ -1,21 +1,21 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
 import type { FiltersPopoverProps } from './FiltersPopover';
 import { FiltersPopover } from './FiltersPopover';
-import styles from './FiltersPopover.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
+import styles from './FiltersPopover.stories.module.css';
 
 export default {
-  title: 'Organisms/Interactive/FiltersPopover',
+  title: 'Components/FiltersPopover',
   component: FiltersPopover,
   parameters: {
-    badges: [BADGE.BETA],
-    chromatic: { delay: 300 },
+    badges: ['1.1', BADGE.BETA],
+    chromatic: { disableSnapshot: true },
   },
   args: {
     triggerText: 'Filters',
@@ -46,7 +46,7 @@ export const Default: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };
@@ -241,7 +241,7 @@ export const OverflowInteractive: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };

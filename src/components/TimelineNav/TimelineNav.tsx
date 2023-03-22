@@ -1,9 +1,7 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import type { KeyboardEventHandler, ReactNode } from 'react';
+import React, { useCallback, useId, useEffect, useRef, useState } from 'react';
 import { allByType } from 'react-children-by-type';
-import { useUIDSeed } from 'react-uid';
-import styles from './TimelineNav.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -17,6 +15,7 @@ import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import type { TimelineNavPanelVariant } from '../TimelineNavPanel';
 import TimelineNavPanel from '../TimelineNavPanel';
+import styles from './TimelineNav.module.css';
 
 export interface Props {
   /**
@@ -44,14 +43,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * Function passed down from higher level component into TimelineNav
-   */
-  timelineNavOnClick?: () => void;
-  /**
    * Timeline nav item tab name
    */
   title?: string;
@@ -59,11 +50,6 @@ export interface Props {
    * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
    */
   titleAfter?: ReactNode;
-  /**
-   * Stylistic variations:
-   * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
-   */
-  variant?: 'ordered';
 }
 
 export interface TimelineNavItem {
@@ -89,11 +75,8 @@ export const TimelineNav = ({
   className,
   id,
   onChange,
-  required,
-  timelineNavOnClick,
   title,
   titleAfter,
-  variant,
   ...other
 }: Props) => {
   /**
@@ -121,7 +104,6 @@ export const TimelineNav = ({
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
   const [idVar, setId] = useState<string[]>([]);
   const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
-  const getUID = useUIDSeed();
 
   /**
    * Get previous prop
@@ -155,23 +137,29 @@ export const TimelineNav = ({
     }
   }, [prevActiveIndex, activeIndex, timelineNavItemRefs]);
 
+  const generatedId = useId();
+  const idPrefix = id || generatedId;
+  const generatedAriaLabelledBy = useId();
+  const ariaLabelledByPrefix =
+    other['aria-labelledby'] || generatedAriaLabelledBy;
+
   /**
    * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
     setId(
-      timelineNavItems().map((item) =>
-        item.props.id ? item.props.id : getUID(item),
+      timelineNavItems().map((item, index) =>
+        item.props.id ? item.props.id : `${idPrefix}-${index}`,
       ),
     );
     setAriaLabelledBy(
-      timelineNavItems().map((item) =>
+      timelineNavItems().map((item, index) =>
         item.props['aria-labelledby']
           ? item.props['aria-labelledby']
-          : getUID(item),
+          : `${ariaLabelledByPrefix}-${index}`,
       ),
     );
-  }, [timelineNavItems, getUID]);
+  }, [timelineNavItems, idPrefix, ariaLabelledByPrefix]);
 
   /**
    * On open
@@ -191,12 +179,8 @@ export const TimelineNav = ({
    * On KeyDown
    *
    * Find active tab. If there isn't one, do nothing on Keydown.
-   *
-   * TODO: determine why backRef.current?.focus() needs to be in a callback
-   *
-   * TODO: improve `any` type
    */
-  function onKeyDown(e: any) {
+  const onKeyDown: KeyboardEventHandler = function (e) {
     let activeTimelineNavPanel = null;
     timelineNavItemRefs.map((item) => {
       if (item.current === document.activeElement) {
@@ -224,19 +208,19 @@ export const TimelineNav = ({
          * If enter or spacebar keyed, set focus to the 'Back' button. This
          * is wrapped in a setTimeout() method to ensure that document.activeElement
          * gets set properly.
+         *
+         * Note: this may be improved by identifying what has a delayed rendering
          */
         backRef.current?.focus();
       }, 500);
     }
-  }
+  };
 
   const childrenWithProps = React.Children.map(
     timelineNavItems(),
     (child, i) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
+      // Checking isValidElement is the safe way and avoids a typescript error too.
       if (React.isValidElement(child)) {
-        // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
           ['aria-labelledby']: ariaLabelledByVar[i],
@@ -322,7 +306,7 @@ export const TimelineNav = ({
           <NumberIcon
             aria-label="incomplete step"
             className={styles['timeline-nav__icon']}
-            incomplete={true}
+            incomplete
             number={i}
             numberIconTitle="incomplete step"
           />
@@ -389,16 +373,14 @@ export const TimelineNav = ({
         <ol
           className={clsx(
             styles['timeline-nav__list'],
+            styles['timeline-nav__list--ordered'],
             isActive && styles['eds-is-active'],
-            {
-              [styles['timeline-nav__list--ordered']]: variant === 'ordered',
-            },
           )}
           role="tablist"
         >
           {timelineNavItems().map((tab, i) => {
             const isActive = activeIndexState === i;
-            const itemVariant = variant && tab.props.variant;
+            const itemVariant = tab.props.variant;
             return (
               <li
                 className={clsx(

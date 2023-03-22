@@ -5,8 +5,11 @@ import { Layout } from './Layout';
 import LayoutSection from '../LayoutSection';
 
 export default {
-  title: 'Molecules/Layout and Containers/Layout',
+  title: 'Components/Layout',
   component: Layout,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: (
       <>

@@ -4,14 +4,13 @@ import React, {
   type ReactNode,
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
   type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
-import { useUID, useUIDSeed } from 'react-uid';
-import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -19,6 +18,7 @@ import {
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
 import Tab from '../Tab';
+import styles from './Tabs.module.css';
 
 export interface Props {
   /**
@@ -60,8 +60,7 @@ export const Tabs = ({
   onChange,
   ...other
 }: Props) => {
-  const getUID = useUIDSeed();
-  const activeTabPanelId = useUID();
+  const activeTabPanelId = useId();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
@@ -79,9 +78,11 @@ export const Tabs = ({
     [tabs],
   );
 
+  const generatedId = useId();
+  const tabIdPrefix = other.id || generatedId;
   const tabIds = useMemo(
-    () => tabs.map((tab) => tab.props.id || getUID(tab)),
-    [tabs, getUID],
+    () => tabs.map((tab) => `${tabIdPrefix}-${tab.props.title}`),
+    [tabs, tabIdPrefix],
   );
 
   // Set the active tab if the `activeIndex` prop changes.

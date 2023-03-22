@@ -1,10 +1,13 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
-import Toast from './Toast';
+import { Toast } from './Toast';
 
 export default {
-  title: 'Molecules/Messaging/Toast',
+  title: 'Components/Toast',
   component: Toast,
+  parameters: {
+    badges: ['1.0'],
+  },
   argTypes: { onDismiss: { action: 'dismissed' } },
   args: {
     children: "You've got toast!",

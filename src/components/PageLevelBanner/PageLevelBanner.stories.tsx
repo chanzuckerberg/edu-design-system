@@ -5,8 +5,11 @@ import { PageLevelBanner } from './PageLevelBanner';
 import Button from '../Button';
 
 export default {
-  title: 'Molecules/Messaging/PageLevelBanner',
+  title: 'Components/PageLevelBanner',
   component: PageLevelBanner,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     title:
       'New curriculum updates are available for one or more of your courses.',

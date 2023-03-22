@@ -1,12 +1,15 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import Tag, { VARIANTS } from './Tag';
-import styles from './Tag.stories.module.css';
+import { Tag, VARIANTS } from './Tag';
 import Icon from '../Icon';
+import styles from './Tag.stories.module.css';
 
 export default {
-  title: 'Molecules/Messaging/Tag',
+  title: 'Components/Tag',
   component: Tag,
+  parameters: {
+    badges: ['1.0'],
+  },
   argTypes: {
     variant: {
       control: {
@@ -92,9 +95,7 @@ export const WithLongTextAndIcon: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
-        return (
-          <Tag key={variant} {...args} hasOutline={true} variant={variant} />
-        );
+        return <Tag key={variant} {...args} hasOutline variant={variant} />;
       })}
     </div>
   ),

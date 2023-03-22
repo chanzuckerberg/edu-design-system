@@ -14,7 +14,8 @@ describe('<Link />', () => {
     expect(screen.getByRole('link')).toHaveTextContent('Click');
   });
 
-  it('fires callback on click', () => {
+  it('fires callback on click', async () => {
+    const user = userEvent.setup();
     const onClick = jest.fn();
     render(
       <Link href="/" onClick={onClick}>
@@ -22,7 +23,7 @@ describe('<Link />', () => {
       </Link>,
     );
 
-    userEvent.click(screen.getByRole('link'));
+    await user.click(screen.getByRole('link'));
     expect(onClick).toHaveBeenCalled();
   });
 

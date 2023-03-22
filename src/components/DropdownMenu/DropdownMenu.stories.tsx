@@ -7,11 +7,11 @@ import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
 import { Icon } from '../Icon/Icon';
 
 export default {
-  title: 'Molecules/Navigation/DropdownMenu',
+  title: 'Components/DropdownMenu',
   component: DropdownMenu,
   subcomponents: { DropdownMenuItem },
   parameters: {
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
 } as Meta<Args>;
 

@@ -1,6 +1,3 @@
-const path = require('path');
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
-
 /**
  * Although `--static-dir` is marked as deprecated. The The Chromatic CLI
  * currently pulls the staticDir from the build script, but does not support
@@ -11,7 +8,6 @@ const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
  */
 module.exports = {
   stories: [
-    './components/GettingStarted/GettingStarted.stories.tsx',
     '../docs',
     './components/**/*.stories.@(js|jsx|ts|tsx)',
     './components/**/*.stories.mdx',
@@ -42,19 +38,7 @@ module.exports = {
       },
     },
   ],
-  webpackFinal: async (config) => {
-    const SVGSpritesPlugin = new SVGSpritemapPlugin(
-      path.resolve(__dirname, '../src/icons/**/*.svg'),
-      {
-        sprite: {
-          prefix: false,
-          generate: {
-            symbol: true,
-          },
-        },
-      },
-    );
-    config.plugins.push(SVGSpritesPlugin);
-    return config;
+  core: {
+    builder: 'webpack5',
   },
 };

@@ -4,8 +4,11 @@ import type { ComponentProps } from 'react';
 import { Hr } from './Hr';
 
 export default {
-  title: 'Atoms/Text/Hr',
+  title: 'Components/Hr',
   component: Hr,
+  parameters: {
+    badges: ['1.0'],
+  },
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof Hr>;

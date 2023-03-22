@@ -5,13 +5,13 @@ import type { ComponentProps } from 'react';
 import { InputLabel } from './InputLabel';
 
 export default {
-  title: 'Atoms/Forms/InputLabel',
+  title: 'Components/InputLabel',
   component: InputLabel,
   args: {
     children: 'Label',
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
 } as Meta<Args>;
 

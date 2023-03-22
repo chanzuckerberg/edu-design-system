@@ -1,11 +1,10 @@
 import clsx from 'clsx';
-import React from 'react';
-import { useUID } from 'react-uid';
-import styles from './DataBar.module.css';
+import React, { useId } from 'react';
 
 import DataBarSegment from '../DataBarSegment';
 import type { Variants } from '../DataBarSegment';
 import Text from '../Text';
+import styles from './DataBar.module.css';
 
 type Segment = {
   /**
@@ -155,8 +154,8 @@ export const DataBar = ({
     !isFull && styles[`data-bar__segment-space--incomplete`],
   );
 
-  const id = useUID();
-  const captionId = useUID();
+  const id = useId();
+  const captionId = useId();
   const caption = totalSegmentValue + '/' + max;
   return (
     <div className={className}>

@@ -8,12 +8,16 @@ import HorizontalStep from '../HorizontalStep';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Lists/HorizontalStepper',
+  title: 'Components/HorizontalStepper',
   component: HorizontalStepper,
   args: {
     activeIndex: 0,
     steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'],
   },
+  parameters: {
+    badges: ['1.0'],
+  },
+
   decorators: [
     (Story) => (
       // Pushes contents away from storybook borders.

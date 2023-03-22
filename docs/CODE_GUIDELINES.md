@@ -7,13 +7,12 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
   - [CSS design principles](#css-design-principles)
   - [CSS tools](#css-tools)
   - [CSS conventions](#css-conventions)
-  - [Utility classes](#utility-classes)
+  - [Tailwind utility classes](#tailwind-utility-classes)
   - [Theming conventions](#theming-conventions)
-  - [Design tokens](#design-tokens)
 - [JavaScript/TypeScript](#js)
   - [JavaScript principles](#js-principles)
-  - [JavaScript tools](#js-tools)
   - [TypeScript/React conventions](#ts-conventions)
+  - [Anatomy of a component](#anatomy)
   - [Component rules and considerations](#component-rules)
   - [Component API naming conventions](#api-naming)
 - [Accessibility](#accessibility)
@@ -22,9 +21,9 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
 # HTML principles and conventions <a name="html"></a>
 
 - **Use semantic markup.** That means using the `<button>` tag rather than `<div onClick={toggle}>` when a button is required, an `<a>` tag when a link is required, and so on.
-- **Clarity over brevity** Developers should be able to understand what's going on with markup at a glance. Avoid cryptic abbreviations and nicknames, add proper indenting & spacing, and use clear comments.
+- **Clarity over brevity.** Developers should be able to understand what's going on with markup at a glance. Avoid cryptic abbreviations and nicknames, add proper indenting & spacing, and use clear comments.
 - **Accessibility.** Markup should be accessible and [follow best practices](https://www.a11yproject.com/checklist/). Use (but [don't abuse](https://www.deque.com/blog/top-5-rules-of-aria/)) <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes. See [Accessibility](#accessibility).
-- Native HTML elements (e.g. `<input>`, `<select>`) should be preferred over custom elements whenever possible. Native elements provide a slew of functionality and accessibility best practices out of the box.
+- **Native HTML elements** (e.g. `<input>`, `<select>`) should be preferred over custom elements whenever possible. Native elements provide a slew of functionality and accessibility best practices out of the box.
 
 ---
 
@@ -296,12 +295,11 @@ Use:
 
 You can continue to use the `Icon` components' `color` prop with JavaScript variables in storybook (including recipes and pages) because those will not be imported and themed in other prodcuts.
 
-## Utility classes <a name="utility-classes"></a>
+## Tailwind utility classes <a name="tailwind-utility-classes"></a>
 
-EDS provides a number of utility classes (e.g. `u-margin-bottom-xl` and `u-padding-none`) that can be appended to components (e.g. `<TableCell className="u-padding-none">`) in order to achieve certain style results. Utility classes provide an additional layer to help "massage" components into place without having to overwhelm component styles with too many style variants.
+EDS uses [tailwind utility classes](https://tailwindcss.com/docs/padding) (e.g. `mb-0` and `p-0`) inline in `*.stories.tsx` files to quickly add small styling tweaks, like spacing (e.g. `<TableCell className="p-0">`). This reduces the need for CSS module files made specifically for stories. Use the `!` modifier to override default component styles (e.g. `<TableCell className="!p-0">`).
 
-- Utility classes can be found in `src/components/Utilities`
-- Utility classes use the `!important` declaration to override any existing component styles
+Consider installing the VSCode extension [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) for autocomplete, linting, and hover previews.
 
 ## Theming conventions <a name="theming-conventions"></a>
 
@@ -309,28 +307,19 @@ EDS is a [themeable design system](https://bradfrost.com/blog/post/creating-them
 
 This is a "lightly" themed system, meaning that only a few variables (such as key UI colors and other properties like border radius) are available for theming.
 
-### Themeable component conventions
-
-Components that ingest theme variables (defined in [design tokens](#design-tokens)) should follow these conventions:
-
-## Design Tokens <a name="design-tokens"></a>
+### Design Tokens <a name="design-tokens"></a>
 
 Please refer to the [design tokens documentation](./TOKENS.md) to learn how to use design tokens in EDS.
 
 ---
 
-# JavaScript <a name="js"></a>
+# JavaScript/Typescript <a name="js"></a>
 
-## JavaScript/React principles <a name="js-principles"></a>
+## JavaScript principles <a name="js-principles"></a>
 
-- **Presentational Components Only** - EDS provides a library of reusable [presentational UI components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) that are consumed by CZI applications. These presentational components are "dumb" and don't contain any application business logic and aren't hooked up to any data models.
+- **Presentational Components Only** - EDS provides a library of reusable [presentational UI components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) that are consumed by CZI applications. These presentational components don't contain any application business logic and aren't hooked up to any data models.
 - **Predictable APIs** - EDS provides consistent, clear [component APIs](#component-naming) in order to provide a consistent and intuitive user developer experience.
-- **Composition over inheritance** EDS adheres to the [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
-
-## JavaScript Tools <a name="js-tools"></a>
-
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+- **Composition over inheritance** - EDS adheres to the [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
 
 ## TypeScript Conventions <a name="ts-conventions"></a>
 
@@ -351,7 +340,7 @@ The design system's component directory contains all of the design system's comp
 - `ComponentName.module.css`contains the styles for the component. All components must include a `.module.css` file.
 - `ComponentName.stories.js` contains all the [stories](https://storybook.js.org/basics/writing-stories/) for the component.
 
-## Anatomy of a component
+## Anatomy of a component <a name="anatomy"></a>
 
 ### Imports
 
@@ -394,7 +383,7 @@ The comment should begin with an import example, include a general description o
 
 Example:
 
-````
+````tsx
 /**
  * `import {ButtonGroup} from "@chanzuckerberg/eds";`
  *
@@ -420,7 +409,7 @@ Do not use [jsdoc tags](https://devhints.io/jsdoc) (e.g. `@example`) if possible
 
 Example:
 
-````
+````tsx
 /**
  * The Banner component is deprecated and will be removed in an upcoming release.
  *
@@ -459,6 +448,22 @@ export const ComponentName = ({
 ```
 
 This defines the component name and passes in all the `Props`.
+
+The `src/components/{componentFolder}/index.ts` file should should import and re-export the component `as default`. The `src/index.ts` file should re-export the component for an easy way to consume it downstream.
+
+i.e. in `src/components/{componentFolder}/index.ts`
+
+```ts
+export { ComponentName as default } from './ComponentName';
+```
+
+and in `src/index.ts`
+
+```ts
+...
+export { default as ComponentName } from './components/ComponentName';
+...
+```
 
 ### Children
 
@@ -563,15 +568,16 @@ EDS adheres to the following API naming conventions:
 
 ### Variants
 
+The default option should be the one most commonly used in order to reduce friction for developers using the components.
+
 - `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
 - `inverted` should be used consistently for stylistic `variation`s that "invert" the color schemes (e.g. `inverted=true`) to work on a darker background.
 - `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="md"`>). Use abbreviations for sizes (ex: `xs`, `sm`, `md`, `lg`).
 - `behavior` should be used for functional variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
 - `orientation` should be used for controlling the layout or orientation of a component (e.g. `<ButtonGroup orientation="stacked">`)
-- `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled={true} />`)
+- `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled />`)
 - `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
-- The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
 ### Text, Labels, Titles, and Children
 
@@ -591,32 +597,10 @@ EDS adheres to the following API naming conventions:
 
 ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
 
-We currently use [react-uid](https://www.npmjs.com/package/react-uid) hooks for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
-
-- `useUID()` is the most common usage.
+We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
 
 ```tsx
-const generatedId = useUID();
-```
-
-- `useUIDSeed()` generates a stable seed generator for use in iterators.
-
-```tsx
-const getUID = useUIDSeed();
-// you should either pass an object to getUID:
-items.forEach((item) => {
-  const generatedId = getUID(item);
-});
-
-// or pass a constructed string:
-items.forEach((item, index) => {
-  const generatedId = getUID(`item-${index}-aria-labelledby`);
-});
-
-// interpolating an object into a string will NOT work:
-// items.forEach((item) => {
-//   const generatedId = getUID(`${item}-id`);
-// });
+const generatedId = useId();
 ```
 
 ## Tools <a name="accessibility-tools"></a>

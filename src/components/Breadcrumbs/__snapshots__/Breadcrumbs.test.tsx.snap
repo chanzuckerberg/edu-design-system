@@ -7,7 +7,6 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
   <nav
     aria-label="breadcrumbs links"
     class="breadcrumbs"
-    id="1"
   >
     <ul
       class="breadcrumbs__list"
@@ -23,15 +22,14 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="2"
-            >
+            <title>
               Child
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>
@@ -102,7 +100,6 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
   <nav
     aria-label="breadcrumbs links"
     class="breadcrumbs"
-    id="6"
   >
     <ul
       class="breadcrumbs__list"
@@ -118,15 +115,14 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="7"
-            >
+            <title>
               Breadcrumb 9
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>
@@ -325,7 +321,6 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
   <nav
     aria-label="breadcrumbs links"
     class="breadcrumbs"
-    id="8"
   >
     <ul
       class="breadcrumbs__list"
@@ -341,15 +336,14 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="9"
-            >
+            <title>
               Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>
@@ -436,7 +430,6 @@ exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
   <nav
     aria-label="breadcrumbs links"
     class="breadcrumbs"
-    id="3"
   >
     <ul
       class="breadcrumbs__list"
@@ -469,7 +462,6 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
   <nav
     aria-label="breadcrumbs links"
     class="breadcrumbs"
-    id="4"
   >
     <ul
       class="breadcrumbs__list"
@@ -485,15 +477,14 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="5"
-            >
+            <title>
               Breadcrumb 1
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>

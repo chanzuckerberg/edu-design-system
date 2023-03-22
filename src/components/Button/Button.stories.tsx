@@ -6,7 +6,7 @@ import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Buttons/Button',
+  title: 'Components/Button',
   component: Button,
   args: {
     children: 'Button',
@@ -41,6 +41,9 @@ export default {
     loading: {
       control: 'boolean',
     },
+  },
+  parameters: {
+    badges: ['1.0'],
   },
 } as Meta<Args>;
 

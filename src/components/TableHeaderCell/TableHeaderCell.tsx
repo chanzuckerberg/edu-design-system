@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode, MouseEventHandler } from 'react';
-import styles from './TableHeaderCell.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
+import styles from './TableHeaderCell.module.css';
 
 export type Props = React.ThHTMLAttributes<HTMLTableCellElement> & {
   /**
@@ -51,7 +51,7 @@ export type Props = React.ThHTMLAttributes<HTMLTableCellElement> & {
 
 export const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 
-export type SortDirectionsType = typeof SORT_DIRECTIONS[number];
+export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -96,7 +96,6 @@ export const TableHeaderCell = ({
           : undefined
       }
       className={componentClassName}
-      data-bootstrap-override="table-header-cell"
       {...other}
     >
       {sortDirection ? (

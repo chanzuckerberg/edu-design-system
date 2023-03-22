@@ -1,9 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
-import { useUID } from 'react-uid';
-
-import styles from './AlongDemo.module.css';
-import globalStyles from './GlobalStyles.module.css';
+import React, { useId, useState } from 'react';
 
 import {
   Button,
@@ -26,6 +22,8 @@ import AlongUserIllustration2 from '../../static/along-user-illustration-2.png';
 import GoogleLogo from '../../static/google-logo.svg';
 import MicrosoftLogo from '../../static/microsoft-logo.svg';
 import Sprout from '../../static/sprout.svg';
+import styles from './AlongDemo.module.css';
+import globalStyles from './GlobalStyles.module.css';
 
 const GlobalFooter = ({ className }: { className?: string }) => (
   <ul className={clsx(styles['wireframe-demo__footer'], className)}>
@@ -81,7 +79,7 @@ const GlobalFooter = ({ className }: { className?: string }) => (
 
 const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
   <div className={styles['logged-out-page']}>
-    <div className="flex flex-col items-center mb-16 p-8 grow">
+    <div className="mb-16 flex grow flex-col items-center p-8">
       <header className="flex gap-4">
         <img
           alt="A studious youth with specs smiling and looking at his laptop"
@@ -119,10 +117,10 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
           className={styles['logged-out-page__social-sign-in-button']}
           onClick={onLogin}
         >
-          <span className="w-[20px] overflow-hidden flex">
+          <span className="flex w-[20px] overflow-hidden">
             <img
               alt=""
-              className="max-w-[11.35rem] inline-block"
+              className="inline-block max-w-[11.35rem]"
               src={MicrosoftLogo}
             />
           </span>
@@ -196,7 +194,7 @@ const StudentTab = ({
       className={clsx(
         styles['watch-page__avatar'],
         styles[`watch-page__avatar--${avatarColor}`],
-        'w-10 h-10',
+        'h-10 w-10',
       )}
     >
       <Text size="sm">{studentName.slice(0, 1)}</Text>
@@ -208,15 +206,15 @@ const StudentTab = ({
 );
 
 const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
-  const responseTextareaId = useUID();
-  const notesTextareaId = useUID();
+  const responseTextareaId = useId();
+  const notesTextareaId = useId();
 
   const ReplyIcon = (
-    <svg className="min-w-[1rem] h-4" viewBox="0 0 16 16">
+    <svg className="h-4 min-w-[1rem]" viewBox="0 0 16 16">
       <path
-        clip-rule="inherit"
+        clipRule="inherit"
         d="M6.53086 5.19809V4.13809C6.53086 3.54476 5.81086 3.24476 5.39086 3.66476L2.33086 6.72476C2.07086 6.98476 2.07086 7.40476 2.33086 7.66476L5.39086 10.7248C5.81086 11.1448 6.53086 10.8514 6.53086 10.2581V9.13142C9.8642 9.13142 12.1975 10.1981 13.8642 12.5314C13.1975 9.19809 11.1975 5.86476 6.53086 5.19809Z"
-        fill-rule="inherit"
+        fillRule="inherit"
       ></path>
     </svg>
   );
@@ -277,11 +275,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           <Tabs className={clsx(styles['watch-page__tabs'], 'mt-4')}>
             <Tab title="All (3)">
               <div className="flex">
-                <StudentTab
-                  active={true}
-                  avatarColor="pine"
-                  studentName="Mikaela"
-                />
+                <StudentTab active avatarColor="pine" studentName="Mikaela" />
                 <StudentTab avatarColor="sneaker" studentName="Cesar" />
                 <StudentTab avatarColor="carrot" studentName="Truman" />
               </div>
@@ -289,11 +283,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 
             <Tab title="New (1)">
               <div className="flex">
-                <StudentTab
-                  active={true}
-                  avatarColor="pine"
-                  studentName="Mikaela"
-                />
+                <StudentTab active avatarColor="pine" studentName="Mikaela" />
               </div>
             </Tab>
 
@@ -307,13 +297,13 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__reflection']}>
-          <div className="w-full mt-2 lg:w-[31.25rem]">
+          <div className="mt-2 w-full lg:w-[31.25rem]">
             <div className="flex cursor-pointer">
               <div
                 className={clsx(
                   styles['watch-page__avatar'],
                   styles['watch-page__avatar--pine'],
-                  'mr-2 w-9 h-9',
+                  'mr-2 h-9 w-9',
                 )}
               >
                 <Text size="sm">M</Text>
@@ -340,7 +330,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               </a>
             </video>
 
-            <div className="flex gap-4 mt-4 ml-2">
+            <div className="mt-4 ml-2 flex gap-4">
               {ReplyIcon}
               <Text>
                 My greatest accomplishment this year was in math, because I
@@ -383,7 +373,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           className={clsx(
             styles['watch-page__avatar'],
             styles['watch-page__avatar--pine'],
-            'm-4 w-[6.25rem] h-[6.25rem]',
+            'm-4 h-[6.25rem] w-[6.25rem]',
           )}
         >
           <Text size="lg">M</Text>
@@ -436,7 +426,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           </label>
           <Tooltip
             align="bottom"
-            childNotInteractive={true}
+            childNotInteractive
             className={styles['watch-page__tooltip-container']}
             text={
               <Text className={styles['watch-page__tooltip-content']}>
@@ -458,7 +448,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           id={notesTextareaId}
           placeholder="Add any notes about Mikaela here. Only you can see them."
         ></textarea>
-        <Button className="w-full mt-2 mb-16" variant="secondary">
+        <Button className="mt-2 mb-16 w-full" variant="secondary">
           Save
         </Button>
       </aside>

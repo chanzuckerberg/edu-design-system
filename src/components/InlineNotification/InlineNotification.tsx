@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './InlineNotification.module.css';
 import { Icon, Text } from '../../';
+import styles from './InlineNotification.module.css';
 
 export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
 
 const variantToIconAssetsMap: {
-  [key in 'brand' | 'success' | 'warning' | 'yield']: {
+  [key in Variant]: {
     name: 'info' | 'check-circle' | 'warning' | 'error-inverted';
     title: 'info' | 'success' | 'alert' | 'yield';
   };
@@ -29,7 +29,7 @@ const variantToIconAssetsMap: {
   },
 };
 
-type Variant = typeof VARIANTS[number];
+type Variant = (typeof VARIANTS)[number];
 
 type Props = {
   /**

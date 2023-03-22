@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Section } from '../../../../src';
-import '../../../../src/components/Utilities/TypographyUsage.css';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 import { PRESET_SIZE_MAP } from '../Tier1/TypographyPresets';
+import styles from './TypographyUsage.module.css';
 
 export class Tier2TypographyUsage extends Component {
   render() {
@@ -18,7 +18,7 @@ export class Tier2TypographyUsage extends Component {
         <TokenSpecimen
           comment={`Ref: preset-${preset}`}
           name={name}
-          specimenClassName={`u-theme-typography-${size}`}
+          specimenClassName={styles[`typography-usage--${size}`]}
           value={`${fontSize} / ${lineHeight}`}
           variant="typography-body"
         />

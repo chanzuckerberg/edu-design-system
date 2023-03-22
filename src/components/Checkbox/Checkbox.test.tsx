@@ -12,9 +12,13 @@ describe('<Checkbox />', () => {
   generateSnapshots(stories);
 
   test('throws an error if no label or aria-label', () => {
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(() => {
       render(<Checkbox />);
     }).toThrow(/must provide a visible label or aria-label/);
+    consoleErrorMock.mockRestore();
   });
 
   test('Disabled story renders snapshot', () => {
@@ -23,11 +27,12 @@ describe('<Checkbox />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should toggle the checkbox with space', () => {
+  test('should toggle the checkbox with space', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const checkbox = screen.getByRole('checkbox');
     checkbox.focus();
-    userEvent.keyboard('{space}');
+    await user.keyboard(' ');
     expect(checkbox).toBeChecked();
   });
 });

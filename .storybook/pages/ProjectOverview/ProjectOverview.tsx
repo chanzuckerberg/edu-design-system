@@ -1,31 +1,27 @@
 import React from 'react';
-import styles from './ProjectOverview.module.css';
 
 import {
-  PageHeader,
-  Text,
   Breadcrumbs,
   BreadcrumbsItem,
   Button,
+  Card,
+  Grid,
+  GridItem,
   Heading,
   Hr,
-  Card,
-  CardBody,
   Icon,
+  Link,
+  PageHeader,
   Section,
+  Text,
   TimelineNav,
   TimelineNavPanel,
-  DefinitionList,
-  StackedBlock,
-  Link,
-  GridItem,
-  Grid,
 } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
-import '../../../src/components/Utilities/Spacing.css';
 import ButtonActionCalloutCard from '../../recipes/ButtonActionCalloutCard';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import styles from './ProjectOverview.module.css';
 
 export interface Props {
   /**
@@ -36,7 +32,7 @@ export interface Props {
 
 export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
-    <PageShell className="body--alternate" mentoringIsActive={true}>
+    <PageShell className="body--alternate" mentoringIsActive>
       <Breadcrumbs className="!mb-4">
         <BreadcrumbsItem href="#" text="My Courses" />
         <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
@@ -76,17 +72,21 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             Essential Questions
           </Heading>
-          <Text as="div" className="!mb-8">
-            <ul>
-              <li>How are structures in the body organized?</li>
-              <li>
+          <div className="mb-8 max-w-xl">
+            <ul className="ml-4 list-disc">
+              <li className="mb-2">
+                How are structures in the body organized?
+              </li>
+              <li className="mb-2">
                 How do these structures work together to support life? But
                 really need to see what it looks like if we have an extra long
                 question.
               </li>
-              <li>How are structures in the body organized?</li>
+              <li className="mb-2">
+                How are structures in the body organized?
+              </li>
             </ul>
-          </Text>
+          </div>
           <Heading
             as="h3"
             className="!mb-2"
@@ -95,19 +95,21 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             Key Take Aways
           </Heading>
-          <Text as="div" className="!mb-8">
-            <ol>
-              <li>
+          <div className="mb-8 max-w-xl">
+            <ol className="ml-4 list-decimal">
+              <li className="mb-2">
                 Groups of specialized cells make up organs and body systems,
                 which work together to support an organism’s survival.
               </li>
-              <li>
+              <li className="mb-2">
                 How are structures in the body organized? More text blah blah
                 blah.
               </li>
-              <li>How are structures in the body organized?</li>
+              <li className="mb-2">
+                How are structures in the body organized?
+              </li>
             </ol>
-          </Text>
+          </div>
           <Hr className="!mb-0" />
 
           <div className="fpo">FPO Brand asset</div>
@@ -126,7 +128,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             }
           >
             <Card className="!mb-4">
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -139,10 +141,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
             <Card className="!mb-4">
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -155,10 +157,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
             <Card>
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -171,12 +173,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
           </Section>
           <Section headingSize="headline-sm" title="Additional Focus Areas">
             <Card className="!mb-4">
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -189,10 +191,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
             <Card>
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -205,7 +207,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
           </Section>
         </TimelineNavPanel>
@@ -217,11 +219,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Overline above title
-              </Text>
-            }
+            overline={<Text size="overline">Overline above title</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
             <Heading
@@ -232,32 +230,30 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             >
               What to Focus on this Checkpoint
             </Heading>
-            <Text as="div" className="!mb-4">
-              <p>
-                Students individually develop a follow up question that builds
-                from their group’s experiment and describe their follow up
-                question in their conclusion. Students craft evidence-supported
-                explanations of how the body is organized and functions.
-              </p>
+            <Text className="mb-4 max-w-xl">
+              Students individually develop a follow up question that builds
+              from their group’s experiment and describe their follow up
+              question in their conclusion. Students craft evidence-supported
+              explanations of how the body is organized and functions.
             </Text>
-            <DefinitionList className="!mb-6" orientation="horizontal">
-              <DefinitionList.Item title="Term 1:">
+            <dl className="mt-0 mb-6 flex">
+              <dt>Term 1:</dt>
+              <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
-              </DefinitionList.Item>
-            </DefinitionList>
+              </dd>
+            </dl>
 
-            <Text as="div" className="!mb-4">
-              <p>
-                Students collaboratively develop a single group research
-                question to frame their shared experiment, then describe the
-                group research question in the introduction.
-              </p>
+            <Text className="mb-4 max-w-xl">
+              Students collaboratively develop a single group research question
+              to frame their shared experiment, then describe the group research
+              question in the introduction.
             </Text>
-            <DefinitionList className="!mb-8" orientation="horizontal">
-              <DefinitionList.Item title="Term 1:">
+            <dl className="mt-0 mb-8 flex">
+              <dt>Term 1:</dt>
+              <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
-              </DefinitionList.Item>
-            </DefinitionList>
+              </dd>
+            </dl>
 
             <ButtonActionCalloutCard
               actions={<Button variant="primary">Preview</Button>}
@@ -281,24 +277,28 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <Grid className="!mb-8">
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
-              </GridItem>{' '}
-              <GridItem>
-                <StackedBlock href="#" title="This is a link">
-                  This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
+              </GridItem>
+              <GridItem>
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
+                  This is a stacked block description
+                </Text>
               </GridItem>
             </Grid>
 
@@ -313,24 +313,28 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <Grid className="!mb-8">
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
-              </GridItem>{' '}
-              <GridItem>
-                <StackedBlock href="#" title="This is a link">
-                  This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
+              </GridItem>
+              <GridItem>
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
+                  This is a stacked block description
+                </Text>
               </GridItem>
             </Grid>
             <Hr className="!mt-12" />
@@ -344,20 +348,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Checkpoint 2
-              </Text>
-            }
+            overline={<Text size="overline">Checkpoint 2</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
-            <Text as="div">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex
-              </p>
+            <Text className="max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex
             </Text>
           </Section>
         </TimelineNavPanel>
@@ -368,20 +366,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Checkpoint 3
-              </Text>
-            }
+            overline={<Text size="overline">Checkpoint 3</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
-            <Text as="div">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex
-              </p>
+            <Text className="max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex
             </Text>
           </Section>
         </TimelineNavPanel>
@@ -392,20 +384,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Checkpoint 4
-              </Text>
-            }
+            overline={<Text size="overline">Checkpoint 4</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
-            <Text as="div">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex
-              </p>
+            <Text className="max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex
             </Text>
           </Section>
         </TimelineNavPanel>

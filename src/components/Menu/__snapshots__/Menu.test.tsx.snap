@@ -3,43 +3,47 @@
 exports[`<Menu /> Default story renders snapshot 1`] = `
 <div
   class="menu"
+  data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-2"
+    aria-controls="headlessui-menu-items-:r1:"
     aria-expanded="true"
-    aria-haspopup="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-menu-button-1"
+    aria-haspopup="menu"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary menu__button"
+    data-headlessui-state="open"
+    id="headlessui-menu-button-:r0:"
     type="button"
   >
     Documentation Links
     <svg
       aria-hidden="true"
-      class="icon menu__button--icon"
+      class="icon menu__button--with-chevron"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-1"
+    aria-labelledby="headlessui-menu-button-:r0:"
     class="popover-container menu__popover"
+    data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-2"
+    id="headlessui-menu-items-:r1:"
     role="menu"
     tabindex="0"
   >
     <a
       class="menu__item"
+      data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-3"
+      id="headlessui-menu-item-:r2:"
       role="menuitem"
       tabindex="-1"
     >
@@ -55,11 +59,12 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
             fill="currentColor"
             height="1.5rem"
             style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
             width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use
-              xlink:href="test-file-stub#link"
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
             />
           </svg>
         </div>
@@ -68,8 +73,9 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     </a>
     <a
       class="menu__item"
+      data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-4"
+      id="headlessui-menu-item-:r3:"
       role="menuitem"
       tabindex="-1"
     >
@@ -85,11 +91,12 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
             fill="currentColor"
             height="1.5rem"
             style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
             width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use
-              xlink:href="test-file-stub#link"
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
             />
           </svg>
         </div>
@@ -98,7 +105,8 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     </a>
     <a
       class="menu__item"
-      id="headlessui-menu-item-5"
+      data-headlessui-state=""
+      id="headlessui-menu-item-:r4:"
       role="menuitem"
       tabindex="-1"
     >
@@ -114,7 +122,8 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     <div
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
-      id="headlessui-menu-item-6"
+      data-headlessui-state="disabled"
+      id="headlessui-menu-item-:r5:"
       role="menuitem"
     >
       <div
@@ -126,11 +135,152 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#warning"
+          <path
+            d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
+          />
+        </svg>
+      </div>
+      Not Possible (disabled)
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
+<div
+  class="menu"
+  data-headlessui-state="open"
+>
+  <button
+    aria-controls="headlessui-menu-items-:rj:"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    class="menu__plain-button"
+    data-headlessui-state="open"
+    id="headlessui-menu-button-:ri:"
+    type="button"
+  >
+    <div
+      class="fpo"
+    >
+      Menu Button
+    </div>
+  </button>
+  <div
+    aria-labelledby="headlessui-menu-button-:ri:"
+    class="popover-container menu__popover"
+    data-headlessui-state="open"
+    data-testid="menu-content"
+    id="headlessui-menu-items-:rj:"
+    role="menu"
+    tabindex="0"
+  >
+    <a
+      class="menu__item"
+      data-headlessui-state=""
+      href="https://headlessui.com/react/menu#menu-button"
+      id="headlessui-menu-item-:rk:"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
+            />
+          </svg>
+        </div>
+        Headless UI Docs
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      data-headlessui-state=""
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+      id="headlessui-menu-item-:rl:"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
+            />
+          </svg>
+        </div>
+        MDN: Menu
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      data-headlessui-state=""
+      id="headlessui-menu-item-:rm:"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__no-icon"
+        />
+        Trigger Action
+      </div>
+    </a>
+    <div
+      aria-disabled="true"
+      class="popover-list-item popover-list-item--disabled"
+      data-headlessui-state="disabled"
+      id="headlessui-menu-item-:rn:"
+      role="menuitem"
+    >
+      <div
+        class="popover-list-item__icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
           />
         </svg>
       </div>
@@ -143,43 +293,47 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
 exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
 <div
   class="menu"
+  data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-8"
+    aria-controls="headlessui-menu-items-:r7:"
     aria-expanded="true"
-    aria-haspopup="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-menu-button-7"
+    aria-haspopup="menu"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary menu__button"
+    data-headlessui-state="open"
+    id="headlessui-menu-button-:r6:"
     type="button"
   >
     Long Trigger Button Text to Demonstrate Popover Matching
     <svg
       aria-hidden="true"
-      class="icon menu__button--icon"
+      class="icon menu__button--with-chevron"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-7"
+    aria-labelledby="headlessui-menu-button-:r6:"
     class="popover-container menu__popover"
+    data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-8"
+    id="headlessui-menu-items-:r7:"
     role="menu"
     tabindex="0"
   >
     <a
       class="menu__item"
+      data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-9"
+      id="headlessui-menu-item-:r8:"
       role="menuitem"
       tabindex="-1"
     >
@@ -195,11 +349,12 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
             fill="currentColor"
             height="1.5rem"
             style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
             width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use
-              xlink:href="test-file-stub#link"
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
             />
           </svg>
         </div>
@@ -208,8 +363,9 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     </a>
     <a
       class="menu__item"
+      data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-10"
+      id="headlessui-menu-item-:r9:"
       role="menuitem"
       tabindex="-1"
     >
@@ -225,11 +381,12 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
             fill="currentColor"
             height="1.5rem"
             style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
             width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use
-              xlink:href="test-file-stub#link"
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
             />
           </svg>
         </div>
@@ -238,7 +395,8 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     </a>
     <a
       class="menu__item"
-      id="headlessui-menu-item-11"
+      data-headlessui-state=""
+      id="headlessui-menu-item-:ra:"
       role="menuitem"
       tabindex="-1"
     >
@@ -254,7 +412,8 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     <div
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
-      id="headlessui-menu-item-12"
+      data-headlessui-state="disabled"
+      id="headlessui-menu-item-:rb:"
       role="menuitem"
     >
       <div
@@ -266,11 +425,12 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#warning"
+          <path
+            d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
           />
         </svg>
       </div>
@@ -283,43 +443,47 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
 exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
 <div
   class="menu"
+  data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-14"
+    aria-controls="headlessui-menu-items-:rd:"
     aria-expanded="true"
-    aria-haspopup="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-menu-button-13"
+    aria-haspopup="menu"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary menu__button"
+    data-headlessui-state="open"
+    id="headlessui-menu-button-:rc:"
     type="button"
   >
     Menu
     <svg
       aria-hidden="true"
-      class="icon menu__button--icon"
+      class="icon menu__button--with-chevron"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-13"
+    aria-labelledby="headlessui-menu-button-:rc:"
     class="popover-container menu__popover"
+    data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-14"
+    id="headlessui-menu-items-:rd:"
     role="menu"
     tabindex="0"
   >
     <a
       class="menu__item"
+      data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-15"
+      id="headlessui-menu-item-:re:"
       role="menuitem"
       tabindex="-1"
     >
@@ -335,11 +499,12 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
             fill="currentColor"
             height="1.5rem"
             style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
             width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use
-              xlink:href="test-file-stub#link"
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
             />
           </svg>
         </div>
@@ -348,8 +513,9 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     </a>
     <a
       class="menu__item"
+      data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-16"
+      id="headlessui-menu-item-:rf:"
       role="menuitem"
       tabindex="-1"
     >
@@ -365,11 +531,12 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
             fill="currentColor"
             height="1.5rem"
             style="--icon-size: 1.5rem;"
+            viewBox="0 0 24 24"
             width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use
-              xlink:href="test-file-stub#link"
+            <path
+              d="M11 17H7C5.61667 17 4.43767 16.5123 3.463 15.537C2.48767 14.5623 2 13.3833 2 12C2 10.6167 2.48767 9.43733 3.463 8.462C4.43767 7.48733 5.61667 7 7 7H11V9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H11V17ZM8 13V11H16V13H8ZM13 17V15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H13V7H17C18.3833 7 19.5627 7.48733 20.538 8.462C21.5127 9.43733 22 10.6167 22 12C22 13.3833 21.5127 14.5623 20.538 15.537C19.5627 16.5123 18.3833 17 17 17H13Z"
             />
           </svg>
         </div>
@@ -378,7 +545,8 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     </a>
     <a
       class="menu__item"
-      id="headlessui-menu-item-17"
+      data-headlessui-state=""
+      id="headlessui-menu-item-:rg:"
       role="menuitem"
       tabindex="-1"
     >
@@ -394,7 +562,8 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     <div
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
-      id="headlessui-menu-item-18"
+      data-headlessui-state="disabled"
+      id="headlessui-menu-item-:rh:"
       role="menuitem"
     >
       <div
@@ -406,11 +575,12 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#warning"
+          <path
+            d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
           />
         </svg>
       </div>

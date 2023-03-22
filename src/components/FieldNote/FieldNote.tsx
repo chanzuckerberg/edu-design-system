@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './FieldNote.module.css';
 import Icon from '../Icon';
+import styles from './FieldNote.module.css';
 
 export interface Props {
   /**

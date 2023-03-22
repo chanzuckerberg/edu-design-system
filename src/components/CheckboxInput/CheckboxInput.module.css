@@ -1,71 +1,64 @@
 @import '../../design-tokens/mixins.css';
 
-/*------------------------------------*\
-    # CHECKBOX INPUT
-\*------------------------------------*/
-
-/**
- * Wraps the visually hidden checkbox input element and the visible sibling svg element.
- */
-.input__wrapper {
-  position: relative;
-  /* Centers the checkbox icon in the wrapper. */
-  display: inline-flex;
-  align-items: center;
-  /* Aligns the checkbox with the first line of the label. */
-  align-self: flex-start;
-}
-/**
- * The visually hidden input element for the checkbox. The visual checkmark is provided by an svg element.
- */
 .checkbox__input {
-  cursor: pointer;
-  /* Removes default margins placed by browser for checkboxes. */
-  margin: 0;
-  /* Remove the checkbox from the page flow, positioning it on top of the SVG. */
-  position: absolute;
-  left: 0.25rem;
-  /* Set same dimensions as the CheckboxSvg element. */
-  height: var(--eds-size-2);
-  width: var(--eds-size-2);
-  /** 
-   * Hide the input element visually.
-   * This ensures the checkbox is still "physically" present so that all users,
-   * especially on touch screen readers, still interact with the real checkbox element
-   * where it would naturally be present. 
-   */
-  opacity: 0;
+  height: 18px;
+  width: 18px;
+
+  /* The parent Checkbox component is a flex container. Make sure the input doesn't shrink. */
+  flex-shrink: 0;
+
+  /* Remove the browser's checkbox styles, allowing us to provide our own. */
+  appearance: none;
+
+  /* Magic value to center the checkbox on its label. */
+  margin: 3px;
+
+  color: var(--eds-theme-color-icon-brand-primary);
+  border: 2px solid currentColor;
+
+  /* Place the ::before content smack in the middle of the input. */
+  display: grid;
+  place-content: center;
 }
 
-/**
- * The visible checkbox svg icon element.
- */
-.checkbox__icon {
-  color: var(--eds-theme-color-icon-brand-primary);
+.checkbox__input:checked::before {
+  background-color: currentColor;
+  content: '';
+
+  /* Clip this element in the shape of a checkbox. The element's background color will be visible
+  anywhere the svg path is solid. Whatever is behind the checkbox will show through wherever the
+  svg is transparent. See https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+  clip-path: path("M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z");
+
+  /* Because the path does not have an explicit viewbox, this element's bounding box establishes
+  one. In other words, the height/width here need to match the expected viewbox for the path. */
+  height: 24px;
+  width: 24px;
 }
-.checkbox__input:focus-visible + .checkbox__icon {
+
+.checkbox__input:indeterminate::before {
+  background-color: currentColor;
+  content: '';
+
+  clip-path: path("M7 13H17V11H7V13ZM3 21V3H21V21H3Z");
+
+  height: 24px;
+  width: 24px;
+}
+
+.checkbox__input:focus-visible {
   @mixin focus;
-  outline-offset: -2px;
+  outline-offset: 1px;
 }
 
 @supports not selector(:focus-visible) {
-  .checkbox__input:focus + .checkbox__icon {
+  .checkbox__input:focus {
     @mixin focus;
-    outline-offset: -2px;
+    outline-offset: 1px;
   }
 }
 
-/**
- * The disabled variant of the visible checkbbox svg icon.
- */
-.checkbox__icon--disabled {
-  color: var(--eds-theme-color-icon-disabled);
-}
-
-/**
- * The disabled status of the visually hidden input element.
- * Needed since the input element overlays the visible svg icon for user input and cursor.
- */
 .checkbox__input:disabled {
+  color: var(--eds-theme-color-icon-disabled);
   cursor: not-allowed;
 }

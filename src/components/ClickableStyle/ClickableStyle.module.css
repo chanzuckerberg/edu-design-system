@@ -24,7 +24,7 @@
   transition-duration: var(--eds-anim-fade-quick);
   transition-timing-function: var(--eds-anim-ease);
 
-  svg {
+  :where(svg) {
     /* Adds default size for icons passed in for consistency. */
     --icon-size-default: 2em;
     transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease);
@@ -61,7 +61,7 @@
 /**
  * Primary brand clickable style
  */
-.clickable-style--primary.clickable-style--brand {
+:where(.clickable-style--primary).clickable-style--brand {
   border-color: var(--eds-theme-color-button-primary-brand-border);
   background-color: var(--eds-theme-color-button-primary-brand-background);
   color: var(--eds-theme-color-button-primary-brand-text);
@@ -86,7 +86,7 @@
 /**
  * Primary error clickable style
  */
-.clickable-style--primary.clickable-style--error {
+:where(.clickable-style--primary).clickable-style--error {
   border-color: var(--eds-theme-color-button-primary-error-border);
   background-color: var(--eds-theme-color-button-primary-error-background);
   color: var(--eds-theme-color-button-primary-error-text);
@@ -111,12 +111,12 @@
 /**
  * Secondary brand clickable style
  */
-.clickable-style--secondary.clickable-style--brand {
+:where(.clickable-style--secondary).clickable-style--brand {
   border-color: var(--eds-theme-color-button-secondary-brand-border);
   background-color: var(--eds-theme-color-button-secondary-brand-background);
   color: var(--eds-theme-color-button-secondary-brand-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-secondary-brand-icon);
   }
 
@@ -126,7 +126,7 @@
       --eds-theme-color-button-secondary-brand-background-hover
     );
     color: var(--eds-theme-color-button-secondary-brand-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-brand-icon-hover);
     }
   }
@@ -137,7 +137,7 @@
       --eds-theme-color-button-secondary-brand-background-active
     );
     color: var(--eds-theme-color-button-secondary-brand-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-brand-icon-focus);
     }
   }
@@ -146,12 +146,12 @@
 /**
  * Secondary neutral clickable style
  */
-.clickable-style--secondary.clickable-style--neutral {
+:where(.clickable-style--secondary).clickable-style--neutral {
   border-color: var(--eds-theme-color-button-secondary-neutral-border);
   background-color: var(--eds-theme-color-button-secondary-neutral-background);
   color: var(--eds-theme-color-button-secondary-neutral-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-secondary-neutral-icon);
   }
 
@@ -161,7 +161,7 @@
       --eds-theme-color-button-secondary-neutral-background-hover
     );
     color: var(--eds-theme-color-button-secondary-neutral-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-neutral-icon-hover);
     }
   }
@@ -172,7 +172,7 @@
       --eds-theme-color-button-secondary-neutral-background-active
     );
     color: var(--eds-theme-color-button-secondary-neutral-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-neutral-icon-active);
     }
   }
@@ -181,12 +181,12 @@
 /**
  * Secondary success clickable style
  */
-.clickable-style--secondary.clickable-style--success {
+:where(.clickable-style--secondary).clickable-style--success {
   border-color: var(--eds-theme-color-button-secondary-success-border);
   background-color: var(--eds-theme-color-button-secondary-success-background);
   color: var(--eds-theme-color-button-secondary-success-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-secondary-success-icon);
   }
 
@@ -196,7 +196,7 @@
       --eds-theme-color-button-secondary-success-background-hover
     );
     color: var(--eds-theme-color-button-secondary-success-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-success-icon-hover);
     }
   }
@@ -207,7 +207,7 @@
       --eds-theme-color-button-secondary-success-background-active
     );
     color: var(--eds-theme-color-button-secondary-success-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-success-icon-active);
     }
   }
@@ -216,12 +216,12 @@
 /**
  * Secondary warning clickable style
  */
-.clickable-style--secondary.clickable-style--warning {
+:where(.clickable-style--secondary).clickable-style--warning {
   border-color: var(--eds-theme-color-button-secondary-warning-border);
   background-color: var(--eds-theme-color-button-secondary-warning-background);
   color: var(--eds-theme-color-button-secondary-warning-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-secondary-warning-icon);
   }
 
@@ -231,7 +231,7 @@
       --eds-theme-color-button-secondary-warning-background-hover
     );
     color: var(--eds-theme-color-button-secondary-warning-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-warning-icon-hover);
     }
   }
@@ -242,7 +242,7 @@
       --eds-theme-color-button-secondary-warning-background-active
     );
     color: var(--eds-theme-color-button-secondary-warning-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-warning-icon-active);
     }
   }
@@ -251,12 +251,12 @@
 /**
  * Secondary error clickable style
  */
-.clickable-style--secondary.clickable-style--error {
+:where(.clickable-style--secondary).clickable-style--error {
   border-color: var(--eds-theme-color-button-secondary-error-border);
   background-color: var(--eds-theme-color-button-secondary-error-background);
   color: var(--eds-theme-color-button-secondary-error-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-secondary-error-icon);
   }
 
@@ -266,7 +266,7 @@
       --eds-theme-color-button-secondary-error-background-hover
     );
     color: var(--eds-theme-color-button-secondary-error-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-error-icon-hover);
     }
   }
@@ -277,7 +277,7 @@
       --eds-theme-color-button-secondary-error-background-active
     );
     color: var(--eds-theme-color-button-secondary-error-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-secondary-error-icon-active);
     }
   }
@@ -290,12 +290,12 @@
  *
  * Use for Close "X" buttons, tooltip icons, and other.
  */
-.clickable-style--icon.clickable-style--brand {
+:where(.clickable-style--icon).clickable-style--brand {
   border-color: var(--eds-theme-color-button-icon-brand-border);
   background-color: var(--eds-theme-color-button-icon-brand-background);
   color: var(--eds-theme-color-button-icon-brand-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-icon-brand);
   }
 
@@ -303,7 +303,7 @@
     border-color: var(--eds-theme-color-button-icon-brand-border-hover);
     background-color: var(--eds-theme-color-button-icon-brand-background-hover);
     color: var(--eds-theme-color-button-icon-brand-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-brand-hover);
     }
   }
@@ -314,7 +314,7 @@
       --eds-theme-color-button-icon-brand-background-active
     );
     color: var(--eds-theme-color-button-icon-brand-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-brand-active);
     }
   }
@@ -327,12 +327,12 @@
  *
  * Use for Close "X" buttons, tooltip icons, and other.
  */
-.clickable-style--icon.clickable-style--neutral {
+:where(.clickable-style--icon).clickable-style--neutral {
   border-color: var(--eds-theme-color-button-icon-neutral-border);
   background-color: var(--eds-theme-color-button-icon-neutral-background);
   color: var(--eds-theme-color-button-icon-neutral-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-icon-neutral);
   }
 
@@ -342,7 +342,7 @@
       --eds-theme-color-button-icon-neutral-background-hover
     );
     color: var(--eds-theme-color-button-icon-neutral-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-neutral-hover);
     }
   }
@@ -353,7 +353,7 @@
       --eds-theme-color-button-icon-neutral-background-active
     );
     color: var(--eds-theme-color-button-icon-neutral-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-neutral-active);
     }
   }
@@ -366,12 +366,12 @@
  *
  * Use for Close "X" buttons, tooltip icons, and other.
  */
-.clickable-style--icon.clickable-style--success {
+:where(.clickable-style--icon).clickable-style--success {
   border-color: var(--eds-theme-color-button-icon-success-border);
   background-color: var(--eds-theme-color-button-icon-success-background);
   color: var(--eds-theme-color-button-icon-success-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-icon-success);
   }
 
@@ -381,7 +381,7 @@
       --eds-theme-color-button-icon-success-background-hover
     );
     color: var(--eds-theme-color-button-icon-success-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-success-hover);
     }
   }
@@ -392,7 +392,7 @@
       --eds-theme-color-button-icon-success-background-active
     );
     color: var(--eds-theme-color-button-icon-success-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-success-active);
     }
   }
@@ -405,12 +405,12 @@
  *
  * Use for Close "X" buttons, tooltip icons, and other.
  */
-.clickable-style--icon.clickable-style--warning {
+:where(.clickable-style--icon).clickable-style--warning {
   border-color: var(--eds-theme-color-button-icon-warning-border);
   background-color: var(--eds-theme-color-button-icon-warning-background);
   color: var(--eds-theme-color-button-icon-warning-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-icon-warning);
   }
 
@@ -420,7 +420,7 @@
       --eds-theme-color-button-icon-warning-background-hover
     );
     color: var(--eds-theme-color-button-icon-warning-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-warning-hover);
     }
   }
@@ -431,7 +431,7 @@
       --eds-theme-color-button-icon-warning-background-active
     );
     color: var(--eds-theme-color-button-icon-warning-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-warning-active);
     }
   }
@@ -444,12 +444,12 @@
  *
  * Use for Close "X" buttons, tooltip icons, and other.
  */
-.clickable-style--icon.clickable-style--error {
+:where(.clickable-style--icon).clickable-style--error {
   border-color: var(--eds-theme-color-button-icon-error-border);
   background-color: var(--eds-theme-color-button-icon-error-background);
   color: var(--eds-theme-color-button-icon-error-text);
 
-  svg {
+  :where(svg) {
     color: var(--eds-theme-color-button-icon-error);
   }
 
@@ -457,7 +457,7 @@
     border-color: var(--eds-theme-color-button-icon-error-border-hover);
     background-color: var(--eds-theme-color-button-icon-error-background-hover);
     color: var(--eds-theme-color-button-icon-error-text-hover);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-error-hover);
     }
   }
@@ -468,7 +468,7 @@
       --eds-theme-color-button-icon-error-background-active
     );
     color: var(--eds-theme-color-button-icon-error-text-active);
-    svg {
+    :where(svg) {
       color: var(--eds-theme-color-button-icon-error-active);
     }
   }
@@ -494,9 +494,10 @@
 
 /**
  * Needs `:where` pseudoclass to reduce specificity so class overrides
- * for margin can happen where used.
+ * for margin can happen where used, but needs to be specific enough to override preflight.
  */
-:where(.clickable-style--link) {
+a:where(.clickable-style--link),
+button:where(.clickable-style--link) {
   /* 2px padding gives the text breathing room in the focus state */
   padding: 2px;
   /**
@@ -509,7 +510,7 @@
 /**
  * Link neutral clickable style
  */
-.clickable-style--link.clickable-style--neutral {
+:where(.clickable-style--link).clickable-style--neutral {
   text-decoration-color: var(--eds-theme-color-border-link-neutral);
 
   &:hover {

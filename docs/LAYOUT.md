@@ -64,15 +64,13 @@ View the `Grid` component in Storybook to view all available variants.
 
 Most EDS components do not include `margin` properties as spacing between components should be handled primarily with the `Grid` and `Layout` components described above.
 
-However, it's important to be able to control spacing between components, so EDS provides `margin` utility classes that can be added to any component. For instance:
+However, it's important to be able to control spacing between components, so EDS uses [tailwind margin utility classes](https://tailwindcss.com/docs/margin) that can be added to any component. For instance:
 
 ```jsx
-<Heading className="u-margin-bottom-sm">
-  Heading with small margin bottom
-</Heading>
+<Heading className="mb-2">Heading with small margin bottom</Heading>
 ```
 
-`margin-bottom` utility classes should be primarily used in order to embrace a [single-direction margin flow](https://csswizardry.com/2012/06/single-direction-margin-declarations/) that leads to more predictable and maintainable outcomes.
+Margin bottom utility classes should be primarily used in order to embrace a [single-direction margin flow](https://csswizardry.com/2012/06/single-direction-margin-declarations/) that leads to more predictable and maintainable outcomes.
 
 ---
 
@@ -89,11 +87,4 @@ However, it's important to be able to control spacing between components, so EDS
 
 ### Adding or Modifying Layouts or Grids
 
-`Layout` and `Grid` components should contain the minimum number of patterns to build most product layouts and compositions. Adding additional variants should be handled with careful consideration.
-
-1. Validate the need for adding an additional layout/variant.
-2.
-
-### Adding or modifying spacing utility classes
-
-Spacing utilities are found in `src/components/Utilities/_spacing.scss`. The existing t-shirt size values accommodate a spectrum of use cases and therefore shouldn't really be appended to. If an "in-between" value is needed, handle it as a one-time inline style. Altering these utility values would constitute a breaking change since it would shift all layouts using those utility classes.
+`Layout` and `Grid` components should contain the minimum number of patterns to build most product layouts and compositions. Adding additional variants should be handled with careful consideration. Be sure to determine the additional layout/variant is really needed before adding.

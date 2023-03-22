@@ -6,30 +6,39 @@ import {
   EdsThemeColorIconBrandPrimary,
   EdsThemeColorIconUtilitySuccess,
 } from '../../tokens-dist/ts/colors';
+import { chromaticViewports } from '../../util/viewports';
+import Heading from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';
 
 export default {
-  title: 'Molecules/Navigation/TimelineNav',
+  title: 'Components/TimelineNav',
   component: TimelineNav,
   subcomponents: { TimelineNavPanel },
+  parameters: {
+    badges: ['1.0'],
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
+  },
   args: {
     variant: 'ordered',
     children: (
       <>
-        <TimelineNavPanel title="Overview">
-          <Text as="div">
-            <h3>Overview</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+        <TimelineNavPanel className="max-w-xl" title="Overview">
+          <Heading className="mb-6" size="h3">
+            Overview
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
         <TimelineNavPanel
+          className="max-w-xl"
           title="TimelineNavPanel 1"
           titleAfter={
             <Icon
@@ -42,30 +51,35 @@ export default {
           }
           variant="number"
         >
-          <Text as="div">
-            <h3>TimelineNavPanel 1</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
-          </Text>
-        </TimelineNavPanel>
-
-        <TimelineNavPanel title="TimelineNavPanel 2" variant="error">
-          <Text as="div">
-            <h3>TimelineNavPanel 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+          <Heading className="mb-6" size="h3">
+            TimelineNavPanel 1
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
 
         <TimelineNavPanel
+          className="max-w-xl"
+          title="TimelineNavPanel 2"
+          variant="error"
+        >
+          <Heading className="mb-6" size="h3">
+            TimelineNavPanel 2
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
+          </Text>
+        </TimelineNavPanel>
+
+        <TimelineNavPanel
+          className="max-w-xl"
           title="
               Panel with a long name that breaks into multiple lines on smaller
               viewports"
@@ -80,65 +94,75 @@ export default {
           }
           variant="warning"
         >
-          <Text as="div">
-            <h3>
-              Panel with a long name that breaks into multiple lines on smaller
-              viewports
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+          <Heading className="mb-6" size="h3">
+            Panel with a long name that breaks into multiple lines on smaller
+            viewports
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="TimelineNavPanel 4" variant="success">
-          <Text as="div">
-            <h3>TimelineNavPanel 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+        <TimelineNavPanel
+          className="max-w-xl"
+          title="TimelineNavPanel 4"
+          variant="success"
+        >
+          <Heading className="mb-6" size="h3">
+            TimelineNavPanel 4
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="TimelineNavPanel 5">
-          <Text as="div">
-            <h3>TimelineNavPanel 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+        <TimelineNavPanel className="max-w-xl" title="TimelineNavPanel 5">
+          <Heading className="mb-6" size="h3">
+            TimelineNavPanel 5
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="TimelineNavPanel 6" variant="number">
-          <Text as="div">
-            <h3>TimelineNavPanel 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+        <TimelineNavPanel
+          className="max-w-xl"
+          title="TimelineNavPanel 6"
+          variant="number"
+        >
+          <Heading className="mb-6" size="h3">
+            TimelineNavPanel 6
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="Final Item - complete" variant="complete">
-          <Text as="div">
-            <h3>Final Item - complete</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+        <TimelineNavPanel
+          className="max-w-xl"
+          title="Final Item - complete"
+          variant="complete"
+        >
+          <Heading className="mb-6" size="h3">
+            Final Item - complete
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
           </Text>
         </TimelineNavPanel>
       </>
@@ -148,4 +172,13 @@ export default {
 
 type Args = React.ComponentProps<typeof TimelineNavPanel>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.chromebook,
+      ],
+    },
+  },
+};

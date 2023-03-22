@@ -6,7 +6,7 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 
 export default {
-  title: 'Molecules/Data/DataBar',
+  title: 'Components/DataBar',
   component: DataBar,
   args: {
     label: 'Data bar',
@@ -16,6 +16,9 @@ export default {
       { value: 10, text: 'Segment 2' },
       { value: 15, text: 'Segment 3' },
     ],
+  },
+  parameters: {
+    badges: ['1.0'],
   },
   decorators: [
     (Story) => (

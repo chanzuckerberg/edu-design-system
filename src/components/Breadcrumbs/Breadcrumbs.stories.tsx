@@ -1,11 +1,12 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
+import { chromaticViewports } from '../../util/viewports';
 
 export default {
-  title: 'Molecules/Navigation/Breadcrumbs',
+  title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
   subcomponents: { 'Breadcrumbs.Item': Breadcrumbs.Item },
   args: {
@@ -16,6 +17,9 @@ export default {
         <Breadcrumbs.Item href="#" text="Grandchild" />
       </>
     ),
+  },
+  parameters: {
+    badges: ['1.0'],
   },
   decorators: [
     (Story) => (
@@ -89,7 +93,13 @@ export const LongText: StoryObj<Args> = {
     ),
   },
   parameters: {
-    chromatic: { viewports: [414, 768, 1366] },
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.chromebook,
+      ],
+    },
   },
 };
 
@@ -102,9 +112,9 @@ export const LongTextMenu: StoryObj<Args> = {
   },
   parameters: {
     viewport: {
-      defaultViewport: 'tablet',
+      defaultViewport: 'ipadMini',
     },
-    chromatic: { viewports: [834] },
+    chromatic: { viewports: [chromaticViewports.ipadMini] },
     axe: {
       skip: true,
     },
@@ -115,6 +125,6 @@ export const LongTextMenu: StoryObj<Args> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const dropdownMenuTrigger = await canvas.findByRole('button');
-    dropdownMenuTrigger.click();
+    userEvent.click(dropdownMenuTrigger);
   },
 };

@@ -5,10 +5,10 @@ import React from 'react';
 import { Score } from './Score';
 
 export default {
-  title: 'Molecules/Messaging/Score',
+  title: 'Components/Score',
   component: Score,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
 } as Meta<Args>;
 
@@ -36,7 +36,9 @@ export const Table: StoryObj<Args> = {
   decorators: [
     (Story) => (
       <div>
-        <p>Score has transparent border for use in Table component</p>
+        <p className="mb-4">
+          Score has transparent border for use in Table component
+        </p>
         <Story />
       </div>
     ),

@@ -3,7 +3,6 @@
 exports[`<Button /> Default story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -13,7 +12,6 @@ exports[`<Button /> Default story renders snapshot 1`] = `
 exports[`<Button /> Destructive story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -23,17 +21,17 @@ exports[`<Button /> Destructive story renders snapshot 1`] = `
 exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   <svg
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -43,7 +41,6 @@ exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> FullWidth story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand clickable-style--full-width button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -53,7 +50,6 @@ exports[`<Button /> FullWidth story renders snapshot 1`] = `
 exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon button--disabled"
-  data-bootstrap-override="clickable-style-icon"
   disabled=""
   tabindex="-1"
   type="button"
@@ -62,10 +58,11 @@ exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -75,22 +72,20 @@ exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
 exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
     class="icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="10"
-    >
+    <title>
       go back
     </title>
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
 </button>
@@ -99,22 +94,20 @@ exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
 exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
     class="icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="13"
-    >
+    <title>
       go back
     </title>
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
 </button>
@@ -123,17 +116,17 @@ exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
 exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -143,17 +136,17 @@ exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -163,7 +156,6 @@ exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
 exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -171,10 +163,11 @@ exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -183,7 +176,6 @@ exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
 exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -191,10 +183,11 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -203,7 +196,6 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 exports[`<Button /> IconError story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--error button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -211,10 +203,11 @@ exports[`<Button /> IconError story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -223,7 +216,6 @@ exports[`<Button /> IconError story renders snapshot 1`] = `
 exports[`<Button /> IconNeutral story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -231,10 +223,11 @@ exports[`<Button /> IconNeutral story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -243,7 +236,6 @@ exports[`<Button /> IconNeutral story renders snapshot 1`] = `
 exports[`<Button /> IconSuccess story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--success button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -251,10 +243,11 @@ exports[`<Button /> IconSuccess story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -263,7 +256,6 @@ exports[`<Button /> IconSuccess story renders snapshot 1`] = `
 exports[`<Button /> IconWarning story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--warning button button--icon"
-  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -271,10 +263,11 @@ exports[`<Button /> IconWarning story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -283,7 +276,6 @@ exports[`<Button /> IconWarning story renders snapshot 1`] = `
 exports[`<Button /> Link story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--link clickable-style--brand button button--link"
-  data-bootstrap-override="clickable-style-link"
   type="button"
 >
   Button
@@ -293,7 +285,6 @@ exports[`<Button /> Link story renders snapshot 1`] = `
 exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--link clickable-style--brand button button--link button--disabled"
-  data-bootstrap-override="clickable-style-link"
   disabled=""
   tabindex="-1"
   type="button"
@@ -305,7 +296,6 @@ exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-  data-bootstrap-override="clickable-style-link"
   type="button"
 >
   Button
@@ -315,7 +305,6 @@ exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
 exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--link clickable-style--brand button button--link"
-  data-bootstrap-override="clickable-style-link"
   type="button"
 >
   Button
@@ -323,15 +312,14 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
     class="icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="14"
-    >
+    <title>
       opens in a new tab
     </title>
-    <use
-      xlink:href="test-file-stub#open-in-new"
+    <path
+      d="M3 21V3H12V5H5V19H19V12H21V21H3ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z"
     />
   </svg>
 </button>
@@ -340,29 +328,58 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 exports[`<Button /> Loading story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary button--disabled eds-is-loading"
-  data-bootstrap-override="clickable-style-secondary"
   disabled=""
   tabindex="-1"
   type="button"
 >
-  <svg
-    class="icon eds-is-loading"
-    fill="currentColor"
-    height="1.5em"
-    role="img"
-    style="--icon-size: 1.5em;"
-    width="1.5em"
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    aria-busy="true"
+    aria-label="loading"
+    class="loading-indicator eds-is-loading"
+    data-testid="oval-loading"
+    role="status"
   >
-    <title
-      id="16"
+    <svg
+      data-testid="oval-svg"
+      height="24"
+      stroke="transparent"
+      viewBox="-20 -20 42 42"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      loading
-    </title>
-    <use
-      xlink:href="test-file-stub#spinner"
-    />
-  </svg>
+      <g
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <g
+          data-testid="oval-secondary-group"
+          stroke-width="2"
+          transform="translate(1 1)"
+        >
+          <circle
+            cx="0"
+            cy="0"
+            r="20"
+            stroke="transparent"
+            stroke-opacity=".5"
+            stroke-width="2"
+          />
+          <path
+            d="M20 0c0-9.94-8.06-20-20-20"
+          >
+            <animatetransform
+              attributeName="transform"
+              dur="1s"
+              from="0 0 0"
+              repeatCount="indefinite"
+              to="360 0 0"
+              type="rotate"
+            />
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
   Button
 </button>
 `;
@@ -370,7 +387,6 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
 exports[`<Button /> Primary story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -380,7 +396,6 @@ exports[`<Button /> Primary story renders snapshot 1`] = `
 exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled"
-  data-bootstrap-override="clickable-style-primary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -392,17 +407,17 @@ exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   <svg
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -412,7 +427,6 @@ exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -422,7 +436,6 @@ exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -430,10 +443,11 @@ exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -442,7 +456,6 @@ exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--sm clickable-style--primary clickable-style--brand button button--primary"
-  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -452,7 +465,6 @@ exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary button--disabled"
-  data-bootstrap-override="clickable-style-secondary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -464,7 +476,6 @@ exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 exports[`<Button /> SecondaryError story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--error button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -474,17 +485,17 @@ exports[`<Button /> SecondaryError story renders snapshot 1`] = `
 exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   <svg
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -494,7 +505,6 @@ exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--brand button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -504,7 +514,6 @@ exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -512,10 +521,11 @@ exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -524,7 +534,6 @@ exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--brand button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -534,7 +543,6 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 exports[`<Button /> SecondarySuccess story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--success button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -544,7 +552,6 @@ exports[`<Button /> SecondarySuccess story renders snapshot 1`] = `
 exports[`<Button /> SecondaryWarning story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -554,7 +561,6 @@ exports[`<Button /> SecondaryWarning story renders snapshot 1`] = `
 exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -564,7 +570,6 @@ exports[`<Button /> Tertiary story renders snapshot 1`] = `
 exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary button--disabled"
-  data-bootstrap-override="clickable-style-secondary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -576,17 +581,17 @@ exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   <svg
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -596,7 +601,6 @@ exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -606,7 +610,6 @@ exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -614,10 +617,11 @@ exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -626,7 +630,6 @@ exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 <button
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--neutral button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -636,7 +639,6 @@ exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 exports[`<Button /> passes class names down properly 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary exampleClassName"
-  data-bootstrap-override="clickable-style-secondary"
   data-testid="example-class-name"
   type="button"
 >
@@ -647,7 +649,6 @@ exports[`<Button /> passes class names down properly 1`] = `
 exports[`<Button /> passes test ids down properly 1`] = `
 <button
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-  data-bootstrap-override="clickable-style-secondary"
   data-testid="example-test-id"
   type="button"
 >

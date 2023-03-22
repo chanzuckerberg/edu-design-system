@@ -4,10 +4,7 @@
     "browser": true,
     "node": true
   },
-  "plugins": [
-    "testing-library",
-    "@chanzuckerberg/stories"
-  ],
+  "plugins": ["testing-library", "@chanzuckerberg/stories"],
   "extends": [
     "@chanzuckerberg/eslint-config-edu-js",
     "@chanzuckerberg/eslint-config-edu-ts",
@@ -28,6 +25,7 @@
           "**/*.config.{js,ts,mjs}",
           "**/*.setup.{js,ts}",
           ".storybook/**",
+          "scripts/stylelint/**",
           "plopfile.js"
         ]
       }
@@ -38,10 +36,20 @@
         "alphabetize": {
           "order": "asc"
         },
-        "groups": ["builtin", "external", "sibling", "parent", "index"]
+        "groups": ["builtin", "external", "sibling", "parent", "index"],
+        "pathGroups": [
+          {
+            "pattern": "*.module.css",
+            "group": "index",
+            "patternOptions": { "matchBase": true },
+            "position": "after"
+          }
+        ]
       }
     ],
-    "no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "react/jsx-boolean-value": "warn"
   },
   "overrides": [
     {

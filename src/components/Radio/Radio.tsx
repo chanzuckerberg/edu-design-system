@@ -1,11 +1,10 @@
 import clsx from 'clsx';
-import React from 'react';
-import { useUID } from 'react-uid';
-import styles from './Radio.module.css';
+import React, { useId } from 'react';
 import type { RadioInputProps } from '../RadioInput';
 import RadioInput from '../RadioInput';
 import type { RadioLabelProps } from '../RadioLabel';
 import RadioLabel from '../RadioLabel';
+import styles from './Radio.module.css';
 
 export type RadioProps = RadioInputProps & {
   /**
@@ -45,7 +44,7 @@ export const Radio = ({
   ) {
     throw new Error('You must provide a visible label or aria-label');
   }
-  const generatedId = useUID();
+  const generatedId = useId();
   const radioId = id || generatedId;
 
   const componentClassName = clsx(styles['radio'], className);

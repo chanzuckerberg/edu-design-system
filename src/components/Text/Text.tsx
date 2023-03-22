@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { ForwardedRef } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './Text.module.css';
-import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
 export type Size =
   | 'body'
@@ -31,24 +30,13 @@ export type Variant =
 
 export type Props = {
   /**
-   * Controls whether to render text inline (defaults to "p");
-   * Use "div" to indicate usage of `<Text>` as a text passage,
-   * (i.e. wraps <p>, <h1>-<h6>, <a>, <ol>, <ul>, <blockquote>, <hr>)
+   * Controls whether to render text inline (defaults to "p").
    */
-  as?: 'p' | 'span' | 'div';
-  /**
-   * Flags if the length of the text passage should be capped.
-   * Used only with as="div" and defaults to true
-   */
-  capLinelength?: boolean;
+  as?: 'p' | 'span';
   children: React.ReactNode;
   className?: string;
   variant?: Variant;
   size?: Size;
-  /**
-   * Adds margin bottom spacing to the <Text> component.
-   */
-  spacing?: 'half' | '1x' | '2x';
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -56,33 +44,29 @@ export type Props = {
 /**
  * `import {Text} from "@chanzuckerberg/eds";`
  *
- * There are two perceived use cases for the text component.
- * One is to decorate `<p>` and `<span>` with thematic variants.
+ * The Text component decorates `<p>` and `<span>` with thematic variants.
  * Defaults to `<p>` and should pass `as="span"` to set as `<span>`.
- *
- * The second is to provide a wrapper for multiple text elements in usage as a text passage.
- * For such use, should pass as="div" and wrap various elements like `<p>`, `<h1>`-`<h6>`, `<a>`, `<ol>`, `<ul>`, `<blockquote>`, and `<hr>`.
  *
  * Example usage:
  *
  * ```tsx
- * <Text as="div">
- *   <h1>Heading for the text passage</h1>
- *   <p>First paragraph copy of the text passage</p>
- *   <p>Second paragraph copy of the text passage</p>
+ * <Text>
+ *  Text paragraph copy
+ * </Text>
+ *
+ * <Text as="span">
+ *  Text inline copy
  * </Text>
  * ```
  */
 export const Text = forwardRef(
   (
     {
-      as = 'p',
-      capLinelength = true,
+      as: TagName = 'p',
       children,
       className,
       variant,
       size = 'body',
-      spacing,
       weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
@@ -98,16 +82,11 @@ export const Text = forwardRef(
         'Info variant is deprecated, please consider another variant.',
       );
     }
-    const TagName =
-      capLinelength && as === 'div' ? LayoutLinelengthContainer : as;
     const componentClassName = clsx(
       styles['text'],
       styles[`text--${size}`],
       variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
-      spacing && styles[`text--${spacing}-spacing`],
-      as === 'div' && styles['text-passage'],
-      as === 'div' && styles[`text-passage--${size}`],
       className,
     );
     return (
@@ -118,5 +97,3 @@ export const Text = forwardRef(
   },
 );
 Text.displayName = 'Text'; // Satisfy eslint
-
-export default Text;

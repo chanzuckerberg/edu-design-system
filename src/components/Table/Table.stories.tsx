@@ -3,19 +3,19 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Table } from './Table';
-import styles from './Table.stories.module.css';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
 import type { SortDirectionsType } from '../TableHeaderCell';
 import TableRow from '../TableRow';
+import styles from './Table.stories.module.css';
 
 export default {
-  title: 'Organisms/Tables/Table',
+  title: 'Components/Table',
   component: Table,
   subcomponents: { TableBody, TableCell, TableHeader, TableRow },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.1', BADGE.BETA],
   },
   decorators: [
     (Story) => (

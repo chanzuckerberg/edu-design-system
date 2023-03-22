@@ -1,0 +1,90 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # PRIMARY NAVIGATION ITEM
+\*------------------------------------*/
+
+/**
+ * Primary nav link
+ *
+ * Individual link within each primary nav item.
+ */
+.primary-nav__link {
+  display: flex;
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: var(--eds-size-1);
+  border-radius: var(--eds-border-radius-md);
+  transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--eds-theme-color-button-primary-brand-background-hover);
+  }
+
+  &:active {
+    background: var(--eds-theme-color-button-primary-brandbackground-active);
+  }
+
+  &:focus-visible {
+    @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      background: var(--eds-theme-color-button-primary-brand-background-hover);
+    }
+
+    &:focus {
+      @mixin focusInverted;
+    }
+  }
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+/**
+ * Active primary nav link
+ */
+.primary-nav__link--active {
+  background: var(--eds-theme-color-button-primary-brand-background-active);
+}
+
+/**
+ * Primary nav icon
+ */
+.primary-nav__icon {
+  margin-right: var(--eds-size-2-and-half);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+}
+
+/*------------------------------------*\
+    # PRIMARY NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Primary navigation existing in the header and maybe the footer.
+ * 
+ * The outer <nav> wrapper of the primary navigation.
+ */
+
+/**
+ * Primary nav list
+ * 
+ The actual list of nav items.
+ */
+.primary-nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-1);
+  width: fit-content;
+  z-index: var(--eds-z-index-200);
+
+  @media all and (min-width: $eds-bp-xl) {
+    width: auto;
+  }
+}

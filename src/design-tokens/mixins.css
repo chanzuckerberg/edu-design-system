@@ -1,23 +1,6 @@
 @import '../design-tokens/tier-2-usage/typography-usage.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
-@define-mixin reset {
-  margin: 0;
-  padding: 0;
-}
-
-/**
-* Reset all
-*
-* The 'all' shorthand CSS property resets all of an element's properties except unicode-bidi,
-* direction, and CSS Custom Properties. The value 'unset' specifies that all of an element's
-* properties should be changed to their inherited values if they inherit by default, or to their
-* initial values if not.
-*/
-@define-mixin resetAll {
-  all: unset !important;
-}
-
 /**
  * Link button styles
  */
@@ -133,13 +116,15 @@
    * Input error state
    */
   &.error {
+    /* TODO: should this color be applied when a field is in an :invalid state */
     border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 
   /**
-   * Disabled state
+   * Disabled/read-only state
    */
   &:disabled,
+  &:read-only,
   &:disabled::placeholder {
     border-color: var(--eds-theme-color-border-disabled);
     color: var(--eds-theme-color-text-disabled);
@@ -149,11 +134,6 @@
   &::placeholder {
     @mixin placeholderStyles;
   }
-}
-
-@define-mixin labelStyles {
-  @mixin eds-theme-typography-form-label;
-  display: inline-block;
 }
 
 @define-mixin placeholderStyles {

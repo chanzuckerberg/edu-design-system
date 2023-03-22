@@ -1,14 +1,17 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Section } from './Section';
-import styles from './Section.stories.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
+import styles from './Section.stories.module.css';
 
 export default {
-  title: 'Organisms/Sections/Section',
+  title: 'Components/Section',
   component: Section,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children:
       'This is the section body, where you can put any content or include other components.',
@@ -30,11 +33,7 @@ export const Default: StoryObj<Args> = {
 export const Center: StoryObj<Args> = {
   args: {
     align: 'center',
-    overline: (
-      <Text as="div" size="overline">
-        Overline above title
-      </Text>
-    ),
+    overline: <Text size="overline">Overline above title</Text>,
     title: 'Section Title',
     description: (
       <Text as="p" className={styles['section__text']} size="sm">
@@ -57,11 +56,7 @@ export const WithDescription: StoryObj<Args> = {
 
 export const WithOverline: StoryObj<Args> = {
   args: {
-    overline: (
-      <Text as="div" size="overline">
-        Overline above title
-      </Text>
-    ),
+    overline: <Text size="overline">Overline above title</Text>,
     title: 'Section Title',
   },
 };

@@ -6,8 +6,11 @@ import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Buttons/Link',
+  title: 'Components/Link',
   component: Link,
+  parameters: {
+    badges: ['1.0'],
+  },
   args: {
     children: 'Link',
     variant: 'secondary',

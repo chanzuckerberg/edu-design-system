@@ -1,0 +1,61 @@
+@import '../../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # PROJECT CARD
+\*------------------------------------*/
+
+/**
+ * Primary UI components acts as container for card components.
+ */
+.project-card {
+  position: relative;
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-fade-quick);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.project-card__header.project-card__header {
+  margin-right: var(--eds-size-1);
+
+  /**
+  * Project card header within draggable project card.
+  */
+  .project-card--draggable & {
+    /* Allows room for the handle to show on hover without overlaying content. */
+    min-width: var(--eds-size-2-and-half);
+  }
+}
+
+.project-card__body {
+  flex-direction: row;
+  gap: var(--eds-);
+}
+
+.project-card__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__title {
+  min-height: var(--eds-size-6);
+}
+
+.project-card__menu-button {
+  padding-top: var(--eds-size-2);
+  padding-bottom: var(--eds-size-2);
+}
+
+.project-card__meta {
+  @mixin eds-theme-typography-body-text-xs;
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.project-card__meta-icon {
+  margin-right: var(--eds-size-1);
+  position: relative;
+  bottom: 1px;
+}

@@ -8,15 +8,14 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="1"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -35,7 +34,6 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -54,15 +52,14 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="13"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -81,7 +78,6 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -91,22 +87,20 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="14"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -121,15 +115,14 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="8"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -148,7 +141,6 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -160,7 +152,6 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -186,15 +177,14 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="23"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -213,7 +203,6 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -225,7 +214,6 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -234,22 +222,20 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="24"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -264,15 +250,14 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="5"
-    >
+    <title>
       error
     </title>
-    <use
-      xlink:href="test-file-stub#dangerous"
+    <path
+      d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
     />
   </svg>
   <div
@@ -291,7 +276,6 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -310,15 +294,14 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="21"
-    >
+    <title>
       error
     </title>
-    <use
-      xlink:href="test-file-stub#dangerous"
+    <path
+      d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
     />
   </svg>
   <div
@@ -337,7 +320,6 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -347,22 +329,20 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="22"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -377,15 +357,14 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="12"
-    >
+    <title>
       error
     </title>
-    <use
-      xlink:href="test-file-stub#dangerous"
+    <path
+      d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
     />
   </svg>
   <div
@@ -404,7 +383,6 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -416,7 +394,6 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--error button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -434,15 +411,14 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="33"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -461,7 +437,6 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -480,15 +455,14 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="2"
-    >
+    <title>
       notice
     </title>
-    <use
-      xlink:href="test-file-stub#forum"
+    <path
+      d="M2 17V2H17V13H6L2 17ZM6 18V15H19V6H22V22L18 18H6Z"
     />
   </svg>
   <div
@@ -507,7 +481,6 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -526,15 +499,14 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="15"
-    >
+    <title>
       notice
     </title>
-    <use
-      xlink:href="test-file-stub#forum"
+    <path
+      d="M2 17V2H17V13H6L2 17ZM6 18V15H19V6H22V22L18 18H6Z"
     />
   </svg>
   <div
@@ -553,7 +525,6 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -563,22 +534,20 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="16"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -593,15 +562,14 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="9"
-    >
+    <title>
       notice
     </title>
-    <use
-      xlink:href="test-file-stub#forum"
+    <path
+      d="M2 17V2H17V13H6L2 17ZM6 18V15H19V6H22V22L18 18H6Z"
     />
   </svg>
   <div
@@ -620,7 +588,6 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -632,7 +599,6 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -650,15 +616,14 @@ exports[`<Banner /> NoDescription story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="6"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -683,15 +648,14 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="7"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -705,7 +669,6 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -724,15 +687,14 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="3"
-    >
+    <title>
       success
     </title>
-    <use
-      xlink:href="test-file-stub#check-circle"
+    <path
+      d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
     />
   </svg>
   <div
@@ -751,7 +713,6 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -770,15 +731,14 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="17"
-    >
+    <title>
       success
     </title>
-    <use
-      xlink:href="test-file-stub#check-circle"
+    <path
+      d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
     />
   </svg>
   <div
@@ -797,7 +757,6 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -807,22 +766,20 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="18"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -837,15 +794,14 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="10"
-    >
+    <title>
       success
     </title>
-    <use
-      xlink:href="test-file-stub#check-circle"
+    <path
+      d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
     />
   </svg>
   <div
@@ -864,7 +820,6 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -876,7 +831,6 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--success button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -894,15 +848,14 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="27"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -921,7 +874,6 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -940,15 +892,14 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="28"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -967,7 +918,6 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -977,22 +927,20 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="29"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -1007,15 +955,14 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="31"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -1034,7 +981,6 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1046,7 +992,6 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -1055,22 +1000,20 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="32"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -1085,15 +1028,14 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="30"
-    >
+    <title>
       attention
     </title>
-    <use
-      xlink:href="test-file-stub#notifications"
+    <path
+      d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V2H13.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
     />
   </svg>
   <div
@@ -1112,7 +1054,6 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1124,7 +1065,6 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates
@@ -1142,15 +1082,14 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="4"
-    >
+    <title>
       warning
     </title>
-    <use
-      xlink:href="test-file-stub#warning"
+    <path
+      d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
     />
   </svg>
   <div
@@ -1169,7 +1108,6 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1188,15 +1126,14 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="19"
-    >
+    <title>
       warning
     </title>
-    <use
-      xlink:href="test-file-stub#warning"
+    <path
+      d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
     />
   </svg>
   <div
@@ -1215,7 +1152,6 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1225,22 +1161,20 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
   </div>
   <button
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
-    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
       class="icon"
       fill="currentColor"
       role="img"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="20"
-      >
+      <title>
         dismiss notification
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -1255,15 +1189,14 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
     class="icon banner__icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="11"
-    >
+    <title>
       warning
     </title>
-    <use
-      xlink:href="test-file-stub#warning"
+    <path
+      d="M1 21L12 2L23 21H1ZM11 15H13V10H11V15ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.9043 17.5207 13 17.2833 13 17C13 16.7167 12.9043 16.4793 12.713 16.288C12.521 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.096 16.4793 11 16.7167 11 17C11 17.2833 11.096 17.5207 11.288 17.712C11.4793 17.904 11.7167 18 12 18Z"
     />
   </svg>
   <div
@@ -1282,7 +1215,6 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
          
         <button
           class="clickable-style clickable-style--link clickable-style--neutral button button--link"
-          data-bootstrap-override="clickable-style-link"
           type="button"
         >
           click into the course.
@@ -1294,7 +1226,6 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         See updates

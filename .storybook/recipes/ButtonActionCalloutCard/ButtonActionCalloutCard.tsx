@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
+import { Card, Heading } from '../../../src';
 import styles from './ButtonActionCalloutCard.module.css';
-import { Card, Heading, Text } from '../../../src';
 
 export interface Props {
   /**
@@ -46,11 +46,7 @@ export const ButtonActionCalloutCard = ({
           {title}
         </Heading>
         <div className={styles['button-action-callout-card__body-inner']}>
-          {children && (
-            <Text as="div" size="sm">
-              {children}
-            </Text>
-          )}
+          {children && <div className="max-w-xl">{children}</div>}
           {actions && <div>{actions}</div>}
         </div>
       </Card.Body>

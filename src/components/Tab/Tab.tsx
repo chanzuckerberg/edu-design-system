@@ -25,7 +25,7 @@ export interface Props {
   /**
    * Text used to label the tab in the tab list
    */
-  title?: string;
+  title: string;
 }
 
 /**

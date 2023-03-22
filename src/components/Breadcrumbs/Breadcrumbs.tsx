@@ -1,11 +1,10 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, { type ReactNode } from 'react';
-import { useUID } from 'react-uid';
-import styles from './Breadcrumbs.module.css';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
 import DropdownMenuItem from '../DropdownMenuItem';
+import styles from './Breadcrumbs.module.css';
 
 type Props = {
   /**
@@ -44,11 +43,7 @@ export const Breadcrumbs = ({
 
   const ref = React.useRef<HTMLUListElement>(null);
 
-  /**
-   * Needs useLayoutEffect over useEffect since it needs to be run before paint.
-   * TODO: with React 18, might be able to use useEffect https://github.com/reactjs/reactjs.org/blob/d14cbdca2445cd676526c4c52e1e106342ff7bb3/content/docs/hooks-reference.md?plain=1#L155
-   */
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const updateShouldTruncate = () => {
       const willOverflow = ref.current
         ? ref.current.clientWidth < ref.current.scrollWidth
@@ -105,15 +100,12 @@ export const Breadcrumbs = ({
       );
     });
 
-  const generatedId = useUID();
-  const breadcrumbsId = id || generatedId;
-
   const componentClassName = clsx(styles['breadcrumbs'], className);
   return (
     <nav
       aria-label={ariaLabel}
       className={componentClassName}
-      id={breadcrumbsId}
+      id={id}
       {...other}
     >
       <ul className={styles['breadcrumbs__list']} ref={ref}>

@@ -1,5 +1,8 @@
+import clsx from 'clsx';
 import React, { useState } from 'react';
-import styles from './CoursePlannerEdit.module.css';
+import type { ReactNode } from 'react';
+
+import ProjectCard from './ProjectCard';
 
 import {
   PageHeader,
@@ -20,17 +23,28 @@ import {
   Grid,
   GridItem,
   Text,
-  ProjectCard,
   DropdownMenuItem,
+  Card,
+  CardBody,
+  NumberIcon,
+  TableHeader,
+  TableRow,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeaderCell,
+  CardFooter,
 } from '../../../src';
+
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
 
-import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';
-import TableCard from '../../recipes/TableCard';
+import NumberIconList from '../../recipes/NumberIconList';
 
 import EmptyImage from '../../static/hand-pencil.svg';
+import styles from './CoursePlannerEdit.module.css';
 
+NumberIconList;
 const CognitiveSkillColumns = [
   {
     title: 'Least covered Cognitive Skills',
@@ -263,12 +277,112 @@ const StandardsRows = [
   },
 ];
 
+interface Item {
+  'aria-label': string;
+  complete: boolean;
+}
+
+interface Row {
+  value1: string;
+  projects: Item[];
+}
+
+interface Column {
+  title: string;
+}
+
+interface CardProps {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  title?: string;
+  buttonContent?: ReactNode;
+  tableColumns: Column[];
+  tableRows: Row[];
+}
+
+/**
+ * A Card containing a Table.
+ */
+export const TableCard = ({
+  className,
+  title,
+  buttonContent,
+  tableRows,
+  tableColumns,
+  ...other
+}: CardProps) => {
+  const componentClassName = clsx(styles['table-card'], className);
+
+  return (
+    <Card className={componentClassName} {...other}>
+      <CardBody>
+        <Heading
+          as="h2"
+          className="mb-4"
+          size="title-sm"
+          variant="neutral-strong"
+        >
+          {title}
+        </Heading>
+        <Table className={styles['table-card__table']} title={title}>
+          <TableHeader>
+            <TableRow variant="header">
+              {tableColumns.map((item, index) => {
+                return (
+                  <TableHeaderCell
+                    className={styles['table-card__table-header-cell']}
+                    key={'table-header-cell-' + item.title}
+                  >
+                    {item.title}
+                  </TableHeaderCell>
+                );
+              })}
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {tableRows.map((item) => {
+              return (
+                <TableRow key={`table-row-${item.value1}`}>
+                  <TableHeaderCell variant="body">
+                    {item.value1}
+                  </TableHeaderCell>
+                  <TableCell>
+                    <NumberIconList>
+                      {item.projects.map((item, index) => {
+                        return (
+                          <NumberIcon
+                            aria-label={item['aria-label']}
+                            incomplete={!item.complete}
+                            key={`number-icon-${item['aria-label']}`}
+                            number={index + 1}
+                            numberIconTitle={`incomplete step ${index + 1}`}
+                            size="sm"
+                          />
+                        );
+                      })}
+                    </NumberIconList>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </CardBody>
+      <CardFooter>
+        <Button status="neutral">{buttonContent}</Button>
+      </CardFooter>
+    </Card>
+  );
+};
+
 export const CoursePlannerEdit = () => {
   const container1EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="!mb-8">
-          <p>There are no more available projects to create your course plan</p>
+        <Text className="mb-8 max-w-xl">
+          There are no more available projects to create your course plan
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
       </>
@@ -278,8 +392,8 @@ export const CoursePlannerEdit = () => {
   const container2EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="!mb-8">
-          <p>Drag in available projects to build your course plan</p>
+        <Text className="mb-8 max-w-xl">
+          Drag in available projects to build your course plan
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
       </>
@@ -525,18 +639,18 @@ export const CoursePlannerEdit = () => {
               >
                 Select projects for your History 6 plan
               </Heading>
-              <Text as="div" className="!mb-6">
-                <p>
+              <div className="mb-6 max-w-xl">
+                <Text className="mb-6">
                   Make a plan so that you can stay connected to learning
                   objectives even as changes occur throughout the year.
-                </p>
-                <p>
+                </Text>
+                <Text>
                   Room for more instructional copy per Content Strategy lorem
                   ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                   est quam, consequat iaculis pretium accumsan, fringilla id
                   ligula.
-                </p>
-              </Text>
+                </Text>
+              </div>
 
               <DragDrop
                 containers={containers}
@@ -545,7 +659,7 @@ export const CoursePlannerEdit = () => {
                 }
                 items={items}
                 multipleContainers={false}
-                unstyledItems={true}
+                unstyledItems
               />
             </Panel>
           </LayoutSection>

@@ -3,6 +3,7 @@
 exports[`<TimelineNav /> Default story renders snapshot 1`] = `
 <div
   class="timeline-nav"
+  variant="ordered"
 >
   <div
     class="timeline-nav__nav"
@@ -16,11 +17,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid1"
+          aria-controls=":r0:-0"
           aria-selected="true"
           class="timeline-nav__link"
-          href="#1uid1"
-          id="1uid9"
+          href="#:r0:-0"
+          id=":r1:-0"
           role="tab"
           tabindex="0"
         >
@@ -38,16 +39,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
                 height="0.5rem"
                 role="img"
                 style="--icon-size: 0.5rem;"
+                viewBox="0 0 24 24"
                 width="0.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title
-                  id="2"
-                >
+                <title>
                   incomplete step
                 </title>
-                <use
-                  xlink:href="test-file-stub#circle"
+                <path
+                  d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
                 />
               </svg>
             </span>
@@ -63,16 +63,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="3"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -82,11 +81,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid2"
+          aria-controls=":r0:-1"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid2"
-          id="1uid10"
+          href="#:r0:-1"
+          id=":r1:-1"
           role="tab"
           tabindex="-1"
         >
@@ -114,16 +113,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
                 height="1.5em"
                 role="img"
                 style="--icon-size: 1.5em;"
+                viewBox="0 0 24 24"
                 width="1.5em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title
-                  id="4"
-                >
+                <title>
                   29 students have completed
                 </title>
-                <use
-                  xlink:href="test-file-stub#circle-small"
+                <path
+                  d="M12 16C11.4467 16 10.9267 15.8949 10.44 15.6848C9.95333 15.4749 9.53 15.19 9.17 14.83C8.81 14.47 8.52507 14.0467 8.3152 13.56C8.10507 13.0733 8 12.5533 8 12C8 11.4467 8.10507 10.9267 8.3152 10.44C8.52507 9.95333 8.81 9.53 9.17 9.17C9.53 8.81 9.95333 8.52493 10.44 8.3148C10.9267 8.10493 11.4467 8 12 8C12.5533 8 13.0733 8.10493 13.56 8.3148C14.0467 8.52493 14.47 8.81 14.83 9.17C15.19 9.53 15.4749 9.95333 15.6848 10.44C15.8949 10.9267 16 11.4467 16 12C16 12.5533 15.8949 13.0733 15.6848 13.56C15.4749 14.0467 15.19 14.47 14.83 14.83C14.47 15.19 14.0467 15.4749 13.56 15.6848C13.0733 15.8949 12.5533 16 12 16Z"
                 />
               </svg>
             </div>
@@ -134,16 +132,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="5"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -153,11 +150,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid3"
+          aria-controls=":r0:-2"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid3"
-          id="1uid11"
+          href="#:r0:-2"
+          id=":r1:-2"
           role="tab"
           tabindex="-1"
         >
@@ -168,10 +165,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon timeline-nav__icon timeline-nav__icon--error"
               fill="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <use
-                xlink:href="test-file-stub#cancel"
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM8.4 17L12 13.4L15.6 17L17 15.6L13.4 12L17 8.4L15.6 7L12 10.6L8.4 7L7 8.4L10.6 12L7 15.6L8.4 17Z"
               />
             </svg>
           </div>
@@ -186,16 +184,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="7"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -205,11 +202,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid4"
+          aria-controls=":r0:-3"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid4"
-          id="1uid12"
+          href="#:r0:-3"
+          id=":r1:-3"
           role="tab"
           tabindex="-1"
         >
@@ -220,10 +217,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon timeline-nav__icon timeline-nav__icon--warning"
               fill="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <use
-                xlink:href="test-file-stub#error"
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM11 13H13V7H11V13ZM12 17C12.2833 17 12.521 16.904 12.713 16.712C12.9043 16.5207 13 16.2833 13 16C13 15.7167 12.9043 15.479 12.713 15.287C12.521 15.0957 12.2833 15 12 15C11.7167 15 11.4793 15.0957 11.288 15.287C11.096 15.479 11 15.7167 11 16C11 16.2833 11.096 16.5207 11.288 16.712C11.4793 16.904 11.7167 17 12 17Z"
               />
             </svg>
           </div>
@@ -242,16 +240,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
                 height="1.5em"
                 role="img"
                 style="--icon-size: 1.5em;"
+                viewBox="0 0 24 24"
                 width="1.5em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title
-                  id="9"
-                >
+                <title>
                   2 students need feedback
                 </title>
-                <use
-                  xlink:href="test-file-stub#circle-small"
+                <path
+                  d="M12 16C11.4467 16 10.9267 15.8949 10.44 15.6848C9.95333 15.4749 9.53 15.19 9.17 14.83C8.81 14.47 8.52507 14.0467 8.3152 13.56C8.10507 13.0733 8 12.5533 8 12C8 11.4467 8.10507 10.9267 8.3152 10.44C8.52507 9.95333 8.81 9.53 9.17 9.17C9.53 8.81 9.95333 8.52493 10.44 8.3148C10.9267 8.10493 11.4467 8 12 8C12.5533 8 13.0733 8.10493 13.56 8.3148C14.0467 8.52493 14.47 8.81 14.83 9.17C15.19 9.53 15.4749 9.95333 15.6848 10.44C15.8949 10.9267 16 11.4467 16 12C16 12.5533 15.8949 13.0733 15.6848 13.56C15.4749 14.0467 15.19 14.47 14.83 14.83C14.47 15.19 14.0467 15.4749 13.56 15.6848C13.0733 15.8949 12.5533 16 12 16Z"
                 />
               </svg>
             </div>
@@ -262,16 +259,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="10"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -281,11 +277,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid5"
+          aria-controls=":r0:-4"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid5"
-          id="1uid13"
+          href="#:r0:-4"
+          id=":r1:-4"
           role="tab"
           tabindex="-1"
         >
@@ -296,10 +292,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon timeline-nav__icon timeline-nav__icon--success"
               fill="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <use
-                xlink:href="test-file-stub#check-circle"
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
               />
             </svg>
           </div>
@@ -314,16 +311,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="12"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -333,11 +329,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid6"
+          aria-controls=":r0:-5"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid6"
-          id="1uid14"
+          href="#:r0:-5"
+          id=":r1:-5"
           role="tab"
           tabindex="-1"
         >
@@ -355,16 +351,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
                 height="0.5rem"
                 role="img"
                 style="--icon-size: 0.5rem;"
+                viewBox="0 0 24 24"
                 width="0.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title
-                  id="13"
-                >
+                <title>
                   incomplete step
                 </title>
-                <use
-                  xlink:href="test-file-stub#circle"
+                <path
+                  d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
                 />
               </svg>
             </span>
@@ -380,16 +375,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="14"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -399,11 +393,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid7"
+          aria-controls=":r0:-6"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid7"
-          id="1uid15"
+          href="#:r0:-6"
+          id=":r1:-6"
           role="tab"
           tabindex="-1"
         >
@@ -429,16 +423,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="15"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -448,11 +441,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1uid8"
+          aria-controls=":r0:-7"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1uid8"
-          id="1uid16"
+          href="#:r0:-7"
+          id=":r1:-7"
           role="tab"
           tabindex="-1"
         >
@@ -463,10 +456,13 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon timeline-nav__icon timeline-nav__icon--success"
               fill="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <use
-                xlink:href="test-file-stub#star"
+              <path
+                clip-rule="evenodd"
+                d="M14.645 8.35942L12 2L9.35497 8.35942L2.48944 8.90983L7.72025 13.3906L6.12215 20.0902L12 16.5L17.8779 20.0902L16.2798 13.3906L21.5106 8.90983L14.645 8.35942Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -481,16 +477,15 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             height="var(--eds-size-2-and-half)"
             role="img"
             style="--icon-size: var(--eds-size-2-and-half);"
+            viewBox="0 0 24 24"
             width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="17"
-            >
+            <title>
               forward
             </title>
-            <use
-              xlink:href="test-file-stub#arrow-forward"
+            <path
+              d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
             />
           </svg>
         </a>
@@ -502,43 +497,42 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
   >
     <button
       class="clickable-style clickable-style--link clickable-style--neutral button button--link timeline-nav__back"
-      data-bootstrap-override="clickable-style-link"
       type="button"
     >
       <svg
         class="icon"
         fill="currentColor"
         role="img"
+        viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="18"
-        >
+        <title>
           back
         </title>
-        <use
-          xlink:href="test-file-stub#arrow-back"
+        <path
+          d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
         />
       </svg>
       Back
     </button>
     <div
       aria-hidden="false"
-      aria-labelledby="1uid9"
-      id="1uid1"
+      aria-labelledby=":r1:-0"
+      class="max-w-xl"
+      id=":r0:-0"
       role="tabpanel"
     >
-      <div
-        class="layout-linelength-container text text--body text-passage text-passage--body"
+      <h3
+        class="heading heading--size-h3 mb-6"
       >
-        <h3>
-          Overview
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-           
-        </p>
-      </div>
+        Overview
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+         
+      </p>
     </div>
   </div>
 </div>

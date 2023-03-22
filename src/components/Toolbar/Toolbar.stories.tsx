@@ -5,12 +5,12 @@ import { Toolbar } from './Toolbar';
 import ToolbarItem from '../ToolbarItem';
 
 export default {
-  title: 'Organisms/Toolbars/Toolbar',
+  title: 'Components/Toolbar',
   component: Toolbar,
   subcomponents: { ToolbarItem },
   parameters: {
+    badges: ['1.0'],
     axe: {
-      // TODO: re-enable when component is worked on
       skip: true,
     },
   },

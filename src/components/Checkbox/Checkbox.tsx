@@ -1,11 +1,10 @@
 import clsx from 'clsx';
-import React from 'react';
-import { useUID } from 'react-uid';
-import styles from './Checkbox.module.css';
+import React, { useId } from 'react';
 import type { CheckboxInputProps } from '../CheckboxInput';
 import CheckboxInput from '../CheckboxInput';
 import type { CheckboxLabelProps } from '../CheckboxLabel';
 import CheckboxLabel from '../CheckboxLabel';
+import styles from './Checkbox.module.css';
 
 // id is required in CheckboxInputProps but optional in CheckboxProps, so we
 // first remove `id` from CheckboxInputProps before intersecting.
@@ -55,13 +54,11 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     ) {
       throw new Error('You must provide a visible label or aria-label');
     }
-    const generatedId = useUID();
+    const generatedId = useId();
     const checkboxId = id || generatedId;
 
-    const componentClassName = clsx(styles['checkbox'], className);
-
     return (
-      <div className={componentClassName}>
+      <div className={clsx(className, styles.checkbox)}>
         <CheckboxInput
           disabled={disabled}
           id={checkboxId}

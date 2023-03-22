@@ -9,10 +9,10 @@ import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import { Heading } from '../Heading/Heading';
 
 export default {
-  title: 'Organisms/Interactive/Drawer',
+  title: 'Components/Drawer',
   component: Drawer,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.0', BADGE.BETA],
   },
   args: {
     'aria-describedby': 'drawer-description-1',

@@ -1,12 +1,13 @@
 import { Popover as HeadlessPopover } from '@headlessui/react';
 import type { Options as PopperJSOptions } from '@popperjs/core';
-import * as React from 'react';
-import { useState, createContext } from 'react';
+import clsx from 'clsx';
+import React from 'react';
+import { useState, createContext, useContext } from 'react';
 import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
-import PopoverButton from '../PopoverButton';
 import { defaultPopoverModifiers } from '../PopoverContainer';
-import PopoverContent from '../PopoverContent';
+import PopoverContainer from '../PopoverContainer';
+import styles from './Popover.module.css';
 
 export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
   /**
@@ -26,9 +27,10 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
     | 'left-start'
     | 'left-end'
     | 'top'
-    | 'right'
     | 'bottom'
-    | 'left';
+    | 'left'
+    | 'right';
+
   /**
    * Object to customize how your popover will behave. For a full list of what is available,
    * refer to https://popper.js.org/docs/v2/modifiers/.
@@ -39,6 +41,11 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
    * If your trigger element is in a fixed container, use the fixed strategy.
    */
   strategy?: PopperJSOptions['strategy'];
+  /**
+   * Callback ran after Popper positions the element the first time.
+   * Refer to https://popper.js.org/docs/v2/lifecycle/#hook-into-the-lifecycle.
+   */
+  onFirstUpdate?: PopperJSOptions['onFirstUpdate'];
 };
 
 type PopoverContextType = {
@@ -61,7 +68,7 @@ export const PopoverContext = createContext<PopoverContextType>({});
  *
  * `import {Popover} from "@chanzuckerberg/eds";`
  *
- * A styled popover built on 'headless UI' popover. Consider using the Dropdown component instead.
+ * General-purpose floating menus that appear proximal to a trigger point
  */
 export const Popover = ({
   placement,
@@ -112,7 +119,129 @@ const PopoverGroup = (props: ExtractProps<typeof HeadlessPopover.Group>) => (
   <HeadlessPopover.Group {...props} />
 );
 
+type RenderProps<RenderPropArgs> = {
+  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
+};
+
+type PopoverButtonProps = {
+  as?: React.ElementType;
+  className?: string;
+} & RenderProps<{ open: boolean }>;
+
+const PopoverButton = (props: PopoverButtonProps) => {
+  const { setReferenceElement } = useContext(PopoverContext);
+  return <HeadlessPopover.Button {...props} ref={setReferenceElement} />;
+};
+
+export type PopoverContentProps = {
+  /**
+   * Custom classname for additional styles for the arrow.
+   */
+  arrowClassName?: string;
+  /**
+   * Custom classname for additional styles on the generic popover container.
+   */
+  bodyClassName?: string;
+  /**
+   * Custom classname for additional styles for the entire popover content.
+   */
+  className?: string;
+} & RenderProps<{
+  /**
+   * Render prop indicating popover open status.
+   */
+  open: boolean;
+  /**
+   * Render prop that closes popover when called.
+   */
+  close: (
+    focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
+  ) => void;
+}>;
+
+/**
+ * A floating container that can be resized to fit content inside
+ */
+const PopoverContent = ({
+  arrowClassName,
+  bodyClassName,
+  children,
+  className,
+  ...other
+}: PopoverContentProps) => {
+  // Grabs popper behavior generated from usePopper hook from Popover parent component.
+  const { popperStyles, popperAttributes, setPopperElement } =
+    useContext(PopoverContext);
+  const allProps = {
+    ...popperAttributes,
+    ...other,
+    ref: setPopperElement,
+    style: popperStyles,
+  };
+
+  const componentClassName = clsx(styles['popover-content'], className);
+
+  return (
+    <HeadlessPopover.Panel
+      {...allProps}
+      as="article"
+      className={componentClassName}
+    >
+      <PopoverContainer className={bodyClassName}>
+        {children as React.ReactNode}
+      </PopoverContainer>
+    </HeadlessPopover.Panel>
+  );
+};
+
+/**
+ * A button that when clicked, can show or hide the Popover Menu
+ * (Product teams can decide how a Popover will close, if it is on click, release, hover, etc.)
+ *
+ * If you need to use some sort of special button, pass it as the `as` prop. Make sure the
+ * component accepts `aria-expanded` and `aria-controls` props for accessibility.
+ *
+ * Examples:
+ *
+ * ```ts
+ * import {Popover} from "@chanzuckerberg/eds";
+ *
+ * // Normal usage
+ * <Popover.Button className={someCustomClasses}>
+ *   <span>Coffee</span>
+ *   <MugIcon />
+ * </Popover.Button>
+ * ```
+ *
+ * ```ts
+ * import {Popover} from "@chanzuckerberg/eds";
+ *
+ * // Passing your own button
+ * <Popover.Button as={Button}>
+ *   EDS Button Yay
+ * </Popover.Button>
+ *
+ * // Also works
+ * <Popover.Button as={React.Fragment}>
+ *   <Button>
+ *     EDS Button Yay
+ *   </Button>
+ * </Popover.Button>
+ * ```
+ */
 Popover.Button = PopoverButton;
+/**
+ * A floating container that can be resized to fit content inside
+ *
+ * @example
+ * ```ts
+ * import {Popover} from "@chanzuckerberg/eds";
+ *
+ * <Popover.Content>
+ *  {children}
+ * </Popover.Content>
+ * ```
+ */
 Popover.Content = PopoverContent;
 Popover.Overlay = PopoverOverlay;
 Popover.Group = PopoverGroup;

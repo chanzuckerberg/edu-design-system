@@ -4,19 +4,19 @@ import React from 'react';
 
 import type { Variant } from './Banner';
 import { Banner } from './Banner';
-import styles from './Banner.stories.module.css';
 import Button from '../Button';
 import Heading from '../Heading';
+import styles from './Banner.stories.module.css';
 
 export default {
-  title: 'Molecules/Messaging/Banner',
+  title: 'Components/Banner',
   component: Banner,
   args: {
     title:
       'New curriculum updates are available for one or more of your courses.',
   },
   parameters: {
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
 } as Meta<Args>;
 

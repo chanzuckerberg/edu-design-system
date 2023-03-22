@@ -15,16 +15,15 @@ exports[`Modal Brand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="4"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -60,14 +59,12 @@ exports[`Modal Brand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -92,16 +89,15 @@ exports[`Modal Default story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="1"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -127,14 +123,12 @@ exports[`Modal Default story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -146,16 +140,18 @@ exports[`Modal Default story renders snapshot 1`] = `
 
 exports[`Modal DefaultInteractive story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-4"
+  aria-labelledby="headlessui-dialog-title-:r2:"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-2"
+  data-headlessui-state="open"
+  id="headlessui-dialog-:r0:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-3"
+    data-headlessui-state="open"
+    id="headlessui-dialog-overlay-:r1:"
   />
   <div
     class="modal__content modal__content--md modal__content--lg"
@@ -170,16 +166,15 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="17"
-        >
+        <title>
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>
@@ -188,7 +183,8 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
     >
       <h2
         class="heading heading--size-headline-md"
-        id="headlessui-dialog-title-4"
+        data-headlessui-state="open"
+        id="headlessui-dialog-title-:r2:"
       >
         Modal Title
       </h2>
@@ -206,14 +202,12 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 2
@@ -239,16 +233,15 @@ exports[`Modal Medium story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="2"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -274,14 +267,12 @@ exports[`Modal Medium story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -306,16 +297,15 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="5"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -341,14 +331,12 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -373,16 +361,15 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="7"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -418,14 +405,12 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -450,16 +435,15 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="6"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -485,14 +469,12 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -517,16 +499,15 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="8"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -562,14 +543,12 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -590,16 +569,15 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     height="0.5rem"
     role="img"
     style="--icon-size: 0.5rem;"
+    viewBox="0 0 24 24"
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="21"
-    >
+    <title>
       Active Step 1
     </title>
-    <use
-      xlink:href="test-file-stub#circle"
+    <path
+      d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
     />
   </svg>
   <svg
@@ -608,16 +586,23 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     height="0.5rem"
     role="img"
     style="--icon-size: 0.5rem;"
+    viewBox="0 0 24 24"
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="22"
-    >
+    <title>
       Step 2
     </title>
-    <use
-      xlink:href="test-file-stub#empty-circle"
+    <circle
+      cx="12"
+      cy="12"
+      r="8"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+      r="6"
     />
   </svg>
   <svg
@@ -626,16 +611,23 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     height="0.5rem"
     role="img"
     style="--icon-size: 0.5rem;"
+    viewBox="0 0 24 24"
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="23"
-    >
+    <title>
       Step 3
     </title>
-    <use
-      xlink:href="test-file-stub#empty-circle"
+    <circle
+      cx="12"
+      cy="12"
+      r="8"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+      r="6"
     />
   </svg>
 </div>
@@ -656,16 +648,15 @@ exports[`Modal Small story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="3"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -691,14 +682,12 @@ exports[`Modal Small story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -723,16 +712,15 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="9"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -758,14 +746,12 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -790,16 +776,15 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="10"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -835,14 +820,12 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -854,16 +837,18 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
 
 exports[`Modal WithLongText story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-8"
+  aria-labelledby="headlessui-dialog-title-:r5:"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-6"
+  data-headlessui-state="open"
+  id="headlessui-dialog-:r3:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-7"
+    data-headlessui-state="open"
+    id="headlessui-dialog-overlay-:r4:"
   />
   <div
     class="modal__content modal__content--md modal__content--lg"
@@ -878,16 +863,15 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="18"
-        >
+        <title>
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>
@@ -896,7 +880,8 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
     >
       <h2
         class="heading heading--size-headline-md"
-        id="headlessui-dialog-title-8"
+        data-headlessui-state="open"
+        id="headlessui-dialog-title-:r5:"
       >
         Modal Title
       </h2>
@@ -932,14 +917,12 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 2
@@ -952,16 +935,18 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
 
 exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-12"
+  aria-labelledby="headlessui-dialog-title-:r8:"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-10"
+  data-headlessui-state="open"
+  id="headlessui-dialog-:r6:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-11"
+    data-headlessui-state="open"
+    id="headlessui-dialog-overlay-:r7:"
   />
   <div
     class="modal__content modal__content--scrollable modal__content--md modal__content--lg"
@@ -976,16 +961,15 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="19"
-        >
+        <title>
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>
@@ -994,7 +978,8 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
     >
       <h2
         class="heading heading--size-headline-md"
-        id="headlessui-dialog-title-12"
+        data-headlessui-state="open"
+        id="headlessui-dialog-title-:r8:"
       >
         Modal Title
       </h2>
@@ -1031,14 +1016,12 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 2
@@ -1064,16 +1047,15 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="11"
-      >
+      <title>
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -1103,16 +1085,23 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="12"
-        >
+        <title>
           Step 1
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
       <svg
@@ -1121,16 +1110,15 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="13"
-        >
+        <title>
           Active Step 2
         </title>
-        <use
-          xlink:href="test-file-stub#circle"
+        <path
+          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
         />
       </svg>
       <svg
@@ -1139,16 +1127,23 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="14"
-        >
+        <title>
           Step 3
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
       <svg
@@ -1157,16 +1152,23 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="15"
-        >
+        <title>
           Step 4
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
       <svg
@@ -1175,16 +1177,23 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="16"
-        >
+        <title>
           Step 5
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
     </div>
@@ -1193,14 +1202,12 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
         type="button"
       >
         Button 2
@@ -1215,13 +1222,15 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
   aria-label="The Modal Amazing Modal You've Ever Seen"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-14"
+  data-headlessui-state="open"
+  id="headlessui-dialog-:r9:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-15"
+    data-headlessui-state="open"
+    id="headlessui-dialog-overlay-:ra:"
   />
   <div
     class="modal__content modal__content--scrollable modal__content--md modal__content--lg"
@@ -1236,16 +1245,15 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="20"
-        >
+        <title>
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>

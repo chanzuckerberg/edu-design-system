@@ -19,7 +19,7 @@ jobs:
       - name: Renovate
         # The version of renovatebot should be kept up-to-date with major releases
         # https://github.com/renovatebot/github-action/blob/release/CHANGELOG.md
-        uses: renovatebot/github-action@v34
+        uses: renovatebot/github-action@v34.50.1
         with:
           configurationFile: .github/renovate.json5
           token: ${{ secrets.RENOVATE_TOKEN }}

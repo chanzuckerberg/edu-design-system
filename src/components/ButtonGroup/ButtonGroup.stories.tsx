@@ -4,7 +4,7 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 
 export default {
-  title: 'Organisms/Buttons/ButtonGroup',
+  title: 'Components/ButtonGroup',
   component: ButtonGroup,
   args: {
     spacing: '1x' as const,
@@ -15,6 +15,9 @@ export default {
         <Button variant="primary">Button 2</Button>
       </>
     ),
+  },
+  parameters: {
+    badges: ['1.0'],
   },
 } as Meta<Args>;
 

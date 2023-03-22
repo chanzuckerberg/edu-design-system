@@ -1,8 +1,8 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
-import styles from './AccordionPanel.module.css';
 import { AccordionContext } from '../Accordion';
+import styles from './AccordionPanel.module.css';
 
 export type Props = {
   /**
@@ -18,7 +18,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * The heading text subcomponent for the Accordion.Button subcomponent for the EDS Accordion component.
+ * An expandable/collapsible content area.
  */
 export const AccordionPanel = ({ className, children, ...other }: Props) => {
   const { hasOutline, size } = useContext(AccordionContext);

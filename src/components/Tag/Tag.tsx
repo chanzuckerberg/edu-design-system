@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Tag.module.css';
 import Text from '../Text';
+import styles from './Tag.module.css';
 
 export const VARIANTS = [
   'neutral',
@@ -12,7 +12,7 @@ export const VARIANTS = [
   'brand',
 ] as const;
 
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 
 type Props = {
   /**
@@ -72,5 +72,3 @@ export const Tag = ({
     </Text>
   );
 };
-
-export default Tag;

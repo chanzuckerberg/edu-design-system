@@ -5,7 +5,7 @@ import React from 'react';
 import { Accordion } from './Accordion';
 
 export default {
-  title: 'Organisms/Interactive/Accordion',
+  title: 'Components/Accordion',
   component: Accordion,
   subcomponents: {
     'Accordion.Row': Accordion.Row,
@@ -13,7 +13,7 @@ export default {
     'Accordion.Button': Accordion.Button,
   },
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.2', BADGE.BETA],
   },
   args: {
     headingAs: 'h2',

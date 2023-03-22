@@ -8,10 +8,10 @@ import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
 import { Icon } from '../Icon/Icon';
 
 export default {
-  title: 'Organisms/Interactive/ButtonDropdown',
+  title: 'Components/ButtonDropdown',
   parameters: {
     layout: 'centered',
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   component: ButtonDropdown,
   subcomponents: { DropdownMenuItem },

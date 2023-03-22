@@ -8,6 +8,8 @@
   display: grid;
   gap: 1rem;
 
+  font-family: var(--eds-font-family-primary);
+
   @media all and (min-width: 20rem) {
     grid-template-columns: 300px 1fr;
   }

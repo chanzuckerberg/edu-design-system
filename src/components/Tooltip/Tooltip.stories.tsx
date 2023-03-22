@@ -3,8 +3,8 @@ import type { Meta, Story, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
 import { Tooltip } from './Tooltip';
-import styles from './Tooltip.stories.module.css';
 import { Button } from '../Button/Button';
+import styles from './Tooltip.stories.module.css';
 
 const defaultArgs = {
   text: (
@@ -27,10 +27,11 @@ const defaultArgs = {
 };
 
 export default {
-  title: 'Molecules/Messaging/Tooltip',
+  title: 'Components/Tooltip',
   component: Tooltip,
   args: defaultArgs,
   parameters: {
+    badges: ['1.0'],
     chromatic: {
       // These stories are very flaky, though we're not sure why.
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
@@ -141,12 +142,7 @@ export const DisabledButton: StoryObj<Args> = {
         styles['trigger--spacing-left'],
       )}
     >
-      <Tooltip
-        align="top"
-        childNotInteractive={true}
-        text={defaultArgs.text}
-        visible={true}
-      >
+      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
         <Button disabled variant="primary">
           Tooltip trigger
         </Button>
@@ -163,12 +159,7 @@ export const TextChild: StoryObj<Args> = {
         styles['trigger--spacing-left'],
       )}
     >
-      <Tooltip
-        align="top"
-        childNotInteractive={true}
-        text={defaultArgs.text}
-        visible={true}
-      >
+      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
         <span>Tooltip trigger</span>
       </Tooltip>
     </div>
@@ -210,7 +201,7 @@ export const InteractiveDisabledButton: StoryObj<Args> = {
     >
       <Tooltip
         align="top"
-        childNotInteractive={true}
+        childNotInteractive
         duration={args.duration}
         text={defaultArgs.text}
       >

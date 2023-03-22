@@ -41,7 +41,6 @@
  * Dropdown menu list.
  */
 .dropdown-menu__list {
-  @mixin reset;
   list-style: none;
 }
 

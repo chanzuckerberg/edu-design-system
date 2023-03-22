@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Score.module.css';
 import Tag from '../Tag';
+import styles from './Score.module.css';
 
 export const VARIANTS = ['table', 'error', 'success'] as const;
 
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 
 export interface Props {
   /**

@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Filters /> Default story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-5"
+    aria-controls="headlessui-popover-panel-:r2:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-popover-button-4"
+    data-headlessui-state="open"
+    id="headlessui-popover-button-:r0:"
     type="button"
   >
     <svg
@@ -16,21 +18,23 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
       fill="currentColor"
       height="1.5rem"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#filter-list"
+      <path
+        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
       />
     </svg>
     Filters
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-5"
+    id="headlessui-popover-panel-:r2:"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -53,33 +57,14 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="5"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r5:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="5"
+                for=":r5:"
               >
                 Filters label 1
               </label>
@@ -87,33 +72,14 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="7"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r6:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="7"
+                for=":r6:"
               >
                 Filters label 2
               </label>
@@ -121,33 +87,14 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="9"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r7:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="9"
+                for=":r7:"
               >
                 Filters label 3
               </label>
@@ -161,13 +108,15 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
 `;
 
 exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-17"
+    aria-controls="headlessui-popover-panel-:rq:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-popover-button-16"
+    data-headlessui-state="open"
+    id="headlessui-popover-button-:ro:"
     type="button"
   >
     <svg
@@ -176,21 +125,23 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       fill="currentColor"
       height="1.5rem"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#filter-list"
+      <path
+        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
       />
     </svg>
     Filters
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-17"
+    id="headlessui-popover-panel-:rq:"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -215,33 +166,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="38"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rt:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="38"
+                for=":rt:"
               >
                 Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               </label>
@@ -249,33 +181,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="40"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":ru:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="40"
+                for=":ru:"
               >
                 Filters label 2
               </label>
@@ -283,33 +196,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="42"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rv:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="42"
+                for=":rv:"
               >
                 Filters label 3
               </label>
@@ -331,33 +225,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="44"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r10:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="44"
+                for=":r10:"
               >
                 Filters label 1
               </label>
@@ -365,33 +240,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="46"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r11:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="46"
+                for=":r11:"
               >
                 Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               </label>
@@ -399,33 +255,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="48"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r12:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="48"
+                for=":r12:"
               >
                 Filters label 3
               </label>
@@ -447,33 +284,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="50"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r13:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="50"
+                for=":r13:"
               >
                 Filters label 1
               </label>
@@ -481,33 +299,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="52"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r14:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="52"
+                for=":r14:"
               >
                 Filters label 2
               </label>
@@ -515,33 +314,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="54"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r15:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="54"
+                for=":r15:"
               >
                 Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               </label>
@@ -563,33 +343,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="56"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r16:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="56"
+                for=":r16:"
               >
                 Filters label 1
               </label>
@@ -597,33 +358,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="58"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r17:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="58"
+                for=":r17:"
               >
                 Filters label 2
               </label>
@@ -631,33 +373,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="60"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r18:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="60"
+                for=":r18:"
               >
                 Filters label 3
               </label>
@@ -665,33 +388,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="62"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r19:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="62"
+                for=":r19:"
               >
                 Filters label 4
               </label>
@@ -699,33 +403,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="64"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r1a:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="64"
+                for=":r1a:"
               >
                 Filters label 5
               </label>
@@ -733,33 +418,14 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="66"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":r1b:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="66"
+                for=":r1b:"
               >
                 Filters label 6
               </label>
@@ -772,14 +438,12 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Clear All
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Apply
@@ -791,13 +455,15 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
 `;
 
 exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-12"
+    aria-controls="headlessui-popover-panel-:ri:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-popover-button-11"
+    data-headlessui-state="open"
+    id="headlessui-popover-button-:rg:"
     type="button"
   >
     <svg
@@ -806,21 +472,23 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       fill="currentColor"
       height="1.5rem"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#filter-list"
+      <path
+        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
       />
     </svg>
     Filters
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-12"
+    id="headlessui-popover-panel-:ri:"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -843,33 +511,14 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="27"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rl:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="27"
+                for=":rl:"
               >
                 Filters label 1
               </label>
@@ -877,33 +526,14 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="29"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rm:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="29"
+                for=":rm:"
               >
                 Filters label 2
               </label>
@@ -911,33 +541,14 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="31"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rn:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="31"
+                for=":rn:"
               >
                 Filters label 3
               </label>
@@ -950,7 +561,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Apply
@@ -962,13 +572,15 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
 `;
 
 exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-7"
+    aria-controls="headlessui-popover-panel-:ra:"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-popover-button-6"
+    data-headlessui-state="open"
+    id="headlessui-popover-button-:r8:"
     type="button"
   >
     <svg
@@ -977,21 +589,23 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       fill="currentColor"
       height="1.5rem"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#filter-list"
+      <path
+        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
       />
     </svg>
     Filters
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-7"
+    id="headlessui-popover-panel-:ra:"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -1014,33 +628,14 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="16"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rd:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="16"
+                for=":rd:"
               >
                 Filters label 1
               </label>
@@ -1048,33 +643,14 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="18"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":re:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="18"
+                for=":re:"
               >
                 Filters label 2
               </label>
@@ -1082,33 +658,14 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
             <div
               class="checkbox"
             >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="20"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use
-                    xlink:href="test-file-stub#checkbox-unchecked"
-                  />
-                </svg>
-              </span>
+              <input
+                class="checkbox__input"
+                id=":rf:"
+                type="checkbox"
+              />
               <label
                 class="label label--lg"
-                data-bootstrap-override="label"
-                for="20"
+                for=":rf:"
               >
                 Filters label 3
               </label>
@@ -1121,7 +678,6 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Clear All

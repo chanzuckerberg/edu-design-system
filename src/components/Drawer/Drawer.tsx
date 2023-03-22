@@ -10,11 +10,11 @@ import React, {
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
-import styles from './Drawer.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import DrawerBody from '../DrawerBody';
 import DrawerFooter from '../DrawerFooter';
 import DrawerHeader from '../DrawerHeader';
+import styles from './Drawer.module.css';
 
 export type Props = {
   /**
@@ -190,7 +190,7 @@ export const Drawer = ({
 
   return (
     <Portal>
-      <FocusLock disabled={!activeFocus} returnFocus={true}>
+      <FocusLock disabled={!activeFocus} returnFocus>
         {/**
          * the drawer will probably have buttons inside,
          * We're intentionally not adding role=button for now,

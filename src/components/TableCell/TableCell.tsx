@@ -45,11 +45,7 @@ export const TableCell = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table-cell'], className);
 
   return (
-    <td
-      className={componentClassName}
-      data-bootstrap-override="table-cell"
-      {...other}
-    >
+    <td className={componentClassName} {...other}>
       {children}
     </td>
   );

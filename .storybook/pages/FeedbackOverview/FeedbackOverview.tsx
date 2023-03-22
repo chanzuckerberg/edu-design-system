@@ -1,6 +1,5 @@
 import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
-import styles from './FeedbackOverview.module.css';
 import {
   Button,
   Breadcrumbs,
@@ -29,6 +28,7 @@ import {
 } from '../../../src/tokens-dist/ts/colors';
 import NumberIconList from '../../recipes/NumberIconList';
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import styles from './FeedbackOverview.module.css';
 
 export interface Props {
   /**
@@ -208,7 +208,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
             <div className="fpo">Plans</div>
           </Tab>
           <Tab title="Feedback">
-            <TimelineNav activeIndex={activeIndex} variant="ordered">
+            <TimelineNav activeIndex={activeIndex}>
               <TimelineNavPanel title="Overview">
                 <Toolbar
                   className={styles['feedback-overview__toolbar']}
@@ -342,7 +342,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {!isTable &&
                   feedbackOverviews.map((overview) => (
                     <Card
-                      className="py-8 mb-4"
+                      className="mb-4 py-8"
                       key={`feedback-overview-${overview.student}`}
                     >
                       <Card.Header
@@ -452,7 +452,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {!isTable &&
                   checkpointProgresses.map((progress) => (
                     <Card
-                      className="py-8 mb-4"
+                      className="mb-4 py-8"
                       key={`progress-${progress.student}`}
                     >
                       <Card.Header
@@ -494,73 +494,85 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 title="Research and Model Cells"
                 variant="number"
               >
-                <Text as="div">
-                  <h3>Research and Model Cells</h3>
-                  <p>
+                <div className="max-w-xl">
+                  <Heading className="mb-6" size="h3">
+                    Research and Model Cells
+                  </Heading>
+                  <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex
-                  </p>
-                </Text>
+                  </Text>
+                </div>
               </TimelineNavPanel>
               <TimelineNavPanel
                 title="Research and Model Body Systems"
                 variant="number"
               >
-                <Text as="div">
-                  <h3>Research and Model Body Systems</h3>
-                  <p>
+                <div className="max-w-xl">
+                  <Heading className="mb-6" size="h3">
+                    Research and Model Body Systems
+                  </Heading>
+                  <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex
-                  </p>
-                </Text>
+                  </Text>
+                </div>
               </TimelineNavPanel>
               <TimelineNavPanel title="Draft Your Book" variant="number">
-                <Text as="div">
-                  <h3>Draft Your Book</h3>
-                  <p>
+                <div className="max-w-xl">
+                  <Heading className="mb-6" size="h3">
+                    Draft Your Book
+                  </Heading>
+                  <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex
-                  </p>
-                </Text>
+                  </Text>
+                </div>
               </TimelineNavPanel>
               <TimelineNavPanel title="Critique a Peer's Book" variant="number">
-                <Text as="div">
-                  <h3>Critique a Peer&apos;s Book</h3>
-                  <p>
+                <div className="max-w-xl">
+                  <Heading className="mb-6" size="h3">
+                    Critique a Peer&apos;s Book
+                  </Heading>
+                  <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex
-                  </p>
-                </Text>
+                  </Text>
+                </div>
               </TimelineNavPanel>
               <TimelineNavPanel title="Human Body Book" variant="number">
-                <Text as="div">
-                  <h3>Human Body Book</h3>
-                  <p>
+                <div className="max-w-xl">
+                  <Heading className="mb-6" size="h3">
+                    Human Body Book
+                  </Heading>
+                  <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex
-                  </p>
-                </Text>
+                  </Text>
+                </div>
               </TimelineNavPanel>
               <TimelineNavPanel title="Book Review" variant="incomplete">
-                <Text as="div">
-                  <h3>Book Review</h3>
-                  <p>
+                <div className="max-w-xl">
+                  <Heading className="mb-6" size="h3">
+                    Book Review
+                  </Heading>
+                  <Text>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex
-                  </p>
-                </Text>
+                  </Text>
+                </div>
               </TimelineNavPanel>
             </TimelineNav>
           </Tab>

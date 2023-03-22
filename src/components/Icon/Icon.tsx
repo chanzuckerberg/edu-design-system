@@ -1,14 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
-import React, { useEffect } from 'react';
-import { useUID } from 'react-uid';
-import svg4everybody from 'svg4everybody';
+import React from 'react';
+import icons, { type IconName } from '../../icons/spritemap';
 import styles from './Icon.module.css';
-import icons from '../../icons/spritemap/spritemap.svg';
-import type { ALL_ICONS } from '../../util/allIcons';
 
-// generates a union type of all possible icon names
-export type IconName = typeof ALL_ICONS[number];
+export type { IconName } from '../../icons/spritemap';
 
 interface IconPropsBase {
   /**
@@ -114,12 +110,6 @@ export const Icon = (props: IconProps) => {
     size,
     viewBox,
   } = props;
-  const generatedId = useUID();
-  const idVar = id || generatedId;
-
-  useEffect(() => {
-    svg4everybody(); // Required to get IE to render icon sprites
-  }, []);
 
   const componentClassName = clsx(
     styles['icon'],
@@ -140,16 +130,17 @@ export const Icon = (props: IconProps) => {
     style,
     width: size,
     xmlns: 'http://www.w3.org/2000/svg',
-    viewBox,
+    viewBox: name ? icons[name].viewBox : viewBox,
   };
+
   // allow passing custom SVGs to render, otherwise
   // load from the spritemap of EDS icons
-  const computedSvg = children || <use xlinkHref={`${icons}#${name}`} />;
+  const computedSvg = name ? icons[name].content : children;
 
   if (purpose === 'informative') {
     return (
       <svg {...svgCommonProps} role="img">
-        <title id={idVar}>{props.title}</title>
+        <title id={id}>{props.title}</title>
         {computedSvg}
       </svg>
     );

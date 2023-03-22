@@ -1,19 +1,19 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Dropdown';
 import { Dropdown } from './Dropdown';
-import styles from './Dropdown.stories.module.css';
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
+import styles from './Dropdown.stories.module.css';
 
 export default {
-  title: 'Molecules/Forms/Dropdown',
+  title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
-    badges: [BADGE.DEPRECATED],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   decorators: [
     (Story) => (
@@ -57,7 +57,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
-    React.useState<typeof exampleOptions[0]>();
+    React.useState<(typeof exampleOptions)[0]>();
 
   const componentClassName = clsx(
     styles['interactive-example'],
@@ -86,7 +86,7 @@ function InteractiveExampleUsingChildren(props: Props) {
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
-    React.useState<typeof exampleOptions[0]>();
+    React.useState<(typeof exampleOptions)[0]>();
 
   return (
     <div className={styles['interactive-example']}>
@@ -115,7 +115,7 @@ function InteractiveExampleUsingChildren(props: Props) {
 // This story just tests the case where a function in passed in that wraps the children.
 function InteractiveExampleUsingFunctionChildren() {
   const [selectedOption, setSelectedOption] =
-    React.useState<typeof exampleOptions[0]>();
+    React.useState<(typeof exampleOptions)[0]>();
 
   return (
     <div className={styles['interactive-example']}>
@@ -238,12 +238,12 @@ export const OpenByDefault: StoryObj = {
 
     // Open the dropdown.
     const dropdownButton = await canvas.findByRole('button');
-    dropdownButton.click();
+    await userEvent.click(dropdownButton);
     // Select the best option.
     const bestOption = await canvas.findByText('Cats');
-    bestOption.click();
+    await userEvent.click(bestOption);
     // Reopen the dropdown; selecting an option closed it.
-    dropdownButton.click();
+    await userEvent.click(dropdownButton);
   },
 };
 
@@ -252,7 +252,7 @@ export const DropdownButtonOnly = {
     <>
       <DropdownButton isOpen={false}>Dropdown button closed</DropdownButton>
       <br />
-      <DropdownButton isOpen={true}>Dropdown button open</DropdownButton>
+      <DropdownButton isOpen>Dropdown button open</DropdownButton>
     </>
   ),
   parameters: {

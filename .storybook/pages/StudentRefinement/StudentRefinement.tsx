@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
-import styles from './StudentRefinement.module.css';
 
 import {
   Breadcrumbs,
@@ -11,6 +10,7 @@ import {
   Checkbox,
   FiltersCheckboxField,
   FiltersDrawer,
+  Heading,
   Icon,
   Layout,
   PageHeader,
@@ -23,13 +23,103 @@ import {
   Tag,
   Text,
 } from '../../../src';
+import type { HeadingElement } from '../../../src/components/Heading';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 
 import { EdsThemeColorIconUtilityWarning } from '../../../src/tokens-dist/ts/colors';
 
-import { DataSummaryCard } from '../../recipes/DataSummaryCard/DataSummaryCard';
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import styles from './StudentRefinement.module.css';
+
+interface DataSummaryProps {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Main data text of the card.
+   */
+  dataAmount: string;
+  /**
+   * Text that provides a unit of measurement for the data.
+   */
+  dataUnit?: string;
+  /**
+   * Text to provide more context for the data.
+   */
+  description?: string;
+  /**
+   * Specifies the heading element to render the card heading as.
+   */
+  headingElement?: HeadingElement;
+  /**
+   * Title text of the data represented.
+   */
+  title: string;
+  /**
+   * Off track variant to indicate status.
+   */
+  variant?: 'off-track';
+}
+
+const DataSummaryCard = ({
+  className,
+  dataAmount,
+  dataUnit,
+  description,
+  headingElement,
+  title,
+  variant,
+  ...other
+}: DataSummaryProps) => {
+  const componentClassName = clsx(styles['data-summary-card'], className);
+  return (
+    <Card className={componentClassName} {...other}>
+      <Card.Header className={styles['data-summary-card__header']}>
+        <Heading
+          as={headingElement}
+          className={styles['data-summary-card__title']}
+          size="h3"
+        >
+          {title}
+        </Heading>
+      </Card.Header>
+      <Card.Body className={styles['data-summary-card__body']}>
+        <Text
+          className={styles['data-summary-card__data']}
+          variant="neutral-medium"
+        >
+          {dataAmount}
+          {dataUnit && (
+            <Text
+              as="span"
+              className={styles['data-summary-card__data-unit']}
+              variant="neutral-subtle"
+            >
+              {dataUnit}
+            </Text>
+          )}
+        </Text>
+        {description && (
+          <Text
+            className={styles['data-summary-card__description']}
+            variant="neutral-subtle"
+          >
+            {description}
+          </Text>
+        )}
+      </Card.Body>
+      {variant === 'off-track' && (
+        <div
+          aria-label="off track"
+          className={styles['data-summary-card__indicator--off-track']}
+          role="img"
+        />
+      )}
+    </Card>
+  );
+};
 
 export const StudentRefinement = () => {
   const [isTable, setIsTable] = useState(false);
@@ -191,7 +281,7 @@ export const StudentRefinement = () => {
             <Table.Cell className="text-center">
               {student.grade.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -200,7 +290,7 @@ export const StudentRefinement = () => {
                 />
               )}
               {student.grade.grade && (
-                <Text as="span" className="inline-flex justify-center w-5">
+                <Text as="span" className="inline-flex w-5 justify-center">
                   {student.grade.grade}
                 </Text>
               )}
@@ -215,7 +305,7 @@ export const StudentRefinement = () => {
             >
               {student.cogSkillAvg.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -234,7 +324,7 @@ export const StudentRefinement = () => {
             >
               {student.projects.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -253,7 +343,7 @@ export const StudentRefinement = () => {
             >
               {student.powerFocusAreas.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -293,10 +383,10 @@ export const StudentRefinement = () => {
               <Text as="span" size="sm" weight="bold">
                 Grade
               </Text>
-              <div className="flex items-center justify-between w-16">
+              <div className="flex w-16 items-center justify-between">
                 {student.grade.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -305,7 +395,7 @@ export const StudentRefinement = () => {
                   />
                 )}
                 {student.grade.grade && (
-                  <Text as="span" className="inline-flex justify-center w-5">
+                  <Text as="span" className="inline-flex w-5 justify-center">
                     {student.grade.grade}
                   </Text>
                 )}
@@ -324,12 +414,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.cogSkillAvg.offTrack && 'justify-end',
-                  student.cogSkillAvg.offTrack && 'justify-between w-16',
+                  student.cogSkillAvg.offTrack && 'w-16 justify-between',
                 )}
               >
                 {student.cogSkillAvg.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -352,12 +442,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.projects.offTrack && 'justify-end',
-                  student.projects.offTrack && 'justify-between w-16',
+                  student.projects.offTrack && 'w-16 justify-between',
                 )}
               >
                 {student.projects.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -380,12 +470,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.powerFocusAreas.offTrack && 'justify-end',
-                  student.powerFocusAreas.offTrack && 'justify-between w-16',
+                  student.powerFocusAreas.offTrack && 'w-16 justify-between',
                 )}
               >
                 {student.powerFocusAreas.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -423,7 +513,7 @@ export const StudentRefinement = () => {
             <div className="fpo">Overview</div>
           </Tab>
           <Tab title="Students">
-            <div className="pt-8 px-12 pb-12">
+            <div className="px-12 pt-8 pb-12">
               <div className={styles['student-refinement__summary-cards']}>
                 <DataSummaryCard
                   className={styles['student-refinement__summary-card']}
@@ -473,7 +563,7 @@ export const StudentRefinement = () => {
               </div>
               <Layout className="mb-8" variant="50-50">
                 <SearchBar>
-                  <SearchBar.InputField />
+                  <SearchBar.Field />
                   <SearchBar.Button />
                 </SearchBar>
                 <ButtonGroup

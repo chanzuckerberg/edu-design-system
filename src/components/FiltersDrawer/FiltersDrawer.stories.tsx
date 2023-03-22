@@ -1,19 +1,19 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
 import { FiltersDrawer } from './FiltersDrawer';
-import styles from './FiltersDrawer.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
+import styles from './FiltersDrawer.stories.module.css';
 
 export default {
-  title: 'Organisms/Interactive/FiltersDrawer',
+  title: 'Components/FiltersDrawer',
   component: FiltersDrawer,
   parameters: {
-    badges: [BADGE.BETA],
+    badges: ['1.1', BADGE.BETA],
   },
   args: {
     triggerText: 'Filters',
@@ -43,7 +43,7 @@ export const Default: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };
@@ -221,7 +221,7 @@ export const OverflowInteractive: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };

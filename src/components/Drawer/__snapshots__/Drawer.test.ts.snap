@@ -24,7 +24,6 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
       </h2>
       <button
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
-        data-bootstrap-override="clickable-style-icon"
         type="button"
       >
         <svg
@@ -33,16 +32,15 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
           height="1.5rem"
           role="img"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="1"
-          >
+          <title>
             Close
           </title>
-          <use
-            xlink:href="test-file-stub#close"
+          <path
+            d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
           />
         </svg>
       </button>
@@ -64,14 +62,12 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
           type="button"
         >
           Button 1
         </button>
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 2

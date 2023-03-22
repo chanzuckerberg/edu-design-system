@@ -3,122 +3,145 @@ import { within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Tabs } from './Tabs';
+import { chromaticViewports } from '../../util/viewports';
+import Heading from '../Heading';
 import Tab from '../Tab';
 import Text from '../Text';
 
 export default {
-  title: 'Organisms/Interactive/Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
+  parameters: {
+    badges: ['1.0'],
+  },
   subcomponents: { Tabs },
   args: {
     children: (
       <>
         <Tab title="Tab Title 1">
-          <Text as="div">
-            <h3>Tab 1</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 1
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 2">
-          <Text as="div">
-            <h3>Tab 2</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 2
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 3">
-          <Text as="div">
-            <h3>Tab 3</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 3
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 4">
-          <Text as="div">
-            <h3>Tab 4</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 4
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 5">
-          <Text as="div">
-            <h3>Tab 5</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 5
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 6">
-          <Text as="div">
-            <h3>Tab 6</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 6
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 7">
-          <Text as="div">
-            <h3>Tab 7</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 7
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 8">
-          <Text as="div">
-            <h3>Tab 8</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 8
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
 
         <Tab title="Tab Title 9">
-          <Text as="div">
-            <h3>Tab 9</h3>
-            <p>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 9
+            </Heading>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex{' '}
-            </p>
-          </Text>
+            </Text>
+          </div>
         </Tab>
       </>
     ),
@@ -129,7 +152,12 @@ type Args = React.ComponentProps<typeof Tabs>;
 
 export const Default: StoryObj<Args> = {
   parameters: {
-    chromatic: { viewports: [414, 1366] },
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.chromebook,
+      ],
+    },
   },
 };
 
@@ -137,9 +165,9 @@ export const Default: StoryObj<Args> = {
 export const ScrollMiddle: StoryObj<Args> = {
   parameters: {
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: 'googlePixel2',
     },
-    chromatic: { viewports: [414] },
+    chromatic: { viewports: [chromaticViewports.googlePixel2] },
     snapshot: { skip: true },
   },
   play: async ({ canvasElement }) => {

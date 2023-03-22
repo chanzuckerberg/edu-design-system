@@ -1,16 +1,14 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import type { ReactNode, ElementType } from 'react';
+import type { ReactElement, ReactNode, ElementType } from 'react';
 import React, { useContext } from 'react';
-import styles from './Dropdown.module.css';
 
 import type { ExtractProps } from '../../util/utility-types';
 
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
+import styles from './Dropdown.module.css';
 
-// TODO: this is going to be renamed to be a new Select component
-// and refactored to align with the Menu component (use PopoverContainer, PopoverListItem)
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';
 
@@ -76,7 +74,7 @@ type DropdownProps = ListboxProps & {
   optionsClassName?: string;
 };
 
-type RenderProp<Arg> = (arg: Arg) => ReactNode;
+type RenderProp<Arg> = (arg: Arg) => ReactElement;
 type PropsWithRenderProp<RenderPropArg> = {
   children?: ReactNode | RenderProp<RenderPropArg>;
   className?: string;
@@ -113,6 +111,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 
 /**
  * `import {Dropdown} from "@chanzuckerberg/eds";`
+ *
+ * Note: this component has been deprecated and will be removed in a future release.
+ * Please use the Select component instead for forms, and the Menu component for other
+ * types of popover-like dropdowns.
  *
  * EDS Dropdown. Used to select one option from a list of options.
  *
@@ -244,6 +246,8 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     optionsClassName="dropdown__options--width-24rem"
  *   />
  * );
+ *
+ * @deprecated
  * ```
  */
 export function Dropdown(props: DropdownProps) {
@@ -254,6 +258,8 @@ export function Dropdown(props: DropdownProps) {
     options,
     children,
     'aria-label': ariaLabel,
+    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
+    value = null,
     variant,
     optionsAlign,
     optionsClassName,
@@ -275,7 +281,8 @@ export function Dropdown(props: DropdownProps) {
       );
     }
 
-    const childrenHaveLabel = children && childrenHaveLabelComponent(children);
+    const childrenHaveLabel =
+      children && childrenHaveLabelComponent(children as ReactNode);
     if (!labelText && !props['aria-label'] && !childrenHaveLabel) {
       throw new Error('You must provide a visible label or `aria-label`.');
     }
@@ -292,6 +299,7 @@ export function Dropdown(props: DropdownProps) {
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
+    value,
     ...other,
   };
 

@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, { createContext } from 'react';
-import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
 import AccordionRow from '../AccordionRow';
 import type { HeadingElement } from '../Heading';
+import styles from './Accordion.module.css';
 
 type Props = {
   /**
@@ -42,7 +42,7 @@ export const AccordionContext = createContext<{
  *
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
- * One or multiple interactive headings that reveal or hide associated content.
+ * Displays a list of headers stacked on top of one another that can reveal or hide associated content.
  *
  * ```tsx
  * <Accordion>

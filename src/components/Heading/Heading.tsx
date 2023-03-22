@@ -16,7 +16,7 @@ export const VARIANTS = [
    * @deprecated Info variant is deprecated.
    */ 'info',
 ] as const;
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 // For now, "h1"-"h6" sizes point to the old type ramp, while
 // "headline-*" and "title-*" sizes point to the new type ramp.
@@ -110,5 +110,3 @@ export const Heading = forwardRef(
 );
 
 Heading.displayName = 'Heading'; // Satisfy eslint.
-
-export default Heading;

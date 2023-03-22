@@ -3,18 +3,20 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
 import { useState } from 'react';
-import Modal, { ModalContent } from './Modal';
-import styles from './Modal.stories.module.css';
+import { Modal, ModalContent } from './Modal';
 import { Button, ButtonGroup, Heading, Text, Tooltip } from '../../';
+import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import { VARIANTS } from '../Heading/Heading';
+import styles from './Modal.stories.module.css';
 
 export default {
-  title: 'Organisms/Interactive/Modal',
+  title: 'Components/Modal',
   component: Modal,
   parameters: {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
+    badges: ['1.0'],
   },
 } as Meta<Args>;
 
@@ -112,9 +114,12 @@ export const Mobile: StoryObj<Args> = {
   parameters: {
     ...Default.parameters,
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: 'googlePixel2',
     },
-    chromatic: { disableSnapshot: false, viewports: [414] },
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [chromaticViewports.googlePixel2],
+    },
   },
 };
 
@@ -162,18 +167,15 @@ export const Tablet: StoryObj<Args> = {
   parameters: {
     ...Default.parameters,
     viewport: {
-      defaultViewport: 'mobilelandscape',
+      defaultViewport: 'ipadMini',
       viewports: {
-        mobilelandscape: {
-          name: 'Mobile Landscape',
-          styles: {
-            width: '768px',
-            height: '1024px',
-          },
-        },
+        mobilelandscape: storybookViewports.ipadMini,
       },
     },
-    chromatic: { disableSnapshot: false, viewports: [768] },
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [chromaticViewports.ipadMini],
+    },
   },
 };
 
@@ -202,7 +204,7 @@ function InteractiveExample(args: InteractiveArgs) {
 
   return (
     <>
-      <Text size="sm" spacing="2x" weight="bold">
+      <Text className="mb-4" size="sm" weight="bold">
         Please note: opening the modal only works in the Canvas tab.
       </Text>
       <Button onClick={() => setOpen(true)} variant="primary">
@@ -276,7 +278,7 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
 
 export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
   render: (args) => (
-    <InteractiveExample {...args} hideCloseButton={true}>
+    <InteractiveExample {...args} hideCloseButton>
       {getChildren()}
     </InteractiveExample>
   ),

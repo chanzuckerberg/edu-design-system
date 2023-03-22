@@ -14,11 +14,12 @@ describe('<Button />', () => {
     expect(screen.getByRole('button')).toHaveTextContent('Click');
   });
 
-  it('fires callback on click', () => {
+  it('fires callback on click', async () => {
+    const user = userEvent.setup();
     const onClick = jest.fn();
     render(<Button onClick={onClick}>Click</Button>);
 
-    userEvent.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('button'));
     expect(onClick).toHaveBeenCalled();
   });
 
