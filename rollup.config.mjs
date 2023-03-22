@@ -1,11 +1,6 @@
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
-import packageJson from './package.json' assert { type: 'json' };
-
-const allDeps = {
-  ...packageJson.peerDependencies,
-  ...packageJson.dependencies,
-};
 
 export default {
   input: 'src/index.ts',
@@ -15,8 +10,9 @@ export default {
     preserveModules: true,
     preserveModulesRoot: 'src',
   },
-  external: [...Object.keys(allDeps)],
+  external: [/node_modules/],
   plugins: [
+    nodeResolve(),
     postcss({
       extract: true,
       modules: true,
