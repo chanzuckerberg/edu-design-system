@@ -37,13 +37,15 @@ html {
 The EDS Tailwind theme provides EDS color [tokens](./docs/TOKENS.md) and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
 
 ```js
-const edsConfig.theme = require('@chanzuckerberg/eds/tailwind.config');
+const { theme } = require('@chanzuckerberg/eds/tailwind.config');
 
 module.exports = {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
-  theme: edsConfig.theme,
+  theme,
 };
 ```
+
+This will override default Tailwind [color](https://chanzuckerberg.github.io/edu-design-system/?path=/story/design-tokens-tier-2-usage--colors), [font size, font weight](https://chanzuckerberg.github.io/edu-design-system/?path=/story/design-tokens-tier-1-definitions--typography-tokens), and [breakpoint](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/design-tokens/tier-1-definitions/breakpoints.js) tokens to match with EDS theming.
 
 Refer to the [tokens tailwind section](./docs/TOKENS.md#tailwind-class-tokens) for usage guide.
 
