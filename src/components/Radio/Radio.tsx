@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { useId } from 'react';
+import type { EitherInclusive } from '../../util/utility-types';
 import type { RadioInputProps } from '../RadioInput';
 import RadioInput from '../RadioInput';
 import type { RadioLabelProps } from '../RadioLabel';
@@ -13,14 +14,23 @@ export type RadioProps = RadioInputProps & {
    */
   id?: string;
   /**
-   * Visible text label for the radio.
-   */
-  label?: React.ReactNode;
-  /**
    * Size of the radio label.
    */
   size?: RadioLabelProps['size'];
-};
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: React.ReactNode;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -28,6 +38,8 @@ export type RadioProps = RadioInputProps & {
  * `import {Radio} from "@chanzuckerberg/eds";`
  *
  * This component provides a radio component and a label for form selection.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const Radio = ({
   className,
@@ -37,13 +49,6 @@ export const Radio = ({
   size,
   ...other
 }: RadioProps) => {
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    !label &&
-    !('aria-label' in other)
-  ) {
-    throw new Error('You must provide a visible label or aria-label');
-  }
   const generatedId = useId();
   const radioId = id || generatedId;
 

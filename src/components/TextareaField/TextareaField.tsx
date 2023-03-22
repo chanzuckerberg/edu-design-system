@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
+import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
@@ -8,10 +9,6 @@ import TextArea from '../TextArea';
 import styles from './TextareaField.module.css';
 
 export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
-  /**
-   * Aria-label to provide an accesible name for the text input if no visible label is provided.
-   */
-  'aria-label'?: string;
   /**
    * Text content of the field upon instantiation
    */
@@ -36,11 +33,20 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * Error state of the form field
    */
   isError?: boolean;
-  /**
-   * HTML label text (used in an accessory label component)
-   */
-  label?: string;
-};
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: string;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -50,6 +56,8 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
  * Multi-line text input field with built-in labeling and accessory text to describe
  * the content. When a maximum text count is specified, component also shows relevant
  * text up to the maximum.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
   (
@@ -67,14 +75,6 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
     },
     ref,
   ) => {
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      !label &&
-      !other['aria-label']
-    ) {
-      throw new Error('You must provide a visible label or aria-label');
-    }
-
     const shouldRenderOverline = !!(label || required);
     const overlineClassName = clsx(
       styles['textarea-field__overline'],

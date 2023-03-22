@@ -1,7 +1,7 @@
 import { Switch } from '@headlessui/react';
 import clsx from 'clsx';
 import React from 'react';
-import type { ExtractProps } from '../../util/utility-types';
+import type { EitherInclusive, ExtractProps } from '../../util/utility-types';
 import styles from './Toggle.module.css';
 
 type ToggleLabelProps = {
@@ -35,21 +35,21 @@ type ToggleButtonProps = {
 };
 
 type ToggleProps = ToggleButtonProps & {
-  /**
-   * When possible, use a visible label through the `label` prop instead.
-   * In rare cases where there's no visible label, you must provide an
-   * `aria-label` for screen readers.
-   */
-  'aria-label'?: string;
-  /**
-   * Visible text label for the toggle.
-   */
   children?: React.ReactNode;
-  /**
-   * Visible text label for the toggle.
-   */
-  label?: React.ReactNode;
-};
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: React.ReactNode;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
 
 const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
   const componentClassName = clsx(styles['toggle__label'], className);
@@ -100,16 +100,10 @@ const ToggleWrapper = (props: ExtractProps<typeof Switch.Group>) => (
  *   <Toggle.Button onChange={onChange} checked={checked} className={customCssModulesClassname} />
  * </Toggle.Wrapper>
  * ```
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const Toggle = ({ label, ...other }: ToggleProps) => {
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    !label &&
-    !('aria-label' in other)
-  ) {
-    throw new Error('You must provide a visible label or aria-label');
-  }
-
   return label ? (
     <ToggleWrapper as="div" className={styles['toggle__wrapper']}>
       <ToggleButton {...other} />
