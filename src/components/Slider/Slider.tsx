@@ -5,16 +5,13 @@ import React, {
   type CSSProperties,
 } from 'react';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
+import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
 import styles from './Slider.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-  /**
-   * Aria-label to provide an accesible name for the text input if no visible label is provided.
-   */
-  'aria-label'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -32,10 +29,6 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * HTML id for the component
    */
   id?: string;
-  /**
-   * HTML label text
-   */
-  label?: string;
   /**
    * List of markers to imply slider value.
    * As 'number', will automatically generate markers based on min, max, and step.
@@ -62,7 +55,20 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Value denoted by the slider.
    */
   value: number;
-};
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: string;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -72,6 +78,8 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
  * Allows input of a value via dragging a thumb along a track.
  * Strict: This slider requires a visual indicator of value/markers.
  * Please check out our recipes for possible ideas.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const Slider = ({
   className,
@@ -86,10 +94,6 @@ export const Slider = ({
   value,
   ...other
 }: Props) => {
-  if (process.env.NODE_ENV !== 'production' && !label && !other['aria-label']) {
-    throw new Error('You must provide a visible label or aria-label');
-  }
-
   // Required due to 0.1 + 0.2 != 0.3
   const multiplier = findLowestTenMultiplier([max, min, step]);
   const markersCount =
