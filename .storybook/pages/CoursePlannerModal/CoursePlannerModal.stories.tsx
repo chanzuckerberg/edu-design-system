@@ -19,4 +19,12 @@ export const Brand: StoryObj = {
 
 export const FinalStep: StoryObj = {
   render: () => <ModalFinalStep />,
+  parameters: {
+    axe: {
+      /**
+       * Axe testing is flaky here, but is tested across the other modal stories and would be testing Headless Dialog functionality anyways.
+       */
+      disabledRules: ['aria-dialog-name'],
+    },
+  },
 };
