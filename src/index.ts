@@ -1,3 +1,5 @@
+import './tokens-dist/css/variables.css';
+
 export { default as Accordion } from './components/Accordion';
 export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
