@@ -55,19 +55,6 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
       ],
     },
-    scss: {
-      transforms: [...StyleDictionary.transformGroup.scss, 'name/cti/kebab'],
-      buildPath: 'src/tokens-dist/',
-      files: [
-        {
-          format: 'scss/map-deep',
-          destination: 'scss/_variables.scss',
-          options: {
-            showFileHeader: false,
-          },
-        },
-      ],
-    },
   },
 });
 
