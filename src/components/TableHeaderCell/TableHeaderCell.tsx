@@ -54,8 +54,6 @@ export const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TableHeaderCell} from "@chanzuckerberg/eds";`
  *
  * HTML `th` cell of the `Table` component

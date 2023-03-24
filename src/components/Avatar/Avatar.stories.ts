@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import type React from 'react';
 
@@ -13,7 +12,7 @@ export default {
     variant: 'icon',
   },
   parameters: {
-    badges: ['1.3', BADGE.BETA],
+    badges: ['1.3'],
     layout: 'centered',
   },
 } as Meta<Args>;

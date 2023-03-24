@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -15,7 +14,7 @@ export default {
   component: Table,
   subcomponents: { TableBody, TableCell, TableHeader, TableRow },
   parameters: {
-    badges: ['1.1', BADGE.BETA],
+    badges: ['1.1'],
   },
   decorators: [
     (Story) => (

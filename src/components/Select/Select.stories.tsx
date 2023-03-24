@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import clsx from 'clsx';
@@ -18,7 +17,7 @@ export default {
     'Select.Option': Select.Option,
   },
   parameters: {
-    badges: ['1.2', BADGE.BETA],
+    badges: ['1.2'],
     layout: 'centered',
   },
 } as Meta;

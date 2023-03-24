@@ -55,11 +55,9 @@ export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
- * A dropdown that reveals or hides a list of actions
+ * A dropdown that reveals or hides a list of actions.
  */
 export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);

@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -9,7 +8,7 @@ export default {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
-    badges: ['1.0', BADGE.BETA],
+    badges: ['1.0'],
   },
   decorators: [
     (Story) => (
