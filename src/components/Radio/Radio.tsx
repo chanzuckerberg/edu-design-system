@@ -33,8 +33,6 @@ export type RadioProps = RadioInputProps & {
   >;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Radio} from "@chanzuckerberg/eds";`
  *
  * This component provides a radio component and a label for form selection.

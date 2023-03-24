@@ -31,8 +31,6 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {ProgressBar} from "@chanzuckerberg/eds";`
  *
  * Show the progression of a system operation: downloading, uploading, processing, etc., in a visual way

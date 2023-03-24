@@ -49,8 +49,6 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   >;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TextareaField} from "@chanzuckerberg/eds";`
  *
  * Multi-line text input field with built-in labeling and accessory text to describe

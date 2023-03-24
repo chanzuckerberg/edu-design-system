@@ -22,8 +22,6 @@ export type Props = React.TableHTMLAttributes<HTMLTableElement> & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Table} from "@chanzuckerberg/eds";`
  *
  * HTML table component.

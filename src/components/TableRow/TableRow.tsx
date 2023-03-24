@@ -19,8 +19,6 @@ export type Props = React.HTMLAttributes<HTMLTableRowElement> & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TableRow} from "@chanzuckerberg/eds";`
  *
  * HTML `tr` of the `Table` component

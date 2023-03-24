@@ -30,8 +30,6 @@ export interface Props {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {PopoverListItem} from "@chanzuckerberg/eds";`
  *
  * This abstracts the structure of an item in a popover, when the popover contains a
