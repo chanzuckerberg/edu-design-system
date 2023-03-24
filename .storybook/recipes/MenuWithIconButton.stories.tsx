@@ -13,11 +13,13 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
   },
+  args: {
+    iconName: 'dots-vertical',
+  },
   argTypes: {
     iconName: {
       control: 'radio',
       options: Object.keys(icons),
-      defaultValue: 'dots-vertical',
     },
   },
 } as Meta<{ iconName: IconName }>;
