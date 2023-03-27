@@ -27,3 +27,5 @@ export const CardBody = ({ children, className, ...other }: Props) => {
     </div>
   );
 };
+
+CardBody.displayName = 'CardBody';

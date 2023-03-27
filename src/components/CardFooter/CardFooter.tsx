@@ -27,3 +27,5 @@ export const CardFooter = ({ children, className, ...other }: Props) => {
     </footer>
   );
 };
+
+CardFooter.displayName = 'CardFooter';

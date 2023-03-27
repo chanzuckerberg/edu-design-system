@@ -1,103 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Card /> Default story renders snapshot 1`] = `
-<article
-  class="card"
+<div
+  class="p-5"
 >
-  <header
-    class="card__header"
+  <article
+    class="card"
   >
-    <div
-      class="fpo"
+    <header
+      class="card__header"
     >
-      Card Header
+      <div
+        class="fpo"
+      >
+        Card Header
+      </div>
+    </header>
+    <div
+      class="card__body"
+    >
+      <div
+        class="fpo"
+      >
+        Card Body
+      </div>
     </div>
-  </header>
-  <div
-    class="card__body"
+    <footer
+      class="card__footer"
+    >
+      <div
+        class="fpo"
+      >
+        Card Footer
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Card /> Dragging story renders snapshot 1`] = `
+<div
+  class="p-5"
+>
+  <article
+    class="card card--dragging"
   >
-    <div
-      class="fpo"
+    <header
+      class="card__header"
     >
-      Card Body
-    </div>
-  </div>
-  <footer
-    class="card__footer"
-  >
+      <div
+        class="fpo"
+      >
+        Card Header
+      </div>
+    </header>
     <div
-      class="fpo"
+      class="card__body"
     >
-      Card Footer
+      <div
+        class="fpo"
+      >
+        Card Body
+      </div>
     </div>
-  </footer>
-</article>
+    <footer
+      class="card__footer"
+    >
+      <div
+        class="fpo"
+      >
+        Card Footer
+      </div>
+    </footer>
+  </article>
+</div>
 `;
 
 exports[`<Card /> Horizontal story renders snapshot 1`] = `
-<article
-  class="card card--horizontal"
+<div
+  class="p-5"
 >
-  <header
-    class="card__header"
+  <article
+    class="card card--horizontal"
   >
-    <div
-      class="fpo"
+    <header
+      class="card__header"
     >
-      Card Header
-    </div>
-  </header>
-  <div
-    class="card__body"
-  >
+      <div
+        class="fpo"
+      >
+        Card Header
+      </div>
+    </header>
     <div
-      class="fpo"
+      class="card__body"
     >
-      Card Body
+      <div
+        class="fpo"
+      >
+        Card Body
+      </div>
     </div>
-  </div>
-  <footer
-    class="card__footer"
-  >
-    <div
-      class="fpo"
+    <footer
+      class="card__footer"
     >
-      Card Footer
-    </div>
-  </footer>
-</article>
+      <div
+        class="fpo"
+      >
+        Card Footer
+      </div>
+    </footer>
+  </article>
+</div>
 `;
 
 exports[`<Card /> Raised story renders snapshot 1`] = `
-<article
-  class="card card--raised"
+<div
+  class="p-5"
 >
-  <header
-    class="card__header"
+  <article
+    class="card card--raised"
   >
-    <div
-      class="fpo"
+    <header
+      class="card__header"
     >
-      Card Header
-    </div>
-  </header>
-  <div
-    class="card__body"
-  >
+      <div
+        class="fpo"
+      >
+        Card Header
+      </div>
+    </header>
     <div
-      class="fpo"
+      class="card__body"
     >
-      Card Body
+      <div
+        class="fpo"
+      >
+        Card Body
+      </div>
     </div>
-  </div>
-  <footer
-    class="card__footer"
-  >
-    <div
-      class="fpo"
+    <footer
+      class="card__footer"
     >
-      Card Footer
-    </div>
-  </footer>
-</article>
+      <div
+        class="fpo"
+      >
+        Card Footer
+      </div>
+    </footer>
+  </article>
+</div>
 `;

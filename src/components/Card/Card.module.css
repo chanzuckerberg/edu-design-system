@@ -28,27 +28,17 @@
 
 /**
  * Card that is being dragged in drag and drop.
- * 
- * Passed down to card to be reused.
  */
-.card.eds-is-dragging {
+.card--dragging {
   box-shadow: var(--eds-box-shadow-xl);
 }
 
 /**
- * Horizontal card.
+ * Card with horizontal contents.
  */
 .card--horizontal {
   /* Change the orientation to display header, body, and footer in a row. */
   flex-direction: row;
-}
-
-/**
- * Centered card
- */
-.card--center {
-  /* Card where the content is centered. */
-  text-align: center;
 }
 
 /**
