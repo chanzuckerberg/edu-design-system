@@ -19,6 +19,11 @@ export default {
       </div>
     ),
   ],
+  argTypes: {
+    fieldNote: {
+      type: 'string',
+    },
+  },
   render: (args) => <InteractiveSlider {...args} />,
 } as Meta<Args>;
 
