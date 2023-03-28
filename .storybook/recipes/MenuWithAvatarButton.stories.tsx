@@ -3,25 +3,15 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent } from '@storybook/testing-library';
 import React from 'react';
 
-import { Icon, type IconName } from '../../src';
+import { Avatar } from '../../src';
 import { Menu } from '../../src/components/Menu/Menu';
-import icons from '../../src/icons/spritemap';
 
 export default {
-  title: 'Recipes/MenuWithIconButton',
+  title: 'Recipes/MenuWithAvatarButton',
   component: Menu,
   parameters: {
     badges: [BADGE.BETA],
     layout: 'centered',
-  },
-  args: {
-    iconName: 'dots-vertical',
-  },
-  argTypes: {
-    iconName: {
-      control: 'radio',
-      options: Object.keys(icons),
-    },
   },
   decorators: [
     (Story) => (
@@ -30,15 +20,10 @@ export default {
       </div>
     ),
   ],
-  render: ({ iconName }) => (
+  render: () => (
     <Menu>
       <Menu.PlainButton>
-        <Icon
-          name={iconName}
-          purpose="informative"
-          size="2rem"
-          title="show more"
-        />
+        <Avatar user={{ fullName: 'Josie Sandberg' }} />
       </Menu.PlainButton>
       <Menu.Items data-testid="menu-content">
         <Menu.Item
@@ -63,9 +48,11 @@ export default {
       </Menu.Items>
     </Menu>
   ),
-} as Meta<{ iconName: IconName }>;
+} as Meta<Args>;
 
-export const WithVerticalDotsButton: StoryObj = {};
+type Args = React.ComponentProps<typeof Avatar>;
+
+export const WithAvatarButton: StoryObj = {};
 
 export const Focused: StoryObj = {
   play: () => {
