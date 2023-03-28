@@ -1,12 +1,12 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
 import CardHeader from '../CardHeader';
 import styles from './Card.module.css';
 
-export interface Props {
+export interface Props extends HTMLAttributes<HTMLElement> {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -17,19 +17,22 @@ export interface Props {
   className?: string;
   /**
    * Elevation variants
+   * - **none** renders the card with no elevation (no box-shadow applied)
    * - **raised** renders the card that is raised off of the canvas (box-shadow applied)
+   * - **dragging** renders the card that is raised even further off the canvas (during drag)
    */
-  elevation?: 'raised';
+  elevation?: 'none' | 'raised' | 'dragging';
   /**
-   * Property passed in to style draggable project card
+   * Property to apply a "dragging" elevation. Used when card is under drag
    */
   isDragging?: boolean;
   /**
    * Orientation of a card
+   * - **vertical** renders the header, body, and footer in a columnar fashion (default)
    * - **horizontal** renders the header, body, and footer in a horizontal fashion
    * where the body is required but the header and footer are not
    */
-  orientation?: 'horizontal';
+  orientation?: 'vertical' | 'horizontal';
 }
 
 /**
@@ -41,16 +44,17 @@ export interface Props {
 export const Card = ({
   className,
   children,
-  elevation,
-  isDragging,
-  orientation,
+  elevation = 'none',
+  isDragging = false,
+  orientation = 'vertical',
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['card'],
-    orientation && styles['card--horizontal'],
-    isDragging && styles['eds-is-dragging'],
+    orientation === 'horizontal' && styles['card--horizontal'],
     elevation === 'raised' && styles['card--raised'],
+    elevation === 'dragging' && styles['card--dragging'],
+    isDragging && styles['card--dragging'],
     className,
   );
   return (
@@ -59,6 +63,8 @@ export const Card = ({
     </article>
   );
 };
+
+Card.displayName = 'Card';
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;
