@@ -71,25 +71,25 @@ export const LayoutExample: StoryObj<Args> = {
             width="50px"
           />
           <Skeleton.Text
-            className="mt-2 mb-2"
+            className="mb-2 mt-2"
             height="4rem"
             isAnimating={isAnimating}
             width="15ch"
           />
           <Skeleton.Text
-            className="mt-2 mb-2"
+            className="mb-2 mt-2"
             height="1.5rem"
             isAnimating={isAnimating}
             width="30ch"
           />
           <Skeleton.Text
-            className="mt-2 mb-2"
+            className="mb-2 mt-2"
             height="1.5rem"
             isAnimating={isAnimating}
             width="25ch"
           />
           <Skeleton.Text
-            className="mt-2 mb-8"
+            className="mb-8 mt-2"
             height="1.5rem"
             isAnimating={isAnimating}
             width="10ch"

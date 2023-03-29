@@ -330,7 +330,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               </a>
             </video>
 
-            <div className="mt-4 ml-2 flex gap-4">
+            <div className="ml-2 mt-4 flex gap-4">
               {ReplyIcon}
               <Text>
                 My greatest accomplishment this year was in math, because I
@@ -448,7 +448,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           id={notesTextareaId}
           placeholder="Add any notes about Mikaela here. Only you can see them."
         ></textarea>
-        <Button className="mt-2 mb-16 w-full" variant="secondary">
+        <Button className="mb-16 mt-2 w-full" variant="secondary">
           Save
         </Button>
       </aside>
