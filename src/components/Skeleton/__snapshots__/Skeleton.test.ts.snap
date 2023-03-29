@@ -31,22 +31,22 @@ exports[`<Skeleton /> LayoutExample story renders snapshot 1`] = `
     />
     <div
       aria-hidden="true"
-      class="mt-2 mb-2 skeleton skeleton--is-animating"
+      class="mb-2 mt-2 skeleton skeleton--is-animating"
       style="width: 15ch; height: 4rem;"
     />
     <div
       aria-hidden="true"
-      class="mt-2 mb-2 skeleton skeleton--is-animating"
+      class="mb-2 mt-2 skeleton skeleton--is-animating"
       style="width: 30ch; height: 1.5rem;"
     />
     <div
       aria-hidden="true"
-      class="mt-2 mb-2 skeleton skeleton--is-animating"
+      class="mb-2 mt-2 skeleton skeleton--is-animating"
       style="width: 25ch; height: 1.5rem;"
     />
     <div
       aria-hidden="true"
-      class="mt-2 mb-8 skeleton skeleton--is-animating"
+      class="mb-8 mt-2 skeleton skeleton--is-animating"
       style="width: 10ch; height: 1.5rem;"
     />
     <div

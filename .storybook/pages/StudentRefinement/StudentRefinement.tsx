@@ -513,7 +513,7 @@ export const StudentRefinement = () => {
             <div className="fpo">Overview</div>
           </Tab>
           <Tab title="Students">
-            <div className="px-12 pt-8 pb-12">
+            <div className="px-12 pb-12 pt-8">
               <div className={styles['student-refinement__summary-cards']}>
                 <DataSummaryCard
                   className={styles['student-refinement__summary-card']}
