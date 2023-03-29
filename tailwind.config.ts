@@ -1,4 +1,5 @@
-const edsTokens = require('./lib/tokens/json/css-variables-nested.json').eds;
+import type { Config } from 'tailwindcss';
+import { eds as edsTokens } from './lib/tokens/json/css-variables-nested.json';
 
 const {
   background: backgroundColorTokens,
@@ -7,7 +8,7 @@ const {
   ...colorTokens
 } = edsTokens.theme.color;
 
-module.exports = {
+export default {
   /**
    * The main value in TW utility classes is for Storybook stories & recipes.
    * We avoid using them in component styles to reduce chance of conflict with other libraries.
@@ -63,4 +64,4 @@ module.exports = {
       xxl: '1400px',
     },
   },
-};
+} satisfies Config;
