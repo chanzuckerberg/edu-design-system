@@ -143,7 +143,6 @@
  */
 .slider__markers {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   /* Calculates offset of the markers to align with actual values */
@@ -165,4 +164,18 @@
 
 .slider__marker--disabled {
   color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * align the text of the last marker flush with the right edge
+ */
+.slider__marker:last-child {
+  text-align: right;
+}
+
+/**
+ * Align all middle markers as centered on the mark point (if multi-line)
+ */
+.slider__marker:not(:first-child):not(:last-child) {
+  text-align: center;
 }
