@@ -104,6 +104,7 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@geometricpanda/storybook-addon-badges": "^1.1.1",
     "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@size-limit/file": "^8.2.4",
     "@storybook/addon-a11y": "^6.5.16",
