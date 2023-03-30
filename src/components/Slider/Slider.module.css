@@ -1,16 +1,13 @@
 @import '../../design-tokens/mixins.css';
 
-/*------------------------------------*\
+/*------------------------*\
     # SLIDER
-\*------------------------------------*/
+\*------------------------*/
 
 /**
  * Slider wrapping Label and Input
  */
 .slider {
-  --slider-track-height: var(--eds-size-1);
-  --slider-thumb-size: var(--eds-size-3);
-
   display: flex;
   flex-direction: column;
   gap: var(--eds-size-1-and-half);
@@ -42,7 +39,7 @@
   appearance: none;
   background: transparent;
 
-  height: var(--slider-thumb-size);
+  height: var(--eds-theme-size-slider-thumb);
 }
 .slider__input:focus {
   outline: none;
@@ -64,7 +61,7 @@
  */
 .slider__input::-webkit-slider-runnable-track {
   background: var(--slider-track-background);
-  height: var(--slider-track-height);
+  height: var(--eds-theme-size-slider-track-height);
   border-radius: var(--eds-border-radius-full);
 }
 /**
@@ -73,7 +70,7 @@
 /* Firefox */
 .slider__input::-moz-range-track {
   background: var(--slider-track-background);
-  height: var(--slider-track-height);
+  height: var(--eds-theme-size-slider-track-height);
   border-radius: var(--eds-border-radius-full);
 }
 
@@ -81,15 +78,16 @@
 .slider__input::-webkit-slider-thumb {
   appearance: none;
 
-  height: var(--slider-thumb-size);
-  width: var(--slider-thumb-size);
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
   background: var(--eds-theme-color-text-neutral-default-inverse);
   border: var(--eds-border-width-md) solid
     var(--eds-theme-color-border-neutral-default);
   border-radius: var(--eds-border-radius-full);
 
   margin-top: calc(
-    var(--slider-track-height) / 2 - var(--slider-thumb-size) / 2
+    var(--eds-theme-size-slider-track-height) / 2 -
+      var(--eds-theme-size-slider-thumb) / 2
   ); /* Centers thumb on the track */
 }
 .slider__input:not(:disabled)::-webkit-slider-thumb {
@@ -115,8 +113,8 @@
 .slider__input::-moz-range-thumb {
   box-sizing: border-box;
 
-  height: var(--slider-thumb-size);
-  width: var(--slider-thumb-size);
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
   background: var(--eds-theme-color-text-neutral-default-inverse);
   border: var(--eds-border-width-md) solid
     var(--eds-theme-color-border-neutral-default);
@@ -146,8 +144,8 @@
   justify-content: space-between;
 
   /* Calculates offset of the markers to align with actual values */
-  padding-left: calc(var(--slider-thumb-size) / 2);
-  padding-right: calc(var(--slider-thumb-size) / 2);
+  padding-left: calc(var(--eds-theme-size-slider-thumb) / 2);
+  padding-right: calc(var(--eds-theme-size-slider-thumb) / 2);
 }
 
 /**
@@ -178,4 +176,15 @@
  */
 .slider__marker:not(:first-child):not(:last-child) {
   text-align: center;
+}
+
+/**
+ * Horizontally centers the tooltip arrow respective to the tooltip.
+ */
+.slider :global(.tippy-arrow) {
+  transform: initial !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }

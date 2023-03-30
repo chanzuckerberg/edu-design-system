@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, {
   useId,
+  useRef,
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
@@ -9,6 +10,7 @@ import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
+import Tooltip from '../Tooltip';
 import styles from './Slider.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -52,6 +54,11 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   step: number;
   /**
+   * Content to display in a tooltip above the thumb. Presence toggles Tooltip.
+   * Will flip to bottom of Slider if there is more space.
+   */
+  tooltip?: string;
+  /**
    * Value denoted by the slider.
    */
   value: number;
@@ -91,9 +98,12 @@ export const Slider = ({
   max,
   min,
   step,
+  tooltip,
   value,
   ...other
 }: Props) => {
+  const ref = useRef<HTMLInputElement>(null);
+
   // Required due to 0.1 + 0.2 != 0.3
   const multiplier = findLowestTenMultiplier([max, min, step]);
   const markersCount =
@@ -107,6 +117,8 @@ export const Slider = ({
       'Number of markers is not an integer. Change step or supply custom markers',
     );
   }
+
+  const ratio = (value - min) / (max - min);
 
   const componentClassName = clsx(styles['slider'], className);
   const labelClassName = clsx(disabled && styles['slider__label--disabled']);
@@ -123,6 +135,7 @@ export const Slider = ({
     ? other['aria-describedby'] || generatedAriaDescribedById
     : undefined;
 
+  const computedBodyStyles = getComputedStyle(document.body);
   return (
     <div className={componentClassName}>
       {label && (
@@ -135,15 +148,41 @@ export const Slider = ({
         id={sliderId}
         max={max}
         min={min}
+        ref={ref}
         step={step}
         style={
           // calculate value as a ratio to color the track
-          { '--ratio': (value - min) / (max - min) } as CSSProperties
+          { '--ratio': ratio } as CSSProperties
         }
         type="range"
         value={value}
         {...other}
       />
+      {tooltip && (
+        <Tooltip
+          align="top"
+          appendTo="parent"
+          hideOnClick={false}
+          offset={({ reference }) => {
+            // offsets the tooltip relative to the position of the thumb
+            return [
+              (ratio - 0.5) *
+                (reference.width -
+                  // rems and pixels has to be converted to number values for the offset
+                  parseFloat(
+                    computedBodyStyles.getPropertyValue(
+                      '--eds-theme-size-slider-thumb',
+                    ),
+                  ) *
+                    parseFloat(computedBodyStyles.fontSize)),
+              0,
+            ];
+          }}
+          reference={ref}
+          text={tooltip}
+          touch="hold"
+        />
+      )}
       {fieldNote && (
         <FieldNote disabled={disabled} id={ariaDescribedByVar}>
           {fieldNote}

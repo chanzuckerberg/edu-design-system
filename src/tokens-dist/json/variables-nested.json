@@ -668,6 +668,14 @@
           "width": "1px",
           "radius": "4px"
         }
+      },
+      "size": {
+        "slider": {
+          "track": {
+            "height": "0.5rem"
+          },
+          "thumb": "1.5rem"
+        }
       }
     }
   },
