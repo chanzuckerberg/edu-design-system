@@ -181,7 +181,7 @@
 }
 
 /**
- * Centers the tooltip arrow to the tooltip horizontally.
+ * Horizontally centers the tooltip arrow respective to the tooltip.
  */
 .slider :global(.tippy-arrow) {
   transform: none !important;
