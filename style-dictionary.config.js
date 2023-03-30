@@ -42,14 +42,6 @@ const EDSStyleDictionary = StyleDictionary.extend({
           },
           filter: (token) => token.path.includes('color'),
         },
-        {
-          format: 'javascript/es6',
-          destination: 'ts/slider.ts',
-          options: {
-            showFileHeader: false,
-          },
-          filter: (token) => token.filePath.includes('tier-3-component/slider'),
-        },
       ],
     },
     json: {

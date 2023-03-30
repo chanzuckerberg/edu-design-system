@@ -5,7 +5,6 @@ import React, {
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
-import { EdsThemeSizeSliderThumb } from '../../tokens-dist/ts/slider';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
 import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
@@ -136,6 +135,7 @@ export const Slider = ({
     ? other['aria-describedby'] || generatedAriaDescribedById
     : undefined;
 
+  const computedBodyStyles = getComputedStyle(document.body);
   return (
     <div className={componentClassName}>
       {label && (
@@ -168,8 +168,13 @@ export const Slider = ({
             return [
               (ratio - 0.5) *
                 (reference.width -
-                  parseFloat(EdsThemeSizeSliderThumb) *
-                    parseFloat(getComputedStyle(document.body).fontSize)),
+                  // rems and pixels has to be converted to number values for the offset
+                  parseFloat(
+                    computedBodyStyles.getPropertyValue(
+                      '--eds-theme-size-slider-thumb',
+                    ),
+                  ) *
+                    parseFloat(computedBodyStyles.fontSize)),
               0,
             ];
           }}
