@@ -160,7 +160,7 @@ export const Tooltip: StoryObj<Args> = {
     snapshot: { skip: true },
   },
   play: async ({ canvasElement }) => {
-    if (!isChromatic()) {
+    if (isChromatic()) {
       const canvas = within(canvasElement);
       const slider = await canvas.findByRole('slider');
 

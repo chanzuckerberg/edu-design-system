@@ -182,7 +182,7 @@
  * Horizontally centers the tooltip arrow respective to the tooltip.
  */
 .slider :global(.tippy-arrow) {
-  transform: none !important;
+  transform: initial !important;
   margin-left: auto;
   margin-right: auto;
   left: 0;
