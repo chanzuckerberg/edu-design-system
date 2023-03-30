@@ -179,3 +179,14 @@
 .slider__marker:not(:first-child):not(:last-child) {
   text-align: center;
 }
+
+/**
+ * Centers the tooltip arrow to the tooltip horizontally.
+ */
+.slider :global(.tippy-arrow) {
+  transform: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
