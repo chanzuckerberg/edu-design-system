@@ -5,6 +5,7 @@ import React, {
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
+import { EdsThemeSizeSliderThumb } from '../../tokens-dist/ts/slider';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
 import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
@@ -164,11 +165,17 @@ export const Slider = ({
           hideOnClick={false}
           offset={({ reference }) => {
             // offsets the tooltip relative to the position of the thumb
-            // the magic number 24 is the slider thumb size (see relevant css module)
-            return [(ratio - 0.5) * (reference.width - 24), 0];
+            return [
+              (ratio - 0.5) *
+                (reference.width -
+                  parseFloat(EdsThemeSizeSliderThumb) *
+                    parseFloat(getComputedStyle(document.body).fontSize)),
+              0,
+            ];
           }}
           reference={ref}
           text={tooltip}
+          touch="hold"
         />
       )}
       {fieldNote && (

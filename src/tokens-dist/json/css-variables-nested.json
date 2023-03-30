@@ -664,6 +664,14 @@
           "radius": "var(--eds-theme-form-border-radius)"
         }
       },
+      "size": {
+        "slider": {
+          "track": {
+            "height": "var(--eds-theme-size-slider-track-height)"
+          },
+          "thumb": "var(--eds-theme-size-slider-thumb)"
+        }
+      },
       "color-focus-ring": "var(--eds-theme-color-focus-ring)"
     }
   },
