@@ -18,8 +18,8 @@
       "import": "./lib/tokens/fonts.css",
       "require": "./lib/tokens/fonts.css"
     },
-    "./tailwind.config.mjs": {
-      "import": "./tailwind.config.mjs"
+    "./tailwind.config": {
+      "import": "./tailwind.config.ts"
     }
   },
   "types": "lib/index.d.ts",

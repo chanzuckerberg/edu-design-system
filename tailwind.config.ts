@@ -1,3 +1,4 @@
+import type { Config } from 'tailwindcss';
 import { eds as edsTokens } from './lib/tokens/json/css-variables-nested.json';
 
 const {
@@ -7,9 +8,6 @@ const {
   ...colorTokens
 } = edsTokens.theme.color;
 
-/**
- * @type {import('tailwindcss').Config}
- */
 export default {
   /**
    * The main value in TW utility classes is for Storybook stories & recipes.
@@ -66,4 +64,4 @@ export default {
       xxl: '1400px',
     },
   },
-};
+} satisfies Config;
