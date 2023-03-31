@@ -2,7 +2,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Skeleton } from './Skeleton';
-import PopoverContainer from '../PopoverContainer';
 
 export default {
   title: 'Components/Skeleton',
@@ -46,57 +45,5 @@ export const Text: StoryObj<React.ComponentProps<typeof Skeleton.Text>> = {
   },
   render: (args) => {
     return <Skeleton.Text {...args} />;
-  },
-};
-
-export const LayoutExample: StoryObj<Args> = {
-  argTypes: {
-    className: {
-      control: false,
-    },
-    width: {
-      control: false,
-    },
-    height: {
-      control: false,
-    },
-  },
-  render: ({ isAnimating }) => {
-    return (
-      <div aria-label="Loading example profile card" role="status">
-        <PopoverContainer className="m-2 p-3">
-          <Skeleton.Circle
-            className="mb-3"
-            isAnimating={isAnimating}
-            width="50px"
-          />
-          <Skeleton.Text
-            className="mb-2 mt-2"
-            height="4rem"
-            isAnimating={isAnimating}
-            width="15ch"
-          />
-          <Skeleton.Text
-            className="mb-2 mt-2"
-            height="1.5rem"
-            isAnimating={isAnimating}
-            width="30ch"
-          />
-          <Skeleton.Text
-            className="mb-2 mt-2"
-            height="1.5rem"
-            isAnimating={isAnimating}
-            width="25ch"
-          />
-          <Skeleton.Text
-            className="mb-8 mt-2"
-            height="1.5rem"
-            isAnimating={isAnimating}
-            width="10ch"
-          />
-          <Skeleton height={50} isAnimating={isAnimating} width="100%" />
-        </PopoverContainer>
-      </div>
-    );
   },
 };
