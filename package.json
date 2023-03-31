@@ -48,7 +48,6 @@
     "build:js": "rollup --config",
     "build:storybook": "build-storybook -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",
     "build:styles": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
-    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly",
     "chromatic": "chromatic",
     "copy-fonts-to-lib": "copyfiles -u 3 src/design-tokens/tier-1-definitions/fonts.css src/design-tokens/tier-1-definitions/fonts/**/* lib/tokens",
     "copy-tokens-to-lib": "copyfiles -u 2 src/tokens-dist/**/* lib/tokens",
