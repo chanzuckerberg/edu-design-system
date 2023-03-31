@@ -9,18 +9,19 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      dir: 'lib/es',
+      dir: 'lib',
       format: 'es',
       preserveModules: true,
       preserveModulesRoot: 'src',
       sourcemap: true,
     },
     {
-      dir: 'lib/cjs',
+      dir: 'lib',
       format: 'cjs',
       preserveModules: true,
       preserveModulesRoot: 'src',
       sourcemap: true,
+      entryFileNames: '[name].cjs',
     },
   ],
   /**
@@ -37,15 +38,6 @@ export default {
     }),
     typescript({
       tsconfig: 'tsconfig.build.json',
-      compilerOptions: {
-        /**
-         * Rollup wants declarations in the same directory as the output folder,
-         * but since we ship both cjs and esm in separate folders, this will throw an error.
-         * Declarations are hence built separately using tsc into lib/types
-         */
-        declaration: false,
-        declarationDir: undefined,
-      },
     }),
   ],
 };

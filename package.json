@@ -5,9 +5,11 @@
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
-  "main": "lib/cjs/index.js",
-  "module": "lib/es/index.js",
-  "types": "lib/types/index.d.ts",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
+  "types": "lib/index.d.ts",
   "sideEffects": [
     "lib/tokens/css/variables.css",
     "lib/tokens/fonts.css"
@@ -27,7 +29,7 @@
     "tailwind.config.js"
   ],
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:types && yarn copy-fonts-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn copy-tokens-to-lib && yarn prettier-tokens-dist",
     "build:js": "rollup --config",
