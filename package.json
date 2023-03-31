@@ -6,8 +6,21 @@
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
   "exports": {
-    "import": "./lib/index.js",
-    "require": "./lib/index.cjs"
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    },
+    "./index.css": {
+      "import": "./lib/index.css",
+      "require": "./lib/index.css"
+    },
+    "./fonts.css": {
+      "import": "./lib/tokens/fonts.css",
+      "require": "./lib/tokens/fonts.css"
+    },
+    "./tailwind.config.mjs": {
+      "import": "./tailwind.config.mjs"
+    }
   },
   "types": "lib/index.d.ts",
   "sideEffects": [
@@ -26,7 +39,7 @@
   },
   "files": [
     "/lib",
-    "tailwind.config.js"
+    "tailwind.config.mjs"
   ],
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
