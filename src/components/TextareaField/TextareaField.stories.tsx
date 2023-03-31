@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -17,7 +16,7 @@ export default {
     fieldNote: 'Longer Field description',
   },
   parameters: {
-    badges: ['1.3', BADGE.BETA],
+    badges: ['1.3'],
   },
 } as Meta<Args>;
 

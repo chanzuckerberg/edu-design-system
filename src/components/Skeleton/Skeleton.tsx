@@ -20,8 +20,6 @@ type SkeletonProps = BaseProps & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Skeleton} from "@chanzuckerberg/eds";`
  *
  * Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout

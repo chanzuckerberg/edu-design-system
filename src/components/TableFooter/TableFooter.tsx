@@ -13,8 +13,6 @@ export interface Props {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TableFooter} from "@chanzuckerberg/eds";`
  *
  * HTML `tfoot` of the `Table` component

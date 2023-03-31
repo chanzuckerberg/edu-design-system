@@ -33,6 +33,10 @@
   min-height: 44px;
   min-width: 44px;
 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
   border-radius: var(--eds-border-radius-md);
 }
 .menu__plain-button:hover {

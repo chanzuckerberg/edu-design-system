@@ -1,0 +1,18 @@
+{
+  "eds": {
+    "theme": {
+      "size": {
+        "slider": {
+          "track": {
+            "height": {
+              "value": "{eds.size.1}"
+            }
+          },
+          "thumb": {
+            "value": "{eds.size.3}"
+          }
+        }
+      }
+    }
+  }
+}

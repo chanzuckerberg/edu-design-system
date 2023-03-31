@@ -332,23 +332,54 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
   tabindex="-1"
   type="button"
 >
-  <svg
-    class="icon eds-is-loading"
-    fill="currentColor"
-    height="1.5em"
-    role="img"
-    style="--icon-size: 1.5em;"
-    viewBox="0 0 32 32"
-    width="1.5em"
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    aria-busy="true"
+    aria-label="loading"
+    class="loading-indicator eds-is-loading"
+    data-testid="oval-loading"
+    role="status"
   >
-    <title>
-      loading
-    </title>
-    <path
-      d="M16 31.9995C11.726 31.9995 7.708 30.3355 4.686 27.3135C1.664 24.2915 0 20.2735 0 15.9995C0 12.9735 0.849 10.0265 2.456 7.47752C4.019 4.99952 6.227 2.99752 8.842 1.68652L10.186 4.36852C8.06 5.43352 6.264 7.06152 4.994 9.07652C3.689 11.1455 3 13.5385 3 15.9985C3 23.1665 8.832 28.9985 16 28.9985C23.168 28.9985 29 23.1665 29 15.9985C29 13.5395 28.31 11.1455 27.006 9.07652C25.735 7.06152 23.94 5.43352 21.814 4.36852L23.158 1.68652C25.773 2.99652 27.982 4.99952 29.544 7.47752C31.151 10.0265 32 12.9725 32 15.9995C32 20.2735 30.336 24.2915 27.314 27.3135C24.292 30.3355 20.274 31.9995 16 31.9995Z"
-    />
-  </svg>
+    <svg
+      data-testid="oval-svg"
+      height="24"
+      stroke="transparent"
+      viewBox="-20 -20 42 42"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <g
+          data-testid="oval-secondary-group"
+          stroke-width="2"
+          transform="translate(1 1)"
+        >
+          <circle
+            cx="0"
+            cy="0"
+            r="20"
+            stroke="transparent"
+            stroke-opacity=".5"
+            stroke-width="2"
+          />
+          <path
+            d="M20 0c0-9.94-8.06-20-20-20"
+          >
+            <animatetransform
+              attributeName="transform"
+              dur="1s"
+              from="0 0 0"
+              repeatCount="indefinite"
+              to="360 0 0"
+              type="rotate"
+            />
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
   Button
 </button>
 `;

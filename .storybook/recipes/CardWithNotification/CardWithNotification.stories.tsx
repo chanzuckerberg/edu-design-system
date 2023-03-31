@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { CardWithNotification } from './CardWithNotification';
-import { DataBar } from '../../../src';
+import { DataBar, Card } from '../../../src';
 
 export default {
   title: 'Recipes/CardWithNotification',
@@ -26,15 +26,15 @@ export const Default: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <CardWithNotification.Header>
+        <Card.Header>
           <div className="fpo">Card Header</div>
-        </CardWithNotification.Header>
-        <CardWithNotification.Body>
+        </Card.Header>
+        <Card.Body>
           <div className="fpo">Card Body</div>
-        </CardWithNotification.Body>
-        <CardWithNotification.Footer>
+        </Card.Body>
+        <Card.Footer>
           <div className="fpo">Card Footer</div>
-        </CardWithNotification.Footer>
+        </Card.Footer>
       </>
     ),
     text: 'Lorem ipsum dolor sit amet',
@@ -45,7 +45,7 @@ export const Default: StoryObj<Args> = {
 export const CADBrand: StoryObj<Args> = {
   args: {
     children: (
-      <CardWithNotification.Body>
+      <Card.Body>
         <DataBar
           label="Total instructional days"
           max={60}
@@ -56,7 +56,7 @@ export const CADBrand: StoryObj<Args> = {
             { value: 11, text: 'Project 4' },
           ]}
         />
-      </CardWithNotification.Body>
+      </Card.Body>
     ),
     text: 'Summit recommends teaching at least five (5) projects for this course.',
     variant: 'brand',

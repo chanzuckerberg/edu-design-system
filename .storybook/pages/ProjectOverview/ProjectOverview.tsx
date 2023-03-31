@@ -236,7 +236,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               question in their conclusion. Students craft evidence-supported
               explanations of how the body is organized and functions.
             </Text>
-            <dl className="mt-0 mb-6 flex">
+            <dl className="mb-6 mt-0 flex">
               <dt>Term 1:</dt>
               <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
@@ -248,7 +248,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               to frame their shared experiment, then describe the group research
               question in the introduction.
             </Text>
-            <dl className="mt-0 mb-8 flex">
+            <dl className="mb-8 mt-0 flex">
               <dt>Term 1:</dt>
               <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>

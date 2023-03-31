@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
+import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
 import Label from '../Label';
@@ -8,10 +9,6 @@ import Text from '../Text';
 import styles from './InputField.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-  /**
-   * Aria-label to provide an accesible name for the text input if no visible label is provided.
-   */
-  'aria-label'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -48,10 +45,6 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Error state of the form field
    */
   isError?: boolean;
-  /**
-   * HTML label text
-   */
-  label?: string;
   /**
    * Maximum value allowed for the input, if type is 'number'. When the input value matches this maximum, the plus button becomes disabled.
    */
@@ -113,7 +106,20 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Default value passed down from higher levels for initial state
    */
   defaultValue?: string | number;
-};
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: string;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
 
 /**
  * `import {InputField} from "@chanzuckerberg/eds";`
@@ -137,19 +143,16 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
     },
     ref,
   ) => {
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      !label &&
-      !other['aria-label']
-    ) {
-      throw new Error('You must provide a visible label or aria-label');
-    }
-
     const shouldRenderOverline = !!(label || required);
     const overlineClassName = clsx(
       styles['input-field__overline'],
       !label && styles['input-field__overline--no-label'],
       disabled && styles['input-field__overline--disabled'],
+    );
+
+    const inputBodyClassName = clsx(
+      styles['input-field__body'],
+      fieldNote && styles['input-field--has-fieldNote'],
     );
 
     const generatedIdVar = useId();
@@ -173,7 +176,7 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
           </div>
         )}
 
-        <div className={styles['input-field__body']}>
+        <div className={inputBodyClassName}>
           <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
