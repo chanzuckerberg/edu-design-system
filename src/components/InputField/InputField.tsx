@@ -150,6 +150,11 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
       disabled && styles['input-field__overline--disabled'],
     );
 
+    const inputBodyClassName = clsx(
+      styles['input-field__body'],
+      fieldNote && styles['input-field--has-fieldNote'],
+    );
+
     const generatedIdVar = useId();
     const idVar = id || generatedIdVar;
 
@@ -171,7 +176,7 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
           </div>
         )}
 
-        <div className={styles['input-field__body']}>
+        <div className={inputBodyClassName}>
           <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
