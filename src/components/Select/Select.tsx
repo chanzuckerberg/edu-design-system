@@ -73,8 +73,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Select} from "@chanzuckerberg/eds";`
  *
  * A dropdown that reveals or hides a list of options to select

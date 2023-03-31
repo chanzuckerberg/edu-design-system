@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import type React from 'react';
 
@@ -9,7 +8,7 @@ export default {
   component: LoadingIndicator,
   parameters: {
     layout: 'centered',
-    badges: ['1.2', BADGE.BETA],
+    badges: ['1.2'],
   },
 } as Meta<Args>;
 

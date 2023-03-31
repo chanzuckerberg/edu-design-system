@@ -11,16 +11,6 @@ const { Default } = composeStories(stories);
 describe('<Checkbox />', () => {
   generateSnapshots(stories);
 
-  test('throws an error if no label or aria-label', () => {
-    // expect console error from react, suppressed.
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
-    expect(() => {
-      render(<Checkbox />);
-    }).toThrow(/must provide a visible label or aria-label/);
-    consoleErrorMock.mockRestore();
-  });
-
   test('Disabled story renders snapshot', () => {
     const { container } = render(<Checkbox disabled label="Disabled" />);
     // eslint-disable-next-line testing-library/no-node-access

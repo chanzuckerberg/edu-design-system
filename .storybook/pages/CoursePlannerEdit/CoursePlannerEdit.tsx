@@ -669,7 +669,7 @@ export const CoursePlannerEdit = () => {
               text="Summit recommends teaching at least five (5) projects for this course."
               variant="brand"
             >
-              <CardWithNotification.Body>
+              <Card.Body>
                 <DataBar
                   label="Total instructional days"
                   max={60}
@@ -680,7 +680,7 @@ export const CoursePlannerEdit = () => {
                     { value: 11, text: 'Project 4' },
                   ]}
                 />
-              </CardWithNotification.Body>
+              </Card.Body>
             </CardWithNotification>
             <Grid className="!mb-6" variant="1-2-1up">
               <GridItem>

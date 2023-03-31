@@ -27,3 +27,5 @@ export const CardHeader = ({ children, className, ...other }: Props) => {
     </header>
   );
 };
+
+CardHeader.displayName = 'CardHeader';
