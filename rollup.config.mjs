@@ -2,7 +2,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 
-// rollup.config.js
 /**
  * @type {import('rollup').RollupOptions}
  */
@@ -14,12 +13,14 @@ export default {
       format: 'es',
       preserveModules: true,
       preserveModulesRoot: 'src',
+      sourcemap: true,
     },
     {
       dir: 'lib/cjs',
       format: 'cjs',
       preserveModules: true,
       preserveModulesRoot: 'src',
+      sourcemap: true,
     },
   ],
   /**
@@ -36,6 +37,15 @@ export default {
     }),
     typescript({
       tsconfig: 'tsconfig.build.json',
+      compilerOptions: {
+        /**
+         * Rollup wants declarations in the same directory as the output folder,
+         * but since we ship both cjs and esm in separate folders, this will throw an error.
+         * Declarations are hence built separately using tsc into lib/types
+         */
+        declaration: false,
+        declarationDir: undefined,
+      },
     }),
   ],
 };
