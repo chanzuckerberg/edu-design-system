@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v11.1.0...v11.1.1) (2023-04-03)
+
+
+### Bug Fixes
+
+* include tailwind config in package ([#1576](https://github.com/chanzuckerberg/edu-design-system/issues/1576)) ([4f66b35](https://github.com/chanzuckerberg/edu-design-system/commit/4f66b352a2225a20895f818fc4ea57642745cd7a))
+
 ## [11.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v11.0.0...v11.1.0) (2023-03-31)
 
 
