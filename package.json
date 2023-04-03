@@ -5,7 +5,24 @@
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
-  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    },
+    "./index.css": {
+      "import": "./lib/index.css",
+      "require": "./lib/index.css"
+    },
+    "./fonts.css": {
+      "import": "./lib/tokens/fonts.css",
+      "require": "./lib/tokens/fonts.css"
+    },
+    "./tailwind.config": {
+      "import": "./tailwind.config.ts"
+    }
+  },
+  "types": "lib/index.d.ts",
   "sideEffects": [
     "lib/tokens/css/variables.css",
     "lib/tokens/fonts.css"
@@ -22,7 +39,7 @@
   },
   "files": [
     "/lib",
-    "tailwind.config.js"
+    "tailwind.config.mjs"
   ],
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
@@ -90,8 +107,6 @@
     "react-popper": "^2.3.0",
     "react-portal": "^4.2.2"
   },
-  "entry": "lib/index.js",
-  "types": "lib/index.d.ts",
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.3.0",
     "@chanzuckerberg/eslint-config-edu-js": "^1.0.3",
