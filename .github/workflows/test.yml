@@ -41,6 +41,14 @@ jobs:
       - name: Build Dist 🔧
         run: yarn run build
 
+      - name: Check for "tslib" in build # tslib is peer dep of rollup ts plugin, but we're not including tslib due to lack of need
+        run: |
+          if grep -r '--include=*.'{cjs,js} 'tslib' ./lib -q
+          then
+            echo "tslib found in lib"
+            exit 1
+          fi
+
   storybook:
     runs-on: ubuntu-latest
     steps:
