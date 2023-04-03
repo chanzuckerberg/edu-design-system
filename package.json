@@ -22,7 +22,7 @@
   },
   "files": [
     "/lib",
-    "tailwind.config.js"
+    "tailwind.config.*"
   ],
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-fonts-to-lib",
