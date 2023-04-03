@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
-import type { EitherInclusive } from '../../util/utility-types';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
 import Label from '../Label';
@@ -121,12 +124,17 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     }
   >;
 
+type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> & {
+  Input?: typeof Input;
+  Label?: typeof Label;
+};
+
 /**
  * `import {InputField} from "@chanzuckerberg/eds";`
  *
  * An input with optional labels and error messaging built-in.
  */
-export const InputField = forwardRef<HTMLInputElement, Props>(
+export const InputField: InputFieldType = forwardRef(
   (
     {
       'aria-describedby': ariaDescribedBy,
@@ -208,3 +216,5 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
   },
 );
 InputField.displayName = 'InputField';
+InputField.Input = Input;
+InputField.Label = Label;

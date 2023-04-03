@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
-import type { EitherInclusive } from '../../util/utility-types';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
@@ -48,6 +51,11 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
     }
   >;
 
+type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
+  TextArea?: typeof TextArea;
+  Label?: typeof Label;
+};
+
 /**
  * `import {TextareaField} from "@chanzuckerberg/eds";`
  *
@@ -57,7 +65,7 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
  *
  * NOTE: This component requires `label` or `aria-label` prop
  */
-export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
+export const TextareaField: TextareaFieldType = forwardRef(
   (
     {
       'aria-describedby': ariaDescribedBy,
@@ -128,3 +136,7 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
     );
   },
 );
+
+TextareaField.displayName = 'TextareaField';
+TextareaField.Label = Label;
+TextareaField.TextArea = TextArea;
