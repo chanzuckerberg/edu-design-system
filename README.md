@@ -19,9 +19,9 @@ yarn add @chanzuckerberg/eds
 Import the EDS stylesheet and tokens somewhere in your app, e.g. an `init.ts` or `app.ts` file:
 
 ```js
-import '@chanzuckerberg/eds/lib/index.css';
+import '@chanzuckerberg/eds/index.css';
 // optionally import EDS font faces
-// import '@chanzuckerberg/eds/lib/tokens/fonts.css';
+// import '@chanzuckerberg/eds/fonts.css';
 ```
 
 EDS components are designed for the Graphik font, but you may use other fonts by re-defining the `--eds-font-family-primary` CSS property. We also surface an `--eds-font-size-base` property to set your base `rem` font size, eg:
