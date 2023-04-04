@@ -1,6 +1,9 @@
 import clsx from 'clsx';
-import React, { useId } from 'react';
-import type { EitherInclusive } from '../../util/utility-types';
+import React, { forwardRef, useId } from 'react';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import type { CheckboxInputProps } from '../CheckboxInput';
 import CheckboxInput from '../CheckboxInput';
 import type { CheckboxLabelProps } from '../CheckboxLabel';
@@ -34,6 +37,10 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
     }
   >;
 
+type CheckboxType = ForwardedRefComponent<HTMLInputElement, CheckboxProps> & {
+  Input?: typeof CheckboxInput;
+};
+
 /**
  * `import {Checkbox} from "@chanzuckerberg/eds";`
  *
@@ -43,37 +50,24 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
  *
  * NOTE: Requires either a visible label or `aria-label` prop.
  */
-export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  (props, ref) => {
-    // All remaining props are passed to the `input` element
-    const { className, id, label, size = 'lg', disabled, ...other } = props;
+export const Checkbox: CheckboxType = forwardRef((props, ref) => {
+  // All remaining props are passed to the `input` element
+  const { className, id, label, size = 'lg', disabled, ...other } = props;
 
-    const generatedId = useId();
-    const checkboxId = id || generatedId;
+  const generatedId = useId();
+  const checkboxId = id || generatedId;
 
-    return (
-      <div className={clsx(className, styles.checkbox)}>
-        <CheckboxInput
-          disabled={disabled}
-          id={checkboxId}
-          ref={ref}
-          {...other}
-        />
-        {label && (
-          <CheckboxLabel disabled={disabled} htmlFor={checkboxId} size={size}>
-            {label}
-          </CheckboxLabel>
-        )}
-      </div>
-    );
-  },
-);
+  return (
+    <div className={clsx(className, styles.checkbox)}>
+      <CheckboxInput disabled={disabled} id={checkboxId} ref={ref} {...other} />
+      {label && (
+        <CheckboxLabel disabled={disabled} htmlFor={checkboxId} size={size}>
+          {label}
+        </CheckboxLabel>
+      )}
+    </div>
+  );
+});
 
-/**
- * NOTE: usually, we would re-export subcomponents with
- *   Checkbox.Input = CheckboxInput;
- *   Checkbox.Label = CheckboxLabel;
- * but this does not compile with Typescript since Checkbox itself is a
- * forwarded ref component. Thus Input and Label must be imported separately.
- */
 Checkbox.displayName = 'Checkbox';
+Checkbox.Input = CheckboxInput;
