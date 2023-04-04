@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<TextareaField /> AfterDelete story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <div
+    class="textarea-field__overline"
+  >
+    <label
+      class="label"
+      for=":ri:"
+    >
+      Textarea Field
+       
+    </label>
+  </div>
+  <textarea
+    aria-describedby=":rj:"
+    class="textarea"
+    id=":ri:"
+    maxlength="209"
+    placeholder="Enter long-form text here"
+    rows="5"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
+    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+    praesentium, commodi eligendi asperiores quis dolorum porro.
+  </textarea>
+  <div
+    class="textarea-field__footer"
+  >
+    <div
+      class="field-note textarea-field__field-note"
+      id=":rj:"
+    >
+      Longer Field description
+    </div>
+    <div
+      class="textarea-field__character-counter"
+    >
+      <span
+        class=""
+      >
+        209
+      </span>
+       
+      / 
+      209
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<TextareaField /> Default story renders snapshot 1`] = `
 <div
   class="textarea-field"
@@ -28,10 +80,14 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note"
-    id=":r1:"
+    class="textarea-field__footer"
   >
-    Longer Field description
+    <div
+      class="field-note textarea-field__field-note"
+      id=":r1:"
+    >
+      Longer Field description
+    </div>
   </div>
 </div>
 `;
@@ -63,10 +119,14 @@ exports[`<TextareaField /> UsingChildren story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note"
-    id=":r3:"
+    class="textarea-field__footer"
   >
-    Longer Field description
+    <div
+      class="field-note textarea-field__field-note"
+      id=":r3:"
+    >
+      Longer Field description
+    </div>
   </div>
 </div>
 `;
@@ -100,10 +160,14 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note field-note--disabled"
-    id=":r7:"
+    class="textarea-field__footer"
   >
-    Longer Field description
+    <div
+      class="field-note field-note--disabled textarea-field__field-note"
+      id=":r7:"
+    >
+      Longer Field description
+    </div>
   </div>
 </div>
 `;
@@ -135,27 +199,31 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note field-note--error"
-    id=":r9:"
+    class="textarea-field__footer"
   >
-    <svg
-      class="icon field-note__icon"
-      fill="currentColor"
-      height="1rem"
-      role="img"
-      style="--icon-size: 1rem;"
-      viewBox="0 0 24 24"
-      width="1rem"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="field-note field-note--error textarea-field__field-note"
+      id=":r9:"
     >
-      <title>
-        error
-      </title>
-      <path
-        d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
-      />
-    </svg>
-    Text should be at least 100 characters
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          error
+        </title>
+        <path
+          d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+        />
+      </svg>
+      Text should be at least 100 characters
+    </div>
   </div>
 </div>
 `;
@@ -177,7 +245,7 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
   </div>
   <textarea
     aria-describedby=":rb:"
-    class="textarea"
+    class="textarea error"
     id=":ra:"
     maxlength="10"
     placeholder="Enter long-form text here"
@@ -188,10 +256,43 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note"
-    id=":rb:"
+    class="textarea-field__footer"
   >
-    Longer Field description
+    <div
+      class="field-note field-note--error textarea-field__field-note"
+      id=":rb:"
+    >
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          error
+        </title>
+        <path
+          d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+        />
+      </svg>
+      Longer Field description
+    </div>
+    <div
+      class="textarea-field__character-counter"
+    >
+      <span
+        class="textarea-field--invalid-length"
+      >
+        210
+      </span>
+       
+      / 
+      10
+    </div>
   </div>
 </div>
 `;
@@ -229,10 +330,14 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note"
-    id=":rd:"
+    class="textarea-field__footer"
   >
-    Longer Field description
+    <div
+      class="field-note textarea-field__field-note"
+      id=":rd:"
+    >
+      Longer Field description
+    </div>
   </div>
 </div>
 `;
@@ -264,10 +369,89 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
     praesentium, commodi eligendi asperiores quis dolorum porro.
   </textarea>
   <div
-    class="field-note"
-    id=":rf:"
+    class="textarea-field__footer"
   >
-    Longer Field description
+    <div
+      class="field-note textarea-field__field-note"
+      id=":rf:"
+    >
+      Longer Field description
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <div
+    class="textarea-field__overline"
+  >
+    <label
+      class="label"
+      for=":rg:"
+    >
+      Textarea Field
+       
+    </label>
+    <p
+      class="text text--sm"
+    >
+      Required
+    </p>
+  </div>
+  <textarea
+    aria-describedby=":rh:"
+    class="textarea error"
+    id=":rg:"
+    maxlength="144"
+    placeholder="Enter long-form text here"
+    required=""
+    rows="10"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
+    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+    praesentium, commodi eligendi asperiores quis dolorum porro.
+  </textarea>
+  <div
+    class="textarea-field__footer"
+  >
+    <div
+      class="field-note field-note--error textarea-field__field-note"
+      id=":rh:"
+    >
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          error
+        </title>
+        <path
+          d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+        />
+      </svg>
+      Longer Field description
+    </div>
+    <div
+      class="textarea-field__character-counter"
+    >
+      <span
+        class="textarea-field--invalid-length"
+      >
+        210
+      </span>
+       
+      / 
+      144
+    </div>
   </div>
 </div>
 `;
@@ -288,17 +472,10 @@ exports[`<TextareaField /> WithNoDefaultValue story renders snapshot 1`] = `
     </label>
   </div>
   <textarea
-    aria-describedby=":r5:"
     class="textarea"
     id=":r4:"
     placeholder="Enter long-form text here"
     rows="5"
   />
-  <div
-    class="field-note"
-    id=":r5:"
-  >
-    Longer Field description
-  </div>
 </div>
 `;

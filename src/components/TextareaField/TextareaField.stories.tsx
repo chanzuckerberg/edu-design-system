@@ -1,4 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
 import React from 'react';
 
 import { TextareaField } from './TextareaField';
@@ -39,7 +40,8 @@ export const UsingChildren: StoryObj<Args> = {
 
 export const WithNoDefaultValue: StoryObj<Args> = {
   args: {
-    defaultValue: '',
+    defaultValue: undefined,
+    fieldNote: undefined,
   },
 };
 
@@ -78,5 +80,25 @@ export const WhenRequired: StoryObj<Args> = {
 export const WithADifferentSize: StoryObj<Args> = {
   args: {
     rows: 10,
+  },
+};
+
+export const WithAMaxLength: StoryObj<Args> = {
+  args: {
+    rows: 10,
+    maxLength: 144,
+    required: true,
+  },
+  render: (args) => <TextareaField {...args} />,
+};
+
+export const AfterDelete: StoryObj<Args> = {
+  args: {
+    maxLength: 209,
+    onChange: () => console.info('ensure custom events are handled'),
+  },
+  play: () => {
+    userEvent.tab();
+    userEvent.keyboard('{arrowdown}{delete}');
   },
 };
