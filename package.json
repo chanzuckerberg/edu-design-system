@@ -24,7 +24,7 @@
   },
   "types": "lib/index.d.ts",
   "sideEffects": [
-    "lib/tokens/css/variables.css",
+    "lib/index.css",
     "lib/tokens/fonts.css"
   ],
   "publishConfig": {
@@ -44,13 +44,12 @@
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
-    "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn copy-tokens-to-lib && yarn prettier-tokens-dist",
+    "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist",
     "build:js": "rollup --config",
     "build:storybook": "build-storybook -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",
     "build:styles": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
     "chromatic": "chromatic",
     "copy-fonts-to-lib": "copyfiles -u 3 src/design-tokens/tier-1-definitions/fonts.css src/design-tokens/tier-1-definitions/fonts/**/* lib/tokens",
-    "copy-tokens-to-lib": "copyfiles -u 2 src/tokens-dist/**/* lib/tokens",
     "create-component": "plop",
     "deploy:docs": "storybook-to-ghpages --ci",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
