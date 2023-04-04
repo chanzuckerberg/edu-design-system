@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useId } from 'react';
+import React, { forwardRef, useId } from 'react';
 import type {
   EitherInclusive,
   ForwardedRefComponent,
@@ -39,7 +39,6 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
 
 type CheckboxType = ForwardedRefComponent<HTMLInputElement, CheckboxProps> & {
   Input?: typeof CheckboxInput;
-  Label?: typeof CheckboxLabel;
 };
 
 /**
@@ -51,7 +50,7 @@ type CheckboxType = ForwardedRefComponent<HTMLInputElement, CheckboxProps> & {
  *
  * NOTE: Requires either a visible label or `aria-label` prop.
  */
-export const Checkbox: CheckboxType = React.forwardRef((props, ref) => {
+export const Checkbox: CheckboxType = forwardRef((props, ref) => {
   // All remaining props are passed to the `input` element
   const { className, id, label, size = 'lg', disabled, ...other } = props;
 
@@ -72,4 +71,3 @@ export const Checkbox: CheckboxType = React.forwardRef((props, ref) => {
 
 Checkbox.displayName = 'Checkbox';
 Checkbox.Input = CheckboxInput;
-Checkbox.Label = CheckboxLabel;

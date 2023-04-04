@@ -126,13 +126,14 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 
 type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> & {
   Input?: typeof Input;
-  Label?: typeof Label;
 };
 
 /**
  * `import {InputField} from "@chanzuckerberg/eds";`
  *
  * An input with optional labels and error messaging built-in.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const InputField: InputFieldType = forwardRef(
   (
@@ -217,4 +218,3 @@ export const InputField: InputFieldType = forwardRef(
 );
 InputField.displayName = 'InputField';
 InputField.Input = Input;
-InputField.Label = Label;

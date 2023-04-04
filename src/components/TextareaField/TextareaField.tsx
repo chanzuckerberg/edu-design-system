@@ -53,7 +53,6 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
 
 type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
   TextArea?: typeof TextArea;
-  Label?: typeof Label;
 };
 
 /**
@@ -138,5 +137,4 @@ export const TextareaField: TextareaFieldType = forwardRef(
 );
 
 TextareaField.displayName = 'TextareaField';
-TextareaField.Label = Label;
 TextareaField.TextArea = TextArea;
