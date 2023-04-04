@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v11.1.0...v11.1.1) (2023-04-03)
+
+
+### Bug Fixes
+
+* include tailwind config in package ([#1576](https://github.com/chanzuckerberg/edu-design-system/issues/1576)) ([4f66b35](https://github.com/chanzuckerberg/edu-design-system/commit/4f66b352a2225a20895f818fc4ea57642745cd7a))
+
+## [11.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v11.0.0...v11.1.0) (2023-03-31)
+
+
+### Features
+
+* add utility types to enforce either label or aria-label ([#1554](https://github.com/chanzuckerberg/edu-design-system/issues/1554)) ([2313063](https://github.com/chanzuckerberg/edu-design-system/commit/2313063f10944c90a38df85fd512717acd70ee7e))
+* **Button:** use LoadingIndicator for loading state ([#1552](https://github.com/chanzuckerberg/edu-design-system/issues/1552)) ([2406d01](https://github.com/chanzuckerberg/edu-design-system/commit/2406d019c5010fbdd74049f53f12fdc739abb51a))
+* **Card:** add card variant updates ([#1565](https://github.com/chanzuckerberg/edu-design-system/issues/1565)) ([87dbef7](https://github.com/chanzuckerberg/edu-design-system/commit/87dbef72d79f6aedec0d2b6a56c69429b5abafa7))
+* **Menu:** update centering with plain button ([#1566](https://github.com/chanzuckerberg/edu-design-system/issues/1566)) ([d4ddfd5](https://github.com/chanzuckerberg/edu-design-system/commit/d4ddfd5c0d9f476e799c7face94467643bd79587))
+* **Slider:** add alignment styles and recipes ([#1567](https://github.com/chanzuckerberg/edu-design-system/issues/1567)) ([900d102](https://github.com/chanzuckerberg/edu-design-system/commit/900d102a4af36ef4b466c3c0a66864a14b4c3e1e))
+* **slider:** add tooltip ([#1571](https://github.com/chanzuckerberg/edu-design-system/issues/1571)) ([fa7c5a2](https://github.com/chanzuckerberg/edu-design-system/commit/fa7c5a2f212b70a31e0812c2cab78d55a0245f54))
+
+
+### Bug Fixes
+
+* **InputField:** apply bottom margin only with fieldNote ([#1573](https://github.com/chanzuckerberg/edu-design-system/issues/1573)) ([430522f](https://github.com/chanzuckerberg/edu-design-system/commit/430522fb0773505a1b643c0c82c02c100fe49961))
+
 ## [11.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v10.0.0...v11.0.0) (2023-03-17)
 
 

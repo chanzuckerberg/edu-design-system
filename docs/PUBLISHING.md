@@ -16,6 +16,7 @@ _Before the first time you publish_, make sure to:
 
 - set up Two Factor Authentication for your npm account
 - run `npm login` in your terminal to generate an access token for publishing
+- are referring to the docs on `next` as there may have been updates to the release steps
 
 ### Publishing steps
 
@@ -65,13 +66,15 @@ Merge the PR through a **merge commit**:
 
 ![github user interface showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
 
+Once merged, wait until the [builds complete on `main`](https://github.com/chanzuckerberg/edu-design-system/actions) before continuing.
+
 #### Publishing the package
 
 7. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
 8. Publish the package: `npm publish`
 9. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). This will automatically post to [relevant slack channels](https://slack.github.com/):
 10. Lastly, run the following to "back merge" release changes to `next`:
-    - git checkout main && git pull origin main && git checkout next && git merge main && git push
+    - `git checkout main && git pull origin main && git checkout next && git merge main && git push`
 
 Once complete, you can update the package in the main apps that use it (for major versions):
 

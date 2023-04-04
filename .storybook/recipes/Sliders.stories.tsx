@@ -45,11 +45,11 @@ export const UsingInputDisplay: StoryObj<Args> = {
     const [sliderValue, setSliderValue] = useState(value);
 
     return (
-      <div className="flex w-full items-end justify-center gap-2">
-        <Text className="py-3">{min}</Text>
+      <div className="flex w-full items-center justify-center gap-2">
+        <Text>{min}</Text>
         <Slider
+          aria-label="Slider with input"
           className="w-1/2"
-          label="Slider with input"
           max={max}
           min={min}
           step={step}
@@ -57,10 +57,10 @@ export const UsingInputDisplay: StoryObj<Args> = {
           onChange={({ target }) => setSliderValue(Number(target.value))}
           value={sliderValue}
         />
-        <Text className="py-3">{max}</Text>
+        <Text>{max}</Text>
         <InputField
           aria-label="display value"
-          className="mx-2 w-14"
+          className="mx-2  w-14"
           readOnly
           value={sliderValue}
         />
@@ -74,7 +74,7 @@ export const UsingControlButtons: StoryObj<Args> = {
     const [sliderValue, setSliderValue] = useState(value);
 
     return (
-      <div className="flex w-full items-end items-center justify-center gap-2">
+      <div className="flex w-full items-center justify-center gap-2">
         <Button
           aria-label="Decrement"
           disabled={sliderValue === min}
@@ -93,6 +93,7 @@ export const UsingControlButtons: StoryObj<Args> = {
           step={step}
           {...rest}
           onChange={({ target }) => setSliderValue(Number(target.value))}
+          tooltip={`Slider: ${sliderValue}`}
           value={sliderValue}
         />
         <Text>{max}</Text>

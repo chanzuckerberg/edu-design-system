@@ -23,6 +23,9 @@
  */
 .input-field__body {
   position: relative;
+}
+
+.input-field--has-fieldNote {
   margin-bottom: var(--eds-size-half);
 }
 

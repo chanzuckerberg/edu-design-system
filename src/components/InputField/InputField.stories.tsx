@@ -28,6 +28,12 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const NoFieldnote: StoryObj<Args> = {
+  args: {
+    label: 'Default input field',
+  },
+};
+
 export const Error: StoryObj<Args> = {
   args: {
     label: 'Error input field',

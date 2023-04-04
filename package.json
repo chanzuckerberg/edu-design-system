@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "11.0.0",
+  "version": "11.1.1",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -39,7 +39,7 @@
   },
   "files": [
     "/lib",
-    "tailwind.config.mjs"
+    "tailwind.config.*"
   ],
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
@@ -97,7 +97,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
-    "@popperjs/core": "^2.11.6",
+    "@popperjs/core": "^2.11.7",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
     "lodash.debounce": "^4.0.8",
@@ -109,13 +109,13 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.3.0",
-    "@chanzuckerberg/eslint-config-edu-js": "^1.0.3",
+    "@chanzuckerberg/eslint-config-edu-js": "^1.1.0",
     "@chanzuckerberg/eslint-config-edu-ts": "^1.0.7",
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.9",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.12",
     "@chanzuckerberg/prettier-config-edu": "^1.0.4",
     "@chanzuckerberg/story-utils": "^3.0.12",
-    "@commitlint/cli": "^17.5.0",
+    "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@geometricpanda/storybook-addon-badges": "^1.1.1",
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -139,8 +139,8 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.0",
     "@types/lodash.debounce": "^4.0.7",
-    "@types/node": "^18.15.7",
-    "@types/react": "^18.0.28",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
     "@types/react-beautiful-dnd": "^13.1.4",
     "@types/react-dom": "^18.0.11",
     "@types/react-portal": "^4.0.4",
@@ -148,7 +148,7 @@
     "chromatic": "^6.17.2",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-prettier": "^4.2.1",
@@ -181,7 +181,7 @@
     "style-dictionary": "^3.7.2",
     "stylelint": "^15.3.0",
     "stylelint-config-recommended": "^10.0.1",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.3.1",
     "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
   },
