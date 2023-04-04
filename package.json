@@ -10,17 +10,9 @@
       "import": "./lib/index.js",
       "require": "./lib/index.cjs"
     },
-    "./index.css": {
-      "import": "./lib/index.css",
-      "require": "./lib/index.css"
-    },
-    "./fonts.css": {
-      "import": "./lib/tokens/fonts.css",
-      "require": "./lib/tokens/fonts.css"
-    },
-    "./tailwind.config": {
-      "import": "./tailwind.config.ts"
-    }
+    "./index.css": "./lib/index.css",
+    "./fonts.css": "./lib/tokens/fonts.css",
+    "./tailwind.config": "./tailwind.config.ts"
   },
   "types": "lib/index.d.ts",
   "sideEffects": [
