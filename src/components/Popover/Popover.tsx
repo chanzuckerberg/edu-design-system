@@ -1,6 +1,6 @@
 import { Popover as HeadlessPopover } from '@headlessui/react';
 import type { Options as PopperJSOptions } from '@popperjs/core';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { useState, createContext, useContext } from 'react';
 import { usePopper } from 'react-popper';

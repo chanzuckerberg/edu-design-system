@@ -1,5 +1,5 @@
 import { Menu as HeadlessMenu } from '@headlessui/react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import type { MouseEventHandler } from 'react';
 

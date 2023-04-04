@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { useId } from 'react';
 
 import DataBarSegment from '../DataBarSegment';

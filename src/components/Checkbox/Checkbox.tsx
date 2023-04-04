@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { useId } from 'react';
 import type { EitherInclusive } from '../../util/utility-types';
 import type { CheckboxInputProps } from '../CheckboxInput';

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { Component } from 'react';
 import './TokenSpecimen.css';
 

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { Icon } from '../Icon/Icon';
 import styles from './ModalStepper.module.css';

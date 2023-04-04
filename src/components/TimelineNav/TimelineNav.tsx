@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import type { KeyboardEventHandler, ReactNode } from 'react';
 import React, { useCallback, useId, useEffect, useRef, useState } from 'react';
 import { allByType } from 'react-children-by-type';

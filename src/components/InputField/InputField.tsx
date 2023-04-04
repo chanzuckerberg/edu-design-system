@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
 import type { EitherInclusive } from '../../util/utility-types';

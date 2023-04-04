@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import useForwardedRef from '../../util/useForwardedRef';
 import styles from './CheckboxInput.module.css';

@@ -1,7 +1,7 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Dropdown';
 import { Dropdown } from './Dropdown';

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import type { ForwardedRef } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './Text.module.css';

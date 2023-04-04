@@ -1,6 +1,6 @@
 import type { TippyProps } from '@tippyjs/react';
 import Tippy from '@tippyjs/react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import * as React from 'react';
 import styles from './Tooltip.module.css';
 
