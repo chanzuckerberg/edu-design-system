@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { Meta, Story, StoryObj } from '@storybook/react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React from 'react';
 import { Tooltip } from './Tooltip';
 import { Button } from '../Button/Button';

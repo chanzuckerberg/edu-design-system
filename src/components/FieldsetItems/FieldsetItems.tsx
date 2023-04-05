@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import type { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
 import React from 'react';
 import styles from './FieldsetItems.module.css';

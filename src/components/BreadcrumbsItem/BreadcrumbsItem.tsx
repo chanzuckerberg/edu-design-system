@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React from 'react';
 import ButtonDropdown from '../ButtonDropdown';
 import Icon from '../Icon';

@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import Button from '../Button';

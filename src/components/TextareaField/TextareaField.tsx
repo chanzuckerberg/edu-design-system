@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
 import type { EitherInclusive } from '../../util/utility-types';

@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React from 'react';
 import type { InputLabelProps } from '../InputLabel/InputLabel';
 import { InputLabel } from '../InputLabel/InputLabel';

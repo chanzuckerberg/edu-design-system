@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import type { MouseEventHandler } from 'react';
 import React from 'react';
 import Button from '../Button';

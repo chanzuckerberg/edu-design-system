@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import Button, { type ButtonProps } from '../Button';
 import type { VariantStatus } from '../ClickableStyle';

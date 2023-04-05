@@ -1,5 +1,5 @@
 import { Switch } from '@headlessui/react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React from 'react';
 import type { EitherInclusive, ExtractProps } from '../../util/utility-types';
 import styles from './Toggle.module.css';

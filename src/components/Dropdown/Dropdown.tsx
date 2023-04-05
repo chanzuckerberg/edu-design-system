@@ -1,5 +1,5 @@
 import { Listbox } from '@headlessui/react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import type { ReactElement, ReactNode, ElementType } from 'react';
 import React, { useContext } from 'react';
 

@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import type { ReactElement, ReactNode } from 'react';
 import React, { useEffect, useId, useRef, useState } from 'react';
 import Button from '../Button';

@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import React, { useState } from 'react';
 import type { ReactNode } from 'react';
 
