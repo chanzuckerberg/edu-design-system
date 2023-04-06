@@ -18,6 +18,13 @@ export default {
     chromatic: { disableSnapshot: true },
     badges: ['1.0'],
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Modal>;

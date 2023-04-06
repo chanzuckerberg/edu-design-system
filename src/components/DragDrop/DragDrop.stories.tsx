@@ -20,6 +20,13 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <div

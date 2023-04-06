@@ -168,6 +168,13 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta;
 
 type Args = React.ComponentProps<typeof TimelineNavPanel>;

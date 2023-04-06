@@ -30,6 +30,18 @@ export default {
   title: 'Components/Tooltip',
   component: Tooltip,
   args: defaultArgs,
+  argTypes: {
+    text: {
+      control: {
+        type: 'text',
+      },
+    },
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   parameters: {
     badges: ['1.0'],
     chromatic: {
