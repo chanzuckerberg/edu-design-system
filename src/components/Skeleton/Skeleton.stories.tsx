@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -26,6 +27,19 @@ export const Default: StoryObj<Args> = {
   args: {
     width: 100,
     height: 100,
+  },
+};
+
+export const Rect: StoryObj<Args> = {
+  args: {
+    width: 50,
+    height: 50,
+  },
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
+  render: (args) => {
+    return <Skeleton.Rect {...args} />;
   },
 };
 
