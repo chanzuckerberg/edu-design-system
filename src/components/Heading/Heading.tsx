@@ -17,21 +17,44 @@ export const VARIANTS = [
    */ 'info',
 ] as const;
 export type Variant = (typeof VARIANTS)[number];
-export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type HeadingElement =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | /** @deprecated */ 'h6';
+export type TokenSize =
+  | 'headline-lg'
+  | 'headline-md'
+  | 'headline-sm'
+  | 'title-md'
+  | 'title-sm'
+  | 'body-sm'
+  | 'body-xs'
+  | 'title-xs';
+export type HeadingSize = HeadingElement | TokenSize | /** @deprecated */ 'h7';
+
 // For now, "h1"-"h6" sizes point to the old type ramp, while
 // "headline-*" and "title-*" sizes point to the new type ramp.
 // These will be brought in sync with the next major release.
-const TOKEN_TO_SIZE = {
+const TOKEN_TO_SIZE: Record<HeadingSize, HeadingElement> = {
   'headline-lg': 'h1',
   'headline-md': 'h2',
   'headline-sm': 'h3',
   'title-md': 'h4',
   'title-sm': 'h5',
   'body-sm': 'h6',
-  'body-xs': 'h7',
+  'body-xs': 'h6',
   'title-xs': 'h5',
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  h7: 'h6',
 };
-export type HeadingSize = HeadingElement | 'h7' | keyof typeof TOKEN_TO_SIZE;
 
 type Props = {
   /**
@@ -48,14 +71,6 @@ type Props = {
   tabIndex?: number;
   variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
-
-const getComputedAs = (size: HeadingSize) => {
-  if (size === 'h7') {
-    return 'h6';
-  }
-
-  return size in TOKEN_TO_SIZE ? TOKEN_TO_SIZE[size] : size;
-};
 
 /**
  * `import {Heading} from "@chanzuckerberg/eds";`
@@ -94,7 +109,7 @@ export const Heading = forwardRef(
       }
     }
 
-    const TagName = as || getComputedAs(size);
+    const TagName = as || TOKEN_TO_SIZE[size];
     const componentClassName = clsx(
       styles['heading'],
       styles[`heading--size-${size}`],
