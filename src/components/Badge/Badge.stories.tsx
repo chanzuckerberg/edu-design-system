@@ -16,6 +16,13 @@ export default {
     layout: 'centered',
     badges: ['1.2', BADGE.BETA],
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Badge>;

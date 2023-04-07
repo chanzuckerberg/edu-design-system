@@ -18,6 +18,13 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   parameters: {
     badges: ['1.0'],
   },

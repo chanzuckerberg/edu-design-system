@@ -36,6 +36,13 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<PopoverProps>;
 
 export const Default: StoryObj<PopoverProps> = {

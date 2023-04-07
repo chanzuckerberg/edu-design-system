@@ -31,6 +31,13 @@ export default {
       </Accordion.Row>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <div style={{ margin: '0.5rem' }}>
