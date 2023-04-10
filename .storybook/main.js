@@ -20,6 +20,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     'storybook-css-modules-preset',
+    'storybook-css-modules',
     '@storybook/addon-interactions',
     '@geometricpanda/storybook-addon-badges',
     {
@@ -30,15 +31,20 @@ module.exports = {
       },
     },
     {
-      name: '@storybook/addon-postcss',
+      name: '@storybook/addon-styling',
       options: {
-        postcssLoaderOptions: {
+        postCss: {
           implementation: require('postcss'),
         },
       },
     },
+    '@storybook/addon-mdx-gfm',
   ],
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  docs: {
+    autodocs: true,
   },
 };
