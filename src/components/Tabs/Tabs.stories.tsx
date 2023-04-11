@@ -174,8 +174,9 @@ export const ScrollMiddle: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'googlePixel2',
     },
-    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+    // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
+    chromatic: { viewports: [chromaticViewports.googlePixel2] },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

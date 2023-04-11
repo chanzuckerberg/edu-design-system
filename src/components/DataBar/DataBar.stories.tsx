@@ -132,11 +132,7 @@ export const InteractiveExample: StoryObj<Args> = {
     /**
      * For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
      */
-    chromatic: {
-      disableSnapshot: true,
-    },
-    snapshot: {
-      skip: true,
-    },
+    chromatic: { disableSnapshot: true },
+    snapshot: { skip: true },
   },
 };
