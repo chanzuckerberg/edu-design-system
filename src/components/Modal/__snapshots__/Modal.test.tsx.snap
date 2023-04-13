@@ -837,18 +837,18 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
 
 exports[`Modal WithLongText story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-:r5:"
+  aria-labelledby="headlessui-dialog-title-:r8:"
   aria-modal="true"
   class="modal"
   data-headlessui-state="open"
-  id="headlessui-dialog-:r3:"
+  id="headlessui-dialog-:r6:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
     data-headlessui-state="open"
-    id="headlessui-dialog-overlay-:r4:"
+    id="headlessui-dialog-overlay-:r7:"
   />
   <div
     class="modal__content modal__content--md modal__content--lg"
@@ -881,7 +881,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
       <h2
         class="heading heading--size-headline-md"
         data-headlessui-state="open"
-        id="headlessui-dialog-title-:r5:"
+        id="headlessui-dialog-title-:r8:"
       >
         Modal Title
       </h2>
@@ -935,18 +935,18 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
 
 exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-:r8:"
+  aria-labelledby="headlessui-dialog-title-:rb:"
   aria-modal="true"
   class="modal"
   data-headlessui-state="open"
-  id="headlessui-dialog-:r6:"
+  id="headlessui-dialog-:r9:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
     data-headlessui-state="open"
-    id="headlessui-dialog-overlay-:r7:"
+    id="headlessui-dialog-overlay-:ra:"
   />
   <div
     class="modal__content modal__content--scrollable modal__content--md modal__content--lg"
@@ -979,7 +979,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
       <h2
         class="heading heading--size-headline-md"
         data-headlessui-state="open"
-        id="headlessui-dialog-title-:r8:"
+        id="headlessui-dialog-title-:rb:"
       >
         Modal Title
       </h2>
@@ -1217,20 +1217,80 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
+exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
 <div
-  aria-label="The Modal Amazing Modal You've Ever Seen"
+  aria-labelledby="headlessui-dialog-title-:r5:"
   aria-modal="true"
   class="modal"
   data-headlessui-state="open"
-  id="headlessui-dialog-:r9:"
+  id="headlessui-dialog-:r3:"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
     data-headlessui-state="open"
-    id="headlessui-dialog-overlay-:ra:"
+    id="headlessui-dialog-overlay-:r4:"
+  />
+  <div
+    class="modal__content modal__content--md modal__content--lg"
+  >
+    <div
+      class="modal-header"
+    >
+      <h2
+        class="heading heading--size-headline-md"
+        data-headlessui-state="open"
+        id="headlessui-dialog-title-:r5:"
+      >
+        Modal Title
+      </h2>
+    </div>
+    <div
+      class="modal-body"
+    >
+      Modal content.
+    </div>
+    <div
+      class="modal-footer"
+    >
+      <div
+        class="button-group button-group--spacing-1x footer__button-group"
+      >
+        <button
+          aria-describedby="tippy-13"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+          tabindex="0"
+          type="button"
+        >
+          Button 1
+        </button>
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          type="button"
+        >
+          Button 2
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
+<div
+  aria-label="The Modal Amazing Modal You've Ever Seen"
+  aria-modal="true"
+  class="modal"
+  data-headlessui-state="open"
+  id="headlessui-dialog-:rc:"
+  role="dialog"
+>
+  <div
+    aria-hidden="true"
+    class="modal__overlay"
+    data-headlessui-state="open"
+    id="headlessui-dialog-overlay-:rd:"
   />
   <div
     class="modal__content modal__content--scrollable modal__content--md modal__content--lg"

@@ -1,3 +1,5 @@
+import type React from 'react';
+
 /**
  * HeadlessUI 1.6.0 changed the way components were typed, such that React.ComponentProps no longer correctly inferred props https://github.com/tailwindlabs/headlessui/issues/1394#issuecomment-1120911944.
  * Workaround is to declare own utility type https://github.com/tailwindlabs/headlessui/discussions/601#discussioncomment-1959631
@@ -32,3 +34,11 @@ export type EitherExclusive<T, U> = Only<T, U> | Only<U, T>;
  * TypeScript will hint to apply the first type, T, if both are missing
  */
 export type EitherInclusive<T, U> = EitherExclusive<T, U> | (T & U);
+
+/**
+ * The return type of React.forwardRef, and utilized similarly by passing <RefAttachedElement, Props>.
+ * Used to be extended to include subcomponents. i.e.: type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> * {Input?: typeof Input};
+ */
+export type ForwardedRefComponent<T, P> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+>;

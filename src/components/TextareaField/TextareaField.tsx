@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
-import React, { forwardRef, useId } from 'react';
-import type { EitherInclusive } from '../../util/utility-types';
+import React, { forwardRef, useState, useId } from 'react';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
@@ -48,6 +51,10 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
     }
   >;
 
+type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
+  TextArea?: typeof TextArea;
+};
+
 /**
  * `import {TextareaField} from "@chanzuckerberg/eds";`
  *
@@ -57,38 +64,50 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
  *
  * NOTE: This component requires `label` or `aria-label` prop
  */
-export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
+export const TextareaField: TextareaFieldType = forwardRef(
   (
     {
       'aria-describedby': ariaDescribedBy,
       children,
       className,
+      defaultValue = '',
       disabled,
       fieldNote,
       id,
       isError,
       label,
+      maxLength,
+      onChange,
       required,
       ...other
     },
     ref,
   ) => {
-    const shouldRenderOverline = !!(label || required);
-    const overlineClassName = clsx(
-      styles['textarea-field__overline'],
-      !label && styles['textarea-field__overline--no-label'],
-      disabled && styles['textarea-field__overline--disabled'],
-    );
-
+    const [fieldText, setFieldText] = useState(defaultValue);
     const generatedIdVar = useId();
-    const idVar = id || generatedIdVar;
-
     const generatedAriaDescribedById = useId();
+
+    const idVar = id || generatedIdVar;
+    const shouldRenderOverline = !!(label || required);
+    const fieldLength = fieldText?.toString().length;
+    const textExceedsLength =
+      maxLength !== undefined ? fieldLength > maxLength : false;
+
+    const shouldRenderError = isError || textExceedsLength;
+
     const ariaDescribedByVar = fieldNote
       ? ariaDescribedBy || generatedAriaDescribedById
       : undefined;
 
     const componentClassName = clsx(styles['textarea-field'], className);
+    const overlineClassName = clsx(
+      styles['textarea-field__overline'],
+      !label && styles['textarea-field__overline--no-label'],
+      disabled && styles['textarea-field__overline--disabled'],
+    );
+    const fieldLengthCountClassName = clsx(
+      textExceedsLength && styles['textarea-field--invalid-length'],
+    );
 
     return (
       <div className={componentClassName}>
@@ -105,9 +124,15 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
         <TextArea
           aria-describedby={ariaDescribedByVar}
           aria-disabled={disabled}
+          defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
-          isError={isError}
+          isError={shouldRenderError}
+          maxLength={maxLength}
+          onChange={(e) => {
+            setFieldText(e.target.value);
+            onChange && onChange(e);
+          }}
           readOnly={disabled}
           ref={ref}
           required={required}
@@ -115,16 +140,30 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
         >
           {children}
         </TextArea>
-        {fieldNote && (
-          <FieldNote
-            disabled={disabled}
-            id={ariaDescribedByVar}
-            isError={isError}
-          >
-            {fieldNote}
-          </FieldNote>
+        {(fieldNote || maxLength) && (
+          <div className={styles['textarea-field__footer']}>
+            {fieldNote && (
+              <FieldNote
+                className={styles['textarea-field__field-note']}
+                disabled={disabled}
+                id={ariaDescribedByVar}
+                isError={shouldRenderError}
+              >
+                {fieldNote}
+              </FieldNote>
+            )}
+            {maxLength && (
+              <div className={styles['textarea-field__character-counter']}>
+                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
+                / {maxLength}
+              </div>
+            )}
+          </div>
         )}
       </div>
     );
   },
 );
+
+TextareaField.displayName = 'TextareaField';
+TextareaField.TextArea = TextArea;

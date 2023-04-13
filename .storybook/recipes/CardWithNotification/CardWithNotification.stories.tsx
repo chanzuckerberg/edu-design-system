@@ -18,6 +18,13 @@ export default {
       </div>
     ),
   ],
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof CardWithNotification>;
