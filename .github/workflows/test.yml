@@ -41,7 +41,9 @@ jobs:
       - name: Build Dist 🔧
         run: yarn run build
 
-      - name: Check for "tslib" in build # tslib is peer dep of rollup ts plugin, but we're not including tslib due to lack of need
+      # Rollup's TS plugin can include an implicit dependency on tslib that we don't want. It shouldn't be
+      # included in builds if our tsconfig.json configures "target" properly, which this check ensures.
+      - name: Check for "tslib" in build
         run: |
           if grep -r '--include=*.'{cjs,js} 'tslib' ./lib -q
           then
