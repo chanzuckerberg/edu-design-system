@@ -2,7 +2,7 @@
   "name": "@chanzuckerberg/eds",
   "version": "12.0.0",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
-  "author": "CZI <edu-dev-foundations@chanzuckerberg.com>",
+  "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
   "exports": {
