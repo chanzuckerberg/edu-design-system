@@ -158,7 +158,6 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
   >
     <button
       class="modal__close-button"
-      tabindex="0"
     >
       <svg
         class="icon modal__close-icon"
@@ -855,7 +854,6 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
   >
     <button
       class="modal__close-button"
-      tabindex="0"
     >
       <svg
         class="icon modal__close-icon"
@@ -953,7 +951,6 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
   >
     <button
       class="modal__close-button"
-      tabindex="0"
     >
       <svg
         class="icon modal__close-icon"
@@ -1260,7 +1257,6 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
         <button
           aria-describedby="tippy-13"
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          tabindex="0"
           type="button"
         >
           Button 1
@@ -1297,7 +1293,6 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
   >
     <button
       class="modal__close-button"
-      tabindex="0"
     >
       <svg
         class="icon modal__close-icon"
