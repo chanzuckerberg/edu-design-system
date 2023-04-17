@@ -16,6 +16,13 @@ export default {
     badges: ['1.2'],
     layout: 'centered',
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<MenuProps>;
 
 export const Default: StoryObj<MenuProps> = {

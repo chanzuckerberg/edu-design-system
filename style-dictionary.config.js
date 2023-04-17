@@ -14,11 +14,10 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
-      buildPath: 'src/tokens-dist/',
       files: [
         {
           format: 'css/variables',
-          destination: 'css/variables.css',
+          destination: 'src/tokens-dist/css/variables.css',
           options: {
             showFileHeader: false,
           },
@@ -26,7 +25,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: 'json/nested-css-variables',
           // useful for tailwind configs in consuming apps
-          destination: 'json/css-variables-nested.json',
+          destination: 'lib/tokens/json/css-variables-nested.json',
         },
       ],
     },

@@ -41,7 +41,7 @@ export const Filters = ({ ...other }) => {
     soup: false,
   });
 
-  const onCheckboxChange = (food: string) => {
+  const onCheckboxChange = (food: 'salad' | 'sandwich' | 'soup') => {
     const newChecked = { ...checked };
     newChecked[food] = !checked[food];
     setChecked(newChecked);

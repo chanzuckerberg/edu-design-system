@@ -13,6 +13,13 @@ export default {
     badges: ['1.0'],
   },
   subcomponents: { FieldsetLegend, FieldsetItems },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Fieldset>;

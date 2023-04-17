@@ -39,6 +39,11 @@ export default {
     ),
   },
   argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
     onClose: {
       action: 'on close',
     },

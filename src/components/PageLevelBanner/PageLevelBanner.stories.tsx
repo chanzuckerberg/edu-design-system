@@ -27,6 +27,13 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    description: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageLevelBanner>;

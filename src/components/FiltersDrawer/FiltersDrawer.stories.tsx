@@ -26,6 +26,13 @@ export default {
       </FiltersCheckboxField>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <div style={{ margin: '0.25rem', height: '100vh' }}>

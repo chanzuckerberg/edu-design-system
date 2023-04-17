@@ -40,6 +40,18 @@ export default {
       <Button data-testid="trigger-button">Open Dropdown</Button>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+    dropdownMenuTrigger: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ButtonDropdown>;

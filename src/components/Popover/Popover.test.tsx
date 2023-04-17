@@ -17,15 +17,6 @@ describe('<Popover />', () => {
     },
   });
 
-  it('should open Popover with trigger button', async () => {
-    const user = userEvent.setup();
-    render(<Default />);
-    expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
-    const triggerButton = screen.getByTestId('popover-trigger-button');
-    await user.click(triggerButton);
-    expect(screen.getByTestId('popover-content')).toBeInTheDocument();
-  });
-
   it('should close Popover via escape key', async () => {
     const user = userEvent.setup();
     render(<Default />);

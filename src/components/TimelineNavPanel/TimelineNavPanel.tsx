@@ -13,6 +13,10 @@ export type TimelineNavPanelVariant =
 
 export interface Props {
   /**
+   * Accessible label for a given panel
+   */
+  'aria-label'?: string;
+  /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title text
    */
   'aria-labelledby'?: string;

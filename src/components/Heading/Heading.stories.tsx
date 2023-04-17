@@ -104,9 +104,7 @@ export const Variants: StoryObj<Args> = {
     axe: {
       skip: true,
     },
-    snapshot: {
-      skip: true,
-    },
+    snapshot: { skip: true },
   },
 };
 

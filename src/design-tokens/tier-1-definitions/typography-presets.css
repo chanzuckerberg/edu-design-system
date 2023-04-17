@@ -1,8 +1,10 @@
-/* Updates to font-size and line-height in this file
-should be reflected in the TypographyPresets story */
+/** 
+ * Updates to font-size and line-height in this file
+ * should be reflected in the TypographyPresets story 
+ */
 
 /**
- * Typography Preset 001: Medium, Mobile, & Bold
+ * Typography Preset 001: Regular, Mobile, & Bold
  */
 @define-mixin eds-typography-preset-001 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -10,8 +12,14 @@ should be reflected in the TypographyPresets story */
   font-size: var(--eds-font-size-40) $important;
   line-height: 1.2 $important;
 
+  @mixin eds-typography-preset-001-mobile $important;
+}
+
+@define-mixin eds-typography-preset-001-mobile @important {
   @media all and (max-width: $eds-bp-md) {
+    font-family: var(--eds-font-family-primary) $important;
     font-size: var(--eds-font-size-32) $important;
+    font-weight: var(--eds-font-weight-bold) $important;
     line-height: 1.25 $important;
   }
 }
@@ -22,7 +30,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 002: Light, Medium, Mobile, & Bold
+ * Typography Preset 002: Light, Regular, Mobile, & Bold
  */
 @define-mixin eds-typography-preset-002 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -30,8 +38,14 @@ should be reflected in the TypographyPresets story */
   font-size: var(--eds-font-size-32) $important;
   line-height: 1.25 $important;
 
+  @mixin eds-typography-preset-002-mobile $important;
+}
+
+@define-mixin eds-typography-preset-002-mobile $important {
   @media all and (max-width: $eds-bp-md) {
+    font-family: var(--eds-font-family-primary) $important;
     font-size: var(--eds-font-size-28) $important;
+    font-weight: var(--eds-font-weight-bold) $important;
     line-height: 1.2857 $important;
   }
 }
@@ -47,7 +61,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 003: Medium, Mobile, & Bold
+ * Typography Preset 003: Regular, Mobile, & Bold
  */
 @define-mixin eds-typography-preset-003 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -55,8 +69,14 @@ should be reflected in the TypographyPresets story */
   font-size: var(--eds-font-size-24) $important;
   line-height: 1.333 $important;
 
+  @mixin eds-typography-preset-003-mobile $important;
+}
+
+@define-mixin eds-typography-preset-003-mobile $important {
   @media all and (max-width: $eds-bp-md) {
+    font-family: var(--eds-font-family-primary) $important;
     font-size: var(--eds-font-size-20) $important;
+    font-weight: var(--eds-font-weight-bold) $important;
     line-height: 1.4 $important;
   }
 }
@@ -67,7 +87,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 004: Medium, Light, & Bold
+ * Typography Preset 004: Regular, Light, & Bold
  */
 @define-mixin eds-typography-preset-004 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -87,7 +107,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 005: Medium, Light, & Bold
+ * Typography Preset 005: Regular, Light, & Bold
  */
 @define-mixin eds-typography-preset-005 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -107,7 +127,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 006: Medium, Light, & Bold
+ * Typography Preset 006: Regular, Light, & Bold
  */
 @define-mixin eds-typography-preset-006 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -127,7 +147,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 007: Medium & Bold
+ * Typography Preset 007: Regular & Bold
  */
 @define-mixin eds-typography-preset-007 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -157,7 +177,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 009: Medium & Bold
+ * Typography Preset 009: Regular & Bold
  */
 @define-mixin eds-typography-preset-009 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -172,7 +192,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 010: Medium & Bold
+ * Typography Preset 010: Regular & Bold
  */
 @define-mixin eds-typography-preset-010 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -187,7 +207,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 011: Medium & Bold
+ * Typography Preset 011: Regular & Bold
  */
 @define-mixin eds-typography-preset-011 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -203,7 +223,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 012: Medium & Bold
+ * Typography Preset 012: Regular & Bold
  */
 @define-mixin eds-typography-preset-012 $important {
   font-family: var(--eds-font-family-primary) $important;
