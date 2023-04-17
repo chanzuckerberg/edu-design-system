@@ -22,7 +22,7 @@
         "devDependencies": [
           "src/**/*.test.{ts,tsx}",
           "src/**/*.stories.{ts,tsx}",
-          "**/*.config.{js,ts}",
+          "**/*.config.{js,ts,mjs}",
           "**/*.setup.{js,ts}",
           ".storybook/**",
           "scripts/stylelint/**",

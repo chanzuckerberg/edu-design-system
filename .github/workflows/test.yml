@@ -41,6 +41,16 @@ jobs:
       - name: Build Dist 🔧
         run: yarn run build
 
+      # Rollup's TS plugin can include an implicit dependency on tslib that we don't want. It shouldn't be
+      # included in builds if our tsconfig.json configures "target" properly, which this check ensures.
+      - name: Check for "tslib" in build
+        run: |
+          if grep -r '--include=*.'{cjs,js} 'tslib' ./lib -q
+          then
+            echo "tslib found in lib"
+            exit 1
+          fi
+
   storybook:
     runs-on: ubuntu-latest
     steps:
