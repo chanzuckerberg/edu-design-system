@@ -1,5 +1,4 @@
-import type { Story } from '@storybook/react';
-import type { ReactNode } from 'react';
+import { Markdown } from '@storybook/blocks';
 import React, { useEffect } from 'react';
 // @ts-expect-error prism.js must be in JS
 import Prism from './prism';
@@ -10,18 +9,22 @@ import styles from './MarkdownWrapper.module.css';
 
 type MarkdownWrapperProps = {
   /**
-   * Child node(s) that can be nested inside component
+   * Markdown as string, e.g.:
+   * `import ReadMe from './README.md?raw';`
    */
-  children: ReactNode;
+  children: string;
 };
 
 export const MarkdownWrapper = ({ children }: MarkdownWrapperProps) => {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+  console.log(children);
   return (
     <LayoutContainer className={styles['markdown']}>
-      <LayoutLinelengthContainer>{children}</LayoutLinelengthContainer>
+      <LayoutLinelengthContainer>
+        <Markdown>{children}</Markdown>
+      </LayoutLinelengthContainer>
     </LayoutContainer>
   );
 };
@@ -33,11 +36,5 @@ export const markdownStorybookOptions = {
       skip: true,
     },
   },
-  decorators: [
-    (Story: Story) => (
-      <MarkdownWrapper>
-        <Story />
-      </MarkdownWrapper>
-    ),
-  ],
+  render: (args: MarkdownWrapperProps) => <MarkdownWrapper {...args} />,
 };

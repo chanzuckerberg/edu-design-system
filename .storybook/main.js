@@ -19,7 +19,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
-    'storybook-css-modules-preset',
+    'storybook-css-modules',
     '@storybook/addon-interactions',
     '@geometricpanda/storybook-addon-badges',
     {
@@ -29,16 +29,30 @@ module.exports = {
         transcludeMarkdown: true,
       },
     },
-    {
-      name: '@storybook/addon-postcss',
-      options: {
-        postcssLoaderOptions: {
-          implementation: require('postcss'),
-        },
-      },
-    },
+    '@storybook/addon-mdx-gfm',
   ],
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  webpackFinal: (config) => {
+    config.module.rules.push(
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'postcss-loader',
+          },
+        ],
+      },
+      {
+        test: /\.md$/,
+        type: 'asset/source',
+      },
+    );
+    return config;
+  },
+  docs: {
+    autodocs: true,
   },
 };
