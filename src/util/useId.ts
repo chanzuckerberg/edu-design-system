@@ -5,9 +5,10 @@ function genId() {
   return ++id;
 }
 
-// Warning: probably not ssr friendly if using React <18
+console.warn(
+  'EDS useId is not ssr friendly if using React <18 as it uses the native React.useId hook if available https://react.dev/reference/react/useId.',
+);
 export const useId =
-  // Prefer React's `useId` if it's available.
   React.useId ??
   function useId() {
     const id = 'eds-' + genId();
