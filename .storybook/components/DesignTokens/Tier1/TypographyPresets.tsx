@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 import styles from './TypographyPresets.module.css';
 
@@ -57,8 +57,8 @@ export const PRESET_SIZE_MAP = {
 export class Tier1TypographyPresets extends Component {
   render() {
     const renderTypeToken = (
-      preset,
-      index,
+      preset: string,
+      index: number,
       { boldVariant = true, lightVariant = false } = {},
     ) => {
       const { fontSize, lineHeight } = PRESET_SIZE_MAP[preset];
@@ -94,14 +94,16 @@ export class Tier1TypographyPresets extends Component {
     };
 
     return (
-      <Grid>
-        {Object.keys(PRESET_SIZE_MAP).map((preset, index) => {
-          if (preset === '005') {
-            return renderTypeToken(preset, index, { lightVariant: true });
-          }
-          return renderTypeToken(preset, index);
-        })}
-      </Grid>
+      <Section title="Typography Presets">
+        <Grid>
+          {Object.keys(PRESET_SIZE_MAP).map((preset, index) => {
+            if (preset === '005') {
+              return renderTypeToken(preset, index, { lightVariant: true });
+            }
+            return renderTypeToken(preset, index);
+          })}
+        </Grid>
+      </Section>
     );
   }
 }
