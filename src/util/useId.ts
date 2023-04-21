@@ -10,6 +10,6 @@ export const useId =
   // Prefer React's `useId` if it's available.
   React.useId ??
   function useId() {
-    const id = genId();
+    const id = 'eds-' + genId();
     return id;
   };
