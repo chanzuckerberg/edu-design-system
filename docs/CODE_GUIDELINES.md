@@ -597,7 +597,9 @@ The default option should be the one most commonly used in order to reduce frict
 
 ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
 
-We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
+We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation for React 18, and polyfill with an incrementing number for React <18.
+The polyfill is not ssr friendly as id generation is render timing dependent.
+To ensure stable results, they cannot be invoked within conditionals or callbacks.
 
 ```tsx
 const generatedId = useId();

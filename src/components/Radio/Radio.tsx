@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { useId } from 'react';
+import React from 'react';
+import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 import type { RadioInputProps } from '../RadioInput';
 import RadioInput from '../RadioInput';

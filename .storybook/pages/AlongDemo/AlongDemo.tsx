@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import React, { useId, useState } from 'react';
-
+import React, { useState } from 'react';
 import {
   Button,
   ButtonGroup,
@@ -14,6 +13,7 @@ import {
   Text,
   Tooltip,
 } from '../../../src';
+import { useId } from '../../../src/util/useId';
 
 import AlongFooterPaper from '../../static/along-footer-paper.svg';
 import AlongLogoBulb from '../../static/along-logo-bulb.svg';
