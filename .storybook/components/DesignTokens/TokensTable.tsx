@@ -1,49 +1,74 @@
-import React from 'react';
-import { Table, Text } from '../../../src';
+import React, { useState } from 'react';
+import { InputField, Table, Text } from '../../../src';
 import tokens from '../../data/token-map.json';
 
 export const TokensTable = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const tokensList = Object.keys(tokens);
-  const map: { value?: string; tokens?: string[] } = {};
+  // get map of tokens with primary values its mapped tokens
+  const map = {};
   tokensList.forEach((token) => {
     const mappedToken = getDeepValue(token);
     if (!map[mappedToken.token]) {
       map[mappedToken.token] = {
+        token: mappedToken.token,
         value: mappedToken.value,
-        tokens: [],
+        mappedTokens: [],
       };
     }
     if (mappedToken.depth) {
-      map[mappedToken.token].tokens.push(token);
+      map[mappedToken.token].mappedTokens.push(token);
     }
   });
+  // filter token map based on search term into a list
+  const filteredTokensList = (
+    Object.values(map) as {
+      token: string;
+      value: string;
+      mappedTokens: string[];
+    }[]
+  ).filter(
+    (item) =>
+      // filter based on if token name includes search term or if one of the mapped token names includes search term
+      item.token.includes(searchTerm) ||
+      item.mappedTokens.join('|').includes(searchTerm),
+  );
   return (
-    <Table>
-      <Table.Header>
-        <Table.Row variant="header">
-          <Table.HeaderCell scope="col">Token</Table.HeaderCell>
-          <Table.HeaderCell scope="col">Value</Table.HeaderCell>
-          <Table.HeaderCell scope="col">Mapped Tokens</Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {Object.keys(map).map((key) => (
-          <Table.Row key={key}>
-            <Table.Cell scope="row">
-              <Text>{key}</Text>
-            </Table.Cell>
-            <Table.Cell>
-              <Text>{map[key].value}</Text>
-            </Table.Cell>
-            <Table.Cell>
-              {map[key].tokens.map((token: string) => (
-                <Text key={token}>{token}</Text>
-              ))}
-            </Table.Cell>
+    <div>
+      <InputField
+        className="mb-4 w-1/2"
+        fieldNote="Clear to see all"
+        label="Search for Tokens"
+        onChange={(e) => setSearchTerm(e.target.value)}
+        value={searchTerm}
+      />
+      <Table>
+        <Table.Header>
+          <Table.Row variant="header">
+            <Table.HeaderCell scope="col">Token</Table.HeaderCell>
+            <Table.HeaderCell scope="col">Value</Table.HeaderCell>
+            <Table.HeaderCell scope="col">Mapped Tokens</Table.HeaderCell>
           </Table.Row>
-        ))}
-      </Table.Body>
-    </Table>
+        </Table.Header>
+        <Table.Body>
+          {filteredTokensList.map((item) => (
+            <Table.Row key={item.token}>
+              <Table.Cell>
+                <Text>{item.token}</Text>
+              </Table.Cell>
+              <Table.Cell>
+                <Text>{item.value}</Text>
+              </Table.Cell>
+              <Table.Cell>
+                {item.mappedTokens.map((token: string) => (
+                  <Text key={token}>{token}</Text>
+                ))}
+              </Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
+    </div>
   );
 };
 
