@@ -1,14 +1,24 @@
 const StyleDictionary = require('style-dictionary');
+
+/** @type {import('style-dictionary')} */
 const EDSStyleDictionary = StyleDictionary.extend({
   source: ['src/design-tokens/**/*.json'],
   platforms: {
     storybook: {
       transformGroup: 'css',
-      buildPath: '',
       files: [
         {
           format: 'json/flat',
           destination: '.storybook/data/tokens.json',
+        },
+      ],
+    },
+    tokenMap: {
+      transformGroup: 'css',
+      files: [
+        {
+          format: 'json/flat-map',
+          destination: '.storybook/data/token-map.json',
         },
       ],
     },
@@ -134,6 +144,23 @@ EDSStyleDictionary.registerFormat({
     const minifiedCssDictionary = minifyCSSVarDictionary(dictionary.properties);
     formatEdsTokens(minifiedCssDictionary);
     return JSON.stringify(minifiedCssDictionary, null, 2);
+  },
+});
+
+// This transforms tokens into a flat map with preserved original values, so tokens with tier > n + 1 will map to tier n tokens (usually tier 1),
+// while tier 1 tokens will map to primary values.
+EDSStyleDictionary.registerFormat({
+  name: 'json/flat-map',
+  formatter: function (dictionary) {
+    const map = {};
+    dictionary.allTokens.forEach((token) => {
+      const value =
+        token.original.value.slice(0, 4) === '{eds'
+          ? token.original.value.slice(1, -1).split('.').join('-')
+          : token.original.value;
+      map[token.name] = value;
+    });
+    return JSON.stringify(map, null, 2);
   },
 });
 
