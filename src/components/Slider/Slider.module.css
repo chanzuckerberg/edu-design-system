@@ -152,7 +152,7 @@
  * Slider Marker 
  */
 .slider__marker {
-  @mixin eds-theme-typography-caption-text-sm;
+  @mixin eds-theme-typography-caption-sm;
 
   /* Centers the text to the marker location */
   width: 0px;

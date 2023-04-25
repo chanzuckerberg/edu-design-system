@@ -85,7 +85,7 @@
  * The button to trigger the display of the select field.
  */
 .select-button {
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-body-md;
   /* Allow select component font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
   color: var(--eds-theme-text-neutral-subtle);

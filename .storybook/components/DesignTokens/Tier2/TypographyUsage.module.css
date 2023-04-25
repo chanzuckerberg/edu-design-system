@@ -48,31 +48,31 @@
   @mixin eds-typography-preset-009-bold;
 }
 
-.typography-usage--body-text-lg {
+.typography-usage--body-lg {
   @mixin eds-typography-preset-004;
 }
 
-.typography-usage--body-text-md {
+.typography-usage--body-md {
   @mixin eds-typography-preset-005-light;
 }
 
-.typography-usage--body-text-sm {
+.typography-usage--body-sm {
   @mixin eds-typography-preset-006;
 }
 
-.typography-usage--body-text-xs {
+.typography-usage--body-xs {
   @mixin eds-typography-preset-008;
 }
 
-.typography-usage--caption-text-lg {
+.typography-usage--caption-lg {
   @mixin eds-typography-preset-006;
 }
 
-.typography-usage--caption-text-md {
+.typography-usage--caption-md {
   @mixin eds-typography-preset-008;
 }
 
-.typography-usage--caption-text-sm {
+.typography-usage--caption-sm {
   @mixin eds-typography-preset-010;
 }
 
@@ -111,29 +111,29 @@
 /**
  * Body text bold
  */
-.typography-usage--body-text-bold {
-  @mixin eds-theme-typography-body-text-md;
+.typography-usage--body-bold {
+  @mixin eds-theme-typography-body-md;
 }
 
 /**
  *  Body text sm bold
  */
-.typography-usage--body-text-sm-bold {
-  @mixin eds-theme-typography-body-text-sm;
+.typography-usage--body-sm-bold {
+  @mixin eds-theme-typography-body-sm;
 }
 
 /**
  *  Body text xs bold
  */
-.typography-usage--body-text-xs-bold {
-  @mixin eds-theme-typography-body-text-xs-bold;
+.typography-usage--body-xs-bold {
+  @mixin eds-theme-typography-body-xs-bold;
 }
 
 /**
  *  Body text lg bold
  */
-.typography-usage--body-text-lg-bold {
-  @mixin eds-theme-typography-body-text-lg-bold;
+.typography-usage--body-lg-bold {
+  @mixin eds-theme-typography-body-lg-bold;
 }
 
 /**

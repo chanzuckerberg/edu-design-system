@@ -11,9 +11,9 @@
  */
 .fieldset-legend {
   /* Removes some default browser styles. */
-  @mixin legendReset; 
+  @mixin legendReset;
   @mixin eds-theme-typography-form-label;
-   /* Adjust margin between legend and option list */
+  /* Adjust margin between legend and option list */
   margin-bottom: var(--eds-size-2);
 }
 
@@ -22,5 +22,5 @@
  * or optional. Currently a flag is only present for optional fields
  */
 .fieldset-legend__flag {
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
 }
