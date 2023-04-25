@@ -34,8 +34,8 @@ type Args = React.ComponentProps<typeof Icon>;
 export const Default: StoryObj<Args> = {
   render: ({ name, color, ...rest }) => {
     // ESlint can't tell if ColorTokens[color] is valid or not, since it's computed at runtime.
-    /* eslint-disable-next-line import/namespace */
-    const computedColor = color && ColorTokens[color];
+    // @ts-expect-error cannot check type compliance on runtime imports
+    const computedColor = color && ColorTokens[color]; /* eslint-disable-line */
     return <Icon {...rest} color={computedColor} name={name} />;
   },
   args: {
