@@ -1,6 +1,6 @@
 name: Build & Test CI
 
-on: push
+on: [push, workflow_call]
 
 jobs:
   test:
