@@ -1,5 +1,6 @@
 name: Release
 on:
+  pull_request:
   release:
     types:
       - created
@@ -15,18 +16,18 @@ jobs:
       packages: write
       contents: read
     steps:
-      - name: Checkout
+      - name: Checkout ⬇️
         uses: actions/checkout@v3
 
-      - name: Setup node
+      - name: Setup node 😻
         uses: actions/setup-node@v3
         with:
           node-version-file: '.node-version'
           # Configure NPM to point to Github's package registry.
           registry-url: https://npm.pkg.github.com/
 
-      - name: Install deps
-        uses: bahmutov/npm-install@v1
+      - name: Install Dependencies 🧶
+        uses: yarn install --immutable
 
       - name: Build EDS 🛠️
         run: yarn build
