@@ -50,7 +50,7 @@
     "lint:styles:fix": "yarn run lint:styles --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
-    "postinstall": "husky install",
+    "postinstall": "npx husky install",
     "postpack": "pinst --enable",
     "prepack": "pinst --disable",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
