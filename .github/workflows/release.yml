@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.node-version'
+          cache: 'yarn'
           # Configure NPM to point to Github's package registry.
           registry-url: https://npm.pkg.github.com/
 
