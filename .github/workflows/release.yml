@@ -1,11 +1,11 @@
 name: Release
 on:
-  pull_request:
   release:
     types:
       - created
 jobs:
   tests:
+    # TODO: instead of reusing test.yml, trigger `yarn test` directly
     uses: ./.github/workflows/test.yml
     secrets: inherit
   release:
