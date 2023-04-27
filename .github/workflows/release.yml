@@ -28,6 +28,9 @@ jobs:
       - name: Install deps
         uses: bahmutov/npm-install@v1
 
+      - name: Build EDS 🛠️
+        run: yarn build
+
       # Publish the package on Github's package registry for internal CZI use. You should still
       # publish to the npm registry separately from this job.
       - name: Publish package to the Github registry
