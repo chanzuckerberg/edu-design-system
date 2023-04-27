@@ -28,7 +28,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
 
       - name: Install Dependencies 🧶
-        uses: yarn install --immutable
+        run: yarn install --immutable
 
       - name: Build EDS 🛠️
         run: yarn build
