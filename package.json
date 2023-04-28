@@ -12,6 +12,7 @@
     },
     "./index.css": "./lib/index.css",
     "./fonts.css": "./lib/tokens/fonts.css",
+    "./css-variables-nested.json": "./lib/json/css-variables-nested.json",
     "./tailwind.config": "./tailwind.config.ts"
   },
   "types": "lib/index.d.ts",
