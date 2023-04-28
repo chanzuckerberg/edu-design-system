@@ -36,7 +36,7 @@
 }
 
 .textarea-field__character-counter {
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
 
   color: var(--eds-theme-color-text-neutral-default);
   flex: 1 0 50%;

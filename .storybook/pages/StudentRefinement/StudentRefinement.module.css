@@ -118,7 +118,7 @@
  * The Description provides more elucidation for the data.
  */
 .data-summary-card__description {
-  @mixin eds-theme-typography-caption-text-sm;
+  @mixin eds-theme-typography-caption-sm;
   font-weight: var(--eds-font-weight-light);
 }
 

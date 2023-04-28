@@ -9,19 +9,19 @@
  */
 .text--body,
 .text--md {
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-body-md;
 }
 .text--lg {
-  @mixin eds-theme-typography-body-text-lg;
+  @mixin eds-theme-typography-body-lg;
 }
 .text--sm {
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
 }
 .text--xs {
-  @mixin eds-theme-typography-body-text-xs;
+  @mixin eds-theme-typography-body-xs;
 }
 .text--caption {
-  @mixin eds-theme-typography-caption-text-md;
+  @mixin eds-theme-typography-caption-md;
 }
 .text--overline {
   @mixin eds-theme-typography-overline;

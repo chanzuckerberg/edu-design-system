@@ -31,12 +31,12 @@
 
 /* Deprecated; not in figma */
 .heading--size-body-sm {
-  @mixin eds-theme-typography-body-text-sm-bold;
+  @mixin eds-theme-typography-body-sm-bold;
 }
 
 /* Deprecated; not in figma */
 .heading--size-body-xs {
-  @mixin eds-theme-typography-body-text-xs-bold;
+  @mixin eds-theme-typography-body-xs-bold;
 }
 
 /**

@@ -50,14 +50,15 @@
   }
 }
 
-@define-mixin eds-typography-preset-002-bold $important {
-  @mixin eds-typography-preset-002 $important;
-  font-weight: var(--eds-font-weight-bold) $important;
-}
-
+/* TODO: Verify whether this one should be removed */
 @define-mixin eds-typography-preset-002-light $important {
   @mixin eds-typography-preset-002 $important;
   font-weight: var(--eds-font-weight-light) $important;
+}
+
+@define-mixin eds-typography-preset-002-bold $important {
+  @mixin eds-typography-preset-002 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
 }
 
 /**
@@ -67,7 +68,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-24) $important;
-  line-height: 1.333 $important;
+  line-height: 1.333333333 $important;
 
   @mixin eds-typography-preset-003-mobile $important;
 }
@@ -93,7 +94,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-18) $important;
-  line-height: 1.333 $important;
+  line-height: 1.333333333 $important;
 }
 
 @define-mixin eds-typography-preset-004-light $important {
@@ -133,7 +134,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-14) $important;
-  line-height: 1.57 $important;
+  line-height: 1.57142857 $important;
 }
 
 @define-mixin eds-typography-preset-006-light $important {
@@ -153,7 +154,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-14) $important;
-  line-height: 1.28 $important;
+  line-height: 1.28571429 $important;
 }
 
 @define-mixin eds-typography-preset-007-bold $important {
@@ -162,13 +163,17 @@
 }
 
 /**
- * Typography Preset 008: Light & Bold
+ * Typography Preset 008: Regular, Light & Bold
  */
 @define-mixin eds-typography-preset-008 $important {
   font-family: var(--eds-font-family-primary) $important;
-  font-weight: var(--eds-font-weight-light) $important;
   font-size: var(--eds-font-size-12) $important;
-  line-height: 1.666 $important;
+  line-height: 1.666666667 $important;
+}
+
+@define-mixin eds-typography-preset-008-light $important {
+  @mixin eds-typography-preset-008 $important;
+  font-weight: var(--eds-font-weight-light) $important;
 }
 
 @define-mixin eds-typography-preset-008-bold $important {
@@ -183,7 +188,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-12) $important;
-  line-height: 1.333 $important;
+  line-height: 1.333333333 $important;
 }
 
 @define-mixin eds-typography-preset-009-bold $important {
@@ -198,7 +203,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-11) $important;
-  line-height: 1.27 $important;
+  line-height: 1.272727272 $important;
 }
 
 @define-mixin eds-typography-preset-010-bold $important {
@@ -213,7 +218,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-12) $important;
-  line-height: 1.333 $important;
+  line-height: 1.333333333 $important;
   text-transform: uppercase $important;
 }
 
@@ -229,7 +234,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-11) $important;
-  line-height: 1.27 $important;
+  line-height: 1.272727272 $important;
   text-transform: uppercase $important;
 }
 
