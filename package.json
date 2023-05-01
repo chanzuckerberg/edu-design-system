@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "12.0.1-alpha.4",
+  "version": "12.0.1-alpha.6",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -33,6 +33,7 @@
     "/lib",
     "tailwind.config.*"
   ],
+  "private": "false",
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
@@ -50,10 +51,9 @@
     "lint:styles:fix": "yarn run lint:styles --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
-    "postinstall": "husky install",
-    "postpack": "less package.json && pinst --enable",
+    "_postinstall": "husky install",
+    "postpack": "pinst --enable",
     "prepack": "pinst --disable",
-    "prepare": "pinst --disable",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "prettier-tokens-dist": "prettier --write \"src/tokens-dist/**/*.{js,jsx,ts,tsx}\"",
     "release": "yarn build && standard-version",
