@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "12.0.1-alpha.8",
+  "version": "12.0.1-alpha.9",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -53,6 +53,7 @@
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
+    "postpublish": "pinst --enable",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "prettier-tokens-dist": "prettier --write \"src/tokens-dist/**/*.{js,jsx,ts,tsx}\"",
     "release": "yarn build && standard-version",
