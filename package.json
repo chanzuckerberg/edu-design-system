@@ -51,7 +51,7 @@
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "postinstall": "husky install",
-    "postpack": "pinst --enable",
+    "postpack": "less package.json && pinst --enable",
     "prepack": "pinst --disable",
     "prepare": "pinst --disable",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
