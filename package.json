@@ -53,7 +53,7 @@
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpublish": "pinst --enable",
+    "postpack": "pinst --enable",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "prettier-tokens-dist": "prettier --write \"src/tokens-dist/**/*.{js,jsx,ts,tsx}\"",
     "release": "yarn build && standard-version",
