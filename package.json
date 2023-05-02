@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "12.0.1-alpha.10",
+  "version": "12.0.1-alpha.11",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -33,7 +33,6 @@
     "/lib",
     "tailwind.config.*"
   ],
-  "private": "false",
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
