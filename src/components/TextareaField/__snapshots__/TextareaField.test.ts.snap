@@ -22,6 +22,7 @@ exports[`<TextareaField /> AfterDelete story renders snapshot 1`] = `
     maxlength="209"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -74,6 +75,7 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
     id=":r0:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -113,6 +115,7 @@ exports[`<TextareaField /> UsingChildren story renders snapshot 1`] = `
     id=":r2:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -154,6 +157,7 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
     placeholder="Enter long-form text here"
     readonly=""
     rows="2"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -193,6 +197,7 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
     id=":r8:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -250,6 +255,7 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
     maxlength="10"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -324,6 +330,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
     placeholder="Enter long-form text here"
     required=""
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -363,6 +370,7 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
     id=":re:"
     placeholder="Enter long-form text here"
     rows="10"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -409,6 +417,7 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
     placeholder="Enter long-form text here"
     required=""
     rows="10"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -476,6 +485,7 @@ exports[`<TextareaField /> WithNoDefaultValue story renders snapshot 1`] = `
     id=":r4:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   />
 </div>
 `;
