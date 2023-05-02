@@ -41,6 +41,6 @@ jobs:
       # Publish the package on Github's package registry for internal CZI use. You should still
       # publish to the npm registry separately from this job.
       - name: Publish package to the Github registry
-        run: npm publish --foreground-scripts true --verbose --access public
+        run: npm publish --tag alpha --foreground-scripts true --verbose --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
