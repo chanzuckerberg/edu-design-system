@@ -15,7 +15,7 @@ export default {
     label: 'Textarea Field',
     rows: 5,
     fieldNote: 'Longer Field description',
-    spellcheck: false,
+    spellCheck: false,
   },
   parameters: {
     badges: ['1.3'],
