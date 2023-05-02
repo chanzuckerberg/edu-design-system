@@ -20,7 +20,7 @@ export default {
   parameters: {
     badges: ['1.3'],
   },
-} as Meta<Args>;
+} satisfies Meta<Args>;
 
 type Args = React.ComponentProps<typeof TextareaField>;
 
