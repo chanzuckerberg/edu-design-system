@@ -21,6 +21,7 @@ jobs:
           cache: 'yarn'
           # Configure NPM to point to Github's package registry.
           registry-url: https://npm.pkg.github.com/
+          scope: '@chanzuckerberg'
 
       - name: Install Dependencies 🧶
         run: yarn install --immutable
@@ -40,6 +41,8 @@ jobs:
       # Publish the package on Github's package registry for internal CZI use. You should still
       # publish to the npm registry separately from this job.
       - name: Publish package to the Github registry
+        # run: npm publish --tag alpha --foreground-scripts true --verbose --access public
         run: yarn npm publish --tag alpha --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          # NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
