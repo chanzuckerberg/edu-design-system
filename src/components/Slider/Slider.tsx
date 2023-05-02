@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import React, {
-  useId,
   useRef,
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
+import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';

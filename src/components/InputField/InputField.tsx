@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
-import React, { forwardRef, useId } from 'react';
+import React, { forwardRef } from 'react';
+import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
   ForwardedRefComponent,

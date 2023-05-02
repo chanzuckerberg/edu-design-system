@@ -81,7 +81,7 @@
     }
   ],
   "peerDependencies": {
-    "react": ">= 18"
+    "react": ">= 17"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",

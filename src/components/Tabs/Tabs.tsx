@@ -4,7 +4,6 @@ import React, {
   type ReactNode,
   useCallback,
   useEffect,
-  useId,
   useMemo,
   useRef,
   useState,
@@ -17,6 +16,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
+import { useId } from '../../util/useId';
 import Tab from '../Tab';
 import styles from './Tabs.module.css';
 
