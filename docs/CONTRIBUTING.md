@@ -1,5 +1,13 @@
 # Contributing to EDS
 
+## First-time development setup
+
+- After checking out the repository, remember to set up `husky` for the first time:
+
+```sh
+npx husky install
+```
+
 ## Git Flow
 
 This project uses [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/) to manage the development workflow. Here's a breakdown of what this means for the design system:
