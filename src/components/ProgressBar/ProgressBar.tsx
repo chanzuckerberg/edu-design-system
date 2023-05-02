@@ -1,4 +1,5 @@
-import React, { useId } from 'react';
+import React from 'react';
+import { useId } from '../../util/useId';
 import Text from '../Text';
 import styles from './ProgressBar.module.css';
 

@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.0...v12.0.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* polyfill for useid for react <18 ([#1595](https://github.com/chanzuckerberg/edu-design-system/issues/1595)) ([4d32194](https://github.com/chanzuckerberg/edu-design-system/commit/4d321945c5e64c6e8a2a64f10cf25dcad00a4d03))
+* restore check for undefined any types ([#1600](https://github.com/chanzuckerberg/edu-design-system/issues/1600)) ([214cd88](https://github.com/chanzuckerberg/edu-design-system/commit/214cd88e237d43c58def3cd458e8cbb4c68ae452))
+* suppress warnings from useId imports and prop usage ([#1606](https://github.com/chanzuckerberg/edu-design-system/issues/1606)) ([c875d9d](https://github.com/chanzuckerberg/edu-design-system/commit/c875d9dcb44b1d94f30df381575dde96eded0ec2))
+* **Typography:** update type ramp to sync with design  ([#1601](https://github.com/chanzuckerberg/edu-design-system/issues/1601)) ([be5b868](https://github.com/chanzuckerberg/edu-design-system/commit/be5b8685f9c25b8e9a50ccff6317508ee322d4ce))
+
 ## [12.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v11.1.1...v12.0.0) (2023-04-17)
 
 

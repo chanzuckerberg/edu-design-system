@@ -21,7 +21,7 @@
  * is only present for optional fields.
  */
 .label__flag {
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
 }
 
 /**

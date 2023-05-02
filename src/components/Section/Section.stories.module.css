@@ -4,5 +4,5 @@
  *  Body text xs bold
  */
 .section__text {
-    @mixin eds-theme-typography-body-text-xs-bold;
-  }
+  @mixin eds-theme-typography-body-xs-bold;
+}

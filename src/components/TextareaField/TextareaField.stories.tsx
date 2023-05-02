@@ -15,11 +15,12 @@ export default {
     label: 'Textarea Field',
     rows: 5,
     fieldNote: 'Longer Field description',
+    spellCheck: false,
   },
   parameters: {
     badges: ['1.3'],
   },
-} as Meta<Args>;
+} satisfies Meta<Args>;
 
 type Args = React.ComponentProps<typeof TextareaField>;
 

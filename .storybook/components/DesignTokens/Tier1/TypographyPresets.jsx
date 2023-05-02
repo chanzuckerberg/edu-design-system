@@ -5,50 +5,62 @@ import styles from './TypographyPresets.module.css';
 
 export const PRESET_SIZE_MAP = {
   '001': {
+    weights: ['regular', 'bold'],
     fontSize: 40,
     lineHeight: 48,
   },
   '002': {
+    weights: ['light', 'regular', 'bold'],
     fontSize: 32,
     lineHeight: 40,
   },
   '003': {
+    weights: ['regular', 'bold'],
     fontSize: 24,
     lineHeight: 32,
   },
   '004': {
+    weights: ['regular', 'bold'],
     fontSize: 18,
     lineHeight: 24,
   },
   '005': {
+    weights: ['light', 'regular', 'bold'],
     fontSize: 16,
     lineHeight: 24,
   },
   '006': {
+    weights: ['light', 'regular', 'bold'],
     fontSize: 14,
-    lineHeight: 24,
+    lineHeight: 22,
   },
   '007': {
+    weights: ['regular', 'bold'],
     fontSize: 14,
     lineHeight: 18,
   },
   '008': {
+    weights: ['light', 'bold'],
     fontSize: 12,
     lineHeight: 20,
   },
   '009': {
+    weights: ['regular', 'bold'],
     fontSize: 12,
     lineHeight: 16,
   },
   '010': {
+    weights: ['regular', 'bold'],
     fontSize: 11,
     lineHeight: 14,
   },
   '011': {
+    weights: ['regular', 'bold'],
     fontSize: 12,
     lineHeight: 16,
   },
   '012': {
+    weights: ['regular', 'bold'],
     fontSize: 11,
     lineHeight: 14,
   },
@@ -56,12 +68,8 @@ export const PRESET_SIZE_MAP = {
 
 export class Tier1TypographyPresets extends Component {
   render() {
-    const renderTypeToken = (
-      preset,
-      index,
-      { boldVariant = true, lightVariant = false } = {},
-    ) => {
-      const { fontSize, lineHeight } = PRESET_SIZE_MAP[preset];
+    const renderTypeToken = (preset, index) => {
+      const { fontSize, lineHeight, weights } = PRESET_SIZE_MAP[preset];
       const commonProps = {
         comment: 'font size / line height (px)',
         value: `${fontSize} / ${lineHeight}`,
@@ -70,19 +78,21 @@ export class Tier1TypographyPresets extends Component {
 
       return (
         <Grid key={`tier-1-typography-preset-${index}`}>
-          <TokenSpecimen
-            name={`eds-typography-preset-${preset}`}
-            specimenClassName={styles[`typography-presets--${preset}`]}
-            {...commonProps}
-          />
-          {lightVariant && (
+          {weights.includes('regular') && (
+            <TokenSpecimen
+              name={`eds-typography-preset-${preset}`}
+              specimenClassName={styles[`typography-presets--${preset}`]}
+              {...commonProps}
+            />
+          )}
+          {weights.includes('light') && (
             <TokenSpecimen
               name={`eds-typography-preset-${preset}-light`}
               specimenClassName={styles[`typography-presets--${preset}-light`]}
               {...commonProps}
             />
           )}
-          {boldVariant && (
+          {weights.includes('bold') && (
             <TokenSpecimen
               name={`eds-typography-preset-${preset}-bold`}
               specimenClassName={styles[`typography-presets--${preset}-bold`]}
@@ -96,9 +106,7 @@ export class Tier1TypographyPresets extends Component {
     return (
       <Grid>
         {Object.keys(PRESET_SIZE_MAP).map((preset, index) => {
-          if (preset === '005') {
-            return renderTypeToken(preset, index, { lightVariant: true });
-          }
+          // TODO: simplify this file to avoid custom mappings to type ramp
           return renderTypeToken(preset, index);
         })}
       </Grid>
