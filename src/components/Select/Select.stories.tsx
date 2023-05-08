@@ -61,10 +61,10 @@ function InteractiveExampleUsingChildren(props: Props) {
   >(value);
 
   return (
-    <div className={styles['interactive-example']}>
+    <div className="mb-10 p-8">
       <Select
         aria-label={props['aria-label']}
-        className={clsx(!compact && styles['select--non-compact'])}
+        className={clsx(!compact && 'w-60')}
         data-testid="dropdown"
         disabled={disabled}
         onChange={setSelectedOption}
@@ -93,11 +93,11 @@ function InteractiveExampleUsingFunctionChildren() {
     React.useState<(typeof exampleOptions)[0]>();
 
   return (
-    <div className={styles['interactive-example']}>
+    <div className="mb-10 p-8">
       <Select
         aria-label="Favorite Animal"
         as="div"
-        className={styles['select--non-compact']}
+        className="w-60"
         data-testid="dropdown"
         onChange={setSelectedOption}
         value={selectedOption}
@@ -117,7 +117,7 @@ function InteractiveExampleUsingFunctionChildren() {
                 >
                   {selectedOption?.label || 'Select'}
                   <Icon
-                    className={styles['function-children__icon']}
+                    className="ml-4"
                     name="filter-list"
                     purpose="decorative"
                   />
@@ -137,6 +137,32 @@ function InteractiveExampleUsingFunctionChildren() {
     </div>
   );
 }
+
+/**
+ * Play function to use with interactive stories
+ */
+const selectCat: StoryObj['play'] = async (playOptions) => {
+  const { canvasElement } = playOptions;
+  const canvas = within(canvasElement);
+
+  // Target the body of the iframe since we now use PopperJS
+  const popoverCanvas = within(document.body);
+
+  console.log(document.body);
+
+  // Open the dropdown.
+  const selectButton = await canvas.findByRole('button');
+  await userEvent.click(selectButton);
+
+  // Select the best option.
+  console.log(document.body.innerHTML);
+
+  const bestOption = await popoverCanvas.findByText('Cats');
+  await userEvent.click(bestOption);
+
+  // Reopen the dropdown; selecting an option closed it.
+  await userEvent.click(selectButton);
+};
 
 export const Default: StoryObj = {
   render: () => (
@@ -168,44 +194,49 @@ export const Compact: StoryObj = {
   ),
 };
 
-export const CompactWithOptionsRightAligned: StoryObj = {
+export const NoVisibleLabel: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
+  ),
+};
+
+export const OptionsRightAligned: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
       optionsAlign="right"
-      variant="compact"
+      optionsClassName="w-96"
     />
   ),
+  play: selectCat,
+};
+
+export const OptionsLeftAligned: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingChildren
+      aria-label="Favorite Animal"
+      optionsAlign="left"
+      optionsClassName="w-96"
+    />
+  ),
+  play: selectCat,
 };
 
 export const SeparateButtonAndMenuWidth: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
-      optionsClassName={styles['separate-button-and-menu-width']}
+      optionsClassName="w-96"
+      variant="compact"
     />
   ),
+  play: selectCat,
 };
 
 export const UsingChildrenProp: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
       labelComponent={<Select.Label>Favorite Animal</Select.Label>}
-    />
-  ),
-};
-
-export const UsingChildrenPropAndNoVisibleLabel: StoryObj = {
-  render: () => (
-    <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
-  ),
-};
-
-export const CompactUsingChildrenPropAndNoVisibleLabel: StoryObj = {
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      variant="compact"
     />
   ),
 };
@@ -217,18 +248,7 @@ export const UsingFunctionChildrenProp: StoryObj = {
 // This story just opens the dropdown automatically so chromatic can test it.
 export const OpenByDefault: StoryObj = {
   ...Default,
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    // Open the dropdown.
-    const dropdownButton = await canvas.findByRole('button');
-    await userEvent.click(dropdownButton);
-    // Select the best option.
-    const bestOption = await canvas.findByText('Cats');
-    await userEvent.click(bestOption);
-    // Reopen the dropdown; selecting an option closed it.
-    await userEvent.click(dropdownButton);
-  },
+  play: selectCat,
 };
 
 export const WithSelectedOption: StoryObj = {

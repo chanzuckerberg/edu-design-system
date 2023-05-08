@@ -11,14 +11,6 @@
   position: relative;
 }
 
-.menu__popover {
-  margin-top: var(--eds-size-1);
-  min-width: max-content;
-  max-width: var(--eds-l-max-width);
-  position: absolute;
-  width: 100%;
-}
-
 .menu__button {
   @mixin eds-theme-typography-body-md;
 
