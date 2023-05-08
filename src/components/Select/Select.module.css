@@ -43,30 +43,7 @@
  * The container for the individual select options. 
  */
 .select__options {
-  margin-top: var(--eds-size-1);
-  min-width: max-content;
-  max-width: var(--eds-l-max-width);
-  position: absolute;
   z-index: var(--eds-z-index-100);
-}
-
-.select__options--compact {
-  min-width: max-content;
-  width: 100%;
-}
-
-/**
- * Full variant styling for the select options
- */
-.select__options--full-width {
-  width: 100%;
-}
-
-/**
- * Places the options on the right side of the container.
- */
-.select__options--align-right {
-  right: 0;
 }
 
 .select__option-text {

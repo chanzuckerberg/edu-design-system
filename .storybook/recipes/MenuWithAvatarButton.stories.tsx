@@ -15,7 +15,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="p-5">
+      <div className="m-10 p-8">
         <Story />
       </div>
     ),
