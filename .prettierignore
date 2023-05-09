@@ -6,4 +6,3 @@ lib
 .prettierignore
 *.svg
 *.png
-prism.js
