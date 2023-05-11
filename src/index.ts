@@ -1,3 +1,6 @@
+// Ensure @import rules for fonts are before anything else. Otherwise build tools can show warnings
+// in consuming apps.
+import './design-tokens/external-fonts.css';
 // This brings the style tokens that are css custom variables into the built stylesheet so only one stylesheet for EDS has to be imported.
 import './tokens-dist/css/variables.css';
 
