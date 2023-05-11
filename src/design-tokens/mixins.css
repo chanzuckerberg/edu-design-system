@@ -1,5 +1,4 @@
 @import '../design-tokens/tier-2-usage/typography-usage.css';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
 /**
  * Link button styles
@@ -27,7 +26,7 @@
 
   &:focus-visible {
     /**
-     * Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+     * Make the focus outline invisible but don't remove it. High contrast mode will remove the background
      * color, but it will also make borders 100% opacity black.
      */
     outline: 1px solid transparent;
@@ -41,7 +40,7 @@
   @supports not selector(:focus-visible) {
     &:focus {
       /**
-       * Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+       * Make the focus outline invisible but don't remove it. High contrast mode will remove the background
        * color, but it will also make borders 100% opacity black.
        */
       outline: 1px solid transparent;
