@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.0.2](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.1...v12.0.2) (2023-05-11)
+
+
+### Bug Fixes
+
+* add missing token updates ([#1608](https://github.com/chanzuckerberg/edu-design-system/issues/1608)) ([734863f](https://github.com/chanzuckerberg/edu-design-system/commit/734863f7b43719c0e10895ca3fa04bbc898423e1))
+* ensure [@import](https://github.com/import) rules are before any other styles ([#1611](https://github.com/chanzuckerberg/edu-design-system/issues/1611)) ([855f691](https://github.com/chanzuckerberg/edu-design-system/commit/855f691642cd7346c002a330db884eba1e49736a))
+
 ### [12.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.0...v12.0.1) (2023-05-02)
 
 

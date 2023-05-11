@@ -4,7 +4,7 @@
 
 Education Design System (EDS) is a repository of [presentational](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components used to build React-based products for [Chan Zuckerberg Initiative](https://chanzuckerberg.com/education/).
 
-## Setup
+## Installation
 
 First install the package.
 
@@ -16,7 +16,9 @@ npm install --save @chanzuckerberg/eds
 yarn add @chanzuckerberg/eds
 ```
 
-Import the EDS stylesheet and tokens somewhere in your app, e.g. an `init.ts` or `app.ts` file:
+## App Setup
+
+Import the EDS stylesheet and tokens somewhere in your app root, e.g. an `init.ts` or `app.ts` file:
 
 ```js
 import '@chanzuckerberg/eds/index.css';
@@ -24,15 +26,17 @@ import '@chanzuckerberg/eds/index.css';
 // import '@chanzuckerberg/eds/fonts.css';
 ```
 
-EDS components are designed for the Graphik font, but you may use other fonts by re-defining the `--eds-font-family-primary` CSS property. We also surface an `--eds-font-size-base` property to set your base `rem` font size, eg:
+We also surface an `--eds-font-size-base` property to set your base `rem` font size, eg:
 
 ```css
 html {
-  font-size: var(--eds-font-size-base);
+  font-size: var(
+    --eds-font-size-base
+  ); /* Resets the default pixel-to-rem ratio */
 }
 ```
 
-### Tailwind Config
+### Tailwind Setup
 
 The EDS Tailwind theme provides EDS color [tokens](./docs/TOKENS.md) and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
 
@@ -45,13 +49,14 @@ module.exports = {
 };
 ```
 
-Refer to the [tokens tailwind section](./docs/TOKENS.md#tailwind-class-tokens) for usage guide.
+Refer to the [tokens tailwind section](./docs/TOKENS.md#tailwind-class-tokens) for usage guidelines.
 
 ## Usage
 
-Import any of the components from this package
+Import any of the components from the top-level package:
 
 ```js
+// Import components by name at the top of your file
 import { Heading } from '@chanzuckerberg/eds';
 ```
 
@@ -63,12 +68,20 @@ and then use them in your React components
 </Heading>
 ```
 
+EDS provides a [sizeable suite](https://chanzuckerberg.github.io/edu-design-system/) of components for use, and documentation for available props and overrides.
+
 ## Development
+
+See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for more information on how to contribute to EDS. Also, read our [guidelines](./docs/CODE_GUIDELINES.md) for additional information.
 
 ### Requirements
 
-- Node - if using [nodenv](https://github.com/nodenv/nodenv), you can install the right version with `nodenv install`
-- Yarn - install through either [npm](https://docs.npmjs.com/) (`npm install -g yarn`) or [homebrew](https://brew.sh/) (`brew install yarn`)
+```bash
+# Setup your node environment using nodenv (https://github.com/nodenv/nodenv)
+$ nodenv install
+# Setup yarn using npm or homebrew (https://brew.sh)
+$ brew install yarn # or npm install -g yarn
+```
 
 ### Helpful commands
 
@@ -80,30 +93,6 @@ and then use them in your React components
 | Build package                         | `yarn build`            |
 | Run the component generator           | `yarn create-component` |
 
-### [Icons](./docs/ICONS.md)
-
-### [Publishing](./docs/PUBLISHING.md)
-
-## Working with the codebase
-
-Please refer to the following documentation to learn how to work with this codebase:
-
-- [Code guidelines](./docs/CODE_GUIDELINES.md)
-- [Tokens](./docs/TOKENS.md)
-- [Components](./docs/COMPONENTS.md)
-- [Typography](./docs/TYPOGRAPHY.md)
-- [Layout](./docs/LAYOUT.md)
-- [Icons](./docs/ICONS.md)
-
-## Workflow
-
-- [Contribution guidelines](./docs/CONTRIBUTING.md) - Please refer to these guidelines to learn how to contribute to the library.
-- [Release guidelines](./docs/PUBLISHING.md) - Please refer to these guidelines for instructions on how to publish a new version of the library.
-
-## Support
-
-For questions, feature requests, bugs, and more,feel free to reach out in [#help-edu-design-system](https://chanzuckerbergteam.slack.com/archives/CTFV79JH4) or [office hours](https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1zZguiMQHQLANjfUF-LjmPkbZ29I7ZXfl8TRDAhqDL0o/edit&sa=D&source=calendar&ust=1617083817378000&usg=AOvVaw2MJp29FMPv2AD1WJFX5Q2x) if you have additional questions (_note: these resources can only be accessed by CZI employees_).
-
 ## Project Status
 
 This project is under **active development**. If you would like to contribute, check out the [contribution guidelines](./docs/CONTRIBUTING.md) or [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
@@ -113,3 +102,7 @@ This project is governed under the [Contributor Covenant](https://www.contributo
 ## Reporting Security Issues
 
 See our [Security Readme](https://github.com/chanzuckerberg/edu-design-system/blob/main/SECURITY.md).
+
+## More Information and Support
+
+Please review our Education Design System Site (SSO Required): [/Paper](https://eds.czi.design/0843bc428/p/581284-education-design-system)
