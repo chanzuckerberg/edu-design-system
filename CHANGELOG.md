@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.1.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.1...v12.1.0-alpha.0) (2023-05-12)
+
+
+### Features
+
+* apply advanced popover handling to select components ([c895e09](https://github.com/chanzuckerberg/edu-design-system/commit/c895e091d68547a19500e020528e8d32e19ce7f9))
+
+
+### Bug Fixes
+
+* add missing token updates ([#1608](https://github.com/chanzuckerberg/edu-design-system/issues/1608)) ([734863f](https://github.com/chanzuckerberg/edu-design-system/commit/734863f7b43719c0e10895ca3fa04bbc898423e1))
+
 ### [12.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.0...v12.0.1) (2023-05-02)
 
 
