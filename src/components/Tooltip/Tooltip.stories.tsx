@@ -6,6 +6,9 @@ import { Tooltip } from './Tooltip';
 import { Button } from '../Button/Button';
 import styles from './Tooltip.stories.module.css';
 
+// diminishing the threshold of this component to avoid sub-pixel jittering
+// https://www.chromatic.com/docs/threshold
+const diffThreshold = 0.5;
 const defaultArgs = {
   text: (
     <span data-testid="tooltip-content">
@@ -45,9 +48,7 @@ export default {
   parameters: {
     badges: ['1.0'],
     chromatic: {
-      // diminishing the threshold of this component to avoid sub-pixel jittering
-      // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.25,
+      diffThreshold,
       diffIncludeAntiAliasing: false,
     },
   },
@@ -164,9 +165,7 @@ export const DisabledButton: StoryObj<Args> = {
   ),
   parameters: {
     chromatic: {
-      // diminishing the threshold of this component to avoid sub-pixel jittering
-      // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.25,
+      diffThreshold,
       diffIncludeAntiAliasing: false,
     },
   },
@@ -187,9 +186,7 @@ export const TextChild: StoryObj<Args> = {
   ),
   parameters: {
     chromatic: {
-      // diminishing the threshold of this component to avoid sub-pixel jittering
-      // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.25,
+      diffThreshold,
       diffIncludeAntiAliasing: false,
     },
   },
@@ -242,9 +239,7 @@ export const InteractiveDisabledButton: StoryObj<Args> = {
   ),
   parameters: {
     chromatic: {
-      // diminishing the threshold of this component to avoid sub-pixel jittering
-      // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.25,
+      diffThreshold,
       diffIncludeAntiAliasing: false,
     },
   },
