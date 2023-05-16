@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
@@ -11,7 +10,7 @@ export default {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: ['1.3', BADGE.BETA],
+    badges: ['1.3'],
   },
   decorators: [
     (Story) => (
