@@ -1,10 +1,7 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { Meta, Story, StoryObj } from '@storybook/react';
-import clsx from 'clsx';
 import React from 'react';
 import { Tooltip } from './Tooltip';
-import { Button } from '../Button/Button';
-import styles from './Tooltip.stories.module.css';
 
 // diminishing the threshold of this component to avoid sub-pixel jittering
 // https://www.chromatic.com/docs/threshold
@@ -17,11 +14,7 @@ const defaultArgs = {
       efficitur mauris ac leo semper accumsan.
     </span>
   ),
-  children: (
-    <Button className={clsx(styles['trigger--spacing'])} variant="primary">
-      Tooltip trigger
-    </Button>
-  ),
+  children: <div className="fpo w-3 p-1">&bull;</div>,
   align: 'right',
   // most stories show a visible, non-interactive tooltip.
   // this turns animation off to ensure stable visual snapshots
@@ -46,6 +39,7 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     badges: ['1.0'],
     chromatic: {
       diffThreshold,
@@ -70,52 +64,24 @@ export const DarkVariant: StoryObj<Args> = {
 export const LeftPlacement: StoryObj<Args> = {
   args: {
     align: 'left',
-    children: (
-      <Button
-        className={clsx(
-          styles['trigger--spacing-top'],
-          styles['trigger--spacing-bottom'],
-          styles['trigger--spacing-left-large'],
-        )}
-        variant="primary"
-      >
-        Tooltip trigger
-      </Button>
-    ),
+    children: <div className="fpo w-3 p-1">&bull;</div>,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
   },
 };
 
 export const TopPlacement: StoryObj<Args> = {
   args: {
     align: 'top',
-    children: (
-      <Button
-        className={clsx(
-          styles['trigger--spacing-top'],
-          styles['trigger--spacing-left'],
-        )}
-        variant="primary"
-      >
-        Tooltip trigger
-      </Button>
-    ),
+    children: <div className="fpo w-3 p-1">&bull;</div>,
   },
 };
 
 export const BottomPlacement: StoryObj<Args> = {
   args: {
     align: 'bottom',
-    children: (
-      <Button
-        className={clsx(
-          styles['trigger--spacing-bottom'],
-          styles['trigger--spacing-left'],
-        )}
-        variant="primary"
-      >
-        Tooltip trigger
-      </Button>
-    ),
+    children: <div className="fpo w-3 p-1">&bull;</div>,
   },
 };
 
@@ -135,54 +101,17 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
-export const LongButtonText: StoryObj<Args> = {
+export const LongTriggerText: StoryObj<Args> = {
   args: {
-    children: (
-      <Button
-        className={clsx(styles['trigger--spacing-top'])}
-        variant="primary"
-      >
-        Tooltip trigger with longer text to test placement
-      </Button>
-    ),
-  },
-};
-
-export const DisabledButton: StoryObj<Args> = {
-  render: () => (
-    <div
-      className={clsx(
-        styles['trigger--spacing-top'],
-        styles['trigger--spacing-left'],
-      )}
-    >
-      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
-        <Button disabled variant="primary">
-          Tooltip trigger
-        </Button>
-      </Tooltip>
-    </div>
-  ),
-  parameters: {
-    chromatic: {
-      diffThreshold,
-      diffIncludeAntiAliasing: false,
-    },
+    children: <div className="fpo p-1">Longer text to test placement</div>,
   },
 };
 
 export const TextChild: StoryObj<Args> = {
   render: () => (
-    <div
-      className={clsx(
-        styles['trigger--spacing-top'],
-        styles['trigger--spacing-left'],
-      )}
-    >
-      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
-        <span>Tooltip trigger</span>
-      </Tooltip>
-    </div>
+    <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
+      <span>Tooltip trigger</span>
+    </Tooltip>
   ),
   parameters: {
     chromatic: {
@@ -194,15 +123,10 @@ export const TextChild: StoryObj<Args> = {
 
 export const Interactive: StoryObj<Args> = {
   args: {
-    id: 'id-for-testing',
     // reset prop values defined in defaultArgs
     duration: undefined,
     visible: undefined,
-    children: (
-      <Button className={clsx(styles['trigger--spacing'])} variant="primary">
-        Tooltip trigger
-      </Button>
-    ),
+    children: <button className="fpo w-3 p-1">&bull;</button>,
   },
   decorators: [
     (Story: Story) => (
@@ -214,28 +138,19 @@ export const Interactive: StoryObj<Args> = {
   ],
 };
 
-export const InteractiveDisabledButton: StoryObj<Args> = {
+export const InteractiveDisabled: StoryObj<Args> = {
   args: {
     duration: undefined,
   },
   render: (args) => (
-    <div
-      className={clsx(
-        styles['trigger--spacing-top'],
-        styles['trigger--spacing-left'],
-      )}
+    <Tooltip
+      align="top"
+      childNotInteractive
+      duration={args.duration}
+      text={defaultArgs.text}
     >
-      <Tooltip
-        align="top"
-        childNotInteractive
-        duration={args.duration}
-        text={defaultArgs.text}
-      >
-        <Button disabled variant="primary">
-          Tooltip trigger
-        </Button>
-      </Tooltip>
-    </div>
+      <div className="fpo  p-1">&bull;</div>
+    </Tooltip>
   ),
   parameters: {
     chromatic: {

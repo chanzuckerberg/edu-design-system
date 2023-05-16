@@ -3,13 +3,12 @@
 exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
 <body>
   <div>
-    <button
+    <div
       aria-describedby="tippy-5"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-bottom trigger--spacing-left"
-      type="button"
+      class="fpo w-3 p-1"
     >
-      Tooltip trigger
-    </button>
+      •
+    </div>
   </div>
   <div
     data-tippy-root=""
@@ -57,13 +56,12 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
 exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 <body>
   <div>
-    <button
+    <div
       aria-describedby="tippy-2"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-      type="button"
+      class="fpo w-3 p-1"
     >
-      Tooltip trigger
-    </button>
+      •
+    </div>
   </div>
   <div
     data-tippy-root=""
@@ -108,71 +106,6 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> DisabledButton story renders snapshot 1`] = `
-<body>
-  <div>
-    <div
-      class="trigger--spacing-top trigger--spacing-left"
-    >
-      <span
-        aria-describedby="tippy-8"
-        data-testid="disabled-child-tooltip-wrapper"
-        tabindex="0"
-      >
-        <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled"
-          disabled=""
-          tabindex="-1"
-          type="button"
-        >
-          Tooltip trigger
-        </button>
-      </span>
-    </div>
-  </div>
-  <div
-    data-tippy-root=""
-    id="tippy-8"
-    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, -10px);"
-  >
-    <div
-      class="tippy-box tooltip tooltip--light"
-      data-animation="fade"
-      data-escaped=""
-      data-placement="top"
-      data-reference-hidden=""
-      data-state="visible"
-      role="tooltip"
-      style="max-width: 350px; transition-duration: 200ms;"
-      tabindex="-1"
-    >
-      <div
-        class="tippy-content"
-        data-state="visible"
-        style="transition-duration: 200ms;"
-      >
-        <div>
-          <span
-            data-testid="tooltip-content"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
-          </span>
-        </div>
-      </div>
-      <div
-        class="tippy-arrow"
-        style="position: absolute; left: 0px; transform: translate(3px, 0px);"
-      />
-    </div>
-  </div>
-</body>
-`;
-
 exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
@@ -181,40 +114,32 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
         Hover over the button to make the tooltip appear.
       </p>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-        type="button"
+        class="fpo w-3 p-1"
       >
-        Tooltip trigger
+        •
       </button>
     </div>
   </div>
 </body>
 `;
 
-exports[`<Tooltip /> InteractiveDisabledButton story renders snapshot 1`] = `
+exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
 <body>
   <div>
     <div>
       <p>
         Hover over the button to make the tooltip appear.
       </p>
-      <div
-        class="trigger--spacing-top trigger--spacing-left"
+      <span
+        data-testid="disabled-child-tooltip-wrapper"
+        tabindex="0"
       >
-        <span
-          data-testid="disabled-child-tooltip-wrapper"
-          tabindex="0"
+        <div
+          class="fpo  p-1"
         >
-          <button
-            class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            Tooltip trigger
-          </button>
-        </span>
-      </div>
+          •
+        </div>
+      </span>
     </div>
   </div>
 </body>
@@ -223,13 +148,12 @@ exports[`<Tooltip /> InteractiveDisabledButton story renders snapshot 1`] = `
 exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
 <body>
   <div>
-    <button
+    <div
       aria-describedby="tippy-3"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-top trigger--spacing-bottom trigger--spacing-left-large"
-      type="button"
+      class="fpo w-3 p-1"
     >
-      Tooltip trigger
-    </button>
+      •
+    </div>
   </div>
   <div
     data-tippy-root=""
@@ -277,13 +201,12 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
 exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
 <body>
   <div>
-    <button
+    <div
       aria-describedby="tippy-1"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-      type="button"
+      class="fpo w-3 p-1"
     >
-      Tooltip trigger
-    </button>
+      •
+    </div>
   </div>
   <div
     data-tippy-root=""
@@ -328,16 +251,66 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
+exports[`<Tooltip /> LongText story renders snapshot 1`] = `
 <body>
   <div>
-    <button
-      aria-describedby="tippy-7"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-top"
-      type="button"
+    <div
+      aria-describedby="tippy-6"
+      class="fpo w-3 p-1"
     >
-      Tooltip trigger with longer text to test placement
-    </button>
+      •
+    </div>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-6"
+    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
+  >
+    <div
+      class="tippy-box tooltip tooltip--light"
+      data-animation="fade"
+      data-escaped=""
+      data-placement="right"
+      data-reference-hidden=""
+      data-state="visible"
+      role="tooltip"
+      style="max-width: 350px; transition-duration: 0ms;"
+      tabindex="-1"
+    >
+      <div
+        class="tippy-content"
+        data-state="visible"
+        style="transition-duration: 0ms;"
+      >
+        <div>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             
+            <b>
+              Donec a erat eu augue consequat eleifend non vel sem.
+            </b>
+             Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.
+          </span>
+        </div>
+      </div>
+      <div
+        class="tippy-arrow"
+        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
+<body>
+  <div>
+    <div
+      aria-describedby="tippy-7"
+      class="fpo p-1"
+    >
+      Longer text to test placement
+    </div>
   </div>
   <div
     data-tippy-root=""
@@ -382,78 +355,22 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LongText story renders snapshot 1`] = `
-<body>
-  <div>
-    <button
-      aria-describedby="tippy-6"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
-      type="button"
-    >
-      Tooltip trigger
-    </button>
-  </div>
-  <div
-    data-tippy-root=""
-    id="tippy-6"
-    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
-  >
-    <div
-      class="tippy-box tooltip tooltip--light"
-      data-animation="fade"
-      data-escaped=""
-      data-placement="right"
-      data-reference-hidden=""
-      data-state="visible"
-      role="tooltip"
-      style="max-width: 350px; transition-duration: 0ms;"
-      tabindex="-1"
-    >
-      <div
-        class="tippy-content"
-        data-state="visible"
-        style="transition-duration: 0ms;"
-      >
-        <div>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.
-          </span>
-        </div>
-      </div>
-      <div
-        class="tippy-arrow"
-        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
-      />
-    </div>
-  </div>
-</body>
-`;
-
 exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
 <body>
   <div>
-    <div
-      class="trigger--spacing-top trigger--spacing-left"
+    <span
+      aria-describedby="tippy-8"
+      data-testid="disabled-child-tooltip-wrapper"
+      tabindex="0"
     >
-      <span
-        aria-describedby="tippy-9"
-        data-testid="disabled-child-tooltip-wrapper"
-        tabindex="0"
-      >
-        <span>
-          Tooltip trigger
-        </span>
+      <span>
+        Tooltip trigger
       </span>
-    </div>
+    </span>
   </div>
   <div
     data-tippy-root=""
-    id="tippy-9"
+    id="tippy-8"
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, -10px);"
   >
     <div
@@ -497,13 +414,12 @@ exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
 exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
 <body>
   <div>
-    <button
+    <div
       aria-describedby="tippy-4"
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing-top trigger--spacing-left"
-      type="button"
+      class="fpo w-3 p-1"
     >
-      Tooltip trigger
-    </button>
+      •
+    </div>
   </div>
   <div
     data-tippy-root=""
