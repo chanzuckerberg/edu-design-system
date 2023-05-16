@@ -46,6 +46,13 @@ export default {
       diffIncludeAntiAliasing: false,
     },
   },
+  decorators: [
+    (Story: Story) => (
+      <div className="p-16">
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;

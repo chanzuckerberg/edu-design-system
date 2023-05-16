@@ -4,10 +4,14 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-5"
-      class="fpo w-3 p-1"
+      class="p-16"
     >
-      •
+      <div
+        aria-describedby="tippy-5"
+        class="fpo w-3 p-1"
+      >
+        •
+      </div>
     </div>
   </div>
   <div
@@ -57,10 +61,14 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-2"
-      class="fpo w-3 p-1"
+      class="p-16"
     >
-      •
+      <div
+        aria-describedby="tippy-2"
+        class="fpo w-3 p-1"
+      >
+        •
+      </div>
     </div>
   </div>
   <div
@@ -109,15 +117,19 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
-    <div>
-      <p>
-        Hover over the button to make the tooltip appear.
-      </p>
-      <button
-        class="fpo w-3 p-1"
-      >
-        •
-      </button>
+    <div
+      class="p-16"
+    >
+      <div>
+        <p>
+          Hover over the button to make the tooltip appear.
+        </p>
+        <button
+          class="fpo w-3 p-1"
+        >
+          •
+        </button>
+      </div>
     </div>
   </div>
 </body>
@@ -126,20 +138,24 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
 <body>
   <div>
-    <div>
-      <p>
-        Hover over the button to make the tooltip appear.
-      </p>
-      <span
-        data-testid="disabled-child-tooltip-wrapper"
-        tabindex="0"
-      >
-        <div
-          class="fpo  p-1"
+    <div
+      class="p-16"
+    >
+      <div>
+        <p>
+          Hover over the button to make the tooltip appear.
+        </p>
+        <span
+          data-testid="disabled-child-tooltip-wrapper"
+          tabindex="0"
         >
-          •
-        </div>
-      </span>
+          <div
+            class="fpo  p-1"
+          >
+            •
+          </div>
+        </span>
+      </div>
     </div>
   </div>
 </body>
@@ -149,10 +165,14 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-3"
-      class="fpo w-3 p-1"
+      class="p-16"
     >
-      •
+      <div
+        aria-describedby="tippy-3"
+        class="fpo w-3 p-1"
+      >
+        •
+      </div>
     </div>
   </div>
   <div
@@ -202,10 +222,14 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-1"
-      class="fpo w-3 p-1"
+      class="p-16"
     >
-      •
+      <div
+        aria-describedby="tippy-1"
+        class="fpo w-3 p-1"
+      >
+        •
+      </div>
     </div>
   </div>
   <div
@@ -255,10 +279,14 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-6"
-      class="fpo w-3 p-1"
+      class="p-16"
     >
-      •
+      <div
+        aria-describedby="tippy-6"
+        class="fpo w-3 p-1"
+      >
+        •
+      </div>
     </div>
   </div>
   <div
@@ -306,10 +334,14 @@ exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-7"
-      class="fpo p-1"
+      class="p-16"
     >
-      Longer text to test placement
+      <div
+        aria-describedby="tippy-7"
+        class="fpo p-1"
+      >
+        Longer text to test placement
+      </div>
     </div>
   </div>
   <div
@@ -358,15 +390,19 @@ exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
 exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
 <body>
   <div>
-    <span
-      aria-describedby="tippy-8"
-      data-testid="disabled-child-tooltip-wrapper"
-      tabindex="0"
+    <div
+      class="p-16"
     >
-      <span>
-        Tooltip trigger
+      <span
+        aria-describedby="tippy-8"
+        data-testid="disabled-child-tooltip-wrapper"
+        tabindex="0"
+      >
+        <span>
+          Tooltip trigger
+        </span>
       </span>
-    </span>
+    </div>
   </div>
   <div
     data-tippy-root=""
@@ -415,10 +451,14 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      aria-describedby="tippy-4"
-      class="fpo w-3 p-1"
+      class="p-16"
     >
-      •
+      <div
+        aria-describedby="tippy-4"
+        class="fpo w-3 p-1"
+      >
+        •
+      </div>
     </div>
   </div>
   <div

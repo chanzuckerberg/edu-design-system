@@ -97,15 +97,6 @@ type Plugin = Plugins[number];
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
  *
- * Example usage:
- *
- * ```tsx
- * <Tooltip>
- *   <Button variant="primary">
- *     Tooltip trigger
- *   </Button>
- * </Tooltip>
- * ```
  */
 export const Tooltip = ({
   variant = 'light',
