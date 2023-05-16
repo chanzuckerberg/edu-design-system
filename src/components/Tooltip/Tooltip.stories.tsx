@@ -47,7 +47,7 @@ export default {
     chromatic: {
       // diminishing the threshold of this component to avoid sub-pixel jittering
       // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.8,
+      diffThreshold: 0.25,
       diffIncludeAntiAliasing: false,
     },
   },
@@ -166,7 +166,7 @@ export const DisabledButton: StoryObj<Args> = {
     chromatic: {
       // diminishing the threshold of this component to avoid sub-pixel jittering
       // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.8,
+      diffThreshold: 0.25,
       diffIncludeAntiAliasing: false,
     },
   },
@@ -189,7 +189,7 @@ export const TextChild: StoryObj<Args> = {
     chromatic: {
       // diminishing the threshold of this component to avoid sub-pixel jittering
       // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.8,
+      diffThreshold: 0.25,
       diffIncludeAntiAliasing: false,
     },
   },
@@ -244,7 +244,7 @@ export const InteractiveDisabledButton: StoryObj<Args> = {
     chromatic: {
       // diminishing the threshold of this component to avoid sub-pixel jittering
       // https://www.chromatic.com/docs/threshold
-      diffThreshold: 0.8,
+      diffThreshold: 0.25,
       diffIncludeAntiAliasing: false,
     },
   },
