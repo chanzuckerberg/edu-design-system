@@ -45,9 +45,10 @@ export default {
   parameters: {
     badges: ['1.0'],
     chromatic: {
-      // These stories are very flaky, though we're not sure why.
-      // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
-      disableSnapshot: true,
+      // diminishing the threshold of this component to avoid sub-pixel jittering
+      // https://www.chromatic.com/docs/threshold
+      diffThreshold: 0.8,
+      diffIncludeAntiAliasing: false,
     },
   },
 } as Meta<Args>;
@@ -161,6 +162,14 @@ export const DisabledButton: StoryObj<Args> = {
       </Tooltip>
     </div>
   ),
+  parameters: {
+    chromatic: {
+      // diminishing the threshold of this component to avoid sub-pixel jittering
+      // https://www.chromatic.com/docs/threshold
+      diffThreshold: 0.8,
+      diffIncludeAntiAliasing: false,
+    },
+  },
 };
 
 export const TextChild: StoryObj<Args> = {
@@ -176,6 +185,14 @@ export const TextChild: StoryObj<Args> = {
       </Tooltip>
     </div>
   ),
+  parameters: {
+    chromatic: {
+      // diminishing the threshold of this component to avoid sub-pixel jittering
+      // https://www.chromatic.com/docs/threshold
+      diffThreshold: 0.8,
+      diffIncludeAntiAliasing: false,
+    },
+  },
 };
 
 export const Interactive: StoryObj<Args> = {
@@ -223,6 +240,14 @@ export const InteractiveDisabledButton: StoryObj<Args> = {
       </Tooltip>
     </div>
   ),
+  parameters: {
+    chromatic: {
+      // diminishing the threshold of this component to avoid sub-pixel jittering
+      // https://www.chromatic.com/docs/threshold
+      diffThreshold: 0.8,
+      diffIncludeAntiAliasing: false,
+    },
+  },
   decorators: [
     (Story: Story) => (
       <div>
