@@ -93,7 +93,7 @@
   outline: none;
   padding: var(--eds-size-1);
   margin: 0;
-  color: var(--eds-theme-color-neutral-default);
+  color: var(--eds-theme-color-text-neutral-default);
   background-color: var(--eds-theme-color-form-background);
   transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);

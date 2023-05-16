@@ -64,8 +64,6 @@ type PopoverContextType = {
 export const PopoverContext = createContext<PopoverContextType>({});
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Popover} from "@chanzuckerberg/eds";`
  *
  * General-purpose floating menus that appear proximal to a trigger point
