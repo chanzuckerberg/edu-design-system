@@ -1,8 +1,5 @@
 ignore:
-  - "**/*.stories.ts"
-  - "**/*.stories.tsx"
-  - "**/*.test.ts"
-  - "**/*.test.tsx"
+  - "**/*.?(test|stories).ts?(x)"
 coverage:
   status:
     project:
