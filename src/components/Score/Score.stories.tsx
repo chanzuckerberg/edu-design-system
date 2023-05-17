@@ -39,7 +39,7 @@ export const Table: StoryObj<Args> = {
         <p className="mb-4">
           Score has transparent border for use in Table component
         </p>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

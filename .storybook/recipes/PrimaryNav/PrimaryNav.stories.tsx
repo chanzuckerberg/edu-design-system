@@ -7,13 +7,7 @@ export default {
   title: 'Recipes/PrimaryNav',
   component: PrimaryNav,
   subcomponents: { 'PrimaryNav.Item': PrimaryNav.Item },
-  decorators: [
-    (Story) => (
-      <div style={{ background: '#000' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div style={{ background: '#000' }}>{Story()}</div>],
   args: {
     children: (
       <>

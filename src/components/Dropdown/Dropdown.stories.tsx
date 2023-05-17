@@ -22,7 +22,7 @@ export default {
           margin: '1rem', // Provides spacing to see activity around dropdown.
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],

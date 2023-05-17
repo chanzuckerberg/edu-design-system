@@ -23,7 +23,7 @@ export default {
         // Provides spacing to see focus indicator around checkbox.
         className="m-1"
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],

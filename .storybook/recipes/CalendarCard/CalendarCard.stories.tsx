@@ -5,13 +5,7 @@ import { CalendarCard } from './CalendarCard';
 export default {
   title: 'Recipes/CalendarCard',
   component: CalendarCard,
-  decorators: [
-    (Story) => (
-      <div style={{ margin: '0.25rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div style={{ margin: '0.25rem' }}>{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof CalendarCard>;

@@ -13,41 +13,37 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
   },
-  decorators: [
-    (Story) => (
-      <div className="p-5">
-        <Story />
-      </div>
+  decorators: [(Story) => <div className="p-5">{Story()}</div>],
+  args: {
+    children: (
+      <>
+        <Menu.PlainButton>
+          <Avatar user={{ fullName: 'Josie Sandberg' }} />
+        </Menu.PlainButton>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
     ),
-  ],
-  render: () => (
-    <Menu>
-      <Menu.PlainButton>
-        <Avatar user={{ fullName: 'Josie Sandberg' }} />
-      </Menu.PlainButton>
-      <Menu.Items data-testid="menu-content">
-        <Menu.Item
-          href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
-        >
-          Headless UI Docs
-        </Menu.Item>
-        <Menu.Item
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
-        >
-          MDN: Menu
-        </Menu.Item>
-        {/* eslint-disable-next-line no-alert */}
-        <Menu.Item onClick={() => alert('Item clicked')}>
-          Trigger Action
-        </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
-          Not Possible (disabled)
-        </Menu.Item>
-      </Menu.Items>
-    </Menu>
-  ),
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Avatar>;
