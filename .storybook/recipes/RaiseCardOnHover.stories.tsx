@@ -6,13 +6,7 @@ import { Card } from '../../src/';
 export default {
   title: 'Recipes/RaiseCardOnHover',
   component: Card,
-  decorators: [
-    (Story) => (
-      <div className="p-8">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Card>;

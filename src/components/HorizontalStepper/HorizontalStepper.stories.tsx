@@ -21,9 +21,7 @@ export default {
   decorators: [
     (Story) => (
       // Pushes contents away from storybook borders.
-      <div className="m-4">
-        <Story />
-      </div>
+      <div className="m-4">{Story()}</div>
     ),
   ],
 } as Meta<Args>;

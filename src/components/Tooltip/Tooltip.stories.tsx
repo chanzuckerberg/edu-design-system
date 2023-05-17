@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { Meta, Story, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Tooltip } from './Tooltip';
 
@@ -46,13 +46,7 @@ export default {
       diffIncludeAntiAliasing: false,
     },
   },
-  decorators: [
-    (Story: Story) => (
-      <div className="p-16">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-16">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;
@@ -130,10 +124,10 @@ export const Interactive: StoryObj<Args> = {
     children: <button className="fpo w-3 p-1">&bull;</button>,
   },
   decorators: [
-    (Story: Story) => (
+    (Story) => (
       <div>
         <p>Hover over the button to make the tooltip appear.</p>
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -154,10 +148,10 @@ export const InteractiveDisabled: StoryObj<Args> = {
     </Tooltip>
   ),
   decorators: [
-    (Story: Story) => (
+    (Story) => (
       <div>
         <p>Hover over the button to make the tooltip appear.</p>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

@@ -13,7 +13,7 @@ export default {
   decorators: [
     (Story) => (
       <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

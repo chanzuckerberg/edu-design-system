@@ -12,13 +12,7 @@ export default {
     layout: 'centered',
     badges: ['1.3'],
   },
-  decorators: [
-    (Story) => (
-      <div className="w-96">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="w-96">{Story()}</div>],
   argTypes: {
     fieldNote: {
       type: 'string',
@@ -114,13 +108,7 @@ export const MarkersLargeValues: StoryObj<Args> = {
     step: 2500,
     markers: 'number',
   },
-  decorators: [
-    (Story) => (
-      <div className="w-80">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="w-80">{Story()}</div>],
 };
 
 export const FieldNote: StoryObj<Args> = {

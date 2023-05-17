@@ -403,7 +403,7 @@ export const ModalStepper: StoryObj<ModalStepperArgs> = {
           margin: '0.5rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
