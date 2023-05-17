@@ -35,9 +35,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ margin: '0.25rem', height: '100vh' }}>
-        <Story />
-      </div>
+      <div style={{ margin: '0.25rem', height: '100vh' }}>{Story()}</div>
     ),
   ],
 } as Meta<Args>;

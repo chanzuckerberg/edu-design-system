@@ -13,13 +13,7 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
-  decorators: [
-    (Story) => (
-      <div style={{ margin: '0.25rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div style={{ margin: '0.25rem' }}>{Story()}</div>],
 } as Meta<Args>;
 
 /**

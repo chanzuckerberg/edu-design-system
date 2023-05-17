@@ -27,7 +27,7 @@ export default {
           margin: '0.25rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],

@@ -9,7 +9,7 @@ export default {
     (Story) => (
       <div style={{ margin: '0.25rem', height: '100vh' }}>
         <p>Filters are popover when larger screen size and drawer when not</p>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

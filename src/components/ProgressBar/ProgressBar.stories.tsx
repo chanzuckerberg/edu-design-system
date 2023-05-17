@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story) => (
       <div style={{ backgroundColor: 'white', padding: '0.5rem' }}>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

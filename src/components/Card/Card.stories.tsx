@@ -12,13 +12,7 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
-  decorators: [
-    (Story) => (
-      <div className="p-5">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-5">{Story()}</div>],
   args: {
     children: (
       <>
