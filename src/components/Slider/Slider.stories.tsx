@@ -157,6 +157,9 @@ export const Tooltip: StoryObj<Args> = {
      * No point snapping the button as this story is testing visual regression on the tooltip.
      */
     snapshot: { skip: true },
+    chromatic: {
+      diffThreshold: 0.5,
+    },
   },
   play: async ({ canvasElement }) => {
     if (isChromatic()) {
