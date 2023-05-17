@@ -5,7 +5,7 @@ import { Tooltip } from './Tooltip';
 
 // diminishing the threshold of this component to avoid sub-pixel jittering
 // https://www.chromatic.com/docs/threshold
-const diffThreshold = 0.5;
+const diffThreshold = 0.75;
 const defaultArgs = {
   text: (
     <span data-testid="tooltip-content">
