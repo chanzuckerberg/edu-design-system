@@ -22,7 +22,7 @@
 .menu__button {
   @mixin eds-theme-typography-body-md;
 
-  color: var(--eds-theme-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-subtle);
   background-color: var(--eds-theme-color-form-background);
   border-color: var(--eds-theme-color-form-border);
   font-weight: var(--eds-font-weight-light);
