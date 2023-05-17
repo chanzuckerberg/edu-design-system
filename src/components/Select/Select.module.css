@@ -88,7 +88,7 @@
   @mixin eds-theme-typography-body-md;
   /* Allow select component font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
-  color: var(--eds-theme-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-subtle);
 
   height: var(--eds-size-5);
   width: 100%;
