@@ -120,12 +120,6 @@ export const TextChild: StoryObj<Args> = {
       <span>Tooltip trigger</span>
     </Tooltip>
   ),
-  parameters: {
-    chromatic: {
-      diffThreshold,
-      diffIncludeAntiAliasing: false,
-    },
-  },
 };
 
 export const Interactive: StoryObj<Args> = {
@@ -156,15 +150,9 @@ export const InteractiveDisabled: StoryObj<Args> = {
       duration={args.duration}
       text={defaultArgs.text}
     >
-      <div className="fpo  p-1">&bull;</div>
+      <div className="fpo p-1">&bull;</div>
     </Tooltip>
   ),
-  parameters: {
-    chromatic: {
-      diffThreshold,
-      diffIncludeAntiAliasing: false,
-    },
-  },
   decorators: [
     (Story: Story) => (
       <div>

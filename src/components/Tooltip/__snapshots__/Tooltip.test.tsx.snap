@@ -150,7 +150,7 @@ exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="fpo  p-1"
+            class="fpo p-1"
           >
             •
           </div>
