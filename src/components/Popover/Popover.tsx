@@ -2,7 +2,6 @@ import { Popover as HeadlessPopover } from '@headlessui/react';
 import clsx from 'clsx';
 import { useState, createContext, useContext } from 'react';
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';

@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import type { MouseEventHandler } from 'react';
 import { useContext, useState } from 'react';
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { createPortal } from 'react-dom';
 
 import { usePopper } from 'react-popper';

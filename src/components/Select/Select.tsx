@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import type { ReactElement, ReactNode, ElementType } from 'react';
 
 import React, { useContext, useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { createPortal } from 'react-dom';
 
 import { usePopper } from 'react-popper';
