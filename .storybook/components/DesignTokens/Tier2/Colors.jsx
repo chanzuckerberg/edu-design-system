@@ -7,40 +7,6 @@ export class Tier2Colors extends Component {
   render() {
     return (
       <div>
-        <Section title="Text Colors">
-          <Grid>
-            {filterTokens(`eds-theme-color-text`).map(function (listItem) {
-              return (
-                <TokenSpecimen
-                  inlineStyles={{
-                    color: `var(${listItem.name})`,
-                  }}
-                  key={listItem.name}
-                  name={listItem.name}
-                  value={listItem.value}
-                  variant="typography-title"
-                />
-              );
-            })}
-          </Grid>
-        </Section>
-        <Section title="Icon Colors">
-          <Grid>
-            {filterTokens(`eds-theme-color-icon`).map(function (listItem) {
-              return (
-                <TokenSpecimen
-                  inlineStyles={{
-                    color: `var(${listItem.name})`,
-                  }}
-                  key={listItem.name}
-                  name={listItem.name}
-                  value={listItem.value}
-                  variant="typography-title"
-                />
-              );
-            })}
-          </Grid>
-        </Section>
         <Section title="Background Colors">
           <Grid>
             {filterTokens(`eds-theme-color-background`).map(function (
@@ -79,6 +45,25 @@ export class Tier2Colors extends Component {
           </Grid>
         </Section>
 
+        <Section title="Transparent Colors">
+          <Grid>
+            {filterTokens(`eds-theme-color-transparent`).map(function (
+              listItem,
+            ) {
+              return (
+                <TokenSpecimen
+                  inlineStyles={{
+                    backgroundColor: `var(${listItem.name})`,
+                  }}
+                  key={listItem.name}
+                  name={listItem.name}
+                  value={listItem.value}
+                />
+              );
+            })}
+          </Grid>
+        </Section>
+
         <Section title="Body Colors">
           <Grid>
             {filterTokens(`eds-theme-color-body`).map(function (listItem) {
@@ -96,42 +81,22 @@ export class Tier2Colors extends Component {
           </Grid>
         </Section>
 
-        <Section title="Link Colors">
-          <Grid>
-            {filterTokens(`eds-theme-color-text-link`).map(function (listItem) {
-              return (
-                <GridItem key={listItem.name}>
-                  <TokenSpecimen
-                    inlineStyles={{
-                      color: `var(${listItem.name})`,
-                    }}
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="typography-title"
-                  />
-                </GridItem>
-              );
-            })}
-          </Grid>
-        </Section>
-
         <Section title="Form Colors">
           <Heading className="my-4" size="h3">
-            Form Label
+            Form Background
           </Heading>
           <Grid>
-            {filterTokens(`eds-theme-color-form-label`).map(function (
+            {filterTokens(`eds-theme-color-form-background`).map(function (
               listItem,
             ) {
               return (
                 <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      color: `var(${listItem.name})`,
+                      backgroundColor: `var(${listItem.name})`,
                     }}
                     name={listItem.name}
                     value={listItem.value}
-                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -139,7 +104,7 @@ export class Tier2Colors extends Component {
           </Grid>
 
           <Heading className="my-4" size="h3">
-            Form Input Borders
+            Form Border
           </Heading>
           <Grid>
             {filterTokens(`eds-theme-color-form-border`).map(function (
@@ -163,20 +128,21 @@ export class Tier2Colors extends Component {
           </Grid>
 
           <Heading className="my-4" size="h3">
-            Form Background
+            Form Label
           </Heading>
           <Grid>
-            {filterTokens(`eds-theme-color-form-background`).map(function (
+            {filterTokens(`eds-theme-color-form-label`).map(function (
               listItem,
             ) {
               return (
                 <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      backgroundColor: `var(${listItem.name})`,
+                      backgroundColor: 'transparent',
                     }}
                     name={listItem.name}
                     value={listItem.value}
+                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -189,9 +155,7 @@ export class Tier2Colors extends Component {
             Focus Ring
           </Heading>
           <Grid>
-            {filterTokens(`eds-theme-color-focus-ring`).map(function (
-              listItem,
-            ) {
+            {filterTokens(`eds-theme-color-focus`).map(function (listItem) {
               return (
                 <GridItem key={listItem.name}>
                   <TokenSpecimen
