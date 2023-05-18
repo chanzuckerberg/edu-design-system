@@ -142,7 +142,7 @@ export const Drawer = ({
   useEffect(() => {
     function handleOnClickOutside(e: MouseEvent) {
       if (
-        isActive &&
+        activeFocus &&
         dismissible &&
         windowRef.current &&
         !windowRef.current.contains(e.target as HTMLElement)
@@ -157,7 +157,7 @@ export const Drawer = ({
     return () => {
       document.removeEventListener('click', handleOnClickOutside);
     };
-  }, [isActive, dismissible, handleOnClose, windowRef]);
+  }, [activeFocus, dismissible, handleOnClose, windowRef]);
 
   /**
    * If escape button is struck, close the drawer
