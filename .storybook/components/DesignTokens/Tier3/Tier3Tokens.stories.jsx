@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tier3Colors } from './Colors';
+import { Tier3Colors, Tier3ButtonColors } from './Colors';
 import { Tier3Sizes } from './Sizes';
 
 export default {
@@ -15,6 +15,12 @@ export default {
 
 export const Colors = {
   render: () => <Tier3Colors />,
+};
+
+export const ButtonColors = {
+  // disabling snapshot b/c of the number of button color tokens
+  parameters: { chromatic: { disableSnapshot: true } },
+  render: () => <Tier3ButtonColors />,
 };
 
 export const Sizes = {

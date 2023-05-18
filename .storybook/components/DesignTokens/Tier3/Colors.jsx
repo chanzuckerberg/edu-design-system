@@ -3,7 +3,7 @@ import { Section, Grid, GridItem, Heading } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
-export class Tier3Colors extends Component {
+export class Tier3ButtonColors extends Component {
   render() {
     return (
       <div>
@@ -23,7 +23,15 @@ export class Tier3Colors extends Component {
             })}
           </Grid>
         </Section>
+      </div>
+    );
+  }
+}
 
+export class Tier3Colors extends Component {
+  render() {
+    return (
+      <div>
         <Section title="Text Colors">
           <Grid>
             {filterTokens(`eds-theme-color-text`).map(function (listItem) {
