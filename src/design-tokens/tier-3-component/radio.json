@@ -1,0 +1,17 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "radio": {
+          "brand": {
+            "background": {
+              "@": {
+                "value": "{eds.color.brand.grape.500}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
