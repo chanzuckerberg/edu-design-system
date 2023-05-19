@@ -635,6 +635,13 @@
             }
           }
         },
+        "checkbox": {
+          "brand": {
+            "background": {
+              "@": "#8984E8"
+            }
+          }
+        },
         "focus-ring": {
           "@": "#6B65E2",
           "inverted": "#FFFFFF"
@@ -656,6 +663,13 @@
               "background": {
                 "@": "#8984E8"
               }
+            }
+          }
+        },
+        "radio": {
+          "brand": {
+            "background": {
+              "@": "#8984E8"
             }
           }
         },
