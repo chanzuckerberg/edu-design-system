@@ -189,7 +189,7 @@ export const ScrollMiddle: StoryObj<Args> = {
       <div>
         For Chromatic visual regression testing of the masks on both sides of
         the Tabs. Currently does not work properly on local.
-        <Story />
+        {Story()}
       </div>
     ),
   ],

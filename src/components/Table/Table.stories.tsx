@@ -30,7 +30,7 @@ export default {
           backgroundColor: 'white',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],

@@ -5,13 +5,7 @@ import { Avatar, Card, Hr, Skeleton, Text } from '../../src';
 export default {
   title: 'Recipes/LoadingProfileCard',
   component: Card,
-  decorators: [
-    (Story) => (
-      <div className="p-8">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
   args: {
     isLoading: false,
     className: 'm-2 p-3',

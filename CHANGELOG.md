@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.0.3](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.2...v12.0.3) (2023-05-19)
+
+
+### Bug Fixes
+
+* clean component statuses and tokens ([#1616](https://github.com/chanzuckerberg/edu-design-system/issues/1616)) ([ebc2b36](https://github.com/chanzuckerberg/edu-design-system/commit/ebc2b360aa6664ec9fcfa665cef5654f6c55b438))
+* correct misspelled color token names ([#1618](https://github.com/chanzuckerberg/edu-design-system/issues/1618)) ([88b1f8b](https://github.com/chanzuckerberg/edu-design-system/commit/88b1f8b20fc58858b1f29bc6f34896a993485bd6))
+* group all font imports together ([#1615](https://github.com/chanzuckerberg/edu-design-system/issues/1615)) ([405027a](https://github.com/chanzuckerberg/edu-design-system/commit/405027acdd0c5386983bd340f8be4ff714b822ca))
+
 ### [12.0.2](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.1...v12.0.2) (2023-05-11)
 
 

@@ -11,13 +11,7 @@ import { Slider, InputField, Text, Button, Label } from '../../src';
 export default {
   title: 'Recipes/Sliders',
   component: Slider,
-  decorators: [
-    (Story) => (
-      <div className="p-8">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
   argTypes: {
     fieldNote: {
       type: 'string',

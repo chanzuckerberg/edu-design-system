@@ -34,7 +34,7 @@ export default {
           margin: '1rem', // Provides spacing around storybook edges
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
