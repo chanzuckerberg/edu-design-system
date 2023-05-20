@@ -94,6 +94,12 @@ For testing a release to build confidence.
 git push --follow-tags origin <branch> && npm publish --tag alpha
 ```
 
+3. Now, publish to the GitHub Registry
+
+```
+npm publish --tag alpha --registry=https://npm.pkg.github.com/
+```
+
 #### Editing the CHANGELOG
 
 1. Run `git log` and note the version tag on the latest (release) commit

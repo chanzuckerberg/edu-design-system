@@ -13,7 +13,7 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
   },
-  decorators: [(Story) => <div className="p-5">{Story()}</div>],
+  decorators: [(Story) => <div className="m-10 p-8">{Story()}</div>],
   args: {
     children: (
       <>
