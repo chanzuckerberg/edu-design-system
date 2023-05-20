@@ -17,11 +17,10 @@ EDS is a [themeable design system](https://bradfrost.com/blog/post/creating-them
   - [Typography](#tier-1-typography)
   - [Z-index](#tier-1-z-index)
 - [Tier 2 Usage Tokens](#tier-2-usage-tokens)
-  - [Borders](#tier-2-borders)
-  - [Colors](#tier-2-colors)
-  - [Forms](#tier-2-forms)
-  - [Shadows](#tier-2-shadows)
-- [Tier 3 Component Variables](#tier-3-component-variables)
+  - [Border](#tier-2-borders)
+  - [Color](#tier-2-colors)
+  - [Form](#tier-2-forms)
+- [Tier 3 Component Tokens](#tier-3-component-tokens)
 - [Tailwind Class Tokens](#tailwind-class-tokens)
 
 ## Style Dictionary
@@ -38,10 +37,12 @@ Design tokens live at `src/design-tokens`, and follows this directory structure:
 design-tokens
  |--tier-1-definitions
  |--tier-2-usage
+ |--tier-3-component
 ```
 
-- `tier-1-definitions` define the brand’s core design values, serving as the raw materials for the UI’s visual design.
+- `tier-1-definitions` define the brand's core design values, serving as the raw materials for the UI's visual design.
 - `tier-2-usage` house the semantic design values, which take Tier 1 token values and map them to specific UI applications.
+- `tier-3-component` house the component-specific design values, which allow for more nuanced theming for components.
 
 All tokens are prefixed with `eds-` to serve as a namespace and identifier for working with the system in production applications.
 
@@ -49,7 +50,7 @@ EDS's token architecture and nomenclature is as follows:
 
 ## Tier 1 tokens
 
-Tier 1 tokens define the brand’s design values. They can be thought of as a brand style guide converted into variables. Tier1 token values should not imply any UI usage, and should not be used directly by components. Instead, Tier 1 values should be mapped to Tier 2 values.
+Tier 1 tokens define the brand's design values. They can be thought of as a brand style guide converted into variables. Tier1 token values should not imply any UI usage, and should not be used directly by components. Instead, Tier 1 values should be mapped to Tier 2 values.
 
 ### Animation <a name="tier-1-animation"></a>
 
@@ -59,12 +60,14 @@ Tier 1 tokens define the brand’s design values. They can be thought of as a br
 
 ### Borders <a name="tier-1-borders"></a>
 
-- `border-width-` for border widths. Typically default to abbreviated t-shirt sizes (e.g. `sm`, `md`, `lg`, `xl`) in accordance with the [EDS code guidelines](./?path=/story/documentation-guidelines-code-guidelines--page).
-- `border-radius-` for border radius values. Typically default to t-shirt sizes, although sometimes "pill" or "round" might also be present
+- `border-width-` for border widths. EDS defaults to abbreviated t-shirt sizes (e.g. `sm`, `md`, `lg`, `xl`) in accordance with the [EDS code guidelines](./?path=/story/documentation-guidelines-code-guidelines--page).
+- `border-radius-` for border radius values. EDS defaults to t-shirt sizes, with additional "full" and "round"
 
 ### Breakpoints <a name="tier-1-breakpoints"></a>
 
-- `bp-` for breakpoint. Typically default to t-shirt sizes (e.g. `bp-sm`, `bp-md`, etc). EDS[deliberately avoids](https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/) using "mobile" and "tablet" and "desktop" as values, despite it being a common nomenclature. NOTE: These are currently defined directly as SCSS variables due to lack of support at the moment for CSS custom property media queries.
+- `bp-` for breakpoint. Typically default to t-shirt sizes (e.g. `bp-sm`, `bp-md`, etc). EDS[deliberately avoids](https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/) using "mobile" and "tablet" and "desktop" as values, despite it being a common nomenclature. 
+
+**NOTE**: These are currently defined directly as SCSS variables due to lack of support at the moment for CSS custom property media queries.
 
 ### Colors <a name="tier-1-colors"></a>
 
@@ -84,133 +87,88 @@ Tier 1 tokens define the brand’s design values. They can be thought of as a br
 
 ### Size <a name="tier-1-size"></a>
 
-- `size-base-unit-` describes the base unit which most size-based units (`margin`, `padding`, `width`, `height`, etc) will use. This should be set to `0.5rem` (which is equivalent to `8px`) in order to adhere to an [8-point grid](https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632).
+- `size-base-unit-` describes the base unit which most size-based units (`margin`, `padding`, `width`, `height`, etc) will use. We set this to `0.5rem` (which is equivalent to `8px`) in order to adhere to an [8-point grid](https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632).
 
 ### Typography <a name="tier-1-typography"></a>
 
-- `font-family-` for font family definitions. EDS defaults to "primary" "secondary" and "tertiary" for font-family definitions.
-- `font-size-` for font size definitions. Default to t-shirt sizes (e.g. `font-size-sm`, `font-size-md`, `font-size-lg`, and so on).
+- `font-family-` for font family definitions. EDS defaults to "primary" and "secondary" for font-family definitions.
+- `font-size-` for font size definitions. Font sizes are based on pixel sizes and use `rem` (e.g., `font-size-16` = `1rem`)
+- `font-weight-` for the different weights. EDS defaults to "light", "medium", and "bold".
+- `letter-spacing` for the spacing between text characters. This uses t-shirt sizes.
 - `line-height-` for line height definitions. These are unitless relative values. Default to t-shirt sizes (e.g. `line-height-lg: 1.5` )
+
+In addition to these tokens, we define a set of typography mixins which map font famil, size, and line height in discrete categories. Refer to the typography page in storybook for more information.
 
 ### Z-index <a name="tier-1-z-index"></a>
 
-- `z-index-` controls an item’s position in the stacking order.
+- `z-index-` controls an item's position in the stacking order. For now, EDS defaults to values that map to "top", "bottom", and some set z-index values (e.g., 0, 100, 200, 300, 400, 500).
 
 ## Tier 2 usage tokens
 
-Tier 2 tokens define a semantic UI layer. Tier 2 values take Tier 1 token values and map them to specific UI applications, which are in then used by individual component styles.
+Tier 2 tokens define a semantic UI layer. Tier 2 values use Tier 1 token values, mapping them to specific UI applications, which are in then used by individual component styles.
 
-All Tier 2 tokens begin with the prefix `eds-theme-`. For specific documentation around specific theme tokens, please refer to the token page in Storybook, which articulate the role of each theme tokens.
+All Tier 2 tokens begin with the prefix `eds-theme-`. For specific documentation around specific theme tokens, please refer to the token page in Storybook, which articulate the role of each theme token.
 
 ### Borders <a name="tier-2-borders"></a>
 
-- `border-width` defines the border width for the thickness. Typically set to `border-width-sm` (which is typically set to `1px`).
-- `border-radius` defines the border radius value that gets applied by default to buttons, form inputs, and bordered components like cards.
+- `border-width` defines the border width for the thickness. EDS defaults to `border-width-sm`.
 
 ### Colors <a name="tier-2-colors"></a>
 
-Tier 2 color tokens follow a "foreground/background/border" convention in order to assure colors are properly used and that adequate color contrast is always achieved. Here's a breakdown of this convention:
+Tier 2 color tokens specify categorization of colors, given a specific use within an application. The naming categories specify where and when they are used, but not which components they are used for, specifically. For that, we would use [tier-3 tokens](#tier-3-component-tokens).
 
-- `foreground` for text and icon fills (only applied to `color` and `fill` properties)
-- `background` for background values (only applied to `background` properties)
-- `border` for border values (only applied to `border-color` and `box-shadow` if used to mimic a border)
+Each token in this group is prefixed by `--eds-theme-color` and has certain suffixes based on the the broad categorization.
 
-In addition to the "foreground/background/border" convention, an `inverted` convention is used to manage colors for components rendered on a dark background.
-
-The structure for Tier 2 color token values is as follows:
-
-```css
---eds-theme-[property]-[semantic definition or element]-[foreground|background|border]-[optional inverted]
-```
-
-This language can take some getting used to, so it may be best to break down an example:
-
-```css
---eds-theme-color-text-neutral-default-inverse
-```
-
-- `eds-` means the token value is coming from the design system
-- `theme-` means this is a Tier 2 token value
-- `color-` describes the token category
-- `body-` is targeting the specific UI application
-- `foreground-` is targeting the text and icon fill color
-- `inverted` is targeting the body text _when rendered on a dark background_.
-
-Putting it all together, this token value says "Target the body text color when rendered on a dark background".
-
-#### Body colors
-
-- `body-foreground` defines body text color
-- `body-background` defines body background color
-- `body-foreground-inverted` defines body text color when rendered on a dark background
-- `body-background-inverted` defines body background color that is a dark value
-
-#### Brand colors
-
-Brand Tier 2 colors define the most branded colors of the UI.
-
-- `primary-foreground` defines a branded text color
-- `primary-foreground-hover` defines a branded text hover color
-- `primary-background` defines a branded background color
-- `primary-background-hover` defines a branded background hover color
-- `primary-border` defines a branded border
-- `primary-border-hover` defines a branded hover border
-- `primary-foreground-inverted` defines a branded text color rendered on a dark background
-
-Additional branded values ("secondary", "tertiary", "accent", "supports", etc) can be added to accomplish desired UI results.
-
-#### Disabled colors
-
-- `disabled-foreground` defines a disabled text color
-- `disabled-background` defines a disabled background color
-- `disabled-border` defines a disabled border
-
-#### Focus colors
-
-- `focus-ring` defines the focus ring color used for component `:focus` state
-
-#### Link colors
-
-- `link-foreground` defines text link color. By default, this is mapped to `eds-theme-color-primary-foreground`.
-- `link-foreground-hover` defines text link hover color
-
-#### Neutral colors
-
-- `neutral-subtle` defines a subtle border
-- `neutral-medium` defines a medium border
-- `neutral-bold` defines a pronounced border
-
-#### Text highlight colors
-
-Defines text highlight values
+For more information, [refer to Storybook](/story/design-tokens-tier-2-usage--colors) for the existing tokens and their naming.
 
 ### Forms <a name="tier-2-forms"></a>
 
 Defines the border width, radius, and color properties for form controls. These values are all mapped to other Tier 2 values and are considered optional in case remapping is required.
 
-### Shadows <a name="tier-2-shadows"></a>
+- `form-border-width` defines the default border width for any form element
+- `form-border-radius` defines the default border radius used on any form element's border
 
-- `box-shadow` defines the shadow value that gets applied by default to buttons and other "elevated" components like cards.
-
-## Tier 3 component variables
+## Tier 3 Component Tokens <a name="tier-3-component-tokens"></a>
 
 Tier 3 component variables represent each component's specific values.
+
+Naming for tier-3 tokens will use the following prefix:
+
+```css
+--eds-theme-[property]-[component-name]
+```
+
+With the rest matching a corresponding use for the given component. For example, if a modal is to have a specific header background color, the token to use is:
+
+```css
+--eds-theme-color-modal-brand-header-background
+```
+
+The suffix here is arbitrary, but uses similar naming to tier two tokens. When possible, any new tier 3 tokens should be a more specifically named tier 2 token, to keep the naming consistent.
+
+See the current set of tier 3 tokens [in storybook](/story/design-tokens-tier-3-component--colors).
+
 
 ## Tailwind Class Tokens
 
 If the EDS tailwind config theme is being used, Tier 2 and tier 3 color tokens are available as a part of tailwind utility classes, and can be used to apply to specific attributes to a component. Background(prefix: bg-), border(prefix: border-), and text(prefix: text-) colors will only be available for themselves specifically. e.g.:
 
-```jsx
-<div
-  className="
-    bg-brand-grape-100 // will NOT work since tier 1 colors are not available
-    bg-button-icon-brand // will work since button colors are available across all color utility classes
-    bg-link-neutral // will NOT work since background utility classes don't have border colors
-    border-link-neutral // will work since border colors are available for border color utility classes
+### These will not work
 
-    bg-brand-primary-strong
-    border-brand-primary-strong // will reflect respective color utility tokens
-      (background-brand-primary-strong and border-brand-primary-strong)
-  "
->
+```html
+<!-- will NOT work since tier 1 colors are not available -->
+<div className="bg-brand-grape-100"></div>
+<!-- will NOT work since background utility classes don't have border colors -->
+<div className="bg-link-neutral"></div>
+```
+
+### These will work
+```html
+<!-- will work since button colors are available across all color utility classes -->
+<div className="bg-button-icon-brand"></div>
+<!-- will work since border colors are available for border color utility classes -->
+<div className="border-link-neutral"></div>
+<!-- will reflect respective color utility tokens
+      (background-brand-primary-strong and border-brand-primary-strong) -->
+<div className="bg-brand-primary-strong border-brand-primary-strong"></div>
 ```
