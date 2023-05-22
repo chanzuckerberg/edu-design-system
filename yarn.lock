@@ -1686,12 +1686,12 @@ __metadata:
     "@tippyjs/react": ^4.2.6
     "@types/jest": ^29.5.1
     "@types/lodash.debounce": ^4.0.7
-    "@types/node": ^18.16.8
+    "@types/node": ^18.16.13
     "@types/react": ^18.2.6
     "@types/react-beautiful-dnd": ^13.1.4
     "@types/react-dom": ^18.2.4
     "@types/react-portal": ^4.0.4
-    axe-core: 4.7.0
+    axe-core: 4.7.1
     chromatic: ^6.17.4
     clsx: ^1.2.1
     codecov: ^3.8.3
@@ -1725,14 +1725,14 @@ __metadata:
     react-focus-lock: ^2.9.4
     react-popper: ^2.3.0
     react-portal: ^4.2.2
-    rollup: ^3.21.6
+    rollup: ^3.22.0
     rollup-plugin-postcss: ^4.0.2
     size-limit: ^8.2.4
     snake-case: ^3.0.4
     standard-version: ^9.5.0
     storybook-css-modules-preset: ^1.1.1
     style-dictionary: ^3.8.0
-    stylelint: ^15.6.1
+    stylelint: ^15.6.2
     stylelint-config-recommended: ^10.0.1
     tailwindcss: ^3.3.2
     ts-jest: ^29.1.0
@@ -4846,10 +4846,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.16.8":
-  version: 18.16.9
-  resolution: "@types/node@npm:18.16.9"
-  checksum: 7fe0ef372ba8b157bd646efe29b0ece92ccb9f455171a7ceb4c92d6b490789ff0f14411b1dc6ad203351a0efa2b435072dfab5566fb6eaaaa5cd549e1fb22afa
+"@types/node@npm:^18.16.13":
+  version: 18.16.14
+  resolution: "@types/node@npm:18.16.14"
+  checksum: c11cb3c787236414efe58240ae71854971592554d82ff9d201876ce7cafd51c37aaa001c63602d002e8238614d7331bd6d48ac4c1c0caa826799980b6846fb08
   languageName: node
   linkType: hard
 
@@ -6529,10 +6529,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:4.7.0":
-  version: 4.7.0
-  resolution: "axe-core@npm:4.7.0"
-  checksum: f086bcab42be1761ba2b0b127dec350087f4c3a853bba8dd58f69d898cefaac31a1561da23146f6f3c07954c76171d1f2ce460e555e052d2b02cd79af628fa4a
+"axe-core@npm:4.7.1":
+  version: 4.7.1
+  resolution: "axe-core@npm:4.7.1"
+  checksum: ff6fb92d6cadb749977af72b7d28009dec2b1842d4fdc4114a295ce973a39d0ac477e541be360eb9482a8d63f55840196813d7d892c0bd8437f52d9f7349c788
   languageName: node
   linkType: hard
 
@@ -19125,9 +19125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^3.21.6":
-  version: 3.21.7
-  resolution: "rollup@npm:3.21.7"
+"rollup@npm:^3.22.0":
+  version: 3.23.0
+  resolution: "rollup@npm:3.23.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -19135,7 +19135,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 44372a1e6fbd1941d6cb230b2a3de6d86861ca7523792757c9fe1d254ae4cd645f5dae27d93c7b1e02c60945d2eadd8c74a99033bd8328eda84949086330d804
+  checksum: 0721065cf725c5611815be61d2b01f20b4d0027e17035f6e76384d38396b56cf6ed21a3db78eb004d9db4d24c8a6a19da4563b4ff96b5dd36f0a0f7a3baf85e8
   languageName: node
   linkType: hard
 
@@ -20459,9 +20459,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^15.6.1":
-  version: 15.6.1
-  resolution: "stylelint@npm:15.6.1"
+"stylelint@npm:^15.6.2":
+  version: 15.6.2
+  resolution: "stylelint@npm:15.6.2"
   dependencies:
     "@csstools/css-parser-algorithms": ^2.1.1
     "@csstools/css-tokenizer": ^2.1.1
@@ -20507,7 +20507,7 @@ __metadata:
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.js
-  checksum: 192ac3b5185cb59aaead62e1e2e53c42ffc9eba38e471bcb9e3a34381f688d2194a48ae5a356759e2368a9764626d2c6131dffd31933244519422ebcf76f6da6
+  checksum: b44949053b0500226d718d810af64a10b43d8faeed6c464ab1c8bebd8ace488135b47e3a6e4a97ae552d7e14f011dce82c6c69624e463476f8408751b7544b2f
   languageName: node
   linkType: hard
 
