@@ -84,7 +84,7 @@
   --tag-secondary-color: var(
     --eds-theme-color-background-brand-primary-default
   );
-  --tag-outline-color: var(--eds-theme-color-border-brand-primary);
+  --tag-outline-color: var(--eds-theme-color-border-brand-primary-default);
 }
 
 /**
