@@ -1,0 +1,16 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "progress-bar": {
+          "background": {
+            "value": "{eds.color.neutral.200}"
+          },
+          "border": {
+            "value": "{eds.color.neutral.200}"
+          }
+        }
+      }
+    }
+  }
+}

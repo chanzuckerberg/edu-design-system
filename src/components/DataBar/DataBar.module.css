@@ -14,9 +14,9 @@
   );
   height: var(--data-bar-height);
 
-  background-color: var(--eds-theme-color-background-neutral-subtle);
+  background-color: var(--eds-theme-color-data-bar-background);
 
-  border: var(--eds-theme-color-border-neutral-default) solid
+  border: var(--eds-theme-color-data-bar-border) solid
     var(--eds-theme-border-width);
   /* Rounds the sides rather than making the bar elliptical. */
   border-radius: var(--eds-border-radius-full);

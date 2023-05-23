@@ -642,6 +642,10 @@
             }
           }
         },
+        "data-bar": {
+          "background": "#F4F6F8",
+          "border": "#C0C4C8"
+        },
         "focus-ring": {
           "@": "#6B65E2",
           "inverted": "#FFFFFF"
@@ -665,6 +669,10 @@
               }
             }
           }
+        },
+        "progress-bar": {
+          "background": "#E7E8EA",
+          "border": "#E7E8EA"
         },
         "radio": {
           "brand": {
