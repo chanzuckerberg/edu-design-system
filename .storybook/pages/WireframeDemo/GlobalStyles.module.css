@@ -69,7 +69,7 @@
   --eds-theme-color-body-background: var(--wireframe-gray-a);
   --eds-theme-color-border-brand-primary-strong: var(--wireframe-gray-c);
   --eds-theme-color-border-brand-primary-subtle: var(--wireframe-gray-a);
-  --eds-theme-color-border-brand-primary: var(--wireframe-gray-b);
+  --eds-theme-color-border-brand-primary-default: var(--wireframe-gray-b);
   --eds-theme-color-border-disabled: var(--wireframe-gray-b);
   --eds-theme-color-border-grade-complete: var(--wireframe-gray-b);
   --eds-theme-color-border-grade-revise-default: var(--wireframe-gray-b);

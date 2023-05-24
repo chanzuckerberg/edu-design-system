@@ -250,6 +250,7 @@
           "brand": {
             "primary": {
               "subtle": "#E0E0F9",
+              "default": "#C4C1F3",
               "@": "#C4C1F3",
               "strong": "#A6A3EE"
             }

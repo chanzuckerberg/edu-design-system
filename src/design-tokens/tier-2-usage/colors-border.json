@@ -42,8 +42,12 @@
               "subtle": {
                 "value": "{eds.color.brand.grape.200}"
               },
-              "@": {
+              "default": {
                 "value": "{eds.color.brand.grape.300}"
+              },
+              "@": {
+                "value": "{eds.theme.color.border.brand.primary.default}",
+                "comment": "This token is deprecated and will be removed in a future EDS release"
               },
               "strong": {
                 "value": "{eds.color.brand.grape.400}"
