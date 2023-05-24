@@ -147,6 +147,7 @@ export const EdsThemeColorTextGradeRevise = '#21272D';
 export const EdsThemeColorTextGradeStop = '#BD0044';
 export const EdsThemeColorTextDisabled = '#C0C4C8';
 export const EdsThemeColorTextBrandDefault = '#5751D2';
+export const EdsThemeColorTextBrandPrimary = '#5751D2'; // deprecated
 export const EdsThemeColorTransparentBlack0 = 'rgba(0, 0, 0, 0)';
 export const EdsThemeColorTransparentBlack30 = 'rgba(0, 0, 0, .3)';
 export const EdsThemeColorTransparentWhite0 = 'rgba(255, 255, 255, 0)';

@@ -43,6 +43,10 @@
           "brand": {
             "default": {
               "value": "{eds.color.brand.grape.700}"
+            },
+            "primary": {
+              "value": "{eds.theme.color.text.brand.default}",
+              "comment": "deprecated"
             }
           }
         }
