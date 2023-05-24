@@ -339,7 +339,7 @@
   --eds-theme-color-icon-utility-warning-hover: var(--wireframe-gray-c);
   --eds-theme-color-icon-utility-warning: var(--wireframe-gray-c);
   --eds-theme-color-modal-brand-header-background: var(--wireframe-gray-c);
-  --eds-theme-color-text-brand-primary: var(--wireframe-gray-d);
+  --eds-theme-color-text-brand-default: var(--wireframe-gray-d);
   --eds-theme-color-text-disabled: var(--wireframe-gray-b);
   --eds-theme-color-text-grade-complete: var(--wireframe-gray-d);
   --eds-theme-color-text-grade-revise: var(--wireframe-gray-e);

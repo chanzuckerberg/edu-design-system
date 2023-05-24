@@ -80,7 +80,7 @@
 }
 
 :where(.tag--brand) {
-  --tag-primary-color: var(--eds-theme-color-text-brand-primary);
+  --tag-primary-color: var(--eds-theme-color-text-brand-default);
   --tag-secondary-color: var(
     --eds-theme-color-background-brand-primary-default
   );
