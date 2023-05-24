@@ -79,7 +79,7 @@
   color: var(--eds-theme-color-text-utility-error);
 }
 .heading--brand {
-  color: var(--eds-theme-color-text-brand-primary);
+  color: var(--eds-theme-color-text-brand-default);
 }
 /* stylelint-disable-next-line eds/no-tier-1-color-variable */
 .heading--info {

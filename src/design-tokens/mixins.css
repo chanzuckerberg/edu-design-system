@@ -167,7 +167,7 @@
   --messaging-icon-color: var(--eds-theme-color-icon-brand-primary);
 
   background: var(--eds-theme-color-background-brand-primary-default);
-  color: var(--eds-theme-color-text-brand-primary);
+  color: var(--eds-theme-color-text-brand-default);
 }
 
 @define-mixin messagingNeutral {

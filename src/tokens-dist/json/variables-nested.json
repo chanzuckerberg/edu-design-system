@@ -366,6 +366,7 @@
           },
           "disabled": "#C0C4C8",
           "brand": {
+            "default": "#5751D2",
             "primary": "#5751D2"
           }
         },
