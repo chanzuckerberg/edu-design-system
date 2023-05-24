@@ -42,11 +42,11 @@
           },
           "brand": {
             "default": {
-              "value": "{eds.color.brand.grape.700}"
+              "value": "var(--eds-theme-color-text-brand-primary)"
             },
             "primary": {
-              "value": "{eds.theme.color.text.brand.default}",
-              "comment": "deprecated"
+              "value": "{eds.color.brand.grape.700}",
+              "comment": "This token is deprecated. Please use eds-theme-color-text-brand-default instead."
             }
           }
         }

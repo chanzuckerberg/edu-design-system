@@ -91,8 +91,9 @@ export const EdsThemeColorBorderNeutralDefaultHover = '#999EA3';
 export const EdsThemeColorBorderNeutralStrong = '#999EA3';
 export const EdsThemeColorBorderNeutralStrongHover = '#878C90';
 export const EdsThemeColorBorderBrandPrimarySubtle = '#E0E0F9';
-export const EdsThemeColorBorderBrandPrimaryDefault = '#C4C1F3';
-export const EdsThemeColorBorderBrandPrimary = '#C4C1F3'; // This token is deprecated and will be removed in a future EDS release
+export const EdsThemeColorBorderBrandPrimaryDefault =
+  'var(--eds-theme-color-border-brand-primary)';
+export const EdsThemeColorBorderBrandPrimary = '#C4C1F3'; // This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead
 export const EdsThemeColorBorderBrandPrimaryStrong = '#A6A3EE';
 export const EdsThemeColorBorderUtilitySuccessSubtle = '#B7E9CE';
 export const EdsThemeColorBorderUtilitySuccessDefault = '#8FDCB3';
@@ -146,8 +147,9 @@ export const EdsThemeColorTextGradeComplete = '#007249';
 export const EdsThemeColorTextGradeRevise = '#21272D';
 export const EdsThemeColorTextGradeStop = '#BD0044';
 export const EdsThemeColorTextDisabled = '#C0C4C8';
-export const EdsThemeColorTextBrandDefault = '#5751D2';
-export const EdsThemeColorTextBrandPrimary = '#5751D2'; // deprecated
+export const EdsThemeColorTextBrandDefault =
+  'var(--eds-theme-color-text-brand-primary)';
+export const EdsThemeColorTextBrandPrimary = '#5751D2'; // This token is deprecated. Please use eds-theme-color-text-brand-default instead.
 export const EdsThemeColorTransparentBlack0 = 'rgba(0, 0, 0, 0)';
 export const EdsThemeColorTransparentBlack30 = 'rgba(0, 0, 0, .3)';
 export const EdsThemeColorTransparentWhite0 = 'rgba(255, 255, 255, 0)';

@@ -156,8 +156,8 @@
   --eds-theme-color-border-neutral-strong: #999EA3;
   --eds-theme-color-border-neutral-strong-hover: #878C90;
   --eds-theme-color-border-brand-primary-subtle: #E0E0F9;
-  --eds-theme-color-border-brand-primary-default: #C4C1F3;
-  --eds-theme-color-border-brand-primary: #C4C1F3; /* This token is deprecated and will be removed in a future EDS release */
+  --eds-theme-color-border-brand-primary-default: var(--eds-theme-color-border-brand-primary);
+  --eds-theme-color-border-brand-primary: #C4C1F3; /* This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
   --eds-theme-color-border-brand-primary-strong: #A6A3EE;
   --eds-theme-color-border-utility-success-subtle: #B7E9CE;
   --eds-theme-color-border-utility-success-default: #8FDCB3;
@@ -211,8 +211,8 @@
   --eds-theme-color-text-grade-revise: #21272D;
   --eds-theme-color-text-grade-stop: #BD0044;
   --eds-theme-color-text-disabled: #C0C4C8;
-  --eds-theme-color-text-brand-default: #5751D2;
-  --eds-theme-color-text-brand-primary: #5751D2; /* deprecated */
+  --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
+  --eds-theme-color-text-brand-primary: #5751D2; /* This token is deprecated. Please use eds-theme-color-text-brand-default instead. */
   --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0);
   --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3);
   --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0);
