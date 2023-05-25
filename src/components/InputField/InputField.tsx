@@ -50,13 +50,13 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   isError?: boolean;
   /**
-   * Maximum value allowed for the input, if type is 'number'. When the input value matches this maximum, the plus button becomes disabled.
+   * Maximum value allowed for the input, if type is 'number'.
    */
-  max?: number;
+  max?: number | string | undefined;
   /**
-   * Minimum value allowed for the input, if type is 'number'. When the input value matches this minimum, the minus button becomes disabled.
+   * Minimum value allowed for the input, if type is 'number'.
    */
-  min?: number;
+  min?: number | string | undefined;
   /**
    * HTML name attribute for the input
    */
