@@ -663,6 +663,32 @@
           },
           "label": "#383C43"
         },
+        "link": {
+          "brand": {
+            "text": {
+              "@": "#21272D",
+              "hover": "#5751D2",
+              "focus": "#FFFFFF"
+            },
+            "text-decoration": {
+              "@": "#5751D2",
+              "hover": "#5751D2",
+              "focus": "#FFFFFF"
+            }
+          },
+          "neutral": {
+            "text": {
+              "@": "#21272D",
+              "hover": "#5751D2",
+              "focus": "#FFFFFF"
+            },
+            "text-decoration": {
+              "@": "#21272D",
+              "hover": "#5751D2",
+              "focus": "#FFFFFF"
+            }
+          }
+        },
         "modal": {
           "brand": {
             "header": {

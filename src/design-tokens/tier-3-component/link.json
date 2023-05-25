@@ -1,0 +1,58 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "link": {
+          "brand": {
+            "text": {
+              "@": {
+                "value": "{eds.color.neutral.800}"
+              },
+              "hover": {
+                "value": "{eds.color.brand.grape.700}"
+              },
+              "focus": {
+                "value": "{eds.color.neutral.white}"
+              }
+            },
+            "text-decoration": {
+              "@": {
+                "value": "{eds.color.brand.grape.700}"
+              },
+              "hover": {
+                "value": "{eds.color.brand.grape.700}"
+              },
+              "focus": {
+                "value": "{eds.color.neutral.white}"
+              }
+            }
+          },
+          "neutral": {
+            "text": {
+              "@": {
+                "value": "{eds.color.neutral.800}"
+              },
+              "hover": {
+                "value": "{eds.color.brand.grape.700}"
+              },
+              "focus": {
+                "value": "{eds.color.neutral.white}"
+              }
+            },
+            "text-decoration": {
+              "@": {
+                "value": "{eds.color.neutral.800}"
+              },
+              "hover": {
+                "value": "{eds.color.brand.grape.700}"
+              },
+              "focus": {
+                "value": "{eds.color.neutral.white}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

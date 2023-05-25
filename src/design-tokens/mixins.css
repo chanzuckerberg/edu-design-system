@@ -8,9 +8,9 @@
   font-weight: var(--eds-font-weight-medium);
   line-height: inherit;
 
-  color: var(--eds-theme-color-text-link-neutral);
+  color: var(--eds-theme-color-link-brand-text);
   text-decoration: underline;
-  text-decoration-color: var(--eds-theme-color-border-link-brand);
+  text-decoration-color: var(--eds-theme-color-link-brand-text-decoration);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
@@ -20,8 +20,10 @@
   }
 
   &:hover {
-    color: var(--eds-theme-color-text-link-brand);
-    text-decoration-color: var(--eds-theme-color-border-link-brand);
+    color: var(--eds-theme-color-link-brand-text-hover);
+    text-decoration-color: var(
+      --eds-theme-color-link-brand-text-decoration-hover
+    );
   }
 
   &:focus-visible {
@@ -30,9 +32,9 @@
      * color, but it will also make borders 100% opacity black.
      */
     outline: 1px solid transparent;
-    color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+    color: var(--eds-theme-color-link-brand-text-focus) !important;
     text-decoration-color: var(
-      --eds-theme-color-text-neutral-default-inverse
+      --eds-theme-color-link-brand-text-decoration-focus
     ) !important;
     background-color: var(--eds-theme-color-border-link-brand);
   }
@@ -44,9 +46,9 @@
        * color, but it will also make borders 100% opacity black.
        */
       outline: 1px solid transparent;
-      color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+      color: var(--eds-theme-color-link-brand-text-focus) !important;
       text-decoration-color: var(
-        --eds-theme-color-text-neutral-default-inverse
+        --eds-theme-color-link-brand-text-decoration-focus
       ) !important;
       background-color: var(--eds-theme-color-border-link-brand);
     }
