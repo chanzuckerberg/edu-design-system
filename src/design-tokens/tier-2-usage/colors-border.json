@@ -47,7 +47,7 @@
               },
               "@": {
                 "value": "{eds.color.brand.grape.300}",
-                "comment": "This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
+                "comment": "@deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
               },
               "strong": {
                 "value": "{eds.color.brand.grape.400}"
