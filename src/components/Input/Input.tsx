@@ -39,11 +39,11 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Maximum number the input can take.
    */
-  max?: number | string | undefined;
+  max?: number | string;
   /**
    * Minimum number the input can take.
    */
-  min?: number | string | undefined;
+  min?: number | string;
   /**
    * HTML name attribute for the input
    */
