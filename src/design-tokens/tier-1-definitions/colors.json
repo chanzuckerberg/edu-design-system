@@ -52,7 +52,8 @@
           "value": "#F5FF8F"
         },
         "eraser": {
-          "value": "#F3DCE2"
+          "value": "#F3DCE2",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
         },
         "orange": {
           "100": { "value": "#FFF1E9" },

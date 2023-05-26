@@ -21,7 +21,11 @@ export class Tier1Colors extends Component {
         </Section>
 
         <Section title="Other Colors">
-          <ColorList listItems={filterTokens(`eds-color-other`)} />
+          <ColorList listItems={filterTokens(`eds-color-other-mint`)} />
+          <ColorList listItems={filterTokens(`eds-color-other-yellow`)} />
+          <ColorList listItems={filterTokens(`eds-color-other-lemon`)} />
+          <ColorList listItems={filterTokens(`eds-color-other-orange`)} />
+          <ColorList listItems={filterTokens(`eds-color-other-ruby`)} />
         </Section>
       </div>
     );
