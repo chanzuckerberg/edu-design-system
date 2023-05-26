@@ -303,34 +303,20 @@ export const EdsThemeColorFormBorderHover = '#21272D';
 export const EdsThemeColorFormBackground = '#FFFFFF';
 export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
 export const EdsThemeColorFormLabel = '#383C43';
-export const EdsThemeColorLinkBrandText =
-  'var(--eds-theme-color-text-link-neutral)';
-export const EdsThemeColorLinkBrandTextHover =
-  'var(--eds-theme-color-text-link-brand)';
-export const EdsThemeColorLinkBrandTextFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkBrandTextDecoration =
-  'var(--eds-theme-color-border-link-brand)';
-export const EdsThemeColorLinkBrandTextDecorationHover =
-  'var(--eds-theme-color-border-link-brand)';
-export const EdsThemeColorLinkBrandTextDecorationFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkBrandBackgroundFocus =
-  'var(--eds-theme-color-border-link-brand)';
-export const EdsThemeColorLinkNeutralText =
-  'var(--eds-theme-color-text-link-neutral)';
-export const EdsThemeColorLinkNeutralTextHover =
-  'var(--eds-theme-color-text-link-brand)';
-export const EdsThemeColorLinkNeutralTextFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkNeutralTextDecoration =
-  'var(--eds-theme-color-border-link-neutral)';
-export const EdsThemeColorLinkNeutralTextDecorationHover =
-  'var(--eds-theme-color-border-link-brand)';
-export const EdsThemeColorLinkNeutralTextDecorationFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkNeutralBackgroundFocus =
-  'var(--eds-theme-color-border-link-neutral)';
+export const EdsThemeColorLinkBrandText = '#21272D';
+export const EdsThemeColorLinkBrandTextHover = '#5751D2';
+export const EdsThemeColorLinkBrandTextFocus = '#FFFFFF';
+export const EdsThemeColorLinkBrandTextDecoration = '#5751D2';
+export const EdsThemeColorLinkBrandTextDecorationHover = '#5751D2';
+export const EdsThemeColorLinkBrandTextDecorationFocus = '#FFFFFF';
+export const EdsThemeColorLinkBrandBackgroundFocus = '#5751D2';
+export const EdsThemeColorLinkNeutralText = '#21272D';
+export const EdsThemeColorLinkNeutralTextHover = '#5751D2';
+export const EdsThemeColorLinkNeutralTextFocus = '#FFFFFF';
+export const EdsThemeColorLinkNeutralTextDecoration = '#21272D';
+export const EdsThemeColorLinkNeutralTextDecorationHover = '#5751D2';
+export const EdsThemeColorLinkNeutralTextDecorationFocus = '#FFFFFF';
+export const EdsThemeColorLinkNeutralBackgroundFocus = '#21272D';
 export const EdsThemeColorModalBrandHeaderBackground = '#8984E8';
 export const EdsThemeColorProgressBarBackground = '#E7E8EA';
 export const EdsThemeColorProgressBarBorder = '#E7E8EA';
