@@ -250,7 +250,7 @@
           "brand": {
             "primary": {
               "subtle": "#E0E0F9",
-              "default": "#C4C1F3",
+              "default": "var(--eds-theme-color-border-brand-primary)",
               "@": "#C4C1F3",
               "strong": "#A6A3EE"
             }
@@ -366,7 +366,7 @@
           },
           "disabled": "#C0C4C8",
           "brand": {
-            "default": "#5751D2",
+            "default": "var(--eds-theme-color-text-brand-primary)",
             "primary": "#5751D2"
           }
         },
