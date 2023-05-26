@@ -5,29 +5,29 @@
         "toggle": {
           "on": {
             "background": {
-              "value": "{eds.color.brand.grape.600}"
+              "value": "var(--eds-theme-color-background-brand-primary-strong)"
             }
           },
           "off": {
             "background": {
-              "value": "{eds.color.neutral.500}"
+              "value": "var(--eds-theme-color-icon-neutral-subtle)"
             }
           },
           "disabled": {
             "background": {
-              "value": "{eds.color.neutral.300}"
+              "value": "var(--eds-theme-color-icon-disabled)"
             },
             "text": {
-              "value": "{eds.color.neutral.300}"
+              "value": "var(--eds-theme-color-text-disabled)"
             }
           },
           "primary": {
             "text": {
-              "value": "{eds.color.neutral.700}"
+              "value": "var(--eds-theme-color-text-neutral-default)"
             }
           },
           "thumb": {
-            "value": "{eds.color.neutral.white}"
+            "value": "var(--eds-theme-color-text-neutral-default-inverse)"
           }
         }
       }

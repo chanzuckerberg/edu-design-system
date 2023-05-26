@@ -689,19 +689,19 @@
         },
         "toggle": {
           "on": {
-            "background": "#6B65E2"
+            "background": "var(--eds-theme-color-background-brand-primary-strong)"
           },
           "off": {
-            "background": "#878C90"
+            "background": "var(--eds-theme-color-icon-neutral-subtle)"
           },
           "disabled": {
-            "background": "#C0C4C8",
-            "text": "#C0C4C8"
+            "background": "var(--eds-theme-color-icon-disabled)",
+            "text": "var(--eds-theme-color-text-disabled)"
           },
           "primary": {
-            "text": "#383C43"
+            "text": "var(--eds-theme-color-text-neutral-default)"
           },
-          "thumb": "#FFFFFF"
+          "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
         }
       },
       "form": {
