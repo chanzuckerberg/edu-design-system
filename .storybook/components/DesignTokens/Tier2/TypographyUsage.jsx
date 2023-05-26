@@ -63,9 +63,9 @@ export class Tier2TypographyUsage extends Component {
 
         <Section title="Caption">
           <Grid>
-            {renderTypeToken('caption-text-lg', '006')}
-            {renderTypeToken('caption-text-md', '008')}
-            {renderTypeToken('caption-text-sm', '010')}
+            {renderTypeToken('caption-lg', '006')}
+            {renderTypeToken('caption-md', '008')}
+            {renderTypeToken('caption-sm', '010')}
           </Grid>
         </Section>
 

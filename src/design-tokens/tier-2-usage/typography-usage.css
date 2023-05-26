@@ -60,7 +60,6 @@
   @mixin eds-typography-preset-006-light $important;
 }
 
-/* TODO: This does not exist on the type ramp currently */
 @define-mixin eds-theme-typography-caption-md $important {
   @mixin eds-typography-preset-008 $important;
 }

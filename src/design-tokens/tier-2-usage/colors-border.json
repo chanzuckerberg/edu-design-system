@@ -43,11 +43,11 @@
                 "value": "{eds.color.brand.grape.200}"
               },
               "default": {
-                "value": "{eds.color.brand.grape.300}"
+                "value": "var(--eds-theme-color-border-brand-primary)"
               },
               "@": {
-                "value": "{eds.theme.color.border.brand.primary.default}",
-                "comment": "This token is deprecated and will be removed in a future EDS release"
+                "value": "{eds.color.brand.grape.300}",
+                "comment": "@deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
               },
               "strong": {
                 "value": "{eds.color.brand.grape.400}"
