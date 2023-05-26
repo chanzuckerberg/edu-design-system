@@ -1,0 +1,36 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "toggle": {
+          "on": {
+            "background": {
+              "value": "{eds.color.brand.grape.600}"
+            }
+          },
+          "off": {
+            "background": {
+              "value": "{eds.color.neutral.500}"
+            }
+          },
+          "disabled": {
+            "background": {
+              "value": "{eds.color.neutral.300}"
+            },
+            "text": {
+              "value": "{eds.color.neutral.300}"
+            }
+          },
+          "primary": {
+            "text": {
+              "value": "{eds.color.neutral.700}"
+            }
+          },
+          "thumb": {
+            "value": "{eds.color.neutral.white}"
+          }
+        }
+      }
+    }
+  }
+}

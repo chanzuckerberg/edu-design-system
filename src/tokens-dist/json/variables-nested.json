@@ -686,6 +686,22 @@
         "text-highlight": {
           "foreground": "#21272D",
           "background": "#F5FF8F"
+        },
+        "toggle": {
+          "on": {
+            "background": "#6B65E2"
+          },
+          "off": {
+            "background": "#878C90"
+          },
+          "disabled": {
+            "background": "#C0C4C8",
+            "text": "#C0C4C8"
+          },
+          "primary": {
+            "text": "#383C43"
+          },
+          "thumb": "#FFFFFF"
         }
       },
       "form": {

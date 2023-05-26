@@ -15,7 +15,7 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="toggle__button-circle"
+      class="toggle__button-thumb"
     />
   </button>
   <label
@@ -50,7 +50,7 @@ exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="toggle__button-circle"
+      class="toggle__button-thumb"
     />
   </button>
 </div>
@@ -71,7 +71,7 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="toggle__button-circle"
+      class="toggle__button-thumb"
     />
   </button>
   <label
@@ -100,7 +100,7 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="toggle__button-circle"
+      class="toggle__button-thumb"
     />
   </button>
   <label
@@ -125,7 +125,7 @@ exports[`<Toggle /> WithoutLabel story renders snapshot 1`] = `
   type="button"
 >
   <span
-    class="toggle__button-circle"
+    class="toggle__button-thumb"
   />
 </button>
 `;
