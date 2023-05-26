@@ -309,18 +309,12 @@ export const EdsThemeColorProgressBarBorder = '#E7E8EA';
 export const EdsThemeColorRadioBrandBackground = '#8984E8';
 export const EdsThemeColorTextHighlightForeground = '#21272D';
 export const EdsThemeColorTextHighlightBackground = '#F5FF8F';
-export const EdsThemeColorToggleOnBackground =
-  'var(--eds-theme-color-background-brand-primary-strong)';
-export const EdsThemeColorToggleOffBackground =
-  'var(--eds-theme-color-icon-neutral-subtle)';
-export const EdsThemeColorToggleDisabledBackground =
-  'var(--eds-theme-color-icon-disabled)';
-export const EdsThemeColorToggleDisabledText =
-  'var(--eds-theme-color-text-disabled)';
-export const EdsThemeColorTogglePrimaryText =
-  'var(--eds-theme-color-text-neutral-default)';
-export const EdsThemeColorToggleThumb =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
+export const EdsThemeColorToggleOnBackground = '#6B65E2';
+export const EdsThemeColorToggleOffBackground = '#878C90';
+export const EdsThemeColorToggleDisabledBackground = '#C0C4C8';
+export const EdsThemeColorToggleDisabledText = '#C0C4C8';
+export const EdsThemeColorTogglePrimaryText = '#383C43';
+export const EdsThemeColorToggleThumb = '#FFFFFF';
 export const LegacyColorGray50 = '#F8F9FC';
 export const LegacyColorGray100 = '#EBEBEC';
 export const LegacyColorGray200 = '#D8D8D9';
