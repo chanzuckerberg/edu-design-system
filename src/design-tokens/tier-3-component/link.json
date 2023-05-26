@@ -25,6 +25,11 @@
               "focus": {
                 "value": "{eds.color.neutral.white}"
               }
+            },
+            "background": {
+              "focus": {
+                "value": "{eds.color.brand.grape.700}"
+              }
             }
           },
           "neutral": {
@@ -48,6 +53,11 @@
               },
               "focus": {
                 "value": "{eds.color.neutral.white}"
+              }
+            },
+            "background": {
+              "focus": {
+                "value": "{eds.color.neutral.800}"
               }
             }
           }

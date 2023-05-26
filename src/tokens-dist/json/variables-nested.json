@@ -674,6 +674,9 @@
               "@": "#5751D2",
               "hover": "#5751D2",
               "focus": "#FFFFFF"
+            },
+            "background": {
+              "focus": "#5751D2"
             }
           },
           "neutral": {
@@ -686,6 +689,9 @@
               "@": "#21272D",
               "hover": "#5751D2",
               "focus": "#FFFFFF"
+            },
+            "background": {
+              "focus": "#21272D"
             }
           }
         },

@@ -520,14 +520,12 @@ button:where(.clickable-style--link) {
   }
 
   &:focus-visible {
-    background-color: var(--eds-theme-color-link-neutral-text-decoration-focus);
+    background-color: var(--eds-theme-color-link-neutral-background-focus);
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
-      background-color: var(
-        --eds-theme-color-link-neutral-text-decoration-focus
-      );
+      background-color: var(--eds-theme-color-link-neutral-background-focus);
     }
   }
 }

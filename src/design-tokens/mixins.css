@@ -36,7 +36,7 @@
     text-decoration-color: var(
       --eds-theme-color-link-brand-text-decoration-focus
     ) !important;
-    background-color: var(--eds-theme-color-border-link-brand);
+    background-color: var(--eds-theme-color-link-brand-background-focus);
   }
 
   @supports not selector(:focus-visible) {
@@ -50,7 +50,7 @@
       text-decoration-color: var(
         --eds-theme-color-link-brand-text-decoration-focus
       ) !important;
-      background-color: var(--eds-theme-color-border-link-brand);
+      background-color: var(--eds-theme-color-link-brand-background-focus);
     }
   }
 }
