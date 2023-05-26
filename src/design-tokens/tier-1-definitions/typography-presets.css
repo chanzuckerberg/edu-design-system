@@ -180,8 +180,8 @@
  * Typography Preset 008: Regular, Light & Bold
  */
 @define-mixin eds-typography-preset-008 $important {
-  font-weight: var(--eds-font-weight-medium) $important;
   font-family: var(--eds-font-family-primary) $important;
+  font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-12) $important;
   line-height: 1.666666667 $important;
 }
