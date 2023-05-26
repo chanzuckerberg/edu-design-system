@@ -66,12 +66,12 @@
   --eds-color-other-ruby-600: #D41E52;
   --eds-color-other-ruby-700: #BD0044;
   --eds-color-other-ruby-800: #8F0134;
-  --eds-color-highlight-100: #FF9FEC;
-  --eds-color-highlight-200: #FFBEAA;
-  --eds-color-highlight-300: #FCFF00;
-  --eds-color-highlight-400: #9DFFA4;
-  --eds-color-highlight-500: #00F1FF;
-  --eds-color-highlight-600: #CFC9FF;
+  --eds-color-highlight-100: #FF9FEC; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-200: #FFBEAA; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-300: #FCFF00; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-400: #9DFFA4; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-500: #00F1FF; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-600: #CFC9FF; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
   --eds-color-info-100: #F1F9FF; /* legacy token, will be removed */
   --eds-color-info-200: #B0D5FF; /* legacy token, will be removed */
   --eds-color-info-300: #7FB9FD; /* legacy token, will be removed */
