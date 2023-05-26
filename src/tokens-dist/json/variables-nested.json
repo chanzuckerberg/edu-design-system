@@ -666,32 +666,32 @@
         "link": {
           "brand": {
             "text": {
-              "@": "#21272D",
-              "hover": "#5751D2",
-              "focus": "#FFFFFF"
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "text-decoration": {
-              "@": "#5751D2",
-              "hover": "#5751D2",
-              "focus": "#FFFFFF"
+              "@": "var(--eds-theme-color-border-link-brand)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "background": {
-              "focus": "#5751D2"
+              "focus": "var(--eds-theme-color-border-link-brand)"
             }
           },
           "neutral": {
             "text": {
-              "@": "#21272D",
-              "hover": "#5751D2",
-              "focus": "#FFFFFF"
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "text-decoration": {
-              "@": "#21272D",
-              "hover": "#5751D2",
-              "focus": "#FFFFFF"
+              "@": "var(--eds-theme-color-border-link-neutral)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "background": {
-              "focus": "#21272D"
+              "focus": "var(--eds-theme-color-border-link-neutral)"
             }
           }
         },

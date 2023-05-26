@@ -6,58 +6,58 @@
           "brand": {
             "text": {
               "@": {
-                "value": "{eds.color.neutral.800}"
+                "value": "var(--eds-theme-color-text-link-neutral)"
               },
               "hover": {
-                "value": "{eds.color.brand.grape.700}"
+                "value": "var(--eds-theme-color-text-link-brand)"
               },
               "focus": {
-                "value": "{eds.color.neutral.white}"
+                "value": "var(--eds-theme-color-text-neutral-default-inverse)"
               }
             },
             "text-decoration": {
               "@": {
-                "value": "{eds.color.brand.grape.700}"
+                "value": "var(--eds-theme-color-border-link-brand)"
               },
               "hover": {
-                "value": "{eds.color.brand.grape.700}"
+                "value": "var(--eds-theme-color-border-link-brand)"
               },
               "focus": {
-                "value": "{eds.color.neutral.white}"
+                "value": "var(--eds-theme-color-text-neutral-default-inverse)"
               }
             },
             "background": {
               "focus": {
-                "value": "{eds.color.brand.grape.700}"
+                "value": "var(--eds-theme-color-border-link-brand)"
               }
             }
           },
           "neutral": {
             "text": {
               "@": {
-                "value": "{eds.color.neutral.800}"
+                "value": "var(--eds-theme-color-text-link-neutral)"
               },
               "hover": {
-                "value": "{eds.color.brand.grape.700}"
+                "value": "var(--eds-theme-color-text-link-brand)"
               },
               "focus": {
-                "value": "{eds.color.neutral.white}"
+                "value": "var(--eds-theme-color-text-neutral-default-inverse)"
               }
             },
             "text-decoration": {
               "@": {
-                "value": "{eds.color.neutral.800}"
+                "value": "var(--eds-theme-color-border-link-neutral)"
               },
               "hover": {
-                "value": "{eds.color.brand.grape.700}"
+                "value": "var(--eds-theme-color-border-link-brand)"
               },
               "focus": {
-                "value": "{eds.color.neutral.white}"
+                "value": "var(--eds-theme-color-text-neutral-default-inverse)"
               }
             },
             "background": {
               "focus": {
-                "value": "{eds.color.neutral.800}"
+                "value": "var(--eds-theme-color-border-link-neutral)"
               }
             }
           }
