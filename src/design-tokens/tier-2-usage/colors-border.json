@@ -5,10 +5,12 @@
         "border": {
           "link": {
             "neutral": {
-              "value": "{eds.color.neutral.800}"
+              "value": "{eds.color.neutral.800}",
+              "comment": "@deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead"
             },
             "brand": {
-              "value": "{eds.color.brand.grape.700}"
+              "value": "{eds.color.brand.grape.700}",
+              "comment": "@deprecated This token is deprecated. Please use eds-theme-color-link-brand-background-focus, eds-theme-color-link-brand-text-decoration, eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead"
             }
           },
           "neutral": {
