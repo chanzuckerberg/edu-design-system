@@ -229,10 +229,6 @@
           "disabled": "#C0C4C8"
         },
         "border": {
-          "link": {
-            "neutral": "#21272D",
-            "brand": "#5751D2"
-          },
           "neutral": {
             "subtle": {
               "@": "#E7E8EA",
@@ -349,10 +345,6 @@
             },
             "strong": "#21272D",
             "subtle": "#5D6369"
-          },
-          "link": {
-            "neutral": "#21272D",
-            "brand": "#5751D2"
           },
           "utility": {
             "success": "#007249",

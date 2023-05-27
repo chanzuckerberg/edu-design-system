@@ -19,14 +19,6 @@
               "value": "{eds.color.neutral.600}"
             }
           },
-          "link": {
-            "neutral": {
-              "value": "{eds.color.neutral.800}"
-            },
-            "brand": {
-              "value": "{eds.color.brand.grape.700}"
-            }
-          },
           "utility": {
             "success": { "value": "{eds.color.other.mint.700}" },
             "warning": { "value": "{eds.color.other.orange.700}" },

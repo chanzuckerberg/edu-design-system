@@ -3,14 +3,6 @@
     "theme": {
       "color": {
         "border": {
-          "link": {
-            "neutral": {
-              "value": "{eds.color.neutral.800}"
-            },
-            "brand": {
-              "value": "{eds.color.brand.grape.700}"
-            }
-          },
           "neutral": {
             "subtle": {
               "@": {
