@@ -250,6 +250,7 @@
           "brand": {
             "primary": {
               "subtle": "#E0E0F9",
+              "default": "var(--eds-theme-color-border-brand-primary)",
               "@": "#C4C1F3",
               "strong": "#A6A3EE"
             }
@@ -365,6 +366,7 @@
           },
           "disabled": "#C0C4C8",
           "brand": {
+            "default": "var(--eds-theme-color-text-brand-primary)",
             "primary": "#5751D2"
           }
         },
@@ -642,6 +644,10 @@
             }
           }
         },
+        "data-bar": {
+          "background": "#F4F6F8",
+          "border": "#C0C4C8"
+        },
         "focus-ring": {
           "@": "#6B65E2",
           "inverted": "#FFFFFF"
@@ -657,6 +663,38 @@
           },
           "label": "#383C43"
         },
+        "link": {
+          "brand": {
+            "text": {
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "text-decoration": {
+              "@": "var(--eds-theme-color-border-link-brand)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "background": {
+              "focus": "var(--eds-theme-color-border-link-brand)"
+            }
+          },
+          "neutral": {
+            "text": {
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "text-decoration": {
+              "@": "var(--eds-theme-color-border-link-neutral)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "background": {
+              "focus": "var(--eds-theme-color-border-link-neutral)"
+            }
+          }
+        },
         "modal": {
           "brand": {
             "header": {
@@ -665,6 +703,10 @@
               }
             }
           }
+        },
+        "progress-bar": {
+          "background": "#E7E8EA",
+          "border": "#E7E8EA"
         },
         "radio": {
           "brand": {
@@ -676,6 +718,22 @@
         "text-highlight": {
           "foreground": "#21272D",
           "background": "#F5FF8F"
+        },
+        "toggle": {
+          "on": {
+            "background": "var(--eds-theme-color-background-brand-primary-strong)"
+          },
+          "off": {
+            "background": "var(--eds-theme-color-icon-neutral-subtle)"
+          },
+          "disabled": {
+            "background": "var(--eds-theme-color-icon-disabled)",
+            "text": "var(--eds-theme-color-text-disabled)"
+          },
+          "primary": {
+            "text": "var(--eds-theme-color-text-neutral-default)"
+          },
+          "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
         }
       },
       "form": {

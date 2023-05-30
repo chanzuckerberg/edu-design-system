@@ -23,6 +23,13 @@ export default {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div className="m-10 p-8">
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<MenuProps>;
 
 export const Default: StoryObj<MenuProps> = {

@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "12.0.3",
+  "version": "12.1.0",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -34,8 +34,9 @@
     "tailwind.config.*"
   ],
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:declarations && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
+    "build:declarations": "tsc --emitDeclarationOnly --project tsconfig.build.json",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist",
     "build:js": "rollup --config",
     "build:storybook": "build-storybook -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",
@@ -81,7 +82,8 @@
     }
   ],
   "peerDependencies": {
-    "react": ">= 17"
+    "react": ">= 17",
+    "react-dom": ">= 17"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -126,16 +128,16 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.1",
     "@types/lodash.debounce": "^4.0.7",
-    "@types/node": "^18.16.8",
-    "@types/react": "^18.2.6",
+    "@types/node": "^18.16.15",
+    "@types/react": "^18.2.7",
     "@types/react-beautiful-dnd": "^13.1.4",
     "@types/react-dom": "^18.2.4",
     "@types/react-portal": "^4.0.4",
-    "axe-core": "4.7.0",
+    "axe-core": "4.7.2",
     "chromatic": "^6.17.4",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-prettier": "^4.2.1",
@@ -158,14 +160,14 @@
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^3.21.6",
+    "rollup": "^3.23.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.2.4",
     "snake-case": "^3.0.4",
     "standard-version": "^9.5.0",
     "storybook-css-modules-preset": "^1.1.1",
     "style-dictionary": "^3.8.0",
-    "stylelint": "^15.6.1",
+    "stylelint": "^15.6.2",
     "stylelint-config-recommended": "^10.0.1",
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.1.0",

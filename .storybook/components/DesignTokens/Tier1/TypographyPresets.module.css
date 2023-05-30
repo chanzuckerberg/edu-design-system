@@ -12,6 +12,10 @@
   @mixin eds-typography-preset-001;
 }
 
+.typography-presets--001-light {
+  @mixin eds-typography-preset-001-light;
+}
+
 .typography-presets--001-bold {
   @mixin eds-typography-preset-001-bold;
 }
@@ -32,16 +36,20 @@
   @mixin eds-typography-preset-003;
 }
 
+.typography-presets--003-light {
+  @mixin eds-typography-preset-003-light;
+}
+
 .typography-presets--003-bold {
   @mixin eds-typography-preset-003-bold;
 }
 
-.typography-presets--004-light {
-  @mixin eds-typography-preset-004-light;
-}
-
 .typography-presets--004 {
   @mixin eds-typography-preset-004;
+}
+
+.typography-presets--004-light {
+  @mixin eds-typography-preset-004-light;
 }
 
 .typography-presets--004-bold {
@@ -60,12 +68,12 @@
   @mixin eds-typography-preset-005-bold;
 }
 
-.typography-presets--006-light {
-  @mixin eds-typography-preset-006-light;
-}
-
 .typography-presets--006 {
   @mixin eds-typography-preset-006;
+}
+
+.typography-presets--006-light {
+  @mixin eds-typography-preset-006-light;
 }
 
 .typography-presets--006-bold {
@@ -76,8 +84,16 @@
   @mixin eds-typography-preset-007;
 }
 
+.typography-presets--007-light {
+  @mixin eds-typography-preset-007-light;
+}
+
 .typography-presets--007-bold {
   @mixin eds-typography-preset-007-bold;
+}
+
+.typography-presets--008 {
+  @mixin eds-typography-preset-008;
 }
 
 .typography-presets--008-bold {

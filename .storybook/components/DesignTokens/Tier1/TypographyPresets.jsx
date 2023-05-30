@@ -5,7 +5,7 @@ import styles from './TypographyPresets.module.css';
 
 export const PRESET_SIZE_MAP = {
   '001': {
-    weights: ['regular', 'bold'],
+    weights: ['light', 'regular', 'bold'],
     fontSize: 40,
     lineHeight: 48,
   },
@@ -15,12 +15,12 @@ export const PRESET_SIZE_MAP = {
     lineHeight: 40,
   },
   '003': {
-    weights: ['regular', 'bold'],
+    weights: ['light', 'regular', 'bold'],
     fontSize: 24,
     lineHeight: 32,
   },
   '004': {
-    weights: ['regular', 'bold'],
+    weights: ['light', 'regular', 'bold'],
     fontSize: 18,
     lineHeight: 24,
   },
@@ -35,12 +35,12 @@ export const PRESET_SIZE_MAP = {
     lineHeight: 22,
   },
   '007': {
-    weights: ['regular', 'bold'],
+    weights: ['light', 'regular', 'bold'],
     fontSize: 14,
     lineHeight: 18,
   },
   '008': {
-    weights: ['light', 'bold'],
+    weights: ['light', 'regular', 'bold'],
     fontSize: 12,
     lineHeight: 20,
   },

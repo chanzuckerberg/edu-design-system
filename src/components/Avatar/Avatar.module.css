@@ -29,7 +29,7 @@
 }
 
 .avatar--sm {
-  @mixin eds-theme-typography-label-md;
+  @mixin eds-theme-typography-title-sm;
 
   height: var(--eds-size-4);
   width: var(--eds-size-4);

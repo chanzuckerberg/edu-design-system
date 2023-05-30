@@ -511,19 +511,21 @@ button:where(.clickable-style--link) {
  * Link neutral clickable style
  */
 :where(.clickable-style--link).clickable-style--neutral {
-  text-decoration-color: var(--eds-theme-color-border-link-neutral);
+  text-decoration-color: var(--eds-theme-color-link-neutral-text-decoration);
 
   &:hover {
-    text-decoration-color: var(--eds-theme-color-border-link-brand);
+    text-decoration-color: var(
+      --eds-theme-color-link-neutral-text-decoration-hover
+    );
   }
 
   &:focus-visible {
-    background-color: var(--eds-theme-color-border-link-neutral);
+    background-color: var(--eds-theme-color-link-neutral-background-focus);
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
-      background-color: var(--eds-theme-color-border-link-neutral);
+      background-color: var(--eds-theme-color-link-neutral-background-focus);
     }
   }
 }

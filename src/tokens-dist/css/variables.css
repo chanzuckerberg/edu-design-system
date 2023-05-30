@@ -66,12 +66,12 @@
   --eds-color-other-ruby-600: #D41E52;
   --eds-color-other-ruby-700: #BD0044;
   --eds-color-other-ruby-800: #8F0134;
-  --eds-color-highlight-100: #FF9FEC;
-  --eds-color-highlight-200: #FFBEAA;
-  --eds-color-highlight-300: #FCFF00;
-  --eds-color-highlight-400: #9DFFA4;
-  --eds-color-highlight-500: #00F1FF;
-  --eds-color-highlight-600: #CFC9FF;
+  --eds-color-highlight-100: #FF9FEC; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-200: #FFBEAA; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-300: #FCFF00; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-400: #9DFFA4; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-500: #00F1FF; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
+  --eds-color-highlight-600: #CFC9FF; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
   --eds-color-info-100: #F1F9FF; /* legacy token, will be removed */
   --eds-color-info-200: #B0D5FF; /* legacy token, will be removed */
   --eds-color-info-300: #7FB9FD; /* legacy token, will be removed */
@@ -147,8 +147,8 @@
   --eds-theme-color-background-grade-stop-default: #D41E52;
   --eds-theme-color-background-grade-stop-subtle: #FFF0F4;
   --eds-theme-color-background-disabled: #C0C4C8;
-  --eds-theme-color-border-link-neutral: #21272D;
-  --eds-theme-color-border-link-brand: #5751D2;
+  --eds-theme-color-border-link-neutral: #21272D; /* @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead */
+  --eds-theme-color-border-link-brand: #5751D2; /* @deprecated This token is deprecated. Please use eds-theme-color-link-brand-background-focus, eds-theme-color-link-brand-text-decoration, eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead */
   --eds-theme-color-border-neutral-subtle: #E7E8EA;
   --eds-theme-color-border-neutral-subtle-hover: #C0C4C8;
   --eds-theme-color-border-neutral-default: #C0C4C8;
@@ -156,7 +156,8 @@
   --eds-theme-color-border-neutral-strong: #999EA3;
   --eds-theme-color-border-neutral-strong-hover: #878C90;
   --eds-theme-color-border-brand-primary-subtle: #E0E0F9;
-  --eds-theme-color-border-brand-primary: #C4C1F3;
+  --eds-theme-color-border-brand-primary-default: var(--eds-theme-color-border-brand-primary);
+  --eds-theme-color-border-brand-primary: #C4C1F3; /* @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
   --eds-theme-color-border-brand-primary-strong: #A6A3EE;
   --eds-theme-color-border-utility-success-subtle: #B7E9CE;
   --eds-theme-color-border-utility-success-default: #8FDCB3;
@@ -201,8 +202,8 @@
   --eds-theme-color-text-neutral-default-inverse: #FFFFFF;
   --eds-theme-color-text-neutral-strong: #21272D;
   --eds-theme-color-text-neutral-subtle: #5D6369;
-  --eds-theme-color-text-link-neutral: #21272D;
-  --eds-theme-color-text-link-brand: #5751D2;
+  --eds-theme-color-text-link-neutral: #21272D; /* @deprecated This token is deprecated. Please use eds-theme-color-link-neutral-text-decoration or eds-theme-color-link-neutral-background instead. */
+  --eds-theme-color-text-link-brand: #5751D2; /* @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-hover or eds-theme-color-link-neutral-text-hover instead. */
   --eds-theme-color-text-utility-success: #007249;
   --eds-theme-color-text-utility-warning: #AC3400;
   --eds-theme-color-text-utility-error: #BD0044;
@@ -210,7 +211,8 @@
   --eds-theme-color-text-grade-revise: #21272D;
   --eds-theme-color-text-grade-stop: #BD0044;
   --eds-theme-color-text-disabled: #C0C4C8;
-  --eds-theme-color-text-brand-primary: #5751D2;
+  --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
+  --eds-theme-color-text-brand-primary: #5751D2; /* @deprecated This token is deprecated. Please use eds-theme-color-text-brand-default instead. */
   --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0);
   --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3);
   --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0);
@@ -355,6 +357,8 @@
   --eds-theme-color-button-icon-error-text-hover: #BD0044;
   --eds-theme-color-button-icon-error-text-active: #FFFFFF;
   --eds-theme-color-checkbox-brand-background: #8984E8;
+  --eds-theme-color-data-bar-background: #F4F6F8;
+  --eds-theme-color-data-bar-border: #C0C4C8;
   --eds-theme-color-focus-ring: #6B65E2;
   --eds-theme-color-focus-ring-inverted: #FFFFFF;
   --eds-theme-color-form-border: #878C90;
@@ -362,10 +366,32 @@
   --eds-theme-color-form-background: #FFFFFF;
   --eds-theme-color-form-background-hover: #F4F6F8;
   --eds-theme-color-form-label: #383C43;
+  --eds-theme-color-link-brand-text: var(--eds-theme-color-text-link-neutral);
+  --eds-theme-color-link-brand-text-hover: var(--eds-theme-color-text-link-brand);
+  --eds-theme-color-link-brand-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-brand-text-decoration: var(--eds-theme-color-border-link-brand);
+  --eds-theme-color-link-brand-text-decoration-hover: var(--eds-theme-color-border-link-brand);
+  --eds-theme-color-link-brand-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-brand-background-focus: var(--eds-theme-color-border-link-brand);
+  --eds-theme-color-link-neutral-text: var(--eds-theme-color-text-link-neutral);
+  --eds-theme-color-link-neutral-text-hover: var(--eds-theme-color-text-link-brand);
+  --eds-theme-color-link-neutral-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-neutral-text-decoration: var(--eds-theme-color-border-link-neutral);
+  --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-border-link-brand);
+  --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-border-link-neutral);
   --eds-theme-color-modal-brand-header-background: #8984E8;
+  --eds-theme-color-progress-bar-background: #E7E8EA;
+  --eds-theme-color-progress-bar-border: #E7E8EA;
   --eds-theme-color-radio-brand-background: #8984E8;
   --eds-theme-color-text-highlight-foreground: #21272D;
   --eds-theme-color-text-highlight-background: #F5FF8F;
+  --eds-theme-color-toggle-on-background: var(--eds-theme-color-background-brand-primary-strong);
+  --eds-theme-color-toggle-off-background: var(--eds-theme-color-icon-neutral-subtle);
+  --eds-theme-color-toggle-disabled-background: var(--eds-theme-color-icon-disabled);
+  --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
+  --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-form-border-width: 1px;
   --eds-theme-form-border-radius: 4px;
   --eds-theme-size-slider-track-height: 0.5rem;
