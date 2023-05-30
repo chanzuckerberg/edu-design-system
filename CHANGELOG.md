@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.3...v12.1.0) (2023-05-30)
+
+
+### Features
+
+* add tier-3 tokens to DataBar and ProgressBar ([#1628](https://github.com/chanzuckerberg/edu-design-system/issues/1628)) ([ca9da5b](https://github.com/chanzuckerberg/edu-design-system/commit/ca9da5b97102e6c61bcfb0123f2b7b0c87ca4c4e))
+* apply advanced popover handling to select components ([#1613](https://github.com/chanzuckerberg/edu-design-system/issues/1613)) ([b74b046](https://github.com/chanzuckerberg/edu-design-system/commit/b74b046a36b2d3d47a31f35b1837eb8075d6f1cc))
+* deprecate color highlight tokens ([#1636](https://github.com/chanzuckerberg/edu-design-system/issues/1636)) ([8975315](https://github.com/chanzuckerberg/edu-design-system/commit/89753158266b63eea1afbfdf073f4235745aa197))
+* **Typography:** add light weight type ramp entries ([#1634](https://github.com/chanzuckerberg/edu-design-system/issues/1634)) ([1bb2b67](https://github.com/chanzuckerberg/edu-design-system/commit/1bb2b67d9757ef320ba71ce2d69c9d14483f12bd))
+
+
+### Bug Fixes
+
+* align token name with design ([#1630](https://github.com/chanzuckerberg/edu-design-system/issues/1630)) ([cfd928a](https://github.com/chanzuckerberg/edu-design-system/commit/cfd928a39e82f6c3e0941a0b4ac68832b0520f2c))
+* **Avatar:** adjust the tier 2 token used in size 'sm' ([#1627](https://github.com/chanzuckerberg/edu-design-system/issues/1627)) ([6d174d0](https://github.com/chanzuckerberg/edu-design-system/commit/6d174d0ba2f8bb64a89d4955c84f312d2a2f224e))
+* **build:** build type declarations separately ([#1633](https://github.com/chanzuckerberg/edu-design-system/issues/1633)) ([4db2d74](https://github.com/chanzuckerberg/edu-design-system/commit/4db2d74adaf6304b80f05d79617fd139c1d8d821))
+* **drawer:** handle clickoutside on slower active boolean ([#1621](https://github.com/chanzuckerberg/edu-design-system/issues/1621)) ([c61508b](https://github.com/chanzuckerberg/edu-design-system/commit/c61508b8675016c33551e8ccd868dddd803fb49a))
+* link deprecated border token to new token value ([#1631](https://github.com/chanzuckerberg/edu-design-system/issues/1631)) ([e198667](https://github.com/chanzuckerberg/edu-design-system/commit/e198667526fa0951df3fe36c23d2eada83775f33))
+* use token name from design ([#1629](https://github.com/chanzuckerberg/edu-design-system/issues/1629)) ([01b2ea8](https://github.com/chanzuckerberg/edu-design-system/commit/01b2ea8693c28550fcf4e2cd315f47cccba8ea38))
+
 ### [12.0.3](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.2...v12.0.3) (2023-05-19)
 
 
