@@ -1,0 +1,36 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "toggle": {
+          "on": {
+            "background": {
+              "value": "var(--eds-theme-color-background-brand-primary-strong)"
+            }
+          },
+          "off": {
+            "background": {
+              "value": "var(--eds-theme-color-icon-neutral-subtle)"
+            }
+          },
+          "disabled": {
+            "background": {
+              "value": "var(--eds-theme-color-icon-disabled)"
+            },
+            "text": {
+              "value": "var(--eds-theme-color-text-disabled)"
+            }
+          },
+          "primary": {
+            "text": {
+              "value": "var(--eds-theme-color-text-neutral-default)"
+            }
+          },
+          "thumb": {
+            "value": "var(--eds-theme-color-text-neutral-default-inverse)"
+          }
+        }
+      }
+    }
+  }
+}

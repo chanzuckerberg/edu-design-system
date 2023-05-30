@@ -69,7 +69,7 @@ const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
     {...other}
   >
     {/* This span is the circular part of the toggle */}
-    <span className={styles['toggle__button-circle']} />
+    <span className={styles['toggle__button-thumb']} />
   </Switch>
 );
 

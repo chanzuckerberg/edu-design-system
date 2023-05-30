@@ -718,6 +718,22 @@
         "text-highlight": {
           "foreground": "#21272D",
           "background": "#F5FF8F"
+        },
+        "toggle": {
+          "on": {
+            "background": "var(--eds-theme-color-background-brand-primary-strong)"
+          },
+          "off": {
+            "background": "var(--eds-theme-color-icon-neutral-subtle)"
+          },
+          "disabled": {
+            "background": "var(--eds-theme-color-icon-disabled)",
+            "text": "var(--eds-theme-color-text-disabled)"
+          },
+          "primary": {
+            "text": "var(--eds-theme-color-text-neutral-default)"
+          },
+          "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
         }
       },
       "form": {
