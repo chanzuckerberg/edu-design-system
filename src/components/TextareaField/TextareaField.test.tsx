@@ -12,7 +12,7 @@ describe('<TextareaField />', () => {
   generateSnapshots(stories);
 
   it('can handle custom events when there is content', async () => {
-    const onChangeFn = jest.fn(() => console.log('test'));
+    const onChangeFn = jest.fn();
     const user = userEvent.setup();
     render(
       <TextareaField aria-label="test" onChange={() => onChangeFn()}>
@@ -34,7 +34,7 @@ describe('<TextareaField />', () => {
   });
 
   it('will not fire a custom event when there is no content', async () => {
-    const onChangeFn = jest.fn(() => console.log('test'));
+    const onChangeFn = jest.fn();
     const user = userEvent.setup();
     render(<TextareaField aria-label="test" onChange={() => onChangeFn()} />);
 
