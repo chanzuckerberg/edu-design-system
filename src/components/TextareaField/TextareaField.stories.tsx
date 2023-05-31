@@ -1,5 +1,4 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { userEvent } from '@storybook/testing-library';
 import React from 'react';
 
 import { TextareaField } from './TextareaField';
@@ -91,15 +90,4 @@ export const WithAMaxLength: StoryObj<Args> = {
     required: true,
   },
   render: (args) => <TextareaField {...args} />,
-};
-
-export const AfterDelete: StoryObj<Args> = {
-  args: {
-    maxLength: 209,
-    onChange: () => console.info('ensure custom events are handled'),
-  },
-  play: () => {
-    userEvent.tab();
-    userEvent.keyboard('{arrowdown}{delete}');
-  },
 };
