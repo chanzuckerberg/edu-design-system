@@ -49,7 +49,7 @@
   --eds-color-other-yellow-700: #9E5B03;
   --eds-color-other-yellow-800: #854C03;
   --eds-color-other-lemon: #F5FF8F;
-  --eds-color-other-eraser: #F3DCE2;
+  --eds-color-other-eraser: #F3DCE2; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
   --eds-color-other-orange-100: #FFF1E9;
   --eds-color-other-orange-200: #FFCBA5;
   --eds-color-other-orange-300: #FFAF76;
