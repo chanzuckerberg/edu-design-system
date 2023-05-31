@@ -55,7 +55,7 @@
  * The heading text.
  */
 .accordion-button__heading {
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
   color: var(--eds-theme-color-text-neutral-strong);
 }
 
@@ -63,7 +63,7 @@
  * Small variant of the heading text.
  */
 .accordion-button__heading--sm {
-  @mixin eds-theme-typography-body-text-xs;
+  @mixin eds-theme-typography-body-xs;
 }
 
 /**
@@ -101,7 +101,7 @@
   padding-right: var(--eds-size-3);
   padding-bottom: 1.625rem;
 
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
   color: var(--eds-theme-color-text-neutral-strong);
 }
 
@@ -109,7 +109,7 @@
  * Small variant.
  */
 .accordion-panel--sm {
-  @mixin eds-theme-typography-body-text-xs;
+  @mixin eds-theme-typography-body-xs;
 }
 
 /**

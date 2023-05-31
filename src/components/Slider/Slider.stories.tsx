@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
@@ -11,15 +10,9 @@ export default {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: ['1.3', BADGE.BETA],
+    badges: ['1.3'],
   },
-  decorators: [
-    (Story) => (
-      <div className="w-96">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="w-96">{Story()}</div>],
   argTypes: {
     fieldNote: {
       type: 'string',
@@ -115,13 +108,7 @@ export const MarkersLargeValues: StoryObj<Args> = {
     step: 2500,
     markers: 'number',
   },
-  decorators: [
-    (Story) => (
-      <div className="w-80">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="w-80">{Story()}</div>],
 };
 
 export const FieldNote: StoryObj<Args> = {
@@ -158,6 +145,9 @@ export const Tooltip: StoryObj<Args> = {
      * No point snapping the button as this story is testing visual regression on the tooltip.
      */
     snapshot: { skip: true },
+    chromatic: {
+      diffThreshold: 0.5,
+    },
   },
   play: async ({ canvasElement }) => {
     if (isChromatic()) {

@@ -1,0 +1,16 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "data-bar": {
+          "background": {
+            "value": "{eds.color.neutral.100}"
+          },
+          "border": {
+            "value": "{eds.color.neutral.300}"
+          }
+        }
+      }
+    }
+  }
+}

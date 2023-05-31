@@ -21,10 +21,12 @@
           },
           "link": {
             "neutral": {
-              "value": "{eds.color.neutral.800}"
+              "value": "{eds.color.neutral.800}",
+              "comment": "@deprecated This token is deprecated. Please use eds-theme-color-link-neutral-text-decoration or eds-theme-color-link-neutral-background instead."
             },
             "brand": {
-              "value": "{eds.color.brand.grape.700}"
+              "value": "{eds.color.brand.grape.700}",
+              "comment": "@deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-hover or eds-theme-color-link-neutral-text-hover instead."
             }
           },
           "utility": {
@@ -41,8 +43,12 @@
             "value": "{eds.color.neutral.300}"
           },
           "brand": {
+            "default": {
+              "value": "var(--eds-theme-color-text-brand-primary)"
+            },
             "primary": {
-              "value": "{eds.color.brand.grape.700}"
+              "value": "{eds.color.brand.grape.700}",
+              "comment": "@deprecated This token is deprecated. Please use eds-theme-color-text-brand-default instead."
             }
           }
         }

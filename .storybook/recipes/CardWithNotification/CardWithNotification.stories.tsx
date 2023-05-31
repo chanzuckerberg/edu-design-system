@@ -14,7 +14,7 @@ export default {
           margin: '0.25rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -77,7 +77,7 @@ export const CADBrand: StoryObj<Args> = {
           height: '30rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],

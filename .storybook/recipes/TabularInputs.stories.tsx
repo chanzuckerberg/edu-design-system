@@ -14,13 +14,7 @@ import {
 export default {
   title: 'Recipes/TabularInput',
   component: Table,
-  decorators: [
-    (Story) => (
-      <div className="p-8">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Table>;

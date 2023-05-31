@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import type { KeyboardEventHandler, ReactNode } from 'react';
-import React, { useCallback, useId, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { allByType } from 'react-children-by-type';
 import {
   L_ARROW_KEYCODE,
@@ -10,6 +10,7 @@ import {
   ENTER_KEYCODE,
   SPACEBAR_KEYCODE,
 } from '../../util/keycodes';
+import { useId } from '../../util/useId';
 import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';

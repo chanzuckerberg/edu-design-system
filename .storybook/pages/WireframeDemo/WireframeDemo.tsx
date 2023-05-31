@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useId, useState } from 'react';
+import React, { useState } from 'react';
 
 import {
   Button,
@@ -14,6 +14,7 @@ import {
   Text,
   Tooltip,
 } from '../../../src';
+import { useId } from '../../../src/util/useId';
 
 import PlaceholderImage from '../../static/placeholder-image.svg';
 import PlaceholderVideo from '../../static/placeholder-video.svg';

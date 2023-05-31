@@ -52,7 +52,8 @@
           "value": "#F5FF8F"
         },
         "eraser": {
-          "value": "#F3DCE2"
+          "value": "#F3DCE2",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
         },
         "orange": {
           "100": { "value": "#FFF1E9" },
@@ -76,12 +77,30 @@
         }
       },
       "highlight": {
-        "100": { "value": "#FF9FEC" },
-        "200": { "value": "#FFBEAA" },
-        "300": { "value": "#FCFF00" },
-        "400": { "value": "#9DFFA4" },
-        "500": { "value": "#00F1FF" },
-        "600": { "value": "#CFC9FF" }
+        "100": {
+          "value": "#FF9FEC",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "200": {
+          "value": "#FFBEAA",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "300": {
+          "value": "#FCFF00",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "400": {
+          "value": "#9DFFA4",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "500": {
+          "value": "#00F1FF",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "600": {
+          "value": "#CFC9FF",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        }
       },
       "info": {
         "100": {

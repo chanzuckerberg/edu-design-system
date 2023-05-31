@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ReactElement, ReactNode } from 'react';
-import React, { useEffect, useId, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useId } from '../../util/useId';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';

@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextareaField /> AfterDelete story renders snapshot 1`] = `
-<div
-  class="textarea-field"
->
-  <div
-    class="textarea-field__overline"
-  >
-    <label
-      class="label"
-      for=":ri:"
-    >
-      Textarea Field
-       
-    </label>
-  </div>
-  <textarea
-    aria-describedby=":rj:"
-    class="textarea"
-    id=":ri:"
-    maxlength="209"
-    placeholder="Enter long-form text here"
-    rows="5"
-  >
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
-    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
-    praesentium, commodi eligendi asperiores quis dolorum porro.
-  </textarea>
-  <div
-    class="textarea-field__footer"
-  >
-    <div
-      class="field-note textarea-field__field-note"
-      id=":rj:"
-    >
-      Longer Field description
-    </div>
-    <div
-      class="textarea-field__character-counter"
-    >
-      <span
-        class=""
-      >
-        209
-      </span>
-       
-      / 
-      209
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<TextareaField /> Default story renders snapshot 1`] = `
 <div
   class="textarea-field"
@@ -74,6 +22,7 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
     id=":r0:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -113,6 +62,7 @@ exports[`<TextareaField /> UsingChildren story renders snapshot 1`] = `
     id=":r2:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -154,6 +104,7 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
     placeholder="Enter long-form text here"
     readonly=""
     rows="2"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -193,6 +144,7 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
     id=":r8:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -250,6 +202,7 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
     maxlength="10"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -324,6 +277,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
     placeholder="Enter long-form text here"
     required=""
     rows="5"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -363,6 +317,7 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
     id=":re:"
     placeholder="Enter long-form text here"
     rows="10"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -409,6 +364,7 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
     placeholder="Enter long-form text here"
     required=""
     rows="10"
+    spellcheck="false"
   >
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -476,6 +432,7 @@ exports[`<TextareaField /> WithNoDefaultValue story renders snapshot 1`] = `
     id=":r4:"
     placeholder="Enter long-form text here"
     rows="5"
+    spellcheck="false"
   />
 </div>
 `;

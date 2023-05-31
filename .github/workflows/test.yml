@@ -1,6 +1,11 @@
 name: Build & Test CI
 
-on: push
+on:
+  push:
+  workflow_call:
+    secrets:
+      CHROMATIC_PROJECT_TOKEN:
+        required: true
 
 jobs:
   test:
@@ -90,10 +95,11 @@ jobs:
           node-version-file: '.node-version'
           cache: 'yarn'
 
-      - name: Install Dependencies ⬆️
+      - name: Install Dependencies 🧶
         run: yarn install --immutable
 
-      - name: Build design tokens # required since there are references to built tokens
+      # required since there are references to built tokens
+      - name: Build design tokens 🛠️
         run: yarn build:tokens
 
       - name: Lint Commit Messages 👕

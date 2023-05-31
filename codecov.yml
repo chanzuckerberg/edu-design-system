@@ -1,3 +1,8 @@
+ignore:
+  - "**/*.test.ts"
+  - "**/*.test.tsx"
+  - "**/*.stories.ts"
+  - "**/*.stories.tsx"
 coverage:
   status:
     project:

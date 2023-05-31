@@ -11,13 +11,7 @@ export default {
 type Args = React.ComponentProps<typeof StackedCardsToTable>;
 
 export const Default: StoryObj<Args> = {
-  decorators: [
-    (Story) => (
-      <div style={{ margin: '0.5rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
   parameters: {
     chromatic: {
       viewports: [
