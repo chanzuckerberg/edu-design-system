@@ -233,6 +233,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
   play: selectCat,
   parameters: {
     chromatic: {
+      diffIncludeAntiAliasing: false,
       diffThreshold: 0.45,
     },
   },
