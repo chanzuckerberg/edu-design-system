@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import React, { type ReactNode } from 'react';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
-import DropdownMenuItem from '../DropdownMenuItem';
+import Menu from '../Menu';
 import styles from './Breadcrumbs.module.css';
 
 type Props = {
@@ -89,14 +89,15 @@ export const Breadcrumbs = ({
     .map((breadcrumbItem, index) => {
       const menuItem = breadcrumbItem as JSX.Element;
       return (
-        <DropdownMenuItem
+        <Menu.Item
           href={menuItem.props.href}
+          icon="link"
           // FIXME
           // eslint-disable-next-line react/no-array-index-key
           key={`breadcrumb-menu-item-${index}`}
         >
           {menuItem.props.text}
-        </DropdownMenuItem>
+        </Menu.Item>
       );
     });
 

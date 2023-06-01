@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import ButtonDropdown from '../ButtonDropdown';
 import Icon from '../Icon';
+import Menu from '../Menu';
 import styles from './BreadcrumbsItem.module.css';
 
 type Props = {
@@ -60,19 +60,15 @@ export const BreadcrumbsItem = ({
     if (variant === 'collapsed') {
       /* The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links. */
       return (
-        <ButtonDropdown
-          dropdownMenuTrigger={
-            <button
-              aria-label="Show more breadcrumbs"
-              className={ellipsisButtonClassName}
-            >
-              ...
-            </button>
-          }
-          position="bottom-right"
-        >
-          {dropdownMenuItems}
-        </ButtonDropdown>
+        <Menu>
+          <Menu.PlainButton
+            aria-label="Show more breadcrumbs"
+            className={ellipsisButtonClassName}
+          >
+            ...
+          </Menu.PlainButton>
+          <Menu.Items>{dropdownMenuItems}</Menu.Items>
+        </Menu>
       );
     } else if (variant === 'back') {
       /* The back variant is a left pointing icon that usually links to the second last breadcrumb href. */
