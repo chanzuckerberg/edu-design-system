@@ -302,7 +302,7 @@ const SelectOption = function (props: SelectOptionProps) {
   );
 };
 
-type SelecButtonProps = {
+type SelectButtonProps = {
   /**
    * Optional className for additional styling.
    */
@@ -322,7 +322,7 @@ type SelecButtonProps = {
  */
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,
-  SelecButtonProps
+  SelectButtonProps
 >(({ children, className, isOpen, ...other }, ref) => {
   const componentClassName = clsx(styles['select-button'], className);
   const iconClassName = clsx(

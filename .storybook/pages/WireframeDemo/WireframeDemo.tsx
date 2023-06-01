@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import {
   Button,
   ButtonGroup,
-  Dropdown,
   Heading,
   Icon,
   Label,
   Link,
+  Select,
   Tabs,
   Tab,
   Text,
@@ -204,13 +204,20 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 
         <div className={styles['watch-page__carousel']}>
           <div className="w-[10.5rem]">
-            <Dropdown
+            <Select
               aria-label="student groups"
-              buttonText={selectedOption.label}
               onChange={setSelectedOption}
-              options={studentGroupOptions}
               value={selectedOption}
-            />
+            >
+              <Select.Button>{selectedOption.label}</Select.Button>
+              <Select.Options>
+                {studentGroupOptions.map((option) => (
+                  <Select.Option key={option.key} value={option}>
+                    {option.label}
+                  </Select.Option>
+                ))}
+              </Select.Options>
+            </Select>
           </div>
 
           <Tabs className="mt-4">
