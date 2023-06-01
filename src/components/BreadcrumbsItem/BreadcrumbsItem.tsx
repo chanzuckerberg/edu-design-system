@@ -12,14 +12,14 @@ type Props = {
   /**
    * URL for the breadcrumbs item.
    * Required since breadcrumbs should reroute user.
-   * Null case is used for the collapsed variant, which uses dropdownMenuItems which has hrefs.
+   * Null case is used for the collapsed variant, which uses Menu Items which has hrefs.
    */
   href: string | null;
   /**
    * URLs for the collapsed breadcrumbs variant.
-   * Should be <DropdownMenuItem href={href}>{text}</DropdownMenuItem>.
+   * Should be <Menu.Item href={href}>{text}</Menu.Item>.
    */
-  dropdownMenuItems?: React.ReactNode[];
+  menuItems?: React.ReactNode[];
   /**
    * Breadcrumbs item text.
    */
@@ -27,7 +27,7 @@ type Props = {
   /**
    * Behavior variations for the breadcrumbs item.
    * - **back** - results in a left facing icon, usually denoting the second last breadcrumb item in a mobile breakpoint.
-   * - **collapsed** - results in an ellipsis, where interaction spawns a dropdown menu containing more links.
+   * - **collapsed** - results in an ellipsis, where interaction spawns a Menu containing more links.
    */
   variant?: 'back' | 'collapsed';
 };
@@ -38,7 +38,7 @@ type Props = {
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({
-  dropdownMenuItems,
+  menuItems,
   className,
   href,
   text,
@@ -58,7 +58,7 @@ export const BreadcrumbsItem = ({
 
   const getInteractionElement = () => {
     if (variant === 'collapsed') {
-      /* The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links. */
+      /* The collapsed variant is a button with ellipsis. Interaction spawns a Menu containing the collapsed breadcrumb links. */
       return (
         <Menu>
           <Menu.PlainButton
@@ -67,7 +67,7 @@ export const BreadcrumbsItem = ({
           >
             ...
           </Menu.PlainButton>
-          <Menu.Items>{dropdownMenuItems}</Menu.Items>
+          <Menu.Items>{menuItems}</Menu.Items>
         </Menu>
       );
     } else if (variant === 'back') {

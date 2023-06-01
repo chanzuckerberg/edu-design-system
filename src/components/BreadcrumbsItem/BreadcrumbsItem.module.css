@@ -10,7 +10,7 @@
 .breadcrumbs__item {
   @mixin eds-theme-typography-body-xs;
   max-width: 100%;
-  /* Required for dropdown menu to absolutely position relative to this container. */
+  /* Required for the Menu to absolutely position relative to this container. */
   position: relative;
 
   /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */

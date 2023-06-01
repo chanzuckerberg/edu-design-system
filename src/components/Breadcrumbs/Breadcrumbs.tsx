@@ -82,9 +82,9 @@ export const Breadcrumbs = ({
       : null;
 
   /**
-   * Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the dropdown.
+   * Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the Menu.
    */
-  const dropdownMenuItems = breadcrumbsItems
+  const menuItems = breadcrumbsItems
     .slice(1, breadcrumbsItems.length - 1)
     .map((breadcrumbItem, index) => {
       const menuItem = breadcrumbItem as JSX.Element;
@@ -115,14 +115,14 @@ export const Breadcrumbs = ({
          */}
         {backBreadCrumb}
         {/**
-         * The ellipsis breadcrumb with dropdown only exists if there would be overflow and there are 3 or more breadcrumb items.
+         * The ellipsis breadcrumb with Menu only exists if there would be overflow and there are 3 or more breadcrumb items.
          */}
         {shouldTruncate && breadcrumbsItems.length > 2 ? (
           <>
             {breadcrumbsItems[0]}
             <BreadcrumbsItem
-              dropdownMenuItems={dropdownMenuItems}
               href={null}
+              menuItems={menuItems}
               variant="collapsed"
             />
             {breadcrumbsItems[breadcrumbsItems.length - 1]}
