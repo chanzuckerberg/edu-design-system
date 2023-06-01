@@ -5,8 +5,6 @@ import { Tier1Colors } from './Colors';
 import { Tier1Layout } from './Layout';
 import { Tier1Shadows } from './Shadows';
 import { Tier1Sizes } from './Sizes';
-import { Tier1TypographyPresets } from './TypographyPresets';
-import { Tier1TypographyTokens } from './TypographyTokens';
 
 export default {
   title: 'Design Tokens/Tier 1: Definitions',
@@ -46,12 +44,4 @@ export const Layout = {
 
 export const Shadows = {
   render: () => <Tier1Shadows />,
-};
-
-export const TypographyTokens = {
-  render: () => <Tier1TypographyTokens />,
-};
-
-export const TypographyPresets = {
-  render: () => <Tier1TypographyPresets />,
 };
