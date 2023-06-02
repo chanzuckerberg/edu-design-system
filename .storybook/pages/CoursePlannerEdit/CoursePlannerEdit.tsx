@@ -403,39 +403,21 @@ export const CoursePlannerEdit = () => {
   const projectCardMenuItems = () => {
     return (
       <>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move to other section
-        </Menu.Item>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move up
-        </Menu.Item>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move down
-        </Menu.Item>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move view details
-        </Menu.Item>
+        <Menu.Item icon="schedule">Move to other section</Menu.Item>
+        <Menu.Item icon="schedule">Move up</Menu.Item>
+        <Menu.Item icon="schedule">Move down</Menu.Item>
+        <Menu.Item icon="schedule">Move view details</Menu.Item>
       </>
     );
   };
 
   const projectCardMenuItemsWithDelete = () => {
-    const destructiveMenuItem = clsx(
-      styles['menu-item'],
-      styles['menu-item--destructive'],
-    );
     return (
       <>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move to other section
-        </Menu.Item>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move up
-        </Menu.Item>
-        <Menu.Item className={styles['menu-item']} icon="schedule">
-          Move down
-        </Menu.Item>
-        <Menu.Item className={destructiveMenuItem} icon="delete">
+        <Menu.Item icon="schedule">Move to other section</Menu.Item>
+        <Menu.Item icon="schedule">Move up</Menu.Item>
+        <Menu.Item icon="schedule">Move down</Menu.Item>
+        <Menu.Item className={styles['menu-item--destructive']} icon="delete">
           Delete item
         </Menu.Item>
       </>

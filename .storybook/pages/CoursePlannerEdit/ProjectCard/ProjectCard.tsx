@@ -133,6 +133,7 @@ export const ProjectCard = ({
         <Card.Footer className={styles['project-card__footer']}>
           <Menu
             modifiers={[
+              // Brings the Menu closer to the dots-vertical icon trigger button
               {
                 name: 'offset',
                 options: { offset: [0, 0] },
