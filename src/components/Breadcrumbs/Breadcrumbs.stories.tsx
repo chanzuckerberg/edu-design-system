@@ -133,5 +133,6 @@ export const LongTextMenu: StoryObj<Args> = {
     const canvas = within(canvasElement);
     const dropdownMenuTrigger = await canvas.findByRole('button');
     userEvent.click(dropdownMenuTrigger);
+    // TODO: capture open menu in Chromatic
   },
 };
