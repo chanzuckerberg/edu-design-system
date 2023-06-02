@@ -7,9 +7,8 @@ import {
   CardHeader,
   Heading,
   Icon,
-  Button,
+  Menu,
   NumberIcon,
-  ButtonDropdown,
 } from '../../../../src';
 import type { HeadingElement } from '../../../../src/components/Heading';
 
@@ -23,19 +22,11 @@ export interface Props {
    */
   behavior?: 'draggable';
   /**
-   * Button dropdown items
+   * Menu items
    *
-   * If not declared, the button dropdown does not render.
+   * If not declared, the menu does not render.
    */
-  buttonDropdownItems?: ReactNode;
-  /**
-   * Determines type of clickable
-   * - default renders a dropdown menu to the bottom left of the button
-   * - **top-left** renders a dropdown menu to the top left of the button
-   * - **top-right** renders a dropdown menu to the top right of the button
-   * - **bottom-right** renders a dropdown menu to the bottom right of the button
-   */
-  buttonDropdownPosition?: 'top-left' | 'top-right' | 'bottom-right';
+  menuItems?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -82,8 +73,7 @@ export const ProjectCard = ({
   metaIconName,
   number,
   headingAs = 'h3',
-  buttonDropdownItems,
-  buttonDropdownPosition,
+  menuItems,
   numberAriaLabel,
   isDragging,
   ...other
@@ -139,24 +129,27 @@ export const ProjectCard = ({
           </div>
         )}
       </Card.Body>
-      {buttonDropdownItems && (
+      {menuItems && (
         <Card.Footer className={styles['project-card__footer']}>
-          <ButtonDropdown
-            dropdownMenuTrigger={
-              <Button
-                aria-label="Open project dropdown"
-                className={styles['project-card__menu-button']}
-                size="sm"
-                status="neutral"
-                variant="icon"
-              >
-                <Icon name="dots-vertical" purpose="decorative" />
-              </Button>
-            }
-            position={buttonDropdownPosition}
+          <Menu
+            modifiers={[
+              {
+                name: 'offset',
+                options: { offset: [0, 0] },
+              },
+            ]}
+            placement="bottom-end"
           >
-            {buttonDropdownItems}
-          </ButtonDropdown>
+            <Menu.PlainButton>
+              <Icon
+                name="dots-vertical"
+                purpose="informative"
+                size="1.5rem"
+                title="Open project dropdown"
+              />
+            </Menu.PlainButton>
+            <Menu.Items>{menuItems}</Menu.Items>
+          </Menu>
         </Card.Footer>
       )}
     </Card>

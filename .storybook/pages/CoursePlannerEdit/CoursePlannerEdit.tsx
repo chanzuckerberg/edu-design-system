@@ -5,35 +5,35 @@ import type { ReactNode } from 'react';
 import ProjectCard from './ProjectCard';
 
 import {
-  PageHeader,
-  Panel,
-  ButtonGroup,
   Button,
-  Heading,
-  LayoutContainer,
-  Layout,
-  LayoutSection,
-  DragDrop,
-  DragDropContainerHeader,
-  Icon,
-  HorizontalStepper,
-  DataBar,
-  Toolbar,
-  ToolbarItem,
-  Grid,
-  GridItem,
-  Text,
-  DropdownMenuItem,
+  ButtonGroup,
   Card,
   CardBody,
+  CardFooter,
+  DataBar,
+  DragDrop,
+  DragDropContainerHeader,
+  Grid,
+  GridItem,
+  Heading,
+  HorizontalStepper,
+  Icon,
+  Layout,
+  LayoutContainer,
+  LayoutSection,
+  Menu,
   NumberIcon,
-  TableHeader,
-  TableRow,
+  PageHeader,
+  Panel,
   Table,
   TableBody,
   TableCell,
+  TableHeader,
   TableHeaderCell,
-  CardFooter,
+  TableRow,
+  Text,
+  Toolbar,
+  ToolbarItem,
 } from '../../../src';
 
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
@@ -403,45 +403,41 @@ export const CoursePlannerEdit = () => {
   const projectCardMenuItems = () => {
     return (
       <>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move to other section
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        </Menu.Item>
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move up
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        </Menu.Item>
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move down
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        </Menu.Item>
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move view details
-        </DropdownMenuItem>
+        </Menu.Item>
       </>
     );
   };
 
   const projectCardMenuItemsWithDelete = () => {
+    const destructiveMenuItem = clsx(
+      styles['menu-item'],
+      styles['menu-item--destructive'],
+    );
     return (
       <>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move to other section
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        </Menu.Item>
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move up
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        </Menu.Item>
+        <Menu.Item className={styles['menu-item']} icon="schedule">
           Move down
-        </DropdownMenuItem>
-        <DropdownMenuItem status="error">
-          <Icon name="delete" purpose="decorative" size="1.25rem" />
+        </Menu.Item>
+        <Menu.Item className={destructiveMenuItem} icon="delete">
           Delete item
-        </DropdownMenuItem>
+        </Menu.Item>
       </>
     );
   };
@@ -497,7 +493,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItemsWithDelete()}
+          menuItems={projectCardMenuItemsWithDelete()}
           meta="12 days"
           metaIconName="event-note"
           number={1}
@@ -511,7 +507,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={indexState}
@@ -525,7 +521,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={3}
@@ -539,7 +535,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={4}
@@ -553,8 +549,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
-          buttonDropdownPosition="top-left"
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={5}
@@ -568,8 +563,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
-          buttonDropdownPosition="top-left"
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={6}

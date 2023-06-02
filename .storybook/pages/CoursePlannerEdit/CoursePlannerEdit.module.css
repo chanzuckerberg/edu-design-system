@@ -16,6 +16,22 @@
   }
 }
 
+/**
+ * Individual Menu item that displays when clicking the vertical dots.
+ */
+.menu-item {
+  padding: var(--eds-size-1-and-half) var(--eds-size-2);
+}
+
+/**
+ * Destructive variant of the Menu item.
+ *
+ * For indicating deletion of the project.
+ */
+.menu-item--destructive {
+  color: var(--eds-theme-color-text-utility-error);
+}
+
 /*------------------------------------*\
     # TABLE CARD
 \*------------------------------------*/
