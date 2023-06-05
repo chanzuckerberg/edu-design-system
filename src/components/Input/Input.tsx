@@ -71,20 +71,7 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * HTML type attribute, allowing switching between text, password, and other HTML5 input field types
    */
-  type?:
-    | 'text'
-    | 'password'
-    | 'datetime'
-    | 'datetime-local'
-    | 'date'
-    | 'month'
-    | 'time'
-    | 'week'
-    | 'number'
-    | 'email'
-    | 'url'
-    | 'search'
-    | 'tel';
+  type?: React.HTMLInputTypeAttribute;
   /**
    * The value of the input
    */
