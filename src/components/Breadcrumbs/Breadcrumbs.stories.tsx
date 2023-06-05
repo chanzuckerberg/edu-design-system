@@ -117,6 +117,7 @@ export const LongTextMenu: StoryObj<Args> = {
   args: {
     ...LongText.args,
   },
+  decorators: [(Story) => <div className="pb-28">{Story()}</div>],
   parameters: {
     viewport: {
       defaultViewport: 'ipadMini',

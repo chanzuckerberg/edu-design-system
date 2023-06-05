@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import React, { type ReactNode } from 'react';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
-import DropdownMenuItem from '../DropdownMenuItem';
+import Menu from '../Menu';
 import styles from './Breadcrumbs.module.css';
 
 type Props = {
@@ -82,21 +82,22 @@ export const Breadcrumbs = ({
       : null;
 
   /**
-   * Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the dropdown.
+   * Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the Menu.
    */
-  const dropdownMenuItems = breadcrumbsItems
+  const menuItems = breadcrumbsItems
     .slice(1, breadcrumbsItems.length - 1)
     .map((breadcrumbItem, index) => {
       const menuItem = breadcrumbItem as JSX.Element;
       return (
-        <DropdownMenuItem
+        <Menu.Item
           href={menuItem.props.href}
+          icon="link"
           // FIXME
           // eslint-disable-next-line react/no-array-index-key
           key={`breadcrumb-menu-item-${index}`}
         >
           {menuItem.props.text}
-        </DropdownMenuItem>
+        </Menu.Item>
       );
     });
 
@@ -114,14 +115,14 @@ export const Breadcrumbs = ({
          */}
         {backBreadCrumb}
         {/**
-         * The ellipsis breadcrumb with dropdown only exists if there would be overflow and there are 3 or more breadcrumb items.
+         * The ellipsis breadcrumb with Menu only exists if there would be overflow and there are 3 or more breadcrumb items.
          */}
         {shouldTruncate && breadcrumbsItems.length > 2 ? (
           <>
             {breadcrumbsItems[0]}
             <BreadcrumbsItem
-              dropdownMenuItems={dropdownMenuItems}
               href={null}
+              menuItems={menuItems}
               variant="collapsed"
             />
             {breadcrumbsItems[breadcrumbsItems.length - 1]}
