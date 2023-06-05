@@ -42,4 +42,10 @@ jobs:
       - name: Publish package to the Github registry
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update Omlet 🍳
+        run: npx omlet analyze
+        env:
+          OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
+      
