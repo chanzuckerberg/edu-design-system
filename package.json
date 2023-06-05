@@ -86,8 +86,8 @@
     "react-dom": ">= 17"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.14",
-    "@popperjs/core": "^2.11.7",
+    "@headlessui/react": "^1.7.15",
+    "@popperjs/core": "^2.11.8",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
     "lodash.debounce": "^4.0.8",
@@ -105,10 +105,10 @@
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.14",
     "@chanzuckerberg/prettier-config-edu": "^1.0.4",
     "@chanzuckerberg/story-utils": "^3.0.14",
-    "@commitlint/cli": "^17.6.3",
-    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@geometricpanda/storybook-addon-badges": "^1.1.1",
-    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.1",
     "@size-limit/file": "^8.2.4",
     "@storybook/addon-a11y": "^6.5.16",
@@ -126,15 +126,15 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.5.1",
+    "@types/jest": "^29.5.2",
     "@types/lodash.debounce": "^4.0.7",
-    "@types/node": "^18.16.15",
-    "@types/react": "^18.2.7",
+    "@types/node": "^18.16.16",
+    "@types/react": "^18.2.8",
     "@types/react-beautiful-dnd": "^13.1.4",
     "@types/react-dom": "^18.2.4",
     "@types/react-portal": "^4.0.4",
     "axe-core": "4.7.2",
-    "chromatic": "^6.17.4",
+    "chromatic": "^6.18.0",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
     "eslint": "^8.41.0",
@@ -151,7 +151,7 @@
     "lint-staged": "^13.2.2",
     "pascal-case": "^3.1.2",
     "plop": "^3.1.2",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "postcss-mixins": "^9.0.4",
@@ -182,5 +182,5 @@
       "stylelint --fix"
     ]
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.6.0"
 }
