@@ -179,7 +179,11 @@ export const InputField: InputFieldType = forwardRef(
           <div className={overlineClassName}>
             {label && <Label htmlFor={idVar} text={label} />}
             {required && (
-              <Text as="p" size="sm">
+              <Text
+                as="span"
+                className={styles['input-field__required-text']}
+                size="sm"
+              >
                 Required
               </Text>
             )}
@@ -217,5 +221,6 @@ export const InputField: InputFieldType = forwardRef(
     );
   },
 );
+
 InputField.displayName = 'InputField';
 InputField.Input = Input;
