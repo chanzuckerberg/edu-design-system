@@ -14,6 +14,7 @@
 }
 
 .popover-list-item--active {
+  color: var(--eds-theme-color-text-neutral-default);
   background-color: var(--eds-theme-color-background-neutral-default-hover);
 }
 

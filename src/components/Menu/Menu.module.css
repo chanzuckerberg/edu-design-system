@@ -53,3 +53,8 @@
   text-decoration: none;
   color: inherit;
 }
+
+/* Unset the hover on the menu item, as this is handled by the PopoverListItem */
+.menu__item:hover {
+  color: unset;
+}
