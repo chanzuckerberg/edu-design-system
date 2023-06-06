@@ -75,7 +75,12 @@ export const ProgressBar = ({
         <label className={styles['progress-bar__label']} id={labelId}>
           {label}
         </label>
-        <Text as="span" id={captionId} size="caption">
+        <Text
+          as="span"
+          className={styles['progress-bar__caption']}
+          id={captionId}
+          size="caption"
+        >
           {progressBarCaption}
         </Text>
       </div>
