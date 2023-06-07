@@ -7,7 +7,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
       class="p-16"
     >
       <div
-        aria-describedby="tippy-5"
+        aria-describedby="tippy-4"
         class="fpo w-3 p-1"
       >
         •
@@ -16,7 +16,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
   </div>
   <div
     data-tippy-root=""
-    id="tippy-5"
+    id="tippy-4"
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 10px);"
   >
     <div
@@ -37,77 +37,24 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
       >
         <div>
           <span
+            class="text text--caption-lg"
             data-testid="tooltip-content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <strong>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </strong>
+               
+              Praesent efficitur mauris ac leo semper accumsan.
+            </span>
           </span>
         </div>
       </div>
       <div
         class="tippy-arrow"
         style="position: absolute; left: 0px; transform: translate(3px, 0px);"
-      />
-    </div>
-  </div>
-</body>
-`;
-
-exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
-<body>
-  <div>
-    <div
-      class="p-16"
-    >
-      <div
-        aria-describedby="tippy-2"
-        class="fpo w-3 p-1"
-      >
-        •
-      </div>
-    </div>
-  </div>
-  <div
-    data-tippy-root=""
-    id="tippy-2"
-    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
-  >
-    <div
-      class="tippy-box tooltip tooltip--dark"
-      data-animation="fade"
-      data-escaped=""
-      data-placement="right"
-      data-reference-hidden=""
-      data-state="visible"
-      role="tooltip"
-      style="max-width: 350px; transition-duration: 0ms;"
-      tabindex="-1"
-    >
-      <div
-        class="tippy-content"
-        data-state="visible"
-        style="transition-duration: 0ms;"
-      >
-        <div>
-          <span
-            data-testid="tooltip-content"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
-          </span>
-        </div>
-      </div>
-      <div
-        class="tippy-arrow"
-        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
       />
     </div>
   </div>
@@ -168,7 +115,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
       class="p-16"
     >
       <div
-        aria-describedby="tippy-3"
+        aria-describedby="tippy-2"
         class="fpo w-3 p-1"
       >
         •
@@ -177,7 +124,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
   </div>
   <div
     data-tippy-root=""
-    id="tippy-3"
+    id="tippy-2"
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; right: 0px; transform: translate(-10px, 0px);"
   >
     <div
@@ -198,14 +145,18 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
       >
         <div>
           <span
+            class="text text--caption-lg"
             data-testid="tooltip-content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <strong>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </strong>
+               
+              Praesent efficitur mauris ac leo semper accumsan.
+            </span>
           </span>
         </div>
       </div>
@@ -255,14 +206,18 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
       >
         <div>
           <span
+            class="text text--caption-lg"
             data-testid="tooltip-content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <strong>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </strong>
+               
+              Praesent efficitur mauris ac leo semper accumsan.
+            </span>
           </span>
         </div>
       </div>
@@ -282,10 +237,70 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
       class="p-16"
     >
       <div
-        aria-describedby="tippy-6"
+        aria-describedby="tippy-5"
         class="fpo w-3 p-1"
       >
         •
+      </div>
+    </div>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-5"
+    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
+  >
+    <div
+      class="tippy-box tooltip tooltip--light"
+      data-animation="fade"
+      data-escaped=""
+      data-placement="right"
+      data-reference-hidden=""
+      data-state="visible"
+      role="tooltip"
+      style="max-width: 350px; transition-duration: 0ms;"
+      tabindex="-1"
+    >
+      <div
+        class="tippy-content"
+        data-state="visible"
+        style="transition-duration: 0ms;"
+      >
+        <div>
+          <span
+            class="text text--caption-lg"
+            data-testid="tooltip-content"
+          >
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <b>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </b>
+               Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="tippy-arrow"
+        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="p-16"
+    >
+      <div
+        aria-describedby="tippy-6"
+        class="fpo p-1"
+      >
+        Longer text to test placement
       </div>
     </div>
   </div>
@@ -311,70 +326,19 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
         style="transition-duration: 0ms;"
       >
         <div>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.
-          </span>
-        </div>
-      </div>
-      <div
-        class="tippy-arrow"
-        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
-      />
-    </div>
-  </div>
-</body>
-`;
-
-exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
-<body>
-  <div>
-    <div
-      class="p-16"
-    >
-      <div
-        aria-describedby="tippy-7"
-        class="fpo p-1"
-      >
-        Longer text to test placement
-      </div>
-    </div>
-  </div>
-  <div
-    data-tippy-root=""
-    id="tippy-7"
-    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
-  >
-    <div
-      class="tippy-box tooltip tooltip--light"
-      data-animation="fade"
-      data-escaped=""
-      data-placement="right"
-      data-reference-hidden=""
-      data-state="visible"
-      role="tooltip"
-      style="max-width: 350px; transition-duration: 0ms;"
-      tabindex="-1"
-    >
-      <div
-        class="tippy-content"
-        data-state="visible"
-        style="transition-duration: 0ms;"
-      >
-        <div>
           <span
+            class="text text--caption-lg"
             data-testid="tooltip-content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <strong>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </strong>
+               
+              Praesent efficitur mauris ac leo semper accumsan.
+            </span>
           </span>
         </div>
       </div>
@@ -394,7 +358,7 @@ exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
       class="p-16"
     >
       <span
-        aria-describedby="tippy-8"
+        aria-describedby="tippy-7"
         data-testid="disabled-child-tooltip-wrapper"
         tabindex="0"
       >
@@ -406,7 +370,7 @@ exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
   </div>
   <div
     data-tippy-root=""
-    id="tippy-8"
+    id="tippy-7"
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, -10px);"
   >
     <div
@@ -427,14 +391,18 @@ exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
       >
         <div>
           <span
+            class="text text--caption-lg"
             data-testid="tooltip-content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <strong>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </strong>
+               
+              Praesent efficitur mauris ac leo semper accumsan.
+            </span>
           </span>
         </div>
       </div>
@@ -454,7 +422,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
       class="p-16"
     >
       <div
-        aria-describedby="tippy-4"
+        aria-describedby="tippy-3"
         class="fpo w-3 p-1"
       >
         •
@@ -463,7 +431,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
   </div>
   <div
     data-tippy-root=""
-    id="tippy-4"
+    id="tippy-3"
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, -10px);"
   >
     <div
@@ -484,14 +452,18 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
       >
         <div>
           <span
+            class="text text--caption-lg"
             data-testid="tooltip-content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             
-            <b>
-              Donec a erat eu augue consequat eleifend non vel sem.
-            </b>
-             Praesent efficitur mauris ac leo semper accumsan.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               
+              <strong>
+                Donec a erat eu augue consequat eleifend non vel sem.
+              </strong>
+               
+              Praesent efficitur mauris ac leo semper accumsan.
+            </span>
           </span>
         </div>
       </div>
