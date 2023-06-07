@@ -54,16 +54,16 @@ export class Tier2TypographyUsage extends Component {
 
         <Section title="Body Text">
           <Grid>
-            {renderTypeToken('body-lg', '004')}
-            {renderTypeToken('body-md', '005')}
-            {renderTypeToken('body-sm', '006')}
-            {renderTypeToken('body-xs', '008')}
+            {renderTypeToken('body-lg', '004-light')}
+            {renderTypeToken('body-md', '005-light')}
+            {renderTypeToken('body-sm', '006-light')}
+            {renderTypeToken('body-xs', '008-light')}
           </Grid>
         </Section>
 
         <Section title="Caption">
           <Grid>
-            {renderTypeToken('caption-lg', '006')}
+            {renderTypeToken('caption-lg', '006-light')}
             {renderTypeToken('caption-md', '008')}
             {renderTypeToken('caption-sm', '010')}
           </Grid>
