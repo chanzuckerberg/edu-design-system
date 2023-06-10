@@ -20,8 +20,11 @@
 .text--xs {
   @mixin eds-theme-typography-body-xs;
 }
-.text--caption {
+.text--caption, .text--caption-md {
   @mixin eds-theme-typography-caption-md;
+}
+.text--caption-lg {
+  @mixin eds-theme-typography-caption-lg;
 }
 .text--overline {
   @mixin eds-theme-typography-overline;
