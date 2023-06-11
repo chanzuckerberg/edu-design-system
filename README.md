@@ -38,7 +38,7 @@ html {
 
 ### Tailwind Setup
 
-The EDS Tailwind theme provides EDS color [tokens](./docs/TOKENS.md) and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
+The EDS Tailwind theme provides EDS color [tokens](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-tokens--page) and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
 
 ```js
 const edsConfig.theme = require('@chanzuckerberg/eds/tailwind.config');
@@ -49,7 +49,7 @@ module.exports = {
 };
 ```
 
-Refer to the [tokens tailwind section](./docs/TOKENS.md#tailwind-class-tokens) for usage guidelines.
+Refer to the [tokens tailwind section](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-tokens--page#tailwind-class-tokens) for usage guidelines.
 
 ## Usage
 
@@ -72,7 +72,7 @@ EDS provides a [sizeable suite](https://chanzuckerberg.github.io/edu-design-syst
 
 ## Development
 
-See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for more information on how to contribute to EDS. Also, read our [guidelines](./docs/CODE_GUIDELINES.md) for additional information.
+See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for more information on how to contribute to EDS. Also, read our [guidelines](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-code-guidelines--page) for additional information.
 
 ### Requirements
 
