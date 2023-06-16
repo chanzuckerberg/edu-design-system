@@ -138,7 +138,7 @@ const PopoverContent = ({
   };
 
   const componentClassName = clsx(styles['popover-content'], className);
-  if (typeof window === 'object') {
+  if (typeof document !== 'undefined') {
     return (
       <>
         {createPortal(

@@ -159,7 +159,7 @@ const MenuItems = (props: MenuItemsProps) => {
     ...props,
     ...popperAttributes,
   };
-  if (typeof window === 'object') {
+  if (typeof document !== 'undefined') {
     return (
       <>
         {createPortal(<HeadlessMenu.Items {...optionProps} />, document.body)}

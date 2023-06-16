@@ -247,7 +247,7 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
     ...popperAttributes,
     ...other,
   };
-  if (typeof window === 'object') {
+  if (typeof document !== 'undefined') {
     return (
       <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
     );
