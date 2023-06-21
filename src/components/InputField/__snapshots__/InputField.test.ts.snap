@@ -901,11 +901,11 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
     <div
       class="input-field__overline input-field__overline--no-label"
     >
-      <p
-        class="text text--sm"
+      <span
+        class="text text--sm input-field__required-text"
       >
         Required
-      </p>
+      </span>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -945,11 +945,11 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
         Input field with fieldNote
          
       </label>
-      <p
-        class="text text--sm"
+      <span
+        class="text text--sm input-field__required-text"
       >
         Required
-      </p>
+      </span>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -1001,11 +1001,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1038,11 +1038,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1077,11 +1077,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body"
@@ -1107,11 +1107,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body"
@@ -1132,11 +1132,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
       <div
         class="input-field__overline input-field__overline--no-label"
       >
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1163,11 +1163,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
       <div
         class="input-field__overline input-field__overline--no-label"
       >
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1196,11 +1196,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
       <div
         class="input-field__overline input-field__overline--no-label"
       >
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body"
@@ -1220,11 +1220,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
       <div
         class="input-field__overline input-field__overline--no-label"
       >
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body"
@@ -1253,11 +1253,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1307,11 +1307,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1363,11 +1363,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"
@@ -1401,11 +1401,11 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
            
         </label>
-        <p
-          class="text text--sm"
+        <span
+          class="text text--sm input-field__required-text"
         >
           Required
-        </p>
+        </span>
       </div>
       <div
         class="input-field__body input-field--has-fieldNote"

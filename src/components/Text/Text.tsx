@@ -9,9 +9,15 @@ export type Size =
   | 'md'
   | 'lg'
   | 'xs'
-  | 'caption'
+  | 'caption-md'
+  | 'caption-lg'
   | 'overline'
   | 'callout';
+
+/**
+ * @deprecated  Please use `caption-md` instead
+ */
+export type DeprecatedSize = 'caption';
 
 export type Variant =
   | 'inherit'
@@ -22,11 +28,12 @@ export type Variant =
   | 'success'
   | 'warning'
   | 'error'
-  | 'white'
-  /**
-   * @deprecated Info variant is deprecated.
-   */
-  | 'info';
+  | 'white';
+
+/**
+ * @deprecated Info variant is deprecated.
+ */
+export type DeprecatedVariant = 'info';
 
 export type Props = {
   /**
@@ -35,8 +42,8 @@ export type Props = {
   as?: 'p' | 'span';
   children: React.ReactNode;
   className?: string;
-  variant?: Variant;
-  size?: Size;
+  variant?: Variant | DeprecatedVariant;
+  size?: Size | DeprecatedSize;
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -96,4 +103,5 @@ export const Text = forwardRef(
     );
   },
 );
+
 Text.displayName = 'Text'; // Satisfy eslint

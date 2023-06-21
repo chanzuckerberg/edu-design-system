@@ -247,10 +247,12 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
     ...popperAttributes,
     ...other,
   };
-
-  return (
-    <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
-  );
+  if (typeof document !== 'undefined') {
+    return (
+      <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
+    );
+  }
+  return null;
 };
 
 type SelectOptionProps = {
@@ -302,7 +304,7 @@ const SelectOption = function (props: SelectOptionProps) {
   );
 };
 
-type SelecButtonProps = {
+type SelectButtonProps = {
   /**
    * Optional className for additional styling.
    */
@@ -322,7 +324,7 @@ type SelecButtonProps = {
  */
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,
-  SelecButtonProps
+  SelectButtonProps
 >(({ children, className, isOpen, ...other }, ref) => {
   const componentClassName = clsx(styles['select-button'], className);
   const iconClassName = clsx(

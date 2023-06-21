@@ -25,6 +25,10 @@
   position: relative;
 }
 
+.input-field__required-text {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
 .input-field--has-fieldNote {
   margin-bottom: var(--eds-size-half);
 }

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import ButtonDropdown from '../ButtonDropdown';
 import Icon from '../Icon';
+import Menu from '../Menu';
 import styles from './BreadcrumbsItem.module.css';
 
 type Props = {
@@ -12,14 +12,14 @@ type Props = {
   /**
    * URL for the breadcrumbs item.
    * Required since breadcrumbs should reroute user.
-   * Null case is used for the collapsed variant, which uses dropdownMenuItems which has hrefs.
+   * Null case is used for the collapsed variant, which uses Menu Items which has hrefs.
    */
   href: string | null;
   /**
    * URLs for the collapsed breadcrumbs variant.
-   * Should be <DropdownMenuItem href={href}>{text}</DropdownMenuItem>.
+   * Should be <Menu.Item href={href}>{text}</Menu.Item>.
    */
-  dropdownMenuItems?: React.ReactNode[];
+  menuItems?: React.ReactNode[];
   /**
    * Breadcrumbs item text.
    */
@@ -27,7 +27,7 @@ type Props = {
   /**
    * Behavior variations for the breadcrumbs item.
    * - **back** - results in a left facing icon, usually denoting the second last breadcrumb item in a mobile breakpoint.
-   * - **collapsed** - results in an ellipsis, where interaction spawns a dropdown menu containing more links.
+   * - **collapsed** - results in an ellipsis, where interaction spawns a Menu containing more links.
    */
   variant?: 'back' | 'collapsed';
 };
@@ -38,7 +38,7 @@ type Props = {
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({
-  dropdownMenuItems,
+  menuItems,
   className,
   href,
   text,
@@ -58,21 +58,17 @@ export const BreadcrumbsItem = ({
 
   const getInteractionElement = () => {
     if (variant === 'collapsed') {
-      /* The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links. */
+      /* The collapsed variant is a button with ellipsis. Interaction spawns a Menu containing the collapsed breadcrumb links. */
       return (
-        <ButtonDropdown
-          dropdownMenuTrigger={
-            <button
-              aria-label="Show more breadcrumbs"
-              className={ellipsisButtonClassName}
-            >
-              ...
-            </button>
-          }
-          position="bottom-right"
-        >
-          {dropdownMenuItems}
-        </ButtonDropdown>
+        <Menu>
+          <Menu.PlainButton
+            aria-label="Show more breadcrumbs"
+            className={ellipsisButtonClassName}
+          >
+            ...
+          </Menu.PlainButton>
+          <Menu.Items>{menuItems}</Menu.Items>
+        </Menu>
       );
     } else if (variant === 'back') {
       /* The back variant is a left pointing icon that usually links to the second last breadcrumb href. */

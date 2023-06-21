@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 import styles from './TypographyPresets.module.css';
 
@@ -68,7 +68,10 @@ export const PRESET_SIZE_MAP = {
 
 export class Tier1TypographyPresets extends Component {
   render() {
-    const renderTypeToken = (preset, index) => {
+    const renderTypeToken = (
+      preset: keyof typeof PRESET_SIZE_MAP,
+      index: number,
+    ) => {
       const { fontSize, lineHeight, weights } = PRESET_SIZE_MAP[preset];
       const commonProps = {
         comment: 'font size / line height (px)',
@@ -104,12 +107,12 @@ export class Tier1TypographyPresets extends Component {
     };
 
     return (
-      <Grid>
+      <Section title="Typography Presets">
         {Object.keys(PRESET_SIZE_MAP).map((preset, index) => {
           // TODO: simplify this file to avoid custom mappings to type ramp
-          return renderTypeToken(preset, index);
+          return renderTypeToken(preset as keyof typeof PRESET_SIZE_MAP, index);
         })}
-      </Grid>
+      </Section>
     );
   }
 }

@@ -10,7 +10,7 @@
 .breadcrumbs__item {
   @mixin eds-theme-typography-body-xs;
   max-width: 100%;
-  /* Required for dropdown menu to absolutely position relative to this container. */
+  /* Required for the Menu to absolutely position relative to this container. */
   position: relative;
 
   /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */
@@ -56,9 +56,15 @@
  * Ellipsis variant of the breadcrumbs list item.
  */
 .breadcrumbs__ellipsis {
+  min-height: unset;
+  min-width: unset;
+
   border: none;
+  border-radius: unset;
   background-color: transparent;
-  cursor: pointer;
+}
+.breadcrumbs__ellipsis:hover {
+  background-color: transparent;
 }
 
 /**

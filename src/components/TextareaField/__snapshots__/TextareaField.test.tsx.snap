@@ -1,58 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextareaField /> AfterDelete story renders snapshot 1`] = `
-<div
-  class="textarea-field"
->
-  <div
-    class="textarea-field__overline"
-  >
-    <label
-      class="label"
-      for=":ri:"
-    >
-      Textarea Field
-       
-    </label>
-  </div>
-  <textarea
-    aria-describedby=":rj:"
-    class="textarea"
-    id=":ri:"
-    maxlength="209"
-    placeholder="Enter long-form text here"
-    rows="5"
-    spellcheck="false"
-  >
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
-    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
-    praesentium, commodi eligendi asperiores quis dolorum porro.
-  </textarea>
-  <div
-    class="textarea-field__footer"
-  >
-    <div
-      class="field-note textarea-field__field-note"
-      id=":rj:"
-    >
-      Longer Field description
-    </div>
-    <div
-      class="textarea-field__character-counter"
-    >
-      <span
-        class=""
-      >
-        209
-      </span>
-       
-      / 
-      209
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<TextareaField /> Default story renders snapshot 1`] = `
 <div
   class="textarea-field"
