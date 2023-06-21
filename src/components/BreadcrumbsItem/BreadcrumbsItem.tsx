@@ -21,6 +21,11 @@ type Props = {
    */
   menuItems?: React.ReactNode[];
   /**
+   * Custom string separator after current breadcrumb item.
+   * Defaults to '/'
+   */
+  separator?: string;
+  /**
    * Breadcrumbs item text.
    */
   text?: string;
@@ -38,9 +43,10 @@ type Props = {
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({
-  menuItems,
   className,
   href,
+  menuItems,
+  separator = '/',
   text,
   variant,
   ...other
@@ -96,7 +102,7 @@ export const BreadcrumbsItem = ({
     <li className={componentClassName} {...other}>
       {getInteractionElement()}
       <span aria-hidden className={styles['breadcrumbs__separator']}>
-        /
+        {separator}
       </span>
     </li>
   );

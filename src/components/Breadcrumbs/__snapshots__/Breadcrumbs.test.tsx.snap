@@ -423,6 +423,115 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <nav
+    aria-label="breadcrumbs links"
+    class="breadcrumbs"
+  >
+    <ul
+      class="breadcrumbs__list"
+    >
+      <li
+        class="breadcrumbs__item breadcrumbs__item-back"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+            </title>
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
+            />
+          </svg>
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__separator"
+        >
+          &gt;
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Home
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__separator"
+        >
+          &gt;
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 1
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__separator"
+        >
+          &gt;
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__separator"
+        >
+          &gt;
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__separator"
+        >
+          &gt;
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
 exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
 <div
   style="margin: 0.5rem;"
