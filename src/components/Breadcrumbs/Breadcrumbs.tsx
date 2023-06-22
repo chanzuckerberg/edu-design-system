@@ -27,11 +27,11 @@ type Props = {
    * Custom string separator between individual breadcrumbs
    * Defaults to '/'
    */
-  separator?: string;
+  separator?: '|' | '>' | '/';
 };
 
 type Context = {
-  separator?: string;
+  separator?: '|' | '>' | '/';
 };
 
 const BreadcrumbsContext = createContext<Context>({});

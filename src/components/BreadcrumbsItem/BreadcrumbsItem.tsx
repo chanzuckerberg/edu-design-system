@@ -24,7 +24,7 @@ type Props = {
    * Custom string separator after current breadcrumb item.
    * Defaults to '/'
    */
-  separator?: string;
+  separator?: '|' | '>' | '/';
   /**
    * Breadcrumbs item text.
    */
