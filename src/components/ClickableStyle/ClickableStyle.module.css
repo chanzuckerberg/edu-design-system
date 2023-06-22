@@ -8,7 +8,7 @@
  * Styled clickable element that should look like a button or link.
  */
 .clickable-style {
-  @mixin eds-theme-typography-button-label;
+  font: var(--eds-theme-typography-button-label);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -534,7 +534,7 @@ button:where(.clickable-style--link) {
  * Small clickable style
  */
 .clickable-style--sm {
-  @mixin eds-theme-typography-button-label-sm;
+  font: var(--eds-theme-typography-button-label-sm);
   /**
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand

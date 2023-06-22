@@ -36,7 +36,6 @@ export default {
     },
     fontSize: {
       // provide values for both font-size and line-height
-      // sync with src/design-tokens/tier-1-definitions/typography-presets.css
       body: [edsTokens['font-size']['16'], '1.5'],
       h1: [edsTokens['font-size']['40'], '1.2'],
       h2: [edsTokens['font-size']['32'], '1.25'],

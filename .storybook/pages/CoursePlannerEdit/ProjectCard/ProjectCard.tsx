@@ -110,7 +110,7 @@ export const ProjectCard = ({
         <Heading
           as={headingAs}
           className={styles['project-card__title']}
-          size="body-sm"
+          size="title-xs"
           variant="neutral-strong"
         >
           {title}

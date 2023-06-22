@@ -62,7 +62,12 @@
   display: flex;
   border-bottom: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-subtle);
-  @mixin eds-theme-typography-tab;
+  font: var(--eds-theme-typography-tab-lg);
+  line-height: 1.429;
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-theme-typography-tab-sm);
+  }
 }
 
 /**

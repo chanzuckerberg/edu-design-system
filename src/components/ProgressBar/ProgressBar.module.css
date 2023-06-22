@@ -54,7 +54,7 @@
  * Progress bar label.
  */
 .progress-bar__label {
-  @mixin eds-theme-typography-label-md;
+  font: var(--eds-theme-typography-label-md);
   color: var(--eds-theme-color-text-neutral-strong);
   margin-bottom: 0;
 }

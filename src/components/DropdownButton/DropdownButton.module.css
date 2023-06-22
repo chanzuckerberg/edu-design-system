@@ -8,7 +8,7 @@
  * The button to trigger the display of the dropdown.
  */
 .dropdown-button {
-  @mixin eds-theme-typography-body-md;
+  font: var(--eds-theme-typography-body-md);
   /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
 

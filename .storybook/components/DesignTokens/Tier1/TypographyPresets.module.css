@@ -1,137 +1,140 @@
-@import '../../../../src/design-tokens/mixins.css';
 /*------------------------------------*\
   # TYPOGRAPHY PRESETS
 \*------------------------------------*/
 
 /**
- * Use typography mixins to display the type ramp
- * TODO: revisit type ramp definitions to simplify this layout 
+ * Use typography tokens to display the type ramp
  */
 
 .typography-presets--001 {
-  @mixin eds-typography-preset-001;
+  font: var(--eds-typography-preset-001);
 }
 
 .typography-presets--001-light {
-  @mixin eds-typography-preset-001-light;
+  font: var(--eds-typography-preset-001-light);
 }
 
 .typography-presets--001-bold {
-  @mixin eds-typography-preset-001-bold;
+  font: var(--eds-typography-preset-001-bold);
 }
 
 .typography-presets--002 {
-  @mixin eds-typography-preset-002;
+  font: var(--eds-typography-preset-002);
 }
 
 .typography-presets--002-light {
-  @mixin eds-typography-preset-002-light;
+  font: var(--eds-typography-preset-002-light);
 }
 
 .typography-presets--002-bold {
-  @mixin eds-typography-preset-002-bold;
+  font: var(--eds-typography-preset-002-bold);
 }
 
 .typography-presets--003 {
-  @mixin eds-typography-preset-003;
+  font: var(--eds-typography-preset-003);
 }
 
 .typography-presets--003-light {
-  @mixin eds-typography-preset-003-light;
+  font: var(--eds-typography-preset-003-light);
 }
 
 .typography-presets--003-bold {
-  @mixin eds-typography-preset-003-bold;
+  font: var(--eds-typography-preset-003-bold);
 }
 
 .typography-presets--004 {
-  @mixin eds-typography-preset-004;
+  font: var(--eds-typography-preset-004);
 }
 
 .typography-presets--004-light {
-  @mixin eds-typography-preset-004-light;
+  font: var(--eds-typography-preset-004-light);
 }
 
 .typography-presets--004-bold {
-  @mixin eds-typography-preset-004-bold;
+  font: var(--eds-typography-preset-004-bold);
 }
 
 .typography-presets--005 {
-  @mixin eds-typography-preset-005;
+  font: var(--eds-typography-preset-005);
 }
 
 .typography-presets--005-light {
-  @mixin eds-typography-preset-005-light;
+  font: var(--eds-typography-preset-005-light);
 }
 
 .typography-presets--005-bold {
-  @mixin eds-typography-preset-005-bold;
+  font: var(--eds-typography-preset-005-bold);
 }
 
 .typography-presets--006 {
-  @mixin eds-typography-preset-006;
+  font: var(--eds-typography-preset-006);
 }
 
 .typography-presets--006-light {
-  @mixin eds-typography-preset-006-light;
+  font: var(--eds-typography-preset-006-light);
 }
 
 .typography-presets--006-bold {
-  @mixin eds-typography-preset-006-bold;
+  font: var(--eds-typography-preset-006-bold);
 }
 
 .typography-presets--007 {
-  @mixin eds-typography-preset-007;
+  font: var(--eds-typography-preset-007);
 }
 
 .typography-presets--007-light {
-  @mixin eds-typography-preset-007-light;
+  font: var(--eds-typography-preset-007-light);
 }
 
 .typography-presets--007-bold {
-  @mixin eds-typography-preset-007-bold;
+  font: var(--eds-typography-preset-007-bold);
 }
 
 .typography-presets--008 {
-  @mixin eds-typography-preset-008;
+  font: var(--eds-typography-preset-008);
+
 }
 
 .typography-presets--008-bold {
-  @mixin eds-typography-preset-008-bold;
+  font: var(--eds-typography-preset-008-bold);
 }
 
 .typography-presets--008-light {
-  @mixin eds-typography-preset-008-light;
+  font: var(--eds-typography-preset-008-light);
 }
 
 .typography-presets--009 {
-  @mixin eds-typography-preset-009;
+  font: var(--eds-typography-preset-009);
 }
 
 .typography-presets--009-bold {
-  @mixin eds-typography-preset-009-bold;
+  font: var(--eds-typography-preset-009-bold);
 }
 
 .typography-presets--010 {
-  @mixin eds-typography-preset-010;
+  font: var(--eds-typography-preset-010);
 }
 
 .typography-presets--010-bold {
-  @mixin eds-typography-preset-010-bold;
+  font: var(--eds-typography-preset-010-bold);
 }
 
 .typography-presets--011 {
-  @mixin eds-typography-preset-011;
+  font: var(--eds-typography-preset-011);
+  text-transform: uppercase;
 }
 
 .typography-presets--011-bold {
-  @mixin eds-typography-preset-011-bold;
+  font: var(--eds-typography-preset-011-bold);
+  text-transform: uppercase;
 }
 
 .typography-presets--012 {
-  @mixin eds-typography-preset-012;
+  font: var(--eds-typography-preset-012);
+  text-transform: uppercase;
 }
 
 .typography-presets--012-bold {
-  @mixin eds-typography-preset-012-bold;
+  font: var(--eds-typography-preset-012-bold);
+  text-transform: uppercase;
 }

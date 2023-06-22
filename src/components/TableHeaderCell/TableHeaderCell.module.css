@@ -9,7 +9,7 @@
  * The `:where` pseudo class function allows easy overriding via className.
  */
 :where(.table-header-cell) {
-  @mixin eds-theme-typography-label-sm;
+  font: var(--eds-theme-typography-label-sm);
   padding: var(--eds-size-1) var(--eds-size-1);
   text-align: left;
 }

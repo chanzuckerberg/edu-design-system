@@ -1,0 +1,90 @@
+{
+  "eds": {
+    "theme": {
+      "typography": {
+        "headline": {
+          "lg": {
+            "value": "var(--eds-typography-preset-001-bold)"
+          },
+          "md": {
+            "value": "var(--eds-typography-preset-002-bold)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-003-bold)"
+          }
+        },
+        "title": {
+          "md": {
+            "value": "var(--eds-typography-preset-004-bold)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-005-bold)"
+          },
+          "xs": {
+            "value": "var(--eds-typography-preset-007-bold)"
+          }
+        },
+        "label": {
+          "lg": {
+            "subtle": {
+              "value": "var(--eds-typography-preset-005)"
+            }
+          },
+          "md": {
+            "@": {
+              "value": "var(--eds-typography-preset-007-bold)"
+            },
+            "subtle": {
+              "value": "var(--eds-typography-preset-007)"
+            }
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-009-bold)"
+          }
+        },
+        "body": {
+          "xl": {
+            "value": "var(--eds-typography-preset-003-light)"
+          },
+          "lg": {
+            "value": "var(--eds-typography-preset-004-light)"
+          },
+          "md": {
+            "value": "var(--eds-typography-preset-005-light)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-006-light)"
+          },
+          "xs": {
+            "value": "var(--eds-typography-preset-008-light)"
+          }
+        },
+        "caption": {
+          "lg": {
+            "value": "var(--eds-typography-preset-006-light)"
+          },
+          "md": {
+            "value": "var(--eds-typography-preset-008)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-010)"
+          }
+        },
+        "overline": {
+          "@": {
+            "value": "var(--eds-typography-preset-011)"
+          },
+          "md": {
+            "value": "var(--eds-typography-preset-011)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-012)"
+          }
+        },
+        "callout": {
+          "value": "var(--eds-typography-preset-002-light)"
+        }
+      }
+    }
+  }
+}

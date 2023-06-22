@@ -10,7 +10,7 @@
  * Labels can sometimes be marked up as legends for field groups (i.e. radio field).
  */
 .label {
-  @mixin eds-theme-typography-form-label;
+  font: var(--eds-theme-typography-form-label);
   display: inline-block;
 }
 
@@ -21,7 +21,7 @@
  * is only present for optional fields.
  */
 .label__flag {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
 }
 
 /**

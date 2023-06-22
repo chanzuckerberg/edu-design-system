@@ -1,6 +1,16 @@
 {
   "eds": {
     "theme": {
+      "typography": {
+        "form": {
+          "label": {
+            "value": "var(--eds-typography-preset-006)"
+          },
+          "input": {
+            "value": "var(--eds-typography-preset-005-light)"
+          }
+        }
+      },
       "color": {
         "form": {
           "border": {

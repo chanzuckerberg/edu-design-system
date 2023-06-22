@@ -5,136 +5,113 @@
 \*------------------------------------*/
 
 /**
- *  Use typography mixins to display the type ramp
+ *  Use typography tokens to display the type ramp
  */
 
+/* TODO-AH: these should actually use the relevant tier 2 tokens. the tier 3 ones need to be on their own page */
+
 .typography-usage--headline-lg {
-  @mixin eds-typography-preset-001-bold;
+  font: var(--eds-typography-preset-001-bold);
 }
 
 .typography-usage--headline-md {
-  @mixin eds-typography-preset-002-bold;
+  font: var(--eds-typography-preset-002-bold);
 }
 
 .typography-usage--headline-sm {
-  @mixin eds-typography-preset-003-bold;
+  font: var(--eds-typography-preset-003-bold);
 }
 
 .typography-usage--title-md {
-  @mixin eds-typography-preset-004-bold;
+  font: var(--eds-typography-preset-004-bold);
 }
 
 .typography-usage--title-sm {
-  @mixin eds-typography-preset-005-bold;
+  font: var(--eds-typography-preset-005-bold);
 }
 
 .typography-usage--title-xs {
-  @mixin eds-typography-preset-007-bold;
+  font: var(--eds-typography-preset-007-bold);
 }
 
 .typography-usage--label-lg-subtle {
-  @mixin eds-typography-preset-005;
+  font: var(--eds-typography-preset-005);
 }
 
 .typography-usage--label-md-subtle {
-  @mixin eds-typography-preset-007;
+  font: var(--eds-typography-preset-007);
 }
 
 .typography-usage--label-md {
-  @mixin eds-typography-preset-007-bold;
+  font: var(--eds-typography-preset-007-bold);
 }
 
 .typography-usage--label-sm {
-  @mixin eds-typography-preset-009-bold;
+  font: var(--eds-typography-preset-009-bold);
 }
 
 .typography-usage--body-lg {
-  @mixin eds-typography-preset-004;
+  font: var(--eds-typography-preset-004-light);
 }
 
 .typography-usage--body-md {
-  @mixin eds-typography-preset-005-light;
+  font: var(--eds-typography-preset-005-light);
 }
 
 .typography-usage--body-sm {
-  @mixin eds-typography-preset-006;
+  font: var(--eds-typography-preset-006-light);
 }
 
 .typography-usage--body-xs {
-  @mixin eds-typography-preset-008;
+  font: var(--eds-typography-preset-008-light);
 }
 
 .typography-usage--caption-lg {
-  @mixin eds-typography-preset-006;
+  font: var(--eds-typography-preset-006);
 }
 
 .typography-usage--caption-md {
-  @mixin eds-typography-preset-008;
+  font: var(--eds-typography-preset-008);
 }
 
 .typography-usage--caption-sm {
-  @mixin eds-typography-preset-010;
+  font: var(--eds-typography-preset-010);
 }
 
 .typography-usage--button-label {
-  @mixin eds-typography-preset-006-bold;
+  font: var(--eds-typography-preset-006-bold);
 }
 
 .typography-usage--form-label {
-  @mixin eds-typography-preset-006-bold;
+  font: var(--eds-typography-preset-006-bold);
 }
 
 .typography-usage--form-input {
-  @mixin eds-typography-preset-005;
+  font: var(--eds-typography-preset-005);
 }
 
 .typography-usage--overline {
-  @mixin eds-typography-preset-011-bold;
+  font: var(--eds-typography-preset-011);
+  text-transform: uppercase;
 }
 
 .typography-usage--overline-sm {
-  @mixin eds-typography-preset-012-bold;
+  font: var(--eds-typography-preset-012);
+  text-transform: uppercase;
 }
 
 .typography-usage--tag {
-  @mixin eds-typography-preset-009-bold;
+  font: var(--eds-typography-preset-009-bold);
 }
+
 .typography-usage--callout {
-  @mixin eds-typography-preset-002-light;
+  font: var(--eds-typography-preset-002-light);
 }
 
 /**
  * Legacy utility classes that aren't a part of the new
  * design system.
  */
-
-/**
- * Body text bold
- */
-.typography-usage--body-bold {
-  @mixin eds-theme-typography-body-md;
-}
-
-/**
- *  Body text sm bold
- */
-.typography-usage--body-sm-bold {
-  @mixin eds-theme-typography-body-sm;
-}
-
-/**
- *  Body text xs bold
- */
-.typography-usage--body-xs-bold {
-  @mixin eds-theme-typography-body-xs-bold;
-}
-
-/**
- *  Body text lg bold
- */
-.typography-usage--body-lg-bold {
-  @mixin eds-theme-typography-body-lg-bold;
-}
 
 /**
  * Heading 1

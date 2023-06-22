@@ -8,7 +8,7 @@
  * Breadcrumbs list item.
  */
 .breadcrumbs__item {
-  @mixin eds-theme-typography-body-xs;
+  font: var(--eds-theme-typography-body-xs);
   max-width: 100%;
   /* Required for the Menu to absolutely position relative to this container. */
   position: relative;
