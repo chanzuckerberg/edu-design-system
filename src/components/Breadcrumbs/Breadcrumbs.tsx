@@ -166,7 +166,9 @@ const flattenBreadcrumbsItems = (children: React.ReactNode) => {
     },
   );
   if (process.env.NODE_ENV !== 'production' && shouldThrowError) {
-    throw 'Only <Breadcrumbs.Item> or React.Fragment of aforementioned components allowed';
+    throw new Error(
+      'Only <Breadcrumbs.Item> or React.Fragment of aforementioned components allowed',
+    );
   }
   return flattenedChildren;
 };
