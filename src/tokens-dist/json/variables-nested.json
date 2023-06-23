@@ -736,6 +736,13 @@
           "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
         }
       },
+      "box": {
+        "button": {
+          "border": {
+            "radius": "4px"
+          }
+        }
+      },
       "form": {
         "border": {
           "width": "1px",

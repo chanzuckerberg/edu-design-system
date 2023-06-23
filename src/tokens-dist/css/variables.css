@@ -392,6 +392,7 @@
   --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
   --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
   --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-box-button-border-radius: 4px;
   --eds-theme-form-border-width: 1px;
   --eds-theme-form-border-radius: 4px;
   --eds-theme-size-slider-track-height: 0.5rem;

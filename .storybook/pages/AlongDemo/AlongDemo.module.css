@@ -180,6 +180,7 @@
 .watch-page__dropdown-button {
   color: inherit;
   border-color: var(--along-color-space-500);
+  border-radius: 2.25rem;
   background-color: transparent;
   justify-content: center;
   transition-property: color, border-color;
