@@ -201,6 +201,7 @@
           "brand": {
             "primary": {
               "default": "#F0F0FC",
+              "subtle": "#F0F0FC",
               "strong": {
                 "@": "#6B65E2",
                 "hover": "#3E42B1"
