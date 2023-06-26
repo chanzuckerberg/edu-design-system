@@ -1655,7 +1655,7 @@ __metadata:
     "@commitlint/config-conventional": ^17.6.5
     "@geometricpanda/storybook-addon-badges": ^1.1.1
     "@headlessui/react": ^1.7.15
-    "@omlet/cli": ^1.0.1-beta.27
+    "@omlet/cli": ^1.0.1-beta.28
     "@popperjs/core": ^2.11.8
     "@rollup/plugin-node-resolve": ^15.1.0
     "@rollup/plugin-typescript": ^11.1.1
@@ -1679,18 +1679,18 @@ __metadata:
     "@types/jest": ^29.5.2
     "@types/lodash.debounce": ^4.0.7
     "@types/node": ^18.16.18
-    "@types/react": ^18.2.12
+    "@types/react": ^18.2.13
     "@types/react-beautiful-dnd": ^13.1.4
-    "@types/react-dom": ^18.2.5
+    "@types/react-dom": ^18.2.6
     "@types/react-portal": ^4.0.4
     axe-core: 4.7.2
-    chromatic: ^6.19.7
+    chromatic: ^6.19.9
     clsx: ^1.2.1
     codecov: ^3.8.3
     copyfiles: ^2.4.1
-    eslint: ^8.42.0
+    eslint: ^8.43.0
     eslint-config-prettier: ^8.7.0
-    eslint-plugin-jest: ^27.2.1
+    eslint-plugin-jest: ^27.2.2
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-storybook: ^0.6.11
     eslint-plugin-testing-library: ^5.11.0
@@ -1724,7 +1724,7 @@ __metadata:
     standard-version: ^9.5.0
     storybook-css-modules-preset: ^1.1.1
     style-dictionary: ^3.8.0
-    stylelint: ^15.7.0
+    stylelint: ^15.9.0
     stylelint-config-recommended: ^10.0.1
     tailwindcss: ^3.3.2
     ts-jest: ^29.1.0
@@ -2171,10 +2171,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.42.0":
-  version: 8.42.0
-  resolution: "@eslint/js@npm:8.42.0"
-  checksum: 750558843ac458f7da666122083ee05306fc087ecc1e5b21e7e14e23885775af6c55bcc92283dff1862b7b0d8863ec676c0f18c7faf1219c722fe91a8ece56b6
+"@eslint/js@npm:8.43.0":
+  version: 8.43.0
+  resolution: "@eslint/js@npm:8.43.0"
+  checksum: 580487a09c82ac169744d36e4af77bc4f582c9a37749d1e9481eb93626c8f3991b2390c6e4e69e5642e3b6e870912b839229a0e23594fae348156ea5a8ed7e2e
   languageName: node
   linkType: hard
 
@@ -2202,6 +2202,58 @@ __metadata:
     react-dom:
       optional: true
   checksum: d60a2368213019392355b980d635f28a9e4d21ab8a40a350048429a4967a42ba810a7a152ddb62151c48035968e1ca97314fd00d9327f6d671a5fc3f686e460b
+  languageName: node
+  linkType: hard
+
+"@hapi/address@npm:^4.0.1":
+  version: 4.1.0
+  resolution: "@hapi/address@npm:4.1.0"
+  dependencies:
+    "@hapi/hoek": ^9.0.0
+  checksum: 01e8257c9428be2a2a0441b24dcab2396a6ca20f53799fd921035b45f9f62a6014f1a0dfaf2dd10912a8b0098a9ba53c3f0863a67e7acbadddeb3d2785591cfc
+  languageName: node
+  linkType: hard
+
+"@hapi/formula@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@hapi/formula@npm:2.0.0"
+  checksum: 902da057c53027d9356de15e53a8af9ea4795d3fb78c066668b36cfca54abd2d707860469618448e7de02eb8364ead86e53b839dbd363e1aeb65ee9a195e5fad
+  languageName: node
+  linkType: hard
+
+"@hapi/hoek@npm:^9.0.0":
+  version: 9.3.0
+  resolution: "@hapi/hoek@npm:9.3.0"
+  checksum: 4771c7a776242c3c022b168046af4e324d116a9d2e1d60631ee64f474c6e38d1bb07092d898bf95c7bc5d334c5582798a1456321b2e53ca817d4e7c88bc25b43
+  languageName: node
+  linkType: hard
+
+"@hapi/joi@npm:^17.1.1":
+  version: 17.1.1
+  resolution: "@hapi/joi@npm:17.1.1"
+  dependencies:
+    "@hapi/address": ^4.0.1
+    "@hapi/formula": ^2.0.0
+    "@hapi/hoek": ^9.0.0
+    "@hapi/pinpoint": ^2.0.0
+    "@hapi/topo": ^5.0.0
+  checksum: 803d77e19e26802860de22b8d1ae3435679844202703d20bfd6246a8c6aa00143ce48d0e8beecf55812334e8e89ac04b79301264d4a3f87c980eb0c0646b33ab
+  languageName: node
+  linkType: hard
+
+"@hapi/pinpoint@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "@hapi/pinpoint@npm:2.0.1"
+  checksum: 8a1bb399f7cf48948669fdc80dff83892ed56eb62eee2cca128fc8b0683733b16e274b395eddfae6154a698aa57c66a3905ceaa3119c59de29751d4601831057
+  languageName: node
+  linkType: hard
+
+"@hapi/topo@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "@hapi/topo@npm:5.1.0"
+  dependencies:
+    "@hapi/hoek": ^9.0.0
+  checksum: 604dfd5dde76d5c334bd03f9001fce69c7ce529883acf92da96f4fe7e51221bf5e5110e964caca287a6a616ba027c071748ab636ff178ad750547fba611d6014
   languageName: node
   linkType: hard
 
@@ -2777,70 +2829,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@omlet/cli-darwin-arm64@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-darwin-arm64@npm:1.0.1-beta.27"
+"@omlet/cli-darwin-arm64@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-darwin-arm64@npm:1.0.1-beta.28"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@omlet/cli-darwin-x64@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-darwin-x64@npm:1.0.1-beta.27"
+"@omlet/cli-darwin-x64@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-darwin-x64@npm:1.0.1-beta.28"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.27"
+"@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.28"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.27"
+"@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.28"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.27"
+"@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.28"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-x64-musl@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-linux-x64-musl@npm:1.0.1-beta.27"
+"@omlet/cli-linux-x64-musl@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-linux-x64-musl@npm:1.0.1-beta.28"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.27"
+"@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.28"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@omlet/cli@npm:^1.0.1-beta.27":
-  version: 1.0.1-beta.27
-  resolution: "@omlet/cli@npm:1.0.1-beta.27"
+"@omlet/cli@npm:^1.0.1-beta.28":
+  version: 1.0.1-beta.28
+  resolution: "@omlet/cli@npm:1.0.1-beta.28"
   dependencies:
+    "@hapi/joi": ^17.1.1
     "@npmcli/ci-detect": ^2.0.0
-    "@omlet/cli-darwin-arm64": 1.0.1-beta.27
-    "@omlet/cli-darwin-x64": 1.0.1-beta.27
-    "@omlet/cli-linux-arm64-gnu": 1.0.1-beta.27
-    "@omlet/cli-linux-arm64-musl": 1.0.1-beta.27
-    "@omlet/cli-linux-x64-gnu": 1.0.1-beta.27
-    "@omlet/cli-linux-x64-musl": 1.0.1-beta.27
-    "@omlet/cli-win32-x64-msvc": 1.0.1-beta.27
+    "@omlet/cli-darwin-arm64": 1.0.1-beta.28
+    "@omlet/cli-darwin-x64": 1.0.1-beta.28
+    "@omlet/cli-linux-arm64-gnu": 1.0.1-beta.28
+    "@omlet/cli-linux-arm64-musl": 1.0.1-beta.28
+    "@omlet/cli-linux-x64-gnu": 1.0.1-beta.28
+    "@omlet/cli-linux-x64-musl": 1.0.1-beta.28
+    "@omlet/cli-win32-x64-msvc": 1.0.1-beta.28
     colorette: ^2.0.19
     commander: ^9.0.0
     core-js: ^3.29.1
+    cosmiconfig: ^8.2.0
     current-git-branch: ^1.1.0
     eslint-plugin-import: ^2.27.5
     fast-glob: ^3.2.11
@@ -2879,7 +2933,7 @@ __metadata:
       optional: true
   bin:
     omlet: bin/omlet
-  checksum: 351f2a5b5762c2745f9ac2d075ea533b58eb887404bd61c4afefb5b37827b5036ea2f31b7c4a1ab37893a81f65cbab5e84e9b68e439da21d9b525b5645012986
+  checksum: 2edcf9f358277542def5863bea3ebfad65623f6af4fd95b7d6d1c5eeec93719719ae923daa3fd48bc8799fc683c17710f4c4cd0e571a7b3c6d3bc700964ea54d
   languageName: node
   linkType: hard
 
@@ -4949,7 +5003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.5":
+"@types/react-dom@npm:^18.2.6":
   version: 18.2.6
   resolution: "@types/react-dom@npm:18.2.6"
   dependencies:
@@ -4990,14 +5044,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.12":
-  version: 18.2.13
-  resolution: "@types/react@npm:18.2.13"
+"@types/react@npm:^18.2.13":
+  version: 18.2.14
+  resolution: "@types/react@npm:18.2.14"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: f7c15f19c164a29262993ea2aae2085fa38cddd9b8359fd8fefabfced91010b515a3abe2042b2b7f2f86e6b38a25b191415aa9313a9027175e3a000883c858cc
+  checksum: a6a5e8cc78f486b9020d1ad009aa6c56943c68c7c6376e0f8399e9cbcd950b7b8f5d73f00200f5379f5e58d31d57d8aed24357f301d8e86108cd438ce6c8b3dd
   languageName: node
   linkType: hard
 
@@ -7514,14 +7568,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^6.19.7":
-  version: 6.19.8
-  resolution: "chromatic@npm:6.19.8"
+"chromatic@npm:^6.19.9":
+  version: 6.19.9
+  resolution: "chromatic@npm:6.19.9"
   bin:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 3f80373d9e77d3363924c274c8b9465b5f0ff835b7fb4a753848e37068a4564fa67ab205a4cf89820cf136fdefd637b54730819a5c376406a87bf8737ddf03ac
+  checksum: 50552c3043d96e7badb0d16ddd1839c0601d0f5e0c2c573acda5d6b0d0fad96067f0c659ad0a2b278d8b28b46670549b4bcedfd2d350a9077975aff203c29193
   languageName: node
   linkType: hard
 
@@ -9882,20 +9936,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^27.2.1":
-  version: 27.2.1
-  resolution: "eslint-plugin-jest@npm:27.2.1"
+"eslint-plugin-jest@npm:^27.2.2":
+  version: 27.2.2
+  resolution: "eslint-plugin-jest@npm:27.2.2"
   dependencies:
     "@typescript-eslint/utils": ^5.10.0
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^5.0.0
     eslint: ^7.0.0 || ^8.0.0
+    jest: "*"
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
     jest:
       optional: true
-  checksum: 579a4d26304cc6748b2e6dff6c965ea7a21b618d8b051eb02727d25cf5c7767f6db8ef5237531635ff77e242b983b973e7cb8c820a4d20d5bda73358c452a8ab
+  checksum: 98b63252d985f5dedf36ce9587dd4a0d24daf71ca8a997258343402c0d33ddd5070502378dafd9ac7fc0ef2e0d557b5c77f18e09ad73c71a52de8061db88293f
   languageName: node
   linkType: hard
 
@@ -10061,14 +10116,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.42.0":
-  version: 8.42.0
-  resolution: "eslint@npm:8.42.0"
+"eslint@npm:^8.43.0":
+  version: 8.43.0
+  resolution: "eslint@npm:8.43.0"
   dependencies:
     "@eslint-community/eslint-utils": ^4.2.0
     "@eslint-community/regexpp": ^4.4.0
     "@eslint/eslintrc": ^2.0.3
-    "@eslint/js": 8.42.0
+    "@eslint/js": 8.43.0
     "@humanwhocodes/config-array": ^0.11.10
     "@humanwhocodes/module-importer": ^1.0.1
     "@nodelib/fs.walk": ^1.2.8
@@ -10106,7 +10161,7 @@ __metadata:
     text-table: ^0.2.0
   bin:
     eslint: bin/eslint.js
-  checksum: 07105397b5f2ff4064b983b8971e8c379ec04b1dfcc9d918976b3e00377189000161dac991d82ba14f8759e466091b8c71146f602930ca810c290ee3fcb3faf0
+  checksum: 55654ce00b0d128822b57526e40473d0497c7c6be3886afdc0b41b6b0dfbd34d0eae8159911b18451b4db51a939a0e6d2e117e847ae419086884fc3d4fe23c7c
   languageName: node
   linkType: hard
 
@@ -20360,9 +20415,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^15.7.0":
-  version: 15.7.0
-  resolution: "stylelint@npm:15.7.0"
+"stylelint@npm:^15.9.0":
+  version: 15.9.0
+  resolution: "stylelint@npm:15.9.0"
   dependencies:
     "@csstools/css-parser-algorithms": ^2.2.0
     "@csstools/css-tokenizer": ^2.1.1
@@ -20404,11 +20459,10 @@ __metadata:
     supports-hyperlinks: ^3.0.0
     svg-tags: ^1.0.0
     table: ^6.8.1
-    v8-compile-cache: ^2.3.0
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.js
-  checksum: 041bcb4396f5a7fd706a305d2518f4671dc93108336d31a1a717c564ebebe6fd503af9151e3d1d0cf01198e7925266911d0561eaed9c38a03becff817bf18bf3
+  checksum: 554165854bad5db90f5e325546940cae8f47f324a2d8ce27d809e1f5ad2d3de8fa4b1eaded97b0c456e2a7f1d714779876b021c432cc39dc40473aea1a05e8b2
   languageName: node
   linkType: hard
 
@@ -21843,13 +21897,6 @@ __metadata:
   version: 3.0.1
   resolution: "v8-compile-cache-lib@npm:3.0.1"
   checksum: 78089ad549e21bcdbfca10c08850022b22024cdcc2da9b168bcf5a73a6ed7bf01a9cebb9eac28e03cd23a684d81e0502797e88f3ccd27a32aeab1cfc44c39da0
-  languageName: node
-  linkType: hard
-
-"v8-compile-cache@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "v8-compile-cache@npm:2.3.0"
-  checksum: adb0a271eaa2297f2f4c536acbfee872d0dd26ec2d76f66921aa7fc437319132773483344207bdbeee169225f4739016d8d2dbf0553913a52bb34da6d0334f8e
   languageName: node
   linkType: hard
 
