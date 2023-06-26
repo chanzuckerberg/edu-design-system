@@ -16,7 +16,7 @@
   gap: 0.75rem;
   border-width: var(--eds-theme-border-width);
   border-style: solid;
-  border-radius: var(--eds-border-radius-md);
+  border-radius: var(--eds-theme-box-button-border-radius);
   cursor: pointer;
   /* Removes the underline in the case that the rendered element is an <a> tag. */
   text-decoration: none;
