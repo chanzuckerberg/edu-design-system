@@ -110,6 +110,14 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
+export const LongTextCustomSeparator: StoryObj<Args> = {
+  ...LongText,
+  args: {
+    ...LongText.args,
+    separator: '>',
+  },
+};
+
 /**
  * Mostly for visual regression testing.
  */

@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   Breadcrumbs,
-  BreadcrumbsItem,
   Button,
   Card,
   Grid,
@@ -34,8 +33,8 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate" mentoringIsActive>
       <Breadcrumbs className="!mb-4">
-        <BreadcrumbsItem href="#" text="My Courses" />
-        <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
+        <Breadcrumbs.Item href="#" text="My Courses" />
+        <Breadcrumbs.Item href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
       <PageHeader
         headingSize="h3"
