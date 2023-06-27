@@ -1,3 +1,5 @@
+<Meta title="Documentation/Guidelines/Components" />
+
 # Working with EDS Components, Pages, and Recipes
 
 This codebase contains all the components, [recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/), and pages to successfully build the presentation view of product screens.
@@ -16,7 +18,7 @@ The top-level organization you can find in storybook is as follows:
 
 Using EDS components in your React application involves first installing the EDS package as a dependency:
 
-```sh
+```bash
 npm install @chanzuckerberg/eds
 # or
 yarn add @chanzuckerberg/eds
@@ -50,7 +52,7 @@ If you have questions or are experiencing any issues when working with EDS's com
 
 1. To create a component, run `yarn plop` in the command line.
 2. The command will ask, "What is your component name?" Add your component name (you can either type `PageHeader` or `page header` and it will automatically generate the proper casing).
-3. Edit component source code in accordance with [EDS's code guidelines](./CODE_GUIDELINES.md)
+3. Edit component source code in accordance with [EDS's code guidelines][code-guidelines]
 4. Create relevant stories for all component variants
 
 ### Component Beta status
@@ -107,7 +109,7 @@ Pages
 
 ## Working with recipes
 
-**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system. Recipes should follow EDS [code conventions](./CODE_GUIDELINES.md) as closely as possible in order to make future use across projects as easy as possible.
+**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system. Recipes should follow EDS [code conventions][code-guidelines] as closely as possible in order to make future use across projects as easy as possible.
 
 ### Using recipes
 
@@ -166,3 +168,5 @@ Recipes
 --Recipe Name
 ----Recipe Stories
 ```
+
+[code-guidelines]: ./?path=/story/documentation-guidelines-code-guidelines--page

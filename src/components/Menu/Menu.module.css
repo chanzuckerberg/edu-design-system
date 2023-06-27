@@ -11,18 +11,10 @@
   position: relative;
 }
 
-.menu__popover {
-  margin-top: var(--eds-size-1);
-  min-width: max-content;
-  max-width: var(--eds-l-max-width);
-  position: absolute;
-  width: 100%;
-}
-
 .menu__button {
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-body-md;
 
-  color: var(--eds-theme-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-subtle);
   background-color: var(--eds-theme-color-form-background);
   border-color: var(--eds-theme-color-form-border);
   font-weight: var(--eds-font-weight-light);
@@ -60,4 +52,9 @@
 .menu__item {
   text-decoration: none;
   color: inherit;
+}
+
+/* Unset the hover on the menu item, as this is handled by the PopoverListItem */
+.menu__item:hover {
+  color: unset;
 }

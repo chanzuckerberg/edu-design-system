@@ -1,77 +1,35 @@
 import { Popover as HeadlessPopover } from '@headlessui/react';
-import type { Options as PopperJSOptions } from '@popperjs/core';
 import clsx from 'clsx';
-import React from 'react';
 import { useState, createContext, useContext } from 'react';
+import React from 'react';
+import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
+import type {
+  PopoverOptions,
+  PopoverContext as PopoverContextType,
+} from '../PopoverContainer';
 import { defaultPopoverModifiers } from '../PopoverContainer';
 import PopoverContainer from '../PopoverContainer';
 import styles from './Popover.module.css';
 
-export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
-  /**
-   * Custom classname for additional styles
-   */
-  className?: string;
-  /**
-   * Popover placement options relative to the trigger element.
-   */
-  placement?:
-    | 'top-start'
-    | 'top-end'
-    | 'bottom-start'
-    | 'bottom-end'
-    | 'right-start'
-    | 'right-end'
-    | 'left-start'
-    | 'left-end'
-    | 'top'
-    | 'bottom'
-    | 'left'
-    | 'right';
-
-  /**
-   * Object to customize how your popover will behave. For a full list of what is available,
-   * refer to https://popper.js.org/docs/v2/modifiers/.
-   */
-  modifiers?: PopperJSOptions['modifiers'];
-  /**
-   * Describes the positioning strategy to use. By default, it is 'absolute', which in the simplest cases does not require repositioning of the popper.
-   * If your trigger element is in a fixed container, use the fixed strategy.
-   */
-  strategy?: PopperJSOptions['strategy'];
-  /**
-   * Callback ran after Popper positions the element the first time.
-   * Refer to https://popper.js.org/docs/v2/lifecycle/#hook-into-the-lifecycle.
-   */
-  onFirstUpdate?: PopperJSOptions['onFirstUpdate'];
-};
-
-type PopoverContextType = {
-  placement?: PopoverProps['placement'];
-  popperStyles?: React.CSSProperties;
-  popperAttributes?: { [key: string]: string };
-  popperElement?: Element;
-  setPopperElement?: React.Dispatch<
-    React.SetStateAction<HTMLElement | null | undefined>
-  >;
-  setReferenceElement?: React.Dispatch<
-    React.SetStateAction<Element | null | undefined>
-  >;
-};
+export type PopoverProps = ExtractProps<typeof HeadlessPopover> &
+  PopoverOptions & {
+    /**
+     * Custom classname for additional styles
+     */
+    className?: string;
+  };
 
 export const PopoverContext = createContext<PopoverContextType>({});
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Popover} from "@chanzuckerberg/eds";`
  *
  * General-purpose floating menus that appear proximal to a trigger point
  */
 export const Popover = ({
-  placement,
+  placement = 'bottom-start',
   modifiers = defaultPopoverModifiers,
   strategy,
   onFirstUpdate,
@@ -180,18 +138,25 @@ const PopoverContent = ({
   };
 
   const componentClassName = clsx(styles['popover-content'], className);
-
-  return (
-    <HeadlessPopover.Panel
-      {...allProps}
-      as="article"
-      className={componentClassName}
-    >
-      <PopoverContainer className={bodyClassName}>
-        {children as React.ReactNode}
-      </PopoverContainer>
-    </HeadlessPopover.Panel>
-  );
+  if (typeof document !== 'undefined') {
+    return (
+      <>
+        {createPortal(
+          <HeadlessPopover.Panel
+            {...allProps}
+            as="article"
+            className={componentClassName}
+          >
+            <PopoverContainer className={bodyClassName}>
+              {children as React.ReactNode}
+            </PopoverContainer>
+          </HeadlessPopover.Panel>,
+          document.body,
+        )}
+      </>
+    );
+  }
+  return null;
 };
 
 /**

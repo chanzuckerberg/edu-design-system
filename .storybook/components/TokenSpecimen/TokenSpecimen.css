@@ -22,7 +22,7 @@
 }
 
 .token-specimen__info {
-  @mixin eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-sm;
 }
 
 .token-specimen__name {

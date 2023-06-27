@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { forwardRef, useId } from 'react';
+import React, { forwardRef } from 'react';
+import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
   ForwardedRefComponent,

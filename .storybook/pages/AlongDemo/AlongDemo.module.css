@@ -177,13 +177,10 @@
   padding-left: 5.5rem;
 }
 
-/**
- * THEMING-NOTE: Dropdown doesn't allow customization, so we have
- * to wrap the dropdown in a div with a class and drill down to the
- * Dropdown contents.
- */
-.watch-page__dropdown button {
+.watch-page__dropdown-button {
+  color: inherit;
   border-color: var(--along-color-space-500);
+  border-radius: 2.25rem;
   background-color: transparent;
   justify-content: center;
   transition-property: color, border-color;

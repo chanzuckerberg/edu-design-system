@@ -31,12 +31,12 @@
 
 /* Deprecated; not in figma */
 .heading--size-body-sm {
-  @mixin eds-theme-typography-body-text-sm-bold;
+  @mixin eds-theme-typography-body-sm-bold;
 }
 
 /* Deprecated; not in figma */
 .heading--size-body-xs {
-  @mixin eds-theme-typography-body-text-xs-bold;
+  @mixin eds-theme-typography-body-xs-bold;
 }
 
 /**
@@ -79,7 +79,7 @@
   color: var(--eds-theme-color-text-utility-error);
 }
 .heading--brand {
-  color: var(--eds-theme-color-text-brand-primary);
+  color: var(--eds-theme-color-text-brand-default);
 }
 /* stylelint-disable-next-line eds/no-tier-1-color-variable */
 .heading--info {

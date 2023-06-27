@@ -6,6 +6,9 @@
 # testing
 /coverage
 
+# logging
+omlet-cli.log
+
 # production
 /build
 _site
@@ -31,7 +34,6 @@ yarn-error.log*
 
 /.vscode
 *.css.map
-!prism.css
 !DesignTokens.css
 !Utilities.css
 

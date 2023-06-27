@@ -35,7 +35,7 @@ export default {
           margin: '0.5rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -110,6 +110,14 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
+export const LongTextCustomSeparator: StoryObj<Args> = {
+  ...LongText,
+  args: {
+    ...LongText.args,
+    separator: '>',
+  },
+};
+
 /**
  * Mostly for visual regression testing.
  */
@@ -117,6 +125,7 @@ export const LongTextMenu: StoryObj<Args> = {
   args: {
     ...LongText.args,
   },
+  decorators: [(Story) => <div className="pb-28">{Story()}</div>],
   parameters: {
     viewport: {
       defaultViewport: 'ipadMini',

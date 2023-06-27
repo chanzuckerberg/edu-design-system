@@ -12,14 +12,11 @@ export default {
   },
   parameters: {
     badges: ['1.2'],
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ backgroundColor: 'white', padding: '0.5rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ProgressBar>;

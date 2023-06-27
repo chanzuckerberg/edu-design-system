@@ -2,6 +2,7 @@ import type { TippyProps } from '@tippyjs/react';
 import Tippy from '@tippyjs/react';
 import clsx from 'clsx';
 import * as React from 'react';
+import { Text } from '../Text/Text';
 import styles from './Tooltip.module.css';
 
 // Full list of Tippy props: https://atomiks.github.io/tippyjs/v6/all-props/
@@ -97,15 +98,6 @@ type Plugin = Plugins[number];
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
  *
- * Example usage:
- *
- * ```tsx
- * <Tooltip>
- *   <Button variant="primary">
- *     Tooltip trigger
- *   </Button>
- * </Tooltip>
- * ```
  */
 export const Tooltip = ({
   variant = 'light',
@@ -159,6 +151,12 @@ export const Tooltip = ({
     );
   }
 
+  const textContent = (
+    <Text as="span" data-testid="tooltip-content" size="caption-lg">
+      {text}
+    </Text>
+  );
+
   return (
     <Tippy
       {...rest}
@@ -168,7 +166,7 @@ export const Tooltip = ({
         variant === 'dark' && styles['tooltip--dark'],
         className,
       )}
-      content={text}
+      content={textContent}
       duration={duration}
       placement={align}
       plugins={[hideOnEsc]}

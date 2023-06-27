@@ -22,41 +22,6 @@ exports[`<Popover /> Bottom story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:ri:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="bottom"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:rh:"
-    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:rj:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -79,41 +44,6 @@ exports[`<Popover /> BottomEnd story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:r19:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r1b:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="bottom-end"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r1a:"
-    style="position: absolute; left: 0px; top: 0px; right: 0px; transform: translate(0px, 10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r1c:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
@@ -142,41 +72,6 @@ exports[`<Popover /> BottomStart story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r16:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="bottom-start"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r15:"
-    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r17:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -199,41 +94,6 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:r1:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r3:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="bottom"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r2:"
-    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r4:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
@@ -262,41 +122,6 @@ exports[`<Popover /> Left story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:rn:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="left"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:rm:"
-    style="position: absolute; left: 0px; top: 0px; right: 0px; transform: translate(-10px, 0px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:ro:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -319,41 +144,6 @@ exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:r1t:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r1v:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="left-end"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r1u:"
-    style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; transform: translate(-10px, 0px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r20:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
@@ -382,41 +172,6 @@ exports[`<Popover /> LeftStart story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r1q:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="left-start"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r1p:"
-    style="position: absolute; left: 0px; top: 0px; right: 0px; transform: translate(-10px, 0px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r1r:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -439,41 +194,6 @@ exports[`<Popover /> Right story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:rb:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:rd:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="right"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:rc:"
-    style="position: absolute; left: 0px; top: 0px; transform: translate(10px, 0px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:re:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
@@ -502,41 +222,6 @@ exports[`<Popover /> RightEnd story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r1l:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="right-end"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r1k:"
-    style="position: absolute; left: 0px; top: 0px; bottom: 0px; transform: translate(10px, 0px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r1m:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -559,41 +244,6 @@ exports[`<Popover /> RightStart story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:r1e:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r1g:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="right-start"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r1f:"
-    style="position: absolute; left: 0px; top: 0px; transform: translate(10px, 0px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r1h:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
@@ -622,41 +272,6 @@ exports[`<Popover /> Top story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r8:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="top"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r7:"
-    style="position: absolute; left: 0px; top: 0px; bottom: 0px; transform: translate(0px, -10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r9:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -682,41 +297,6 @@ exports[`<Popover /> TopEnd story renders snapshot 1`] = `
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:r11:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="top-end"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:r10:"
-    style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; transform: translate(0px, -10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:r12:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
 </div>
 `;
 
@@ -739,41 +319,6 @@ exports[`<Popover /> TopStart story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:rq:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-before-:rs:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="top-start"
-    data-popper-reference-hidden="true"
-    data-testid="popover-content"
-    id="headlessui-popover-panel-:rr:"
-    style="position: absolute; left: 0px; top: 0px; bottom: 0px; transform: translate(0px, -10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container"
-    >
-      <div
-        class="fpo m-2 p-6"
-      >
-        Popover Content goes here
-      </div>
-    </div>
-  </article>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-after-:rt:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />

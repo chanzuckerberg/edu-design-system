@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
 import { Toast } from './Toast';
@@ -6,7 +7,7 @@ export default {
   title: 'Components/Toast',
   component: Toast,
   parameters: {
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   argTypes: { onDismiss: { action: 'dismissed' } },
   args: {

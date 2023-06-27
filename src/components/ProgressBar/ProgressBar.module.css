@@ -8,7 +8,7 @@
  * Progress Bar indicates the completion progress of a task.
  */
 .progress-bar {
-  border: var(--eds-theme-color-border-neutral-subtle) solid
+  border: var(--eds-theme-color-progress-bar-border) solid
     var(--eds-border-width-sm);
   border-radius: var(--eds-border-radius-full);
 
@@ -17,7 +17,7 @@
 
   height: 0.875rem;
   width: 100%;
-  background-color: var(--eds-theme-color-background-neutral-medium);
+  background-color: var(--eds-theme-color-progress-bar-background);
 }
 
 /**
@@ -54,6 +54,14 @@
  * Progress bar label.
  */
 .progress-bar__label {
-  @mixin eds-theme-typography-title-md;
+  @mixin eds-theme-typography-label-md;
+  color: var(--eds-theme-color-text-neutral-strong);
   margin-bottom: 0;
+}
+
+/**
+ * Progress bar caption (text showing progress bar numeric value)
+ */
+.progress-bar__caption {
+ color: var(--eds-theme-color-text-neutral-subtle);
 }

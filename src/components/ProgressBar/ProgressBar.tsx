@@ -1,4 +1,5 @@
-import React, { useId } from 'react';
+import React from 'react';
+import { useId } from '../../util/useId';
 import Text from '../Text';
 import styles from './ProgressBar.module.css';
 
@@ -74,7 +75,12 @@ export const ProgressBar = ({
         <label className={styles['progress-bar__label']} id={labelId}>
           {label}
         </label>
-        <Text as="span" id={captionId} size="caption">
+        <Text
+          as="span"
+          className={styles['progress-bar__caption']}
+          id={captionId}
+          size="caption"
+        >
           {progressBarCaption}
         </Text>
       </div>

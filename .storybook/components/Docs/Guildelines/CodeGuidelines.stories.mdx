@@ -1,6 +1,8 @@
+<Meta title="Documentation/Guidelines/Code Guidelines" />
+
 # Code Guidelines
 
-EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeScript/React:
+EDS component code follows these principles and conventions for HTML, CSS, and JavaScript/TypeScript/React:
 
 - [HTML](#html)
 - [CSS](#css)
@@ -50,7 +52,7 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
 
 ### BEM syntax
 
-EDS follows [BEM](http://getbem.com/introduction/) syntax for component classnames. BEM stands for “Block Element Modifier”. Here's a breakdown of what that means:
+EDS follows [BEM](http://getbem.com/introduction/) syntax for component class names. BEM stands for “Block Element Modifier”. Here's a breakdown of what that means:
 
 - **Block** is the primary component block (e.g. `.button`)
 - **Element** is a child of the primary block (e.g. `.button__text`)
@@ -94,7 +96,7 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 
 #### Media queries
 
-```scss
+```css
 .primary-nav {
   /**
     * On larger displays, convert to a horizontal list
@@ -111,7 +113,7 @@ We use focus-visible for most focus states. This ensures that the focus state wi
 
 However, we currently support some browser versions that do not support the focus-visible CSS feature, so we also use a fallback block in conjunciton with focus-visible.
 
-```scss
+```css
 .button--primary {
   &:focus-visible {
     @mixin focus;
@@ -127,7 +129,7 @@ However, we currently support some browser versions that do not support the focu
 
 #### States and pseudo-selectors
 
-```scss
+```css
 .button--primary {
   background: var(--eds-theme-color-background-brand-primary-strong);
 
@@ -149,7 +151,7 @@ Use [parent selectors](https://sass-lang.com/documentation/style-rules/parent-se
 
 Use the following conventions:
 
-```scss
+```css
 .button {
   /* button code */
 }
@@ -181,7 +183,7 @@ There are some disabilities (ex: vestibular disorders) that cause users to becom
 
 Examples:
 
-```scss
+```css
 .dropdown-button__icon {
   transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
 
@@ -265,7 +267,7 @@ Instead of:
 
 Use:
 
-```scss
+```css
 .primary-nav {
   flex-direction: column;
 
@@ -309,7 +311,7 @@ This is a "lightly" themed system, meaning that only a few variables (such as ke
 
 ### Design Tokens <a name="design-tokens"></a>
 
-Please refer to the [design tokens documentation](./TOKENS.md) to learn how to use design tokens in EDS.
+Please refer to the [design tokens documentation](./?path=/story/documentation-guidelines-tokens--page) to learn how to use design tokens in EDS.
 
 ---
 
@@ -545,6 +547,7 @@ By default, we err towards more centralized control over the component architect
 - Compound components should be re-exported from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
 
 ```tsx
+// This demonstrates how bound subcomponents are attached
 Card.Header = CardHeader;
 Card.Footer = CardFooter;
 ```
@@ -597,7 +600,9 @@ The default option should be the one most commonly used in order to reduce frict
 
 ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
 
-We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
+We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation for React 18, and polyfill with an incrementing number for React <18.
+The polyfill is not ssr friendly as id generation is render timing dependent.
+To ensure stable results, they cannot be invoked within conditionals or callbacks.
 
 ```tsx
 const generatedId = useId();

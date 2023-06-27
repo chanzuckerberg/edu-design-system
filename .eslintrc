@@ -111,5 +111,5 @@
       }
     }
   ],
-  "ignorePatterns": ["!.storybook", ".storybook/components/Docs/prism.js"]
+  "ignorePatterns": ["!.storybook"]
 }

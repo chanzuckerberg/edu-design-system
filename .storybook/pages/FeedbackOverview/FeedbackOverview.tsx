@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import {
   Button,
   Breadcrumbs,
-  BreadcrumbsItem,
   Card,
   Heading,
   Icon,
@@ -183,8 +182,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate">
       <Breadcrumbs className="mb-4">
-        <BreadcrumbsItem href="#" text="My Courses" />
-        <BreadcrumbsItem href="#" text="Modern World 2" />
+        <Breadcrumbs.Item href="#" text="My Courses" />
+        <Breadcrumbs.Item href="#" text="Modern World 2" />
       </Breadcrumbs>
       <PageHeader
         className="!mb-8 !flex-row"

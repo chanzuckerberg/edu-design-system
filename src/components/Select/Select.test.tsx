@@ -6,9 +6,15 @@ import React from 'react';
 import { Select } from './Select';
 import * as stories from './Select.stories';
 
-const { OpenByDefault, Disabled, ...closedStories } = stories;
+const {
+  OpenByDefault,
+  Disabled,
+  OptionsLeftAligned,
+  OptionsRightAligned,
+  SeparateButtonAndMenuWidth,
+  ...closedStories
+} = stories;
 
-const OpenByDefaultComponent = composeStory(OpenByDefault, stories.default);
 const DisabledComponent = composeStory(Disabled, stories.default);
 
 const exampleOptions = [
@@ -46,12 +52,6 @@ describe('<Select />', () => {
 
     // see if there are any options, which there should not be
     expect(screen.queryByRole('option')).not.toBeInTheDocument();
-  });
-
-  it('renders the OpenByDefault story', async () => {
-    const { container } = render(<OpenByDefaultComponent />);
-    await OpenByDefaultComponent.play({ canvasElement: container });
-    expect(screen.getByTestId('dropdown')).toMatchSnapshot();
   });
 
   it('throws an error if children is used without labeling', () => {

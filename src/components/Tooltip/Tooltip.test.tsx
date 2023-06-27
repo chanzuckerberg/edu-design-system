@@ -6,8 +6,7 @@ import React from 'react';
 import * as TooltipStoryFile from './Tooltip.stories';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
-const { Interactive, InteractiveDisabledButton } =
-  composeStories(TooltipStoryFile);
+const { Interactive, InteractiveDisabled } = composeStories(TooltipStoryFile);
 
 describe('<Tooltip />', () => {
   const warnMock = consoleWarnMockHelper();
@@ -34,7 +33,7 @@ describe('<Tooltip />', () => {
   it('should close tooltip via escape key for disabled buttons', async () => {
     const user = userEvent.setup();
     // disable animation for test
-    render(<InteractiveDisabledButton duration={0} />);
+    render(<InteractiveDisabled duration={0} />);
     const trigger = await screen.findByTestId('disabled-child-tooltip-wrapper');
     expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
     await user.hover(trigger);

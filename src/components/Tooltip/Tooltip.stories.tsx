@@ -1,24 +1,19 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { Meta, Story, StoryObj } from '@storybook/react';
-import clsx from 'clsx';
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Tooltip } from './Tooltip';
-import { Button } from '../Button/Button';
-import styles from './Tooltip.stories.module.css';
 
+// diminishing the threshold of this component to avoid sub-pixel jittering
+// https://www.chromatic.com/docs/threshold
+const diffThreshold = 0.75;
 const defaultArgs = {
   text: (
-    <span data-testid="tooltip-content">
+    <span>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-      <b>Donec a erat eu augue consequat eleifend non vel sem.</b> Praesent
-      efficitur mauris ac leo semper accumsan.
+      <strong>Donec a erat eu augue consequat eleifend non vel sem.</strong>{' '}
+      Praesent efficitur mauris ac leo semper accumsan.
     </span>
   ),
-  children: (
-    <Button className={clsx(styles['trigger--spacing'])} variant="primary">
-      Tooltip trigger
-    </Button>
-  ),
+  children: <div className="fpo w-3 p-1">&bull;</div>,
   align: 'right',
   // most stories show a visible, non-interactive tooltip.
   // this turns animation off to ensure stable visual snapshots
@@ -43,77 +38,41 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     badges: ['1.0'],
     chromatic: {
-      // These stories are very flaky, though we're not sure why.
-      // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
-      disableSnapshot: true,
+      diffThreshold,
+      diffIncludeAntiAliasing: false,
     },
   },
+  decorators: [(Story) => <div className="p-16">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;
 
 export const LightVariant: StoryObj<Args> = {};
 
-export const DarkVariant: StoryObj<Args> = {
-  args: {
-    variant: 'dark',
-  },
-  parameters: {
-    badges: [BADGE.DEPRECATED],
-  },
-};
-
 export const LeftPlacement: StoryObj<Args> = {
   args: {
     align: 'left',
-    children: (
-      <Button
-        className={clsx(
-          styles['trigger--spacing-top'],
-          styles['trigger--spacing-bottom'],
-          styles['trigger--spacing-left-large'],
-        )}
-        variant="primary"
-      >
-        Tooltip trigger
-      </Button>
-    ),
+    children: <div className="fpo w-3 p-1">&bull;</div>,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
   },
 };
 
 export const TopPlacement: StoryObj<Args> = {
   args: {
     align: 'top',
-    children: (
-      <Button
-        className={clsx(
-          styles['trigger--spacing-top'],
-          styles['trigger--spacing-left'],
-        )}
-        variant="primary"
-      >
-        Tooltip trigger
-      </Button>
-    ),
+    children: <div className="fpo w-3 p-1">&bull;</div>,
   },
 };
 
 export const BottomPlacement: StoryObj<Args> = {
   args: {
     align: 'bottom',
-    children: (
-      <Button
-        className={clsx(
-          styles['trigger--spacing-bottom'],
-          styles['trigger--spacing-left'],
-        )}
-        variant="primary"
-      >
-        Tooltip trigger
-      </Button>
-    ),
+    children: <div className="fpo w-3 p-1">&bull;</div>,
   },
 };
 
@@ -133,101 +92,56 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
-export const LongButtonText: StoryObj<Args> = {
+export const LongTriggerText: StoryObj<Args> = {
   args: {
-    children: (
-      <Button
-        className={clsx(styles['trigger--spacing-top'])}
-        variant="primary"
-      >
-        Tooltip trigger with longer text to test placement
-      </Button>
-    ),
+    children: <div className="fpo p-1">Longer text to test placement</div>,
   },
-};
-
-export const DisabledButton: StoryObj<Args> = {
-  render: () => (
-    <div
-      className={clsx(
-        styles['trigger--spacing-top'],
-        styles['trigger--spacing-left'],
-      )}
-    >
-      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
-        <Button disabled variant="primary">
-          Tooltip trigger
-        </Button>
-      </Tooltip>
-    </div>
-  ),
 };
 
 export const TextChild: StoryObj<Args> = {
   render: () => (
-    <div
-      className={clsx(
-        styles['trigger--spacing-top'],
-        styles['trigger--spacing-left'],
-      )}
-    >
-      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
-        <span>Tooltip trigger</span>
-      </Tooltip>
-    </div>
+    <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
+      <span>Tooltip trigger</span>
+    </Tooltip>
   ),
 };
 
 export const Interactive: StoryObj<Args> = {
   args: {
-    id: 'id-for-testing',
     // reset prop values defined in defaultArgs
     duration: undefined,
     visible: undefined,
-    children: (
-      <Button className={clsx(styles['trigger--spacing'])} variant="primary">
-        Tooltip trigger
-      </Button>
-    ),
+    children: <button className="fpo w-3 p-1">&bull;</button>,
   },
   decorators: [
-    (Story: Story) => (
+    (Story) => (
       <div>
         <p>Hover over the button to make the tooltip appear.</p>
-        <Story />
+        {Story()}
       </div>
     ),
   ],
 };
 
-export const InteractiveDisabledButton: StoryObj<Args> = {
+export const InteractiveDisabled: StoryObj<Args> = {
   args: {
     duration: undefined,
   },
   render: (args) => (
-    <div
-      className={clsx(
-        styles['trigger--spacing-top'],
-        styles['trigger--spacing-left'],
-      )}
+    <Tooltip
+      align="top"
+      childNotInteractive
+      duration={args.duration}
+      text={defaultArgs.text}
     >
-      <Tooltip
-        align="top"
-        childNotInteractive
-        duration={args.duration}
-        text={defaultArgs.text}
-      >
-        <Button disabled variant="primary">
-          Tooltip trigger
-        </Button>
-      </Tooltip>
-    </div>
+      <div className="fpo p-1">&bull;</div>
+    </Tooltip>
   ),
   decorators: [
-    (Story: Story) => (
+    (Story) => (
       <div>
         <p>Hover over the button to make the tooltip appear.</p>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

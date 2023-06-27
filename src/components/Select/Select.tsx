@@ -1,13 +1,18 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
 import type { ReactElement, ReactNode, ElementType } from 'react';
-import React, { useContext } from 'react';
 
+import React, { useContext, useState } from 'react';
+import { createPortal } from 'react-dom';
+
+import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
 
 import Icon from '../Icon';
 
-import PopoverContainer from '../PopoverContainer';
+import PopoverContainer, { defaultPopoverModifiers } from '../PopoverContainer';
+import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
+
 import PopoverListItem from '../PopoverListItem';
 import styles from './Select.module.css';
 
@@ -21,37 +26,39 @@ type PropsWithRenderProp<RenderPropArg> = {
   as?: ElementType;
 };
 
-type SelectProps = ExtractProps<typeof Listbox> & {
-  /**
-   * Screen-reader text for the select's label.
-   *
-   * When possible, use a visible label by passing a <Select.Label> into `chidren`.
-   * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
-   * If you pass in an `aria-label`, <Select.Label>.
-   */
-  'aria-label'?: string;
-  /**
-   * Optional className for additional styling.
-   */
-  className?: string;
-  /**
-   * The style of the select.
-   *
-   * Compact renders select trigger button that is only as wide as the content.
-   */
-  variant?: VariantType;
-  /**
-   * Align select's popover to the left (default) or right of the trigger button.
-   */
-  optionsAlign?: OptionsAlignType;
-  /**
-   * Optional className for additional options menu styling.
-   *
-   * When not using the compact variant, if optionsClassName is provided please
-   * include the width property to define the options menu width.
-   */
-  optionsClassName?: string;
-};
+type SelectProps = ExtractProps<typeof Listbox> &
+  PopoverOptions & {
+    /**
+     * Screen-reader text for the select's label.
+     *
+     * When possible, use a visible label by passing a <Select.Label> into `chidren`.
+     * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
+     * If you pass in an `aria-label`, <Select.Label>.
+     */
+    'aria-label'?: string;
+    /**
+     * Optional className for additional styling.
+     */
+    className?: string;
+    /**
+     * The style of the select.
+     *
+     * Compact renders select trigger button that is only as wide as the content.
+     */
+    variant?: VariantType;
+    /**
+     * Align select's popover to the left (default) or right of the trigger button's bottom edge.
+     * @deprecated
+     */
+    optionsAlign?: OptionsAlignType;
+    /**
+     * Optional className for additional options menu styling.
+     *
+     * When not using the compact variant, if optionsClassName is provided please
+     * include the width property to define the options menu width.
+     */
+    optionsClassName?: string;
+  };
 
 function childrenHaveLabelComponent(children?: ReactNode): boolean {
   const childrenArray = React.Children.toArray(children);
@@ -72,84 +79,19 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
   });
 }
 
+type SelectContextType = PopoverContext & {
+  compact?: boolean;
+  optionsAlign?: OptionsAlignType;
+  optionsClassName?: string;
+};
+
+const SelectContext = React.createContext<SelectContextType>({});
+
 /**
  * `import {Select} from "@chanzuckerberg/eds";`
  *
- * A dropdown that reveals or hides a list of options to select
+ * A popover that reveals or hides a list of options from which to select
  *
- * Examples:
- *
- * ```
- * return (
- *   <Select>
- *     <Select.Label>Options:</Select.Label>
- *     <Select.Button>Select</Select.Button>
- *
- *     <Select.Options>
- *       <Select.Option>Option 1</Select.Option>
- *       <Select.Option>Option 2</Select.Option>
- *       <Select.Option>Option 3</Select.Option>
- *     </Select.Options>
- *   </Select>
- * );
- * ```
- *
- * ```
- * return (
- *   <Select aria-label="Options:">
- *     <Select.Button>Select</Select.Button>
- *
- *     <Select.Options>
- *       <Select.Option>Option 1</Select.Option>
- *       <Select.Option>Option 2</Select.Option>
- *       <Select.Option>Option 3</Select.Option>
- *     </Select.Options>
- *   </Select>
- * );
- * ```
- *
- * For compact variant, add variant="compact" and optionally optionsAlign.
- *
- * Example:
- *
- * ```
- * return (
- *   <Select
- *     aria-label="Options"
- *     optionsAlign="right"
- *     variant="compact"
- *   >
- *     <Select.Options>
- *       <Select.Option>Option 1</Select.Option>
- *       <Select.Option>Option 2</Select.Option>
- *       <Select.Option>Option 3</Select.Option>
- *     </Select.Options>
- *   </Select>
- * );
- * ```
- *
- * For select components that differs in button and option popoover width, style
- * width with `className` and options popover width with `optionsClassName`.
- *
- * Example:
- *
- * ```
- * return (
- *   <Select
- *     aria-label="Options"
- *     optionsAlign="right"
- *     variant="compact"
- *     className="select--width-15em"
- *     optionsClassName="select__options--width-24rem"
- *   >
- *     <Select.Options>
- *       <Select.Option>Option 1</Select.Option>
- *       <Select.Option>Option 2</Select.Option>
- *       <Select.Option>Option 3</Select.Option>
- *     </Select.Options>
- *   </Select>
- * );
- * ```
  */
 export function Select(props: SelectProps) {
   const {
@@ -161,8 +103,27 @@ export function Select(props: SelectProps) {
     variant,
     optionsAlign,
     optionsClassName,
+    placement = 'bottom-start',
+    modifiers = defaultPopoverModifiers,
+    strategy,
+    onFirstUpdate,
     ...other
   } = props;
+
+  // Translate old optionsAlign to placement values
+  // TODO: when removing optionsAlign, also remove this
+  const optionsPlacement: SelectProps['placement'] = optionsAlign
+    ? ({ left: 'bottom-start', right: 'bottom-end' }[
+        optionsAlign
+      ] as SelectProps['placement'])
+    : placement;
+  const [referenceElement, setReferenceElement] = useState(null);
+  const [popperElement, setPopperElement] = useState(null);
+  const { styles: popperStyles, attributes: popperAttributes } = usePopper(
+    referenceElement,
+    popperElement,
+    { placement: optionsPlacement, modifiers, strategy, onFirstUpdate },
+  );
 
   const compact = variant === 'compact';
 
@@ -193,6 +154,10 @@ export function Select(props: SelectProps) {
     { compact },
     optionsAlign ? { optionsAlign } : null,
     optionsClassName ? { optionsClassName } : null,
+    { setReferenceElement },
+    { setPopperElement },
+    { popperStyles: popperStyles.popper },
+    { popperAttributes: popperAttributes.popper },
   );
 
   if (typeof children === 'function') {
@@ -218,12 +183,6 @@ export function Select(props: SelectProps) {
   );
 }
 
-const SelectContext = React.createContext<{
-  compact?: boolean;
-  optionsAlign?: OptionsAlignType;
-  optionsClassName?: string;
-}>({});
-
 const SelectLabel = (props: { className?: string; children: ReactNode }) => {
   const { children, className } = props;
 
@@ -240,7 +199,7 @@ const SelectTrigger = function (
   props: PropsWithRenderProp<{ disabled: boolean; open: boolean }>,
 ) {
   const { children, className, ...other } = props;
-  const { compact } = useContext(SelectContext);
+  const { compact, setReferenceElement } = useContext(SelectContext);
 
   const componentClassName = clsx(
     className,
@@ -252,6 +211,7 @@ const SelectTrigger = function (
       // the render prop to control styling and positiong, and we don't want to end up with
       // duplicate buttons.
       as={React.Fragment}
+      ref={setReferenceElement}
       {...other}
     >
       {typeof children === 'function'
@@ -270,23 +230,29 @@ const SelectTrigger = function (
  */
 const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
   const { className, ...other } = props;
-  const { compact, optionsAlign, optionsClassName } = useContext(SelectContext);
+  const { optionsClassName, setPopperElement, popperStyles, popperAttributes } =
+    useContext(SelectContext);
 
   const componentClassName = clsx(
     styles['select__options'],
     className,
-    optionsAlign === 'right' && styles['select__options--align-right'],
-    optionsClassName || (!compact && styles['select__options--full-width']),
-    compact && styles['select__options--compact'],
+    optionsClassName,
   );
 
-  return (
-    <Listbox.Options
-      as={PopoverContainer}
-      className={componentClassName}
-      {...other}
-    />
-  );
+  const optionProps = {
+    as: PopoverContainer,
+    className: componentClassName,
+    ref: setPopperElement,
+    style: popperStyles,
+    ...popperAttributes,
+    ...other,
+  };
+  if (typeof document !== 'undefined') {
+    return (
+      <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
+    );
+  }
+  return null;
 };
 
 type SelectOptionProps = {
@@ -338,7 +304,7 @@ const SelectOption = function (props: SelectOptionProps) {
   );
 };
 
-type SelecButtonProps = {
+type SelectButtonProps = {
   /**
    * Optional className for additional styling.
    */
@@ -358,7 +324,7 @@ type SelecButtonProps = {
  */
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,
-  SelecButtonProps
+  SelectButtonProps
 >(({ children, className, isOpen, ...other }, ref) => {
   const componentClassName = clsx(styles['select-button'], className);
   const iconClassName = clsx(

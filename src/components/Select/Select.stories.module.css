@@ -2,14 +2,6 @@
     # SELECT STORIES
 \*------------------------------------*/
 
-.interactive-example--align-right {
-  padding-left: var(--eds-size-4);
-}
-
-.select--non-compact {
-  width: 15rem;
-}
-
 .function-children__button {
   padding: var(--eds-size-2);
 
@@ -20,12 +12,4 @@
   cursor: pointer;
 
   background-color: var(--eds-theme-color-background-neutral-default);
-}
-
-.function-children__icon {
-  margin-left: var(--eds-size-1);
-}
-
-.separate-button-and-menu-width {
-  width: 24rem;
 }

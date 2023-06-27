@@ -42,7 +42,7 @@
  * The container for the individual dropdown options. 
  */
 .dropdown__options {
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-body-md;
   /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
 
@@ -105,7 +105,7 @@
 .dropdown__option--selected {
   padding-left: 0;
 
-  @mixin eds-theme-typography-body-text-bold;
+  @mixin eds-theme-typography-body-bold;
 }
 
 /**

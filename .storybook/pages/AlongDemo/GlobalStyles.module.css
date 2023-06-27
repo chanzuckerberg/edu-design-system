@@ -99,6 +99,7 @@
   --eds-border-radius-md: 0.5rem;
   --eds-font-family-primary: 'Untitled Sans', sans-serif;
   --eds-font-family-secondary: 'Moranga', serif;
+  --eds-theme-box-button-border-radius: 2.25rem;
   --eds-theme-color-background-brand-primary-default: var(--along-color-white);
   --eds-theme-color-background-disabled: var(--along-color-space-100);
   --eds-theme-color-background-neutral-medium: var(--along-color-sneaker-100);
@@ -205,7 +206,6 @@
    * like buttons.
    */
   button {
-    border-radius: 2.25rem;
     border-width: 3px;
     height: 3rem;
   }
