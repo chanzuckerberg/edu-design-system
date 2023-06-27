@@ -13,8 +13,6 @@ export interface Props {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TableBody} from "@chanzuckerberg/eds";`
  *
  * HTML `tbody` of the `Table` component

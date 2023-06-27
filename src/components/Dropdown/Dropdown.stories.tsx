@@ -22,7 +22,7 @@ export default {
           margin: '1rem', // Provides spacing to see activity around dropdown.
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -256,6 +256,7 @@ export const DropdownButtonOnly = {
     </>
   ),
   parameters: {
-    snapshot: { skip: true }, // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
+    // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
+    snapshot: { skip: true },
   },
 };

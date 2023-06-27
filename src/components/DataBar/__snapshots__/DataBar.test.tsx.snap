@@ -2,7 +2,7 @@
 
 exports[`<DataBar /> LargeValue story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div
@@ -46,7 +46,7 @@ exports[`<DataBar /> LargeValue story renders snapshot 1`] = `
 
 exports[`<DataBar /> NoSegments story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div
@@ -87,7 +87,7 @@ exports[`<DataBar /> NoSegments story renders snapshot 1`] = `
 
 exports[`<DataBar /> SmallValue story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div
@@ -131,7 +131,7 @@ exports[`<DataBar /> SmallValue story renders snapshot 1`] = `
 
 exports[`<DataBar /> TotalsLessThanMax story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div
@@ -189,7 +189,7 @@ exports[`<DataBar /> TotalsLessThanMax story renders snapshot 1`] = `
 
 exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div
@@ -247,7 +247,7 @@ exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
 
 exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div
@@ -291,7 +291,7 @@ exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
 
 exports[`<DataBar /> TotalsRightUnderMax story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-4"
 >
   <div>
     <div

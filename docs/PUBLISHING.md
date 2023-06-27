@@ -16,6 +16,7 @@ _Before the first time you publish_, make sure to:
 
 - set up Two Factor Authentication for your npm account
 - run `npm login` in your terminal to generate an access token for publishing
+- are referring to the docs on `next` as there may have been updates to the release steps
 
 ### Publishing steps
 
@@ -59,19 +60,21 @@ git push --follow-tags origin <branch> # this will also push tags
 
 6. Open a pull request for the release branch, merging into **`main`**.
 
-For the commit message, use the new version's content in the [CHANGELOG.md](../CHANGELOG.md) (e.g., all the changes for version 9.0.0). Review the content in the changelog to make sure the notes, and the from-version and to-version are correct.
+For the commit message, use the new version's content in the [CHANGELOG.md](../CHANGELOG.md) (e.g., all the changes for version 1.2.3). Review the content in the changelog to make sure the notes, and the from-version and to-version are correct. Note the link to the storybook on this PR CI/CD. You will add this link to the GitHub release notes later.
 
 Merge the PR through a **merge commit**:
 
 ![github user interface showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
 
+Once merged, wait until the [builds complete on `main`](https://github.com/chanzuckerberg/edu-design-system/actions) before continuing.
+
 #### Publishing the package
 
 7. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
 8. Publish the package: `npm publish`
-9. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). This will automatically post to [relevant slack channels](https://slack.github.com/):
+9. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/):
 10. Lastly, run the following to "back merge" release changes to `next`:
-    - git checkout main && git pull origin main && git checkout next && git merge main && git push
+    - `git checkout main && git pull origin main && git checkout next && git merge main && git push`
 
 Once complete, you can update the package in the main apps that use it (for major versions):
 
@@ -89,6 +92,12 @@ For testing a release to build confidence.
 
 ```
 git push --follow-tags origin <branch> && npm publish --tag alpha
+```
+
+3. Now, publish to the GitHub Registry
+
+```
+npm publish --tag alpha --registry=https://npm.pkg.github.com/
 ```
 
 #### Editing the CHANGELOG

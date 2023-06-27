@@ -25,6 +25,9 @@
       "24": {
         "value": "1.5rem"
       },
+      "20": {
+        "value": "1.25rem"
+      },
       "18": {
         "value": "1.125rem"
       },
@@ -38,7 +41,7 @@
         "value": "0.75rem"
       },
       "11": {
-        "value": "0.688rem"
+        "value": "0.6875rem"
       }
     },
     "font-weight": {

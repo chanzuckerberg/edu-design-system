@@ -1,19 +1,20 @@
 import clsx from 'clsx';
-import React, { useId, useState } from 'react';
+import React, { useState } from 'react';
 
 import {
   Button,
   ButtonGroup,
-  Dropdown,
   Heading,
   Icon,
   Label,
   Link,
+  Select,
   Tabs,
   Tab,
   Text,
   Tooltip,
 } from '../../../src';
+import { useId } from '../../../src/util/useId';
 
 import PlaceholderImage from '../../static/placeholder-image.svg';
 import PlaceholderVideo from '../../static/placeholder-video.svg';
@@ -203,13 +204,20 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 
         <div className={styles['watch-page__carousel']}>
           <div className="w-[10.5rem]">
-            <Dropdown
+            <Select
               aria-label="student groups"
-              buttonText={selectedOption.label}
               onChange={setSelectedOption}
-              options={studentGroupOptions}
               value={selectedOption}
-            />
+            >
+              <Select.Button>{selectedOption.label}</Select.Button>
+              <Select.Options>
+                {studentGroupOptions.map((option) => (
+                  <Select.Option key={option.key} value={option}>
+                    {option.label}
+                  </Select.Option>
+                ))}
+              </Select.Options>
+            </Select>
           </div>
 
           <Tabs className="mt-4">
@@ -256,7 +264,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               src={PlaceholderVideo}
             />
 
-            <div className="mt-4 ml-8 flex gap-4">
+            <div className="ml-8 mt-4 flex gap-4">
               <Icon
                 className="min-w-[1rem]"
                 name="circle"
@@ -370,7 +378,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           )}
           placeholder="Add any notes about Mikaela here. Only you can see them."
         ></textarea>
-        <Button className="mt-2 mb-16 w-full" variant="secondary">
+        <Button className="mb-16 mt-2 w-full" variant="secondary">
           Save
         </Button>
       </aside>

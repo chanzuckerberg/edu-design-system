@@ -48,14 +48,11 @@ const loaderViewportSize = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {LoadingIndicator} from "@chanzuckerberg/eds";`
  *
  * Loading indicators inform users about the wait time, reason, and status of ongoing processes when the layout is unknown
  *
  * For screen readers, add a custom `aria-label` to describe what is loading.
- *
  */
 export const LoadingIndicator = ({
   ariaLabel = 'loading',

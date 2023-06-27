@@ -1,20 +1,19 @@
 import clsx from 'clsx';
 import React, {
-  useId,
+  useRef,
   type ChangeEventHandler,
   type CSSProperties,
 } from 'react';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
+import { useId } from '../../util/useId';
+import type { EitherInclusive } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
+import Tooltip from '../Tooltip';
 import styles from './Slider.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-  /**
-   * Aria-label to provide an accesible name for the text input if no visible label is provided.
-   */
-  'aria-label'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -32,10 +31,6 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * HTML id for the component
    */
   id?: string;
-  /**
-   * HTML label text
-   */
-  label?: string;
   /**
    * List of markers to imply slider value.
    * As 'number', will automatically generate markers based on min, max, and step.
@@ -59,10 +54,28 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   step: number;
   /**
+   * Content to display in a tooltip above the thumb. Presence toggles Tooltip.
+   * Will flip to bottom of Slider if there is more space.
+   */
+  tooltip?: string;
+  /**
    * Value denoted by the slider.
    */
   value: number;
-};
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: string;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -72,6 +85,8 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
  * Allows input of a value via dragging a thumb along a track.
  * Strict: This slider requires a visual indicator of value/markers.
  * Please check out our recipes for possible ideas.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const Slider = ({
   className,
@@ -83,12 +98,11 @@ export const Slider = ({
   max,
   min,
   step,
+  tooltip,
   value,
   ...other
 }: Props) => {
-  if (process.env.NODE_ENV !== 'production' && !label && !other['aria-label']) {
-    throw new Error('You must provide a visible label or aria-label');
-  }
+  const ref = useRef<HTMLInputElement>(null);
 
   // Required due to 0.1 + 0.2 != 0.3
   const multiplier = findLowestTenMultiplier([max, min, step]);
@@ -103,6 +117,8 @@ export const Slider = ({
       'Number of markers is not an integer. Change step or supply custom markers',
     );
   }
+
+  const ratio = (value - min) / (max - min);
 
   const componentClassName = clsx(styles['slider'], className);
   const labelClassName = clsx(disabled && styles['slider__label--disabled']);
@@ -119,6 +135,7 @@ export const Slider = ({
     ? other['aria-describedby'] || generatedAriaDescribedById
     : undefined;
 
+  const computedBodyStyles = getComputedStyle(document.body);
   return (
     <div className={componentClassName}>
       {label && (
@@ -131,15 +148,41 @@ export const Slider = ({
         id={sliderId}
         max={max}
         min={min}
+        ref={ref}
         step={step}
         style={
           // calculate value as a ratio to color the track
-          { '--ratio': (value - min) / (max - min) } as CSSProperties
+          { '--ratio': ratio } as CSSProperties
         }
         type="range"
         value={value}
         {...other}
       />
+      {tooltip && (
+        <Tooltip
+          align="top"
+          appendTo="parent"
+          hideOnClick={false}
+          offset={({ reference }) => {
+            // offsets the tooltip relative to the position of the thumb
+            return [
+              (ratio - 0.5) *
+                (reference.width -
+                  // rems and pixels has to be converted to number values for the offset
+                  parseFloat(
+                    computedBodyStyles.getPropertyValue(
+                      '--eds-theme-size-slider-thumb',
+                    ),
+                  ) *
+                    parseFloat(computedBodyStyles.fontSize)),
+              0,
+            ];
+          }}
+          reference={ref}
+          text={tooltip}
+          touch="hold"
+        />
+      )}
       {fieldNote && (
         <FieldNote disabled={disabled} id={ariaDescribedByVar}>
           {fieldNote}

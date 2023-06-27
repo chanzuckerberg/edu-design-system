@@ -26,7 +26,7 @@ export default {
           margin: '0.25rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -145,12 +145,12 @@ export const Variants: StoryObj<Args> = {
     );
   },
   parameters: {
-    /**
-     * Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
-     */
     axe: {
       skip: true,
     },
+    /**
+     * Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
+     */
     snapshot: {
       skip: true,
     },

@@ -2,13 +2,7 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
 
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  InlineNotification,
-} from '../../../src';
+import { Card, InlineNotification } from '../../../src';
 import type { VARIANTS } from '../../../src/components/InlineNotification/InlineNotification';
 import styles from './CardWithNotification.module.css';
 
@@ -61,10 +55,3 @@ export const CardWithNotification = ({
     </div>
   );
 };
-
-/**
- * Re-exports subcomponents so consuming apps don't have to import the Card component or the individual subcomponents.
- */
-CardWithNotification.Body = CardBody;
-CardWithNotification.Footer = CardFooter;
-CardWithNotification.Header = CardHeader;

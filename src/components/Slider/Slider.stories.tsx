@@ -1,6 +1,6 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import { userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
 import React, { useState } from 'react';
 
 import { Slider } from './Slider';
@@ -10,15 +10,14 @@ export default {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: ['1.3', BADGE.BETA],
+    badges: ['1.3'],
   },
-  decorators: [
-    (Story) => (
-      <div className="w-96">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="w-96">{Story()}</div>],
+  argTypes: {
+    fieldNote: {
+      type: 'string',
+    },
+  },
   render: (args) => <InteractiveSlider {...args} />,
 } as Meta<Args>;
 
@@ -109,13 +108,7 @@ export const MarkersLargeValues: StoryObj<Args> = {
     step: 2500,
     markers: 'number',
   },
-  decorators: [
-    (Story) => (
-      <div className="w-80">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="w-80">{Story()}</div>],
 };
 
 export const FieldNote: StoryObj<Args> = {
@@ -123,6 +116,46 @@ export const FieldNote: StoryObj<Args> = {
     label: 'Slider Label',
     fieldNote: 'This is a fieldnote. It overrides the markers',
     markers: 'number',
+  },
+};
+
+export const Tooltip: StoryObj<Args> = {
+  args: {
+    label: 'Slider With Tooltip',
+    min: 0,
+    max: 5,
+    step: 1,
+    value: 3,
+    fieldNote: 'Hover to view tooltip with the value',
+  },
+  render: ({ value, ...args }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [sliderValue, setSliderValue] = useState(value);
+    return (
+      <Slider
+        tooltip={sliderValue + ''}
+        {...args}
+        onChange={(e) => setSliderValue(Number(e.target.value))}
+        value={sliderValue}
+      />
+    );
+  },
+  parameters: {
+    /**
+     * No point snapping the button as this story is testing visual regression on the tooltip.
+     */
+    snapshot: { skip: true },
+    chromatic: {
+      diffThreshold: 0.5,
+    },
+  },
+  play: async ({ canvasElement }) => {
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      const slider = await canvas.findByRole('slider');
+
+      userEvent.hover(slider);
+    }
   },
 };
 

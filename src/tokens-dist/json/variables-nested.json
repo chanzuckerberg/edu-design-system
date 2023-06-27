@@ -148,11 +148,12 @@
       "secondary": "'Open Sans', sans-serif"
     },
     "font-size": {
-      "11": "0.688rem",
+      "11": "0.6875rem",
       "12": "0.75rem",
       "14": "0.875rem",
       "16": "1rem",
       "18": "1.125rem",
+      "20": "1.25rem",
       "24": "1.5rem",
       "28": "1.75rem",
       "32": "2rem",
@@ -200,6 +201,7 @@
           "brand": {
             "primary": {
               "default": "#F0F0FC",
+              "subtle": "#F0F0FC",
               "strong": {
                 "@": "#6B65E2",
                 "hover": "#3E42B1"
@@ -249,6 +251,7 @@
           "brand": {
             "primary": {
               "subtle": "#E0E0F9",
+              "default": "var(--eds-theme-color-border-brand-primary)",
               "@": "#C4C1F3",
               "strong": "#A6A3EE"
             }
@@ -364,6 +367,7 @@
           },
           "disabled": "#C0C4C8",
           "brand": {
+            "default": "var(--eds-theme-color-text-brand-primary)",
             "primary": "#5751D2"
           }
         },
@@ -634,6 +638,17 @@
             }
           }
         },
+        "checkbox": {
+          "brand": {
+            "background": {
+              "@": "#8984E8"
+            }
+          }
+        },
+        "data-bar": {
+          "background": "#F4F6F8",
+          "border": "#C0C4C8"
+        },
         "focus-ring": {
           "@": "#6B65E2",
           "inverted": "#FFFFFF"
@@ -649,6 +664,38 @@
           },
           "label": "#383C43"
         },
+        "link": {
+          "brand": {
+            "text": {
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "text-decoration": {
+              "@": "var(--eds-theme-color-border-link-brand)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "background": {
+              "focus": "var(--eds-theme-color-border-link-brand)"
+            }
+          },
+          "neutral": {
+            "text": {
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "text-decoration": {
+              "@": "var(--eds-theme-color-border-link-neutral)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "background": {
+              "focus": "var(--eds-theme-color-border-link-neutral)"
+            }
+          }
+        },
         "modal": {
           "brand": {
             "header": {
@@ -658,15 +705,57 @@
             }
           }
         },
+        "progress-bar": {
+          "background": "#E7E8EA",
+          "border": "#E7E8EA"
+        },
+        "radio": {
+          "brand": {
+            "background": {
+              "@": "#8984E8"
+            }
+          }
+        },
         "text-highlight": {
           "foreground": "#21272D",
           "background": "#F5FF8F"
+        },
+        "toggle": {
+          "on": {
+            "background": "var(--eds-theme-color-background-brand-primary-strong)"
+          },
+          "off": {
+            "background": "var(--eds-theme-color-icon-neutral-subtle)"
+          },
+          "disabled": {
+            "background": "var(--eds-theme-color-icon-disabled)",
+            "text": "var(--eds-theme-color-text-disabled)"
+          },
+          "primary": {
+            "text": "var(--eds-theme-color-text-neutral-default)"
+          },
+          "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
+        }
+      },
+      "box": {
+        "button": {
+          "border": {
+            "radius": "4px"
+          }
         }
       },
       "form": {
         "border": {
           "width": "1px",
           "radius": "4px"
+        }
+      },
+      "size": {
+        "slider": {
+          "track": {
+            "height": "0.5rem"
+          },
+          "thumb": "1.5rem"
         }
       }
     }

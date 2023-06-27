@@ -3,7 +3,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Skeleton } from './Skeleton';
-import PopoverContainer from '../PopoverContainer';
 
 export default {
   title: 'Components/Skeleton',
@@ -14,7 +13,7 @@ export default {
     'Skeleton.Text': Skeleton.Text,
   },
   parameters: {
-    badges: ['1.2', BADGE.BETA],
+    badges: ['1.2'],
     layout: 'centered',
     backgrounds: {
       default: 'eds-color-neutral-white',
@@ -28,6 +27,19 @@ export const Default: StoryObj<Args> = {
   args: {
     width: 100,
     height: 100,
+  },
+};
+
+export const Rect: StoryObj<Args> = {
+  args: {
+    width: 50,
+    height: 50,
+  },
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
+  render: (args) => {
+    return <Skeleton.Rect {...args} />;
   },
 };
 
@@ -47,57 +59,5 @@ export const Text: StoryObj<React.ComponentProps<typeof Skeleton.Text>> = {
   },
   render: (args) => {
     return <Skeleton.Text {...args} />;
-  },
-};
-
-export const LayoutExample: StoryObj<Args> = {
-  argTypes: {
-    className: {
-      control: false,
-    },
-    width: {
-      control: false,
-    },
-    height: {
-      control: false,
-    },
-  },
-  render: ({ isAnimating }) => {
-    return (
-      <div aria-label="Loading example profile card" role="status">
-        <PopoverContainer className="m-2 p-3">
-          <Skeleton.Circle
-            className="mb-3"
-            isAnimating={isAnimating}
-            width="50px"
-          />
-          <Skeleton.Text
-            className="mt-2 mb-2"
-            height="4rem"
-            isAnimating={isAnimating}
-            width="15ch"
-          />
-          <Skeleton.Text
-            className="mt-2 mb-2"
-            height="1.5rem"
-            isAnimating={isAnimating}
-            width="30ch"
-          />
-          <Skeleton.Text
-            className="mt-2 mb-2"
-            height="1.5rem"
-            isAnimating={isAnimating}
-            width="25ch"
-          />
-          <Skeleton.Text
-            className="mt-2 mb-8"
-            height="1.5rem"
-            isAnimating={isAnimating}
-            width="10ch"
-          />
-          <Skeleton height={50} isAnimating={isAnimating} width="100%" />
-        </PopoverContainer>
-      </div>
-    );
   },
 };

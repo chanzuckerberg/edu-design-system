@@ -2,6 +2,149 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.1.0...v12.2.0) (2023-06-21)
+
+
+### Features
+
+* deprecate color-other-eraser token ([#1640](https://github.com/chanzuckerberg/edu-design-system/issues/1640)) ([55a78e2](https://github.com/chanzuckerberg/edu-design-system/commit/55a78e2f26c9d5cc025d01a906fcf21b5a6e2543))
+* **Text:** add support for caption-md and caption-lg ([53fd4e0](https://github.com/chanzuckerberg/edu-design-system/commit/53fd4e04ea1845d614b505ef1da25d288b13543f))
+
+
+### Bug Fixes
+
+* allow all valid input types ([#1648](https://github.com/chanzuckerberg/edu-design-system/issues/1648)) ([e674741](https://github.com/chanzuckerberg/edu-design-system/commit/e674741bb3d8116fb9d21d9f7fb7c68356203bb4))
+* **InputField:** fix alignment and color for required marker ([#1654](https://github.com/chanzuckerberg/edu-design-system/issues/1654)) ([1c3b1db](https://github.com/chanzuckerberg/edu-design-system/commit/1c3b1dbd54e3e0df835494a41db413f2380eb1e4))
+* make menu, popover, select ssr friendly ([#1660](https://github.com/chanzuckerberg/edu-design-system/issues/1660)) ([eac8829](https://github.com/chanzuckerberg/edu-design-system/commit/eac882976f07d2a5d3bede0888c7415fbb9afabe))
+* **Menu:** reset menu item hover and defer to popover ([#1653](https://github.com/chanzuckerberg/edu-design-system/issues/1653)) ([f329e4d](https://github.com/chanzuckerberg/edu-design-system/commit/f329e4df810873bab9117a28c44a24a765e6e469))
+* **ProgressBar:** align label and caption with design ([#1655](https://github.com/chanzuckerberg/edu-design-system/issues/1655)) ([9de0d6b](https://github.com/chanzuckerberg/edu-design-system/commit/9de0d6bfdeb5c906bfa5a48fe536582635292ef2))
+* **Tooltip:** use caption-lg for tooltip text ([f0772c7](https://github.com/chanzuckerberg/edu-design-system/commit/f0772c7e148051fd3c3b16af874bcb74831e1b4f))
+
+## [12.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.3...v12.1.0) (2023-05-30)
+
+
+### Features
+
+* add tier-3 tokens to DataBar and ProgressBar ([#1628](https://github.com/chanzuckerberg/edu-design-system/issues/1628)) ([ca9da5b](https://github.com/chanzuckerberg/edu-design-system/commit/ca9da5b97102e6c61bcfb0123f2b7b0c87ca4c4e))
+* apply advanced popover handling to select components ([#1613](https://github.com/chanzuckerberg/edu-design-system/issues/1613)) ([b74b046](https://github.com/chanzuckerberg/edu-design-system/commit/b74b046a36b2d3d47a31f35b1837eb8075d6f1cc))
+* deprecate color highlight tokens ([#1636](https://github.com/chanzuckerberg/edu-design-system/issues/1636)) ([8975315](https://github.com/chanzuckerberg/edu-design-system/commit/89753158266b63eea1afbfdf073f4235745aa197))
+* **Typography:** add light weight type ramp entries ([#1634](https://github.com/chanzuckerberg/edu-design-system/issues/1634)) ([1bb2b67](https://github.com/chanzuckerberg/edu-design-system/commit/1bb2b67d9757ef320ba71ce2d69c9d14483f12bd))
+
+
+### Bug Fixes
+
+* align token name with design ([#1630](https://github.com/chanzuckerberg/edu-design-system/issues/1630)) ([cfd928a](https://github.com/chanzuckerberg/edu-design-system/commit/cfd928a39e82f6c3e0941a0b4ac68832b0520f2c))
+* **Avatar:** adjust the tier 2 token used in size 'sm' ([#1627](https://github.com/chanzuckerberg/edu-design-system/issues/1627)) ([6d174d0](https://github.com/chanzuckerberg/edu-design-system/commit/6d174d0ba2f8bb64a89d4955c84f312d2a2f224e))
+* **build:** build type declarations separately ([#1633](https://github.com/chanzuckerberg/edu-design-system/issues/1633)) ([4db2d74](https://github.com/chanzuckerberg/edu-design-system/commit/4db2d74adaf6304b80f05d79617fd139c1d8d821))
+* **drawer:** handle clickoutside on slower active boolean ([#1621](https://github.com/chanzuckerberg/edu-design-system/issues/1621)) ([c61508b](https://github.com/chanzuckerberg/edu-design-system/commit/c61508b8675016c33551e8ccd868dddd803fb49a))
+* link deprecated border token to new token value ([#1631](https://github.com/chanzuckerberg/edu-design-system/issues/1631)) ([e198667](https://github.com/chanzuckerberg/edu-design-system/commit/e198667526fa0951df3fe36c23d2eada83775f33))
+* use token name from design ([#1629](https://github.com/chanzuckerberg/edu-design-system/issues/1629)) ([01b2ea8](https://github.com/chanzuckerberg/edu-design-system/commit/01b2ea8693c28550fcf4e2cd315f47cccba8ea38))
+
+### [12.0.3](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.2...v12.0.3) (2023-05-19)
+
+
+### Bug Fixes
+
+* clean component statuses and tokens ([#1616](https://github.com/chanzuckerberg/edu-design-system/issues/1616)) ([ebc2b36](https://github.com/chanzuckerberg/edu-design-system/commit/ebc2b360aa6664ec9fcfa665cef5654f6c55b438))
+* correct misspelled color token names ([#1618](https://github.com/chanzuckerberg/edu-design-system/issues/1618)) ([88b1f8b](https://github.com/chanzuckerberg/edu-design-system/commit/88b1f8b20fc58858b1f29bc6f34896a993485bd6))
+* group all font imports together ([#1615](https://github.com/chanzuckerberg/edu-design-system/issues/1615)) ([405027a](https://github.com/chanzuckerberg/edu-design-system/commit/405027acdd0c5386983bd340f8be4ff714b822ca))
+
+### [12.0.2](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.1...v12.0.2) (2023-05-11)
+
+
+### Bug Fixes
+
+* add missing token updates ([#1608](https://github.com/chanzuckerberg/edu-design-system/issues/1608)) ([734863f](https://github.com/chanzuckerberg/edu-design-system/commit/734863f7b43719c0e10895ca3fa04bbc898423e1))
+* ensure [@import](https://github.com/import) rules are before any other styles ([#1611](https://github.com/chanzuckerberg/edu-design-system/issues/1611)) ([855f691](https://github.com/chanzuckerberg/edu-design-system/commit/855f691642cd7346c002a330db884eba1e49736a))
+
+### [12.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.0...v12.0.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* polyfill for useid for react <18 ([#1595](https://github.com/chanzuckerberg/edu-design-system/issues/1595)) ([4d32194](https://github.com/chanzuckerberg/edu-design-system/commit/4d321945c5e64c6e8a2a64f10cf25dcad00a4d03))
+* restore check for undefined any types ([#1600](https://github.com/chanzuckerberg/edu-design-system/issues/1600)) ([214cd88](https://github.com/chanzuckerberg/edu-design-system/commit/214cd88e237d43c58def3cd458e8cbb4c68ae452))
+* suppress warnings from useId imports and prop usage ([#1606](https://github.com/chanzuckerberg/edu-design-system/issues/1606)) ([c875d9d](https://github.com/chanzuckerberg/edu-design-system/commit/c875d9dcb44b1d94f30df381575dde96eded0ec2))
+* **Typography:** update type ramp to sync with design  ([#1601](https://github.com/chanzuckerberg/edu-design-system/issues/1601)) ([be5b868](https://github.com/chanzuckerberg/edu-design-system/commit/be5b8685f9c25b8e9a50ccff6317508ee322d4ce))
+
+## [12.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v11.1.1...v12.0.0) (2023-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* use rollup (#1555)
+
+### Features
+
+* export some subcomponents ([#1579](https://github.com/chanzuckerberg/edu-design-system/issues/1579)) ([2857ae4](https://github.com/chanzuckerberg/edu-design-system/commit/2857ae456bd1fe593bf3ba4941fca58039ff8e61))
+* **TextareaField:** add character length counter ([#1580](https://github.com/chanzuckerberg/edu-design-system/issues/1580)) ([ff6226f](https://github.com/chanzuckerberg/edu-design-system/commit/ff6226f18df3104fae8f65d1ba8c774f45c0b65a))
+
+
+### Bug Fixes
+
+* restore check for undefined any types ([#1585](https://github.com/chanzuckerberg/edu-design-system/issues/1585)) ([c7fae07](https://github.com/chanzuckerberg/edu-design-system/commit/c7fae07b587f018ed7b479ec3e06ca4e351b6804))
+* **Skeleton:** mark .Rect as deprecated ([#1586](https://github.com/chanzuckerberg/edu-design-system/issues/1586)) ([405f81b](https://github.com/chanzuckerberg/edu-design-system/commit/405f81b96b5b6ad38aaa4023b4b12753c35d5f14))
+* sync typography presets to documentation ([#1592](https://github.com/chanzuckerberg/edu-design-system/issues/1592)) ([b56eadb](https://github.com/chanzuckerberg/edu-design-system/commit/b56eadbfacb549f2339a050a9b394bec076c8bb5))
+* **typography:** add missing eds-font-size-20 ([#1591](https://github.com/chanzuckerberg/edu-design-system/issues/1591)) ([de5dd03](https://github.com/chanzuckerberg/edu-design-system/commit/de5dd03cd45d765eaebbe10945e7007387d43361))
+
+
+### build
+
+* use rollup ([#1555](https://github.com/chanzuckerberg/edu-design-system/issues/1555)) ([d794696](https://github.com/chanzuckerberg/edu-design-system/commit/d794696f07c039ed5c497fa954d1bd56ad1d5485)), closes [#1558](https://github.com/chanzuckerberg/edu-design-system/issues/1558) [#1572](https://github.com/chanzuckerberg/edu-design-system/issues/1572) [#1581](https://github.com/chanzuckerberg/edu-design-system/issues/1581) [#1582](https://github.com/chanzuckerberg/edu-design-system/issues/1582)
+
+## [12.0.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.0.0-alpha.0...v12.0.0-alpha.1) (2023-04-04)
+
+## [12.0.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v11.0.0...v12.0.0-alpha.0) (2023-04-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* generate cjs and type declarations (#1572)
+
+### Features
+
+* add utility types to enforce either label or aria-label ([#1554](https://github.com/chanzuckerberg/edu-design-system/issues/1554)) ([2313063](https://github.com/chanzuckerberg/edu-design-system/commit/2313063f10944c90a38df85fd512717acd70ee7e))
+* **Button:** use LoadingIndicator for loading state ([#1552](https://github.com/chanzuckerberg/edu-design-system/issues/1552)) ([2406d01](https://github.com/chanzuckerberg/edu-design-system/commit/2406d019c5010fbdd74049f53f12fdc739abb51a))
+* **Card:** add card variant updates ([#1565](https://github.com/chanzuckerberg/edu-design-system/issues/1565)) ([87dbef7](https://github.com/chanzuckerberg/edu-design-system/commit/87dbef72d79f6aedec0d2b6a56c69429b5abafa7))
+* **Menu:** update centering with plain button ([#1566](https://github.com/chanzuckerberg/edu-design-system/issues/1566)) ([d4ddfd5](https://github.com/chanzuckerberg/edu-design-system/commit/d4ddfd5c0d9f476e799c7face94467643bd79587))
+* **Slider:** add alignment styles and recipes ([#1567](https://github.com/chanzuckerberg/edu-design-system/issues/1567)) ([900d102](https://github.com/chanzuckerberg/edu-design-system/commit/900d102a4af36ef4b466c3c0a66864a14b4c3e1e))
+* **slider:** add tooltip ([#1571](https://github.com/chanzuckerberg/edu-design-system/issues/1571)) ([fa7c5a2](https://github.com/chanzuckerberg/edu-design-system/commit/fa7c5a2f212b70a31e0812c2cab78d55a0245f54))
+
+
+### Bug Fixes
+
+* include tailwind config in package ([#1576](https://github.com/chanzuckerberg/edu-design-system/issues/1576)) ([4f66b35](https://github.com/chanzuckerberg/edu-design-system/commit/4f66b352a2225a20895f818fc4ea57642745cd7a))
+* **InputField:** apply bottom margin only with fieldNote ([#1573](https://github.com/chanzuckerberg/edu-design-system/issues/1573)) ([430522f](https://github.com/chanzuckerberg/edu-design-system/commit/430522fb0773505a1b643c0c82c02c100fe49961))
+
+
+### build
+
+* generate cjs and type declarations ([#1572](https://github.com/chanzuckerberg/edu-design-system/issues/1572)) ([5efbba3](https://github.com/chanzuckerberg/edu-design-system/commit/5efbba3a84efada0b8f043d78e037030e018987c))
+
+### [11.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v11.1.0...v11.1.1) (2023-04-03)
+
+
+### Bug Fixes
+
+* include tailwind config in package ([#1576](https://github.com/chanzuckerberg/edu-design-system/issues/1576)) ([4f66b35](https://github.com/chanzuckerberg/edu-design-system/commit/4f66b352a2225a20895f818fc4ea57642745cd7a))
+
+## [11.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v11.0.0...v11.1.0) (2023-03-31)
+
+
+### Features
+
+* add utility types to enforce either label or aria-label ([#1554](https://github.com/chanzuckerberg/edu-design-system/issues/1554)) ([2313063](https://github.com/chanzuckerberg/edu-design-system/commit/2313063f10944c90a38df85fd512717acd70ee7e))
+* **Button:** use LoadingIndicator for loading state ([#1552](https://github.com/chanzuckerberg/edu-design-system/issues/1552)) ([2406d01](https://github.com/chanzuckerberg/edu-design-system/commit/2406d019c5010fbdd74049f53f12fdc739abb51a))
+* **Card:** add card variant updates ([#1565](https://github.com/chanzuckerberg/edu-design-system/issues/1565)) ([87dbef7](https://github.com/chanzuckerberg/edu-design-system/commit/87dbef72d79f6aedec0d2b6a56c69429b5abafa7))
+* **Menu:** update centering with plain button ([#1566](https://github.com/chanzuckerberg/edu-design-system/issues/1566)) ([d4ddfd5](https://github.com/chanzuckerberg/edu-design-system/commit/d4ddfd5c0d9f476e799c7face94467643bd79587))
+* **Slider:** add alignment styles and recipes ([#1567](https://github.com/chanzuckerberg/edu-design-system/issues/1567)) ([900d102](https://github.com/chanzuckerberg/edu-design-system/commit/900d102a4af36ef4b466c3c0a66864a14b4c3e1e))
+* **slider:** add tooltip ([#1571](https://github.com/chanzuckerberg/edu-design-system/issues/1571)) ([fa7c5a2](https://github.com/chanzuckerberg/edu-design-system/commit/fa7c5a2f212b70a31e0812c2cab78d55a0245f54))
+
+
+### Bug Fixes
+
+* **InputField:** apply bottom margin only with fieldNote ([#1573](https://github.com/chanzuckerberg/edu-design-system/issues/1573)) ([430522f](https://github.com/chanzuckerberg/edu-design-system/commit/430522fb0773505a1b643c0c82c02c100fe49961))
+
 ## [11.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v10.0.0...v11.0.0) (2023-03-17)
 
 

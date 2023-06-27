@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # ACCORDION
 \*------------------------------------*/
@@ -11,4 +13,133 @@
   border: var(--eds-theme-color-border-neutral-subtle) solid
     var(--eds-border-width-sm);
   border-radius: var(--eds-border-radius-md);
+}
+
+/**
+ * Accordion Button, wraps the heading and open indicator icon.
+ */
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+
+  border: 0;
+  border-radius: 0;
+
+  padding: var(--eds-size-2) var(--eds-size-1);
+  height: 3.375rem;
+}
+
+/**
+ * Small variant.
+ */
+.accordion-button--sm {
+  padding: var(--eds-size-1);
+  height: 2.25rem;
+}
+
+/**
+ * Outline variant.
+ */
+.accordion-button--outline {
+  padding: var(--eds-size-2) var(--eds-size-3);
+}
+
+/**
+ * Small outline variant.
+ */
+.accordion-button--sm.accordion-button--outline {
+  padding: var(--eds-size-1) var(--eds-size-2);
+}
+
+/**
+ * The heading text.
+ */
+.accordion-button__heading {
+  @mixin eds-theme-typography-body-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+/**
+ * Small variant of the heading text.
+ */
+.accordion-button__heading--sm {
+  @mixin eds-theme-typography-body-xs;
+}
+
+/**
+ * Expand more (chevron) icon indicates open or closed status.
+ *
+ * This nonrotated icon points down and represents closed status.
+ */
+.accordion-button__icon {
+  transform: rotate(0);
+}
+/**
+ * This rotated icon points up and represents open status.
+ */
+.accordion-button__icon--open {
+  transform: rotate(180deg);
+}
+
+/**
+ * Animates the icon rotation when opening and closing.
+ */
+.accordion-button > .accordion-button__icon {
+  transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+/**
+ * Accordion Panel that expands and collapses.
+ * Reveals itself below the associated Accordion Button.
+ */
+.accordion-panel {
+  padding-left: var(--eds-size-1);
+  padding-right: var(--eds-size-3);
+  padding-bottom: 1.625rem;
+
+  @mixin eds-theme-typography-body-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+/**
+ * Small variant.
+ */
+.accordion-panel--sm {
+  @mixin eds-theme-typography-body-xs;
+}
+
+/**
+ * Outline variant.
+ */
+.accordion-panel--outline {
+  padding-left: var(--eds-size-3);
+  padding-right: var(--eds-size-5);
+}
+
+/**
+ * Small outline variant.
+ */
+.accordion-panel--sm.accordion-panel--outline {
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-4);
+}
+
+/**
+ * Accordion Row houses one Accordion Button subcomponent and its relevant Accordion Panel subcomponent.
+ */
+.accordion-row {
+  border-bottom: var(--eds-border-width-sm) solid
+    var(--eds-theme-color-border-neutral-subtle);
+}
+
+/**
+ * Variant with outline.
+ * Removes bottom border on the last Accordion Row so there aren't two borders at the bottom of the Accordion.
+ */
+.accordion-row--outline:last-of-type {
+  border-bottom: 0;
 }

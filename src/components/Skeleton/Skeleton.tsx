@@ -20,8 +20,6 @@ type SkeletonProps = BaseProps & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Skeleton} from "@chanzuckerberg/eds";`
  *
  * Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout
@@ -30,9 +28,9 @@ type SkeletonProps = BaseProps & {
  *
  * For text, Use `Skeleton.Text` and specify the height and the width (for example in 'ch' units).
  *
- * For circular objects, use `Skeleton.Circle' and specify the width (which is the same as the height).
+ * For circular objects, use `Skeleton.Circle` and specify the width (which is the same as the height).
  *
- * For all other objects, use `Skeleton.Rect` (or just `Skeleton`) and specify the width and height.
+ * For rectangular objects, just use `Skeleton` and specify the width and height.
  */
 export const Skeleton = ({
   className,
@@ -109,5 +107,6 @@ const CircleSkeleton = ({
 };
 
 Skeleton.Text = TextSkeleton;
+/** @deprecated Use `Skeleton` instead */
 Skeleton.Rect = Skeleton;
 Skeleton.Circle = CircleSkeleton;

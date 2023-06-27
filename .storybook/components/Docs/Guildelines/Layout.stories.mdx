@@ -1,0 +1,92 @@
+<Meta title="Documentation/Guidelines/Layout" />
+
+# Layout
+
+EDS provides several layout-specific components to accomplish specific design outcomes.
+
+## Using layout
+
+EDS provides the following components and conventions:
+
+1. [Layout Container](#layoutcontainer)
+2. [Page Layout](#pagelayout)
+3. [Grid](#grid)
+4. [Spacing](#spacing)
+
+### LayoutContainer
+
+`LayoutContainer` is used to cap the width of the content to the defined maximum width, so that content doesn't always span the full width of the viewport.
+
+```jsx
+<LayoutContainer>
+  // content inside will be capped at the defined maximum width
+</LayoutContainer>
+```
+
+### Page Layout
+
+The `Layout` component (together with the `LayoutSection` subcomponent) is a component dedicated to achieving page-level layouts, such as a main content container and a sidebar container.
+
+These components control the responsive behavior for the page and can control fixed or sticky page sections.
+
+```jsx
+<Layout variant="right-sidebar">
+  <LayoutSection>Main content</LayoutSection>
+  <LayoutSection>Sidebar content</LayoutSection>
+</Layout>
+```
+
+View the `Layout` component in Storybook to view all available variants.
+
+### Grid
+
+The `Grid` component (together with the `GridItem` subcomponent) arranges content in specific configurations and controls the responsive behavior for content inside grid items.
+
+For instance, `<Grid variant="side-by-side">` will render grid items that always occupy 50% of their container regardless of the viewport size:
+
+```jsx
+<Grid variant="side-by-side">
+  <GridItem></GridItem>
+  <GridItem></GridItem>
+</Grid>
+```
+
+Whereas `<Grid variant="2up">` will render grid items that stack on small viewports but will occupy 50% of their container when the viewport becomes large enough to accommodate that layout:
+
+```jsx
+<Grid variant="2up">
+  <GridItem></GridItem>
+  <GridItem></GridItem>
+</Grid>
+```
+
+View the `Grid` component in Storybook to view all available variants.
+
+## Spacing
+
+Most EDS components do not include `margin` properties as spacing between components should be handled primarily with the `Grid` and `Layout` components described above.
+
+However, it's important to be able to control spacing between components, so EDS uses [tailwind margin utility classes](https://tailwindcss.com/docs/margin) that can be added to any component. For instance:
+
+```jsx
+<Heading className="mb-2">Heading with small margin bottom</Heading>
+```
+
+Margin bottom utility classes should be primarily used in order to embrace a [single-direction margin flow](https://csswizardry.com/2012/06/single-direction-margin-declarations/) that leads to more predictable and maintainable outcomes.
+
+---
+
+## Working with layout
+
+1. [Layout Container](#layoutcontainer)
+2. [Page Layout](#pagelayout)
+3. [Grid](#grid)
+4. [Spacing](#spacing)
+
+### Updating LayoutContainer
+
+`LayoutContainer`'s is controlled by the `l-max-width` token. Updating this token value will change the maximum width for content. Altering this value would constitute a breaking change.
+
+### Adding or Modifying Layouts or Grids
+
+`Layout` and `Grid` components should contain the minimum number of patterns to build most product layouts and compositions. Adding additional variants should be handled with careful consideration. Be sure to determine the additional layout/variant is really needed before adding.

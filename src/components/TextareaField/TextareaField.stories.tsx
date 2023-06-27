@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -15,11 +14,12 @@ export default {
     label: 'Textarea Field',
     rows: 5,
     fieldNote: 'Longer Field description',
+    spellCheck: false,
   },
   parameters: {
-    badges: ['1.3', BADGE.BETA],
+    badges: ['1.3'],
   },
-} as Meta<Args>;
+} satisfies Meta<Args>;
 
 type Args = React.ComponentProps<typeof TextareaField>;
 
@@ -40,7 +40,8 @@ export const UsingChildren: StoryObj<Args> = {
 
 export const WithNoDefaultValue: StoryObj<Args> = {
   args: {
-    defaultValue: '',
+    defaultValue: undefined,
+    fieldNote: undefined,
   },
 };
 
@@ -80,4 +81,13 @@ export const WithADifferentSize: StoryObj<Args> = {
   args: {
     rows: 10,
   },
+};
+
+export const WithAMaxLength: StoryObj<Args> = {
+  args: {
+    rows: 10,
+    maxLength: 144,
+    required: true,
+  },
+  render: (args) => <TextareaField {...args} />,
 };

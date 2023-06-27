@@ -8,8 +8,6 @@ export type Props = React.HTMLAttributes<HTMLTableCaptionElement> & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TableCaption} from "@chanzuckerberg/eds";`
  *
  * HTML caption cell for the `Table` component.

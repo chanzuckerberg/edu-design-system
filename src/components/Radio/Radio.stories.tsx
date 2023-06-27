@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -12,15 +11,9 @@ export default {
     checked: false,
   },
   parameters: {
-    badges: ['1.0', BADGE.BETA],
+    badges: ['1.0'],
   },
-  decorators: [
-    (Story) => (
-      <div style={{ margin: '0.25rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div style={{ margin: '0.25rem' }}>{Story()}</div>],
 } as Meta<Args>;
 
 /**

@@ -146,6 +146,13 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tabs>;
@@ -167,8 +174,9 @@ export const ScrollMiddle: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'googlePixel2',
     },
-    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+    // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
+    chromatic: { viewports: [chromaticViewports.googlePixel2] },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -181,7 +189,7 @@ export const ScrollMiddle: StoryObj<Args> = {
       <div>
         For Chromatic visual regression testing of the masks on both sides of
         the Tabs. Currently does not work properly on local.
-        <Story />
+        {Story()}
       </div>
     ),
   ],

@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -14,9 +13,23 @@ export default {
     'Menu.Item': Menu.Item,
   },
   parameters: {
-    badges: ['1.2', BADGE.BETA],
+    badges: ['1.2'],
     layout: 'centered',
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
+  decorators: [
+    (Story) => (
+      <div className="m-10 p-8">
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<MenuProps>;
 
 export const Default: StoryObj<MenuProps> = {

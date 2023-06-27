@@ -1,0 +1,17 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "checkbox": {
+          "brand": {
+            "background": {
+              "@": {
+                "value": "{eds.color.brand.grape.500}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

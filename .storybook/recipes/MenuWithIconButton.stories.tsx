@@ -1,5 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
 import React from 'react';
 
 import { Icon, type IconName } from '../../src';
@@ -13,16 +14,16 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
   },
+  args: {
+    iconName: 'dots-vertical',
+  },
   argTypes: {
     iconName: {
       control: 'radio',
       options: Object.keys(icons),
-      defaultValue: 'dots-vertical',
     },
   },
-} as Meta<{ iconName: IconName }>;
-
-export const WithVerticalDotsButton: StoryObj = {
+  decorators: [(Story) => <div className="m-10 p-8">{Story()}</div>],
   render: ({ iconName }) => (
     <Menu>
       <Menu.PlainButton>
@@ -56,4 +57,19 @@ export const WithVerticalDotsButton: StoryObj = {
       </Menu.Items>
     </Menu>
   ),
+} as Meta<{ iconName: IconName }>;
+
+export const WithVerticalDotsButton: StoryObj = {};
+
+export const Focused: StoryObj = {
+  play: () => {
+    userEvent.tab();
+  },
+};
+
+export const Opened: StoryObj = {
+  play: () => {
+    userEvent.tab();
+    userEvent.keyboard(' ');
+  },
 };

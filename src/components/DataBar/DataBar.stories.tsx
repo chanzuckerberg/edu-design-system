@@ -19,18 +19,11 @@ export default {
   },
   parameters: {
     badges: ['1.0'],
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          margin: '0.25rem',
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof DataBar>;
@@ -132,11 +125,7 @@ export const InteractiveExample: StoryObj<Args> = {
     /**
      * For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
      */
-    chromatic: {
-      disableSnapshot: true,
-    },
-    snapshot: {
-      skip: true,
-    },
+    chromatic: { disableSnapshot: true },
+    snapshot: { skip: true },
   },
 };

@@ -12,6 +12,7 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
+  decorators: [(Story) => <div className="p-5">{Story()}</div>],
   args: {
     children: (
       <>
@@ -27,11 +28,24 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Card>;
 
 export const Default: StoryObj<Args> = {};
+
+export const Horizontal: StoryObj<Args> = {
+  args: {
+    orientation: 'horizontal',
+  },
+};
 
 export const Raised: StoryObj<Args> = {
   args: {
@@ -39,8 +53,8 @@ export const Raised: StoryObj<Args> = {
   },
 };
 
-export const Horizontal: StoryObj<Args> = {
+export const Dragging: StoryObj<Args> = {
   args: {
-    orientation: 'horizontal',
+    elevation: 'dragging',
   },
 };

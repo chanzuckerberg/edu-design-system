@@ -13,6 +13,13 @@ export default {
   parameters: {
     badges: ['1.0', BADGE.DEPRECATED],
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof DropdownMenu>;

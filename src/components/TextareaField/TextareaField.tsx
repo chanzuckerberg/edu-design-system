@@ -1,6 +1,11 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
-import React, { forwardRef, useId } from 'react';
+import React, { forwardRef, useState } from 'react';
+import { useId } from '../../util/useId';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
@@ -8,10 +13,6 @@ import TextArea from '../TextArea';
 import styles from './TextareaField.module.css';
 
 export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
-  /**
-   * Aria-label to provide an accesible name for the text input if no visible label is provided.
-   */
-  'aria-label'?: string;
   /**
    * Text content of the field upon instantiation
    */
@@ -36,61 +37,78 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * Error state of the form field
    */
   isError?: boolean;
-  /**
-   * HTML label text (used in an accessory label component)
-   */
-  label?: string;
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: string;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
+
+type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
+  TextArea?: typeof TextArea;
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TextareaField} from "@chanzuckerberg/eds";`
  *
  * Multi-line text input field with built-in labeling and accessory text to describe
  * the content. When a maximum text count is specified, component also shows relevant
  * text up to the maximum.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
-export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
+export const TextareaField: TextareaFieldType = forwardRef(
   (
     {
       'aria-describedby': ariaDescribedBy,
       children,
       className,
+      defaultValue = '',
       disabled,
       fieldNote,
       id,
       isError,
       label,
+      maxLength,
+      onChange,
       required,
       ...other
     },
     ref,
   ) => {
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      !label &&
-      !other['aria-label']
-    ) {
-      throw new Error('You must provide a visible label or aria-label');
-    }
-
-    const shouldRenderOverline = !!(label || required);
-    const overlineClassName = clsx(
-      styles['textarea-field__overline'],
-      !label && styles['textarea-field__overline--no-label'],
-      disabled && styles['textarea-field__overline--disabled'],
-    );
-
+    const [fieldText, setFieldText] = useState(defaultValue);
     const generatedIdVar = useId();
-    const idVar = id || generatedIdVar;
-
     const generatedAriaDescribedById = useId();
+
+    const idVar = id || generatedIdVar;
+    const shouldRenderOverline = !!(label || required);
+    const fieldLength = fieldText?.toString().length;
+    const textExceedsLength =
+      maxLength !== undefined ? fieldLength > maxLength : false;
+
+    const shouldRenderError = isError || textExceedsLength;
+
     const ariaDescribedByVar = fieldNote
       ? ariaDescribedBy || generatedAriaDescribedById
       : undefined;
 
     const componentClassName = clsx(styles['textarea-field'], className);
+    const overlineClassName = clsx(
+      styles['textarea-field__overline'],
+      !label && styles['textarea-field__overline--no-label'],
+      disabled && styles['textarea-field__overline--disabled'],
+    );
+    const fieldLengthCountClassName = clsx(
+      textExceedsLength && styles['textarea-field--invalid-length'],
+    );
 
     return (
       <div className={componentClassName}>
@@ -107,9 +125,15 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
         <TextArea
           aria-describedby={ariaDescribedByVar}
           aria-disabled={disabled}
+          defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
-          isError={isError}
+          isError={shouldRenderError}
+          maxLength={maxLength}
+          onChange={(e) => {
+            setFieldText(e.target.value);
+            onChange && onChange(e);
+          }}
           readOnly={disabled}
           ref={ref}
           required={required}
@@ -117,16 +141,30 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(
         >
           {children}
         </TextArea>
-        {fieldNote && (
-          <FieldNote
-            disabled={disabled}
-            id={ariaDescribedByVar}
-            isError={isError}
-          >
-            {fieldNote}
-          </FieldNote>
+        {(fieldNote || maxLength) && (
+          <div className={styles['textarea-field__footer']}>
+            {fieldNote && (
+              <FieldNote
+                className={styles['textarea-field__field-note']}
+                disabled={disabled}
+                id={ariaDescribedByVar}
+                isError={shouldRenderError}
+              >
+                {fieldNote}
+              </FieldNote>
+            )}
+            {maxLength && (
+              <div className={styles['textarea-field__character-counter']}>
+                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
+                / {maxLength}
+              </div>
+            )}
+          </div>
         )}
       </div>
     );
   },
 );
+
+TextareaField.displayName = 'TextareaField';
+TextareaField.TextArea = TextArea;

@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -13,7 +12,7 @@ export default {
     'Accordion.Button': Accordion.Button,
   },
   parameters: {
-    badges: ['1.2', BADGE.BETA],
+    badges: ['1.2'],
   },
   args: {
     headingAs: 'h2',
@@ -31,13 +30,14 @@ export default {
       </Accordion.Row>
     ),
   },
-  decorators: [
-    (Story) => (
-      <div style={{ margin: '0.5rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
+  decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Accordion>;

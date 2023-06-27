@@ -1,19 +1,19 @@
 import clsx from 'clsx';
-import React, { useId, useState } from 'react';
-
+import React, { useState } from 'react';
 import {
   Button,
   ButtonGroup,
-  Dropdown,
   Heading,
   Icon,
   Label,
   Link,
+  Select,
   Tabs,
   Tab,
   Text,
   Tooltip,
 } from '../../../src';
+import { useId } from '../../../src/util/useId';
 
 import AlongFooterPaper from '../../static/along-footer-paper.svg';
 import AlongLogoBulb from '../../static/along-logo-bulb.svg';
@@ -262,14 +262,23 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__carousel']}>
-          <div className={clsx('w-[10.5rem]', styles['watch-page__dropdown'])}>
-            <Dropdown
+          <div className="w-[10.5rem]">
+            <Select
               aria-label="student groups"
-              buttonText={selectedOption.label}
               onChange={setSelectedOption}
-              options={studentGroupOptions}
               value={selectedOption}
-            />
+            >
+              <Select.Button className={styles['watch-page__dropdown-button']}>
+                {selectedOption.label}
+              </Select.Button>
+              <Select.Options>
+                {studentGroupOptions.map((option) => (
+                  <Select.Option key={option.key} value={option}>
+                    {option.label}
+                  </Select.Option>
+                ))}
+              </Select.Options>
+            </Select>
           </div>
 
           <Tabs className={clsx(styles['watch-page__tabs'], 'mt-4')}>
@@ -330,7 +339,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               </a>
             </video>
 
-            <div className="mt-4 ml-2 flex gap-4">
+            <div className="ml-2 mt-4 flex gap-4">
               {ReplyIcon}
               <Text>
                 My greatest accomplishment this year was in math, because I
@@ -448,7 +457,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           id={notesTextareaId}
           placeholder="Add any notes about Mikaela here. Only you can see them."
         ></textarea>
-        <Button className="mt-2 mb-16 w-full" variant="secondary">
+        <Button className="mb-16 mt-2 w-full" variant="secondary">
           Save
         </Button>
       </aside>

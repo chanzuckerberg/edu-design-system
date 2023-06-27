@@ -13,7 +13,7 @@
   /* Magic value to center the checkbox on its label. */
   margin: 3px;
 
-  color: var(--eds-theme-color-icon-brand-primary);
+  color: var(--eds-theme-color-checkbox-brand-background);
   border: 2px solid currentColor;
 
   /* Place the ::before content smack in the middle of the input. */
@@ -28,7 +28,9 @@
   /* Clip this element in the shape of a checkbox. The element's background color will be visible
   anywhere the svg path is solid. Whatever is behind the checkbox will show through wherever the
   svg is transparent. See https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
-  clip-path: path("M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z");
+  clip-path: path(
+    'M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z'
+  );
 
   /* Because the path does not have an explicit viewbox, this element's bounding box establishes
   one. In other words, the height/width here need to match the expected viewbox for the path. */
@@ -40,7 +42,7 @@
   background-color: currentColor;
   content: '';
 
-  clip-path: path("M7 13H17V11H7V13ZM3 21V3H21V21H3Z");
+  clip-path: path('M7 13H17V11H7V13ZM3 21V3H21V21H3Z');
 
   height: 24px;
   width: 24px;

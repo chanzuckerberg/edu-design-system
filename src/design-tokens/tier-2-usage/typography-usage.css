@@ -40,31 +40,31 @@
   @mixin eds-typography-preset-009-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-text-lg $important {
+@define-mixin eds-theme-typography-body-lg $important {
   @mixin eds-typography-preset-004-light $important;
 }
 
-@define-mixin eds-theme-typography-body-text-md $important {
+@define-mixin eds-theme-typography-body-md $important {
   @mixin eds-typography-preset-005-light $important;
 }
 
-@define-mixin eds-theme-typography-body-text-sm $important {
+@define-mixin eds-theme-typography-body-sm $important {
   @mixin eds-typography-preset-006-light $important;
 }
 
-@define-mixin eds-theme-typography-body-text-xs $important {
-  @mixin eds-typography-preset-008 $important;
+@define-mixin eds-theme-typography-body-xs $important {
+  @mixin eds-typography-preset-008-light $important;
 }
 
-@define-mixin eds-theme-typography-caption-text-lg $important {
+@define-mixin eds-theme-typography-caption-lg $important {
   @mixin eds-typography-preset-006-light $important;
 }
 
-@define-mixin eds-theme-typography-caption-text-md $important {
+@define-mixin eds-theme-typography-caption-md $important {
   @mixin eds-typography-preset-008 $important;
 }
 
-@define-mixin eds-theme-typography-caption-text-sm $important {
+@define-mixin eds-theme-typography-caption-sm $important {
   @mixin eds-typography-preset-010 $important;
 }
 
@@ -130,11 +130,11 @@
 }
 
 @define-mixin eds-theme-typography-heading-6 $important {
-  @mixin eds-theme-typography-body-text-sm-bold $important;
+  @mixin eds-theme-typography-body-sm-bold $important;
 }
 
 @define-mixin eds-theme-typography-heading-7 $important {
-  @mixin eds-theme-typography-body-text-xs-bold $important;
+  @mixin eds-theme-typography-body-xs-bold $important;
 }
 
 /**
@@ -145,18 +145,18 @@
   @mixin eds-typography-preset-005 $important;
 }
 
-@define-mixin eds-theme-typography-body-text-bold $important {
+@define-mixin eds-theme-typography-body-bold $important {
   @mixin eds-typography-preset-005-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-text-lg-bold $important {
+@define-mixin eds-theme-typography-body-lg-bold $important {
   @mixin eds-typography-preset-003-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-text-sm-bold $important {
+@define-mixin eds-theme-typography-body-sm-bold $important {
   @mixin eds-typography-preset-006-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-text-xs-bold $important {
+@define-mixin eds-theme-typography-body-xs-bold $important {
   @mixin eds-typography-preset-008-bold $important;
 }

@@ -20,6 +20,13 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <div
@@ -27,7 +34,7 @@ export default {
           margin: '1rem', // Provides spacing around storybook edges
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],

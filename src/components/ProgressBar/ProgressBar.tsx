@@ -1,4 +1,5 @@
-import React, { useId } from 'react';
+import React from 'react';
+import { useId } from '../../util/useId';
 import Text from '../Text';
 import styles from './ProgressBar.module.css';
 
@@ -31,8 +32,6 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {ProgressBar} from "@chanzuckerberg/eds";`
  *
  * Show the progression of a system operation: downloading, uploading, processing, etc., in a visual way
@@ -76,7 +75,12 @@ export const ProgressBar = ({
         <label className={styles['progress-bar__label']} id={labelId}>
           {label}
         </label>
-        <Text as="span" id={captionId} size="caption">
+        <Text
+          as="span"
+          className={styles['progress-bar__caption']}
+          id={captionId}
+          size="caption"
+        >
           {progressBarCaption}
         </Text>
       </div>

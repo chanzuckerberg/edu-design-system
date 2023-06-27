@@ -18,6 +18,13 @@ export default {
     chromatic: { disableSnapshot: true },
     badges: ['1.0'],
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -267,11 +274,11 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
       <Modal.Body>Modal Content</Modal.Body>
     </InteractiveExample>
   ),
-  /**
-   * Purpose of this story is to have different controls for the Modal.Title but defaults to what all the other stories are.
-   * Hence will snap similarly to the other stories has no value in snapping both unit and Chromatic.
-   */
   parameters: {
+    /**
+     * Purpose of this story is to have different controls for the Modal.Title but defaults to what all the other stories are.
+     * Hence will snap similarly to the other stories has no value in snapping both unit and Chromatic.
+     */
     snapshot: { skip: true },
   },
 };
@@ -282,9 +289,6 @@ export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
       {getChildren()}
     </InteractiveExample>
   ),
-  parameters: {
-    snapshot: { skip: true },
-  },
 };
 
 const reallyLongText = (
@@ -399,7 +403,7 @@ export const ModalStepper: StoryObj<ModalStepperArgs> = {
           margin: '0.5rem',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -438,12 +442,10 @@ const InteractiveModalStepperComponent = () => {
 export const InteractiveModalStepper: StoryObj<ModalStepperArgs> = {
   ...ModalStepper,
   render: () => <InteractiveModalStepperComponent />,
+  /**
+   * For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
+   */
   parameters: {
-    /**
-     * For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
-     */
-    snapshot: {
-      skip: true,
-    },
+    snapshot: { skip: true },
   },
 };

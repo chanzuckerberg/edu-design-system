@@ -16,46 +16,12 @@ exports[`<Skeleton /> Default story renders snapshot 1`] = `
 />
 `;
 
-exports[`<Skeleton /> LayoutExample story renders snapshot 1`] = `
+exports[`<Skeleton /> Rect story renders snapshot 1`] = `
 <div
-  aria-label="Loading example profile card"
-  role="status"
->
-  <div
-    class="popover-container m-2 p-3"
-  >
-    <div
-      aria-hidden="true"
-      class="mb-3 skeleton skeleton-circle skeleton--is-animating"
-      style="width: 50px; height: 50px;"
-    />
-    <div
-      aria-hidden="true"
-      class="mt-2 mb-2 skeleton skeleton--is-animating"
-      style="width: 15ch; height: 4rem;"
-    />
-    <div
-      aria-hidden="true"
-      class="mt-2 mb-2 skeleton skeleton--is-animating"
-      style="width: 30ch; height: 1.5rem;"
-    />
-    <div
-      aria-hidden="true"
-      class="mt-2 mb-2 skeleton skeleton--is-animating"
-      style="width: 25ch; height: 1.5rem;"
-    />
-    <div
-      aria-hidden="true"
-      class="mt-2 mb-8 skeleton skeleton--is-animating"
-      style="width: 10ch; height: 1.5rem;"
-    />
-    <div
-      aria-hidden="true"
-      class="skeleton skeleton--is-animating"
-      style="width: 100%; height: 50px;"
-    />
-  </div>
-</div>
+  aria-hidden="true"
+  class="skeleton skeleton--is-animating"
+  style="width: 50px; height: 50px;"
+/>
 `;
 
 exports[`<Skeleton /> Text story renders snapshot 1`] = `

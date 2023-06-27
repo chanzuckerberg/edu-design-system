@@ -1,5 +1,4 @@
 @import '../design-tokens/tier-2-usage/typography-usage.css';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
 /**
  * Link button styles
@@ -9,9 +8,9 @@
   font-weight: var(--eds-font-weight-medium);
   line-height: inherit;
 
-  color: var(--eds-theme-color-text-link-neutral);
+  color: var(--eds-theme-color-link-brand-text);
   text-decoration: underline;
-  text-decoration-color: var(--eds-theme-color-border-link-brand);
+  text-decoration-color: var(--eds-theme-color-link-brand-text-decoration);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
@@ -21,35 +20,37 @@
   }
 
   &:hover {
-    color: var(--eds-theme-color-text-link-brand);
-    text-decoration-color: var(--eds-theme-color-border-link-brand);
+    color: var(--eds-theme-color-link-brand-text-hover);
+    text-decoration-color: var(
+      --eds-theme-color-link-brand-text-decoration-hover
+    );
   }
 
   &:focus-visible {
     /**
-     * Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+     * Make the focus outline invisible but don't remove it. High contrast mode will remove the background
      * color, but it will also make borders 100% opacity black.
      */
     outline: 1px solid transparent;
-    color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+    color: var(--eds-theme-color-link-brand-text-focus) !important;
     text-decoration-color: var(
-      --eds-theme-color-text-neutral-default-inverse
+      --eds-theme-color-link-brand-text-decoration-focus
     ) !important;
-    background-color: var(--eds-theme-color-border-link-brand);
+    background-color: var(--eds-theme-color-link-brand-background-focus);
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       /**
-       * Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+       * Make the focus outline invisible but don't remove it. High contrast mode will remove the background
        * color, but it will also make borders 100% opacity black.
        */
       outline: 1px solid transparent;
-      color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+      color: var(--eds-theme-color-link-brand-text-focus) !important;
       text-decoration-color: var(
-        --eds-theme-color-text-neutral-default-inverse
+        --eds-theme-color-link-brand-text-decoration-focus
       ) !important;
-      background-color: var(--eds-theme-color-border-link-brand);
+      background-color: var(--eds-theme-color-link-brand-background-focus);
     }
   }
 }
@@ -94,7 +95,7 @@
   outline: none;
   padding: var(--eds-size-1);
   margin: 0;
-  color: var(--eds-theme-color-neutral-default);
+  color: var(--eds-theme-color-text-neutral-default);
   background-color: var(--eds-theme-color-form-background);
   transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
@@ -168,7 +169,7 @@
   --messaging-icon-color: var(--eds-theme-color-icon-brand-primary);
 
   background: var(--eds-theme-color-background-brand-primary-default);
-  color: var(--eds-theme-color-text-brand-primary);
+  color: var(--eds-theme-color-text-brand-default);
 }
 
 @define-mixin messagingNeutral {

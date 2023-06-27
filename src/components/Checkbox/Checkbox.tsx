@@ -1,5 +1,10 @@
 import clsx from 'clsx';
-import React, { useId } from 'react';
+import React, { forwardRef } from 'react';
+import { useId } from '../../util/useId';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import type { CheckboxInputProps } from '../CheckboxInput';
 import CheckboxInput from '../CheckboxInput';
 import type { CheckboxLabelProps } from '../CheckboxLabel';
@@ -15,13 +20,26 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
    */
   id?: string;
   /**
-   * Visible text label for the checkbox.
-   */
-  label?: React.ReactNode;
-  /**
    * Size of the checkbox label.
    */
   size?: CheckboxLabelProps['size'];
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: React.ReactNode;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
+
+type CheckboxType = ForwardedRefComponent<HTMLInputElement, CheckboxProps> & {
+  Input?: typeof CheckboxInput;
 };
 
 /**
@@ -31,48 +49,26 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
  *
  * Checkbox control indicating if something is selected or unselected.
  *
- * Requires either a visible label or an accessible name.
- *
- * NOTE: usually, we would re-export subcomponents with
- *   Checkbox.Input = CheckboxInput;
- *   Checkbox.Label = CheckboxLabel;
- * but this does not compile with Typescript since Checkbox itself is a
- * forwarded ref component. Thus Input and Label must be imported separately.
+ * NOTE: Requires either a visible label or `aria-label` prop.
  */
-export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  (props, ref) => {
-    // All remaining props are passed to the `input` element
-    const { className, id, label, size = 'lg', disabled, ...other } = props;
+export const Checkbox: CheckboxType = forwardRef((props, ref) => {
+  // All remaining props are passed to the `input` element
+  const { className, id, label, size = 'lg', disabled, ...other } = props;
 
-    // When possible, use a visible label through the `label` prop instead.
-    // In rare cases where there's no visible label, you must provide an
-    // `aria-label` for screen readers.
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      !label &&
-      !props['aria-label']
-    ) {
-      throw new Error('You must provide a visible label or aria-label');
-    }
-    const generatedId = useId();
-    const checkboxId = id || generatedId;
+  const generatedId = useId();
+  const checkboxId = id || generatedId;
 
-    return (
-      <div className={clsx(className, styles.checkbox)}>
-        <CheckboxInput
-          disabled={disabled}
-          id={checkboxId}
-          ref={ref}
-          {...other}
-        />
-        {label && (
-          <CheckboxLabel disabled={disabled} htmlFor={checkboxId} size={size}>
-            {label}
-          </CheckboxLabel>
-        )}
-      </div>
-    );
-  },
-);
+  return (
+    <div className={clsx(className, styles.checkbox)}>
+      <CheckboxInput disabled={disabled} id={checkboxId} ref={ref} {...other} />
+      {label && (
+        <CheckboxLabel disabled={disabled} htmlFor={checkboxId} size={size}>
+          {label}
+        </CheckboxLabel>
+      )}
+    </div>
+  );
+});
 
 Checkbox.displayName = 'Checkbox';
+Checkbox.Input = CheckboxInput;

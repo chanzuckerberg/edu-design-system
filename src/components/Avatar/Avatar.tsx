@@ -68,8 +68,6 @@ function getInitials(fromName: string): string {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Avatar} from "@chanzuckerberg/eds";`
  *
  * Representation of a single, unique user, keyed by the user name

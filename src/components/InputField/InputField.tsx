@@ -1,6 +1,11 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
-import React, { forwardRef, useId } from 'react';
+import React, { forwardRef } from 'react';
+import { useId } from '../../util/useId';
+import type {
+  EitherInclusive,
+  ForwardedRefComponent,
+} from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
 import Label from '../Label';
@@ -8,10 +13,6 @@ import Text from '../Text';
 import styles from './InputField.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-  /**
-   * Aria-label to provide an accesible name for the text input if no visible label is provided.
-   */
-  'aria-label'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -49,17 +50,13 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   isError?: boolean;
   /**
-   * HTML label text
+   * Maximum value allowed for the input, if type is 'number'.
    */
-  label?: string;
+  max?: number | string;
   /**
-   * Maximum value allowed for the input, if type is 'number'. When the input value matches this maximum, the plus button becomes disabled.
+   * Minimum value allowed for the input, if type is 'number'.
    */
-  max?: number;
-  /**
-   * Minimum value allowed for the input, if type is 'number'. When the input value matches this minimum, the minus button becomes disabled.
-   */
-  min?: number;
+  min?: number | string;
   /**
    * HTML name attribute for the input
    */
@@ -113,14 +110,33 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Default value passed down from higher levels for initial state
    */
   defaultValue?: string | number;
+} & EitherInclusive<
+    {
+      /**
+       * Visible text label for the component.
+       */
+      label: string;
+    },
+    {
+      /**
+       * Aria-label to provide an accesible name for the text input if no visible label is provided.
+       */
+      'aria-label': string;
+    }
+  >;
+
+type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> & {
+  Input?: typeof Input;
 };
 
 /**
  * `import {InputField} from "@chanzuckerberg/eds";`
  *
  * An input with optional labels and error messaging built-in.
+ *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
-export const InputField = forwardRef<HTMLInputElement, Props>(
+export const InputField: InputFieldType = forwardRef(
   (
     {
       'aria-describedby': ariaDescribedBy,
@@ -137,19 +153,16 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
     },
     ref,
   ) => {
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      !label &&
-      !other['aria-label']
-    ) {
-      throw new Error('You must provide a visible label or aria-label');
-    }
-
     const shouldRenderOverline = !!(label || required);
     const overlineClassName = clsx(
       styles['input-field__overline'],
       !label && styles['input-field__overline--no-label'],
       disabled && styles['input-field__overline--disabled'],
+    );
+
+    const inputBodyClassName = clsx(
+      styles['input-field__body'],
+      fieldNote && styles['input-field--has-fieldNote'],
     );
 
     const generatedIdVar = useId();
@@ -166,14 +179,18 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
           <div className={overlineClassName}>
             {label && <Label htmlFor={idVar} text={label} />}
             {required && (
-              <Text as="p" size="sm">
+              <Text
+                as="span"
+                className={styles['input-field__required-text']}
+                size="sm"
+              >
                 Required
               </Text>
             )}
           </div>
         )}
 
-        <div className={styles['input-field__body']}>
+        <div className={inputBodyClassName}>
           <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
@@ -204,4 +221,6 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
     );
   },
 );
+
 InputField.displayName = 'InputField';
+InputField.Input = Input;

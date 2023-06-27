@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { ProgressBar } from './ProgressBar';
@@ -12,15 +11,12 @@ export default {
     maxValue: 100,
   },
   parameters: {
-    badges: ['1.2', BADGE.BETA],
+    badges: ['1.2'],
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ backgroundColor: 'white', padding: '0.5rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ProgressBar>;
@@ -115,11 +111,7 @@ export const Interactive: StoryObj<Args> = {
     /**
      * For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
      */
-    chromatic: {
-      disableSnapshot: true,
-    },
-    snapshot: {
-      skip: true,
-    },
+    chromatic: { disableSnapshot: true },
+    snapshot: { skip: true },
   },
 };

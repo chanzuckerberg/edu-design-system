@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # TEXTAREA FIELD
 \*------------------------------------*/
@@ -18,4 +20,25 @@
 
 .textarea-field__overline--disabled {
   color: var(--eds-theme-color-text-disabled);
+}
+
+.textarea-field--invalid-length {
+  color: var(--eds-theme-color-text-utility-error);
+}
+
+.textarea-field__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textarea-field__field-note {
+  flex: 1 0 50%;
+}
+
+.textarea-field__character-counter {
+  @mixin eds-theme-typography-body-sm;
+
+  color: var(--eds-theme-color-text-neutral-default);
+  flex: 1 0 50%;
+  text-align: right;
 }

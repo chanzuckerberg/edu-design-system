@@ -29,8 +29,7 @@ interface IconPropsBase {
    * The SVG Color, expects a valid css color (hex, rgb, etc.).
    *
    * Recommendation: if `currentColor` isn't sufficient,
-   * use `EdsThemeColor` tokens from
-   * `@chanzuckerberg/eds/lib/tokens/colors.ts`
+   * style the fill with Tailwind: https://tailwindcss.com/docs/fill
    */
   color?: string;
   /**

@@ -13,10 +13,17 @@ export default {
   decorators: [
     (Story) => (
       <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
-        <Story />
+        {Story()}
       </div>
     ),
   ],
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SearchBar>;
