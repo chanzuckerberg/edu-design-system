@@ -1,75 +1,95 @@
-@import '../../design-tokens/tier-2-usage/typography-usage.css';
-
 /*------------------------------------*\
     # HEADING
 \*------------------------------------*/
 
-/* New type ramp sizes */
 .heading--size-headline-lg {
-  @mixin eds-theme-typography-headline-lg;
+  font: var(--eds-theme-typography-headline-lg);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-001-mobile);
+  }
 }
 
 .heading--size-headline-md {
-  @mixin eds-theme-typography-headline-md;
+  font: var(--eds-theme-typography-headline-md);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-002-mobile);
+  }
 }
 
 .heading--size-headline-sm {
-  @mixin eds-theme-typography-headline-sm;
+  font: var(--eds-theme-typography-headline-sm);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-003-mobile);
+  }
 }
 
 .heading--size-title-md {
-  @mixin eds-theme-typography-title-md;
+  font: var(--eds-theme-typography-title-md);
 }
 
 .heading--size-title-sm {
-  @mixin eds-theme-typography-title-sm;
+  font: var(--eds-theme-typography-title-sm);
 }
 
 .heading--size-title-xs {
-  @mixin eds-theme-typography-title-xs;
+  font: var(--eds-theme-typography-title-xs);
 }
 
 /* Deprecated; not in figma */
 .heading--size-body-sm {
-  @mixin eds-theme-typography-body-sm-bold;
+  font: var(--eds-theme-typography-body-sm);
 }
 
 /* Deprecated; not in figma */
 .heading--size-body-xs {
-  @mixin eds-theme-typography-body-xs-bold;
+  font: var(--eds-theme-typography-body-xs);
 }
 
 /**
  * Heading sizes, correlate to similar numerically named typography token.
  */
 .heading--size-h1 {
-  @mixin eds-theme-typography-heading-1;
+  font: var(--eds-theme-typography-headline-lg);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-001-mobile);
+  }
 }
 
 .heading--size-h2 {
-  @mixin eds-theme-typography-heading-2;
+  font: var(--eds-theme-typography-headline-md);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-002-mobile);
+  }
 }
 
 .heading--size-h3 {
-  @mixin eds-theme-typography-heading-3;
+  font: var(--eds-theme-typography-headline-sm);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-003-mobile);
+  }
 }
 
 .heading--size-h4 {
-  @mixin eds-theme-typography-heading-4;
+  font: var(--eds-theme-typography-title-md);
 }
 
 .heading--size-h5 {
-  @mixin eds-theme-typography-heading-5;
+  font: var(--eds-theme-typography-title-sm);
 }
 
-/* Deprecated; not in figma */
 .heading--size-h6 {
-  @mixin eds-theme-typography-heading-6;
+  font: var(--eds-theme-typography-title-xs);
 }
 
 /* Deprecated; not in figma */
 .heading--size-h7 {
-  @mixin eds-theme-typography-heading-7;
+  font: var(--eds-theme-typography-body-xs);
 }
 
 /**

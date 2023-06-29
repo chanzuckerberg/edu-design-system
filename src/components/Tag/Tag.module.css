@@ -43,7 +43,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  @mixin eds-theme-typography-tag;
+  font: var(--eds-theme-typography-tag);
 }
 
 /**

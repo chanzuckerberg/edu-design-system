@@ -27,7 +27,7 @@
  */
 .inline-notification__text {
   margin: var(--eds-size-half);
-  @mixin eds-theme-typography-label-md-subtle;
+  font: var(--eds-theme-typography-label-md-subtle);
 }
 
 /**

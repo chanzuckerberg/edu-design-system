@@ -47,7 +47,7 @@
   background-color: var(--eds-theme-color-background-brand-primary-strong);
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
-  @mixin eds-theme-typography-caption-sm;
+  font: var(--eds-theme-typography-caption-sm);
 }
 
 /**

@@ -56,7 +56,7 @@
  * Dropdown menu link.
  */
 .dropdown-menu__link {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--eds-size-1);

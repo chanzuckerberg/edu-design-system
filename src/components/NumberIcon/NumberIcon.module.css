@@ -9,7 +9,7 @@
  * Centers the number text in the circle.
  */
 .number-icon {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   display: flex;
@@ -37,7 +37,7 @@
  * Size Variants.
  */
 .number-icon--sm {
-  @mixin eds-theme-typography-body-xs;
+  font: var(--eds-theme-typography-body-xs);
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   /* Height and width should be the same to make the icon a circle and not oblong. */

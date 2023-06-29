@@ -84,7 +84,7 @@
 }
 
 @define-mixin inputStyles {
-  @mixin eds-theme-typography-form-input;
+  font: var(--eds-theme-typography-form-input);
   font-family: inherit;
   -webkit-appearance: none;
   width: 100%;

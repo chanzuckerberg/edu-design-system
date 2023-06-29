@@ -99,6 +99,7 @@
 @define-mixin eds-theme-typography-tab $important {
   @mixin eds-typography-preset-006 $important;
   line-height: 1.429 $important;
+
   @media all and (max-width: $eds-bp-md) {
     @mixin eds-typography-preset-009 $important;
   }

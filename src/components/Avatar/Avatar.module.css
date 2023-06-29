@@ -29,21 +29,21 @@
 }
 
 .avatar--sm {
-  @mixin eds-theme-typography-title-sm;
+  font: var(--eds-theme-typography-title-sm);
 
   height: var(--eds-size-4);
   width: var(--eds-size-4);
 }
 
 .avatar--md {
-  @mixin eds-theme-typography-title-md;
+  font: var(--eds-theme-typography-title-md);
 
   height: var(--eds-size-5);
   width: var(--eds-size-5);
 }
 
 .avatar--lg {
-  @mixin eds-theme-typography-title-md;
+  font: var(--eds-theme-typography-title-md);
 
   height: var(--eds-size-6);
   width: var(--eds-size-6);
