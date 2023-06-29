@@ -1,6 +1,18 @@
 {
   "eds": {
     "theme": {
+      "typography": {
+        "button": {
+          "label": {
+            "@": {
+              "value": "var(--eds-typography-preset-006)"
+            },
+            "sm": {
+              "value": "var(--eds-typography-preset-008-bold)"
+            }
+          }
+        }
+      },
       "color": {
         "button": {
           "primary": {
@@ -527,6 +539,15 @@
                   "value": "{eds.color.neutral.white}"
                 }
               }
+            }
+          }
+        }
+      },
+      "box": {
+        "button": {
+          "border": {
+            "radius": {
+              "value": "{eds.border.radius.md}"
             }
           }
         }

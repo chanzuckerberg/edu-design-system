@@ -75,8 +75,8 @@ export class Tier2TypographyUsage extends Component {
 
         <Section title="Overline">
           <Grid>
-            {renderTypeToken('overline', '011-bold')}
-            {renderTypeToken('overline-sm', '012-bold')}
+            {renderTypeToken('overline', '011')}
+            {renderTypeToken('overline-sm', '012')}
           </Grid>
         </Section>
 

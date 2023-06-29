@@ -186,6 +186,46 @@ const IconsInGrid = () => (
                 This has been replaced by status-error. This will be deprecated
               </div>
             )}
+            {name === 'avatar' && (
+              <div className={styles['icon-grid__deprecation']}>
+                <Icon
+                  className={styles['icon-grid__deprecation-icon']}
+                  name="status-error"
+                  purpose="decorative"
+                />
+                This has been replaced by person. This will be deprecated
+              </div>
+            )}
+            {name === 'class-copy' && (
+              <div className={styles['icon-grid__deprecation']}>
+                <Icon
+                  className={styles['icon-grid__deprecation-icon']}
+                  name="status-error"
+                  purpose="decorative"
+                />
+                This has been replaced by book. This will be deprecated
+              </div>
+            )}
+            {name === 'file-copy' && (
+              <div className={styles['icon-grid__deprecation']}>
+                <Icon
+                  className={styles['icon-grid__deprecation-icon']}
+                  name="status-error"
+                  purpose="decorative"
+                />
+                This has been replaced by copy. This will be deprecated
+              </div>
+            )}
+            {name === 'more-vert' && (
+              <div className={styles['icon-grid__deprecation']}>
+                <Icon
+                  className={styles['icon-grid__deprecation-icon']}
+                  name="status-error"
+                  purpose="decorative"
+                />
+                This has been replaced by dots-vertical. This will be deprecated
+              </div>
+            )}
           </li>
         );
       })}

@@ -6,5 +6,5 @@
 
 .feedback-overview__card-header {
   margin-bottom: var(--eds-size-1);
-  @mixin eds-theme-typography-title-md;
+  font: var(--eds-theme-typography-title-md);
 }

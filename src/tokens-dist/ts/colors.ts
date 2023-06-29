@@ -70,6 +70,7 @@ export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMediumHover = '#C0C4C8';
 export const EdsThemeColorBackgroundBrandPrimaryDefault = '#F0F0FC';
+export const EdsThemeColorBackgroundBrandPrimarySubtle = '#F0F0FC';
 export const EdsThemeColorBackgroundBrandPrimaryStrong = '#6B65E2';
 export const EdsThemeColorBackgroundBrandPrimaryStrongHover = '#3E42B1';
 export const EdsThemeColorBackgroundUtilitySuccess = '#ECFFF5';

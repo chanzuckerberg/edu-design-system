@@ -25,7 +25,7 @@
  * Label on top of the select trigger button to label the select field.
  */
 .select__label {
-  @mixin eds-theme-typography-form-label;
+  font: var(--eds-theme-typography-form-label);
   display: inline-block;
 }
 
@@ -62,7 +62,7 @@
  * The button to trigger the display of the select field.
  */
 .select-button {
-  @mixin eds-theme-typography-body-md;
+  font: var(--eds-theme-typography-body-md);
   /* Allow select component font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
   color: var(--eds-theme-color-text-neutral-subtle);

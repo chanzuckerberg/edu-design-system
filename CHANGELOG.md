@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.2.0...v12.3.0) (2023-06-29)
+
+
+### Features
+
+* **breadcrumbs:** allow custom separators ([#1663](https://github.com/chanzuckerberg/edu-design-system/issues/1663)) ([1fe0e6c](https://github.com/chanzuckerberg/edu-design-system/commit/1fe0e6cc3cf6542f4d58b03aaa1aeafefee76145))
+* **button:** create t3 token for border radius ([#1665](https://github.com/chanzuckerberg/edu-design-system/issues/1665)) ([eadd005](https://github.com/chanzuckerberg/edu-design-system/commit/eadd005a67d2fc3980d3d2400705deda4a2d5994))
+* **icons:** make icons rounded outline and add send, mail ([#1669](https://github.com/chanzuckerberg/edu-design-system/issues/1669)) ([669d01c](https://github.com/chanzuckerberg/edu-design-system/commit/669d01c61792f9dba520e089714a8af3b8a594b5))
+* **tokens:** add t2 color bg-brand-primary-subtle ([#1668](https://github.com/chanzuckerberg/edu-design-system/issues/1668)) ([7137da6](https://github.com/chanzuckerberg/edu-design-system/commit/7137da6c424e49e033098c1c0136726f2eba425f))
+* **typography:** support typography theming ([#1664](https://github.com/chanzuckerberg/edu-design-system/issues/1664)) ([3148751](https://github.com/chanzuckerberg/edu-design-system/commit/31487514a8c3e20bbad5560cdccf1dbb1ceae2b8))
+
 ## [12.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.1.0...v12.2.0) (2023-06-21)
 
 

@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # TEXT
 \*------------------------------------*/
@@ -9,28 +7,29 @@
  */
 .text--body,
 .text--md {
-  @mixin eds-theme-typography-body-md;
+  font: var(--eds-theme-typography-body-md);
 }
 .text--lg {
-  @mixin eds-theme-typography-body-lg;
+  font: var(--eds-theme-typography-body-lg);
 }
 .text--sm {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
 }
 .text--xs {
-  @mixin eds-theme-typography-body-xs;
+  font: var(--eds-theme-typography-body-xs);
 }
 .text--caption, .text--caption-md {
-  @mixin eds-theme-typography-caption-md;
+  font: var(--eds-theme-typography-caption-md);
 }
 .text--caption-lg {
-  @mixin eds-theme-typography-caption-lg;
+  font: var(--eds-theme-typography-caption-lg);
 }
 .text--overline {
-  @mixin eds-theme-typography-overline;
+  font: var(--eds-theme-typography-overline);
+  text-transform: uppercase;
 }
 .text--callout {
-  @mixin eds-theme-typography-callout;
+  font: var(--eds-theme-typography-callout);
 }
 
 /**

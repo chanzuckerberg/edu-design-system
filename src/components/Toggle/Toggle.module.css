@@ -71,7 +71,7 @@
   margin-bottom: 0;
 
   color: var(--eds-theme-color-toggle-primary-text);
-  @mixin eds-theme-typography-body-md;
+  font: var(--eds-theme-typography-body-md);
 }
 
 /**
