@@ -1,399 +1,1710 @@
 {
-  "eds-anim-fade-quick": "0.15s",
-  "eds-anim-fade-long": "0.4s",
-  "eds-anim-move-quick": "0.15s",
-  "eds-anim-move-medium": "0.3s",
-  "eds-anim-move-long": "0.4s",
-  "eds-anim-ease": "ease",
-  "eds-border-width-sm": "1px",
-  "eds-border-width-md": "2px",
-  "eds-border-width-lg": "4px",
-  "eds-border-width-xl": "8px",
-  "eds-border-radius-md": "4px",
-  "eds-border-radius-lg": "8px",
-  "eds-border-radius-xl": "20px",
-  "eds-border-radius-round": "50%",
-  "eds-border-radius-full": "9999px",
-  "eds-color-brand-grape-100": "#F0F0FC",
-  "eds-color-brand-grape-200": "#E0E0F9",
-  "eds-color-brand-grape-300": "#C4C1F3",
-  "eds-color-brand-grape-400": "#A6A3EE",
-  "eds-color-brand-grape-500": "#8984E8",
-  "eds-color-brand-grape-600": "#6B65E2",
-  "eds-color-brand-grape-700": "#5751D2",
-  "eds-color-brand-grape-800": "#3E42B1",
-  "eds-color-neutral-100": "#F4F6F8",
-  "eds-color-neutral-200": "#E7E8EA",
-  "eds-color-neutral-300": "#C0C4C8",
-  "eds-color-neutral-400": "#999EA3",
-  "eds-color-neutral-500": "#878C90",
-  "eds-color-neutral-600": "#5D6369",
-  "eds-color-neutral-700": "#383C43",
-  "eds-color-neutral-800": "#21272D",
-  "eds-color-neutral-white": "#FFFFFF",
-  "eds-color-neutral-black": "#161B1F",
-  "eds-color-other-mint-100": "#ECFFF5",
-  "eds-color-other-mint-200": "#B7E9CE",
-  "eds-color-other-mint-300": "#8FDCB3",
-  "eds-color-other-mint-400": "#59C88C",
-  "eds-color-other-mint-500": "#00A56A",
-  "eds-color-other-mint-600": "#008656",
-  "eds-color-other-mint-700": "#007249",
-  "eds-color-other-mint-800": "#005939",
-  "eds-color-other-yellow-100": "#FDF1D0",
-  "eds-color-other-yellow-200": "#FFEBB3",
-  "eds-color-other-yellow-300": "#FFDD80",
-  "eds-color-other-yellow-400": "#F7BE2D",
-  "eds-color-other-yellow-500": "#D18400",
-  "eds-color-other-yellow-600": "#BF7300",
-  "eds-color-other-yellow-700": "#9E5B03",
-  "eds-color-other-yellow-800": "#854C03",
-  "eds-color-other-lemon": "#F5FF8F",
-  "eds-color-other-eraser": "#F3DCE2",
-  "eds-color-other-orange-100": "#FFF1E9",
-  "eds-color-other-orange-200": "#FFCBA5",
-  "eds-color-other-orange-300": "#FFAF76",
-  "eds-color-other-orange-400": "#F6924A",
-  "eds-color-other-orange-500": "#E06B00",
-  "eds-color-other-orange-600": "#C64600",
-  "eds-color-other-orange-700": "#AC3400",
-  "eds-color-other-orange-800": "#842800",
-  "eds-color-other-ruby-100": "#FFF0F4",
-  "eds-color-other-ruby-200": "#FFCBD7",
-  "eds-color-other-ruby-300": "#FB90B0",
-  "eds-color-other-ruby-400": "#F76C96",
-  "eds-color-other-ruby-500": "#F1497B",
-  "eds-color-other-ruby-600": "#D41E52",
-  "eds-color-other-ruby-700": "#BD0044",
-  "eds-color-other-ruby-800": "#8F0134",
-  "eds-color-highlight-100": "#FF9FEC",
-  "eds-color-highlight-200": "#FFBEAA",
-  "eds-color-highlight-300": "#FCFF00",
-  "eds-color-highlight-400": "#9DFFA4",
-  "eds-color-highlight-500": "#00F1FF",
-  "eds-color-highlight-600": "#CFC9FF",
-  "eds-color-info-100": "#F1F9FF",
-  "eds-color-info-200": "#B0D5FF",
-  "eds-color-info-300": "#7FB9FD",
-  "eds-color-info-400": "#5CA7FF",
-  "eds-color-info-500": "#328EFB",
-  "eds-color-info-600": "#1977CD",
-  "eds-color-info-700": "#0563B8",
-  "eds-l-max-width": "71.25rem",
-  "eds-l-sidebar-width": "13.5rem",
-  "eds-l-linelength-width": "36rem",
-  "eds-box-shadow-sm": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
-  "eds-box-shadow-md": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
-  "eds-box-shadow-lg": "0px 4px 12px rgba(0, 0, 0, 0.16)",
-  "eds-box-shadow-xl": "0px 6px 20px rgba(0, 0, 0, 0.2)",
-  "eds-size-1": "0.5rem",
-  "eds-size-2": "1rem",
-  "eds-size-3": "1.5rem",
-  "eds-size-4": "2rem",
-  "eds-size-5": "2.5rem",
-  "eds-size-6": "3rem",
-  "eds-size-7": "3.5rem",
-  "eds-size-8": "4rem",
-  "eds-size-9": "4.5rem",
-  "eds-size-10": "5rem",
-  "eds-size-12": "6rem",
-  "eds-size-base-unit": "0.5rem",
-  "eds-size-half": "0.25rem",
-  "eds-size-quarter": "0.125rem",
-  "eds-size-1-and-half": "0.75rem",
-  "eds-size-2-and-half": "1.25rem",
-  "eds-font-family-primary": "'Graphik', sans-serif",
-  "eds-font-family-secondary": "'Open Sans', sans-serif",
-  "eds-font-size-11": "0.688rem",
-  "eds-font-size-12": "0.75rem",
-  "eds-font-size-14": "0.875rem",
-  "eds-font-size-16": "1rem",
-  "eds-font-size-18": "1.125rem",
-  "eds-font-size-20": "1.25rem",
-  "eds-font-size-24": "1.5rem",
-  "eds-font-size-28": "1.75rem",
-  "eds-font-size-32": "2rem",
-  "eds-font-size-40": "2.5rem",
-  "eds-font-size-base": "16px",
-  "eds-font-weight-light": "400",
-  "eds-font-weight-medium": "500",
-  "eds-font-weight-bold": "600",
-  "eds-letter-spacing-sm": "0.5px",
-  "eds-z-index-0": "0",
-  "eds-z-index-100": "100",
-  "eds-z-index-200": "200",
-  "eds-z-index-300": "300",
-  "eds-z-index-400": "400",
-  "eds-z-index-500": "500",
-  "eds-z-index-top": "99999",
-  "eds-z-index-bottom": "-100",
-  "eds-theme-border-width": "eds-border-width-sm",
-  "eds-theme-color-background-neutral-default": "eds-color-neutral-white",
-  "eds-theme-color-background-neutral-default-hover": "eds-color-neutral-100",
-  "eds-theme-color-background-neutral-subtle": "eds-color-neutral-100",
-  "eds-theme-color-background-neutral-subtle-hover": "eds-color-neutral-200",
-  "eds-theme-color-background-neutral-medium": "eds-color-neutral-200",
-  "eds-theme-color-background-neutral-medium-hover": "eds-color-neutral-300",
-  "eds-theme-color-background-brand-primary-default": "eds-color-brand-grape-100",
-  "eds-theme-color-background-brand-primary-strong": "eds-color-brand-grape-600",
-  "eds-theme-color-background-brand-primary-strong-hover": "eds-color-brand-grape-800",
-  "eds-theme-color-background-utility-success": "eds-color-other-mint-100",
-  "eds-theme-color-background-utility-warning": "eds-color-other-orange-100",
-  "eds-theme-color-background-utility-error": "eds-color-other-ruby-100",
-  "eds-theme-color-background-grade-complete-default": "eds-color-other-mint-600",
-  "eds-theme-color-background-grade-complete-subtle": "eds-color-other-mint-100",
-  "eds-theme-color-background-grade-revise-default": "eds-color-other-yellow-400",
-  "eds-theme-color-background-grade-revise-subtle": "eds-color-other-yellow-100",
-  "eds-theme-color-background-grade-stop-default": "eds-color-other-ruby-600",
-  "eds-theme-color-background-grade-stop-subtle": "eds-color-other-ruby-100",
-  "eds-theme-color-background-disabled": "eds-color-neutral-300",
-  "eds-theme-color-border-link-neutral": "eds-color-neutral-800",
-  "eds-theme-color-border-link-brand": "eds-color-brand-grape-700",
-  "eds-theme-color-border-neutral-subtle": "eds-color-neutral-200",
-  "eds-theme-color-border-neutral-subtle-hover": "eds-color-neutral-300",
-  "eds-theme-color-border-neutral-default": "eds-color-neutral-300",
-  "eds-theme-color-border-neutral-default-hover": "eds-color-neutral-400",
-  "eds-theme-color-border-neutral-strong": "eds-color-neutral-400",
-  "eds-theme-color-border-neutral-strong-hover": "eds-color-neutral-500",
-  "eds-theme-color-border-brand-primary-subtle": "eds-color-brand-grape-200",
-  "eds-theme-color-border-brand-primary": "eds-color-brand-grape-300",
-  "eds-theme-color-border-brand-primary-strong": "eds-color-brand-grape-400",
-  "eds-theme-color-border-utility-success-subtle": "eds-color-other-mint-200",
-  "eds-theme-color-border-utility-success-default": "eds-color-other-mint-300",
-  "eds-theme-color-border-utility-success-strong": "eds-color-other-mint-400",
-  "eds-theme-color-border-utility-warning-subtle": "eds-color-other-orange-200",
-  "eds-theme-color-border-utility-warning-default": "eds-color-other-orange-300",
-  "eds-theme-color-border-utility-warning-strong": "eds-color-other-orange-400",
-  "eds-theme-color-border-utility-error-subtle": "eds-color-other-ruby-200",
-  "eds-theme-color-border-utility-error-default": "eds-color-other-ruby-300",
-  "eds-theme-color-border-utility-error-strong": "eds-color-other-ruby-400",
-  "eds-theme-color-border-grade-complete": "eds-color-other-mint-300",
-  "eds-theme-color-border-grade-revise-subtle": "eds-color-other-yellow-200",
-  "eds-theme-color-border-grade-revise-default": "eds-color-other-yellow-300",
-  "eds-theme-color-border-grade-revise-strong": "eds-color-other-yellow-400",
-  "eds-theme-color-border-grade-stop": "eds-color-other-ruby-300",
-  "eds-theme-color-border-disabled": "eds-color-neutral-300",
-  "eds-theme-color-icon-neutral-default": "eds-color-neutral-600",
-  "eds-theme-color-icon-neutral-default-inverse": "eds-color-neutral-white",
-  "eds-theme-color-icon-neutral-default-hover": "eds-color-neutral-700",
-  "eds-theme-color-icon-neutral-strong": "eds-color-neutral-700",
-  "eds-theme-color-icon-neutral-strong-hover": "eds-color-neutral-800",
-  "eds-theme-color-icon-neutral-subtle": "eds-color-neutral-500",
-  "eds-theme-color-icon-neutral-subtle-hover": "eds-color-neutral-600",
-  "eds-theme-color-icon-link-default": "eds-color-brand-grape-600",
-  "eds-theme-color-icon-link-default-hover": "eds-color-brand-grape-700",
-  "eds-theme-color-icon-brand-primary": "eds-color-brand-grape-500",
-  "eds-theme-color-icon-brand-primary-hover": "eds-color-brand-grape-600",
-  "eds-theme-color-icon-utility-success": "eds-color-other-mint-500",
-  "eds-theme-color-icon-utility-success-hover": "eds-color-other-mint-600",
-  "eds-theme-color-icon-utility-warning": "eds-color-other-orange-500",
-  "eds-theme-color-icon-utility-warning-hover": "eds-color-other-orange-600",
-  "eds-theme-color-icon-utility-error": "eds-color-other-ruby-500",
-  "eds-theme-color-icon-utility-error-hover": "eds-color-other-ruby-600",
-  "eds-theme-color-icon-grade-complete": "eds-color-other-mint-500",
-  "eds-theme-color-icon-grade-complete-hover": "eds-color-other-mint-500",
-  "eds-theme-color-icon-grade-revise": "eds-color-neutral-800",
-  "eds-theme-color-icon-grade-revise-hover": "eds-color-neutral-black",
-  "eds-theme-color-icon-grade-stop": "eds-color-other-ruby-500",
-  "eds-theme-color-icon-grade-stop-hover": "eds-color-other-ruby-600",
-  "eds-theme-color-icon-disabled": "eds-color-neutral-300",
-  "eds-theme-color-text-neutral-default": "eds-color-neutral-700",
-  "eds-theme-color-text-neutral-default-inverse": "eds-color-neutral-white",
-  "eds-theme-color-text-neutral-strong": "eds-color-neutral-800",
-  "eds-theme-color-text-neutral-subtle": "eds-color-neutral-600",
-  "eds-theme-color-text-link-neutral": "eds-color-neutral-800",
-  "eds-theme-color-text-link-brand": "eds-color-brand-grape-700",
-  "eds-theme-color-text-utility-success": "eds-color-other-mint-700",
-  "eds-theme-color-text-utility-warning": "eds-color-other-orange-700",
-  "eds-theme-color-text-utility-error": "eds-color-other-ruby-700",
-  "eds-theme-color-text-grade-complete": "eds-color-other-mint-700",
-  "eds-theme-color-text-grade-revise": "eds-color-neutral-800",
-  "eds-theme-color-text-grade-stop": "eds-color-other-ruby-700",
-  "eds-theme-color-text-disabled": "eds-color-neutral-300",
-  "eds-theme-color-text-brand-primary": "eds-color-brand-grape-700",
-  "eds-theme-color-transparent-black-0": "rgba(0, 0, 0, 0)",
-  "eds-theme-color-transparent-black-30": "rgba(0, 0, 0, .3)",
-  "eds-theme-color-transparent-white-0": "rgba(255, 255, 255, 0)",
-  "eds-theme-color-body-background": "eds-color-neutral-100",
-  "eds-theme-color-body-background-inverted": "eds-color-neutral-700",
-  "eds-theme-color-button-primary-brand-background": "eds-color-brand-grape-600",
-  "eds-theme-color-button-primary-brand-background-hover": "eds-color-brand-grape-700",
-  "eds-theme-color-button-primary-brand-background-active": "eds-color-brand-grape-800",
-  "eds-theme-color-button-primary-brand-border": "eds-color-brand-grape-600",
-  "eds-theme-color-button-primary-brand-border-hover": "eds-color-brand-grape-700",
-  "eds-theme-color-button-primary-brand-border-active": "eds-color-brand-grape-800",
-  "eds-theme-color-button-primary-brand-text": "eds-color-neutral-white",
-  "eds-theme-color-button-primary-brand-text-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-primary-brand-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-primary-error-background": "eds-color-other-ruby-600",
-  "eds-theme-color-button-primary-error-background-hover": "eds-color-other-ruby-700",
-  "eds-theme-color-button-primary-error-background-active": "eds-color-other-ruby-800",
-  "eds-theme-color-button-primary-error-border": "eds-color-other-ruby-600",
-  "eds-theme-color-button-primary-error-border-hover": "eds-color-other-ruby-700",
-  "eds-theme-color-button-primary-error-border-active": "eds-color-other-ruby-800",
-  "eds-theme-color-button-primary-error-text": "eds-color-neutral-white",
-  "eds-theme-color-button-primary-error-text-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-primary-error-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-brand-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-secondary-brand-background-hover": "eds-color-brand-grape-700",
-  "eds-theme-color-button-secondary-brand-background-active": "eds-color-brand-grape-800",
-  "eds-theme-color-button-secondary-brand-border": "eds-color-brand-grape-600",
-  "eds-theme-color-button-secondary-brand-border-hover": "eds-color-brand-grape-700",
-  "eds-theme-color-button-secondary-brand-border-active": "eds-color-brand-grape-800",
-  "eds-theme-color-button-secondary-brand-text": "eds-color-brand-grape-700",
-  "eds-theme-color-button-secondary-brand-text-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-brand-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-brand-icon": "eds-color-brand-grape-600",
-  "eds-theme-color-button-secondary-brand-icon-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-brand-icon-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-neutral-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-secondary-neutral-background-hover": "eds-color-neutral-200",
-  "eds-theme-color-button-secondary-neutral-background-active": "eds-color-neutral-700",
-  "eds-theme-color-button-secondary-neutral-border": "eds-color-neutral-600",
-  "eds-theme-color-button-secondary-neutral-border-hover": "eds-color-neutral-600",
-  "eds-theme-color-button-secondary-neutral-border-active": "eds-color-neutral-700",
-  "eds-theme-color-button-secondary-neutral-text": "eds-color-neutral-600",
-  "eds-theme-color-button-secondary-neutral-text-hover": "eds-color-neutral-600",
-  "eds-theme-color-button-secondary-neutral-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-neutral-icon": "eds-color-neutral-400",
-  "eds-theme-color-button-secondary-neutral-icon-hover": "eds-color-neutral-400",
-  "eds-theme-color-button-secondary-neutral-icon-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-success-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-secondary-success-background-hover": "eds-color-other-mint-700",
-  "eds-theme-color-button-secondary-success-background-active": "eds-color-other-mint-800",
-  "eds-theme-color-button-secondary-success-border": "eds-color-other-mint-600",
-  "eds-theme-color-button-secondary-success-border-hover": "eds-color-other-mint-700",
-  "eds-theme-color-button-secondary-success-border-active": "eds-color-other-mint-800",
-  "eds-theme-color-button-secondary-success-text": "eds-color-other-mint-700",
-  "eds-theme-color-button-secondary-success-text-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-success-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-success-icon": "eds-color-other-mint-600",
-  "eds-theme-color-button-secondary-success-icon-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-success-icon-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-warning-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-secondary-warning-background-hover": "eds-color-other-orange-700",
-  "eds-theme-color-button-secondary-warning-background-active": "eds-color-other-orange-800",
-  "eds-theme-color-button-secondary-warning-border": "eds-color-other-orange-600",
-  "eds-theme-color-button-secondary-warning-border-hover": "eds-color-other-orange-700",
-  "eds-theme-color-button-secondary-warning-border-active": "eds-color-other-orange-800",
-  "eds-theme-color-button-secondary-warning-text": "eds-color-other-orange-700",
-  "eds-theme-color-button-secondary-warning-text-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-warning-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-warning-icon": "eds-color-other-orange-600",
-  "eds-theme-color-button-secondary-warning-icon-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-warning-icon-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-error-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-secondary-error-background-hover": "eds-color-other-ruby-700",
-  "eds-theme-color-button-secondary-error-background-active": "eds-color-other-ruby-800",
-  "eds-theme-color-button-secondary-error-border": "eds-color-other-ruby-600",
-  "eds-theme-color-button-secondary-error-border-hover": "eds-color-other-ruby-700",
-  "eds-theme-color-button-secondary-error-border-active": "eds-color-other-ruby-800",
-  "eds-theme-color-button-secondary-error-text": "eds-color-other-ruby-700",
-  "eds-theme-color-button-secondary-error-text-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-error-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-error-icon": "eds-color-other-ruby-600",
-  "eds-theme-color-button-secondary-error-icon-hover": "eds-color-neutral-white",
-  "eds-theme-color-button-secondary-error-icon-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-brand": "eds-color-brand-grape-600",
-  "eds-theme-color-button-icon-brand-hover": "eds-color-brand-grape-600",
-  "eds-theme-color-button-icon-brand-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-brand-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-brand-background-hover": "eds-color-brand-grape-200",
-  "eds-theme-color-button-icon-brand-background-active": "eds-color-brand-grape-700",
-  "eds-theme-color-button-icon-brand-border": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-brand-border-hover": "eds-color-brand-grape-200",
-  "eds-theme-color-button-icon-brand-border-active": "eds-color-brand-grape-700",
-  "eds-theme-color-button-icon-brand-text": "eds-color-brand-grape-700",
-  "eds-theme-color-button-icon-brand-text-hover": "eds-color-brand-grape-700",
-  "eds-theme-color-button-icon-brand-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-neutral": "eds-color-neutral-600",
-  "eds-theme-color-button-icon-neutral-hover": "eds-color-neutral-600",
-  "eds-theme-color-button-icon-neutral-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-neutral-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-neutral-background-hover": "eds-color-neutral-200",
-  "eds-theme-color-button-icon-neutral-background-active": "eds-color-neutral-600",
-  "eds-theme-color-button-icon-neutral-border": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-neutral-border-hover": "eds-color-neutral-200",
-  "eds-theme-color-button-icon-neutral-border-active": "eds-color-neutral-600",
-  "eds-theme-color-button-icon-neutral-text": "eds-color-neutral-600",
-  "eds-theme-color-button-icon-neutral-text-hover": "eds-color-neutral-600",
-  "eds-theme-color-button-icon-neutral-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-success": "eds-color-other-mint-600",
-  "eds-theme-color-button-icon-success-hover": "eds-color-other-mint-600",
-  "eds-theme-color-button-icon-success-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-success-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-success-background-hover": "eds-color-other-mint-200",
-  "eds-theme-color-button-icon-success-background-active": "eds-color-other-mint-700",
-  "eds-theme-color-button-icon-success-border": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-success-border-hover": "eds-color-other-mint-200",
-  "eds-theme-color-button-icon-success-border-active": "eds-color-other-mint-700",
-  "eds-theme-color-button-icon-success-text": "eds-color-other-mint-700",
-  "eds-theme-color-button-icon-success-text-hover": "eds-color-other-mint-700",
-  "eds-theme-color-button-icon-success-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-warning": "eds-color-other-orange-600",
-  "eds-theme-color-button-icon-warning-hover": "eds-color-other-orange-600",
-  "eds-theme-color-button-icon-warning-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-warning-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-warning-background-hover": "eds-color-other-orange-100",
-  "eds-theme-color-button-icon-warning-background-active": "eds-color-other-orange-700",
-  "eds-theme-color-button-icon-warning-border": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-warning-border-hover": "eds-color-other-orange-100",
-  "eds-theme-color-button-icon-warning-border-active": "eds-color-other-orange-700",
-  "eds-theme-color-button-icon-warning-text": "eds-color-other-orange-700",
-  "eds-theme-color-button-icon-warning-text-hover": "eds-color-other-orange-700",
-  "eds-theme-color-button-icon-warning-text-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-error": "eds-color-other-ruby-600",
-  "eds-theme-color-button-icon-error-hover": "eds-color-other-ruby-600",
-  "eds-theme-color-button-icon-error-active": "eds-color-neutral-white",
-  "eds-theme-color-button-icon-error-background": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-error-background-hover": "eds-color-other-ruby-200",
-  "eds-theme-color-button-icon-error-background-active": "eds-color-other-ruby-700",
-  "eds-theme-color-button-icon-error-border": "eds-theme-color-transparent-black-0",
-  "eds-theme-color-button-icon-error-border-hover": "eds-color-other-ruby-200",
-  "eds-theme-color-button-icon-error-border-active": "eds-color-other-ruby-700",
-  "eds-theme-color-button-icon-error-text": "eds-color-other-ruby-700",
-  "eds-theme-color-button-icon-error-text-hover": "eds-color-other-ruby-700",
-  "eds-theme-color-button-icon-error-text-active": "eds-color-neutral-white",
-  "eds-theme-color-focus-ring": "eds-color-brand-grape-600",
-  "eds-theme-color-focus-ring-inverted": "eds-color-neutral-white",
-  "eds-theme-color-form-border": "eds-color-neutral-500",
-  "eds-theme-color-form-border-hover": "eds-color-neutral-800",
-  "eds-theme-color-form-background": "eds-color-neutral-white",
-  "eds-theme-color-form-background-hover": "eds-color-neutral-100",
-  "eds-theme-color-form-label": "eds-color-neutral-700",
-  "eds-theme-color-modal-brand-header-background": "eds-color-brand-grape-500",
-  "eds-theme-color-text-highlight-foreground": "eds-color-neutral-800",
-  "eds-theme-color-text-highlight-background": "eds-color-other-lemon",
-  "eds-theme-form-border-width": "eds-border-width-sm",
-  "eds-theme-form-border-radius": "eds-border-radius-md",
-  "eds-theme-size-slider-track-height": "eds-size-1",
-  "eds-theme-size-slider-thumb": "eds-size-3",
-  "legacy-color-gray-50": "#F8F9FC",
-  "legacy-color-gray-100": "#EBEBEC",
-  "legacy-color-gray-200": "#D8D8D9",
-  "legacy-color-gray-300": "#C5C5C6",
-  "legacy-color-gray-500": "#9F9FA0",
-  "legacy-color-gray-700": "#78797A",
-  "legacy-color-gray-1000": "#3F4041",
-  "legacy-color-black": "#2C2D2E",
-  "legacy-color-red-100": "#F7DDDD",
-  "legacy-color-red-200": "#F25252",
-  "legacy-color-green-100": "#E1F0E7",
-  "legacy-color-green-200": "#6CC188",
-  "legacy-color-green-300": "#457B57",
-  "legacy-color-yellow-200": "#FFC55B",
-  "legacy-color-yellow-300": "#A46900",
-  "legacy-color-yellow-400": "#644C1F",
-  "legacy-color-purple-200": "#7686D3",
-  "legacy-color-purple-300": "#5761BA",
-  "legacy-color-purple-400": "#32417C",
-  "legacy-size-font-h1": "1.5rem",
-  "legacy-size-font-h2": "1.125rem",
-  "legacy-size-font-body": "1rem",
-  "legacy-size-font-sm": "0.875rem",
-  "legacy-size-font-xs": "0.75rem",
-  "legacy-size-line-height-h1": "2rem",
-  "legacy-size-line-height-body": "1.5rem",
-  "legacy-size-line-height-sm": "1.25rem",
-  "legacy-size-line-height-xs": "1rem"
+  "eds-anim-fade-quick": {
+    "value": "0.15s",
+    "filePath": "src/design-tokens/tier-1-definitions/animation.json"
+  },
+  "eds-anim-fade-long": {
+    "value": "0.4s",
+    "filePath": "src/design-tokens/tier-1-definitions/animation.json"
+  },
+  "eds-anim-move-quick": {
+    "value": "0.15s",
+    "filePath": "src/design-tokens/tier-1-definitions/animation.json"
+  },
+  "eds-anim-move-medium": {
+    "value": "0.3s",
+    "filePath": "src/design-tokens/tier-1-definitions/animation.json"
+  },
+  "eds-anim-move-long": {
+    "value": "0.4s",
+    "filePath": "src/design-tokens/tier-1-definitions/animation.json"
+  },
+  "eds-anim-ease": {
+    "value": "ease",
+    "filePath": "src/design-tokens/tier-1-definitions/animation.json"
+  },
+  "eds-border-width-sm": {
+    "value": "1px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-width-md": {
+    "value": "2px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-width-lg": {
+    "value": "4px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-width-xl": {
+    "value": "8px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-radius-md": {
+    "value": "4px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-radius-lg": {
+    "value": "8px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-radius-xl": {
+    "value": "20px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-radius-round": {
+    "value": "50%",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-border-radius-full": {
+    "value": "9999px",
+    "filePath": "src/design-tokens/tier-1-definitions/borders.json"
+  },
+  "eds-color-brand-grape-100": {
+    "value": "#F0F0FC",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-200": {
+    "value": "#E0E0F9",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-300": {
+    "value": "#C4C1F3",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-400": {
+    "value": "#A6A3EE",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-500": {
+    "value": "#8984E8",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-600": {
+    "value": "#6B65E2",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-700": {
+    "value": "#5751D2",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-brand-grape-800": {
+    "value": "#3E42B1",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-100": {
+    "value": "#F4F6F8",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-200": {
+    "value": "#E7E8EA",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-300": {
+    "value": "#C0C4C8",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-400": {
+    "value": "#999EA3",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-500": {
+    "value": "#878C90",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-600": {
+    "value": "#5D6369",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-700": {
+    "value": "#383C43",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-800": {
+    "value": "#21272D",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-white": {
+    "value": "#FFFFFF",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-neutral-black": {
+    "value": "#161B1F",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-100": {
+    "value": "#ECFFF5",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-200": {
+    "value": "#B7E9CE",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-300": {
+    "value": "#8FDCB3",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-400": {
+    "value": "#59C88C",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-500": {
+    "value": "#00A56A",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-600": {
+    "value": "#008656",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-700": {
+    "value": "#007249",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-mint-800": {
+    "value": "#005939",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-100": {
+    "value": "#FDF1D0",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-200": {
+    "value": "#FFEBB3",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-300": {
+    "value": "#FFDD80",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-400": {
+    "value": "#F7BE2D",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-500": {
+    "value": "#D18400",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-600": {
+    "value": "#BF7300",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-700": {
+    "value": "#9E5B03",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-yellow-800": {
+    "value": "#854C03",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-lemon": {
+    "value": "#F5FF8F",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-eraser": {
+    "value": "#F3DCE2",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-100": {
+    "value": "#FFF1E9",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-200": {
+    "value": "#FFCBA5",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-300": {
+    "value": "#FFAF76",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-400": {
+    "value": "#F6924A",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-500": {
+    "value": "#E06B00",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-600": {
+    "value": "#C64600",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-700": {
+    "value": "#AC3400",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-orange-800": {
+    "value": "#842800",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-100": {
+    "value": "#FFF0F4",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-200": {
+    "value": "#FFCBD7",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-300": {
+    "value": "#FB90B0",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-400": {
+    "value": "#F76C96",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-500": {
+    "value": "#F1497B",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-600": {
+    "value": "#D41E52",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-700": {
+    "value": "#BD0044",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-other-ruby-800": {
+    "value": "#8F0134",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-highlight-100": {
+    "value": "#FF9FEC",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-highlight-200": {
+    "value": "#FFBEAA",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-highlight-300": {
+    "value": "#FCFF00",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-highlight-400": {
+    "value": "#9DFFA4",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-highlight-500": {
+    "value": "#00F1FF",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-highlight-600": {
+    "value": "#CFC9FF",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-100": {
+    "value": "#F1F9FF",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-200": {
+    "value": "#B0D5FF",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-300": {
+    "value": "#7FB9FD",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-400": {
+    "value": "#5CA7FF",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-500": {
+    "value": "#328EFB",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-600": {
+    "value": "#1977CD",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-color-info-700": {
+    "value": "#0563B8",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "eds-l-max-width": {
+    "value": "71.25rem",
+    "filePath": "src/design-tokens/tier-1-definitions/layout.json"
+  },
+  "eds-l-sidebar-width": {
+    "value": "13.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/layout.json"
+  },
+  "eds-l-linelength-width": {
+    "value": "36rem",
+    "filePath": "src/design-tokens/tier-1-definitions/layout.json"
+  },
+  "eds-box-shadow-sm": {
+    "value": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
+    "filePath": "src/design-tokens/tier-1-definitions/shadows.json"
+  },
+  "eds-box-shadow-md": {
+    "value": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
+    "filePath": "src/design-tokens/tier-1-definitions/shadows.json"
+  },
+  "eds-box-shadow-lg": {
+    "value": "0px 4px 12px rgba(0, 0, 0, 0.16)",
+    "filePath": "src/design-tokens/tier-1-definitions/shadows.json"
+  },
+  "eds-box-shadow-xl": {
+    "value": "0px 6px 20px rgba(0, 0, 0, 0.2)",
+    "filePath": "src/design-tokens/tier-1-definitions/shadows.json"
+  },
+  "eds-size-1": {
+    "value": "0.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-2": {
+    "value": "1rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-3": {
+    "value": "1.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-4": {
+    "value": "2rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-5": {
+    "value": "2.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-6": {
+    "value": "3rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-7": {
+    "value": "3.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-8": {
+    "value": "4rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-9": {
+    "value": "4.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-10": {
+    "value": "5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-12": {
+    "value": "6rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-base-unit": {
+    "value": "0.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-half": {
+    "value": "0.25rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-quarter": {
+    "value": "0.125rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-1-and-half": {
+    "value": "0.75rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-size-2-and-half": {
+    "value": "1.25rem",
+    "filePath": "src/design-tokens/tier-1-definitions/size.json"
+  },
+  "eds-font-family-primary": {
+    "value": "'Graphik', sans-serif",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-family-secondary": {
+    "value": "'Open Sans', sans-serif",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-11": {
+    "value": "0.6875rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-12": {
+    "value": "0.75rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-14": {
+    "value": "0.875rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-16": {
+    "value": "1rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-18": {
+    "value": "1.125rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-20": {
+    "value": "1.25rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-24": {
+    "value": "1.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-28": {
+    "value": "1.75rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-32": {
+    "value": "2rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-40": {
+    "value": "2.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-size-base": {
+    "value": "16px",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-weight-light": {
+    "value": "400",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-weight-medium": {
+    "value": "500",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-font-weight-bold": {
+    "value": "600",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-letter-spacing-sm": {
+    "value": "0.5px",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "eds-z-index-0": {
+    "value": "0",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-100": {
+    "value": "100",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-200": {
+    "value": "200",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-300": {
+    "value": "300",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-400": {
+    "value": "400",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-500": {
+    "value": "500",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-top": {
+    "value": "99999",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-z-index-bottom": {
+    "value": "-100",
+    "filePath": "src/design-tokens/tier-1-definitions/z-index.json"
+  },
+  "eds-theme-border-width": {
+    "value": "eds-border-width-sm",
+    "filePath": "src/design-tokens/tier-2-usage/borders.json"
+  },
+  "eds-theme-color-background-neutral-default": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-neutral-default-hover": {
+    "value": "eds-color-neutral-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-neutral-subtle": {
+    "value": "eds-color-neutral-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-neutral-subtle-hover": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-neutral-medium": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-neutral-medium-hover": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-brand-primary-default": {
+    "value": "eds-color-brand-grape-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-brand-primary-subtle": {
+    "value": "eds-color-brand-grape-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-brand-primary-strong": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-brand-primary-strong-hover": {
+    "value": "eds-color-brand-grape-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-utility-success": {
+    "value": "eds-color-other-mint-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-utility-warning": {
+    "value": "eds-color-other-orange-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-utility-error": {
+    "value": "eds-color-other-ruby-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-grade-complete-default": {
+    "value": "eds-color-other-mint-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-grade-complete-subtle": {
+    "value": "eds-color-other-mint-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-grade-revise-default": {
+    "value": "eds-color-other-yellow-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-grade-revise-subtle": {
+    "value": "eds-color-other-yellow-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-grade-stop-default": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-grade-stop-subtle": {
+    "value": "eds-color-other-ruby-100",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-background-disabled": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-background.json"
+  },
+  "eds-theme-color-border-link-neutral": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-link-brand": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-neutral-subtle": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-neutral-subtle-hover": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-neutral-default": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-neutral-default-hover": {
+    "value": "eds-color-neutral-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-neutral-strong": {
+    "value": "eds-color-neutral-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-neutral-strong-hover": {
+    "value": "eds-color-neutral-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-brand-primary-subtle": {
+    "value": "eds-color-brand-grape-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-brand-primary-default": {
+    "value": "eds-theme-color-border-brand-primary",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-brand-primary": {
+    "value": "eds-color-brand-grape-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-brand-primary-strong": {
+    "value": "eds-color-brand-grape-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-success-subtle": {
+    "value": "eds-color-other-mint-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-success-default": {
+    "value": "eds-color-other-mint-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-success-strong": {
+    "value": "eds-color-other-mint-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-warning-subtle": {
+    "value": "eds-color-other-orange-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-warning-default": {
+    "value": "eds-color-other-orange-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-warning-strong": {
+    "value": "eds-color-other-orange-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-error-subtle": {
+    "value": "eds-color-other-ruby-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-error-default": {
+    "value": "eds-color-other-ruby-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-utility-error-strong": {
+    "value": "eds-color-other-ruby-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-grade-complete": {
+    "value": "eds-color-other-mint-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-grade-revise-subtle": {
+    "value": "eds-color-other-yellow-200",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-grade-revise-default": {
+    "value": "eds-color-other-yellow-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-grade-revise-strong": {
+    "value": "eds-color-other-yellow-400",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-grade-stop": {
+    "value": "eds-color-other-ruby-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-border-disabled": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-border.json"
+  },
+  "eds-theme-color-icon-neutral-default": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-neutral-default-inverse": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-neutral-default-hover": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-neutral-strong": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-neutral-strong-hover": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-neutral-subtle": {
+    "value": "eds-color-neutral-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-neutral-subtle-hover": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-link-default": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-link-default-hover": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-brand-primary": {
+    "value": "eds-color-brand-grape-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-brand-primary-hover": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-utility-success": {
+    "value": "eds-color-other-mint-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-utility-success-hover": {
+    "value": "eds-color-other-mint-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-utility-warning": {
+    "value": "eds-color-other-orange-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-utility-warning-hover": {
+    "value": "eds-color-other-orange-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-utility-error": {
+    "value": "eds-color-other-ruby-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-utility-error-hover": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-grade-complete": {
+    "value": "eds-color-other-mint-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-grade-complete-hover": {
+    "value": "eds-color-other-mint-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-grade-revise": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-grade-revise-hover": {
+    "value": "eds-color-neutral-black",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-grade-stop": {
+    "value": "eds-color-other-ruby-500",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-grade-stop-hover": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-icon-disabled": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-icon.json"
+  },
+  "eds-theme-color-text-neutral-default": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-neutral-default-inverse": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-neutral-strong": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-neutral-subtle": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-link-neutral": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-link-brand": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-utility-success": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-utility-warning": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-utility-error": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-grade-complete": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-grade-revise": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-grade-stop": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-disabled": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-brand-default": {
+    "value": "eds-theme-color-text-brand-primary",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-text-brand-primary": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-2-usage/colors-text.json"
+  },
+  "eds-theme-color-transparent-black-0": {
+    "value": "rgba(0, 0, 0, 0)",
+    "filePath": "src/design-tokens/tier-2-usage/colors-transparent.json"
+  },
+  "eds-theme-color-transparent-black-30": {
+    "value": "rgba(0, 0, 0, .3)",
+    "filePath": "src/design-tokens/tier-2-usage/colors-transparent.json"
+  },
+  "eds-theme-color-transparent-white-0": {
+    "value": "rgba(255, 255, 255, 0)",
+    "filePath": "src/design-tokens/tier-2-usage/colors-transparent.json"
+  },
+  "eds-theme-color-body-background": {
+    "value": "eds-color-neutral-100",
+    "filePath": "src/design-tokens/tier-3-component/body.json"
+  },
+  "eds-theme-color-body-background-inverted": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-3-component/body.json"
+  },
+  "eds-theme-color-button-primary-brand-background": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-background-hover": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-background-active": {
+    "value": "eds-color-brand-grape-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-border": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-border-hover": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-border-active": {
+    "value": "eds-color-brand-grape-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-text": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-text-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-brand-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-background": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-background-hover": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-background-active": {
+    "value": "eds-color-other-ruby-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-border": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-border-hover": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-border-active": {
+    "value": "eds-color-other-ruby-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-text": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-text-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-primary-error-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-background-hover": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-background-active": {
+    "value": "eds-color-brand-grape-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-border": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-border-hover": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-border-active": {
+    "value": "eds-color-brand-grape-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-text": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-text-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-icon": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-icon-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-brand-icon-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-background-hover": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-background-active": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-border": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-border-hover": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-border-active": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-text": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-text-hover": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-icon": {
+    "value": "eds-color-neutral-400",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-icon-hover": {
+    "value": "eds-color-neutral-400",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-neutral-icon-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-background-hover": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-background-active": {
+    "value": "eds-color-other-mint-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-border": {
+    "value": "eds-color-other-mint-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-border-hover": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-border-active": {
+    "value": "eds-color-other-mint-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-text": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-text-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-icon": {
+    "value": "eds-color-other-mint-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-icon-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-success-icon-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-background-hover": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-background-active": {
+    "value": "eds-color-other-orange-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-border": {
+    "value": "eds-color-other-orange-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-border-hover": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-border-active": {
+    "value": "eds-color-other-orange-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-text": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-text-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-icon": {
+    "value": "eds-color-other-orange-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-icon-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-warning-icon-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-background-hover": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-background-active": {
+    "value": "eds-color-other-ruby-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-border": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-border-hover": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-border-active": {
+    "value": "eds-color-other-ruby-800",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-text": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-text-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-icon": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-icon-hover": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-secondary-error-icon-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-hover": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-background-hover": {
+    "value": "eds-color-brand-grape-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-background-active": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-border": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-border-hover": {
+    "value": "eds-color-brand-grape-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-border-active": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-text": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-text-hover": {
+    "value": "eds-color-brand-grape-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-brand-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-hover": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-background-hover": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-background-active": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-border": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-border-hover": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-border-active": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-text": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-text-hover": {
+    "value": "eds-color-neutral-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-neutral-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success": {
+    "value": "eds-color-other-mint-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-hover": {
+    "value": "eds-color-other-mint-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-background-hover": {
+    "value": "eds-color-other-mint-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-background-active": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-border": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-border-hover": {
+    "value": "eds-color-other-mint-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-border-active": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-text": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-text-hover": {
+    "value": "eds-color-other-mint-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-success-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning": {
+    "value": "eds-color-other-orange-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-hover": {
+    "value": "eds-color-other-orange-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-background-hover": {
+    "value": "eds-color-other-orange-100",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-background-active": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-border": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-border-hover": {
+    "value": "eds-color-other-orange-100",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-border-active": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-text": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-text-hover": {
+    "value": "eds-color-other-orange-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-warning-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-hover": {
+    "value": "eds-color-other-ruby-600",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-background": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-background-hover": {
+    "value": "eds-color-other-ruby-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-background-active": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-border": {
+    "value": "eds-theme-color-transparent-black-0",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-border-hover": {
+    "value": "eds-color-other-ruby-200",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-border-active": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-text": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-text-hover": {
+    "value": "eds-color-other-ruby-700",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-button-icon-error-text-active": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-color-checkbox-brand-background": {
+    "value": "eds-color-brand-grape-500",
+    "filePath": "src/design-tokens/tier-3-component/checkbox.json"
+  },
+  "eds-theme-color-data-bar-background": {
+    "value": "eds-color-neutral-100",
+    "filePath": "src/design-tokens/tier-3-component/data-bar.json"
+  },
+  "eds-theme-color-data-bar-border": {
+    "value": "eds-color-neutral-300",
+    "filePath": "src/design-tokens/tier-3-component/data-bar.json"
+  },
+  "eds-theme-color-focus-ring": {
+    "value": "eds-color-brand-grape-600",
+    "filePath": "src/design-tokens/tier-3-component/focus-ring.json"
+  },
+  "eds-theme-color-focus-ring-inverted": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/focus-ring.json"
+  },
+  "eds-theme-color-form-border": {
+    "value": "eds-color-neutral-500",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-color-form-border-hover": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-color-form-background": {
+    "value": "eds-color-neutral-white",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-color-form-background-hover": {
+    "value": "eds-color-neutral-100",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-color-form-label": {
+    "value": "eds-color-neutral-700",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-color-link-brand-text": {
+    "value": "eds-theme-color-text-link-neutral",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-brand-text-hover": {
+    "value": "eds-theme-color-text-link-brand",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-brand-text-focus": {
+    "value": "eds-theme-color-text-neutral-default-inverse",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-brand-text-decoration": {
+    "value": "eds-theme-color-border-link-brand",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-brand-text-decoration-hover": {
+    "value": "eds-theme-color-border-link-brand",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-brand-text-decoration-focus": {
+    "value": "eds-theme-color-text-neutral-default-inverse",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-brand-background-focus": {
+    "value": "eds-theme-color-border-link-brand",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-text": {
+    "value": "eds-theme-color-text-link-neutral",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-text-hover": {
+    "value": "eds-theme-color-text-link-brand",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-text-focus": {
+    "value": "eds-theme-color-text-neutral-default-inverse",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-text-decoration": {
+    "value": "eds-theme-color-border-link-neutral",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-text-decoration-hover": {
+    "value": "eds-theme-color-border-link-brand",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-text-decoration-focus": {
+    "value": "eds-theme-color-text-neutral-default-inverse",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-link-neutral-background-focus": {
+    "value": "eds-theme-color-border-link-neutral",
+    "filePath": "src/design-tokens/tier-3-component/link.json"
+  },
+  "eds-theme-color-modal-brand-header-background": {
+    "value": "eds-color-brand-grape-500",
+    "filePath": "src/design-tokens/tier-3-component/modals.json"
+  },
+  "eds-theme-color-progress-bar-background": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-3-component/progress-bar.json"
+  },
+  "eds-theme-color-progress-bar-border": {
+    "value": "eds-color-neutral-200",
+    "filePath": "src/design-tokens/tier-3-component/progress-bar.json"
+  },
+  "eds-theme-color-radio-brand-background": {
+    "value": "eds-color-brand-grape-500",
+    "filePath": "src/design-tokens/tier-3-component/radio.json"
+  },
+  "eds-theme-color-text-highlight-foreground": {
+    "value": "eds-color-neutral-800",
+    "filePath": "src/design-tokens/tier-3-component/text-highlight.json"
+  },
+  "eds-theme-color-text-highlight-background": {
+    "value": "eds-color-other-lemon",
+    "filePath": "src/design-tokens/tier-3-component/text-highlight.json"
+  },
+  "eds-theme-color-toggle-on-background": {
+    "value": "eds-theme-color-background-brand-primary-strong",
+    "filePath": "src/design-tokens/tier-3-component/toggle.json"
+  },
+  "eds-theme-color-toggle-off-background": {
+    "value": "eds-theme-color-icon-neutral-subtle",
+    "filePath": "src/design-tokens/tier-3-component/toggle.json"
+  },
+  "eds-theme-color-toggle-disabled-background": {
+    "value": "eds-theme-color-icon-disabled",
+    "filePath": "src/design-tokens/tier-3-component/toggle.json"
+  },
+  "eds-theme-color-toggle-disabled-text": {
+    "value": "eds-theme-color-text-disabled",
+    "filePath": "src/design-tokens/tier-3-component/toggle.json"
+  },
+  "eds-theme-color-toggle-primary-text": {
+    "value": "eds-theme-color-text-neutral-default",
+    "filePath": "src/design-tokens/tier-3-component/toggle.json"
+  },
+  "eds-theme-color-toggle-thumb": {
+    "value": "eds-theme-color-text-neutral-default-inverse",
+    "filePath": "src/design-tokens/tier-3-component/toggle.json"
+  },
+  "eds-theme-box-button-border-radius": {
+    "value": "eds-border-radius-md",
+    "filePath": "src/design-tokens/tier-3-component/buttons.json"
+  },
+  "eds-theme-form-border-width": {
+    "value": "eds-border-width-sm",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-form-border-radius": {
+    "value": "eds-border-radius-md",
+    "filePath": "src/design-tokens/tier-3-component/forms.json"
+  },
+  "eds-theme-size-slider-track-height": {
+    "value": "eds-size-1",
+    "filePath": "src/design-tokens/tier-3-component/slider.json"
+  },
+  "eds-theme-size-slider-thumb": {
+    "value": "eds-size-3",
+    "filePath": "src/design-tokens/tier-3-component/slider.json"
+  },
+  "legacy-color-gray-50": {
+    "value": "#F8F9FC",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-gray-100": {
+    "value": "#EBEBEC",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-gray-200": {
+    "value": "#D8D8D9",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-gray-300": {
+    "value": "#C5C5C6",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-gray-500": {
+    "value": "#9F9FA0",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-gray-700": {
+    "value": "#78797A",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-gray-1000": {
+    "value": "#3F4041",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-black": {
+    "value": "#2C2D2E",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-red-100": {
+    "value": "#F7DDDD",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-red-200": {
+    "value": "#F25252",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-green-100": {
+    "value": "#E1F0E7",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-green-200": {
+    "value": "#6CC188",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-green-300": {
+    "value": "#457B57",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-yellow-200": {
+    "value": "#FFC55B",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-yellow-300": {
+    "value": "#A46900",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-yellow-400": {
+    "value": "#644C1F",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-purple-200": {
+    "value": "#7686D3",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-purple-300": {
+    "value": "#5761BA",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-color-purple-400": {
+    "value": "#32417C",
+    "filePath": "src/design-tokens/tier-1-definitions/colors.json"
+  },
+  "legacy-size-font-h1": {
+    "value": "1.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-font-h2": {
+    "value": "1.125rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-font-body": {
+    "value": "1rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-font-sm": {
+    "value": "0.875rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-font-xs": {
+    "value": "0.75rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-line-height-h1": {
+    "value": "2rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-line-height-body": {
+    "value": "1.5rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-line-height-sm": {
+    "value": "1.25rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  },
+  "legacy-size-line-height-xs": {
+    "value": "1rem",
+    "filePath": "src/design-tokens/tier-1-definitions/typography.json"
+  }
 }

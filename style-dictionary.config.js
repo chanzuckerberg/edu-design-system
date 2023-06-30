@@ -154,11 +154,17 @@ EDSStyleDictionary.registerFormat({
   formatter: function (dictionary) {
     const map = {};
     dictionary.allTokens.forEach((token) => {
-      const value =
-        token.original.value.slice(0, 4) === '{eds'
-          ? token.original.value.slice(1, -1).split('.').join('-')
-          : token.original.value;
-      map[token.name] = value;
+      let value = '';
+      // Look for style dictionary format tokens or css custom variables and morph them to a common format
+      if (token.original.value.startsWith('{eds')) {
+        value = token.original.value.slice(1, -1).split('.').join('-');
+      } else if (token.original.value.startsWith('var(--')) {
+        value = token.original.value.slice(6, -1);
+      } else {
+        value = token.original.value;
+      }
+      // Include file path to distinguish tiers of tokens
+      map[token.name] = { value, filePath: token.filePath };
     });
     return JSON.stringify(map, null, 2);
   },
