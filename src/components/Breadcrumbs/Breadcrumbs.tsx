@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import debounce from 'lodash.debounce';
+import { debounce } from 'lodash';
 import React, { createContext, useContext, type ReactNode } from 'react';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';

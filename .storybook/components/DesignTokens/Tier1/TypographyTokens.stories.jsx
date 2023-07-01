@@ -21,7 +21,6 @@ export const FontSize = {
 export const FontWeight = {
   render: () => <FontWeights />,
 };
-
 export const Presets = {
   render: () => <Tier1TypographyPresets />,
 };
