@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout ⬇️
         uses: actions/checkout@v3
+        with:
+          # Omlet uses git history for analysis; disable shallow clone
+          fetch-depth: 0
 
       - name: Setup node 😻
         uses: actions/setup-node@v3
