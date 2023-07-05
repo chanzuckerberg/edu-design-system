@@ -62,6 +62,22 @@
             }
           }
         }
+      },
+      "typography": {
+        "link": {
+          "lg": {
+            "value": "var(--eds-typography-preset-004)"
+          },
+          "md": {
+            "value": "var(--eds-typography-preset-005)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-007)"
+          },
+          "xs": {
+            "value": "var(--eds-typography-preset-009)"
+          }
+        }
       }
     }
   }

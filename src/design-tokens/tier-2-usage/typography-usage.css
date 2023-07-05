@@ -1,5 +1,7 @@
 @import '../tier-1-definitions/typography-presets.css';
 
+ /* TODO - delete this file on next major */
+
 @define-mixin eds-theme-typography-headline-lg $important {
   @mixin eds-typography-preset-001-bold $important;
 }

@@ -1677,7 +1677,7 @@ __metadata:
     "@testing-library/user-event": ^14.4.3
     "@tippyjs/react": ^4.2.6
     "@types/jest": ^29.5.2
-    "@types/lodash.debounce": ^4.0.7
+    "@types/lodash": ^4.14.195
     "@types/node": ^18.16.18
     "@types/react": ^18.2.14
     "@types/react-beautiful-dnd": ^13.1.4
@@ -1700,7 +1700,7 @@ __metadata:
     jest-environment-jsdom: ^29.5.0
     jest-preset-stylelint: ^6.1.0
     lint-staged: ^13.2.3
-    lodash.debounce: ^4.0.8
+    lodash: ^4.17.21
     pascal-case: ^3.1.2
     plop: ^3.1.2
     postcss: ^8.4.24
@@ -4859,19 +4859,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash.debounce@npm:^4.0.7":
-  version: 4.0.7
-  resolution: "@types/lodash.debounce@npm:4.0.7"
-  dependencies:
-    "@types/lodash": "*"
-  checksum: e873b2d77f89010876baba3437ef826b17221b98948e00b5590828334a481dea1c8f9d28543210e564adc53199584f42c3cb171f8b6c3614fefc0b4e0888679c
-  languageName: node
-  linkType: hard
-
-"@types/lodash@npm:*, @types/lodash@npm:^4.14.167":
+"@types/lodash@npm:^4.14.167":
   version: 4.14.191
   resolution: "@types/lodash@npm:4.14.191"
   checksum: ba0d5434e10690869f32d5ea49095250157cae502f10d57de0a723fd72229ce6c6a4979576f0f13e0aa9fbe3ce2457bfb9fa7d4ec3d6daba56730a51906d1491
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:^4.14.195":
+  version: 4.14.195
+  resolution: "@types/lodash@npm:4.14.195"
+  checksum: 39b75ca635b3fa943d17d3d3aabc750babe4c8212485a4df166fe0516e39288e14b0c60afc6e21913cc0e5a84734633c71e617e2bd14eaa1cf51b8d7799c432e
   languageName: node
   linkType: hard
 

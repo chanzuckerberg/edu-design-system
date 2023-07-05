@@ -38,14 +38,14 @@
      * Brand specific font for the title.
      */
     flex: 1;
-    font-family: 'Mint Grotesk V1.1', sans-serif;
-    font-weight: var(--eds-font-weight-medium);
+    font: var(--eds-theme-typography-headline-secondary-lg);
+    
     @media all and (min-width: $eds-bp-sm-2) {
       margin-bottom: var(--eds-size-3);
     }
     @media all and (min-width: $eds-bp-xl) {
-      font-size: var(--eds-size-6);
-      line-height: var(--eds-size-7);
+      font: var(--eds-theme-typography-headline-secondary-md);
+   
     }
   }
 }

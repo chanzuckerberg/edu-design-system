@@ -27,6 +27,6 @@ export const Forms = {
   render: () => <Tier2Forms />,
 };
 
-export const TypographyUsage = {
+export const Typography = {
   render: () => <Tier2TypographyUsage />,
 };

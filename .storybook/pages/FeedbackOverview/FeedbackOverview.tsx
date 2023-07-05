@@ -1,4 +1,4 @@
-import debounce from 'lodash.debounce';
+import { debounce } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import {
   Button,
