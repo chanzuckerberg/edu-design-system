@@ -10,6 +10,18 @@
             "value": "{eds.color.neutral.white}"
           }
         }
+      },
+      "box": {
+        "focus-ring": {
+          "outline": {
+            "width": {
+              "value": "{eds.outline.width.sm}"
+            },
+            "offset": {
+              "value": "{eds.outline.width.md}"
+            }
+          }
+        }
       }
     }
   }

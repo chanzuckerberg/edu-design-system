@@ -1,0 +1,17 @@
+{
+  "eds": {
+    "outline": {
+      "width": {
+        "sm": {
+          "value": "1px"
+        },
+        "md": {
+          "value": "2px"
+        },
+        "lg": {
+          "value": "4px"
+        }
+      }
+    }
+  }
+}
