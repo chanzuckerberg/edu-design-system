@@ -15,10 +15,10 @@
         "focus-ring": {
           "outline": {
             "width": {
-              "value": "{eds.outline.width.sm}"
+              "value": "var(--eds-outline-width-sm)"
             },
             "offset": {
-              "value": "{eds.outline.width.md}"
+              "value": "var(--eds-outline-width-md)"
             }
           }
         }

@@ -463,8 +463,8 @@
   --eds-theme-typography-tab-sm-active: var(--eds-typography-preset-009);
   --eds-theme-typography-tag: var(--eds-typography-preset-009);
   --eds-theme-box-button-border-radius: 4px;
-  --eds-theme-box-focus-ring-outline-width: 1px;
-  --eds-theme-box-focus-ring-outline-offset: 2px;
+  --eds-theme-box-focus-ring-outline-width: var(--eds-outline-width-sm);
+  --eds-theme-box-focus-ring-outline-offset: var(--eds-outline-width-md);
   --eds-theme-form-border-width: 1px;
   --eds-theme-form-border-radius: 4px;
   --eds-theme-size-slider-track-height: 0.5rem;

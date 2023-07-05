@@ -876,8 +876,8 @@
         },
         "focus-ring": {
           "outline": {
-            "width": "1px",
-            "offset": "2px"
+            "width": "var(--eds-outline-width-sm)",
+            "offset": "var(--eds-outline-width-md)"
           }
         }
       },
