@@ -1,27 +1,26 @@
-import { at, capitalize, forEach } from 'lodash';
+import { at, forEach } from 'lodash';
 
 import React, { Component } from 'react';
 import { Grid, Section } from '../../../../src';
-import usages from '../../../../src/design-tokens/tier-2-usage/typography.json';
+import presets from '../../../../src/design-tokens/tier-1-definitions/typography.json';
 import flatten from '../../../util/flattenToken';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
-export class Tier2TypographyUsage extends Component {
+export class Tier1TypographyPresets extends Component {
   render() {
     const values = {};
-    forEach(at(usages, 'eds.theme.typography')[0], (_, key) => {
+    forEach(at(presets, 'eds.typography')[0], (_, key) => {
       values[key] = flatten(
-        at(usages, `eds.theme.typography.${key}`)[0],
-        `eds-theme-typography-${key}-`,
+        at(presets, `eds.typography.${key}`)[0],
+        `eds-typography-${key}-`,
       );
     });
 
-    // Flatten all the tier 2 tokens, group them by usage, and print specimens for the results
     return (
       <div>
         {Object.keys(values).map((section) => {
           return (
-            <Section key={section} title={capitalize(section)}>
+            <Section key={section} title="Typography Presets">
               <Grid>
                 {Object.keys(values[section]).map((usage) => {
                   return (

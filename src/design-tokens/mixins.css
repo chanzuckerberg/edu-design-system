@@ -65,22 +65,19 @@
 }
 
 @define-mixin focus {
-  outline: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-  outline-offset: 2px;
+  outline: var(--eds-theme-box-focus-ring-outline-width) solid
+    var(--eds-theme-color-focus-ring);
+  outline-offset: var(--eds-theme-box-focus-ring-outline-offset);
 }
 
 @define-mixin focusInside {
   @mixin focus;
-  outline-offset: -2px;
+  outline-offset: calc(-1 * var(--eds-theme-box-focus-ring-outline-offset));
 }
 
 @define-mixin focusInverted {
   @mixin focus;
   outline-color: var(--eds-theme-color-focus-ring-inverted);
-}
-
-@define-mixin focusTransparent {
-  outline: 2px solid transparent;
 }
 
 @define-mixin inputStyles {

@@ -50,7 +50,6 @@
 
 .checkbox__input:focus-visible {
   @mixin focus;
-  outline-offset: 1px;
 }
 
 @supports not selector(:focus-visible) {
