@@ -119,6 +119,13 @@
       "sidebar-width": "13.5rem",
       "linelength-width": "36rem"
     },
+    "outline": {
+      "width": {
+        "sm": "1px",
+        "md": "2px",
+        "lg": "4px"
+      }
+    },
     "box-shadow": {
       "sm": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
       "md": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
@@ -1001,6 +1008,12 @@
         "button": {
           "border": {
             "radius": "4px"
+          }
+        },
+        "focus-ring": {
+          "outline": {
+            "width": "var(--eds-outline-width-sm)",
+            "offset": "var(--eds-outline-width-md)"
           }
         }
       },
