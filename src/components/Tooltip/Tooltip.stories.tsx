@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Tooltip } from './Tooltip';
@@ -39,7 +40,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.NEEDS_REVISION],
     chromatic: {
       diffThreshold,
       diffIncludeAntiAliasing: false,
