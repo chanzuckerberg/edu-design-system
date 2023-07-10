@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.3.0...v12.4.0) (2023-07-06)
+
+
+### Features
+
+* **focus:** create t1 outline and t3 focus tokens ([#1675](https://github.com/chanzuckerberg/edu-design-system/issues/1675)) ([6ab9857](https://github.com/chanzuckerberg/edu-design-system/commit/6ab9857c9cd71d1b258e613371c6de7f5c7a1e0f))
+* **Typography:** force sync and simplify typography ([#1671](https://github.com/chanzuckerberg/edu-design-system/issues/1671)) ([c30fc5b](https://github.com/chanzuckerberg/edu-design-system/commit/c30fc5b056f324d35bf3ffe0057b5e2ec3e0ea77))
+
 ## [12.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.2.0...v12.3.0) (2023-06-29)
 
 
