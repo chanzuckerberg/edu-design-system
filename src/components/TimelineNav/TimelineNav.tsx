@@ -58,8 +58,7 @@ type TimelineNavPanelVariant =
   | 'incomplete'
   | 'number'
   | 'success'
-  | 'warning'
-  | undefined;
+  | 'warning';
 
 type TimelineNavPanelProps = {
   /**
@@ -295,7 +294,10 @@ export const TimelineNav = ({
     className,
   );
 
-  const iconVariant = (itemVariant: TimelineNavPanelVariant, i: number) => {
+  const iconVariant = (
+    itemVariant: TimelineNavPanelProps['variant'],
+    i: number,
+  ) => {
     switch (itemVariant) {
       case 'success':
         return (
