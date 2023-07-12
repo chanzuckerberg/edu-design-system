@@ -52,3 +52,7 @@
 .avatar--circle {
   border-radius: var(--eds-border-radius-round);
 }
+
+.avatar__image {
+  width: 100%;
+}
