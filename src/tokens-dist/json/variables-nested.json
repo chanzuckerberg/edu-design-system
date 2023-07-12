@@ -133,22 +133,23 @@
       "xl": "0px 6px 20px rgba(0, 0, 0, 0.2)"
     },
     "size": {
-      "1": "0.5rem",
-      "2": "1rem",
-      "3": "1.5rem",
-      "4": "2rem",
-      "5": "2.5rem",
-      "6": "3rem",
-      "7": "3.5rem",
-      "8": "4rem",
-      "9": "4.5rem",
-      "10": "5rem",
-      "12": "6rem",
+      "1": "var(--eds-size-base-unit)",
+      "2": "calc(var(--eds-size-base-unit) * 2)",
+      "3": "calc(var(--eds-size-base-unit) * 3)",
+      "4": "calc(var(--eds-size-base-unit) * 4)",
+      "5": "calc(var(--eds-size-base-unit) * 5)",
+      "6": "calc(var(--eds-size-base-unit) * 6)",
+      "7": "calc(var(--eds-size-base-unit) * 7)",
+      "8": "calc(var(--eds-size-base-unit) * 8)",
+      "9": "calc(var(--eds-size-base-unit) * 9)",
+      "10": "calc(var(--eds-size-base-unit) * 10)",
+      "11": "calc(var(--eds-size-base-unit) * 11)",
+      "12": "calc(var(--eds-size-base-unit) * 12)",
       "base-unit": "0.5rem",
-      "half": "0.25rem",
-      "quarter": "0.125rem",
-      "1-and-half": "0.75rem",
-      "2-and-half": "1.25rem"
+      "half": "calc(var(--eds-size-base-unit) / 2)",
+      "quarter": "calc(var(--eds-size-base-unit) / 4)",
+      "1-and-half": "calc(var(--eds-size-base-unit) * 1.5)",
+      "2-and-half": "calc(var(--eds-size-base-unit) * 2.5)"
     },
     "font-family": {
       "primary": "'Graphik', sans-serif",
@@ -1026,9 +1027,9 @@
       "size": {
         "slider": {
           "track": {
-            "height": "0.5rem"
+            "height": "var(--eds-size-base-unit)"
           },
-          "thumb": "1.5rem"
+          "thumb": "calc(var(--eds-size-base-unit) * 3)"
         }
       }
     }
