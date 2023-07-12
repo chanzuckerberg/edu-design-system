@@ -95,8 +95,6 @@ export { default as TimelineNav } from './components/TimelineNav';
 export { default as TimelineNavPanel } from './components/TimelineNavPanel';
 export { default as Toast } from './components/Toast';
 export { default as Toggle } from './components/Toggle';
-export { default as Toolbar } from './components/Toolbar';
-export { default as ToolbarItem } from './components/ToolbarItem';
 export { default as Tooltip } from './components/Tooltip';
 
 /**

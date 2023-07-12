@@ -15,8 +15,6 @@ import {
   Text,
   TimelineNav,
   TimelineNavPanel,
-  Toolbar,
-  ToolbarItem,
 } from '../../../src';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
@@ -209,16 +207,11 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
           <Tab title="Feedback">
             <TimelineNav activeIndex={activeIndex}>
               <TimelineNavPanel title="Overview">
-                <Toolbar
-                  className={styles['feedback-overview__toolbar']}
-                  variant="bare"
-                >
-                  <ToolbarItem>
-                    <Heading as="h2" size="headline-md">
-                      Feedback Overview
-                    </Heading>
-                  </ToolbarItem>
-                  <ToolbarItem align="right">
+                <div className="flex items-center gap-4 px-4 pb-4 pt-2">
+                  <Heading as="h2" size="headline-md">
+                    Feedback Overview
+                  </Heading>
+                  <div className="ml-auto">
                     <Button size="md" status="brand" variant="secondary">
                       <Icon
                         name="filter-list"
@@ -227,8 +220,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                       />
                       Filters
                     </Button>
-                  </ToolbarItem>
-                </Toolbar>
+                  </div>
+                </div>
                 {isTable && (
                   <Table>
                     <Table.Header>
@@ -406,16 +399,11 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 }
                 variant="number"
               >
-                <Toolbar
-                  className={styles['feedback-overview__toolbar']}
-                  variant="bare"
-                >
-                  <ToolbarItem>
-                    <Heading as="h2" size="h3">
-                      Checkpoint Progress
-                    </Heading>
-                  </ToolbarItem>
-                  <ToolbarItem align="right">
+                <div className="flex items-center gap-4 px-4 pb-4 pt-2">
+                  <Heading as="h2" size="h3">
+                    Checkpoint Progress
+                  </Heading>
+                  <div className="ml-auto">
                     <Button size="md" status="brand" variant="secondary">
                       <Icon
                         name="filter-list"
@@ -424,8 +412,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                       />
                       Filters
                     </Button>
-                  </ToolbarItem>
-                </Toolbar>
+                  </div>
+                </div>
                 {isTable && (
                   <Table>
                     <Table.Header>
