@@ -6,7 +6,6 @@ export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
 export { default as Banner } from './components/Banner';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
-export { default as BreadcrumbsItem } from './components/BreadcrumbsItem';
 export { default as Button } from './components/Button';
 export { default as ButtonDropdown } from './components/ButtonDropdown';
 export { default as ButtonGroup } from './components/ButtonGroup';
