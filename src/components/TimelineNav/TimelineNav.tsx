@@ -14,11 +14,9 @@ import { useId } from '../../util/useId';
 import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
-import type { TimelineNavPanelVariant } from '../TimelineNavPanel';
-import TimelineNavPanel from '../TimelineNavPanel';
 import styles from './TimelineNav.module.css';
 
-export interface Props {
+type Props = {
   /**
    * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
    */
@@ -51,18 +49,79 @@ export interface Props {
    * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
    */
   titleAfter?: ReactNode;
-}
+};
 
-export interface TimelineNavItem {
-  props: {
-    'aria-label': string;
-    children: ReactNode;
-    completed?: boolean;
-    title?: string;
-    titleAfter?: ReactNode;
-    variant?: TimelineNavPanelVariant;
-  };
-}
+type TimelineNavPanelVariant =
+  | 'bullet'
+  | 'complete'
+  | 'error'
+  | 'incomplete'
+  | 'number'
+  | 'success'
+  | 'warning'
+  | undefined;
+
+type TimelineNavPanelProps = {
+  /**
+   * Accessible label for a given panel
+   */
+  'aria-label'?: string;
+  /**
+   * aria-labelledby attribute that associates a tab panel with its accompanying tab title text
+   */
+  'aria-labelledby'?: string;
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Mark list as completed
+   */
+  completed?: boolean;
+  /**
+   * HTML id for the component
+   */
+  id?: string;
+  /**
+   * The tab variant
+   */
+  variant?: TimelineNavPanelVariant;
+  /**
+   * The tab title
+   */
+  title?: string;
+  /**
+   * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
+   */
+  titleAfter?: ReactNode;
+};
+
+const TimelineNavPanel = ({
+  children,
+  className,
+  completed,
+  id,
+  title,
+  titleAfter,
+  variant,
+  ...other
+}: TimelineNavPanelProps) => {
+  return (
+    <div
+      aria-hidden={false}
+      className={className}
+      id={id}
+      role="tabpanel"
+      {...other}
+    >
+      {children}
+    </div>
+  );
+};
 
 /**
  * `import {TimelineNav} from "@chanzuckerberg/eds";`
