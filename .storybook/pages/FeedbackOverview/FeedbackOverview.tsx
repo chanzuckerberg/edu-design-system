@@ -206,7 +206,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
           <Tab title="Feedback">
             <TimelineNav activeIndex={activeIndex}>
               <TimelineNav.Panel title="Overview">
-                <div className="flex items-center gap-4 px-4 pb-4 pt-2">
+                <div className="flex items-center gap-4 pb-4">
                   <Heading as="h2" size="headline-md">
                     Feedback Overview
                   </Heading>
@@ -398,7 +398,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 }
                 variant="number"
               >
-                <div className="flex items-center gap-4 px-4 pb-4 pt-2">
+                <div className="flex items-center gap-4 pb-4">
                   <Heading as="h2" size="h3">
                     Checkpoint Progress
                   </Heading>

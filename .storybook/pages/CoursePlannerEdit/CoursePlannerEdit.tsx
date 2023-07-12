@@ -429,7 +429,7 @@ export const CoursePlannerEdit = () => {
       emptyContent: container1EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <div className="mb-4 flex items-center gap-4 px-4 py-2">
+          <div className="mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Available projects
             </Heading>
@@ -448,7 +448,7 @@ export const CoursePlannerEdit = () => {
       emptyContent: container2EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <div className="mb-4 flex items-center gap-4 px-4 py-2">
+          <div className="mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Planned projects
             </Heading>

@@ -871,7 +871,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4"
           >
             <h2
               class="heading heading--size-title-sm heading--neutral-strong"
@@ -1119,7 +1119,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4"
           >
             <h2
               class="heading heading--size-title-sm heading--neutral-strong"
@@ -1166,7 +1166,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4"
           >
             <h2
               class="heading heading--size-title-sm heading--neutral-strong"
@@ -1213,7 +1213,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4 p-0"
           >
             <h2
               class="heading heading--size-title-sm heading--neutral-strong"

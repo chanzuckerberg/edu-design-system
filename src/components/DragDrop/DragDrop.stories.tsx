@@ -519,7 +519,7 @@ const InteractiveDragDrop = () => {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       header: (
         <DragDropContainerHeader>
-          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Available projects
             </Heading>
@@ -540,7 +540,7 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Planned projects
             </Heading>
@@ -561,7 +561,7 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Planned projects
             </Heading>
@@ -582,7 +582,7 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 px-4 py-2">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 p-0">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Planned projects
             </Heading>
