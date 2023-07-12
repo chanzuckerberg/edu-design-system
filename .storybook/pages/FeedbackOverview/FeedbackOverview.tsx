@@ -14,7 +14,6 @@ import {
   Table,
   Text,
   TimelineNav,
-  TimelineNavPanel,
   Toolbar,
   ToolbarItem,
 } from '../../../src';
@@ -208,7 +207,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
           </Tab>
           <Tab title="Feedback">
             <TimelineNav activeIndex={activeIndex}>
-              <TimelineNavPanel title="Overview">
+              <TimelineNav.Panel title="Overview">
                 <Toolbar
                   className={styles['feedback-overview__toolbar']}
                   variant="bare"
@@ -391,9 +390,9 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                       </Card.Body>
                     </Card>
                   ))}
-              </TimelineNavPanel>
+              </TimelineNav.Panel>
 
-              <TimelineNavPanel
+              <TimelineNav.Panel
                 title="Plan your body"
                 titleAfter={
                   <Icon
@@ -487,9 +486,9 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                       </Card.Body>
                     </Card>
                   ))}
-              </TimelineNavPanel>
+              </TimelineNav.Panel>
 
-              <TimelineNavPanel
+              <TimelineNav.Panel
                 title="Research and Model Cells"
                 variant="number"
               >
@@ -504,8 +503,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                     ullamco laboris nisi ut aliquip ex
                   </Text>
                 </div>
-              </TimelineNavPanel>
-              <TimelineNavPanel
+              </TimelineNav.Panel>
+              <TimelineNav.Panel
                 title="Research and Model Body Systems"
                 variant="number"
               >
@@ -520,8 +519,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                     ullamco laboris nisi ut aliquip ex
                   </Text>
                 </div>
-              </TimelineNavPanel>
-              <TimelineNavPanel title="Draft Your Book" variant="number">
+              </TimelineNav.Panel>
+              <TimelineNav.Panel title="Draft Your Book" variant="number">
                 <div className="max-w-xl">
                   <Heading className="mb-6" size="h3">
                     Draft Your Book
@@ -533,8 +532,11 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                     ullamco laboris nisi ut aliquip ex
                   </Text>
                 </div>
-              </TimelineNavPanel>
-              <TimelineNavPanel title="Critique a Peer's Book" variant="number">
+              </TimelineNav.Panel>
+              <TimelineNav.Panel
+                title="Critique a Peer's Book"
+                variant="number"
+              >
                 <div className="max-w-xl">
                   <Heading className="mb-6" size="h3">
                     Critique a Peer&apos;s Book
@@ -546,8 +548,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                     ullamco laboris nisi ut aliquip ex
                   </Text>
                 </div>
-              </TimelineNavPanel>
-              <TimelineNavPanel title="Human Body Book" variant="number">
+              </TimelineNav.Panel>
+              <TimelineNav.Panel title="Human Body Book" variant="number">
                 <div className="max-w-xl">
                   <Heading className="mb-6" size="h3">
                     Human Body Book
@@ -559,8 +561,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                     ullamco laboris nisi ut aliquip ex
                   </Text>
                 </div>
-              </TimelineNavPanel>
-              <TimelineNavPanel title="Book Review" variant="incomplete">
+              </TimelineNav.Panel>
+              <TimelineNav.Panel title="Book Review" variant="incomplete">
                 <div className="max-w-xl">
                   <Heading className="mb-6" size="h3">
                     Book Review
@@ -572,7 +574,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                     ullamco laboris nisi ut aliquip ex
                   </Text>
                 </div>
-              </TimelineNavPanel>
+              </TimelineNav.Panel>
             </TimelineNav>
           </Tab>
         </Tabs>
