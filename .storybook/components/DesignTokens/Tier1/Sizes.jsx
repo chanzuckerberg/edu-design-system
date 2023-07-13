@@ -7,23 +7,43 @@ export class Tier1Sizes extends Component {
   render() {
     return (
       <div>
-        <Section title="Size">
+        <Section title="Base Grid Size">
           <Grid>
-            {filterTokens(`eds-size`).map(function (listItem) {
-              return (
-                <GridItem key={listItem.name}>
-                  <TokenSpecimen
-                    inlineStyles={{
-                      width: `var(${listItem.name})`,
-                      height: `var(${listItem.name})`,
-                      minHeight: '0',
-                    }}
-                    name={listItem.name}
-                    value={listItem.value}
-                  />
-                </GridItem>
-              );
-            })}
+            {filterTokens('eds-size-base').map((listItem) => (
+              <GridItem key={listItem.name}>
+                <TokenSpecimen
+                  comment="Calculated from a multiple of the base font size --eds-font-size-base"
+                  inlineStyles={{
+                    width: `var(${listItem.name})`,
+                    height: `var(${listItem.name})`,
+                    minHeight: '0',
+                  }}
+                  name={listItem.name}
+                  value={listItem.value}
+                />
+              </GridItem>
+            ))}
+          </Grid>
+        </Section>
+        <Section title="Grid Size">
+          <Grid>
+            {filterTokens(`eds-size`)
+              .filter((listItem) => !listItem.name.endsWith('base-unit'))
+              .map(function (listItem) {
+                return (
+                  <GridItem key={listItem.name}>
+                    <TokenSpecimen
+                      inlineStyles={{
+                        width: `var(${listItem.name})`,
+                        height: `var(${listItem.name})`,
+                        minHeight: '0',
+                      }}
+                      name={listItem.name}
+                      value={listItem.value}
+                    />
+                  </GridItem>
+                );
+              })}
           </Grid>
         </Section>
       </div>
