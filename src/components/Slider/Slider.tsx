@@ -216,6 +216,7 @@ export const Slider = ({
           ))}
         </div>
       )}
+      {/* Adding slider thumb hidden element so that we can retrieve calculated thumb size in DOM */}
       <div className={styles['slider__thumb-proxy']} ref={proxyRef}></div>
     </div>
   );
