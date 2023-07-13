@@ -179,6 +179,17 @@
 }
 
 /**
+ * Use this proxy element to calculate runtime sizing of the rendered thumb
+ * which is hidden by the shadow dom
+ */
+.slider__thumb-proxy {
+  position: absolute;
+  visibility: hidden;
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
+}
+
+/**
  * Horizontally centers the tooltip arrow respective to the tooltip.
  */
 .slider :global(.tippy-arrow) {
