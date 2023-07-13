@@ -10,7 +10,6 @@ import {
   Heading,
   Icon,
   Text,
-  Toolbar,
 } from '../..';
 import styles from './DragDrop.stories.module.css';
 
@@ -91,11 +90,11 @@ export const Default: StoryObj<Args> = {
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
         header: (
           <DragDropContainerHeader>
-            <Toolbar>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Available Projects
               </Heading>
-            </Toolbar>
+            </div>
           </DragDropContainerHeader>
         ),
       },
@@ -298,11 +297,11 @@ export const Default: StoryObj<Args> = {
         ),
         header: (
           <DragDropContainerHeader>
-            <Toolbar>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Selected Projects
               </Heading>
-            </Toolbar>
+            </div>
           </DragDropContainerHeader>
         ),
       },
@@ -365,11 +364,11 @@ export const HoveredHandle: StoryObj<Args> = {
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
         header: (
           <DragDropContainerHeader>
-            <Toolbar>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Available Projects
               </Heading>
-            </Toolbar>
+            </div>
           </DragDropContainerHeader>
         ),
       },
@@ -492,11 +491,11 @@ export const HoveredHandle: StoryObj<Args> = {
         ),
         header: (
           <DragDropContainerHeader>
-            <Toolbar>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Selected Projects
               </Heading>
-            </Toolbar>
+            </div>
           </DragDropContainerHeader>
         ),
       },
@@ -520,19 +519,17 @@ const InteractiveDragDrop = () => {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Available projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Available projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
+            </div>
+          </div>
         </DragDropContainerHeader>
       ),
     },
@@ -543,19 +540,17 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
+            </div>
+          </div>
         </DragDropContainerHeader>
       ),
     },
@@ -566,19 +561,17 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
+            </div>
+          </div>
         </DragDropContainerHeader>
       ),
     },
@@ -589,19 +582,17 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 p-0">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
+            </div>
+          </div>
         </DragDropContainerHeader>
       ),
     },

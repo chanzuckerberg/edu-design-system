@@ -32,8 +32,6 @@ import {
   TableHeaderCell,
   TableRow,
   Text,
-  Toolbar,
-  ToolbarItem,
 } from '../../../src';
 
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
@@ -431,19 +429,17 @@ export const CoursePlannerEdit = () => {
       emptyContent: container1EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Available projects
-              </Heading>
-            </ToolbarItem>
-            <ToolbarItem align="right">
+          <div className="mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Available projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </ToolbarItem>
-          </Toolbar>
+            </div>
+          </div>
         </DragDropContainerHeader>
       ),
     },
@@ -452,19 +448,17 @@ export const CoursePlannerEdit = () => {
       emptyContent: container2EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </ToolbarItem>
-            <ToolbarItem align="right">
+          <div className="mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </ToolbarItem>
-          </Toolbar>
+            </div>
+          </div>
         </DragDropContainerHeader>
       ),
     },
