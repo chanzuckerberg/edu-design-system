@@ -93,8 +93,6 @@ export { default as TextareaField } from './components/TextareaField';
 export { default as TimelineNav } from './components/TimelineNav';
 export { default as Toast } from './components/Toast';
 export { default as Toggle } from './components/Toggle';
-export { default as Toolbar } from './components/Toolbar';
-export { default as ToolbarItem } from './components/ToolbarItem';
 export { default as Tooltip } from './components/Tooltip';
 
 /**
