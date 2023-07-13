@@ -1027,9 +1027,9 @@
       "size": {
         "slider": {
           "track": {
-            "height": "var(--eds-size-base-unit)"
+            "height": "var(--eds-size-1)"
           },
-          "thumb": "calc(var(--eds-size-base-unit) * 3)"
+          "thumb": "var(--eds-size-3)"
         }
       }
     }

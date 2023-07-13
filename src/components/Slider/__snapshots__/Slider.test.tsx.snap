@@ -24,6 +24,9 @@ exports[`<Slider /> Default story renders snapshot 1`] = `
       type="range"
       value="50"
     />
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -83,6 +86,9 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
         5
       </p>
     </div>
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -118,6 +124,9 @@ exports[`<Slider /> FieldNote story renders snapshot 1`] = `
     >
       This is a fieldnote. It overrides the markers
     </div>
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -176,6 +185,9 @@ exports[`<Slider /> GeneratedMarkers story renders snapshot 1`] = `
         5
       </p>
     </div>
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -237,6 +249,9 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
           10000
         </p>
       </div>
+      <div
+        class="slider__thumb-proxy"
+      />
     </div>
   </div>
 </div>
@@ -296,6 +311,9 @@ exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
         5
       </p>
     </div>
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -354,6 +372,9 @@ exports[`<Slider /> NegativeNonIntegerMarkers story renders snapshot 1`] = `
         1
       </p>
     </div>
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -375,6 +396,9 @@ exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
       style="--ratio: 0.5;"
       type="range"
       value="50"
+    />
+    <div
+      class="slider__thumb-proxy"
     />
   </div>
 </div>
