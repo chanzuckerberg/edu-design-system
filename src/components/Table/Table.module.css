@@ -9,3 +9,61 @@
   border-collapse: collapse;
   width: 100%;
 }
+
+/**
+ * Table Cell
+ * The `:where` pseudo class function allows easy overriding via className.
+ */
+:where(.table-cell) {
+  font: var(--eds-theme-typography-body-sm);
+
+  padding: var(--eds-size-2) var(--eds-size-1);
+}
+
+/**
+ * Table header cell
+ * The `:where` pseudo class function allows easy overriding via className.
+ */
+:where(.table-header-cell) {
+  font: var(--eds-theme-typography-label-sm);
+  padding: var(--eds-size-1) var(--eds-size-1);
+  text-align: left;
+}
+
+/**
+ * Table header cell within table body
+ *
+ * Adjusts the padding to match the table__cell padding for alignment.
+ */
+.table-header-cell--body {
+  padding: var(--eds-size-2) var(--eds-size-1);
+}
+
+/**
+ * Table header cell button
+ *
+ * On table header cells that are sortable, the content is wrapped by a <Button>.
+ */
+.table-header-cell__sort-button {
+  gap: var(--eds-size-half);
+  text-decoration: none;
+  font-weight: var(--eds-font-weight-bold);
+}
+
+/**
+ * Table row
+ */
+.table-row {
+  vertical-align: top;
+  border-bottom-width: var(--eds-theme-border-width);
+  border-bottom-style: solid;
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+}
+
+/**
+ * Header variant 
+ * Has darker bottom border color for distinguishment.
+ */
+.table-row--header {
+  border-bottom-color: var(--eds-theme-color-border-neutral-default);
+}
