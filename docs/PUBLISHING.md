@@ -8,6 +8,10 @@ EDS uses [SemVer](https://semver.org/) semantic versioning to keep track of ongo
 
 Look to [this helpful document](https://designsystem.morningstar.com/getting-started/versioning-and-breaking-changes/) from the Morning Star design system for detailed guidance on versioning.
 
+We currently use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log.
+
+**NOTE**: `standard-version` is deprecated. Soon, we may move to an alternative script to handle releases.
+
 ---
 
 ## Releasing a new version of EDS
@@ -24,7 +28,8 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 
 - Development happens on `next`
 - Release branches are cut from `next`. Only bugfixes and documentation updates can be added to release branches.
-- Release branches are merged back into `main` and `next` when ready
+- Hotfix branches are cut from `main`. Only **urgent** bugfixes and documentation updates can be added to hotfix branches.
+- Release and Hotfix branches are merged back into `main` and `next` after the publish is completed
 
 #### Cutting a release branch
 
@@ -33,32 +38,28 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 2. Run `git checkout next && git pull origin next` to update your local copy of `next`.
 3. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
 4. Run `git checkout -b release-v<version>`
-5. Run:
+5. Run `yarn release` if the recommended version is correct. If it isn't, use `yarn release:` followed by the proper version type (patch, minor, major)
 
-```
-yarn release
+#### Cutting a hotfix branch
 
-# or, if there are breaking changes but
-# they're not represented in the commit log
+0. Before beginning, run `git fetch origin` to ensure you have the latest remote changes.
+1. Run `git checkout main && git pull origin main` to update your local copy of `main`.
+2. Run `git checkout -b hotfix-v<currentVersion>`
+3. Create a new commit with the fix, merging into the above branch
+4. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
+5. Run `yarn release` if the recommended version is correct. If it isn't, use `yarn release:patch` (hotfix commits should not be minor or major)
 
-yarn release:major
+**NOTE**: The package is not published, yet. If needed, you can [make additional changes to CHANGELOG.md now](#editing-the-changelog).
 
-# Running this command will print instructions to complete the process. IGNORE THIS. Continue following the directions below.
-```
-
-We currently use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log. The package is not published, yet. If needed, you can [make additional changes to the CHANGELOG now](#editing-the-changelog).
-
-**NOTE**: `standard-version` is deprecated. Soon, we may move to an alternative script to handle releases.
-
-5. Push the release branch up, including tags:
+6. Push the branch up, including tags:
 
 ```
 git push --follow-tags origin <branch> # this will also push tags
 ```
 
-#### Merging a release branch
+#### Merging a branch
 
-6. Open a pull request for the release branch, merging into **`main`**.
+7. Open a pull request for the branch, merging into **`main`**.
 
 For the commit message, use the new version's content in the [CHANGELOG.md](../CHANGELOG.md) (e.g., all the changes for version 1.2.3). Review the content in the changelog to make sure the notes, and the from-version and to-version are correct. Note the link to the storybook on this PR CI/CD. You will add this link to the GitHub release notes later.
 
@@ -70,16 +71,16 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 
 #### Publishing the package
 
-7. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
-8. Publish the package: `npm publish`
-9. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/):
-10. Lastly, run the following to "back merge" release changes to `next`:
+8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
+9. Publish the package: `npm publish`
+10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/):
+11. Lastly, run the following to "back merge" release changes to `next`:
     - `git checkout main && git pull origin main && git checkout next && git merge main && git push`
 
 Once complete, you can update the package in the main apps that use it (for major versions):
 
-- [cra-template-edu](https://github.com/chanzuckerberg/frontend-libs/tree/main/packages/cra-template-edu) - in the template.json and package.json
 - [edu-stack](https://github.com/chanzuckerberg/edu-stack) - in the package.json
+- [edu-stack-service](https://github.com/chanzuckerberg/edu-stack-service) - in the package.json
 
 Take note of the details here, which will also be mentioned in that month's newsletter, and updates to ZeroHeight (What's New).
 
