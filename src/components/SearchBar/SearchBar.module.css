@@ -9,3 +9,14 @@
   display: flex;
   gap: var(--eds-size-1);
 }
+
+/**
+ * Button to trigger search in a Search Bar.
+ */
+.search-button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  height: var(--eds-size-5);
+  box-sizing: content-box;
+  border: 0;
+}
