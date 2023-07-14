@@ -35,7 +35,7 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 
 0. Before beginning, run `git fetch origin` to ensure you have the latest remote changes.
 1. Confirm that all checks are green on CI.
-2. Run `git checkout next && git pull origin next` to update your local copy of `next`.
+2. Run `git checkout next && git pull origin next && yarn install` to update your local copy of `next`.
 3. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
 4. Run `git checkout -b release-v<version>`
 5. Run `yarn release` if the recommended version is correct. If it isn't, use `yarn release:` followed by the proper version type (patch, minor, major)
@@ -43,7 +43,7 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 #### Cutting a hotfix branch
 
 0. Before beginning, run `git fetch origin` to ensure you have the latest remote changes.
-1. Run `git checkout main && git pull origin main` to update your local copy of `main`.
+1. Run `git checkout main && git pull origin main && yarn install` to update your local copy of `main`.
 2. Run `git checkout -b hotfix-v<currentVersion>`
 3. Create a new commit with the fix, merging into the above branch
 4. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
