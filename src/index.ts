@@ -71,8 +71,6 @@ export { default as RadioInput } from './components/RadioInput';
 export { default as RadioLabel } from './components/RadioLabel';
 export { default as Score } from './components/Score';
 export { default as SearchBar } from './components/SearchBar';
-export { default as SearchButton } from './components/SearchButton';
-export { default as SearchField } from './components/SearchField';
 export { default as Section } from './components/Section';
 export { default as Select } from './components/Select';
 export { default as Skeleton } from './components/Skeleton';
