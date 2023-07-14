@@ -134,7 +134,7 @@ type TableRowProps = React.HTMLAttributes<HTMLTableRowElement> & {
   variant?: 'header';
 };
 
-type Props = React.TableHTMLAttributes<HTMLTableElement> & {
+type TableProps = React.TableHTMLAttributes<HTMLTableElement> & {
   /**
    * Child node(s) that can be nested inside component.
    */
@@ -290,7 +290,7 @@ export const TableRow = ({
 /**
  * HTML table component.
  */
-export const Table = ({ children, className, ...other }: Props) => {
+export const Table = ({ children, className, ...other }: TableProps) => {
   const componentClassName = clsx(styles['table'], className);
   return (
     <table className={componentClassName} {...other}>
