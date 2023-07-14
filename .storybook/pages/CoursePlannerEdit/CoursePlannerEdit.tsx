@@ -26,11 +26,6 @@ import {
   PageHeader,
   Panel,
   Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
   Text,
 } from '../../../src';
 
@@ -325,28 +320,28 @@ export const TableCard = ({
           {title}
         </Heading>
         <Table className={styles['table-card__table']} title={title}>
-          <TableHeader>
-            <TableRow variant="header">
+          <Table.Header>
+            <Table.Row variant="header">
               {tableColumns.map((item, index) => {
                 return (
-                  <TableHeaderCell
+                  <Table.HeaderCell
                     className={styles['table-card__table-header-cell']}
                     key={'table-header-cell-' + item.title}
                   >
                     {item.title}
-                  </TableHeaderCell>
+                  </Table.HeaderCell>
                 );
               })}
-            </TableRow>
-          </TableHeader>
-          <TableBody>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
             {tableRows.map((item) => {
               return (
-                <TableRow key={`table-row-${item.value1}`}>
-                  <TableHeaderCell variant="body">
+                <Table.Row key={`table-row-${item.value1}`}>
+                  <Table.HeaderCell variant="body">
                     {item.value1}
-                  </TableHeaderCell>
-                  <TableCell>
+                  </Table.HeaderCell>
+                  <Table.Cell>
                     <NumberIconList>
                       {item.projects.map((item, index) => {
                         return (
@@ -361,11 +356,11 @@ export const TableCard = ({
                         );
                       })}
                     </NumberIconList>
-                  </TableCell>
-                </TableRow>
+                  </Table.Cell>
+                </Table.Row>
               );
             })}
-          </TableBody>
+          </Table.Body>
         </Table>
       </CardBody>
       <CardFooter>
