@@ -71,7 +71,7 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 
 #### Publishing the package
 
-8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
+8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn install && yarn build`
 9. Publish the package: `npm publish`
 10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/):
 11. Lastly, run the following to "back merge" release changes to `next`:
