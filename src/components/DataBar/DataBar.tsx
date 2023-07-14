@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import { useId } from '../../util/useId';
-
-import DataBarSegment from '../DataBarSegment';
-import type { Variants } from '../DataBarSegment';
 import Text from '../Text';
+import Tooltip from '../Tooltip';
+
 import styles from './DataBar.module.css';
 
 type Segment = {
@@ -18,7 +17,28 @@ type Segment = {
   value: number;
 };
 
-export type Props = {
+type Variants = 'brand' | 'success';
+
+export type DataBarSegmentProps = {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Tooltip text to be displayed when the segment is hovered.
+   */
+  text?: string;
+  /**
+   * Width that the segment should consume.
+   */
+  width: string;
+  /**
+   * Color variant of the individual segment.
+   */
+  variant?: Variants;
+} & React.HTMLAttributes<HTMLElement>;
+
+export type DataBarProps = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -67,7 +87,7 @@ export const DataBar = ({
   segments,
   variant = 'brand',
   ...other
-}: Props) => {
+}: DataBarProps) => {
   /**
    * Calculates the total of the segment values.
    */
@@ -184,3 +204,51 @@ export const DataBar = ({
     </div>
   );
 };
+
+/**
+ * A segment sub component for the <DataBar>.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <DataBarSegment text="Segment 1" width="40%" />
+ * ```
+ */
+const DataBarSegment = React.forwardRef(
+  (
+    {
+      className,
+      text,
+      width,
+      variant = 'brand',
+      ...other
+    }: DataBarSegmentProps,
+    ref: React.ForwardedRef<HTMLDivElement>,
+  ) => {
+    const componentClassName = clsx(
+      styles['data-bar-segment'],
+      styles[`data-bar-segment--${variant}`],
+      text && styles['data-bar-segment--hoverable'],
+      className,
+    );
+    const segmentComponent = (
+      <div
+        className={componentClassName}
+        ref={ref}
+        style={{ width: `${width}` }}
+        {...other}
+      />
+    );
+    return text ? (
+      <Tooltip align="bottom" text={text}>
+        {segmentComponent}
+      </Tooltip>
+    ) : (
+      segmentComponent
+    );
+  },
+);
+
+DataBarSegment.displayName = 'DataBarSegment'; // Satisfy eslint
+
+DataBar.Segment = DataBarSegment;
