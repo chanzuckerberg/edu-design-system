@@ -67,3 +67,41 @@
     100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--data-bar-height)
   );
 }
+
+/*------------------------------------*\
+    # DATA BAR SEGMENT
+\*------------------------------------*/
+
+/**
+ * A block that represents its progress in a data bar.
+ */
+ .data-bar-segment {
+  height: 100%;
+}
+
+/**
+ * The pointer cursor indicates that the element is hoverable.
+ * The non hoverable case is the default cursor, used for the empty state indicator.
+ */
+.data-bar-segment--hoverable:hover {
+  cursor: pointer;
+}
+
+/**
+ * The color variants of the data bar segments.
+ */
+.data-bar-segment--brand {
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
+}
+.data-bar-segment--brand.data-bar-segment--hoverable:hover {
+  background-color: var(
+    --eds-theme-color-background-brand-primary-strong-hover
+  );
+}
+
+.data-bar-segment--success {
+  background-color: var(--eds-theme-color-icon-utility-success);
+}
+.data-bar-segment--success.data-bar-segment--hoverable:hover {
+  background-color: var(--eds-theme-color-icon-utility-success-hover);
+}
