@@ -17,7 +17,7 @@ type Segment = {
   value: number;
 };
 
-type Variants = 'brand' | 'success';
+type Variant = 'brand' | 'success';
 
 export type DataBarSegmentProps = {
   /**
@@ -35,7 +35,7 @@ export type DataBarSegmentProps = {
   /**
    * Color variant of the individual segment.
    */
-  variant?: Variants;
+  variant?: Variant;
 } & React.HTMLAttributes<HTMLElement>;
 
 export type DataBarProps = {
@@ -59,7 +59,7 @@ export type DataBarProps = {
   /**
    * Color variant of the data bar. Decorates the segments.
    */
-  variant?: Variants;
+  variant?: Variant;
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
@@ -139,7 +139,7 @@ export const DataBar = ({
     /* Ensures a minimumum width of 5% for the segment. */
     const percentage = Math.max(5, (segment.value / max) * 100);
     segmentComponents.push(
-      <DataBarSegment
+      <DataBar.Segment
         aria-label={segment.text}
         key={`segment-${index}`}
         onKeyDown={(e) => handleOnKeyDown(e, index)}
@@ -158,7 +158,7 @@ export const DataBar = ({
    */
   if (!segmentComponents.length) {
     segmentComponents.push(
-      <DataBarSegment
+      <DataBar.Segment
         key="segment-empty"
         role="gridcell"
         variant={variant}
@@ -211,7 +211,7 @@ export const DataBar = ({
  * Example usage:
  *
  * ```tsx
- * <DataBarSegment text="Segment 1" width="40%" />
+ * <DataBar.Segment text="Segment 1" width="40%" />
  * ```
  */
 const DataBarSegment = React.forwardRef(
