@@ -528,10 +528,6 @@ return <div className={componentClassName} {...other} />;
 
 ## Component Rules and Considerations <a name="component-rules"></a>
 
-### Exactly one component per directory and per folder
-
-Components in this library exist in a flat structure so each component directory needs to contain exactly one component file. Certain components may require several components to properly function (for instance, a `Table` may consist of `TableRow` and `TableCell` subcomponents), and these components should live as siblings in the `components` directory.
-
 ### Compound Components
 
 Certain components (such as `<Tabs />` and `<Table />`) require splitting up into smaller subcomponents.
@@ -540,11 +536,11 @@ By default, we err towards more centralized control over the component architect
 
 #### Conventions for compound components
 
-- Compound components are composed of a parent component (e.g. `<Card>`) and children component (e.g. `<CardHeader>` and `<CardFooter>`).
-- Compound component children names must always begin with the parent name. A parent component `Table` means that all child components related to it must begin with `Table` (such as `TableBody`, `TableRow` and `TableCell`).
-- Compound component children have an associated `.module.css` file, and child component styles will contain styles relevant to the subcomponent element (e.g. `AccordionPanel.module.css` would begin with `.accordion__panel { ... }`).
+- Compound components are composed of a parent component (e.g. `<Card>`) and children component (e.g. `<Card.Header>` and `<Card.Footer>`).
+- Compound component children must be declared within the parent component file.
+- Compound component children names must always begin with the parent name. A parent component `Table` means that all child components related to it must begin with `Table` (such as `Table.Body`, `Table.Row` and `Table.Cell`).
 - Compound components never have an associated `.stories.tsx` file as they rely on the parent component's stories to render properly.
-- Compound components should be re-exported from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
+- Compound components should be exported as subcomponents from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
 
 ```tsx
 // This demonstrates how bound subcomponents are attached
