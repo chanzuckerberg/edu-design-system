@@ -1,9 +1,6 @@
 import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
-import CardBody from '../CardBody';
-import CardFooter from '../CardFooter';
-import CardHeader from '../CardHeader';
 import styles from './Card.module.css';
 
 export interface Props extends HTMLAttributes<HTMLElement> {
@@ -33,6 +30,17 @@ export interface Props extends HTMLAttributes<HTMLElement> {
    * where the body is required but the header and footer are not
    */
   orientation?: 'vertical' | 'horizontal';
+}
+
+export interface CardSubComponentProps {
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
 }
 
 /**
@@ -65,6 +73,56 @@ export const Card = ({
 };
 
 Card.displayName = 'Card';
+
+/**
+ * Body of the Card component.
+ */
+const CardBody = ({ children, className, ...other }: CardSubComponentProps) => {
+  const componentClassName = clsx(styles['card__body'], className);
+  return (
+    <div className={componentClassName} {...other}>
+      {children}
+    </div>
+  );
+};
+
+CardBody.displayName = 'CardBody';
+
+/**
+ * Footer of the Card component.
+ */
+const CardFooter = ({
+  children,
+  className,
+  ...other
+}: CardSubComponentProps) => {
+  const componentClassName = clsx(styles['card__footer'], className);
+  return (
+    <footer className={componentClassName} {...other}>
+      {children}
+    </footer>
+  );
+};
+
+CardFooter.displayName = 'CardFooter';
+
+/**
+ * Header of the Card component.
+ */
+const CardHeader = ({
+  children,
+  className,
+  ...other
+}: CardSubComponentProps) => {
+  const componentClassName = clsx(styles['card__header'], className);
+  return (
+    <header className={componentClassName} {...other}>
+      {children}
+    </header>
+  );
+};
+
+CardHeader.displayName = 'CardHeader';
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;
