@@ -61,8 +61,6 @@ export { default as Popover } from './components/Popover';
 export { default as PopoverListItem } from './components/PopoverListItem';
 export { default as ProgressBar } from './components/ProgressBar';
 export { default as Radio } from './components/Radio';
-export { default as RadioInput } from './components/RadioInput';
-export { default as RadioLabel } from './components/RadioLabel';
 export { default as Score } from './components/Score';
 export { default as SearchBar } from './components/SearchBar';
 export { default as Section } from './components/Section';
