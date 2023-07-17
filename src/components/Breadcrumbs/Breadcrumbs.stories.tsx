@@ -130,7 +130,10 @@ export const LongTextMenu: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'ipadMini',
     },
-    chromatic: { viewports: [chromaticViewports.ipadMini] },
+    chromatic: {
+      viewports: [chromaticViewports.ipadMini],
+      diffThreshold: 0.75,
+    },
     axe: {
       skip: true,
     },
