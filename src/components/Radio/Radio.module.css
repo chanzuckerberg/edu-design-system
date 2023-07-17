@@ -29,7 +29,7 @@
   margin: 0;
   /* Remove the radio from the page flow, positioning it on top of the SVG. */
   position: absolute;
-  left: 0.25rem;
+  left: var(--eds-size-half);
   /* Set same dimensions as the RadioSvg element. */
   height: var(--eds-size-2);
   width: var(--eds-size-2);
@@ -89,8 +89,9 @@
  * Used for centering the label with the radio input button.
  */
 .radio__label--md {
-  top: 0.125rem;
+  top: var(--eds-size-quarter);
 }
 .radio__label--lg {
+  /* This is a 1px increase in top spacing from the md variant. Size is too specific to have a token. */
   top: 0.0625rem;
 }
