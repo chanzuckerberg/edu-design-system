@@ -24,8 +24,6 @@ export { default as DropdownMenu } from './components/DropdownMenu';
 export { default as DropdownMenuItem } from './components/DropdownMenuItem';
 export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
-export { default as FieldsetItems } from './components/FieldsetItems';
-export { default as FieldsetLegend } from './components/FieldsetLegend';
 export { default as FiltersButton } from './components/FiltersButton';
 export { default as FiltersCheckboxField } from './components/FiltersCheckboxField';
 export { default as FiltersDrawer } from './components/FiltersDrawer';

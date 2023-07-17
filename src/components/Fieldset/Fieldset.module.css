@@ -12,3 +12,39 @@
    /* Overrides default browser styling. */
   margin: var(--eds-size-2);
 }
+
+/*------------------------------------*\
+    # FIELDSET ITEMS
+\*------------------------------------*/
+
+/**
+ * The contents of the fieldset. Spaces them apart.
+ */
+ .fieldset-items > :not(:last-child) {
+  margin-bottom: var(--eds-size-1-and-half);
+}
+
+/*------------------------------------*\
+    # FIELDSET LEGEND
+\*------------------------------------*/
+
+/**
+ * A label that's rendered as a <legend> for fieldsets.
+ * It contains the same characteristics as a label (ability to add flag for optional field, etc),
+ * but semantically/stylistically a bit different.
+ */
+.fieldset-legend {
+  /* Removes some default browser styles. */
+  @mixin legendReset;
+  font: var(--eds-theme-typography-form-label);
+  /* Adjust margin between legend and option list */
+  margin-bottom: var(--eds-size-2);
+}
+
+/**
+ * Label flag to mark whether or not a field is required
+ * or optional. Currently a flag is only present for optional fields
+ */
+.fieldset-legend__flag {
+  font: var(--eds-theme-typography-body-sm);
+}

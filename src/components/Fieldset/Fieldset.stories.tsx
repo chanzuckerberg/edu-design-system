@@ -1,10 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 import { Fieldset } from './Fieldset';
+import type { FieldsetLegendProps } from './Fieldset';
 import Checkbox from '../Checkbox';
-import FieldsetItems from '../FieldsetItems';
-import type { FieldsetLegendProps } from '../FieldsetLegend';
-import FieldsetLegend from '../FieldsetLegend';
 
 export default {
   title: 'Components/Fieldset',
@@ -12,7 +10,10 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
-  subcomponents: { FieldsetLegend, FieldsetItems },
+  subcomponents: {
+    FieldsetLegend: Fieldset.Legend,
+    FieldsetItems: Fieldset.Items,
+  },
   argTypes: {
     children: {
       control: {
