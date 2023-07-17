@@ -8,8 +8,6 @@ import {
   Button,
   ButtonGroup,
   Card,
-  CardBody,
-  CardFooter,
   DataBar,
   DragDrop,
   DragDropContainerHeader,
@@ -310,7 +308,7 @@ export const TableCard = ({
 
   return (
     <Card className={componentClassName} {...other}>
-      <CardBody>
+      <Card.Body>
         <Heading
           as="h2"
           className="mb-4"
@@ -362,10 +360,10 @@ export const TableCard = ({
             })}
           </Table.Body>
         </Table>
-      </CardBody>
-      <CardFooter>
+      </Card.Body>
+      <Card.Footer>
         <Button status="neutral">{buttonContent}</Button>
-      </CardFooter>
+      </Card.Footer>
     </Card>
   );
 };
