@@ -33,7 +33,6 @@ export { default as FiltersPopover } from './components/FiltersPopover';
 export { default as Grid } from './components/Grid';
 export { default as GridItem } from './components/GridItem';
 export { default as Heading } from './components/Heading';
-export { default as HorizontalStep } from './components/HorizontalStep';
 export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';

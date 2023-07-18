@@ -4,7 +4,6 @@ import React from 'react';
 import { HorizontalStepper } from './HorizontalStepper';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import HorizontalStep from '../HorizontalStep';
 import Icon from '../Icon';
 
 export default {
@@ -87,13 +86,17 @@ export const Interactive: StoryObj<Args> = {
 export const HorizontalSteps: StoryObj<Args> = {
   render: () => (
     <ol className="p-0">
-      <HorizontalStep
+      <HorizontalStepper.Step
         stepNumber={1}
         text="Horizontal step"
         variant="incomplete"
       />
-      <HorizontalStep stepNumber={1} text="Horizontal step" variant="active" />
-      <HorizontalStep
+      <HorizontalStepper.Step
+        stepNumber={1}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
         stepNumber={1}
         text="Horizontal step"
         variant="complete"
@@ -105,21 +108,81 @@ export const HorizontalSteps: StoryObj<Args> = {
 export const HorizontalStepsDifferentNumbers: StoryObj<Args> = {
   render: () => (
     <ol className="p-0">
-      <HorizontalStep stepNumber={1} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={2} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={3} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={4} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={5} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={6} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={7} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={8} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={9} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={10} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={21} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={32} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={43} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={54} text="Horizontal step" variant="active" />
-      <HorizontalStep stepNumber={65} text="Horizontal step" variant="active" />
+      <HorizontalStepper.Step
+        stepNumber={1}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={2}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={3}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={4}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={5}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={6}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={7}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={8}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={9}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={10}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={21}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={32}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={43}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={54}
+        text="Horizontal step"
+        variant="active"
+      />
+      <HorizontalStepper.Step
+        stepNumber={65}
+        text="Horizontal step"
+        variant="active"
+      />
     </ol>
   ),
 };
