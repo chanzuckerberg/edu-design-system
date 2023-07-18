@@ -45,9 +45,7 @@
   --eds-font-family-primary: var(--wireframe-font-family-primary);
   --eds-font-family-secondary: var(--wireframe-font-family-secondary);
   --eds-theme-color-background-brand-primary-default: var(--wireframe-white);
-  --eds-theme-color-background-brand-primary-strong-hover: var(
-    --wireframe-gray-e
-  );
+  --eds-theme-color-background-brand-primary-strong-hover: var(--wireframe-gray-e);
   --eds-theme-color-background-brand-primary-strong: var(--wireframe-gray-b);
   --eds-theme-color-background-disabled: var(--wireframe-gray-b);
   --eds-theme-color-background-grade-complete-default: var(--wireframe-gray-c);
@@ -94,9 +92,7 @@
   --eds-theme-color-border-utility-warning-strong: var(--wireframe-gray-b);
   --eds-theme-color-border-utility-warning-subtle: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-brand-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-brand-background-active: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-icon-brand-background-active: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-brand-background-hover: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-brand-background: transparent;
   --eds-theme-color-button-icon-brand-border-active: var(--wireframe-gray-d);
@@ -108,9 +104,7 @@
   --eds-theme-color-button-icon-brand-text: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-brand: var(--wireframe-gray-c);
   --eds-theme-color-button-icon-error-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-error-background-active: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-icon-error-background-active: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-error-background-hover: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-error-background: transparent;
   --eds-theme-color-button-icon-error-border-active: var(--wireframe-gray-d);
@@ -122,12 +116,8 @@
   --eds-theme-color-button-icon-error-text: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-error: var(--wireframe-gray-c);
   --eds-theme-color-button-icon-neutral-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-neutral-background-active: var(
-    --wireframe-gray-d
-  );
-  --eds-theme-color-button-icon-neutral-background-hover: var(
-    --wireframe-gray-a
-  );
+  --eds-theme-color-button-icon-neutral-background-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-neutral-background-hover: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-neutral-background: transparent;
   --eds-theme-color-button-icon-neutral-border-active: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-neutral-border-hover: var(--wireframe-gray-a);
@@ -138,12 +128,8 @@
   --eds-theme-color-button-icon-neutral-text: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-neutral: var(--wireframe-gray-c);
   --eds-theme-color-button-icon-success-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-success-background-active: var(
-    --wireframe-gray-d
-  );
-  --eds-theme-color-button-icon-success-background-hover: var(
-    --wireframe-gray-a
-  );
+  --eds-theme-color-button-icon-success-background-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-success-background-hover: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-success-background: transparent;
   --eds-theme-color-button-icon-success-border-active: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-success-border-hover: var(--wireframe-gray-a);
@@ -154,12 +140,8 @@
   --eds-theme-color-button-icon-success-text: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-success: var(--wireframe-gray-c);
   --eds-theme-color-button-icon-warning-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-warning-background-active: var(
-    --wireframe-gray-d
-  );
-  --eds-theme-color-button-icon-warning-background-hover: var(
-    --wireframe-gray-a
-  );
+  --eds-theme-color-button-icon-warning-background-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-warning-background-hover: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-warning-background: transparent;
   --eds-theme-color-button-icon-warning-border-active: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-warning-border-hover: var(--wireframe-gray-a);
@@ -169,12 +151,8 @@
   --eds-theme-color-button-icon-warning-text-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-warning-text: var(--wireframe-gray-d);
   --eds-theme-color-button-icon-warning: var(--wireframe-gray-c);
-  --eds-theme-color-button-primary-brand-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-primary-brand-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-primary-brand-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-primary-brand-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-primary-brand-background: var(--wireframe-gray-c);
   --eds-theme-color-button-primary-brand-border-active: var(--wireframe-gray-e);
   --eds-theme-color-button-primary-brand-border-hover: var(--wireframe-gray-d);
@@ -182,12 +160,8 @@
   --eds-theme-color-button-primary-brand-text-active: var(--wireframe-white);
   --eds-theme-color-button-primary-brand-text-hover: var(--wireframe-white);
   --eds-theme-color-button-primary-brand-text: var(--wireframe-white);
-  --eds-theme-color-button-primary-error-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-primary-error-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-primary-error-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-primary-error-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-primary-error-background: var(--wireframe-gray-c);
   --eds-theme-color-button-primary-error-border-active: var(--wireframe-gray-e);
   --eds-theme-color-button-primary-error-border-hover: var(--wireframe-gray-d);
@@ -195,19 +169,11 @@
   --eds-theme-color-button-primary-error-text-active: var(--wireframe-white);
   --eds-theme-color-button-primary-error-text-hover: var(--wireframe-white);
   --eds-theme-color-button-primary-error-text: var(--wireframe-white);
-  --eds-theme-color-button-secondary-brand-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-brand-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-brand-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-brand-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-brand-background: transparent;
-  --eds-theme-color-button-secondary-brand-border-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-brand-border-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-brand-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-brand-border-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-brand-border: var(--wireframe-gray-c);
   --eds-theme-color-button-secondary-brand-icon-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-brand-icon-hover: var(--wireframe-white);
@@ -215,19 +181,11 @@
   --eds-theme-color-button-secondary-brand-text-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-brand-text-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-brand-text: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-error-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-error-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-error-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-error-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-error-background: transparent;
-  --eds-theme-color-button-secondary-error-border-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-error-border-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-error-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-error-border-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-error-border: var(--wireframe-gray-c);
   --eds-theme-color-button-secondary-error-icon-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-error-icon-hover: var(--wireframe-white);
@@ -235,76 +193,40 @@
   --eds-theme-color-button-secondary-error-text-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-error-text-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-error-text: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-neutral-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-neutral-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-neutral-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-neutral-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-neutral-background: transparent;
-  --eds-theme-color-button-secondary-neutral-border-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-neutral-border-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-neutral-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-neutral-border-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-neutral-border: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-neutral-icon-active: var(
-    --wireframe-white
-  );
+  --eds-theme-color-button-secondary-neutral-icon-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-neutral-icon-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-neutral-icon: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-neutral-text-active: var(
-    --wireframe-white
-  );
+  --eds-theme-color-button-secondary-neutral-text-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-neutral-text-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-neutral-text: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-success-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-success-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-success-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-success-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-success-background: transparent;
-  --eds-theme-color-button-secondary-success-border-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-success-border-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-success-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-success-border-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-success-border: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-success-icon-active: var(
-    --wireframe-white
-  );
+  --eds-theme-color-button-secondary-success-icon-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-success-icon-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-success-icon: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-success-text-active: var(
-    --wireframe-white
-  );
+  --eds-theme-color-button-secondary-success-text-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-success-text-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-success-text: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-warning-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-warning-background-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-warning-background-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-warning-background-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-warning-background: transparent;
-  --eds-theme-color-button-secondary-warning-border-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-warning-border-hover: var(
-    --wireframe-gray-d
-  );
+  --eds-theme-color-button-secondary-warning-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-secondary-warning-border-hover: var(--wireframe-gray-d);
   --eds-theme-color-button-secondary-warning-border: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-warning-icon-active: var(
-    --wireframe-white
-  );
+  --eds-theme-color-button-secondary-warning-icon-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-warning-icon-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-warning-icon: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-warning-text-active: var(
-    --wireframe-white
-  );
+  --eds-theme-color-button-secondary-warning-text-active: var(--wireframe-white);
   --eds-theme-color-button-secondary-warning-text-hover: var(--wireframe-white);
   --eds-theme-color-button-secondary-warning-text: var(--wireframe-gray-c);
   --eds-theme-color-focus-ring-inverted: var(--wireframe-white);
