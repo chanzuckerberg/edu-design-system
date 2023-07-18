@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -8,7 +9,7 @@ export default {
   title: 'Components/Layout',
   component: Layout,
   parameters: {
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   args: {
     children: (
