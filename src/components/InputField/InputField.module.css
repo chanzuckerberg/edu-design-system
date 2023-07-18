@@ -9,24 +9,29 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--eds-size-half);
-  color: var(--eds-theme-color-form-label);
 }
 .input-field__overline--no-label {
   justify-content: flex-end;
 }
-.input-field__overline--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
 
 /**
- * Input field body
- */
+* Input field body
+*/
 .input-field__body {
   position: relative;
 }
 
+.input-field__label {
+  color: var(--eds-theme-color-form-label);
+  font: var(--eds-theme-typography-form-label);
+}
+.input-field__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
 .input-field__required-text {
   color: var(--eds-theme-color-text-neutral-subtle);
+  font: var(--eds-theme-typography-body-sm);
 }
 
 .input-field--has-fieldNote {
