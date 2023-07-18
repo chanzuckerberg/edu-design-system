@@ -10,7 +10,6 @@ import {
   Card,
   DataBar,
   DragDrop,
-  DragDropContainerHeader,
   Grid,
   GridItem,
   Heading,
@@ -421,7 +420,7 @@ export const CoursePlannerEdit = () => {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       emptyContent: container1EmptyContent(),
       header: (
-        <DragDropContainerHeader>
+        <DragDrop.ContainerHeader>
           <div className="mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Available projects
@@ -433,14 +432,14 @@ export const CoursePlannerEdit = () => {
               </Button>
             </div>
           </div>
-        </DragDropContainerHeader>
+        </DragDrop.ContainerHeader>
       ),
     },
     'container-2': {
       itemIds: [],
       emptyContent: container2EmptyContent(),
       header: (
-        <DragDropContainerHeader>
+        <DragDrop.ContainerHeader>
           <div className="mb-4 flex items-center gap-4">
             <Heading as="h2" size="title-sm" variant="neutral-strong">
               Planned projects
@@ -452,7 +451,7 @@ export const CoursePlannerEdit = () => {
               </Button>
             </div>
           </div>
-        </DragDropContainerHeader>
+        </DragDrop.ContainerHeader>
       ),
     },
   });
