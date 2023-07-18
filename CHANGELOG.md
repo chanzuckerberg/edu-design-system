@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.4.0...v12.4.1) (2023-07-18)
+
+
+### Bug Fixes
+
+* make sure all var properties exist on one line ([1fecab5](https://github.com/chanzuckerberg/edu-design-system/commit/1fecab5789132f0f7dbe0cdaf74dec3f30444c83))
+
 ## [12.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.3.0...v12.4.0) (2023-07-06)
 
 

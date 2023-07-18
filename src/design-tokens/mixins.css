@@ -21,9 +21,7 @@
 
   &:hover {
     color: var(--eds-theme-color-link-brand-text-hover);
-    text-decoration-color: var(
-      --eds-theme-color-link-brand-text-decoration-hover
-    );
+    text-decoration-color: var(--eds-theme-color-link-brand-text-decoration-hover);
   }
 
   &:focus-visible {
@@ -33,9 +31,7 @@
      */
     outline: 1px solid transparent;
     color: var(--eds-theme-color-link-brand-text-focus) !important;
-    text-decoration-color: var(
-      --eds-theme-color-link-brand-text-decoration-focus
-    ) !important;
+    text-decoration-color: var(--eds-theme-color-link-brand-text-decoration-focus) !important;
     background-color: var(--eds-theme-color-link-brand-background-focus);
   }
 
@@ -47,9 +43,7 @@
        */
       outline: 1px solid transparent;
       color: var(--eds-theme-color-link-brand-text-focus) !important;
-      text-decoration-color: var(
-        --eds-theme-color-link-brand-text-decoration-focus
-      ) !important;
+      text-decoration-color: var(--eds-theme-color-link-brand-text-decoration-focus) !important;
       background-color: var(--eds-theme-color-link-brand-background-focus);
     }
   }
@@ -178,9 +172,7 @@
 }
 
 @define-mixin messagingSuccess {
-  --messaging-border-color: var(
-    --eds-theme-color-border-utility-success-subtle
-  );
+  --messaging-border-color: var(--eds-theme-color-border-utility-success-subtle);
   --messaging-icon-color: var(--eds-theme-color-icon-utility-success);
 
   background: var(--eds-theme-color-background-utility-success);
@@ -188,9 +180,7 @@
 }
 
 @define-mixin messagingWarning {
-  --messaging-border-color: var(
-    --eds-theme-color-border-utility-warning-subtle
-  );
+  --messaging-border-color: var(--eds-theme-color-border-utility-warning-subtle);
   --messaging-icon-color: var(--eds-theme-color-icon-utility-warning);
 
   background: var(--eds-theme-color-background-utility-warning);

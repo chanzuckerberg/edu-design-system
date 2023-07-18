@@ -68,17 +68,13 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-primary-brand-border-hover);
-    background-color: var(
-      --eds-theme-color-button-primary-brand-background-hover
-    );
+    background-color: var(--eds-theme-color-button-primary-brand-background-hover);
     color: var(--eds-theme-color-button-primary-brand-text-hover);
   }
 
   &:active {
     border-color: var(--eds-theme-color-button-primary-brand-border-active);
-    background-color: var(
-      --eds-theme-color-button-primary-brand-background-active
-    );
+    background-color: var(--eds-theme-color-button-primary-brand-background-active);
     color: var(--eds-theme-color-button-primary-brand-text-active);
   }
 }
@@ -93,17 +89,13 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-primary-error-border-hover);
-    background-color: var(
-      --eds-theme-color-button-primary-error-background-hover
-    );
+    background-color: var(--eds-theme-color-button-primary-error-background-hover);
     color: var(--eds-theme-color-button-primary-error-text-hover);
   }
 
   &:active {
     border-color: var(--eds-theme-color-button-primary-error-border-active);
-    background-color: var(
-      --eds-theme-color-button-primary-error-background-active
-    );
+    background-color: var(--eds-theme-color-button-primary-error-background-active);
     color: var(--eds-theme-color-button-primary-error-text-active);
   }
 }
@@ -122,9 +114,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-secondary-brand-border-hover);
-    background-color: var(
-      --eds-theme-color-button-secondary-brand-background-hover
-    );
+    background-color: var(--eds-theme-color-button-secondary-brand-background-hover);
     color: var(--eds-theme-color-button-secondary-brand-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-brand-icon-hover);
@@ -133,9 +123,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-secondary-brand-border-active);
-    background-color: var(
-      --eds-theme-color-button-secondary-brand-background-active
-    );
+    background-color: var(--eds-theme-color-button-secondary-brand-background-active);
     color: var(--eds-theme-color-button-secondary-brand-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-brand-icon-focus);
@@ -157,9 +145,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-secondary-neutral-border-hover);
-    background-color: var(
-      --eds-theme-color-button-secondary-neutral-background-hover
-    );
+    background-color: var(--eds-theme-color-button-secondary-neutral-background-hover);
     color: var(--eds-theme-color-button-secondary-neutral-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-neutral-icon-hover);
@@ -168,9 +154,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-secondary-neutral-border-active);
-    background-color: var(
-      --eds-theme-color-button-secondary-neutral-background-active
-    );
+    background-color: var(--eds-theme-color-button-secondary-neutral-background-active);
     color: var(--eds-theme-color-button-secondary-neutral-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-neutral-icon-active);
@@ -192,9 +176,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-secondary-success-border-hover);
-    background-color: var(
-      --eds-theme-color-button-secondary-success-background-hover
-    );
+    background-color: var(--eds-theme-color-button-secondary-success-background-hover);
     color: var(--eds-theme-color-button-secondary-success-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-success-icon-hover);
@@ -203,9 +185,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-secondary-success-border-active);
-    background-color: var(
-      --eds-theme-color-button-secondary-success-background-active
-    );
+    background-color: var(--eds-theme-color-button-secondary-success-background-active);
     color: var(--eds-theme-color-button-secondary-success-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-success-icon-active);
@@ -227,9 +207,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-secondary-warning-border-hover);
-    background-color: var(
-      --eds-theme-color-button-secondary-warning-background-hover
-    );
+    background-color: var(--eds-theme-color-button-secondary-warning-background-hover);
     color: var(--eds-theme-color-button-secondary-warning-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-warning-icon-hover);
@@ -238,9 +216,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-secondary-warning-border-active);
-    background-color: var(
-      --eds-theme-color-button-secondary-warning-background-active
-    );
+    background-color: var(--eds-theme-color-button-secondary-warning-background-active);
     color: var(--eds-theme-color-button-secondary-warning-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-warning-icon-active);
@@ -262,9 +238,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-secondary-error-border-hover);
-    background-color: var(
-      --eds-theme-color-button-secondary-error-background-hover
-    );
+    background-color: var(--eds-theme-color-button-secondary-error-background-hover);
     color: var(--eds-theme-color-button-secondary-error-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-error-icon-hover);
@@ -273,9 +247,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-secondary-error-border-active);
-    background-color: var(
-      --eds-theme-color-button-secondary-error-background-active
-    );
+    background-color: var(--eds-theme-color-button-secondary-error-background-active);
     color: var(--eds-theme-color-button-secondary-error-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-secondary-error-icon-active);
@@ -310,9 +282,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-icon-brand-border-active);
-    background-color: var(
-      --eds-theme-color-button-icon-brand-background-active
-    );
+    background-color: var(--eds-theme-color-button-icon-brand-background-active);
     color: var(--eds-theme-color-button-icon-brand-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-brand-active);
@@ -338,9 +308,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-icon-neutral-border-hover);
-    background-color: var(
-      --eds-theme-color-button-icon-neutral-background-hover
-    );
+    background-color: var(--eds-theme-color-button-icon-neutral-background-hover);
     color: var(--eds-theme-color-button-icon-neutral-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-neutral-hover);
@@ -349,9 +317,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-icon-neutral-border-active);
-    background-color: var(
-      --eds-theme-color-button-icon-neutral-background-active
-    );
+    background-color: var(--eds-theme-color-button-icon-neutral-background-active);
     color: var(--eds-theme-color-button-icon-neutral-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-neutral-active);
@@ -377,9 +343,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-icon-success-border-hover);
-    background-color: var(
-      --eds-theme-color-button-icon-success-background-hover
-    );
+    background-color: var(--eds-theme-color-button-icon-success-background-hover);
     color: var(--eds-theme-color-button-icon-success-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-success-hover);
@@ -388,9 +352,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-icon-success-border-active);
-    background-color: var(
-      --eds-theme-color-button-icon-success-background-active
-    );
+    background-color: var(--eds-theme-color-button-icon-success-background-active);
     color: var(--eds-theme-color-button-icon-success-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-success-active);
@@ -416,9 +378,7 @@
 
   &:hover {
     border-color: var(--eds-theme-color-button-icon-warning-border-hover);
-    background-color: var(
-      --eds-theme-color-button-icon-warning-background-hover
-    );
+    background-color: var(--eds-theme-color-button-icon-warning-background-hover);
     color: var(--eds-theme-color-button-icon-warning-text-hover);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-warning-hover);
@@ -427,9 +387,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-icon-warning-border-active);
-    background-color: var(
-      --eds-theme-color-button-icon-warning-background-active
-    );
+    background-color: var(--eds-theme-color-button-icon-warning-background-active);
     color: var(--eds-theme-color-button-icon-warning-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-warning-active);
@@ -464,9 +422,7 @@
 
   &:active {
     border-color: var(--eds-theme-color-button-icon-error-border-active);
-    background-color: var(
-      --eds-theme-color-button-icon-error-background-active
-    );
+    background-color: var(--eds-theme-color-button-icon-error-background-active);
     color: var(--eds-theme-color-button-icon-error-text-active);
     :where(svg) {
       color: var(--eds-theme-color-button-icon-error-active);
@@ -514,9 +470,7 @@ button:where(.clickable-style--link) {
   text-decoration-color: var(--eds-theme-color-link-neutral-text-decoration);
 
   &:hover {
-    text-decoration-color: var(
-      --eds-theme-color-link-neutral-text-decoration-hover
-    );
+    text-decoration-color: var(--eds-theme-color-link-neutral-text-decoration-hover);
   }
 
   &:focus-visible {
