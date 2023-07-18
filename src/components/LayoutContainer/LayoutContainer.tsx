@@ -24,9 +24,17 @@ export interface Props {
 }
 
 /**
+ * The Layout components are deprecated and will be removed in an upcoming release.
+ * Instead, please make use of utility libraries, like Tailwind CSS:
+ * * https://tailwindcss.com/docs/display
+ * * https://tailwindcss.com/docs/container
+ * * https://tailwindcss.com/docs/columns
+ *
  * `import {LayoutContainer} from "@chanzuckerberg/eds";`
  *
  * Layout container. Caps the width of the content to the maximum width and centers the container.
+ *
+ * @deprecated
  */
 export const LayoutContainer = ({
   className,
