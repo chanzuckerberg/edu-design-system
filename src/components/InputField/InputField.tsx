@@ -8,7 +8,7 @@ import type {
 } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
-import Label from '../Label';
+import InputLabel from '../InputLabel';
 import Text from '../Text';
 import styles from './InputField.module.css';
 
@@ -127,6 +127,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 
 type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> & {
   Input?: typeof Input;
+  Label?: typeof InputLabel;
 };
 
 /**
@@ -157,7 +158,11 @@ export const InputField: InputFieldType = forwardRef(
     const overlineClassName = clsx(
       styles['input-field__overline'],
       !label && styles['input-field__overline--no-label'],
-      disabled && styles['input-field__overline--disabled'],
+    );
+
+    const labelClassName = clsx(
+      styles['input-field__label'],
+      disabled && styles['input-field__label--disabled'],
     );
 
     const inputBodyClassName = clsx(
@@ -177,7 +182,11 @@ export const InputField: InputFieldType = forwardRef(
       <div className={className}>
         {shouldRenderOverline && (
           <div className={overlineClassName}>
-            {label && <Label htmlFor={idVar} text={label} />}
+            {label && (
+              <InputLabel className={labelClassName} htmlFor={idVar}>
+                {label}
+              </InputLabel>
+            )}
             {required && (
               <Text
                 as="span"
@@ -224,3 +233,4 @@ export const InputField: InputFieldType = forwardRef(
 
 InputField.displayName = 'InputField';
 InputField.Input = Input;
+InputField.Label = InputLabel;
