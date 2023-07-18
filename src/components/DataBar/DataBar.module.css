@@ -62,8 +62,7 @@
  * Results in an empty space that visually indicates incompleteness of the relevant task.
  * Required due to disproportionately larger spacing given to small segments to make them visible.
  */
+/* prettier-ignore */
 .data-bar__segment-space--incomplete {
-  width: calc(
-    100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--data-bar-height)
-  );
+  width: calc(100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--data-bar-height));
 }

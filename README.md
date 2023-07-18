@@ -30,9 +30,7 @@ We also surface an `--eds-font-size-base` property to set your base `rem` font s
 
 ```css
 html {
-  font-size: var(
-    --eds-font-size-base
-  ); /* Resets the default pixel-to-rem ratio */
+  font-size: var(--eds-font-size-base); /* Resets the default pixel-to-rem ratio */
 }
 ```
 

@@ -24,9 +24,7 @@
   background-color: var(--eds-theme-color-background-brand-primary-strong);
 }
 .data-bar-segment--brand.data-bar-segment--hoverable:hover {
-  background-color: var(
-    --eds-theme-color-background-brand-primary-strong-hover
-  );
+  background-color: var(--eds-theme-color-background-brand-primary-strong-hover);
 }
 
 .data-bar-segment--success {
