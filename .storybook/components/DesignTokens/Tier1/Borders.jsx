@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridItem, Section } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -11,7 +11,7 @@ export class Tier1Borders extends Component {
           <Grid>
             {filterTokens(`eds-border-width`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -22,7 +22,7 @@ export class Tier1Borders extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -32,7 +32,7 @@ export class Tier1Borders extends Component {
           <Grid>
             {filterTokens(`eds-border-radius`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -44,7 +44,7 @@ export class Tier1Borders extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>

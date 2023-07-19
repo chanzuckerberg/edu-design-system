@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridItem, Section } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -10,7 +10,7 @@ export class Tier1Sizes extends Component {
         <Section title="Base Grid Size">
           <Grid>
             {filterTokens('eds-size-base').map((listItem) => (
-              <GridItem key={listItem.name}>
+              <Grid.Item key={listItem.name}>
                 <TokenSpecimen
                   comment="Calculated from a multiple of the base font size --eds-font-size-base"
                   inlineStyles={{
@@ -21,7 +21,7 @@ export class Tier1Sizes extends Component {
                   name={listItem.name}
                   value={listItem.value}
                 />
-              </GridItem>
+              </Grid.Item>
             ))}
           </Grid>
         </Section>
@@ -31,7 +31,7 @@ export class Tier1Sizes extends Component {
               .filter((listItem) => !listItem.name.endsWith('base-unit'))
               .map(function (listItem) {
                 return (
-                  <GridItem key={listItem.name}>
+                  <Grid.Item key={listItem.name}>
                     <TokenSpecimen
                       inlineStyles={{
                         width: `var(${listItem.name})`,
@@ -41,7 +41,7 @@ export class Tier1Sizes extends Component {
                       name={listItem.name}
                       value={listItem.value}
                     />
-                  </GridItem>
+                  </Grid.Item>
                 );
               })}
           </Grid>

@@ -5,7 +5,6 @@ import {
   Button,
   Card,
   Grid,
-  GridItem,
   Heading,
   Hr,
   Icon,
@@ -274,30 +273,30 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </Heading>
 
             <Grid className="!mb-8">
-              <GridItem>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
+              </Grid.Item>
             </Grid>
 
             <Heading
@@ -310,30 +309,30 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </Heading>
 
             <Grid className="!mb-8">
-              <GridItem>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
+              </Grid.Item>
             </Grid>
             <Hr className="!mt-12" />
           </Section>

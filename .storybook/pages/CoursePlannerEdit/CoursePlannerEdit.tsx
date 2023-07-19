@@ -11,7 +11,6 @@ import {
   DataBar,
   DragDrop,
   Grid,
-  GridItem,
   Heading,
   HorizontalStepper,
   Icon,
@@ -645,22 +644,22 @@ export const CoursePlannerEdit = () => {
               </Card.Body>
             </CardWithNotification>
             <Grid className="!mb-6" variant="1-2-1up">
-              <GridItem>
+              <Grid.Item>
                 <TableCard
                   buttonContent="View all Cognitive Skills"
                   tableColumns={CognitiveSkillColumns}
                   tableRows={CognitiveSkillRows}
                   title="Cognitive skills coverage"
                 />
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <TableCard
                   buttonContent="View all Standards"
                   tableColumns={StandardsColumns}
                   tableRows={StandardsRows}
                   title="Standards coverage"
                 />
-              </GridItem>
+              </Grid.Item>
             </Grid>
           </LayoutSection>
         </Layout>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, Grid, GridItem, Heading } from '../../../../src';
+import { Section, Grid, Heading } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -90,7 +90,7 @@ export class Tier2Colors extends Component {
               listItem,
             ) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: `var(${listItem.name})`,
@@ -98,7 +98,7 @@ export class Tier2Colors extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -111,7 +111,7 @@ export class Tier2Colors extends Component {
               listItem,
             ) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -122,7 +122,7 @@ export class Tier2Colors extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -135,7 +135,7 @@ export class Tier2Colors extends Component {
               listItem,
             ) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -144,7 +144,7 @@ export class Tier2Colors extends Component {
                     value={listItem.value}
                     variant="typography-title"
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -157,7 +157,7 @@ export class Tier2Colors extends Component {
           <Grid>
             {filterTokens(`eds-theme-color-focus`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -168,7 +168,7 @@ export class Tier2Colors extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -180,7 +180,7 @@ export class Tier2Colors extends Component {
               listItem,
             ) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: `var(${listItem.name})`,
@@ -188,7 +188,7 @@ export class Tier2Colors extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
