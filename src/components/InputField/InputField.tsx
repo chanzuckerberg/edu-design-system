@@ -165,6 +165,11 @@ export const InputField: InputFieldType = forwardRef(
       disabled && styles['input-field__label--disabled'],
     );
 
+    const requiredTextClassName = clsx(
+      styles['input-field__required-text'],
+      disabled && styles['input-field__required-text--disabled'],
+    );
+
     const inputBodyClassName = clsx(
       styles['input-field__body'],
       fieldNote && styles['input-field--has-fieldNote'],
@@ -188,11 +193,7 @@ export const InputField: InputFieldType = forwardRef(
               </InputLabel>
             )}
             {required && (
-              <Text
-                as="span"
-                className={styles['input-field__required-text']}
-                size="sm"
-              >
+              <Text as="span" className={requiredTextClassName} size="sm">
                 Required
               </Text>
             )}

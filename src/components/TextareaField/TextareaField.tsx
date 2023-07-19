@@ -7,7 +7,7 @@ import type {
   ForwardedRefComponent,
 } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
-import Label from '../Label';
+import InputLabel from '../InputLabel';
 import Text from '../Text';
 import TextArea from '../TextArea';
 import styles from './TextareaField.module.css';
@@ -54,6 +54,7 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
 
 type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
   TextArea?: typeof TextArea;
+  Label?: typeof InputLabel;
 };
 
 /**
@@ -106,6 +107,15 @@ export const TextareaField: TextareaFieldType = forwardRef(
       !label && styles['textarea-field__overline--no-label'],
       disabled && styles['textarea-field__overline--disabled'],
     );
+    const labelClassName = clsx(
+      styles['textarea-field__label'],
+      disabled && styles['textarea-field__label--disabled'],
+    );
+
+    const requiredTextClassName = clsx(
+      styles['textarea-field__required-text'],
+      disabled && styles['textarea-field__required-text--disabled'],
+    );
     const fieldLengthCountClassName = clsx(
       textExceedsLength && styles['textarea-field--invalid-length'],
     );
@@ -114,9 +124,13 @@ export const TextareaField: TextareaFieldType = forwardRef(
       <div className={componentClassName}>
         {shouldRenderOverline && (
           <div className={overlineClassName}>
-            {label && <Label htmlFor={idVar} text={label} />}
+            {label && (
+              <InputLabel className={labelClassName} htmlFor={idVar}>
+                {label}
+              </InputLabel>
+            )}
             {required && (
-              <Text as="p" size="sm">
+              <Text as="p" className={requiredTextClassName} size="sm">
                 Required
               </Text>
             )}
@@ -168,3 +182,4 @@ export const TextareaField: TextareaFieldType = forwardRef(
 
 TextareaField.displayName = 'TextareaField';
 TextareaField.TextArea = TextArea;
+TextareaField.Label = InputLabel;

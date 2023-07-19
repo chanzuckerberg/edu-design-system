@@ -33,6 +33,9 @@
   color: var(--eds-theme-color-text-neutral-subtle);
   font: var(--eds-theme-typography-body-sm);
 }
+.input-field__required-text--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
 
 .input-field--has-fieldNote {
   margin-bottom: var(--eds-size-half);
