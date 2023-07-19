@@ -1339,7 +1339,7 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
         </label>
         <span
-          class="text text--sm input-field__required-text"
+          class="text text--sm input-field__required-text input-field__required-text--disabled"
         >
           Required
         </span>
@@ -1376,7 +1376,7 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
           Label text
         </label>
         <span
-          class="text text--sm input-field__required-text"
+          class="text text--sm input-field__required-text input-field__required-text--disabled"
         >
           Required
         </span>

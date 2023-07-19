@@ -7,12 +7,11 @@ import type {
   ForwardedRefComponent,
 } from '../../util/utility-types';
 import FieldNote from '../FieldNote';
-import Label from '../Label';
+import InputLabel from '../InputLabel';
 import Text from '../Text';
-import TextArea from '../TextArea';
 import styles from './TextareaField.module.css';
 
-export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   /**
    * Text content of the field upon instantiation
    */
@@ -52,9 +51,65 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
     }
   >;
 
-type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
+type TextareaFieldType = ForwardedRefComponent<
+  HTMLTextAreaElement,
+  TextareaFieldProps
+> & {
   TextArea?: typeof TextArea;
+  Label?: typeof InputLabel;
 };
+
+type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  /**
+   * CSS class names that can be appended to the component
+   */
+  className?: string;
+  /**
+   * Text default contents of the field
+   */
+  children?: string;
+  /**
+   * Whether the disabled stat is active
+   */
+  disabled?: boolean;
+  /**
+   * Whether the error state is active
+   */
+  isError?: boolean;
+};
+
+/**
+ * Base component, applying styles to a <textarea> tag
+ */
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  (
+    {
+      className,
+      children,
+      disabled,
+      defaultValue = '',
+      isError = false,
+      ...other
+    },
+    ref,
+  ) => {
+    const componentClassName = clsx(
+      styles['textarea'],
+      isError && styles['error'],
+      disabled && styles['textarea--disabled'],
+      className,
+    );
+
+    return (
+      <textarea
+        className={componentClassName}
+        defaultValue={children || defaultValue}
+        ref={ref}
+        {...other}
+      ></textarea>
+    );
+  },
+);
 
 /**
  * `import {TextareaField} from "@chanzuckerberg/eds";`
@@ -106,6 +161,15 @@ export const TextareaField: TextareaFieldType = forwardRef(
       !label && styles['textarea-field__overline--no-label'],
       disabled && styles['textarea-field__overline--disabled'],
     );
+    const labelClassName = clsx(
+      styles['textarea-field__label'],
+      disabled && styles['textarea-field__label--disabled'],
+    );
+
+    const requiredTextClassName = clsx(
+      styles['textarea-field__required-text'],
+      disabled && styles['textarea-field__required-text--disabled'],
+    );
     const fieldLengthCountClassName = clsx(
       textExceedsLength && styles['textarea-field--invalid-length'],
     );
@@ -114,9 +178,13 @@ export const TextareaField: TextareaFieldType = forwardRef(
       <div className={componentClassName}>
         {shouldRenderOverline && (
           <div className={overlineClassName}>
-            {label && <Label htmlFor={idVar} text={label} />}
+            {label && (
+              <InputLabel className={labelClassName} htmlFor={idVar}>
+                {label}
+              </InputLabel>
+            )}
             {required && (
-              <Text as="p" size="sm">
+              <Text as="p" className={requiredTextClassName} size="sm">
                 Required
               </Text>
             )}
@@ -168,3 +236,4 @@ export const TextareaField: TextareaFieldType = forwardRef(
 
 TextareaField.displayName = 'TextareaField';
 TextareaField.TextArea = TextArea;
+TextareaField.Label = InputLabel;
