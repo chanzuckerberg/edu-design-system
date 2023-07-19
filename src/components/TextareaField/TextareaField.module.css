@@ -5,6 +5,17 @@
 \*------------------------------------*/
 
 /**
+ * Default input styles 
+ */
+.textarea {
+  @mixin inputStyles;
+}
+
+.textarea--disabled:focus {
+  outline: none;
+}
+
+/**
  * Wraps the Label and the optional/required indicator.
  */
 .textarea-field__overline {

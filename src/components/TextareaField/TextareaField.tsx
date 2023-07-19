@@ -9,10 +9,9 @@ import type {
 import FieldNote from '../FieldNote';
 import InputLabel from '../InputLabel';
 import Text from '../Text';
-import TextArea from '../TextArea';
 import styles from './TextareaField.module.css';
 
-export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   /**
    * Text content of the field upon instantiation
    */
@@ -52,10 +51,65 @@ export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
     }
   >;
 
-type TextareaFieldType = ForwardedRefComponent<HTMLTextAreaElement, Props> & {
+type TextareaFieldType = ForwardedRefComponent<
+  HTMLTextAreaElement,
+  TextareaFieldProps
+> & {
   TextArea?: typeof TextArea;
   Label?: typeof InputLabel;
 };
+
+type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  /**
+   * CSS class names that can be appended to the component
+   */
+  className?: string;
+  /**
+   * Text default contents of the field
+   */
+  children?: string;
+  /**
+   * Whether the disabled stat is active
+   */
+  disabled?: boolean;
+  /**
+   * Whether the error state is active
+   */
+  isError?: boolean;
+};
+
+/**
+ * Base component, applying styles to a <textarea> tag
+ */
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  (
+    {
+      className,
+      children,
+      disabled,
+      defaultValue = '',
+      isError = false,
+      ...other
+    },
+    ref,
+  ) => {
+    const componentClassName = clsx(
+      styles['textarea'],
+      isError && styles['error'],
+      disabled && styles['textarea--disabled'],
+      className,
+    );
+
+    return (
+      <textarea
+        className={componentClassName}
+        defaultValue={children || defaultValue}
+        ref={ref}
+        {...other}
+      ></textarea>
+    );
+  },
+);
 
 /**
  * `import {TextareaField} from "@chanzuckerberg/eds";`

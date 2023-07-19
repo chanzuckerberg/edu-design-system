@@ -266,7 +266,6 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
   </div>
   <textarea
     aria-describedby=":rd:"
-    aria-disabled="false"
     class="textarea"
     id=":rc:"
     placeholder="Enter long-form text here"

@@ -74,7 +74,6 @@ export const WhenInvalid: StoryObj<Args> = {
 export const WhenRequired: StoryObj<Args> = {
   args: {
     required: true,
-    disabled: false,
   },
 };
 
