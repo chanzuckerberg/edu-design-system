@@ -40,14 +40,14 @@ View the `Layout` component in Storybook to view all available variants.
 
 ### Grid
 
-The `Grid` component (together with the `GridItem` subcomponent) arranges content in specific configurations and controls the responsive behavior for content inside grid items.
+The `Grid` component (together with its `Grid.Item` subcomponent) arranges content in specific configurations and controls the responsive behavior for content inside grid items.
 
 For instance, `<Grid variant="side-by-side">` will render grid items that always occupy 50% of their container regardless of the viewport size:
 
 ```jsx
 <Grid variant="side-by-side">
-  <GridItem></GridItem>
-  <GridItem></GridItem>
+  <Grid.Item></Grid.Item>
+  <Grid.Item></Grid.Item>
 </Grid>
 ```
 
@@ -55,8 +55,8 @@ Whereas `<Grid variant="2up">` will render grid items that stack on small viewpo
 
 ```jsx
 <Grid variant="2up">
-  <GridItem></GridItem>
-  <GridItem></GridItem>
+  <Grid.Item></Grid.Item>
+  <Grid.Item></Grid.Item>
 </Grid>
 ```
 

@@ -148,7 +148,7 @@
 /**
  * 1-2-4up grid pattern
  *
- * yields a Grid whose GridItems are stacked on small screens, transforms to a 2-across pattern, and
+ * yields a Grid whose Grid items are stacked on small screens, transforms to a 2-across pattern, and
  * ultimately transforms to a 4-across pattern
  */
 .grid--1-2-4up {
@@ -175,7 +175,7 @@
 /**
  * 1-2-1up grid pattern
  *
- * yields a Grid whose GridItems are stacked on small screens, transforms to a 2-across pattern, and
+ * yields a Grid whose Grid items are stacked on small screens, transforms to a 2-across pattern, and
  * ultimately transforms back to a 1-across pattern
  */
 .grid--1-2-1up {
@@ -195,6 +195,103 @@
 
     @media all and (min-width: $eds-bp-xl) {
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+/*------------------------------------*\
+    # GRID ITEM
+\*------------------------------------*/
+/**
+ * Direct child of grid
+ */
+ .grid__item {
+  .grid & {
+    padding: var(--eds-size-1-and-half);
+    width: 100%;
+
+    @supports (display: grid) {
+      padding: 0;
+    }
+  }
+
+  /**
+   * Grid item that span 2 columns
+   */
+  &.grid__item.grid__item--span-2 {
+    width: 100%;
+
+    @supports (display: grid) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .grid--1-3up & {
+    margin: 0 -1.5rem;
+
+    @media all and (min-width: $eds-bp-lg) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .grid--2up & {
+    @media all and (min-width: $eds-bp-md) {
+      width: 50%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .grid--3up & {
+    @media all and (min-width: $eds-bp-md) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $eds-bp-lg) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .grid--3up-alt & {
+    @media all and (min-width: $eds-bp-md) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $eds-bp-lg) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .grid--4up & {
+    @media all and (min-width: $eds-bp-md) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $eds-bp-lg) {
+      width: 33.33%;
+    }
+
+    @media all and (min-width: $eds-bp-xl) {
+      width: 25%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
     }
   }
 }
