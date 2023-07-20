@@ -1,17 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
 import React, { useState } from 'react';
-import type { NewState } from './DragDrop';
-import { DragDrop } from './DragDrop';
-import {
-  Button,
-  Card,
-  DragDropContainerHeader,
-  Heading,
-  Icon,
-  Text,
-  Toolbar,
-} from '../..';
+import { DragDrop, type NewState } from './DragDrop';
+import { Button, Card, Heading, Icon, Text } from '../..';
 import styles from './DragDrop.stories.module.css';
 
 export default {
@@ -90,13 +81,13 @@ export const Default: StoryObj<Args> = {
       'container-1': {
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
         header: (
-          <DragDropContainerHeader>
-            <Toolbar>
+          <DragDrop.ContainerHeader>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Available Projects
               </Heading>
-            </Toolbar>
-          </DragDropContainerHeader>
+            </div>
+          </DragDrop.ContainerHeader>
         ),
       },
       'container-2': {
@@ -297,13 +288,13 @@ export const Default: StoryObj<Args> = {
           </>
         ),
         header: (
-          <DragDropContainerHeader>
-            <Toolbar>
+          <DragDrop.ContainerHeader>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Selected Projects
               </Heading>
-            </Toolbar>
-          </DragDropContainerHeader>
+            </div>
+          </DragDrop.ContainerHeader>
         ),
       },
     },
@@ -364,13 +355,13 @@ export const HoveredHandle: StoryObj<Args> = {
       'container-1': {
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
         header: (
-          <DragDropContainerHeader>
-            <Toolbar>
+          <DragDrop.ContainerHeader>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Available Projects
               </Heading>
-            </Toolbar>
-          </DragDropContainerHeader>
+            </div>
+          </DragDrop.ContainerHeader>
         ),
       },
       'container-2': {
@@ -491,13 +482,13 @@ export const HoveredHandle: StoryObj<Args> = {
           </>
         ),
         header: (
-          <DragDropContainerHeader>
-            <Toolbar>
+          <DragDrop.ContainerHeader>
+            <div className="bg-neutral-subtle flex items-center gap-4 px-4 py-2">
               <Heading as="h5" size="h5">
                 Selected Projects
               </Heading>
-            </Toolbar>
-          </DragDropContainerHeader>
+            </div>
+          </DragDrop.ContainerHeader>
         ),
       },
     },
@@ -513,27 +504,25 @@ const InteractiveDragDrop = () => {
   );
 
   const [indexState, setIndexState] = useState<number | undefined>(2);
-  const [containers, setContainers] = useState({
+  const [containers, setContainers] = useState<NewState['containers']>({
     'container-1': {
       columnClassName: styles['bg-yellow'],
       emptyContent: emptyContent(),
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Available projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+        <DragDrop.ContainerHeader>
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Available projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
     'container-2': {
@@ -542,21 +531,19 @@ const InteractiveDragDrop = () => {
       emptyContent: emptyContent(),
       itemIds: [],
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+        <DragDrop.ContainerHeader>
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
     'container-3': {
@@ -565,21 +552,19 @@ const InteractiveDragDrop = () => {
       emptyContent: emptyContent(),
       itemIds: [],
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+        <DragDrop.ContainerHeader>
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
     'container-4': {
@@ -588,25 +573,23 @@ const InteractiveDragDrop = () => {
       emptyContent: emptyContent(),
       itemIds: [],
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <Toolbar.Item>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </Toolbar.Item>
-            <Toolbar.Item align="right">
+        <DragDrop.ContainerHeader>
+          <div className="bg-neutral-subtle mb-4 flex items-center gap-4 p-0">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </Toolbar.Item>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
   });
-  const [items, setItems] = useState({
+  const [items, setItems] = useState<NewState['items']>({
     'item-1': {
       title: 'Project #1',
       children: (
@@ -648,7 +631,7 @@ const InteractiveDragDrop = () => {
       ),
     },
   });
-  const returnUpdatedItems = (updatedItems: any) => {
+  const returnUpdatedItems = (updatedItems: NewState) => {
     setContainers(updatedItems.containers);
     setItems(updatedItems.items);
     updatedItems.containers['container-2'].itemIds.map(
@@ -664,7 +647,7 @@ const InteractiveDragDrop = () => {
     <DragDrop
       containers={containers}
       containersClassName={styles['grid-square']}
-      getNewState={(updatedItems: NewState) => returnUpdatedItems(updatedItems)}
+      getNewState={(updatedItems) => returnUpdatedItems(updatedItems)}
       items={items}
       multipleContainers={false}
       unstyledItems

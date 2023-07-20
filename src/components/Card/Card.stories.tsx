@@ -1,14 +1,15 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Card } from './Card';
-import CardBody from '../CardBody';
-import CardFooter from '../CardFooter';
-import CardHeader from '../CardHeader';
 
 export default {
   title: 'Components/Card',
   component: Card,
-  subcomponents: { CardHeader, CardBody, CardFooter },
+  subcomponents: {
+    CardHeader: Card.Header,
+    CardBody: Card.Body,
+    CardFooter: Card.Footer,
+  },
   parameters: {
     badges: ['1.0'],
   },

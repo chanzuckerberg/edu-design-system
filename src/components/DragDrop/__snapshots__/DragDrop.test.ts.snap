@@ -17,7 +17,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar"
+            class="bg-neutral-subtle flex items-center gap-4 px-4 py-2"
           >
             <h5
               class="heading heading--size-h5"
@@ -243,7 +243,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar"
+            class="bg-neutral-subtle flex items-center gap-4 px-4 py-2"
           >
             <h5
               class="heading heading--size-h5"
@@ -474,7 +474,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar"
+            class="bg-neutral-subtle flex items-center gap-4 px-4 py-2"
           >
             <h5
               class="heading heading--size-h5"
@@ -700,7 +700,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar"
+            class="bg-neutral-subtle flex items-center gap-4 px-4 py-2"
           >
             <h5
               class="heading heading--size-h5"
@@ -871,19 +871,15 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare !mb-4"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4"
           >
-            <div
-              class="toolbar__item"
+            <h2
+              class="heading heading--size-title-sm heading--neutral-strong"
             >
-              <h2
-                class="heading heading--size-title-sm heading--neutral-strong"
-              >
-                Available projects
-              </h2>
-            </div>
+              Available projects
+            </h2>
             <div
-              class="toolbar__item toolbar__item--align-right"
+              class="ml-auto"
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
@@ -1123,19 +1119,15 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare !mb-4"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4"
           >
-            <div
-              class="toolbar__item"
+            <h2
+              class="heading heading--size-title-sm heading--neutral-strong"
             >
-              <h2
-                class="heading heading--size-title-sm heading--neutral-strong"
-              >
-                Planned projects
-              </h2>
-            </div>
+              Planned projects
+            </h2>
             <div
-              class="toolbar__item toolbar__item--align-right"
+              class="ml-auto"
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
@@ -1174,19 +1166,15 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare !mb-4"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4"
           >
-            <div
-              class="toolbar__item"
+            <h2
+              class="heading heading--size-title-sm heading--neutral-strong"
             >
-              <h2
-                class="heading heading--size-title-sm heading--neutral-strong"
-              >
-                Planned projects
-              </h2>
-            </div>
+              Planned projects
+            </h2>
             <div
-              class="toolbar__item toolbar__item--align-right"
+              class="ml-auto"
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
@@ -1225,19 +1213,15 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare !mb-4"
+            class="bg-neutral-subtle mb-4 flex items-center gap-4 p-0"
           >
-            <div
-              class="toolbar__item"
+            <h2
+              class="heading heading--size-title-sm heading--neutral-strong"
             >
-              <h2
-                class="heading heading--size-title-sm heading--neutral-strong"
-              >
-                Planned projects
-              </h2>
-            </div>
+              Planned projects
+            </h2>
             <div
-              class="toolbar__item toolbar__item--align-right"
+              class="ml-auto"
             >
               <button
                 class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
