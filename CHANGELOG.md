@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.4.2](https://github.com/chanzuckerberg/edu-design-system/compare/v12.4.1...v12.4.2) (2023-07-20)
+
+
+### Bug Fixes
+
+* **Avatar:** add responsive image handling to component ([#1679](https://github.com/chanzuckerberg/edu-design-system/issues/1679)) ([7ff27ff](https://github.com/chanzuckerberg/edu-design-system/commit/7ff27ff05973d9a0ba9b84c90b46915959da75f9))
+
 ### [12.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v12.4.0...v12.4.1) (2023-07-18)
 
 

@@ -103,6 +103,7 @@ export const Slider = ({
   ...other
 }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
+  const proxyRef = useRef<HTMLDivElement>(null);
 
   // Required due to 0.1 + 0.2 != 0.3
   const multiplier = findLowestTenMultiplier([max, min, step]);
@@ -135,7 +136,6 @@ export const Slider = ({
     ? other['aria-describedby'] || generatedAriaDescribedById
     : undefined;
 
-  const computedBodyStyles = getComputedStyle(document.body);
   return (
     <div className={componentClassName}>
       {label && (
@@ -164,19 +164,15 @@ export const Slider = ({
           appendTo="parent"
           hideOnClick={false}
           offset={({ reference }) => {
-            // offsets the tooltip relative to the position of the thumb
-            return [
-              (ratio - 0.5) *
-                (reference.width -
-                  // rems and pixels has to be converted to number values for the offset
-                  parseFloat(
-                    computedBodyStyles.getPropertyValue(
-                      '--eds-theme-size-slider-thumb',
-                    ),
-                  ) *
-                    parseFloat(computedBodyStyles.fontSize)),
-              0,
-            ];
+            // rems and pixels has to be converted to number values for the offset
+            const thumbSize = parseFloat(
+              proxyRef.current
+                ? getComputedStyle(proxyRef.current).height
+                : '0',
+            );
+
+            // offsets the tooltip relative to the position and size of the thumb
+            return [(ratio - 0.5) * (reference.width - thumbSize), 0];
           }}
           reference={ref}
           text={tooltip}
@@ -220,6 +216,8 @@ export const Slider = ({
           ))}
         </div>
       )}
+      {/* Adding slider thumb hidden element so that we can retrieve calculated thumb size in DOM */}
+      <div className={styles['slider__thumb-proxy']} ref={proxyRef}></div>
     </div>
   );
 };

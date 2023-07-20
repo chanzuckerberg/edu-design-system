@@ -5,49 +5,52 @@
         "value": "0.5rem"
       },
       "half": {
-        "value": "0.25rem"
+        "value": "calc(var(--eds-size-base-unit) / 2)"
       },
       "quarter": {
-        "value": "0.125rem"
+        "value": "calc(var(--eds-size-base-unit) / 4)"
       },
       "1": {
-        "value": "0.5rem"
+        "value": "var(--eds-size-base-unit)"
       },
       "1-and-half": {
-        "value": "0.75rem"
+        "value": "calc(var(--eds-size-base-unit) * 1.5)"
       },
       "2": {
-        "value": "1rem"
+        "value": "calc(var(--eds-size-base-unit) * 2)"
       },
       "2-and-half": {
-        "value": "1.25rem"
+        "value": "calc(var(--eds-size-base-unit) * 2.5)"
       },
       "3": {
-        "value": "1.5rem"
+        "value": "calc(var(--eds-size-base-unit) * 3)"
       },
       "4": {
-        "value": "2rem"
+        "value": "calc(var(--eds-size-base-unit) * 4)"
       },
       "5": {
-        "value": "2.5rem"
+        "value": "calc(var(--eds-size-base-unit) * 5)"
       },
       "6": {
-        "value": "3rem"
+        "value": "calc(var(--eds-size-base-unit) * 6)"
       },
       "7": {
-        "value": "3.5rem"
+        "value": "calc(var(--eds-size-base-unit) * 7)"
       },
       "8": {
-        "value": "4rem"
+        "value": "calc(var(--eds-size-base-unit) * 8)"
       },
       "9": {
-        "value": "4.5rem"
+        "value": "calc(var(--eds-size-base-unit) * 9)"
       },
       "10": {
-        "value": "5rem"
+        "value": "calc(var(--eds-size-base-unit) * 10)"
+      },
+      "11": {
+        "value": "calc(var(--eds-size-base-unit) * 11)"
       },
       "12": {
-        "value": "6rem"
+        "value": "calc(var(--eds-size-base-unit) * 12)"
       }
     }
   }
