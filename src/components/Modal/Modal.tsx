@@ -8,7 +8,7 @@ import Heading from '../Heading';
 import { Icon } from '../Icon/Icon';
 import styles from './Modal.module.css';
 
-type Variant = 'brand' | undefined;
+type Variant = 'brand';
 
 type ModalContentProps = {
   /**
@@ -56,8 +56,19 @@ type ModalContentProps = {
   isScrollable?: boolean;
   /**
    * Method called when the close button is clicked. Use this to hide the modal.
+   * This should be used to also reset the `open` state.
+   * @see https://headlessui.com/react/dialog
    *
    * This is required even if you don't have a close button so the ESC key can close the modal.
+   *
+   * ```
+   * const [isOpen, setIsOpen] = useState(true);
+   * // ....
+   *
+   * <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+   *  ...
+   * </Modal>
+   * ```
    */
   onClose: () => void;
   /**
@@ -73,7 +84,18 @@ type ModalContentProps = {
 
 type ModalProps = ModalContentProps & {
   /**
-   * Whether or not the modal is visible.
+   * Whether or not the modal is visible. Recommend using `useState` to set this
+   * variable instead of a boolean literal, to avoid component control issues.
+   * @see https://headlessui.com/react/dialog
+   *
+   * ```
+   * const [isOpen, setIsOpen] = useState(true);
+   * // ....
+   *
+   * <Modal open={isOpen}>
+   *  ...
+   * </Modal>
+   * ```
    */
   open: boolean;
   /**
@@ -99,7 +121,8 @@ type ModalTitleProps = Omit<ExtractProps<typeof Heading>, 'size'> & {
 
 type ModalBodyProps = {
   /**
-   * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
+   * Child node(s) that can be nested inside component. `Modal.Header`,
+   * `Modal.Body`, and `Model.Footer` are the only permissible children of the Modal.
    */
   children: ReactNode;
   /**
@@ -252,25 +275,13 @@ export const ModalContent = (props: ModalContentProps) => {
 /**
  * `import {Modal} from "@chanzuckerberg/eds";`
  *
- * Modal wrapping the Headless UI Diaglog component https://headlessui.dev/react/dialog
+ * EDS Wrapper for the HeadlessUI Dialog component
+ * @see https://headlessui.dev/react/dialog
  *
  * NOTE: You must have at least one focusable element in the modal contents, for keyboard
- * accessibility reasons. (The close button counts as a focusable element.)
+ * accessibility reasons. (The close button counts as a focusable element.) Use `initialFocus`
+ * to choose a different element.
  *
- * Example usage:
- *
- * ```tsx
- * <Modal>
- *   <Modal.Header>
- *     <Modal.Title>{modalTitle}</Modal.Title>
- *   </Modal.Header>
- *   <Modal.Body>{modalBodyContent}</Modal.Body>
- *   <Modal.Footer>
- *     <Modal.Stepper />
- *     {modalFooterContent}
- *   </Modal.Footer>
- * </Modal>
- * ```
  */
 export const Modal = (props: ModalProps) => {
   const {
