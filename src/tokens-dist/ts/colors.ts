@@ -350,22 +350,3 @@ export const EdsThemeColorTogglePrimaryText =
   'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorToggleThumb =
   'var(--eds-theme-color-text-neutral-default-inverse)';
-export const LegacyColorGray50 = '#F8F9FC';
-export const LegacyColorGray100 = '#EBEBEC';
-export const LegacyColorGray200 = '#D8D8D9';
-export const LegacyColorGray300 = '#C5C5C6';
-export const LegacyColorGray500 = '#9F9FA0';
-export const LegacyColorGray700 = '#78797A';
-export const LegacyColorGray1000 = '#3F4041';
-export const LegacyColorBlack = '#2C2D2E';
-export const LegacyColorRed100 = '#F7DDDD';
-export const LegacyColorRed200 = '#F25252';
-export const LegacyColorGreen100 = '#E1F0E7';
-export const LegacyColorGreen200 = '#6CC188';
-export const LegacyColorGreen300 = '#457B57';
-export const LegacyColorYellow200 = '#FFC55B';
-export const LegacyColorYellow300 = '#A46900';
-export const LegacyColorYellow400 = '#644C1F';
-export const LegacyColorPurple200 = '#7686D3';
-export const LegacyColorPurple300 = '#5761BA';
-export const LegacyColorPurple400 = '#32417C';
