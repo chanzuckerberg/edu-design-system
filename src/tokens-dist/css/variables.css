@@ -79,9 +79,9 @@
   --eds-color-info-500: #328EFB; /* legacy token, will be removed */
   --eds-color-info-600: #1977CD; /* legacy token, will be removed */
   --eds-color-info-700: #0563B8; /* legacy token, will be removed */
-  --eds-l-max-width: 71.25rem;
-  --eds-l-sidebar-width: 13.5rem;
-  --eds-l-linelength-width: 36rem;
+  --eds-l-max-width: 71.25rem; /* Layout tokens are deprecated and will be removed in a future release */
+  --eds-l-sidebar-width: 13.5rem; /* Layout tokens are deprecated and will be removed in a future release */
+  --eds-l-linelength-width: 36rem; /* Layout tokens are deprecated and will be removed in a future release */
   --eds-outline-width-sm: 1px;
   --eds-outline-width-md: 2px;
   --eds-outline-width-lg: 4px;
