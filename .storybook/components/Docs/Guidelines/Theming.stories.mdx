@@ -2,7 +2,9 @@
 
 # Theming overview
 
-"Theming", in the context of EDS, is the process of overriding the default styles of EDS components to match a different brand (or "theme"). The "Theming" directory in storybook demonstrates two examples of theming — a [wireframe theme](./?path=/story/pages-theming-wireframedemo--default) (an unbranded theme that can be used for prototyping a product before it has an official visual style) and an [along theme](./?path=/story/pages-theming-alongdemo--default) that replicates the visual style of the [Along product](https://app.along.org/).
+"Theming", in the context of EDS, is the process of overriding the default styles of EDS components to match a different brand (or "theme"). The "Theming" directory in storybook demonstrates examples of theming:
+
+- A [wireframe theme](./?path=/story/pages-theming-wireframedemo--default) (an unbranded theme that can be used for prototyping a product before it has an official visual style).
 
 ## How to apply a theme in another product
 
@@ -10,7 +12,7 @@ In EDS, theming is implemented by overriding the values of the CSS variables rep
 
 These CSS variables overrides lives in the products using EDS components. This allows product teams to quickly iterate on their theme without making changes to EDS itself.
 
-You can find the full list of CSS variables in [src/tokens-dist/css/variables.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/tokens-dist/css/variables.css), and you can see examples of overriding them in [.storybook/pages/WireframeDemo/GlobalStyles.module.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/.storybook/pages/WireframeDemo/GlobalStyles.module.css) and [.storybook/pages/AlongDemo/GlobalStyles.module.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/.storybook/pages/AlongDemo/GlobalStyles.module.css).
+You can find the full list of CSS variables in [src/tokens-dist/css/variables.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/tokens-dist/css/variables.css), and you can see examples of overriding them in [.storybook/pages/WireframeDemo/GlobalStyles.module.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/.storybook/pages/WireframeDemo/GlobalStyles.module.css).
 
 If you're looking to set up a prototype using the [wireframe theme](./?path=/story/pages-theming-wireframedemo--default), you can copy and paste the variables defined in [.storybook/pages/WireframeDemo/GlobalStyles.module.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/.storybook/pages/WireframeDemo/GlobalStyles.module.css). (The placeholder images will need to be added separately.)
 
