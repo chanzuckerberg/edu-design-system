@@ -9,5 +9,5 @@
  */
 
 .course-planner-step1__text{
-    @mixin eds-typography-preset-004-bold;
+    font: var(--eds-typography-preset-004);
   }

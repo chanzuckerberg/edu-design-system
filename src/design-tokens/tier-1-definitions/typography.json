@@ -344,40 +344,5 @@
         }
       }
     }
-  },
-  "legacy": {
-    "size": {
-      "font": {
-        "h1": {
-          "value": "1.5rem"
-        },
-        "h2": {
-          "value": "1.125rem"
-        },
-        "body": {
-          "value": "1rem"
-        },
-        "sm": {
-          "value": "0.875rem"
-        },
-        "xs": {
-          "value": "0.75rem"
-        }
-      },
-      "line-height": {
-        "h1": {
-          "value": "2rem"
-        },
-        "body": {
-          "value": "1.5rem"
-        },
-        "sm": {
-          "value": "1.25rem"
-        },
-        "xs": {
-          "value": "1rem"
-        }
-      }
-    }
   }
 }
