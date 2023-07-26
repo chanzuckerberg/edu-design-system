@@ -20,9 +20,7 @@
    * Custom property allows for easy change of downstream size handling.
    * Kind of a source of truth for badge size related properties.
    */
-  --badge-height: calc(
-    var(--eds-size-2-and-half) + 2 * var(--eds-border-width-sm)
-  );
+  --badge-height: calc(var(--eds-size-2-and-half) + 2 * var(--eds-border-width-sm));
 
   z-index: var(--eds-z-index-100);
 
@@ -47,7 +45,7 @@
   background-color: var(--eds-theme-color-background-brand-primary-strong);
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
-  @mixin eds-theme-typography-caption-sm;
+  font: var(--eds-theme-typography-caption-sm);
 }
 
 /**

@@ -1,18 +1,19 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
-import { Table } from './Table';
-import TableBody from '../TableBody';
-import TableCell from '../TableCell';
-import TableHeader from '../TableHeader';
-import type { SortDirectionsType } from '../TableHeaderCell';
-import TableRow from '../TableRow';
+import { Table, type SortDirectionsType } from './Table';
 import styles from './Table.stories.module.css';
 
 export default {
   title: 'Components/Table',
   component: Table,
-  subcomponents: { TableBody, TableCell, TableHeader, TableRow },
+  subcomponents: {
+    'Table.Body': Table.Body,
+    'Table.Caption': Table.Caption,
+    'Table.Cell': Table.Cell,
+    'Table.Header': Table.Header,
+    'Table.Row': Table.Row,
+  },
   parameters: {
     badges: ['1.1'],
   },
@@ -331,14 +332,14 @@ const SortableExample = () => {
           <Table.HeaderCell>Not sortable</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
-      <TableBody>
+      <Table.Body>
         {sortedValues.map(({ col1, col2 }) => (
           <Table.Row key={`row-${col1}-${col2}`}>
             <Table.Cell>{col1}</Table.Cell>
             <Table.Cell>{col2}</Table.Cell>
           </Table.Row>
         ))}
-      </TableBody>
+      </Table.Body>
     </Table>
   );
 };

@@ -16,6 +16,15 @@
   }
 }
 
+/**
+ * Destructive variant of the Menu item.
+ *
+ * For indicating deletion of the project.
+ */
+.menu-item--destructive {
+  color: var(--eds-theme-color-text-utility-error);
+}
+
 /*------------------------------------*\
     # TABLE CARD
 \*------------------------------------*/

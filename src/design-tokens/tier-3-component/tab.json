@@ -1,0 +1,26 @@
+{
+  "eds": {
+    "theme": {
+      "typography": {
+        "tab": {
+          "lg": {
+            "@": {
+              "value": "var(--eds-typography-preset-006-light)"
+            },
+            "active": {
+              "value": "var(--eds-typography-preset-006)"
+            }
+          },
+          "sm": {
+            "@": {
+              "value": "var(--eds-typography-preset-008-light)"
+            },
+            "active": {
+              "value": "var(--eds-typography-preset-009)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

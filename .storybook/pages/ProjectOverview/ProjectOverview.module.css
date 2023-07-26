@@ -4,7 +4,7 @@
  *  Utility classes to apply typography usage mixins to Project Overview in body text xs bold
  */
 .project-overview__text {
-  @mixin eds-theme-typography-body-xs-bold;
+  font: var(--eds-theme-typography-body-xs);
 }
 
 .project-overview__link-description {

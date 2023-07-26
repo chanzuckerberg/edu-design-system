@@ -2,18 +2,13 @@ import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
+import type { ExtractProps } from '../../util/utility-types';
+import type { HeadingSize } from '../Heading';
+import Heading from '../Heading';
 import { Icon } from '../Icon/Icon';
-import type { Props as ModalBodyProps } from '../ModalBody/ModalBody';
-import { ModalBody } from '../ModalBody/ModalBody';
-import type { Props as ModalFooterProps } from '../ModalFooter/ModalFooter';
-import { ModalFooter } from '../ModalFooter/ModalFooter';
-import type { Props as ModalHeaderProps } from '../ModalHeader/ModalHeader';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
-import { ModalStepper } from '../ModalStepper/ModalStepper';
-import { ModalTitle } from '../ModalTitle/ModalTitle';
 import styles from './Modal.module.css';
 
-type Variant = 'brand' | undefined;
+type Variant = 'brand';
 
 type ModalContentProps = {
   /**
@@ -40,13 +35,14 @@ type ModalContentProps = {
    *
    * If undefined, the first focusable element (usually the close button) will be used.
    *
-   * @example
+   * ```
    * const inputFieldRef = useRef();
    *
    * <Modal initialFocus={inputFieldRef}>
    *   ...
    *   <InputField ref={inputFieldRef} />
    * </Modal>
+   * ```
    */
   initialFocus?: MutableRefObject<HTMLElement | null>;
   /**
@@ -60,8 +56,19 @@ type ModalContentProps = {
   isScrollable?: boolean;
   /**
    * Method called when the close button is clicked. Use this to hide the modal.
+   * This should be used to also reset the `open` state.
+   * @see https://headlessui.com/react/dialog
    *
    * This is required even if you don't have a close button so the ESC key can close the modal.
+   *
+   * ```
+   * const [isOpen, setIsOpen] = useState(true);
+   * // ....
+   *
+   * <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+   *  ...
+   * </Modal>
+   * ```
    */
   onClose: () => void;
   /**
@@ -77,13 +84,115 @@ type ModalContentProps = {
 
 type ModalProps = ModalContentProps & {
   /**
-   * Whether or not the modal is visible.
+   * Whether or not the modal is visible. Recommend using `useState` to set this
+   * variable instead of a boolean literal, to avoid component control issues.
+   * @see https://headlessui.com/react/dialog
+   *
+   * ```
+   * const [isOpen, setIsOpen] = useState(true);
+   * // ....
+   *
+   * <Modal open={isOpen}>
+   *  ...
+   * </Modal>
+   * ```
    */
   open: boolean;
   /**
    * Additional classnames passed in for the modal container.
    */
   modalContainerClassName?: string;
+};
+
+type ModalTitleProps = Omit<ExtractProps<typeof Heading>, 'size'> & {
+  /**
+   * Text for the modal title.
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Modal Title Heading size. Defaults to 'headline-md'
+   */
+  size?: HeadingSize;
+};
+
+type ModalBodyProps = {
+  /**
+   * Child node(s) that can be nested inside component. `Modal.Header`,
+   * `Modal.Body`, and `Model.Footer` are the only permissible children of the Modal.
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Toggles focusable variant of the modal. Used to attach a tabIndex for keyboard scrolling
+   * and focus indicator outline.
+   * Scrolling functionality exists on Modal since the header also needs to scroll.
+   * Defaults to false since modal default is not scrollable.
+   */
+  isFocusable?: boolean;
+};
+
+type ModalHeaderProps = {
+  /**
+   * Child node(s) to place inside the Modal header.
+   * Should include the <Modal.Title>
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Adjusts height, color, and text of the header.
+   */
+  variant?: Variant;
+  /**
+   * Placeholder for brand asset.
+   */
+  brandAsset?: ReactNode;
+  /**
+   * CSS class names that can be appended to the brand asset.
+   */
+  assetClassName?: string;
+};
+
+type ModalFooterProps = {
+  /**
+   * Child node(s) to place inside the Modal footer.
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Toggles sticky variant of the footer. If modal is scrollable, footer is sticky.
+   * Also adds border and shadow to indicate sticky status.
+   * Defaults to false since modal default is not scrollable.
+   */
+  isSticky?: boolean;
+};
+
+type ModalStepperProps = {
+  /**
+   * Indicates which step is the active step. Must be one or more.
+   */
+  activeStep: number;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Indicates how many steps to represent. Must be one or more and
+   * greater than or equal to activeStep.
+   */
+  totalSteps: number;
 };
 
 type Context = {
@@ -166,25 +275,13 @@ export const ModalContent = (props: ModalContentProps) => {
 /**
  * `import {Modal} from "@chanzuckerberg/eds";`
  *
- * Modal wrapping the Headless UI Diaglog component https://headlessui.dev/react/dialog
+ * EDS Wrapper for the HeadlessUI Dialog component
+ * @see https://headlessui.dev/react/dialog
  *
  * NOTE: You must have at least one focusable element in the modal contents, for keyboard
- * accessibility reasons. (The close button counts as a focusable element.)
+ * accessibility reasons. (The close button counts as a focusable element.) Use `initialFocus`
+ * to choose a different element.
  *
- * Example usage:
- *
- * ```tsx
- * <Modal>
- *   <Modal.Header>
- *     <Modal.Title>{modalTitle}</Modal.Title>
- *   </Modal.Header>
- *   <Modal.Body>{modalBodyContent}</Modal.Body>
- *   <Modal.Footer>
- *     <Modal.Stepper />
- *     {modalFooterContent}
- *   </Modal.Footer>
- * </Modal>
- * ```
  */
 export const Modal = (props: ModalProps) => {
   const {
@@ -233,6 +330,139 @@ export const Modal = (props: ModalProps) => {
     </Transition>
   );
 };
+
+/**
+ * Component defines the body of the modal.
+ */
+const ModalBody = ({
+  children,
+  className,
+  isFocusable,
+  ...other
+}: ModalBodyProps) => (
+  <div
+    className={clsx(styles['modal-body'], className)}
+    // This element is tabbable to allow keyboard users to scroll long content.
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+    tabIndex={isFocusable ? 0 : undefined}
+    {...other}
+  >
+    {children}
+  </div>
+);
+
+/**
+ * Component defines the Footer section of the modal.
+ */
+const ModalFooter = ({
+  children,
+  className,
+  isSticky = false,
+  ...other
+}: ModalFooterProps) => {
+  return (
+    <div
+      className={clsx(
+        styles['modal-footer'],
+        isSticky && styles['modal-footer--sticky'],
+        className,
+      )}
+      {...other}
+    >
+      {children}
+    </div>
+  );
+};
+
+/**
+ * Component defines the Header section of the modal.
+ */
+const ModalHeader = ({
+  assetClassName,
+  brandAsset,
+  children,
+  className,
+  variant,
+  ...other
+}: ModalHeaderProps) => {
+  const componentClassName = clsx(
+    styles['modal-header'],
+    variant === 'brand' && styles['modal-header--brand'],
+    className,
+  );
+  const brandAssetClassName = clsx(
+    styles['modal-header__brand-asset'],
+    assetClassName,
+  );
+  return (
+    <div className={componentClassName} {...other}>
+      {children}
+      {variant === 'brand' && brandAsset && (
+        <div className={brandAssetClassName}>{brandAsset}</div>
+      )}
+    </div>
+  );
+};
+
+/**
+ * Stepper for the modal to indicate page status.
+ */
+const ModalStepper = ({
+  activeStep,
+  className,
+  totalSteps,
+  ...other
+}: ModalStepperProps) => {
+  const componentClassName = clsx(styles['modal-stepper'], className);
+  if (process.env.NODE_ENV !== 'production') {
+    if (totalSteps < 1) {
+      throw new Error('Must have more than one step in totalSteps.');
+    }
+    if (activeStep < 1) {
+      throw new Error('activeStep must be one or more.');
+    }
+    if (totalSteps < activeStep) {
+      throw new Error('activeStep cannot exceed totalSteps');
+    }
+  }
+
+  const stepIcons = [];
+  for (let i = 0; i < totalSteps; i++) {
+    const isActivestep = i + 1 === activeStep;
+    const name = isActivestep ? 'circle' : 'empty-circle';
+    const title = isActivestep ? `Active Step ${i + 1}` : `Step ${i + 1}`;
+    stepIcons.push(
+      <Icon
+        key={i}
+        name={name}
+        purpose="informative"
+        size="0.5rem"
+        title={title}
+      />,
+    );
+  }
+  return (
+    <div className={componentClassName} {...other}>
+      {stepIcons}
+    </div>
+  );
+};
+
+/**
+ * Component defines the Title section of the modal.
+ */
+const ModalTitle = ({
+  children,
+  className,
+  size = 'headline-md',
+  ...other
+}: ModalTitleProps) => (
+  <Dialog.Title as={React.Fragment}>
+    <Heading className={className} size={size} {...other}>
+      {children}
+    </Heading>
+  </Dialog.Title>
+);
 
 /**
  * Variations of the subcomponent to pass props from parent Modal component.

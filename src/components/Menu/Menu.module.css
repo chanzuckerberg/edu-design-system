@@ -12,7 +12,7 @@
 }
 
 .menu__button {
-  @mixin eds-theme-typography-body-md;
+  font: var(--eds-theme-typography-body-md);
 
   color: var(--eds-theme-color-text-neutral-subtle);
   background-color: var(--eds-theme-color-form-background);
@@ -32,9 +32,7 @@
   border-radius: var(--eds-border-radius-md);
 }
 .menu__plain-button:hover {
-  background-color: var(
-    --eds-theme-color-button-secondary-neutral-background-hover
-  );
+  background-color: var(--eds-theme-color-button-secondary-neutral-background-hover);
 }
 .menu__plain-button:focus-visible {
   @mixin focus;
@@ -52,4 +50,9 @@
 .menu__item {
   text-decoration: none;
   color: inherit;
+}
+
+/* Unset the hover on the menu item, as this is handled by the PopoverListItem */
+.menu__item:hover {
+  color: unset;
 }

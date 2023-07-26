@@ -5,35 +5,24 @@ import type { ReactNode } from 'react';
 import ProjectCard from './ProjectCard';
 
 import {
+  Button,
+  ButtonGroup,
+  Card,
+  DataBar,
+  DragDrop,
+  Grid,
+  Heading,
+  HorizontalStepper,
+  Icon,
+  Layout,
+  LayoutContainer,
+  LayoutSection,
+  Menu,
+  NumberIcon,
   PageHeader,
   Panel,
-  ButtonGroup,
-  Button,
-  Heading,
-  LayoutContainer,
-  Layout,
-  LayoutSection,
-  DragDrop,
-  DragDropContainerHeader,
-  Icon,
-  HorizontalStepper,
-  DataBar,
-  Toolbar,
-  ToolbarItem,
-  Grid,
-  GridItem,
-  Text,
-  DropdownMenuItem,
-  Card,
-  CardBody,
-  NumberIcon,
-  TableHeader,
-  TableRow,
   Table,
-  TableBody,
-  TableCell,
-  TableHeaderCell,
-  CardFooter,
+  Text,
 } from '../../../src';
 
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
@@ -317,7 +306,7 @@ export const TableCard = ({
 
   return (
     <Card className={componentClassName} {...other}>
-      <CardBody>
+      <Card.Body>
         <Heading
           as="h2"
           className="mb-4"
@@ -327,28 +316,28 @@ export const TableCard = ({
           {title}
         </Heading>
         <Table className={styles['table-card__table']} title={title}>
-          <TableHeader>
-            <TableRow variant="header">
+          <Table.Header>
+            <Table.Row variant="header">
               {tableColumns.map((item, index) => {
                 return (
-                  <TableHeaderCell
+                  <Table.HeaderCell
                     className={styles['table-card__table-header-cell']}
                     key={'table-header-cell-' + item.title}
                   >
                     {item.title}
-                  </TableHeaderCell>
+                  </Table.HeaderCell>
                 );
               })}
-            </TableRow>
-          </TableHeader>
-          <TableBody>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
             {tableRows.map((item) => {
               return (
-                <TableRow key={`table-row-${item.value1}`}>
-                  <TableHeaderCell variant="body">
+                <Table.Row key={`table-row-${item.value1}`}>
+                  <Table.HeaderCell variant="body">
                     {item.value1}
-                  </TableHeaderCell>
-                  <TableCell>
+                  </Table.HeaderCell>
+                  <Table.Cell>
                     <NumberIconList>
                       {item.projects.map((item, index) => {
                         return (
@@ -363,16 +352,16 @@ export const TableCard = ({
                         );
                       })}
                     </NumberIconList>
-                  </TableCell>
-                </TableRow>
+                  </Table.Cell>
+                </Table.Row>
               );
             })}
-          </TableBody>
+          </Table.Body>
         </Table>
-      </CardBody>
-      <CardFooter>
+      </Card.Body>
+      <Card.Footer>
         <Button status="neutral">{buttonContent}</Button>
-      </CardFooter>
+      </Card.Footer>
     </Card>
   );
 };
@@ -403,22 +392,10 @@ export const CoursePlannerEdit = () => {
   const projectCardMenuItems = () => {
     return (
       <>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move to other section
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move up
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move down
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move view details
-        </DropdownMenuItem>
+        <Menu.Item icon="schedule">Move to other section</Menu.Item>
+        <Menu.Item icon="schedule">Move up</Menu.Item>
+        <Menu.Item icon="schedule">Move down</Menu.Item>
+        <Menu.Item icon="schedule">Move view details</Menu.Item>
       </>
     );
   };
@@ -426,22 +403,12 @@ export const CoursePlannerEdit = () => {
   const projectCardMenuItemsWithDelete = () => {
     return (
       <>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move to other section
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move up
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move down
-        </DropdownMenuItem>
-        <DropdownMenuItem status="error">
-          <Icon name="delete" purpose="decorative" size="1.25rem" />
+        <Menu.Item icon="schedule">Move to other section</Menu.Item>
+        <Menu.Item icon="schedule">Move up</Menu.Item>
+        <Menu.Item icon="schedule">Move down</Menu.Item>
+        <Menu.Item className={styles['menu-item--destructive']} icon="delete">
           Delete item
-        </DropdownMenuItem>
+        </Menu.Item>
       </>
     );
   };
@@ -452,42 +419,38 @@ export const CoursePlannerEdit = () => {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       emptyContent: container1EmptyContent(),
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Available projects
-              </Heading>
-            </ToolbarItem>
-            <ToolbarItem align="right">
+        <DragDrop.ContainerHeader>
+          <div className="mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Available projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </ToolbarItem>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
     'container-2': {
       itemIds: [],
       emptyContent: container2EmptyContent(),
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </ToolbarItem>
-            <ToolbarItem align="right">
+        <DragDrop.ContainerHeader>
+          <div className="mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </ToolbarItem>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
   });
@@ -497,7 +460,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItemsWithDelete()}
+          menuItems={projectCardMenuItemsWithDelete()}
           meta="12 days"
           metaIconName="event-note"
           number={1}
@@ -511,7 +474,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={indexState}
@@ -525,7 +488,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={3}
@@ -539,7 +502,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={4}
@@ -553,8 +516,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
-          buttonDropdownPosition="top-left"
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={5}
@@ -568,8 +530,7 @@ export const CoursePlannerEdit = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={projectCardMenuItems()}
-          buttonDropdownPosition="top-left"
+          menuItems={projectCardMenuItems()}
           meta="12 days"
           metaIconName="event-note"
           number={6}
@@ -683,22 +644,22 @@ export const CoursePlannerEdit = () => {
               </Card.Body>
             </CardWithNotification>
             <Grid className="!mb-6" variant="1-2-1up">
-              <GridItem>
+              <Grid.Item>
                 <TableCard
                   buttonContent="View all Cognitive Skills"
                   tableColumns={CognitiveSkillColumns}
                   tableRows={CognitiveSkillRows}
                   title="Cognitive skills coverage"
                 />
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <TableCard
                   buttonContent="View all Standards"
                   tableColumns={StandardsColumns}
                   tableRows={StandardsRows}
                   title="Standards coverage"
                 />
-              </GridItem>
+              </Grid.Item>
             </Grid>
           </LayoutSection>
         </Layout>

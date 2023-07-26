@@ -1,0 +1,35 @@
+<Meta title="Documentation/Guidelines/Layout" />
+
+import {InlineNotification} from "../../../../src";
+
+# Layout
+
+<InlineNotification text="The layout components are being deprecated in favor of using TailwindCSS" variant="warning" />
+
+This includes the following:
+
+* `Grid` and `GridItem`
+* `Layout` and `LayoutSection`
+* `LayoutContainer`
+* `LayoutLinelength`
+
+Please refer to our documentation [on ZeroHeight](https://eds.czi.design/styleguide/s/36770/p/17f0a9-layout/b/66febf)
+for suggested alternatives and patterns.
+
+For more information on what TailwindCSS supplies, check out the following links:
+
+* https://tailwindcss.com/docs/columns
+* https://tailwindcss.com/docs/container
+* https://tailwindcss.com/docs/display
+
+## Spacing and alignment
+
+EDS components do not include margin properties as spacing between components should be handled primarily with 
+tailwind utility classes or similar custom classes.
+
+However, it's important to be able to control spacing between components, so EDS works well with tailwind utility 
+classes like [margin](https://tailwindcss.com/docs/margin).
+
+```jsx
+<InlineNotification text="lorem ipsum dolor sit amet" variant="success" className="mb-5" />
+```

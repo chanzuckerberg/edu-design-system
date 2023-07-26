@@ -82,7 +82,8 @@
  * The title communicates card organization.
  */
 .data-summary-card__title {
-  @mixin eds-theme-typography-overline-sm;
+  font: var(--eds-theme-typography-overline-sm);
+  text-transform: uppercase;
 }
 
 /**
@@ -98,7 +99,11 @@
  * The data is the main content for the card.
  */
 .data-summary-card__data {
-  @mixin eds-theme-typography-headline-lg;
+  font: var(--eds-theme-typography-headline-lg);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-001-mobile);
+  }
 
   display: flex;
   align-items: center;
@@ -111,14 +116,18 @@
  * The data unit provides a unit of measurement for the data to make it relevant.
  */
 .data-summary-card__data-unit {
-  @mixin eds-theme-typography-headline-sm;
+  font: var(--eds-theme-typography-headline-sm);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-003-mobile);
+  }
 }
 
 /**
  * The Description provides more elucidation for the data.
  */
 .data-summary-card__description {
-  @mixin eds-theme-typography-caption-sm;
+  font: var(--eds-theme-typography-caption-sm);
   font-weight: var(--eds-font-weight-light);
 }
 

@@ -8,10 +8,10 @@ import { Tooltip } from './Tooltip';
 const diffThreshold = 0.75;
 const defaultArgs = {
   text: (
-    <span data-testid="tooltip-content">
+    <span>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-      <b>Donec a erat eu augue consequat eleifend non vel sem.</b> Praesent
-      efficitur mauris ac leo semper accumsan.
+      <strong>Donec a erat eu augue consequat eleifend non vel sem.</strong>{' '}
+      Praesent efficitur mauris ac leo semper accumsan.
     </span>
   ),
   children: <div className="fpo w-3 p-1">&bull;</div>,
@@ -40,7 +40,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.NEEDS_REVISION],
     chromatic: {
       diffThreshold,
       diffIncludeAntiAliasing: false,
@@ -52,15 +52,6 @@ export default {
 type Args = React.ComponentProps<typeof Tooltip>;
 
 export const LightVariant: StoryObj<Args> = {};
-
-export const DarkVariant: StoryObj<Args> = {
-  args: {
-    variant: 'dark',
-  },
-  parameters: {
-    badges: [BADGE.DEPRECATED],
-  },
-};
 
 export const LeftPlacement: StoryObj<Args> = {
   args: {

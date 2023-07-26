@@ -125,7 +125,7 @@
  * Actual unordered list of timeline-nav.
  */
 .timeline-nav__list {
-  @mixin eds-theme-typography-body-text;
+  font: var(--eds-typography-preset-005);
 
   @media all and (min-width: $eds-bp-lg) {
     position: sticky;

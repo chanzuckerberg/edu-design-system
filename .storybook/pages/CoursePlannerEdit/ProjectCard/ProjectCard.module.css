@@ -50,7 +50,7 @@
 }
 
 .project-card__meta {
-  @mixin eds-theme-typography-body-xs;
+  font: var(--eds-theme-typography-body-xs);
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 

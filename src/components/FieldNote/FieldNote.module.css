@@ -8,7 +8,7 @@
  * Fieldnote
  */
 .field-note {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
 }
 
 /**

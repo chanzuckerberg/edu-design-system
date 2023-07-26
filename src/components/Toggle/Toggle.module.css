@@ -39,21 +39,21 @@
  * Unchecked state of the toggle button.
  */
 .toggle__button--unchecked {
-  background-color: var(--eds-theme-color-icon-neutral-subtle);
+  background-color: var(--eds-theme-color-toggle-off-background);
 }
 
 /**
  * Checked state of the toggle button.
  */
 .toggle__button--checked {
-  background-color: var(--eds-theme-color-background-brand-primary-strong);
+  background-color: var(--eds-theme-color-toggle-on-background);
 }
 
 /**
  * Disabled state of the toggle button.
  */
 .toggle__button:disabled {
-  background-color: var(--eds-theme-color-icon-disabled);
+  background-color: var(--eds-theme-color-toggle-disabled-background);
   cursor: not-allowed;
 }
 
@@ -61,7 +61,7 @@
  * Disabled state of the associated label text to the toggle.
  */
 .toggle__button:disabled ~ .toggle__label {
-  color: var(--eds-theme-color-text-disabled);
+  color: var(--eds-theme-color-toggle-disabled-text);
 }
 
 /**
@@ -70,8 +70,8 @@
 .toggle__label {
   margin-bottom: 0;
 
-  color: var(--eds-theme-color-text-neutral-default);
-  @mixin eds-theme-typography-body-md;
+  color: var(--eds-theme-color-toggle-primary-text);
+  font: var(--eds-theme-typography-body-md);
 }
 
 /**
@@ -87,7 +87,7 @@
 /**
  * The circle indicator of the toggle button.
  */
-.toggle__button-circle {
+.toggle__button-thumb {
   display: inline-block;
 
   height: var(--eds-size-2-and-half);
@@ -97,7 +97,7 @@
   border: var(--eds-theme-border-width) solid transparent;
   border-radius: var(--eds-border-radius-round);
 
-  background-color: var(--eds-theme-color-text-neutral-default-inverse);
+  background-color: var(--eds-theme-color-toggle-thumb);
 
   transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
 
@@ -109,13 +109,13 @@
 /**
  * The unchecked state of the circle indicator.
  */
-.toggle__button--unchecked > .toggle__button-circle {
+.toggle__button--unchecked > .toggle__button-thumb {
   transform: translateX(0.0625rem);
 }
 
 /**
  * The checked state of the circle indicator.
  */
-.toggle__button--checked > .toggle__button-circle {
+.toggle__button--checked > .toggle__button-thumb {
   transform: translateX(2.0625rem);
 }

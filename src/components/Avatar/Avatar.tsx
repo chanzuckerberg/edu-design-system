@@ -102,8 +102,10 @@ export const Avatar = ({
       {...other}
     >
       {variant === 'initials' && (user ? getInitials(user.fullName) : '??')}
-      {variant === 'icon' && <Icon name="avatar" purpose="decorative" />}
-      {variant === 'image' && <img alt="user" src={src} />}
+      {variant === 'icon' && <Icon name="person" purpose="decorative" />}
+      {variant === 'image' && (
+        <img alt="user" className={styles['avatar__image']} src={src} />
+      )}
     </div>
   );
 };
