@@ -5,7 +5,7 @@
         "value": "'Graphik', sans-serif"
       },
       "secondary": {
-        "value": "'Open Sans', sans-serif"
+        "value": "'Mint Grotesk V1.1', sans-serif"
       }
     },
     "font-size": {
@@ -24,6 +24,9 @@
       },
       "24": {
         "value": "1.5rem"
+      },
+      "22": {
+        "value": "1.375rem"
       },
       "20": {
         "value": "1.25rem"
@@ -59,39 +62,285 @@
       "sm": {
         "value": "0.5px"
       }
-    }
-  },
-  "legacy": {
-    "size": {
-      "font": {
-        "h1": {
-          "value": "1.5rem"
+    },
+    "typography": {
+      "preset": {
+        "001": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)"
+          },
+          "mobile": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
+            "comment": "This is deprecated and missing from figma"
+          }
         },
-        "h2": {
-          "value": "1.125rem"
+        "002": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+          },
+          "mobile": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.2857 var(--eds-font-family-primary)",
+            "comment": "This is deprecated and missing from figma"
+          }
         },
-        "body": {
-          "value": "1rem"
+        "003": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)"
+          },
+          "mobile": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
+            "comment": "This is deprecated and missing from figma"
+          }
         },
-        "sm": {
-          "value": "0.875rem"
+        "004": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+          }
         },
-        "xs": {
-          "value": "0.75rem"
-        }
-      },
-      "line-height": {
-        "h1": {
-          "value": "2rem"
+        "005": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+          }
         },
-        "body": {
-          "value": "1.5rem"
+        "006": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+          }
         },
-        "sm": {
-          "value": "1.25rem"
+        "007": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+          }
         },
-        "xs": {
-          "value": "1rem"
+        "008": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+          }
+        },
+        "009": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+          }
+        },
+        "010": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+          }
+        },
+        "011": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+            "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+            "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+            "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+          }
+        },
+        "012": {
+          "@": {
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+            "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+          },
+          "light": {
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+            "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+          },
+          "bold": {
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+            "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+          }
+        },
+        "secondary": {
+          "001": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+            }
+          },
+          "002": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+            }
+          },
+          "003": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+            }
+          },
+          "004": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)"
+            }
+          },
+          "005": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)"
+            }
+          },
+          "006": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)"
+            }
+          },
+          "007": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)"
+            }
+          },
+          "008": {
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)"
+            },
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)"
+            }
+          },
+          "mobile": {
+            "001": {
+              "light": {
+                "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+              },
+              "@": {
+                "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+              }
+            },
+            "002": {
+              "light": {
+                "value": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+              },
+              "@": {
+                "value": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+              }
+            },
+            "003": {
+              "light": {
+                "value": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+              },
+              "@": {
+                "value": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+              }
+            }
+          }
+        },
+        "mobile": {
+          "001": {
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            },
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            },
+            "bold": {
+              "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            }
+          },
+          "002": {
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+            },
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+            },
+            "bold": {
+              "value": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+            }
+          },
+          "003": {
+            "light": {
+              "value": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+            },
+            "@": {
+              "value": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+            },
+            "bold": {
+              "value": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+            }
+          }
         }
       }
     }

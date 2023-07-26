@@ -52,7 +52,8 @@
           "value": "#F5FF8F"
         },
         "eraser": {
-          "value": "#F3DCE2"
+          "value": "#F3DCE2",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
         },
         "orange": {
           "100": { "value": "#FFF1E9" },
@@ -76,12 +77,30 @@
         }
       },
       "highlight": {
-        "100": { "value": "#FF9FEC" },
-        "200": { "value": "#FFBEAA" },
-        "300": { "value": "#FCFF00" },
-        "400": { "value": "#9DFFA4" },
-        "500": { "value": "#00F1FF" },
-        "600": { "value": "#CFC9FF" }
+        "100": {
+          "value": "#FF9FEC",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "200": {
+          "value": "#FFBEAA",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "300": {
+          "value": "#FCFF00",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "400": {
+          "value": "#9DFFA4",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "500": {
+          "value": "#00F1FF",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "600": {
+          "value": "#CFC9FF",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        }
       },
       "info": {
         "100": {
@@ -112,39 +131,6 @@
           "value": "#0563B8",
           "comment": "legacy token, will be removed"
         }
-      }
-    }
-  },
-  "legacy": {
-    "color": {
-      "gray": {
-        "50": { "value": "#F8F9FC" },
-        "100": { "value": "#EBEBEC" },
-        "200": { "value": "#D8D8D9" },
-        "300": { "value": "#C5C5C6" },
-        "500": { "value": "#9F9FA0" },
-        "700": { "value": "#78797A" },
-        "1000": { "value": "#3F4041" }
-      },
-      "black": { "value": "#2C2D2E" },
-      "red": {
-        "100": { "value": "#F7DDDD" },
-        "200": { "value": "#F25252" }
-      },
-      "green": {
-        "100": { "value": "#E1F0E7" },
-        "200": { "value": "#6CC188" },
-        "300": { "value": "#457B57" }
-      },
-      "yellow": {
-        "200": { "value": "#FFC55B" },
-        "300": { "value": "#A46900" },
-        "400": { "value": "#644C1F" }
-      },
-      "purple": {
-        "200": { "value": "#7686D3" },
-        "300": { "value": "#5761BA" },
-        "400": { "value": "#32417C" }
       }
     }
   }

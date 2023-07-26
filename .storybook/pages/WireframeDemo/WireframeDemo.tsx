@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import {
   Button,
   ButtonGroup,
-  Dropdown,
   Heading,
   Icon,
   Label,
   Link,
+  Select,
   Tabs,
   Tab,
   Text,
@@ -79,7 +79,7 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
           src={PlaceholderImage}
         />
         <div className="flex flex-col items-center gap-6">
-          <Heading size="h1">along</Heading>
+          <Heading size="h1">Application</Heading>
           <Heading size="h2">Sign in</Heading>
           <Text>Remember to use your school email to sign in:</Text>
         </div>
@@ -204,13 +204,20 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 
         <div className={styles['watch-page__carousel']}>
           <div className="w-[10.5rem]">
-            <Dropdown
+            <Select
               aria-label="student groups"
-              buttonText={selectedOption.label}
               onChange={setSelectedOption}
-              options={studentGroupOptions}
               value={selectedOption}
-            />
+            >
+              <Select.Button>{selectedOption.label}</Select.Button>
+              <Select.Options>
+                {studentGroupOptions.map((option) => (
+                  <Select.Option key={option.key} value={option}>
+                    {option.label}
+                  </Select.Option>
+                ))}
+              </Select.Options>
+            </Select>
           </div>
 
           <Tabs className="mt-4">
@@ -385,7 +392,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
  * See the [theming documentation](./?path=/docs/documentation-theming--theming) for more information on the purpose of this demo.
  *
  * Just for the purpose of demonstration, we're using the logged out homepage and
- * the teacher watch page in the Along app.
+ * the teacher watch page in an example app.
  */
 export const WireframeDemo = () => {
   const [currentPage, setCurrentPage] = useState<'loggedOut' | 'watch'>(

@@ -21,8 +21,7 @@
     to right,
     var(--eds-theme-color-background-neutral-medium) 50%,
     var(--eds-theme-color-background-neutral-subtle) 65%,
-    var(--eds-theme-color-background-neutral-medium) 80%
-  );
+    var(--eds-theme-color-background-neutral-medium) 80%);
   background-size: 500% 100%;
 }
 

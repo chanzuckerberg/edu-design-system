@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, Grid, GridItem } from '../../../../src';
+import { Section, Grid } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -11,7 +11,7 @@ export class Tier3Sizes extends Component {
           <Grid>
             {filterTokens(`eds-theme-size`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       width: `var(${listItem.name})`,
@@ -21,7 +21,7 @@ export class Tier3Sizes extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>

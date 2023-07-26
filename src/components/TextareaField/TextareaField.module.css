@@ -5,20 +5,42 @@
 \*------------------------------------*/
 
 /**
+ * Default input styles 
+ */
+.textarea {
+  @mixin inputStyles;
+}
+
+.textarea--disabled:focus {
+  outline: none;
+}
+
+/**
  * Wraps the Label and the optional/required indicator.
  */
 .textarea-field__overline {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--eds-size-half);
-  color: var(--eds-theme-color-form-label);
 }
 
 .textarea-field__overline--no-label {
   justify-content: flex-end;
 }
 
-.textarea-field__overline--disabled {
+.textarea-field__label {
+  color: var(--eds-theme-color-form-label);
+  font: var(--eds-theme-typography-form-label);
+}
+.textarea-field__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+.textarea-field__required-text {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  font: var(--eds-theme-typography-body-sm);
+}
+.textarea-field__required-text--disabled {
   color: var(--eds-theme-color-text-disabled);
 }
 
@@ -36,7 +58,7 @@
 }
 
 .textarea-field__character-counter {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
 
   color: var(--eds-theme-color-text-neutral-default);
   flex: 1 0 50%;

@@ -33,7 +33,7 @@ export const EdsColorOtherYellow600 = '#BF7300';
 export const EdsColorOtherYellow700 = '#9E5B03';
 export const EdsColorOtherYellow800 = '#854C03';
 export const EdsColorOtherLemon = '#F5FF8F';
-export const EdsColorOtherEraser = '#F3DCE2';
+export const EdsColorOtherEraser = '#F3DCE2'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
 export const EdsColorOtherOrange100 = '#FFF1E9';
 export const EdsColorOtherOrange200 = '#FFCBA5';
 export const EdsColorOtherOrange300 = '#FFAF76';
@@ -50,12 +50,12 @@ export const EdsColorOtherRuby500 = '#F1497B';
 export const EdsColorOtherRuby600 = '#D41E52';
 export const EdsColorOtherRuby700 = '#BD0044';
 export const EdsColorOtherRuby800 = '#8F0134';
-export const EdsColorHighlight100 = '#FF9FEC';
-export const EdsColorHighlight200 = '#FFBEAA';
-export const EdsColorHighlight300 = '#FCFF00';
-export const EdsColorHighlight400 = '#9DFFA4';
-export const EdsColorHighlight500 = '#00F1FF';
-export const EdsColorHighlight600 = '#CFC9FF';
+export const EdsColorHighlight100 = '#FF9FEC'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
+export const EdsColorHighlight200 = '#FFBEAA'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
+export const EdsColorHighlight300 = '#FCFF00'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
+export const EdsColorHighlight400 = '#9DFFA4'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
+export const EdsColorHighlight500 = '#00F1FF'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
+export const EdsColorHighlight600 = '#CFC9FF'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
 export const EdsColorInfo100 = '#F1F9FF'; // legacy token, will be removed
 export const EdsColorInfo200 = '#B0D5FF'; // legacy token, will be removed
 export const EdsColorInfo300 = '#7FB9FD'; // legacy token, will be removed
@@ -70,6 +70,7 @@ export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMediumHover = '#C0C4C8';
 export const EdsThemeColorBackgroundBrandPrimaryDefault = '#F0F0FC';
+export const EdsThemeColorBackgroundBrandPrimarySubtle = '#F0F0FC';
 export const EdsThemeColorBackgroundBrandPrimaryStrong = '#6B65E2';
 export const EdsThemeColorBackgroundBrandPrimaryStrongHover = '#3E42B1';
 export const EdsThemeColorBackgroundUtilitySuccess = '#ECFFF5';
@@ -82,8 +83,8 @@ export const EdsThemeColorBackgroundGradeReviseSubtle = '#FDF1D0';
 export const EdsThemeColorBackgroundGradeStopDefault = '#D41E52';
 export const EdsThemeColorBackgroundGradeStopSubtle = '#FFF0F4';
 export const EdsThemeColorBackgroundDisabled = '#C0C4C8';
-export const EdsThemeColorBorderLinkNeutral = '#21272D';
-export const EdsThemeColorBorderLinkBrand = '#5751D2';
+export const EdsThemeColorBorderLinkNeutral = '#21272D'; // @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead
+export const EdsThemeColorBorderLinkBrand = '#5751D2'; // @deprecated This token is deprecated. Please use eds-theme-color-link-brand-background-focus, eds-theme-color-link-brand-text-decoration, eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead
 export const EdsThemeColorBorderNeutralSubtle = '#E7E8EA';
 export const EdsThemeColorBorderNeutralSubtleHover = '#C0C4C8';
 export const EdsThemeColorBorderNeutralDefault = '#C0C4C8';
@@ -138,8 +139,8 @@ export const EdsThemeColorTextNeutralDefault = '#383C43';
 export const EdsThemeColorTextNeutralDefaultInverse = '#FFFFFF';
 export const EdsThemeColorTextNeutralStrong = '#21272D';
 export const EdsThemeColorTextNeutralSubtle = '#5D6369';
-export const EdsThemeColorTextLinkNeutral = '#21272D';
-export const EdsThemeColorTextLinkBrand = '#5751D2';
+export const EdsThemeColorTextLinkNeutral = '#21272D'; // @deprecated This token is deprecated. Please use eds-theme-color-link-neutral-text-decoration or eds-theme-color-link-neutral-background instead.
+export const EdsThemeColorTextLinkBrand = '#5751D2'; // @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-hover or eds-theme-color-link-neutral-text-hover instead.
 export const EdsThemeColorTextUtilitySuccess = '#007249';
 export const EdsThemeColorTextUtilityWarning = '#AC3400';
 export const EdsThemeColorTextUtilityError = '#BD0044';
@@ -303,34 +304,49 @@ export const EdsThemeColorFormBorderHover = '#21272D';
 export const EdsThemeColorFormBackground = '#FFFFFF';
 export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
 export const EdsThemeColorFormLabel = '#383C43';
+export const EdsThemeColorLinkBrandText =
+  'var(--eds-theme-color-text-link-neutral)';
+export const EdsThemeColorLinkBrandTextHover =
+  'var(--eds-theme-color-text-link-brand)';
+export const EdsThemeColorLinkBrandTextFocus =
+  'var(--eds-theme-color-text-neutral-default-inverse)';
+export const EdsThemeColorLinkBrandTextDecoration =
+  'var(--eds-theme-color-border-link-brand)';
+export const EdsThemeColorLinkBrandTextDecorationHover =
+  'var(--eds-theme-color-border-link-brand)';
+export const EdsThemeColorLinkBrandTextDecorationFocus =
+  'var(--eds-theme-color-text-neutral-default-inverse)';
+export const EdsThemeColorLinkBrandBackgroundFocus =
+  'var(--eds-theme-color-border-link-brand)';
+export const EdsThemeColorLinkNeutralText =
+  'var(--eds-theme-color-text-link-neutral)';
+export const EdsThemeColorLinkNeutralTextHover =
+  'var(--eds-theme-color-text-link-brand)';
+export const EdsThemeColorLinkNeutralTextFocus =
+  'var(--eds-theme-color-text-neutral-default-inverse)';
+export const EdsThemeColorLinkNeutralTextDecoration =
+  'var(--eds-theme-color-border-link-neutral)';
+export const EdsThemeColorLinkNeutralTextDecorationHover =
+  'var(--eds-theme-color-border-link-brand)';
+export const EdsThemeColorLinkNeutralTextDecorationFocus =
+  'var(--eds-theme-color-text-neutral-default-inverse)';
+export const EdsThemeColorLinkNeutralBackgroundFocus =
+  'var(--eds-theme-color-border-link-neutral)';
 export const EdsThemeColorModalBrandHeaderBackground = '#8984E8';
 export const EdsThemeColorProgressBarBackground = '#E7E8EA';
 export const EdsThemeColorProgressBarBorder = '#E7E8EA';
 export const EdsThemeColorRadioBrandBackground = '#8984E8';
 export const EdsThemeColorTextHighlightForeground = '#21272D';
 export const EdsThemeColorTextHighlightBackground = '#F5FF8F';
-export const EdsThemeColorToggleOnBackground = '#6B65E2';
-export const EdsThemeColorToggleOffBackground = '#878C90';
-export const EdsThemeColorToggleDisabledBackground = '#C0C4C8';
-export const EdsThemeColorToggleDisabledText = '#C0C4C8';
-export const EdsThemeColorTogglePrimaryText = '#383C43';
-export const EdsThemeColorToggleThumb = '#FFFFFF';
-export const LegacyColorGray50 = '#F8F9FC';
-export const LegacyColorGray100 = '#EBEBEC';
-export const LegacyColorGray200 = '#D8D8D9';
-export const LegacyColorGray300 = '#C5C5C6';
-export const LegacyColorGray500 = '#9F9FA0';
-export const LegacyColorGray700 = '#78797A';
-export const LegacyColorGray1000 = '#3F4041';
-export const LegacyColorBlack = '#2C2D2E';
-export const LegacyColorRed100 = '#F7DDDD';
-export const LegacyColorRed200 = '#F25252';
-export const LegacyColorGreen100 = '#E1F0E7';
-export const LegacyColorGreen200 = '#6CC188';
-export const LegacyColorGreen300 = '#457B57';
-export const LegacyColorYellow200 = '#FFC55B';
-export const LegacyColorYellow300 = '#A46900';
-export const LegacyColorYellow400 = '#644C1F';
-export const LegacyColorPurple200 = '#7686D3';
-export const LegacyColorPurple300 = '#5761BA';
-export const LegacyColorPurple400 = '#32417C';
+export const EdsThemeColorToggleOnBackground =
+  'var(--eds-theme-color-background-brand-primary-strong)';
+export const EdsThemeColorToggleOffBackground =
+  'var(--eds-theme-color-icon-neutral-subtle)';
+export const EdsThemeColorToggleDisabledBackground =
+  'var(--eds-theme-color-icon-disabled)';
+export const EdsThemeColorToggleDisabledText =
+  'var(--eds-theme-color-text-disabled)';
+export const EdsThemeColorTogglePrimaryText =
+  'var(--eds-theme-color-text-neutral-default)';
+export const EdsThemeColorToggleThumb =
+  'var(--eds-theme-color-text-neutral-default-inverse)';

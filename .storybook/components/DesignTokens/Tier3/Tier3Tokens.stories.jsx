@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tier3Colors, Tier3ButtonColors } from './Colors';
 import { Tier3Sizes } from './Sizes';
+import { TypographyComponents } from './TypographyComponents';
 
 export default {
   title: 'Design Tokens/Tier 3: Component',
@@ -25,4 +26,8 @@ export const ButtonColors = {
 
 export const Sizes = {
   render: () => <Tier3Sizes />,
+};
+
+export const Typography = {
+  render: () => <TypographyComponents />,
 };

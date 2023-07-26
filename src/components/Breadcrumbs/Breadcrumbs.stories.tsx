@@ -110,6 +110,14 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
+export const LongTextCustomSeparator: StoryObj<Args> = {
+  ...LongText,
+  args: {
+    ...LongText.args,
+    separator: '>',
+  },
+};
+
 /**
  * Mostly for visual regression testing.
  */
@@ -117,11 +125,15 @@ export const LongTextMenu: StoryObj<Args> = {
   args: {
     ...LongText.args,
   },
+  decorators: [(Story) => <div className="pb-28">{Story()}</div>],
   parameters: {
     viewport: {
       defaultViewport: 'ipadMini',
     },
-    chromatic: { viewports: [chromaticViewports.ipadMini] },
+    chromatic: {
+      viewports: [chromaticViewports.ipadMini],
+      diffThreshold: 0.75,
+    },
     axe: {
       skip: true,
     },

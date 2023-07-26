@@ -22,8 +22,8 @@
  * Input label size variants.
  */
 .label--md {
-  @mixin eds-theme-typography-body-sm;
+  font: var(--eds-theme-typography-body-sm);
 }
 .label--lg {
-  @mixin eds-theme-typography-body-md;
+  font: var(--eds-theme-typography-body-md);
 }

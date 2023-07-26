@@ -35,10 +35,18 @@ export interface Props {
 }
 
 /**
+ * The Layout components are deprecated and will be removed in an upcoming release.
+ * Instead, please make use of utility libraries, like Tailwind CSS:
+ * * https://tailwindcss.com/docs/display
+ * * https://tailwindcss.com/docs/container
+ * * https://tailwindcss.com/docs/columns
+ *
  * `import {Layout} from "@chanzuckerberg/eds";`
  *
  * Component that controls an overarching page layout. By default, the layout renders
  * a fixed-position left sidebar on larger screens.
+ *
+ * @deprecated
  */
 export const Layout = ({
   behavior,

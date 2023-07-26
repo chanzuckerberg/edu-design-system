@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import { useId } from '../../util/useId';
-
-import DataBarSegment from '../DataBarSegment';
-import type { Variants } from '../DataBarSegment';
 import Text from '../Text';
+import Tooltip from '../Tooltip';
+
 import styles from './DataBar.module.css';
 
 type Segment = {
@@ -18,7 +17,28 @@ type Segment = {
   value: number;
 };
 
-export type Props = {
+type Variant = 'brand' | 'success';
+
+export type DataBarSegmentProps = {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Tooltip text to be displayed when the segment is hovered.
+   */
+  text?: string;
+  /**
+   * Width that the segment should consume.
+   */
+  width: string;
+  /**
+   * Color variant of the individual segment.
+   */
+  variant?: Variant;
+} & React.HTMLAttributes<HTMLElement>;
+
+export type DataBarProps = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -39,7 +59,7 @@ export type Props = {
   /**
    * Color variant of the data bar. Decorates the segments.
    */
-  variant?: Variants;
+  variant?: Variant;
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
@@ -67,7 +87,7 @@ export const DataBar = ({
   segments,
   variant = 'brand',
   ...other
-}: Props) => {
+}: DataBarProps) => {
   /**
    * Calculates the total of the segment values.
    */
@@ -119,7 +139,7 @@ export const DataBar = ({
     /* Ensures a minimumum width of 5% for the segment. */
     const percentage = Math.max(5, (segment.value / max) * 100);
     segmentComponents.push(
-      <DataBarSegment
+      <DataBar.Segment
         aria-label={segment.text}
         key={`segment-${index}`}
         onKeyDown={(e) => handleOnKeyDown(e, index)}
@@ -138,7 +158,7 @@ export const DataBar = ({
    */
   if (!segmentComponents.length) {
     segmentComponents.push(
-      <DataBarSegment
+      <DataBar.Segment
         key="segment-empty"
         role="gridcell"
         variant={variant}
@@ -184,3 +204,51 @@ export const DataBar = ({
     </div>
   );
 };
+
+/**
+ * A segment sub component for the <DataBar>.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <DataBar.Segment text="Segment 1" width="40%" />
+ * ```
+ */
+const DataBarSegment = React.forwardRef(
+  (
+    {
+      className,
+      text,
+      width,
+      variant = 'brand',
+      ...other
+    }: DataBarSegmentProps,
+    ref: React.ForwardedRef<HTMLDivElement>,
+  ) => {
+    const componentClassName = clsx(
+      styles['data-bar-segment'],
+      styles[`data-bar-segment--${variant}`],
+      text && styles['data-bar-segment--hoverable'],
+      className,
+    );
+    const segmentComponent = (
+      <div
+        className={componentClassName}
+        ref={ref}
+        style={{ width: `${width}` }}
+        {...other}
+      />
+    );
+    return text ? (
+      <Tooltip align="bottom" text={text}>
+        {segmentComponent}
+      </Tooltip>
+    ) : (
+      segmentComponent
+    );
+  },
+);
+
+DataBarSegment.displayName = 'DataBarSegment'; // Satisfy eslint
+
+DataBar.Segment = DataBarSegment;

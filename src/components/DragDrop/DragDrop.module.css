@@ -159,7 +159,7 @@
  * Optional title div at the top of an item.
  */
 .drag-drop__item-title {
-  @mixin eds-typography-preset-007-bold;
+  font: var(--eds-typography-preset-007-bold);
   margin-bottom: var(--eds-size-2);
 }
 

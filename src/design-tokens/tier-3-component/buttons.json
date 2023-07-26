@@ -1,6 +1,26 @@
 {
   "eds": {
     "theme": {
+      "typography": {
+        "button": {
+          "lg": {
+            "value": "var(--eds-typography-preset-006)"
+          },
+          "md": {
+            "value": "var(--eds-typography-preset-006)"
+          },
+          "label": {
+            "@": {
+              "value": "var(--eds-typography-preset-006)",
+              "comment": "This is deprecated and missing from figma"
+            },
+            "sm": {
+              "value": "var(--eds-typography-preset-008-bold)",
+              "comment": "This is deprecated and missing from figma"
+            }
+          }
+        }
+      },
       "color": {
         "button": {
           "primary": {
@@ -527,6 +547,15 @@
                   "value": "{eds.color.neutral.white}"
                 }
               }
+            }
+          }
+        }
+      },
+      "box": {
+        "button": {
+          "border": {
+            "radius": {
+              "value": "{eds.border.radius.md}"
             }
           }
         }

@@ -1,0 +1,84 @@
+<Meta title="Documentation/Guidelines/Typography" />
+
+# Typography
+
+Typography in EDS follows [the same structure as design tokens](./?path=/story/documentation-guidelines-tokens--page), with the exception that typography operates as a _cluster_ of typography-specific style properties rather than a single style property.
+
+## Tier 1: Typography values
+
+These token values are _never to be used_ directly by components; these token values are assembled into typography presets.
+
+Values include:
+
+- `eds-font-family`
+- `eds-font-size-XX`
+- `eds-font-weight-XX`
+- `eds-letter-spacing-XX`
+
+## Tier 1: Typography presets
+
+Just as with other Tier 1 tokens, typography presets shouldn't be used directly by components. Typography presets are mapped to specific semantic usage at the Tier 2 level.
+
+Note: `line-height` values are [unitless](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values) and are specific to each preset, which is why the decision was made to exclude line height values from tokens.
+
+All presets exist as inline [`font:`](https://developer.mozilla.org/en-US/docs/Web/CSS/font) values, and can be used in Tier 2 usages:
+
+```css
+font: var(--eds-typography-preset-001);
+```
+
+When defining a new usage, you can refer to the variable by name
+
+```json
+{
+  "eds": {
+    "theme": {
+      "typography": {
+        "headline": {
+          "lg": {
+            "value": "var(--eds-typography-preset-001-bold)"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+
+## Tier 2: Typography usage
+
+Tier 2 typography values take the typography presets defined at the Tier 2 level and map them to a semantic usage value like so:
+
+Similar to the example above, you can use the token names in components and other code, or to define higher-tier tokens.
+
+These semantic values are then included in each component's style file:
+
+```css
+.breadcrumbs {
+  font: var(--eds-theme-typography-body-sm);
+}
+```
+
+And defining tier 3 tokens using lower token values:
+
+```json
+{
+  "eds": {
+    "theme": {
+      "typography": {
+        "tab": {
+          "lg": {
+            "@": {
+              "value": "var(--eds-typography-preset-006-light)"
+            },
+            "active": {
+              "value": "var(--eds-typography-preset-006)"
+            }
+          },
+        }
+      }
+    }
+  }
+}
+```

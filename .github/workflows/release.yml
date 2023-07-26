@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout ⬇️
         uses: actions/checkout@v3
+        with:
+          # Omlet uses git history for analysis; disable shallow clone
+          fetch-depth: 0
 
       - name: Setup node 😻
         uses: actions/setup-node@v3
@@ -42,4 +45,10 @@ jobs:
       - name: Publish package to the Github registry
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update Omlet 🍳
+        run: npx omlet analyze
+        env:
+          OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
+      

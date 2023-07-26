@@ -119,6 +119,13 @@
       "sidebar-width": "13.5rem",
       "linelength-width": "36rem"
     },
+    "outline": {
+      "width": {
+        "sm": "1px",
+        "md": "2px",
+        "lg": "4px"
+      }
+    },
     "box-shadow": {
       "sm": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
       "md": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
@@ -126,26 +133,27 @@
       "xl": "0px 6px 20px rgba(0, 0, 0, 0.2)"
     },
     "size": {
-      "1": "0.5rem",
-      "2": "1rem",
-      "3": "1.5rem",
-      "4": "2rem",
-      "5": "2.5rem",
-      "6": "3rem",
-      "7": "3.5rem",
-      "8": "4rem",
-      "9": "4.5rem",
-      "10": "5rem",
-      "12": "6rem",
+      "1": "var(--eds-size-base-unit)",
+      "2": "calc(var(--eds-size-base-unit) * 2)",
+      "3": "calc(var(--eds-size-base-unit) * 3)",
+      "4": "calc(var(--eds-size-base-unit) * 4)",
+      "5": "calc(var(--eds-size-base-unit) * 5)",
+      "6": "calc(var(--eds-size-base-unit) * 6)",
+      "7": "calc(var(--eds-size-base-unit) * 7)",
+      "8": "calc(var(--eds-size-base-unit) * 8)",
+      "9": "calc(var(--eds-size-base-unit) * 9)",
+      "10": "calc(var(--eds-size-base-unit) * 10)",
+      "11": "calc(var(--eds-size-base-unit) * 11)",
+      "12": "calc(var(--eds-size-base-unit) * 12)",
       "base-unit": "0.5rem",
-      "half": "0.25rem",
-      "quarter": "0.125rem",
-      "1-and-half": "0.75rem",
-      "2-and-half": "1.25rem"
+      "half": "calc(var(--eds-size-base-unit) / 2)",
+      "quarter": "calc(var(--eds-size-base-unit) / 4)",
+      "1-and-half": "calc(var(--eds-size-base-unit) * 1.5)",
+      "2-and-half": "calc(var(--eds-size-base-unit) * 2.5)"
     },
     "font-family": {
       "primary": "'Graphik', sans-serif",
-      "secondary": "'Open Sans', sans-serif"
+      "secondary": "'Mint Grotesk V1.1', sans-serif"
     },
     "font-size": {
       "11": "0.6875rem",
@@ -154,6 +162,7 @@
       "16": "1rem",
       "18": "1.125rem",
       "20": "1.25rem",
+      "22": "1.375rem",
       "24": "1.5rem",
       "28": "1.75rem",
       "32": "2rem",
@@ -167,6 +176,138 @@
     },
     "letter-spacing": {
       "sm": "0.5px"
+    },
+    "typography": {
+      "preset": {
+        "001": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+        },
+        "002": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.2857 var(--eds-font-family-primary)"
+        },
+        "003": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+        },
+        "004": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+        },
+        "005": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+        },
+        "006": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+        },
+        "007": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+        },
+        "008": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+        },
+        "009": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+        },
+        "010": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+        },
+        "011": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+        },
+        "012": {
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+        },
+        "secondary": {
+          "001": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+          },
+          "002": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+          },
+          "003": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+          },
+          "004": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)"
+          },
+          "005": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)"
+          },
+          "006": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)"
+          },
+          "007": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)"
+          },
+          "008": {
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)"
+          },
+          "mobile": {
+            "001": {
+              "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)",
+              "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+            },
+            "002": {
+              "light": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)",
+              "@": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+            },
+            "003": {
+              "light": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)",
+              "@": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+            }
+          }
+        },
+        "mobile": {
+          "001": {
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
+            "bold": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+          },
+          "002": {
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)",
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)",
+            "bold": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+          },
+          "003": {
+            "light": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
+            "@": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
+            "bold": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+          }
+        }
+      }
     },
     "z-index": {
       "0": "0",
@@ -201,6 +342,7 @@
           "brand": {
             "primary": {
               "default": "#F0F0FC",
+              "subtle": "#F0F0FC",
               "strong": {
                 "@": "#6B65E2",
                 "hover": "#3E42B1"
@@ -663,6 +805,38 @@
           },
           "label": "#383C43"
         },
+        "link": {
+          "brand": {
+            "text": {
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "text-decoration": {
+              "@": "var(--eds-theme-color-border-link-brand)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "background": {
+              "focus": "var(--eds-theme-color-border-link-brand)"
+            }
+          },
+          "neutral": {
+            "text": {
+              "@": "var(--eds-theme-color-text-link-neutral)",
+              "hover": "var(--eds-theme-color-text-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "text-decoration": {
+              "@": "var(--eds-theme-color-border-link-neutral)",
+              "hover": "var(--eds-theme-color-border-link-brand)",
+              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
+            },
+            "background": {
+              "focus": "var(--eds-theme-color-border-link-neutral)"
+            }
+          }
+        },
         "modal": {
           "brand": {
             "header": {
@@ -689,19 +863,159 @@
         },
         "toggle": {
           "on": {
-            "background": "#6B65E2"
+            "background": "var(--eds-theme-color-background-brand-primary-strong)"
           },
           "off": {
-            "background": "#878C90"
+            "background": "var(--eds-theme-color-icon-neutral-subtle)"
           },
           "disabled": {
-            "background": "#C0C4C8",
-            "text": "#C0C4C8"
+            "background": "var(--eds-theme-color-icon-disabled)",
+            "text": "var(--eds-theme-color-text-disabled)"
           },
           "primary": {
-            "text": "#383C43"
+            "text": "var(--eds-theme-color-text-neutral-default)"
           },
-          "thumb": "#FFFFFF"
+          "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
+        }
+      },
+      "typography": {
+        "headline": {
+          "lg": {
+            "@": "var(--eds-typography-preset-001-light)",
+            "bold": {
+              "@": "var(--eds-typography-preset-001)",
+              "mobile": "var(--eds-typography-preset-mobile-001)"
+            },
+            "mobile": "var(--eds-typography-preset-mobile-001-light)"
+          },
+          "md": {
+            "@": "var(--eds-typography-preset-002-light)",
+            "bold": {
+              "@": "var(--eds-typography-preset-002)",
+              "mobile": "var(--eds-typography-preset-mobile-002)"
+            },
+            "mobile": "var(--eds-typography-preset-mobile-002-light)"
+          },
+          "sm": {
+            "@": "var(--eds-typography-preset-003-light)",
+            "bold": {
+              "@": "var(--eds-typography-preset-003)",
+              "mobile": "var(--eds-typography-preset-mobile-003)"
+            },
+            "mobile": "var(--eds-typography-preset-mobile-003-light)"
+          },
+          "secondary": {
+            "lg": {
+              "@": "var(--eds-typography-preset-secondary-001-light)",
+              "bold": "var(--eds-typography-preset-secondary-001)"
+            },
+            "md": {
+              "@": "var(--eds-typography-preset-secondary-002-light)",
+              "bold": "var(--eds-typography-preset-secondary-002)"
+            },
+            "sm": {
+              "@": "var(--eds-typography-preset-secondary-003-light)",
+              "bold": "var(--eds-typography-preset-secondary-003)"
+            }
+          }
+        },
+        "title": {
+          "lg": {
+            "@": "var(--eds-typography-preset-004)",
+            "bold": "var(--eds-typography-preset-004-bold)"
+          },
+          "md": {
+            "@": "var(--eds-typography-preset-004)",
+            "bold": "var(--eds-typography-preset-004-bold)"
+          },
+          "sm": {
+            "@": "var(--eds-typography-preset-005)",
+            "bold": "var(--eds-typography-preset-005-bold)"
+          },
+          "xs": {
+            "@": "var(--eds-typography-preset-007)",
+            "bold": "var(--eds-typography-preset-007-bold)"
+          }
+        },
+        "label": {
+          "lg": {
+            "subtle": "var(--eds-typography-preset-005)"
+          },
+          "md": {
+            "@": "var(--eds-typography-preset-007-bold)",
+            "subtle": "var(--eds-typography-preset-007)"
+          },
+          "sm": "var(--eds-typography-preset-009-bold)"
+        },
+        "body": {
+          "xl": "var(--eds-typography-preset-003-light)",
+          "lg": "var(--eds-typography-preset-004-light)",
+          "md": "var(--eds-typography-preset-005-light)",
+          "sm": "var(--eds-typography-preset-006-light)",
+          "xs": "var(--eds-typography-preset-008-light)"
+        },
+        "caption": {
+          "lg": {
+            "@": "var(--eds-typography-preset-006-light)",
+            "bold": "var(--eds-typography-preset-006)"
+          },
+          "md": {
+            "@": "var(--eds-typography-preset-008-light)",
+            "bold": "var(--eds-typography-preset-008)"
+          },
+          "sm": {
+            "@": "var(--eds-typography-preset-010-light)",
+            "bold": "var(--eds-typography-preset-010)"
+          }
+        },
+        "overline": {
+          "@": "var(--eds-typography-preset-011)",
+          "md": "var(--eds-typography-preset-011)",
+          "sm": "var(--eds-typography-preset-012)"
+        },
+        "callout": "var(--eds-typography-preset-002-light)",
+        "breadcrumb": "var(--eds-typography-preset-009)",
+        "button": {
+          "lg": "var(--eds-typography-preset-006)",
+          "md": "var(--eds-typography-preset-006)",
+          "label": {
+            "@": "var(--eds-typography-preset-006)",
+            "sm": "var(--eds-typography-preset-008-bold)"
+          }
+        },
+        "form": {
+          "label": "var(--eds-typography-preset-006)",
+          "input": "var(--eds-typography-preset-005-light)"
+        },
+        "link": {
+          "lg": "var(--eds-typography-preset-004)",
+          "md": "var(--eds-typography-preset-005)",
+          "sm": "var(--eds-typography-preset-007)",
+          "xs": "var(--eds-typography-preset-009)"
+        },
+        "tab": {
+          "lg": {
+            "@": "var(--eds-typography-preset-006-light)",
+            "active": "var(--eds-typography-preset-006)"
+          },
+          "sm": {
+            "@": "var(--eds-typography-preset-008-light)",
+            "active": "var(--eds-typography-preset-009)"
+          }
+        },
+        "tag": "var(--eds-typography-preset-009)"
+      },
+      "box": {
+        "button": {
+          "border": {
+            "radius": "4px"
+          }
+        },
+        "focus-ring": {
+          "outline": {
+            "width": "var(--eds-outline-width-sm)",
+            "offset": "var(--eds-outline-width-md)"
+          }
         }
       },
       "form": {
@@ -713,58 +1027,10 @@
       "size": {
         "slider": {
           "track": {
-            "height": "0.5rem"
+            "height": "var(--eds-size-1)"
           },
-          "thumb": "1.5rem"
+          "thumb": "var(--eds-size-3)"
         }
-      }
-    }
-  },
-  "legacy": {
-    "color": {
-      "gray": {
-        "50": "#F8F9FC",
-        "100": "#EBEBEC",
-        "200": "#D8D8D9",
-        "300": "#C5C5C6",
-        "500": "#9F9FA0",
-        "700": "#78797A",
-        "1000": "#3F4041"
-      },
-      "black": "#2C2D2E",
-      "red": {
-        "100": "#F7DDDD",
-        "200": "#F25252"
-      },
-      "green": {
-        "100": "#E1F0E7",
-        "200": "#6CC188",
-        "300": "#457B57"
-      },
-      "yellow": {
-        "200": "#FFC55B",
-        "300": "#A46900",
-        "400": "#644C1F"
-      },
-      "purple": {
-        "200": "#7686D3",
-        "300": "#5761BA",
-        "400": "#32417C"
-      }
-    },
-    "size": {
-      "font": {
-        "h1": "1.5rem",
-        "h2": "1.125rem",
-        "body": "1rem",
-        "sm": "0.875rem",
-        "xs": "0.75rem"
-      },
-      "line-height": {
-        "h1": "2rem",
-        "body": "1.5rem",
-        "sm": "1.25rem",
-        "xs": "1rem"
       }
     }
   }

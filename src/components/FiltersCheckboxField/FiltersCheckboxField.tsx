@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
 import Fieldset from '../Fieldset';
-import FieldsetLegend from '../FieldsetLegend';
 import styles from './FiltersCheckboxField.module.css';
 
 export type Props = {
@@ -40,7 +39,7 @@ export const FiltersCheckboxField = ({
   return (
     <Fieldset className={componentClassName}>
       {legend && (
-        <FieldsetLegend
+        <Fieldset.Legend
           className={styles['filters-fieldset__legend']}
           text={legend}
         />
