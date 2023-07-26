@@ -2,11 +2,9 @@ import React from 'react';
 
 import {
   Breadcrumbs,
-  BreadcrumbsItem,
   Button,
   Card,
   Grid,
-  GridItem,
   Heading,
   Hr,
   Icon,
@@ -15,7 +13,6 @@ import {
   Section,
   Text,
   TimelineNav,
-  TimelineNavPanel,
 } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import ButtonActionCalloutCard from '../../recipes/ButtonActionCalloutCard';
@@ -34,8 +31,8 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate" mentoringIsActive>
       <Breadcrumbs className="!mb-4">
-        <BreadcrumbsItem href="#" text="My Courses" />
-        <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
+        <Breadcrumbs.Item href="#" text="My Courses" />
+        <Breadcrumbs.Item href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
       <PageHeader
         headingSize="h3"
@@ -48,7 +45,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         title="Feudal Honor Codes and Values"
       />
       <TimelineNav activeIndex={activeIndex}>
-        <TimelineNavPanel title="Overview" variant="success">
+        <TimelineNav.Panel title="Overview" variant="success">
           <Heading
             as="h2"
             className="!mb-8"
@@ -210,9 +207,9 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               </Card.Body>
             </Card>
           </Section>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
+        <TimelineNav.Panel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section
             description={
               <Text as="p" className={styles['project-overview__text']}>
@@ -276,30 +273,30 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </Heading>
 
             <Grid className="!mb-8">
-              <GridItem>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
+              </Grid.Item>
             </Grid>
 
             <Heading
@@ -312,36 +309,36 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </Heading>
 
             <Grid className="!mb-8">
-              <GridItem>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <Link href="#">This is a link</Link>
                 <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
                 </Text>
-              </GridItem>
+              </Grid.Item>
             </Grid>
             <Hr className="!mt-12" />
           </Section>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
+        <TimelineNav.Panel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
               <Text as="p" className={styles['project-overview__text']}>
@@ -358,8 +355,8 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               nisi ut aliquip ex
             </Text>
           </Section>
-        </TimelineNavPanel>
-        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
+        </TimelineNav.Panel>
+        <TimelineNav.Panel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
               <Text as="p" className={styles['project-overview__text']}>
@@ -376,8 +373,8 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               nisi ut aliquip ex
             </Text>
           </Section>
-        </TimelineNavPanel>
-        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
+        </TimelineNav.Panel>
+        <TimelineNav.Panel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
               <Text as="p" className={styles['project-overview__text']}>
@@ -394,7 +391,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               nisi ut aliquip ex
             </Text>
           </Section>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
       </TimelineNav>
     </PageShell>
   );

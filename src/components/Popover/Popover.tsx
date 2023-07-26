@@ -138,23 +138,25 @@ const PopoverContent = ({
   };
 
   const componentClassName = clsx(styles['popover-content'], className);
-
-  return (
-    <>
-      {createPortal(
-        <HeadlessPopover.Panel
-          {...allProps}
-          as="article"
-          className={componentClassName}
-        >
-          <PopoverContainer className={bodyClassName}>
-            {children as React.ReactNode}
-          </PopoverContainer>
-        </HeadlessPopover.Panel>,
-        document.body,
-      )}
-    </>
-  );
+  if (typeof document !== 'undefined') {
+    return (
+      <>
+        {createPortal(
+          <HeadlessPopover.Panel
+            {...allProps}
+            as="article"
+            className={componentClassName}
+          >
+            <PopoverContainer className={bodyClassName}>
+              {children as React.ReactNode}
+            </PopoverContainer>
+          </HeadlessPopover.Panel>,
+          document.body,
+        )}
+      </>
+    );
+  }
+  return null;
 };
 
 /**

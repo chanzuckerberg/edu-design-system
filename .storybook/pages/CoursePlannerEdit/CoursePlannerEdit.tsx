@@ -8,13 +8,9 @@ import {
   Button,
   ButtonGroup,
   Card,
-  CardBody,
-  CardFooter,
   DataBar,
   DragDrop,
-  DragDropContainerHeader,
   Grid,
-  GridItem,
   Heading,
   HorizontalStepper,
   Icon,
@@ -26,14 +22,7 @@ import {
   PageHeader,
   Panel,
   Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
   Text,
-  Toolbar,
-  ToolbarItem,
 } from '../../../src';
 
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
@@ -317,7 +306,7 @@ export const TableCard = ({
 
   return (
     <Card className={componentClassName} {...other}>
-      <CardBody>
+      <Card.Body>
         <Heading
           as="h2"
           className="mb-4"
@@ -327,28 +316,28 @@ export const TableCard = ({
           {title}
         </Heading>
         <Table className={styles['table-card__table']} title={title}>
-          <TableHeader>
-            <TableRow variant="header">
+          <Table.Header>
+            <Table.Row variant="header">
               {tableColumns.map((item, index) => {
                 return (
-                  <TableHeaderCell
+                  <Table.HeaderCell
                     className={styles['table-card__table-header-cell']}
                     key={'table-header-cell-' + item.title}
                   >
                     {item.title}
-                  </TableHeaderCell>
+                  </Table.HeaderCell>
                 );
               })}
-            </TableRow>
-          </TableHeader>
-          <TableBody>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
             {tableRows.map((item) => {
               return (
-                <TableRow key={`table-row-${item.value1}`}>
-                  <TableHeaderCell variant="body">
+                <Table.Row key={`table-row-${item.value1}`}>
+                  <Table.HeaderCell variant="body">
                     {item.value1}
-                  </TableHeaderCell>
-                  <TableCell>
+                  </Table.HeaderCell>
+                  <Table.Cell>
                     <NumberIconList>
                       {item.projects.map((item, index) => {
                         return (
@@ -363,16 +352,16 @@ export const TableCard = ({
                         );
                       })}
                     </NumberIconList>
-                  </TableCell>
-                </TableRow>
+                  </Table.Cell>
+                </Table.Row>
               );
             })}
-          </TableBody>
+          </Table.Body>
         </Table>
-      </CardBody>
-      <CardFooter>
+      </Card.Body>
+      <Card.Footer>
         <Button status="neutral">{buttonContent}</Button>
-      </CardFooter>
+      </Card.Footer>
     </Card>
   );
 };
@@ -430,42 +419,38 @@ export const CoursePlannerEdit = () => {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       emptyContent: container1EmptyContent(),
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Available projects
-              </Heading>
-            </ToolbarItem>
-            <ToolbarItem align="right">
+        <DragDrop.ContainerHeader>
+          <div className="mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Available projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </ToolbarItem>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
     'container-2': {
       itemIds: [],
       emptyContent: container2EmptyContent(),
       header: (
-        <DragDropContainerHeader>
-          <Toolbar className="!mb-4" variant="bare">
-            <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="neutral-strong">
-                Planned projects
-              </Heading>
-            </ToolbarItem>
-            <ToolbarItem align="right">
+        <DragDrop.ContainerHeader>
+          <div className="mb-4 flex items-center gap-4">
+            <Heading as="h2" size="title-sm" variant="neutral-strong">
+              Planned projects
+            </Heading>
+            <div className="ml-auto">
               <Button variant="icon">
                 <Icon name="add" purpose="decorative" />
                 Add project
               </Button>
-            </ToolbarItem>
-          </Toolbar>
-        </DragDropContainerHeader>
+            </div>
+          </div>
+        </DragDrop.ContainerHeader>
       ),
     },
   });
@@ -659,22 +644,22 @@ export const CoursePlannerEdit = () => {
               </Card.Body>
             </CardWithNotification>
             <Grid className="!mb-6" variant="1-2-1up">
-              <GridItem>
+              <Grid.Item>
                 <TableCard
                   buttonContent="View all Cognitive Skills"
                   tableColumns={CognitiveSkillColumns}
                   tableRows={CognitiveSkillRows}
                   title="Cognitive skills coverage"
                 />
-              </GridItem>
-              <GridItem>
+              </Grid.Item>
+              <Grid.Item>
                 <TableCard
                   buttonContent="View all Standards"
                   tableColumns={StandardsColumns}
                   tableRows={StandardsRows}
                   title="Standards coverage"
                 />
-              </GridItem>
+              </Grid.Item>
             </Grid>
           </LayoutSection>
         </Layout>

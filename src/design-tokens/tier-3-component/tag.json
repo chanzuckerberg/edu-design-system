@@ -1,0 +1,11 @@
+{
+  "eds": {
+    "theme": {
+      "typography": {
+        "tag": {
+          "value": "var(--eds-typography-preset-009)"
+        }
+      }
+    }
+  }
+}

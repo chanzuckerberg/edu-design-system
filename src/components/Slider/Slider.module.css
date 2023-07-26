@@ -47,8 +47,8 @@
 .slider__input:disabled {
   --slider-track-background: linear-gradient(
     /* fill from left to right */ to right,
-    /* fill color */ var(--eds-theme-color-background-disabled)
-      /* percent to fill */ calc(var(--ratio) * 100%),
+    /* fill color */ var(--eds-theme-color-background-disabled) /* percent to fill */
+      calc(var(--ratio) * 100%),
     /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
       /* don't blend the colors */ 0
   );
@@ -81,14 +81,12 @@
   height: var(--eds-theme-size-slider-thumb);
   width: var(--eds-theme-size-slider-thumb);
   background: var(--eds-theme-color-text-neutral-default-inverse);
-  border: var(--eds-border-width-md) solid
-    var(--eds-theme-color-border-neutral-default);
+  border: var(--eds-border-width-md) solid var(--eds-theme-color-border-neutral-default);
   border-radius: var(--eds-border-radius-full);
 
-  margin-top: calc(
-    var(--eds-theme-size-slider-track-height) / 2 -
-      var(--eds-theme-size-slider-thumb) / 2
-  ); /* Centers thumb on the track */
+  /* Centers thumb on the track */
+  /* prettier-ignore */
+  margin-top: calc(var(--eds-theme-size-slider-track-height) / 2 - var(--eds-theme-size-slider-thumb) / 2);
 }
 .slider__input:not(:disabled)::-webkit-slider-thumb {
   cursor: grab;
@@ -116,8 +114,7 @@
   height: var(--eds-theme-size-slider-thumb);
   width: var(--eds-theme-size-slider-thumb);
   background: var(--eds-theme-color-text-neutral-default-inverse);
-  border: var(--eds-border-width-md) solid
-    var(--eds-theme-color-border-neutral-default);
+  border: var(--eds-border-width-md) solid var(--eds-theme-color-border-neutral-default);
   border-radius: var(--eds-border-radius-full);
 }
 .slider__input:not(:disabled)::-moz-range-thumb {
@@ -152,7 +149,7 @@
  * Slider Marker 
  */
 .slider__marker {
-  @mixin eds-theme-typography-caption-sm;
+  font: var(--eds-theme-typography-caption-sm);
 
   /* Centers the text to the marker location */
   width: 0px;
@@ -176,6 +173,17 @@
  */
 .slider__marker:not(:first-child):not(:last-child) {
   text-align: center;
+}
+
+/**
+ * Use this proxy element to calculate runtime sizing of the rendered thumb
+ * which is hidden by the shadow dom
+ */
+.slider__thumb-proxy {
+  position: absolute;
+  visibility: hidden;
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
 }
 
 /**

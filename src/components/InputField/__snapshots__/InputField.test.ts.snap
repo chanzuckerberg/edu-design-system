@@ -9,11 +9,10 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r0:"
       >
         Default input field
-         
       </label>
     </div>
     <div
@@ -43,14 +42,13 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="input-field__overline input-field__overline--disabled"
+      class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label input-field__label--disabled"
         for=":r6:"
       >
         Disabled input field
-         
       </label>
     </div>
     <div
@@ -94,14 +92,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </p>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1e:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -126,14 +123,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </div>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1g:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -160,14 +156,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </p>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1i:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -185,14 +180,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </div>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1k:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -298,11 +292,10 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r4:"
       >
         Error input field
-         
       </label>
     </div>
     <div
@@ -334,7 +327,7 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
           error
         </title>
         <path
-          d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+          d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
         />
       </svg>
       This is a fieldnote with an error.
@@ -365,11 +358,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":ru:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -402,7 +394,7 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
             error
           </title>
           <path
-            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
         fieldNote text
@@ -413,11 +405,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r10:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -449,7 +440,7 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
             error
           </title>
           <path
-            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
         fieldNote text
@@ -463,11 +454,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r12:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -487,11 +477,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r14:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -540,7 +529,7 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
             error
           </title>
           <path
-            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
         fieldNote text
@@ -577,7 +566,7 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
             error
           </title>
           <path
-            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
         fieldNote text
@@ -626,11 +615,10 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":rc:"
       >
         Input field with button inside
-         
       </label>
     </div>
     <div
@@ -679,11 +667,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":re:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -710,11 +697,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":rg:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -743,11 +729,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":ri:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -767,11 +752,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":rk:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -872,11 +856,10 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r2:"
       >
         Default input field
-         
       </label>
     </div>
     <div
@@ -939,11 +922,10 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r8:"
       >
         Input field with fieldNote
-         
       </label>
       <span
         class="text text--sm input-field__required-text"
@@ -995,11 +977,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r1u:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1032,11 +1013,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r20:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1071,11 +1051,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r22:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1101,11 +1080,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r24:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1247,11 +1225,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r2e:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1290,7 +1267,7 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
             error
           </title>
           <path
-            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
         fieldNote text
@@ -1301,11 +1278,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r2g:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1343,7 +1319,7 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
             error
           </title>
           <path
-            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
         fieldNote text
@@ -1354,17 +1330,16 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
     </p>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r2i:"
         >
           Label text
-           
         </label>
         <span
-          class="text text--sm input-field__required-text"
+          class="text text--sm input-field__required-text input-field__required-text--disabled"
         >
           Required
         </span>
@@ -1392,17 +1367,16 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
     </div>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r2k:"
         >
           Label text
-           
         </label>
         <span
-          class="text text--sm input-field__required-text"
+          class="text text--sm input-field__required-text input-field__required-text--disabled"
         >
           Required
         </span>

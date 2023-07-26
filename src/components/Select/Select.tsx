@@ -247,10 +247,12 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
     ...popperAttributes,
     ...other,
   };
-
-  return (
-    <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
-  );
+  if (typeof document !== 'undefined') {
+    return (
+      <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
+    );
+  }
+  return null;
 };
 
 type SelectOptionProps = {

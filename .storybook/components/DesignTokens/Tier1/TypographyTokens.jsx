@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridItem, Section } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -11,7 +11,7 @@ export class Tier1TypographyTokens extends Component {
           <Grid>
             {filterTokens(`eds-font-family`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       fontFamily: `var(${listItem.name})`,
@@ -20,7 +20,7 @@ export class Tier1TypographyTokens extends Component {
                     value={listItem.value}
                     variant="typography-title"
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -30,7 +30,7 @@ export class Tier1TypographyTokens extends Component {
           <Grid>
             {filterTokens(`eds-font-size`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       fontSize: `var(${listItem.name})`,
@@ -39,7 +39,7 @@ export class Tier1TypographyTokens extends Component {
                     value={listItem.value}
                     variant="typography-title"
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>
@@ -49,7 +49,7 @@ export class Tier1TypographyTokens extends Component {
           <Grid>
             {filterTokens(`eds-font-weight`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       fontWeight: `var(${listItem.name})`,
@@ -58,7 +58,7 @@ export class Tier1TypographyTokens extends Component {
                     value={listItem.value}
                     variant="typography-title"
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>

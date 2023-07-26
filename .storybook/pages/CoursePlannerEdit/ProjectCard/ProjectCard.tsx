@@ -2,14 +2,7 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
 
-import {
-  Card,
-  CardHeader,
-  Heading,
-  Icon,
-  Menu,
-  NumberIcon,
-} from '../../../../src';
+import { Card, Heading, Icon, Menu, NumberIcon } from '../../../../src';
 import type { HeadingElement } from '../../../../src/components/Heading';
 
 import type { IconName } from '../../../../src/components/Icon';
@@ -96,7 +89,7 @@ export const ProjectCard = ({
       orientation="horizontal"
       {...other}
     >
-      <CardHeader className={styles['project-card__header']}>
+      <Card.Header className={styles['project-card__header']}>
         {number && numberAriaLabel && (
           <NumberIcon
             aria-label={numberAriaLabel}
@@ -105,12 +98,12 @@ export const ProjectCard = ({
             size="sm"
           />
         )}
-      </CardHeader>
+      </Card.Header>
       <Card.Body className={styles['project-card__body']}>
         <Heading
           as={headingAs}
           className={styles['project-card__title']}
-          size="body-sm"
+          size="title-xs"
           variant="neutral-strong"
         >
           {title}
