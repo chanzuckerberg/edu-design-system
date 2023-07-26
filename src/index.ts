@@ -4,7 +4,6 @@ import './tokens-dist/css/variables.css';
 export { default as Accordion } from './components/Accordion';
 export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
-export { default as Banner } from './components/Banner';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as Button } from './components/Button';
 export { default as ButtonDropdown } from './components/ButtonDropdown';
@@ -70,4 +69,3 @@ export { default as Tooltip } from './components/Tooltip';
  * Prop types, exported for convenience
  */
 export type { IconName } from './components/Icon';
-export type { BannerProps } from './components/Banner';
