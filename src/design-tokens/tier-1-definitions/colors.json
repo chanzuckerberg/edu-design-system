@@ -75,62 +75,6 @@
           "700": { "value": "#BD0044" },
           "800": { "value": "#8F0134" }
         }
-      },
-      "highlight": {
-        "100": {
-          "value": "#FF9FEC",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
-        },
-        "200": {
-          "value": "#FFBEAA",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
-        },
-        "300": {
-          "value": "#FCFF00",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
-        },
-        "400": {
-          "value": "#9DFFA4",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
-        },
-        "500": {
-          "value": "#00F1FF",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
-        },
-        "600": {
-          "value": "#CFC9FF",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
-        }
-      },
-      "info": {
-        "100": {
-          "value": "#F1F9FF",
-          "comment": "legacy token, will be removed"
-        },
-        "200": {
-          "value": "#B0D5FF",
-          "comment": "legacy token, will be removed"
-        },
-        "300": {
-          "value": "#7FB9FD",
-          "comment": "legacy token, will be removed"
-        },
-        "400": {
-          "value": "#5CA7FF",
-          "comment": "legacy token, will be removed"
-        },
-        "500": {
-          "value": "#328EFB",
-          "comment": "legacy token, will be removed"
-        },
-        "600": {
-          "value": "#1977CD",
-          "comment": "legacy token, will be removed"
-        },
-        "700": {
-          "value": "#0563B8",
-          "comment": "legacy token, will be removed"
-        }
       }
     }
   }

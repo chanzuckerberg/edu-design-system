@@ -1,5 +1,3 @@
-@import '../../../src/design-tokens/mixins.css';
-
 .token-specimen {
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   box-shadow: 1px solid var(--eds-box-shadow-md);
