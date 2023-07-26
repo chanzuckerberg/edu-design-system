@@ -223,8 +223,6 @@
   --eds-theme-color-background-grade-stop-default: #D41E52;
   --eds-theme-color-background-grade-stop-subtle: #FFF0F4;
   --eds-theme-color-background-disabled: #C0C4C8;
-  --eds-theme-color-border-link-neutral: #21272D; /* @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead */
-  --eds-theme-color-border-link-brand: #5751D2; /* @deprecated This token is deprecated. Please use eds-theme-color-link-brand-background-focus, eds-theme-color-link-brand-text-decoration, eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead */
   --eds-theme-color-border-neutral-subtle: #E7E8EA;
   --eds-theme-color-border-neutral-subtle-hover: #C0C4C8;
   --eds-theme-color-border-neutral-default: #C0C4C8;
@@ -278,8 +276,6 @@
   --eds-theme-color-text-neutral-default-inverse: #FFFFFF;
   --eds-theme-color-text-neutral-strong: #21272D;
   --eds-theme-color-text-neutral-subtle: #5D6369;
-  --eds-theme-color-text-link-neutral: #21272D; /* @deprecated This token is deprecated. Please use eds-theme-color-link-neutral-text-decoration or eds-theme-color-link-neutral-background instead. */
-  --eds-theme-color-text-link-brand: #5751D2; /* @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-hover or eds-theme-color-link-neutral-text-hover instead. */
   --eds-theme-color-text-utility-success: #007249;
   --eds-theme-color-text-utility-warning: #AC3400;
   --eds-theme-color-text-utility-error: #BD0044;
