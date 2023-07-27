@@ -165,18 +165,76 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
 };
 
 export const Default: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+// props: {aria-label: 'Favorite Animal'}
+function InteractiveExampleUsingChildren(props: Props) {
+  const { variant, optionsAlign, optionsClassName, disabled, value } = props;
+  const compact = variant === 'compact';
+
+  const [selectedOption, setSelectedOption] = React.useState<
+    SelectOption | undefined
+  >(value);
+
+  return (
+    <div className="mb-10 p-8">
+      <Select
+        aria-label={props['aria-label']}
+        className={clsx(!compact && 'w-60')}
+        data-testid="dropdown"
+        disabled={disabled}
+        onChange={setSelectedOption}
+        optionsAlign={optionsAlign}
+        optionsClassName={optionsClassName}
+        value={selectedOption}
+        variant={variant}
+      >
+        {props.labelComponent}
+        <Select.Button>{selectedOption?.label || 'Select'}</Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </Select>
+    </div>
+  );
+}`,
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
   ),
 };
 
 export const Disabled: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: '// refer to "Default" story code',
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren aria-label="Favorite Animal" disabled />
   ),
 };
 
 export const DefaultWithVisibleLabel: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+// refer to "Default" story code with:
+// props: {aria-label: 'Favorite Animal', labelComponent: <Select.Label>Favorite Animal</Select.Label>}`,
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
@@ -186,6 +244,13 @@ export const DefaultWithVisibleLabel: StoryObj = {
 };
 
 export const Compact: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: '// refer to "Default" story code',
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
@@ -195,12 +260,26 @@ export const Compact: StoryObj = {
 };
 
 export const NoVisibleLabel: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: '// refer to "Default" story code',
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
   ),
 };
 
 export const OptionsRightAligned: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: '// refer to "Default" story code',
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
@@ -212,6 +291,13 @@ export const OptionsRightAligned: StoryObj = {
 };
 
 export const OptionsLeftAligned: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: '// refer to "Default" story code',
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
@@ -235,11 +321,23 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
     chromatic: {
       diffIncludeAntiAliasing: false,
       diffThreshold: 0.72,
+      docs: {
+        source: {
+          code: '// refer to "Default" story code',
+        },
+      },
     },
   },
 };
 
 export const UsingChildrenProp: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: '// refer to "DefaultWithVisibleLabel" story code',
+      },
+    },
+  },
   render: () => (
     <InteractiveExampleUsingChildren
       labelComponent={<Select.Label>Favorite Animal</Select.Label>}
@@ -248,6 +346,62 @@ export const UsingChildrenProp: StoryObj = {
 };
 
 export const UsingFunctionChildrenProp: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+function InteractiveExampleUsingFunctionChildren() {
+  const [selectedOption, setSelectedOption] =
+    React.useState<(typeof exampleOptions)[0]>();
+
+  return (
+    <div className="mb-10 p-8">
+      <Select
+        aria-label="Favorite Animal"
+        as="div"
+        className="w-60"
+        data-testid="dropdown"
+        onChange={setSelectedOption}
+        value={selectedOption}
+      >
+        {({ open }) => (
+          <>
+            <Select.Button
+              // Because we're using a render prop to completely control the styling and icon of the
+              // button, we need to configure this component to render as a Fragment. Otherwise we'd
+              // render two, nested buttons.
+              as={React.Fragment}
+            >
+              {() => (
+                <button
+                  aria-expanded={open}
+                  className={styles['function-children__button']}
+                >
+                  {selectedOption?.label || 'Select'}
+                  <Icon
+                    className="ml-4"
+                    name="filter-list"
+                    purpose="decorative"
+                  />
+                </button>
+              )}
+            </Select.Button>
+            <Select.Options>
+              {exampleOptions.map((option) => (
+                <Select.Option key={option.key} value={option}>
+                  {option.label}
+                </Select.Option>
+              ))}
+            </Select.Options>
+          </>
+        )}
+      </Select>
+    </div>
+  );
+}`,
+      },
+    },
+  },
   render: () => <InteractiveExampleUsingFunctionChildren />,
 };
 
@@ -258,6 +412,15 @@ export const OpenByDefault: StoryObj = {
 };
 
 export const WithSelectedOption: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+// refer to "Default" story code with:
+// props: {aria-label: 'Favorite Animal', labelComponent: <Select.Label>Favorite Animal</Select.Label>, value}`,
+      },
+    },
+  },
   args: {
     value: exampleOptions[0],
   },

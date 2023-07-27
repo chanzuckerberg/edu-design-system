@@ -73,6 +73,14 @@ export const NoVisibleLabel: StoryObj<Args> = {
 };
 
 export const InputWithin: StoryObj<Args> = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+  },
   render: () => (
     <InputField
       inputWithin={

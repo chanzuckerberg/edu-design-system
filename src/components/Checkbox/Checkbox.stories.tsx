@@ -153,6 +153,13 @@ export const LongLabels = {
 };
 
 export const WithCustomPositioning = {
+  parameters: {
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+  },
   render: () => (
     <div className="flex items-center">
       <Checkbox.Label className="mr-2" htmlFor="test">
