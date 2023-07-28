@@ -1,7 +1,11 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
+import { Filters } from './Filters';
+import { StackedCardsToTable } from './StackedCardsToTable';
 import { Table, type SortDirectionsType } from './Table';
+import { chromaticViewports } from '../../../src/util/viewports';
+
 import styles from './Table.stories.module.css';
 
 export default {
@@ -352,4 +356,25 @@ export const SortableInteractive: StoryObj<Args> = {
       </Table>
     );
   },
+};
+
+export const FiltersInteractive: StoryObj<Args> = {
+  parameters: {
+    badges: ['1.1', 'implementationExample'],
+  },
+  render: () => <Filters />,
+};
+
+export const StackedCardsExample: StoryObj<Args> = {
+  parameters: {
+    badges: ['1.1', 'implementationExample'],
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.chromebook,
+      ],
+    },
+  },
+  render: () => <StackedCardsToTable />,
 };

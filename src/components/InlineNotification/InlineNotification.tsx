@@ -46,7 +46,6 @@ type Props = {
   inactive?: boolean;
   /**
    * Toggles notification that fills the full width of its container.
-   * Used for CardWithNotification recipe.
    */
   isFullWidth?: boolean;
   /**
