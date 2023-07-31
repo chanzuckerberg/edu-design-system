@@ -13,6 +13,10 @@ export type UserData = {
    */
   id?: string | number;
   /**
+   * The display shortcut for the user name. Can be initials, emoji, or other text symbols (recommended max: 2)
+   */
+  displayName?: string;
+  /**
    * Additional data for an attached user (email, etc.)
    */
   [k: string]: string | number | boolean | undefined;
@@ -56,7 +60,7 @@ function getInitials(fromName: string): string {
    * - User's name has a middle name or initial: John C. Smith
    * - User's Name has dashes in it
    */
-  return fromName
+  const initials = fromName
     .split(' ')
     .map((part) => part[0])
     .reduce(
@@ -65,6 +69,7 @@ function getInitials(fromName: string): string {
       '',
     )
     .toUpperCase();
+  return initials;
 }
 
 /**
@@ -94,6 +99,13 @@ export const Avatar = ({
     ariaLabel ??
     `Avatar for ${user ? '' : 'unknown '}user ${user?.fullName || ''}`;
 
+  // use the display name if prop is provided. Otherwise, try to calculate initials
+  let avatarDisplayName = user ? getInitials(user.fullName) : '??';
+
+  if (user?.displayName) {
+    avatarDisplayName = user.displayName;
+  }
+
   return (
     <div
       aria-label={descriptiveLabel}
@@ -101,11 +113,12 @@ export const Avatar = ({
       role="img"
       {...other}
     >
-      {variant === 'initials' && (user ? getInitials(user.fullName) : '??')}
+      {variant === 'initials' && avatarDisplayName}
       {variant === 'icon' && <Icon name="person" purpose="decorative" />}
-      {variant === 'image' && (
+      {variant === 'image' && src && (
         <img alt="user" className={styles['avatar__image']} src={src} />
       )}
+      {variant === 'image' && !src && avatarDisplayName}
     </div>
   );
 };

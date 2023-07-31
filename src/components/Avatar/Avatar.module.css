@@ -16,6 +16,8 @@
 
   color: var(--eds-theme-color-text-neutral-strong);
   background-color: var(--eds-theme-color-background-neutral-medium);
+
+  white-space: nowrap;
 }
 
 .avatar:focus-visible {
