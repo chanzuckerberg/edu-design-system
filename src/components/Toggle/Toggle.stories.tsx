@@ -53,20 +53,27 @@ export const WithoutLabel: StoryObj<Args> = {
   },
 };
 
-const CustomPositionExample = () => {
-  const [selected, setSelected] = useState(false);
-  return (
-    <Toggle.Wrapper as="div" className="flex flex-col items-center">
-      <Toggle.Label>Custom positioned label</Toggle.Label>
-      <Toggle.Button
-        checked={selected}
-        onChange={() => {
-          setSelected(!selected);
-        }}
-      />
-    </Toggle.Wrapper>
-  );
-};
 export const CustomPositioning: StoryObj<Args> = {
-  render: () => <CustomPositionExample />,
+  parameters: {
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+  },
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [selected, setSelected] = useState(false);
+    return (
+      <Toggle.Wrapper as="div" className="flex flex-col items-center">
+        <Toggle.Label>Custom positioned label</Toggle.Label>
+        <Toggle.Button
+          checked={selected}
+          onChange={() => {
+            setSelected(!selected);
+          }}
+        />
+      </Toggle.Wrapper>
+    );
+  },
 };

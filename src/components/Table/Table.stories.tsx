@@ -275,75 +275,81 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
   },
 };
 
-const SortableExample = () => {
-  const values = [
-    { col1: 'Value 1', col2: 'Value A' },
-    { col1: 'Value 3', col2: 'Value B' },
-    { col1: 'Value 2', col2: 'Value C' },
-    { col1: 'Value 4', col2: 'Value D' },
-  ];
-  const [sortDirection, setSortDirection] =
-    useState<SortDirectionsType>('default');
-  const onSortClick = () => {
-    if (sortDirection === 'descending') {
-      setSortDirection('default');
-    }
-    if (sortDirection === 'default') {
-      setSortDirection('ascending');
-    }
-    if (sortDirection === 'ascending') {
-      setSortDirection('descending');
-    }
-  };
-  const sortedValues = values.slice().sort((a, b) => {
-    if (sortDirection === 'default') {
-      if (a.col2 < b.col2) {
-        return -1;
-      } else {
-        return 1;
-      }
-    }
-    if (sortDirection === 'ascending') {
-      if (a.col1 < b.col1) {
-        return -1;
-      } else {
-        return 1;
-      }
-    }
-    if (sortDirection === 'descending') {
-      if (b.col1 < a.col1) {
-        return -1;
-      } else {
-        return 1;
-      }
-    }
-    return 0;
-  });
-  return (
-    <Table>
-      <Table.Header>
-        <Table.Row variant="header">
-          <Table.HeaderCell
-            onSortClick={onSortClick}
-            sortDirection={sortDirection}
-          >
-            Sortable
-          </Table.HeaderCell>
-          <Table.HeaderCell>Not sortable</Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {sortedValues.map(({ col1, col2 }) => (
-          <Table.Row key={`row-${col1}-${col2}`}>
-            <Table.Cell>{col1}</Table.Cell>
-            <Table.Cell>{col2}</Table.Cell>
-          </Table.Row>
-        ))}
-      </Table.Body>
-    </Table>
-  );
-};
-
 export const SortableInteractive: StoryObj<Args> = {
-  render: () => <SortableExample />,
+  parameters: {
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+  },
+  render: () => {
+    const values = [
+      { col1: 'Value 1', col2: 'Value A' },
+      { col1: 'Value 3', col2: 'Value B' },
+      { col1: 'Value 2', col2: 'Value C' },
+      { col1: 'Value 4', col2: 'Value D' },
+    ];
+    const [sortDirection, setSortDirection] =
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      useState<SortDirectionsType>('default');
+    const onSortClick = () => {
+      if (sortDirection === 'descending') {
+        setSortDirection('default');
+      }
+      if (sortDirection === 'default') {
+        setSortDirection('ascending');
+      }
+      if (sortDirection === 'ascending') {
+        setSortDirection('descending');
+      }
+    };
+    const sortedValues = values.slice().sort((a, b) => {
+      if (sortDirection === 'default') {
+        if (a.col2 < b.col2) {
+          return -1;
+        } else {
+          return 1;
+        }
+      }
+      if (sortDirection === 'ascending') {
+        if (a.col1 < b.col1) {
+          return -1;
+        } else {
+          return 1;
+        }
+      }
+      if (sortDirection === 'descending') {
+        if (b.col1 < a.col1) {
+          return -1;
+        } else {
+          return 1;
+        }
+      }
+      return 0;
+    });
+    return (
+      <Table>
+        <Table.Header>
+          <Table.Row variant="header">
+            <Table.HeaderCell
+              onSortClick={onSortClick}
+              sortDirection={sortDirection}
+            >
+              Sortable
+            </Table.HeaderCell>
+            <Table.HeaderCell>Not sortable</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {sortedValues.map(({ col1, col2 }) => (
+            <Table.Row key={`row-${col1}-${col2}`}>
+              <Table.Cell>{col1}</Table.Cell>
+              <Table.Cell>{col2}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
+    );
+  },
 };
