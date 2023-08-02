@@ -1404,3 +1404,67 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<InputField /> TabularInput story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <table
+    class="table"
+  >
+    <thead>
+      <tr
+        class="table-row"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Label
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Field
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell flex items-center"
+        >
+          <label
+            class="label flex items-center"
+            for="field-1"
+            id="input-1"
+          >
+            Input One
+             
+          </label>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <div>
+            <div
+              class="input-field__body"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="redundant"
+                aria-labelledby="input-1"
+                class="input"
+                id="field-1"
+                placeholder="click the label to highlight field"
+                type="text"
+              />
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

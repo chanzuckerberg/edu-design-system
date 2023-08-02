@@ -480,6 +480,456 @@ exports[`<Table /> Default story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Table /> FiltersInteractive story renders snapshot 1`] = `
+<div
+  style="background-color: white;"
+>
+  <div>
+    <div>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 18h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1zm4 6h10c.55 0 1-.45 1-1s-.45-1-1-1H7c-.55 0-1 .45-1 1s.45 1 1 1z"
+          />
+        </svg>
+        Filters
+      </button>
+    </div>
+    <table
+      class="table"
+    >
+      <thead>
+        <tr
+          class="table-row table-row--header"
+        >
+          <th
+            class="table-header-cell w-1/4"
+          >
+            Food
+          </th>
+          <th
+            class="table-header-cell w-1/4 text-center"
+          >
+            Soup
+          </th>
+          <th
+            class="table-header-cell w-1/4 text-center"
+          >
+            Salad
+          </th>
+          <th
+            class="table-header-cell w-1/4 text-center"
+          >
+            Sandwich
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Cereal
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is soup
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is salad
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          />
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Fried Rice
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          />
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is salad
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          />
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Hot Dog
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          />
+          <td
+            class="table-cell text-center"
+          />
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is sandwich
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Mashed Potatoes
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is soup
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is salad
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          />
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Nigiri
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          />
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is salad
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is sandwich
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Oatmeal
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is soup
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          />
+          <td
+            class="table-cell text-center"
+          />
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Soup in Bread Bowl
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is soup
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          />
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is sandwich
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Sloppy Joe
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is soup
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is salad
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is sandwich
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Vanilla Soy Latte
+          </td>
+          <td
+            class="table-cell w-1/4 text-center"
+          >
+            <svg
+              class="icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                is soup
+              </title>
+              <path
+                d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+              />
+            </svg>
+          </td>
+          <td
+            class="table-cell text-center"
+          />
+          <td
+            class="table-cell text-center"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
 exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
 <div
   style="background-color: white;"
@@ -584,6 +1034,263 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       </tr>
     </tbody>
   </table>
+</div>
+`;
+
+exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
+<div
+  style="background-color: white;"
+>
+  <div>
+    <table
+      class="table"
+    >
+      <thead>
+        <tr
+          class="table-row table-row--header"
+        >
+          <th
+            class="table-header-cell"
+          >
+            Students
+          </th>
+          <th
+            class="table-header-cell"
+          >
+            Status
+          </th>
+          <th
+            class="table-header-cell"
+          >
+            Cog skill
+          </th>
+          <th
+            class="table-header-cell"
+          >
+            Time submitted
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Araya, Raquel
+          </td>
+          <td
+            class="table-cell"
+          >
+            Stop and Revise
+          </td>
+          <td
+            class="table-cell"
+          >
+            3
+          </td>
+          <td
+            class="table-cell"
+          >
+            2 hours ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Jesse Banet
+          </td>
+          <td
+            class="table-cell"
+          >
+            Stop and Revise
+          </td>
+          <td
+            class="table-cell"
+          >
+            1
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Julie Davis
+          </td>
+          <td
+            class="table-cell"
+          >
+            Working
+          </td>
+          <td
+            class="table-cell"
+          >
+            0
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Hussain, Adnan
+          </td>
+          <td
+            class="table-cell"
+          >
+            Review Feedback
+          </td>
+          <td
+            class="table-cell"
+          >
+            0
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Ilango, Megha
+          </td>
+          <td
+            class="table-cell"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table-cell"
+          >
+            3
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Jaffer, Arman
+          </td>
+          <td
+            class="table-cell"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table-cell"
+          >
+            1
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Kang, Michelle
+          </td>
+          <td
+            class="table-cell"
+          >
+            Review Feedback
+          </td>
+          <td
+            class="table-cell"
+          >
+            1
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Lewine, Chris
+          </td>
+          <td
+            class="table-cell"
+          >
+            Continue Working
+          </td>
+          <td
+            class="table-cell"
+          >
+            2
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+        <tr
+          class="table-row"
+        >
+          <td
+            class="table-cell"
+          >
+            Luo, Celia
+          </td>
+          <td
+            class="table-cell"
+          >
+            Review Feedback
+          </td>
+          <td
+            class="table-cell"
+          >
+            1
+          </td>
+          <td
+            class="table-cell"
+          >
+            3 days ago
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 

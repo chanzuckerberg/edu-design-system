@@ -3,6 +3,8 @@ import React from 'react';
 
 import { InputField } from './InputField';
 import Button from '../Button';
+import { Label } from '../Label/Label';
+import { Table } from '../Table/Table';
 
 export default {
   title: 'Components/InputField',
@@ -235,4 +237,40 @@ export const RequiredVariants: StoryObj<Args> = {
       disabledRules: ['color-contrast'],
     },
   },
+};
+
+export const TabularInput: StoryObj<Args> = {
+  parameters: {
+    badges: ['1.1', 'implementationExample'],
+  },
+  render: (args) => (
+    <Table>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell>Label</Table.HeaderCell>
+          <Table.HeaderCell>Field</Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell className="flex items-center">
+            <Label
+              className="flex items-center"
+              htmlFor="field-1"
+              id="input-1"
+              text="Input One"
+            />
+          </Table.Cell>
+          <Table.Cell>
+            <InputField
+              aria-label="redundant"
+              aria-labelledby="input-1"
+              id="field-1"
+              placeholder="click the label to highlight field"
+            />
+          </Table.Cell>
+        </Table.Row>
+      </Table.Body>
+    </Table>
+  ),
 };
