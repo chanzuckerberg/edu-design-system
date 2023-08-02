@@ -1,6 +1,0 @@
-@import '../../../src/design-tokens/mixins.css';
-
-.feedback-overview__card-header {
-  margin-bottom: var(--eds-size-1);
-  font: var(--eds-theme-typography-title-md);
-}
