@@ -1656,7 +1656,7 @@ __metadata:
     "@chanzuckerberg/eslint-config-edu-ts": ^1.0.9
     "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.9
     "@chanzuckerberg/eslint-plugin-stories": ^3.2.14
-    "@chanzuckerberg/prettier-config-edu": ^1.0.4
+    "@chanzuckerberg/prettier-config-edu": ^1.0.5
     "@chanzuckerberg/story-utils": ^3.0.14
     "@commitlint/cli": ^17.6.7
     "@commitlint/config-conventional": ^17.6.7
@@ -1696,7 +1696,7 @@ __metadata:
     codecov: ^3.8.3
     copyfiles: ^2.4.1
     eslint: ^8.45.0
-    eslint-config-prettier: ^8.7.0
+    eslint-config-prettier: ^8.10.0
     eslint-plugin-jest: ^27.2.3
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-storybook: ^0.6.11
@@ -1716,7 +1716,7 @@ __metadata:
     postcss-mixins: ^9.0.4
     postcss-nested: ^6.0.1
     postcss-simple-vars: ^7.0.1
-    prettier: ^2.8.4
+    prettier: ^2.8.8
     react: ^18.2.0
     react-beautiful-dnd: ^13.1.1
     react-children-by-type: ^1.1.0
@@ -1787,14 +1787,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/prettier-config-edu@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@chanzuckerberg/prettier-config-edu@npm:1.0.4"
+"@chanzuckerberg/prettier-config-edu@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@chanzuckerberg/prettier-config-edu@npm:1.0.5"
   dependencies:
-    prettier-plugin-tailwindcss: ^0.2.4
+    prettier-plugin-tailwindcss: ^0.2.6
   peerDependencies:
     prettier: ">= 2"
-  checksum: dce1bff399bf979806c4392890edbe4cc69760bd356b3006a8c40599075c607ea5447c47da2c7587f43e0fec7803bd0da577603af0ce24338bfb9d369c5359b9
+  checksum: bd72832793558c2d958901c583bc158a9fe6612939e7b30ea80936b633ea7d80725900a189320596b6921916635965c823669349d3f01c14bcc2fbc541821488
   languageName: node
   linkType: hard
 
@@ -9917,14 +9917,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.7.0":
-  version: 8.7.0
-  resolution: "eslint-config-prettier@npm:8.7.0"
+"eslint-config-prettier@npm:^8.10.0":
+  version: 8.10.0
+  resolution: "eslint-config-prettier@npm:8.10.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: b05bc7f2296ce3e0925c14147849706544870e0382d38af2352d709a6cf8521bdaff2bd8e5021f1780e570775a8ffa1d2bac28b8065d90d43a3f1f98fd26ce52
+  checksum: 153266badd477e49b0759816246b2132f1dbdb6c7f313ca60a9af5822fd1071c2bc5684a3720d78b725452bbac04bb130878b2513aea5e72b1b792de5a69fec8
   languageName: node
   linkType: hard
 
@@ -17763,12 +17763,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.2.4":
-  version: 0.2.5
-  resolution: "prettier-plugin-tailwindcss@npm:0.2.5"
+"prettier-plugin-tailwindcss@npm:^0.2.6":
+  version: 0.2.8
+  resolution: "prettier-plugin-tailwindcss@npm:0.2.8"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
-    "@prettier/plugin-php": "*"
     "@prettier/plugin-pug": "*"
     "@shopify/prettier-plugin-liquid": "*"
     "@shufo/prettier-plugin-blade": "*"
@@ -17785,8 +17784,6 @@ __metadata:
     prettier-plugin-twig-melody: "*"
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
-      optional: true
-    "@prettier/plugin-php":
       optional: true
     "@prettier/plugin-pug":
       optional: true
@@ -17814,7 +17811,7 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: 44ae325d40ad747dd8fb36e1d7986de1919b9bd912993628c18f4743c9287b1add6dd2d951ed336b1031a2ad49c7ba5eb50e4be6d3b9b37e0da7fd137d13ec53
+  checksum: 0c99295f1f47b4d35a3e19d88e6b1aac58a60479a4317fb3c3a6522b51f6b5a28cfd9c03545749354b01ca4f8ec3edf7ba2a34596c5cc58a7022b1d850bbe6be
   languageName: node
   linkType: hard
 
@@ -17827,12 +17824,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.4":
-  version: 2.8.4
-  resolution: "prettier@npm:2.8.4"
+"prettier@npm:^2.8.8":
+  version: 2.8.8
+  resolution: "prettier@npm:2.8.8"
   bin:
     prettier: bin-prettier.js
-  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
+  checksum: b49e409431bf129dd89238d64299ba80717b57ff5a6d1c1a8b1a28b590d998a34e083fa13573bc732bb8d2305becb4c9a4407f8486c81fa7d55100eb08263cf8
   languageName: node
   linkType: hard
 
