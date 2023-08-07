@@ -51,6 +51,13 @@ const getListItems = ({
   });
 
 export const Button: StoryObj = {
+  // story is too large to be snapped
+  // TODO: when button colors are more in sync with mocks, should be less colors so might fit then
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
   render: () => (
     <div>
       <Section title="Button Colors">
