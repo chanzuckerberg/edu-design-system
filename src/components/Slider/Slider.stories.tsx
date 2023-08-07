@@ -337,7 +337,7 @@ export const WithVisualLabel: StoryObj<Args> = {
             id="slider-label"
             text="Mood Slider"
           />
-          <div className="text-h1 w-1/2 py-4 text-center">
+          <div className="w-1/2 py-4 text-center text-h1">
             {moodData.map((mood) => {
               return (
                 sliderValue === mood.value && (
@@ -380,7 +380,7 @@ export const WithMultipleVisualLabels: StoryObj<Args> = {
             id="slider-label"
             text="Mood Slider"
           />
-          <div className="text-h1 flex w-1/2 justify-between py-4 text-center">
+          <div className="flex w-1/2 justify-between py-4 text-center text-h1">
             {moodData.map((mood, index) => {
               return (
                 <div
