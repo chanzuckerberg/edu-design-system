@@ -37,7 +37,7 @@ const getListItems = ({
 
 export const Text: StoryObj = {
   render: () => (
-    <div className="text-neutral-default">
+    <div>
       <Section title="Text Colors">
         <ColorList
           listItems={getListItems({
