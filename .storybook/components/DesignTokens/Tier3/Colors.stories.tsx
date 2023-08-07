@@ -17,7 +17,8 @@ export default {
 const getListItems = ({
   filterTerm,
   figmaTokenHeader,
-  getTailwindClassHeader = (stringMatch: string) => {
+  tailwindClassHeader,
+  getTailwindClassPrefix = (stringMatch: string) => {
     if (stringMatch.includes('background')) {
       return 'bg';
     } else if (stringMatch.includes('border')) {
@@ -29,7 +30,8 @@ const getListItems = ({
 }: {
   filterTerm: string;
   figmaTokenHeader: string;
-  getTailwindClassHeader?: (stringMatch: string) => string;
+  tailwindClassHeader: string;
+  getTailwindClassPrefix?: (stringMatch: string) => string;
 }) =>
   filterTokens(filterTerm).map(({ name, value }) => {
     const specifier = name.slice(
@@ -39,7 +41,12 @@ const getListItems = ({
       name,
       value,
       figmaToken: figmaTokenHeader + '/' + specifier,
-      tailwindClass: getTailwindClassHeader(specifier) + '-' + specifier,
+      tailwindClass:
+        getTailwindClassPrefix(specifier) +
+        '-' +
+        tailwindClassHeader +
+        '-' +
+        specifier,
     };
   });
 
@@ -51,6 +58,7 @@ export const Button: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-button',
             figmaTokenHeader: 'button',
+            tailwindClassHeader: 'button',
           })}
         />
       </Section>
@@ -66,6 +74,7 @@ export const Checkbox: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-checkbox',
             figmaTokenHeader: 'checkbox',
+            tailwindClassHeader: 'checkbox',
           })}
         />
       </Section>
@@ -81,6 +90,7 @@ export const DataBar: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-data-bar',
             figmaTokenHeader: 'data bar',
+            tailwindClassHeader: 'data-bar',
           })}
         />
       </Section>
@@ -96,6 +106,7 @@ export const Form: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-form',
             figmaTokenHeader: 'form',
+            tailwindClassHeader: 'form',
           })}
         />
       </Section>
@@ -111,6 +122,7 @@ export const Link: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-link',
             figmaTokenHeader: 'link',
+            tailwindClassHeader: 'link',
           })}
         />
       </Section>
@@ -126,6 +138,7 @@ export const Modal: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-modal',
             figmaTokenHeader: 'modal',
+            tailwindClassHeader: 'modal',
           })}
         />
       </Section>
@@ -141,6 +154,7 @@ export const ProgressBar: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-progress-bar',
             figmaTokenHeader: 'progress bar',
+            tailwindClassHeader: 'progress-bar',
           })}
         />
       </Section>
@@ -156,6 +170,7 @@ export const Toggle: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-toggle',
             figmaTokenHeader: 'toggle',
+            tailwindClassHeader: 'toggle',
           })}
         />
       </Section>
@@ -171,7 +186,8 @@ export const FocusRing: StoryObj = {
           listItems={getListItems({
             filterTerm: 'eds-theme-color-focus',
             figmaTokenHeader: 'focus',
-            getTailwindClassHeader: () => '"outline-focus"/"border-focus"',
+            tailwindClassHeader: 'focus',
+            getTailwindClassPrefix: () => '(outline/border)',
           })}
         />
       </Section>
