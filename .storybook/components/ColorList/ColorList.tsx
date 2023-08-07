@@ -16,7 +16,7 @@ export const ColorList = (props: Props) => (
   <div className="flex flex-col gap-4">
     {props.listItems.map(function (listItem) {
       return (
-        <div className="bg-neutral-default flex gap-4 p-4" key={listItem.name}>
+        <div className="flex gap-4 bg-neutral-default p-4" key={listItem.name}>
           <div className="flex w-80 flex-col gap-1">
             <label
               className={styles['color-list__label']}
