@@ -12,6 +12,10 @@
 .color-list__input {
   width: 100%;
   height: 5rem;
+  border: var(--eds-theme-color-border-neutral-subtle) solid
+    var(--eds-border-width-sm);
+  outline: var(--eds-theme-color-border-neutral-strong) solid
+    var(--eds-border-width-sm);
 }
 
 .color-list__input::-webkit-color-swatch {
