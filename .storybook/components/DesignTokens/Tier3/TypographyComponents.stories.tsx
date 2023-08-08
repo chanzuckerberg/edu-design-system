@@ -1,6 +1,7 @@
+import type { StoryObj } from '@storybook/react';
 import { at, capitalize, forEach, merge } from 'lodash';
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Grid, Section } from '../../../../src';
 import breadcrumb from '../../../../src/design-tokens/tier-3-component/breadcrumb.json';
 import button from '../../../../src/design-tokens/tier-3-component/buttons.json';
@@ -8,12 +9,28 @@ import form from '../../../../src/design-tokens/tier-3-component/forms.json';
 import link from '../../../../src/design-tokens/tier-3-component/link.json';
 import tab from '../../../../src/design-tokens/tier-3-component/tab.json';
 import tag from '../../../../src/design-tokens/tier-3-component/tag.json';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore importing of a legacy utility file results in some 'any's, which is acceptable for this docs page
 import flatten from '../../../util/flattenToken';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
-export class TypographyComponents extends Component {
-  render() {
-    const values = {};
+export default {
+  title: 'Design Tokens/Tier 3: Component',
+  parameters: {
+    axe: {
+      // For documentation purposes only
+      skip: true,
+    },
+  },
+};
+
+export const Typography: StoryObj = {
+  render: () => {
+    const values: {
+      [key: string]: {
+        [key: string]: string;
+      };
+    } = {};
     const componentTypography = merge(breadcrumb, button, form, link, tab, tag);
     forEach(at(componentTypography, 'eds.theme.typography')[0], (_, key) => {
       values[key] = flatten(
@@ -46,5 +63,5 @@ export class TypographyComponents extends Component {
         })}
       </div>
     );
-  }
-}
+  },
+};
