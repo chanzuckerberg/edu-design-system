@@ -803,7 +803,7 @@
               "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "text-decoration": {
-              "@": "var(--eds-theme-color-text-neutral-strong)",
+              "@": "var(--eds-theme-color-text-neutral-default)",
               "hover": "var(--eds-theme-color-text-brand-default)",
               "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
             },

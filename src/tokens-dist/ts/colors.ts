@@ -308,7 +308,7 @@ export const EdsThemeColorLinkNeutralTextHover =
 export const EdsThemeColorLinkNeutralTextFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkNeutralTextDecoration =
-  'var(--eds-theme-color-text-neutral-strong)';
+  'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorLinkNeutralTextDecorationHover =
   'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralTextDecorationFocus =
