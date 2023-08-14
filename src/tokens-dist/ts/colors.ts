@@ -301,33 +301,33 @@ export const EdsThemeColorFormBackground = '#FFFFFF';
 export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
 export const EdsThemeColorFormLabel = '#383C43';
 export const EdsThemeColorLinkBrandText =
-  'var(--eds-theme-color-text-link-neutral)';
+  'var(--eds-theme-color-text-neutral-strong)';
 export const EdsThemeColorLinkBrandTextHover =
-  'var(--eds-theme-color-text-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkBrandTextDecoration =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextDecorationHover =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextDecorationFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkBrandBackgroundFocus =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralText =
-  'var(--eds-theme-color-text-link-neutral)';
+  'var(--eds-theme-color-text-neutral-strong)';
 export const EdsThemeColorLinkNeutralTextHover =
-  'var(--eds-theme-color-text-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralTextFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkNeutralTextDecoration =
-  'var(--eds-theme-color-border-link-neutral)';
+  'var(--eds-theme-color-text-neutral-strong)';
 export const EdsThemeColorLinkNeutralTextDecorationHover =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralTextDecorationFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkNeutralBackgroundFocus =
-  'var(--eds-theme-color-border-link-neutral)';
+  'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorModalBrandHeaderBackground = '#8984E8';
 export const EdsThemeColorProgressBarBackground = '#E7E8EA';
 export const EdsThemeColorProgressBarBorder = '#E7E8EA';
