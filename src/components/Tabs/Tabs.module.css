@@ -110,7 +110,7 @@
    * Tabs link within active tabs item
    */
   .tabs__item.eds-is-active & {
-    color: var(--eds-theme-color-text-link-brand);
+    color: var(--eds-theme-color-text-brand-default);
     box-shadow: inset 0 calc(var(--eds-border-width-md) * -1) 0 0
       var(--eds-theme-color-border-brand-primary-strong);
   }
