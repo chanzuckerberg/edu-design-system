@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.4.2...v13.0.0) (2023-08-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **link:** remove text-link tokens for link t3 tokens (#1639)
+* **colors:** remove old colors and convert to input and show figma token (#1711)
+* remove deprecated dropdown (#1657)
+* **banner:** remove component (#1702)
+* remove legacy tokens and typography mixins (#1709)
+* **Grid:** remove top-level sub-component(s) (#1703)
+* **dragdrop:** remove top level subcomponents (#1697)
+* **Fieldset:** remove top-level sub-component(s) (#1695)
+* **HorizontalStepper:** remove top-level sub-component(s) (#1696)
+* **Card:** remove top-level sub-component(s) (#1692)
+* **checkbox:** remove top level subcomponents (#1693)
+* **radio:** remove top level subcomponents (#1690)
+* **DataBar:** remove top-level sub-component(s) (#1686)
+* **Modal:** remove top-level sub-component(s) (#1689)
+* **searchbar:** remove top level subcomponents (#1687)
+* **table:** remove top-level sub-components (#1685)
+* **toolbar:** remove component (#1683)
+* **Breadcrumbs:** remove top-level sub-component (#1680)
+* **timelinenav:** remove top-level sub-component (#1681)
+
+### Features
+
+* **Breadcrumbs:** remove top-level sub-component ([#1680](https://github.com/chanzuckerberg/edu-design-system/issues/1680)) ([669081d](https://github.com/chanzuckerberg/edu-design-system/commit/669081dce402c0f84799ef17af6c8e05ccc4c37a))
+* **Card:** remove top-level sub-component(s) ([#1692](https://github.com/chanzuckerberg/edu-design-system/issues/1692)) ([7ec01f4](https://github.com/chanzuckerberg/edu-design-system/commit/7ec01f434e5c2d58bc0b95f5f3c7ebc318393bf2))
+* **checkbox:** remove top level subcomponents ([#1693](https://github.com/chanzuckerberg/edu-design-system/issues/1693)) ([87b12e8](https://github.com/chanzuckerberg/edu-design-system/commit/87b12e8ee5237ae99b037b3285364a363d4f2749))
+* **DataBar:** remove top-level sub-component(s) ([#1686](https://github.com/chanzuckerberg/edu-design-system/issues/1686)) ([b4b9276](https://github.com/chanzuckerberg/edu-design-system/commit/b4b9276fb5115542a1e659d4d13a830aa5e7d4b0))
+* **dragdrop:** remove top level subcomponents ([#1697](https://github.com/chanzuckerberg/edu-design-system/issues/1697)) ([b4fd00c](https://github.com/chanzuckerberg/edu-design-system/commit/b4fd00ca3daea679099a7fe073c03b476e9fbde2))
+* **Fieldset:** remove top-level sub-component(s) ([#1695](https://github.com/chanzuckerberg/edu-design-system/issues/1695)) ([0c8280d](https://github.com/chanzuckerberg/edu-design-system/commit/0c8280d18b18f684d772a9fe3346ede375fdbefe))
+* **Grid:** remove top-level sub-component(s) ([#1703](https://github.com/chanzuckerberg/edu-design-system/issues/1703)) ([c8925c9](https://github.com/chanzuckerberg/edu-design-system/commit/c8925c96fd219b145d56dbe270020b26e7ff97d0))
+* **HorizontalStepper:** remove top-level sub-component(s) ([#1696](https://github.com/chanzuckerberg/edu-design-system/issues/1696)) ([188fd99](https://github.com/chanzuckerberg/edu-design-system/commit/188fd992c28c34c370debd59b4db8cb82ca9752b))
+* **Layout:** mark layout components as deprecated ([#1700](https://github.com/chanzuckerberg/edu-design-system/issues/1700)) ([930a369](https://github.com/chanzuckerberg/edu-design-system/commit/930a369143abca25728d0f03e236aeb244781d6e))
+* **Modal:** remove top-level sub-component(s) ([#1689](https://github.com/chanzuckerberg/edu-design-system/issues/1689)) ([8743e62](https://github.com/chanzuckerberg/edu-design-system/commit/8743e627bb70eed44f13b56efcbe1c77deac0a21))
+* **radio:** remove top level subcomponents ([#1690](https://github.com/chanzuckerberg/edu-design-system/issues/1690)) ([82da617](https://github.com/chanzuckerberg/edu-design-system/commit/82da6178bd61657e31595788249a53c69aef6b56))
+* remove legacy tokens and typography mixins ([#1709](https://github.com/chanzuckerberg/edu-design-system/issues/1709)) ([ec3e819](https://github.com/chanzuckerberg/edu-design-system/commit/ec3e81972e7d6952a227f6c01cedcc25aee5f9c4))
+* **searchbar:** remove top level subcomponents ([#1687](https://github.com/chanzuckerberg/edu-design-system/issues/1687)) ([d13bb6c](https://github.com/chanzuckerberg/edu-design-system/commit/d13bb6cd643b4ed87fadbe0f168cf763f07157c3))
+* **table:** remove top-level sub-components ([#1685](https://github.com/chanzuckerberg/edu-design-system/issues/1685)) ([742a530](https://github.com/chanzuckerberg/edu-design-system/commit/742a530babe97f507582f31b84bcbf6eb78591e8))
+* **timelinenav:** remove top-level sub-component ([#1681](https://github.com/chanzuckerberg/edu-design-system/issues/1681)) ([f46eca7](https://github.com/chanzuckerberg/edu-design-system/commit/f46eca76ba44088d23050fde7f659f3f7e23e1e8))
+
+
+### Bug Fixes
+
+* **Avatar:** support display names using emoji and multi-byte ([#1716](https://github.com/chanzuckerberg/edu-design-system/issues/1716)) ([1294022](https://github.com/chanzuckerberg/edu-design-system/commit/1294022658b48e709413b5080fc45a0bbc126268))
+* update token exports ([#1722](https://github.com/chanzuckerberg/edu-design-system/issues/1722)) ([982c55f](https://github.com/chanzuckerberg/edu-design-system/commit/982c55f122f96cf68bddd77955540dd236a000cc))
+
+
+* **banner:** remove component ([#1702](https://github.com/chanzuckerberg/edu-design-system/issues/1702)) ([356550c](https://github.com/chanzuckerberg/edu-design-system/commit/356550c699a3fd549315f06fccdd569932032c4e))
+* **colors:** remove old colors and convert to input and show figma token ([#1711](https://github.com/chanzuckerberg/edu-design-system/issues/1711)) ([c9a5079](https://github.com/chanzuckerberg/edu-design-system/commit/c9a5079ab2b3b61abf431d859f1ecb4a068272f9))
+* **link:** remove text-link tokens for link t3 tokens ([#1639](https://github.com/chanzuckerberg/edu-design-system/issues/1639)) ([d35cfe4](https://github.com/chanzuckerberg/edu-design-system/commit/d35cfe44be0fa618f45fe2051d240e27c55f5199))
+* remove deprecated dropdown ([#1657](https://github.com/chanzuckerberg/edu-design-system/issues/1657)) ([26d1694](https://github.com/chanzuckerberg/edu-design-system/commit/26d16942f9e2393312db773eb06e72fc7ab54620))
+* **toolbar:** remove component ([#1683](https://github.com/chanzuckerberg/edu-design-system/issues/1683)) ([bd47899](https://github.com/chanzuckerberg/edu-design-system/commit/bd478996207ff59e4dd43c06da9711e14ecd09b4))
+
 ### [12.4.2](https://github.com/chanzuckerberg/edu-design-system/compare/v12.4.1...v12.4.2) (2023-07-20)
 
 

@@ -1,8 +1,8 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Grid } from './Grid';
-import GridItem from '../GridItem';
 
 export default {
   title: 'Components/Grid',
@@ -38,10 +38,10 @@ export default {
     },
   },
   parameters: {
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   component: Grid,
-  subcomponents: { GridItem },
+  subcomponents: { GridItem: Grid.Item },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Grid>;

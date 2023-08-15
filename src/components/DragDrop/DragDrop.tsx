@@ -1,18 +1,49 @@
 import clsx from 'clsx';
 import React, {
-  type ReactNode,
-  useState,
   useEffect,
   useRef,
+  useState,
+  type ReactNode,
   type UIEvent,
 } from 'react';
-import type { DropResult, DroppableProvided } from 'react-beautiful-dnd';
-import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import type { Items, Containers } from './DragDropTypes';
-import DragDropContainer from '../DragDropContainer';
+import {
+  DragDropContext,
+  Draggable,
+  Droppable,
+  type DraggableProvided,
+  type DropResult,
+  type DroppableProvided,
+} from 'react-beautiful-dnd';
+import { oneByType } from 'react-children-by-type';
+import Icon from '../Icon';
 import styles from './DragDrop.module.css';
 
-export interface Props {
+type ItemContents = {
+  id?: string;
+  title?: string;
+  behavior?: 'hover';
+  children?: React.ReactNode;
+  handle?: React.ReactNode;
+};
+
+type Items = {
+  [key: string]: ItemContents;
+};
+
+type ContainerContents = {
+  className?: string;
+  columnClassName?: string;
+  emptyContent?: React.ReactNode;
+  header?: React.ReactNode;
+  id?: string;
+  itemIds: string[];
+};
+
+type Containers = {
+  [key: string]: ContainerContents;
+};
+
+type DragDropProps = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -45,13 +76,179 @@ export interface Props {
    * Prop that allows parent components to get the updated drag and drop object data from the outside
    */
   getNewState?: (newState: NewState) => void;
-}
+};
 
-export interface NewState {
+export type NewState = {
   containerOrder: string[];
   containers: Containers;
   items: Items;
-}
+};
+
+type DragDropItemProps = {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * The contents of an item; includes id, title (optional) and children (optional)
+   */
+  item: ItemContents;
+  /**
+   * Item's original indexed position
+   */
+  index: number;
+};
+
+type DragDropContainerHeaderProps = {
+  /**
+   * Child node(s) to be rendered as the header.
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+};
+
+type DragDropContainerProps = {
+  /**
+   * Prop that will contain an id for each container and an array of itemIds that will be used on initial render
+   */
+  container: ContainerContents;
+  /**
+   * Empty state contents
+   */
+  emptyContent?: ReactNode;
+  /**
+   * Prop that will be an array of items
+   */
+  items: ItemContents[];
+};
+
+/**
+ * Container for draggable components to be dropped within the container.
+ */
+const DragDropContainer = ({
+  container,
+  items,
+  emptyContent,
+}: DragDropContainerProps) => {
+  const componentClassName = clsx(
+    styles['drag-drop__container'],
+    items.length < 1 && styles['drag-drop__container--empty'],
+    container.className,
+  );
+
+  const containerInnerClassName = clsx(
+    styles['drag-drop__container-inner'],
+    container.columnClassName,
+  );
+
+  const dragDropContainerHeader = oneByType(
+    container.header,
+    DragDropContainerHeader,
+  );
+
+  const header = React.Children.map(dragDropContainerHeader, (child) => {
+    return React.cloneElement(child);
+  });
+
+  return container.id ? (
+    <div className={componentClassName}>
+      {header}
+      <Droppable droppableId={container.id} type="item">
+        {(provided: DroppableProvided) =>
+          items.length > 0 ? (
+            <ol
+              className={containerInnerClassName}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {items.map((item: ItemContents, index: number) => (
+                <DragDropItem index={index} item={item} key={item.id} />
+              ))}
+              {provided.placeholder}
+            </ol>
+          ) : (
+            <div
+              className={containerInnerClassName}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {emptyContent}
+              {provided.placeholder}
+            </div>
+          )
+        }
+      </Droppable>
+    </div>
+  ) : null;
+};
+
+/**
+ * Component that contains header section for the container which consists of drag and drop components.
+ */
+
+const DragDropContainerHeader = ({
+  className,
+  children,
+  ...other
+}: DragDropContainerHeaderProps) => {
+  return (
+    <header className={className} {...other}>
+      {children}
+    </header>
+  );
+};
+
+/**
+ * Item to be dragged and dropped in containers.
+ */
+const DragDropItem = ({ className, item, index }: DragDropItemProps) => {
+  const componentClassName = clsx(
+    styles['drag-drop__item'],
+    item.behavior === 'hover' && styles['drag-drop__item--hover'],
+    className,
+  );
+
+  // `id` is injected in <DragDrop />
+  return item.id ? (
+    <Draggable draggableId={item.id} index={index}>
+      {(provided: DraggableProvided, snapshot) => {
+        const childrenWithProps = React.Children.map(
+          item.children,
+          (child: ReactNode) => {
+            // Checking isValidElement is the safe way and avoids a typescript
+            // error too.
+            if (React.isValidElement(child)) {
+              // @ts-expect-error "No overload matches this call" error due to type mismatch
+              return React.cloneElement<Props>(child, {
+                isDragging: snapshot.isDragging,
+                number: index + 1,
+              });
+            }
+          },
+        );
+        return (
+          <li
+            className={componentClassName}
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+          >
+            <div
+              aria-label={`Handle for draggable item: ${item.title}`}
+              className={clsx(styles['drag-drop__item-handle'])}
+              {...provided.dragHandleProps}
+            >
+              <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
+            </div>
+            {childrenWithProps}
+          </li>
+        );
+      }}
+    </Draggable>
+  ) : null;
+};
 
 /**
  * `import {DragDrop} from "@chanzuckerberg/eds"`
@@ -66,7 +263,7 @@ export const DragDrop = ({
   getNewState,
   multipleContainers = false,
   unstyledItems = false,
-}: Props) => {
+}: DragDropProps) => {
   /**
    * Set states and refs
    *
@@ -339,3 +536,5 @@ export const DragDrop = ({
     </DragDropContext>
   );
 };
+
+DragDrop.ContainerHeader = DragDropContainerHeader;

@@ -50,19 +50,6 @@ export const EdsColorOtherRuby500 = '#F1497B';
 export const EdsColorOtherRuby600 = '#D41E52';
 export const EdsColorOtherRuby700 = '#BD0044';
 export const EdsColorOtherRuby800 = '#8F0134';
-export const EdsColorHighlight100 = '#FF9FEC'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
-export const EdsColorHighlight200 = '#FFBEAA'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
-export const EdsColorHighlight300 = '#FCFF00'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
-export const EdsColorHighlight400 = '#9DFFA4'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
-export const EdsColorHighlight500 = '#00F1FF'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
-export const EdsColorHighlight600 = '#CFC9FF'; // @deprecated This token has been deprecated and will be removed in a future EDS release.
-export const EdsColorInfo100 = '#F1F9FF'; // legacy token, will be removed
-export const EdsColorInfo200 = '#B0D5FF'; // legacy token, will be removed
-export const EdsColorInfo300 = '#7FB9FD'; // legacy token, will be removed
-export const EdsColorInfo400 = '#5CA7FF'; // legacy token, will be removed
-export const EdsColorInfo500 = '#328EFB'; // legacy token, will be removed
-export const EdsColorInfo600 = '#1977CD'; // legacy token, will be removed
-export const EdsColorInfo700 = '#0563B8'; // legacy token, will be removed
 export const EdsThemeColorBackgroundNeutralDefault = '#FFFFFF';
 export const EdsThemeColorBackgroundNeutralDefaultHover = '#F4F6F8';
 export const EdsThemeColorBackgroundNeutralSubtle = '#F4F6F8';
@@ -83,8 +70,6 @@ export const EdsThemeColorBackgroundGradeReviseSubtle = '#FDF1D0';
 export const EdsThemeColorBackgroundGradeStopDefault = '#D41E52';
 export const EdsThemeColorBackgroundGradeStopSubtle = '#FFF0F4';
 export const EdsThemeColorBackgroundDisabled = '#C0C4C8';
-export const EdsThemeColorBorderLinkNeutral = '#21272D'; // @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead
-export const EdsThemeColorBorderLinkBrand = '#5751D2'; // @deprecated This token is deprecated. Please use eds-theme-color-link-brand-background-focus, eds-theme-color-link-brand-text-decoration, eds-theme-color-link-brand-text-decoration-hover, or eds-theme-color-link-neutral-text-decoration-hover instead
 export const EdsThemeColorBorderNeutralSubtle = '#E7E8EA';
 export const EdsThemeColorBorderNeutralSubtleHover = '#C0C4C8';
 export const EdsThemeColorBorderNeutralDefault = '#C0C4C8';
@@ -139,8 +124,6 @@ export const EdsThemeColorTextNeutralDefault = '#383C43';
 export const EdsThemeColorTextNeutralDefaultInverse = '#FFFFFF';
 export const EdsThemeColorTextNeutralStrong = '#21272D';
 export const EdsThemeColorTextNeutralSubtle = '#5D6369';
-export const EdsThemeColorTextLinkNeutral = '#21272D'; // @deprecated This token is deprecated. Please use eds-theme-color-link-neutral-text-decoration or eds-theme-color-link-neutral-background instead.
-export const EdsThemeColorTextLinkBrand = '#5751D2'; // @deprecated This token is deprecated. Please use eds-theme-color-link-brand-text-hover or eds-theme-color-link-neutral-text-hover instead.
 export const EdsThemeColorTextUtilitySuccess = '#007249';
 export const EdsThemeColorTextUtilityWarning = '#AC3400';
 export const EdsThemeColorTextUtilityError = '#BD0044';
@@ -305,33 +288,33 @@ export const EdsThemeColorFormBackground = '#FFFFFF';
 export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
 export const EdsThemeColorFormLabel = '#383C43';
 export const EdsThemeColorLinkBrandText =
-  'var(--eds-theme-color-text-link-neutral)';
+  'var(--eds-theme-color-text-neutral-strong)';
 export const EdsThemeColorLinkBrandTextHover =
-  'var(--eds-theme-color-text-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkBrandTextDecoration =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextDecorationHover =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextDecorationFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkBrandBackgroundFocus =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralText =
-  'var(--eds-theme-color-text-link-neutral)';
+  'var(--eds-theme-color-text-neutral-strong)';
 export const EdsThemeColorLinkNeutralTextHover =
-  'var(--eds-theme-color-text-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralTextFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkNeutralTextDecoration =
-  'var(--eds-theme-color-border-link-neutral)';
+  'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorLinkNeutralTextDecorationHover =
-  'var(--eds-theme-color-border-link-brand)';
+  'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkNeutralTextDecorationFocus =
   'var(--eds-theme-color-text-neutral-default-inverse)';
 export const EdsThemeColorLinkNeutralBackgroundFocus =
-  'var(--eds-theme-color-border-link-neutral)';
+  'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorModalBrandHeaderBackground = '#8984E8';
 export const EdsThemeColorProgressBarBackground = '#E7E8EA';
 export const EdsThemeColorProgressBarBorder = '#E7E8EA';
@@ -350,22 +333,3 @@ export const EdsThemeColorTogglePrimaryText =
   'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorToggleThumb =
   'var(--eds-theme-color-text-neutral-default-inverse)';
-export const LegacyColorGray50 = '#F8F9FC';
-export const LegacyColorGray100 = '#EBEBEC';
-export const LegacyColorGray200 = '#D8D8D9';
-export const LegacyColorGray300 = '#C5C5C6';
-export const LegacyColorGray500 = '#9F9FA0';
-export const LegacyColorGray700 = '#78797A';
-export const LegacyColorGray1000 = '#3F4041';
-export const LegacyColorBlack = '#2C2D2E';
-export const LegacyColorRed100 = '#F7DDDD';
-export const LegacyColorRed200 = '#F25252';
-export const LegacyColorGreen100 = '#E1F0E7';
-export const LegacyColorGreen200 = '#6CC188';
-export const LegacyColorGreen300 = '#457B57';
-export const LegacyColorYellow200 = '#FFC55B';
-export const LegacyColorYellow300 = '#A46900';
-export const LegacyColorYellow400 = '#644C1F';
-export const LegacyColorPurple200 = '#7686D3';
-export const LegacyColorPurple300 = '#5761BA';
-export const LegacyColorPurple400 = '#32417C';

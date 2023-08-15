@@ -66,5 +66,17 @@ export const parameters = {
     ...createPaperReleaseConfig('1.2'),
     ...createPaperReleaseConfig('1.1'),
     ...createPaperReleaseConfig('1.0'),
+    implementationExample: {
+      styles: {
+        backgroundColor: '#ffffff',
+        borderColor: '#000000',
+        color: '#000000',
+      },
+      title: 'Implementation Example',
+      tooltip: {
+        title: `About Implementation Examples`,
+        desc: 'Implementation examples show how you might compose existing EDS components',
+      },
+    },
   },
 };

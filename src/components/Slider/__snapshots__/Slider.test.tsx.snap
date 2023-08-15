@@ -2,7 +2,7 @@
 
 exports[`<Slider /> Default story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -33,7 +33,7 @@ exports[`<Slider /> Default story renders snapshot 1`] = `
 
 exports[`<Slider /> Disabled story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -95,7 +95,7 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
 
 exports[`<Slider /> FieldNote story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -133,7 +133,7 @@ exports[`<Slider /> FieldNote story renders snapshot 1`] = `
 
 exports[`<Slider /> GeneratedMarkers story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -194,7 +194,7 @@ exports[`<Slider /> GeneratedMarkers story renders snapshot 1`] = `
 
 exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="w-80"
@@ -259,7 +259,7 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
 
 exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -320,7 +320,7 @@ exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
 
 exports[`<Slider /> NegativeNonIntegerMarkers story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -381,7 +381,7 @@ exports[`<Slider /> NegativeNonIntegerMarkers story renders snapshot 1`] = `
 
 exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="w-96"
+  class="p-8"
 >
   <div
     class="slider"
@@ -401,5 +401,369 @@ exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
       class="slider__thumb-proxy"
     />
   </div>
+</div>
+`;
+
+exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="flex w-full items-center justify-center gap-2"
+  >
+    <button
+      aria-label="Decrement"
+      class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+      type="button"
+    >
+      –
+    </button>
+    <p
+      class="text text--body"
+    >
+      0
+    </p>
+    <div
+      class="slider w-1/2"
+    >
+      <input
+        aria-label="select a value"
+        class="slider__input"
+        id=":rk:"
+        max="100"
+        min="0"
+        step="1"
+        style="--ratio: 0.5;"
+        type="range"
+        value="50"
+      />
+      <div
+        class="slider__thumb-proxy"
+      />
+    </div>
+    <p
+      class="text text--body"
+    >
+      100
+    </p>
+    <button
+      aria-label="Increment"
+      class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+      type="button"
+    >
+      +
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Slider /> UsingInputDisplay story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="flex w-full items-center justify-center gap-2"
+  >
+    <p
+      class="text text--body"
+    >
+      0
+    </p>
+    <div
+      class="slider w-1/2"
+    >
+      <input
+        aria-label="Slider with input"
+        class="slider__input"
+        id=":rg:"
+        max="100"
+        min="0"
+        step="1"
+        style="--ratio: 0.5;"
+        type="range"
+        value="50"
+      />
+      <div
+        class="slider__thumb-proxy"
+      />
+    </div>
+    <p
+      class="text text--body"
+    >
+      100
+    </p>
+    <div
+      class="mx-2  w-14"
+    >
+      <div
+        class="input-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="display value"
+          class="input"
+          id=":ri:"
+          readonly=""
+          type="text"
+          value="50"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Slider /> WithHighlightedContent story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <article>
+    <div
+      class="items-top flex justify-center gap-10"
+    >
+      <div
+        class="slider w-1/2"
+      >
+        <input
+          aria-describedby="mood-description"
+          aria-label="Mood Slider"
+          class="slider__input"
+          id=":rm:"
+          max="100"
+          min="0"
+          step="25"
+          style="--ratio: 0.5;"
+          type="range"
+          value="50"
+        />
+        <div
+          aria-hidden="true"
+          class="slider__markers"
+        >
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Very Upset
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Upset
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Neutral
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Happy
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Very Happy
+          </p>
+        </div>
+        <div
+          class="slider__thumb-proxy"
+        />
+      </div>
+      <div
+        class="text-h1"
+      >
+        <span>
+          😐
+        </span>
+      </div>
+    </div>
+    <p
+      class="text text--body py-3 text-center"
+      id="mood-description"
+    >
+      Current mood:
+       
+      <strong>
+        <span>
+          Neutral
+        </span>
+      </strong>
+    </p>
+  </article>
+</div>
+`;
+
+exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <article>
+    <div
+      class="items-top flex flex-col justify-center "
+    >
+      <label
+        class="label w-1/2 py-4 text-center"
+        id="slider-label"
+      >
+        Mood Slider
+         
+      </label>
+      <div
+        class="flex w-1/2 justify-between py-4 text-center text-h1"
+      >
+        <div
+          class=""
+        >
+          😡
+        </div>
+        <div
+          class=""
+        >
+          🙁
+        </div>
+        <div
+          class="scale-150 transition-transform"
+        >
+          😐
+        </div>
+        <div
+          class=""
+        >
+          🙂
+        </div>
+        <div
+          class=""
+        >
+          😍
+        </div>
+      </div>
+      <div
+        class="slider w-1/2"
+      >
+        <input
+          aria-label="Mood Slider"
+          aria-labelledby="slider-label"
+          class="slider__input"
+          id=":rq:"
+          max="100"
+          min="0"
+          step="25"
+          style="--ratio: 0.5;"
+          type="range"
+          value="50"
+        />
+        <div
+          aria-hidden="true"
+          class="slider__markers"
+        >
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Very Upset
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Upset
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Neutral
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Happy
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Very Happy
+          </p>
+        </div>
+        <div
+          class="slider__thumb-proxy"
+        />
+      </div>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`<Slider /> WithVisualLabel story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <article>
+    <div
+      class="items-top flex flex-col justify-center "
+    >
+      <label
+        class="label w-1/2 py-4 text-center"
+        id="slider-label"
+      >
+        Mood Slider
+         
+      </label>
+      <div
+        class="w-1/2 py-4 text-center text-h1"
+      >
+        <span>
+          😐
+        </span>
+      </div>
+      <div
+        class="slider w-1/2"
+      >
+        <input
+          aria-label="Mood Slider"
+          aria-labelledby="slider-label"
+          class="slider__input"
+          id=":ro:"
+          max="100"
+          min="0"
+          step="25"
+          style="--ratio: 0.5;"
+          type="range"
+          value="50"
+        />
+        <div
+          aria-hidden="true"
+          class="slider__markers"
+        >
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Very Upset
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Upset
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Neutral
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Happy
+          </p>
+          <p
+            class="text text--body text--neutral-medium slider__marker"
+          >
+            Very Happy
+          </p>
+        </div>
+        <div
+          class="slider__thumb-proxy"
+        />
+      </div>
+    </div>
+  </article>
 </div>
 `;

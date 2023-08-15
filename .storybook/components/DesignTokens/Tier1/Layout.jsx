@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridItem, Section } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -11,7 +11,7 @@ export class Tier1Layout extends Component {
           <Grid>
             {filterTokens(`eds-l-`).map(function (listItem) {
               return (
-                <GridItem key={listItem.name}>
+                <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       maxWidth: `var(${listItem.name})`,
@@ -19,7 +19,7 @@ export class Tier1Layout extends Component {
                     name={listItem.name}
                     value={listItem.value}
                   />
-                </GridItem>
+                </Grid.Item>
               );
             })}
           </Grid>

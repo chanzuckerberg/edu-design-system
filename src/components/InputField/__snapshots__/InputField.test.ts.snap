@@ -9,11 +9,10 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r0:"
       >
         Default input field
-         
       </label>
     </div>
     <div
@@ -43,14 +42,13 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="input-field__overline input-field__overline--disabled"
+      class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label input-field__label--disabled"
         for=":r6:"
       >
         Disabled input field
-         
       </label>
     </div>
     <div
@@ -94,14 +92,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </p>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1e:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -126,14 +123,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </div>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1g:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -160,14 +156,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </p>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1i:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -185,14 +180,13 @@ exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
     </div>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r1k:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -298,11 +292,10 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r4:"
       >
         Error input field
-         
       </label>
     </div>
     <div
@@ -365,11 +358,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":ru:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -413,11 +405,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r10:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -463,11 +454,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r12:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -487,11 +477,10 @@ exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r14:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -626,11 +615,10 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":rc:"
       >
         Input field with button inside
-         
       </label>
     </div>
     <div
@@ -679,11 +667,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":re:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -710,11 +697,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":rg:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -743,11 +729,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":ri:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -767,11 +752,10 @@ exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":rk:"
         >
           Label text
-           
         </label>
       </div>
       <div
@@ -872,11 +856,10 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r2:"
       >
         Default input field
-         
       </label>
     </div>
     <div
@@ -939,11 +922,10 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label"
+        class="label label--lg input-field__label"
         for=":r8:"
       >
         Input field with fieldNote
-         
       </label>
       <span
         class="text text--sm input-field__required-text"
@@ -995,11 +977,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r1u:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1032,11 +1013,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r20:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1071,11 +1051,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r22:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1101,11 +1080,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r24:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1247,11 +1225,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r2e:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1301,11 +1278,10 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
         class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label"
           for=":r2g:"
         >
           Label text
-           
         </label>
         <span
           class="text text--sm input-field__required-text"
@@ -1354,17 +1330,16 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
     </p>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r2i:"
         >
           Label text
-           
         </label>
         <span
-          class="text text--sm input-field__required-text"
+          class="text text--sm input-field__required-text input-field__required-text--disabled"
         >
           Required
         </span>
@@ -1392,17 +1367,16 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
     </div>
     <div>
       <div
-        class="input-field__overline input-field__overline--disabled"
+        class="input-field__overline"
       >
         <label
-          class="label"
+          class="label label--lg input-field__label input-field__label--disabled"
           for=":r2k:"
         >
           Label text
-           
         </label>
         <span
-          class="text text--sm input-field__required-text"
+          class="text text--sm input-field__required-text input-field__required-text--disabled"
         >
           Required
         </span>
@@ -1428,5 +1402,69 @@ exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`<InputField /> TabularInput story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <table
+    class="table"
+  >
+    <thead>
+      <tr
+        class="table-row"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Label
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Field
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell flex items-center"
+        >
+          <label
+            class="label flex items-center"
+            for="field-1"
+            id="input-1"
+          >
+            Input One
+             
+          </label>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <div>
+            <div
+              class="input-field__body"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="redundant"
+                aria-labelledby="input-1"
+                class="input"
+                id="field-1"
+                placeholder="click the label to highlight field"
+                type="text"
+              />
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

@@ -10,12 +10,11 @@ import { chromaticViewports } from '../../util/viewports';
 import Heading from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';
-import TimelineNavPanel from '../TimelineNavPanel';
 
 export default {
   title: 'Components/TimelineNav',
   component: TimelineNav,
-  subcomponents: { TimelineNavPanel },
+  subcomponents: { 'TimlineNav.Panel': TimelineNav.Panel },
   parameters: {
     badges: ['1.0'],
     backgrounds: {
@@ -26,7 +25,7 @@ export default {
     variant: 'ordered',
     children: (
       <>
-        <TimelineNavPanel className="max-w-xl" title="Overview">
+        <TimelineNav.Panel className="max-w-xl" title="Overview">
           <Heading className="mb-6" size="h3">
             Overview
           </Heading>
@@ -36,8 +35,8 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
-        <TimelineNavPanel
+        </TimelineNav.Panel>
+        <TimelineNav.Panel
           className="max-w-xl"
           title="TimelineNavPanel 1"
           titleAfter={
@@ -60,9 +59,9 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel
+        <TimelineNav.Panel
           className="max-w-xl"
           title="TimelineNavPanel 2"
           variant="error"
@@ -76,9 +75,9 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel
+        <TimelineNav.Panel
           className="max-w-xl"
           title="
               Panel with a long name that breaks into multiple lines on smaller
@@ -104,9 +103,9 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel
+        <TimelineNav.Panel
           className="max-w-xl"
           title="TimelineNavPanel 4"
           variant="success"
@@ -120,9 +119,9 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel className="max-w-xl" title="TimelineNavPanel 5">
+        <TimelineNav.Panel className="max-w-xl" title="TimelineNavPanel 5">
           <Heading className="mb-6" size="h3">
             TimelineNavPanel 5
           </Heading>
@@ -132,9 +131,9 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel
+        <TimelineNav.Panel
           className="max-w-xl"
           title="TimelineNavPanel 6"
           variant="number"
@@ -148,9 +147,9 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
 
-        <TimelineNavPanel
+        <TimelineNav.Panel
           className="max-w-xl"
           title="Final Item - complete"
           variant="complete"
@@ -164,7 +163,7 @@ export default {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </Text>
-        </TimelineNavPanel>
+        </TimelineNav.Panel>
       </>
     ),
   },
@@ -177,7 +176,7 @@ export default {
   },
 } as Meta;
 
-type Args = React.ComponentProps<typeof TimelineNavPanel>;
+type Args = React.ComponentProps<typeof TimelineNav.Panel>;
 
 export const Default: StoryObj<Args> = {
   parameters: {

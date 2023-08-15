@@ -6,10 +6,10 @@
           "brand": {
             "text": {
               "@": {
-                "value": "var(--eds-theme-color-text-link-neutral)"
+                "value": "var(--eds-theme-color-text-neutral-strong)"
               },
               "hover": {
-                "value": "var(--eds-theme-color-text-link-brand)"
+                "value": "var(--eds-theme-color-text-brand-default)"
               },
               "focus": {
                 "value": "var(--eds-theme-color-text-neutral-default-inverse)"
@@ -17,10 +17,10 @@
             },
             "text-decoration": {
               "@": {
-                "value": "var(--eds-theme-color-border-link-brand)"
+                "value": "var(--eds-theme-color-text-brand-default)"
               },
               "hover": {
-                "value": "var(--eds-theme-color-border-link-brand)"
+                "value": "var(--eds-theme-color-text-brand-default)"
               },
               "focus": {
                 "value": "var(--eds-theme-color-text-neutral-default-inverse)"
@@ -28,17 +28,17 @@
             },
             "background": {
               "focus": {
-                "value": "var(--eds-theme-color-border-link-brand)"
+                "value": "var(--eds-theme-color-text-brand-default)"
               }
             }
           },
           "neutral": {
             "text": {
               "@": {
-                "value": "var(--eds-theme-color-text-link-neutral)"
+                "value": "var(--eds-theme-color-text-neutral-strong)"
               },
               "hover": {
-                "value": "var(--eds-theme-color-text-link-brand)"
+                "value": "var(--eds-theme-color-text-brand-default)"
               },
               "focus": {
                 "value": "var(--eds-theme-color-text-neutral-default-inverse)"
@@ -46,10 +46,10 @@
             },
             "text-decoration": {
               "@": {
-                "value": "var(--eds-theme-color-border-link-neutral)"
+                "value": "var(--eds-theme-color-text-neutral-default)"
               },
               "hover": {
-                "value": "var(--eds-theme-color-border-link-brand)"
+                "value": "var(--eds-theme-color-text-brand-default)"
               },
               "focus": {
                 "value": "var(--eds-theme-color-text-neutral-default-inverse)"
@@ -57,7 +57,7 @@
             },
             "background": {
               "focus": {
-                "value": "var(--eds-theme-color-border-link-neutral)"
+                "value": "var(--eds-theme-color-text-neutral-default)"
               }
             }
           }

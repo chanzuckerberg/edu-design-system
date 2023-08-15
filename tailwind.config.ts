@@ -10,7 +10,7 @@ const {
 
 export default {
   /**
-   * The main value in TW utility classes is for Storybook stories & recipes.
+   * The main value in TW utility classes is for Storybook stories, etc..
    * We avoid using them in component styles to reduce chance of conflict with other libraries.
    * Please configure downstream Tailwind config purge to include app files if necessary.
    */

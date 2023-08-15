@@ -1,11 +1,12 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type { MouseEventHandler, ReactNode } from 'react';
 import React from 'react';
-import SearchButton from '../SearchButton';
-import SearchField from '../SearchField';
+import Button from '../Button';
+import Icon from '../Icon';
+import Input, { type InputProps } from '../Input';
 import styles from './SearchBar.module.css';
 
-export type Props = {
+type SearchBarProps = {
   /**
    * SearchBar subcomponents to be wrapped.
    */
@@ -16,14 +17,72 @@ export type Props = {
   className?: string;
 };
 
+type SearchButtonProps = {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Disables the button and prevents button use.
+   */
+  disabled?: boolean;
+  /**
+   * On click handler for component
+   */
+  onClick?: MouseEventHandler;
+};
+
 /**
- * BETA: This component is still a work in progress and is subject to change.
+ * A search Input component styled for use with the SearchBar.
+ */
+const SearchField = ({ className, disabled, ...other }: InputProps) => {
+  const inputClassName = clsx(styles['search-field__input'], className);
+  const iconClassName = clsx(
+    styles['search-field__icon'],
+    disabled && styles['search-field__icon--disabled'],
+  );
+
+  return (
+    <div className={styles['search-field']}>
+      <Input
+        className={inputClassName}
+        disabled={disabled}
+        placeholder="Search"
+        type="search"
+        {...other}
+      />
+      <Icon
+        className={iconClassName}
+        name="search"
+        purpose="informative"
+        size="1.25rem"
+        title="search"
+      />
+    </div>
+  );
+};
+
+/**
+ * A button styled for use with the SearchBar.
+ */
+const SearchButton = ({ className, ...other }: SearchButtonProps) => {
+  const componentClassName = clsx(styles['search-button'], className);
+
+  return (
+    <Button className={componentClassName} variant="primary" {...other}>
+      Search
+    </Button>
+  );
+};
+
+/**
+ * In Review: This component is in design review and is subject to change.
  *
  * `import {SearchBar} from "@chanzuckerberg/eds";`
  *
  * Input field and button used for searching through various data fields.
  */
-export const SearchBar = ({ children, className }: Props) => {
+export const SearchBar = ({ children, className }: SearchBarProps) => {
   const componentClassName = clsx(styles['search-bar'], className);
 
   return <div className={componentClassName}>{children}</div>;

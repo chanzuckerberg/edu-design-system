@@ -230,5 +230,21 @@ export const UsingRenderProp: StoryObj<Args> = {
   ),
   parameters: {
     chromatic: { disableSnapshot: true },
+    docs: {
+      source: {
+        code: `<Accordion headingAs="h2">
+  <Accordion.Row>
+    {({ open }) => (
+      <>
+        <Accordion.Button data-testid="accordion-button">
+          Accordion Button {(open && 'open') || 'closed'}
+        </Accordion.Button>
+        <Accordion.Panel>Accordion Panel</Accordion.Panel>
+      </>
+    )}
+  </Accordion.Row>
+</Accordion>`,
+      },
+    },
   },
 };
