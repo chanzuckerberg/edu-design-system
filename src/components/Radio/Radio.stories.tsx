@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Radio } from './Radio';
 
-export default {
+const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
   component: Radio,
   args: {
@@ -14,7 +14,9 @@ export default {
     badges: ['1.0'],
   },
   decorators: [(Story) => <div style={{ margin: '0.25rem' }}>{Story()}</div>],
-} as Meta<Args>;
+};
+
+export default meta;
 
 /**
  * Controlled example to make checked stories interactive.
@@ -29,26 +31,27 @@ function RadioExample(args: Args) {
 }
 
 type Args = React.ComponentProps<typeof Radio>;
+type Story = StoryObj<typeof Radio>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   render: (args) => <RadioExample {...args} />,
 };
 
-export const Medium: StoryObj<Args> = {
+export const Medium: Story = {
   args: {
     size: 'md',
   },
   render: (args) => <RadioExample {...args} />,
 };
 
-export const Checked: StoryObj<Args> = {
+export const Checked: Story = {
   args: {
     checked: true,
   },
   render: (args) => <RadioExample {...args} />,
 };
 
-export const CheckedMedium: StoryObj<Args> = {
+export const CheckedMedium: Story = {
   args: {
     checked: true,
     size: 'md',
@@ -56,7 +59,7 @@ export const CheckedMedium: StoryObj<Args> = {
   render: (args) => <RadioExample {...args} />,
 };
 
-export const Disabled: StoryObj<Args> = {
+export const Disabled: Story = {
   args: {
     disabled: true,
   },
@@ -68,7 +71,7 @@ export const Disabled: StoryObj<Args> = {
   },
 };
 
-export const WithoutVisibleLabel: StoryObj<Args> = {
+export const WithoutVisibleLabel: Story = {
   render: () => (
     <>
       <Radio aria-label="unchecked radio" readOnly />

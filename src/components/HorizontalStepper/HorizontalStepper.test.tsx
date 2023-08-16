@@ -1,4 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { render } from '@testing-library/react';
 import React from 'react';
 import { HorizontalStepper } from './HorizontalStepper';
@@ -8,7 +9,7 @@ import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 describe('<HorizontalStepper />', () => {
   const warnMock = consoleWarnMockHelper();
 
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
   it('should warn if invalid activeIndex is passed', () => {
     const { rerender } = render(
       <HorizontalStepper activeIndex={4} steps={['1', '2', '3']} />,

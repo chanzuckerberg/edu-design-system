@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as LabelStoryFile from './Label.stories';
+import type { StoryFile } from '@storybook/testing-react';
+import * as stories from './Label.stories';
 
 describe('<Label />', () => {
-  generateSnapshots(LabelStoryFile);
+  generateSnapshots(stories as StoryFile);
 });

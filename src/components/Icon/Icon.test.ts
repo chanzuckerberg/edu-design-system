@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as IconStoryFile from './Icon.stories';
+import type { StoryFile } from '@storybook/testing-react';
+import * as stories from './Icon.stories';
 
 describe('<Icon />', () => {
-  generateSnapshots(IconStoryFile);
+  generateSnapshots(stories as StoryFile);
 });

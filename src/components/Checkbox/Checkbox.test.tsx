@@ -1,4 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -9,7 +10,7 @@ import * as stories from './Checkbox.stories';
 const { Default } = composeStories(stories);
 
 describe('<Checkbox />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   test('Disabled story renders snapshot', () => {
     const { container } = render(<Checkbox disabled label="Disabled" />);

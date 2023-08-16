@@ -1,13 +1,14 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Text } from './Text';
-import * as TextStoryFile from './Text.stories';
+import * as stories from './Text.stories';
 
 describe('<Text />', () => {
-  generateSnapshots(TextStoryFile);
+  generateSnapshots(stories as StoryFile);
 
   it('should add the passthrough className', () => {
     render(

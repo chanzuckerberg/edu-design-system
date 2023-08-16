@@ -14,11 +14,11 @@ module.exports = {
     './**/*.stories.mdx',
     './**/*.stories.@(js|jsx|ts|tsx)',
   ],
+
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
-    'storybook-css-modules-preset',
     '@storybook/addon-interactions',
     '@geometricpanda/storybook-addon-badges',
     {
@@ -29,15 +29,20 @@ module.exports = {
       },
     },
     {
-      name: '@storybook/addon-postcss',
+      name: '@storybook/addon-styling',
       options: {
-        postcssLoaderOptions: {
-          implementation: require('postcss'),
-        },
+        postCss: true,
+        cssModules: true,
       },
     },
   ],
-  core: {
-    builder: 'webpack5',
+
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+
+  docs: {
+    autodocs: true,
   },
 };

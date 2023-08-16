@@ -1,12 +1,13 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { render, screen } from '@testing-library/react';
+import type { StoryFile } from '@storybook/testing-react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { DataBar } from './DataBar';
 import * as stories from './DataBar.stories';
 
 describe('<DataBar />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   it('should focus with the tab key and the left and right arrow keys', async () => {
     const user = userEvent.setup();
@@ -23,11 +24,20 @@ describe('<DataBar />', () => {
       />,
     );
     screen.getByTestId('databar-test').focus();
-    await user.tab();
+
+    await act(async () => {
+      await user.tab();
+    });
     expect(screen.getByLabelText('Segment 1')).toHaveFocus();
-    await user.keyboard('{arrowright}');
+
+    await act(async () => {
+      await user.keyboard('{arrowright}');
+    });
     expect(screen.getByLabelText('Segment 2')).toHaveFocus();
-    await user.keyboard('{arrowleft}');
+
+    await act(async () => {
+      await user.keyboard('{arrowleft}');
+    });
     expect(screen.getByLabelText('Segment 1')).toHaveFocus();
   });
 });

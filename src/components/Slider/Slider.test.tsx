@@ -1,11 +1,12 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { render } from '@testing-library/react';
 import React from 'react';
 import * as stories from './Slider.stories';
 import Slider from './';
 
 describe('<Slider />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
   describe('error throws', () => {
     it('throws an error if told to generate markers, but steps are not integers', () => {
       // expect console error from react, suppressed.
