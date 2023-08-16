@@ -12,7 +12,7 @@ export const useId =
   function useId() {
     if (process.env.NODE_ENV !== 'production' && showWarning) {
       console.warn(
-        "React < 18: EDS's `useId` is not SSR friendly. We recommend applying an ID package like `uniqueId` or using React 18's built-in `React.useId` https://react.dev/reference/react/useId",
+        "React < 18: EDS's `useId` is not SSR friendly and can lead to race conditions. We recommend importing `uniqueId` and setting the id prop directly, or using React 18's built-in `React.useId` https://react.dev/reference/react/useId",
       );
       showWarning = false;
     }
