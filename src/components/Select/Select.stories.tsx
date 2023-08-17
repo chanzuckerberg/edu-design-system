@@ -279,6 +279,9 @@ export const OptionsRightAligned: StoryObj = {
         code: '// refer to "Default" story code',
       },
     },
+    chromatic: {
+      delay: 300,
+    },
   },
   render: () => (
     <InteractiveExampleUsingChildren
@@ -296,6 +299,9 @@ export const OptionsLeftAligned: StoryObj = {
       source: {
         code: '// refer to "Default" story code',
       },
+    },
+    chromatic: {
+      delay: 300,
     },
   },
   render: () => (
@@ -408,6 +414,11 @@ function InteractiveExampleUsingFunctionChildren() {
 // This story just opens the dropdown automatically so chromatic can test it.
 export const OpenByDefault: StoryObj = {
   ...Default,
+  parameters: {
+    badges: ['1.2'],
+    layout: 'centered',
+    chromatic: { delay: 300 },
+  },
   play: selectCat,
 };
 
