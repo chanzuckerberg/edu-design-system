@@ -411,7 +411,7 @@ export const OpenByDefault: StoryObj = {
   play: selectCat,
 };
 
-export const WithSelectedOption: StoryObj = {
+export const WithSelectedOption: StoryObj<typeof Select> = {
   parameters: {
     docs: {
       source: {
@@ -421,14 +421,11 @@ export const WithSelectedOption: StoryObj = {
       },
     },
   },
-  args: {
-    value: exampleOptions[0],
-  },
-  render: ({ value }) => (
+  render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
       labelComponent={<Select.Label>Favorite Animal</Select.Label>}
-      value={value}
+      value={exampleOptions[0]}
     />
   ),
 };
