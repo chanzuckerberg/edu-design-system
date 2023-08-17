@@ -139,23 +139,29 @@ function InteractiveExampleUsingFunctionChildren() {
 }
 
 /**
+ * Play function to open a menu item
+ */
+const openMenu: StoryObj['play'] = async (playOptions) => {
+  const { canvasElement } = playOptions;
+  const canvas = within(canvasElement);
+
+  // Open the dropdown.
+  const selectButton = await canvas.findByRole('button');
+  await userEvent.click(selectButton);
+};
+
+/**
  * Play function to use with interactive stories
  */
 const selectCat: StoryObj['play'] = async (playOptions) => {
   const { canvasElement } = playOptions;
   const canvas = within(canvasElement);
+  const selectButton = await canvas.findByRole('button');
+
+  await openMenu(playOptions);
 
   // Target the body of the iframe since we now use PopperJS
   const popoverCanvas = within(document.body);
-
-  console.log(document.body);
-
-  // Open the dropdown.
-  const selectButton = await canvas.findByRole('button');
-  await userEvent.click(selectButton);
-
-  // Select the best option.
-  console.log(document.body.innerHTML);
 
   const bestOption = await popoverCanvas.findByText('Cats');
   await userEvent.click(bestOption);
@@ -290,7 +296,7 @@ export const OptionsRightAligned: StoryObj = {
       optionsClassName="w-96"
     />
   ),
-  play: selectCat,
+  play: openMenu,
 };
 
 export const OptionsLeftAligned: StoryObj = {
@@ -311,7 +317,7 @@ export const OptionsLeftAligned: StoryObj = {
       optionsClassName="w-96"
     />
   ),
-  play: selectCat,
+  play: openMenu,
 };
 
 export const SeparateButtonAndMenuWidth: StoryObj = {
@@ -411,13 +417,12 @@ function InteractiveExampleUsingFunctionChildren() {
   render: () => <InteractiveExampleUsingFunctionChildren />,
 };
 
-// This story just opens the dropdown automatically so chromatic can test it.
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
     badges: ['1.2'],
     layout: 'centered',
-    chromatic: { delay: 300 },
+    chromatic: { delay: 300, disableSnapshot: true },
   },
   play: selectCat,
 };
