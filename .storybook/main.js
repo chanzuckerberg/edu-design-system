@@ -45,4 +45,29 @@ module.exports = {
   docs: {
     autodocs: true,
   },
+
+  core: {
+    disableTelemetry: true,
+  },
+
+  babel: (config) => {
+    return {
+      sourceType: 'unambiguous',
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              chrome: 100,
+              safari: 15,
+              firefox: 91,
+            },
+          },
+        ],
+        '@babel/preset-typescript',
+        '@babel/preset-react',
+      ],
+      plugins: [],
+    };
+  },
 };
