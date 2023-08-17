@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as InputFieldStoryFile from './InputField.stories';
+import type { StoryFile } from '@storybook/testing-react';
+import * as stories from './InputField.stories';
 
 describe('<InputField />', () => {
-  generateSnapshots(InputFieldStoryFile);
+  generateSnapshots(stories as StoryFile);
 });

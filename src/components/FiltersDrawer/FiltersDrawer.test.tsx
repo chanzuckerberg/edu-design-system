@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './FiltersDrawer.stories';
@@ -9,14 +10,16 @@ const { OverflowInteractive } = composeStories(stories);
 
 describe('<Filters />', () => {
   jest.setTimeout(50000);
-  generateSnapshots(stories, {
+  generateSnapshots(stories as StoryFile, {
     getElement: async () => {
       const user = userEvent.setup();
       const toggleFiltersButton = screen.queryByRole('button', {
         name: 'Filters',
       });
       if (toggleFiltersButton) {
-        await user.click(toggleFiltersButton);
+        await act(async () => {
+          await user.click(toggleFiltersButton);
+        });
       }
       const filters = await screen.findByRole('dialog');
       return filters.parentElement; // eslint-disable-line testing-library/no-node-access

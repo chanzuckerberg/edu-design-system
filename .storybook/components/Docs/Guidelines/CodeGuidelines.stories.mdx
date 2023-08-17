@@ -1,3 +1,5 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
 <Meta title="Documentation/Guidelines/Code Guidelines" />
 
 # Code Guidelines
@@ -281,7 +283,7 @@ Use:
 
 Instead of:
 
-```tsx
+```
 import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
 
 <Icon color={EdsThemeColorUtilitySuccessForeground} />;
@@ -351,10 +353,9 @@ The framework follows a specific ordering/clustering for importing modules into 
 Here's an example:
 
 ```js
-import React, { ReactNode } from 'react'; // 1
-import styles from './Tags.module.css'; // 2
-import { Icon } from '../Icon/Icon'; // 3
-// 4
+import React, { ReactNode } from 'react';
+import styles from './Tags.module.css';
+import { Icon } from '../Icon/Icon';
 ```
 
 1. Import utility/library dependencies first, in alphabetical order of the library name
@@ -385,7 +386,7 @@ The comment should begin with an import example, include a general description o
 
 Example:
 
-````tsx
+```tsx
 /**
  * `import {ButtonGroup} from "@chanzuckerberg/eds";`
  *
@@ -393,7 +394,7 @@ Example:
  *
  * Example usage:
  *
- * ```tsx
+ * ```
  * <ButtonGroup
  *   className={componentClassName}
  *   spacing='1x'
@@ -404,14 +405,14 @@ Example:
  * </ButtonGroup>
  * ```
  */
- export const ButtonGroup = ({
-````
+ export const ButtonGroup = ({ ... })
+```
 
 Do not use [jsdoc tags](https://devhints.io/jsdoc) (e.g. `@example`) if possible because these will break the documentation in storybook and cause all following text to not be shown on the page. For important jsdoc tags that we really want to include, place them at the end of the comment to avoid hiding comment content. For example, we use the `@deprecated` tag so Visual Studio Code will indicate a component is deprecated for developers, but we place that at the end of a component's docstring to avoid disrupting any of the other text.
 
 Example:
 
-````tsx
+```tsx
 /**
  * The Banner component is deprecated and will be removed in an upcoming release.
  *
@@ -434,7 +435,7 @@ Example:
  *
  * @deprecated
  */
-````
+```
 
 ### Export module
 
@@ -455,13 +456,13 @@ The `src/components/{componentFolder}/index.ts` file should should import and re
 
 i.e. in `src/components/{componentFolder}/index.ts`
 
-```ts
+```tsx
 export { ComponentName as default } from './ComponentName';
 ```
 
 and in `src/index.ts`
 
-```ts
+```tsx
 ...
 export { default as ComponentName } from './components/ComponentName';
 ...
@@ -542,7 +543,7 @@ By default, we err towards more centralized control over the component architect
 - Compound components never have an associated `.stories.tsx` file as they rely on the parent component's stories to render properly.
 - Compound components should be exported as subcomponents from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
 
-```tsx
+```ts
 // This demonstrates how bound subcomponents are attached
 Card.Header = CardHeader;
 Card.Footer = CardFooter;
@@ -550,7 +551,7 @@ Card.Footer = CardFooter;
 
 ### Prop Naming conventions
 
-- \*_camelCase for multi-word props_ - \*
+- _camelCase for multi-word props_
 - **All props declared at top of `render` method** - this defines all the props available to a component in one place and keeps the rest of the component code cleaner (you don't have to repeat `this.props.[thing]` everywhere).
 - Don't use ternaries for most things, especially blocks of JSX.
 - Update aria attribute prop names to native HTML names (`aria-label`, `aria-describedby`, `aria-labelledby`)
@@ -596,11 +597,11 @@ The default option should be the one most commonly used in order to reduce frict
 
 ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
 
-We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation for React 18, and polyfill with an incrementing number for React <18.
+We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation for React 18, and polyfill with an incrementing number for React &lt; 18.
 The polyfill is not ssr friendly as id generation is render timing dependent.
 To ensure stable results, they cannot be invoked within conditionals or callbacks.
 
-```tsx
+```ts
 const generatedId = useId();
 ```
 

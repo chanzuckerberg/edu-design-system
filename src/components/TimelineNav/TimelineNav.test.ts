@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as TimelineNav from './TimelineNav.stories';
+import * as stories from './TimelineNav.stories';
 
 describe('<TimelineNav />', () => {
-  generateSnapshots(TimelineNav);
+  generateSnapshots(stories);
 });

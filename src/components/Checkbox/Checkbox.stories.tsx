@@ -7,7 +7,7 @@ const defaultArgs = {
   label: 'Checkbox',
 };
 
-export default {
+const meta: Meta<typeof Checkbox> = {
   title: 'Components/Checkbox',
   component: Checkbox,
   args: defaultArgs,
@@ -25,27 +25,29 @@ export default {
       </div>
     ),
   ],
-} as Meta<Args>;
+};
 
-type Args = React.ComponentProps<typeof Checkbox>;
+export default meta;
 
-export const Default: StoryObj<Args> = {};
+type Story = StoryObj<typeof Checkbox>;
 
-export const Checked: StoryObj<Args> = {
+export const Default: Story = {};
+
+export const Checked: Story = {
   ...Default,
   args: {
     defaultChecked: true,
   },
 };
 
-export const Medium: StoryObj<Args> = {
+export const Medium: Story = {
   ...Default,
   args: {
     size: 'md',
   },
 };
 
-export const MediumChecked: StoryObj<Args> = {
+export const MediumChecked: Story = {
   ...Medium,
   args: {
     ...Checked.args,
@@ -53,14 +55,14 @@ export const MediumChecked: StoryObj<Args> = {
   },
 };
 
-export const Large: StoryObj<Args> = {
+export const Large: Story = {
   ...Default,
   args: {
     size: 'lg',
   },
 };
 
-export const LargeChecked: StoryObj<Args> = {
+export const LargeChecked: Story = {
   ...Large,
   args: {
     ...Checked.args,
@@ -68,13 +70,13 @@ export const LargeChecked: StoryObj<Args> = {
   },
 };
 
-export const Indeterminate: StoryObj<Args> = {
+export const Indeterminate: Story = {
   args: {
     indeterminate: true,
   },
 };
 
-export const Disabled: StoryObj<Args> = {
+export const Disabled: Story = {
   render: () => (
     <table className="border-spacing-8">
       <tbody>
@@ -115,7 +117,7 @@ export const Disabled: StoryObj<Args> = {
   },
 };
 
-export const WithoutVisibleLabel: StoryObj<Args> = {
+export const WithoutVisibleLabel: Story = {
   args: {
     'aria-label': 'a checkbox has no name',
     label: undefined,

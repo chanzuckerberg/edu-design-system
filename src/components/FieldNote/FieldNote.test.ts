@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as FieldNoteStoryFile from './FieldNote.stories';
+import * as stories from './FieldNote.stories';
 
 describe('<FieldNote />', () => {
-  generateSnapshots(FieldNoteStoryFile);
+  generateSnapshots(stories);
 });

@@ -1,4 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -8,7 +9,7 @@ import { TextareaField } from './TextareaField';
 import * as stories from './TextareaField.stories';
 
 describe('<TextareaField />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   it('can handle custom events when there is content', async () => {
     const onChangeFn = jest.fn();
