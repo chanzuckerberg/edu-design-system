@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -10,7 +11,7 @@ export default {
   title: 'Components/PageHeader',
   component: PageHeader,
   parameters: {
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
 } as Meta<Args>;
 

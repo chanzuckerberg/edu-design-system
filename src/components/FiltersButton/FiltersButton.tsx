@@ -21,11 +21,10 @@ export type FiltersButtonProps = {
 } & Omit<ButtonProps, 'children' | 'variant' | 'status'>;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {FiltersButton} from "@chanzuckerberg/eds";`
  *
  * Default button for triggering Filters components.
+ * @deprecated
  */
 export const FiltersButton = forwardRef<HTMLButtonElement, FiltersButtonProps>(
   ({ className, hasSelectedFilters, triggerText, ...other }, ref) => {

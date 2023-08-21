@@ -70,6 +70,7 @@ export interface Props {
  * `import {PageHeader} from "@chanzuckerberg/eds";`
  *
  * Header to be used at the top of a page.
+ * @deprecated
  */
 export const PageHeader = ({
   align,
