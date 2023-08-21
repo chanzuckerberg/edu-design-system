@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -16,7 +17,7 @@ export default {
   component: TimelineNav,
   subcomponents: { 'TimlineNav.Panel': TimelineNav.Panel },
   parameters: {
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.DEPRECATED],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },

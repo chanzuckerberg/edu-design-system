@@ -23,11 +23,10 @@ export interface Props {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Score} from "@chanzuckerberg/eds";`
  *
  * A (pill shaped badge) wrapper intended for use with scores.
+ * @deprecated
  */
 export const Score = ({ className, variant, ...other }: Props) => {
   const componentClassName = clsx(

@@ -13,7 +13,7 @@ export default {
   title: 'Components/FiltersDrawer',
   component: FiltersDrawer,
   parameters: {
-    badges: ['1.1', BADGE.BETA],
+    badges: ['1.1', BADGE.DEPRECATED],
   },
   args: {
     triggerText: 'Filters',

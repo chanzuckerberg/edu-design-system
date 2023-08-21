@@ -52,11 +52,11 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Drawer} from "@chanzuckerberg/eds";`
  *
  * A window component that slides from and out of the right side of the screen.
+ *
+ * @deprecated
  */
 export const Drawer = ({
   'aria-describedby': ariaDescribedBy,

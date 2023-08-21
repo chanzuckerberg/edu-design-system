@@ -160,11 +160,10 @@ const FiltersPopoverRender = ({
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {FiltersPopover} from "@chanzuckerberg/eds";`
  *
  * A popover component with fields of form inputs to select filters.
+ * @deprecated
  */
 export const FiltersPopover = ({
   placement = 'bottom-start',

@@ -79,6 +79,7 @@ export type DataBarProps = {
  *    { value: 15, text: 'Segment 3' },
  *  ]} />
  * ```
+ * @deprecated
  */
 export const DataBar = ({
   className,

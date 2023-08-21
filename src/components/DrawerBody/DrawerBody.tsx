@@ -15,11 +15,10 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {DrawerBody} from "@chanzuckerberg/eds";`
  *
  * The main center content of the Drawer component.
+ * @deprecated
  */
 export const DrawerBody = React.forwardRef<HTMLDivElement, Props>(
   ({ children, className }, ref) => {

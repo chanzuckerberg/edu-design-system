@@ -14,11 +14,10 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {DrawerFooter} from "@chanzuckerberg/eds";`
  *
  * The footer content of the Drawer component. Usually houses interactible component controlling the Drawer functionality.
+ * @deprecated
  */
 export const DrawerFooter = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx('drawer__footer', className);
