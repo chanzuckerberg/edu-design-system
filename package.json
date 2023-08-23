@@ -44,7 +44,6 @@
     "chromatic": "chromatic",
     "copy-fonts-to-lib": "copyfiles -u 3 src/design-tokens/tier-1-definitions/fonts.css src/design-tokens/tier-1-definitions/fonts/**/* lib/tokens",
     "create-component": "plop",
-    "deploy:docs": "storybook-to-ghpages --ci",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore src/**/*.css .storybook/**/*.css",
