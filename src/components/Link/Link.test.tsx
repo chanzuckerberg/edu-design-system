@@ -1,12 +1,13 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Link } from './Link';
-import * as ButtonStoryFile from './Link.stories';
+import * as stories from './Link.stories';
 
 describe('<Link />', () => {
-  generateSnapshots(ButtonStoryFile);
+  generateSnapshots(stories as StoryFile);
 
   it('renders the text in the link', () => {
     render(<Link href="/">Click</Link>);

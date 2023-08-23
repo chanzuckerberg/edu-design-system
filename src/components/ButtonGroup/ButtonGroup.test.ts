@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as ButtonGroupStoryFile from './ButtonGroup.stories';
+import type { StoryFile } from '@storybook/testing-react';
+import * as stories from './ButtonGroup.stories';
 
 describe('<ButtonGroup />', () => {
-  generateSnapshots(ButtonGroupStoryFile);
+  generateSnapshots(stories as StoryFile);
 });

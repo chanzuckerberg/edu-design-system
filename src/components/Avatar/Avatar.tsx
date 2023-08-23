@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import Graphemer from 'graphemer';
+
 import React from 'react';
 import Icon from '../Icon';
 import styles from './Avatar.module.css';
@@ -53,16 +55,25 @@ export interface Props {
   variant?: 'icon' | 'initials' | 'image';
 }
 
-function getInitials(fromName: string): string {
+/**
+ * Use graphemer to take a name part, and select the first grapheme (emoji, surrogate pair, ASCII character)
+ */
+function produceAbbreviation(fromName: string): string {
+  const splitter = new Graphemer();
+  return fromName ? splitter.splitGraphemes(fromName)[0] : '?';
+}
+
+export function getInitials(fromName: string): string {
   /**
    * Scenarios:
-   * - User's name is spelled as first and last name: John Smith
-   * - User's name has a middle name or initial: John C. Smith
-   * - User's Name has dashes in it
+   * - User's name is spelled as first and last name: John Smith => JS
+   * - User's name has a middle name or initial: John C. Smith => JS
+   * - User's Name has dashes in it: Kelly Davis-Johnson => KD
    */
   const initials = fromName
     .split(' ')
-    .map((part) => part[0])
+    .filter((part) => part !== '')
+    .map(produceAbbreviation)
     .reduce(
       (prev, curr, idx, arr) =>
         idx === 0 || idx === arr.length - 1 ? prev + curr : prev,

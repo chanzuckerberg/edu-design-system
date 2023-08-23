@@ -19,8 +19,6 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```tsx
  * import {Filters} from "@chanzuckerberg/eds";
  *
@@ -28,6 +26,7 @@ export type Props = {
  * ```
  *
  * Field of checkboxes that are placed within a FiltersDrawer component.
+ * @deprecated
  */
 export const FiltersCheckboxField = ({
   className,

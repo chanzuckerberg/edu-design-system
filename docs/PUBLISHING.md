@@ -10,6 +10,16 @@ Look to [this helpful document](https://designsystem.morningstar.com/getting-sta
 
 We currently use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log.
 
+### A note about major releases
+
+If you need to create a major release (e.g., one with breaking changes), it is very helpful to folks to include steps on how they can incorporate fixes for those changes. With that in mind, include any instructions for each breaking change in the release notes (step nr. 10).
+
+For an example of what this can look like, see [the release notes for EDS v13](https://github.com/chanzuckerberg/edu-design-system/releases/tag/v13.0.0).
+
+* Create a `details` block for each change, using the change text in the `summary`
+* Supply steps an engineer would take to port old code to the new format
+* If the change is very complex, link to a [codemod](https://github.com/facebook/jscodeshift) that can be run to automate the migration
+
 ---
 
 ## Releasing a new version of EDS
@@ -75,7 +85,7 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 
 8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn install && yarn build`
 9. Publish the package: `npm publish`
-10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/):
+10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**. Also, enable the discussion feature to handle any question-answering should questions arise.
 
 
 #### Finishing the release

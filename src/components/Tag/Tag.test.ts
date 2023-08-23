@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as TagStoryFile from './Tag.stories';
+import * as stories from './Tag.stories';
 
 describe('<Tag />', () => {
-  generateSnapshots(TagStoryFile);
+  generateSnapshots(stories);
 });

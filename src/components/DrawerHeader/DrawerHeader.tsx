@@ -29,11 +29,10 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {DrawerHeader} from "@chanzuckerberg/eds";`
  *
  * The header content of the Drawer component. Usually houses the heading and the close button.
+ * @deprecated
  */
 export const DrawerHeader = ({
   className,

@@ -78,8 +78,6 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   >;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Slider} from "@chanzuckerberg/eds";`
  *
  * Allows input of a value via dragging a thumb along a track.

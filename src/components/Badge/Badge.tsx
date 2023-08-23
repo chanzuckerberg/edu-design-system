@@ -69,8 +69,6 @@ const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
 const BadgeDot = () => <BadgeText />;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Badge} from "@chanzuckerberg/eds";`
  *
  * A badge is used to communicate an update or change to an object since the last interaction.

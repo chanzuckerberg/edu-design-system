@@ -18,7 +18,7 @@ const InteractiveToggle = ({ checked = false, onChange, ...other }: Args) => {
   );
 };
 
-export default {
+const meta: Meta<typeof Toggle> = {
   title: 'Components/Toggle',
   component: Toggle,
   args: {
@@ -30,30 +30,32 @@ export default {
     badges: ['1.0', BADGE.BETA],
   },
   render: (args) => <InteractiveToggle {...args} />,
-} as Meta<Args>;
+};
 
+export default meta;
 type Args = React.ComponentProps<typeof Toggle>;
+type Story = StoryObj<typeof Toggle>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const CheckedTrue: StoryObj<Args> = {
+export const CheckedTrue: Story = {
   args: {
     checked: true,
   },
 };
-export const Disabled: StoryObj<Args> = {
+export const Disabled: Story = {
   args: {
     disabled: true,
   },
 };
-export const WithoutLabel: StoryObj<Args> = {
+export const WithoutLabel: Story = {
   args: {
     label: undefined,
     'aria-label': 'Lorem ipsum',
   },
 };
 
-export const CustomPositioning: StoryObj<Args> = {
+export const CustomPositioning: Story = {
   parameters: {
     docs: {
       source: {

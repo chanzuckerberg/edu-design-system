@@ -10,7 +10,7 @@ import { InputField } from '../InputField/InputField';
 import { Label } from '../Label/Label';
 import { Text } from '../Text/Text';
 
-export default {
+const meta: Meta<typeof Slider> = {
   title: 'Components/Slider',
   component: Slider,
   parameters: {
@@ -22,8 +22,13 @@ export default {
       type: 'string',
     },
   },
-  render: (args) => <InteractiveSlider {...args} />,
-} as Meta<Args>;
+  render: (args: Args) => <InteractiveSlider {...args} />,
+};
+
+export default meta;
+
+type Args = React.ComponentProps<typeof Slider>;
+type Story = StoryObj<typeof Slider>;
 
 const InteractiveSlider = ({
   min = 0,
@@ -45,21 +50,19 @@ const InteractiveSlider = ({
   );
 };
 
-type Args = React.ComponentProps<typeof Slider>;
-
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   args: {
     label: 'Slider Label',
   },
 };
 
-export const NoVisibleLabel: StoryObj<Args> = {
+export const NoVisibleLabel: Story = {
   args: {
     'aria-label': 'Not visible slider label',
   },
 };
 
-export const GeneratedMarkers: StoryObj<Args> = {
+export const GeneratedMarkers: Story = {
   args: {
     label: 'Slider Label',
     min: 1,
@@ -70,7 +73,7 @@ export const GeneratedMarkers: StoryObj<Args> = {
   },
 };
 
-export const NegativeNonIntegerMarkers: StoryObj<Args> = {
+export const NegativeNonIntegerMarkers: Story = {
   args: {
     label: 'Slider Label',
     min: -1,
@@ -81,7 +84,7 @@ export const NegativeNonIntegerMarkers: StoryObj<Args> = {
   },
 };
 
-export const Disabled: StoryObj<Args> = {
+export const Disabled: Story = {
   args: {
     label: 'Slider Label',
     min: 1,
@@ -93,7 +96,7 @@ export const Disabled: StoryObj<Args> = {
   },
 };
 
-export const MarkersSmallValues: StoryObj<Args> = {
+export const MarkersSmallValues: Story = {
   args: {
     label: 'Slider Label',
     min: 1,
@@ -103,7 +106,7 @@ export const MarkersSmallValues: StoryObj<Args> = {
   },
 };
 
-export const MarkersLargeValues: StoryObj<Args> = {
+export const MarkersLargeValues: Story = {
   args: {
     label: 'Slider Label',
     min: 0,
@@ -115,7 +118,7 @@ export const MarkersLargeValues: StoryObj<Args> = {
   decorators: [(Story) => <div className="w-80">{Story()}</div>],
 };
 
-export const FieldNote: StoryObj<Args> = {
+export const FieldNote: Story = {
   args: {
     label: 'Slider Label',
     fieldNote: 'This is a fieldnote. It overrides the markers',
@@ -123,7 +126,7 @@ export const FieldNote: StoryObj<Args> = {
   },
 };
 
-export const Tooltip: StoryObj<Args> = {
+export const Tooltip: Story = {
   args: {
     label: 'Slider With Tooltip',
     min: 0,
@@ -132,7 +135,7 @@ export const Tooltip: StoryObj<Args> = {
     value: 3,
     fieldNote: 'Hover to view tooltip with the value',
   },
-  render: ({ value, ...args }) => {
+  render: ({ value, ...args }: Args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [sliderValue, setSliderValue] = useState(value);
     return (
@@ -164,7 +167,7 @@ export const Tooltip: StoryObj<Args> = {
 };
 
 // For visual regression test
-export const Focus: StoryObj<Args> = {
+export const Focus: Story = {
   args: {
     label: 'Slider Label',
   },
@@ -187,7 +190,7 @@ const moodData = [
   { emoji: '😍', value: 100, description: 'Very Happy' },
 ];
 
-export const UsingInputDisplay: StoryObj<Args> = {
+export const UsingInputDisplay: Story = {
   parameters: {
     badges: ['1.3', 'implementationExample'],
     axe: {
@@ -223,7 +226,7 @@ export const UsingInputDisplay: StoryObj<Args> = {
   },
 };
 
-export const UsingControlButtons: StoryObj<Args> = {
+export const UsingControlButtons: Story = {
   parameters: {
     badges: ['1.3', 'implementationExample'],
   },
@@ -269,7 +272,7 @@ export const UsingControlButtons: StoryObj<Args> = {
   },
 };
 
-export const WithHighlightedContent: StoryObj<Args> = {
+export const WithHighlightedContent: Story = {
   parameters: {
     badges: ['1.3', 'implementationExample'],
   },
@@ -321,7 +324,7 @@ export const WithHighlightedContent: StoryObj<Args> = {
   },
 };
 
-export const WithVisualLabel: StoryObj<Args> = {
+export const WithVisualLabel: Story = {
   parameters: {
     badges: ['1.3', 'implementationExample'],
   },
@@ -364,7 +367,7 @@ export const WithVisualLabel: StoryObj<Args> = {
   },
 };
 
-export const WithMultipleVisualLabels: StoryObj<Args> = {
+export const WithMultipleVisualLabels: Story = {
   parameters: {
     badges: ['1.3', 'implementationExample'],
   },

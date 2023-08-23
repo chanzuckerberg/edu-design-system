@@ -1,12 +1,13 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Button } from './Button';
-import * as ButtonStoryFile from './Button.stories';
+import * as stories from './Button.stories';
 
 describe('<Button />', () => {
-  generateSnapshots(ButtonStoryFile);
+  generateSnapshots(stories as StoryFile);
 
   it('renders the text in the button', () => {
     render(<Button>Click</Button>);

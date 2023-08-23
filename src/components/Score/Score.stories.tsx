@@ -8,7 +8,7 @@ export default {
   title: 'Components/Score',
   component: Score,
   parameters: {
-    badges: ['1.0', BADGE.BETA],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
 } as Meta<Args>;
 

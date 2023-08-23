@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './Drawer.stories';
@@ -21,7 +21,9 @@ describe('<Drawer />', () => {
       name: 'Open Drawer',
     });
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
-    await user.click(openDrawerButton);
+    await act(async () => {
+      await user.click(openDrawerButton);
+    });
     expect(screen.getByRole('dialog')).toBeTruthy();
   });
 });

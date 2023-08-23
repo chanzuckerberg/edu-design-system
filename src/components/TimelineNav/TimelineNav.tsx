@@ -127,6 +127,7 @@ const TimelineNavPanel = ({
  *
  * Provides a list-view pane for item labels/titles, and a details pane for each item's content.
  * When an item in the list is selected, the details pane is updated.
+ * @deprecated
  */
 export const TimelineNav = ({
   activeIndex = 0,

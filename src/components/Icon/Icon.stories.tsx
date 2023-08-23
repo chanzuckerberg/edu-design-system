@@ -7,7 +7,7 @@ import Link from '../Link';
 import Text from '../Text';
 import styles from './Icon.stories.module.css';
 
-export default {
+const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
   component: Icon,
   parameters: {
@@ -27,11 +27,12 @@ export default {
       options: ['currentColor', ...Object.keys(ColorTokens)],
     },
   },
-} as Meta<Args>;
+};
 
-type Args = React.ComponentProps<typeof Icon>;
+export default meta;
+type Story = StoryObj<typeof Icon>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   render: ({ name, color, ...rest }) => {
     // ESlint can't tell if ColorTokens[color] is valid or not, since it's computed at runtime.
     // @ts-expect-error cannot check type compliance on runtime imports
@@ -44,7 +45,7 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const Medium: StoryObj<Args> = {
+export const Medium: Story = {
   ...Default,
   args: {
     ...Default.args,
@@ -52,7 +53,7 @@ export const Medium: StoryObj<Args> = {
   },
 };
 
-export const Large: StoryObj<Args> = {
+export const Large: Story = {
   ...Default,
   args: {
     ...Default.args,
@@ -60,7 +61,7 @@ export const Large: StoryObj<Args> = {
   },
 };
 
-export const FullScreen: StoryObj<Args> = {
+export const FullScreen: Story = {
   ...Default,
   args: {
     ...Default.args,
@@ -73,7 +74,7 @@ export const FullScreen: StoryObj<Args> = {
   },
 };
 
-export const CustomColor: StoryObj<Args> = {
+export const CustomColor: Story = {
   ...Default,
   args: {
     ...Default.args,
@@ -82,7 +83,7 @@ export const CustomColor: StoryObj<Args> = {
   },
 };
 
-export const InText: StoryObj<Args> = {
+export const InText: Story = {
   render: (args) => {
     return (
       <Text as="p">
@@ -116,7 +117,7 @@ export const InText: StoryObj<Args> = {
   },
 };
 
-export const WithChildrenSvg: StoryObj<Args> = {
+export const WithChildrenSvg: Story = {
   ...Default,
   args: {
     viewBox: '0 0 24 24',

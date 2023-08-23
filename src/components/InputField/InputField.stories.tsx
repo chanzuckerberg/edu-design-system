@@ -6,7 +6,7 @@ import Button from '../Button';
 import { Label } from '../Label/Label';
 import { Table } from '../Table/Table';
 
-export default {
+const meta: Meta<typeof InputField> = {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
@@ -19,24 +19,25 @@ export default {
       </div>
     ),
   ],
-} as Meta<Args>;
+};
 
-type Args = React.ComponentProps<typeof InputField>;
+export default meta;
+type Story = StoryObj<typeof InputField>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   args: {
     label: 'Default input field',
     fieldNote: 'This is a fieldnote.',
   },
 };
 
-export const NoFieldnote: StoryObj<Args> = {
+export const NoFieldnote: Story = {
   args: {
     label: 'Default input field',
   },
 };
 
-export const Error: StoryObj<Args> = {
+export const Error: Story = {
   args: {
     label: 'Error input field',
     isError: true,
@@ -44,7 +45,7 @@ export const Error: StoryObj<Args> = {
   },
 };
 
-export const Disabled: StoryObj<Args> = {
+export const Disabled: Story = {
   args: {
     label: 'Disabled input field',
     disabled: true,
@@ -58,7 +59,7 @@ export const Disabled: StoryObj<Args> = {
   },
 };
 
-export const Required: StoryObj<Args> = {
+export const Required: Story = {
   args: {
     label: 'Input field with fieldNote',
     required: true,
@@ -66,7 +67,7 @@ export const Required: StoryObj<Args> = {
   },
 };
 
-export const NoVisibleLabel: StoryObj<Args> = {
+export const NoVisibleLabel: Story = {
   args: {
     'aria-label': 'Input for no visible label',
     fieldNote: 'This input field has no visible label',
@@ -74,7 +75,7 @@ export const NoVisibleLabel: StoryObj<Args> = {
   },
 };
 
-export const InputWithin: StoryObj<Args> = {
+export const InputWithin: Story = {
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
@@ -96,7 +97,7 @@ export const InputWithin: StoryObj<Args> = {
   ),
 };
 
-export const LabelFieldnoteVariants: StoryObj<Args> = {
+export const LabelFieldnoteVariants: Story = {
   render: (args) => (
     <div
       style={{
@@ -139,14 +140,14 @@ export const LabelFieldnoteVariants: StoryObj<Args> = {
   ),
 };
 
-export const ErrorVariants: StoryObj<Args> = {
+export const ErrorVariants: Story = {
   args: {
     isError: true,
   },
   ...LabelFieldnoteVariants,
 };
 
-export const DisabledVariants: StoryObj<Args> = {
+export const DisabledVariants: Story = {
   args: {
     disabled: true,
   },
@@ -159,7 +160,7 @@ export const DisabledVariants: StoryObj<Args> = {
   },
 };
 
-export const RequiredVariants: StoryObj<Args> = {
+export const RequiredVariants: Story = {
   args: {
     required: true,
   },
@@ -239,7 +240,7 @@ export const RequiredVariants: StoryObj<Args> = {
   },
 };
 
-export const TabularInput: StoryObj<Args> = {
+export const TabularInput: Story = {
   parameters: {
     badges: ['1.1', 'implementationExample'],
   },

@@ -1,17 +1,18 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Heading } from './Heading';
-import * as HeadingStoryFile from './Heading.stories';
+import * as stories from './Heading.stories';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 describe('<Heading />', () => {
   const consoleWarnMock = consoleWarnMockHelper();
 
-  generateSnapshots(HeadingStoryFile);
+  generateSnapshots(stories as StoryFile);
 
   it('should add the passthrough className', () => {
     render(
@@ -46,7 +47,7 @@ describe('<Heading />', () => {
   });
 
   it('should display warning message when attempting to use h6 size', () => {
-    const { Heading6 } = composeStories(HeadingStoryFile);
+    const { Heading6 } = composeStories(stories);
     render(<Heading6 />);
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
     expect(consoleWarnMock).toHaveBeenCalledWith(
@@ -56,7 +57,7 @@ describe('<Heading />', () => {
   });
 
   it('should display warning message when attempting to use h7 size', () => {
-    const { Heading7 } = composeStories(HeadingStoryFile);
+    const { Heading7 } = composeStories(stories);
     render(<Heading7 />);
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
     expect(consoleWarnMock).toHaveBeenCalledWith(

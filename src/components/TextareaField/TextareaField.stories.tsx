@@ -3,7 +3,7 @@ import React from 'react';
 
 import { TextareaField } from './TextareaField';
 
-export default {
+const meta: Meta<typeof TextareaField> = {
   title: 'Components/TextareaField',
   component: TextareaField,
   args: {
@@ -19,17 +19,18 @@ export default {
   parameters: {
     badges: ['1.3'],
   },
-} satisfies Meta<Args>;
+};
 
-type Args = React.ComponentProps<typeof TextareaField>;
+export default meta;
+type Story = StoryObj<typeof TextareaField>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   render: (args) => (
     <TextareaField aria-label="Text Label" {...args}></TextareaField>
   ),
 };
 
-export const UsingChildren: StoryObj<Args> = {
+export const UsingChildren: Story = {
   args: {
     children: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -38,14 +39,14 @@ export const UsingChildren: StoryObj<Args> = {
   },
 };
 
-export const WithNoDefaultValue: StoryObj<Args> = {
+export const WithNoDefaultValue: Story = {
   args: {
     defaultValue: undefined,
     fieldNote: undefined,
   },
 };
 
-export const WhenDisabled: StoryObj<Args> = {
+export const WhenDisabled: Story = {
   args: {
     disabled: true,
     rows: 2,
@@ -58,32 +59,32 @@ export const WhenDisabled: StoryObj<Args> = {
   },
 };
 
-export const WhenError: StoryObj<Args> = {
+export const WhenError: Story = {
   args: {
     isError: true,
     fieldNote: 'Text should be at least 100 characters',
   },
 };
 
-export const WhenInvalid: StoryObj<Args> = {
+export const WhenInvalid: Story = {
   args: {
     maxLength: 10,
   },
 };
 
-export const WhenRequired: StoryObj<Args> = {
+export const WhenRequired: Story = {
   args: {
     required: true,
   },
 };
 
-export const WithADifferentSize: StoryObj<Args> = {
+export const WithADifferentSize: Story = {
   args: {
     rows: 10,
   },
 };
 
-export const WithAMaxLength: StoryObj<Args> = {
+export const WithAMaxLength: Story = {
   args: {
     rows: 10,
     maxLength: 144,

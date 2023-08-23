@@ -12,7 +12,7 @@ export default {
   title: 'Components/Drawer',
   component: Drawer,
   parameters: {
-    badges: ['1.0', BADGE.BETA],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   args: {
     'aria-describedby': 'drawer-description-1',

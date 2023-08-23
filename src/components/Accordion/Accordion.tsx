@@ -87,8 +87,6 @@ const AccordionContext = createContext<{
 });
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
  * Displays a list of headers stacked on top of one another that can reveal or hide associated content.
