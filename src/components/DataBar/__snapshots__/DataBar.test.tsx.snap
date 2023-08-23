@@ -1,0 +1,348 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataBar /> LargeValue story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":r8:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":r9:"
+      >
+        96/100
+      </span>
+    </div>
+    <div
+      aria-describedby=":r9:"
+      class="data-bar"
+      id=":r8:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+        role="row"
+      >
+        <div
+          aria-label="Segment 1"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 96%;"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> NoSegments story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":rc:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":rd:"
+      >
+        0/100
+      </span>
+    </div>
+    <div
+      aria-describedby=":rd:"
+      class="data-bar"
+      id=":rc:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+        role="row"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand"
+          role="gridcell"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> SmallValue story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":ra:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":rb:"
+      >
+        1/100
+      </span>
+    </div>
+    <div
+      aria-describedby=":rb:"
+      class="data-bar"
+      id=":ra:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+        role="row"
+      >
+        <div
+          aria-label="Segment 1"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 5%;"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsLessThanMax story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":r0:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":r1:"
+      >
+        50/100
+      </span>
+    </div>
+    <div
+      aria-describedby=":r1:"
+      class="data-bar"
+      id=":r0:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+        role="row"
+      >
+        <div
+          aria-label="Segment 1"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 25%;"
+          tabindex="0"
+        />
+        <div
+          aria-label="Segment 2"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 10%;"
+          tabindex="-1"
+        />
+        <div
+          aria-label="Segment 3"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 15%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":r2:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":r3:"
+      >
+        50/50
+      </span>
+    </div>
+    <div
+      aria-describedby=":r3:"
+      class="data-bar"
+      id=":r2:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space"
+        role="row"
+      >
+        <div
+          aria-label="Segment 1"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 50%;"
+          tabindex="0"
+        />
+        <div
+          aria-label="Segment 2"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 20%;"
+          tabindex="-1"
+        />
+        <div
+          aria-label="Segment 3"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 30%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":r4:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":r5:"
+      >
+        50/25
+      </span>
+    </div>
+    <div
+      aria-describedby=":r5:"
+      class="data-bar"
+      id=":r4:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space"
+        role="row"
+      >
+        <div
+          aria-label="Segment 1"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 100%;"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsRightUnderMax story renders snapshot 1`] = `
+<div
+  class="m-4"
+>
+  <div>
+    <div
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for=":r6:"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id=":r7:"
+      >
+        50/51
+      </span>
+    </div>
+    <div
+      aria-describedby=":r7:"
+      class="data-bar"
+      id=":r6:"
+      role="grid"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+        role="row"
+      >
+        <div
+          aria-label="Segment 1"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 49.01960784313725%;"
+          tabindex="0"
+        />
+        <div
+          aria-label="Segment 2"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 19.607843137254903%;"
+          tabindex="-1"
+        />
+        <div
+          aria-label="Segment 3"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          role="gridcell"
+          style="width: 29.411764705882355%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

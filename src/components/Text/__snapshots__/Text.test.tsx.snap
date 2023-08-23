@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> Body story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--body"
+  >
+    Body paragraph
+  </p>
+</div>
+`;
+
+exports[`<Text /> BodyLarge story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--lg"
+  >
+    Body large
+  </p>
+</div>
+`;
+
+exports[`<Text /> BodyMedium story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--md"
+  >
+    Body medium
+  </p>
+</div>
+`;
+
+exports[`<Text /> BodySmall story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--sm"
+  >
+    Body small
+  </p>
+</div>
+`;
+
+exports[`<Text /> BodyVariantSuccessBold story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--body text--success text--bold-weight"
+  >
+    Success variant body text, bold
+  </p>
+</div>
+`;
+
+exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--xs"
+  >
+    Body Xsmall
+  </p>
+</div>
+`;
+
+exports[`<Text /> Callout story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--callout"
+  >
+    Callout
+  </p>
+</div>
+`;
+
+exports[`<Text /> Caption story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--caption"
+  >
+    Caption
+  </p>
+</div>
+`;
+
+exports[`<Text /> Overline story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--overline"
+  >
+    Overline
+  </p>
+</div>
+`;
+
+exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--body text--error"
+  >
+    This text surrounds the 
+    <span
+      class="text text--body text--inherit"
+    >
+      Child Text
+    </span>
+     and shows it should inherit variant from the parent
+  </p>
+</div>
+`;

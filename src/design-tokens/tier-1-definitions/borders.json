@@ -1,0 +1,37 @@
+{
+  "eds": {
+    "border": {
+      "width": {
+        "sm": {
+          "value": "1px"
+        },
+        "md": {
+          "value": "2px"
+        },
+        "lg": {
+          "value": "4px"
+        },
+        "xl": {
+          "value": "8px"
+        }
+      },
+      "radius": {
+        "md": {
+          "value": "4px"
+        },
+        "lg": {
+          "value": "8px"
+        },
+        "xl": {
+          "value": "20px"
+        },
+        "round": {
+          "value": "50%"
+        },
+        "full": {
+          "value": "9999px"
+        }
+      }
+    }
+  }
+}

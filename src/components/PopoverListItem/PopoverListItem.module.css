@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    # POPOVER LIST ITEM
+\*------------------------------------*/
+
+/**
+ * PopoverListItem
+ */
+.popover-list-item {
+  display: flex;
+  font-size: var(--eds-font-size-14);
+  padding: var(--eds-size-1) var(--eds-size-2);
+  background-color: var(--eds-theme-color-form-background);
+  cursor: pointer;
+}
+
+.popover-list-item--active {
+  color: var(--eds-theme-color-text-neutral-default);
+  background-color: var(--eds-theme-color-background-neutral-default-hover);
+}
+
+.popover-list-item--disabled {
+  color: var(--eds-theme-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.popover-list-item__icon {
+  padding-right: var(--eds-size-1-and-half);
+}
+
+.popover-list-item__no-icon {
+  /* right padding applies space for the icon itself and the padding for that icon container */
+  padding-right: calc(var(--eds-size-3) + var(--eds-size-1-and-half));
+}

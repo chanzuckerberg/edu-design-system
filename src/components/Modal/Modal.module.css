@@ -1,0 +1,314 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # MODAL
+\*------------------------------------*/
+
+/**
+ * The modal wrapper and overlay which takes up the entire screen.
+ */
+.modal,
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+/**
+ * The inverted background of the modal to provide contrast with the actual modal.
+ */
+.modal__overlay {
+  background-color: var(--eds-theme-color-body-background-inverted);
+  opacity: 0.5;
+}
+
+/**
+ * The modal container which positions the modal in the center of the screen.
+ */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--eds-size-2);
+  /**
+   * Ensures modal is above other components. This is not a design token for now since we need to align on 
+   * z-indeces across the app and in the platform. https://app.shortcut.com/czi-edu/story/203871.
+   */
+  z-index: 1050;
+}
+
+/**
+ * Modal transition animations.
+ */
+.modal__transition--enter {
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+.modal__transition--enterFrom {
+  opacity: 0;
+}
+.modal__transition--enterTo {
+  opacity: 1;
+}
+.modal__transition--leave {
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+.modal__transition--leaveFrom {
+  opacity: 1;
+}
+.modal__transition--leaveTo {
+  opacity: 0;
+}
+
+/**
+ * The content of the modal, which can wrap header, body, and footer.
+ */
+.modal__content {
+  position: relative;
+  height: 43.125rem;
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: var(--eds-border-radius-lg);
+  background-color: var(--eds-theme-color-background-neutral-default);
+  /** 
+  * This transparent border is for Window High Contrast Mode, which removes all
+  * background colors but makes borders 100% opacity black. Without this, the
+  * modal would have no clear boundary. 
+  */
+  border: var(--eds-theme-form-border-width) transparent
+    var(--eds-theme-color-background-neutral-default);
+  /** 
+  * We use flexbox to handle height and width automatically. 
+  * The body can scroll when content goes beyond the component,
+  * while the footer remains static (if scrollable).
+  */
+  display: flex;
+  flex-direction: column;
+
+  width: 22.5rem;
+  --modal-horizontal-padding: var(--eds-size-4);
+}
+
+/**
+ * The medium modal size used for the md modal.
+ * Also used for the lg modal size for when the screen size is smaller than 75rem.
+ */
+.modal__content--md {
+  @media all and (min-width: $eds-bp-md) {
+    width: 42rem;
+    --modal-horizontal-padding: var(--eds-size-6);
+  }
+}
+
+/**
+ * The large modal size used for the lg/default modal.
+ */
+.modal__content--lg {
+  @media all and (min-width: $eds-bp-xl) {
+    width: 64rem;
+    --modal-horizontal-padding: var(--eds-size-8);
+  }
+}
+
+/**
+ * Allows scrolling of the modal content except for sticky footer.
+ * This functionality is our intended scroll behavior but consuming teams can 
+ * style the body content as they wish to handle overflow in various ways.
+ */
+.modal__content--scrollable {
+  overflow: auto;
+}
+
+/**
+ * The modal close button.
+ */
+.modal__close-button {
+  border: 0;
+  background-color: transparent;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  /* Minimum button target size is 44px, but 3rem (48px) is next closest ramp size. */
+  width: var(--eds-size-6);
+  height: var(--eds-size-6);
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+/**
+ * The modal close icon that resides in the close button.
+ */
+.modal__close-icon {
+  position: absolute;
+  top: var(--eds-size-1);
+  right: var(--eds-size-1);
+  color: var(--eds-theme-color-icon-neutral-subtle);
+}
+
+/**
+ * White variant of the close icon in a brand variant of the modal.
+ */
+.modal__close-icon--brand {
+  color: var(--eds-theme-color-icon-neutral-default-inverse);
+}
+
+/*------------------------------------*\
+    # MODAL BODY
+\*------------------------------------*/
+
+/**
+ * The body of the modal
+ */
+ .modal-body {
+  padding: var(--eds-size-4) var(--modal-horizontal-padding);
+  flex: 1;
+}
+
+.modal-body:focus-visible {
+  @mixin focusInside;
+}
+
+@supports not selector(:focus-visible) {
+  .modal-body:focus {
+    @mixin focusInside;
+  }
+}
+
+/*------------------------------------*\
+    # MODAL FOOTER
+\*------------------------------------*/
+
+/**
+ * Footer for the modal.
+ */
+ .modal-footer {
+  padding-top: var(--eds-size-2-and-half);
+  padding-bottom: var(--eds-size-2-and-half);
+  padding-left: var(--modal-horizontal-padding);
+  padding-right: var(--eds-size-3);
+
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-default);
+
+  border-bottom-left-radius: var(--eds-border-radius-lg);
+  border-bottom-right-radius: var(--eds-border-radius-lg);
+
+  z-index: var(--eds-z-index-100);
+}
+
+/**
+ * Sticky variant of the footer.
+ * Used when the modal variant is scrollable.
+ */
+.modal-footer--sticky {
+  position: sticky;
+  bottom: 0;
+  box-shadow: var(--eds-box-shadow-xl);
+}
+
+/*------------------------------------*\
+    # MODAL HEADER
+\*------------------------------------*/
+
+/**
+ * Header for the modal.
+ */
+ .modal-header {
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-default);
+  padding-top: var(--eds-size-7);
+  padding-left: var(--modal-horizontal-padding);
+  padding-right: var(--modal-horizontal-padding);
+}
+
+/**
+ * Brand variant for the header.
+ */
+.modal-header--brand {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 10.75rem;
+
+  @media all and (min-height: $eds-bp-sm-2) {
+    min-height: 19.75rem;
+  }
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+    flex-direction: row;
+  }
+
+  flex-shrink: 0;
+
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  background-color: var(--eds-theme-color-modal-brand-header-background);
+  h2 {
+    /**
+     * Brand specific font for the title.
+     */
+    flex: 1;
+    font: var(--eds-theme-typography-headline-secondary-lg);
+    
+    @media all and (min-width: $eds-bp-sm-2) {
+      margin-bottom: var(--eds-size-3);
+    }
+    @media all and (min-width: $eds-bp-xl) {
+      font: var(--eds-theme-typography-headline-secondary-md);
+   
+    }
+  }
+}
+
+/**
+ * Specific asset placement for brand.
+ */
+.modal-header__brand-asset {
+  align-self: flex-end;
+  position: relative;
+  top: var(--eds-size-2);
+  left: var(--eds-size-2);
+
+  width: 8.5rem;
+  height: 8.5rem;
+
+  /* For mobile landscape orientation. */
+  @media all and (min-width: $eds-bp-sm-2) {
+    display: none;
+  }
+
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+    display: block;
+    width: 14rem;
+    height: 14rem;
+    left: var(--eds-size-3);
+  }
+
+  @media all and (min-width: $eds-bp-xl) {
+    width: 16.5rem;
+    height: 16.5rem;
+    left: 0;
+  }
+}
+
+/*------------------------------------*\
+    # MODAL STEPPER
+\*------------------------------------*/
+
+/**
+ * Stepper that resides in the modal footer.
+ */
+ .modal-stepper {
+  color: var(--eds-theme-color-icon-neutral-default);
+  display: flex;
+  gap: var(--eds-size-1-and-half);
+}

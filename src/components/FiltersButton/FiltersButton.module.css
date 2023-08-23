@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    # FILTERS BUTTON
+\*------------------------------------*/
+
+/**
+ * Trigger button that opens the filters.
+ */
+.filters-button {
+  gap: var(--eds-size-1);
+}

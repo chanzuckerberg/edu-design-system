@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputLabel /> Default story renders snapshot 1`] = `
+<label
+  class="label label--lg"
+>
+  Label
+</label>
+`;
+
+exports[`<InputLabel /> LargeDisabled story renders snapshot 1`] = `
+<label
+  class="label label--lg label--disabled"
+>
+  Label
+</label>
+`;
+
+exports[`<InputLabel /> LongCopy story renders snapshot 1`] = `
+<label
+  class="label label--lg"
+>
+  Long label lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id velit ut egestas arcu. Atmaecenas urna, risus donec praesent eu consectetur.
+</label>
+`;
+
+exports[`<InputLabel /> Medium story renders snapshot 1`] = `
+<label
+  class="label label--md"
+>
+  Label
+</label>
+`;
+
+exports[`<InputLabel /> MediumDisabled story renders snapshot 1`] = `
+<label
+  class="label label--md label--disabled"
+>
+  Label
+</label>
+`;

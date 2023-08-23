@@ -1,0 +1,8 @@
+storybook-static
+node_modules
+lib
+*.hbs
+.husky
+.prettierignore
+*.svg
+*.png

@@ -1,0 +1,14 @@
+.button-group__apply-only {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filters-popover {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--eds-size-6);
+}
+
+.filters-popover__checkbox-field {
+  max-width: 300px;
+}

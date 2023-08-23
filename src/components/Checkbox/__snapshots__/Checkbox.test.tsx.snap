@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> Checked story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r1:"
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r1:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Default story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r0:"
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r0:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <table
+    class="border-spacing-8"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              class="checkbox__input"
+              disabled=""
+              id=":r7:"
+              type="checkbox"
+            />
+            <label
+              class="label label--lg label--disabled"
+              for=":r7:"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              class="checkbox__input"
+              id=":r8:"
+              readonly=""
+              type="checkbox"
+            />
+            <label
+              class="label label--lg"
+              for=":r8:"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              checked=""
+              class="checkbox__input"
+              disabled=""
+              id=":r9:"
+              type="checkbox"
+            />
+            <label
+              class="label label--lg label--disabled"
+              for=":r9:"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              checked=""
+              class="checkbox__input"
+              id=":ra:"
+              readonly=""
+              type="checkbox"
+            />
+            <label
+              class="label label--lg"
+              for=":ra:"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              class="checkbox__input"
+              disabled=""
+              id=":rb:"
+              type="checkbox"
+            />
+            <label
+              class="label label--lg label--disabled"
+              for=":rb:"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <input
+              class="checkbox__input"
+              id=":rc:"
+              readonly=""
+              type="checkbox"
+            />
+            <label
+              class="label label--lg"
+              for=":rc:"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
+<div
+  class="checkbox"
+>
+  <input
+    class="checkbox__input"
+    disabled=""
+    id=":rn:"
+    type="checkbox"
+  />
+  <label
+    class="label label--lg label--disabled"
+    for=":rn:"
+  >
+    Disabled
+  </label>
+</div>
+`;
+
+exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r6:"
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r6:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Large story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r4:"
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r4:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> LargeChecked story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r5:"
+      type="checkbox"
+    />
+    <label
+      class="label label--lg"
+      for=":r5:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="grid w-80 grid-cols-2 gap-4"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        id=":rj:"
+        readonly=""
+        type="checkbox"
+      />
+      <label
+        class="label label--lg"
+        for=":rj:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        id=":rk:"
+        readonly=""
+        type="checkbox"
+      />
+      <label
+        class="label label--md checkbox__label--md"
+        for=":rk:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":rl:"
+        type="checkbox"
+      />
+      <label
+        class="label label--lg label--disabled"
+        for=":rl:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":rm:"
+        type="checkbox"
+      />
+      <label
+        class="label label--md label--disabled checkbox__label--md"
+        for=":rm:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Medium story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r2:"
+      type="checkbox"
+    />
+    <label
+      class="label label--md checkbox__label--md"
+      for=":r2:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r3:"
+      type="checkbox"
+    />
+    <label
+      class="label label--md checkbox__label--md"
+      for=":r3:"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="flex items-center"
+  >
+    <label
+      class="label label--lg mr-2"
+      for="test"
+    >
+      Label on Left
+    </label>
+    <input
+      class="checkbox__input"
+      id="test"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        class="checkbox__input"
+        id=":rd:"
+        readonly=""
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        checked=""
+        class="checkbox__input"
+        id=":re:"
+        readonly=""
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        class="checkbox__input"
+        id=":rf:"
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        class="checkbox__input"
+        disabled=""
+        id=":rg:"
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        checked=""
+        class="checkbox__input"
+        disabled=""
+        id=":rh:"
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        aria-label="a checkbox has no name"
+        class="checkbox__input"
+        disabled=""
+        id=":ri:"
+        type="checkbox"
+      />
+    </div>
+  </div>
+</div>
+`;

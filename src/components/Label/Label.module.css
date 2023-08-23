@@ -1,0 +1,45 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # LABEL
+\*------------------------------------*/
+
+/**
+ * Label
+ * 
+ * Labels can sometimes be marked up as legends for field groups (i.e. radio field).
+ */
+.label {
+  font: var(--eds-theme-typography-form-label);
+  display: inline-block;
+}
+
+/**
+ * Label flag
+ *
+ * A flag to mark whether or not a field is required or optional. Currently a flag
+ * is only present for optional fields.
+ */
+.label__flag {
+  font: var(--eds-theme-typography-body-sm);
+}
+
+/**
+ * Label after
+ *
+ * An empty slot for additional element to appear to the right of the label text.
+ * Typically used to present tooltips by the labels.
+ */
+.label__after {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: var(--eds-size-1);
+}
+
+/**
+ * Visually hides the label element but is kept for screen reading accessibility.
+ */
+.u-is-vishidden {
+  @mixin visuallyHide;
+}

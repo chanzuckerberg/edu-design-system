@@ -1,0 +1,150 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BREADCRUMBS
+\*------------------------------------*/
+
+/**
+ * Breadcrumbs are a navigational component
+ *
+ * The outer wrapper for the breadcrumbs is a <nav> element.
+ */
+
+/**
+ * Breadcrumbs list
+ */
+.breadcrumbs__list {
+  list-style: none;
+  display: flex;
+}
+
+/*------------------------------------*\
+    # BREADCRUMBS ITEM
+\*------------------------------------*/
+
+/**
+ * Breadcrumbs list item.
+ */
+ .breadcrumbs__item {
+  font: var(--eds-theme-typography-body-xs);
+  max-width: 100%;
+  /* Required for the Menu to absolutely position relative to this container. */
+  position: relative;
+
+  /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */
+  display: none;
+  flex-shrink: 0;
+  &:last-of-type {
+    display: flex;
+    /* Truncate last breadcrumb in smaller breakpoints */
+    flex: 1 0 0%;
+  }
+
+  min-width: 0;
+
+  align-items: center;
+
+  @media all and (min-width: $eds-bp-md) {
+    /* Display breadcrumbs in larger breakpoints. */
+    display: flex;
+    &:last-of-type {
+      /* Truncate last breadcrumb in smaller breakpoints */
+      flex: 0 0 auto;
+    }
+  }
+}
+
+/**
+ * Back variant of the breadcrumbs list item.
+ */
+.breadcrumbs__item-back {
+  display: flex;
+  margin-right: var(--eds-size-1-and-half);
+  @media all and (min-width: $eds-bp-md) {
+    /* Hidden for larger breakpoints. */
+    display: none;
+  }
+}
+.breadcrumbs__item-back > .breadcrumbs__separator {
+  /* Hide the separator for the back variant. */
+  display: none;
+}
+
+/**
+ * Ellipsis variant of the breadcrumbs list item.
+ */
+.breadcrumbs__ellipsis {
+  min-height: unset;
+  min-width: unset;
+
+  border: none;
+  border-radius: unset;
+  background-color: transparent;
+}
+.breadcrumbs__ellipsis:hover {
+  background-color: transparent;
+}
+
+/**
+ * Breadcrumbs link.
+ */
+.breadcrumbs__link {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  text-decoration: none;
+
+  &:last-of-type {
+    /* Truncate last link with ellipsis. */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      @mixin focus;
+    }
+  }
+}
+
+/**
+ * Breadcrumbs Icon - a separator between breadcrumb links.
+ */
+.breadcrumbs__separator {
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  margin-left: var(--eds-size-1);
+  margin-right: var(--eds-size-1);
+  cursor: default;
+}
+
+/**
+ * Last breadcrumbs item icon.
+ */
+.breadcrumbs__item:last-child .breadcrumbs__separator.breadcrumbs__separator {
+  /*  A separator shouldn't be displayed after last link. */
+  display: none;
+}
+
+/**
+ * Breadcrumbs Back Icon.
+ */
+.breadcrumbs__back-icon {
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  /* Transform over height due to icon being placed inside <a>. */
+  transform: scale(1.5);
+  position: relative;
+  bottom: 0.125rem;
+}

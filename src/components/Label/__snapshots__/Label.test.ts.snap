@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> Default story renders snapshot 1`] = `
+<label
+  class="label"
+>
+  Label
+   
+</label>
+`;
+
+exports[`<Label /> Optional story renders snapshot 1`] = `
+<label
+  class="label"
+>
+  Label
+   
+  <span
+    class="label__flag"
+  >
+    (optional)
+  </span>
+</label>
+`;

@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    # INPUT FIELD
+\*------------------------------------*/
+
+/**
+ * Wraps the Label and the optional/required indicator.
+ */
+.input-field__overline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--eds-size-half);
+}
+.input-field__overline--no-label {
+  justify-content: flex-end;
+}
+
+/**
+ * Input field body
+ */
+.input-field__body {
+  position: relative;
+}
+
+.input-field__label {
+  color: var(--eds-theme-color-form-label);
+  font: var(--eds-theme-typography-form-label);
+}
+.input-field__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+.input-field__required-text {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  font: var(--eds-theme-typography-body-sm);
+}
+.input-field__required-text--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+.input-field--has-fieldNote {
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * Input Field Within
+ *
+ * A slot to put arbitrary content that appears within the input field border to the right. 
+ *
+ * Typically used for buttons and icon buttons to enable things like show/hide password buttons .
+ */
+.input-field__input-within {
+  position: absolute;
+  right: var(--eds-size-2);
+  top: 0;
+  bottom: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

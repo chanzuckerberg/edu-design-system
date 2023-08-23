@@ -1,0 +1,22 @@
+.example-card {
+  padding-left: var(--eds-size-6);
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.grid-square {
+  width: fit-content;
+  display: grid;
+  grid-template-areas: 'a a' 'a a';
+  gap: var(--eds-size-6);
+}
+
+.margin-0 {
+  margin: 0;
+}

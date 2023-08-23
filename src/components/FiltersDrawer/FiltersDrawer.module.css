@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    # FILTERS DRAWER
+\*------------------------------------*/
+
+/**
+ * The space the filters drawer takes up.
+ */
+.filters-drawer__container {
+  width: 22.5rem;
+}
+
+/**
+ * The drawer containing the filters. Resides in the filters drawer container.
+ */
+.filters-drawer {
+  height: calc(100vh - var(--eds-size-2));
+  max-width: calc(100vw - var(--eds-size-2));
+  @media all and (min-width: $eds-bp-md) {
+    height: 100vh;
+  }
+}
+
+.filters-drawer__trigger {
+  gap: var(--eds-size-1);
+}
+
+/**
+ * The title name of the filters drawer.
+ */
+.filters-drawer__title {
+  margin-left: var(--eds-size-4);
+}
+
+/**
+ * The body of the filters drawer that houses the filters fields.
+ */
+.filters-drawer__body {
+  overflow: auto;
+
+  padding: var(--eds-size-5) var(--eds-size-4);
+  @media all and (min-width: $eds-bp-md) {
+    padding-top: var(--eds-size-6);
+    padding-bottom: var(--eds-size-6);
+  }
+}
+
+/**
+ * The footer of the filters drawer that houses the apply and clear all button group.
+ */
+.filters-drawer__footer {
+  height: var(--eds-size-10);
+  padding: var(--eds-size-2-and-half) var(--eds-size-3);
+}
+
+/**
+ * The footer variant with a shadow in the case of an overflow.
+ */
+.filters-drawer__footer--overflow {
+  box-shadow: var(--eds-box-shadow-xl);
+}
+
+/**
+ * The button group of the houses the apply and clear all buttons.
+ */
+.footer__button-group {
+  display: flex;
+}
+
+/**
+ * The apply and clear all buttons.
+ */
+.footer__button {
+  flex: 1;
+}

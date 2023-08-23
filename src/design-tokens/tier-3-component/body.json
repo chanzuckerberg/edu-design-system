@@ -1,0 +1,18 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "body": {
+          "background": {
+            "@": {
+              "value": "{eds.color.neutral.100}"
+            },
+            "inverted": {
+              "value": "{eds.color.neutral.700}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

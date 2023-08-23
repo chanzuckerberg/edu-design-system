@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    # TEXT
+\*------------------------------------*/
+
+/**
+ * Sizes
+ */
+.text--body,
+.text--md {
+  font: var(--eds-theme-typography-body-md);
+}
+.text--lg {
+  font: var(--eds-theme-typography-body-lg);
+}
+.text--sm {
+  font: var(--eds-theme-typography-body-sm);
+}
+.text--xs {
+  font: var(--eds-theme-typography-body-xs);
+}
+.text--caption, .text--caption-md {
+  font: var(--eds-theme-typography-caption-md);
+}
+.text--caption-lg {
+  font: var(--eds-theme-typography-caption-lg);
+}
+.text--overline {
+  font: var(--eds-theme-typography-overline);
+  text-transform: uppercase;
+}
+.text--callout {
+  font: var(--eds-theme-typography-callout);
+}
+
+/**
+ * Variant
+ */
+.text--error {
+  color: var(--eds-theme-color-text-utility-error);
+}
+.text--neutral-subtle {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+.text--neutral-medium {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+.text--neutral-strong {
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+.text--brand {
+  color: var(--eds-theme-color-text-brand-default);
+}
+/* stylelint-disable-next-line eds/no-tier-1-color-variable */
+.text--info {
+  color: var(--eds-color-info-700);
+}
+.text--inherit {
+  color: inherit;
+}
+.text--success {
+  color: var(--eds-theme-color-text-utility-success);
+}
+.text--warning {
+  color: var(--eds-theme-color-text-utility-warning);
+}
+.text--white {
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+}
+
+/**
+ * Weights
+ */
+.text--normal-weight {
+  font-weight: var(--eds-font-weight-light);
+}
+.text--bold-weight {
+  font-weight: var(--eds-font-weight-bold);
+}

@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageHeader /> Centered story renders snapshot 1`] = `
+<header
+  class="page-header page-header--center"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> Default story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+    </h1>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> TitleAfter story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+      <div
+        class="page-header__title-after"
+      >
+        <span
+          class="text text--sm text--bold-weight tag tag--neutral"
+        >
+          <span
+            class="tag__body"
+          >
+            Title after content
+          </span>
+        </span>
+      </div>
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> TwoUp story renders snapshot 1`] = `
+<header
+  class="page-header page-header--2up"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+  <div
+    class="page-header__right"
+  >
+    Right content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> WithBreadcrumbs story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <nav
+      aria-label="breadcrumbs links"
+      class="breadcrumbs"
+    >
+      <ul
+        class="breadcrumbs__list"
+      >
+        <li
+          class="breadcrumbs__item breadcrumbs__item-back"
+        >
+          <a
+            class="breadcrumbs__link"
+            href="#"
+          >
+            <svg
+              class="icon breadcrumbs__back-icon"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                My Courses
+              </title>
+              <path
+                d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
+              />
+            </svg>
+          </a>
+          <span
+            aria-hidden="true"
+            class="breadcrumbs__separator"
+          >
+            /
+          </span>
+        </li>
+        <li
+          class="breadcrumbs__item"
+        >
+          <a
+            class="breadcrumbs__link"
+            href="#"
+          >
+            My Courses
+          </a>
+          <span
+            aria-hidden="true"
+            class="breadcrumbs__separator"
+          >
+            /
+          </span>
+        </li>
+        <li
+          class="breadcrumbs__item"
+        >
+          <a
+            class="breadcrumbs__link"
+            href="#"
+          >
+            (2023) Modern World 1
+          </a>
+          <span
+            aria-hidden="true"
+            class="breadcrumbs__separator"
+          >
+            /
+          </span>
+        </li>
+      </ul>
+    </nav>
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> WithDescription story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> WithOverline story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <p
+      class="text text--overline"
+    >
+      Overline above title
+    </p>
+    <h1
+      class="heading heading--size-headline-lg heading--neutral-strong page-header__title"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;

@@ -1,0 +1,198 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------*\
+    # SLIDER
+\*------------------------*/
+
+/**
+ * Slider wrapping Label and Input
+ */
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-1-and-half);
+}
+
+/**
+ * Slider label disabled
+ */
+.slider__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * Slider Input
+ */
+.slider__input {
+  /* increases vertical hitbox for target size accessibility */
+  padding-top: 22px;
+  padding-bottom: 22px;
+  /* fills left side of track as a percentage of the input value */
+  --slider-track-background: linear-gradient(
+    /* fill from left to right */ to right,
+    /* fill color */ var(--eds-theme-color-background-brand-primary-strong)
+      /* percent to fill */ calc(var(--ratio) * 100%),
+    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
+      /* don't blend the colors */ 0
+  );
+
+  appearance: none;
+  background: transparent;
+
+  height: var(--eds-theme-size-slider-thumb);
+}
+.slider__input:focus {
+  outline: none;
+}
+.slider__input:disabled {
+  --slider-track-background: linear-gradient(
+    /* fill from left to right */ to right,
+    /* fill color */ var(--eds-theme-color-background-disabled) /* percent to fill */
+      calc(var(--ratio) * 100%),
+    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
+      /* don't blend the colors */ 0
+  );
+  cursor: not-allowed;
+}
+
+/* 
+ * Chrome, Safari, Edge Chromium
+ * Although redundant with Firefox, has to be separate or else Chrome ignores
+ */
+.slider__input::-webkit-slider-runnable-track {
+  background: var(--slider-track-background);
+  height: var(--eds-theme-size-slider-track-height);
+  border-radius: var(--eds-border-radius-full);
+}
+/**
+ * Slider Input Track
+ */
+/* Firefox */
+.slider__input::-moz-range-track {
+  background: var(--slider-track-background);
+  height: var(--eds-theme-size-slider-track-height);
+  border-radius: var(--eds-border-radius-full);
+}
+
+/* Chrome, Safari, Edge Chromium */
+.slider__input::-webkit-slider-thumb {
+  appearance: none;
+
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
+  background: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
+
+  /* Centers thumb on the track */
+  /* prettier-ignore */
+  margin-top: calc(var(--eds-theme-size-slider-track-height) / 2 - var(--eds-theme-size-slider-thumb) / 2);
+}
+.slider__input:not(:disabled)::-webkit-slider-thumb {
+  cursor: grab;
+}
+.slider__input:not(:disabled)::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+/* Chrome, Safari, Edge Chromium Focus */
+.slider__input:focus-visible::-webkit-slider-thumb {
+  @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-webkit-slider-thumb {
+    @mixin focus;
+  }
+}
+
+/*
+ * Slider Input Thumb
+ */
+/* Firefox */
+.slider__input::-moz-range-thumb {
+  box-sizing: border-box;
+
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
+  background: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
+}
+.slider__input:not(:disabled)::-moz-range-thumb {
+  cursor: grab;
+}
+.slider__input:not(:disabled)::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+/* Firefox Focus */
+.slider__input:focus-visible::-moz-range-thumb {
+  @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-moz-range-thumb {
+    @mixin focus;
+  }
+}
+
+/**
+ * Slider Markers wrapper below the track
+ */
+.slider__markers {
+  display: flex;
+  justify-content: space-between;
+
+  /* Calculates offset of the markers to align with actual values */
+  padding-left: calc(var(--eds-theme-size-slider-thumb) / 2);
+  padding-right: calc(var(--eds-theme-size-slider-thumb) / 2);
+}
+
+/**
+ * Slider Marker 
+ */
+.slider__marker {
+  font: var(--eds-theme-typography-caption-sm);
+
+  /* Centers the text to the marker location */
+  width: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider__marker--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * align the text of the last marker flush with the right edge
+ */
+.slider__marker:last-child {
+  text-align: right;
+}
+
+/**
+ * Align all middle markers as centered on the mark point (if multi-line)
+ */
+.slider__marker:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
+/**
+ * Use this proxy element to calculate runtime sizing of the rendered thumb
+ * which is hidden by the shadow dom
+ */
+.slider__thumb-proxy {
+  position: absolute;
+  visibility: hidden;
+  height: var(--eds-theme-size-slider-thumb);
+  width: var(--eds-theme-size-slider-thumb);
+}
+
+/**
+ * Horizontally centers the tooltip arrow respective to the tooltip.
+ */
+.slider :global(.tippy-arrow) {
+  transform: initial !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}

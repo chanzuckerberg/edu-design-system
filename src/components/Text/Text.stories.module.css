@@ -1,0 +1,46 @@
+/* ------------------------------------*\
+    # TEXT STORIES
+\*------------------------------------ */
+
+/**
+ * For the "variant" story to display the different text variant options.
+ */
+.variant__table {
+  /*  Uses grid to neatly align the variant variations. */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--eds-size-half);
+}
+
+.variant__item {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacing {
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-default);
+}
+
+.variant__item-white {
+  /* Variants are segmented into left, middle, and right columns. */
+  grid-column: 1;
+  /* Background variants were chosen to represent typical body backgrounds. */
+  background-color: var(--eds-theme-color-background-neutral-default);
+}
+
+.variant__item-light {
+  /* Variants are segmented into left, middle, and right columns. */
+  grid-column: 2;
+  /* Background variants were chosen to represent typical body backgrounds. */
+  background-color: var(--eds-theme-color-body-background);
+}
+
+.variant__item-dark {
+  /* Variants are segmented into left, middle, and right columns. */
+  grid-column: 3;
+  /* Background variants were chosen to represent typical body backgrounds. */
+  background-color: var(--eds-theme-color-body-background-inverted);
+}

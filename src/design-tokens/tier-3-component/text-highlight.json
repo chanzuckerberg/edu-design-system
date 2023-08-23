@@ -1,0 +1,16 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "text-highlight": {
+          "foreground": {
+            "value": "{eds.color.neutral.800}"
+          },
+          "background": {
+            "value": "{eds.color.other.lemon}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+>
+  <button
+    aria-checked="true"
+    aria-labelledby="headlessui-label-:r3:"
+    class="toggle__button toggle__button--checked"
+    data-headlessui-state="checked"
+    id="headlessui-switch-:r2:"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-thumb"
+    />
+  </button>
+  <label
+    class="toggle__label"
+    for="headlessui-switch-:r2:"
+    id="headlessui-label-:r3:"
+  >
+    Lorem ipsum
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
+<div
+  class="flex flex-col items-center"
+>
+  <label
+    class="toggle__label"
+    for="headlessui-switch-:r8:"
+    id="headlessui-label-:r7:"
+  >
+    Custom positioned label
+  </label>
+  <button
+    aria-checked="false"
+    aria-labelledby="headlessui-label-:r7:"
+    class="toggle__button toggle__button--unchecked"
+    data-headlessui-state=""
+    id="headlessui-switch-:r8:"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-thumb"
+    />
+  </button>
+</div>
+`;
+
+exports[`<Toggle /> Default story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+>
+  <button
+    aria-checked="false"
+    aria-labelledby="headlessui-label-:r1:"
+    class="toggle__button toggle__button--unchecked"
+    data-headlessui-state=""
+    id="headlessui-switch-:r0:"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-thumb"
+    />
+  </button>
+  <label
+    class="toggle__label"
+    for="headlessui-switch-:r0:"
+    id="headlessui-label-:r1:"
+  >
+    Lorem ipsum
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> Disabled story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+>
+  <button
+    aria-checked="false"
+    aria-labelledby="headlessui-label-:r5:"
+    class="toggle__button toggle__button--unchecked"
+    data-headlessui-state=""
+    disabled=""
+    id="headlessui-switch-:r4:"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-thumb"
+    />
+  </button>
+  <label
+    class="toggle__label"
+    for="headlessui-switch-:r4:"
+    id="headlessui-label-:r5:"
+  >
+    Lorem ipsum
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> WithoutLabel story renders snapshot 1`] = `
+<button
+  aria-checked="false"
+  aria-label="Lorem ipsum"
+  class="toggle__button toggle__button--unchecked"
+  data-headlessui-state=""
+  id="headlessui-switch-:r6:"
+  role="switch"
+  tabindex="0"
+  type="button"
+>
+  <span
+    class="toggle__button-thumb"
+  />
+</button>
+`;

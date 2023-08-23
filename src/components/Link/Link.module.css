@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    # LINK
+\*------------------------------------*/
+
+/**
+ * Link button with link variant styles.
+ */
+.link--link {
+  /*  Override display: inline-flex from ClickableStyle. */
+  display: inline; 
+}

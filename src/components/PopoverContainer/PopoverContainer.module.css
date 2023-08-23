@@ -1,0 +1,20 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+ # POPOVER CONTAINER
+\*------------------------------------*/
+
+/**
+ * Popover container
+ */
+.popover-container {
+  border-radius: var(--eds-border-radius-md);
+  overflow: auto;
+  box-shadow: var(--eds-box-shadow-md);
+  background-color: var(--eds-theme-color-background-neutral-default);
+  z-index: var(--eds-z-index-100);
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}

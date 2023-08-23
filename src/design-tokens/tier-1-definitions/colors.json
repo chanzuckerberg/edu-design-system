@@ -1,0 +1,81 @@
+{
+  "eds": {
+    "color": {
+      "brand": {
+        "grape": {
+          "100": { "value": "#F0F0FC" },
+          "200": { "value": "#E0E0F9" },
+          "300": { "value": "#C4C1F3" },
+          "400": { "value": "#A6A3EE" },
+          "500": { "value": "#8984E8" },
+          "600": { "value": "#6B65E2" },
+          "700": { "value": "#5751D2" },
+          "800": { "value": "#3E42B1" }
+        }
+      },
+      "neutral": {
+        "white": {
+          "value": "#FFFFFF"
+        },
+        "100": { "value": "#F4F6F8" },
+        "200": { "value": "#E7E8EA" },
+        "300": { "value": "#C0C4C8" },
+        "400": { "value": "#999EA3" },
+        "500": { "value": "#878C90" },
+        "600": { "value": "#5D6369" },
+        "700": { "value": "#383C43" },
+        "800": { "value": "#21272D" },
+        "black": { "value": "#161B1F" }
+      },
+      "other": {
+        "mint": {
+          "100": { "value": "#ECFFF5" },
+          "200": { "value": "#B7E9CE" },
+          "300": { "value": "#8FDCB3" },
+          "400": { "value": "#59C88C" },
+          "500": { "value": "#00A56A" },
+          "600": { "value": "#008656" },
+          "700": { "value": "#007249" },
+          "800": { "value": "#005939" }
+        },
+        "yellow": {
+          "100": { "value": "#FDF1D0" },
+          "200": { "value": "#FFEBB3" },
+          "300": { "value": "#FFDD80" },
+          "400": { "value": "#F7BE2D" },
+          "500": { "value": "#D18400" },
+          "600": { "value": "#BF7300" },
+          "700": { "value": "#9E5B03" },
+          "800": { "value": "#854C03" }
+        },
+        "lemon": {
+          "value": "#F5FF8F"
+        },
+        "eraser": {
+          "value": "#F3DCE2",
+          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+        },
+        "orange": {
+          "100": { "value": "#FFF1E9" },
+          "200": { "value": "#FFCBA5" },
+          "300": { "value": "#FFAF76" },
+          "400": { "value": "#F6924A" },
+          "500": { "value": "#E06B00" },
+          "600": { "value": "#C64600" },
+          "700": { "value": "#AC3400" },
+          "800": { "value": "#842800" }
+        },
+        "ruby": {
+          "100": { "value": "#FFF0F4" },
+          "200": { "value": "#FFCBD7" },
+          "300": { "value": "#FB90B0" },
+          "400": { "value": "#F76C96" },
+          "500": { "value": "#F1497B" },
+          "600": { "value": "#D41E52" },
+          "700": { "value": "#BD0044" },
+          "800": { "value": "#8F0134" }
+        }
+      }
+    }
+  }
+}

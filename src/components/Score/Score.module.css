@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    # SCORE
+\*------------------------------------*/
+
+/**
+ * Rounded rectangle container that houses a score.
+ */
+.score {
+  --tag-secondary-color: transparent;
+}
+
+/**
+ * Color variants
+ */
+.score--success {
+  --tag-outline-color: var(--eds-theme-color-border-utility-success-strong);
+}
+.score--error {
+  --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
+}
+.score--table {
+  --tag-outline-color: transparent;
+}

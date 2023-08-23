@@ -1,0 +1,39 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # FIELD NOTE
+\*------------------------------------*/
+
+/**
+ * Fieldnote
+ */
+.field-note {
+  font: var(--eds-theme-typography-body-sm);
+}
+
+/**
+ * Fieldnote icon
+ */
+.field-note__icon {
+  /* Centers icon with accompanying text */
+  position: relative;
+  bottom: 1px;
+  margin-right: var(--eds-size-half);
+}
+
+/**
+ * Disabled variant
+ */
+.field-note--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * Error variant
+ */
+.field-note--error {
+  color: var(--eds-theme-color-text-utility-error);
+}
+.field-note--error > .field-note__icon {
+  color: var(--eds-theme-color-icon-utility-error);
+}

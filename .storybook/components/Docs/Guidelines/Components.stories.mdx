@@ -1,0 +1,70 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+<Meta title="Documentation/Guidelines/Components" />
+
+# Working with EDS Components
+
+This codebase contains all the components to successfully build the presentation view of product screens. These components are built to exactly match those seen in design mockups.
+
+## Working with components
+
+### Using components
+
+Using EDS components in your React application involves first installing the EDS package as a dependency:
+
+```bash
+npm install @chanzuckerberg/eds
+# or
+yarn add @chanzuckerberg/eds
+```
+
+Next, import any needed components from the EDS component library into your application like so:
+
+```js
+import { Button, Grid } from '@chanzuckerberg/eds';
+```
+
+From there, call EDS components in your React application and pass in the desired values into each component's API:
+
+```jsx
+<Button
+  variant="primary"
+  onClick={...}
+>
+  Submit
+  <Icon name="chevron-right" purpose="decorative" />
+</Button>
+```
+
+Each EDS component is documented in Storybook, which surfaces each component's API and provides copy-and-paste code snippets. We're using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/#the-atomic-design-methodology) to categorize our components, but grouping them under a single "Components" category in Storybook. Information about the component category will appear in its documentation, or as annotations.
+
+If you have questions or are experiencing any issues when working with EDS's components, please reach out for support via slack and the team will be happy to help.
+
+### Creating a component
+
+**NOTE**: Refer to this [Tag](https://github.com/chanzuckerberg/edu-design-system/tree/upcoming-components) for examples of potential upcoming components. If you see one you like, you can use it as a baseline for implementation.
+
+1. To create a component, run `yarn plop` in the command line.
+2. The command will ask, "What is your component name?" Add your component name (you can either type `PageHeader` or `page header` and it will automatically generate the proper casing).
+3. Edit component source code in accordance with [EDS's code guidelines][code-guidelines]
+4. Create relevant stories for all component variants
+
+### Component Beta status
+
+When components are first created using the `plop` feature, they're given a beta tag in the `.stories` file and a line is added to the component docstring stating that the component is in beta. When the component is first officially released/announced internally, the component will be in beta, but it will leave beta in the following release. We expect these releases to happen about once/month, and the removal of the beta information will happen as part of the release process.
+
+Exceptions can be made for components that are still fluctuating and experiencing a lot of changes when the second release comes around.
+
+---
+
+## Directory structure <a name="directory"></a>
+
+The component stucture is as follows:
+
+```
+Components
+--Component Name
+----Component Stories
+```
+
+[code-guidelines]: ./?path=/story/documentation-guidelines-code-guidelines--page

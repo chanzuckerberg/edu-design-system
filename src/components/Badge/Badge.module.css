@@ -1,0 +1,57 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BADGE
+\*------------------------------------*/
+
+/**
+ * Badge wrapper to allow badge to be absolutely positioned.
+ */
+.badge__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/**
+ * Badge indicates a change in regards to its attached object.
+ */
+.badge {
+  /**
+   * Custom property allows for easy change of downstream size handling.
+   * Kind of a source of truth for badge size related properties.
+   */
+  --badge-height: calc(var(--eds-size-2-and-half) + 2 * var(--eds-border-width-sm));
+
+  z-index: var(--eds-z-index-100);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: calc(var(--badge-height) / -2);
+  left: calc(100% - var(--badge-height) / 2);
+
+  height: var(--badge-height);
+  min-width: var(--badge-height);
+
+  border: var(--eds-theme-color-text-neutral-default-inverse) solid
+    var(--eds-border-width-sm);
+  border-radius: var(--eds-border-radius-full);
+
+  padding-left: var(--eds-size-half);
+  padding-right: var(--eds-size-half);
+
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+
+  font: var(--eds-theme-typography-caption-sm);
+}
+
+/**
+ * Empty badge variant for visual indication purposes.
+ */
+.badge--empty {
+  --badge-height: var(--eds-size-2);
+  padding: 0;
+}

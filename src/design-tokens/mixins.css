@@ -1,0 +1,202 @@
+/**
+ * Link button styles
+ */
+@define-mixin textLink {
+  font-size: inherit;
+  font-weight: var(--eds-font-weight-medium);
+  line-height: inherit;
+
+  color: var(--eds-theme-color-link-brand-text);
+  text-decoration: underline;
+  text-decoration-color: var(--eds-theme-color-link-brand-text-decoration);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+
+  svg {
+    /* Has smaller icons than other button styles. */
+    --icon-size-default: 1.25em;
+  }
+
+  &:hover {
+    color: var(--eds-theme-color-link-brand-text-hover);
+    text-decoration-color: var(--eds-theme-color-link-brand-text-decoration-hover);
+  }
+
+  &:focus-visible {
+    /**
+     * Make the focus outline invisible but don't remove it. High contrast mode will remove the background
+     * color, but it will also make borders 100% opacity black.
+     */
+    outline: 1px solid transparent;
+    color: var(--eds-theme-color-link-brand-text-focus) !important;
+    text-decoration-color: var(--eds-theme-color-link-brand-text-decoration-focus) !important;
+    background-color: var(--eds-theme-color-link-brand-background-focus);
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      /**
+       * Make the focus outline invisible but don't remove it. High contrast mode will remove the background
+       * color, but it will also make borders 100% opacity black.
+       */
+      outline: 1px solid transparent;
+      color: var(--eds-theme-color-link-brand-text-focus) !important;
+      text-decoration-color: var(--eds-theme-color-link-brand-text-decoration-focus) !important;
+      background-color: var(--eds-theme-color-link-brand-background-focus);
+    }
+  }
+}
+
+@define-mixin TextLinkInverted {
+  @mixin textLink;
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+
+  &:focus {
+    @mixin focusInverted;
+  }
+}
+
+@define-mixin focus {
+  outline: var(--eds-theme-box-focus-ring-outline-width) solid
+    var(--eds-theme-color-focus-ring);
+  outline-offset: var(--eds-theme-box-focus-ring-outline-offset);
+}
+
+@define-mixin focusInside {
+  @mixin focus;
+  outline-offset: calc(-1 * var(--eds-theme-box-focus-ring-outline-offset));
+}
+
+@define-mixin focusInverted {
+  @mixin focus;
+  outline-color: var(--eds-theme-color-focus-ring-inverted);
+}
+
+@define-mixin inputStyles {
+  font: var(--eds-theme-typography-form-input);
+  font-family: inherit;
+  -webkit-appearance: none;
+  width: 100%;
+  border-width: var(--eds-theme-form-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-form-border);
+  border-radius: var(--eds-theme-form-border-radius);
+  outline: none;
+  padding: var(--eds-size-1);
+  margin: 0;
+  color: var(--eds-theme-color-text-neutral-default);
+  background-color: var(--eds-theme-color-form-background);
+  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover {
+    border-color: var(--eds-theme-color-form-border-hover);
+  }
+
+  &:focus {
+    @mixin focus;
+    border-color: var(--eds-theme-color-border-brand-primary-strong);
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  /**
+   * Input error state
+   */
+  &.error {
+    /* TODO: should this color be applied when a field is in an :invalid state */
+    border-color: var(--eds-theme-color-border-utility-error-strong);
+  }
+
+  /**
+   * Disabled/read-only state
+   */
+  &:disabled,
+  &:read-only,
+  &:disabled::placeholder {
+    border-color: var(--eds-theme-color-border-disabled);
+    color: var(--eds-theme-color-text-disabled);
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    @mixin placeholderStyles;
+  }
+}
+
+@define-mixin placeholderStyles {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+@define-mixin fieldsetStyles {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@define-mixin legendReset {
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
+
+@define-mixin visuallyHide {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+@define-mixin messagingBrand {
+  --messaging-border-color: var(--eds-theme-color-border-brand-primary-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-brand-primary);
+
+  background: var(--eds-theme-color-background-brand-primary-default);
+  color: var(--eds-theme-color-text-brand-default);
+}
+
+@define-mixin messagingNeutral {
+  --messaging-border-color: var(--eds-theme-color-border-neutral-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-neutral-subtle);
+
+  background: var(--eds-theme-color-background-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
+}
+
+@define-mixin messagingSuccess {
+  --messaging-border-color: var(--eds-theme-color-border-utility-success-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-utility-success);
+
+  background: var(--eds-theme-color-background-utility-success);
+  color: var(--eds-theme-color-text-utility-success);
+}
+
+@define-mixin messagingWarning {
+  --messaging-border-color: var(--eds-theme-color-border-utility-warning-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-utility-warning);
+
+  background: var(--eds-theme-color-background-utility-warning);
+  color: var(--eds-theme-color-text-utility-warning);
+}
+
+@define-mixin messagingError {
+  --messaging-border-color: var(--eds-theme-color-border-utility-error-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-utility-error);
+
+  background: var(--eds-theme-color-background-utility-error);
+  color: var(--eds-theme-color-text-utility-error);
+}
+
+@define-mixin messagingYield {
+  --messaging-border-color: var(--eds-theme-color-border-grade-revise-strong);
+  --messaging-icon-color: var(--eds-theme-color-border-grade-revise-strong);
+
+  background: var(--eds-theme-color-background-grade-revise-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
+}

@@ -1,0 +1,86 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # PAGE LEVEL BANNER
+\*------------------------------------*/
+
+/**
+ * Message of information, success, caution, or warning to the user.
+ */
+.banner {
+  /* Position is relative to allow for absolute-positioned close button. */
+  position: relative;
+  /* Grid is used to separate the icon from the text with correct spacing. */
+  display: grid;
+  gap: var(--eds-size-2);
+  grid-template-columns: min-content 1fr;
+  padding: var(--eds-size-2) var(--eds-size-4);
+  background-color: var(--eds-theme-color-neutral-subtle-background);
+  border-bottom: var(--eds-border-width-md) solid var(--messaging-border-color);
+}
+
+/**
+ * PageLevelBanner informational icon
+ *
+ * Icon color matches the thick bottom border.
+ */
+.banner__icon {
+  color: var(--messaging-icon-color);
+  --icon-size-default: var(--eds-size-3);
+}
+
+/**
+ * PageLevelBanner close button
+ *
+ * Button used to dismiss dismissable banners.
+ */
+.banner__close-btn.banner__close-btn {
+  position: absolute;
+  top: var(--eds-size-half);
+  right: var(--eds-size-half);
+}
+
+/**
+ * Dismissable banner
+ *
+ * Add extra right padding to account for close button.
+ */
+.banner--dismissable {
+  padding-right: var(--eds-size-9);
+}
+
+/*------------------------------------*\
+    # VARIANTS
+\*------------------------------------*/
+
+/**
+ * PageLevelBanner success
+ */
+.banner--success {
+  @mixin messagingSuccess;
+  border-color: var(--eds-theme-color-border-utility-success-strong);
+}
+
+/**
+ * PageLevelBanner warning
+ */
+.banner--warning {
+  @mixin messagingWarning;
+  border-color: var(--eds-theme-color-border-utility-warning-strong);
+}
+
+/**
+ * PageLevelBanner error
+ */
+.banner--error {
+  @mixin messagingError;
+  border-color: var(--eds-theme-color-border-utility-error-strong);
+}
+
+/**
+ * PageLevelBanner brand
+ */
+.banner--brand {
+  @mixin messagingBrand;
+  border-color: var(--eds-theme-color-border-brand-primary-strong);
+}

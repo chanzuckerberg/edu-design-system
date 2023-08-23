@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    # HR (HORIZONTAL RULE)
+\*------------------------------------*/
+
+/**
+ * Line that acts as a separator of content.
+ * 
+ */
+.hr {
+  margin-top: var(--eds-size-4);
+  margin-bottom: var(--eds-size-4);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-width: var(--eds-border-width-sm);
+  border-bottom-style: solid;
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+}
+
+/**
+ * Horizontal rule with a thick border.
+ */
+.hr--lg {
+  border-width: var(--eds-border-width-lg);
+}
+
+/**
+ * Branded horizontal rule.
+ */
+.hr--brand {
+  border-color: var(--eds-theme-color-border-brand-primary-strong);
+}

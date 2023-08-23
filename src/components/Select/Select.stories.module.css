@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    # SELECT STORIES
+\*------------------------------------*/
+
+.function-children__button {
+  padding: var(--eds-size-2);
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-default);
+  border-radius: 0.375rem;
+
+  cursor: pointer;
+
+  background-color: var(--eds-theme-color-background-neutral-default);
+}

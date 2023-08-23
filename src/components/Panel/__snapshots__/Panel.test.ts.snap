@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Panel /> Centered story renders snapshot 1`] = `
+<div
+  class="panel panel--align-center"
+>
+  A Panel is a generic bordered container for content.
+</div>
+`;
+
+exports[`<Panel /> Default story renders snapshot 1`] = `
+<div
+  class="panel"
+>
+  A Panel is a generic bordered container for content.
+</div>
+`;
+
+exports[`<Panel /> Flush story renders snapshot 1`] = `
+<div
+  class="panel panel--flush"
+>
+  A Panel is a generic bordered container for content.
+</div>
+`;
+
+exports[`<Panel /> Squared story renders snapshot 1`] = `
+<div
+  class="panel panel--squared"
+>
+  A Panel is a generic bordered container for content.
+</div>
+`;

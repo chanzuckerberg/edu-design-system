@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PopoverListItem /> Active story renders snapshot 1`] = `
+<div
+  class="popover-list-item popover-list-item--active"
+>
+  <div
+    class="popover-list-item__icon"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"
+      />
+    </svg>
+  </div>
+  Active Row with Icon
+</div>
+`;
+
+exports[`<PopoverListItem /> Default story renders snapshot 1`] = `
+<div
+  class="popover-list-item"
+>
+  <div
+    class="popover-list-item__no-icon"
+  />
+  Default list item
+</div>
+`;
+
+exports[`<PopoverListItem /> Disabled story renders snapshot 1`] = `
+<div
+  aria-disabled="true"
+  class="popover-list-item popover-list-item--disabled"
+>
+  <div
+    class="popover-list-item__no-icon"
+  />
+  Disabled
+</div>
+`;
+
+exports[`<PopoverListItem /> WithAnIcon story renders snapshot 1`] = `
+<div
+  class="popover-list-item"
+>
+  <div
+    class="popover-list-item__icon"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+      />
+    </svg>
+  </div>
+  Test with Icon
+</div>
+`;

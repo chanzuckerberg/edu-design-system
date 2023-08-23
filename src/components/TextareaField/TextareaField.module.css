@@ -1,0 +1,66 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # TEXTAREA FIELD
+\*------------------------------------*/
+
+/**
+ * Default input styles 
+ */
+.textarea {
+  @mixin inputStyles;
+}
+
+.textarea--disabled:focus {
+  outline: none;
+}
+
+/**
+ * Wraps the Label and the optional/required indicator.
+ */
+.textarea-field__overline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--eds-size-half);
+}
+
+.textarea-field__overline--no-label {
+  justify-content: flex-end;
+}
+
+.textarea-field__label {
+  color: var(--eds-theme-color-form-label);
+  font: var(--eds-theme-typography-form-label);
+}
+.textarea-field__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+.textarea-field__required-text {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  font: var(--eds-theme-typography-body-sm);
+}
+.textarea-field__required-text--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+.textarea-field--invalid-length {
+  color: var(--eds-theme-color-text-utility-error);
+}
+
+.textarea-field__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textarea-field__field-note {
+  flex: 1 0 50%;
+}
+
+.textarea-field__character-counter {
+  font: var(--eds-theme-typography-body-sm);
+
+  color: var(--eds-theme-color-text-neutral-default);
+  flex: 1 0 50%;
+  text-align: right;
+}
