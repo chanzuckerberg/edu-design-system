@@ -1,5 +1,0 @@
-{
-  "ignore": ["lib/**", ".storybook/**"],
-  "include": ["src/components/**/*.tsx"],
-  "tsconfigPath": "tsconfig.json"
-}
