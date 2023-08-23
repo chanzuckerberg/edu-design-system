@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.0.0...v13.1.0) (2023-08-23)
+
+
+### Features
+
+* update component statuses ([#1731](https://github.com/chanzuckerberg/edu-design-system/issues/1731)) ([586a0cb](https://github.com/chanzuckerberg/edu-design-system/commit/586a0cbb653685107519e76c891c0503b021c711))
+
+
+### Bug Fixes
+
+* **Avatar:** improve support for generating initials ([#1727](https://github.com/chanzuckerberg/edu-design-system/issues/1727)) ([eadeb75](https://github.com/chanzuckerberg/edu-design-system/commit/eadeb756ee18fc1fd024aa8fbd0adfc386070fce))
+* **deps:** update all non-major dependencies ([#1730](https://github.com/chanzuckerberg/edu-design-system/issues/1730)) ([c574755](https://github.com/chanzuckerberg/edu-design-system/commit/c574755903eb789f8c46fc11943c07f807a55fc3))
+
 ## [13.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v12.4.2...v13.0.0) (2023-08-14)
 
 
