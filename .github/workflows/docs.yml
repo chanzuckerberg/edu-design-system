@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Deploy Docs to GH Pages
 
 on:
   push:
@@ -6,24 +6,30 @@ on:
       - main
 
 jobs:
-  deploy_docs:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup node 😻
-        uses: actions/setup-node@v3
-        with:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
           node-version-file: '.node-version'
           cache: 'yarn'
 
-      - name: Install Dependencies ⬆️
-        run: yarn install --immutable
+    - name: Install Dependencies
+      run: yarn install --immutable
 
-      - name: Build Dist 🔧
-        run: yarn run build
+    - name: Build EDS
+      run: yarn build
 
-      - name: Deploy Storybook Docs 🚀
-        run: yarn run deploy:docs
-        env:
-          GH_TOKEN: '${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}'
+    - name: Build Storybook
+      run: yarn build:storybook
+
+    - name: Deploy Storybook
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./storybook-static
+        github_token: ${{ secrets.GITHUB_TOKEN }}
