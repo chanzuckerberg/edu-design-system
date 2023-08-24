@@ -1,9 +1,13 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import type { HeadingElement, HeadingSize } from '../Heading';
-import Heading from '../Heading';
+import { Heading } from '../../../src';
+import type {
+  HeadingElement,
+  HeadingSize,
+} from '../../../src/components/Heading';
 import styles from './Section.module.css';
+
 export interface Props {
   /**
    * Align variations:
@@ -53,13 +57,10 @@ export interface Props {
 }
 
 /**
- * `import {Section} from "@chanzuckerberg/eds";`
- *
  * Section component contains a section header and body.
  *
  * The Heading component requires a value for "size", so this headingAs prop is provided
  * a default value of "h2" to allow it to remain optional on Section component.
- * @deprecated
  */
 export const Section = ({
   align,

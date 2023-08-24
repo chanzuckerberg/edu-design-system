@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Grid, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
+import { Grid } from '../../Grid/Grid';
+import { Section } from '../../Section/Section';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier1Animation extends Component {

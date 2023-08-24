@@ -7,7 +7,7 @@
  * 
  * A section is a discrete section of a web page.
  */
-.section {
+ .section {
   padding-top: var(--eds-size-4);
   padding-bottom: var(--eds-size-4);
 }

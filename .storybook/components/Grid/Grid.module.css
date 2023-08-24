@@ -7,7 +7,7 @@
  * allowing for a variety of responsive layout
  * components
  */
-.grid {
+ .grid {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -1.5rem;

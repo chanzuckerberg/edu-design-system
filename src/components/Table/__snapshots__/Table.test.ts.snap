@@ -485,9 +485,14 @@ exports[`<Table /> FiltersInteractive story renders snapshot 1`] = `
   style="background-color: white;"
 >
   <div>
-    <div>
+    <div
+      data-headlessui-state=""
+    >
       <button
+        aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+        data-headlessui-state=""
+        id="headlessui-popover-button-:r0:"
         type="button"
       >
         <svg
@@ -507,6 +512,9 @@ exports[`<Table /> FiltersInteractive story renders snapshot 1`] = `
         Filters
       </button>
     </div>
+    <div
+      style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+    />
     <table
       class="table"
     >

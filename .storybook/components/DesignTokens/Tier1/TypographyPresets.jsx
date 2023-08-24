@@ -1,9 +1,11 @@
 import { at, forEach } from 'lodash';
 
 import React, { Component } from 'react';
-import { Grid, Section } from '../../../../src';
+
 import presets from '../../../../src/design-tokens/tier-1-definitions/typography.json';
 import flatten from '../../../util/flattenToken';
+import { Grid } from '../../Grid/Grid';
+import { Section } from '../../Section/Section';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier1TypographyPresets extends Component {

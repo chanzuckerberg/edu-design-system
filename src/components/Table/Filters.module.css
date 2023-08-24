@@ -1,0 +1,35 @@
+/**
+ * Filters container (fieldset)
+ */
+.filters-fieldset {
+  margin: 0;
+}
+
+.filters-fieldset__legend {
+  font: var(--eds-theme-typography-title-sm);
+  margin-bottom: var(--eds-size-3);
+}
+
+.filters-fieldset__checkboxes > :not(:last-child) {
+  margin-bottom: var(--eds-size-2-and-half);
+}
+
+/**
+ * Filters popover overrides
+ */
+.filters-popover {
+  padding: var(--eds-size-3);
+}
+
+.footer__button-group {
+  margin-top: var(--eds-size-3);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/**
+ * Filters Button
+ */
+.filters-button {
+  gap: var(--eds-size-1);
+}
