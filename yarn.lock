@@ -2507,7 +2507,7 @@ __metadata:
     react-dom: ">= 17"
   bin:
     eds-apply-theme: bin/eds-apply-theme.js
-    eds-init: bin/eds-init.js
+    eds-init-theme: bin/eds-init.js
   languageName: unknown
   linkType: soft
 

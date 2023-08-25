@@ -36,7 +36,7 @@ html {
 
 ### Tailwind Setup
 
-The EDS Tailwind theme provides EDS color [tokens](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-tokens--page) and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
+The EDS Tailwind theme provides EDS color [tokens][tokens] and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
 
 ```js
 const edsConfig.theme = require('@chanzuckerberg/eds/tailwind.config');
@@ -47,7 +47,15 @@ module.exports = {
 };
 ```
 
-Refer to the [tokens tailwind section](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-tokens--page#tailwind-class-tokens) for usage guidelines.
+Refer to the [tokens tailwind section][tokens] for usage guidelines.
+
+[tokens]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-tokens--docs
+
+
+### Theming Setup
+
+Refer to the "EDS Token and Theme Tools" in [the tokens documentation](https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-tokens--docs#eds-token-and-theming-tools) to learn about the optional tooling setup.
+
 
 ## Usage
 
@@ -101,6 +109,6 @@ This project is governed under the [Contributor Covenant](https://www.contributo
 
 See our [Security Readme](https://github.com/chanzuckerberg/edu-design-system/blob/main/SECURITY.md).
 
-## More Information and Support
+## FAQ, More Information, and Support
 
 Please review our Education Design System Site (SSO Required): [/Paper](https://eds.czi.design/0843bc428/p/581284-education-design-system)

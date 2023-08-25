@@ -36,7 +36,7 @@
   ],
   "bin": {
     "eds-apply-theme": "bin/eds-apply-theme.js",
-    "eds-init": "bin/eds-init.js"
+    "eds-init-theme": "bin/eds-init.js"
   },
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:declarations && yarn build:js && yarn copy-fonts-to-lib",
@@ -190,10 +190,6 @@
     "*.css": [
       "stylelint --fix"
     ]
-  },
-  "eds": {
-    "json": "src/components/",
-    "css": "src/components/"
   },
   "packageManager": "yarn@3.6.3"
 }
