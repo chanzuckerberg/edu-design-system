@@ -4,6 +4,7 @@ import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './Tabs.stories';
+import Tab from '../Tab';
 
 const { Default } = composeStories(stories);
 
@@ -58,5 +59,20 @@ describe('<Tabs />', () => {
 
     rerender(<Default activeIndex={1} />);
     expect(screen.getByRole('heading', { name: 'Tab 2' })).toBeInTheDocument();
+  });
+
+  it('does not include invalid characters in tab ids', () => {
+    render(
+      <Default id="foo">
+        <Tab data-testid="tab-1" title="Tab Title 1">
+          Tab numero uno
+        </Tab>
+      </Default>,
+    );
+
+    expect(screen.getByTestId('tab-1')).toHaveAttribute(
+      'aria-labelledby',
+      'foo-Tab-Title-1',
+    );
   });
 });

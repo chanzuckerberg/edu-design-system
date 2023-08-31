@@ -81,7 +81,10 @@ export const Tabs = ({
   const generatedId = useId();
   const tabIdPrefix = other.id || generatedId;
   const tabIds = useMemo(
-    () => tabs.map((tab) => `${tabIdPrefix}-${tab.props.title}`),
+    () =>
+      tabs.map(
+        (tab) => `${tabIdPrefix}-${tab.props.title.replace(/\s/g, '-')}`,
+      ),
     [tabs, tabIdPrefix],
   );
 
