@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [13.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.1.0...v13.1.1) (2023-09-01)
+
+
+### Bug Fixes
+
+* generate valid tab ids ([#1737](https://github.com/chanzuckerberg/edu-design-system/issues/1737)) ([d1493ea](https://github.com/chanzuckerberg/edu-design-system/commit/d1493ea6b1e55f608701c32900c5089fb19f01e3))
+* update deploy docs for storybook 7.x ([#1733](https://github.com/chanzuckerberg/edu-design-system/issues/1733)) ([b3a091e](https://github.com/chanzuckerberg/edu-design-system/commit/b3a091ed6a3636c61e7df926eba98b20ecbaaf20))
+
 ## [13.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.0.0...v13.1.0) (2023-08-23)
 
 
