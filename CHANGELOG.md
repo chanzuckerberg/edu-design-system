@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.2.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.1.1...v13.2.0-alpha.0) (2023-09-06)
+
+
+### Features
+
+* **tokens:** add tooling for EDS theming ([b7d0dfc](https://github.com/chanzuckerberg/edu-design-system/commit/b7d0dfcb790321bc6aab689f6da52c67509bc5fd))
+
 ### [13.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.1.0...v13.1.1) (2023-09-01)
 
 
