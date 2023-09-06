@@ -10,6 +10,8 @@ module.exports = {
     const { lilconfig } = require('lilconfig');
 
     // read in the config from config file, package json "eds", etc.
+    // TODO: this can throw with TypeError: Cannot destructure property 'config' of '(intermediate value)' as it is null.
+    // can't destructure from null, so this will throw
     const { config } = await lilconfig('eds').search();
 
     // If no config exists, exit.

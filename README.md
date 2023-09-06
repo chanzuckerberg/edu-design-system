@@ -54,7 +54,7 @@ Refer to the [tokens tailwind section][tokens] for usage guidelines.
 
 ### Theming Setup
 
-Refer to the "EDS Token and Theme Tools" in [the tokens documentation](https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-tokens--docs#eds-token-and-theming-tools) to learn about the optional tooling setup.
+Refer to the "EDS Token and Theme Tools" in [the tokens documentation](https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming--docs) to learn about the optional tooling setup.
 
 
 ## Usage
