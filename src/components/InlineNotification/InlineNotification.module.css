@@ -18,7 +18,7 @@
  */
 .inline-notification__icon {
   /* Retain icon original size and wrap text instead. */
-  flex-shrink: 0; 
+  flex-shrink: 0;
   color: var(--messaging-icon-color);
 }
 
@@ -38,6 +38,12 @@
 
   border: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-brand-primary-strong);
+}
+.inline-notification--neutral {
+  @mixin messagingNeutral;
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-default);
 }
 .inline-notification--success {
   @mixin messagingSuccess;
@@ -69,7 +75,7 @@
   border: 0;
   border-radius: 0;
   /*  Accounts for the lack of border in height to make it 44px. */
-  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); 
+  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width));
 }
 .inline-notification--full-width-subtle {
   background-color: var(--eds-theme-color-background-neutral-subtle);
@@ -82,6 +88,6 @@
 }
 .inline-notification__text--inactive {
   /* Creates enough space to keep text in the same place. */
-  padding-left: var(--eds-size-3); 
+  padding-left: var(--eds-size-3);
   color: var(--eds-theme-color-text-neutral-subtle);
 }

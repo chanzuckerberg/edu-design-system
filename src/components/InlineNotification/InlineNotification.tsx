@@ -4,7 +4,13 @@ import Icon from '../Icon';
 import Text from '../Text';
 import styles from './InlineNotification.module.css';
 
-export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
+export const VARIANTS = [
+  'brand',
+  'neutral',
+  'success',
+  'warning',
+  'yield',
+] as const;
 
 const variantToIconAssetsMap: {
   [key in Variant]: {
@@ -13,6 +19,10 @@ const variantToIconAssetsMap: {
   };
 } = {
   brand: {
+    name: 'info',
+    title: 'info',
+  },
+  neutral: {
     name: 'info',
     title: 'info',
   },
@@ -115,7 +125,11 @@ export const InlineNotification = ({
       <Text
         as="span"
         className={textClassName}
-        variant={variant === 'yield' ? 'neutral-medium' : variant}
+        variant={
+          variant === 'yield' || variant === 'neutral'
+            ? 'neutral-medium'
+            : variant
+        }
       >
         {text}
       </Text>
