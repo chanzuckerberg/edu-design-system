@@ -10,16 +10,15 @@ module.exports = {
     const { lilconfig } = require('lilconfig');
 
     // read in the config from config file, package json "eds", etc.
-    // TODO: this can throw with TypeError: Cannot destructure property 'config' of '(intermediate value)' as it is null.
-    // can't destructure from null, so this will throw
-    const { config } = await lilconfig('eds').search();
+    const settings = await lilconfig('eds').search();
 
-    // If no config exists, exit.
-    if (!config) {
-      // TODO: point to documentation (linked either to the repo or confluence)
-      console.error('Please add EDS config to your project before continuing.');
+    // If no config exists, fail
+    if (!settings) {
+      throw new Error(
+        'Please add EDS config to your project before continuing (specify "json" and "css" target paths)',
+      );
     }
 
-    return config;
+    return settings.config;
   },
 };
