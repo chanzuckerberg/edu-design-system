@@ -30,9 +30,14 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "files": [
+    "/bin",
     "/lib",
     "tailwind.config.*"
   ],
+  "bin": {
+    "eds-apply-theme": "bin/eds-apply-theme.js",
+    "eds-init-theme": "bin/eds-init.js"
+  },
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:declarations && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
@@ -58,7 +63,7 @@
     "release:patch": "yarn release --release-as patch",
     "release:alpha": "yarn release --prerelease alpha",
     "start": "yarn build:tokens && yarn storybook",
-    "storybook": "storybook dev -p 9000 -s src/design-tokens/tier-1-definitions/fonts",
+    "storybook": "storybook dev -p 9000",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "plop": "plop component",
@@ -89,12 +94,16 @@
     "@types/lodash": "^4.14.197",
     "clsx": "^1.2.1",
     "graphemer": "^1.4.0",
+    "lilconfig": "^2.0.6",
     "lodash": "^4.17.21",
     "react-beautiful-dnd": "^13.1.1",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.9.5",
     "react-popper": "^2.3.0",
-    "react-portal": "^4.2.2"
+    "react-portal": "^4.2.2",
+    "react-uid": "^2.3.2",
+    "style-dictionary": "^3.7.0",
+    "svg4everybody": "^2.1.9"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.14",

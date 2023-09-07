@@ -1,3 +1,6 @@
+import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { Configuration } from 'webpack';
+
 /**
  * Although `--static-dir` is marked as deprecated. The The Chromatic CLI
  * currently pulls the staticDir from the build script, but does not support
@@ -6,7 +9,7 @@
  * We should refrain from using the staticDirs option in this configuration until
  * https://github.com/chromaui/chromatic-cli/issues/462 is resolved.
  */
-module.exports = {
+const config: StorybookConfig = {
   stories: [
     './components/**/*.stories.mdx',
     './components/**/*.stories.@(js|jsx|ts|tsx)',
@@ -70,4 +73,47 @@ module.exports = {
       plugins: [],
     };
   },
+  webpackFinal(config, { configType }) {
+    if (configType === 'DEVELOPMENT') {
+      updateCSSLoaderPlugin(config);
+    }
+    return config;
+  },
 };
+
+/**
+ * Updates the `css-loader` webpack plugin to make class names human readable.
+ *
+ * NOTE: This should only be used for local development.
+ */
+function updateCSSLoaderPlugin(config: Configuration): Configuration {
+  config.module?.rules?.forEach((rule) => {
+    if (rule && typeof rule === 'object' && Array.isArray(rule.use)) {
+      const isRuleForCSS = rule.test?.toString() === '/\\.css$/';
+      if (isRuleForCSS) {
+        rule.use.forEach((ruleSetRule) => {
+          if (
+            typeof ruleSetRule === 'object' &&
+            ruleSetRule?.loader?.includes('node_modules/css-loader')
+          ) {
+            ruleSetRule.options = {
+              // @ts-expect-error css-loader doesn't accept "string" options
+              // and will either be an object or undefined
+              ...ruleSetRule.options,
+              modules: {
+                // @ts-expect-error css-loader doesn't accept "string" options
+                // and will either be an object or undefined
+                ...ruleSetRule.options?.modules,
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+            };
+          }
+        });
+      }
+    }
+  });
+
+  return config;
+}
+
+export default config;

@@ -22,6 +22,7 @@ export default {
       preserveModulesRoot: 'src',
       sourcemap: true,
       entryFileNames: '[name].cjs',
+      interop: 'auto',
     },
   ],
   /**
