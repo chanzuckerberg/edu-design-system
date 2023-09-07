@@ -203,6 +203,11 @@ export const MenuWithAvatarButton: StoryObj<MenuProps> = {
 
 export const Opened: StoryObj<MenuProps> = {
   ...Default,
+  parameters: {
+    ...Default.parameters,
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300 },
+  },
   play: () => {
     userEvent.tab();
     userEvent.keyboard(' ');
