@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Graphemer from 'graphemer';
 
 import React from 'react';
+import type { Size } from '../../util/variant-types';
 import Icon from '../Icon';
 import styles from './Avatar.module.css';
 
@@ -40,7 +41,7 @@ export interface Props {
   /**
    * The size of the component
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: Size;
   /**
    * The URL to an image resource (loaded lazily)
    */

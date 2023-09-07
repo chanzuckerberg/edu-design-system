@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.1.1...v13.2.0) (2023-09-07)
+
+
+### Features
+
+* **Avatar:** add in expanded size range ([#1734](https://github.com/chanzuckerberg/edu-design-system/issues/1734)) ([7af6e5e](https://github.com/chanzuckerberg/edu-design-system/commit/7af6e5ecb6b79bfdece58643faeac1b741194964))
+* **tokens:** add tooling for EDS theming ([#1738](https://github.com/chanzuckerberg/edu-design-system/issues/1738)) ([91497bf](https://github.com/chanzuckerberg/edu-design-system/commit/91497bf2f0c334566c1144607b7d4b27a9677a30))
+
+
+### Bug Fixes
+
+* opt our rollup CJS build into TS's module interop behavior ([#1747](https://github.com/chanzuckerberg/edu-design-system/issues/1747)) ([2b0855e](https://github.com/chanzuckerberg/edu-design-system/commit/2b0855eee3d236931eb0ae2e68ffeceedf3a2cbe))
+
 ### [13.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.1.0...v13.1.1) (2023-09-01)
 
 
