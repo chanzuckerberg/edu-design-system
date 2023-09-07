@@ -104,7 +104,7 @@ function updateCSSLoaderPlugin(config: Configuration): Configuration {
                 // @ts-expect-error css-loader doesn't accept "string" options
                 // and will either be an object or undefined
                 ...ruleSetRule.options?.modules,
-                localIdentName: '[name]__[local]',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
               },
             };
           }
