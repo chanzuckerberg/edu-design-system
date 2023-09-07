@@ -55,12 +55,14 @@ export interface Props {
    */
   variant?: 'icon' | 'initials' | 'image';
 }
-
 /**
  * Use graphemer to take a name part, and select the first grapheme (emoji, surrogate pair, ASCII character)
  */
 function produceAbbreviation(fromName: string): string {
-  const splitter = new Graphemer();
+  // @see https://github.com/flmnt/graphemer/issues/11
+  // @ts-expect-error handles case where this library adds .default to the export inappropriately in CJS context
+  const G = Graphemer['default'] ? Graphemer.default : Graphemer;
+  const splitter = new G();
   return fromName ? splitter.splitGraphemes(fromName)[0] : '?';
 }
 
