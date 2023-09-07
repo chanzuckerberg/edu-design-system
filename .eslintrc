@@ -64,7 +64,7 @@
       "files": [
         "config.js",
         "*.config.js",
-        "main.js",
+        "main.ts",
         "plopfile.js",
         "src/**/*.js"
       ],
