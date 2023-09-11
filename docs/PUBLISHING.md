@@ -117,6 +117,8 @@ git push --follow-tags origin <branch> && npm publish --tag alpha
 npm publish --tag alpha --registry=https://npm.pkg.github.com/
 ```
 
+**NOTE**: running `npm publish` with `--registry` may edit your .npmrc file and force all subsequent publishes to go to the GH Registry. Remove the scope/registry map from `~/.npmrc` after publishing.
+
 #### Editing the CHANGELOG
 
 1. Run `git log` and note the version tag on the latest (release) commit
