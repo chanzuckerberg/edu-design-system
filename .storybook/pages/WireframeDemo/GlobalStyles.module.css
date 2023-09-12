@@ -74,8 +74,6 @@
   --eds-theme-color-border-grade-revise-strong: var(--wireframe-gray-b);
   --eds-theme-color-border-grade-revise-subtle: var(--wireframe-gray-a);
   --eds-theme-color-border-grade-stop: var(--wireframe-gray-b);
-  --eds-theme-color-border-link-brand: var(--wireframe-gray-c);
-  --eds-theme-color-border-link-neutral: var(--wireframe-gray-e);
   --eds-theme-color-border-neutral-default-hover: var(--wireframe-gray-b);
   --eds-theme-color-border-neutral-default: var(--wireframe-gray-b);
   --eds-theme-color-border-neutral-strong-hover: var(--wireframe-gray-c);
@@ -245,8 +243,6 @@
   --eds-theme-color-icon-grade-revise: var(--wireframe-gray-e);
   --eds-theme-color-icon-grade-stop-hover: var(--wireframe-gray-c);
   --eds-theme-color-icon-grade-stop: var(--wireframe-gray-c);
-  --eds-theme-color-icon-link-default-hover: var(--wireframe-gray-e);
-  --eds-theme-color-icon-link-default: var(--wireframe-gray-d);
   --eds-theme-color-icon-neutral-default-hover: var(--wireframe-gray-d);
   --eds-theme-color-icon-neutral-default-inverse: var(--wireframe-white);
   --eds-theme-color-icon-neutral-default: var(--wireframe-gray-c);
@@ -268,8 +264,6 @@
   --eds-theme-color-text-grade-stop: var(--wireframe-gray-d);
   --eds-theme-color-text-highlight-background: var(--wireframe-gray-a);
   --eds-theme-color-text-highlight-foreground: var(--wireframe-gray-e);
-  --eds-theme-color-text-link-brand: var(--wireframe-gray-c);
-  --eds-theme-color-text-link-neutral: var(--wireframe-gray-e);
   --eds-theme-color-text-neutral-default-inverse: var(--wireframe-white);
   --eds-theme-color-text-neutral-default: var(--wireframe-gray-d);
   --eds-theme-color-text-neutral-strong: var(--wireframe-gray-e);
