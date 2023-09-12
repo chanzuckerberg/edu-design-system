@@ -51,6 +51,23 @@ Refer to the [tokens tailwind section][tokens] for usage guidelines.
 
 [tokens]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-tokens--docs
 
+### CSS Variable Setup
+
+EDS also provides the tokens used in the internal styles, to use in any custom component recipes and designs. If using VSCode, you can set up the IDE to expose the token values and perform autocomplete:
+
+1. Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) VSCode extension
+2. Add the following setting to your user or workspace settings file
+
+```json
+{
+  // ...rest of the settings here
+  "cssvar.files": [
+    "node_modules/@chanzuckerberg/eds/lib/index.css"
+  ]
+}
+```
+3. Restart VSCode
+
 
 ### Theming Setup
 
