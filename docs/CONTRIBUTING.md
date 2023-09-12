@@ -10,6 +10,25 @@ npx husky install
 
 - Install the [CSS Var Complete - VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) which provides better Intellisense while writing CSS and referencing CSS variables.
 
+### Requirements
+
+```bash
+# Setup your node environment using nodenv (https://github.com/nodenv/nodenv)
+$ nodenv install
+# Setup yarn using npm or homebrew (https://brew.sh)
+$ brew install yarn # or npm install -g yarn
+```
+
+### Helpful commands
+
+| Description                           | Command                 |
+| ------------------------------------- | ----------------------- |
+| Install dependencies                  | `yarn install`          |
+| Run linter                            | `yarn lint`             |
+| Run linter and fix all fixable issues | `yarn lint:fix`         |
+| Build package                         | `yarn build`            |
+| Run the component generator           | `yarn create-component` |
+
 ## Git Flow
 
 This project uses [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/) to manage the development workflow. Here's a breakdown of what this means for the design system:
