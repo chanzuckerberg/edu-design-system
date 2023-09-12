@@ -6,6 +6,7 @@
     "typescriptreact"
   ],
   "css.validate": false,
+  "cssvar.files": ["src/tokens-dist/css/variables.css"],
   "scss.validate": false,
   "stylelint.enable": true,
   "typescript.validate.enable": true,
