@@ -58,7 +58,7 @@ EDS also provides the tokens used in the internal styles, to use in any custom c
 1. Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) VSCode extension
 2. Add the following setting to your user or workspace settings file
 
-```json
+```jsonc
 {
   // ...rest of the settings here
   "cssvar.files": [
