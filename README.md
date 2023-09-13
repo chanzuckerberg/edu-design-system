@@ -66,7 +66,7 @@ Import any of the components from the top-level package:
 import { Heading } from '@chanzuckerberg/eds';
 ```
 
-and then use them in your React components
+and then use them in your React components:
 
 ```jsx
 <Heading variant="neutral-strong" size="h2">
@@ -74,34 +74,13 @@ and then use them in your React components
 </Heading>
 ```
 
-EDS provides a [sizeable suite](https://chanzuckerberg.github.io/edu-design-system/) of components for use, and documentation for available props and overrides.
+EDS provides a [suite](https://chanzuckerberg.github.io/edu-design-system/) of components for use, and documentation for available props and overrides.
 
 ## Development
 
-See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for more information on how to contribute to EDS. Also, read our [guidelines](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-code-guidelines--page) for additional information.
+This project is under **active development**. See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for more information on how to contribute to EDS. Also, read our [guidelines](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-code-guidelines--page) for additional information.
 
-### Requirements
-
-```bash
-# Setup your node environment using nodenv (https://github.com/nodenv/nodenv)
-$ nodenv install
-# Setup yarn using npm or homebrew (https://brew.sh)
-$ brew install yarn # or npm install -g yarn
-```
-
-### Helpful commands
-
-| Description                           | Command                 |
-| ------------------------------------- | ----------------------- |
-| Install dependencies                  | `yarn install`          |
-| Run linter                            | `yarn lint`             |
-| Run linter and fix all fixable issues | `yarn lint:fix`         |
-| Build package                         | `yarn build`            |
-| Run the component generator           | `yarn create-component` |
-
-## Project Status
-
-This project is under **active development**. If you would like to contribute, check out the [contribution guidelines](./docs/CONTRIBUTING.md) or [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
+Instead, if you want to report an issue, you can [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
 
 This project is governed under the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
