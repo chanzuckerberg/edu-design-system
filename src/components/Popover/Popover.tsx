@@ -26,7 +26,7 @@ export const PopoverContext = createContext<PopoverContextType>({});
 /**
  * `import {Popover} from "@chanzuckerberg/eds";`
  *
- * General-purpose floating menus that appear proximal to a trigger point
+ * General-purpose floating containers that appear proximal to a trigger point
  */
 export const Popover = ({
   placement = 'bottom-start',
@@ -36,7 +36,6 @@ export const Popover = ({
   ...other
 }: PopoverProps) => {
   const [referenceElement, setReferenceElement] = useState<Element>();
-
   const [popperElement, setPopperElement] = useState<HTMLElement>();
 
   // Leverage usePopper hook from Popper js for additional popover behavior and adds behavior to context for consumption by subcomponents.
