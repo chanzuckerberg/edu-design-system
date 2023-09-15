@@ -67,6 +67,7 @@ function InteractiveExampleUsingChildren(props: Props) {
         className={clsx(!compact && 'w-60')}
         data-testid="dropdown"
         disabled={disabled}
+        name="interactive-select"
         onChange={setSelectedOption}
         optionsAlign={optionsAlign}
         optionsClassName={optionsClassName}
@@ -99,6 +100,7 @@ function InteractiveExampleUsingFunctionChildren() {
         as="div"
         className="w-60"
         data-testid="dropdown"
+        name="interactive-with-children"
         onChange={setSelectedOption}
         value={selectedOption}
       >
