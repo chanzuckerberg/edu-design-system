@@ -26,6 +26,8 @@ type PropsWithRenderProp<RenderPropArg> = {
   as?: ElementType;
 };
 
+let showNameWarning = true;
+
 type SelectProps = ExtractProps<typeof Listbox> &
   PopoverOptions & {
     /**
@@ -41,11 +43,10 @@ type SelectProps = ExtractProps<typeof Listbox> &
      */
     className?: string;
     /**
-     * The style of the select.
-     *
-     * Compact renders select trigger button that is only as wide as the content.
+     * Name of the form element, which triggers the generation of a hidden form field.
+     * @see https://headlessui.com/react/listbox#using-with-html-forms
      */
-    variant?: VariantType;
+    name?: string;
     /**
      * Align select's popover to the left (default) or right of the trigger button's bottom edge.
      * @deprecated
@@ -58,6 +59,12 @@ type SelectProps = ExtractProps<typeof Listbox> &
      * include the width property to define the options menu width.
      */
     optionsClassName?: string;
+    /**
+     * The style of the select.
+     *
+     * Compact renders select trigger button that is only as wide as the content.
+     */
+    variant?: VariantType;
   };
 
 function childrenHaveLabelComponent(children?: ReactNode): boolean {
@@ -95,20 +102,29 @@ const SelectContext = React.createContext<SelectContextType>({});
  */
 export function Select(props: SelectProps) {
   const {
-    className,
-    children,
     'aria-label': ariaLabel,
-    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
-    value = null,
-    variant,
+    children,
+    className,
+    modifiers = defaultPopoverModifiers,
+    name,
+    onFirstUpdate,
     optionsAlign,
     optionsClassName,
     placement = 'bottom-start',
-    modifiers = defaultPopoverModifiers,
     strategy,
-    onFirstUpdate,
+    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
+    value = null,
+    variant,
     ...other
   } = props;
+
+  if (process.env.NODE_ENV !== 'production' && !name && showNameWarning) {
+    console.warn(
+      "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
+      'font-weight: bold',
+    );
+    showNameWarning = false;
+  }
 
   // Translate old optionsAlign to placement values
   // TODO: when removing optionsAlign, also remove this
@@ -117,6 +133,7 @@ export function Select(props: SelectProps) {
         optionsAlign
       ] as SelectProps['placement'])
     : placement;
+
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
   const { styles: popperStyles, attributes: popperAttributes } = usePopper(
