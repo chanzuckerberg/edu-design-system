@@ -28,17 +28,7 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          margin: '0.5rem',
-        }}
-      >
-        {Story()}
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Breadcrumbs>;

@@ -1,13 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
-import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Checkbox } from './Checkbox';
 import * as stories from './Checkbox.stories';
-
-const { Default } = composeStories(stories);
 
 describe('<Checkbox />', () => {
   generateSnapshots(stories as StoryFile);
@@ -18,12 +15,14 @@ describe('<Checkbox />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should toggle the checkbox with space', async () => {
+  test('should toggle the checkbox with space and trigger onChange', async () => {
     const user = userEvent.setup();
-    render(<Default />);
+    const onChange = jest.fn();
+    render(<Checkbox aria-label="test-checkbox" onChange={onChange} />);
     const checkbox = screen.getByRole('checkbox');
     checkbox.focus();
     await user.keyboard(' ');
     expect(checkbox).toBeChecked();
+    expect(onChange).toHaveBeenCalledTimes(1);
   });
 });
