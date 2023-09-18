@@ -7,7 +7,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r2:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+    class="button button--lg button--secondary button--neutral filters-button"
     data-headlessui-state="open"
     id="headlessui-popover-button-:r0:"
     type="button"
@@ -45,7 +45,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rq:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+    class="button button--lg button--secondary button--neutral filters-button"
     data-headlessui-state="open"
     id="headlessui-popover-button-:ro:"
     type="button"
@@ -83,7 +83,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
   <button
     aria-controls="headlessui-popover-panel-:ri:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+    class="button button--lg button--secondary button--neutral filters-button"
     data-headlessui-state="open"
     id="headlessui-popover-button-:rg:"
     type="button"
@@ -121,7 +121,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:ra:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+    class="button button--lg button--secondary button--neutral filters-button"
     data-headlessui-state="open"
     id="headlessui-popover-button-:r8:"
     type="button"

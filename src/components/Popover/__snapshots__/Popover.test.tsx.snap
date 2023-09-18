@@ -7,7 +7,7 @@ exports[`<Popover /> Bottom story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rh:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:rf:"
@@ -32,7 +32,7 @@ exports[`<Popover /> BottomEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1a:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r18:"
@@ -57,7 +57,7 @@ exports[`<Popover /> BottomStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r15:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r13:"
@@ -82,7 +82,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r2:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r0:"
@@ -107,7 +107,7 @@ exports[`<Popover /> FocusClickableElement story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r23:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r21:"
@@ -132,7 +132,7 @@ exports[`<Popover /> Left story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rm:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:rk:"
@@ -157,7 +157,7 @@ exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1u:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1s:"
@@ -182,7 +182,7 @@ exports[`<Popover /> LeftStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1p:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1n:"
@@ -207,7 +207,7 @@ exports[`<Popover /> Right story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rc:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:ra:"
@@ -232,7 +232,7 @@ exports[`<Popover /> RightEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1k:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1i:"
@@ -257,7 +257,7 @@ exports[`<Popover /> RightStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1f:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1d:"
@@ -282,7 +282,7 @@ exports[`<Popover /> Top story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r7:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r5:"
@@ -307,7 +307,7 @@ exports[`<Popover /> TopEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r10:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:ru:"
@@ -332,7 +332,7 @@ exports[`<Popover /> TopStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rr:"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    class="button button--lg button--secondary button--brand"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:rp:"

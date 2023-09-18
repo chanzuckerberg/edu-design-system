@@ -23,7 +23,7 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
         Drawer title
       </h2>
       <button
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        class="button button--lg button--icon button--neutral"
         type="button"
       >
         <svg
@@ -61,13 +61,13 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
         class="button-group button-group--spacing-1x"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          class="button button--lg button--primary button--brand"
           type="button"
         >
           Button 1
         </button>
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+          class="button button--lg button--secondary button--brand"
           type="button"
         >
           Button 2

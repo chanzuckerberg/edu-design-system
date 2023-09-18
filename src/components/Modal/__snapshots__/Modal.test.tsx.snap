@@ -57,13 +57,13 @@ exports[`Modal Brand story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -121,13 +121,13 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -199,13 +199,13 @@ exports[`Modal Default story renders snapshot 1`] = `
         class="button-group button-group--spacing-1x flex w-full justify-end"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+          class="button button--lg button--secondary button--neutral"
           type="button"
         >
           Button 2
         </button>
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          class="button button--lg button--primary button--brand"
           type="button"
         >
           Button 1
@@ -264,13 +264,13 @@ exports[`Modal Medium story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -328,13 +328,13 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -401,13 +401,13 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -465,13 +465,13 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -538,13 +538,13 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -677,13 +677,13 @@ exports[`Modal Small story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -741,13 +741,13 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -814,13 +814,13 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -911,13 +911,13 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         class="button-group button-group--spacing-1x flex w-full justify-end"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+          class="button button--lg button--secondary button--neutral"
           type="button"
         >
           Button 2
         </button>
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          class="button button--lg button--primary button--brand"
           type="button"
         >
           Button 1
@@ -1097,13 +1097,13 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       class="button-group button-group--spacing-1x flex w-full justify-end"
     >
       <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        class="button button--lg button--secondary button--neutral"
         type="button"
       >
         Button 2
       </button>
       <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        class="button button--lg button--primary button--brand"
         type="button"
       >
         Button 1
@@ -1154,13 +1154,13 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
         class="button-group button-group--spacing-1x flex w-full justify-end"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+          class="button button--lg button--secondary button--neutral"
           type="button"
         >
           Button 2
         </button>
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          class="button button--lg button--primary button--brand"
           type="button"
         >
           Button 1
