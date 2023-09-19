@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import type { MouseEventHandler, ReactNode } from 'react';
 import React from 'react';
 import Button from '../Button';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Input, { type InputProps } from '../Input';
 import styles from './SearchBar.module.css';
 
@@ -32,10 +32,19 @@ type SearchButtonProps = {
   onClick?: MouseEventHandler;
 };
 
+type SearchFieldProps = InputProps & {
+  icon?: Extract<IconName, 'search'>;
+};
+
 /**
  * A search Input component styled for use with the SearchBar.
  */
-const SearchField = ({ className, disabled, ...other }: InputProps) => {
+const SearchField = ({
+  className,
+  disabled,
+  icon = 'search',
+  ...other
+}: SearchFieldProps) => {
   const inputClassName = clsx(styles['search-field__input'], className);
   const iconClassName = clsx(
     styles['search-field__icon'],
@@ -53,7 +62,7 @@ const SearchField = ({ className, disabled, ...other }: InputProps) => {
       />
       <Icon
         className={iconClassName}
-        name="search"
+        name={icon}
         purpose="informative"
         size="1.25rem"
         title="search"

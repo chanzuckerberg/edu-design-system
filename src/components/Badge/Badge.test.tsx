@@ -7,7 +7,7 @@ import * as stories from './Badge.stories';
 describe('<Badge />', () => {
   generateSnapshots(stories);
 
-  test('throws an error if Badge.Text length is > 3', () => {
+  it('throws an error if Badge.Text length is > 3', () => {
     // expect console error from react, suppressed.
     const consoleErrorMock = jest.spyOn(console, 'error');
     consoleErrorMock.mockImplementation();
@@ -19,6 +19,22 @@ describe('<Badge />', () => {
         </Badge>,
       );
     }).toThrow(/Max badge text length is 3/);
+    consoleErrorMock.mockRestore();
+  });
+
+  it('throws an error if name and icon are both missing', () => {
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
+    expect(() => {
+      render(
+        <Badge>
+          <div className="fpo">Ava</div>
+          {/* @ts-expect-error 'icon` is required; testing exception */}
+          <Badge.Icon />
+        </Badge>,
+      );
+    }).toThrow(/Name or Icon must be passed to the Badge sub-component/);
     consoleErrorMock.mockRestore();
   });
 });

@@ -56,6 +56,10 @@ export type MenuButtonProps = {
    * Allow custom classes to be applied to the menu button.
    */
   className?: string;
+  /**
+   * Icon override for component. Default is 'expand-more'
+   */
+  icon?: Extract<IconName, 'expand-more'>;
 };
 
 export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
@@ -108,7 +112,12 @@ export const Menu = ({
 /**
  * A styled button that when clicked, shows or hides the Options.
  */
-const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
+const MenuButton = ({
+  children,
+  className,
+  icon = 'expand-more',
+  ...other
+}: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
   const { setReferenceElement } = useContext(MenuContext);
 
@@ -118,7 +127,7 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
         {children}
         <Icon
           className={styles['menu__button--with-chevron']}
-          name="expand-more"
+          name={icon}
           purpose="decorative"
           size="1.25rem"
         />

@@ -15,7 +15,7 @@ import {
   type DroppableProvided,
 } from 'react-beautiful-dnd';
 import { oneByType } from 'react-children-by-type';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import styles from './DragDrop.module.css';
 
 type ItemContents = {
@@ -89,6 +89,17 @@ type DragDropItemProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Icon to use when defining a drag handle. Default is "drag-indicator"
+   */
+  icon?: Extract<
+    IconName,
+    | 'drag-indicator'
+    | 'dots-vertical'
+    | 'dots-horizontal'
+    | 'menu'
+    | 'view-headline'
+  >;
   /**
    * The contents of an item; includes id, title (optional) and children (optional)
    */
@@ -204,7 +215,12 @@ const DragDropContainerHeader = ({
 /**
  * Item to be dragged and dropped in containers.
  */
-const DragDropItem = ({ className, item, index }: DragDropItemProps) => {
+const DragDropItem = ({
+  className,
+  icon = 'drag-indicator',
+  item,
+  index,
+}: DragDropItemProps) => {
   const componentClassName = clsx(
     styles['drag-drop__item'],
     item.behavior === 'hover' && styles['drag-drop__item--hover'],
@@ -240,7 +256,7 @@ const DragDropItem = ({ className, item, index }: DragDropItemProps) => {
               className={clsx(styles['drag-drop__item-handle'])}
               {...provided.dragHandleProps}
             >
-              <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
+              <Icon name={icon} purpose="decorative" size="1.5rem" />
             </div>
             {childrenWithProps}
           </li>

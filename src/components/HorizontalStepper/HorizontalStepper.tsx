@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Text from '../Text';
 
@@ -31,6 +31,10 @@ export type StepProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Icon override for component. Default is 'check-circle'
+   */
+  icon?: Extract<IconName, 'check-circle'>;
   /**
    * Indicates which number the step is.
    */
@@ -145,6 +149,7 @@ export const HorizontalStepper = ({
  */
 export const HorizontalStep = ({
   className,
+  icon = 'check-circle',
   stepNumber,
   text,
   variant,
@@ -157,11 +162,11 @@ export const HorizontalStep = ({
     variant === 'incomplete' &&
       styles['horizontal-step__number-icon--incomplete'],
   );
-  const icon =
+  const stepIcon =
     variant === 'complete' ? (
       <Icon
         className={styles['horizontal-step__complete-icon']}
-        name="check-circle"
+        name={icon}
         purpose="informative"
         size="1.5rem"
         title={`completed step ${stepNumber} ${text}`}
@@ -183,7 +188,7 @@ export const HorizontalStep = ({
   );
   return (
     <li className={componentClassName}>
-      {icon}
+      {stepIcon}
       <Text
         as="span"
         className={styles['horizontal-step__text']}

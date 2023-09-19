@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { debounce } from 'lodash';
 import React, { createContext, useContext, type ReactNode } from 'react';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';
 import styles from './Breadcrumbs.module.css';
 
@@ -194,6 +194,10 @@ type BreadcrumbItemProps = {
    */
   href: string | null;
   /**
+   * Icon override for component. Default is 'chevron-left'
+   */
+  icon?: Extract<IconName, 'chevron-left'>;
+  /**
    * URLs for the collapsed breadcrumbs variant.
    * Should be <Menu.Item href={href}>{text}</Menu.Item>.
    */
@@ -223,6 +227,7 @@ type BreadcrumbItemProps = {
 export const BreadcrumbsItem = ({
   className,
   href,
+  icon = 'chevron-left',
   menuItems,
   separator = '/',
   text,
@@ -260,7 +265,7 @@ export const BreadcrumbsItem = ({
         <a className={styles['breadcrumbs__link']} href={href as string}>
           <Icon
             className={styles['breadcrumbs__back-icon']}
-            name="chevron-left"
+            name={icon}
             purpose="informative"
             title={text as string}
           />

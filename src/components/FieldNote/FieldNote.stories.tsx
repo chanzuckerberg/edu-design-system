@@ -22,6 +22,15 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const WithIcon: StoryObj<Args> = {
+  args: {
+    children: 'This is a fieldnote.',
+    id: 'field-1',
+    icon: 'person-add',
+    isError: true,
+  },
+};
+
 export const WithText: StoryObj<Args> = {
   args: {
     children: (

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import Button from '../Button';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import styles from './Toast.module.css';
 
 export type Variant = 'success' | 'error';
@@ -49,15 +49,11 @@ export const Toast = ({
     variant === 'error' && styles['toast--error'],
     className,
   );
+  const icon: IconName = variant === 'success' ? 'check-circle' : 'warning';
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['toast__content']}>
-        <Icon
-          name={variant === 'success' ? 'check-circle' : 'warning'}
-          purpose="informative"
-          size="1.5rem"
-          title={variant}
-        />
+        <Icon name={icon} purpose="informative" size="1.5rem" title={variant} />
         <p className={styles['toast__text']}>{children}</p>
       </div>
       {onDismiss && (
