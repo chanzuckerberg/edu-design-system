@@ -54,9 +54,11 @@ export const Stacked: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <Accordion.Row>
-          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
-          <Accordion.Panel>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button data-testid="accordion-button-1">
+            Massa quam egestas massa.
+          </Accordion.Button>
+          <Accordion.Panel data-testid="accordion-panel-1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
             massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
@@ -64,8 +66,10 @@ export const Stacked: StoryObj<Args> = {
           </Accordion.Panel>
         </Accordion.Row>
         <Accordion.Row>
-          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
-          <Accordion.Panel>
+          <Accordion.Button data-testid="accordion-button-2">
+            Massa quam egestas massa.
+          </Accordion.Button>
+          <Accordion.Panel data-testid="accordion-panel-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
             massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
@@ -73,8 +77,10 @@ export const Stacked: StoryObj<Args> = {
           </Accordion.Panel>
         </Accordion.Row>
         <Accordion.Row>
-          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
-          <Accordion.Panel>
+          <Accordion.Button data-testid="accordion-button-3">
+            Massa quam egestas massa.
+          </Accordion.Button>
+          <Accordion.Panel data-testid="accordion-panel-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
             massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
@@ -82,8 +88,10 @@ export const Stacked: StoryObj<Args> = {
           </Accordion.Panel>
         </Accordion.Row>
         <Accordion.Row>
-          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
-          <Accordion.Panel>
+          <Accordion.Button data-testid="accordion-button-4">
+            Massa quam egestas massa.
+          </Accordion.Button>
+          <Accordion.Panel data-testid="accordion-panel-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
             massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.

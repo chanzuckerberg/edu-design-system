@@ -95,27 +95,10 @@ const AccordionContext = createContext<{
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
  * Displays a list of headers stacked on top of one another that can reveal or hide associated content.
+ * This component is based on the [Disclosure](https://headlessui.com/react/disclosure) component, provided by HeadlessUI.
  *
- * ```tsx
- * <Accordion>
- *   <Accordion.Item>
- *     <Accordion.Button>
- *       Title 1
- *     </Accordion.Button>
- *     <Accordion.Panel>
- *       Content 1
- *     </Accordion.Panel>
- *   </Accordion.Item>
- *   <Accordion.Item>
- *     <Accordion.Button>
- *       Title 2
- *     </Accordion.Button>
- *     <Accordion.Panel>
- *       Content 2
- *     </Accordion.Panel>
- *   </Accordion.Item>
- * </Accordion>
- * ```
+ * @see https://headlessui.com/react/disclosure
+ *
  */
 export const Accordion = ({
   children,
