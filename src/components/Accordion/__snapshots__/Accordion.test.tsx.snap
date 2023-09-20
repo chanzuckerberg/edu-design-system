@@ -213,9 +213,11 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       class="accordion-row"
     >
       <button
-        aria-expanded="false"
+        aria-controls="headlessui-disclosure-panel-:r5:"
+        aria-expanded="true"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
-        data-headlessui-state=""
+        data-headlessui-state="open"
+        data-testid="accordion-button-1"
         id="headlessui-disclosure-button-:r4:"
         type="button"
       >
@@ -225,7 +227,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           Massa quam egestas massa.
         </h2>
         <svg
-          class="icon accordion-button__icon"
+          class="icon accordion-button__icon accordion-button__icon--open"
           fill="currentColor"
           height="1.625rem"
           role="img"
@@ -235,13 +237,21 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            show content
+            hide content
           </title>
           <path
             d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
           />
         </svg>
       </button>
+      <div
+        class="accordion-panel"
+        data-headlessui-state="open"
+        data-testid="accordion-panel-1"
+        id="headlessui-disclosure-panel-:r5:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
     </div>
     <div
       class="accordion-row"
@@ -250,6 +260,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
+        data-testid="accordion-button-2"
         id="headlessui-disclosure-button-:r6:"
         type="button"
       >
@@ -284,6 +295,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
+        data-testid="accordion-button-3"
         id="headlessui-disclosure-button-:r8:"
         type="button"
       >
@@ -318,6 +330,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
+        data-testid="accordion-button-4"
         id="headlessui-disclosure-button-:ra:"
         type="button"
       >
@@ -539,9 +552,11 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
       class="accordion-row accordion-row--outline"
     >
       <button
-        aria-expanded="false"
+        aria-controls="headlessui-disclosure-panel-:rl:"
+        aria-expanded="true"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--outline"
-        data-headlessui-state=""
+        data-headlessui-state="open"
+        data-testid="accordion-button-1"
         id="headlessui-disclosure-button-:rk:"
         type="button"
       >
@@ -551,7 +566,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           Massa quam egestas massa.
         </h2>
         <svg
-          class="icon accordion-button__icon"
+          class="icon accordion-button__icon accordion-button__icon--open"
           fill="currentColor"
           height="1.625rem"
           role="img"
@@ -561,13 +576,21 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            show content
+            hide content
           </title>
           <path
             d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
           />
         </svg>
       </button>
+      <div
+        class="accordion-panel accordion-panel--outline"
+        data-headlessui-state="open"
+        data-testid="accordion-panel-1"
+        id="headlessui-disclosure-panel-:rl:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
     </div>
     <div
       class="accordion-row accordion-row--outline"
@@ -576,6 +599,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--outline"
         data-headlessui-state=""
+        data-testid="accordion-button-2"
         id="headlessui-disclosure-button-:rm:"
         type="button"
       >
@@ -610,6 +634,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--outline"
         data-headlessui-state=""
+        data-testid="accordion-button-3"
         id="headlessui-disclosure-button-:ro:"
         type="button"
       >
@@ -644,6 +669,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--outline"
         data-headlessui-state=""
+        data-testid="accordion-button-4"
         id="headlessui-disclosure-button-:rq:"
         type="button"
       >
@@ -865,9 +891,11 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
       class="accordion-row"
     >
       <button
-        aria-expanded="false"
+        aria-controls="headlessui-disclosure-panel-:rd:"
+        aria-expanded="true"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
-        data-headlessui-state=""
+        data-headlessui-state="open"
+        data-testid="accordion-button-1"
         id="headlessui-disclosure-button-:rc:"
         type="button"
       >
@@ -877,7 +905,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           Massa quam egestas massa.
         </h2>
         <svg
-          class="icon accordion-button__icon"
+          class="icon accordion-button__icon accordion-button__icon--open"
           fill="currentColor"
           height="1.625rem"
           role="img"
@@ -887,13 +915,21 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            show content
+            hide content
           </title>
           <path
             d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
           />
         </svg>
       </button>
+      <div
+        class="accordion-panel accordion-panel--sm"
+        data-headlessui-state="open"
+        data-testid="accordion-panel-1"
+        id="headlessui-disclosure-panel-:rd:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
     </div>
     <div
       class="accordion-row"
@@ -902,6 +938,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
         data-headlessui-state=""
+        data-testid="accordion-button-2"
         id="headlessui-disclosure-button-:re:"
         type="button"
       >
@@ -936,6 +973,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
         data-headlessui-state=""
+        data-testid="accordion-button-3"
         id="headlessui-disclosure-button-:rg:"
         type="button"
       >
@@ -970,6 +1008,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
         data-headlessui-state=""
+        data-testid="accordion-button-4"
         id="headlessui-disclosure-button-:ri:"
         type="button"
       >
@@ -1191,9 +1230,11 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
       class="accordion-row accordion-row--outline"
     >
       <button
-        aria-expanded="false"
+        aria-controls="headlessui-disclosure-panel-:rt:"
+        aria-expanded="true"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
-        data-headlessui-state=""
+        data-headlessui-state="open"
+        data-testid="accordion-button-1"
         id="headlessui-disclosure-button-:rs:"
         type="button"
       >
@@ -1203,7 +1244,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           Massa quam egestas massa.
         </h2>
         <svg
-          class="icon accordion-button__icon"
+          class="icon accordion-button__icon accordion-button__icon--open"
           fill="currentColor"
           height="1.625rem"
           role="img"
@@ -1213,13 +1254,21 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            show content
+            hide content
           </title>
           <path
             d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
           />
         </svg>
       </button>
+      <div
+        class="accordion-panel accordion-panel--sm accordion-panel--outline"
+        data-headlessui-state="open"
+        data-testid="accordion-panel-1"
+        id="headlessui-disclosure-panel-:rt:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
     </div>
     <div
       class="accordion-row accordion-row--outline"
@@ -1228,6 +1277,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
         data-headlessui-state=""
+        data-testid="accordion-button-2"
         id="headlessui-disclosure-button-:ru:"
         type="button"
       >
@@ -1262,6 +1312,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
         data-headlessui-state=""
+        data-testid="accordion-button-3"
         id="headlessui-disclosure-button-:r10:"
         type="button"
       >
@@ -1296,6 +1347,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
         data-headlessui-state=""
+        data-testid="accordion-button-4"
         id="headlessui-disclosure-button-:r12:"
         type="button"
       >
