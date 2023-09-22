@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.2.0...v13.3.0) (2023-09-22)
+
+
+### Features
+
+* add event hooks to existing components ([#1757](https://github.com/chanzuckerberg/edu-design-system/issues/1757)) ([9045cf5](https://github.com/chanzuckerberg/edu-design-system/commit/9045cf539f46e0022373faec7c3b6ea32ca37190))
+* **Icons:** add 'edit' icon to spritemap ([#1760](https://github.com/chanzuckerberg/edu-design-system/issues/1760)) ([f56983a](https://github.com/chanzuckerberg/edu-design-system/commit/f56983a87b844abc2367cd48286885a6a2fbec42))
+* **Select:** add warning when name is missing from component props ([#1756](https://github.com/chanzuckerberg/edu-design-system/issues/1756)) ([e3f2bc1](https://github.com/chanzuckerberg/edu-design-system/commit/e3f2bc1bf780b0a614c6896c7d9c03d29c0dd800))
+
+
+### Bug Fixes
+
+* remove deprecated tokens from wireframe page ([#1752](https://github.com/chanzuckerberg/edu-design-system/issues/1752)) ([5e388fa](https://github.com/chanzuckerberg/edu-design-system/commit/5e388faf7396b3851cccbbdd704b5040be2c3da5))
+
 ## [13.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.1.1...v13.2.0) (2023-09-07)
 
 

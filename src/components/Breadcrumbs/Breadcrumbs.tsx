@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import { debounce } from 'lodash';
 import React, { createContext, useContext, type ReactNode } from 'react';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
-// import BreadcrumbsItem from '../BreadcrumbsItem';
 import Icon from '../Icon';
 import Menu from '../Menu';
 import styles from './Breadcrumbs.module.css';
@@ -250,7 +249,7 @@ export const BreadcrumbsItem = ({
             aria-label="Show more breadcrumbs"
             className={ellipsisButtonClassName}
           >
-            ...
+            …
           </Menu.PlainButton>
           <Menu.Items>{menuItems}</Menu.Items>
         </Menu>

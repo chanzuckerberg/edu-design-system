@@ -2,6 +2,7 @@ import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
+import type { Size } from '../../util/variant-types';
 import Button from '../Button';
 import Heading, { type HeadingElement } from '../Heading';
 import Icon from '../Icon';
@@ -27,7 +28,7 @@ type AccordionProps = {
   /**
    * Various Accordion sizes. Defaults to 'md'.
    */
-  size?: 'sm' | 'md';
+  size?: Extract<Size, 'sm' | 'md'>;
 };
 
 type AccordionButtonProps = {
@@ -45,9 +46,13 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   * Callback called when accordion is closed.
+   * Callback for when accordion is closed.
    */
   onClose?: () => void;
+  /**
+   * Callback for when according is opened.
+   */
+  onOpen?: () => void;
 };
 
 type AccordionPanelProps = {
@@ -90,27 +95,10 @@ const AccordionContext = createContext<{
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
  * Displays a list of headers stacked on top of one another that can reveal or hide associated content.
+ * This component is based on the [Disclosure](https://headlessui.com/react/disclosure) component, provided by HeadlessUI.
  *
- * ```tsx
- * <Accordion>
- *   <Accordion.Item>
- *     <Accordion.Button>
- *       Title 1
- *     </Accordion.Button>
- *     <Accordion.Panel>
- *       Content 1
- *     </Accordion.Panel>
- *   </Accordion.Item>
- *   <Accordion.Item>
- *     <Accordion.Button>
- *       Title 2
- *     </Accordion.Button>
- *     <Accordion.Panel>
- *       Content 2
- *     </Accordion.Panel>
- *   </Accordion.Item>
- * </Accordion>
- * ```
+ * @see https://headlessui.com/react/disclosure
+ *
  */
 export const Accordion = ({
   children,
@@ -138,6 +126,7 @@ const AccordionButton = ({
   className,
   headingAs,
   onClose,
+  onOpen,
   ...other
 }: AccordionButtonProps) => {
   const {
@@ -168,11 +157,17 @@ const AccordionButton = ({
             if (open && onClose) {
               onClose();
             }
+            if (!open && onOpen) {
+              onOpen();
+            }
           }}
           onKeyDown={(e) => {
             if (e.key === SPACEBAR_KEYCODE || e.key === ENTER_KEYCODE) {
               if (open && onClose) {
                 onClose();
+              }
+              if (!open && onOpen) {
+                onOpen();
               }
             }
           }}

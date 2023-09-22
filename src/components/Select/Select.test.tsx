@@ -61,7 +61,11 @@ describe('<Select />', () => {
 
   it('throws an error if children is used without labeling', () => {
     const dropdownWithChildrenAndLabelText = (
-      <Select onChange={() => undefined} value={exampleOptions[0]}>
+      <Select
+        name="throwing-select"
+        onChange={() => undefined}
+        value={exampleOptions[0]}
+      >
         <Select.Button>Select</Select.Button>
 
         <Select.Options>
@@ -86,7 +90,11 @@ describe('<Select />', () => {
 
   it('does not throw an error if select uses <Select.Label>', () => {
     const dropdownWithDropdownLabel = (
-      <Select onChange={() => undefined} value={exampleOptions[0]}>
+      <Select
+        name="non-throwing-select"
+        onChange={() => undefined}
+        value={exampleOptions[0]}
+      >
         <Select.Label>Options:</Select.Label>
         <Select.Button>Select</Select.Button>
 

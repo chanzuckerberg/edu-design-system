@@ -76,4 +76,31 @@ describe('<Accordion />', () => {
     });
     expect(onClose).toHaveBeenCalledTimes(1);
   });
+
+  it('should call onOpen callback when accordion opens', async () => {
+    const user = userEvent.setup();
+    const onClose = jest.fn();
+    const onOpen = jest.fn();
+    render(
+      <Accordion headingAs="h2">
+        <Accordion.Row>
+          <Accordion.Button
+            data-testid="accordion-button"
+            onClose={onClose}
+            onOpen={onOpen}
+          >
+            Accordion Button
+          </Accordion.Button>
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+    const accordionButton = screen.getByTestId('accordion-button');
+
+    await act(async () => {
+      await user.click(accordionButton);
+    });
+    expect(onOpen).toHaveBeenCalledTimes(1);
+    expect(onClose).not.toHaveBeenCalled();
+  });
 });
