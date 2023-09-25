@@ -263,6 +263,50 @@ export const UsingRenderProp: StoryObj<Args> = {
 export const UsingComplexHeaders: StoryObj<Args> = {
   parameters: {
     badges: ['1.2', 'implementationExample'],
+    docs: {
+      source: {
+        code: `<Accordion>
+  <Accordion.Row>
+    <Accordion.Button>
+      <Text size="lg" variant="neutral-subtle">
+        <Icon
+          className="m-2"
+          name="check-circle"
+          purpose="decorative"
+          size="1rem"
+        />
+        Step 1
+      </Text>
+    </Accordion.Button>
+    <Accordion.Panel>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+      massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+      tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+      Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+    </Accordion.Panel>
+  </Accordion.Row>
+  <Accordion.Row>
+    <Accordion.Button>
+      <Text size="lg" variant="neutral-subtle">
+        <Icon
+          className="m-2"
+          name="check-circle"
+          purpose="decorative"
+          size="1rem"
+        />
+        Step 2
+      </Text>
+    </Accordion.Button>
+    <Accordion.Panel>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+      massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+      tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+      Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+    </Accordion.Panel>
+  </Accordion.Row>
+</Accordion>`,
+      },
+    },
   },
   args: {
     children: (
@@ -295,45 +339,7 @@ export const UsingComplexHeaders: StoryObj<Args> = {
                 purpose="decorative"
                 size="1rem"
               />
-              Step 1
-            </Text>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-          </Accordion.Panel>
-        </Accordion.Row>
-        <Accordion.Row>
-          <Accordion.Button>
-            <Text size="lg" variant="neutral-subtle">
-              <Icon
-                className="m-2"
-                name="check-circle"
-                purpose="decorative"
-                size="1rem"
-              />
-              Step 1
-            </Text>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-          </Accordion.Panel>
-        </Accordion.Row>
-        <Accordion.Row defaultOpen>
-          <Accordion.Button>
-            <Text size="lg" variant="neutral-strong">
-              <Icon
-                className="m-2"
-                name="circle"
-                purpose="decorative"
-                size="1rem"
-              />
-              Step 1
+              Step 2
             </Text>
           </Accordion.Button>
           <Accordion.Panel>
@@ -351,6 +357,44 @@ export const UsingComplexHeaders: StoryObj<Args> = {
 export const UsingNumberIconInHeaders: StoryObj<Args> = {
   parameters: {
     badges: ['1.2', 'implementationExample'],
+    docs: {
+      source: {
+        code: `<Accordion>
+  <Accordion.Row>
+    <Accordion.Button>
+      <div className="flex flex-wrap gap-1">
+        <NumberIcon aria-label="Step 1" number={1} />
+        <Text size="lg" variant="neutral-subtle">
+          Step 1
+        </Text>
+      </div>
+    </Accordion.Button>
+    <Accordion.Panel>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+      massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+      tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+      Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+    </Accordion.Panel>
+  </Accordion.Row>
+  <Accordion.Row>
+    <Accordion.Button>
+      <div className="flex flex-wrap gap-1">
+        <NumberIcon aria-label="Step 3" number={2} />
+        <Text size="lg" variant="neutral-subtle">
+          Step 2
+        </Text>
+      </div>
+    </Accordion.Button>
+    <Accordion.Panel>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+      massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+      tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+      Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+    </Accordion.Panel>
+  </Accordion.Row>
+</Accordion>`,
+      },
+    },
   },
   args: {
     children: (
@@ -377,38 +421,6 @@ export const UsingNumberIconInHeaders: StoryObj<Args> = {
               <NumberIcon aria-label="Step 3" number={2} />
               <Text size="lg" variant="neutral-subtle">
                 Step 2
-              </Text>
-            </div>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-          </Accordion.Panel>
-        </Accordion.Row>
-        <Accordion.Row>
-          <Accordion.Button>
-            <div className="flex flex-wrap gap-1">
-              <NumberIcon aria-label="Step 3" number={3} />
-              <Text size="lg" variant="neutral-subtle">
-                Step 3
-              </Text>
-            </div>
-          </Accordion.Button>
-          <Accordion.Panel>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-          </Accordion.Panel>
-        </Accordion.Row>
-        <Accordion.Row defaultOpen>
-          <Accordion.Button>
-            <div className="flex flex-wrap gap-1">
-              <NumberIcon aria-label="Step 4" number={4} />
-              <Text size="lg" variant="neutral-subtle">
-                Step 4
               </Text>
             </div>
           </Accordion.Button>
