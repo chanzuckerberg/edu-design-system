@@ -1558,6 +1558,233 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Accordion /> UsingComplexHeaders story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2a:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <p
+            class="text text--lg text--neutral-subtle"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon m-2"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
+              />
+            </svg>
+            Step 1
+          </p>
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2c:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <p
+            class="text text--lg text--neutral-subtle"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon m-2"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
+              />
+            </svg>
+            Step 1
+          </p>
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2e:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <p
+            class="text text--lg text--neutral-subtle"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon m-2"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
+              />
+            </svg>
+            Step 1
+          </p>
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-:r2h:"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state="open"
+        id="headlessui-disclosure-button-:r2g:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <p
+            class="text text--lg text--neutral-strong"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon m-2"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
+              />
+            </svg>
+            Step 1
+          </p>
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            hide content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel"
+        data-headlessui-state="open"
+        id="headlessui-disclosure-panel-:r2h:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
 <div
   style="margin: 0.5rem;"

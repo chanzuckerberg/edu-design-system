@@ -2,6 +2,8 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Accordion } from './Accordion';
+import Icon from '../Icon';
+import Text from '../Text';
 
 export default {
   title: 'Components/Accordion',
@@ -254,5 +256,93 @@ export const UsingRenderProp: StoryObj<Args> = {
 </Accordion>`,
       },
     },
+  },
+};
+
+export const UsingComplexHeaders: StoryObj<Args> = {
+  parameters: {
+    badges: ['1.2', 'implementationExample'],
+  },
+  args: {
+    children: (
+      <>
+        <Accordion.Row>
+          <Accordion.Button>
+            <Text size="lg" variant="neutral-subtle">
+              <Icon
+                className="m-2"
+                name="check-circle"
+                purpose="decorative"
+                size="1rem"
+              />
+              Step 1
+            </Text>
+          </Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button>
+            <Text size="lg" variant="neutral-subtle">
+              <Icon
+                className="m-2"
+                name="check-circle"
+                purpose="decorative"
+                size="1rem"
+              />
+              Step 1
+            </Text>
+          </Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button>
+            <Text size="lg" variant="neutral-subtle">
+              <Icon
+                className="m-2"
+                name="check-circle"
+                purpose="decorative"
+                size="1rem"
+              />
+              Step 1
+            </Text>
+          </Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>
+            <Text size="lg" variant="neutral-strong">
+              <Icon
+                className="m-2"
+                name="circle"
+                purpose="decorative"
+                size="1rem"
+              />
+              Step 1
+            </Text>
+          </Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
   },
 };
