@@ -1785,6 +1785,221 @@ exports[`<Accordion /> UsingComplexHeaders story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Accordion /> UsingNumberIconInHeaders story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2i:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <div
+            class="flex flex-wrap gap-1"
+          >
+            <span
+              aria-label="Step 1"
+              class="text text--sm text--neutral-medium number-icon number-icon--base"
+              role="img"
+            >
+              1
+            </span>
+            <p
+              class="text text--lg text--neutral-subtle"
+            >
+              Step 1
+            </p>
+          </div>
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2k:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <div
+            class="flex flex-wrap gap-1"
+          >
+            <span
+              aria-label="Step 3"
+              class="text text--sm text--neutral-medium number-icon number-icon--base"
+              role="img"
+            >
+              2
+            </span>
+            <p
+              class="text text--lg text--neutral-subtle"
+            >
+              Step 2
+            </p>
+          </div>
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2m:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <div
+            class="flex flex-wrap gap-1"
+          >
+            <span
+              aria-label="Step 3"
+              class="text text--sm text--neutral-medium number-icon number-icon--base"
+              role="img"
+            >
+              3
+            </span>
+            <p
+              class="text text--lg text--neutral-subtle"
+            >
+              Step 3
+            </p>
+          </div>
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-:r2p:"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state="open"
+        id="headlessui-disclosure-button-:r2o:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          <div
+            class="flex flex-wrap gap-1"
+          >
+            <span
+              aria-label="Step 4"
+              class="text text--sm text--neutral-medium number-icon number-icon--base"
+              role="img"
+            >
+              4
+            </span>
+            <p
+              class="text text--lg text--neutral-subtle"
+            >
+              Step 4
+            </p>
+          </div>
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            hide content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel"
+        data-headlessui-state="open"
+        id="headlessui-disclosure-panel-:r2p:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
 <div
   style="margin: 0.5rem;"
