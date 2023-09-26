@@ -29,6 +29,10 @@
   height: 3.375rem;
 }
 
+.accordion-button--empty {
+  pointer-events: none;
+}
+
 /**
  * Small variant.
  */
@@ -103,6 +107,10 @@
 
   font: var(--eds-theme-typography-body-sm);
   color: var(--eds-theme-color-text-neutral-strong);
+}
+
+.accordion-panel--hidden {
+  padding: 0;
 }
 
 /**
