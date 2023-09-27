@@ -4,7 +4,7 @@ import { useState, createContext, useContext } from 'react';
 import React from 'react';
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
-import type { ExtractProps } from '../../util/utility-types';
+import type { ExtractProps, RenderProps } from '../../util/utility-types';
 import type {
   PopoverOptions,
   PopoverContext as PopoverContextType,
@@ -75,10 +75,6 @@ const PopoverOverlay = (
 const PopoverGroup = (props: ExtractProps<typeof HeadlessPopover.Group>) => (
   <HeadlessPopover.Group {...props} />
 );
-
-type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
-};
 
 type PopoverButtonProps = {
   as?: React.ElementType;
