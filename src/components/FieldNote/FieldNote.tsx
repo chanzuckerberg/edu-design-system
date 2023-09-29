@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import styles from './FieldNote.module.css';
 
 export interface Props {
@@ -17,6 +17,10 @@ export interface Props {
    * Toggles disabled styling of the field note.
    */
   disabled?: boolean;
+  /**
+   * Icon to use when an "icon" variant of the avatar. Default is "dangerous"
+   */
+  icon?: IconName;
   /**
    * HTML id for the component
    */
@@ -35,6 +39,7 @@ export interface Props {
 export const FieldNote = ({
   className,
   disabled,
+  icon = 'dangerous',
   id,
   isError,
   children,
@@ -51,7 +56,7 @@ export const FieldNote = ({
       {isError && (
         <Icon
           className={styles['field-note__icon']}
-          name="dangerous"
+          name={icon}
           purpose="informative"
           size="1rem"
           title="error"

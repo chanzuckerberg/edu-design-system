@@ -6,6 +6,8 @@ import styles from './Icon.module.css';
 
 export type { IconName } from '../../icons/spritemap';
 
+// TODO: export union utility type of "Extract<IconName, T> | (renderProps) => ReactNode" when updating IconName usages
+
 interface IconPropsBase {
   /**
    * CSS class names that can be appended to the component.

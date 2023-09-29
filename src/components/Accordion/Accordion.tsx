@@ -5,7 +5,7 @@ import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import type { Size } from '../../util/variant-types';
 import Button from '../Button';
 import Heading, { type HeadingElement } from '../Heading';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import styles from './Accordion.module.css';
 
 type AccordionProps = {
@@ -40,6 +40,10 @@ type AccordionButtonProps = {
    * Additional classnames passed in for styling
    */
   className?: string;
+  /**
+   * Icon override for component. Default is 'expand-more'
+   */
+  icon?: Extract<IconName, 'expand-more'>;
   /**
    * Used to specify which heading element should be rendered for the title.
    * If provided, overrides parent <Accordion> headingAs prop.
@@ -125,6 +129,7 @@ const AccordionButton = ({
   children,
   className,
   headingAs,
+  icon = 'expand-more',
   onClose,
   onOpen,
   ...other
@@ -186,7 +191,7 @@ const AccordionButton = ({
               styles['accordion-button__icon'],
               open && styles['accordion-button__icon--open'],
             )}
-            name="expand-more"
+            name={icon}
             purpose="informative"
             size="1.625rem"
             title={open ? 'hide content' : 'show content'}

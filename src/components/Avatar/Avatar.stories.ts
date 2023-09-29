@@ -98,6 +98,16 @@ export const WithCustomLabel: Story = {
   },
 };
 
+export const WithCustomIcon: Story = {
+  args: {
+    ariaLabel: 'Custom label for avatar',
+    size: 'md',
+    shape: 'circle',
+    variant: 'icon',
+    icon: 'person-add',
+  },
+};
+
 export const UsingInitials: Story = {
   args: {
     size: 'md',

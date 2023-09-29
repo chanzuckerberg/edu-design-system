@@ -75,16 +75,14 @@
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  margin-left: var(--eds-size-2);
+  margin-right: var(--eds-size-2);
   width: 20rem;
   /* Padding added to the top to account for outline of button. */
   padding-top: var(--eds-size-half);
-  /**
-   * First drag drop container.
-   */
-  &:first-of-type {
-    /* Don't add left margin to left align with the rest of the content. */
-    margin-left: 0;
+
+  &:last-of-type {
+    /* Don't add margin to the side of the end-cap sub-component. */
+    margin-right: 0;
   }
 }
 

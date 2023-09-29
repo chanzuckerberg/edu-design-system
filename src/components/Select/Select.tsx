@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
 
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 
 import PopoverContainer, { defaultPopoverModifiers } from '../PopoverContainer';
 import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
@@ -331,6 +331,10 @@ type SelectButtonProps = {
    */
   children?: ReactNode;
   /**
+   * Icon override for component. Default is 'expand-more'
+   */
+  icon?: Extract<IconName, 'expand-more'>;
+  /**
    * Indicates state of the select, used to style the button.
    */
   isOpen?: boolean;
@@ -342,7 +346,7 @@ type SelectButtonProps = {
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,
   SelectButtonProps
->(({ children, className, isOpen, ...other }, ref) => {
+>(({ children, className, icon = 'expand-more', isOpen, ...other }, ref) => {
   const componentClassName = clsx(styles['select-button'], className);
   const iconClassName = clsx(
     styles['select-button__icon'],
@@ -355,7 +359,7 @@ export const SelectButton = React.forwardRef<
       <span>{children}</span>
       <Icon
         className={iconClassName}
-        name="expand-more"
+        name={icon}
         purpose="decorative"
         size="1.25rem"
       />

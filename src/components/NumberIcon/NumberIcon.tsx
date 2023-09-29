@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './NumberIcon.module.css';
 
@@ -13,6 +13,11 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Icon override for component. Default is
+   */
+  icon?: Extract<IconName, 'circle'>;
+
   /**
    * Incomplete prop to show incomplete state
    */
@@ -51,6 +56,7 @@ export const NumberIcon = ({
   number,
   size,
   variant = 'base',
+  icon = 'circle',
   incomplete,
   numberIconTitle,
   ...other
@@ -84,7 +90,7 @@ export const NumberIcon = ({
         <Icon
           className={styles['number-icon__icon']}
           color="inherit"
-          name="circle"
+          name={icon}
           purpose="informative"
           size={size === 'sm' ? '0.25rem' : '0.5rem'}
           title={numberIconTitle}

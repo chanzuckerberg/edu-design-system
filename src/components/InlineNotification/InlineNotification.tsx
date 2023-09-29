@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './InlineNotification.module.css';
 
@@ -8,24 +8,27 @@ export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
 
 const variantToIconAssetsMap: {
   [key in Variant]: {
-    name: 'info' | 'check-circle' | 'warning' | 'error-inverted';
+    icon: Extract<
+      IconName,
+      'info' | 'check-circle' | 'warning' | 'error-inverted'
+    >;
     title: 'info' | 'success' | 'alert' | 'yield';
   };
 } = {
   brand: {
-    name: 'info',
+    icon: 'info',
     title: 'info',
   },
   success: {
-    name: 'check-circle',
+    icon: 'check-circle',
     title: 'success',
   },
   warning: {
-    name: 'warning',
+    icon: 'warning',
     title: 'alert',
   },
   yield: {
-    name: 'error-inverted',
+    icon: 'error-inverted',
     title: 'yield',
   },
 };
@@ -107,7 +110,7 @@ export const InlineNotification = ({
     <div className={componentClassName} {...other}>
       <Icon
         className={iconClassName}
-        name={variantToIconAssetsMap[variant].name}
+        name={variantToIconAssetsMap[variant].icon}
         purpose="informative"
         size="1.5rem"
         title={variantToIconAssetsMap[variant].title}

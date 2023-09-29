@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import type { MouseEventHandler, ReactNode } from 'react';
 import React from 'react';
 import Button from '../Button';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import styles from './Table.module.css';
 
 type TableBodyProps = {
@@ -218,7 +218,7 @@ const TableHeaderCell = ({
     className,
   );
 
-  const iconName =
+  const icon: IconName =
     sortDirection === 'ascending'
       ? 'arrow-narrow-up'
       : sortDirection === 'descending'
@@ -250,7 +250,7 @@ const TableHeaderCell = ({
         >
           {children}
           <Icon
-            name={iconName}
+            name={icon}
             purpose="informative"
             size="1rem"
             title={iconTitle}
