@@ -42,3 +42,11 @@ export type EitherInclusive<T, U> = EitherExclusive<T, U> | (T & U);
 export type ForwardedRefComponent<T, P> = React.ForwardRefExoticComponent<
   React.PropsWithoutRef<P> & React.RefAttributes<T>
 >;
+
+/**
+ * Utility type used when defining custom render props. Uses a type parameter to define the
+ * members of the render prop when not a `ReactNode`.
+ */
+export type RenderProps<RenderPropArgs> = {
+  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
+};

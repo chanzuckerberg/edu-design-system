@@ -9,7 +9,7 @@ import React, {
   useState,
   type KeyboardEvent,
 } from 'react';
-import { allByType } from 'react-children-by-type';
+import { allByType, oneByType } from 'react-children-by-type';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -47,10 +47,18 @@ export interface Props {
   activeIndex?: number;
 }
 
+export type TabContextArgs = {
+  active: boolean;
+  title: string;
+};
+
 /**
  * `import {Tabs} from "@chanzuckerberg/eds";`
  *
  * List of of links where each link toggles open associated information in a tab panel.
+ *
+ * Individual tabs allow for a simple text tab header using the `title` prop on each `<Tab>` instance.
+ * For a more custom tabs, you can use an additonal `<Tab.Button>` sub-component with a render prop exposing `active` and `title`.
  */
 export const Tabs = ({
   activeIndex = 0,
@@ -208,6 +216,7 @@ export const Tabs = ({
         >
           {tabs.map((tab, i) => {
             const isActive = activeIndexState === i;
+            const tabButton = oneByType(tab.props.children, Tab.Button);
             return (
               <li
                 className={clsx(
@@ -232,7 +241,12 @@ export const Tabs = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
-                  {tab.props.title}
+                  {typeof tabButton?.props.children === 'function'
+                    ? tabButton.props.children({
+                        active: isActive,
+                        title: tab.props.title,
+                      })
+                    : tab.props.title}
                 </a>
               </li>
             );
