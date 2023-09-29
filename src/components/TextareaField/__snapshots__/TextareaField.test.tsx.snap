@@ -176,7 +176,7 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
+exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
 <div
   class="textarea-field"
 >
@@ -189,13 +189,18 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
     >
       Textarea Field
     </label>
+    <p
+      class="text text--sm textarea-field__required-text"
+    >
+      Required
+    </p>
   </div>
   <textarea
     aria-describedby=":rb:"
-    class="textarea error"
+    class="textarea"
     id=":ra:"
-    maxlength="10"
     placeholder="Enter long-form text here"
+    required=""
     rows="5"
     spellcheck="false"
   >
@@ -207,8 +212,93 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
     class="textarea-field__footer"
   >
     <div
-      class="field-note field-note--error textarea-field__field-note"
+      class="field-note textarea-field__field-note"
       id=":rb:"
+    >
+      Longer Field description
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <div
+    class="textarea-field__overline"
+  >
+    <label
+      class="label label--lg textarea-field__label"
+      for=":rc:"
+    >
+      Textarea Field
+    </label>
+  </div>
+  <textarea
+    aria-describedby=":rd:"
+    class="textarea"
+    id=":rc:"
+    placeholder="Enter long-form text here"
+    rows="10"
+    spellcheck="false"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
+    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+    praesentium, commodi eligendi asperiores quis dolorum porro.
+  </textarea>
+  <div
+    class="textarea-field__footer"
+  >
+    <div
+      class="field-note textarea-field__field-note"
+      id=":rd:"
+    >
+      Longer Field description
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <div
+    class="textarea-field__overline"
+  >
+    <label
+      class="label label--lg textarea-field__label"
+      for=":re:"
+    >
+      Textarea Field
+    </label>
+    <p
+      class="text text--sm textarea-field__required-text"
+    >
+      Required
+    </p>
+  </div>
+  <textarea
+    aria-describedby=":rf:"
+    class="textarea error"
+    id=":re:"
+    maxlength="144"
+    placeholder="Enter long-form text here"
+    required=""
+    rows="10"
+    spellcheck="false"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
+    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+    praesentium, commodi eligendi asperiores quis dolorum porro.
+  </textarea>
+  <div
+    class="textarea-field__footer"
+  >
+    <div
+      class="field-note field-note--error textarea-field__field-note"
+      id=":rf:"
     >
       <svg
         class="icon field-note__icon"
@@ -239,97 +329,13 @@ exports[`<TextareaField /> WhenInvalid story renders snapshot 1`] = `
       </span>
        
       / 
-      10
+      144
     </div>
   </div>
 </div>
 `;
 
-exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
-<div
-  class="textarea-field"
->
-  <div
-    class="textarea-field__overline"
-  >
-    <label
-      class="label label--lg textarea-field__label"
-      for=":rc:"
-    >
-      Textarea Field
-    </label>
-    <p
-      class="text text--sm textarea-field__required-text"
-    >
-      Required
-    </p>
-  </div>
-  <textarea
-    aria-describedby=":rd:"
-    class="textarea"
-    id=":rc:"
-    placeholder="Enter long-form text here"
-    required=""
-    rows="5"
-    spellcheck="false"
-  >
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
-    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
-    praesentium, commodi eligendi asperiores quis dolorum porro.
-  </textarea>
-  <div
-    class="textarea-field__footer"
-  >
-    <div
-      class="field-note textarea-field__field-note"
-      id=":rd:"
-    >
-      Longer Field description
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
-<div
-  class="textarea-field"
->
-  <div
-    class="textarea-field__overline"
-  >
-    <label
-      class="label label--lg textarea-field__label"
-      for=":re:"
-    >
-      Textarea Field
-    </label>
-  </div>
-  <textarea
-    aria-describedby=":rf:"
-    class="textarea"
-    id=":re:"
-    placeholder="Enter long-form text here"
-    rows="10"
-    spellcheck="false"
-  >
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
-    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
-    praesentium, commodi eligendi asperiores quis dolorum porro.
-  </textarea>
-  <div
-    class="textarea-field__footer"
-  >
-    <div
-      class="field-note textarea-field__field-note"
-      id=":rf:"
-    >
-      Longer Field description
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
+exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
 <div
   class="textarea-field"
 >
@@ -352,7 +358,6 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
     aria-describedby=":rh:"
     class="textarea error"
     id=":rg:"
-    maxlength="144"
     placeholder="Enter long-form text here"
     required=""
     rows="10"
@@ -368,6 +373,81 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
     <div
       class="field-note field-note--error textarea-field__field-note"
       id=":rh:"
+    >
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          error
+        </title>
+        <path
+          d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
+        />
+      </svg>
+      Longer Field description
+    </div>
+    <div
+      class="textarea-field__character-counter"
+    >
+      <span
+        class="textarea-field--invalid-length"
+      >
+        210
+      </span>
+       
+      / 
+      144
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <div
+    class="textarea-field__overline"
+  >
+    <label
+      class="label label--lg textarea-field__label"
+      for=":ri:"
+    >
+      Textarea Field
+    </label>
+    <p
+      class="text text--sm textarea-field__required-text"
+    >
+      Required
+    </p>
+  </div>
+  <textarea
+    aria-describedby=":rj:"
+    class="textarea error"
+    id=":ri:"
+    maxlength="256"
+    placeholder="Enter long-form text here"
+    required=""
+    rows="10"
+    spellcheck="false"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
+    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+    praesentium, commodi eligendi asperiores quis dolorum porro.
+  </textarea>
+  <div
+    class="textarea-field__footer"
+  >
+    <div
+      class="field-note field-note--error textarea-field__field-note"
+      id=":rj:"
     >
       <svg
         class="icon field-note__icon"
