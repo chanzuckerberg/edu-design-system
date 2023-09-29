@@ -85,6 +85,10 @@ type AccordionRowProps = {
    * Whether panel is expanded by default.
    */
   defaultOpen?: boolean;
+  /**
+   * Whether the row can show expandable content
+   */
+  isExpandable?: boolean;
 };
 
 const AccordionContext = createContext<{
@@ -93,6 +97,10 @@ const AccordionContext = createContext<{
   size?: AccordionProps['size'];
 }>({
   headingAs: 'h2',
+});
+
+const AccordionRowContext = createContext<{ isExpandable?: boolean }>({
+  isExpandable: true,
 });
 
 /**
@@ -140,10 +148,13 @@ const AccordionButton = ({
     size,
   } = useContext(AccordionContext);
 
+  const { isExpandable } = useContext(AccordionRowContext);
+
   const componentClassName = clsx(
     styles['accordion-button'],
     size === 'sm' && styles['accordion-button--sm'],
     hasOutline && styles['accordion-button--outline'],
+    !isExpandable && styles['accordion-button--empty'],
     className,
   );
 
@@ -159,19 +170,19 @@ const AccordionButton = ({
           className={componentClassName}
           fullWidth
           onClick={() => {
-            if (open && onClose) {
+            if (open && isExpandable && onClose) {
               onClose();
             }
-            if (!open && onOpen) {
+            if (!open && isExpandable && onOpen) {
               onOpen();
             }
           }}
           onKeyDown={(e) => {
             if (e.key === SPACEBAR_KEYCODE || e.key === ENTER_KEYCODE) {
-              if (open && onClose) {
+              if (open && isExpandable && onClose) {
                 onClose();
               }
-              if (!open && onOpen) {
+              if (!open && isExpandable && onOpen) {
                 onOpen();
               }
             }
@@ -186,16 +197,18 @@ const AccordionButton = ({
           >
             {children}
           </Heading>
-          <Icon
-            className={clsx(
-              styles['accordion-button__icon'],
-              open && styles['accordion-button__icon--open'],
-            )}
-            name={icon}
-            purpose="informative"
-            size="1.625rem"
-            title={open ? 'hide content' : 'show content'}
-          />
+          {isExpandable && (
+            <Icon
+              className={clsx(
+                styles['accordion-button__icon'],
+                open && styles['accordion-button__icon--open'],
+              )}
+              name="expand-more"
+              purpose="informative"
+              size="1.625rem"
+              title={open ? 'hide content' : 'show content'}
+            />
+          )}
         </Button>
       )}
     </Disclosure.Button>
@@ -208,17 +221,19 @@ const AccordionPanel = ({
   ...other
 }: AccordionPanelProps) => {
   const { hasOutline, size } = useContext(AccordionContext);
+  const { isExpandable } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
     size === 'sm' && styles['accordion-panel--sm'],
     hasOutline && styles['accordion-panel--outline'],
+    !isExpandable && styles['accordion-panel--hidden'],
     className,
   );
 
   return (
     <Disclosure.Panel className={componentClassName} {...other}>
-      {children}
+      {isExpandable && children}
     </Disclosure.Panel>
   );
 };
@@ -227,6 +242,7 @@ const AccordionRow = ({
   className,
   defaultOpen,
   children,
+  isExpandable = true,
   ...other
 }: AccordionRowProps) => {
   const { hasOutline } = useContext(AccordionContext);
@@ -236,13 +252,15 @@ const AccordionRow = ({
     className,
   );
   return (
-    <Disclosure defaultOpen={defaultOpen}>
-      {({ open }) => (
-        <div className={componentClassName} {...other}>
-          {typeof children === 'function' ? children({ open }) : children}
-        </div>
-      )}
-    </Disclosure>
+    <AccordionRowContext.Provider value={{ isExpandable }}>
+      <Disclosure defaultOpen={defaultOpen}>
+        {({ open }) => (
+          <div className={componentClassName} {...other}>
+            {typeof children === 'function' ? children({ open }) : children}
+          </div>
+        )}
+      </Disclosure>
+    </AccordionRowContext.Provider>
   );
 };
 

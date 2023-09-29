@@ -149,6 +149,51 @@ export const DefaultOpen: StoryObj<Args> = {
   },
 };
 
+export const EmptyStackedOpen: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Accordion.Row defaultOpen isExpandable={false}>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
+  },
+};
+
 export const SmallOpen: StoryObj<Args> = {
   args: {
     ...DefaultOpen.args,
