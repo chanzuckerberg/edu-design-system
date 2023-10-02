@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useState } from 'react';
+import { getMinValue } from '../../util/getMinValue';
 import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
@@ -117,21 +118,6 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 );
 
 /**
- * Given two lengths that may not be defined, return the smaller of the defined lengths
- * TODO-AH: make this take a rest and can operate on any numbe of values
- * TODO-AH: move this to utilities
- */
-function getSmallest(lengthA?: number, lengthB?: number): number | undefined {
-  if (lengthA !== undefined && lengthB !== undefined) {
-    return Math.min(lengthA, lengthB);
-  } else if (lengthA && lengthB === undefined) {
-    return lengthA;
-  } else if (lengthB && lengthA === undefined) {
-    return lengthB;
-  }
-}
-
-/**
  * `import {TextareaField} from "@chanzuckerberg/eds";`
  *
  * Multi-line text input field with built-in labeling and accessory text to describe
@@ -202,7 +188,8 @@ export const TextareaField: TextareaFieldType = forwardRef(
         styles['textarea-field--invalid-length'],
     );
 
-    const maxLengthShown = getSmallest(maxLength, recommendedMaxLength);
+    // Pick the smallest of the lengths to set as the maximum value allowed
+    const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
     return (
       <div className={componentClassName}>

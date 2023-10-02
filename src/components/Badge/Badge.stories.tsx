@@ -122,8 +122,6 @@ export const IconBadgeUsingIcon: StoryObj<Args> = {
   },
 };
 
-// TODO-AH: add in test to see if error is thrown
-
 export const LargeBadgeableObject: StoryObj<Args> = {
   args: {
     children: (
