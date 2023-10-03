@@ -186,7 +186,7 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote && styles['input-field--has-fieldNote'],
     );
 
-    const fieldLength = fieldText?.toString().length;
+    const fieldLength = fieldText?.toString().length ?? 0;
 
     const textExceedsMaxLength =
       maxLength !== undefined && fieldLength ? fieldLength > maxLength : false;

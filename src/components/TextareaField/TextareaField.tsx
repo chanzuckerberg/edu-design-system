@@ -152,7 +152,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
 
     const idVar = id || generatedIdVar;
     const shouldRenderOverline = !!(label || required);
-    const fieldLength = fieldText?.toString().length;
+    const fieldLength = fieldText?.toString().length ?? 0;
     const textExceedsMaxLength =
       maxLength !== undefined ? fieldLength > maxLength : false;
 
