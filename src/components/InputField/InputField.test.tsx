@@ -33,4 +33,54 @@ describe('<InputField />', () => {
 
     expect(onChange).toHaveBeenCalledTimes(testText.length);
   });
+
+  it('will not fire when maxLength is reached', async () => {
+    const user = userEvent.setup();
+    const onChange = jest.fn();
+    const testText = 'typing';
+
+    render(
+      <InputField
+        aria-label="label"
+        data-testid="test-input"
+        defaultValue={testText}
+        maxLength={6}
+        onChange={onChange}
+      />,
+    );
+    const input = screen.getByTestId('test-input');
+
+    input.focus();
+
+    await act(async () => {
+      await user.keyboard(testText);
+    });
+
+    expect(onChange).toHaveBeenCalledTimes(0);
+  });
+
+  it('will fire when recommendedMaxLength is reached', async () => {
+    const user = userEvent.setup();
+    const onChange = jest.fn();
+    const testText = 'typing';
+
+    render(
+      <InputField
+        aria-label="label"
+        data-testid="test-input"
+        defaultValue={testText}
+        onChange={onChange}
+        recommendedMaxLength={6}
+      />,
+    );
+    const input = screen.getByTestId('test-input');
+
+    input.focus();
+
+    await act(async () => {
+      await user.keyboard(testText);
+    });
+
+    expect(onChange).toHaveBeenCalledTimes(testText.length);
+  });
 });
