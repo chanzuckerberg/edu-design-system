@@ -196,6 +196,20 @@ export const ScrollMiddle: StoryObj<Args> = {
   ],
 };
 
+export const Centered: StoryObj<Args> = {
+  args: {
+    align: 'center',
+  },
+  parameters: {
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.chromebook,
+      ],
+    },
+  },
+};
+
 const IconTab = ({
   isActive,
   title,
