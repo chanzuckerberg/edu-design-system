@@ -108,6 +108,18 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--md !font-secondary"
+  >
+    You can use tailwind to override the font family used for a given size
+  </p>
+</div>
+`;
+
 exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
