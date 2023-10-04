@@ -5,6 +5,7 @@ import React from 'react';
 import { Tabs } from './Tabs';
 import { chromaticViewports } from '../../util/viewports';
 import Heading from '../Heading';
+import Icon, { type IconName } from '../Icon';
 import Tab from '../Tab';
 import Text from '../Text';
 
@@ -193,4 +194,315 @@ export const ScrollMiddle: StoryObj<Args> = {
       </div>
     ),
   ],
+};
+
+const IconTab = ({
+  isActive,
+  title,
+  icon,
+}: {
+  isActive: boolean;
+  title: string;
+  icon: IconName;
+}) => (
+  <div className="px-4">
+    <div className="p-3 text-center">
+      <Icon name={icon} purpose="decorative" size="1rem" />
+    </div>
+    <Text size="caption-lg">{`${isActive ? '●' : '◦'} ${title}`}</Text>
+  </div>
+);
+
+export const CustomTabs: StoryObj<Args> = {
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Tabs>
+  <Tab title="Tab Title 1">
+    <Tab.Button>
+      {({ active, title }) => (
+        <IconTab
+          icon={active ? 'person' : 'people'}
+          isActive={active}
+          title={title}
+        />
+      )}
+    </Tab.Button>
+    <div className="max-w-xl">
+      <Heading className="mb-6" size="h3">
+        Tab 1
+      </Heading>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex{' '}
+      </Text>
+    </div>
+  </Tab>
+
+  <Tab title="Tab Title 2">
+    <Tab.Button>
+      {({ active, title }) => (
+        <IconTab
+          icon={active ? 'person' : 'people'}
+          isActive={active}
+          title={title}
+        />
+      )}
+    </Tab.Button>
+    <div className="max-w-xl">
+      <Heading className="mb-6" size="h3">
+        Tab 2
+      </Heading>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex{' '}
+      </Text>
+    </div>
+  </Tab>
+
+  <Tab title="Tab Title 3">
+    <Tab.Button>
+      {({ active, title }) => (
+        <IconTab
+          icon={active ? 'person' : 'people'}
+          isActive={active}
+          title={title}
+        />
+      )}
+    </Tab.Button>
+    <div className="max-w-xl">
+      <Heading className="mb-6" size="h3">
+        Tab 3
+      </Heading>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex{' '}
+      </Text>
+    </div>
+  </Tab>
+
+  <Tab title="Tab Title 4">
+    <Tab.Button>
+      {({ active, title }) => (
+        <IconTab
+          icon={active ? 'person' : 'people'}
+          isActive={active}
+          title={title}
+        />
+      )}
+    </Tab.Button>
+    <div className="max-w-xl">
+      <Heading className="mb-6" size="h3">
+        Tab 4
+      </Heading>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex{' '}
+      </Text>
+    </div>
+  </Tab>
+
+  <Tab title="Tab Title 5">
+    <Tab.Button>
+      {({ active, title }) => (
+        <IconTab
+          icon={active ? 'person' : 'people'}
+          isActive={active}
+          title={title}
+        />
+      )}
+    </Tab.Button>
+    <div className="max-w-xl">
+      <Heading className="mb-6" size="h3">
+        Tab 5
+      </Heading>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex{' '}
+      </Text>
+    </div>
+  </Tab>
+
+  <Tab title="Tab Title 6">
+    <Tab.Button>
+      {({ active, title }) => (
+        <IconTab
+          icon={active ? 'person' : 'people'}
+          isActive={active}
+          title={title}
+        />
+      )}
+    </Tab.Button>
+    <div className="max-w-xl">
+      <Heading className="mb-6" size="h3">
+        Tab 6
+      </Heading>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex{' '}
+      </Text>
+    </div>
+  </Tab>
+</Tabs>
+        `,
+      },
+    },
+  },
+  args: {
+    children: (
+      <>
+        <Tab title="Tab Title 1">
+          <Tab.Button>
+            {({ active, title }) => (
+              <IconTab
+                icon={active ? 'person' : 'people'}
+                isActive={active}
+                title={title}
+              />
+            )}
+          </Tab.Button>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 1
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </Tab>
+
+        <Tab title="Tab Title 2">
+          <Tab.Button>
+            {({ active, title }) => (
+              <IconTab
+                icon={active ? 'person' : 'people'}
+                isActive={active}
+                title={title}
+              />
+            )}
+          </Tab.Button>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 2
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </Tab>
+
+        <Tab title="Tab Title 3">
+          <Tab.Button>
+            {({ active, title }) => (
+              <IconTab
+                icon={active ? 'person' : 'people'}
+                isActive={active}
+                title={title}
+              />
+            )}
+          </Tab.Button>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 3
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </Tab>
+
+        <Tab title="Tab Title 4">
+          <Tab.Button>
+            {({ active, title }) => (
+              <IconTab
+                icon={active ? 'person' : 'people'}
+                isActive={active}
+                title={title}
+              />
+            )}
+          </Tab.Button>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 4
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </Tab>
+
+        <Tab title="Tab Title 5">
+          <Tab.Button>
+            {({ active, title }) => (
+              <IconTab
+                icon={active ? 'person' : 'people'}
+                isActive={active}
+                title={title}
+              />
+            )}
+          </Tab.Button>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 5
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </Tab>
+
+        <Tab title="Tab Title 6">
+          <Tab.Button>
+            {({ active, title }) => (
+              <IconTab
+                icon={active ? 'person' : 'people'}
+                isActive={active}
+                title={title}
+              />
+            )}
+          </Tab.Button>
+          <div className="max-w-xl">
+            <Heading className="mb-6" size="h3">
+              Tab 6
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </Tab>
+      </>
+    ),
+  },
 };

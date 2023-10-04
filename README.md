@@ -36,16 +36,45 @@ html {
 
 ### Tailwind Setup
 
-The EDS Tailwind theme provides EDS color [tokens][tokens] and screens. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
+The EDS Tailwind theme provides many EDS [tokens][tokens] and some screen sizes. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
+
+
+#### Applying all of the EDS tokens to Tailwind
+
+To take all of what EDS provides (base colors, and extended utility classes for named tokens), use the following:
 
 ```js
-const edsConfig.theme = require('@chanzuckerberg/eds/tailwind.config');
+const edsConfig = require('@chanzuckerberg/eds/tailwind.config');
 
 module.exports = {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
   theme: edsConfig.theme,
 };
 ```
+
+This will replace the default color tokens that come [with Tailwind](https://tailwindcss.com/docs/customizing-colors) with those defined by EDS. **NOTE**: this might cause regressions in your project, if you have been using the default colors from tailwind.
+
+#### Applying the EDS tailwind extensions piecemeal
+
+If you want a gentler transition to using EDS tailwind config, you can instead import **just** the extended values:
+
+
+```js
+const edsConfig = require('@chanzuckerberg/eds/tailwind.config');
+
+module.exports = {
+  content: ['./app/**/*.{ts,tsx,jsx,js}'],
+  theme: {
+    extend: {
+      ...edsConfig.theme.extend
+    }
+  }
+};
+```
+
+This will add in the utility classes for properties like background color `bg-*`, border `border-*`, and text color `text-*`. These match the styles and variables defined in Figma designs. 
+
+You can spread each of the sub-objects in `theme` as desired, e.g., `fontSize`, `fontWeight`, etc.
 
 Refer to the [tokens tailwind section][tokens] for usage guidelines.
 

@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import { InputLabel, type InputLabelProps } from '../InputLabel/InputLabel';
 import styles from './Radio.module.css';
 
@@ -55,10 +55,11 @@ const RadioSvg = ({
     styles['radio__icon'],
     disabled && styles['radio__icon--disabled'],
   );
+  const icon: IconName = checked ? 'radio-selected' : 'radio-unselected';
   return (
     <Icon
       className={iconClassName}
-      name={checked ? 'radio-selected' : 'radio-unselected'}
+      name={icon}
       purpose="decorative"
       size="1.625rem"
     />

@@ -5,7 +5,7 @@ import React from 'react';
 import type { ExtractProps } from '../../util/utility-types';
 import type { HeadingSize } from '../Heading';
 import Heading from '../Heading';
-import { Icon } from '../Icon/Icon';
+import { Icon, type IconName } from '../Icon/Icon';
 import styles from './Modal.module.css';
 
 type Variant = 'brand';
@@ -429,12 +429,12 @@ const ModalStepper = ({
   const stepIcons = [];
   for (let i = 0; i < totalSteps; i++) {
     const isActivestep = i + 1 === activeStep;
-    const name = isActivestep ? 'circle' : 'empty-circle';
+    const icon: IconName = isActivestep ? 'circle' : 'empty-circle';
     const title = isActivestep ? `Active Step ${i + 1}` : `Step ${i + 1}`;
     stepIcons.push(
       <Icon
         key={i}
-        name={name}
+        name={icon}
         purpose="informative"
         size="0.5rem"
         title={title}

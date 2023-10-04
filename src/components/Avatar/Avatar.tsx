@@ -3,7 +3,7 @@ import Graphemer from 'graphemer';
 
 import React from 'react';
 import type { Size } from '../../util/variant-types';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import styles from './Avatar.module.css';
 
 export type UserData = {
@@ -34,6 +34,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Icon to use when an "icon" variant of the avatar. Default is "person"
+   */
+  icon?: IconName;
   /**
    * The shape of the avatar
    */
@@ -92,6 +96,7 @@ export function getInitials(fromName: string): string {
 export const Avatar = ({
   ariaLabel,
   className,
+  icon = 'person',
   shape = 'circle',
   size = 'md',
   user,
@@ -126,7 +131,7 @@ export const Avatar = ({
       {...other}
     >
       {variant === 'initials' && avatarDisplayName}
-      {variant === 'icon' && <Icon name="person" purpose="decorative" />}
+      {variant === 'icon' && <Icon name={icon} purpose="decorative" />}
       {variant === 'image' && src && (
         <img alt="user" className={styles['avatar__image']} src={src} />
       )}

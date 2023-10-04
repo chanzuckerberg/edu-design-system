@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.3.0...v13.4.0) (2023-10-03)
+
+
+### Features
+
+* **Accordion:** allow empty or hidden accordion rows ([#1767](https://github.com/chanzuckerberg/edu-design-system/issues/1767)) ([e044a85](https://github.com/chanzuckerberg/edu-design-system/commit/e044a8549a9427feb2e908cac2f4f3c2f0f2549f))
+* **Icons:** allow component icon usages to be headless ([#1761](https://github.com/chanzuckerberg/edu-design-system/issues/1761)) ([ba454bf](https://github.com/chanzuckerberg/edu-design-system/commit/ba454bf840a4f7f4e1aa1e7ec164a11d05973d7c))
+* **InputField:** support recommendedMaxLength prop for display-only errors ([#1771](https://github.com/chanzuckerberg/edu-design-system/issues/1771)) ([cc84a20](https://github.com/chanzuckerberg/edu-design-system/commit/cc84a20be4670a431598a58cdf980e2d59f3a2c3))
+* **Tabs:** add ability to customize tab button headers ([#1768](https://github.com/chanzuckerberg/edu-design-system/issues/1768)) ([f231ad4](https://github.com/chanzuckerberg/edu-design-system/commit/f231ad4717bf49aa02840acf065a856998632898))
+* **TextareaField:** support recommendedMaxLength prop for display-only errors ([#1769](https://github.com/chanzuckerberg/edu-design-system/issues/1769)) ([0852356](https://github.com/chanzuckerberg/edu-design-system/commit/085235603e5ff7b11d0ecf712281da537d28e407))
+
 ## [13.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.2.0...v13.3.0) (2023-09-22)
 
 

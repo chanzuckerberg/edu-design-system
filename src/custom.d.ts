@@ -28,4 +28,9 @@ declare module 'react-children-by-type' {
     children: React.ReactNode,
     type: React.JSXElementConstructor<P>,
   ): React.ReactElement<P>;
+
+  export function withoutTypes<P>(
+    children: React.ReactNode,
+    ...types: React.JSXElementConstructor<P>[]
+  ): React.ReactElement<P>;
 }

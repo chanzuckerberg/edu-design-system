@@ -240,6 +240,38 @@ export const RequiredVariants: Story = {
   },
 };
 
+export const WithAMaxLength: Story = {
+  args: {
+    defaultValue: 'Some initial text',
+    label: 'test label',
+    maxLength: 15,
+    required: true,
+  },
+  render: (args) => <InputField {...args} />,
+};
+
+export const WithARecommendedLength: Story = {
+  args: {
+    defaultValue: 'Some initial text',
+    label: 'test label',
+    recommendedMaxLength: 15,
+    required: true,
+  },
+  render: (args) => <InputField {...args} />,
+};
+
+export const WithBothMaxAndRecommendedLength: Story = {
+  args: {
+    label: 'test label',
+    defaultValue: 'Some initial text',
+    fieldNote: 'Longer Field Description',
+    maxLength: 20,
+    recommendedMaxLength: 15,
+    required: true,
+  },
+  render: (args) => <InputField {...args} />,
+};
+
 export const TabularInput: Story = {
   parameters: {
     badges: ['1.1', 'implementationExample'],

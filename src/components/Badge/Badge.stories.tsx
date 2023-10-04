@@ -106,6 +106,22 @@ export const IconBadge: StoryObj<Args> = {
   },
 };
 
+export const IconBadgeUsingIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <div
+          aria-label="Ava alert"
+          className="fpo flex h-8 w-8 items-center justify-center"
+        >
+          Ava
+        </div>
+        <Badge.Icon icon="alarm" />
+      </>
+    ),
+  },
+};
+
 export const LargeBadgeableObject: StoryObj<Args> = {
   args: {
     children: (

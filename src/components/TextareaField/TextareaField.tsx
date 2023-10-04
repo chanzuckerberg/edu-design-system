@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useState } from 'react';
+import { getMinValue } from '../../util/getMinValue';
 import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
@@ -36,6 +37,11 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * Error state of the form field
    */
   isError?: boolean;
+  /**
+   * Behaves similar to `maxLength` but allows the user to continue typing more text.
+   * Should not be larger than `maxLength`, if present.
+   */
+  recommendedMaxLength?: number;
 } & EitherInclusive<
     {
       /**
@@ -134,6 +140,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       label,
       maxLength,
       onChange,
+      recommendedMaxLength,
       required,
       ...other
     },
@@ -145,11 +152,17 @@ export const TextareaField: TextareaFieldType = forwardRef(
 
     const idVar = id || generatedIdVar;
     const shouldRenderOverline = !!(label || required);
-    const fieldLength = fieldText?.toString().length;
-    const textExceedsLength =
+    const fieldLength = fieldText?.toString().length ?? 0;
+    const textExceedsMaxLength =
       maxLength !== undefined ? fieldLength > maxLength : false;
 
-    const shouldRenderError = isError || textExceedsLength;
+    const textExceedsRecommendedLength =
+      recommendedMaxLength !== undefined
+        ? fieldLength > recommendedMaxLength
+        : false;
+
+    const shouldRenderError =
+      isError || textExceedsMaxLength || textExceedsRecommendedLength;
 
     const ariaDescribedByVar = fieldNote
       ? ariaDescribedBy || generatedAriaDescribedById
@@ -171,8 +184,12 @@ export const TextareaField: TextareaFieldType = forwardRef(
       disabled && styles['textarea-field__required-text--disabled'],
     );
     const fieldLengthCountClassName = clsx(
-      textExceedsLength && styles['textarea-field--invalid-length'],
+      (textExceedsMaxLength || textExceedsRecommendedLength) &&
+        styles['textarea-field--invalid-length'],
     );
+
+    // Pick the smallest of the lengths to set as the maximum value allowed
+    const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
     return (
       <div className={componentClassName}>
@@ -209,7 +226,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
         >
           {children}
         </TextArea>
-        {(fieldNote || maxLength) && (
+        {(fieldNote || maxLengthShown) && (
           <div className={styles['textarea-field__footer']}>
             {fieldNote && (
               <FieldNote
@@ -221,10 +238,10 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 {fieldNote}
               </FieldNote>
             )}
-            {maxLength && (
+            {maxLengthShown && (
               <div className={styles['textarea-field__character-counter']}>
                 <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLength}
+                / {maxLengthShown}
               </div>
             )}
           </div>

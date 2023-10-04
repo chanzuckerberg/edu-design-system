@@ -95,12 +95,39 @@ describe('<Accordion />', () => {
         </Accordion.Row>
       </Accordion>,
     );
-    const accordionButton = screen.getByTestId('accordion-button');
+    const accordionButton = screen.getByRole('button');
 
     await act(async () => {
       await user.click(accordionButton);
     });
     expect(onOpen).toHaveBeenCalledTimes(1);
+    expect(onClose).not.toHaveBeenCalled();
+  });
+
+  it('should not call onOpen callback when accordion opens on an empty row', async () => {
+    const user = userEvent.setup();
+    const onClose = jest.fn();
+    const onOpen = jest.fn();
+    render(
+      <Accordion headingAs="h2">
+        <Accordion.Row isExpandable={false}>
+          <Accordion.Button
+            data-testid="accordion-button"
+            onClose={onClose}
+            onOpen={onOpen}
+          >
+            Accordion Button
+          </Accordion.Button>
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+    const accordionButton = screen.getByRole('button');
+
+    await act(async () => {
+      await user.click(accordionButton);
+    });
+    expect(onOpen).not.toHaveBeenCalled();
     expect(onClose).not.toHaveBeenCalled();
   });
 });

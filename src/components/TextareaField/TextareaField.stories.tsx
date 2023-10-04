@@ -66,12 +66,6 @@ export const WhenError: Story = {
   },
 };
 
-export const WhenInvalid: Story = {
-  args: {
-    maxLength: 10,
-  },
-};
-
 export const WhenRequired: Story = {
   args: {
     required: true,
@@ -88,6 +82,25 @@ export const WithAMaxLength: Story = {
   args: {
     rows: 10,
     maxLength: 144,
+    required: true,
+  },
+  render: (args) => <TextareaField {...args} />,
+};
+
+export const WithARecommendedLength: Story = {
+  args: {
+    rows: 10,
+    recommendedMaxLength: 144,
+    required: true,
+  },
+  render: (args) => <TextareaField {...args} />,
+};
+
+export const WithBothRecommendedAndMaxLengths: Story = {
+  args: {
+    rows: 10,
+    maxLength: 256,
+    recommendedMaxLength: 144,
     required: true,
   },
   render: (args) => <TextareaField {...args} />,

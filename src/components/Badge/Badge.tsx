@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { EitherExclusive } from '../../util/utility-types';
 import Icon from '../Icon';
 import type { IconName, IconProps } from '../Icon';
 import styles from './Badge.module.css';
@@ -16,12 +17,22 @@ type BadgeProps = {
   className?: string;
 };
 
-type BadgeIconProps = Omit<IconProps, 'purpose' | 'name'> & {
-  /**
-   * Name of icon to render.
-   */
-  name: IconName;
-};
+type BadgeIconProps = Omit<IconProps, 'purpose' | 'name'> &
+  EitherExclusive<
+    {
+      /**
+       * Name of icon to render. Please use `icon` instead, which has the same behavior.
+       * @deprecated
+       */
+      name: IconName;
+    },
+    {
+      /**
+       * Name of icon to render.
+       */
+      icon: IconName;
+    }
+  >;
 
 type BadgeTextProps = {
   /**
@@ -34,11 +45,22 @@ type BadgeTextProps = {
   className?: string;
 };
 
-const BadgeIcon = ({ className, ...other }: BadgeIconProps) => {
+const BadgeIcon = ({ className, name, icon, ...other }: BadgeIconProps) => {
   const componentClassName = clsx(styles['badge'], className);
+  let iconName: IconName;
+
+  if (icon) {
+    iconName = icon;
+  } else if (name) {
+    iconName = name;
+  } else {
+    // both name and icon are undefined. throw an error
+    throw new Error('Name or Icon must be passed to the Badge sub-component');
+  }
+
   return (
     <div aria-hidden className={componentClassName}>
-      <Icon purpose="decorative" size="1rem" {...other} />
+      <Icon name={iconName} purpose="decorative" size="1rem" {...other} />
     </div>
   );
 };
@@ -57,7 +79,7 @@ const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
     children &&
     children.length > 3
   ) {
-    throw 'Max badge text length is 3';
+    throw new Error('Max badge text length is 3');
   }
   return (
     <div aria-hidden className={componentClassName} {...other}>
@@ -90,7 +112,7 @@ const BadgeDot = () => <BadgeText />;
  *
  * <Badge>
  *   {badgeableObject}
- *   <Badge.Icon name="alarm"/>
+ *   <Badge.Icon icon="alarm"/>
  * </Badge>
  * ```
  */

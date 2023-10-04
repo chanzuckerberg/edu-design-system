@@ -4,7 +4,7 @@ import React from 'react';
 import Button from '../Button';
 import type { HeadingElement } from '../Heading';
 import Heading from '../Heading';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './PageLevelBanner.module.css';
 
@@ -47,24 +47,27 @@ export type PageLevelBannerProps = {
 
 const variantToIconAssetsMap: {
   [key: string]: {
-    name: 'notifications' | 'forum' | 'check-circle' | 'warning' | 'dangerous';
+    icon: Extract<
+      IconName,
+      'notifications' | 'forum' | 'check-circle' | 'warning' | 'dangerous'
+    >;
     title: string;
   };
 } = {
   brand: {
-    name: 'notifications',
+    icon: 'notifications',
     title: 'attention',
   },
   success: {
-    name: 'check-circle',
+    icon: 'check-circle',
     title: 'success',
   },
   warning: {
-    name: 'warning',
+    icon: 'warning',
     title: 'warning',
   },
   error: {
-    name: 'dangerous',
+    icon: 'dangerous',
     title: 'error',
   },
 };
@@ -110,7 +113,7 @@ export const PageLevelBanner = ({
     <aside className={componentClassName}>
       <Icon
         className={styles['banner__icon']}
-        name={variantToIconAssetsMap[variant].name}
+        name={variantToIconAssetsMap[variant].icon}
         purpose="informative"
         title={variantToIconAssetsMap[variant].title}
       />

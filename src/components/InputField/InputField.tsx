@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
+import { getMinValue } from '../../util/getMinValue';
 import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
@@ -73,6 +74,11 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
    */
   readOnly?: boolean;
+  /**
+   * Behaves similar to `maxLength` but allows the user to continue typing more text.
+   * Should not be larger than `maxLength`, if present.
+   */
+  recommendedMaxLength?: number;
   /**
    * Indicates that field is required for form to be successfully submitted
    */
@@ -148,6 +154,9 @@ export const InputField: InputFieldType = forwardRef(
       inputWithin,
       isError,
       label,
+      maxLength,
+      onChange,
+      recommendedMaxLength,
       required,
       type = 'text',
       ...other
@@ -155,6 +164,8 @@ export const InputField: InputFieldType = forwardRef(
     ref,
   ) => {
     const shouldRenderOverline = !!(label || required);
+    const [fieldText, setFieldText] = useState(other.defaultValue);
+
     const overlineClassName = clsx(
       styles['input-field__overline'],
       !label && styles['input-field__overline--no-label'],
@@ -175,6 +186,19 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote && styles['input-field--has-fieldNote'],
     );
 
+    const fieldLength = fieldText?.toString().length ?? 0;
+
+    const textExceedsMaxLength =
+      maxLength !== undefined && fieldLength ? fieldLength > maxLength : false;
+
+    const textExceedsRecommendedLength =
+      recommendedMaxLength !== undefined && fieldLength
+        ? fieldLength > recommendedMaxLength
+        : false;
+
+    const shouldRenderError =
+      isError || textExceedsMaxLength || textExceedsRecommendedLength;
+
     const generatedIdVar = useId();
     const idVar = id || generatedIdVar;
 
@@ -182,6 +206,14 @@ export const InputField: InputFieldType = forwardRef(
     const ariaDescribedByVar = fieldNote
       ? ariaDescribedBy || generatedAriaDescribedById
       : undefined;
+
+    const fieldLengthCountClassName = clsx(
+      (textExceedsMaxLength || textExceedsRecommendedLength) &&
+        styles['input-field--invalid-length'],
+    );
+
+    // Pick the smallest of the lengths to set as the maximum value allowed
+    const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
     return (
       <div className={className}>
@@ -206,7 +238,12 @@ export const InputField: InputFieldType = forwardRef(
             aria-invalid={!!isError}
             disabled={disabled}
             id={idVar}
-            isError={isError}
+            isError={shouldRenderError}
+            maxLength={maxLength}
+            onChange={(e) => {
+              setFieldText(e.target.value);
+              onChange && onChange(e);
+            }}
             ref={ref}
             required={required}
             type={type}
@@ -218,14 +255,37 @@ export const InputField: InputFieldType = forwardRef(
             </div>
           )}
         </div>
-        {fieldNote && (
-          <FieldNote
-            disabled={disabled}
-            id={ariaDescribedByVar}
-            isError={isError}
-          >
-            {fieldNote}
-          </FieldNote>
+        {maxLengthShown ? (
+          <div className={styles['input-field__footer']}>
+            {fieldNote && (
+              <FieldNote
+                disabled={disabled}
+                id={ariaDescribedByVar}
+                isError={shouldRenderError}
+              >
+                {fieldNote}
+              </FieldNote>
+            )}
+            {maxLengthShown && (
+              <div className={styles['input-field__character-counter']}>
+                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
+                / {maxLengthShown}
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            {/* maintained for seamless upgrades; can be removed on next breaking change */}
+            {fieldNote && (
+              <FieldNote
+                disabled={disabled}
+                id={ariaDescribedByVar}
+                isError={shouldRenderError}
+              >
+                {fieldNote}
+              </FieldNote>
+            )}
+          </>
         )}
       </div>
     );
