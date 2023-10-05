@@ -112,13 +112,13 @@
         },
         "004": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
           }
         },
         "005": {
