@@ -53,6 +53,13 @@ export default {
       medium: edsTokens['font-weight'].medium,
       bold: edsTokens['font-weight'].bold,
     },
+    fontFamily: {
+      // provide values for the configured font family tokens
+      // Useful when your app imports '@chanzuckerberg/eds/fonts.css' or
+      // if you have custom token values for primary and secondary fonts
+      primary: edsTokens['font-family'].primary,
+      secondary: edsTokens['font-family'].secondary,
+    },
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
     screens: {
       xs: '375px',
