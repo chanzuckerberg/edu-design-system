@@ -33,6 +33,11 @@
   );
 }
 
+.tabs--scrollable-left .tabs__list--align-center,
+.tabs--scrollable-right .tabs__list--align-center {
+  justify-content: unset;
+}
+
 .tabs--scrollable-right {
   -webkit-mask-image: -webkit-linear-gradient(
     right,
@@ -68,6 +73,21 @@
   @media all and (max-width: $eds-bp-md) {
     font: var(--eds-theme-typography-tab-sm);
   }
+}
+
+/**
+ * Control the positioning of the tabs: left, center, or right aligned (horizontally)
+ */
+.tabs__list--align-left {
+  justify-content: left;
+}
+
+.tabs__list--align-center {
+  justify-content: center;
+}
+
+.tabs__list--align-right {
+  justify-content: right;
 }
 
 /**
