@@ -181,9 +181,9 @@
           "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
         },
         "004": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.333333333 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
         },
         "005": {
           "@": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)",
