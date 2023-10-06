@@ -42,7 +42,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
    */
   icon?: IconName;
   /**
-   * Configurable action for the menu item action. If both `href` and `onClick` are used, `onClick` takes precedent.
+   * Configurable action for the menu item upon click
    */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
@@ -189,8 +189,6 @@ const MenuItem = ({
   onClick,
   ...other
 }: MenuItemProps) => {
-  // If we have an event handler, avoid navigation by discarding the href
-  const destinationUrl = !onClick ? href : undefined;
   return (
     <HeadlessMenu.Item {...other}>
       {({ active, disabled }) => {
@@ -209,7 +207,7 @@ const MenuItem = ({
         ) : (
           <a
             className={clsx(styles['menu__item'])}
-            href={destinationUrl}
+            href={href}
             onClick={onClick}
           >
             {listItemView}
