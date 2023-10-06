@@ -210,7 +210,7 @@ export const Opened: StoryObj<MenuProps> = {
   },
   play: () => {
     userEvent.tab();
-    userEvent.keyboard(' ');
+    userEvent.keyboard(' ', { delay: 300 });
   },
 };
 
