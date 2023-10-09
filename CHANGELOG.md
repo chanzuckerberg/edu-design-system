@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.4.0...v13.5.0) (2023-10-06)
+
+
+### Features
+
+* **Tabs:** add variant for controlling tab header alignment ([#1774](https://github.com/chanzuckerberg/edu-design-system/issues/1774)) ([e9b6658](https://github.com/chanzuckerberg/edu-design-system/commit/e9b6658941c27ffed87c52b61fd7305a62b0935b))
+* **Tailwind:** add config to expose primary and secondary fonts ([#1775](https://github.com/chanzuckerberg/edu-design-system/issues/1775)) ([ccab923](https://github.com/chanzuckerberg/edu-design-system/commit/ccab923eee1f6eb557a136162e8fbbc08eb98272))
+
+
+### Bug Fixes
+
+* **Typography:** set line height for preset 004 to 28px ratio ([#1776](https://github.com/chanzuckerberg/edu-design-system/issues/1776)) ([5b6c400](https://github.com/chanzuckerberg/edu-design-system/commit/5b6c4001e2c5a04c9d0b87e8fe39e3f74d9c4c27))
+
 ## [13.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.3.0...v13.4.0) (2023-10-03)
 
 

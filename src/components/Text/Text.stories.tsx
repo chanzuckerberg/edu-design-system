@@ -100,6 +100,15 @@ export const Callout: StoryObj<Args> = {
   },
 };
 
+export const OverridingFontFamily: StoryObj<Args> = {
+  args: {
+    size: 'md',
+    children:
+      'You can use tailwind to override the font family used for a given size',
+    className: '!font-secondary',
+  },
+};
+
 /**
  * Used mainly for visual regression testing and to show the different color options available.
  */

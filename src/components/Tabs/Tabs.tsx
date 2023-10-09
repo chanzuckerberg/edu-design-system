@@ -17,10 +17,12 @@ import {
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
 import { useId } from '../../util/useId';
+import type { Align } from '../../util/variant-types';
 import Tab from '../Tab';
 import styles from './Tabs.module.css';
 
 export interface Props {
+  align?: Align;
   /**
    * Reference to another element that describes the purpose of the set of tabs.
    */
@@ -62,6 +64,7 @@ export type TabContextArgs = {
  */
 export const Tabs = ({
   activeIndex = 0,
+  align,
   'aria-labelledby': ariaLabelledBy,
   children,
   className,
@@ -211,7 +214,10 @@ export const Tabs = ({
       >
         <ul
           aria-labelledby={ariaLabelledBy}
-          className={styles['tabs__list']}
+          className={clsx(
+            styles['tabs__list'],
+            align && styles[`tabs__list--align-${align}`],
+          )}
           role="tablist"
         >
           {tabs.map((tab, i) => {

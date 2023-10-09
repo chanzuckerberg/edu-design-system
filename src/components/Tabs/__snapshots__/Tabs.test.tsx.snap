@@ -1,5 +1,189 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Tabs /> Centered story renders snapshot 1`] = `
+<div
+  class="tabs"
+>
+  <div
+    class="tabs__header"
+  >
+    <ul
+      class="tabs__list tabs__list--align-center"
+      role="tablist"
+    >
+      <li
+        class="tabs__item eds-is-active"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="true"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-1"
+          role="tab"
+          tabindex="0"
+        >
+          Tab Title 1
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-2"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 2
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-3"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 3
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-4"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 4
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-5"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 5
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-6"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 6
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-7"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 7
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-8"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 8
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls=":r2:"
+          aria-selected="false"
+          class="tabs__link"
+          href="#:r2:"
+          id=":r3:-Tab-Title-9"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 9
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <div
+      aria-hidden="false"
+      aria-labelledby=":r3:-Tab-Title-1"
+      id=":r2:"
+      role="tabpanel"
+    >
+      <div
+        class="max-w-xl"
+      >
+        <h3
+          class="heading heading--size-h3 mb-6"
+        >
+          Tab 1
+        </h3>
+        <p
+          class="text text--body"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+           
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
 <div
   class="p-8"
@@ -19,11 +203,11 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls=":r4:"
             aria-selected="true"
             class="tabs__link"
-            href="#:r2:"
-            id=":r3:-Tab-Title-1"
+            href="#:r4:"
+            id=":r5:-Tab-Title-1"
             role="tab"
             tabindex="0"
           >
@@ -61,11 +245,11 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls=":r4:"
             aria-selected="false"
             class="tabs__link"
-            href="#:r2:"
-            id=":r3:-Tab-Title-2"
+            href="#:r4:"
+            id=":r5:-Tab-Title-2"
             role="tab"
             tabindex="-1"
           >
@@ -103,11 +287,11 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls=":r4:"
             aria-selected="false"
             class="tabs__link"
-            href="#:r2:"
-            id=":r3:-Tab-Title-3"
+            href="#:r4:"
+            id=":r5:-Tab-Title-3"
             role="tab"
             tabindex="-1"
           >
@@ -145,11 +329,11 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls=":r4:"
             aria-selected="false"
             class="tabs__link"
-            href="#:r2:"
-            id=":r3:-Tab-Title-4"
+            href="#:r4:"
+            id=":r5:-Tab-Title-4"
             role="tab"
             tabindex="-1"
           >
@@ -187,11 +371,11 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls=":r4:"
             aria-selected="false"
             class="tabs__link"
-            href="#:r2:"
-            id=":r3:-Tab-Title-5"
+            href="#:r4:"
+            id=":r5:-Tab-Title-5"
             role="tab"
             tabindex="-1"
           >
@@ -229,11 +413,11 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls=":r4:"
             aria-selected="false"
             class="tabs__link"
-            href="#:r2:"
-            id=":r3:-Tab-Title-6"
+            href="#:r4:"
+            id=":r5:-Tab-Title-6"
             role="tab"
             tabindex="-1"
           >
@@ -271,8 +455,8 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
     <div>
       <div
         aria-hidden="false"
-        aria-labelledby=":r3:-Tab-Title-1"
-        id=":r2:"
+        aria-labelledby=":r5:-Tab-Title-1"
+        id=":r4:"
         role="tabpanel"
       >
         <div
