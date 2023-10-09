@@ -55,8 +55,7 @@ export const Default: StoryObj<MenuProps> = {
           >
             MDN: Menu
           </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
+          <Menu.Item href="#index" onClick={() => console.log('Item clicked')}>
             Trigger Action
           </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning">
