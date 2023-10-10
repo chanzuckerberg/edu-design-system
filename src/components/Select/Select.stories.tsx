@@ -5,17 +5,10 @@ import React from 'react';
 import type { OptionsAlignType, VariantType } from './Select';
 import { Select } from './Select';
 import Icon from '../Icon';
-import styles from './Select.stories.module.css';
 
 export default {
   title: 'Components/Select',
   component: Select,
-  subcomponents: {
-    'Select.Button': Select.Button,
-    'Select.Label': Select.Label,
-    'Select.Options': Select.Options,
-    'Select.Option': Select.Option,
-  },
   parameters: {
     badges: ['1.2'],
     layout: 'centered',
@@ -113,10 +106,7 @@ function InteractiveExampleUsingFunctionChildren() {
               as={React.Fragment}
             >
               {() => (
-                <button
-                  aria-expanded={open}
-                  className={styles['function-children__button']}
-                >
+                <button aria-expanded={open} className="fpo">
                   {selectedOption?.label || 'Select'}
                   <Icon
                     className="ml-4"
@@ -445,5 +435,63 @@ export const WithSelectedOption: StoryObj<typeof Select> = {
       labelComponent={<Select.Label>Favorite Animal</Select.Label>}
       value={exampleOptions[0]}
     />
+  ),
+};
+
+/**
+ * You can implement a `Select.Button` with a render prop. This exposes several useful values to
+ * control the appearance of the rendered button. The render prop case is "Headless", in that it has
+ * no styling by default.
+ */
+export const UncontrolledHeadless: StoryObj = {
+  render: () => (
+    <Select
+      aria-label="some label"
+      data-testid="dropdown"
+      defaultValue={exampleOptions[0]}
+      name="select"
+    >
+      <Select.Button>
+        {({ value, open, disabled }) => (
+          <button className="fpo">{value.label} </button>
+        )}
+      </Select.Button>
+      <Select.Options>
+        {exampleOptions.map((option) => (
+          <Select.Option key={option.key} value={option}>
+            {option.label}
+          </Select.Option>
+        ))}
+      </Select.Options>
+    </Select>
+  ),
+};
+
+/**
+ * You can use `Select.ButtonWrapper` to borrow the existing style used for controlled `Select` components.
+ */
+export const StyledUncontrolled: StoryObj = {
+  render: () => (
+    <Select
+      aria-label="some label"
+      data-testid="dropdown"
+      defaultValue={exampleOptions[0]}
+      name="select"
+    >
+      <Select.Button>
+        {({ value, open, disabled }) => (
+          <Select.ButtonWrapper isOpen={open}>
+            {value.label}
+          </Select.ButtonWrapper>
+        )}
+      </Select.Button>
+      <Select.Options>
+        {exampleOptions.map((option) => (
+          <Select.Option key={option.key} value={option}>
+            {option.label}
+          </Select.Option>
+        ))}
+      </Select.Options>
+    </Select>
   ),
 };
