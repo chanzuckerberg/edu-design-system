@@ -26,8 +26,6 @@ type PropsWithRenderProp<RenderPropArg> = {
   as?: ElementType;
 };
 
-let showNameWarning = true;
-
 type SelectProps = ExtractProps<typeof Listbox> &
   PopoverOptions & {
     /**
@@ -67,6 +65,51 @@ type SelectProps = ExtractProps<typeof Listbox> &
     variant?: VariantType;
   };
 
+type SelectOption = {
+  label: string;
+  [k: string]: string | number | boolean;
+};
+
+type SelectOptionProps = {
+  value: SelectOption;
+  disabled?: boolean;
+  className?: string;
+  children?: ReactNode | RenderProp<OptionRenderProps>;
+};
+
+type OptionRenderProps = {
+  active: boolean;
+  disabled: boolean;
+  selected: boolean;
+};
+
+type SelectButtonProps = {
+  /**
+   * Optional className for additional styling.
+   */
+  className?: string;
+  /**
+   * Text placed inside the button to describe the field.
+   */
+  children?: ReactNode;
+  /**
+   * Icon override for component. Default is 'expand-more'
+   */
+  icon?: Extract<IconName, 'expand-more'>;
+  /**
+   * Indicates state of the select, used to style the button.
+   */
+  isOpen?: boolean;
+};
+
+type SelectContextType = PopoverContext & {
+  compact?: boolean;
+  optionsAlign?: OptionsAlignType;
+  optionsClassName?: string;
+};
+
+let showNameWarning = true;
+
 function childrenHaveLabelComponent(children?: ReactNode): boolean {
   const childrenArray = React.Children.toArray(children);
   return childrenArray.some((child) => {
@@ -86,18 +129,14 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
   });
 }
 
-type SelectContextType = PopoverContext & {
-  compact?: boolean;
-  optionsAlign?: OptionsAlignType;
-  optionsClassName?: string;
-};
-
 const SelectContext = React.createContext<SelectContextType>({});
 
 /**
  * `import {Select} from "@chanzuckerberg/eds";`
  *
  * A popover that reveals or hides a list of options from which to select
+ *
+ * Supports controlled and uncontrolled behavior, using a render prop in the latter case.
  *
  */
 export function Select(props: SelectProps) {
@@ -112,8 +151,6 @@ export function Select(props: SelectProps) {
     optionsClassName,
     placement = 'bottom-start',
     strategy,
-    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
-    value = null,
     variant,
     ...other
   } = props;
@@ -163,7 +200,6 @@ export function Select(props: SelectProps) {
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
-    value,
     ...other,
   };
 
@@ -212,8 +248,15 @@ const SelectLabel = (props: { className?: string; children: ReactNode }) => {
   );
 };
 
-const SelectTrigger = function (
-  props: PropsWithRenderProp<{ disabled: boolean; open: boolean }>,
+/**
+ * The trigger for the select component, which is usually a form of `Button` or some targetable/clickable component
+ */
+const SelectButton = function (
+  props: PropsWithRenderProp<{
+    disabled: boolean;
+    open: boolean;
+    value: SelectOption;
+  }>,
 ) {
   const { children, className, ...other } = props;
   const { compact, setReferenceElement } = useContext(SelectContext);
@@ -222,6 +265,7 @@ const SelectTrigger = function (
     className,
     compact && styles['select-button--compact'],
   );
+
   return (
     <Listbox.Button
       // Render as a fragment instead of the default element. We're rendering our own element in
@@ -231,13 +275,18 @@ const SelectTrigger = function (
       ref={setReferenceElement}
       {...other}
     >
-      {typeof children === 'function'
-        ? children
-        : ({ open }) => (
-            <SelectButton className={componentClassName} isOpen={open}>
-              {children}
-            </SelectButton>
-          )}
+      {(renderProps) => {
+        return typeof children === 'function' ? (
+          children(renderProps)
+        ) : (
+          <SelectButtonWrapper
+            className={componentClassName}
+            isOpen={renderProps.open}
+          >
+            {children}
+          </SelectButtonWrapper>
+        );
+      }}
     </Listbox.Button>
   );
 };
@@ -272,26 +321,11 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
   return null;
 };
 
-type SelectOptionProps = {
-  value: any;
-  disabled?: boolean;
-  className?: string;
-  children?:
-    | ReactNode
-    | RenderProp<{ active: boolean; disabled: boolean; selected: boolean }>;
-};
-
 /**
  * Represents one of the available options for selection
  */
 const SelectOption = function (props: SelectOptionProps) {
   const { children, className, ...other } = props;
-
-  type RenderProps = {
-    active: boolean;
-    disabled: boolean;
-    selected: boolean;
-  };
 
   return (
     <Listbox.Option
@@ -303,7 +337,7 @@ const SelectOption = function (props: SelectOptionProps) {
     >
       {typeof children === 'function'
         ? children
-        : ({ active, disabled, selected }: RenderProps) => {
+        : ({ active, disabled, selected }: OptionRenderProps) => {
             return (
               <PopoverListItem
                 active={active}
@@ -321,29 +355,10 @@ const SelectOption = function (props: SelectOptionProps) {
   );
 };
 
-type SelectButtonProps = {
-  /**
-   * Optional className for additional styling.
-   */
-  className?: string;
-  /**
-   * Text placed inside the button to describe the field.
-   */
-  children?: ReactNode;
-  /**
-   * Icon override for component. Default is 'expand-more'
-   */
-  icon?: Extract<IconName, 'expand-more'>;
-  /**
-   * Indicates state of the select, used to style the button.
-   */
-  isOpen?: boolean;
-};
-
 /**
- * The component functioning as a trigger, which also shows the current selection
+ * The component functioning as a styling for the trigger, selection arrow, and space to show the current value
  */
-export const SelectButton = React.forwardRef<
+export const SelectButtonWrapper = React.forwardRef<
   HTMLButtonElement,
   SelectButtonProps
 >(({ children, className, icon = 'expand-more', isOpen, ...other }, ref) => {
@@ -367,7 +382,8 @@ export const SelectButton = React.forwardRef<
   );
 });
 
-Select.Button = SelectTrigger;
+Select.Button = SelectButton;
+Select.ButtonWrapper = SelectButtonWrapper;
 Select.Label = SelectLabel;
 Select.Option = SelectOption;
 Select.Options = SelectOptions;
