@@ -86,7 +86,7 @@ const PopoverButton = (props: PopoverButtonProps) => {
   return <HeadlessPopover.Button {...props} ref={setReferenceElement} />;
 };
 
-export type PopoverContentProps = {
+export type PopoverContentProps = ExtractProps<typeof HeadlessPopover.Panel> & {
   /**
    * Custom classname for additional styles for the arrow.
    */
@@ -100,17 +100,17 @@ export type PopoverContentProps = {
    */
   className?: string;
 } & RenderProps<{
-  /**
-   * Render prop indicating popover open status.
-   */
-  open: boolean;
-  /**
-   * Render prop that closes popover when called.
-   */
-  close: (
-    focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
-  ) => void;
-}>;
+    /**
+     * Render prop indicating popover open status.
+     */
+    open: boolean;
+    /**
+     * Render prop that closes popover when called.
+     */
+    close: (
+      focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
+    ) => void;
+  }>;
 
 /**
  * A floating container that can be resized to fit content inside

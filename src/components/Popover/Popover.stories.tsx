@@ -5,6 +5,7 @@ import React from 'react';
 import { Popover } from './Popover';
 import type { PopoverProps } from './Popover';
 import Button from '../Button';
+import Hr from '../Hr';
 
 export default {
   title: 'Components/Popover',
@@ -146,4 +147,32 @@ export const LeftEnd: StoryObj<PopoverProps> = {
     placement: 'left-end',
   },
   ...Default,
+};
+
+export const FocusClickableElement: StoryObj<PopoverProps> = {
+  play: async ({ canvasElement }) => {
+    // We want to test visual regression for the Popover.Content as well as the button,
+    // but don't want the drawer open initally outside Chromatic.
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      const filtersTrigger = await canvas.findByRole('button');
+      await userEvent.click(filtersTrigger);
+    }
+  },
+  render: (args) => {
+    return (
+      <Popover {...args}>
+        <Popover.Button as={Button} data-testid="popover-trigger-button">
+          Open Popover
+        </Popover.Button>
+        <Popover.Content data-testid="popover-content" focus>
+          <div className="fpo m-2 p-6">
+            Popover Content goes here
+            <Hr />
+            <Button>Focus on me upon open</Button>
+          </div>
+        </Popover.Content>
+      </Popover>
+    );
+  },
 };
