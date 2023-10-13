@@ -1732,7 +1732,7 @@ exports[`<Accordion /> UsingComplexHeaders story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-:r2i:"
+        id="headlessui-disclosure-button-:r2k:"
         type="button"
       >
         <h2
@@ -1784,7 +1784,7 @@ exports[`<Accordion /> UsingComplexHeaders story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-:r2k:"
+        id="headlessui-disclosure-button-:r2m:"
         type="button"
       >
         <h2
@@ -1847,7 +1847,7 @@ exports[`<Accordion /> UsingNumberIconInHeaders story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-:r2m:"
+        id="headlessui-disclosure-button-:r2o:"
         type="button"
       >
         <h2
@@ -1896,7 +1896,7 @@ exports[`<Accordion /> UsingNumberIconInHeaders story renders snapshot 1`] = `
         aria-expanded="false"
         class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-:r2o:"
+        id="headlessui-disclosure-button-:r2q:"
         type="button"
       >
         <h2
@@ -1965,6 +1965,51 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
         >
           Accordion Button 
           closed
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-:r2i:"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading"
+        >
+          Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa.
         </h2>
         <svg
           class="icon accordion-button__icon"

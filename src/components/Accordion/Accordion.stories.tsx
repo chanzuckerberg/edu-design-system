@@ -2,6 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Accordion } from './Accordion';
+import { chromaticViewports } from '../../util/viewports';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Text from '../Text';
@@ -9,11 +10,6 @@ import Text from '../Text';
 export default {
   title: 'Components/Accordion',
   component: Accordion,
-  subcomponents: {
-    'Accordion.Row': Accordion.Row,
-    'Accordion.Panel': Accordion.Panel,
-    'Accordion.Button': Accordion.Button,
-  },
   parameters: {
     badges: ['1.2'],
   },
@@ -302,6 +298,34 @@ export const UsingRenderProp: StoryObj<Args> = {
 </Accordion>`,
       },
     },
+  },
+};
+
+/**
+ * Although headings should provide limited text, we allow for text to span multiple lines, preserving
+ * the size of the state caret.
+ */
+export const WithLargeHeader: StoryObj<Args> = {
+  parameters: {
+    chromatic: {
+      viewports: [chromaticViewports.ipadMini],
+    },
+  },
+  args: {
+    children: (
+      <Accordion.Row>
+        <Accordion.Button>
+          Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas
+          massa. Massa quam egestas massa. Massa quam egestas massa.
+        </Accordion.Button>
+        <Accordion.Panel>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </Accordion.Panel>
+      </Accordion.Row>
+    ),
   },
 };
 
