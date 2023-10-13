@@ -66,3 +66,5 @@ export const FieldNote = ({
     </div>
   );
 };
+
+FieldNote.displayName = 'FieldNote';

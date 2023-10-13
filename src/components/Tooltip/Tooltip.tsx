@@ -175,3 +175,5 @@ export const Tooltip = ({
     </Tippy>
   );
 };
+
+Tooltip.displayName = 'Tooltip';

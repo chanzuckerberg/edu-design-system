@@ -74,3 +74,5 @@ export const PopoverListItem = React.forwardRef<HTMLDivElement, Props>(
     );
   },
 );
+
+PopoverListItem.displayName = 'PopoverListItem';

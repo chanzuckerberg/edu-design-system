@@ -137,4 +137,5 @@ export const ClickableStyle = React.forwardRef(
     return <Component className={componentClassName} ref={ref} {...other} />;
   },
 );
+
 ClickableStyle.displayName = 'ClickableStyle';

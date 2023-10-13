@@ -202,4 +202,7 @@ export const HorizontalStep = ({
   );
 };
 
+HorizontalStepper.displayName = 'HorizontalStepper';
+HorizontalStep.displayName = 'HorizontalStepper.Step';
+
 HorizontalStepper.Step = HorizontalStep;

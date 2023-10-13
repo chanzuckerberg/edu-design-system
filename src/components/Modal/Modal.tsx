@@ -483,6 +483,13 @@ const StickyModalFooter = (props: ModalFooterProps) => {
   return <ModalFooter isSticky={isScrollable} {...props} />;
 };
 
+Modal.displayName = 'Modal';
+VariantModalHeader.displayName = 'Modal.Header';
+ModalTitle.displayName = 'Modal.Title';
+FocusableModalBody.displayName = 'Modal.Body';
+StickyModalFooter.displayName = 'Modal.Footer';
+ModalStepper.displayName = 'Modal.Stepper';
+
 Modal.Header = VariantModalHeader;
 Modal.Title = ModalTitle;
 Modal.Body = FocusableModalBody;

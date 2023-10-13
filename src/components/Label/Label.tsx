@@ -80,3 +80,5 @@ export const Label = ({
     </label>
   );
 };
+
+Label.displayName = 'Label';
