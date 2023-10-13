@@ -13,6 +13,9 @@ const { Default } = composeStories(stories);
 const { Opened, ...staticStories } = stories;
 
 describe('<Menu />', () => {
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
   generateSnapshots(staticStories, {
     getElement: async () => {
       const user = userEvent.setup();
@@ -44,6 +47,27 @@ describe('<Menu />', () => {
     });
 
     expect(menuContainer.getAttribute('aria-activedescendant')).not.toBeNull();
+  });
+
+  it('handles onclick events when there is an href present', async () => {
+    // create a spy on the `log` method, and avoid calling it by setting the mock implementation to nothing
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+    const user = userEvent.setup();
+    render(<Default />);
+    const triggerButton = await screen.findByRole('button');
+    await act(async () => {
+      await user.click(triggerButton);
+    });
+
+    await act(async () => {
+      await user.keyboard('{arrowdown}{arrowdown}{arrowdown}');
+    });
+
+    await act(async () => {
+      await user.keyboard('{enter}');
+    });
+
+    expect(consoleSpy).toHaveBeenCalledTimes(1);
   });
 
   it('should close menu on keyboard escape key', async () => {

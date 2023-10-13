@@ -156,6 +156,63 @@ exports[`<Select /> NoVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Select /> StyledUncontrolled story renders snapshot 1`] = `
+<div
+  class="select"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <button
+    aria-controls="headlessui-listbox-options-:r1c:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    class="select-button"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:r1b:"
+    type="button"
+  >
+    <span>
+      Dogs
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Select /> UncontrolledHeadless story renders snapshot 1`] = `
+<div
+  class="select"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <button
+    aria-controls="headlessui-listbox-options-:r17:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    class="fpo"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:r16:"
+    type="button"
+  >
+    Dogs
+     
+  </button>
+</div>
+`;
+
 exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
 <div
   class="select w-60"
@@ -215,7 +272,7 @@ exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
     aria-controls="headlessui-listbox-options-:rs:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    class="function-children__button"
+    class="fpo"
     data-headlessui-state="open"
     id="headlessui-listbox-button-:rr:"
     type="button"

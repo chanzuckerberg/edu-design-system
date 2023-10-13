@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.5.0...v13.6.0) (2023-10-13)
+
+
+### Features
+
+* **Menu:** allow href and onClick to co-exist on a menu item ([#1779](https://github.com/chanzuckerberg/edu-design-system/issues/1779)) ([971f189](https://github.com/chanzuckerberg/edu-design-system/commit/971f189aff4a8e08de7a73df4c44332e12dcd6e3))
+* **Popover:** allow focus upon popover panel open ([#1782](https://github.com/chanzuckerberg/edu-design-system/issues/1782)) ([76ddbc6](https://github.com/chanzuckerberg/edu-design-system/commit/76ddbc6447658d92219430278ac0eb0ed8d5aa91))
+
+
+### Bug Fixes
+
+* **Accordion:** handle multi-line text in headers ([#1783](https://github.com/chanzuckerberg/edu-design-system/issues/1783)) ([0b3c3e6](https://github.com/chanzuckerberg/edu-design-system/commit/0b3c3e6f3528c238e3695d55773d9b7636057f99))
+* **Select:** expose render prop and default value param.s ([#1781](https://github.com/chanzuckerberg/edu-design-system/issues/1781)) ([f21e2b6](https://github.com/chanzuckerberg/edu-design-system/commit/f21e2b686ab159b498633d8c1cad9f0028988752))
+
 ## [13.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.4.0...v13.5.0) (2023-10-06)
 
 
