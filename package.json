@@ -119,7 +119,7 @@
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@geometricpanda/storybook-addon-badges": "^2.0.0",
-    "@omlet/cli": "^1.0.1-beta.37",
+    "@omlet/cli": "^1.0.1-beta.38",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
     "@size-limit/file": "^8.2.6",

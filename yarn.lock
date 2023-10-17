@@ -2537,7 +2537,7 @@ __metadata:
     "@commitlint/config-conventional": ^17.7.0
     "@geometricpanda/storybook-addon-badges": ^2.0.0
     "@headlessui/react": ^1.7.17
-    "@omlet/cli": ^1.0.1-beta.37
+    "@omlet/cli": ^1.0.1-beta.38
     "@popperjs/core": ^2.11.8
     "@rollup/plugin-node-resolve": ^15.2.3
     "@rollup/plugin-typescript": ^11.1.5
@@ -3875,68 +3875,68 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@omlet/cli-darwin-arm64@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-darwin-arm64@npm:1.0.1-beta.37"
+"@omlet/cli-darwin-arm64@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-darwin-arm64@npm:1.0.1-beta.38"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@omlet/cli-darwin-x64@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-darwin-x64@npm:1.0.1-beta.37"
+"@omlet/cli-darwin-x64@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-darwin-x64@npm:1.0.1-beta.38"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.37"
+"@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-linux-arm64-gnu@npm:1.0.1-beta.38"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.37"
+"@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-linux-arm64-musl@npm:1.0.1-beta.38"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.37"
+"@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-linux-x64-gnu@npm:1.0.1-beta.38"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-x64-musl@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-linux-x64-musl@npm:1.0.1-beta.37"
+"@omlet/cli-linux-x64-musl@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-linux-x64-musl@npm:1.0.1-beta.38"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.37"
+"@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli-win32-x64-msvc@npm:1.0.1-beta.38"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@omlet/cli@npm:^1.0.1-beta.37":
-  version: 1.0.1-beta.37
-  resolution: "@omlet/cli@npm:1.0.1-beta.37"
+"@omlet/cli@npm:^1.0.1-beta.38":
+  version: 1.0.1-beta.38
+  resolution: "@omlet/cli@npm:1.0.1-beta.38"
   dependencies:
     "@hapi/joi": ^17.1.1
     "@npmcli/ci-detect": ^2.0.0
-    "@omlet/cli-darwin-arm64": 1.0.1-beta.37
-    "@omlet/cli-darwin-x64": 1.0.1-beta.37
-    "@omlet/cli-linux-arm64-gnu": 1.0.1-beta.37
-    "@omlet/cli-linux-arm64-musl": 1.0.1-beta.37
-    "@omlet/cli-linux-x64-gnu": 1.0.1-beta.37
-    "@omlet/cli-linux-x64-musl": 1.0.1-beta.37
-    "@omlet/cli-win32-x64-msvc": 1.0.1-beta.37
+    "@omlet/cli-darwin-arm64": 1.0.1-beta.38
+    "@omlet/cli-darwin-x64": 1.0.1-beta.38
+    "@omlet/cli-linux-arm64-gnu": 1.0.1-beta.38
+    "@omlet/cli-linux-arm64-musl": 1.0.1-beta.38
+    "@omlet/cli-linux-x64-gnu": 1.0.1-beta.38
+    "@omlet/cli-linux-x64-musl": 1.0.1-beta.38
+    "@omlet/cli-win32-x64-msvc": 1.0.1-beta.38
     colorette: ^2.0.19
     commander: ^9.0.0
     core-js: ^3.29.1
@@ -3983,7 +3983,7 @@ __metadata:
       optional: true
   bin:
     omlet: bin/omlet
-  checksum: e7a43335926dc38578da75c9b0ce17877c7d4f99cece12b0f9e07140dc55543800f58dfcb8fdb8d4946e3cf9845271213e8867710e5856a0a1d03e639662d6aa
+  checksum: 3036074d8a2e07399de10f2a2ee8eff5238f195e03a4b4d89d8ad781bca9d951b7559daba99ab7476625d5e47e420c8274d4c71b5b9456f3a8c824f4aa21eedc
   languageName: node
   linkType: hard
 
