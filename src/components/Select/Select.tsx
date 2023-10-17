@@ -382,6 +382,13 @@ export const SelectButtonWrapper = React.forwardRef<
   );
 });
 
+Select.displayName = 'Select';
+SelectButton.displayName = 'Select.Button';
+SelectButtonWrapper.displayName = 'Select.ButtonWrapper';
+SelectLabel.displayName = 'Select.Label';
+SelectOption.displayName = 'Select.Option';
+SelectOptions.displayName = 'Select.Options';
+
 Select.Button = SelectButton;
 Select.ButtonWrapper = SelectButtonWrapper;
 Select.Label = SelectLabel;

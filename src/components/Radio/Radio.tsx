@@ -142,5 +142,9 @@ export const Radio = ({
   );
 };
 
+Radio.displayName = 'Radio';
+RadioInput.displayName = 'Radio.Input';
+RadioLabel.displayName = 'Radio.Label';
+
 Radio.Input = RadioInput;
 Radio.Label = RadioLabel;

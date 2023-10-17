@@ -116,3 +116,5 @@ export const LoadingIndicator = ({
     </div>
   );
 };
+
+LoadingIndicator.displayName = 'LoadingIndicator';

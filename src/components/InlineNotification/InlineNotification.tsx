@@ -125,3 +125,5 @@ export const InlineNotification = ({
     </div>
   );
 };
+
+InlineNotification.displayName = 'InlineNotification';

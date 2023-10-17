@@ -219,3 +219,5 @@ export const Slider = ({
     </div>
   );
 };
+
+Slider.displayName = 'Slider';

@@ -291,4 +291,7 @@ export const BreadcrumbsItem = ({
   );
 };
 
+Breadcrumbs.displayName = 'Breadcrumbs';
+CustomSeparatorBreadcrumbsItem.displayName = 'Breadcrumbs.Item';
+
 Breadcrumbs.Item = CustomSeparatorBreadcrumbsItem;

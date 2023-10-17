@@ -299,6 +299,15 @@ export const Table = ({ children, className, ...other }: TableProps) => {
   );
 };
 
+Table.displayName = 'Table';
+TableBody.displayName = 'Table.Body';
+TableCell.displayName = 'Table.Cell';
+TableFooter.displayName = 'Table.Footer';
+TableHeader.displayName = 'Table.Header';
+TableHeaderCell.displayName = 'Table.HeaderCell';
+TableRow.displayName = 'Table.Row';
+TableCaption.displayName = 'Table.Caption';
+
 Table.Body = TableBody;
 Table.Cell = TableCell;
 Table.Footer = TableFooter;

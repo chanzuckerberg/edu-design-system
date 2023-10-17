@@ -98,3 +98,5 @@ export const ProgressBar = ({
     </div>
   );
 };
+
+ProgressBar.displayName = 'ProgressBar';

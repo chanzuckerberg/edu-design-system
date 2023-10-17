@@ -153,3 +153,5 @@ export const Icon = (props: IconProps) => {
     );
   }
 };
+
+Icon.displayName = 'Icon';

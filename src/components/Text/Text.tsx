@@ -104,4 +104,4 @@ export const Text = forwardRef(
   },
 );
 
-Text.displayName = 'Text'; // Satisfy eslint
+Text.displayName = 'Text';

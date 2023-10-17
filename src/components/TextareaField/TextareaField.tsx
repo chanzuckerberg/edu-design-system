@@ -252,5 +252,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
 );
 
 TextareaField.displayName = 'TextareaField';
+TextArea.displayName = 'TextareaField.Textarea';
+
 TextareaField.TextArea = TextArea;
 TextareaField.Label = InputLabel;
