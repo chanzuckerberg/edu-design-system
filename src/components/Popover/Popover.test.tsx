@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './Popover.stories';
@@ -13,9 +13,7 @@ describe('<Popover />', () => {
       const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');
 
-      await act(async () => {
-        await user.click(triggerButton);
-      });
+      await user.click(triggerButton);
       return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
     },
   });
@@ -24,12 +22,8 @@ describe('<Popover />', () => {
     const user = userEvent.setup();
     render(<Default />);
     const triggerButton = screen.getByTestId('popover-trigger-button');
-    await act(async () => {
-      await user.click(triggerButton);
-    });
-    await act(async () => {
-      await user.keyboard('{Escape}');
-    });
+    await user.click(triggerButton);
+    await user.keyboard('{Escape}');
     expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
   });
 });
