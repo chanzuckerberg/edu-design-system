@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './FiltersDrawer.stories';
@@ -17,9 +17,7 @@ describe('<Filters />', () => {
         name: 'Filters',
       });
       if (toggleFiltersButton) {
-        await act(async () => {
-          await user.click(toggleFiltersButton);
-        });
+        await user.click(toggleFiltersButton);
       }
       const filters = await screen.findByRole('dialog');
       return filters.parentElement; // eslint-disable-line testing-library/no-node-access

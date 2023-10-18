@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -27,9 +27,7 @@ describe('<InputField />', () => {
 
     input.focus();
 
-    await act(async () => {
-      await user.keyboard(testText);
-    });
+    await user.keyboard(testText);
 
     expect(onChange).toHaveBeenCalledTimes(testText.length);
   });
@@ -51,10 +49,7 @@ describe('<InputField />', () => {
     const input = screen.getByTestId('test-input');
 
     input.focus();
-
-    await act(async () => {
-      await user.keyboard(testText);
-    });
+    await user.keyboard(testText);
 
     expect(onChange).toHaveBeenCalledTimes(0);
   });
@@ -76,10 +71,7 @@ describe('<InputField />', () => {
     const input = screen.getByTestId('test-input');
 
     input.focus();
-
-    await act(async () => {
-      await user.keyboard(testText);
-    });
+    await user.keyboard(testText);
 
     expect(onChange).toHaveBeenCalledTimes(testText.length);
   });

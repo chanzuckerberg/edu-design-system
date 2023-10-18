@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
@@ -20,9 +20,7 @@ describe('<Menu />', () => {
     getElement: async () => {
       const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');
-      await act(async () => {
-        await user.click(triggerButton);
-      });
+      await user.click(triggerButton);
       return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
     },
   });
@@ -31,9 +29,7 @@ describe('<Menu />', () => {
     const user = userEvent.setup();
     render(<Default />);
     const triggerButton = await screen.findByRole('button');
-    await act(async () => {
-      await user.click(triggerButton);
-    });
+    await user.click(triggerButton);
     const menuContainer = await screen.findByRole('menu');
 
     // a11y requires attaching the control dynamically, so confirm
@@ -42,9 +38,7 @@ describe('<Menu />', () => {
     );
 
     expect(menuContainer.getAttribute('aria-activedescendant')).toBeNull();
-    await act(async () => {
-      await user.keyboard('{arrowdown}');
-    });
+    await user.keyboard('{arrowdown}');
 
     expect(menuContainer.getAttribute('aria-activedescendant')).not.toBeNull();
   });
@@ -55,17 +49,10 @@ describe('<Menu />', () => {
     const user = userEvent.setup();
     render(<Default />);
     const triggerButton = await screen.findByRole('button');
-    await act(async () => {
-      await user.click(triggerButton);
-    });
 
-    await act(async () => {
-      await user.keyboard('{arrowdown}{arrowdown}{arrowdown}');
-    });
-
-    await act(async () => {
-      await user.keyboard('{enter}');
-    });
+    await user.click(triggerButton);
+    await user.keyboard('{arrowdown}{arrowdown}{arrowdown}');
+    await user.keyboard('{enter}');
 
     expect(consoleSpy).toHaveBeenCalledTimes(1);
   });
@@ -74,9 +61,7 @@ describe('<Menu />', () => {
     const user = userEvent.setup();
     render(<Default />);
     const triggerButton = await screen.findByRole('button');
-    await act(async () => {
-      await user.click(triggerButton);
-    });
+    await user.click(triggerButton);
     const menuContainer = await screen.findByRole('menu');
 
     // a11y attaches the control dynamically, so confirm
@@ -84,9 +69,7 @@ describe('<Menu />', () => {
       menuContainer.getAttribute('id'),
     );
 
-    await act(async () => {
-      await user.keyboard('{Escape}');
-    });
+    await user.keyboard('{Escape}');
     expect(screen.queryByTestId('menu-content')).not.toBeInTheDocument();
   });
 
@@ -107,9 +90,7 @@ describe('<Menu />', () => {
     );
     const triggerButton = await screen.findByRole('button');
     expect(triggerButton).toHaveAccessibleName('closed');
-    await act(async () => {
-      await user.click(triggerButton);
-    });
+    await user.click(triggerButton);
     expect(triggerButton).toHaveAccessibleName('open');
   });
 });

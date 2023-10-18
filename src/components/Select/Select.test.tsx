@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/testing-react';
-import { screen, render, act } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Select } from './Select';
@@ -37,9 +37,7 @@ describe('<Select />', () => {
     getElement: async () => {
       const user = userEvent.setup();
       const openButton = await screen.findByRole('button');
-      await act(async () => {
-        await user.click(openButton);
-      });
+      await user.click(openButton);
       await screen.findAllByRole('option');
       return screen.getByTestId('dropdown');
     },
@@ -51,9 +49,7 @@ describe('<Select />', () => {
 
     const openTrigger = await screen.findByRole('button');
 
-    await act(async () => {
-      await user.click(openTrigger);
-    });
+    await user.click(openTrigger);
 
     // see if there are any options, which there should not be
     expect(screen.queryByRole('option')).not.toBeInTheDocument();
