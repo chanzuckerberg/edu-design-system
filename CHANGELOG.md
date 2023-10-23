@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [13.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.6.0...v13.6.1) (2023-10-23)
+
+
+### Bug Fixes
+
+* add .displayName to components ([#1785](https://github.com/chanzuckerberg/edu-design-system/issues/1785)) ([dd202d8](https://github.com/chanzuckerberg/edu-design-system/commit/dd202d8a7d2dc50b82587dc4bf1e7223ed41dd37))
+
 ## [13.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.5.0...v13.6.0) (2023-10-13)
 
 
