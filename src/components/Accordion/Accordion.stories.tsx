@@ -7,6 +7,8 @@ import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Text from '../Text';
 
+type Args = React.ComponentProps<typeof Accordion>;
+
 export default {
   title: 'Components/Accordion',
   component: Accordion,
@@ -36,20 +38,27 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
+  decorators: [(Story) => <div className="m-2">{Story()}</div>],
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof Accordion>;
+type Story = StoryObj<Args>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const Small: StoryObj<Args> = {
+/**
+ * Default `Accordion` using the `small` size.
+ */
+export const Small: Story = {
   args: {
     size: 'sm',
   },
 };
 
-export const Stacked: StoryObj<Args> = {
+/**
+ * This demonstrates how one can combine multiple `Accordion` rows, where any of the rows can
+ * be defaulted to open (using `defaultOpen`).
+ */
+export const Stacked: Story = {
   args: {
     children: (
       <>
@@ -102,21 +111,21 @@ export const Stacked: StoryObj<Args> = {
   },
 };
 
-export const StackedSmall: StoryObj<Args> = {
+export const StackedSmall: Story = {
   args: {
     ...Stacked.args,
     size: 'sm',
   },
 };
 
-export const StackedOutline: StoryObj<Args> = {
+export const StackedOutline: Story = {
   args: {
     ...Stacked.args,
     hasOutline: true,
   },
 };
 
-export const StackedSmallOutline: StoryObj<Args> = {
+export const StackedSmallOutline: Story = {
   args: {
     ...Stacked.args,
     size: 'sm',
@@ -125,27 +134,9 @@ export const StackedSmallOutline: StoryObj<Args> = {
 };
 
 /**
- * The following stories are mostly for visual regression testing to capture the open state.
+ * This demonstrates how to specify that a section is not currently expandable using `isExpandable`.
  */
-export const DefaultOpen: StoryObj<Args> = {
-  args: {
-    children: (
-      <Accordion.Row defaultOpen>
-        <Accordion.Button data-testid="accordion-button">
-          Massa quam egestas massa.
-        </Accordion.Button>
-        <Accordion.Panel data-testid="accordion-panel">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </Accordion.Panel>
-      </Accordion.Row>
-    ),
-  },
-};
-
-export const EmptyStackedOpen: StoryObj<Args> = {
+export const EmptyStackedOpen: Story = {
   args: {
     children: (
       <>
@@ -190,14 +181,7 @@ export const EmptyStackedOpen: StoryObj<Args> = {
   },
 };
 
-export const SmallOpen: StoryObj<Args> = {
-  args: {
-    ...DefaultOpen.args,
-    size: 'sm',
-  },
-};
-
-export const StackedOpen: StoryObj<Args> = {
+export const StackedOpen: Story = {
   args: {
     children: (
       <>
@@ -242,21 +226,21 @@ export const StackedOpen: StoryObj<Args> = {
   },
 };
 
-export const StackedSmallOpen: StoryObj<Args> = {
+export const StackedSmallOpen: Story = {
   args: {
     ...StackedOpen.args,
     size: 'sm',
   },
 };
 
-export const StackedOutlineOpen: StoryObj<Args> = {
+export const StackedOutlineOpen: Story = {
   args: {
     ...StackedOpen.args,
     hasOutline: true,
   },
 };
 
-export const StackedSmallOutlineOpen: StoryObj<Args> = {
+export const StackedSmallOutlineOpen: Story = {
   args: {
     ...StackedOpen.args,
     size: 'sm',
@@ -264,8 +248,13 @@ export const StackedSmallOutlineOpen: StoryObj<Args> = {
   },
 };
 
-// Visual regression testing unhelpful since story value is in interaction and as a code example.
-export const UsingRenderProp: StoryObj<Args> = {
+/**
+ *
+ * This shows how to use a render prop for the row, to allow controlling render based on component state.
+ *
+ * **NOTE**: Visual regression testing unhelpful since story value is in interaction and as a code example.
+ */
+export const UsingRenderProp: Story = {
   render: () => (
     <Accordion headingAs="h2">
       <Accordion.Row>
@@ -289,7 +278,7 @@ export const UsingRenderProp: StoryObj<Args> = {
  * Although headings should provide limited text, we allow for text to span multiple lines, preserving
  * the size of the state caret.
  */
-export const WithLargeHeader: StoryObj<Args> = {
+export const WithLargeHeader: Story = {
   parameters: {
     chromatic: {
       viewports: [chromaticViewports.ipadMini],
@@ -313,7 +302,12 @@ export const WithLargeHeader: StoryObj<Args> = {
   },
 };
 
-export const UsingComplexHeaders: StoryObj<Args> = {
+/**
+ * You can use other EDS components within the `Accordion.Button` to allow for custom, non-text headers.
+ *
+ * **Example**: using `Text` and `Icon` in the `Accordion.Button`.
+ */
+export const UsingComplexHeaders: Story = {
   parameters: {
     badges: ['1.2', 'implementationExample'],
   },
@@ -322,7 +316,7 @@ export const UsingComplexHeaders: StoryObj<Args> = {
       <>
         <Accordion.Row>
           <Accordion.Button>
-            <Text size="lg" variant="neutral-subtle">
+            <Text size="lg">
               <Icon
                 className="m-2"
                 name="check-circle"
@@ -341,7 +335,7 @@ export const UsingComplexHeaders: StoryObj<Args> = {
         </Accordion.Row>
         <Accordion.Row>
           <Accordion.Button>
-            <Text size="lg" variant="neutral-subtle">
+            <Text size="lg">
               <Icon
                 className="m-2"
                 name="check-circle"
@@ -363,7 +357,12 @@ export const UsingComplexHeaders: StoryObj<Args> = {
   },
 };
 
-export const UsingNumberIconInHeaders: StoryObj<Args> = {
+/**
+ * You can use other EDS components within the `Accordion.Button` to allow for custom, non-text headers.
+ *
+ * **Example**: using `Text` and `NumberIcon` in the `Accordion.Button`.
+ */
+export const UsingNumberIconInHeaders: Story = {
   parameters: {
     badges: ['1.2', 'implementationExample'],
   },
@@ -372,11 +371,9 @@ export const UsingNumberIconInHeaders: StoryObj<Args> = {
       <>
         <Accordion.Row>
           <Accordion.Button>
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap items-center gap-2">
               <NumberIcon aria-label="Step 1" number={1} />
-              <Text size="lg" variant="neutral-subtle">
-                Step 1
-              </Text>
+              <Text size="lg">Step 1</Text>
             </div>
           </Accordion.Button>
           <Accordion.Panel>
@@ -388,11 +385,9 @@ export const UsingNumberIconInHeaders: StoryObj<Args> = {
         </Accordion.Row>
         <Accordion.Row>
           <Accordion.Button>
-            <div className="flex flex-wrap gap-1">
-              <NumberIcon aria-label="Step 3" number={2} />
-              <Text size="lg" variant="neutral-subtle">
-                Step 2
-              </Text>
+            <div className="items flex flex-wrap items-center gap-2">
+              <NumberIcon aria-label="Step 2" number={2} />
+              <Text size="lg">Step 2</Text>
             </div>
           </Accordion.Button>
           <Accordion.Panel>
