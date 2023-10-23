@@ -113,6 +113,12 @@ export const Toggle = ({ label, ...other }: ToggleProps) => {
     <ToggleButton {...other} />
   );
 };
+
+Toggle.displayName = 'Toggle';
+ToggleLabel.displayName = 'Toggle.Label';
+ToggleButton.displayName = 'Toggle.Button';
+ToggleWrapper.displayName = 'Toggle.Wrapper';
+
 Toggle.Label = ToggleLabel;
 Toggle.Button = ToggleButton;
 Toggle.Wrapper = ToggleWrapper;

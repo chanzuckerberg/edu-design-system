@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
 
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
@@ -96,9 +96,7 @@ describe('<TextareaField />', () => {
 
     expect(field).toHaveFocus();
 
-    await act(async () => {
-      await user.keyboard('abc');
-    });
+    await user.keyboard('abc');
 
     expect(onChangeFn).toHaveBeenCalled();
   });

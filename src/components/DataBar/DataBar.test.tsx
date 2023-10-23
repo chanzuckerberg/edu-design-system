@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { DataBar } from './DataBar';
@@ -25,19 +25,13 @@ describe('<DataBar />', () => {
     );
     screen.getByTestId('databar-test').focus();
 
-    await act(async () => {
-      await user.tab();
-    });
+    await user.tab();
     expect(screen.getByLabelText('Segment 1')).toHaveFocus();
 
-    await act(async () => {
-      await user.keyboard('{arrowright}');
-    });
+    await user.keyboard('{arrowright}');
     expect(screen.getByLabelText('Segment 2')).toHaveFocus();
 
-    await act(async () => {
-      await user.keyboard('{arrowleft}');
-    });
+    await user.keyboard('{arrowleft}');
     expect(screen.getByLabelText('Segment 1')).toHaveFocus();
   });
 });

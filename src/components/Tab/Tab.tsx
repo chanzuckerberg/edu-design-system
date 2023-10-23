@@ -74,6 +74,9 @@ const TabButton = (props: TabButtonProps) => {
   return <div />;
 };
 
+Tab.displayName = 'Tab';
+TabButton.displayName = 'Tab.Button';
+
 /**
  * Allows for control of the Tab Title contents, for custom tab handling
  *

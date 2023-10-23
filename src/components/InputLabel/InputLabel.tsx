@@ -52,3 +52,5 @@ export const InputLabel = ({
     </label>
   );
 };
+
+InputLabel.displayName = 'InputLabel';

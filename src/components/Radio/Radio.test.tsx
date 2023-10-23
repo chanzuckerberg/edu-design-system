@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Radio } from './Radio';
@@ -33,9 +33,7 @@ describe('<Radio />', () => {
     const radio = screen.getByRole('radio');
     radio.focus();
 
-    await act(async () => {
-      await user.keyboard(' ');
-    });
+    await user.keyboard(' ');
 
     expect(radio).toBeChecked();
     expect(onChange).toHaveBeenCalledTimes(1);

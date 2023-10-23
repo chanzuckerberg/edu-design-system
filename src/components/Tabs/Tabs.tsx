@@ -275,3 +275,5 @@ function usePrevious<T>(prop: T) {
   });
   return ref.current;
 }
+
+Tabs.displayName = 'Tabs';

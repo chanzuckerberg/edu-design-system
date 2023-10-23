@@ -34,3 +34,5 @@ export const Hr = ({ className, size, variant, ...other }: Props) => {
 
   return <hr className={componentClassName} {...other} />;
 };
+
+Hr.displayName = 'Hr';

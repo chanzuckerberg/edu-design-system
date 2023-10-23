@@ -125,6 +125,10 @@ export const Badge = ({ children, className, ...other }: BadgeProps) => {
   );
 };
 
+BadgeDot.displayName = 'Badge.Dot';
+BadgeIcon.displayName = 'Badge.Icon';
+BadgeText.displayName = 'Badge.Text';
+
 Badge.Dot = BadgeDot;
 Badge.Icon = BadgeIcon;
 Badge.Text = BadgeText;

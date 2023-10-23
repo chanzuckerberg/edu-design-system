@@ -72,8 +72,6 @@ export const Card = ({
   );
 };
 
-Card.displayName = 'Card';
-
 /**
  * Body of the Card component.
  */
@@ -85,8 +83,6 @@ const CardBody = ({ children, className, ...other }: CardSubComponentProps) => {
     </div>
   );
 };
-
-CardBody.displayName = 'CardBody';
 
 /**
  * Footer of the Card component.
@@ -104,8 +100,6 @@ const CardFooter = ({
   );
 };
 
-CardFooter.displayName = 'CardFooter';
-
 /**
  * Header of the Card component.
  */
@@ -122,7 +116,10 @@ const CardHeader = ({
   );
 };
 
-CardHeader.displayName = 'CardHeader';
+Card.displayName = 'Card';
+CardBody.displayName = 'Card.Body';
+CardFooter.displayName = 'Card.Footer';
+CardHeader.displayName = 'Card.Header';
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;

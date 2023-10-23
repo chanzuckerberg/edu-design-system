@@ -124,4 +124,4 @@ export const Heading = forwardRef(
   },
 );
 
-Heading.displayName = 'Heading'; // Satisfy eslint.
+Heading.displayName = 'Heading';

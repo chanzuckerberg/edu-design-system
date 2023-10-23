@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Modal } from './Modal';
@@ -26,9 +26,7 @@ describe('Modal', () => {
       const openModalButton = await screen.findByRole('button', {
         name: 'Open the modal',
       });
-      await act(async () => {
-        await user.click(openModalButton);
-      });
+      await user.click(openModalButton);
       const modal = await screen.findByRole('dialog');
       return modal;
     },
@@ -45,9 +43,7 @@ describe('Modal', () => {
     const openModalButton = await screen.findByRole('button', {
       name: 'Open the modal',
     });
-    await act(async () => {
-      await user.click(openModalButton);
-    });
+    await user.click(openModalButton);
     const modal = await screen.findByRole('dialog');
     expect(modal).toBeTruthy();
   });
@@ -58,15 +54,11 @@ describe('Modal', () => {
     const openModalButton = await screen.findByRole('button', {
       name: 'Open the modal',
     });
-    await act(async () => {
-      await user.click(openModalButton);
-    });
+    await user.click(openModalButton);
     const closeButton = await screen.findByRole('button', {
       name: 'close modal',
     });
-    await act(async () => {
-      await user.click(closeButton);
-    });
+    await user.click(closeButton);
     await waitFor(() => {
       expect(screen.queryByRole('dialog')).toBeFalsy();
     });
@@ -78,12 +70,8 @@ describe('Modal', () => {
     const openModalButton = await screen.findByRole('button', {
       name: 'Open the modal',
     });
-    await act(async () => {
-      await user.click(openModalButton);
-    });
-    await act(async () => {
-      await user.keyboard('{Escape}');
-    });
+    await user.click(openModalButton);
+    await user.keyboard('{Escape}');
     await waitFor(() => {
       expect(screen.queryByRole('dialog')).toBeFalsy();
     });

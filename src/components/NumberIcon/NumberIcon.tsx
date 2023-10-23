@@ -104,3 +104,5 @@ export const NumberIcon = ({
     </Text>
   );
 };
+
+NumberIcon.displayName = 'NumberIcon';

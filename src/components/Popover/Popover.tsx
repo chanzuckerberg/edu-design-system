@@ -154,6 +154,12 @@ const PopoverContent = ({
   return null;
 };
 
+Popover.displayName = 'Popover';
+PopoverButton.displayName = 'Popover.Group';
+PopoverContent.displayName = 'Popover.Content';
+PopoverOverlay.displayName = 'Popover.Overlay';
+PopoverGroup.displayName = 'Popover.Group';
+
 /**
  * A button that when clicked, can show or hide the Popover Menu
  * (Product teams can decide how a Popover will close, if it is on click, release, hover, etc.)

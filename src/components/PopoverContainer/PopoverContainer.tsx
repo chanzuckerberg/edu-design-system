@@ -107,3 +107,5 @@ export const PopoverContainer = React.forwardRef<HTMLDivElement, Props>(
     );
   },
 );
+
+PopoverContainer.displayName = 'PopoverContainer';

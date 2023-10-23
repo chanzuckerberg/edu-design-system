@@ -218,6 +218,12 @@ const MenuItem = ({
   );
 };
 
+Menu.displayName = 'Menu';
+MenuButton.displayName = 'Menu.Button';
+MenuPlainButton.displayName = 'Menu.PlainButton';
+MenuItems.displayName = 'Menu.Items';
+MenuItem.displayName = 'Menu.Item';
+
 Menu.Button = MenuButton;
 Menu.PlainButton = MenuPlainButton;
 Menu.Items = MenuItems;

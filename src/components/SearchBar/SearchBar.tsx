@@ -97,5 +97,9 @@ export const SearchBar = ({ children, className }: SearchBarProps) => {
   return <div className={componentClassName}>{children}</div>;
 };
 
+SearchBar.displayName = 'SearchBar';
+SearchField.displayName = 'Searchbar.Field';
+SearchButton.displayName = 'SearchBar.Button';
+
 SearchBar.Field = SearchField;
 SearchBar.Button = SearchButton;

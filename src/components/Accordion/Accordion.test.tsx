@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Accordion } from './Accordion';
@@ -18,14 +18,10 @@ describe('<Accordion />', () => {
     expect(screen.queryByTestId('accordion-panel')).not.toBeInTheDocument();
     const accordionButton = screen.getByTestId('accordion-button');
 
-    await act(async () => {
-      await user.click(accordionButton);
-    });
+    await user.click(accordionButton);
     expect(screen.getByTestId('accordion-panel')).toBeInTheDocument();
 
-    await act(async () => {
-      await user.click(accordionButton);
-    });
+    await user.click(accordionButton);
     expect(screen.queryByTestId('accordion-panel')).not.toBeInTheDocument();
   });
 
@@ -35,24 +31,16 @@ describe('<Accordion />', () => {
     const accordionButton = screen.getByTestId('accordion-button');
     accordionButton.focus();
 
-    await act(async () => {
-      await user.keyboard(' ');
-    });
+    await user.keyboard(' ');
     expect(screen.getByTestId('accordion-panel')).toBeInTheDocument();
 
-    await act(async () => {
-      await user.keyboard(' ');
-    });
+    await user.keyboard(' ');
     expect(screen.queryByTestId('accordion-panel')).not.toBeInTheDocument();
 
-    await act(async () => {
-      await user.keyboard('{enter}');
-    });
+    await user.keyboard('{enter}');
     expect(screen.getByTestId('accordion-panel')).toBeInTheDocument();
 
-    await act(async () => {
-      await user.keyboard('{enter}');
-    });
+    await user.keyboard('{enter}');
     expect(screen.queryByTestId('accordion-panel')).not.toBeInTheDocument();
   });
 
@@ -71,9 +59,7 @@ describe('<Accordion />', () => {
     );
     const accordionButton = screen.getByTestId('accordion-button');
 
-    await act(async () => {
-      await user.click(accordionButton);
-    });
+    await user.click(accordionButton);
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
@@ -97,9 +83,7 @@ describe('<Accordion />', () => {
     );
     const accordionButton = screen.getByRole('button');
 
-    await act(async () => {
-      await user.click(accordionButton);
-    });
+    await user.click(accordionButton);
     expect(onOpen).toHaveBeenCalledTimes(1);
     expect(onClose).not.toHaveBeenCalled();
   });
@@ -124,9 +108,7 @@ describe('<Accordion />', () => {
     );
     const accordionButton = screen.getByRole('button');
 
-    await act(async () => {
-      await user.click(accordionButton);
-    });
+    await user.click(accordionButton);
     expect(onOpen).not.toHaveBeenCalled();
     expect(onClose).not.toHaveBeenCalled();
   });

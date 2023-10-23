@@ -103,5 +103,9 @@ const FieldsetLegend = ({
   );
 };
 
+Fieldset.displayName = 'Fieldset';
+FieldsetItems.displayName = 'Fieldset.Items';
+FieldsetLegend.displayName = 'Fieldset.Legend';
+
 Fieldset.Items = FieldsetItems;
 Fieldset.Legend = FieldsetLegend;

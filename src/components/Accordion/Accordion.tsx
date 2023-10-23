@@ -264,6 +264,11 @@ const AccordionRow = ({
   );
 };
 
+Accordion.displayName = 'Accordion';
+AccordionButton.displayName = 'Accordion.Button';
+AccordionPanel.displayName = 'Accordion.Panel';
+AccordionRow.displayName = 'Accordion.Row';
+
 Accordion.Button = AccordionButton;
 Accordion.Panel = AccordionPanel;
 Accordion.Row = AccordionRow;
