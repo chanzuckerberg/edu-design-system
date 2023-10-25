@@ -1,18 +1,18 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { Avatar } from './Avatar';
 
-const meta: Meta<typeof Avatar> = {
+type Args = React.ComponentProps<typeof Avatar>;
+
+export default {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
     badges: ['1.3'],
     layout: 'centered',
   },
-};
+} as Meta<Args>;
 
-export default meta;
-
-type Story = StoryObj<typeof Avatar>;
+type Story = StoryObj<Args>;
 
 export const Default: Story = {};
 
@@ -80,6 +80,10 @@ export const Square: Story = {
   },
 };
 
+/**
+ * You can set the image source when using the `image` variant of the icon component. Here we use an inline SVG, but
+ * it can also point to a regular URI.
+ */
 export const UsingImage: Story = {
   args: {
     variant: 'image',
@@ -89,15 +93,9 @@ export const UsingImage: Story = {
   },
 };
 
-export const WithCustomLabel: Story = {
-  args: {
-    ariaLabel: 'Custom label for avatar',
-    size: 'md',
-    shape: 'circle',
-    variant: 'icon',
-  },
-};
-
+/**
+ * When using the `"icon"` variant, you can select any of the named icons from EDS. here, we specify the `"person-add"` icon.
+ */
 export const WithCustomIcon: Story = {
   args: {
     ariaLabel: 'Custom label for avatar',
@@ -108,6 +106,10 @@ export const WithCustomIcon: Story = {
   },
 };
 
+/**
+ * Initials can be auto-generated from the given user data. EDS uses a built-in algorithm to extract meaningful initials from
+ * several name formats.
+ */
 export const UsingInitials: Story = {
   args: {
     size: 'md',
@@ -121,6 +123,10 @@ export const UsingInitials: Story = {
   },
 };
 
+/**
+ * Initials can also be specified directly by using the `displayName` key in the user object. This allows for initials in the
+ * avatar that aren't composed from the user's name (`fullName`).
+ */
 export const UsingEmoji: Story = {
   args: {
     shape: 'circle',
@@ -135,6 +141,10 @@ export const UsingEmoji: Story = {
   },
 };
 
+/**
+ * When using the `"image"` variant, you may not have a source defined. In such cases it will fall back to a text display for
+ * the user, using either an auto-generated set of initials OR, `displayName`.
+ */
 export const WhenImageVariantMissingSource: Story = {
   args: {
     shape: 'circle',
@@ -149,6 +159,9 @@ export const WhenImageVariantMissingSource: Story = {
   },
 };
 
+/**
+ * `Avatar supports unicode so names with multi-byte characters, or multiple sequences (emoji) are also supported.
+ */
 export const UsingMultibyteUnicode: Story = {
   args: {
     shape: 'circle',

@@ -25,7 +25,7 @@ export type UserData = {
   [k: string]: string | number | boolean | undefined;
 };
 
-export interface Props {
+type AvatarProps = {
   /**
    * Label for the given avatar. Defaults to a string using user data.
    */
@@ -58,7 +58,7 @@ export interface Props {
    * Variants of how the avatar will be portrayed
    */
   variant?: 'icon' | 'initials' | 'image';
-}
+};
 
 /**
  * Use graphemer to take a name part, and select the first grapheme (emoji, surrogate pair, ASCII character)
@@ -103,7 +103,7 @@ export const Avatar = ({
   variant = 'initials',
   src,
   ...other
-}: Props) => {
+}: AvatarProps) => {
   const componentClassName = clsx(
     styles['avatar'],
     shape && styles[`avatar--${shape}`],
@@ -139,5 +139,3 @@ export const Avatar = ({
     </div>
   );
 };
-
-Avatar.displayName = 'Avatar';
