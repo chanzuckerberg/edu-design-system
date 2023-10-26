@@ -1,8 +1,12 @@
 import clsx from 'clsx';
 import type { ForwardedRef } from 'react';
 import React, { forwardRef } from 'react';
+
+import type { Preset } from '../../util/variant-types';
+
 import styles from './Text.module.css';
 
+/** @deprecated */
 export type Size =
   | 'body'
   | 'sm'
@@ -19,6 +23,7 @@ export type Size =
  */
 export type DeprecatedSize = 'caption';
 
+/** @deprecated */
 export type Variant =
   | 'inherit'
   | 'neutral-subtle'
@@ -35,36 +40,33 @@ export type Variant =
  */
 export type DeprecatedVariant = 'info';
 
-export type Props = {
+export type TextProps = {
   /**
-   * Controls whether to render text inline (defaults to "p").
+   * Controls which component to use when rendering copy: `p` or `span` (defaults to `"p"`).
    */
   as?: 'p' | 'span';
   children: React.ReactNode;
   className?: string;
+  /** @deprecated */
   variant?: Variant | DeprecatedVariant;
+  /** @deprecated */
   size?: Size | DeprecatedSize;
   tabIndex?: number;
+  /** @deprecated */
   weight?: 'bold' | 'normal' | null;
+  /**
+   * Key name for matching typography presets (Tier-2/Tier-3)
+   */
+  preset?: Preset;
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
  * `import {Text} from "@chanzuckerberg/eds";`
  *
- * The Text component decorates `<p>` and `<span>` with thematic variants.
- * Defaults to `<p>` and should pass `as="span"` to set as `<span>`.
+ * The Text component decorates `<p>` and `<span>` with thematic variants. Use
+ * typography presets to style the text via `preset`.
  *
- * Example usage:
- *
- * ```tsx
- * <Text>
- *  Text paragraph copy
- * </Text>
- *
- * <Text as="span">
- *  Text inline copy
- * </Text>
- * ```
+ * For headers, please use `Heading`.
  */
 export const Text = forwardRef(
   (
@@ -72,8 +74,9 @@ export const Text = forwardRef(
       as: TagName = 'p',
       children,
       className,
-      variant,
+      preset,
       size = 'body',
+      variant,
       weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
@@ -81,7 +84,7 @@ export const Text = forwardRef(
        * attaches a onHover and onFocus event to the element to determine when to
        * trigger the overlay.
        */ ...other
-    }: Props,
+    }: TextProps,
     ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
   ) => {
     if (variant === 'info' && process.env.NODE_ENV !== 'production') {
@@ -91,9 +94,10 @@ export const Text = forwardRef(
     }
     const componentClassName = clsx(
       styles['text'],
-      styles[`text--${size}`],
-      variant && styles[`text--${variant}`],
-      weight && styles[`text--${weight}-weight`],
+      !preset && size && styles[`text--${size}`],
+      !preset && variant && styles[`text--${variant}`],
+      !preset && weight && styles[`text--${weight}-weight`],
+      preset && styles[`text--${preset}`],
       className,
     );
     return (

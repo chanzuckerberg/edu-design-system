@@ -50,6 +50,7 @@
 
 /**
  * Heading sizes, correlate to similar numerically named typography token.
+ * deprecated in favor of only using the typography presets
  */
 .heading--size-h1 {
   font: var(--eds-theme-typography-headline-lg);
@@ -93,7 +94,7 @@
 }
 
 /**
- * Color variants
+ * Color variants - deprecated in favor of using utility classes
  */
 .heading--error {
   color: var(--eds-theme-color-text-utility-error);
