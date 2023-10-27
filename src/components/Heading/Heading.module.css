@@ -127,3 +127,87 @@
 .heading--white {
   color: var(--eds-theme-color-text-neutral-default-inverse);
 }
+
+/**
+ * Map the component preset names to the defined typography tokens
+ * TODO-AH: This should always match the generated tokens so find a
+ * way to generate this.
+ */
+.heading--headline-lg {
+  font: var(--eds-theme-typography-headline-lg);
+}
+.heading--headline-lg-bold {
+  font: var(--eds-theme-typography-headline-lg-bold);
+}
+.heading--headline-lg-bold-mobile {
+  font: var(--eds-theme-typography-headline-lg-bold-mobile);
+}
+.heading--headline-lg-mobile {
+  font: var(--eds-theme-typography-headline-lg-mobile);
+}
+.heading--headline-md {
+  font: var(--eds-theme-typography-headline-md);
+}
+.heading--headline-md-bold {
+  font: var(--eds-theme-typography-headline-md-bold);
+}
+.heading--headline-md-bold-mobile {
+  font: var(--eds-theme-typography-headline-md-bold-mobile);
+}
+.heading--headline-md-mobile {
+  font: var(--eds-theme-typography-headline-md-mobile);
+}
+.heading--headline-sm {
+  font: var(--eds-theme-typography-headline-sm);
+}
+.heading--headline-sm-bold {
+  font: var(--eds-theme-typography-headline-sm-bold);
+}
+.heading--headline-sm-bold-mobile {
+  font: var(--eds-theme-typography-headline-sm-bold-mobile);
+}
+.heading--headline-sm-mobile {
+  font: var(--eds-theme-typography-headline-sm-mobile);
+}
+.heading--headline-secondary-lg {
+  font: var(--eds-theme-typography-headline-secondary-lg);
+}
+.heading--headline-secondary-lg-bold {
+  font: var(--eds-theme-typography-headline-secondary-lg-bold);
+}
+.heading--headline-secondary-md {
+  font: var(--eds-theme-typography-headline-secondary-md);
+}
+.heading--headline-secondary-md-bold {
+  font: var(--eds-theme-typography-headline-secondary-md-bold);
+}
+.heading--headline-secondary-sm {
+  font: var(--eds-theme-typography-headline-secondary-sm);
+}
+.heading--headline-secondary-sm-bold {
+  font: var(--eds-theme-typography-headline-secondary-sm-bold);
+}
+.heading--title-lg {
+  font: var(--eds-theme-typography-title-lg);
+}
+.heading--title-lg-bold {
+  font: var(--eds-theme-typography-title-lg-bold);
+}
+.heading--title-md {
+  font: var(--eds-theme-typography-title-md);
+}
+.heading--title-md-bold {
+  font: var(--eds-theme-typography-title-md-bold);
+}
+.heading--title-sm {
+  font: var(--eds-theme-typography-title-sm);
+}
+.heading--title-sm-bold {
+  font: var(--eds-theme-typography-title-sm-bold);
+}
+.heading--title-xs {
+  font: var(--eds-theme-typography-title-xs);
+}
+.heading--title-xs-bold {
+  font: var(--eds-theme-typography-title-xs-bold);
+}

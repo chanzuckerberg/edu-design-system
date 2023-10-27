@@ -2,6 +2,7 @@
  * This contains the broad types of the common programmatic variants: e.g.,
  * - size
  * - align
+ * - preset
  *
  * use Extract to trim any unsupported variants
  */
@@ -19,6 +20,7 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 export type Align = 'left' | 'center' | 'right';
 
 // TODO-AH: generate this from the tokens instead of hard coding
+// TODO-AH: either partition heading tokens from the rest, or keep them all under Text
 /**
  * By setting the array `as const`, we can treat each array value as
  * read-only and a unique type.
