@@ -46,16 +46,6 @@ describe('<Heading />', () => {
     await user.click(screen.getByRole('button'));
   });
 
-  it('should display warning message when attempting to use h6 size', () => {
-    const { Heading6 } = composeStories(stories);
-    render(<Heading6 />);
-    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
-    expect(consoleWarnMock).toHaveBeenCalledWith(
-      `The h6 size is deprecated and will be removed in an upcoming release.\n`,
-      'Please bump this heading up to a larger size if possible.',
-    );
-  });
-
   it('should display warning message when attempting to use h7 size', () => {
     const { Heading7 } = composeStories(stories);
     render(<Heading7 />);

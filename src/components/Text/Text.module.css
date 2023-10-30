@@ -70,7 +70,8 @@
 
 /**
  * Map the component preset names to the defined typography tokens
- * TODO-AH: This should always match the generated tokens so find a
+ *
+ * TODO: This should always match the generated tokens so find a
  * way to generate this.
  */
 .text--headline-lg {

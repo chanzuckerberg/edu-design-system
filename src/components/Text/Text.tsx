@@ -47,17 +47,27 @@ export type TextProps = {
   as?: 'p' | 'span';
   children: React.ReactNode;
   className?: string;
-  /** @deprecated */
-  variant?: Variant | DeprecatedVariant;
-  /** @deprecated */
-  size?: Size | DeprecatedSize;
   tabIndex?: number;
-  /** @deprecated */
-  weight?: 'bold' | 'normal' | null;
   /**
-   * Key name for matching typography presets (Tier-2/Tier-3)
+   * Prop to set the desired typography value used in design. Acceptable values
+   * match those used across the design system.
    */
   preset?: Preset;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
+  variant?: Variant | DeprecatedVariant;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
+  size?: Size | DeprecatedSize;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
+  weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
 
 /**

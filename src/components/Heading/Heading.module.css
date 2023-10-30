@@ -2,6 +2,7 @@
     # HEADING
 \*------------------------------------*/
 
+/* Deprecated; moving all size classes to prefer prefix */
 .heading--size-headline-lg {
   font: var(--eds-theme-typography-headline-lg);
 
@@ -130,11 +131,16 @@
 
 /**
  * Map the component preset names to the defined typography tokens
- * TODO-AH: This should always match the generated tokens so find a
+ *
+ * TODO: This should always match the generated tokens so find a
  * way to generate this.
  */
 .heading--headline-lg {
   font: var(--eds-theme-typography-headline-lg);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-001-mobile);
+  }
 }
 .heading--headline-lg-bold {
   font: var(--eds-theme-typography-headline-lg-bold);
@@ -147,6 +153,10 @@
 }
 .heading--headline-md {
   font: var(--eds-theme-typography-headline-md);
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-002-mobile);
+  }
 }
 .heading--headline-md-bold {
   font: var(--eds-theme-typography-headline-md-bold);
@@ -159,6 +169,10 @@
 }
 .heading--headline-sm {
   font: var(--eds-theme-typography-headline-sm);
+  
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-typography-preset-003-mobile);
+  }
 }
 .heading--headline-sm-bold {
   font: var(--eds-theme-typography-headline-sm-bold);

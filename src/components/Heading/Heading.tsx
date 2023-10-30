@@ -26,16 +26,7 @@ export const VARIANTS = [
  */
 export type Variant = (typeof VARIANTS)[number];
 
-/**
- * @deprecated
- */
-export type HeadingElement =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | /** @deprecated */ 'h6';
+export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 /**
  * @deprecated
@@ -90,10 +81,22 @@ type HeadingProps = {
   as?: HeadingElement;
   children: React.ReactNode;
   className?: string;
-  size: HeadingSize;
   tabIndex?: number;
-  variant?: Variant;
+  /**
+   * Prop to set the desired typography value used in design. Acceptable values
+   * match those used across the design system.
+   */
   preset?: Preset;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
+  size: HeadingSize;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
+  variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
 /**
@@ -126,7 +129,7 @@ export const Heading = forwardRef(
           'Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.',
         );
       }
-      if (size === 'h6' || size === 'h7') {
+      if (size === 'h7') {
         console.warn(
           `The ${size} size is deprecated and will be removed in an upcoming release.\n`,
           'Please bump this heading up to a larger size if possible.',

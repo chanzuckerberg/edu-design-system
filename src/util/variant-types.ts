@@ -19,13 +19,16 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
  */
 export type Align = 'left' | 'center' | 'right';
 
-// TODO-AH: generate this from the tokens instead of hard coding
-// TODO-AH: either partition heading tokens from the rest, or keep them all under Text
 /**
+ * List of tier-2 and -3 tokens for use in types:
+ * - src/design-tokens/tier-2-usage/typography.json
+ *
  * By setting the array `as const`, we can treat each array value as
  * read-only and a unique type.
+ *
+ * TODO: generate this from the tokens statically, if possible
  */
-const presets = [
+export const presets = [
   'headline-lg',
   'headline-lg-bold',
   'headline-lg-bold-mobile',
