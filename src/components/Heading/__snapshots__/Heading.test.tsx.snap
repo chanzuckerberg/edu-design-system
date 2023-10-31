@@ -2,7 +2,7 @@
 
 exports[`<Heading /> Heading1 story renders snapshot 1`] = `
 <h1
-  class="heading heading--size-h1"
+  class="heading heading--headline-lg"
 >
   Heading 1
 </h1>
@@ -10,7 +10,7 @@ exports[`<Heading /> Heading1 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading2 story renders snapshot 1`] = `
 <h2
-  class="heading heading--size-h2"
+  class="heading heading--headline-md"
 >
   Heading 2
 </h2>
@@ -18,7 +18,7 @@ exports[`<Heading /> Heading2 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading3 story renders snapshot 1`] = `
 <h3
-  class="heading heading--size-h3"
+  class="heading heading--headline-sm"
 >
   Heading 3
 </h3>
@@ -26,7 +26,7 @@ exports[`<Heading /> Heading3 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading4 story renders snapshot 1`] = `
 <h4
-  class="heading heading--size-h4"
+  class="heading heading--title-md"
 >
   Heading 4
 </h4>
@@ -34,7 +34,7 @@ exports[`<Heading /> Heading4 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading5 story renders snapshot 1`] = `
 <h5
-  class="heading heading--size-h5"
+  class="heading heading--title-sm"
 >
   Heading 5
 </h5>
@@ -42,7 +42,7 @@ exports[`<Heading /> Heading5 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading6 story renders snapshot 1`] = `
 <h6
-  class="heading heading--size-h6"
+  class="heading heading--title-xs"
 >
   Heading 6
 </h6>
@@ -56,317 +56,39 @@ exports[`<Heading /> Heading7 story renders snapshot 1`] = `
 </h6>
 `;
 
-exports[`<Heading /> Sizes story renders snapshot 1`] = `
-<div
-  class="variant__table"
->
-  <div>
-    <h1
-      class="heading heading--size-h1"
-    >
-      as: 
-      h1
-       size: 
-      h1
-    </h1>
-    <h1
-      class="heading heading--size-h2"
-    >
-      as: 
-      h1
-       size: 
-      h2
-    </h1>
-    <h1
-      class="heading heading--size-h3"
-    >
-      as: 
-      h1
-       size: 
-      h3
-    </h1>
-    <h1
-      class="heading heading--size-h4"
-    >
-      as: 
-      h1
-       size: 
-      h4
-    </h1>
-    <h1
-      class="heading heading--size-h5"
-    >
-      as: 
-      h1
-       size: 
-      h5
-    </h1>
-    <h1
-      class="heading heading--size-h6"
-    >
-      as: 
-      h1
-       size: 
-      h6
-    </h1>
-  </div>
-  <div>
-    <h2
-      class="heading heading--size-h1"
-    >
-      as: 
-      h2
-       size: 
-      h1
-    </h2>
-    <h2
-      class="heading heading--size-h2"
-    >
-      as: 
-      h2
-       size: 
-      h2
-    </h2>
-    <h2
-      class="heading heading--size-h3"
-    >
-      as: 
-      h2
-       size: 
-      h3
-    </h2>
-    <h2
-      class="heading heading--size-h4"
-    >
-      as: 
-      h2
-       size: 
-      h4
-    </h2>
-    <h2
-      class="heading heading--size-h5"
-    >
-      as: 
-      h2
-       size: 
-      h5
-    </h2>
-    <h2
-      class="heading heading--size-h6"
-    >
-      as: 
-      h2
-       size: 
-      h6
-    </h2>
-  </div>
-  <div>
-    <h3
-      class="heading heading--size-h1"
-    >
-      as: 
-      h3
-       size: 
-      h1
-    </h3>
-    <h3
-      class="heading heading--size-h2"
-    >
-      as: 
-      h3
-       size: 
-      h2
-    </h3>
-    <h3
-      class="heading heading--size-h3"
-    >
-      as: 
-      h3
-       size: 
-      h3
-    </h3>
-    <h3
-      class="heading heading--size-h4"
-    >
-      as: 
-      h3
-       size: 
-      h4
-    </h3>
-    <h3
-      class="heading heading--size-h5"
-    >
-      as: 
-      h3
-       size: 
-      h5
-    </h3>
-    <h3
-      class="heading heading--size-h6"
-    >
-      as: 
-      h3
-       size: 
-      h6
-    </h3>
-  </div>
-  <div>
-    <h4
-      class="heading heading--size-h1"
-    >
-      as: 
-      h4
-       size: 
-      h1
-    </h4>
-    <h4
-      class="heading heading--size-h2"
-    >
-      as: 
-      h4
-       size: 
-      h2
-    </h4>
-    <h4
-      class="heading heading--size-h3"
-    >
-      as: 
-      h4
-       size: 
-      h3
-    </h4>
-    <h4
-      class="heading heading--size-h4"
-    >
-      as: 
-      h4
-       size: 
-      h4
-    </h4>
-    <h4
-      class="heading heading--size-h5"
-    >
-      as: 
-      h4
-       size: 
-      h5
-    </h4>
-    <h4
-      class="heading heading--size-h6"
-    >
-      as: 
-      h4
-       size: 
-      h6
-    </h4>
-  </div>
-  <div>
-    <h5
-      class="heading heading--size-h1"
-    >
-      as: 
-      h5
-       size: 
-      h1
-    </h5>
-    <h5
-      class="heading heading--size-h2"
-    >
-      as: 
-      h5
-       size: 
-      h2
-    </h5>
-    <h5
-      class="heading heading--size-h3"
-    >
-      as: 
-      h5
-       size: 
-      h3
-    </h5>
-    <h5
-      class="heading heading--size-h4"
-    >
-      as: 
-      h5
-       size: 
-      h4
-    </h5>
-    <h5
-      class="heading heading--size-h5"
-    >
-      as: 
-      h5
-       size: 
-      h5
-    </h5>
-    <h5
-      class="heading heading--size-h6"
-    >
-      as: 
-      h5
-       size: 
-      h6
-    </h5>
-  </div>
-  <div>
-    <h6
-      class="heading heading--size-h1"
-    >
-      as: 
-      h6
-       size: 
-      h1
-    </h6>
-    <h6
-      class="heading heading--size-h2"
-    >
-      as: 
-      h6
-       size: 
-      h2
-    </h6>
-    <h6
-      class="heading heading--size-h3"
-    >
-      as: 
-      h6
-       size: 
-      h3
-    </h6>
-    <h6
-      class="heading heading--size-h4"
-    >
-      as: 
-      h6
-       size: 
-      h4
-    </h6>
-    <h6
-      class="heading heading--size-h5"
-    >
-      as: 
-      h6
-       size: 
-      h5
-    </h6>
-    <h6
-      class="heading heading--size-h6"
-    >
-      as: 
-      h6
-       size: 
-      h6
-    </h6>
-  </div>
+exports[`<Heading /> UsingColorTokens story renders snapshot 1`] = `
+<div>
+  <h1
+    class="heading heading--title-md text-utility-warning"
+  >
+    using 
+    <code>
+      text-utility-warning
+    </code>
+     utility class
+  </h1>
+  <h2
+    class="heading heading--title-md text-utility-success"
+  >
+    using 
+    <code>
+      text-utility-success
+    </code>
+     utility class
+  </h2>
+  <h3
+    class="heading heading--title-md text-utility-error"
+  >
+    using 
+    <code>
+      text-utility-error
+    </code>
+     utility class
+  </h3>
+  <h4
+    class="heading heading--title-md"
+  >
+    using inline color
+  </h4>
 </div>
-`;
-
-exports[`<Heading /> TitleXs story renders snapshot 1`] = `
-<h5
-  class="heading heading--size-title-xs"
->
-  Title xs heading size
-</h5>
 `;

@@ -1,23 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Text /> Body story renders snapshot 1`] = `
-<div
-  style="margin: 0.25rem;"
->
-  <p
-    class="text text--body"
-  >
-    Body paragraph
-  </p>
-</div>
-`;
-
 exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--lg"
+    class="text text--body-lg"
   >
     Body large
   </p>
@@ -26,10 +14,10 @@ exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 
 exports[`<Text /> BodyMedium story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--md"
+    class="text text--body-md"
   >
     Body medium
   </p>
@@ -38,34 +26,34 @@ exports[`<Text /> BodyMedium story renders snapshot 1`] = `
 
 exports[`<Text /> BodySmall story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--sm"
+    class="text text--body-sm"
   >
     Body small
   </p>
 </div>
 `;
 
-exports[`<Text /> BodyVariantSuccessBold story renders snapshot 1`] = `
+exports[`<Text /> BodyXLarge story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--body text--success text--bold-weight"
+    class="text text--body-xl"
   >
-    Success variant body text, bold
+    Body extra-large
   </p>
 </div>
 `;
 
 exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--xs"
+    class="text text--body-xs"
   >
     Body Xsmall
   </p>
@@ -74,7 +62,7 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 
 exports[`<Text /> Callout story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
     class="text text--callout"
@@ -86,19 +74,31 @@ exports[`<Text /> Callout story renders snapshot 1`] = `
 
 exports[`<Text /> Caption story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--caption"
+    class="text text--caption-md"
   >
     Caption
   </p>
 </div>
 `;
 
+exports[`<Text /> Default story renders snapshot 1`] = `
+<div
+  class="m-1"
+>
+  <p
+    class="text text--body"
+  >
+    Default &lt;Text /&gt; rendering
+  </p>
+</div>
+`;
+
 exports[`<Text /> Overline story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
     class="text text--overline"
@@ -110,30 +110,53 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 
 exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
   <p
-    class="text text--md !font-secondary"
+    class="text text--body-md !font-secondary"
   >
-    You can use tailwind to override the font family used for a given size
+    You can use utility classes to override the font family used for a given size
   </p>
 </div>
 `;
 
-exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
+exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="m-1"
 >
-  <p
-    class="text text--body text--error"
-  >
-    This text surrounds the 
-    <span
-      class="text text--body text--inherit"
+  <div>
+    <p
+      class="text text--body-xl text-utility-warning"
     >
-      Child Text
-    </span>
-     and shows it should inherit variant from the parent
-  </p>
+      using 
+      <code>
+        text-utility-warning
+      </code>
+       utility class
+    </p>
+    <p
+      class="text text--body-lg text-utility-success"
+    >
+      using 
+      <code>
+        text-utility-success
+      </code>
+       utility class
+    </p>
+    <p
+      class="text text--body-md text-utility-error"
+    >
+      using 
+      <code>
+        text-utility-error
+      </code>
+       utility class
+    </p>
+    <p
+      class="text text--body-sm"
+    >
+      using inline color
+    </p>
+  </div>
 </div>
 `;
