@@ -109,4 +109,31 @@ describe('<Select />', () => {
 
     expect(renderMethod).not.toThrow(Error);
   });
+
+  it('[GROUP-112] generates a hidden field when used in uncontrolled mode', () => {
+    const dropdownWithChildrenAndLabelText = (
+      <Select
+        aria-label="test"
+        data-testid="dropdown"
+        name="uncontrolled-select"
+        onChange={() => undefined}
+        value={exampleOptions[0]}
+      >
+        <Select.Button>Select</Select.Button>
+
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </Select>
+    );
+
+    const { container } = render(dropdownWithChildrenAndLabelText);
+
+    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
+    expect(container.querySelector(`input`)).toBeInTheDocument();
+  });
 });
