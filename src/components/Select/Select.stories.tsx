@@ -214,6 +214,8 @@ function InteractiveExampleUsingChildren(props: Props) {
  * You can implement a `Select.Button` with a render prop. This exposes several useful values to
  * control the appearance of the rendered button. The render prop case is "Headless", in that it has
  * no styling by default.
+ *
+ * Remember to include a `name` so that a hidden field is generated in this case
  */
 export const UncontrolledHeadless: StoryObj = {
   args: {
@@ -238,10 +240,42 @@ export const UncontrolledHeadless: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select
+  name="select"
+  defaultValue={exampleOptions[0]}
+  data-testid="dropdown"
+  aria-label="some label"
+>
+  <Select.Button>
+  {({ value, open, disabled }) => (
+    <button className="fpo">{value.label} </button>
+  )}
+  </Select.Button>
+  <Select.Options>
+    {exampleOptions.map((option) => (
+      <Select.Option key={option.key} value={option}>
+        {option.label}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>
+<!--
+Hidden fields named "select[key]" and "select[label]" because the datatype used is {key: value, label: value}
+-->
+        `,
+      },
+    },
+  },
 };
 
 /**
  * You can use `Select.ButtonWrapper` to borrow the existing style used for controlled `Select` components.
+ *
+ * Remember to include a `name` so that a hidden field is generated in this case
  */
 export const StyledUncontrolled: StoryObj = {
   args: {
@@ -267,6 +301,38 @@ export const StyledUncontrolled: StoryObj = {
         </Select.Options>
       </>
     ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select
+  name="select"
+  defaultValue={exampleOptions[0]}
+  data-testid="dropdown"
+  aria-label="some label"
+>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+    {exampleOptions.map((option) => (
+      <Select.Option key={option.key} value={option}>
+        {option.label}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>
+<!--
+Hidden fields named "select[key]" and "select[label]" because the datatype used is {key: value, label: value}
+-->
+        `,
+      },
+    },
   },
 };
 
