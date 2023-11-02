@@ -1748,7 +1748,7 @@ exports[`<Accordion /> UsingNumberIconInHeaders story renders snapshot 1`] = `
           >
             <span
               aria-label="Step 1"
-              class="text text--sm text--neutral-medium number-icon number-icon--base"
+              class="text text--body-sm number-icon number-icon--base number-icon--lg"
               role="img"
             >
               1
@@ -1797,7 +1797,7 @@ exports[`<Accordion /> UsingNumberIconInHeaders story renders snapshot 1`] = `
           >
             <span
               aria-label="Step 2"
-              class="text text--sm text--neutral-medium number-icon number-icon--base"
+              class="text text--body-sm number-icon number-icon--base number-icon--lg"
               role="img"
             >
               2

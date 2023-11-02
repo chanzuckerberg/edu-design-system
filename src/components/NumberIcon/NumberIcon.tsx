@@ -1,5 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
+
+import type { Size } from '../../util/variant-types';
+
 import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './NumberIcon.module.css';
@@ -14,7 +17,7 @@ export interface Props {
    */
   className?: string;
   /**
-   * Icon override for component. Default is
+   * Icon override for component.
    */
   icon?: Extract<IconName, 'circle'>;
 
@@ -27,15 +30,23 @@ export interface Props {
    */
   number?: number;
   /**
-   * The size of the icon. Defaults to 'lg'.
+   * The size of the icon.
+   *
+   * **Defaults to 'lg'**
    */
-  size?: 'sm';
+  size?: Extract<Size, 'sm' | 'lg'>;
   /**
-   * The color variant of the icon. Defaults to 'base'.
+   * The variant of the icon.
+   *
+   * **Defaults to 'base'**
+   *
+   * Variant `success` will use a symbol to mark success, along with different color tokens
    */
   variant?: 'base' | 'success';
   /**
    * Number icon title
+   *
+   * When using `incomplete` this is required.
    */
   numberIconTitle?: string;
 }
@@ -43,18 +54,13 @@ export interface Props {
 /**
  * `import {NumberIcon} from "@chanzuckerberg/eds";`
  *
- * Encloses a number in a circle to be used as an icon.
+ * Treats a numeral as an icon by wrapping it in a container and adding color/spacing.
  *
- * Example usage:
- *
- * ```tsx
- * <NumberIcon aria-label="1" number={1} />
- * ```
  */
 export const NumberIcon = ({
   className,
   number,
-  size,
+  size = 'lg',
   variant = 'base',
   icon = 'circle',
   incomplete,
@@ -71,21 +77,12 @@ export const NumberIcon = ({
 
   return (
     <Text
-      /**
-       * Set as 'span' since icon use is more inline than block, but no effect since display is 'flex'.
-       */
       as="span"
       className={componentClassName}
+      preset={size === 'sm' ? 'body-xs' : 'body-sm'}
       role="img"
-      size="sm"
-      variant={variant === 'base' ? 'neutral-medium' : 'white'}
       {...other}
     >
-      {/**
-       *
-       * When `incomplete` is defined and there is a numberIconTitle on the circle icon, then this will render
-       * the proper icon with the incomplete text provided to that icon.
-       */}
       {incomplete && numberIconTitle ? (
         <Icon
           className={styles['number-icon__icon']}

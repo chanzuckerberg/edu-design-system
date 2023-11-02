@@ -17,29 +17,47 @@ export default {
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof NumberIcon>;
+type Story = StoryObj<Args>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const Small: StoryObj<Args> = {
+export const Small: Story = {
   args: {
     size: 'sm',
   },
 };
 
-export const Success: StoryObj<Args> = {
+export const Success: Story = {
   args: {
     variant: 'success',
   },
 };
 
-export const SuccessSmall: StoryObj<Args> = {
+export const SuccessSmall: Story = {
   args: {
     size: 'sm',
     variant: 'success',
   },
 };
 
-export const DifferentNumbers: StoryObj<Args> = {
+/**
+ * When `incomplete` is defined and there is a `numberIconTitle` on the circle icon, then this will render
+ * the proper icon with the incomplete text provided foro that component instance.
+ */
+export const Incomplete: Story = {
+  args: {
+    size: 'sm',
+    incomplete: true,
+    number: undefined,
+    numberIconTitle: 'Incomplete',
+  },
+};
+
+/**
+ * `NumberIcon` supports individual digits, with a maximum of two digits. By default,
+ * they are positioned as block-level elements. use `flex` or `display` to update positioning.
+ */
+export const DifferentNumbers: Story = {
   /**
    * Disables controls for args that have no affect on this story
    */
@@ -57,30 +75,26 @@ export const DifferentNumbers: StoryObj<Args> = {
   },
   render: (args) => (
     <div>
-      <NumberIcon {...args} aria-label="Step 0" number={0} />
-      <NumberIcon {...args} aria-label="Step 1" number={1} />
-      <NumberIcon {...args} aria-label="Step 2" number={2} />
-      <NumberIcon {...args} aria-label="Step 3" number={3} />
-      <NumberIcon {...args} aria-label="Step 4" number={4} />
-      <NumberIcon {...args} aria-label="Step 5" number={5} />
-      <NumberIcon {...args} aria-label="Step 6" number={6} />
-      <NumberIcon {...args} aria-label="Step 7" number={7} />
-      <NumberIcon {...args} aria-label="Step 8" number={8} />
-      <NumberIcon {...args} aria-label="Step 9" number={9} />
-      <NumberIcon {...args} aria-label="Step 10" number={10} />
-      <NumberIcon {...args} aria-label="Step 21" number={21} />
-      <NumberIcon {...args} aria-label="Step 32" number={32} />
-      <NumberIcon {...args} aria-label="Step 43" number={43} />
-      <NumberIcon {...args} aria-label="Step 54" number={54} />
-      <NumberIcon {...args} aria-label="Step 65" number={65} />
-      <NumberIcon {...args} aria-label="Step 76" number={76} />
-      <NumberIcon {...args} aria-label="Step 87" number={87} />
-      <NumberIcon {...args} aria-label="Step 98" number={98} />
+      {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21, 32, 43, 54, 65, 76, 87, 98].map(
+        (number) => (
+          <NumberIcon
+            key={number}
+            {...args}
+            aria-label={`Step ${number}`}
+            number={number}
+          />
+        ),
+      )}
     </div>
   ),
 };
 
-export const NumberIconList: StoryObj<Args> = {
+/**
+ * This Implementation example shows how to use Number Icon to build a stepper-like component.
+ *
+ * - incomplete rows are aligned with each number icon to show progress
+ */
+export const NumberIconList: Story = {
   parameters: {
     badges: ['1.0', 'implementationExample'],
   },
