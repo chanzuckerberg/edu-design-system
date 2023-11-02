@@ -1,9 +1,9 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { kebabCase } from 'lodash';
 import React from 'react';
-import { Icon } from './Icon';
+import { Icon, type IconProps } from './Icon';
 import icons, { type IconName } from '../../icons/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
-import Link from '../Link';
 import Text from '../Text';
 import styles from './Icon.stories.module.css';
 
@@ -24,7 +24,13 @@ const meta: Meta<typeof Icon> = {
       control: {
         type: 'select',
       },
-      options: ['currentColor', ...Object.keys(ColorTokens)],
+      // For now, take the variables and convert to equivalent tokens for the UI
+      options: [
+        'currentColor',
+        ...Object.keys(ColorTokens).map(
+          (tokenVarName) => `var(--${kebabCase(tokenVarName)})`,
+        ),
+      ],
     },
   },
 };
@@ -34,10 +40,7 @@ type Story = StoryObj<typeof Icon>;
 
 export const Default: Story = {
   render: ({ name, color, ...rest }) => {
-    // ESlint can't tell if ColorTokens[color] is valid or not, since it's computed at runtime.
-    // @ts-expect-error cannot check type compliance on runtime imports
-    const computedColor = color && ColorTokens[color]; /* eslint-disable-line */
-    return <Icon {...rest} color={computedColor} name={name} />;
+    return <Icon {...rest} color={color} name={name} />;
   },
   args: {
     name: 'close',
@@ -61,28 +64,28 @@ export const Large: Story = {
   },
 };
 
-export const FullScreen: Story = {
-  ...Default,
-  args: {
-    ...Default.args,
-    size: '100vh',
-  },
-  parameters: {
-    axe: {
-      disabledRules: ['scrollable-region-focusable'],
-    },
-  },
-};
-
+/**
+ * You can control the color of the icon using any valid CSS color values, including our token suite.
+ *
+ * If `currentColor` for the whole container isn't sufficient,
+ * use a CSS variable in `color` with the token you need, or
+ * style `fill` with Tailwind: https://tailwindcss.com/docs/fill
+ */
 export const CustomColor: Story = {
   ...Default,
   args: {
     ...Default.args,
-    color: 'EdsColorBrandGrape400',
+    color: 'var(--eds-color-brand-grape-400)',
     size: '2em',
   },
 };
 
+/**
+ * Icons are positioned naturally in lines of text. Use the size, color, or other props
+ * to match the recommended design and layout.
+ *
+ * See: https://material-ui.com/components/material-icons/
+ */
 export const InText: Story = {
   render: (args) => {
     return (
@@ -94,29 +97,17 @@ export const InText: Story = {
           purpose="informative"
           title="icon with 1em line height"
         />
-        ; 1em), but often looks better with the line height (
-        <Icon
-          {...args}
-          name="account-circle"
-          purpose="informative"
-          size="2em"
-          title="icon with 2em line height"
-        />
-        ; 2em) which is harder to determine. Take a look at the icons available
-        in{' '}
-        <Link
-          href="https://material-ui.com/components/material-icons/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          https://material-ui.com/components/material-icons/
-        </Link>
-        , currently we only support the filled icons.
+        ; 1em) by default.
       </Text>
     );
   },
 };
 
+/**
+ * If your product needs icons not currently existing in the suite, you can introduce new
+ * accessible icons by inserting the body of an SVG into `Icon`. Each resulting icon can be
+ * treated like a standalone component, matching the recipe defined by design.
+ */
 export const WithChildrenSvg: Story = {
   ...Default,
   args: {
@@ -127,72 +118,20 @@ export const WithChildrenSvg: Story = {
   },
 };
 
-/**
- * Grid of all the available icons.
- */
-const IconsInGrid = () => (
+const IconsInGrid = (args: IconProps) => (
   <div>
     <ul className={styles['icon-grid']}>
       {(Object.keys(icons) as IconName[]).map((name) => {
         return (
           <li className={styles['icon-grid__item']} key={name}>
-            <Icon
-              className={styles['icon-grid__icon']}
-              name={name}
-              purpose="decorative"
-            />
+            <Icon className={styles['icon-grid__icon']} name={name} {...args} />
             <span className={styles['icon-grid__text']}>{name}</span>
-            {name === 'warning' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  purpose="decorative"
-                  size="0.875rem"
-                />
-                This has been replaced by status-warning. This will be
-                deprecated
-              </div>
-            )}
-            {name === 'check-circle' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  purpose="decorative"
-                  size="0.875rem"
-                />
-                This has been replaced by status-check-circle. This will be
-                deprecated
-              </div>
-            )}
-            {name === 'info' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  purpose="decorative"
-                  size="0.875rem"
-                />
-                This has been replaced by status-info. This will be deprecated
-              </div>
-            )}
-            {(name === 'error' || name === 'error-inverted') && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  purpose="decorative"
-                />
-                This has been replaced by status-error. This will be deprecated
-              </div>
-            )}
             {name === 'avatar' && (
               <div className={styles['icon-grid__deprecation']}>
                 <Icon
                   className={styles['icon-grid__deprecation-icon']}
                   name="status-error"
-                  purpose="decorative"
+                  {...args}
                 />
                 This has been replaced by person. This will be deprecated
               </div>
@@ -202,7 +141,7 @@ const IconsInGrid = () => (
                 <Icon
                   className={styles['icon-grid__deprecation-icon']}
                   name="status-error"
-                  purpose="decorative"
+                  {...args}
                 />
                 This has been replaced by book. This will be deprecated
               </div>
@@ -212,7 +151,7 @@ const IconsInGrid = () => (
                 <Icon
                   className={styles['icon-grid__deprecation-icon']}
                   name="status-error"
-                  purpose="decorative"
+                  {...args}
                 />
                 This has been replaced by copy. This will be deprecated
               </div>
@@ -222,9 +161,25 @@ const IconsInGrid = () => (
                 <Icon
                   className={styles['icon-grid__deprecation-icon']}
                   name="status-error"
-                  purpose="decorative"
+                  {...args}
                 />
                 This has been replaced by dots-vertical. This will be deprecated
+              </div>
+            )}
+            {[
+              'status-check-circle',
+              'status-error',
+              'status-info',
+              'status-warning',
+            ].includes(name) && (
+              <div className={styles['icon-grid__deprecation']}>
+                <Icon
+                  className={styles['icon-grid__deprecation-icon']}
+                  name="status-error"
+                  {...args}
+                />
+                Icons with baked-in colors are not recommended. This will be
+                deprecated.
               </div>
             )}
           </li>
@@ -234,6 +189,11 @@ const IconsInGrid = () => (
   </div>
 );
 
-export const IconGrid: StoryObj = {
-  render: () => <IconsInGrid />,
+/**
+ * Grid of all the available icons. Use the controls to change color, or other attributes
+ *
+ * **NOTE**: some icons marked as deprecated will be removed in future releases.
+ */
+export const IconGrid: Story = {
+  render: (args) => <IconsInGrid {...args} />,
 };
