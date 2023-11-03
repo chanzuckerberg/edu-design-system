@@ -3,6 +3,7 @@ import React, { forwardRef } from 'react';
 import useForwardedRef from '../../util/useForwardedRef';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
+import type { Size } from '../../util/variant-types';
 import { InputLabel, type InputLabelProps } from '../InputLabel/InputLabel';
 
 import styles from './Checkbox.module.css';
@@ -42,9 +43,11 @@ type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
    */
   id?: string;
   /**
-   * Size of the checkbox label.
+   * Size of the checkbox and associated label.
+   *
+   * **Defaults to 'lg'.**
    */
-  size?: CheckboxLabelProps['size'];
+  size?: Extract<Size, 'md' | 'lg'>;
 } & EitherInclusive<
     {
       /**
@@ -89,8 +92,6 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputProps>(
   },
 );
 
-CheckboxInput.displayName = 'CheckboxInput';
-
 const CheckboxLabel = ({ className, size, ...other }: CheckboxLabelProps) => {
   const componentClassName = clsx(
     size === 'md' && styles['checkbox__label--md'],
@@ -103,9 +104,10 @@ const CheckboxLabel = ({ className, size, ...other }: CheckboxLabelProps) => {
 /**
  * `import {Checkbox} from "@chanzuckerberg/eds";`
  *
- * Checkbox control indicating if something is selected or unselected.
+ * Checkbox control indicating if something is selected or unselected. Uncontrolled by default,
+ * it can be used in place of boolean-like form data.
  *
- * NOTE: Requires either a visible label or `aria-label` prop.
+ * **NOTE**: Requires either a visible `label` or `aria-label` prop.
  */
 export const Checkbox = Object.assign(
   forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
@@ -138,3 +140,4 @@ export const Checkbox = Object.assign(
 );
 
 Checkbox.displayName = 'Checkbox';
+CheckboxInput.displayName = 'CheckboxInput';
