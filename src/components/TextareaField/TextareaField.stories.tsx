@@ -9,8 +9,8 @@ const meta: Meta<typeof TextareaField> = {
   args: {
     placeholder: 'Enter long-form text here',
     defaultValue: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
-    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
-    praesentium, commodi eligendi asperiores quis dolorum porro.`,
+dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+praesentium, commodi eligendi asperiores quis dolorum porro.`,
     label: 'Textarea Field',
     rows: 5,
     fieldNote: 'Longer Field description',
@@ -30,7 +30,11 @@ export const Default: Story = {
   ),
 };
 
-export const UsingChildren: Story = {
+/**
+ * You can specify the content of `TextareaField` by using children. Convenient for cases where
+ * specifying `value` or `defaultValue` is inconvenient.
+ */
+export const WhenUsingChildren: Story = {
   args: {
     children: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
     dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -39,7 +43,10 @@ export const UsingChildren: Story = {
   },
 };
 
-export const WithNoDefaultValue: Story = {
+/**
+ * `TextareaField` does not require any initial content.
+ */
+export const WhenNoDefaultValue: Story = {
   args: {
     defaultValue: undefined,
     fieldNote: undefined,
@@ -72,12 +79,21 @@ export const WhenRequired: Story = {
   },
 };
 
+/**
+ * You can size `TextareaField` by specifying `row` attribute, inherited from
+ * [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
+ */
 export const WithADifferentSize: Story = {
   args: {
     rows: 10,
   },
 };
 
+/**
+ * You can lock the maximum length of the text content of `TextareaField`. When setting `maxLength`,
+ * the field will reuse the browser's [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+ * behavior (e.g., prevent further text from being typed, prevent keydown events, etc.).
+ */
 export const WithAMaxLength: Story = {
   args: {
     rows: 10,
@@ -87,6 +103,11 @@ export const WithAMaxLength: Story = {
   render: (args) => <TextareaField {...args} />,
 };
 
+/**
+ * If you want to signal that a field has reached a maximum length but want to allow more text to be typed, you can use
+ * `recommendedMaxLength`. This will show a similar UI to using `maxLength` but will allow more text to be typed, and
+ * emit any appropriate events.
+ */
 export const WithARecommendedLength: Story = {
   args: {
     rows: 10,
@@ -96,6 +117,10 @@ export const WithARecommendedLength: Story = {
   render: (args) => <TextareaField {...args} />,
 };
 
+/**
+ * Both `maxLength` and `recommendedMaxLength` can be specified at the same time. Text length between `recommendedMaxLength`
+ * and `maxLength` will show the treatment warning the user about the text length being violated.
+ */
 export const WithBothRecommendedAndMaxLengths: Story = {
   args: {
     rows: 10,
