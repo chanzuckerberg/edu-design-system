@@ -16,8 +16,9 @@ export type Variant = (typeof VARIANTS)[number];
 
 type Props = {
   /**
-   * The color variant of the tag. New variants should be supported
-   * in the VARIANTS array and by its separate style in CSS file.
+   * The color variant of the tag. It will update the content colors, background color, and border (when `hasOutline` is set to `true`).
+   *
+   * **Defaults to 'neutral'.**
    */
   variant?: Variant;
   /**
@@ -25,8 +26,7 @@ type Props = {
    */
   className?: string;
   /**
-   * The tag icon (shouldn't provide color or size since those are determined
-   * by the color prop).
+   * The tag icon
    */
   icon?: React.ReactNode;
   /**
@@ -34,7 +34,9 @@ type Props = {
    */
   text?: React.ReactNode;
   /**
-   * Adds an outline for the tag. Defaulted to no outline.
+   * Adds an outline for the tag.
+   *
+   * **Defaults to `false`.**
    */
   hasOutline?: boolean;
 };
@@ -42,7 +44,7 @@ type Props = {
 /**
  * `import {Tag} from "@chanzuckerberg/eds";`
  *
- * This component provides a tag (pill shaped badge) wrapper.
+ * This component provides a tag (pill shaped badge). Can contain text and a left-aligned icon.
  */
 export const Tag = ({
   variant = 'neutral',
@@ -59,6 +61,8 @@ export const Tag = ({
     className,
   );
 
+  // TODO: Text component is receiving the tag styles directly, instead of using a wrapper. De-couple
+  // and remove deprecated usages
   return (
     <Text
       as="span"

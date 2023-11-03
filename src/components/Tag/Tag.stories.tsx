@@ -25,10 +25,14 @@ export default {
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tag>;
+type Story = StoryObj<Args>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const ColorVariants: StoryObj<Args> = {
+/**
+ * `Tag` variants correspond to named use cases. Each variant defines a text color, background/surface color, and potential outline color.
+ */
+export const Variants: Story = {
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
@@ -46,7 +50,10 @@ export const ColorVariants: StoryObj<Args> = {
   ),
 };
 
-export const OutlineVariants: StoryObj<Args> = {
+/**
+ * `Tag` can have an outside border, which corresponds to the variant selected. When false, the border will be set to match the background color.
+ */
+export const OutlineVariants: Story = {
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
@@ -64,7 +71,10 @@ export const OutlineVariants: StoryObj<Args> = {
   ),
 };
 
-export const WithIcon: StoryObj<Args> = {
+/**
+ * Icons can be added to the left side of the text in the tag.
+ */
+export const WithIcon: Story = {
   ...Default,
   args: {
     icon: <Icon name="favorite" purpose="decorative" />,
@@ -86,7 +96,10 @@ export const WithIcon: StoryObj<Args> = {
   ),
 };
 
-export const WithLongTextAndIcon: StoryObj<Args> = {
+/**
+ * `Tag` can support lengthy text, but should be kept as brief as possible.
+ */
+export const WithLongTextAndIcon: Story = {
   ...Default,
   args: {
     text: 'This tag has a really long text message',
