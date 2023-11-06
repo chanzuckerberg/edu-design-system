@@ -2637,7 +2637,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.14"
     "@types/react-portal": "npm:^4.0.5"
     axe-core: "npm:4.8.2"
-    chromatic: "npm:^6.24.1"
+    chromatic: "npm:^7.6.0"
     clsx: "npm:^1.2.1"
     codecov: "npm:^3.8.3"
     copyfiles: "npm:^2.4.1"
@@ -8827,14 +8827,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^6.24.1":
-  version: 6.24.1
-  resolution: "chromatic@npm:6.24.1"
+"chromatic@npm:^7.6.0":
+  version: 7.6.0
+  resolution: "chromatic@npm:7.6.0"
   bin:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 5ea62aac2c2d2795a010975af75bf6f2006622d4f9abd9e0a0973079aee2a0e4ee525d7c778b52ee216c2e90acb53e550f487dbefb3f72cb77d6669fffff2260
+  checksum: e7e900bd34ad0b1b8fe3b85f105ae24acf757ef206eb332e57eea1ced7a5377bd53440b3514d6763c3bc63340c3ad5fc6fa5bb6b69f683d25568504f1b31ee86
   languageName: node
   linkType: hard
 
