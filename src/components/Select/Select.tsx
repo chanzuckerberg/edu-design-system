@@ -200,6 +200,7 @@ export function Select(props: SelectProps) {
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
+    name,
     ...other,
   };
 

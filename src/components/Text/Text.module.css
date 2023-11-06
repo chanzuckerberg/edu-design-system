@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * Sizes
+ * Sizes - deprecated in favor of using the full set of typography tokens
  */
 .text--body,
 .text--md {
@@ -18,22 +18,13 @@
 .text--xs {
   font: var(--eds-theme-typography-body-xs);
 }
-.text--caption, .text--caption-md {
+.text--caption,
+.text--caption-md {
   font: var(--eds-theme-typography-caption-md);
-}
-.text--caption-lg {
-  font: var(--eds-theme-typography-caption-lg);
-}
-.text--overline {
-  font: var(--eds-theme-typography-overline);
-  text-transform: uppercase;
-}
-.text--callout {
-  font: var(--eds-theme-typography-callout);
 }
 
 /**
- * Variant
+ * Variant - deprecated in favor of using the tokens/utility classes for color
  */
 .text--error {
   color: var(--eds-theme-color-text-utility-error);
@@ -68,11 +59,204 @@
 }
 
 /**
- * Weights
+ * Weights - deprecated in favor of using the full set of typography tokens
  */
 .text--normal-weight {
   font-weight: var(--eds-font-weight-light);
 }
 .text--bold-weight {
   font-weight: var(--eds-font-weight-bold);
+}
+
+/**
+ * Map the component preset names to the defined typography tokens
+ *
+ * TODO: This should always match the generated tokens so find a
+ * way to generate this.
+ */
+.text--headline-lg {
+  font: var(--eds-theme-typography-headline-lg);
+}
+.text--headline-lg-bold {
+  font: var(--eds-theme-typography-headline-lg-bold);
+}
+.text--headline-lg-bold-mobile {
+  font: var(--eds-theme-typography-headline-lg-bold-mobile);
+}
+.text--headline-lg-mobile {
+  font: var(--eds-theme-typography-headline-lg-mobile);
+}
+.text--headline-md {
+  font: var(--eds-theme-typography-headline-md);
+}
+.text--headline-md-bold {
+  font: var(--eds-theme-typography-headline-md-bold);
+}
+.text--headline-md-bold-mobile {
+  font: var(--eds-theme-typography-headline-md-bold-mobile);
+}
+.text--headline-md-mobile {
+  font: var(--eds-theme-typography-headline-md-mobile);
+}
+.text--headline-sm {
+  font: var(--eds-theme-typography-headline-sm);
+}
+.text--headline-sm-bold {
+  font: var(--eds-theme-typography-headline-sm-bold);
+}
+.text--headline-sm-bold-mobile {
+  font: var(--eds-theme-typography-headline-sm-bold-mobile);
+}
+.text--headline-sm-mobile {
+  font: var(--eds-theme-typography-headline-sm-mobile);
+}
+.text--headline-secondary-lg {
+  font: var(--eds-theme-typography-headline-secondary-lg);
+}
+.text--headline-secondary-lg-bold {
+  font: var(--eds-theme-typography-headline-secondary-lg-bold);
+}
+.text--headline-secondary-md {
+  font: var(--eds-theme-typography-headline-secondary-md);
+}
+.text--headline-secondary-md-bold {
+  font: var(--eds-theme-typography-headline-secondary-md-bold);
+}
+.text--headline-secondary-sm {
+  font: var(--eds-theme-typography-headline-secondary-sm);
+}
+.text--headline-secondary-sm-bold {
+  font: var(--eds-theme-typography-headline-secondary-sm-bold);
+}
+.text--title-lg {
+  font: var(--eds-theme-typography-title-lg);
+}
+.text--title-lg-bold {
+  font: var(--eds-theme-typography-title-lg-bold);
+}
+.text--title-md {
+  font: var(--eds-theme-typography-title-md);
+}
+.text--title-md-bold {
+  font: var(--eds-theme-typography-title-md-bold);
+}
+.text--title-sm {
+  font: var(--eds-theme-typography-title-sm);
+}
+.text--title-sm-bold {
+  font: var(--eds-theme-typography-title-sm-bold);
+}
+.text--title-xs {
+  font: var(--eds-theme-typography-title-xs);
+}
+.text--title-xs-bold {
+  font: var(--eds-theme-typography-title-xs-bold);
+}
+.text--label-lg-subtle {
+  font: var(--eds-theme-typography-label-lg-subtle);
+}
+.text--label-md {
+  font: var(--eds-theme-typography-label-md);
+}
+.text--label-md-subtle {
+  font: var(--eds-theme-typography-label-md-subtle);
+}
+.text--label-sm {
+  font: var(--eds-theme-typography-label-sm);
+}
+.text--body-xl {
+  font: var(--eds-theme-typography-body-xl);
+}
+.text--body-lg {
+  font: var(--eds-theme-typography-body-lg);
+}
+.text--body-md {
+  font: var(--eds-theme-typography-body-md);
+}
+.text--body-sm {
+  font: var(--eds-theme-typography-body-sm);
+}
+.text--body-xs {
+  font: var(--eds-theme-typography-body-xs);
+}
+.text--caption-lg {
+  font: var(--eds-theme-typography-caption-lg);
+}
+.text--caption-lg-bold {
+  font: var(--eds-theme-typography-caption-lg-bold);
+}
+.text--caption-md {
+  font: var(--eds-theme-typography-caption-md);
+}
+.text--caption-md-bold {
+  font: var(--eds-theme-typography-caption-md-bold);
+}
+.text--caption-sm {
+  font: var(--eds-theme-typography-caption-sm);
+}
+.text--caption-sm-bold {
+  font: var(--eds-theme-typography-caption-sm-bold);
+}
+.text--overline {
+  font: var(--eds-theme-typography-overline);
+  text-transform: uppercase;
+}
+.text--overline-md {
+  font: var(--eds-theme-typography-overline-md);
+  text-transform: uppercase;
+}
+.text--overline-sm {
+  font: var(--eds-theme-typography-overline-sm);
+  text-transform: uppercase;
+}
+.text--callout {
+  font: var(--eds-theme-typography-callout);
+}
+.text--breadcrumb {
+  font: var(--eds-theme-typography-breadcrumb);
+}
+.text--button-lg {
+  font: var(--eds-theme-typography-button-lg);
+}
+.text--button-md {
+  font: var(--eds-theme-typography-button-md);
+}
+.text--button-label {
+  font: var(--eds-theme-typography-button-label);
+}
+.text--button-label-sm {
+  font: var(--eds-theme-typography-button-label-sm);
+}
+.text--form-label {
+  font: var(--eds-theme-typography-form-label);
+}
+.text--form-input {
+  font: var(--eds-theme-typography-form-input);
+}
+.text--link-lg {
+  font: var(--eds-theme-typography-link-lg);
+}
+.text--link-md {
+  font: var(--eds-theme-typography-link-md);
+}
+.text--link-sm {
+  font: var(--eds-theme-typography-link-sm);
+}
+.text--link-xs {
+  font: var(--eds-theme-typography-link-xs);
+}
+.text--tab-lg {
+  font: var(--eds-theme-typography-tab-lg);
+}
+.text--tab-lg-active {
+  font: var(--eds-theme-typography-tab-lg-active);
+}
+.text--tab-sm {
+  font: var(--eds-theme-typography-tab-sm);
+}
+.text--tab-sm-active {
+  font: var(--eds-theme-typography-tab-sm-active);
+}
+.text--tag {
+  font: var(--eds-theme-typography-tag);
 }

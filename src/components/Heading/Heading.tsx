@@ -1,7 +1,11 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
+import type { Preset } from '../../util/variant-types';
 import styles from './Heading.module.css';
 
+/**
+ * @deprecated
+ */
 export const VARIANTS = [
   'inherit',
   'neutral-subtle',
@@ -16,14 +20,17 @@ export const VARIANTS = [
    * @deprecated Info variant is deprecated.
    */ 'info',
 ] as const;
+
+/**
+ * @deprecated
+ */
 export type Variant = (typeof VARIANTS)[number];
-export type HeadingElement =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | /** @deprecated */ 'h6';
+
+export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+/**
+ * @deprecated
+ */
 export type TokenSize =
   | 'headline-lg'
   | 'headline-md'
@@ -33,11 +40,18 @@ export type TokenSize =
   | 'body-sm'
   | 'body-xs'
   | 'title-xs';
+
+/**
+ * @deprecated
+ */
 export type HeadingSize = HeadingElement | TokenSize | /** @deprecated */ 'h7';
 
 // For now, "h1"-"h6" sizes point to the old type ramp, while
 // "headline-*" and "title-*" sizes point to the new type ramp.
 // These will be brought in sync with the next major release.
+/**
+ * @deprecated
+ */
 const TOKEN_TO_SIZE: Record<HeadingSize, HeadingElement> = {
   'headline-lg': 'h1',
   'headline-md': 'h2',
@@ -56,7 +70,7 @@ const TOKEN_TO_SIZE: Record<HeadingSize, HeadingElement> = {
   h7: 'h6',
 };
 
-type Props = {
+type HeadingProps = {
   /**
    * This prop can be used to specify which size heading should
    * actually be rendered, in the case that you want to render an element
@@ -67,8 +81,21 @@ type Props = {
   as?: HeadingElement;
   children: React.ReactNode;
   className?: string;
-  size: HeadingSize;
   tabIndex?: number;
+  /**
+   * Prop to set the desired typography value used in design. Acceptable values
+   * match those used across the design system.
+   */
+  preset?: Preset;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
+  size: HeadingSize;
+  /**
+   * This prop is **deprecated**.
+   * @deprecated
+   */
   variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
@@ -85,14 +112,15 @@ export const Heading = forwardRef(
       as,
       children,
       className,
-      variant,
+      preset,
       size,
+      variant,
       /**
-       * Components that wrap typography sometimes require props such as
+       * Components that wrap typography sometimes require properties such as
        * event handlers, tabIndex, etc. and/or other native heading element
        * attributes to be passed down into the element.
        */ ...other
-    }: Props,
+    }: HeadingProps,
     ref: React.ForwardedRef<HTMLHeadingElement>,
   ) => {
     if (process.env.NODE_ENV !== 'production') {
@@ -101,7 +129,7 @@ export const Heading = forwardRef(
           'Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.',
         );
       }
-      if (size === 'h6' || size === 'h7') {
+      if (size === 'h7') {
         console.warn(
           `The ${size} size is deprecated and will be removed in an upcoming release.\n`,
           'Please bump this heading up to a larger size if possible.',
@@ -112,8 +140,9 @@ export const Heading = forwardRef(
     const TagName = as || TOKEN_TO_SIZE[size];
     const componentClassName = clsx(
       styles['heading'],
-      styles[`heading--size-${size}`],
-      variant && styles[`heading--${variant}`],
+      preset && styles[`heading--${preset}`],
+      !preset && size && styles[`heading--size-${size}`],
+      !preset && variant && styles[`heading--${variant}`],
       className,
     );
     return (

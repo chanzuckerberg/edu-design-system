@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.6.1...v13.7.0) (2023-11-06)
+
+
+### Features
+
+* **Heading:** add preset typography prop and values ([5732144](https://github.com/chanzuckerberg/edu-design-system/commit/57321449504e0bedded8affc93d5f127fcb3807c))
+* **Text:** add preset typography prop ([4422e8e](https://github.com/chanzuckerberg/edu-design-system/commit/4422e8eaf0b3460ef78f8342642581e9a6a24401))
+
+
+### Bug Fixes
+
+* **Select:** ensure name prop gets to Listbox ([#1795](https://github.com/chanzuckerberg/edu-design-system/issues/1795)) ([a7eae60](https://github.com/chanzuckerberg/edu-design-system/commit/a7eae60dbee1a1057e7240bf592a5f9086e949c9))
+
 ### [13.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.6.0...v13.6.1) (2023-10-23)
 
 

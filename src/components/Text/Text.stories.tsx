@@ -1,10 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import clsx from 'clsx';
 import React from 'react';
 
 import { Text } from './Text';
-import type { Variant } from './Text';
-import styles from './Text.stories.module.css';
 
 export default {
   title: 'Components/Text',
@@ -19,170 +16,115 @@ export default {
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          margin: '0.25rem',
-        }}
-      >
-        {Story()}
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-1">{Story()}</div>],
 } as Meta<Args>;
 
-const variants = [
-  'inherit',
-  'neutral-subtle',
-  'neutral-medium',
-  'neutral-strong',
-  'brand',
-  'success',
-  'warning',
-  'error',
-  'white',
-];
-
 type Args = React.ComponentProps<typeof Text>;
+type Story = StoryObj<Args>;
 
-export const Body: StoryObj<Args> = {
+export const Default: Story = {
   args: {
-    children: 'Body paragraph',
+    children: 'Default <Text /> rendering',
   },
 };
 
-export const BodyLarge: StoryObj<Args> = {
+export const BodyXLarge: Story = {
   args: {
-    size: 'lg',
+    preset: 'body-xl',
+    children: 'Body extra-large',
+  },
+};
+
+export const BodyLarge: Story = {
+  args: {
+    preset: 'body-lg',
     children: 'Body large',
   },
 };
 
-export const BodyMedium: StoryObj<Args> = {
+export const BodyMedium: Story = {
   args: {
-    size: 'md',
+    preset: 'body-md',
     children: 'Body medium',
   },
 };
-export const BodySmall: StoryObj<Args> = {
+export const BodySmall: Story = {
   args: {
-    size: 'sm',
+    preset: 'body-sm',
     children: 'Body small',
   },
 };
 
-export const BodyXSmall: StoryObj<Args> = {
+export const BodyXSmall: Story = {
   args: {
-    size: 'xs',
+    preset: 'body-xs',
     children: 'Body Xsmall',
   },
 };
 
-export const Caption: StoryObj<Args> = {
+export const Caption: Story = {
   args: {
-    size: 'caption',
+    preset: 'caption-md',
     children: 'Caption',
   },
 };
 
-export const Overline: StoryObj<Args> = {
+export const Overline: Story = {
   args: {
-    size: 'overline',
+    preset: 'overline',
     children: 'Overline',
   },
 };
 
-export const Callout: StoryObj<Args> = {
+export const Callout: Story = {
   args: {
-    size: 'callout',
+    preset: 'callout',
     children: 'Callout',
   },
 };
 
-export const OverridingFontFamily: StoryObj<Args> = {
+export const OverridingFontFamily: Story = {
   args: {
-    size: 'md',
+    preset: 'body-md',
     children:
-      'You can use tailwind to override the font family used for a given size',
+      'You can use utility classes to override the font family used for a given size',
     className: '!font-secondary',
   },
 };
 
 /**
- * Used mainly for visual regression testing and to show the different color options available.
+ * Here we demonstrate how to use utility classes to augment the text.
+ * Note that when present, `preset` will override the deprecated props.
  */
-export const Variants: StoryObj<Args> = {
-  render: () => {
-    const Item = ({
-      className,
-      children,
-    }: {
-      className?: string;
-      children: React.ReactElement;
-    }) => (
-      <div className={clsx(styles['variant__item'], className)}>{children}</div>
-    );
-    return (
-      <div className={styles['variant__table']}>
-        {variants.map((variant) => (
-          <>
-            <Item
-              className={styles['variant__item-white']}
-              key={`${variant}-white`}
-            >
-              <Text size="lg" variant={variant as Variant}>
-                {variant}
-              </Text>
-            </Item>
-            <Item className={styles['variant__item-light']} key={`${variant}`}>
-              <Text size="lg" variant={variant as Variant}>
-                {variant}
-              </Text>
-            </Item>
-            <Item
-              className={styles['variant__item-dark']}
-              key={`${variant}-dark`}
-            >
-              <Text size="lg" variant={variant as Variant}>
-                {variant}
-              </Text>
-            </Item>
-          </>
-        ))}
-      </div>
-    );
-  },
-  parameters: {
-    axe: {
-      skip: true,
-    },
-    /**
-     * Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
-     */
-    snapshot: {
-      skip: true,
-    },
-  },
-};
-
-export const BodyVariantSuccessBold: StoryObj<Args> = {
-  args: {
-    children: 'Success variant body text, bold',
-    variant: 'success',
-    weight: 'bold',
-  },
-};
-
-export const TextVariantInherit: StoryObj<Args> = {
+export const UsingColorTokens: Story = {
   render: (args) => (
-    <Text size="body" variant="error">
-      This text surrounds the <Text as="span" {...args} /> and shows it should
-      inherit variant from the parent
-    </Text>
+    <div>
+      <Text {...args} className="text-utility-warning" preset="body-xl">
+        using <code>text-utility-warning</code> utility class
+      </Text>
+      <Text
+        {...args}
+        className="text-utility-success"
+        preset="body-lg"
+        weight="bold"
+      >
+        using <code>text-utility-success</code> utility class
+      </Text>
+      <Text
+        {...args}
+        className="text-utility-error"
+        preset="body-md"
+        variant="white"
+      >
+        using <code>text-utility-error</code> utility class
+      </Text>
+      <Text
+        preset="body-sm"
+        size="callout"
+        style={{ color: 'var(--eds-theme-color-text-utility-success)' }}
+      >
+        using inline color
+      </Text>
+    </div>
   ),
-  args: {
-    children: 'Child Text',
-    variant: 'inherit',
-  },
 };
