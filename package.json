@@ -92,7 +92,7 @@
     "@popperjs/core": "^2.11.8",
     "@tippyjs/react": "^4.2.6",
     "@types/lodash": "^4.14.200",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "graphemer": "^1.4.0",
     "lilconfig": "^2.1.0",
     "lodash": "^4.17.21",
