@@ -2632,7 +2632,7 @@ __metadata:
     "@tippyjs/react": "npm:^4.2.6"
     "@types/jest": "npm:^29.5.7"
     "@types/lodash": "npm:^4.14.200"
-    "@types/node": "npm:^18.18.8"
+    "@types/node": "npm:^20.8.10"
     "@types/react": "npm:^18.2.34"
     "@types/react-beautiful-dnd": "npm:^13.1.6"
     "@types/react-dom": "npm:^18.2.14"
@@ -6774,12 +6774,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.18.8":
-  version: 18.18.8
-  resolution: "@types/node@npm:18.18.8"
+"@types/node@npm:^20.8.10":
+  version: 20.8.10
+  resolution: "@types/node@npm:20.8.10"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 25346cda374c3bb630a9055cf8b7dd49729d53502b81ba647336f459c751f66c73ae9ba755a63d7bd05b07afa2c90b5627af985998ef5cdb0bafb2db5ec7b520
+  checksum: 8930039077c8ad74de74c724909412bea8110c3f8892bcef8dda3e9629073bed65632ee755f94b252bcdae8ca71cf83e89a4a440a105e2b1b7c9797b43483049
   languageName: node
   linkType: hard
 
