@@ -2656,7 +2656,6 @@ __metadata:
     lilconfig: "npm:^2.1.0"
     lint-staged: "npm:^13.3.0"
     lodash: "npm:^4.17.21"
-    pascal-case: "npm:^3.1.2"
     plop: "npm:^3.1.2"
     postcss: "npm:^8.4.31"
     postcss-cli: "npm:^10.1.0"

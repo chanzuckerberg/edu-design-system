@@ -1,5 +1,4 @@
-const pascalCase = require('pascal-case');
-const { snakeCase } = require('snake-case');
+const { snakeCase } = require('lodash');
 
 module.exports = (plop) => {
   plop.setHelper('spacedUpperCase', (txt) =>
@@ -8,7 +7,7 @@ module.exports = (plop) => {
 
   // This helper allows us to place a variable inside curly braces without spaces
   // between the text and the braces.
-  plop.setHelper('inBraces', (txt) => `{${pascalCase.pascalCase(txt)}}`);
+  plop.setHelper('inBraces', (txt) => `{${txt}}`);
 
   plop.setGenerator('component', {
     description: 'Create a reusable component',
