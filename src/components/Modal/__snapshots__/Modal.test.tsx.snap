@@ -142,7 +142,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-:r2:"
   aria-modal="true"
-  class="modal"
+  class="modal modal__transition--enterTo"
   data-headlessui-state="open"
   id="headlessui-dialog-:r0:"
   role="dialog"
@@ -838,7 +838,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-:r8:"
   aria-modal="true"
-  class="modal"
+  class="modal modal__transition--enterTo"
   data-headlessui-state="open"
   id="headlessui-dialog-:r6:"
   role="dialog"
@@ -935,7 +935,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-:rb:"
   aria-modal="true"
-  class="modal"
+  class="modal modal__transition--enterTo"
   data-headlessui-state="open"
   id="headlessui-dialog-:r9:"
   role="dialog"
@@ -1218,7 +1218,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-:r5:"
   aria-modal="true"
-  class="modal"
+  class="modal modal__transition--enterTo"
   data-headlessui-state="open"
   id="headlessui-dialog-:r3:"
   role="dialog"
@@ -1277,7 +1277,7 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
 <div
   aria-label="The Modal Amazing Modal You've Ever Seen"
   aria-modal="true"
-  class="modal"
+  class="modal modal__transition--enterTo"
   data-headlessui-state="open"
   id="headlessui-dialog-:rc:"
   role="dialog"
