@@ -3,7 +3,7 @@ import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 import styles from './Card.module.css';
 
-export interface Props extends HTMLAttributes<HTMLElement> {
+export interface CardProps extends HTMLAttributes<HTMLElement> {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -17,10 +17,14 @@ export interface Props extends HTMLAttributes<HTMLElement> {
    * - **none** renders the card with no elevation (no box-shadow applied)
    * - **raised** renders the card that is raised off of the canvas (box-shadow applied)
    * - **dragging** renders the card that is raised even further off the canvas (during drag)
+   *
+   * **Default is `'none'`.**
    */
   elevation?: 'none' | 'raised' | 'dragging';
   /**
-   * Property to apply a "dragging" elevation. Used when card is under drag
+   * Property to apply a "dragging" elevation. Can be use while card is in a moving state.
+   *
+   * **Default is `'false'`.**
    */
   isDragging?: boolean;
   /**
@@ -28,6 +32,9 @@ export interface Props extends HTMLAttributes<HTMLElement> {
    * - **vertical** renders the header, body, and footer in a columnar fashion (default)
    * - **horizontal** renders the header, body, and footer in a horizontal fashion
    * where the body is required but the header and footer are not
+   *
+   * **Default is `'vertical'`.**
+   * @deprecated
    */
   orientation?: 'vertical' | 'horizontal';
 }
@@ -47,7 +54,7 @@ export interface CardSubComponentProps {
  * `import {Card} from "@chanzuckerberg/eds";`
  *
  * Card component is the outer wrapper for the block that typically contains a title, image,
- *    text, and/or calls to action.
+ * text, and/or calls to action.
  */
 export const Card = ({
   className,
@@ -56,7 +63,7 @@ export const Card = ({
   isDragging = false,
   orientation = 'vertical',
   ...other
-}: Props) => {
+}: CardProps) => {
   const componentClassName = clsx(
     styles['card'],
     orientation === 'horizontal' && styles['card--horizontal'],

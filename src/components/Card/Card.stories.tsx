@@ -4,15 +4,9 @@ import React, { useState } from 'react';
 
 import { Card } from './Card';
 import { Avatar } from '../Avatar/Avatar';
-import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
 import { Hr } from '../Hr/Hr';
-import { InlineNotification } from '../InlineNotification/InlineNotification';
 import { Skeleton } from '../Skeleton/Skeleton';
 import { Text } from '../Text/Text';
-
-import buttonActionCalloutStyles from './ButtonActionCalloutCard.module.css';
-import cardWithNotificationStyles from './CardWithNotification.module.css';
 
 export default {
   title: 'Components/Card',
@@ -63,82 +57,29 @@ export const Horizontal: StoryObj<Args> = {
   },
 };
 
+/**
+ * Shows `Card` with `elevation` set to `'raised'`
+ */
 export const Raised: StoryObj<Args> = {
   args: {
     elevation: 'raised',
   },
 };
 
+/**
+ * Shows `Card` with `elevation` set to `'dragging'`
+ */
 export const Dragging: StoryObj<Args> = {
   args: {
     elevation: 'dragging',
   },
 };
 
-export const ButtonActionCalloutCard: StoryObj<Args> = {
-  args: {
-    elevation: 'raised',
-  },
-  parameters: {
-    badges: ['1.0', 'implementationExample'],
-  },
-  render: (args) => (
-    <Card
-      className={buttonActionCalloutStyles['button-action-callout-card']}
-      {...args}
-    >
-      <Card.Body>
-        <Heading as="h3" size="h5">
-          Do This Checkpoint
-        </Heading>
-        <div
-          className={
-            buttonActionCalloutStyles['button-action-callout-card__body-inner']
-          }
-        >
-          Develop the text of your Body Book, crafting evidence-supported
-          explanations on how the body is organized and its functions.
-          <div>
-            <Button variant="primary">Preview</Button>
-          </div>
-        </div>
-      </Card.Body>
-    </Card>
-  ),
-};
-
-export const CardWithNotification: StoryObj<Args> = {
-  args: {
-    elevation: 'raised',
-  },
-  parameters: {
-    badges: ['1.0', 'implementationExample'],
-  },
-  render: (args) => (
-    <div className={cardWithNotificationStyles['card-with-notification']}>
-      <Card
-        className={cardWithNotificationStyles['card-with-notification__card']}
-        {...args}
-      >
-        <Card.Header>
-          <div className="fpo">Card Header</div>
-        </Card.Header>
-        <Card.Body>
-          <div className="fpo">Card Body</div>
-        </Card.Body>
-        <Card.Footer>
-          <div className="fpo">Card Footer</div>
-        </Card.Footer>
-      </Card>
-      <InlineNotification
-        isFullWidth
-        text="Lorem ipsum dolor sit amet"
-        variant="success"
-      />
-    </div>
-  ),
-};
-
+/**
+ * This implementation example shows how you might use `Skeleton` to implement a loading state
+ * for a recipe-like Profile card. Initially, the component would use the `Skeleton` instances,
+ * and once the data is fetched, replace those with the actual contents.
+ */
 export const LoadingProfileCard: StoryObj<Args> = {
   args: {
     isLoading: true,
@@ -238,12 +179,13 @@ const InteractiveCard = () => {
   );
 };
 
+/**
+ * You can implement appearance changes using `elevation`. In this implementation example,
+ * we show how to build the basics of a drag/hover behavior using react state, `isDragging`, and `elevation`.
+ *
+ * To `Card`, we add handlers on `onMouseDown`, `onMouseEnter`, `onMouseLeave`, and `onMouseUp`.
+ */
 export const InteractiveOnHover: StoryObj<Args> = {
-  render: (args) => <InteractiveCard {...args} />,
-};
-
-// Add visual regression test simulating hover
-export const StaticOnHover: StoryObj<Args> = {
   render: (args) => <InteractiveCard {...args} />,
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
