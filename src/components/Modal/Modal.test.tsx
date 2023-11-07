@@ -1,4 +1,4 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { generateSnapshots, wait } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen, waitFor } from '@testing-library/react';
@@ -28,6 +28,10 @@ describe('Modal', () => {
       });
       await user.click(openModalButton);
       const modal = await screen.findByRole('dialog');
+
+      // Give Headless UI's transition/style classes time to settle.
+      await wait(50);
+
       return modal;
     },
   });
