@@ -1,47 +1,35 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
+// Implementation examples, separated out int separate files
 import { Filters } from './Filters';
 import { StackedCardsToTable } from './StackedCardsToTable';
+
 import { Table, type SortDirectionsType } from './Table';
 import { chromaticViewports } from '../../../src/util/viewports';
-
-import styles from './Table.stories.module.css';
 
 export default {
   title: 'Components/Table',
   component: Table,
-  subcomponents: {
-    'Table.Body': Table.Body,
-    'Table.Caption': Table.Caption,
-    'Table.Cell': Table.Cell,
-    'Table.Header': Table.Header,
-    'Table.Row': Table.Row,
-  },
   parameters: {
     badges: ['1.1'],
   },
   argTypes: {
     children: {
+      description:
+        'Contains the sub-components for a table, including `.Body`, `.Cell`, `.Header`, `.Footer`, `.HeaderCell`, `.Row`, and `.Caption`',
       control: {
         type: null,
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          backgroundColor: 'white',
-        }}
-      >
-        {Story()}
-      </div>
-    ),
-  ],
+  backgrounds: {
+    default: 'eds-color-neutral-white',
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Table>;
+type Story = StoryObj<Args>;
 
 const tableColumns = [
   {
@@ -92,7 +80,13 @@ const tableRows = [
   },
 ];
 
-export const Default: StoryObj<Args> = {
+/**
+ * The basic structure of this component is defined here, and each cell can receive classes that
+ * can augment layout, alignment, or other properties of the content.
+ *
+ * Use `Text` to update any typographical details, which will apply tokens to the content.
+ */
+export const Default: Story = {
   args: {
     children: (
       <>
@@ -126,7 +120,11 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const TableWithCaption: StoryObj<Args> = {
+/**
+ * Captions can be inserted into the body of the table, which will render content
+ * above the table headers and content.
+ */
+export const TableWithCaption: Story = {
   args: {
     children: (
       <>
@@ -164,122 +162,14 @@ export const TableWithCaption: StoryObj<Args> = {
     ),
   },
 };
-export const ZebraHover: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Table.Header>
-          <Table.Row className={styles['table__row--zebra']} variant="header">
-            {tableColumns.map((item) => {
-              return (
-                <Table.HeaderCell key={'table-header-row-' + item.title}>
-                  {item.title}
-                </Table.HeaderCell>
-              );
-            })}
-          </Table.Row>
-        </Table.Header>
 
-        <Table.Body>
-          {tableRows.map((item) => {
-            return (
-              <Table.Row
-                className={styles['table__row--zebra']}
-                key={item.value1.slice(0, 11)}
-              >
-                <Table.Cell>{item.value1}</Table.Cell>
-                <Table.Cell>{item.value2}</Table.Cell>
-                <Table.Cell>{item.value3}</Table.Cell>
-                <Table.Cell>{item.value4}</Table.Cell>
-                <Table.Cell>{item.value5}</Table.Cell>
-              </Table.Row>
-            );
-          })}
-        </Table.Body>
-      </>
-    ),
-  },
-  parameters: {
-    // No hover functionality on chromatic, no need to snap.
-    chromatic: { disableSnapshot: true },
-  },
-};
-
-export const AlignTableCellContentCenter: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Table.Header>
-          <Table.Row variant="header">
-            {tableColumns.map(function (item) {
-              return (
-                <Table.HeaderCell
-                  className="text-center"
-                  key={'table-cell-' + item.title}
-                >
-                  {item.title}
-                </Table.HeaderCell>
-              );
-            })}
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-          {tableRows.map(function (item) {
-            return (
-              <Table.Row key={item.value1.slice(0, 11)}>
-                <Table.Cell>{item.value1}</Table.Cell>
-                <Table.Cell>{item.value2}</Table.Cell>
-                <Table.Cell>{item.value3}</Table.Cell>
-                <Table.Cell>{item.value4}</Table.Cell>
-                <Table.Cell>{item.value5}</Table.Cell>
-              </Table.Row>
-            );
-          })}
-        </Table.Body>
-      </>
-    ),
-  },
-};
-
-export const AlignTableCellContentRight: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Table.Header>
-          <Table.Row variant="header">
-            {tableColumns.map(function (item) {
-              return (
-                <Table.HeaderCell
-                  className="text-right"
-                  key={'table-cell-' + item.title}
-                >
-                  {item.title}
-                </Table.HeaderCell>
-              );
-            })}
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-          {tableRows.map(function (item, index) {
-            return (
-              <Table.Row key={item.value1.slice(0, 11)}>
-                <Table.Cell>{item.value1}</Table.Cell>
-                <Table.Cell>{item.value2}</Table.Cell>
-                <Table.Cell>{item.value3}</Table.Cell>
-                <Table.Cell>{item.value4}</Table.Cell>
-                <Table.Cell>{item.value5}</Table.Cell>
-              </Table.Row>
-            );
-          })}
-        </Table.Body>
-      </>
-    ),
-  },
-};
-
-export const SortableInteractive: StoryObj<Args> = {
+/**
+ * This implementation example shows how one might implement sort. Sort can be implemented to work based
+ * on the current content (if the full table is already rendered), or using request results from the server
+ * if the table needs to contain any additional logic to sort (e.g., sorting needs to fetch different search
+ * result pages).
+ */
+export const SortableInteractive: Story = {
   parameters: {
     docs: {
       source: {
@@ -358,14 +248,24 @@ export const SortableInteractive: StoryObj<Args> = {
   },
 };
 
-export const FiltersInteractive: StoryObj<Args> = {
+/**
+ * Filtering can be implemented such that results only show some content of the table.
+ *
+ * Code: https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Table/Filters.tsx
+ */
+export const FiltersInteractive: Story = {
   parameters: {
     badges: ['1.1', 'implementationExample'],
   },
-  render: () => <Filters />,
+  render: (args) => <Filters {...args} />,
 };
 
-export const StackedCardsExample: StoryObj<Args> = {
+/**
+ * Responsive behavior can be built by combining different components and responsive logic
+ *
+ * Code: https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Table/StackedCardsToTable.tsx
+ */
+export const StackedCardsExample: Story = {
   parameters: {
     badges: ['1.1', 'implementationExample'],
     chromatic: {
@@ -376,5 +276,5 @@ export const StackedCardsExample: StoryObj<Args> = {
       ],
     },
   },
-  render: () => <StackedCardsToTable />,
+  render: (args) => <StackedCardsToTable {...args} />,
 };

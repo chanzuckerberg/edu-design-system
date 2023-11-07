@@ -288,7 +288,9 @@ export const TableRow = ({
 };
 
 /**
- * HTML table component.
+ * `import {Table} from "@chanzuckerberg/eds";`
+ *
+ * HTML table component. Allows for the structure and layout of a standard HTML table, with styles to support theming.
  */
 export const Table = ({ children, className, ...other }: TableProps) => {
   const componentClassName = clsx(styles['table'], className);
