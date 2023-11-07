@@ -2614,7 +2614,6 @@ __metadata:
     "@popperjs/core": "npm:^2.11.8"
     "@rollup/plugin-node-resolve": "npm:^15.2.3"
     "@rollup/plugin-typescript": "npm:^11.1.5"
-    "@size-limit/file": "npm:^8.2.6"
     "@storybook/addon-a11y": "npm:^7.5.2"
     "@storybook/addon-docs": "npm:^7.5.2"
     "@storybook/addon-essentials": "npm:^7.5.2"
@@ -2675,7 +2674,6 @@ __metadata:
     react-uid: "npm:^2.3.3"
     rollup: "npm:^3.29.4"
     rollup-plugin-postcss: "npm:^4.0.2"
-    size-limit: "npm:^8.2.6"
     snake-case: "npm:^3.0.4"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^7.5.2"
@@ -4769,17 +4767,6 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^2.0.0"
   checksum: f7b47a290426d545894774c946c39877de6d6b3645e46d7d4dc99b9fc869c513791fb5be2496e877472fa630df0b61fc05b12a150bbdca606651a41ec3d5da2d
-  languageName: node
-  linkType: hard
-
-"@size-limit/file@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "@size-limit/file@npm:8.2.6"
-  dependencies:
-    semver: "npm:7.5.3"
-  peerDependencies:
-    size-limit: 8.2.6
-  checksum: bfff3d28e21752eabb64b94bb1d5741fe0293a1a639e6c027051a1e839b4cb67a14fa9d3d4c01ffee69eeb7fdfafbf94f8f08647363e9c2370fdfed785e2b099
   languageName: node
   linkType: hard
 
@@ -8463,13 +8450,6 @@ __metadata:
   version: 3.3.0
   resolution: "builtin-modules@npm:3.3.0"
   checksum: 62e063ab40c0c1efccbfa9ffa31873e4f9d57408cb396a2649981a0ecbce56aabc93c28feaccbc5658c95aab2703ad1d11980e62ec2e5e72637404e1eb60f39e
-  languageName: node
-  linkType: hard
-
-"bytes-iec@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "bytes-iec@npm:3.1.1"
-  checksum: 2f89d1dbb058b1bc8a9284658b6c779ffe16127f93f3647b749723660c989a38ac87bad065cc874d380f05b566c95153348f416e6a08985625812512d01e689f
   languageName: node
   linkType: hard
 
@@ -16175,15 +16155,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanospinner@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "nanospinner@npm:1.1.0"
-  dependencies:
-    picocolors: "npm:^1.0.0"
-  checksum: a775e8266df12e6d78e992f4c47c14b50d647f0b636ffaafc32d4005e13b9182327f7cbecca8236134bba592ad46d8b4081686821351f4b3885ff6f48084a40c
-  languageName: node
-  linkType: hard
-
 "natural-compare-lite@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare-lite@npm:1.4.0"
@@ -19536,17 +19507,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.5.3, semver@npm:^7.5.3":
-  version: 7.5.3
-  resolution: "semver@npm:7.5.3"
-  dependencies:
-    lru-cache: "npm:^6.0.0"
-  bin:
-    semver: bin/semver.js
-  checksum: 80b4b3784abff33bacf200727e012dc66768ed5835441e0a802ba9f3f5dd6b10ee366294711f5e7e13d73b82a6127ea55f11f9884d35e76a6a618dc11bc16ccf
-  languageName: node
-  linkType: hard
-
 "semver@npm:7.5.4, semver@npm:^7.3.8, semver@npm:^7.5.4":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
@@ -19593,6 +19553,17 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: c8c04a4d41d30cffa7277904e0ad6998623dd61e36bca9578b0128d8c683b705a3924beada55eae7fa004fb30a9359a53a4ead2b68468d778b602f3b1a28f8e3
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.5.3":
+  version: 7.5.3
+  resolution: "semver@npm:7.5.3"
+  dependencies:
+    lru-cache: "npm:^6.0.0"
+  bin:
+    semver: bin/semver.js
+  checksum: 80b4b3784abff33bacf200727e012dc66768ed5835441e0a802ba9f3f5dd6b10ee366294711f5e7e13d73b82a6127ea55f11f9884d35e76a6a618dc11bc16ccf
   languageName: node
   linkType: hard
 
@@ -19767,22 +19738,6 @@ __metadata:
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
   checksum: aba6438f46d2bfcef94cf112c835ab395172c75f67453fe05c340c770d3c402363018ae1ab4172a1026a90c47eaccf3af7b6ff6fa749a680c2929bd7fa2b37a4
-  languageName: node
-  linkType: hard
-
-"size-limit@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "size-limit@npm:8.2.6"
-  dependencies:
-    bytes-iec: "npm:^3.1.1"
-    chokidar: "npm:^3.5.3"
-    globby: "npm:^11.1.0"
-    lilconfig: "npm:^2.1.0"
-    nanospinner: "npm:^1.1.0"
-    picocolors: "npm:^1.0.0"
-  bin:
-    size-limit: bin.js
-  checksum: 59c86f1ca7d07b734b76f838ba04b42239d9499a28a2a6e1d11760674f57178e94d1ef99f528b16a5b37d99124dbbdb32fa1e9bbafec77e706823f98e20659c3
   languageName: node
   linkType: hard
 

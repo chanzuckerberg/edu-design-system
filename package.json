@@ -71,18 +71,6 @@
     "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
     "types": "tsc --noEmit"
   },
-  "size-limit": [
-    {
-      "path": "lib/**/*([a-zA-Z-_]).js",
-      "limit": "140KB",
-      "name": "components"
-    },
-    {
-      "path": "lib/**/*([a-zA-Z-_]).css",
-      "limit": "140KB",
-      "name": "styles"
-    }
-  ],
   "peerDependencies": {
     "react": ">= 17",
     "react-dom": ">= 17"
@@ -121,7 +109,6 @@
     "@omlet/cli": "^1.0.1-beta.38",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@size-limit/file": "^8.2.6",
     "@storybook/addon-a11y": "^7.5.2",
     "@storybook/addon-docs": "^7.5.2",
     "@storybook/addon-essentials": "^7.5.2",
@@ -170,7 +157,6 @@
     "react-dom": "^18.2.0",
     "rollup": "^3.29.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "size-limit": "^8.2.6",
     "snake-case": "^3.0.4",
     "standard-version": "^9.5.0",
     "storybook": "^7.5.2",
