@@ -12,6 +12,10 @@ type TooltipProps = {
    *
    * Tippy also supports 'top-start', 'top-end', 'right-start', 'right-end', etc,
    * but our CSS currently only supports the 4 main sides.
+   *
+   * This is deprecated. Please use `placement` instead.
+   *
+   * @deprecated
    */
   align?: 'top' | 'right' | 'bottom' | 'left';
   /**
@@ -58,6 +62,12 @@ type TooltipProps = {
    */
   duration?: number;
   /**
+   * Where the tooltip should be placed in relation to the element it's attached to.
+   *
+   * **Default is `'top'`.**
+   */
+  placement?: 'top' | 'right' | 'bottom' | 'left';
+  /**
    * The trigger element the tooltip appears next to.
    *
    * Use this instead of `children` if the trigger element is being
@@ -71,11 +81,9 @@ type TooltipProps = {
   text?: React.ReactNode;
   /**
    * Whether the tooltip has a light or dark background.
+   * @deprecated
    */
-  variant?:
-    | 'light'
-    /** @deprecated */
-    | 'dark';
+  variant?: 'light' | 'dark';
   /**
    * Whether the tooltip is always visible or always invisible.
    *
@@ -93,7 +101,7 @@ type Plugin = Plugins[number];
 /**
  * `import {Tooltip} from "@chanzuckerberg/eds";`
  *
- * A styled tooltip built on Tippy.js.
+ * A floating information box, attached to other components on the page. Used to display option, additional information.
  *
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
@@ -105,6 +113,7 @@ export const Tooltip = ({
   childNotInteractive,
   className,
   duration = 200,
+  placement,
   text,
   ...rest
 }: TooltipProps) => {
@@ -113,6 +122,9 @@ export const Tooltip = ({
       'The dark variant is deprecated and will be removed in an upcoming release. Please use the default light variant instead.',
     );
   }
+
+  // TODO: when removing `align`, remove this line and set `placement={placement}` below
+  const intendedPlacement = placement ?? align;
 
   // Hides tooltip when escape key is pressed, following:
   // https://atomiks.github.io/tippyjs/v6/plugins/#hideonesc
@@ -168,7 +180,7 @@ export const Tooltip = ({
       )}
       content={textContent}
       duration={duration}
-      placement={align}
+      placement={intendedPlacement}
       plugins={[hideOnEsc]}
     >
       {children}
