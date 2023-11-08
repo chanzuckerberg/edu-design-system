@@ -18,7 +18,7 @@ type Props = {
   /**
    * The color variant of the tag. It will update the content colors, background color, and border (when `hasOutline` is set to `true`).
    *
-   * **Defaults to 'neutral'.**
+   * **Default is `"neutral"`**.
    */
   variant?: Variant;
   /**
@@ -36,7 +36,7 @@ type Props = {
   /**
    * Adds an outline for the tag.
    *
-   * **Defaults to `false`.**
+   * **Default is `false`**.
    */
   hasOutline?: boolean;
 };

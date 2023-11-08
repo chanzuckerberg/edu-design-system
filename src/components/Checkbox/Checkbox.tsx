@@ -45,7 +45,7 @@ type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
   /**
    * Size of the checkbox and associated label.
    *
-   * **Defaults to 'lg'.**
+   * **Default is `"lg"`**.
    */
   size?: Extract<Size, 'md' | 'lg'>;
 } & EitherInclusive<

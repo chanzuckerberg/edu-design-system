@@ -32,13 +32,13 @@ export interface Props {
   /**
    * The size of the icon.
    *
-   * **Defaults to 'lg'**
+   * **Default is `"lg"`**.
    */
   size?: Extract<Size, 'sm' | 'lg'>;
   /**
    * The variant of the icon.
    *
-   * **Defaults to 'base'**
+   * **Default is `"base"`**.
    *
    * Variant `success` will use a symbol to mark success, along with different color tokens
    */

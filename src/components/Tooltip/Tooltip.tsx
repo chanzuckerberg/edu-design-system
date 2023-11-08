@@ -64,7 +64,7 @@ type TooltipProps = {
   /**
    * Where the tooltip should be placed in relation to the element it's attached to.
    *
-   * **Default is `'top'`.**
+   * **Default is `"top"`**.
    */
   placement?: 'top' | 'right' | 'bottom' | 'left';
   /**

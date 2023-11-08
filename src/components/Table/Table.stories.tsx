@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
-// Implementation examples, separated out int separate files
+// Implementation examples, separated out into separate files
 import { Filters } from './Filters';
 import { StackedCardsToTable } from './StackedCardsToTable';
 

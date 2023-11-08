@@ -58,7 +58,7 @@ export const Horizontal: StoryObj<Args> = {
 };
 
 /**
- * Shows `Card` with `elevation` set to `'raised'`
+ * Shows `Card` with `elevation` set to `"raised"`
  */
 export const Raised: StoryObj<Args> = {
   args: {
@@ -67,7 +67,7 @@ export const Raised: StoryObj<Args> = {
 };
 
 /**
- * Shows `Card` with `elevation` set to `'dragging'`
+ * Shows `Card` with `elevation` set to `"dragging"`
  */
 export const Dragging: StoryObj<Args> = {
   args: {

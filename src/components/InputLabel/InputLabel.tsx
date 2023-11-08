@@ -19,7 +19,7 @@ export type InputLabelProps = {
   /**
    * Size of the label.
    *
-   * **Defaults to 'lg'.**
+   * **Default is `"lg"`**.
    */
   size?: Extract<Size, 'md' | 'lg'>;
   /**

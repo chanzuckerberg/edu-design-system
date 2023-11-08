@@ -41,7 +41,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Error variant of the form field
    *
-   * **Default is `false`.**
+   * **Default is `false`**.
    */
   isError?: boolean;
   /**

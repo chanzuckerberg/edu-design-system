@@ -20,7 +20,7 @@ type AccordionProps = {
   /**
    * Outline variant adds adjusts the `Accordion` style by defining a containing border and other layout adjustments.
    *
-   * **Default is `false`.**
+   * **Default is `false`**.
    */
   hasOutline?: boolean;
   /**
@@ -49,7 +49,7 @@ type AccordionButtonProps = {
   /**
    * Icon override for component.
    *
-   * **Default is `expand-more`**.
+   * **Default is `"expand-more"`**.
    */
   icon?: Extract<IconName, 'expand-more'>;
   /**

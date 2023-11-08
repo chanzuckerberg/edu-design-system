@@ -18,13 +18,13 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
    * - **raised** renders the card that is raised off of the canvas (box-shadow applied)
    * - **dragging** renders the card that is raised even further off the canvas (during drag)
    *
-   * **Default is `'none'`.**
+   * **Default is `'none'`**.
    */
   elevation?: 'none' | 'raised' | 'dragging';
   /**
    * Property to apply a "dragging" elevation. Can be use while card is in a moving state.
    *
-   * **Default is `'false'`.**
+   * **Default is `false`**.
    */
   isDragging?: boolean;
   /**
@@ -33,7 +33,7 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
    * - **horizontal** renders the header, body, and footer in a horizontal fashion
    * where the body is required but the header and footer are not
    *
-   * **Default is `'vertical'`.**
+   * **Default is `"vertical"`**.
    * @deprecated
    */
   orientation?: 'vertical' | 'horizontal';
