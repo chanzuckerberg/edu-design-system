@@ -10,12 +10,6 @@ import Hr from '../Hr';
 export default {
   title: 'Components/Popover',
   component: Popover,
-  subcomponents: {
-    'Popover.Button': Popover.Button,
-    'Popover.Content': Popover.Content,
-    'Popover.Group': Popover.Group,
-    'Popover.Overlay': Popover.Overlay,
-  },
   parameters: {
     layout: 'centered',
     badges: ['1.0'],
@@ -38,22 +32,45 @@ export default {
     ),
   },
   argTypes: {
+    as: {
+      description: 'Element to use for the `Popover.Button` instance',
+    },
+    __demoMode: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      type: 'string',
+      table: {
+        type: {
+          detail: 'some custom classes or combination of utility classes',
+          summary: 'string',
+        },
+      },
+    },
     children: {
       control: {
         type: null,
       },
     },
+    refName: {
+      table: {
+        disable: true,
+      },
+    },
+    ref: {
+      table: {
+        disable: true,
+      },
+    },
   },
-  decorators: [
-    (Story) => (
-      <div className="m-10 p-8">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-10 p-8">{Story()}</div>],
 } as Meta<PopoverProps>;
 
-export const Default: StoryObj<PopoverProps> = {
+type Story = StoryObj<PopoverProps>;
+
+export const Default: Story = {
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.
@@ -65,91 +82,98 @@ export const Default: StoryObj<PopoverProps> = {
   },
 };
 
-export const Top: StoryObj<PopoverProps> = {
+/**
+ * The following stories demonstrate how a popover can be made to appear on different sides of the trigger.
+ * Each story name denotes a value pased to `placement`.
+ */
+export const Top: Story = {
   args: {
     placement: 'top',
   },
   ...Default,
 };
 
-export const Right: StoryObj<PopoverProps> = {
+export const Right: Story = {
   args: {
     placement: 'right',
   },
   ...Default,
 };
 
-export const Bottom: StoryObj<PopoverProps> = {
+export const Bottom: Story = {
   args: {
     placement: 'bottom',
   },
   ...Default,
 };
 
-export const Left: StoryObj<PopoverProps> = {
+export const Left: Story = {
   args: {
     placement: 'left',
   },
   ...Default,
 };
 
-export const TopStart: StoryObj<PopoverProps> = {
+export const TopStart: Story = {
   args: {
     placement: 'top-start',
   },
   ...Default,
 };
 
-export const TopEnd: StoryObj<PopoverProps> = {
+export const TopEnd: Story = {
   args: {
     placement: 'top-end',
   },
   ...Default,
 };
 
-export const BottomStart: StoryObj<PopoverProps> = {
+export const BottomStart: Story = {
   args: {
     placement: 'bottom-start',
   },
   ...Default,
 };
 
-export const BottomEnd: StoryObj<PopoverProps> = {
+export const BottomEnd: Story = {
   args: {
     placement: 'bottom-end',
   },
   ...Default,
 };
 
-export const RightStart: StoryObj<PopoverProps> = {
+export const RightStart: Story = {
   args: {
     placement: 'right-start',
   },
   ...Default,
 };
 
-export const RightEnd: StoryObj<PopoverProps> = {
+export const RightEnd: Story = {
   args: {
     placement: 'right-end',
   },
   ...Default,
 };
 
-export const LeftStart: StoryObj<PopoverProps> = {
+export const LeftStart: Story = {
   args: {
     placement: 'left-start',
   },
   ...Default,
 };
 
-export const LeftEnd: StoryObj<PopoverProps> = {
+export const LeftEnd: Story = {
   args: {
     placement: 'left-end',
   },
   ...Default,
 };
 
-export const FocusClickableElement: StoryObj<PopoverProps> = {
+/**
+ * The trigger for `Popover` can receive focus, by convention.
+ */
+export const FocusClickableElement: Story = {
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.

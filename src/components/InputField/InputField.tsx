@@ -13,7 +13,7 @@ import InputLabel from '../InputLabel';
 import Text from '../Text';
 import styles from './InputField.module.css';
 
-export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
+export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -31,23 +31,17 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   id?: string;
   /**
-   * Gives a hint as to the type of data needed for text input
+   * Gives a hint as to the type of data needed for text input (e.g., to render the correct input keyboard on mobile).
    */
-  inputMode?:
-    | 'text'
-    | 'email'
-    | 'url'
-    | 'search'
-    | 'tel'
-    | 'none'
-    | 'numeric'
-    | 'decimal';
+  inputMode?: React.InputHTMLAttributes<HTMLInputElement>['inputMode'];
   /**
    * Node(s) that can be nested within the input field
    */
   inputWithin?: ReactNode;
   /**
-   * Error state of the form field
+   * Error variant of the form field
+   *
+   * **Default is `false`**.
    */
   isError?: boolean;
   /**
@@ -93,8 +87,11 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   title?: string;
   /**
    * HTML type attribute, allowing switching between text, password, and other HTML5 input field types
+   *
+   * **NOTE**: this excludes types that correspond to non-text controls, like `checkbox`, `radio`, etc.
    */
-  type?:
+  type?: Extract<
+    React.InputHTMLAttributes<HTMLInputElement>['type'],
     | 'text'
     | 'password'
     | 'datetime'
@@ -107,7 +104,8 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'email'
     | 'url'
     | 'search'
-    | 'tel';
+    | 'tel'
+  >;
   /**
    * Value passed down from higher levels for initial state
    */
@@ -131,7 +129,10 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     }
   >;
 
-type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> & {
+type InputFieldType = ForwardedRefComponent<
+  HTMLInputElement,
+  InputFieldProps
+> & {
   Input?: typeof Input;
   Label?: typeof InputLabel;
 };
@@ -141,7 +142,7 @@ type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> & {
  *
  * An input with optional labels and error messaging built-in.
  *
- * NOTE: This component requires `label` or `aria-label` prop
+ * **NOTE**: This component requires `label` or `aria-label` prop
  */
 export const InputField: InputFieldType = forwardRef(
   (

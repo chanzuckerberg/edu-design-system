@@ -124,7 +124,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
  * the content. When a maximum text count is specified, component also shows relevant
  * text up to the maximum.
  *
- * NOTE: This component requires `label` or `aria-label` prop
+ * **NOTE**: This component requires `label` or `aria-label` prop to support accessibility.
  */
 export const TextareaField: TextareaFieldType = forwardRef(
   (
