@@ -1,5 +1,5 @@
 # Overview: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
 # Any line with invalid syntax will invalidate the entire file.
 
-# Developer Foundations Team
-package.json @chanzuckerberg/edu-dev-foundations
+# Education Shared Infrastructure Team
+package.json @chanzuckerberg/edu-shared-infra
