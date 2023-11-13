@@ -171,7 +171,6 @@
     "rollup": "^4.3.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.2.6",
-    "snake-case": "^3.0.4",
     "standard-version": "^9.5.0",
     "storybook": "^7.5.3",
     "style-dictionary": "^3.9.0",

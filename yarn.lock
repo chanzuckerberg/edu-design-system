@@ -3087,7 +3087,6 @@ __metadata:
     rollup: "npm:^4.3.0"
     rollup-plugin-postcss: "npm:^4.0.2"
     size-limit: "npm:^8.2.6"
-    snake-case: "npm:^3.0.4"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^7.5.3"
     style-dictionary: "npm:^3.9.0"
