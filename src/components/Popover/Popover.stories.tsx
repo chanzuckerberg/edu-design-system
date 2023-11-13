@@ -77,7 +77,7 @@ export const Default: Story = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      userEvent.click(filtersTrigger);
+      await userEvent.click(filtersTrigger);
     }
   },
 };

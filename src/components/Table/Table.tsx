@@ -222,15 +222,15 @@ const TableHeaderCell = ({
     sortDirection === 'ascending'
       ? 'arrow-narrow-up'
       : sortDirection === 'descending'
-      ? 'arrow-narrow-down'
-      : 'unfold-more';
+        ? 'arrow-narrow-down'
+        : 'unfold-more';
 
   const iconTitle =
     sortDirection === 'ascending'
       ? 'Sorted, ascending'
       : sortDirection === 'descending'
-      ? 'Sorted, descending'
-      : 'Sort';
+        ? 'Sorted, descending'
+        : 'Sort';
 
   return (
     <th

@@ -51,7 +51,7 @@ export const Default: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      userEvent.click(filtersTrigger);
+      await userEvent.click(filtersTrigger);
     }
   },
 };
@@ -246,7 +246,7 @@ export const OverflowInteractive: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      userEvent.click(filtersTrigger);
+      await userEvent.click(filtersTrigger);
     }
   },
 };

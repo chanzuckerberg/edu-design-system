@@ -191,6 +191,6 @@ export const InteractiveOnHover: StoryObj<Args> = {
     const canvas = within(canvasElement);
     const cardContents = await canvas.findByText('Card Contents');
 
-    userEvent.hover(cardContents);
+    await userEvent.hover(cardContents);
   },
 };

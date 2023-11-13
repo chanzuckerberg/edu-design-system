@@ -161,7 +161,7 @@ export const Tooltip: Story = {
       const canvas = within(canvasElement);
       const slider = await canvas.findByRole('slider');
 
-      userEvent.hover(slider);
+      await userEvent.hover(slider);
     }
   },
 };
@@ -177,8 +177,8 @@ export const Focus: Story = {
      */
     snapshot: { skip: true },
   },
-  play: () => {
-    userEvent.tab();
+  play: async () => {
+    await userEvent.tab();
   },
 };
 

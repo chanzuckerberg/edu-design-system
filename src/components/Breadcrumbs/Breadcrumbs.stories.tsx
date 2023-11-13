@@ -134,6 +134,6 @@ export const LongTextMenu: StoryObj<Args> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const dropdownMenuTrigger = await canvas.findByRole('button');
-    userEvent.click(dropdownMenuTrigger);
+    await userEvent.click(dropdownMenuTrigger);
   },
 };
