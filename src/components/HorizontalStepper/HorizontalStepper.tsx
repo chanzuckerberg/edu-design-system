@@ -114,8 +114,8 @@ export const HorizontalStepper = ({
       index < activeIndex
         ? 'complete'
         : index === activeIndex
-        ? 'active'
-        : 'incomplete';
+          ? 'active'
+          : 'incomplete';
 
     /**
      * Add step to stepComponents.
