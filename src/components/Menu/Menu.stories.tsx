@@ -207,9 +207,9 @@ export const Opened: StoryObj<MenuProps> = {
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300 },
   },
-  play: () => {
-    userEvent.tab();
-    userEvent.keyboard(' ', { delay: 300 });
+  play: async () => {
+    await userEvent.tab();
+    await userEvent.keyboard(' ', { delay: 300 });
   },
 };
 
