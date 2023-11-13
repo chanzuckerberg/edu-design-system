@@ -12,6 +12,7 @@
     "custom-property-empty-line-before": "never",
     "max-nesting-depth": 2,
     "no-descending-specificity": null,
+    "media-query-no-invalid": null,
     "selector-class-pattern": null,
     "selector-pseudo-class-no-unknown": [
       true,

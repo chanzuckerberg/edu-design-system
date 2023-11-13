@@ -115,7 +115,7 @@
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.9",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.14",
     "@chanzuckerberg/story-utils": "^4.0.0",
-    "@commitlint/cli": "^18.4.0",
+    "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
     "@geometricpanda/storybook-addon-badges": "^2.0.0",
     "@omlet/cli": "^1.0.1-beta.38",
@@ -175,7 +175,7 @@
     "storybook": "^7.5.3",
     "style-dictionary": "^3.9.0",
     "stylelint": "^15.11.0",
-    "stylelint-config-recommended": "^10.0.1",
+    "stylelint-config-recommended": "^13.0.0",
     "tailwindcss": "^3.3.5",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
