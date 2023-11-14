@@ -12,11 +12,11 @@
           "label": {
             "@": {
               "value": "var(--eds-typography-preset-006)",
-              "comment": "This is deprecated and missing from figma"
+              "comment": "@deprecated This is deprecated and missing from figma"
             },
             "sm": {
               "value": "var(--eds-typography-preset-008-bold)",
-              "comment": "This is deprecated and missing from figma"
+              "comment": "@deprecated This is deprecated and missing from figma"
             }
           }
         }

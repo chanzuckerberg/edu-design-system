@@ -47,6 +47,7 @@
             destination: 'app-theme.css',
             options: {
               fileHeader: 'cssOverrideHeader',
+              outputReferences: true,
             },
             filter: function (token) {
               // don't allow theming on legacy tokens

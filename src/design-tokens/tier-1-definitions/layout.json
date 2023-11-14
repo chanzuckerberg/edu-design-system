@@ -3,15 +3,15 @@
     "l": {
       "max-width": {
         "value": "71.25rem",
-        "comment": "Layout tokens are deprecated and will be removed in a future release"
+        "comment": "@deprecated Layout tokens are deprecated and will be removed in a future release"
       },
       "sidebar-width": {
         "value": "13.5rem",
-        "comment": "Layout tokens are deprecated and will be removed in a future release"
+        "comment": "@deprecated Layout tokens are deprecated and will be removed in a future release"
       },
       "linelength-width": {
         "value": "36rem",
-        "comment": "Layout tokens are deprecated and will be removed in a future release"
+        "comment": "@deprecated Layout tokens are deprecated and will be removed in a future release"
       }
     }
   }
