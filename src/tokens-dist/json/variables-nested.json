@@ -988,8 +988,8 @@
         },
         "focus-ring": {
           "outline": {
-            "width": "var(--eds-outline-width-sm)",
-            "offset": "var(--eds-outline-width-md)"
+            "width": "1px",
+            "offset": "2px"
           }
         }
       },
@@ -1002,9 +1002,9 @@
       "size": {
         "slider": {
           "track": {
-            "height": "var(--eds-size-1)"
+            "height": "var(--eds-size-base-unit)"
           },
-          "thumb": "var(--eds-size-3)"
+          "thumb": "calc(var(--eds-size-base-unit) * 3)"
         }
       }
     }

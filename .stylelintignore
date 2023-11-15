@@ -1,0 +1,2 @@
+# Ignore this file, as it uses token references instead of hard-coded values
+src/tokens-dist/css/variables.css

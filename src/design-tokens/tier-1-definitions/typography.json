@@ -77,7 +77,7 @@
           },
           "mobile": {
             "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-            "comment": "This is deprecated and missing from figma"
+            "comment": "@deprecated This is deprecated and missing from figma"
           }
         },
         "002": {
@@ -92,7 +92,7 @@
           },
           "mobile": {
             "value": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.2857 var(--eds-font-family-primary)",
-            "comment": "This is deprecated and missing from figma"
+            "comment": "@deprecated This is deprecated and missing from figma"
           }
         },
         "003": {
@@ -107,7 +107,7 @@
           },
           "mobile": {
             "value": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
-            "comment": "This is deprecated and missing from figma"
+            "comment": "@deprecated This is deprecated and missing from figma"
           }
         },
         "004": {

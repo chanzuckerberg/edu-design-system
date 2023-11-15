@@ -20,12 +20,14 @@ const EDSStyleDictionary = StyleDictionary.extend({
           destination: 'src/tokens-dist/css/variables.css',
           options: {
             showFileHeader: false,
+            outputReferences: true,
           },
         },
         {
           format: 'json/nested-css-variables',
           // useful for tailwind configs in consuming apps
           destination: 'lib/tokens/json/css-variables-nested.json',
+          outputReferences: true,
         },
       ],
     },
