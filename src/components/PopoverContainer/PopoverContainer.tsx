@@ -67,8 +67,9 @@ export type PopoverOptions = {
     | 'right';
 
   /**
-   * Object to customize how your popover will behave. For a full list of what is available,
-   * refer to https://popper.js.org/docs/v2/modifiers/.
+   * Object to customize how your popover will behave.
+   *
+   * For a full list of what is available, refer to https://popper.js.org/docs/v2/modifiers/.
    */
   modifiers?: Options['modifiers'];
   /**
@@ -78,6 +79,7 @@ export type PopoverOptions = {
   strategy?: Options['strategy'];
   /**
    * Callback ran after Popper positions the element the first time.
+   *
    * Refer to https://popper.js.org/docs/v2/lifecycle/#hook-into-the-lifecycle.
    */
   onFirstUpdate?: Options['onFirstUpdate'];

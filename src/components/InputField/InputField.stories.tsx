@@ -11,14 +11,11 @@ const meta: Meta<typeof InputField> = {
   component: InputField,
   parameters: {
     badges: ['1.0'],
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
-        {Story()}
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-2">{Story()}</div>],
 };
 
 export default meta;
@@ -75,6 +72,11 @@ export const NoVisibleLabel: Story = {
   },
 };
 
+/**
+ * You can render certain components **within** an `InputField`, such as a button, icon, or other
+ * small component. This facility is used to implement controls that should appear visibly nested
+ * within the button, to the right-hand side.
+ */
 export const InputWithin: Story = {
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -97,149 +99,11 @@ export const InputWithin: Story = {
   ),
 };
 
-export const LabelFieldnoteVariants: Story = {
-  render: (args) => (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 2fr 2fr',
-        gap: '2rem',
-      }}
-    >
-      <div />
-      <p>Placeholder</p>
-      <p>No Placeholder</p>
-
-      <p>fieldNote, label</p>
-      <InputField
-        fieldNote="fieldNote text"
-        label="Label text"
-        placeholder="placeholder"
-        {...args}
-      />
-      <InputField fieldNote="fieldNote text" label="Label text" {...args} />
-      <p>no fieldNote, label</p>
-      <InputField label="Label text" placeholder="placeholder" {...args} />
-      <InputField label="Label text" {...args} />
-      <p>fieldNote, no label</p>
-      <InputField
-        aria-label="Label text"
-        fieldNote="fieldNote text"
-        placeholder="placeholder"
-        {...args}
-      />
-      <InputField
-        aria-label="Label text"
-        fieldNote="fieldNote text"
-        {...args}
-      />
-      <p>no fieldNote, no label</p>
-      <InputField aria-label="Label text" placeholder="placeholder" {...args} />
-      <InputField aria-label="Label text" {...args} />
-    </div>
-  ),
-};
-
-export const ErrorVariants: Story = {
-  args: {
-    isError: true,
-  },
-  ...LabelFieldnoteVariants,
-};
-
-export const DisabledVariants: Story = {
-  args: {
-    disabled: true,
-  },
-  ...LabelFieldnoteVariants,
-  parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
-    },
-  },
-};
-
-export const RequiredVariants: Story = {
-  args: {
-    required: true,
-  },
-  render: (args) => (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 2fr 2fr',
-        gap: '2rem',
-      }}
-    >
-      <div />
-      <p>Placeholder</p>
-      <p>No Placeholder</p>
-
-      <p>fieldNote, label</p>
-      <InputField
-        fieldNote="fieldNote text"
-        label="Label text"
-        placeholder="placeholder"
-        {...args}
-      />
-      <InputField fieldNote="fieldNote text" label="Label text" {...args} />
-      <p>no fieldNote, label</p>
-      <InputField label="Label text" placeholder="placeholder" {...args} />
-      <InputField label="Label text" {...args} />
-      <p>fieldNote, no label</p>
-      <InputField
-        aria-label="Label text"
-        fieldNote="fieldNote text"
-        placeholder="placeholder"
-        {...args}
-      />
-      <InputField
-        aria-label="Label text"
-        fieldNote="fieldNote text"
-        {...args}
-      />
-      <p>no fieldNote, no label</p>
-      <InputField aria-label="Label text" placeholder="placeholder" {...args} />
-      <InputField aria-label="Label text" {...args} />
-      <p>fieldNote, label, isError</p>
-      <InputField
-        fieldNote="fieldNote text"
-        isError
-        label="Label text"
-        placeholder="placeholder"
-        {...args}
-      />
-      <InputField
-        fieldNote="fieldNote text"
-        isError
-        label="Label text"
-        {...args}
-      />
-      <p>fieldNote, label, disabled</p>
-      <InputField
-        disabled
-        fieldNote="fieldNote text"
-        label="Label text"
-        placeholder="placeholder"
-        {...args}
-      />
-      <InputField
-        disabled
-        fieldNote="fieldNote text"
-        label="Label text"
-        {...args}
-      />
-    </div>
-  ),
-  parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
-    },
-  },
-};
-
+/**
+ * You can lock the maximum length of the text content of `InputField`. When setting `maxLength`,
+ * the field will reuse the browser's [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+ * behavior (e.g., prevent further text from being typed, prevent keydown events, etc.).
+ */
 export const WithAMaxLength: Story = {
   args: {
     defaultValue: 'Some initial text',
@@ -250,6 +114,11 @@ export const WithAMaxLength: Story = {
   render: (args) => <InputField {...args} />,
 };
 
+/**
+ * If you want to signal that a field has reached a maximum length but want to allow more text to be typed, you can use
+ * `recommendedMaxLength`. This will show a similar UI to using `maxLength` but will allow more text to be typed, and
+ * emit any appropriate events.
+ */
 export const WithARecommendedLength: Story = {
   args: {
     defaultValue: 'Some initial text',
@@ -260,6 +129,10 @@ export const WithARecommendedLength: Story = {
   render: (args) => <InputField {...args} />,
 };
 
+/**
+ * Both `maxLength` and `recommendedMaxLength` can be specified at the same time. Text length between `recommendedMaxLength`
+ * and `maxLength` will show the treatment warning the user about the text length being violated.
+ */
 export const WithBothMaxAndRecommendedLength: Story = {
   args: {
     label: 'test label',
@@ -272,6 +145,10 @@ export const WithBothMaxAndRecommendedLength: Story = {
   render: (args) => <InputField {...args} />,
 };
 
+/**
+ * This **implementation example** shows how to attach labels to fields and labels
+ * when the label is in a different column.
+ */
 export const TabularInput: Story = {
   parameters: {
     badges: ['1.1', 'implementationExample'],

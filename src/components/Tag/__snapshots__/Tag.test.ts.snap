@@ -1,72 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
-<div
-  class="tagList"
->
-  <span
-    class="text text--sm text--bold-weight tag tag--neutral"
-    data-testid="test"
-  >
-    <span
-      class="tag__body"
-    >
-      neutral
-    </span>
-  </span>
-  <span
-    class="text text--sm text--bold-weight tag tag--error"
-    data-testid="test"
-  >
-    <span
-      class="tag__body"
-    >
-      error
-    </span>
-  </span>
-  <span
-    class="text text--sm text--bold-weight tag tag--success"
-    data-testid="test"
-  >
-    <span
-      class="tag__body"
-    >
-      success
-    </span>
-  </span>
-  <span
-    class="text text--sm text--bold-weight tag tag--warning"
-    data-testid="test"
-  >
-    <span
-      class="tag__body"
-    >
-      warning
-    </span>
-  </span>
-  <span
-    class="text text--sm text--bold-weight tag tag--yield"
-    data-testid="test"
-  >
-    <span
-      class="tag__body"
-    >
-      yield
-    </span>
-  </span>
-  <span
-    class="text text--sm text--bold-weight tag tag--brand"
-    data-testid="test"
-  >
-    <span
-      class="tag__body"
-    >
-      brand
-    </span>
-  </span>
-</div>
-`;
-
 exports[`<Tag /> Default story renders snapshot 1`] = `
 <span
   class="text text--sm text--bold-weight tag tag--neutral"
@@ -130,6 +63,73 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
   </span>
   <span
     class="text text--sm text--bold-weight tag tag--brand tag--outline"
+  >
+    <span
+      class="tag__body"
+    >
+      brand
+    </span>
+  </span>
+</div>
+`;
+
+exports[`<Tag /> Variants story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="text text--sm text--bold-weight tag tag--neutral"
+    data-testid="test"
+  >
+    <span
+      class="tag__body"
+    >
+      neutral
+    </span>
+  </span>
+  <span
+    class="text text--sm text--bold-weight tag tag--error"
+    data-testid="test"
+  >
+    <span
+      class="tag__body"
+    >
+      error
+    </span>
+  </span>
+  <span
+    class="text text--sm text--bold-weight tag tag--success"
+    data-testid="test"
+  >
+    <span
+      class="tag__body"
+    >
+      success
+    </span>
+  </span>
+  <span
+    class="text text--sm text--bold-weight tag tag--warning"
+    data-testid="test"
+  >
+    <span
+      class="tag__body"
+    >
+      warning
+    </span>
+  </span>
+  <span
+    class="text text--sm text--bold-weight tag tag--yield"
+    data-testid="test"
+  >
+    <span
+      class="tag__body"
+    >
+      yield
+    </span>
+  </span>
+  <span
+    class="text text--sm text--bold-weight tag tag--brand"
+    data-testid="test"
   >
     <span
       class="tag__body"

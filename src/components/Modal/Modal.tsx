@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 import type { ExtractProps } from '../../util/utility-types';
+import type { Size } from '../../util/variant-types';
 import type { HeadingSize } from '../Heading';
 import Heading from '../Heading';
 import { Icon, type IconName } from '../Icon/Icon';
@@ -28,6 +29,8 @@ type ModalContentProps = {
   children: ReactNode;
   /**
    * Hides the close button in the top right of the modal.
+   *
+   * **Default is `false`**.
    */
   hideCloseButton?: boolean;
   /**
@@ -51,7 +54,8 @@ type ModalContentProps = {
    * Prop should be dependent on whether content overflows at the mobile level.
    * Tabindex for keyboard scroll is on the body, however, due to focus outline
    * not having high contrast on the brand header and being overlapped by the footer.
-   * Defaults to false since modal default is not scrollable.
+   *
+   * **Default is `false`**.
    */
   isScrollable?: boolean;
   /**
@@ -74,8 +78,10 @@ type ModalContentProps = {
   /**
    * Max size of the modal. Defaults to 'lg'.
    * Will still break responsively.
+   *
+   * **Default is `"lg"`**.
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
   /**
    * Color variants of the modal.
    */
@@ -406,6 +412,7 @@ const ModalHeader = ({
 
 /**
  * Stepper for the modal to indicate page status.
+ * TODO: Separate the stepper from the modal, and make into a standalone component.
  */
 const ModalStepper = ({
   activeStep,

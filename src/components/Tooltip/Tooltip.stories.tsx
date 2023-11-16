@@ -15,7 +15,7 @@ const defaultArgs = {
     </span>
   ),
   children: <div className="fpo w-3 p-1">&bull;</div>,
-  align: 'right',
+  placement: 'right',
   // most stories show a visible, non-interactive tooltip.
   // this turns animation off to ensure stable visual snapshots
   duration: 0,
@@ -27,6 +27,12 @@ export default {
   component: Tooltip,
   args: defaultArgs,
   argTypes: {
+    align: {
+      table: {
+        // Marking deprecated props / controls as disabled
+        disable: true,
+      },
+    },
     text: {
       control: {
         type: 'text',
@@ -35,6 +41,17 @@ export default {
     children: {
       control: {
         type: null,
+      },
+    },
+    placement: {
+      table: {
+        defaultValue: { summary: 'top' },
+      },
+    },
+    variant: {
+      table: {
+        // Marking deprecated props / controls as disabled
+        disable: true,
       },
     },
   },
@@ -46,16 +63,19 @@ export default {
       diffIncludeAntiAliasing: false,
     },
   },
-  decorators: [(Story) => <div className="p-16">{Story()}</div>],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;
+type Story = StoryObj<Args>;
 
-export const LightVariant: StoryObj<Args> = {};
-
-export const LeftPlacement: StoryObj<Args> = {
+/**
+ * The following stories demonstrate how `Tooltip` can be made to appear on different sides of the trigger.
+ * Each story name denotes a value pased to `placement`.
+ */
+export const LeftPlacement: Story = {
   args: {
-    align: 'left',
+    placement: 'left',
     children: <div className="fpo w-3 p-1">&bull;</div>,
   },
   parameters: {
@@ -63,21 +83,21 @@ export const LeftPlacement: StoryObj<Args> = {
   },
 };
 
-export const TopPlacement: StoryObj<Args> = {
+export const TopPlacement: Story = {
   args: {
-    align: 'top',
+    placement: 'top',
     children: <div className="fpo w-3 p-1">&bull;</div>,
   },
 };
 
-export const BottomPlacement: StoryObj<Args> = {
+export const BottomPlacement: Story = {
   args: {
-    align: 'bottom',
+    placement: 'bottom',
     children: <div className="fpo w-3 p-1">&bull;</div>,
   },
 };
 
-export const LongText: StoryObj<Args> = {
+export const LongText: Story = {
   args: {
     text: (
       <span>
@@ -93,57 +113,39 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
-export const LongTriggerText: StoryObj<Args> = {
+export const LongTriggerText: Story = {
   args: {
     children: <div className="fpo p-1">Longer text to test placement</div>,
   },
 };
 
-export const TextChild: StoryObj<Args> = {
-  render: () => (
-    <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
-      <span>Tooltip trigger</span>
-    </Tooltip>
-  ),
-};
-
-export const Interactive: StoryObj<Args> = {
+/**
+ * Hover over the button to make the tooltip appear.
+ */
+export const Interactive: Story = {
   args: {
     // reset prop values defined in defaultArgs
     duration: undefined,
     visible: undefined,
     children: <button className="fpo w-3 p-1">&bull;</button>,
   },
-  decorators: [
-    (Story) => (
-      <div>
-        <p>Hover over the button to make the tooltip appear.</p>
-        {Story()}
-      </div>
-    ),
-  ],
 };
 
-export const InteractiveDisabled: StoryObj<Args> = {
+/**
+ * Hover over the button to make the tooltip appear.
+ */
+export const InteractiveDisabled: Story = {
   args: {
     duration: undefined,
   },
   render: (args) => (
     <Tooltip
-      align="top"
       childNotInteractive
       duration={args.duration}
+      placement="top"
       text={defaultArgs.text}
     >
       <div className="fpo p-1">&bull;</div>
     </Tooltip>
   ),
-  decorators: [
-    (Story) => (
-      <div>
-        <p>Hover over the button to make the tooltip appear.</p>
-        {Story()}
-      </div>
-    ),
-  ],
 };

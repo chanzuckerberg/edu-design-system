@@ -28,10 +28,8 @@ interface IconPropsBase {
    */
   children?: ReactNode;
   /**
-   * The SVG Color, expects a valid css color (hex, rgb, etc.).
+   * The SVG Color, expects a valid css color (hex, rgb, css variable, etc.).
    *
-   * Recommendation: if `currentColor` isn't sufficient,
-   * style the fill with Tailwind: https://tailwindcss.com/docs/fill
    */
   color?: string;
   /**
@@ -91,13 +89,8 @@ interface SvgStyle extends CSSProperties {
  *
  * Render arbitrary SVG path data while enforcing good accessibility practices.
  *
- * If you're looking for specific icon files, look in the `src/icons` directory.
- *
- * Example usage:
- *
- * ```
- * <Icon name="arrow-foward" purpose="informative" title="go forward" />
- * ```
+ * Icons are based on [Material Rounded](https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Rounded),
+ * and are encoded in a spritemap in `src/icons`.
  */
 export const Icon = (props: IconProps) => {
   const {

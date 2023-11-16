@@ -181,7 +181,7 @@
         "overline": {
           "@": {
             "value": "var(--eds-typography-preset-011)",
-            "comment": "This is deprecated and missing from figma."
+            "comment": "@deprecated This is deprecated and missing from figma."
           },
           "md": {
             "value": "var(--eds-typography-preset-011)"

@@ -9,15 +9,11 @@
  * Centers the number text in the circle.
  */
 .number-icon {
-  font: var(--eds-theme-typography-body-sm);
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
-  min-width: var(--eds-size-3);
 
   /* The circle part of the icon, made with borders. */
   border: var(--eds-border-width-sm) solid;
@@ -25,7 +21,6 @@
   border-radius: var(--eds-border-radius-round);
 }
 
-/* prettier-ignore */
 .number-icon--incomplete {
   border: none;
   fill: var(--number-icon-incomplete-fill, var(--eds-theme-color-icon-neutral-subtle));
@@ -35,7 +30,6 @@
  * Size Variants.
  */
 .number-icon--sm {
-  font: var(--eds-theme-typography-body-xs);
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   /* Height and width should be the same to make the icon a circle and not oblong. */
@@ -44,14 +38,23 @@
   min-width: var(--eds-size-2-and-half);
 }
 
+.number-icon--lg {
+  height: var(--eds-size-3);
+  width: var(--eds-size-3);
+  min-width: var(--eds-size-3);
+}
+
 /**
  * Color Variants.
  */
 .number-icon--base {
+  color: var(--eds-theme-color-text-neutral-default);
+
   background-color: transparent;
 }
 
 .number-icon--success {
+  color: var(--eds-theme-color-text-neutral-default-inverse);
   background-color: var(--eds-theme-color-icon-utility-success);
   border-color: var(--eds-theme-color-icon-utility-success);
 }

@@ -222,15 +222,15 @@ const TableHeaderCell = ({
     sortDirection === 'ascending'
       ? 'arrow-narrow-up'
       : sortDirection === 'descending'
-      ? 'arrow-narrow-down'
-      : 'unfold-more';
+        ? 'arrow-narrow-down'
+        : 'unfold-more';
 
   const iconTitle =
     sortDirection === 'ascending'
       ? 'Sorted, ascending'
       : sortDirection === 'descending'
-      ? 'Sorted, descending'
-      : 'Sort';
+        ? 'Sorted, descending'
+        : 'Sort';
 
   return (
     <th
@@ -288,7 +288,9 @@ export const TableRow = ({
 };
 
 /**
- * HTML table component.
+ * `import {Table} from "@chanzuckerberg/eds";`
+ *
+ * HTML table component. Allows for the structure and layout of a standard HTML table, with styles to support theming.
  */
 export const Table = ({ children, className, ...other }: TableProps) => {
   const componentClassName = clsx(styles['table'], className);

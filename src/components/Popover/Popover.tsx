@@ -21,6 +21,32 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> &
     className?: string;
   };
 
+export type PopoverContentProps = ExtractProps<typeof HeadlessPopover.Panel> & {
+  /**
+   * Custom classname for additional styles for the arrow.
+   */
+  arrowClassName?: string;
+  /**
+   * Custom classname for additional styles on the generic popover container.
+   */
+  bodyClassName?: string;
+  /**
+   * Custom classname for additional styles for the entire popover content.
+   */
+  className?: string;
+} & RenderProps<{
+    /**
+     * Render prop indicating popover open status.
+     */
+    open: boolean;
+    /**
+     * Render prop that closes popover when called.
+     */
+    close: (
+      focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
+    ) => void;
+  }>;
+
 export const PopoverContext = createContext<PopoverContextType>({});
 
 /**
@@ -86,32 +112,6 @@ const PopoverButton = (props: PopoverButtonProps) => {
   return <HeadlessPopover.Button {...props} ref={setReferenceElement} />;
 };
 
-export type PopoverContentProps = ExtractProps<typeof HeadlessPopover.Panel> & {
-  /**
-   * Custom classname for additional styles for the arrow.
-   */
-  arrowClassName?: string;
-  /**
-   * Custom classname for additional styles on the generic popover container.
-   */
-  bodyClassName?: string;
-  /**
-   * Custom classname for additional styles for the entire popover content.
-   */
-  className?: string;
-} & RenderProps<{
-    /**
-     * Render prop indicating popover open status.
-     */
-    open: boolean;
-    /**
-     * Render prop that closes popover when called.
-     */
-    close: (
-      focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
-    ) => void;
-  }>;
-
 /**
  * A floating container that can be resized to fit content inside
  */
@@ -167,46 +167,10 @@ PopoverGroup.displayName = 'Popover.Group';
  * If you need to use some sort of special button, pass it as the `as` prop. Make sure the
  * component accepts `aria-expanded` and `aria-controls` props for accessibility.
  *
- * Examples:
- *
- * ```ts
- * import {Popover} from "@chanzuckerberg/eds";
- *
- * // Normal usage
- * <Popover.Button className={someCustomClasses}>
- *   <span>Coffee</span>
- *   <MugIcon />
- * </Popover.Button>
- * ```
- *
- * ```ts
- * import {Popover} from "@chanzuckerberg/eds";
- *
- * // Passing your own button
- * <Popover.Button as={Button}>
- *   EDS Button Yay
- * </Popover.Button>
- *
- * // Also works
- * <Popover.Button as={React.Fragment}>
- *   <Button>
- *     EDS Button Yay
- *   </Button>
- * </Popover.Button>
- * ```
  */
 Popover.Button = PopoverButton;
 /**
  * A floating container that can be resized to fit content inside
- *
- * @example
- * ```ts
- * import {Popover} from "@chanzuckerberg/eds";
- *
- * <Popover.Content>
- *  {children}
- * </Popover.Content>
- * ```
  */
 Popover.Content = PopoverContent;
 Popover.Overlay = PopoverOverlay;

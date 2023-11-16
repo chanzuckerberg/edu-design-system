@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [13.7.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.7.0...v13.7.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* update Node types for Node 20 ([115ef19](https://github.com/chanzuckerberg/edu-design-system/commit/115ef19ccef4d9615d9ddaabc298eeee4bfcbbe7))
+
 ## [13.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.6.1...v13.7.0) (2023-11-06)
 
 

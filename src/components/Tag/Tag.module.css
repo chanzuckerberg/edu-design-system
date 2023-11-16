@@ -16,9 +16,8 @@
   display: inline-flex;
   align-items: center;
 
-  /* Grabs colors from whichever variant is selected. */
-  border: var(--tag-secondary-color) solid var(--eds-theme-border-width);
-  /* Rounds the corners of the tag. */
+  /* border color matches the background color, unless a color variant is applied */
+  border: var(--eds-theme-border-width) solid var(--tag-secondary-color) ;
   border-radius: var(--eds-border-radius-full);
 
   background-color: var(--tag-secondary-color);

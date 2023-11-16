@@ -20,6 +20,6 @@ export const WatchPage: StoryObj<Args> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const nextPageButton = await canvas.findByText('Hogwarts');
-    userEvent.click(nextPageButton);
+    await userEvent.click(nextPageButton);
   },
 };

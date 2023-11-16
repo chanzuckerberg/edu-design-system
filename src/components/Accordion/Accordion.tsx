@@ -18,15 +18,21 @@ type AccordionProps = {
    */
   className?: string;
   /**
-   * Outline variant adds extra padding and a rounded border.
+   * Outline variant adds adjusts the `Accordion` style by defining a containing border and other layout adjustments.
+   *
+   * **Default is `false`**.
    */
   hasOutline?: boolean;
   /**
-   * Used to specify which heading element should be rendered for each Accordion.Title child.
+   * Used to specify which heading element should be rendered for each `Accordion.Title` child.
+   *
+   * **Default is `"h2"`**.
    */
   headingAs: HeadingElement;
   /**
-   * Various Accordion sizes. Defaults to 'md'.
+   * Various sizes supported by the `Accordion`.
+   *
+   * **Default is `"md"`**.
    */
   size?: Extract<Size, 'sm' | 'md'>;
 };
@@ -41,7 +47,9 @@ type AccordionButtonProps = {
    */
   className?: string;
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Icon override for component.
+   *
+   * **Default is `"expand-more"`**.
    */
   icon?: Extract<IconName, 'expand-more'>;
   /**
@@ -106,7 +114,7 @@ const AccordionRowContext = createContext<{ isExpandable?: boolean }>({
 /**
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
- * Displays a list of headers stacked on top of one another that can reveal or hide associated content.
+ * Displays one or more headers stacked on top of one another that can reveal or hide associated content.
  * This component is based on the [Disclosure](https://headlessui.com/react/disclosure) component, provided by HeadlessUI.
  *
  * @see https://headlessui.com/react/disclosure

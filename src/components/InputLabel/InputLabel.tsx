@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { Size } from '../../util/variant-types';
 import styles from './InputLabel.module.css';
 
 export type InputLabelProps = {
@@ -16,9 +17,11 @@ export type InputLabelProps = {
    */
   htmlFor: string;
   /**
-   * Size of the label. Defaults to lg.
+   * Size of the label.
+   *
+   * **Default is `"lg"`**.
    */
-  size?: 'md' | 'lg';
+  size?: Extract<Size, 'md' | 'lg'>;
   /**
    * Indicates disabled state of the input.
    */
