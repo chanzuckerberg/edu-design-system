@@ -7,5 +7,5 @@
  */
 .layout-linelength-container {
   /*  Caps the length of an excerpt of text to be easily readable. */
-  max-width: var(--eds-l-linelength-width); 
+  max-width: 36rem; 
 }

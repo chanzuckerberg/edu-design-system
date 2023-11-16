@@ -10,20 +10,20 @@
   --eds-theme-typography-link-lg: var(--eds-typography-preset-004);
   --eds-theme-typography-form-input: var(--eds-typography-preset-005-light);
   --eds-theme-typography-form-label: var(--eds-typography-preset-006);
-  --eds-theme-typography-button-label-sm: var(--eds-typography-preset-008-bold); /* @deprecated This is deprecated and missing from figma */
-  --eds-theme-typography-button-label: var(--eds-typography-preset-006); /* @deprecated This is deprecated and missing from figma */
+  --eds-theme-typography-button-label-sm: var(--eds-typography-preset-008-bold); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-typography-button-label: var(--eds-typography-preset-006); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-typography-button-md: var(--eds-typography-preset-006);
   --eds-theme-typography-button-lg: var(--eds-typography-preset-006);
   --eds-theme-typography-breadcrumb: var(--eds-typography-preset-009);
   --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
   --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);
   --eds-theme-typography-overline-md: var(--eds-typography-preset-011);
-  --eds-theme-typography-overline: var(--eds-typography-preset-011); /* @deprecated This is deprecated and missing from figma. */
-  --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010); /* Currently undefined in figma */
+  --eds-theme-typography-overline: var(--eds-typography-preset-011); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010);
   --eds-theme-typography-caption-sm: var(--eds-typography-preset-010-light);
-  --eds-theme-typography-caption-md-bold: var(--eds-typography-preset-008); /* Currently undefined in figma */
+  --eds-theme-typography-caption-md-bold: var(--eds-typography-preset-008);
   --eds-theme-typography-caption-md: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-caption-lg-bold: var(--eds-typography-preset-006); /* Currently undefined in figma */
+  --eds-theme-typography-caption-lg-bold: var(--eds-typography-preset-006);
   --eds-theme-typography-caption-lg: var(--eds-typography-preset-006-light);
   --eds-theme-typography-body-xs: var(--eds-typography-preset-008-light);
   --eds-theme-typography-body-sm: var(--eds-typography-preset-006-light);
@@ -40,8 +40,8 @@
   --eds-theme-typography-title-sm: var(--eds-typography-preset-005);
   --eds-theme-typography-title-md-bold: var(--eds-typography-preset-004-bold);
   --eds-theme-typography-title-md: var(--eds-typography-preset-004);
-  --eds-theme-typography-title-lg-bold: var(--eds-typography-preset-004-bold); /* Currently undefined in figma */
-  --eds-theme-typography-title-lg: var(--eds-typography-preset-004); /* Currently undefined in figma */
+  --eds-theme-typography-title-lg-bold: var(--eds-typography-preset-004-bold);
+  --eds-theme-typography-title-lg: var(--eds-typography-preset-004);
   --eds-theme-typography-headline-secondary-sm-bold: var(--eds-typography-preset-secondary-003);
   --eds-theme-typography-headline-secondary-sm: var(--eds-typography-preset-secondary-003-light);
   --eds-theme-typography-headline-secondary-md-bold: var(--eds-typography-preset-secondary-002);
@@ -80,89 +80,89 @@
   --eds-theme-color-link-brand-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-link-brand-text-hover: var(--eds-theme-color-text-brand-default);
   --eds-theme-color-link-brand-text: var(--eds-theme-color-text-neutral-strong);
-  --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0);
-  --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3);
-  --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0);
+  --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
   --eds-theme-color-border-brand-primary-default: var(--eds-theme-color-border-brand-primary);
   --eds-z-index-bottom: -100;
   --eds-z-index-top: 99999;
-  --eds-z-index-500: 500;
-  --eds-z-index-400: 400;
-  --eds-z-index-300: 300;
-  --eds-z-index-200: 200;
-  --eds-z-index-100: 100;
-  --eds-z-index-0: 0;
-  --eds-typography-preset-mobile-003-bold: var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-003: var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-003-light: var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002-bold: var(--eds-font-weight-bold) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002: var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002-light: var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001-bold: var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001: var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001-light: var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-secondary-mobile-003: var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-003-light: var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-001: var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-001-light: var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-008-light: var(--eds-font-weight-light) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-008: var(--eds-font-weight-medium) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-007-light: var(--eds-font-weight-light) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-007: var(--eds-font-weight-medium) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-006-light: var(--eds-font-weight-light) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-006: var(--eds-font-weight-medium) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-005-light: var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-005: var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-004-light: var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-004: var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-002-light: var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-002: var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-012-bold: var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-012-light: var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-012: var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011-bold: var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011-light: var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011: var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-010-bold: var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-010-light: var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-010: var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-009-bold: var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-009-light: var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-009: var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-008-bold: var(--eds-font-weight-bold) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-008-light: var(--eds-font-weight-light) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-008: var(--eds-font-weight-medium) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-007-bold: var(--eds-font-weight-bold) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-007-light: var(--eds-font-weight-light) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-007: var(--eds-font-weight-medium) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-006-bold: var(--eds-font-weight-bold) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-006-light: var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-006: var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-005-bold: var(--eds-font-weight-bold) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-005-light: var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-005: var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-004-bold: var(--eds-font-weight-bold) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-004-light: var(--eds-font-weight-light) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-004: var(--eds-font-weight-medium) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-003-mobile: var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary); /* @deprecated This is deprecated and missing from figma */
-  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary);
-  --eds-typography-preset-003-light: var(--eds-font-weight-light) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary);
-  --eds-typography-preset-003: var(--eds-font-weight-medium) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary);
-  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) var(--eds-font-size-28)/1.2857 var(--eds-font-family-primary); /* @deprecated This is deprecated and missing from figma */
-  --eds-typography-preset-002-bold: var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-002-light: var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-002: var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-001-mobile: var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary); /* @deprecated This is deprecated and missing from figma */
-  --eds-typography-preset-001-bold: var(--eds-font-weight-bold) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary);
-  --eds-typography-preset-001-light: var(--eds-font-weight-light) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary);
-  --eds-typography-preset-001: var(--eds-font-weight-medium) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary);
+  --eds-z-index-500: 500; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-400: 400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-300: 300; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-200: 200; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-100: 100; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-0: 0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-mobile-003-bold: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-002-bold: var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-001-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-secondary-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-008-light: var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-008: var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-007-light: var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-007: var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-006-light: var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-006: var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-005-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-005: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-004-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-004: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-012-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-012-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-012: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-011-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-011-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-011: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-010-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary);
+  --eds-typography-preset-010-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary);
+  --eds-typography-preset-010: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary);
+  --eds-typography-preset-009-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-009-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-009: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-008-bold: var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary);
+  --eds-typography-preset-008-light: var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary);
+  --eds-typography-preset-008: var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary);
+  --eds-typography-preset-007-bold: var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-007-light: var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-007: var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-006-bold: var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary);
+  --eds-typography-preset-006-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary);
+  --eds-typography-preset-006: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary);
+  --eds-typography-preset-005-bold: var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary);
+  --eds-typography-preset-005-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary);
+  --eds-typography-preset-005: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary);
+  --eds-typography-preset-004-bold: var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary);
+  --eds-typography-preset-004-light: var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary);
+  --eds-typography-preset-004: var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary);
+  --eds-typography-preset-003-mobile: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.375rem/1.45454545 var(--eds-font-family-primary);
+  --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.375rem/1.45454545 var(--eds-font-family-primary);
+  --eds-typography-preset-003: var(--eds-font-weight-medium) 1.375rem/1.45454545 var(--eds-font-family-primary);
+  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.75rem/1.2857 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-002-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-002-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-002: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-001-mobile: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary);
+  --eds-typography-preset-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary);
+  --eds-typography-preset-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary);
   --eds-letter-spacing-sm: 0.5px;
   --eds-font-weight-bold: 600;
   --eds-font-weight-medium: 500;
@@ -186,6 +186,7 @@
   --eds-size-quarter: calc(var(--eds-size-base-unit) / 4);
   --eds-size-half: calc(var(--eds-size-base-unit) / 2);
   --eds-size-base-unit: 0.5rem;
+  --eds-size-20: calc(var(--eds-size-base-unit) * 20);
   --eds-size-12: calc(var(--eds-size-base-unit) * 12);
   --eds-size-11: calc(var(--eds-size-base-unit) * 11);
   --eds-size-10: calc(var(--eds-size-base-unit) * 10);
@@ -205,9 +206,9 @@
   --eds-outline-width-lg: 4px;
   --eds-outline-width-md: 2px;
   --eds-outline-width-sm: 1px;
-  --eds-l-linelength-width: 36rem; /* @deprecated Layout tokens are deprecated and will be removed in a future release */
-  --eds-l-sidebar-width: 13.5rem; /* @deprecated Layout tokens are deprecated and will be removed in a future release */
-  --eds-l-max-width: 71.25rem; /* @deprecated Layout tokens are deprecated and will be removed in a future release */
+  --eds-l-linelength-width: 36rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-sidebar-width: 13.5rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-max-width: 71.25rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-other-ruby-800: #8F0134;
   --eds-color-other-ruby-700: #BD0044;
   --eds-color-other-ruby-600: #D41E52;
@@ -224,8 +225,8 @@
   --eds-color-other-orange-300: #FFAF76;
   --eds-color-other-orange-200: #FFCBA5;
   --eds-color-other-orange-100: #FFF1E9;
-  --eds-color-other-eraser: #F3DCE2; /* @deprecated This token has been deprecated and will be removed in a future EDS release. */
-  --eds-color-other-lemon: #F5FF8F;
+  --eds-color-other-eraser: #F3DCE2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-lemon: #F5FF8F; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-other-yellow-800: #854C03;
   --eds-color-other-yellow-700: #9E5B03;
   --eds-color-other-yellow-600: #BF7300;
@@ -261,15 +262,16 @@
   --eds-color-brand-grape-200: #E0E0F9;
   --eds-color-brand-grape-100: #F0F0FC;
   --eds-border-radius-full: 9999px;
-  --eds-border-radius-round: 50%;
+  --eds-border-radius-round: 50%; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-border-radius-xl: 20px;
   --eds-border-radius-lg: 8px;
   --eds-border-radius-md: 4px;
+  --eds-border-radius-none: 0px;
   --eds-border-width-xl: 8px;
   --eds-border-width-lg: 4px;
   --eds-border-width-md: 2px;
   --eds-border-width-sm: 1px;
-  --eds-anim-ease: ease;
+  --eds-anim-ease: ease; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-anim-move-long: 0.4s;
   --eds-anim-move-medium: 0.3s;
   --eds-anim-move-quick: 0.15s;
@@ -282,7 +284,7 @@
   --eds-theme-box-focus-ring-outline-offset: var(--eds-outline-width-md);
   --eds-theme-box-focus-ring-outline-width: var(--eds-outline-width-sm);
   --eds-theme-box-button-border-radius: var(--eds-border-radius-md);
-  --eds-theme-color-text-highlight-background: var(--eds-color-other-lemon);
+  --eds-theme-color-text-highlight-background: var(--eds-color-other-yellow-100);
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
   --eds-theme-color-radio-brand-background: var(--eds-color-brand-grape-500);
   --eds-theme-color-progress-bar-border: var(--eds-color-neutral-200);
@@ -295,8 +297,8 @@
   --eds-theme-color-form-border: var(--eds-color-neutral-500);
   --eds-theme-color-focus-ring-inverted: var(--eds-color-neutral-white);
   --eds-theme-color-focus-ring: var(--eds-color-brand-grape-600);
-  --eds-theme-color-data-bar-border: var(--eds-color-neutral-300);
-  --eds-theme-color-data-bar-background: var(--eds-color-neutral-100);
+  --eds-theme-color-data-bar-border: var(--eds-color-neutral-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-data-bar-background: var(--eds-color-neutral-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-checkbox-brand-background: var(--eds-color-brand-grape-500);
   --eds-theme-color-button-icon-error-text-active: var(--eds-color-neutral-white);
   --eds-theme-color-button-icon-error-text-hover: var(--eds-color-other-ruby-700);
@@ -438,11 +440,11 @@
   --eds-theme-color-button-primary-brand-background: var(--eds-color-brand-grape-600);
   --eds-theme-color-body-background-inverted: var(--eds-color-neutral-700);
   --eds-theme-color-body-background: var(--eds-color-neutral-100);
-  --eds-theme-color-text-brand-primary: var(--eds-color-brand-grape-700); /* @deprecated This token is deprecated. Please use eds-theme-color-text-brand-default instead. */
+  --eds-theme-color-text-brand-primary: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. Please use eds-theme-color-text-brand-default instead. */
   --eds-theme-color-text-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-text-grade-stop: var(--eds-color-other-ruby-700);
-  --eds-theme-color-text-grade-revise: var(--eds-color-neutral-800);
-  --eds-theme-color-text-grade-complete: var(--eds-color-other-mint-700);
+  --eds-theme-color-text-grade-stop: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-grade-revise: var(--eds-color-neutral-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-grade-complete: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-text-utility-error: var(--eds-color-other-ruby-700);
   --eds-theme-color-text-utility-warning: var(--eds-color-other-orange-700);
   --eds-theme-color-text-utility-success: var(--eds-color-other-mint-700);
@@ -451,12 +453,12 @@
   --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
   --eds-theme-color-icon-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-icon-grade-stop-hover: var(--eds-color-other-ruby-600);
-  --eds-theme-color-icon-grade-stop: var(--eds-color-other-ruby-500);
-  --eds-theme-color-icon-grade-revise-hover: var(--eds-color-neutral-black);
-  --eds-theme-color-icon-grade-revise: var(--eds-color-neutral-800);
-  --eds-theme-color-icon-grade-complete-hover: var(--eds-color-other-mint-500);
-  --eds-theme-color-icon-grade-complete: var(--eds-color-other-mint-500);
+  --eds-theme-color-icon-grade-stop-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-stop: var(--eds-color-other-ruby-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-revise-hover: var(--eds-color-neutral-black); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-revise: var(--eds-color-neutral-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-complete-hover: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-complete: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-icon-utility-error-hover: var(--eds-color-other-ruby-600);
   --eds-theme-color-icon-utility-error: var(--eds-color-other-ruby-500);
   --eds-theme-color-icon-utility-warning-hover: var(--eds-color-other-orange-600);
@@ -475,11 +477,11 @@
   --eds-theme-color-icon-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-theme-color-icon-neutral-default: var(--eds-color-neutral-600);
   --eds-theme-color-border-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-border-grade-stop: var(--eds-color-other-ruby-300);
-  --eds-theme-color-border-grade-revise-strong: var(--eds-color-other-yellow-400);
-  --eds-theme-color-border-grade-revise-default: var(--eds-color-other-yellow-300);
-  --eds-theme-color-border-grade-revise-subtle: var(--eds-color-other-yellow-200);
-  --eds-theme-color-border-grade-complete: var(--eds-color-other-mint-300);
+  --eds-theme-color-border-grade-stop: var(--eds-color-other-ruby-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-revise-strong: var(--eds-color-other-yellow-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-revise-default: var(--eds-color-other-yellow-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-revise-subtle: var(--eds-color-other-yellow-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-complete: var(--eds-color-other-mint-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-border-utility-error-strong: var(--eds-color-other-ruby-400);
   --eds-theme-color-border-utility-error-default: var(--eds-color-other-ruby-300);
   --eds-theme-color-border-utility-error-subtle: var(--eds-color-other-ruby-200);
@@ -499,12 +501,12 @@
   --eds-theme-color-border-neutral-subtle-hover: var(--eds-color-neutral-300);
   --eds-theme-color-border-neutral-subtle: var(--eds-color-neutral-200);
   --eds-theme-color-background-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-background-grade-stop-subtle: var(--eds-color-other-ruby-100);
-  --eds-theme-color-background-grade-stop-default: var(--eds-color-other-ruby-600);
-  --eds-theme-color-background-grade-revise-subtle: var(--eds-color-other-yellow-100);
-  --eds-theme-color-background-grade-revise-default: var(--eds-color-other-yellow-400);
-  --eds-theme-color-background-grade-complete-subtle: var(--eds-color-other-mint-100);
-  --eds-theme-color-background-grade-complete-default: var(--eds-color-other-mint-600);
+  --eds-theme-color-background-grade-stop-subtle: var(--eds-color-other-ruby-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-stop-default: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-revise-subtle: var(--eds-color-other-yellow-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-revise-default: var(--eds-color-other-yellow-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-complete-subtle: var(--eds-color-other-mint-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-complete-default: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-utility-error: var(--eds-color-other-ruby-100);
   --eds-theme-color-background-utility-warning: var(--eds-color-other-orange-100);
   --eds-theme-color-background-utility-success: var(--eds-color-other-mint-100);

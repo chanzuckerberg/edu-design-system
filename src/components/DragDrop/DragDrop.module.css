@@ -27,7 +27,7 @@
       top: 0;
       left: 0;
       width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      z-index: 100;
     }
   }
 
@@ -52,7 +52,7 @@
       top: 0;
       right: 0;
       width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      z-index: 100;
     }
   }
 }
@@ -180,7 +180,7 @@
   align-items: center;
   height: calc(100% - 2px);
   padding: var(--eds-size-1);
-  z-index: var(--eds-z-index-400);
+  z-index: 400;
   border-radius: var(--eds-border-radius-lg);
   background: var(--eds-theme-color-background-neutral-default);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);

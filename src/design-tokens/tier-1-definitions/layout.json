@@ -3,15 +3,15 @@
     "l": {
       "max-width": {
         "value": "71.25rem",
-        "comment": "@deprecated Layout tokens are deprecated and will be removed in a future release"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "sidebar-width": {
         "value": "13.5rem",
-        "comment": "@deprecated Layout tokens are deprecated and will be removed in a future release"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "linelength-width": {
         "value": "36rem",
-        "comment": "@deprecated Layout tokens are deprecated and will be removed in a future release"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     }
   }

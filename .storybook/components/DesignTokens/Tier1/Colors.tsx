@@ -29,9 +29,6 @@ export const Tier1Colors = () => {
           listItems={getListItems('eds-color-other-yellow', 'yellow')}
         />
         <ColorList listItems={getListItems('eds-color-other-ruby', 'ruby')} />
-        <ColorList
-          listItems={getListItems('eds-color-other-lemon', 'supporting')}
-        />
       </Section>
     </div>
   );

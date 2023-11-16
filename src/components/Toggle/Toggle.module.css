@@ -95,7 +95,7 @@
 
   /* The transparent border is used to support Windows high contrast mode and reduce potential jiggling with adding / removing borders */
   border: var(--eds-theme-border-width) solid transparent;
-  border-radius: var(--eds-border-radius-round);
+  border-radius: var(--eds-border-radius-full);
 
   background-color: var(--eds-theme-color-toggle-thumb);
 

@@ -3,77 +3,81 @@
     "color": {
       "brand": {
         "grape": {
-          "100": { "value": "#F0F0FC" },
-          "200": { "value": "#E0E0F9" },
-          "300": { "value": "#C4C1F3" },
-          "400": { "value": "#A6A3EE" },
-          "500": { "value": "#8984E8" },
-          "600": { "value": "#6B65E2" },
-          "700": { "value": "#5751D2" },
-          "800": { "value": "#3E42B1" }
+          "100": { "value": "#F0F0FC", "group": "color" },
+          "200": { "value": "#E0E0F9", "group": "color" },
+          "300": { "value": "#C4C1F3", "group": "color" },
+          "400": { "value": "#A6A3EE", "group": "color" },
+          "500": { "value": "#8984E8", "group": "color" },
+          "600": { "value": "#6B65E2", "group": "color" },
+          "700": { "value": "#5751D2", "group": "color" },
+          "800": { "value": "#3E42B1", "group": "color" }
         }
       },
       "neutral": {
         "white": {
-          "value": "#FFFFFF"
+          "value": "#FFFFFF",
+          "group": "color"
         },
-        "100": { "value": "#F4F6F8" },
-        "200": { "value": "#E7E8EA" },
-        "300": { "value": "#C0C4C8" },
-        "400": { "value": "#999EA3" },
-        "500": { "value": "#878C90" },
-        "600": { "value": "#5D6369" },
-        "700": { "value": "#383C43" },
-        "800": { "value": "#21272D" },
-        "black": { "value": "#161B1F" }
+        "100": { "value": "#F4F6F8", "group": "color" },
+        "200": { "value": "#E7E8EA", "group": "color" },
+        "300": { "value": "#C0C4C8", "group": "color" },
+        "400": { "value": "#999EA3", "group": "color" },
+        "500": { "value": "#878C90", "group": "color" },
+        "600": { "value": "#5D6369", "group": "color" },
+        "700": { "value": "#383C43", "group": "color" },
+        "800": { "value": "#21272D", "group": "color" },
+        "black": { "value": "#161B1F", "group": "color" }
       },
       "other": {
         "mint": {
-          "100": { "value": "#ECFFF5" },
-          "200": { "value": "#B7E9CE" },
-          "300": { "value": "#8FDCB3" },
-          "400": { "value": "#59C88C" },
-          "500": { "value": "#00A56A" },
-          "600": { "value": "#008656" },
-          "700": { "value": "#007249" },
-          "800": { "value": "#005939" }
+          "100": { "value": "#ECFFF5", "group": "color" },
+          "200": { "value": "#B7E9CE", "group": "color" },
+          "300": { "value": "#8FDCB3", "group": "color" },
+          "400": { "value": "#59C88C", "group": "color" },
+          "500": { "value": "#00A56A", "group": "color" },
+          "600": { "value": "#008656", "group": "color" },
+          "700": { "value": "#007249", "group": "color" },
+          "800": { "value": "#005939", "group": "color" }
         },
         "yellow": {
-          "100": { "value": "#FDF1D0" },
-          "200": { "value": "#FFEBB3" },
-          "300": { "value": "#FFDD80" },
-          "400": { "value": "#F7BE2D" },
-          "500": { "value": "#D18400" },
-          "600": { "value": "#BF7300" },
-          "700": { "value": "#9E5B03" },
-          "800": { "value": "#854C03" }
+          "100": { "value": "#FDF1D0", "group": "color" },
+          "200": { "value": "#FFEBB3", "group": "color" },
+          "300": { "value": "#FFDD80", "group": "color" },
+          "400": { "value": "#F7BE2D", "group": "color" },
+          "500": { "value": "#D18400", "group": "color" },
+          "600": { "value": "#BF7300", "group": "color" },
+          "700": { "value": "#9E5B03", "group": "color" },
+          "800": { "value": "#854C03", "group": "color" }
         },
         "lemon": {
-          "value": "#F5FF8F"
+          "value": "#F5FF8F",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "eraser": {
           "value": "#F3DCE2",
-          "comment": "@deprecated This token has been deprecated and will be removed in a future EDS release."
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "orange": {
-          "100": { "value": "#FFF1E9" },
-          "200": { "value": "#FFCBA5" },
-          "300": { "value": "#FFAF76" },
-          "400": { "value": "#F6924A" },
-          "500": { "value": "#E06B00" },
-          "600": { "value": "#C64600" },
-          "700": { "value": "#AC3400" },
-          "800": { "value": "#842800" }
+          "100": { "value": "#FFF1E9", "group": "color" },
+          "200": { "value": "#FFCBA5", "group": "color" },
+          "300": { "value": "#FFAF76", "group": "color" },
+          "400": { "value": "#F6924A", "group": "color" },
+          "500": { "value": "#E06B00", "group": "color" },
+          "600": { "value": "#C64600", "group": "color" },
+          "700": { "value": "#AC3400", "group": "color" },
+          "800": { "value": "#842800", "group": "color" }
         },
         "ruby": {
-          "100": { "value": "#FFF0F4" },
-          "200": { "value": "#FFCBD7" },
-          "300": { "value": "#FB90B0" },
-          "400": { "value": "#F76C96" },
-          "500": { "value": "#F1497B" },
-          "600": { "value": "#D41E52" },
-          "700": { "value": "#BD0044" },
-          "800": { "value": "#8F0134" }
+          "100": { "value": "#FFF0F4", "group": "color" },
+          "200": { "value": "#FFCBD7", "group": "color" },
+          "300": { "value": "#FB90B0", "group": "color" },
+          "400": { "value": "#F76C96", "group": "color" },
+          "500": { "value": "#F1497B", "group": "color" },
+          "600": { "value": "#D41E52", "group": "color" },
+          "700": { "value": "#BD0044", "group": "color" },
+          "800": { "value": "#8F0134", "group": "color" }
         }
       }
     }

@@ -1,0 +1,16 @@
+{
+  "eds": {
+    "theme": {
+      "form": {
+        "border": {
+          "width": {
+            "value": "{eds.border.width.sm}"
+          },
+          "radius": {
+            "value": "{eds.border.radius.md}"
+          }
+        }
+      }
+    }
+  }
+}

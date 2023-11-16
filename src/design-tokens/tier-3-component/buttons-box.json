@@ -1,0 +1,15 @@
+{
+  "eds": {
+    "theme": {
+      "box": {
+        "button": {
+          "border": {
+            "radius": {
+              "value": "{eds.border.radius.md}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

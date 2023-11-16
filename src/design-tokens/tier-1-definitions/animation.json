@@ -21,7 +21,8 @@
         }
       },
       "ease": {
-        "value": "ease"
+        "value": "ease",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     }
   }

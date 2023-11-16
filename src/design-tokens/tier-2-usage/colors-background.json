@@ -6,86 +6,112 @@
           "neutral": {
             "default": {
               "@": {
-                "value": "{eds.color.neutral.white}"
+                "value": "{eds.color.neutral.white}",
+                "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.100}"
+                "value": "{eds.color.neutral.100}",
+                "group": "color"
               }
             },
             "subtle": {
               "@": {
-                "value": "{eds.color.neutral.100}"
+                "value": "{eds.color.neutral.100}",
+                "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.200}"
+                "value": "{eds.color.neutral.200}",
+                "group": "color"
               }
             },
             "medium": {
               "@": {
-                "value": "{eds.color.neutral.200}"
+                "value": "{eds.color.neutral.200}",
+                "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.300}"
+                "value": "{eds.color.neutral.300}",
+                "group": "color"
               }
             }
           },
           "brand": {
             "primary": {
               "default": {
-                "value": "{eds.color.brand.grape.100}"
+                "value": "{eds.color.brand.grape.100}",
+                "group": "color"
               },
               "subtle": {
-                "value": "{eds.color.brand.grape.100}"
+                "value": "{eds.color.brand.grape.100}",
+                "group": "color"
               },
               "strong": {
                 "@": {
-                  "value": "{eds.color.brand.grape.600}"
+                  "value": "{eds.color.brand.grape.600}",
+                  "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.brand.grape.800}"
+                  "value": "{eds.color.brand.grape.800}",
+                  "group": "color"
                 }
               }
             }
           },
           "utility": {
             "success": {
-              "value": "{eds.color.other.mint.100}"
+              "value": "{eds.color.other.mint.100}",
+              "group": "color"
             },
             "warning": {
-              "value": "{eds.color.other.orange.100}"
+              "value": "{eds.color.other.orange.100}",
+              "group": "color"
             },
             "error": {
-              "value": "{eds.color.other.ruby.100}"
+              "value": "{eds.color.other.ruby.100}",
+              "group": "color"
             }
           },
           "grade": {
             "complete": {
               "default": {
-                "value": "{eds.color.other.mint.600}"
+                "value": "{eds.color.other.mint.600}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "subtle": {
-                "value": "{eds.color.other.mint.100}"
+                "value": "{eds.color.other.mint.100}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
             "revise": {
               "default": {
-                "value": "{eds.color.other.yellow.400}"
+                "value": "{eds.color.other.yellow.400}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "subtle": {
-                "value": "{eds.color.other.yellow.100}"
+                "value": "{eds.color.other.yellow.100}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
             "stop": {
               "default": {
-                "value": "{eds.color.other.ruby.600}"
+                "value": "{eds.color.other.ruby.600}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "subtle": {
-                "value": "{eds.color.other.ruby.100}"
+                "value": "{eds.color.other.ruby.100}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             }
           },
           "disabled": {
-            "value": "{eds.color.neutral.300}"
+            "value": "{eds.color.neutral.300}",
+            "group": "color"
           }
         }
       }

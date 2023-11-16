@@ -6,102 +6,132 @@
           "neutral": {
             "subtle": {
               "@": {
-                "value": "{eds.color.neutral.200}"
+                "value": "{eds.color.neutral.200}",
+                "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.300}"
+                "value": "{eds.color.neutral.300}",
+                "group": "color"
               }
             },
             "default": {
               "@": {
-                "value": "{eds.color.neutral.300}"
+                "value": "{eds.color.neutral.300}",
+                "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.400}"
+                "value": "{eds.color.neutral.400}",
+                "group": "color"
               }
             },
             "strong": {
               "@": {
-                "value": "{eds.color.neutral.400}"
+                "value": "{eds.color.neutral.400}",
+                "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.500}"
+                "value": "{eds.color.neutral.500}",
+                "group": "color"
               }
             }
           },
           "brand": {
             "primary": {
               "subtle": {
-                "value": "{eds.color.brand.grape.200}"
+                "value": "{eds.color.brand.grape.200}",
+                "group": "color"
               },
               "default": {
-                "value": "var(--eds-theme-color-border-brand-primary)"
+                "value": "var(--eds-theme-color-border-brand-primary)",
+                "group": "color"
               },
               "@": {
                 "value": "{eds.color.brand.grape.300}",
+                "group": "color",
                 "comment": "@deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
               },
               "strong": {
-                "value": "{eds.color.brand.grape.400}"
+                "value": "{eds.color.brand.grape.400}",
+                "group": "color"
               }
             }
           },
           "utility": {
             "success": {
               "subtle": {
-                "value": "{eds.color.other.mint.200}"
+                "value": "{eds.color.other.mint.200}",
+                "group": "color"
               },
               "default": {
-                "value": "{eds.color.other.mint.300}"
+                "value": "{eds.color.other.mint.300}",
+                "group": "color"
               },
               "strong": {
-                "value": "{eds.color.other.mint.400}"
+                "value": "{eds.color.other.mint.400}",
+                "group": "color"
               }
             },
             "warning": {
               "subtle": {
-                "value": "{eds.color.other.orange.200}"
+                "value": "{eds.color.other.orange.200}",
+                "group": "color"
               },
               "default": {
-                "value": "{eds.color.other.orange.300}"
+                "value": "{eds.color.other.orange.300}",
+                "group": "color"
               },
               "strong": {
-                "value": "{eds.color.other.orange.400}"
+                "value": "{eds.color.other.orange.400}",
+                "group": "color"
               }
             },
             "error": {
               "subtle": {
-                "value": "{eds.color.other.ruby.200}"
+                "value": "{eds.color.other.ruby.200}",
+                "group": "color"
               },
               "default": {
-                "value": "{eds.color.other.ruby.300}"
+                "value": "{eds.color.other.ruby.300}",
+                "group": "color"
               },
               "strong": {
-                "value": "{eds.color.other.ruby.400}"
+                "value": "{eds.color.other.ruby.400}",
+                "group": "color"
               }
             }
           },
           "grade": {
             "complete": {
-              "value": "{eds.color.other.mint.300}"
+              "value": "{eds.color.other.mint.300}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             },
             "revise": {
               "subtle": {
-                "value": "{eds.color.other.yellow.200}"
+                "value": "{eds.color.other.yellow.200}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "default": {
-                "value": "{eds.color.other.yellow.300}"
+                "value": "{eds.color.other.yellow.300}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "strong": {
-                "value": "{eds.color.other.yellow.400}"
+                "value": "{eds.color.other.yellow.400}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
             "stop": {
-              "value": "{eds.color.other.ruby.300}"
+              "value": "{eds.color.other.ruby.300}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             }
           },
           "disabled": {
-            "value": "{eds.color.neutral.300}"
+            "value": "{eds.color.neutral.300}",
+            "group": "color"
           }
         }
       }
