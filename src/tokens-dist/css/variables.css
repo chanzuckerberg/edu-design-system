@@ -18,7 +18,7 @@
   --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
   --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);
   --eds-theme-typography-overline-md: var(--eds-typography-preset-011);
-  --eds-theme-typography-overline: var(--eds-typography-preset-011); /* This is deprecated and missing from figma. */
+  --eds-theme-typography-overline: var(--eds-typography-preset-011); /* @deprecated This is deprecated and missing from figma. */
   --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010); /* Currently undefined in figma */
   --eds-theme-typography-caption-sm: var(--eds-typography-preset-010-light);
   --eds-theme-typography-caption-md-bold: var(--eds-typography-preset-008); /* Currently undefined in figma */
@@ -205,9 +205,9 @@
   --eds-outline-width-lg: 4px;
   --eds-outline-width-md: 2px;
   --eds-outline-width-sm: 1px;
-  --eds-l-linelength-width: 36rem; /* Layout tokens are deprecated and will be removed in a future release */
-  --eds-l-sidebar-width: 13.5rem; /* Layout tokens are deprecated and will be removed in a future release */
-  --eds-l-max-width: 71.25rem; /* Layout tokens are deprecated and will be removed in a future release */
+  --eds-l-linelength-width: 36rem; /* @deprecated Layout tokens are deprecated and will be removed in a future release */
+  --eds-l-sidebar-width: 13.5rem; /* @deprecated Layout tokens are deprecated and will be removed in a future release */
+  --eds-l-max-width: 71.25rem; /* @deprecated Layout tokens are deprecated and will be removed in a future release */
   --eds-color-other-ruby-800: #8F0134;
   --eds-color-other-ruby-700: #BD0044;
   --eds-color-other-ruby-600: #D41E52;
