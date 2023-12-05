@@ -22,7 +22,9 @@ export type LinkProps = LinkHTMLElementProps & {
   fullWidth?: boolean;
   'data-testid'?: string;
   /**
-   * Link size inherits from the surrounding text. This will be removed in the next major version
+   * Link size inherits from the surrounding text.
+   *
+   * **Deprecated**. This will be removed in the next major version.
    * @deprecated
    */
   size?: Extract<Size, 'sm' | 'md' | 'lg'>;

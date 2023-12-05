@@ -1,7 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Link, type LinkProps } from './Link';
-import { SIZES } from '../ClickableStyle';
 
 import Icon from '../Icon';
 
@@ -35,13 +34,25 @@ export default {
       options: ['brand', 'neutral'],
     },
     size: {
-      control: {
-        type: 'select',
+      table: {
+        disable: true,
       },
-      options: SIZES,
     },
     fullWidth: {
       control: 'boolean',
+      table: {
+        disable: true,
+      },
+    },
+    onClick: {
+      table: {
+        disable: true,
+      },
+    },
+    href: {
+      table: {
+        disable: true,
+      },
     },
   },
 } as Meta<Args>;
