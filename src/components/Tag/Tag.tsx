@@ -8,6 +8,7 @@ export const VARIANTS = [
   'error',
   'success',
   'warning',
+  /** @deprecated */
   'yield',
   'brand',
 ] as const;
@@ -17,6 +18,8 @@ export type Variant = (typeof VARIANTS)[number];
 type Props = {
   /**
    * The color variant of the tag. It will update the content colors, background color, and border (when `hasOutline` is set to `true`).
+   *
+   * **NOTE**: `yield` variant is deprecated and will be removed in a future release.
    *
    * **Default is `"neutral"`**.
    */

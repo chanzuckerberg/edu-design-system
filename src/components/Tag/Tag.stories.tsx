@@ -4,6 +4,8 @@ import { Tag, VARIANTS } from './Tag';
 import Icon from '../Icon';
 import styles from './Tag.stories.module.css';
 
+const supportedVariants = VARIANTS.filter((variant) => variant !== 'yield');
+
 export default {
   title: 'Components/Tag',
   component: Tag,
@@ -35,7 +37,7 @@ export const Default: Story = {};
 export const Variants: Story = {
   render: (args) => (
     <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
+      {supportedVariants.map((variant) => {
         return (
           <Tag
             data-testid="test"
@@ -56,7 +58,7 @@ export const Variants: Story = {
 export const OutlineVariants: Story = {
   render: (args) => (
     <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
+      {supportedVariants.map((variant) => {
         return (
           <Tag
             key={variant}
@@ -81,7 +83,7 @@ export const WithIcon: Story = {
   },
   render: (args) => (
     <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
+      {supportedVariants.map((variant) => {
         return (
           <Tag
             key={variant}
@@ -107,7 +109,7 @@ export const WithLongTextAndIcon: Story = {
   },
   render: (args) => (
     <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
+      {supportedVariants.map((variant) => {
         return <Tag key={variant} {...args} hasOutline variant={variant} />;
       })}
     </div>
