@@ -413,7 +413,7 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
   >
     <button
       aria-label="Decrement"
-      class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+      class="button button--lg button--secondary button--neutral"
       type="button"
     >
       –
@@ -448,7 +448,7 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
     </p>
     <button
       aria-label="Increment"
-      class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+      class="button button--lg button--secondary button--neutral"
       type="button"
     >
       +

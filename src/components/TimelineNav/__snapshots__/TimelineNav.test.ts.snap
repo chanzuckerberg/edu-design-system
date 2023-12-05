@@ -494,7 +494,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
     class="timeline-nav__body"
   >
     <button
-      class="clickable-style clickable-style--link clickable-style--neutral button button--link timeline-nav__back"
+      class="button button--link button--neutral timeline-nav__back"
       type="button"
     >
       <svg

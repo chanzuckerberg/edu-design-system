@@ -8,7 +8,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
     style="margin-bottom: 1rem;"
   >
     <button
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+      class="button button--lg button--primary button--brand search-button"
       type="button"
     >
       Search
@@ -68,7 +68,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
       </svg>
     </div>
     <button
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+      class="button button--lg button--primary button--brand search-button"
       type="button"
     >
       Search
@@ -111,7 +111,7 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
       </svg>
     </div>
     <button
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+      class="button button--lg button--primary button--brand search-button"
       type="button"
     >
       Search
@@ -155,7 +155,7 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
       </svg>
     </div>
     <button
-      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled search-button"
+      class="button button--lg button--primary button--brand button--disabled search-button"
       disabled=""
       tabindex="-1"
       type="button"
@@ -171,7 +171,7 @@ exports[`<SearchField /> SearchButton story renders snapshot 1`] = `
   style="padding: 0.5rem; background-color: white;"
 >
   <button
-    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+    class="button button--lg button--primary button--brand search-button"
     type="button"
   >
     Search

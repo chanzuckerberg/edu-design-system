@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
-import ClickableStyle from '../ClickableStyle';
-import type { ClickableStyleProps, VariantStatus } from '../ClickableStyle';
+import type { Size } from '../../util/variant-types';
+import type { VariantStatus } from '../ClickableStyle';
 import styles from './Link.module.css';
 
 type LinkHTMLElementProps = Omit<
@@ -16,48 +16,72 @@ export type LinkProps = LinkHTMLElementProps & {
    */
   children: ReactNode;
   /**
-   * Toggles clickable that fills the full width of its container
+   * Toggles link that fills the full width of its container
+   * @deprecated
    */
   fullWidth?: boolean;
   'data-testid'?: string;
-  size?: ClickableStyleProps<'a'>['size'];
+  /**
+   * Link size inherits from the surrounding text.
+   *
+   * **Deprecated**. This will be removed in the next major version.
+   * @deprecated
+   */
+  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
 } & VariantStatus;
 
 /**
  * `import {Link} from "@chanzuckerberg/eds";`
  *
- * Component for making styled anchor tags.
+ * Component for making styled anchor tags. It supports neutral and brand statuses (all other variant/status combinations will be removed in a future release).
  *
- * This component is called Link because it should be used to make `<a>` elements;
- * however, it can be styled to look like a button.
+ * This component is called Link because it should be used to make `<a>` elements.
  *
- * If you need to style a `<button>` element to look like a link, please use the `Button` component.
- * If you need to style a different element or component (e.g. `Link` from `react-router`) to
- * look like a button or link, you can use the `ClickableStyle` component.
- *
- * In terms of the look and feel of the component in the UI, the `Button`, and `Link`, and `ClickableStyle`
- * components are exactly the same.
+ * - If you need to style a `<button>` element to look like a link, please use the `Button` component.
+ * - If you need to style a different element or component like a button or link, you can use the `ClickableStyle` component.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
-    { className, variant = 'link', status = 'brand', size = 'lg', ...rest },
+    {
+      children,
+      className,
+      variant = 'link',
+      status = 'brand',
+      size = 'lg',
+      fullWidth,
+      ...rest
+    },
     ref,
   ) => {
     const componentClassName = clsx(
+      // Base styles
+      styles['link'],
+      // Sizes
+      variant !== 'link' && [
+        size === 'sm' && styles['link--sm'],
+        size === 'md' && styles['link--md'],
+        size === 'lg' && styles['link--lg'],
+      ],
+      // Variants
+      variant === 'primary' && styles['link--primary'],
+      variant === 'secondary' && styles['link--secondary'],
+      variant === 'icon' && styles['link--icon'],
       variant === 'link' && styles['link--link'],
+      // Colors
+      status === 'brand' && styles['link--brand'],
+      status === 'neutral' && styles['link--neutral'],
+      status === 'success' && styles['link--success'],
+      status === 'warning' && styles['link--warning'],
+      status === 'error' && styles['link--error'],
+      // Other options
+      fullWidth && styles['link--full-width'],
       className,
     );
 
     return (
-      <ClickableStyle
-        {...rest}
-        as="a"
-        className={componentClassName}
-        ref={ref}
-        size={size}
-        status={status}
-        variant={variant}
-      />
+      <a className={componentClassName} ref={ref} {...rest}>
+        {children}
+      </a>
     );
   },
 );

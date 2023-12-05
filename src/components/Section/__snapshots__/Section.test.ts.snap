@@ -195,7 +195,7 @@ exports[`<Section /> WithRight story renders snapshot 1`] = `
         class="section__right"
       >
         <button
-          class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand button button--primary"
+          class="button button--md button--primary button--brand"
           type="button"
         >
           Button

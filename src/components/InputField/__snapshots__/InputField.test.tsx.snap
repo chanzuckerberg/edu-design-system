@@ -154,7 +154,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
         class="input-field__input-within"
       >
         <button
-          class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
+          class="button button--sm button--icon button--brand"
           type="button"
         >
           Button

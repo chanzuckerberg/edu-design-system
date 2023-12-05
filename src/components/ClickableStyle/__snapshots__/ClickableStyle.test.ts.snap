@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Default story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+>
+  link
+</a>
+`;
+
+exports[`<Button /> Destructive story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+    />
+  </svg>
+  Button
+</a>
+`;
+
+exports[`<Button /> Link story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--link clickable-style--brand"
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--link clickable-style--brand"
+  disabled=""
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--link clickable-style--neutral"
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> Primary story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+  disabled=""
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+    />
+  </svg>
+  Button
+</a>
+`;
+
+exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand"
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--primary clickable-style--brand"
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+  disabled=""
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+    />
+  </svg>
+  Button
+</a>
+`;
+
+exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--neutral"
+  disabled=""
+>
+  example text
+</a>
+`;
+
+exports[`<Button /> WithCustomElement story renders snapshot 1`] = `
+<button
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+>
+  Example Component
+</button>
+`;
