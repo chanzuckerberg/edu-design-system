@@ -1729,7 +1729,6 @@ __metadata:
     "@rollup/plugin-typescript": "npm:^11.1.5"
     "@size-limit/file": "npm:^8.2.6"
     "@storybook/addon-a11y": "npm:^7.6.3"
-    "@storybook/addon-docs": "npm:^7.6.3"
     "@storybook/addon-essentials": "npm:^7.6.3"
     "@storybook/addon-interactions": "npm:^7.6.3"
     "@storybook/addon-links": "npm:^7.6.3"
@@ -3900,7 +3899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:7.6.3, @storybook/addon-docs@npm:^7.6.3":
+"@storybook/addon-docs@npm:7.6.3":
   version: 7.6.3
   resolution: "@storybook/addon-docs@npm:7.6.3"
   dependencies:

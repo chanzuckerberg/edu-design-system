@@ -25,13 +25,6 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@geometricpanda/storybook-addon-badges',
     {
-      name: '@storybook/addon-docs',
-      options: {
-        configureJSX: true,
-        transcludeMarkdown: true,
-      },
-    },
-    {
       name: '@storybook/addon-styling',
       options: {
         postCss: true,
