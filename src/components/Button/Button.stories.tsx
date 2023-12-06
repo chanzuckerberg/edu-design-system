@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Button } from './Button';
-import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
+import { SIZES, STATUSES } from '../ClickableStyle';
 
 import Icon from '../Icon';
 
@@ -21,7 +21,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: VARIANTS,
+      options: ['primary', 'secondary', 'icon'],
     },
     status: {
       control: {
@@ -271,37 +271,6 @@ export const IconButtonIconOnlySmall: StoryObj<Args> = {
     children: <Icon name="arrow-back" purpose="informative" title="go back" />,
     variant: 'icon',
     size: 'sm',
-  },
-};
-
-export const Link: StoryObj<Args> = {
-  args: { variant: 'link' },
-};
-
-export const LinkDisabled: StoryObj<Args> = {
-  args: { variant: 'link', disabled: true },
-};
-
-export const LinkRightIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon
-          name="open-in-new"
-          purpose="informative"
-          title="opens in a new tab"
-        />
-      </>
-    ),
-    variant: 'link',
-  },
-};
-
-export const LinkNeutral: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    variant: 'link',
   },
 };
 

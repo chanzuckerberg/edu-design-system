@@ -19,22 +19,22 @@ export const SIZES = ['sm', 'md', 'lg'] as const;
 export type Size = (typeof SIZES)[number];
 
 // Define Discriminating unions for the valid statuses based on variant
-type IconStatus = {
+export type IconStatus = {
   variant?: Extract<Variant, 'icon'>;
   status?: Status;
 };
 
-type SecondaryStatus = {
+export type SecondaryStatus = {
   variant?: Extract<Variant, 'secondary'>;
   status?: Status;
 };
 
-type PrimaryStatus = {
+export type PrimaryStatus = {
   variant?: Extract<Variant, 'primary'>;
   status?: Extract<Status, 'brand' | 'error'>;
 };
 
-type LinkStatus = {
+export type LinkStatus = {
   variant?: Extract<Variant, 'link'>;
   status?: Extract<Status, 'brand' | 'neutral'>;
 };
@@ -84,15 +84,13 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
 /**
  * `import {ClickableStyle} from "@chanzuckerberg/eds";`
  *
- * A helper component that contains all the styling for buttons and links.
+ * A helper component that contains all the styling for buttons-like controls and navigation links.
  *
  * If you're styling a `<button>` or `<a>` element, you can use the `Button`
  * and `Link` components (respectively). `ClickableStyle` should only be used
- * directly when styling other elements or components (e.g. `Link` from `react-router`)
- * to look like a button or link. Use the exported `VariantStatus` to augment the type
- * when using `ClickableStyle`.
+ * directly when styling other elements or components to look like a button or link.
  *
- * See the `Button` and `Link` stories for usage examples.
+ * Use the exported `VariantStatus` to augment the type when using `ClickableStyle`.
  */
 export const ClickableStyle = React.forwardRef(
   <IComponent extends React.ElementType>(

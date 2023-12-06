@@ -60,7 +60,7 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
       <li>
         Even 
         <a
-          class="clickable-style clickable-style--link clickable-style--brand link--link"
+          class="link link--link link--brand"
           href="#"
         >
           text links

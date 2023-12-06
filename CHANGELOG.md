@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.7.1...v13.8.0) (2023-12-06)
+
+
+### Features
+
+* separate ClickableStyles from core components ([#1759](https://github.com/chanzuckerberg/edu-design-system/issues/1759)) ([c7fc2af](https://github.com/chanzuckerberg/edu-design-system/commit/c7fc2afd989dfbb256279ca2766f18d660bab918))
+* **Tag:** mark yield color variant as deprecated ([#1815](https://github.com/chanzuckerberg/edu-design-system/issues/1815)) ([bd14083](https://github.com/chanzuckerberg/edu-design-system/commit/bd1408348dfc30a0b892301aea800b378b7ca9b4))
+
+
+### Bug Fixes
+
+* remove duplicate addon-docs loading ([#1816](https://github.com/chanzuckerberg/edu-design-system/issues/1816)) ([42a634c](https://github.com/chanzuckerberg/edu-design-system/commit/42a634cb0c934735052afbd742b2cef086b4d827))
+
 ### [13.7.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.7.0...v13.7.1) (2023-11-16)
 
 

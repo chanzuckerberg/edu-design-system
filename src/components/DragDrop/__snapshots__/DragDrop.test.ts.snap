@@ -576,7 +576,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
               class="ml-auto"
             >
               <button
-                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                class="button button--lg button--icon button--brand"
                 type="button"
               >
                 <svg
@@ -824,7 +824,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
               class="ml-auto"
             >
               <button
-                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                class="button button--lg button--icon button--brand"
                 type="button"
               >
                 <svg
@@ -871,7 +871,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
               class="ml-auto"
             >
               <button
-                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                class="button button--lg button--icon button--brand"
                 type="button"
               >
                 <svg
@@ -918,7 +918,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
               class="ml-auto"
             >
               <button
-                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                class="button button--lg button--icon button--brand"
                 type="button"
               >
                 <svg

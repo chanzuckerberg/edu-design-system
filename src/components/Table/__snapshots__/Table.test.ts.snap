@@ -160,7 +160,7 @@ exports[`<Table /> FiltersInteractive story renders snapshot 1`] = `
 <div>
   <div>
     <button
-      class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+      class="button button--lg button--secondary button--neutral filters-button"
       type="button"
     >
       <svg
@@ -614,7 +614,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <button
-          class="clickable-style clickable-style--link clickable-style--brand button button--link table-header-cell__sort-button"
+          class="button button--link button--brand table-header-cell__sort-button"
           type="button"
         >
           Sortable
