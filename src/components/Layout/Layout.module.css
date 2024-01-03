@@ -84,8 +84,8 @@
     top: 0;
     left: 0;
     height: 100vh;
-    width: var(--eds-l-sidebar-width);
-    z-index: var(--eds-z-index-500);
+    width: 13.5rem;
+    z-index: 500;
   }
 
   /**

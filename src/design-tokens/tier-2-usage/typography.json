@@ -81,12 +81,10 @@
         "title": {
           "lg": {
             "@": {
-              "value": "var(--eds-typography-preset-004)",
-              "comment": "Currently undefined in figma"
+              "value": "var(--eds-typography-preset-004)"
             },
             "bold": {
-              "value": "var(--eds-typography-preset-004-bold)",
-              "comment": "Currently undefined in figma"
+              "value": "var(--eds-typography-preset-004-bold)"
             }
           },
           "md": {
@@ -155,8 +153,7 @@
               "value": "var(--eds-typography-preset-006-light)"
             },
             "bold": {
-              "value": "var(--eds-typography-preset-006)",
-              "comment": "Currently undefined in figma"
+              "value": "var(--eds-typography-preset-006)"
             }
           },
           "md": {
@@ -164,8 +161,7 @@
               "value": "var(--eds-typography-preset-008-light)"
             },
             "bold": {
-              "value": "var(--eds-typography-preset-008)",
-              "comment": "Currently undefined in figma"
+              "value": "var(--eds-typography-preset-008)"
             }
           },
           "sm": {
@@ -173,15 +169,14 @@
               "value": "var(--eds-typography-preset-010-light)"
             },
             "bold": {
-              "value": "var(--eds-typography-preset-010)",
-              "comment": "Currently undefined in figma"
+              "value": "var(--eds-typography-preset-010)"
             }
           }
         },
         "overline": {
           "@": {
             "value": "var(--eds-typography-preset-011)",
-            "comment": "@deprecated This is deprecated and missing from figma."
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           },
           "md": {
             "value": "var(--eds-typography-preset-011)"

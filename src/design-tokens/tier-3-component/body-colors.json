@@ -5,10 +5,12 @@
         "body": {
           "background": {
             "@": {
-              "value": "{eds.color.neutral.100}"
+              "value": "{eds.color.neutral.100}",
+              "group": "color"
             },
             "inverted": {
-              "value": "{eds.color.neutral.700}"
+              "value": "{eds.color.neutral.700}",
+              "group": "color"
             }
           }
         }

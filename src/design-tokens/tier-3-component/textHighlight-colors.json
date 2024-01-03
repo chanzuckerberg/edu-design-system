@@ -4,10 +4,12 @@
       "color": {
         "text-highlight": {
           "foreground": {
-            "value": "{eds.color.neutral.800}"
+            "value": "{eds.color.neutral.800}",
+            "group": "color"
           },
           "background": {
-            "value": "{eds.color.other.lemon}"
+            "value": "{eds.color.other.yellow.100}",
+            "group": "color"
           }
         }
       }

@@ -20,6 +20,7 @@
         "xl": "8px"
       },
       "radius": {
+        "none": "0px",
         "md": "4px",
         "lg": "8px",
         "xl": "20px",
@@ -128,6 +129,7 @@
       "10": "calc(var(--eds-size-base-unit) * 10)",
       "11": "calc(var(--eds-size-base-unit) * 11)",
       "12": "calc(var(--eds-size-base-unit) * 12)",
+      "20": "calc(var(--eds-size-base-unit) * 20)",
       "base-unit": "0.5rem",
       "half": "calc(var(--eds-size-base-unit) / 2)",
       "quarter": "calc(var(--eds-size-base-unit) / 4)",
@@ -163,131 +165,131 @@
     "typography": {
       "preset": {
         "001": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)",
-          "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
         },
         "002": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-          "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.2857 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) 1.75rem/1.2857 var(--eds-font-family-primary)"
         },
         "003": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)",
-          "mobile": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 1.375rem/1.45454545 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 1.375rem/1.45454545 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 1.375rem/1.45454545 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)"
         },
         "004": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary)"
         },
         "005": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary)"
         },
         "006": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary)"
         },
         "007": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary)"
         },
         "008": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary)"
         },
         "009": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary)"
         },
         "010": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
         },
         "011": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary)"
         },
         "012": {
-          "@": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
-          "light": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+          "@": "var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
+          "light": "var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
+          "bold": "var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
         },
         "secondary": {
           "001": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary)"
           },
           "002": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
           },
           "003": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary)"
           },
           "004": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary)"
           },
           "005": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary)"
           },
           "006": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary)"
           },
           "007": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary)"
           },
           "008": {
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)",
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)"
+            "@": "var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary)",
+            "light": "var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary)"
           },
           "mobile": {
             "001": {
-              "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)",
-              "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+              "light": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary)",
+              "@": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary)"
             },
             "002": {
-              "light": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)",
-              "@": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+              "light": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary)",
+              "@": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
             },
             "003": {
-              "light": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)",
-              "@": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+              "light": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary)",
+              "@": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary)"
             }
           }
         },
         "mobile": {
           "001": {
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-            "bold": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            "light": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)",
+            "@": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)",
+            "bold": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
           },
           "002": {
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)",
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)",
-            "bold": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+            "light": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary)",
+            "@": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary)",
+            "bold": "var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary)"
           },
           "003": {
-            "light": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
-            "@": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
-            "bold": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+            "light": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary)",
+            "@": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary)",
+            "bold": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)"
           }
         }
       }
@@ -834,7 +836,7 @@
         },
         "text-highlight": {
           "foreground": "#21272D",
-          "background": "#F5FF8F"
+          "background": "#FDF1D0"
         },
         "toggle": {
           "on": {

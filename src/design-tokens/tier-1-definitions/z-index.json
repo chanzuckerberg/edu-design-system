@@ -5,22 +5,28 @@
         "value": "99999"
       },
       "500": {
-        "value": "500"
+        "value": "500",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "400": {
-        "value": "400"
+        "value": "400",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "300": {
-        "value": "300"
+        "value": "300",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "200": {
-        "value": "200"
+        "value": "200",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "100": {
-        "value": "100"
+        "value": "100",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "0": {
-        "value": "0"
+        "value": "0",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "bottom": {
         "value": "-100"

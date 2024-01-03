@@ -14,37 +14,48 @@
         "comment": "Base font size for design system in px"
       },
       "40": {
-        "value": "2.5rem"
+        "value": "2.5rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "32": {
-        "value": "2rem"
+        "value": "2rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "28": {
-        "value": "1.75rem"
+        "value": "1.75rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "24": {
-        "value": "1.5rem"
+        "value": "1.5rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "22": {
-        "value": "1.375rem"
+        "value": "1.375rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "20": {
-        "value": "1.25rem"
+        "value": "1.25rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "18": {
-        "value": "1.125rem"
+        "value": "1.125rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "16": {
-        "value": "1rem"
+        "value": "1rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "14": {
-        "value": "0.875rem"
+        "value": "0.875rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "12": {
-        "value": "0.75rem"
+        "value": "0.75rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "11": {
-        "value": "0.6875rem"
+        "value": "0.6875rem",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     },
     "font-weight": {
@@ -67,242 +78,242 @@
       "preset": {
         "001": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-40)/1.2 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary)"
           },
           "mobile": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)",
-            "comment": "@deprecated This is deprecated and missing from figma"
+            "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "002": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
           },
           "mobile": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.2857 var(--eds-font-family-primary)",
-            "comment": "@deprecated This is deprecated and missing from figma"
+            "value": "var(--eds-font-weight-bold) 1.75rem/1.2857 var(--eds-font-family-primary)",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "003": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 1.375rem/1.45454545 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 1.375rem/1.45454545 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-22)/1.45454545 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 1.375rem/1.45454545 var(--eds-font-family-primary)"
           },
           "mobile": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)",
-            "comment": "@deprecated This is deprecated and missing from figma"
+            "value": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "004": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-18)/1.55555556 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary)"
           }
         },
         "005": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-16)/1.5 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary)"
           }
         },
         "006": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary)"
           }
         },
         "007": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-14)/1.28571429 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary)"
           }
         },
         "008": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.666666667 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary)"
           }
         },
         "009": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary)"
           }
         },
         "010": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
           }
         },
         "011": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary)",
             "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary)",
             "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-12)/1.333333333 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary)",
             "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
           }
         },
         "012": {
           "@": {
-            "value": "var(--eds-font-weight-medium) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
             "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
             "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) var(--eds-font-size-11)/1.272727272 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
             "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
           }
         },
         "secondary": {
           "001": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary)"
             }
           },
           "002": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
             }
           },
           "003": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary)"
             }
           },
           "004": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-16)/1.5 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary)"
             }
           },
           "005": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.57142857 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary)"
             }
           },
           "006": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-14)/1.42857143 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary)"
             }
           },
           "007": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.66666667 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary)"
             }
           },
           "008": {
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-12)/1.33333333 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary)"
             }
           },
           "mobile": {
             "001": {
               "light": {
-                "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary)"
               },
               "@": {
-                "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary)"
               }
             },
             "002": {
               "light": {
-                "value": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
               },
               "@": {
-                "value": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
               }
             },
             "003": {
               "light": {
-                "value": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary)"
               },
               "@": {
-                "value": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary)"
               }
             }
           }
@@ -310,35 +321,35 @@
         "mobile": {
           "001": {
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)"
             },
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)"
             },
             "bold": {
-              "value": "var(--eds-font-weight-bold) var(--eds-font-size-32)/1.25 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
             }
           },
           "002": {
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary)"
             },
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary)"
             },
             "bold": {
-              "value": "var(--eds-font-weight-bold) var(--eds-font-size-28)/1.28571429 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary)"
             }
           },
           "003": {
             "light": {
-              "value": "var(--eds-font-weight-light) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary)"
             },
             "@": {
-              "value": "var(--eds-font-weight-medium) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary)"
             },
             "bold": {
-              "value": "var(--eds-font-weight-bold) var(--eds-font-size-20)/1.4 var(--eds-font-family-primary)"
+              "value": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)"
             }
           }
         }

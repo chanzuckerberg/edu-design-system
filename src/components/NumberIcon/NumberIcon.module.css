@@ -18,7 +18,7 @@
   /* The circle part of the icon, made with borders. */
   border: var(--eds-border-width-sm) solid;
   border-color: inherit;
-  border-radius: var(--eds-border-radius-round);
+  border-radius: var(--eds-border-radius-full);
 }
 
 .number-icon--incomplete {

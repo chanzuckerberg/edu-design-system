@@ -6,16 +6,15 @@ import { Canvas, Meta } from '@storybook/blocks';
 
 Typography in EDS follows [the same structure as design tokens](./?path=/story/documentation-guidelines-tokens--page), with the exception that typography operates as a _cluster_ of typography-specific style properties rather than a single style property.
 
-## Tier 1: Typography values
+## Basics: Typography values
 
 These token values are _never to be used_ directly by components; these token values are assembled into typography presets.
 
-Values include:
+Tokens include those prefixed by:
 
-- `eds-font-family`
-- `eds-font-size-XX`
-- `eds-font-weight-XX`
-- `eds-letter-spacing-XX`
+- `eds-font-family-*`
+- `eds-font-weight-*`
+- `eds-letter-spacing-*`
 
 ## Tier 1: Typography presets
 
@@ -52,7 +51,7 @@ When defining a new usage, you can refer to the variable by name
 
 Tier 2 typography values take the typography presets defined at the Tier 2 level and map them to a semantic usage value like so:
 
-Similar to the example above, you can use the token names in components and other code, or to define higher-tier tokens.
+Similar to the example above, you can use the token names in components and other code, make use of the presets using the `Heading` or `Text` components, or to define higher-tier tokens.
 
 These semantic values are then included in each component's style file:
 

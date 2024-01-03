@@ -2,55 +2,76 @@
   "eds": {
     "size": {
       "base-unit": {
-        "value": "0.5rem"
+        "value": "0.5rem",
+        "group": "size"
       },
       "half": {
-        "value": "calc(var(--eds-size-base-unit) / 2)"
+        "value": "calc(var(--eds-size-base-unit) / 2)",
+        "group": "size"
       },
       "quarter": {
-        "value": "calc(var(--eds-size-base-unit) / 4)"
+        "value": "calc(var(--eds-size-base-unit) / 4)",
+        "group": "size"
       },
       "1": {
-        "value": "var(--eds-size-base-unit)"
+        "value": "var(--eds-size-base-unit)",
+        "group": "size"
       },
       "1-and-half": {
-        "value": "calc(var(--eds-size-base-unit) * 1.5)"
+        "value": "calc(var(--eds-size-base-unit) * 1.5)",
+        "group": "size"
       },
       "2": {
-        "value": "calc(var(--eds-size-base-unit) * 2)"
+        "value": "calc(var(--eds-size-base-unit) * 2)",
+        "group": "size"
       },
       "2-and-half": {
-        "value": "calc(var(--eds-size-base-unit) * 2.5)"
+        "value": "calc(var(--eds-size-base-unit) * 2.5)",
+        "group": "size"
       },
       "3": {
-        "value": "calc(var(--eds-size-base-unit) * 3)"
+        "value": "calc(var(--eds-size-base-unit) * 3)",
+        "group": "size"
       },
       "4": {
-        "value": "calc(var(--eds-size-base-unit) * 4)"
+        "value": "calc(var(--eds-size-base-unit) * 4)",
+        "group": "size"
       },
       "5": {
-        "value": "calc(var(--eds-size-base-unit) * 5)"
+        "value": "calc(var(--eds-size-base-unit) * 5)",
+        "group": "size"
       },
       "6": {
-        "value": "calc(var(--eds-size-base-unit) * 6)"
+        "value": "calc(var(--eds-size-base-unit) * 6)",
+        "group": "size"
       },
       "7": {
-        "value": "calc(var(--eds-size-base-unit) * 7)"
+        "value": "calc(var(--eds-size-base-unit) * 7)",
+        "group": "size"
       },
       "8": {
-        "value": "calc(var(--eds-size-base-unit) * 8)"
+        "value": "calc(var(--eds-size-base-unit) * 8)",
+        "group": "size"
       },
       "9": {
-        "value": "calc(var(--eds-size-base-unit) * 9)"
+        "value": "calc(var(--eds-size-base-unit) * 9)",
+        "group": "size"
       },
       "10": {
-        "value": "calc(var(--eds-size-base-unit) * 10)"
+        "value": "calc(var(--eds-size-base-unit) * 10)",
+        "group": "size"
       },
       "11": {
-        "value": "calc(var(--eds-size-base-unit) * 11)"
+        "value": "calc(var(--eds-size-base-unit) * 11)",
+        "group": "size"
       },
       "12": {
-        "value": "calc(var(--eds-size-base-unit) * 12)"
+        "value": "calc(var(--eds-size-base-unit) * 12)",
+        "group": "size"
+      },
+      "20": {
+        "value": "calc(var(--eds-size-base-unit) * 20)",
+        "group": "size"
       }
     }
   }

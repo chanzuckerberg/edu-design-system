@@ -12,7 +12,7 @@ export class Tier1Sizes extends Component {
             {filterTokens('eds-size-base').map((listItem) => (
               <Grid.Item key={listItem.name}>
                 <TokenSpecimen
-                  comment="Calculated from a multiple of the base font size --eds-font-size-base"
+                  comment="Calculated from a multiple of the base font size"
                   inlineStyles={{
                     width: `var(${listItem.name})`,
                     height: `var(${listItem.name})`,

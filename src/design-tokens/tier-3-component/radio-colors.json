@@ -2,11 +2,12 @@
   "eds": {
     "theme": {
       "color": {
-        "checkbox": {
+        "radio": {
           "brand": {
             "background": {
               "@": {
-                "value": "{eds.color.brand.grape.500}"
+                "value": "{eds.color.brand.grape.500}",
+                "group": "color"
               }
             }
           }

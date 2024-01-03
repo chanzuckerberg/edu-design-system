@@ -43,7 +43,7 @@
  * The container for the individual select options. 
  */
 .select__options {
-  z-index: var(--eds-z-index-100);
+  z-index: 100;
 }
 
 .select__option-text {

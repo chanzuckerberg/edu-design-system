@@ -1,0 +1,18 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "focus-ring": {
+          "@": {
+            "value": "{eds.color.brand.grape.600}",
+            "group": "color"
+          },
+          "inverted": {
+            "value": "{eds.color.neutral.white}",
+            "group": "color"
+          }
+        }
+      }
+    }
+  }
+}

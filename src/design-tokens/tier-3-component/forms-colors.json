@@ -1,0 +1,34 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "form": {
+          "border": {
+            "@": {
+              "value": "{eds.color.neutral.500}",
+              "group": "color"
+            },
+            "hover": {
+              "value": "{eds.color.neutral.800}",
+              "group": "color"
+            }
+          },
+          "background": {
+            "@": {
+              "value": "{eds.color.neutral.white}",
+              "group": "color"
+            },
+            "hover": {
+              "value": "{eds.color.neutral.100}",
+              "group": "color"
+            }
+          },
+          "label": {
+            "value": "{eds.color.neutral.700}",
+            "group": "color"
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,39 +6,67 @@
           "neutral": {
             "default": {
               "@": {
-                "value": "{eds.color.neutral.700}"
+                "value": "{eds.color.neutral.700}",
+                "group": "color"
               },
               "inverse": {
-                "value": "{eds.color.neutral.white}"
+                "value": "{eds.color.neutral.white}",
+                "group": "color"
               }
             },
             "strong": {
-              "value": "{eds.color.neutral.800}"
+              "value": "{eds.color.neutral.800}",
+              "group": "color"
             },
             "subtle": {
-              "value": "{eds.color.neutral.600}"
+              "value": "{eds.color.neutral.600}",
+              "group": "color"
             }
           },
           "utility": {
-            "success": { "value": "{eds.color.other.mint.700}" },
-            "warning": { "value": "{eds.color.other.orange.700}" },
-            "error": { "value": "{eds.color.other.ruby.700}" }
+            "success": {
+              "value": "{eds.color.other.mint.700}",
+              "group": "color"
+            },
+            "warning": {
+              "value": "{eds.color.other.orange.700}",
+              "group": "color"
+            },
+            "error": {
+              "value": "{eds.color.other.ruby.700}",
+              "group": "color"
+            }
           },
           "grade": {
-            "complete": { "value": "{eds.color.other.mint.700}" },
-            "revise": { "value": "{eds.color.neutral.800}" },
-            "stop": { "value": "{eds.color.other.ruby.700}" }
+            "complete": {
+              "value": "{eds.color.other.mint.700}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+            },
+            "revise": {
+              "value": "{eds.color.neutral.800}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+            },
+            "stop": {
+              "value": "{eds.color.other.ruby.700}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+            }
           },
           "disabled": {
-            "value": "{eds.color.neutral.300}"
+            "value": "{eds.color.neutral.300}",
+            "group": "color"
           },
           "brand": {
             "default": {
-              "value": "var(--eds-theme-color-text-brand-primary)"
+              "value": "var(--eds-theme-color-text-brand-primary)",
+              "group": "color"
             },
             "primary": {
               "value": "{eds.color.brand.grape.700}",
-              "comment": "@deprecated This token is deprecated. Please use eds-theme-color-text-brand-default instead."
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS. Please use eds-theme-color-text-brand-default instead."
             }
           }
         }

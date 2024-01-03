@@ -82,14 +82,18 @@ For example, tokens in figma have a name in the format 'Category/token-name', so
 When making changes to existing tokens, we want to be mindful not to cause regressions for consumers. We use the following process for updating existing tokens:
 
 1. Add in the new token to the corresponding JSON file in src/design-tokens
-2. For the new token value, use a `var()` reference, pointing to the old token name
+2. For the new token value, use a [style dictionary][sd] reference, pointing to the old token name (this will generate a css variable when processing CSS as a target).
 3. Also add a comment which notes the old token is deprecated, and which token is the replacement to use.
 
 For example, if we had a token `--eds-theme-color-background-old-name` which we want to change to `---eds-theme-color-background-new-name`, we would set the value of the new token to `var(--eds-theme-color-background-old-name)`. We can also add the following key to the JSON file.
 
+[sd]: https://amzn.github.io/style-dictionary/#/version_3?id=output-references
+
 ```json
-"comment": "@deprecated This token is deprecated. Please use eds-theme-color-new-name instead."
+"comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS. Please use eds-theme-color-new-name instead."
 ```
+
+If there is a plan to simply remove a token due to some refactoring, you can remove the suffix suggesting the token to remove at your discretion.
 
 This has the following benefits:
 
