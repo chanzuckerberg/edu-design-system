@@ -30,7 +30,7 @@
 }
 
 .skeleton.skeleton-circle {
-  border-radius: var(--eds-border-radius-round);
+  border-radius: var(--eds-border-radius-full);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

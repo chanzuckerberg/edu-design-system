@@ -12,7 +12,7 @@
   * Uses calc to account for the addition of padding around the layout container
   * to ensure content doesn't butt up against viewport edge.
   */
-  max-width: calc(var(--eds-l-max-width) + var(--eds-size-6));
+  max-width: calc(71.25rem + var(--eds-size-6));
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--eds-size-2);

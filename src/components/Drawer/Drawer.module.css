@@ -27,7 +27,7 @@
  */
 .drawer__container--is-active {
   visibility: visible;
-  z-index: var(--eds-z-index-400);
+  z-index: 400;
 }
 
 /**

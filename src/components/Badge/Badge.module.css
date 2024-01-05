@@ -22,7 +22,7 @@
    */
   --badge-height: calc(var(--eds-size-2-and-half) + 2 * var(--eds-border-width-sm));
 
-  z-index: var(--eds-z-index-100);
+  z-index: 100;
 
   display: flex;
   align-items: center;

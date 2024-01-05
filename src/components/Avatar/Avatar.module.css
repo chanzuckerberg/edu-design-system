@@ -80,7 +80,7 @@
 }
 
 .avatar--circle {
-  border-radius: var(--eds-border-radius-round);
+  border-radius: var(--eds-border-radius-full);
 }
 
 .avatar__image {
