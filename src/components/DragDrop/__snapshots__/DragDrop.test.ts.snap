@@ -2,7 +2,7 @@
 
 exports[`<DragDrop /> Default story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <section
     class="drag-drop drag-drop--unstyled eds-is-overflow-right"
@@ -276,7 +276,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
 
 exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <section
     class="drag-drop drag-drop--unstyled eds-is-overflow-right"
@@ -550,7 +550,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
 
 exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <section
     class="drag-drop drag-drop--unstyled eds-is-overflow-right"
