@@ -41,8 +41,9 @@ type SelectProps = ExtractProps<typeof Listbox> &
      */
     className?: string;
     /**
-     * Name of the form element, which triggers the generation of a hidden form field.
-     * @see https://headlessui.com/react/listbox#using-with-html-forms
+     * Name of the form element, which triggers the generation of hidden key/value form fields (e.g. `name=$name[$key]`).
+     *
+     * See: https://headlessui.com/react/listbox#using-with-html-forms
      */
     name?: string;
     /**
