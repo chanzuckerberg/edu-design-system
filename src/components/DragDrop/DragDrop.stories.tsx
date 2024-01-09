@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
 import React, { useState } from 'react';
@@ -6,10 +7,10 @@ import { Button, Card, Heading, Icon, Text } from '../..';
 import styles from './DragDrop.stories.module.css';
 
 export default {
-  title: 'Components/Drag and Drop',
+  title: 'Components/DragDrop',
   component: DragDrop,
   parameters: {
-    badges: ['1.0'],
+    badges: ['1.0', BADGE.DEPRECATED],
   },
   argTypes: {
     children: {
@@ -18,17 +19,7 @@ export default {
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          margin: '1rem', // Provides spacing around storybook edges
-        }}
-      >
-        {Story()}
-      </div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof DragDrop>;
