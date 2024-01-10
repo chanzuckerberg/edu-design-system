@@ -7,12 +7,12 @@ exports[`<Select /> Compact story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:rm:"
+    aria-controls="headlessui-listbox-options-:rr:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="select-button select-button--compact"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:rl:"
+    id="headlessui-listbox-button-:rq:"
     type="button"
   >
     <span>
@@ -84,19 +84,19 @@ exports[`<Select /> DefaultWithVisibleLabel story renders snapshot 1`] = `
     <label
       class="select__label"
       data-headlessui-state="open"
-      id="headlessui-listbox-label-:rf:"
+      id="headlessui-listbox-label-:rk:"
     >
       Favorite Animal
     </label>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:rh:"
+    aria-controls="headlessui-listbox-options-:rm:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-listbox-label-:rf: headlessui-listbox-button-:rg:"
+    aria-labelledby="headlessui-listbox-label-:rk: headlessui-listbox-button-:rl:"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:rg:"
+    id="headlessui-listbox-button-:rl:"
     type="button"
   >
     <span>
@@ -127,12 +127,12 @@ exports[`<Select /> NoVisibleLabel story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:rr:"
+    aria-controls="headlessui-listbox-options-:r10:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:rq:"
+    id="headlessui-listbox-button-:rv:"
     type="button"
   >
     <span>
@@ -163,12 +163,12 @@ exports[`<Select /> StyledUncontrolled story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:rb:"
+    aria-controls="headlessui-listbox-options-:rg:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:ra:"
+    id="headlessui-listbox-button-:rf:"
     type="button"
   >
     <span>
@@ -199,12 +199,12 @@ exports[`<Select /> UncontrolledHeadless story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r6:"
+    aria-controls="headlessui-listbox-options-:rb:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="fpo"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r5:"
+    id="headlessui-listbox-button-:ra:"
     type="button"
   >
     Dogs
@@ -225,19 +225,19 @@ exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
     <label
       class="select__label"
       data-headlessui-state="open"
-      id="headlessui-listbox-label-:rv:"
+      id="headlessui-listbox-label-:r14:"
     >
       Favorite Animal
     </label>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r11:"
+    aria-controls="headlessui-listbox-options-:r16:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-listbox-label-:rv: headlessui-listbox-button-:r10:"
+    aria-labelledby="headlessui-listbox-label-:r14: headlessui-listbox-button-:r15:"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r10:"
+    id="headlessui-listbox-button-:r15:"
     type="button"
   >
     <span>
@@ -269,12 +269,12 @@ exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r16:"
+    aria-controls="headlessui-listbox-options-:r1b:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="fpo"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r15:"
+    id="headlessui-listbox-button-:r1a:"
     type="button"
   >
     Select
@@ -293,6 +293,42 @@ exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Select /> WithFieldName story renders snapshot 1`] = `
+<div
+  class="select"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <button
+    aria-controls="headlessui-listbox-options-:r6:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    class="select-button"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:r5:"
+    type="button"
+  >
+    <span>
+      Dogs
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`<Select /> WithSelectedOption story renders snapshot 1`] = `
 <div
   class="select w-60"
@@ -305,19 +341,19 @@ exports[`<Select /> WithSelectedOption story renders snapshot 1`] = `
     <label
       class="select__label"
       data-headlessui-state="open"
-      id="headlessui-listbox-label-:r1a:"
+      id="headlessui-listbox-label-:r1f:"
     >
       Favorite Animal
     </label>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r1c:"
+    aria-controls="headlessui-listbox-options-:r1h:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-listbox-label-:r1a: headlessui-listbox-button-:r1b:"
+    aria-labelledby="headlessui-listbox-label-:r1f: headlessui-listbox-button-:r1g:"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r1b:"
+    id="headlessui-listbox-button-:r1g:"
     type="button"
   >
     <span>
