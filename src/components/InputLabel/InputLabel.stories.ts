@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
 
@@ -11,7 +10,7 @@ export default {
     children: 'Label',
   },
   parameters: {
-    badges: ['1.0', BADGE.BETA],
+    badges: ['1.0'],
   },
 } as Meta<Args>;
 
