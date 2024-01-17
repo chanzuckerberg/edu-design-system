@@ -20,7 +20,10 @@ exports[`<Avatar /> ExtraExtraExtraLarge story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -40,7 +43,10 @@ exports[`<Avatar /> ExtraExtraLarge story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -60,7 +66,10 @@ exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -80,7 +89,10 @@ exports[`<Avatar /> ExtraSmall story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -100,7 +112,10 @@ exports[`<Avatar /> Large story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -120,7 +135,10 @@ exports[`<Avatar /> Medium story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -140,7 +158,10 @@ exports[`<Avatar /> Small story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -160,7 +181,10 @@ exports[`<Avatar /> Square story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -234,7 +258,10 @@ exports[`<Avatar /> WithCustomIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    height="80%"
+    style="--icon-size: 80%;"
     viewBox="0 0 24 24"
+    width="80%"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
