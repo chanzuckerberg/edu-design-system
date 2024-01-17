@@ -19,10 +19,3 @@ export const Default: StoryObj<Args> = {
     required: true,
   },
 };
-
-export const Optional: StoryObj<Args> = {
-  args: {
-    text: 'Label',
-    required: false,
-  },
-};
