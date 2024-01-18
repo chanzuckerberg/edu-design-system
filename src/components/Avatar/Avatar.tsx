@@ -131,7 +131,9 @@ export const Avatar = ({
       {...other}
     >
       {variant === 'initials' && avatarDisplayName}
-      {variant === 'icon' && <Icon name={icon} purpose="decorative" />}
+      {variant === 'icon' && (
+        <Icon name={icon} purpose="decorative" size="80%" />
+      )}
       {variant === 'image' && src && (
         <img alt="user" className={styles['avatar__image']} src={src} />
       )}
