@@ -34,6 +34,9 @@ export interface Props {
   required?: boolean;
   /**
    * String for the required label to add additional information if needed.
+   *
+   * **Deprecated**. This will be removed in the next major version.
+   * @deprecated
    */
   requiredLabel?: string;
   /**
