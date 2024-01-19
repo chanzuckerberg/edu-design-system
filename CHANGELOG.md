@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.9.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.8.1...v13.9.0) (2024-01-19)
+
+
+### Features
+
+* **Avatar:** adjust typography usages and sizing for icons ([#1830](https://github.com/chanzuckerberg/edu-design-system/issues/1830)) ([7da31e6](https://github.com/chanzuckerberg/edu-design-system/commit/7da31e6d8f9dc973ae03b9337c33bbe00bf7a666))
+* **InlineNotification:** remove deprecated variants ([#1833](https://github.com/chanzuckerberg/edu-design-system/issues/1833)) ([cfcf1fa](https://github.com/chanzuckerberg/edu-design-system/commit/cfcf1fae674215cac8fb3ca2101ef77758ecb3c8))
+* **Label:** mark optional as deprecated ([#1832](https://github.com/chanzuckerberg/edu-design-system/issues/1832)) ([8067082](https://github.com/chanzuckerberg/edu-design-system/commit/806708291d9dc8733eee3b782c29cb1409f1cb95))
+* **tokens:** output token literal values in a new tailwind config file ([#1828](https://github.com/chanzuckerberg/edu-design-system/issues/1828)) ([08fa1c4](https://github.com/chanzuckerberg/edu-design-system/commit/08fa1c4783651d815939f735d4ed55d360b473aa))
+
+
+### Bug Fixes
+
+* **InputField:** mark unused prop as deprecated ([#1831](https://github.com/chanzuckerberg/edu-design-system/issues/1831)) ([622abfb](https://github.com/chanzuckerberg/edu-design-system/commit/622abfb0e5a29ab5aaf38a8f9ea08c1bf76308b1))
+* **Select:** update incorrect documentation ([#1825](https://github.com/chanzuckerberg/edu-design-system/issues/1825)) ([94aace5](https://github.com/chanzuckerberg/edu-design-system/commit/94aace5ecda613600de23566c85304bb415b3765))
+
 ### [13.8.1](https://github.com/chanzuckerberg/edu-design-system/compare/v13.8.0...v13.8.1) (2024-01-04)
 
 ## [13.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.7.1...v13.8.0) (2023-12-06)
