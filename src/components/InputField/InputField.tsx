@@ -78,7 +78,10 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   required?: boolean;
   /**
-   * String for the required label to add additional information if needed.
+   * String for the required label to add additional information if needed. Currently not being used.
+   *
+   * **Deprecated**. This will be removed in the next major version.
+   * @deprecated
    */
   requiredLabel?: string;
   /**

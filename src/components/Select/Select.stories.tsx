@@ -6,14 +6,43 @@ import type { OptionsAlignType, VariantType } from './Select';
 import { Select } from './Select';
 import Icon from '../Icon';
 
-export default {
+const meta: Meta<typeof Select> = {
   title: 'Components/Select',
   component: Select,
   parameters: {
     badges: ['1.2'],
     layout: 'centered',
   },
-} as Meta;
+  argTypes: {
+    multiple: {
+      table: {
+        disable: true,
+      },
+    },
+    value: {
+      table: {
+        description: 'The value of the select field (when controlled)',
+        type: {
+          summary: 'SelectOption',
+          detail:
+            'An object with at least label (as string) and any other useful key/value pairs',
+        },
+      },
+    },
+    defaultValue: {
+      description: 'The default value of the select field (when uncontrolled)',
+      table: {
+        type: {
+          summary: 'SelectOption',
+          detail:
+            'An object with at least label (as string) and any other useful key/value pairs',
+        },
+      },
+    },
+  },
+};
+
+export default meta;
 
 type Props = {
   'aria-label'?: string;
@@ -211,11 +240,47 @@ function InteractiveExampleUsingChildren(props: Props) {
 };
 
 /**
+ * You can add a `name` prop to generate form fields for the value object.
+ *
+ * In this example, the field name is `"interactive-select"`, and the value is an object storing `{label: string, key: string}`.
+ *
+ * This will generate hidden fields with names:
+ * * `interactive-select[label]`
+ * * `interactive-select[key]`
+ *
+ * **NOTE**: for select value data types, `{label: string}` is required, but any other key/value pairs are allowed.
+ */
+export const WithFieldName: StoryObj = {
+  args: {
+    'aria-label': 'some label',
+    'data-testid': 'dropdown',
+    defaultValue: exampleOptions[0],
+    name: 'select',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+};
+
+/**
  * You can implement a `Select.Button` with a render prop. This exposes several useful values to
  * control the appearance of the rendered button. The render prop case is "Headless", in that it has
  * no styling by default.
- *
- * Remember to include a `name` so that a hidden field is generated in this case
  */
 export const UncontrolledHeadless: StoryObj = {
   args: {
@@ -274,8 +339,6 @@ Hidden fields named "select[key]" and "select[label]" because the datatype used 
 
 /**
  * You can use `Select.ButtonWrapper` to borrow the existing style used for controlled `Select` components.
- *
- * Remember to include a `name` so that a hidden field is generated in this case
  */
 export const StyledUncontrolled: StoryObj = {
   args: {

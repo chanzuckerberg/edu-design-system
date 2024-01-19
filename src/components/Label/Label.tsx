@@ -25,15 +25,23 @@ export interface Props {
    */
   labelAfter?: ReactNode;
   /**
-   * String for the optional label. By default it is '(optional)'
+   * String for the optional label.
+   *
+   * **Default is `"(optional)"`**
+   *
+   * **Deprecated**. This will be removed in the next major version.
+   * @deprecated
    */
   optionalLabel?: string;
   /**
-   * Indicates that field is required for form to be successfully submitted. Non-required fields will display a text "(optional)" beside the label text
+   * Indicates that field is required for form to be successfully submitted.
    */
   required?: boolean;
   /**
    * String for the required label to add additional information if needed.
+   *
+   * **Deprecated**. This will be removed in the next major version.
+   * @deprecated
    */
   requiredLabel?: string;
   /**

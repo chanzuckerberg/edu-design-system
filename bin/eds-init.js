@@ -9,9 +9,9 @@
     packageRootPath =
       path.dirname(require.resolve('@chanzuckerberg/eds')) + '/tokens/json/';
   } catch (e) {
+    // used for working on theming within EDS
     console.error('EDS package not installed. Using local path...');
-    packageRootPath =
-      path.dirname(require.main.path) + '/src/tokens-dist/json/';
+    packageRootPath = path.dirname(require.main.path) + '/lib/tokens/json/';
   }
 
   // read in the config from config file, package json "eds", etc.
@@ -22,16 +22,19 @@
     try {
       fs.copyFileSync(
         packageRootPath + 'theme-base.json',
-        `${config.json}app-theme.json`,
+        `${config.src}app-theme.json`,
         fs.constants.COPYFILE_EXCL,
       );
     } catch (error) {
-      console.error('The local theme file already exists. Exiting.');
+      console.error(
+        'The local theme file already exists. Exiting. Details: \n',
+        error,
+      );
       return 1;
     }
 
     console.log(
-      'File copy completed! Please use `npx eds-apply-theme` to generate theme tokens (CSS Variables).',
+      'File copy completed! Please use `npx eds-apply-theme` to generate theme token file(s).',
     );
   }
 })();

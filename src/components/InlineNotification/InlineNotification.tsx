@@ -45,6 +45,9 @@ type Props = {
    * will be hidden and the text will be lighter.
    * Overrides variant prop and isStrong prop as a result.
    * Only to be used with isFullWidth.
+   *
+   * **Deprecated**. This will be removed in the next major version.
+   * @deprecated
    */
   inactive?: boolean;
   /**
@@ -60,8 +63,9 @@ type Props = {
    */
   text: React.ReactNode;
   /**
-   * The color variant of the tag. New variants should be supported
-   * in the VARIANTS array and by its separate style in CSS file.
+   * The color variant of the tag.
+   *
+   * **Deprecated**. "Yield" will be removed in the next major version.
    */
   variant: Variant;
 };

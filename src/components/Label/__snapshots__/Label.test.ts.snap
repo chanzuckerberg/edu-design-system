@@ -8,17 +8,3 @@ exports[`<Label /> Default story renders snapshot 1`] = `
    
 </label>
 `;
-
-exports[`<Label /> Optional story renders snapshot 1`] = `
-<label
-  class="label"
->
-  Label
-   
-  <span
-    class="label__flag"
-  >
-    (optional)
-  </span>
-</label>
-`;

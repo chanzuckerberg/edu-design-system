@@ -17,7 +17,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: VARIANTS,
+      options: VARIANTS.filter((item) => item !== 'yield'),
     },
   },
 } as Meta<Args>;
@@ -33,7 +33,7 @@ export const LongText: StoryObj<Args> = {
 };
 
 const getVariants = (optionalArgs: Omit<Args, 'text' | 'variant'> = {}) =>
-  VARIANTS.map((variant) => {
+  VARIANTS.filter((item) => item !== 'yield').map((variant) => {
     return (
       <InlineNotification
         key={variant}
@@ -95,12 +95,6 @@ export const FullWidthVariants: StoryObj<Args> = {
       }}
     >
       {getVariants({ isFullWidth: true })}
-      <InlineNotification
-        inactive
-        isFullWidth
-        text="inactive inline notification lorem ipsum"
-        variant="success"
-      />
     </div>
   ),
 };
@@ -115,13 +109,6 @@ export const FullWidthStrongVariants: StoryObj<Args> = {
       }}
     >
       {getVariants({ isFullWidth: true, isStrong: true })}
-      <InlineNotification
-        inactive
-        isFullWidth
-        isStrong
-        text="inactive inline notification lorem ipsum"
-        variant="success"
-      />
     </div>
   ),
 };

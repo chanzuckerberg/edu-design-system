@@ -52,7 +52,7 @@ module.exports = {
 };
 ```
 
-This will replace the default color tokens that come [with Tailwind](https://tailwindcss.com/docs/customizing-colors) with those defined by EDS. **NOTE**: this might cause regressions in your project, if you have been using the default colors from tailwind.
+This will replace the default color tokens that come [with Tailwind](https://tailwindcss.com/docs/customizing-colors) with those defined by EDS. **NOTE**: this might cause regressions in your project, if you have been using the default colors provided by tailwind.
 
 #### Applying the EDS tailwind extensions piecemeal
 
@@ -63,7 +63,7 @@ If you want a gentler transition to using EDS tailwind config, you can instead i
 const edsConfig = require('@chanzuckerberg/eds/tailwind.config');
 
 module.exports = {
-  content: ['./app/**/*.{ts,tsx,jsx,js}'],
+  // ...
   theme: {
     extend: {
       ...edsConfig.theme.extend
@@ -74,9 +74,7 @@ module.exports = {
 
 This will add in the utility classes for properties like background color `bg-*`, border `border-*`, and text color `text-*`. These match the styles and variables defined in Figma designs. 
 
-You can spread each of the sub-objects in `theme` as desired, e.g., `fontSize`, `fontWeight`, etc.
-
-Refer to the [tokens tailwind section][tokens] for usage guidelines.
+Refer to the [tokens tailwind section][tokens] for usage guidelines if your project uses the theming tooling.
 
 [tokens]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-tokens--docs
 
@@ -101,7 +99,6 @@ EDS also provides the tokens used in the internal styles, to use in any custom c
 ### Theming Setup
 
 Refer to the "EDS Token and Theme Tools" in [the tokens documentation](https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming--docs) to learn about the optional tooling setup.
-
 
 ## Usage
 

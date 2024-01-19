@@ -138,6 +138,8 @@ type DragDropContainerProps = {
 
 /**
  * Container for draggable components to be dropped within the container.
+ *
+ * @deprecated
  */
 const DragDropContainer = ({
   container,
@@ -198,8 +200,9 @@ const DragDropContainer = ({
 
 /**
  * Component that contains header section for the container which consists of drag and drop components.
+ *
+ * @deprecated
  */
-
 const DragDropContainerHeader = ({
   className,
   children,
@@ -214,6 +217,8 @@ const DragDropContainerHeader = ({
 
 /**
  * Item to be dragged and dropped in containers.
+ *
+ * @deprecated
  */
 const DragDropItem = ({
   className,
@@ -270,8 +275,10 @@ const DragDropItem = ({
  * `import {DragDrop} from "@chanzuckerberg/eds"`
  *
  * A flexible Drag and Drop component that allows items to be dragged and dropped in containers.
+ *
+ * @deprecated
  */
-export const DragDrop = ({
+const DragDrop = ({
   className,
   items,
   containers,
@@ -554,3 +561,5 @@ export const DragDrop = ({
 };
 
 DragDrop.ContainerHeader = DragDropContainerHeader;
+
+export { DragDrop };
