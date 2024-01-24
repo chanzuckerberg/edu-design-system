@@ -2,131 +2,120 @@ import { Canvas, Meta } from '@storybook/blocks';
 
 <Meta title="Documentation/Theming" />
 
-# Theming overview
+# Theming
 
-"Theming", in the context of EDS, is the process of overriding the default styles of EDS components to match a different brand (or "theme"). We include useful examples under "Pages":
+Below are instructions on how to use the tooling, configs, and tokens to define custom theme values for a project.
 
-- A [wireframe theme](./?path=/story/pages-theming-wireframedemo--default) (an unbranded theme that can be used for prototyping a product before it has an official visual style).
+## Using Tailwind with the Default Theme
 
-Below are instructions on how to use the tooling and tokens to define custom theme values for a project.
+Out of the box, EDS provides a basic tailwind configuration to use in any project. The provided EDS tailwind config hooks up EDS tokens to useful utility classes and some screen sizes. To import the tailwind config into the app's tailwind config, supply the [theme](https://tailwindcss.com/docs/theme) property for use:
 
-## How to apply a theme in another product
+```ts
+// in your tailwind.config.ts
+import edsConfig from '@chanzuckerberg/eds/tailwind.config';
 
-EDS comes with some tooling to allow easy transfer of theme data from Figma (or some style-dictionary compatible format) into code.
-
-* `eds-init-theme` - This command sets up the initial file(s) for theming your application
-* `eds-apply-theme` - This command parses the style dictionary files to generate the tokens used by EDS (and tailwind, or other tools)
-
-Each of these tools reads config to figure out where to read/write files. This can be defined in several ways, e.g., a top-level file `.edsrc.json`, or as a key-value set in package.json. Example:
-
-`package.json`
-
-```json
-"eds": {
-  "src": "src/components/",
-  "dest": "src/components/"
-},
+module.exports = {
+  content: ['./app/**/*.{ts,tsx,jsx,js}'],
+  theme: edsConfig.theme,
+  // ... any other tailwind config
+};
 ```
 
-`.edsrc.json`
+If you only want part of the provided settings, you can review the [Tailwind Theme Customization][tailwind-theme] documentation, and the contents of the [provided config][eds-tailwind-config], and apply the parts you want to use.
+
+[tailwind-theme]: https://tailwindcss.com/docs/theme
+[eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.ts
+
+<hr />
+
+## Setting up and using the theming tooling
+
+EDS comes with some optional tooling to allow easy transfer of theme data from Figma (or some style-dictionary compatible format) into code.
+
+- `eds-init-theme` - This command creates the initial file(s) for theming your application
+- `eds-apply-theme` - This command parses the local config file to generate the tokens used by EDS components and tools
+
+Each of these tools reads config to figure out where to read/write files.
+
+First, create a configuration file to determine the source and destination directories. This can be defined in a new file `.edsrc.json` in your project root. Example:
 
 ```json
+// in a new file .edsrc.json
 {
   "src": "src/components/",
   "dest": "src/components/"
 }
 ```
 
-`src` determines where the core theme file will be copied to (upon init) OR read from (upon apply), and `dest` determines where the processed files will be written to.
+`src` determines where the core theme file will be copied to (upon running `eds-init-theme`) OR read from (upon running `eds-apply-theme`), and `dest` determines where the generated project files will be written to. Once created, you can use the provided commands.
 
 ### eds-init-theme
 
-This will create an initial JSON file `app-theme.json` that defines ALL the available tokens for EDS that you can edit. 
+Command to run: `npx eds-init-theme`
 
-EDS comes pre-packaged with many tokens that define the base style and character of the system. Users of EDS can theme certain aspects of all components, or details on specific components.
+This will create a new JSON file `app-theme.json` that defines ALL the available tokens for EDS that you can edit. It will copy the template file to configured `src` path in your project.
 
-```json
-{
-  "eds": {
-    "anim": {
-      "fade": {
-        "quick": {
-          "value": "0.15s"
-        },
-        "long": {
-          "value": "0.4s"
-        }
-      },
-      "move": {
-        "quick": {
-          "value": "0.15s"
-        },
-        "medium": {
-          "value": "0.3s"
-        },
-        "long": {
-          "value": "0.4s"
-        }
-      },
-      "ease": {
-        "value": "ease"
-      }
-    },
-    // ...other token values
-  },
-}
-```
+This file is a baseline config to be used later in the process.
 
 ### eds-apply-theme
 
-After making changes to the `app-theme.json` to reflect what has been defined by design, update the project's theme files by running `npx eds-apply-theme`.
+Command to run: `npx eds-apply-theme`
 
-Once run, you will have a CSS file `app-theme.css` that includes a set of token values as CSS variables, which can be used in the app as appropriate. 
+Using `eds-apply-theme` will read in the newly-created `app-theme.json` file, and create the tokens to use in your project.
 
-```css
-/**
- * Do not edit directly
- * Generated on Sunday, 01 Jan 2023 12:34:56 GMT
- * To update, edit app-theme.json, then run `npx eds-apply-theme`
- */
+Once run, you will have a set of theme files written to the configured `dest` path:
 
-:root {
-  --eds-anim-fade-quick: 0.15s;
-  --eds-anim-fade-long: 0.4s;
-  --eds-anim-move-quick: 0.15s;
-  --eds-anim-move-medium: 0.3s;
-  --eds-anim-move-long: 0.4s;
-  --eds-anim-ease: ease;
-/* ...other token values... */
-}
+- `app-theme.css` (CSS file containing custom CSS variables with the theme values for the application)
+- `app-tailwind-theme.config.json` (Configuration file for advanced tailwind configuration in the application)
+
+To use, add this file to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
+
+## Custom Theming and Tailwind
+
+When you have your own custom theme, you can use the tokens provided in `app-tailwind-theme.config.json` to do advanced tailwind configuration. This file contains all the tokens in JSON format, mapped to the literal values in your local theme.
+
+You can use similar import values to what is in `@chanzuckerberg/eds/tailwind.config.ts` in your local tailwind configuration file:
+
+```ts
+// in your tailwind.config.ts file
+import type { Config } from 'tailwindcss';
+import baseConfig from '@chanzuckerberg/eds/tailwind.config';
+import {eds as customTokens} from "<edsrc.json:dest>/app-tailwind-theme.config"; // where <edsrc.json:test> is the path configured in .edsrc.json
+
+const {
+  background: backgroundColorTokens,
+  border: borderColorTokens,
+  text: textColorTokens,
+  ...colorTokens
+} = customTokens.theme.color;
+
+// export the following
+export default {
+  ... // your local content export
+  theme: {
+    colors: {
+      ...colorTokens,
+    },
+    extend: {
+      backgroundColor: {
+        ...backgroundColorTokens,
+      },
+      borderColor: {
+        ...borderColorTokens,
+      },
+      textColor: {
+        ...textColorTokens,
+      },
+    },
+    screens: {
+      ...baseConfig.theme.screens, // you can mix in any base config values into the local theme
+    }
+    ... // any local theme settings
+  }
+} satisfies Config
+
 ```
 
-Add this file to your core app root file. 
+<hr />
 
-This also generates an additional file `app-tailwind-theme.config.json` which contains [useful tailwind configuration](https://github.com/chanzuckerberg/edu-design-system?tab=readme-ov-file#tailwind-setup) for EDS-specific utility classes
-This will also show a preview of the tokens in your IDE of choice. To use this config, replace the import from the package with a link to this files location:
-
-```diff
--const edsConfig = require('@chanzuckerberg/eds/tailwind.config');
-+const edsConfig = require('./src/components/app-tailwind-theme.config');
-```
-
-That's it! Now, the theme will be applied to the tokens used by EDS components. To make other changes, edit `app-theme.json`, then re-run `npx eds-apply-theme`.
-
-**NOTE**: do not edit this file directly. Instead, follow the instructions at the top of the file!
-
-## How to manually apply a theme in another product
-
-You can also manage the creation of theme token definitions manually. In EDS, theming is implemented by overriding the values of the CSS variables representing tokens, which the EDS components use in their styles. This should update the style of the components to match the branding of a different product with minimum manual CSS styling overrides. (Some manual styling overrides will be necessary though because we don't have tokens for every little detail. In those cases, we could create a new token to make those overrides easier if it looks like something that could very well be useful for other products as well.)
-
-These CSS variables overrides lives in the products using EDS components. This allows product teams to quickly iterate on their theme without making changes to EDS itself.
-
-You can find the full list of CSS variables in [src/tokens-dist/css/variables.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/tokens-dist/css/variables.css), and you can see examples of overriding them in [.storybook/pages/WireframeDemo/GlobalStyles.module.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/.storybook/pages/WireframeDemo/GlobalStyles.module.css).
-
-If you're looking to set up a prototype using the [wireframe theme](./?path=/story/pages-theming-wireframedemo--default), you can copy and paste the variables defined in [.storybook/pages/WireframeDemo/GlobalStyles.module.css](https://github.com/chanzuckerberg/edu-design-system/blob/main/.storybook/pages/WireframeDemo/GlobalStyles.module.css). (The placeholder images will need to be added separately.)
-
-If you are trying to customize the styling of a component but find that the style you want to override does not yet have a token for you to redefine, you can reach out to us to discuss whether a new token should be added.
-
-## How to support theming in EDS
-
-Since other products rely on CSS variable tokens to theme EDS components, it's very important that, when working with color, components in the EDS package only use CSS variables representing tier 2 and tier 3 tokens for styling. EDS component styling should never use tier 1 tokens, JavaScript variables representing tokens, or raw hex codes. Non-color styling can use tokens from any tier. (This is only relevant to the EDS components themselves; examples in storybook or in other products do not need to follow this rule.)
+If there are any future updates to the theme, edit the contents of `app-theme.json`, then re-run `npx eds-apply-theme`. Then commit the changes, and that's it!

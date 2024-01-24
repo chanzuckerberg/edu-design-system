@@ -23,7 +23,6 @@ EDS is a [themeable design system](https://bradfrost.com/blog/post/creating-them
   - [Color](#tier-2-colors)
   - [Form](#tier-2-forms)
 - [Tier 3 Component Tokens](#tier-3-component-tokens)
-- [Tailwind Class Tokens](#tailwind-class-tokens)
 
 ## Style Dictionary
 
@@ -33,7 +32,9 @@ Tokens are defined as a collection of JSON files, which then get converted by St
 
 ## Design token architecture
 
-Design tokens live at `src/design-tokens`, and follows this directory structure:
+Design tokens live at `src/design-tokens`. Primitive (tier-1) tokens live in `primitives.json`, and theme (tier-2/tier-3) tokens live in `themes.json`.
+
+For typography tokens, thes directory structure is stored in the following tree:
 
 ```css
 design-tokens
@@ -150,28 +151,3 @@ With the rest matching a corresponding use for the given component. For example,
 The suffix here is arbitrary, but uses similar naming to tier two tokens. When possible, any new tier 3 tokens should be a more specifically named tier 2 token, to keep the naming consistent.
 
 See the current set of tier 3 tokens [in storybook](/story/design-tokens-tier-3-component--colors).
-
-
-## Tailwind Class Tokens
-
-If the EDS tailwind config theme is being used, Tier 2 and tier 3 color tokens are available as a part of tailwind utility classes, and can be used to apply to specific attributes to a component. Background(prefix: bg-), border(prefix: border-), and text(prefix: text-) colors will only be available for themselves specifically. e.g.:
-
-### These will not work
-
-```html
-<!-- will NOT work since tier 1 colors are not available -->
-<div className="bg-brand-grape-100"></div>
-<!-- will NOT work since background utility classes don't have border colors -->
-<div className="bg-link-neutral"></div>
-```
-
-### These will work
-```html
-<!-- will work since button colors are available across all color utility classes -->
-<div className="bg-button-icon-brand"></div>
-<!-- will work since border colors are available for border color utility classes -->
-<div className="border-link-neutral"></div>
-<!-- will reflect respective color utility tokens
-      (background-brand-primary-strong and border-brand-primary-strong) -->
-<div className="bg-brand-primary-strong border-brand-primary-strong"></div>
-```

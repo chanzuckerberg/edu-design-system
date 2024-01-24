@@ -6,27 +6,26 @@ Education Design System (EDS) is a repository of [presentational](https://medium
 
 ## Installation
 
-First install the package.
+First, install the package.
 
 ```bash
-# via npm
+# using npm
 npm install --save @chanzuckerberg/eds
 
-# or, if using Yarn
+# or using Yarn
 yarn add @chanzuckerberg/eds
 ```
 
-## App Setup
+## Setting up EDS in your project
 
-Import the EDS stylesheet and tokens somewhere in your app root, e.g. an `init.ts` or `app.ts` file:
+Import the EDS stylesheets somewhere in your app root, e.g. an `init.ts` or `app.ts` file:
 
 ```js
-import '@chanzuckerberg/eds/index.css';
-// optionally import EDS font faces
-// import '@chanzuckerberg/eds/fonts.css';
+import '@chanzuckerberg/eds/index.css'; // Includes relevant styles and tokens for EDS
+import '@chanzuckerberg/eds/fonts.css'; // Includes font files if using the built in theme fonts
 ```
 
-We also surface an `--eds-font-size-base` property to set your base `rem` font size, eg:
+Also, include this in your base / reset styles to allow configuation of the pixel-to-rem ratio:
 
 ```css
 html {
@@ -34,85 +33,21 @@ html {
 }
 ```
 
-### Tailwind Setup
-
-The EDS Tailwind theme provides many EDS [tokens][tokens] and some screen sizes. Import the tailwind config into the app's tailwind config and supply the [content](https://tailwindcss.com/docs/content-configuration) property for use:
-
-
-#### Applying all of the EDS tokens to Tailwind
-
-To take all of what EDS provides (base colors, and extended utility classes for named tokens), use the following:
-
-```js
-const edsConfig = require('@chanzuckerberg/eds/tailwind.config');
-
-module.exports = {
-  content: ['./app/**/*.{ts,tsx,jsx,js}'],
-  theme: edsConfig.theme,
-};
-```
-
-This will replace the default color tokens that come [with Tailwind](https://tailwindcss.com/docs/customizing-colors) with those defined by EDS. **NOTE**: this might cause regressions in your project, if you have been using the default colors provided by tailwind.
-
-#### Applying the EDS tailwind extensions piecemeal
-
-If you want a gentler transition to using EDS tailwind config, you can instead import **just** the extended values:
-
-
-```js
-const edsConfig = require('@chanzuckerberg/eds/tailwind.config');
-
-module.exports = {
-  // ...
-  theme: {
-    extend: {
-      ...edsConfig.theme.extend
-    }
-  }
-};
-```
-
-This will add in the utility classes for properties like background color `bg-*`, border `border-*`, and text color `text-*`. These match the styles and variables defined in Figma designs. 
-
-Refer to the [tokens tailwind section][tokens] for usage guidelines if your project uses the theming tooling.
-
-[tokens]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-tokens--docs
-
-### CSS Variable Setup
-
-EDS also provides the tokens used in the internal styles, to use in any custom component recipes and designs. If using VSCode, you can set up the IDE to expose the token values and perform autocomplete:
-
-1. Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) VSCode extension
-2. Add the following setting to your user or workspace settings file
-
-```jsonc
-{
-  // ...rest of the settings here
-  "cssvar.files": [
-    "node_modules/@chanzuckerberg/eds/lib/index.css"
-  ]
-}
-```
-3. Restart VSCode
-
-
 ### Theming Setup
 
-Refer to the "EDS Token and Theme Tools" in [the tokens documentation](https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming--docs) to learn about the optional tooling setup.
+For more information and configuration options, read the [Theming Overview][theming-docs].
 
-## Usage
+## EDS Component Usage
 
 Import any of the components from the top-level package:
 
-```js
+```jsx
 // Import components by name at the top of your file
 import { Heading } from '@chanzuckerberg/eds';
-```
 
-and then use them in your React components:
+// ...and then use them in your React components:
 
-```jsx
-<Heading variant="neutral-strong" size="h2">
+<Heading preset="headline-lg">
   Coffee!
 </Heading>
 ```
@@ -121,11 +56,16 @@ EDS provides a [suite](https://chanzuckerberg.github.io/edu-design-system/) of c
 
 ## Development
 
-This project is under **active development**. See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for more information on how to contribute to EDS. Also, read our [guidelines](https://chanzuckerberg.github.io/edu-design-system/?path=/story/documentation-guidelines-code-guidelines--page) for additional information.
+This project is under **active development**. See [CONTRIBUTING.md][contributing] for more information on how to contribute to the Design System and IDE (VSCode) setup. Also, read our [guidelines][guidelines] for additional information on how we build EDS components.
 
-Instead, if you want to report an issue, you can [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
+Instead, if you want to report an issue, you can [open an issue][gh-issue].
 
-This project is governed under the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+This project is governed under the [Contributor Covenant][contribution-covenant] code of conduct.
+
+[contributing]: ./docs/CONTRIBUTING.md
+[guidelines]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-code-guidelines--docs
+[gh-issue]: https://github.com/chanzuckerberg/edu-design-system/issues
+[contribution-covenant]: https://www.contributor-covenant.org/
 
 ## Reporting Security Issues
 
@@ -133,4 +73,6 @@ See our [Security Readme](https://github.com/chanzuckerberg/edu-design-system/bl
 
 ## FAQ, More Information, and Support
 
-Please review our Education Design System Site (SSO Required): [/Paper](https://eds.czi.design/0843bc428/p/581284-education-design-system)
+Please review our Education Design System Site (SSO Required) [here](https://eds.czi.design/0843bc428/p/581284-education-design-system).
+
+[theming-docs]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming--docs
