@@ -16,9 +16,8 @@
 
   // read in the config from config file, package json "eds", etc.
   const config = await getConfig();
-
   // take the packaged token file and place a copy in the project's 'json' specified path
-  if (config) {
+  if (config?.src) {
     try {
       fs.copyFileSync(
         packageRootPath + 'theme-base.json',

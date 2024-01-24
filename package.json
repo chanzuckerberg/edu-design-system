@@ -36,6 +36,7 @@
   ],
   "bin": {
     "eds-apply-theme": "bin/eds-apply-theme.js",
+    "eds-import-from-figma": "bin/eds-import-from-figma.js",
     "eds-init-theme": "bin/eds-init.js"
   },
   "scripts": {
@@ -92,10 +93,15 @@
     "@popperjs/core": "^2.11.8",
     "@tippyjs/react": "^4.2.6",
     "@types/lodash": "^4.14.202",
+    "@types/yargs": "^17.0.32",
+    "chalk": "^4.1.2",
     "clsx": "^2.1.0",
+    "enquirer": "^2.4.1",
     "graphemer": "^1.4.0",
+    "jsonfile": "^6.1.0",
     "lilconfig": "^2.1.0",
     "lodash": "^4.17.21",
+    "ora": "^8.0.1",
     "react-beautiful-dnd": "^13.1.1",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.9.8",
@@ -103,7 +109,8 @@
     "react-portal": "^4.2.2",
     "react-uid": "^2.3.3",
     "style-dictionary": "^3.9.2",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",
@@ -134,9 +141,10 @@
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.17",
-    "@types/react": "^18.2.55",
+    "@types/jest": "^29.5.11",
+    "@types/jsonfile": "^6",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
     "@types/react-beautiful-dnd": "^13.1.8",
     "@types/react-dom": "^18.2.19",
     "@types/react-portal": "^4.0.7",
