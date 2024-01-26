@@ -9,7 +9,6 @@ import * as stories from './Select.stories';
 const {
   OpenByDefault,
   Disabled,
-  OptionsLeftAligned,
   OptionsRightAligned,
   SeparateButtonAndMenuWidth,
   ...closedStories
