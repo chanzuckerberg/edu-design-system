@@ -62,8 +62,15 @@ type SelectProps = ExtractProps<typeof Listbox> &
      * The style of the select.
      *
      * Compact renders select trigger button that is only as wide as the content.
+     *
+     * This is **deprecated**. Please use utility classes to adjust the component width.
+     * @deprecated
      */
     variant?: VariantType;
+    /**
+     * Visible text label for the component.
+     */
+    label?: string;
   };
 
 type SelectOption = {
@@ -145,6 +152,7 @@ export function Select(props: SelectProps) {
     'aria-label': ariaLabel,
     children,
     className,
+    label,
     modifiers = defaultPopoverModifiers,
     name,
     onFirstUpdate,
@@ -185,7 +193,7 @@ export function Select(props: SelectProps) {
   if (process.env.NODE_ENV !== 'production') {
     const childrenHaveLabel =
       children && childrenHaveLabelComponent(children as ReactNode);
-    if (!props['aria-label'] && !childrenHaveLabel) {
+    if (!props['aria-label'] && !props.label && !childrenHaveLabel) {
       throw new Error('You must provide a visible label or `aria-label`.');
     }
   }
@@ -233,15 +241,28 @@ export function Select(props: SelectProps) {
 
   return (
     <SelectContext.Provider value={contextValue}>
-      <Listbox {...sharedProps}>{children}</Listbox>
+      <Listbox {...sharedProps}>
+        {label && (
+          <Select.Label disabled={props.disabled}>{label}</Select.Label>
+        )}
+        {children}
+      </Listbox>
     </SelectContext.Provider>
   );
 }
 
-const SelectLabel = (props: { className?: string; children: ReactNode }) => {
-  const { children, className } = props;
+const SelectLabel = (props: {
+  className?: string;
+  children: ReactNode;
+  disabled?: boolean;
+}) => {
+  const { children, className, disabled } = props;
 
-  const componentClassName = clsx(styles['select__label'], className);
+  const componentClassName = clsx(
+    styles['select__label'],
+    disabled && clsx(styles['select__label--disabled']),
+    className,
+  );
   const overlineClassName = clsx(styles['select__overline']);
   return (
     <div className={overlineClassName}>

@@ -13,10 +13,12 @@
 
 /**
  * Compact variant.
+ * TODO: remove treatment for compact, as it only adjusts the component width, not its overall padding
  */
 .select--compact {
   width: min-content;
 }
+
 .select-button--compact {
   padding: var(--eds-size-half);
 }
@@ -27,6 +29,10 @@
 .select__label {
   font: var(--eds-theme-typography-form-label);
   display: inline-block;
+}
+
+.select__label--disabled {
+  color: var(--eds-theme-color-text-disabled);
 }
 
 /**
