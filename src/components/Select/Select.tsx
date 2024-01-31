@@ -1,6 +1,11 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import type { ReactElement, ReactNode, ElementType } from 'react';
+import type {
+  ReactElement,
+  ReactNode,
+  ElementType,
+  MouseEventHandler,
+} from 'react';
 
 import React, { useContext, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -108,6 +113,10 @@ type SelectButtonProps = {
    * Indicates state of the select, used to style the button.
    */
   isOpen?: boolean;
+  /**
+   * custom click handler for the built-in or wrapper button
+   */
+  onClick?: MouseEventHandler;
 };
 
 type SelectContextType = PopoverContext & {
@@ -161,15 +170,23 @@ export function Select(props: SelectProps) {
     placement = 'bottom-start',
     strategy,
     variant,
+    onChange: theirOnChange,
     ...other
   } = props;
 
-  if (process.env.NODE_ENV !== 'production' && !name && showNameWarning) {
-    console.warn(
-      "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
-      'font-weight: bold',
-    );
-    showNameWarning = false;
+  if (process.env.NODE_ENV !== 'production') {
+    const childrenHaveLabel =
+      children && childrenHaveLabelComponent(children as ReactNode);
+    if (!props['aria-label'] && !props.label && !childrenHaveLabel) {
+      throw new Error('You must provide a visible label or `aria-label`.');
+    }
+    if (!name && showNameWarning) {
+      console.warn(
+        "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
+        'font-weight: bold',
+      );
+      showNameWarning = false;
+    }
   }
 
   // Translate old optionsAlign to placement values
@@ -188,15 +205,14 @@ export function Select(props: SelectProps) {
     { placement: optionsPlacement, modifiers, strategy, onFirstUpdate },
   );
 
-  const compact = variant === 'compact';
+  // Create a new value to track the internal state of Listbox. Added to work around
+  // behavior inherited from HeadlessUI where it will fire onChange even if there is no change
+  // Adding to support behavior synced to how <select> tags work
+  const [selectedValue, setSelectedValue] = useState(
+    other.value !== undefined ? other.value : other.defaultValue,
+  );
 
-  if (process.env.NODE_ENV !== 'production') {
-    const childrenHaveLabel =
-      children && childrenHaveLabelComponent(children as ReactNode);
-    if (!props['aria-label'] && !props.label && !childrenHaveLabel) {
-      throw new Error('You must provide a visible label or `aria-label`.');
-    }
-  }
+  const compact = variant === 'compact';
 
   const componentClassName = clsx(
     styles['select'],
@@ -241,7 +257,16 @@ export function Select(props: SelectProps) {
 
   return (
     <SelectContext.Provider value={contextValue}>
-      <Listbox {...sharedProps}>
+      <Listbox
+        {...sharedProps}
+        onChange={(changedValue: SelectOption) => {
+          if (selectedValue !== changedValue) {
+            setSelectedValue(changedValue);
+            // Use the value from the event because updates to `useState` are queued
+            theirOnChange && theirOnChange(changedValue);
+          }
+        }}
+      >
         {label && (
           <Select.Label disabled={props.disabled}>{label}</Select.Label>
         )}
@@ -279,9 +304,14 @@ const SelectButton = function (
     disabled: boolean;
     open: boolean;
     value: SelectOption;
-  }>,
+  }> & {
+    /**
+     * custom click handler for the built-in or wrapper button
+     */
+    onClick?: MouseEventHandler;
+  },
 ) {
-  const { children, className, ...other } = props;
+  const { children, className, onClick: theirOnClick, ...other } = props;
   const { compact, setReferenceElement } = useContext(SelectContext);
 
   const componentClassName = clsx(
@@ -305,6 +335,9 @@ const SelectButton = function (
           <SelectButtonWrapper
             className={componentClassName}
             isOpen={renderProps.open}
+            onClick={(event) => {
+              theirOnClick && theirOnClick(event);
+            }}
           >
             {children}
           </SelectButtonWrapper>
@@ -379,31 +412,51 @@ const SelectOption = function (props: SelectOptionProps) {
 };
 
 /**
- * The component functioning as a styling for the trigger, selection arrow, and space to show the current value
+ * The component functioning as a styling for the trigger, selection arrow, and space to
+ * show the current value.
  */
 export const SelectButtonWrapper = React.forwardRef<
   HTMLButtonElement,
   SelectButtonProps
->(({ children, className, icon = 'expand-more', isOpen, ...other }, ref) => {
-  const componentClassName = clsx(styles['select-button'], className);
-  const iconClassName = clsx(
-    styles['select-button__icon'],
-    isOpen && styles['select-button__icon--reversed'],
-  );
-  return (
-    <button className={componentClassName} ref={ref} {...other}>
-      {/* Wrapping span ensures that `children` and icon will be correctly pushed to
+>(
+  (
+    {
+      children,
+      className,
+      icon = 'expand-more',
+      isOpen,
+      onClick: theirOnClick,
+      ...other
+    },
+    ref,
+  ) => {
+    const componentClassName = clsx(styles['select-button'], className);
+    const iconClassName = clsx(
+      styles['select-button__icon'],
+      isOpen && styles['select-button__icon--reversed'],
+    );
+    return (
+      <button
+        className={componentClassName}
+        onClick={(ev) => {
+          theirOnClick && theirOnClick(ev);
+        }}
+        ref={ref}
+        {...other}
+      >
+        {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-      <span>{children}</span>
-      <Icon
-        className={iconClassName}
-        name={icon}
-        purpose="decorative"
-        size="1.25rem"
-      />
-    </button>
-  );
-});
+        <span>{children}</span>
+        <Icon
+          className={iconClassName}
+          name={icon}
+          purpose="decorative"
+          size="1.25rem"
+        />
+      </button>
+    );
+  },
+);
 
 Select.displayName = 'Select';
 SelectButton.displayName = 'Select.Button';

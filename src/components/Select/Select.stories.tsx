@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import React, { type SyntheticEvent } from 'react';
+import React from 'react';
 import { Select } from './Select';
 import Icon from '../Icon';
 
@@ -137,7 +137,7 @@ export const Default: StoryObj = {
     children: (
       <>
         <Select.Button>
-          {({ value, open, disabled }) => (
+          {({ value, open }) => (
             <Select.ButtonWrapper isOpen={open}>
               {value.label}
             </Select.ButtonWrapper>
@@ -153,16 +153,55 @@ export const Default: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper
+        isOpen={open}
+      >
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+    {exampleOptions.map((option) => (
+      <Select.Option key={option.key} value={option}>
+        {option.label}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
 };
 
 /**
- * You can select a different option on render.
+ * Instead of a render prop for `Select.Button`, you can forego the render prop for the button and use static text instead.
+ * This mode is also useful if you want to use a controlled component and manage state yourself.
  */
-export const WithSelectedOption: StoryObj<typeof Select> = {
+export const WithStandardButton: StoryObj = {
   args: {
-    ...Default.args,
-    'aria-label': 'Favorite Animal',
-    defaultValue: exampleOptions[1],
+    label: 'Favorite Animal',
+    'data-testid': 'dropdown',
+    defaultValue: exampleOptions[0],
+    name: 'standard-button',
+    children: (
+      <>
+        <Select.Button>- Select Option -</Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
   },
 };
 
@@ -170,13 +209,105 @@ export const WithSelectedOption: StoryObj<typeof Select> = {
  * `Select` allows for event handlers to be added to the component.
  *
  * * `onChange` fires when a value is selected (with value of type `SelectOption`)
- * * `onClick` fires after onChange, when a value in the dropdown popover is picked
+ *
+ * You can also add an `onClick` handler to `.ButtonWrapper` if using a render prop
+ *
+ * * `onClick` fires when the trigger (`.buttonWrapper`) is clicked
  */
-export const EventHandling: StoryObj = {
+export const EventHandlingOnRenderProp: StoryObj = {
   args: {
     ...Default.args,
-    onClick: (args: SelectOption) => console.log('test', args),
-    onChange: (args: SyntheticEvent) => console.log('test 2', args),
+    onChange: (args: SelectOption) => console.log('changed to', args),
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open }) => (
+            <Select.ButtonWrapper
+              isOpen={open}
+              onClick={(args) => console.log('custom click')}
+            >
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper
+        isOpen={open}
+        onClick={...}
+        >
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+    {exampleOptions.map((option) => (
+      <Select.Option key={option.key} value={option}>
+        {option.label}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
+};
+
+/**
+ * `Select` allows for event handlers to be added to the component.
+ *
+ * * `onChange` fires when a value is selected (with value of type `SelectOption`)
+ *
+ * If not using a render prop, you can also add an `onClick` handler to `Select.Button` directly
+ *
+ * * `onClick` fires when the trigger (`.buttonWrapper`) is clicked
+ *
+ * **NOTE**: `onClick` has no function when using a render prop
+ */
+export const EventHandlingOnStandardButton: StoryObj = {
+  args: {
+    ...Default.args,
+    children: (
+      <>
+        <Select.Button onClick={(args) => console.log('external click', args)}>
+          - Select Option -
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+    onChange: (args: SelectOption) => console.log('external change', args),
+  },
+};
+
+/**
+ * You can select a different option to show when rendered.
+ */
+export const WithSelectedOption: StoryObj<typeof Select> = {
+  args: {
+    ...Default.args,
+    'aria-label': 'Favorite Animal',
+    defaultValue: exampleOptions[1],
   },
 };
 
@@ -229,7 +360,7 @@ export const UncontrolledHeadless: StoryObj = {
       <>
         <Select.Button>
           {({ value, open, disabled }) => (
-            <button className="fpo">{value.label} </button>
+            <button className="fpo">{value.label}</button>
           )}
         </Select.Button>
         <Select.Options>
@@ -348,12 +479,12 @@ export const OptionsRightAligned: StoryObj = {
 };
 
 /**
- * As an alternative rendering method, you can apply fine-grained control to the button rendering, AND the rendering of the
- * list itself. Here, we use a render prop to control the contents of `Select`
+ * As an alternative rendering method, you can use several types of render props for fine-grained control of the button rendering, and
+ * the rendering of the list itself. Here, we use a render prop to control the contents of `Select`
  *
  * For more information on `Select` render props, review: https://headlessui.com/react/listbox#using-render-props
  */
-export const UsingFunctionChildrenProp: StoryObj = {
+export const UsingFunctionProps: StoryObj = {
   render: () => {
     const [selectedOption, setSelectedOption] =
       // eslint-disable-next-line react-hooks/rules-of-hooks
