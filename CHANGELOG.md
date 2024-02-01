@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.9.0...v13.10.0) (2024-02-01)
+
+
+### Features
+
+* **Select:** add ability to handle click and change event handlers ([#1839](https://github.com/chanzuckerberg/edu-design-system/issues/1839)) ([54a3de8](https://github.com/chanzuckerberg/edu-design-system/commit/54a3de8e5d1e9416b1ff24a18499ee5f02db3888))
+* **Select:** add support for label prop ([#1837](https://github.com/chanzuckerberg/edu-design-system/issues/1837)) ([c032ff2](https://github.com/chanzuckerberg/edu-design-system/commit/c032ff2b35f074076237aab0786325cc7237fa3a))
+
 ## [13.9.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.8.1...v13.9.0) (2024-01-19)
 
 

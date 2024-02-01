@@ -30,3 +30,20 @@ Storybook offers several facilities to demonstrate how components behave. Some c
 - **Storybook View Options** allow for controlling the viewport, background color, and other details to help understand the component layout. Visually test how the component responds to different layouts
 
 Storybook provides a lot of functionality, including [keyboard navigation](https://storybook.js.org/docs/react/get-started/browse-stories#sidebar-and-canvas). Explore [the docs](https://storybook.js.org/docs/react/get-started/introduction) to learn more.
+
+### IDE Integrations
+
+Since EDS provides many color tokens, it may prove useful to add some integrations to the IDE to show visual references for the colors in use.
+
+- Install the [CSS Var Complete - VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) which provides better Intellisense while writing CSS and referencing CSS variables.
+- Add the following settings in your workspace settings file:
+
+```jsonc
+{
+  // ...rest of the settings here
+  "cssvar.files": [
+    "node_modules/@chanzuckerberg/eds/lib/index.css"
+  ]
+}
+```
+- Restart VSCode

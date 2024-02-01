@@ -1,8 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import clsx from 'clsx';
 import React from 'react';
-import type { OptionsAlignType, VariantType } from './Select';
 import { Select } from './Select';
 import Icon from '../Icon';
 
@@ -17,6 +15,11 @@ const meta: Meta<typeof Select> = {
     multiple: {
       table: {
         disable: true,
+      },
+    },
+    children: {
+      control: {
+        type: null,
       },
     },
     value: {
@@ -39,20 +42,32 @@ const meta: Meta<typeof Select> = {
         },
       },
     },
+    onClick: {
+      description:
+        'Optional click handler. Fires after `onChange`, when a value in the dropdown popover is picked',
+      table: {
+        type: {
+          summary: 'SyntheticEvent',
+          detail:
+            'See: https://react.dev/reference/react-dom/components/common#react-event-object',
+        },
+        default: 'void',
+      },
+    },
+    onChange: {
+      description: 'Optional change handler. Fires when a value is selected',
+      table: {
+        type: {
+          summary: 'SelectOption',
+          detail:
+            'An object with at least label (as string) and any other useful key/value pairs',
+        },
+      },
+    },
   },
 };
 
 export default meta;
-
-type Props = {
-  'aria-label'?: string;
-  labelComponent?: React.ReactNode;
-  optionsAlign?: OptionsAlignType;
-  optionsClassName?: string;
-  variant?: VariantType;
-  disabled?: boolean;
-  value?: SelectOption;
-};
 
 type SelectOption = {
   key: string;
@@ -73,91 +88,6 @@ const exampleOptions: SelectOption[] = [
     label: 'Birds',
   },
 ];
-
-function InteractiveExampleUsingChildren(props: Props) {
-  const { variant, optionsAlign, optionsClassName, disabled, value } = props;
-  const compact = variant === 'compact';
-
-  const [selectedOption, setSelectedOption] = React.useState<
-    SelectOption | undefined
-  >(value);
-
-  return (
-    <div className="mb-10 p-8">
-      <Select
-        aria-label={props['aria-label']}
-        className={clsx(!compact && 'w-60')}
-        data-testid="dropdown"
-        disabled={disabled}
-        name="interactive-select"
-        onChange={setSelectedOption}
-        optionsAlign={optionsAlign}
-        optionsClassName={optionsClassName}
-        value={selectedOption}
-        variant={variant}
-      >
-        {props.labelComponent}
-        <Select.Button>{selectedOption?.label || 'Select'}</Select.Button>
-        <Select.Options>
-          {exampleOptions.map((option) => (
-            <Select.Option key={option.key} value={option}>
-              {option.label}
-            </Select.Option>
-          ))}
-        </Select.Options>
-      </Select>
-    </div>
-  );
-}
-
-// This story just tests the case where a function in passed in that wraps the children.
-function InteractiveExampleUsingFunctionChildren() {
-  const [selectedOption, setSelectedOption] =
-    React.useState<(typeof exampleOptions)[0]>();
-
-  return (
-    <div className="mb-10 p-8">
-      <Select
-        aria-label="Favorite Animal"
-        as="div"
-        className="w-60"
-        data-testid="dropdown"
-        name="interactive-with-children"
-        onChange={setSelectedOption}
-        value={selectedOption}
-      >
-        {({ open }) => (
-          <>
-            <Select.Button
-              // Because we're using a render prop to completely control the styling and icon of the
-              // button, we need to configure this component to render as a Fragment. Otherwise we'd
-              // render two, nested buttons.
-              as={React.Fragment}
-            >
-              {() => (
-                <button aria-expanded={open} className="fpo">
-                  {selectedOption?.label || 'Select'}
-                  <Icon
-                    className="ml-4"
-                    name="filter-list"
-                    purpose="decorative"
-                  />
-                </button>
-              )}
-            </Select.Button>
-            <Select.Options>
-              {exampleOptions.map((option) => (
-                <Select.Option key={option.key} value={option}>
-                  {option.label}
-                </Select.Option>
-              ))}
-            </Select.Options>
-          </>
-        )}
-      </Select>
-    </div>
-  );
-}
 
 /**
  * Play function to open a menu item
@@ -191,35 +121,28 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
   await userEvent.click(selectButton);
 };
 
+/**
+ * The simplest and default case, using the options, button, and button wrapper.
+ * This shows how to reflect the value in the button upon selection, and how to generate
+ * a set of options from a list.
+ *
+ * **NOTE**: for select value data types, `{label: string}` is required, but any other key/value pairs are allowed.
+ */
 export const Default: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: `
-// props: {aria-label: 'Favorite Animal'}
-function InteractiveExampleUsingChildren(props: Props) {
-  const { variant, optionsAlign, optionsClassName, disabled, value } = props;
-  const compact = variant === 'compact';
-
-  const [selectedOption, setSelectedOption] = React.useState<
-    SelectOption | undefined
-  >(value);
-
-  return (
-    <div className="mb-10 p-8">
-      <Select
-        aria-label={props['aria-label']}
-        className={clsx(!compact && 'w-60')}
-        data-testid="dropdown"
-        disabled={disabled}
-        onChange={setSelectedOption}
-        optionsAlign={optionsAlign}
-        optionsClassName={optionsClassName}
-        value={selectedOption}
-        variant={variant}
-      >
-        {props.labelComponent}
-        <Select.Button>{selectedOption?.label || 'Select'}</Select.Button>
+  args: {
+    label: 'Favorite Animal',
+    'data-testid': 'dropdown',
+    defaultValue: exampleOptions[0],
+    name: 'select',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
         <Select.Options>
           {exampleOptions.map((option) => (
             <Select.Option key={option.key} value={option}>
@@ -227,16 +150,165 @@ function InteractiveExampleUsingChildren(props: Props) {
             </Select.Option>
           ))}
         </Select.Options>
-      </Select>
-    </div>
-  );
-}`,
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper
+        isOpen={open}
+      >
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+    {exampleOptions.map((option) => (
+      <Select.Option key={option.key} value={option}>
+        {option.label}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>`,
       },
     },
   },
-  render: () => (
-    <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
-  ),
+};
+
+/**
+ * Instead of a render prop for `Select.Button`, you can forego the render prop for the button and use static text instead.
+ * This mode is also useful if you want to use a controlled component and manage state yourself.
+ */
+export const WithStandardButton: StoryObj = {
+  args: {
+    label: 'Favorite Animal',
+    'data-testid': 'dropdown',
+    defaultValue: exampleOptions[0],
+    name: 'standard-button',
+    children: (
+      <>
+        <Select.Button>- Select Option -</Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+};
+
+/**
+ * `Select` allows for event handlers to be added to the component.
+ *
+ * * `onChange` fires when a value is selected (with value of type `SelectOption`)
+ *
+ * You can also add an `onClick` handler to `.ButtonWrapper` if using a render prop
+ *
+ * * `onClick` fires when the trigger (`.buttonWrapper`) is clicked
+ */
+export const EventHandlingOnRenderProp: StoryObj = {
+  args: {
+    ...Default.args,
+    onChange: (args: SelectOption) => console.log('changed to', args),
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open }) => (
+            <Select.ButtonWrapper
+              isOpen={open}
+              onClick={(args) => console.log('custom click')}
+            >
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper
+        isOpen={open}
+        onClick={...}
+        >
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+    {exampleOptions.map((option) => (
+      <Select.Option key={option.key} value={option}>
+        {option.label}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
+};
+
+/**
+ * `Select` allows for event handlers to be added to the component.
+ *
+ * * `onChange` fires when a value is selected (with value of type `SelectOption`)
+ *
+ * If not using a render prop, you can also add an `onClick` handler to `Select.Button` directly
+ *
+ * * `onClick` fires when the trigger (`.buttonWrapper`) is clicked
+ *
+ * **NOTE**: `onClick` has no function when using a render prop
+ */
+export const EventHandlingOnStandardButton: StoryObj = {
+  args: {
+    ...Default.args,
+    children: (
+      <>
+        <Select.Button onClick={(args) => console.log('external click', args)}>
+          - Select Option -
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+    onChange: (args: SelectOption) => console.log('external change', args),
+  },
+};
+
+/**
+ * You can select a different option to show when rendered.
+ */
+export const WithSelectedOption: StoryObj<typeof Select> = {
+  args: {
+    ...Default.args,
+    'aria-label': 'Favorite Animal',
+    defaultValue: exampleOptions[1],
+  },
 };
 
 /**
@@ -248,14 +320,10 @@ function InteractiveExampleUsingChildren(props: Props) {
  * * `interactive-select[label]`
  * * `interactive-select[key]`
  *
- * **NOTE**: for select value data types, `{label: string}` is required, but any other key/value pairs are allowed.
  */
 export const WithFieldName: StoryObj = {
   args: {
-    'aria-label': 'some label',
-    'data-testid': 'dropdown',
-    defaultValue: exampleOptions[0],
-    name: 'select',
+    ...Default.args,
     children: (
       <>
         <Select.Button>
@@ -292,7 +360,7 @@ export const UncontrolledHeadless: StoryObj = {
       <>
         <Select.Button>
           {({ value, open, disabled }) => (
-            <button className="fpo">{value.label} </button>
+            <button className="fpo">{value.label}</button>
           )}
         </Select.Button>
         <Select.Options>
@@ -304,36 +372,6 @@ export const UncontrolledHeadless: StoryObj = {
         </Select.Options>
       </>
     ),
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select
-  name="select"
-  defaultValue={exampleOptions[0]}
-  data-testid="dropdown"
-  aria-label="some label"
->
-  <Select.Button>
-  {({ value, open, disabled }) => (
-    <button className="fpo">{value.label} </button>
-  )}
-  </Select.Button>
-  <Select.Options>
-    {exampleOptions.map((option) => (
-      <Select.Option key={option.key} value={option}>
-        {option.label}
-      </Select.Option>
-    ))}
-  </Select.Options>
-</Select>
-<!--
-Hidden fields named "select[key]" and "select[label]" because the datatype used is {key: value, label: value}
--->
-        `,
-      },
-    },
   },
 };
 
@@ -365,188 +403,99 @@ export const StyledUncontrolled: StoryObj = {
       </>
     ),
   },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select
-  name="select"
-  defaultValue={exampleOptions[0]}
-  data-testid="dropdown"
-  aria-label="some label"
->
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper isOpen={open}>
-        {value.label}
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-    {exampleOptions.map((option) => (
-      <Select.Option key={option.key} value={option}>
-        {option.label}
-      </Select.Option>
-    ))}
-  </Select.Options>
-</Select>
-<!--
-Hidden fields named "select[key]" and "select[label]" because the datatype used is {key: value, label: value}
--->
-        `,
-      },
-    },
+};
+
+/**
+ * The field trigger width can be set with utility classes. By default, dropdown popover will exppand to match the width.
+ */
+export const AdjustedWidth: StoryObj = {
+  args: {
+    ...Default.args,
+    className: 'w-60',
   },
 };
 
-export const Disabled: StoryObj = {
-  render: () => (
-    <InteractiveExampleUsingChildren aria-label="Favorite Animal" disabled />
-  ),
-};
-
-export const DefaultWithVisibleLabel: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: `
-// refer to "Default" story code with:
-// props: {aria-label: 'Favorite Animal', labelComponent: <Select.Label>Favorite Animal</Select.Label>}`,
-      },
-    },
-  },
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      labelComponent={<Select.Label>Favorite Animal</Select.Label>}
-    />
-  ),
-};
-
-export const Compact: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: '// refer to "Default" story code',
-      },
-    },
-  },
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      variant="compact"
-    />
-  ),
-};
-
-export const NoVisibleLabel: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: '// refer to "Default" story code',
-      },
-    },
-  },
-  render: () => (
-    <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
-  ),
-};
-
-export const OptionsRightAligned: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: '// refer to "Default" story code',
-      },
-    },
-    chromatic: {
-      delay: 300,
-    },
-  },
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      optionsAlign="right"
-      optionsClassName="w-96"
-    />
-  ),
-  play: openMenu,
-};
-
-export const OptionsLeftAligned: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: '// refer to "Default" story code',
-      },
-    },
-    chromatic: {
-      delay: 300,
-    },
-  },
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      optionsAlign="left"
-      optionsClassName="w-96"
-    />
-  ),
-  play: openMenu,
-};
-
+/**
+ * If you want a different width for the trigger and the dropdown popover, you can control them separately.
+ */
 export const SeparateButtonAndMenuWidth: StoryObj = {
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      optionsClassName="w-96"
-      variant="compact"
-    />
-  ),
+  args: {
+    ...Default.args,
+    className: 'w-40',
+    optionsClassName: 'w-96',
+  },
   play: selectCat,
   parameters: {
     chromatic: {
       diffIncludeAntiAliasing: false,
       diffThreshold: 0.72,
-      docs: {
-        source: {
-          code: '// refer to "Default" story code',
-        },
-      },
     },
+  },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+};
+
+/**
+ * Each Select can be marked as disabled. This will update the visual treatment to indicate the field cannot be changed (but by default
+ * will show the selected value).
+ */
+export const Disabled: StoryObj = {
+  args: {
+    ...Default.args,
+    disabled: true,
   },
 };
 
-export const UsingChildrenProp: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: '// refer to "DefaultWithVisibleLabel" story code',
-      },
-    },
+/**
+ * Having a visible label is not necessary. In those cases, use `aria-label` to set a accessible label for the field
+ */
+export const NoVisibleLabel: StoryObj = {
+  args: {
+    ...Default.args,
+    label: undefined,
+    'aria-label': 'hidden label',
   },
-  render: () => (
-    <InteractiveExampleUsingChildren
-      labelComponent={<Select.Label>Favorite Animal</Select.Label>}
-    />
-  ),
 };
 
-export const UsingFunctionChildrenProp: StoryObj = {
+/**
+ * Options for each `Select` can be aligned on different sides of the target button. Options for `placement` defined by
+ * PopperJS.
+ *
+ * More information: https://popper.js.org/docs/v2/constructors/#options
+ */
+export const OptionsRightAligned: StoryObj = {
   parameters: {
-    docs: {
-      source: {
-        code: `
-function InteractiveExampleUsingFunctionChildren() {
-  const [selectedOption, setSelectedOption] =
-    React.useState<(typeof exampleOptions)[0]>();
+    chromatic: {
+      delay: 300,
+    },
+  },
+  args: {
+    ...Default.args,
+    className: 'w-60',
+    optionsClassName: 'w-96',
+    placement: 'bottom-end',
+  },
+  play: openMenu,
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+};
 
-  return (
-    <div className="mb-10 p-8">
+/**
+ * As an alternative rendering method, you can use several types of render props for fine-grained control of the button rendering, and
+ * the rendering of the list itself. Here, we use a render prop to control the contents of `Select`
+ *
+ * For more information on `Select` render props, review: https://headlessui.com/react/listbox#using-render-props
+ */
+export const UsingFunctionProps: StoryObj = {
+  render: () => {
+    const [selectedOption, setSelectedOption] =
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      React.useState<(typeof exampleOptions)[0]>();
+
+    return (
       <Select
         aria-label="Favorite Animal"
         as="div"
-        className="w-60"
         data-testid="dropdown"
+        name="interactive-with-children"
         onChange={setSelectedOption}
         value={selectedOption}
       >
@@ -559,10 +508,7 @@ function InteractiveExampleUsingFunctionChildren() {
               as={React.Fragment}
             >
               {() => (
-                <button
-                  aria-expanded={open}
-                  className={styles['function-children__button']}
-                >
+                <button aria-expanded={open} className="fpo">
                   {selectedOption?.label || 'Select'}
                   <Icon
                     className="ml-4"
@@ -582,15 +528,13 @@ function InteractiveExampleUsingFunctionChildren() {
           </>
         )}
       </Select>
-    </div>
-  );
-}`,
-      },
-    },
+    );
   },
-  render: () => <InteractiveExampleUsingFunctionChildren />,
 };
 
+/**
+ * This shows the contents of `Select` upon render. Mostly to demonstrate it is possible, to capture a snapshot of the appearance.
+ */
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
@@ -599,23 +543,4 @@ export const OpenByDefault: StoryObj = {
     chromatic: { delay: 300, disableSnapshot: true },
   },
   play: selectCat,
-};
-
-export const WithSelectedOption: StoryObj<typeof Select> = {
-  parameters: {
-    docs: {
-      source: {
-        code: `
-// refer to "Default" story code with:
-// props: {aria-label: 'Favorite Animal', labelComponent: <Select.Label>Favorite Animal</Select.Label>, value}`,
-      },
-    },
-  },
-  render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      labelComponent={<Select.Label>Favorite Animal</Select.Label>}
-      value={exampleOptions[0]}
-    />
-  ),
 };
