@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> AdjustedWidth story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`] = `
 <div
   class="select w-60"
   data-headlessui-state="open"
@@ -48,7 +48,7 @@ exports[`<Select /> AdjustedWidth story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Select /> Default story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
 <div
   class="select"
   data-headlessui-state="open"
@@ -96,55 +96,7 @@ exports[`<Select /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Select /> EventHandling story renders snapshot 1`] = `
-<div
-  class="select"
-  data-headlessui-state="open"
-  data-testid="dropdown"
->
-  <div
-    class="select__overline"
-  >
-    <label
-      class="select__label"
-      data-headlessui-state="open"
-      id="headlessui-listbox-label-:rc:"
-    >
-      Favorite Animal
-    </label>
-  </div>
-  <button
-    aria-controls="headlessui-listbox-options-:re:"
-    aria-expanded="true"
-    aria-haspopup="listbox"
-    aria-labelledby="headlessui-listbox-label-:rc: headlessui-listbox-button-:rd:"
-    class="select-button"
-    data-headlessui-state="open"
-    id="headlessui-listbox-button-:rd:"
-    type="button"
-  >
-    <span>
-      Dogs
-    </span>
-    <svg
-      aria-hidden="true"
-      class="icon select-button__icon select-button__icon--reversed"
-      fill="currentColor"
-      height="1.25rem"
-      style="--icon-size: 1.25rem;"
-      viewBox="0 0 24 24"
-      width="1.25rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
-      />
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`<Select /> NoVisibleLabel story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`] = `
 <div
   class="select"
   data-headlessui-state="open"
@@ -180,7 +132,7 @@ exports[`<Select /> NoVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Select /> StyledUncontrolled story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots StyledUncontrolled story renders snapshot 1`] = `
 <div
   class="select"
   data-headlessui-state="open"
@@ -216,7 +168,7 @@ exports[`<Select /> StyledUncontrolled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Select /> UncontrolledHeadless story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots UncontrolledHeadless story renders snapshot 1`] = `
 <div
   class="select"
   data-headlessui-state="open"
@@ -232,12 +184,11 @@ exports[`<Select /> UncontrolledHeadless story renders snapshot 1`] = `
     type="button"
   >
     Dogs
-     
   </button>
 </div>
 `;
 
-exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots UsingFunctionProps story renders snapshot 1`] = `
 <div
   aria-label="Favorite Animal"
   class="select"
@@ -269,7 +220,7 @@ exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Select /> WithFieldName story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots WithFieldName story renders snapshot 1`] = `
 <div
   class="select"
   data-headlessui-state="open"
@@ -317,7 +268,55 @@ exports[`<Select /> WithFieldName story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Select /> WithSelectedOption story renders snapshot 1`] = `
+exports[`<Select /> Generated Snapshots WithSelectedOption story renders snapshot 1`] = `
+<div
+  class="select"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <div
+    class="select__overline"
+  >
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:rc:"
+    >
+      Favorite Animal
+    </label>
+  </div>
+  <button
+    aria-controls="headlessui-listbox-options-:re:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    aria-labelledby="headlessui-listbox-label-:rc: headlessui-listbox-button-:rd:"
+    class="select-button"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:rd:"
+    type="button"
+  >
+    <span>
+      Cats
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Select /> Generated Snapshots WithStandardButton story renders snapshot 1`] = `
 <div
   class="select"
   data-headlessui-state="open"
@@ -345,7 +344,7 @@ exports[`<Select /> WithSelectedOption story renders snapshot 1`] = `
     type="button"
   >
     <span>
-      Cats
+      - Select Option -
     </span>
     <svg
       aria-hidden="true"
