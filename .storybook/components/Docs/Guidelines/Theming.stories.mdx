@@ -80,7 +80,7 @@ You can use similar import values to what is in `@chanzuckerberg/eds/tailwind.co
 // in your tailwind.config.ts file
 import type { Config } from 'tailwindcss';
 import baseConfig from '@chanzuckerberg/eds/tailwind.config';
-import {eds as customTokens} from "<edsrc.json:dest>/app-tailwind-theme.config"; // where <edsrc.json:test> is the path configured in .edsrc.json
+import {eds as customTokens} from "./<edsrc.json:dest>/app-tailwind-theme.config.json"; // where <edsrc.json:dest> is the path configured in .edsrc.json
 
 const {
   background: backgroundColorTokens,
@@ -97,6 +97,7 @@ export default {
       ...colorTokens,
     },
     extend: {
+      ...baseConfig.theme.extend,
       backgroundColor: {
         ...backgroundColorTokens,
       },
