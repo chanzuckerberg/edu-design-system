@@ -442,6 +442,7 @@ export const SelectButtonWrapper = React.forwardRef<
           theirOnClick && theirOnClick(ev);
         }}
         ref={ref}
+        type="button"
         {...other}
       >
         {/* Wrapping span ensures that `children` and icon will be correctly pushed to
