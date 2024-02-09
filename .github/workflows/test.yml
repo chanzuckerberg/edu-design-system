@@ -121,4 +121,5 @@ jobs:
         run: yarn install --immutable
       - name: Validate pushed commits with commitlint
         if: github.event_name == 'push'
-        run: yarn commitlint --from ${{ github.event.push.before }} --to ${{ github.event.push.after }} --verbose
+        run: |
+          yarn commitlint --from ${{ github.event.before }} --to ${{ github.event.after }} --verbose
