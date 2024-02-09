@@ -13,10 +13,6 @@
   const { default: ora } = await import('ora');
   const chalk = require('chalk');
 
-  // read in the config from config file, package json "eds", etc.
-  const { getConfig } = require('./_util');
-  const config = await getConfig();
-
   // Set up the command structure to output help if the file to load is not specified
   const args = yargs(hideBin(process.argv))
     .command('$0 <file>', 'Figma variable file to import from', (yargs) => {
@@ -33,6 +29,10 @@
       describe: 'Run the script without writing any changes',
       type: 'boolean',
     }).argv;
+
+  // read in the config from config file, package json "eds", etc.
+  const { getConfig } = require('./_util');
+  const config = await getConfig();
 
   const isVerbose = args.v;
   const canWrite = !args.dryRun;
@@ -177,7 +177,7 @@
   );
 
   if (isVerbose) {
-    console.log(
+    spinner.succeed(
       'updated:',
       stats.updated.length,
       'skipped:',
