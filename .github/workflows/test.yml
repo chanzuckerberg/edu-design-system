@@ -102,10 +102,30 @@ jobs:
       - name: Build design tokens 🛠️
         run: yarn build:tokens
 
-      - name: Lint Commit Messages 👕
-        uses: wagoid/commitlint-github-action@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Lint Javascript + SCSS 👕
         run: yarn run lint --max-warnings=0
+
+  commitlint:
+    name: Lint Commit Messages 👕
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup node 😻
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+          cache: 'yarn'
+      - name: Install Dependencies 🧶
+        run: yarn install --immutable
+
+      - name: Validate commits commitlint
+        # This workflow can also be triggered via "workflow_call".
+        # Since it's a push event we have access to these properties https://docs.github.com/en/webhooks/webhook-events-and-payloads#push
+        if: github.event_name == 'push'
+        run: |
+          COMMIT_COUNT=$(echo '${{ toJson(github.event.commits) }}' | jq length)
+          echo "Number of commits in the push: $COMMIT_COUNT"
+
+          yarn commitlint --from HEAD~$COMMIT_COUNT --to HEAD --verbose
