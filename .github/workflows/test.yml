@@ -102,10 +102,23 @@ jobs:
       - name: Build design tokens 🛠️
         run: yarn build:tokens
 
-      - name: Lint Commit Messages 👕
-        uses: wagoid/commitlint-github-action@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Lint Javascript + SCSS 👕
         run: yarn run lint --max-warnings=0
+
+  commitlint:
+    name: Lint Commit Messages 👕
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup node 😻
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+          cache: 'yarn'
+      - name: Install Dependencies 🧶
+        run: yarn install --immutable
+      - name: Validate pushed commits with commitlint
+        if: github.event_name == 'push'
+        run: yarn commitlint --from ${{ github.event.push.before }} --to ${{ github.event.push.after }} --verbose
