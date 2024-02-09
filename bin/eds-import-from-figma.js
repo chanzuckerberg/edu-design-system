@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-
-const { boolean } = require('yargs');
-
 (async function () {
   const fs = require('fs');
   const jsonfile = require('jsonfile');
@@ -90,8 +87,8 @@ const { boolean } = require('yargs');
     process.exit(-1);
   }
 
-  // Find the mode, and get the stored value and key for later use
-  const [modeKey, modeValue] = Object.entries(importTheme.modes).filter(
+  // Find the mode, and get the stored key for later use
+  const [modeKey] = Object.entries(importTheme.modes).filter(
     (modeTuple) => modeTuple[1] === response.mode,
   )[0];
 
