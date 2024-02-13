@@ -53,7 +53,7 @@
   },
   "overrides": [
     {
-      "files": ["*.test.ts", "*.test.tsx", "**/test/**"],
+      "files": ["*.test.{js,ts}", "*.test.tsx", "**/test/**"],
       "plugins": ["jest"],
       "extends": ["plugin:jest/recommended"],
       "env": {

@@ -12,7 +12,7 @@
   const { hideBin } = require('yargs/helpers');
   const yargs = require('yargs/yargs');
 
-  const { getConfig } = require('./_util');
+  const { getConfig, parseResolvedValue, getWritePath } = require('./_util');
 
   // Set up the command structure to output help if the file to load is not specified
   const args = yargs(hideBin(process.argv))
@@ -139,103 +139,4 @@
   spinner.succeed(
     `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}`,
   );
-
-  /**
-   * Determine the write path by taking the collection and variable name, and looking it up in
-   * the existing local theme.
-   *
-   * @param {object} localTheme JSON file loaded, representing the data for the local theme
-   * @param {string} collectionName Name of the exported collection
-   * @param {string} variableName current variable name from figma (e.g., color/text/neutral/default)
-   * @returns string|null representation of the path to write to in the local theme JSON file
-   */
-  function getWritePath(localTheme, collectionName, variableName) {
-    const workingPath =
-      getTokenPrefix(collectionName) + tokenNameToPath(variableName);
-
-    const found = at(localTheme, workingPath).filter(
-      (entries) => typeof entries !== 'undefined',
-    );
-
-    if (found.length) {
-      // handle case where we should look for @ in the file, then pluck the value object properly
-      if (found[0]['@']?.value) {
-        // update the write path to mark the @ and value
-        return workingPath + '.@.value';
-      }
-
-      // handle case where it's just value
-      if (found[0]?.value) {
-        // update the write path to mark the value
-        return workingPath + '.value';
-      }
-    }
-
-    // There is no write path based on what's in the local theme so we return null signal it's a missing token
-    return null;
-  }
-
-  /**
-   * Conversion of the figma token name (e.g., some/path/to/token) to the equivalent path in a JSON object
-   * @param {string} figmaTokenName The name from the figma variables panel (slash separated)
-   * @returns a lodash-compatible string representing the path to the token value in JSON
-   */
-  function tokenNameToPath(figmaTokenName) {
-    return figmaTokenName.replaceAll('/', '.').toLowerCase();
-  }
-
-  /**
-   * Given the "type" of import file (named after the collection name), produce
-   * a prefix to the token name that corresponds to the prefix used for those
-   * tokens.
-   *
-   * @param {string} collectionName The key to write to
-   * @returns a text prefix for where to write the token value
-   */
-  function getTokenPrefix(collectionName) {
-    switch (collectionName) {
-      case 'themes':
-        return 'eds.theme.';
-      case 'primitives':
-        return 'eds.';
-      default:
-        return '';
-    }
-  }
-
-  /**
-   * Given the value sourced from figma, translate it into a
-   * style-dictionary format. When encountering an unrecognized type,
-   * throw an error.
-   *
-   * @param {string} type Figma type for the token value (Set:)
-   * @param {object} figmaResolvedValue
-   * @returns value using the type
-   * @throws Error using `details` on the data read from figma
-   */
-  function parseResolvedValue(type, figmaResolvedValue) {
-    if (type === 'COLOR') {
-      const r = Math.floor(figmaResolvedValue.r * 255);
-      const g = Math.floor(figmaResolvedValue.g * 255);
-      const b = Math.floor(figmaResolvedValue.b * 255);
-      const a = figmaResolvedValue.a;
-      if (figmaResolvedValue.a > 0 && figmaResolvedValue.a < 1) {
-        return `rgba(${r}, ${g}, ${b}, ${a})`;
-      } else {
-        // print hex instead
-        return (
-          '#' +
-          [r, g, b]
-            .map((x) => x.toString(16))
-            .map((x) => (x.length === 1 ? '0' + x : x))
-            .join('')
-            .toUpperCase()
-        );
-      }
-    } else {
-      throw new Error('unknown resolved type: ' + type, {
-        details: figmaResolvedValue,
-      });
-    }
-  }
 })();
