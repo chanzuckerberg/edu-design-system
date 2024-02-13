@@ -1,26 +1,31 @@
 #!/usr/bin/env node
-(async function () {
-  const fs = require('fs');
-  const jsonfile = require('jsonfile');
-  const yargs = require('yargs/yargs');
 
-  // eslint-disable-next-line import/extensions
-  const { hideBin } = require('yargs/helpers');
+(async function () {
+  const jsonfile = require('jsonfile');
+  const chalk = require('chalk');
   const { prompt } = require('enquirer');
   const at = require('lodash/at');
   const set = require('lodash/set');
-
   const { default: ora } = await import('ora');
-  const chalk = require('chalk');
+
+  // eslint-disable-next-line import/extensions
+  const { hideBin } = require('yargs/helpers');
+  const yargs = require('yargs/yargs');
+
+  const { getConfig } = require('./_util');
 
   // Set up the command structure to output help if the file to load is not specified
   const args = yargs(hideBin(process.argv))
-    .command('$0 <file>', 'Figma variable file to import from', (yargs) => {
-      yargs.positional('file', {
-        describe: 'JSON tokens file emitted from the plugin',
-        type: 'string',
-      });
-    })
+    .command(
+      '$0 <figma_file>',
+      'Figma variable file to import from',
+      (yargs) => {
+        yargs.positional('figma_file', {
+          describe: 'JSON tokens file emitted from the plugin',
+          type: 'string',
+        });
+      },
+    )
     .option('verbose', {
       describe: 'Print additional details for debugging purposes',
       type: 'boolean',
@@ -31,46 +36,12 @@
     }).argv;
 
   // read in the config from config file, package json "eds", etc.
-  const { getConfig } = require('./_util');
   const config = await getConfig();
 
-  const isVerbose = args.v;
-  const canWrite = !args.dryRun;
-
-  // Read the figma import file, and parse out the modes to select from, prompting the user to pick one
-  let importTheme;
-  try {
-    importTheme = JSON.parse(fs.readFileSync(args.file, 'utf8'));
-  } catch (e) {
-    console.error(chalk.red('cannot load import file', args.file));
-    process.exit(1);
-  }
-
-  // now, load in the local theme file. We want to look up keys in there
-  let localTheme;
-  try {
-    localTheme = JSON.parse(
-      fs.readFileSync(`${config.src}app-theme.json`, 'utf8'),
-    );
-  } catch (e) {
-    console.error(
-      chalk.red('cannot load local theme file', `${config.src}app-theme.json`),
-    );
-    process.exit(2);
-  }
-
-  // Get the file being used: [primitives, themes]
-  let tokenFile;
-  switch (importTheme.name.toLowerCase()) {
-    case 'themes':
-      tokenFile = 'themes';
-      break;
-    case 'primitives':
-      tokenFile = 'primitives';
-      break;
-    default:
-      tokenFile = 'unknown';
-  }
+  // Read the figma import file, and parse out the modes to select from, prompting the user to pick one,
+  // and load in the local theme file. We want to look up keys in there
+  const figmaThemeData = jsonfile.readFileSync(args.figma_file);
+  const localTheme = jsonfile.readFileSync(`${config.src}app-theme.json`);
 
   // Determine which of the modes in the file should be used
   let response;
@@ -79,7 +50,7 @@
       name: 'mode',
       message: 'Please select the Figma mode for token import',
       type: 'select',
-      choices: Object.values(importTheme.modes),
+      choices: Object.values(figmaThemeData.modes),
     });
   } catch (e) {
     // e.g., someone hits ESC
@@ -87,15 +58,6 @@
     process.exit(-1);
   }
 
-  // Find the mode, and get the stored key for later use
-  const [modeKey] = Object.entries(importTheme.modes).filter(
-    (modeTuple) => modeTuple[1] === response.mode,
-  )[0];
-
-  /**
-   * The actual parsing
-   * TODO: separate all of the below out into separate file(s)
-   */
   const stats = {
     skipped: [],
     updated: [],
@@ -103,29 +65,21 @@
   };
 
   const spinner = ora('Parsing tokens').start();
-  importTheme.variables.forEach((figmaVariable) => {
-    const workingPath =
-      getTokenPrefix(tokenFile) + tokenNameToPath(figmaVariable.name);
-    let writePath = workingPath;
+  const isVerbose = args.v;
+  const canWrite = !args.dryRun;
+  // Find the mode, and get the stored key for later use
+  const [modeKey] = Object.entries(figmaThemeData.modes).filter(
+    (modeTuple) => modeTuple[1] === response.mode,
+  )[0];
 
-    const found = at(localTheme, workingPath).filter(
-      (entries) => typeof entries !== 'undefined',
+  figmaThemeData.variables.forEach((figmaVariable) => {
+    const writePath = getWritePath(
+      localTheme,
+      figmaThemeData.name.toLowerCase(),
+      figmaVariable.name,
     );
 
-    if (found.length) {
-      // handle case where we should look for @ in the file, then pluck the value object properly
-      if (found[0]['@']?.value) {
-        // update the write path to mark the @ and value
-        writePath += '.@.value';
-      }
-
-      // handle case where it's just value
-      if (found[0]?.value) {
-        // update the write path to mark the value
-        writePath += '.value';
-      }
-
-      // write the value using the calculated path and parsed value
+    if (writePath) {
       try {
         canWrite &&
           set(
@@ -137,6 +91,7 @@
             ),
           );
 
+        // write the value using the calculated path and parsed value
         if (isVerbose || !canWrite) {
           spinner.succeed(
             'Write: ' +
@@ -148,49 +103,77 @@
               writePath,
           );
         }
-        isVerbose && stats.updated.push(figmaVariable);
+
         spinner.text = chalk.bold(figmaVariable.name) + ': Done!';
+        stats.updated.push(figmaVariable);
       } catch (e) {
         // We couldn't parse the resolved value, so skip and add to errors
-        isVerbose && stats.errored.push(figmaVariable);
-        spinner.warn(
+        spinner.fail(
           chalk.bold(figmaVariable.name) +
             ': Skipped with error (' +
             e.message +
             ')',
         );
+        stats.errored.push(figmaVariable);
       }
     } else {
-      isVerbose && stats.skipped.push(figmaVariable);
       spinner.text = chalk.bold(figmaVariable.name) + ': Skipped';
+
+      if (!writePath) {
+        spinner.warn(
+          chalk.bold(figmaVariable.name) +
+            ': Skipped with warning (no write path)',
+        );
+      }
+      stats.skipped.push(figmaVariable);
     }
   });
-  spinner.prefixText = '';
 
-  await jsonfile.writeFile(
-    `${config.src}app-theme.json`,
-    localTheme,
-    { spaces: 2, finalEOL: false },
-    function (err) {
-      if (err) console.error(chalk.red(err));
-    },
+  if (canWrite) {
+    jsonfile.writeFileSync(`${config.src}app-theme.json`, localTheme, {
+      spaces: 2,
+      finalEOL: false,
+    });
+  }
+
+  spinner.succeed(
+    `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}`,
   );
 
-  if (isVerbose) {
-    spinner.succeed(
-      'updated:',
-      stats.updated.length,
-      'skipped:',
-      stats.skipped.length,
-      'errored:',
-      stats.errored.length,
-    );
-  }
-  spinner.succeed('Done!');
-
   /**
-   * utils
+   * Determine the write path by taking the collection and variable name, and looking it up in
+   * the existing local theme.
+   *
+   * @param {object} localTheme JSON file loaded, representing the data for the local theme
+   * @param {string} collectionName Name of the exported collection
+   * @param {string} variableName current variable name from figma (e.g., color/text/neutral/default)
+   * @returns string|null representation of the path to write to in the local theme JSON file
    */
+  function getWritePath(localTheme, collectionName, variableName) {
+    const workingPath =
+      getTokenPrefix(collectionName) + tokenNameToPath(variableName);
+
+    const found = at(localTheme, workingPath).filter(
+      (entries) => typeof entries !== 'undefined',
+    );
+
+    if (found.length) {
+      // handle case where we should look for @ in the file, then pluck the value object properly
+      if (found[0]['@']?.value) {
+        // update the write path to mark the @ and value
+        return workingPath + '.@.value';
+      }
+
+      // handle case where it's just value
+      if (found[0]?.value) {
+        // update the write path to mark the value
+        return workingPath + '.value';
+      }
+    }
+
+    // There is no write path based on what's in the local theme so we return null signal it's a missing token
+    return null;
+  }
 
   /**
    * Conversion of the figma token name (e.g., some/path/to/token) to the equivalent path in a JSON object
@@ -206,11 +189,11 @@
    * a prefix to the token name that corresponds to the prefix used for those
    * tokens.
    *
-   * @param {string} importFileType The key type to write to
+   * @param {string} collectionName The key to write to
    * @returns a text prefix for where to write the token value
    */
-  function getTokenPrefix(importFileType) {
-    switch (importFileType) {
+  function getTokenPrefix(collectionName) {
+    switch (collectionName) {
       case 'themes':
         return 'eds.theme.';
       case 'primitives':
