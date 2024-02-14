@@ -4,7 +4,6 @@
   const jsonfile = require('jsonfile');
   const chalk = require('chalk');
   const { prompt } = require('enquirer');
-  const at = require('lodash/at');
   const set = require('lodash/set');
   const { default: ora } = await import('ora');
 
