@@ -148,7 +148,7 @@ module.exports = {
    * @param {object} localTheme JSON file loaded, representing the data for the local theme
    * @param {string} collectionName Name of the exported collection
    * @param {string} variableName current variable name from figma (e.g., color/text/neutral/default)
-   * @returns string|null representation of the path to write to in the local theme JSON file
+   * @returns {string|null} representation of the path to write to in the local theme JSON file
    */
   getWritePath: function (localTheme, collectionName, variableName) {
     const at = require('lodash/at');
@@ -196,8 +196,8 @@ module.exports = {
    *
    * @param {string} type Figma type for the token value (Set:)
    * @param {object} figmaResolvedValue
-   * @returns value using the type
-   * @throws Error using `details` on the data read from figma
+   * @returns {string} value using the type
+   * @throws {TypeError} using `details` on the data read from figma
    */
   parseResolvedValue: function (type, figmaResolvedValue) {
     if (type === 'COLOR') {
@@ -230,7 +230,7 @@ module.exports = {
    * tokens.
    *
    * @param {string} collectionName The key to write to
-   * @returns a text prefix for where to write the token value or null when no prefix is found
+   * @returns {string|null} a text prefix for where to write the token value or null when no prefix is found
    */
   getTokenPrefix: function (collectionName) {
     switch (collectionName) {
@@ -245,7 +245,7 @@ module.exports = {
   /**
    * Conversion of the figma token name (e.g., some/path/to/token) to the equivalent path in a JSON object
    * @param {string} figmaTokenName The name from the figma variables panel (slash separated)
-   * @returns a lodash-compatible string representing the path to the token value in JSON
+   * @returns {string} a lodash-compatible string representing the path to the token value in JSON
    */
   tokenNameToPath: function (figmaTokenName) {
     return figmaTokenName.replaceAll('/', '.').toLowerCase();
