@@ -1,11 +1,6 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import type {
-  ReactElement,
-  ReactNode,
-  ElementType,
-  MouseEventHandler,
-} from 'react';
+import type { ReactNode, MouseEventHandler } from 'react';
 
 import React, { useContext, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -24,19 +19,12 @@ import styles from './Select.module.css';
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';
 
-type RenderProp<Arg> = (arg: Arg) => ReactElement;
-type PropsWithRenderProp<RenderPropArg> = {
-  children?: ReactNode | RenderProp<RenderPropArg>;
-  className?: string;
-  as?: ElementType;
-};
-
 type SelectProps = ExtractProps<typeof Listbox> &
   PopoverOptions & {
     /**
      * Screen-reader text for the select's label.
      *
-     * When possible, use a visible label by passing a <Select.Label> into `chidren`.
+     * When possible, use a visible label by passing a <Select.Label> into `children`.
      * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
      * If you pass in an `aria-label`, <Select.Label>.
      */
@@ -78,25 +66,25 @@ type SelectProps = ExtractProps<typeof Listbox> &
     label?: string;
   };
 
-type SelectOption = {
-  label: string;
-  [k: string]: string | number | boolean;
-};
-
-type SelectOptionProps = {
-  value: SelectOption;
+type SelectLabelProps = ExtractProps<typeof Listbox.Label> & {
   disabled?: boolean;
-  className?: string;
-  children?: ReactNode | RenderProp<OptionRenderProps>;
+};
+type SelectOptionsProps = ExtractProps<typeof Listbox.Options>;
+type SelectOptionProps = ExtractProps<typeof Listbox.Option> & {
+  optionClassName?: string;
+};
+type SelectButtonProps = ExtractProps<typeof Listbox.Button> & {
+  /**
+   * Icon override for component. Default is 'expand-more'
+   */
+  icon?: Extract<IconName, 'expand-more'>;
+  /**
+   * Indicates state of the select, used to style the button.
+   */
+  isOpen?: boolean;
 };
 
-type OptionRenderProps = {
-  active: boolean;
-  disabled: boolean;
-  selected: boolean;
-};
-
-type SelectButtonProps = {
+type SelectButtonWrapperProps = {
   /**
    * Optional className for additional styling.
    */
@@ -259,7 +247,7 @@ export function Select(props: SelectProps) {
     <SelectContext.Provider value={contextValue}>
       <Listbox
         {...sharedProps}
-        onChange={(changedValue: SelectOption) => {
+        onChange={(changedValue) => {
           if (selectedValue !== changedValue) {
             setSelectedValue(changedValue);
             // Use the value from the event because updates to `useState` are queued
@@ -276,11 +264,7 @@ export function Select(props: SelectProps) {
   );
 }
 
-const SelectLabel = (props: {
-  className?: string;
-  children: ReactNode;
-  disabled?: boolean;
-}) => {
+const SelectLabel = (props: SelectLabelProps) => {
   const { children, className, disabled } = props;
 
   const componentClassName = clsx(
@@ -299,18 +283,7 @@ const SelectLabel = (props: {
 /**
  * The trigger for the select component, which is usually a form of `Button` or some targetable/clickable component
  */
-const SelectButton = function (
-  props: PropsWithRenderProp<{
-    disabled: boolean;
-    open: boolean;
-    value: SelectOption;
-  }> & {
-    /**
-     * custom click handler for the built-in or wrapper button
-     */
-    onClick?: MouseEventHandler;
-  },
-) {
+const SelectButton = function (props: SelectButtonProps) {
   const { children, className, onClick: theirOnClick, ...other } = props;
   const { compact, setReferenceElement } = useContext(SelectContext);
 
@@ -350,7 +323,7 @@ const SelectButton = function (
 /**
  * The content container showing the available options when the trigger is activated
  */
-const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
+const SelectOptions = function (props: SelectOptionsProps) {
   const { className, ...other } = props;
   const { optionsClassName, setPopperElement, popperStyles, popperAttributes } =
     useContext(SelectContext);
@@ -381,7 +354,8 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
  * Represents one of the available options for selection
  */
 const SelectOption = function (props: SelectOptionProps) {
-  const { children, className, ...other } = props;
+  const { children, className, optionClassName, ...other } = props;
+  const optionClasses = clsx(styles['select__option-item'], optionClassName);
 
   return (
     <Listbox.Option
@@ -393,11 +367,11 @@ const SelectOption = function (props: SelectOptionProps) {
     >
       {typeof children === 'function'
         ? children
-        : ({ active, disabled, selected }: OptionRenderProps) => {
+        : ({ active, disabled, selected }) => {
             return (
               <PopoverListItem
                 active={active}
-                className={styles['select__option-item']}
+                className={optionClasses}
                 disabled={disabled}
                 icon={selected ? 'check' : undefined}
               >
@@ -417,7 +391,7 @@ const SelectOption = function (props: SelectOptionProps) {
  */
 export const SelectButtonWrapper = React.forwardRef<
   HTMLButtonElement,
-  SelectButtonProps
+  SelectButtonWrapperProps
 >(
   (
     {

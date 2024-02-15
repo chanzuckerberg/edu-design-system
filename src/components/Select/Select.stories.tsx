@@ -284,7 +284,9 @@ export const EventHandlingOnStandardButton: StoryObj = {
     ...Default.args,
     children: (
       <>
-        <Select.Button onClick={(args) => console.log('external click', args)}>
+        <Select.Button
+          onClick={(ev: MouseEvent) => console.log('external click')}
+        >
           - Select Option -
         </Select.Button>
         <Select.Options>
@@ -390,6 +392,44 @@ export const StyledUncontrolled: StoryObj = {
           {({ value, open, disabled }) => (
             <Select.ButtonWrapper isOpen={open}>
               {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+};
+
+/**
+ * You can select multiple values by passing `multiple` to the parent element. When doing this,
+ * make sure all props that use the value (e.g., `value` and `defaultValue`) should use an array instead
+ * of an object or value for the individual `Select.Option` entries.
+ *
+ * When handling the button text, `value` represents the data for all options selected. This allows for a flexible
+ * layout to fit the needs of the design.
+ */
+export const Multiple: StoryObj = {
+  args: {
+    ...Default.args,
+    label: 'Favorite Animal(s)',
+    multiple: true,
+    'data-testid': 'dropdown',
+    defaultValue: [exampleOptions[0]],
+    className: 'w-45',
+    name: 'standard-button',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.length > 0 ? value.length : 'none'} selected
             </Select.ButtonWrapper>
           )}
         </Select.Button>
