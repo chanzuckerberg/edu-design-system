@@ -41,14 +41,8 @@ const meta: Meta<typeof Select> = {
       },
     },
     onChange: {
-      description: 'Optional change handler. Fires when a value is selected',
-      table: {
-        type: {
-          summary: 'SelectOption',
-          detail:
-            'An object with at least label (as string) and any other useful key/value pairs',
-        },
-      },
+      description:
+        'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
 };
