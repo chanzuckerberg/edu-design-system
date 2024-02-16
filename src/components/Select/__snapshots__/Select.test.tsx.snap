@@ -98,7 +98,7 @@ exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
 
 exports[`<Select /> Generated Snapshots Multiple story renders snapshot 1`] = `
 <div
-  class="select w-45"
+  class="select w-60"
   data-headlessui-state="open"
   data-testid="dropdown"
 >
