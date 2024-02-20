@@ -25,6 +25,8 @@
 
 .popover-list-item__icon {
   padding-right: var(--eds-size-1-and-half);
+  /* This var. matches the height set in the icon, but makes sure it is locked to only that height */
+  height: var(--eds-size-1-and-half);
 }
 
 .popover-list-item__no-icon {

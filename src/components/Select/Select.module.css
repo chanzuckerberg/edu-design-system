@@ -105,6 +105,7 @@
  * The caret icon to decorate the select trigger button, animated to rotate.
  */
 .select-button__icon {
+  flex-shrink: 0;
   transform: rotate(0);
 
   transition: transform var(--eds-anim-move-medium) ease-out;
@@ -112,6 +113,12 @@
     /* Turns off animation if user prefers reduced motion. */
     transition: none;
   }
+}
+
+.select-button__text--truncated {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .select-button__icon--reversed {
