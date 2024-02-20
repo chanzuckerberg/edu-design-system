@@ -64,6 +64,7 @@ export const PopoverListItem = React.forwardRef<HTMLDivElement, Props>(
       >
         {icon ? (
           <div className={styles['popover-list-item__icon']}>
+            {/* TODO: can link to CSS Var? var(--eds-size-1-and-half) */}
             <Icon name={icon} purpose="decorative" size="1.5rem" />
           </div>
         ) : (

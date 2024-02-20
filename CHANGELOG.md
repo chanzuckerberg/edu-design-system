@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.11.0-alpha.0...v13.11.0) (2024-02-20)
+
+
+### Features
+
+* **Select:** add handling for long text in select field ([7c79a6e](https://github.com/chanzuckerberg/edu-design-system/commit/7c79a6e57c9fd0056cc5ec6223a4fd1439a7b210))
+
+
+### Bug Fixes
+
+* **PopoverListItem:** adjust size of list item when selected ([0496f56](https://github.com/chanzuckerberg/edu-design-system/commit/0496f5608923ae674054d1dad40a232bb0def659))
+
+## [13.11.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.10.0...v13.11.0-alpha.0) (2024-02-15)
+
+
+### Features
+
+* **script:** add import from figma script ([#1844](https://github.com/chanzuckerberg/edu-design-system/issues/1844)) ([9ed90e5](https://github.com/chanzuckerberg/edu-design-system/commit/9ed90e5bf1a42ce55c7c2b0f3cad1add3c71057c))
+* **Select:** enable multi-select ([ced70d5](https://github.com/chanzuckerberg/edu-design-system/commit/ced70d59b653e5132e145e9361c0bc2b358d1b48))
+
+
+### Bug Fixes
+
+* **Select:** set trigger type to button to prevent submits ([#1843](https://github.com/chanzuckerberg/edu-design-system/issues/1843)) ([d7ea037](https://github.com/chanzuckerberg/edu-design-system/commit/d7ea0370e698a09516eacb9de61af3a63e8c1432))
+
 ## [13.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.9.0...v13.10.0) (2024-02-01)
 
 

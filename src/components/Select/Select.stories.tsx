@@ -13,9 +13,7 @@ const meta: Meta<typeof Select> = {
   },
   argTypes: {
     multiple: {
-      table: {
-        disable: true,
-      },
+      description: 'Whether multiple values are allowed in this instance',
     },
     children: {
       control: {
@@ -25,22 +23,10 @@ const meta: Meta<typeof Select> = {
     value: {
       table: {
         description: 'The value of the select field (when controlled)',
-        type: {
-          summary: 'SelectOption',
-          detail:
-            'An object with at least label (as string) and any other useful key/value pairs',
-        },
       },
     },
     defaultValue: {
       description: 'The default value of the select field (when uncontrolled)',
-      table: {
-        type: {
-          summary: 'SelectOption',
-          detail:
-            'An object with at least label (as string) and any other useful key/value pairs',
-        },
-      },
     },
     onClick: {
       description:
@@ -55,14 +41,8 @@ const meta: Meta<typeof Select> = {
       },
     },
     onChange: {
-      description: 'Optional change handler. Fires when a value is selected',
-      table: {
-        type: {
-          summary: 'SelectOption',
-          detail:
-            'An object with at least label (as string) and any other useful key/value pairs',
-        },
-      },
+      description:
+        'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
 };
@@ -212,7 +192,7 @@ export const WithStandardButton: StoryObj = {
  *
  * You can also add an `onClick` handler to `.ButtonWrapper` if using a render prop
  *
- * * `onClick` fires when the trigger (`.buttonWrapper`) is clicked
+ * * `onClick` fires when the trigger (`.ButtonWrapper`) is clicked
  */
 export const EventHandlingOnRenderProp: StoryObj = {
   args: {
@@ -275,7 +255,7 @@ export const EventHandlingOnRenderProp: StoryObj = {
  *
  * If not using a render prop, you can also add an `onClick` handler to `Select.Button` directly
  *
- * * `onClick` fires when the trigger (`.buttonWrapper`) is clicked
+ * * `onClick` fires when the trigger (`.ButtonWrapper`) is clicked
  *
  * **NOTE**: `onClick` has no function when using a render prop
  */
@@ -284,7 +264,9 @@ export const EventHandlingOnStandardButton: StoryObj = {
     ...Default.args,
     children: (
       <>
-        <Select.Button onClick={(args) => console.log('external click', args)}>
+        <Select.Button
+          onClick={(ev: MouseEvent) => console.log('external click')}
+        >
           - Select Option -
         </Select.Button>
         <Select.Options>
@@ -390,6 +372,83 @@ export const StyledUncontrolled: StoryObj = {
           {({ value, open, disabled }) => (
             <Select.ButtonWrapper isOpen={open}>
               {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+};
+
+/**
+ * You can select multiple values by passing `multiple` to the parent element. When doing this,
+ * make sure all props that use the value (e.g., `value` and `defaultValue`) should use an array instead
+ * of an object or value for the individual `Select.Option` entries.
+ *
+ * When handling the button text, `value` represents the data for all options selected. This allows for a flexible
+ * layout to fit the needs of the design.
+ *
+ * Hidden form inputs are generated for each option selected and take the following form:
+ * - `name[arrayIndex][key]`
+ * - `name[arrayIndex][value]`
+ */
+export const Multiple: StoryObj = {
+  args: {
+    ...Default.args,
+    label: 'Favorite Animal(s)',
+    multiple: true,
+    'data-testid': 'dropdown',
+    defaultValue: [exampleOptions[0]],
+    className: 'w-60',
+    name: 'standard-button',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.length > 0 ? value.length : 'none'} selected
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+};
+
+/**
+ * The component provides some basic styles to handle long text in the provided field. Use
+ * `shouldTruncate` on `.ButtonWrapper` to truncate the text with an ellipsis.
+ */
+export const MultipleWithTruncation: StoryObj = {
+  args: {
+    ...Default.args,
+    label: 'Favorite Animal(s)',
+    multiple: true,
+    'data-testid': 'dropdown',
+    defaultValue: [exampleOptions[0]],
+    className: 'w-60',
+    name: 'standard-button',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open} shouldTruncate>
+              {value.length > 0 ? value.length : 'none'} long selected
+              description
             </Select.ButtonWrapper>
           )}
         </Select.Button>

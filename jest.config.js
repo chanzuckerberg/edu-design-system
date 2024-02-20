@@ -10,7 +10,7 @@ module.exports = {
       '<rootDir>/jest/mocks/fileMock.js',
   },
   preset: 'ts-jest',
-  roots: ['<rootDir>/src', '<rootDir>/scripts'],
+  roots: ['<rootDir>/src', '<rootDir>/scripts', '<rootDir>/bin'],
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest/jest.setup.ts'],
 };
