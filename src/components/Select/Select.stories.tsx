@@ -430,6 +430,41 @@ export const Multiple: StoryObj = {
 };
 
 /**
+ * The component provides some basic styles to handle long text in the provided field. Use
+ * `shouldTruncate` on `.ButtonWrapper` to truncate the text with an ellipsis.
+ */
+export const MultipleWithTruncation: StoryObj = {
+  args: {
+    ...Default.args,
+    label: 'Favorite Animal(s)',
+    multiple: true,
+    'data-testid': 'dropdown',
+    defaultValue: [exampleOptions[0]],
+    className: 'w-60',
+    name: 'standard-button',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open} shouldTruncate>
+              {value.length > 0 ? value.length : 'none'} long selected
+              description
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+};
+
+/**
  * The field trigger width can be set with utility classes. By default, dropdown popover will exppand to match the width.
  */
 export const AdjustedWidth: StoryObj = {

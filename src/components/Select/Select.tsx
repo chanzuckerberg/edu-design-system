@@ -105,6 +105,10 @@ type SelectButtonWrapperProps = {
    * custom click handler for the built-in or wrapper button
    */
   onClick?: MouseEventHandler;
+  /**
+   * Whether we should truncate the text displayed in the select field
+   */
+  shouldTruncate?: boolean;
 };
 
 type SelectContextType = PopoverContext & {
@@ -399,6 +403,7 @@ export const SelectButtonWrapper = React.forwardRef<
       className,
       icon = 'expand-more',
       isOpen,
+      shouldTruncate = false,
       onClick: theirOnClick,
       ...other
     },
@@ -409,6 +414,10 @@ export const SelectButtonWrapper = React.forwardRef<
       styles['select-button__icon'],
       isOpen && styles['select-button__icon--reversed'],
     );
+    const textClassName = clsx(
+      shouldTruncate && styles['select-button__text--truncated'],
+    );
+
     return (
       <button
         className={componentClassName}
@@ -421,7 +430,7 @@ export const SelectButtonWrapper = React.forwardRef<
       >
         {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-        <span>{children}</span>
+        <span className={textClassName}>{children}</span>
         <Icon
           className={iconClassName}
           name={icon}
