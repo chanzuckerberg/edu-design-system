@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.11.0-alpha.0...v13.11.0) (2024-02-20)
+
+
+### Features
+
+* **Select:** add handling for long text in select field ([7c79a6e](https://github.com/chanzuckerberg/edu-design-system/commit/7c79a6e57c9fd0056cc5ec6223a4fd1439a7b210))
+
+
+### Bug Fixes
+
+* **PopoverListItem:** adjust size of list item when selected ([0496f56](https://github.com/chanzuckerberg/edu-design-system/commit/0496f5608923ae674054d1dad40a232bb0def659))
+
 ## [13.11.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.10.0...v13.11.0-alpha.0) (2024-02-15)
 
 
