@@ -14,7 +14,7 @@ module.exports = {
 
     // If no config exists, fail
     if (!settings) {
-      throw new Error(
+      throw new ReferenceError(
         'Please add EDS config to your project before continuing (specify "src" and "dest" target paths)',
       );
     }
@@ -80,13 +80,14 @@ module.exports = {
    * @param {object} base The tokens theme file stored in the EDS project
    * @param {object} theme The project theme file stored in the app code (same format as bas)
    * @param {Array} path The base path, stored as an array of object key names (default [])
+   * @returns {boolean} true when is strict subset
    * @throws Error when there are tokens in theme that aren't in base
    */
   isStrictSubset: function (base, theme, path = []) {
     for (const name in theme) {
       if (typeof theme[name] === 'object') {
         if (base[name] === undefined) {
-          throw new Error(
+          throw new ReferenceError(
             `Local themeable value does not exist in base theme: --${path.join(
               '-',
             )}.${name}"`,
@@ -99,6 +100,8 @@ module.exports = {
         );
       }
     }
+
+    return true;
   },
   /**
    * Flatten token names such that any "root-tokens" do not include `@` in the resulting token name.
