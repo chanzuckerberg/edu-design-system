@@ -10,6 +10,7 @@ export default {
   output: [
     {
       dir: 'lib',
+      entryFileNames: '[name].mjs',
       format: 'es',
       preserveModules: true,
       preserveModulesRoot: 'src',
