@@ -40,9 +40,8 @@
     "eds-init-theme": "bin/eds-init.js"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:declarations && yarn build:js && yarn copy-fonts-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
-    "build:declarations": "tsc --emitDeclarationOnly --project tsconfig.build.json",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist",
     "build:js": "rollup --config",
     "build:storybook": "storybook build -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",
