@@ -5,11 +5,9 @@
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
+  "type": "commonjs",
   "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
-    },
+    ".": "./lib/index.js",
     "./index.css": "./lib/index.css",
     "./fonts.css": "./lib/tokens/fonts.css",
     "./tailwind.config": "./tailwind.config.ts"

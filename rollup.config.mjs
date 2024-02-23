@@ -7,24 +7,14 @@ import postcss from 'rollup-plugin-postcss';
  */
 export default {
   input: 'src/index.ts',
-  output: [
-    {
-      dir: 'lib',
-      format: 'es',
-      preserveModules: true,
-      preserveModulesRoot: 'src',
-      sourcemap: true,
-    },
-    {
-      dir: 'lib',
-      format: 'cjs',
-      preserveModules: true,
-      preserveModulesRoot: 'src',
-      sourcemap: true,
-      entryFileNames: '[name].cjs',
-      interop: 'auto',
-    },
-  ],
+  output: {
+    dir: 'lib',
+    format: 'cjs',
+    preserveModules: true,
+    preserveModulesRoot: 'src',
+    sourcemap: true,
+    interop: 'auto',
+  },
   /**
    * With the nodeResolve plugin, this marks all EDS node_modules as external, aka provided by the consumer.
    * Since EDS is not imported directly into a web <script>, package managers (such as npm or yarn)
