@@ -9,7 +9,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--eds-size-half);
+  color: var(--eds-theme-color-form-label);
 }
+
 .input-field__overline--no-label {
   justify-content: flex-end;
 }

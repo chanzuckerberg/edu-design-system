@@ -504,6 +504,14 @@ export const Disabled: StoryObj = {
   },
 };
 
+export const Required: StoryObj = {
+  args: {
+    ...Default.args,
+    required: true,
+    className: 'w-96',
+  },
+};
+
 /**
  * Having a visible label is not necessary. In those cases, use `aria-label` to set a accessible label for the field
  */
@@ -512,6 +520,25 @@ export const NoVisibleLabel: StoryObj = {
     ...Default.args,
     label: undefined,
     'aria-label': 'hidden label',
+  },
+};
+
+export const NoVisibleLabelButRequired: StoryObj = {
+  args: {
+    ...Default.args,
+    label: undefined,
+    'aria-label': 'hidden label',
+    required: true,
+    className: 'w-96',
+  },
+};
+
+export const DisabledRequired: StoryObj = {
+  args: {
+    ...Default.args,
+    disabled: true,
+    required: true,
+    className: 'w-96',
   },
 };
 

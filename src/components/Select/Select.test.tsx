@@ -9,6 +9,7 @@ import * as stories from './Select.stories';
 const {
   OpenByDefault,
   Disabled,
+  DisabledRequired,
   OptionsRightAligned,
   SeparateButtonAndMenuWidth,
   EventHandlingOnRenderProp,
