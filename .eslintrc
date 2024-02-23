@@ -95,17 +95,11 @@
     },
     {
       "files": ["src/**/*.{ts,tsx}"],
-      "excludedFiles": ["src/**/*.{stories,test,spec}.{ts,tsx}"],
+      "excludedFiles": ["src/**/*.stories.{ts,tsx}"],
       "rules": {
         "no-restricted-imports": [
           "error",
           {
-            "paths": [
-              {
-                "name": "lodash",
-                "message": "For better tree shaking, prefer deep imports from lodash (e.g. import at from 'lodash/at') instead of named (e.g. import {at} from 'lodash)"
-              }
-            ],
             "patterns": [
               {
                 "group": ["**/tokens-dist/ts/colors"],
