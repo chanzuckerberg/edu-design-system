@@ -502,6 +502,19 @@ export const Disabled: StoryObj = {
     ...Default.args,
     disabled: true,
   },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
+  },
+};
+
+export const Required: StoryObj = {
+  args: {
+    ...Default.args,
+    required: true,
+    className: 'w-96',
+  },
 };
 
 /**
@@ -512,6 +525,30 @@ export const NoVisibleLabel: StoryObj = {
     ...Default.args,
     label: undefined,
     'aria-label': 'hidden label',
+  },
+};
+
+export const NoVisibleLabelButRequired: StoryObj = {
+  args: {
+    ...Default.args,
+    label: undefined,
+    'aria-label': 'hidden label',
+    required: true,
+    className: 'w-96',
+  },
+};
+
+export const DisabledRequired: StoryObj = {
+  args: {
+    ...Default.args,
+    disabled: true,
+    required: true,
+    className: 'w-96',
+  },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 

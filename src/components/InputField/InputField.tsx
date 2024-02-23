@@ -229,7 +229,12 @@ export const InputField: InputFieldType = forwardRef(
               </InputLabel>
             )}
             {required && (
-              <Text as="span" className={requiredTextClassName} size="sm">
+              <Text
+                as="span"
+                className={requiredTextClassName}
+                preset="body-sm"
+                size="sm"
+              >
                 Required
               </Text>
             )}

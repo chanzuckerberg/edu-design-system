@@ -209,12 +209,120 @@ exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r1l:"
+    aria-controls="headlessui-listbox-options-:r1r:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="select-button"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r1k:"
+    id="headlessui-listbox-button-:r1q:"
+    type="button"
+  >
+    <span
+      class=""
+    >
+      Dogs
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders snapshot 1`] = `
+<div
+  class="select w-96"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <div
+    class="select__overline select__overline--no-label"
+  >
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:r1v:"
+    />
+    <span
+      class="text text--body-sm select__required-text"
+    >
+      Required
+    </span>
+  </div>
+  <button
+    aria-controls="headlessui-listbox-options-:r21:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    aria-labelledby="headlessui-listbox-label-:r1v: headlessui-listbox-button-:r20:"
+    class="select-button"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:r20:"
+    type="button"
+  >
+    <span
+      class=""
+    >
+      Dogs
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="1.25rem"
+      style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
+<div
+  class="select w-96"
+  data-headlessui-state="open"
+  data-testid="dropdown"
+>
+  <div
+    class="select__overline"
+  >
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:r1k:"
+    >
+      Favorite Animal
+    </label>
+    <span
+      class="text text--body-sm select__required-text"
+    >
+      Required
+    </span>
+  </div>
+  <button
+    aria-controls="headlessui-listbox-options-:r1m:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    aria-labelledby="headlessui-listbox-label-:r1k: headlessui-listbox-button-:r1l:"
+    class="select-button"
+    data-headlessui-state="open"
+    id="headlessui-listbox-button-:r1l:"
     type="button"
   >
     <span
@@ -306,12 +414,12 @@ exports[`<Select /> Generated Snapshots UsingFunctionProps story renders snapsho
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r1q:"
+    aria-controls="headlessui-listbox-options-:r26:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="fpo"
     data-headlessui-state="open"
-    id="headlessui-listbox-button-:r1p:"
+    id="headlessui-listbox-button-:r25:"
     type="button"
   >
     Select
