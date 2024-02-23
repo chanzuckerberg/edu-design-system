@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { kebabCase } from 'lodash';
+import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';
 import icons, { type IconName } from '../../icons/spritemap';
