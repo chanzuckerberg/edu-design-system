@@ -7,8 +7,14 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "import": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      },
+      "require": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.cjs"
+      }
     },
     "./index.css": "./lib/index.css",
     "./fonts.css": "./lib/tokens/fonts.css",
