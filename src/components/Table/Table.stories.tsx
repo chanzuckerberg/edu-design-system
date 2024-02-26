@@ -1,8 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
-// Implementation examples, separated out into separate files
-import { Filters } from './Filters';
 import { StackedCardsToTable } from './StackedCardsToTable';
 
 import { Table, type SortDirectionsType } from './Table';
@@ -246,18 +244,6 @@ export const SortableInteractive: Story = {
       </Table>
     );
   },
-};
-
-/**
- * Filtering can be implemented such that results only show some content of the table.
- *
- * Code: https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Table/Filters.tsx
- */
-export const FiltersInteractive: Story = {
-  parameters: {
-    badges: ['1.1', 'implementationExample'],
-  },
-  render: (args) => <Filters {...args} />,
 };
 
 /**
