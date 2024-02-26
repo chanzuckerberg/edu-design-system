@@ -475,6 +475,49 @@ export const AdjustedWidth: StoryObj = {
 };
 
 /**
+ * We lock the maximum height of the option list to 1/4 of the available screen height. Scrolling is allowed in the list, and
+ * keyboard navigation (showing the items off the edge of the screen) is handled when used.
+ */
+export const LongOptionList: StoryObj = {
+  args: {
+    ...Default.args,
+    defaultValue: 'test3',
+    className: 'w-60',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open} shouldTruncate>
+              {value}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {Array(30)
+            .fill('test')
+            .map((option, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <Select.Option key={`${option}-${index}`} value={option + index}>
+                {option}
+                {index}
+              </Select.Option>
+            ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  play: async (playOptions) => {
+    await openMenu(playOptions);
+    await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{ArrowDown}');
+  },
+  parameters: {
+    badges: ['1.2'],
+    layout: 'centered',
+    chromatic: { delay: 450 },
+  },
+};
+
+/**
  * If you want a different width for the trigger and the dropdown popover, you can control them separately.
  */
 export const SeparateButtonAndMenuWidth: StoryObj = {

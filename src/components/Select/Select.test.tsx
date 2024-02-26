@@ -8,6 +8,7 @@ import * as stories from './Select.stories';
 
 const {
   OpenByDefault,
+  LongOptionList,
   Disabled,
   DisabledRequired,
   OptionsRightAligned,
