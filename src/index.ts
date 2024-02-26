@@ -35,7 +35,6 @@ export { default as Section } from './components/Section';
 export { default as Select } from './components/Select';
 export { default as Skeleton } from './components/Skeleton';
 export { default as Slider } from './components/Slider';
-export { default as Tab } from './components/Tab';
 export { default as Table } from './components/Table';
 export { default as Tabs } from './components/Tabs';
 export { default as Tag } from './components/Tag';

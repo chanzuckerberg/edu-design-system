@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './Tabs.stories';
-import Tab from '../Tab';
+import Tabs from '../Tabs';
 
 const { Default } = composeStories(stories);
 
@@ -50,9 +50,9 @@ describe('<Tabs />', () => {
   it('does not include invalid characters in tab ids', () => {
     render(
       <Default id="foo">
-        <Tab data-testid="tab-1" title="Tab Title 1">
+        <Tabs.Tab data-testid="tab-1" title="Tab Title 1">
           Tab numero uno
-        </Tab>
+        </Tabs.Tab>
       </Default>,
     );
 

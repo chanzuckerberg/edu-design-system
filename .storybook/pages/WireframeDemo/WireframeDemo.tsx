@@ -10,7 +10,6 @@ import {
   Link,
   Select,
   Tabs,
-  Tab,
   Text,
   Tooltip,
 } from '../../../src';
@@ -221,26 +220,26 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           </div>
 
           <Tabs className="mt-4">
-            <Tab title="All (3)">
+            <Tabs.Tab title="All (3)">
               <div className="flex">
                 <StudentTab active studentName="Mikaela" />
                 <StudentTab studentName="Cesar" />
                 <StudentTab studentName="Truman" />
               </div>
-            </Tab>
+            </Tabs.Tab>
 
-            <Tab title="New (1)">
+            <Tabs.Tab title="New (1)">
               <div className="flex">
                 <StudentTab active studentName="Mikaela" />
               </div>
-            </Tab>
+            </Tabs.Tab>
 
-            <Tab title="Open (2)">
+            <Tabs.Tab title="Open (2)">
               <div className="flex">
                 <StudentTab studentName="Cesar" />
                 <StudentTab studentName="Truman" />
               </div>
-            </Tab>
+            </Tabs.Tab>
           </Tabs>
         </div>
 
