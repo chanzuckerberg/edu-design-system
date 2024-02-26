@@ -523,6 +523,7 @@ export const LongOptionList: StoryObj = {
     layout: 'centered',
     chromatic: { delay: 450 },
   },
+  decorators: [(Story) => <div className="px-3 py-16">{Story()}</div>],
 };
 
 /**
