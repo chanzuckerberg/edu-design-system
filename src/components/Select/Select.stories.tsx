@@ -1,6 +1,6 @@
-import { expect } from '@storybook/jest';
 import type { StoryObj, Meta } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect } from '@storybook/test';
+import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { Select } from './Select';
 import Icon from '../Icon';
@@ -514,16 +514,16 @@ export const LongOptionList: StoryObj = {
     await openMenu(playOptions);
     await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{ArrowDown}');
 
-    await waitFor(async () => {
-      await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
-    });
+    // await waitFor(async () => {
+    await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
+    // });
   },
   parameters: {
     badges: ['1.2'],
     layout: 'centered',
     chromatic: { delay: 450 },
   },
-  decorators: [(Story) => <div className="px-3 py-16">{Story()}</div>],
+  decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
 };
 
 /**
