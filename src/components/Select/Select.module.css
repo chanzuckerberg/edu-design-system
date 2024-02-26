@@ -53,6 +53,7 @@
  * The container for the individual select options. 
  */
 .select__options {
+  max-height: 25vh;
   z-index: 100;
 }
 
