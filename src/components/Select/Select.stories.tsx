@@ -514,9 +514,7 @@ export const LongOptionList: StoryObj = {
     await openMenu(playOptions);
     await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{ArrowDown}');
 
-    // await waitFor(async () => {
     await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
-    // });
   },
   parameters: {
     badges: ['1.2'],
