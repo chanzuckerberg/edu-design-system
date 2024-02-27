@@ -63,4 +63,5 @@ export { default as Tooltip } from './components/Tooltip';
 /**
  * Prop types, exported for convenience
  */
+export type { ClickableStyleProps } from './components/ClickableStyle';
 export type { IconName } from './components/Icon';
