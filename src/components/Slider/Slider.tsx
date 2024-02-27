@@ -158,7 +158,6 @@ export const Slider = ({
       />
       {tooltip && (
         <Tooltip
-          align="top"
           appendTo="parent"
           hideOnClick={false}
           offset={({ reference }) => {
@@ -172,6 +171,7 @@ export const Slider = ({
             // offsets the tooltip relative to the position and size of the thumb
             return [(ratio - 0.5) * (reference.width - thumbSize), 0];
           }}
+          placement="top"
           reference={ref}
           text={tooltip}
           touch="hold"

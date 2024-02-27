@@ -27,12 +27,6 @@ export default {
   component: Tooltip,
   args: defaultArgs,
   argTypes: {
-    align: {
-      table: {
-        // Marking deprecated props / controls as disabled
-        disable: true,
-      },
-    },
     text: {
       control: {
         type: 'text',
@@ -46,12 +40,6 @@ export default {
     placement: {
       table: {
         defaultValue: { summary: 'top' },
-      },
-    },
-    variant: {
-      table: {
-        // Marking deprecated props / controls as disabled
-        disable: true,
       },
     },
   },

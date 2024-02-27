@@ -17,6 +17,11 @@
   @media (prefers-reduced-motion) {
     transition: none;
   }
+
+  border-color: var(--eds-theme-color-border-neutral-default);
+  color: var(--eds-theme-color-text-neutral-default);
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+  --arrow-color: var(--eds-theme-color-border-neutral-default);
 }
 
 /**
@@ -31,23 +36,6 @@
   padding-right: var(--eds-size-2);
   padding-bottom: var(--eds-size-1);
   padding-top: var(--eds-size-1);
-}
-
-/**
- * Color Variants
- */
-.tooltip--light {
-  border-color: var(--eds-theme-color-border-neutral-default);
-  color: var(--eds-theme-color-text-neutral-default);
-  background-color: var(--eds-theme-color-background-neutral-subtle);
-  --arrow-color: var(--eds-theme-color-border-neutral-default);
-}
-
-.tooltip--dark {
-  border-color: var(--eds-theme-color-body-background-inverted);
-  color: var(--eds-theme-color-text-neutral-default-inverse);
-  background-color: var(--eds-theme-color-body-background-inverted);
-  --arrow-color: var(--eds-theme-color-body-background-inverted);
 }
 
 /**
