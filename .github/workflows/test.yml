@@ -124,7 +124,7 @@ jobs:
         # Since it's a push event we have access to these properties https://docs.github.com/en/webhooks/webhook-events-and-payloads#push
         if: github.event_name == 'push'
         run: |
-          COMMIT_COUNT=${{ github.event.size }}
+          COMMIT_COUNT=${{ github.event.distinct_size }}
           echo "Number of commits in the push: $COMMIT_COUNT"
 
           yarn commitlint --from HEAD~$COMMIT_COUNT --to HEAD --verbose
