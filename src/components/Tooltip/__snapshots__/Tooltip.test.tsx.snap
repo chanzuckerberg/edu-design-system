@@ -20,7 +20,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 10px);"
   >
     <div
-      class="tippy-box tooltip tooltip--light"
+      class="tippy-box tooltip"
       data-animation="fade"
       data-escaped=""
       data-placement="bottom"
@@ -118,7 +118,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; right: 0px; transform: translate(-10px, 0px);"
   >
     <div
-      class="tippy-box tooltip tooltip--light"
+      class="tippy-box tooltip"
       data-animation="fade"
       data-escaped=""
       data-placement="left"
@@ -179,7 +179,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
   >
     <div
-      class="tippy-box tooltip tooltip--light"
+      class="tippy-box tooltip"
       data-animation="fade"
       data-escaped=""
       data-placement="right"
@@ -239,7 +239,7 @@ exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
   >
     <div
-      class="tippy-box tooltip tooltip--light"
+      class="tippy-box tooltip"
       data-animation="fade"
       data-escaped=""
       data-placement="right"
@@ -300,7 +300,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, -10px);"
   >
     <div
-      class="tippy-box tooltip tooltip--light"
+      class="tippy-box tooltip"
       data-animation="fade"
       data-escaped=""
       data-placement="top"
