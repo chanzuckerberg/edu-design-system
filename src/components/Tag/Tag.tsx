@@ -1,6 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { IconName } from '../Icon';
+import Icon from '../Icon';
 import Text from '../Text';
+
 import styles from './Tag.module.css';
 
 export const VARIANTS = [
@@ -8,8 +11,6 @@ export const VARIANTS = [
   'error',
   'success',
   'warning',
-  /** @deprecated */
-  'yield',
   'brand',
 ] as const;
 
@@ -19,8 +20,6 @@ type Props = {
   /**
    * The color variant of the tag. It will update the content colors, background color, and border (when `hasOutline` is set to `true`).
    *
-   * **NOTE**: `yield` variant is deprecated and will be removed in a future release.
-   *
    * **Default is `"neutral"`**.
    */
   variant?: Variant;
@@ -29,9 +28,9 @@ type Props = {
    */
   className?: string;
   /**
-   * The tag icon
+   * Icon name from the defined set of EDS icons
    */
-  icon?: React.ReactNode;
+  icon?: IconName;
   /**
    * The text contents of the tag, nested inside the component, in addition to the icon.
    */
@@ -55,7 +54,6 @@ export const Tag = ({
   icon,
   text,
   hasOutline = false,
-  ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['tag'],
@@ -64,17 +62,9 @@ export const Tag = ({
     className,
   );
 
-  // TODO: Text component is receiving the tag styles directly, instead of using a wrapper. De-couple
-  // and remove deprecated usages
   return (
-    <Text
-      as="span"
-      className={componentClassName}
-      size="sm"
-      weight="bold"
-      {...other}
-    >
-      {icon}
+    <Text as="span" className={componentClassName} preset="tag">
+      {icon && <Icon name={icon} purpose="decorative" />}
       {text && <span className={styles['tag__body']}>{text}</span>}
     </Text>
   );

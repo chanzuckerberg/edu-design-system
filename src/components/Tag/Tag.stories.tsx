@@ -1,10 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Tag, VARIANTS } from './Tag';
-import Icon from '../Icon';
 import styles from './Tag.stories.module.css';
-
-const supportedVariants = VARIANTS.filter((variant) => variant !== 'yield');
 
 export default {
   title: 'Components/Tag',
@@ -37,7 +34,7 @@ export const Default: Story = {};
 export const Variants: Story = {
   render: (args) => (
     <div className={styles.tagList}>
-      {supportedVariants.map((variant) => {
+      {VARIANTS.map((variant) => {
         return (
           <Tag
             data-testid="test"
@@ -58,7 +55,7 @@ export const Variants: Story = {
 export const OutlineVariants: Story = {
   render: (args) => (
     <div className={styles.tagList}>
-      {supportedVariants.map((variant) => {
+      {VARIANTS.map((variant) => {
         return (
           <Tag
             key={variant}
@@ -79,11 +76,11 @@ export const OutlineVariants: Story = {
 export const WithIcon: Story = {
   ...Default,
   args: {
-    icon: <Icon name="favorite" purpose="decorative" />,
+    icon: 'favorite',
   },
   render: (args) => (
     <div className={styles.tagList}>
-      {supportedVariants.map((variant) => {
+      {VARIANTS.map((variant) => {
         return (
           <Tag
             key={variant}
@@ -105,11 +102,11 @@ export const WithLongTextAndIcon: Story = {
   ...Default,
   args: {
     text: 'This tag has a really long text message',
-    icon: <Icon name="star" purpose="decorative" />,
+    icon: 'star',
   },
   render: (args) => (
     <div className={styles.tagList}>
-      {supportedVariants.map((variant) => {
+      {VARIANTS.map((variant) => {
         return <Tag key={variant} {...args} hasOutline variant={variant} />;
       })}
     </div>
