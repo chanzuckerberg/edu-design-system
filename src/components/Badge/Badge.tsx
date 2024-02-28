@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import type { EitherExclusive } from '../../util/utility-types';
 import Icon from '../Icon';
 import type { IconName, IconProps } from '../Icon';
 import styles from './Badge.module.css';
@@ -17,22 +16,12 @@ type BadgeProps = {
   className?: string;
 };
 
-type BadgeIconProps = Omit<IconProps, 'purpose' | 'name'> &
-  EitherExclusive<
-    {
-      /**
-       * Name of icon to render. Please use `icon` instead, which has the same behavior.
-       * @deprecated
-       */
-      name: IconName;
-    },
-    {
-      /**
-       * Name of icon to render.
-       */
-      icon: IconName;
-    }
-  >;
+type BadgeIconProps = Omit<IconProps, 'purpose' | 'name'> & {
+  /**
+   * Icon name from the defined set of EDS icons
+   */
+  icon: IconName;
+};
 
 type BadgeTextProps = {
   /**
@@ -45,17 +34,15 @@ type BadgeTextProps = {
   className?: string;
 };
 
-const BadgeIcon = ({ className, name, icon, ...other }: BadgeIconProps) => {
+const BadgeIcon = ({ className, icon, ...other }: BadgeIconProps) => {
   const componentClassName = clsx(styles['badge'], className);
   let iconName: IconName;
 
   if (icon) {
     iconName = icon;
-  } else if (name) {
-    iconName = name;
   } else {
     // both name and icon are undefined. throw an error
-    throw new Error('Name or Icon must be passed to the Badge sub-component');
+    throw new ReferenceError('Icon must be passed to the Badge sub-component');
   }
 
   return (
