@@ -100,7 +100,7 @@ export const IconBadge: StoryObj<Args> = {
         >
           Ava
         </div>
-        <Badge.Icon name="alarm" />
+        <Badge.Icon icon="alarm" />
       </>
     ),
   },
