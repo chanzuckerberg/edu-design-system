@@ -34,57 +34,8 @@
 }
 
 /**
- * Card with horizontal contents.
- */
-.card--horizontal {
-  /* Change the orientation to display header, body, and footer in a row. */
-  flex-direction: row;
-}
-
-/**
- * Card header.
- */
-.card__header {
-  /* Add spacing in between the header and body. */
-  margin-bottom: var(--eds-size-2);
-
-  /**
-   * Card header within horizontal card
-   */
-  .card--horizontal & {
-    /**
-     * Remove default spacing for vertical card. Add margin right for spacing between header and body
-     */
-    margin-bottom: 0;
-    margin-right: var(--eds-size-2);
-  }
-}
-
-/**
  * Card body.
  */
 .card__body {
   flex: 1;
-}
-
-/**
- * Card footer
- */
-.card__footer {
-  /**
-   * Using margin-top since card__footer is optional and may not always exist. Putting
-   * margin-bottom on card__body would result in a gap if card__footer does not exist.
-   */
-  margin-top: var(--eds-size-2);
-
-  /**
-   * Card footer within horizontal card
-   */
-  .card--horizontal & {
-    /**
-     * Using margin left to space away from card body. Zero out margin top.
-     */
-    margin-top: 0;
-    margin-left: var(--eds-size-2);
-  }
 }
