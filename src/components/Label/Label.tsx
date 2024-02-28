@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
+
+import Text from '../Text';
 import styles from './Label.module.css';
 
 export interface Props {
@@ -25,25 +27,9 @@ export interface Props {
    */
   labelAfter?: ReactNode;
   /**
-   * String for the optional label.
-   *
-   * **Default is `"(optional)"`**
-   *
-   * **Deprecated**. This will be removed in the next major version.
-   * @deprecated
-   */
-  optionalLabel?: string;
-  /**
    * Indicates that field is required for form to be successfully submitted.
    */
   required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   *
-   * **Deprecated**. This will be removed in the next major version.
-   * @deprecated
-   */
-  requiredLabel?: string;
   /**
    * The label text string
    */
@@ -61,9 +47,7 @@ export const Label = ({
   htmlFor,
   id,
   labelAfter,
-  optionalLabel = '(optional)',
   required = true,
-  requiredLabel,
   text,
   ...other
 }: Props) => {
@@ -76,14 +60,10 @@ export const Label = ({
   return (
     <label className={componentClassName} htmlFor={htmlFor} id={id} {...other}>
       {text}{' '}
-      {!required && (
-        <span className={styles['label__flag']}>{optionalLabel}</span>
-      )}
-      {requiredLabel && (
-        <span className={styles['label__flag']}>{requiredLabel}</span>
-      )}
       {labelAfter && (
-        <span className={styles['label__after']}>{labelAfter}</span>
+        <Text as="span" preset="body-sm">
+          {labelAfter}
+        </Text>
       )}
     </label>
   );
