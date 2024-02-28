@@ -17,7 +17,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: VARIANTS.filter((item) => item !== 'yield'),
+      options: VARIANTS,
     },
   },
 } as Meta<Args>;
@@ -33,7 +33,7 @@ export const LongText: StoryObj<Args> = {
 };
 
 const getVariants = (optionalArgs: Omit<Args, 'text' | 'variant'> = {}) =>
-  VARIANTS.filter((item) => item !== 'yield').map((variant) => {
+  VARIANTS.map((variant) => {
     return (
       <InlineNotification
         key={variant}
