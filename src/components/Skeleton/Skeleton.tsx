@@ -111,6 +111,4 @@ TextSkeleton.displayName = 'Skeleton.Text';
 CircleSkeleton.displayName = 'Skeleton.Circle';
 
 Skeleton.Text = TextSkeleton;
-/** @deprecated Use `Skeleton` instead */
-Skeleton.Rect = Skeleton;
 Skeleton.Circle = CircleSkeleton;

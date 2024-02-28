@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -7,11 +6,6 @@ import { Skeleton } from './Skeleton';
 export default {
   title: 'Components/Skeleton',
   component: Skeleton,
-  subcomponents: {
-    'Skeleton.Circle': Skeleton.Circle,
-    'Skeleton.Rect': Skeleton.Rect,
-    'Skeleton.Text': Skeleton.Text,
-  },
   parameters: {
     badges: ['1.2'],
     layout: 'centered',
@@ -23,6 +17,9 @@ export default {
 
 type Args = React.ComponentProps<typeof Skeleton>;
 
+/**
+ * The default shape for a skeleton is a Rounded rectangle with an optional animation.
+ */
 export const Default: StoryObj<Args> = {
   args: {
     width: 100,
@@ -30,19 +27,9 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const Rect: StoryObj<Args> = {
-  args: {
-    width: 50,
-    height: 50,
-  },
-  parameters: {
-    badges: [BADGE.DEPRECATED],
-  },
-  render: (args) => {
-    return <Skeleton.Rect {...args} />;
-  },
-};
-
+/**
+ * It's also possible to use a fully-rounded circle for components like `Avatar`. Only `width` is defined for `.Circle`.
+ */
 export const Circle: StoryObj<React.ComponentProps<typeof Skeleton.Circle>> = {
   args: {
     width: 100,
@@ -52,6 +39,10 @@ export const Circle: StoryObj<React.ComponentProps<typeof Skeleton.Circle>> = {
   },
 };
 
+/**
+ * You can also use a specific variant for handling text. It is recommended to use charactor spacing units,
+ * representing the length in a way that mimics expected/maximum character length.
+ */
 export const Text: StoryObj<React.ComponentProps<typeof Skeleton.Text>> = {
   args: {
     width: '30ch',
