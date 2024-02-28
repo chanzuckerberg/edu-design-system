@@ -49,11 +49,17 @@ type Args = React.ComponentProps<typeof Card> & {
   isLoading: boolean;
 };
 
+/**
+ * Cards come with structural containers for semantic grouping.
+ */
 export const Default: StoryObj<Args> = {};
 
+/**
+ * You can use utility classes to alter the layout and orientation of those structural containers. Here, we change to a horizontal orientation.
+ */
 export const Horizontal: StoryObj<Args> = {
   args: {
-    orientation: 'horizontal',
+    className: 'flex-row',
   },
 };
 

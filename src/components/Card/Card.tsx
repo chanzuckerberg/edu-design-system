@@ -27,16 +27,6 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
    * **Default is `false`**.
    */
   isDragging?: boolean;
-  /**
-   * Orientation of a card
-   * - **vertical** renders the header, body, and footer in a columnar fashion (default)
-   * - **horizontal** renders the header, body, and footer in a horizontal fashion
-   * where the body is required but the header and footer are not
-   *
-   * **Default is `"vertical"`**.
-   * @deprecated
-   */
-  orientation?: 'vertical' | 'horizontal';
 }
 
 export interface CardSubComponentProps {
@@ -61,12 +51,10 @@ export const Card = ({
   children,
   elevation = 'none',
   isDragging = false,
-  orientation = 'vertical',
   ...other
 }: CardProps) => {
   const componentClassName = clsx(
     styles['card'],
-    orientation === 'horizontal' && styles['card--horizontal'],
     elevation === 'raised' && styles['card--raised'],
     elevation === 'dragging' && styles['card--dragging'],
     isDragging && styles['card--dragging'],
