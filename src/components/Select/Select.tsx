@@ -17,9 +17,6 @@ import PopoverListItem from '../PopoverListItem';
 import Text from '../Text';
 import styles from './Select.module.css';
 
-export type OptionsAlignType = 'left' | 'right';
-export type VariantType = 'compact' | 'full';
-
 type SelectProps = ExtractProps<typeof Listbox> &
   PopoverOptions & {
     /**
@@ -41,26 +38,12 @@ type SelectProps = ExtractProps<typeof Listbox> &
      */
     name?: string;
     /**
-     * Align select's popover to the left (default) or right of the trigger button's bottom edge.
-     * @deprecated
-     */
-    optionsAlign?: OptionsAlignType;
-    /**
      * Optional className for additional options menu styling.
      *
      * When not using the compact variant, if optionsClassName is provided please
      * include the width property to define the options menu width.
      */
     optionsClassName?: string;
-    /**
-     * The style of the select.
-     *
-     * Compact renders select trigger button that is only as wide as the content.
-     *
-     * This is **deprecated**. Please use utility classes to adjust the component width.
-     * @deprecated
-     */
-    variant?: VariantType;
     /**
      * Visible text label for the component.
      */
@@ -118,8 +101,6 @@ type SelectButtonWrapperProps = {
 };
 
 type SelectContextType = PopoverContext & {
-  compact?: boolean;
-  optionsAlign?: OptionsAlignType;
   optionsClassName?: string;
 };
 
@@ -163,12 +144,10 @@ export function Select(props: SelectProps) {
     modifiers = defaultPopoverModifiers,
     name,
     onFirstUpdate,
-    optionsAlign,
     optionsClassName,
     placement = 'bottom-start',
     required,
     strategy,
-    variant,
     onChange: theirOnChange,
     ...other
   } = props;
@@ -188,20 +167,12 @@ export function Select(props: SelectProps) {
     }
   }
 
-  // Translate old optionsAlign to placement values
-  // TODO: when removing optionsAlign, also remove this
-  const optionsPlacement: SelectProps['placement'] = optionsAlign
-    ? ({ left: 'bottom-start', right: 'bottom-end' }[
-        optionsAlign
-      ] as SelectProps['placement'])
-    : placement;
-
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
   const { styles: popperStyles, attributes: popperAttributes } = usePopper(
     referenceElement,
     popperElement,
-    { placement: optionsPlacement, modifiers, strategy, onFirstUpdate },
+    { placement, modifiers, strategy, onFirstUpdate },
   );
 
   // Create a new value to track the internal state of Listbox. Added to work around
@@ -211,13 +182,7 @@ export function Select(props: SelectProps) {
     other.value !== undefined ? other.value : other.defaultValue,
   );
 
-  const compact = variant === 'compact';
-
-  const componentClassName = clsx(
-    styles['select'],
-    compact && styles['select--compact'],
-    className,
-  );
+  const componentClassName = clsx(styles['select'], className);
   const sharedProps = {
     className: componentClassName,
     // Provide a wrapping <div> element for the select. This is needed so that any props
@@ -229,8 +194,7 @@ export function Select(props: SelectProps) {
   };
 
   const contextValue = Object.assign(
-    { compact },
-    optionsAlign ? { optionsAlign } : null,
+    {},
     optionsClassName ? { optionsClassName } : null,
     { setReferenceElement },
     { setPopperElement },
@@ -318,12 +282,7 @@ const SelectLabel = (props: SelectLabelProps) => {
  */
 const SelectButton = function (props: SelectButtonProps) {
   const { children, className, onClick: theirOnClick, ...other } = props;
-  const { compact, setReferenceElement } = useContext(SelectContext);
-
-  const componentClassName = clsx(
-    className,
-    compact && styles['select-button--compact'],
-  );
+  const { setReferenceElement } = useContext(SelectContext);
 
   return (
     <Listbox.Button
@@ -339,7 +298,7 @@ const SelectButton = function (props: SelectButtonProps) {
           children(renderProps)
         ) : (
           <SelectButtonWrapper
-            className={componentClassName}
+            className={className}
             isOpen={renderProps.open}
             onClick={(event) => {
               theirOnClick && theirOnClick(event);
