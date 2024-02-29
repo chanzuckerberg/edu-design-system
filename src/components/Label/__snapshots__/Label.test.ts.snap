@@ -8,3 +8,19 @@ exports[`<Label /> Default story renders snapshot 1`] = `
    
 </label>
 `;
+
+exports[`<Label /> LabelAfter story renders snapshot 1`] = `
+<label
+  class="label"
+>
+  Label
+   
+  <span
+    class="text text--body-sm"
+  >
+    <span>
+      *
+    </span>
+  </span>
+</label>
+`;
