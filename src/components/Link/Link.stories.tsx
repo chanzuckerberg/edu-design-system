@@ -14,7 +14,6 @@ export default {
     children: 'Link',
     variant: 'link',
     status: 'brand',
-    fullWidth: false,
     size: 'lg',
     href: 'https://go.czi.team/eds',
     // stop link from navigating to another page so we can click the link for testing
@@ -34,12 +33,6 @@ export default {
       options: ['brand', 'neutral'],
     },
     size: {
-      table: {
-        disable: true,
-      },
-    },
-    fullWidth: {
-      control: 'boolean',
       table: {
         disable: true,
       },
