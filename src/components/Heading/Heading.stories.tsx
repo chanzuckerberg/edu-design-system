@@ -17,7 +17,11 @@ type Story = StoryObj<Args>;
 /**
  * The default `Heading` sets a level-one header tag `<h1>` with the prescribed default preset.
  */
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    children: 'Default Heading',
+  },
+};
 
 /**
  * When using `h1`, the default preset maps to `headline-lg`

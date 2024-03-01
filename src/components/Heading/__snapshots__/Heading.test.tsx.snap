@@ -3,7 +3,9 @@
 exports[`<Heading /> Default story renders snapshot 1`] = `
 <h1
   class="heading heading--headline-lg"
-/>
+>
+  Default Heading
+</h1>
 `;
 
 exports[`<Heading /> Heading1 story renders snapshot 1`] = `
