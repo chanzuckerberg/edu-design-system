@@ -79,7 +79,7 @@ export const ProgressBar = ({
           as="span"
           className={styles['progress-bar__caption']}
           id={captionId}
-          size="caption"
+          preset="caption-md"
         >
           {progressBarCaption}
         </Text>

@@ -131,29 +131,21 @@ export const LoadingProfileCard: StoryObj<Args> = {
             {!isLoading && (
               <>
                 <Avatar size="lg" user={{ fullName: 'Josephine Smith' }} />
-                <Text
-                  className="mb-2 mt-2"
-                  variant="neutral-strong"
-                  weight="bold"
-                >
+                <Text className="mb-2 mt-2 text-neutral-strong">
                   Example Job Title
                 </Text>
-                <Text
-                  className="mb-2 mt-2"
-                  variant="neutral-strong"
-                  weight="bold"
-                >
+                <Text className="mb-2 mt-2 text-neutral-strong">
                   Example Company Name
                 </Text>
                 <Hr />
-                <Text className="mb-2 mt-2" variant="neutral-medium">
+                <Text className="mb-2 mt-2 text-neutral-default">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia dolorem doloribus laudantium magnam. Laboriosam!
                 </Text>
-                <Text className="mb-2 mt-2" variant="neutral-medium">
+                <Text className="mb-2 mt-2 text-neutral-default">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </Text>
-                <Text className="mb-2 mt-2" variant="neutral-medium">
+                <Text className="mb-2 mt-2 text-neutral-default">
                   Lorem ipsum dolor sit amet.
                 </Text>
               </>

@@ -118,32 +118,32 @@ export const StackedCardsToTable = () => {
         checkpointProgresses.map((progress) => (
           <Card className="mb-4 py-8" key={`progress-${progress.student}`}>
             <Card.Header>
-              <Text as="p" size="lg" weight="bold">
+              <Text as="p" preset="body-lg">
                 {progress.student}
               </Text>
             </Card.Header>
             <Card.Body>
               <div className="flex justify-between">
-                <Text as="p" size="sm" weight="bold">
+                <Text as="p" preset="body-sm">
                   Status
                 </Text>
-                <Text as="p" size="sm">
+                <Text as="p" preset="body-sm">
                   {progress.status}
                 </Text>
               </div>
               <div className="flex justify-between">
-                <Text as="p" size="sm" weight="bold">
+                <Text as="p" preset="body-sm">
                   Cog skill
                 </Text>
-                <Text as="p" size="sm">
+                <Text as="p" preset="body-sm">
                   {progress.cogSkill}
                 </Text>
               </div>
               <div className="flex justify-between">
-                <Text as="p" size="sm" weight="bold">
+                <Text as="p" preset="body-sm">
                   Time submitted
                 </Text>
-                <Text as="p" size="sm">
+                <Text as="p" preset="body-sm">
                   {progress.timeSubmitted}
                 </Text>
               </div>

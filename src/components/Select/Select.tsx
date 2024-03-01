@@ -264,12 +264,7 @@ const SelectLabel = (props: SelectLabelProps) => {
     <div className={overlineClassName}>
       <Listbox.Label className={componentClassName}>{label}</Listbox.Label>
       {required && (
-        <Text
-          as="span"
-          className={requiredTextClassName}
-          preset="body-sm"
-          size="sm"
-        >
+        <Text as="span" className={requiredTextClassName} preset="body-sm">
           Required
         </Text>
       )}

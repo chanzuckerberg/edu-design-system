@@ -226,7 +226,6 @@ export const InputField: InputFieldType = forwardRef(
                 as="span"
                 className={requiredTextClassName}
                 preset="body-sm"
-                size="sm"
               >
                 Required
               </Text>

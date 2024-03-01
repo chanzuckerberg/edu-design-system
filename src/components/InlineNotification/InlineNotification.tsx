@@ -93,7 +93,7 @@ export const InlineNotification = ({
         size="1.5rem"
         title={variantToIconAssetsMap[variant].title}
       />
-      <Text as="span" className={textClassName} variant={variant}>
+      <Text as="span" className={textClassName} preset="label-md-subtle">
         {text}
       </Text>
     </div>

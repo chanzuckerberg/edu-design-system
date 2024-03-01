@@ -193,7 +193,6 @@ export const Slider = ({
                 <Text
                   className={markerClassName}
                   key={'slider-option-' + marker}
-                  variant="neutral-medium"
                 >
                   {marker}
                 </Text>
@@ -204,11 +203,7 @@ export const Slider = ({
       {!fieldNote && Array.isArray(markers) && (
         <div aria-hidden className={styles['slider__markers']}>
           {markers.map((marker) => (
-            <Text
-              className={markerClassName}
-              key={'slider-option-' + marker}
-              variant="neutral-medium"
-            >
+            <Text className={markerClassName} key={'slider-option-' + marker}>
               {marker}
             </Text>
           ))}

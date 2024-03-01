@@ -201,7 +201,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
               </InputLabel>
             )}
             {required && (
-              <Text as="p" className={requiredTextClassName} size="sm">
+              <Text as="p" className={requiredTextClassName} preset="body-sm">
                 Required
               </Text>
             )}
