@@ -4,7 +4,6 @@ import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
-import type { HeadingSize } from '../Heading';
 import Heading from '../Heading';
 import { Icon, type IconName } from '../Icon/Icon';
 import styles from './Modal.module.css';
@@ -110,19 +109,15 @@ type ModalProps = ModalContentProps & {
   modalContainerClassName?: string;
 };
 
-type ModalTitleProps = Omit<ExtractProps<typeof Heading>, 'size'> & {
+type ModalTitleProps = ExtractProps<typeof Heading> & {
   /**
-   * Text for the modal title.
+   * Contents for the modal title.
    */
   children: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Modal Title Heading size. Defaults to 'headline-md'
-   */
-  size?: HeadingSize;
 };
 
 type ModalBodyProps = {
@@ -461,11 +456,11 @@ const ModalStepper = ({
 const ModalTitle = ({
   children,
   className,
-  size = 'headline-md',
+  preset = 'headline-md',
   ...other
 }: ModalTitleProps) => (
   <Dialog.Title as={React.Fragment}>
-    <Heading className={className} size={size} {...other}>
+    <Heading as="h2" className={className} preset={preset} {...other}>
       {children}
     </Heading>
   </Dialog.Title>
