@@ -525,11 +525,3 @@ button:where(.link--link) {
   padding: 0 var(--eds-size-2);
 }
 
-/**
- * Full-width link style
- * A block link that fills 100% of the width of its container
- * @deprecated ?
- */
- .link--full-width {
-  width: 100%;
-}
