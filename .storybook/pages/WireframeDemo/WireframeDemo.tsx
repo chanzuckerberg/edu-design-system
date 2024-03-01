@@ -78,8 +78,8 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
           src={PlaceholderImage}
         />
         <div className="flex flex-col items-center gap-6">
-          <Heading size="h1">Application</Heading>
-          <Heading size="h2">Sign in</Heading>
+          <Heading as="h1">Application</Heading>
+          <Heading as="h2">Sign in</Heading>
           <Text>Remember to use your school email to sign in:</Text>
         </div>
         <img
@@ -194,7 +194,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           </Button>
           <div>
             <Text className="mb-2">Playing reflections in response to:</Text>
-            <Heading as="h1" size="h3">
+            <Heading as="h1" preset="headline-sm">
               What's something in your life, big or small, that you're proud of?
               Why are you proud of it?
             </Heading>
@@ -315,7 +315,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           <Text size="lg">M</Text>
         </div>
         <Link className="mb-4">
-          <Heading as="h2" size="h3">
+          <Heading as="h2" preset="headline-sm">
             Mikaela
           </Heading>
         </Link>
