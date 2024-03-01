@@ -152,9 +152,9 @@ const StudentTab = ({
     )}
   >
     <div className={clsx(styles['watch-page__avatar'], 'h-10 w-10')}>
-      <Text size="sm">{studentName.slice(0, 1)}</Text>
+      <Text preset="body-sm">{studentName.slice(0, 1)}</Text>
     </div>
-    <Text className="!mt-2 truncate" size="xs">
+    <Text className="!mt-2 truncate" preset="body-xs">
       {studentName}
     </Text>
   </div>
@@ -249,12 +249,12 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               <div
                 className={clsx(styles['watch-page__avatar'], 'mr-2 h-9 w-9')}
               >
-                <Text size="sm">M</Text>
+                <Text preset="body-sm">M</Text>
               </div>
 
               <div>
-                <Text size="sm">Mikaela</Text>
-                <Text size="xs">3d</Text>
+                <Text preset="body-sm">Mikaela</Text>
+                <Text preset="body-xs">3d</Text>
               </div>
             </div>
             <img
@@ -312,7 +312,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             'm-4 h-[6.25rem] w-[6.25rem]',
           )}
         >
-          <Text size="lg">M</Text>
+          <Text preset="body-lg">M</Text>
         </div>
         <Link className="mb-4">
           <Heading as="h2" preset="headline-sm">
@@ -330,22 +330,22 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <thead>
               <tr>
                 <th>
-                  <Text size="xs">Questions received</Text>
+                  <Text preset="body-xs">Questions received</Text>
                 </th>
                 <th>
-                  <Text size="xs">Reflections submitted</Text>
+                  <Text preset="body-xs">Reflections submitted</Text>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <Text className="text-center" size="lg">
+                  <Text className="text-center" preset="body-lg">
                     10
                   </Text>
                 </td>
                 <td>
-                  <Text className="text-center" size="lg">
+                  <Text className="text-center" preset="body-lg">
                     8
                   </Text>
                 </td>
@@ -355,7 +355,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__teacher-notes-heading']}>
-          <Text size="xs">Your personal notes</Text>
+          <Text preset="body-xs">Your personal notes</Text>
           <Tooltip
             childNotInteractive
             text={
