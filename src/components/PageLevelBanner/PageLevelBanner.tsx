@@ -120,7 +120,7 @@ export const PageLevelBanner = ({
 
       <div>
         {title && (
-          <Heading as={titleAs} size="title-md" variant={variant}>
+          <Heading as={titleAs} preset="title-md">
             {title}
           </Heading>
         )}

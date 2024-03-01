@@ -168,7 +168,7 @@ exports[`<Tabs /> Centered story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--size-h3 mb-6"
+          class="heading heading--headline-sm mb-6"
         >
           Tab 1
         </h3>
@@ -463,7 +463,7 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           class="max-w-xl"
         >
           <h3
-            class="heading heading--size-h3 mb-6"
+            class="heading heading--headline-sm mb-6"
           >
             Tab 1
           </h3>
@@ -648,7 +648,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--size-h3 mb-6"
+          class="heading heading--headline-sm mb-6"
         >
           Tab 1
         </h3>

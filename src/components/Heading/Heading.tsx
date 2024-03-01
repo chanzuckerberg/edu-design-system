@@ -3,80 +3,15 @@ import React, { forwardRef } from 'react';
 import type { Preset } from '../../util/variant-types';
 import styles from './Heading.module.css';
 
-/**
- * @deprecated
- */
-export const VARIANTS = [
-  'inherit',
-  'neutral-subtle',
-  'neutral-medium',
-  'neutral-strong',
-  'brand',
-  'success',
-  'warning',
-  'error',
-  'white',
-  /**
-   * @deprecated Info variant is deprecated.
-   */ 'info',
-] as const;
-
-/**
- * @deprecated
- */
-export type Variant = (typeof VARIANTS)[number];
-
 export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-/**
- * @deprecated
- */
-export type TokenSize =
-  | 'headline-lg'
-  | 'headline-md'
-  | 'headline-sm'
-  | 'title-md'
-  | 'title-sm'
-  | 'body-sm'
-  | 'body-xs'
-  | 'title-xs';
-
-/**
- * @deprecated
- */
-export type HeadingSize = HeadingElement | TokenSize | /** @deprecated */ 'h7';
-
-// For now, "h1"-"h6" sizes point to the old type ramp, while
-// "headline-*" and "title-*" sizes point to the new type ramp.
-// These will be brought in sync with the next major release.
-/**
- * @deprecated
- */
-const TOKEN_TO_SIZE: Record<HeadingSize, HeadingElement> = {
-  'headline-lg': 'h1',
-  'headline-md': 'h2',
-  'headline-sm': 'h3',
-  'title-md': 'h4',
-  'title-sm': 'h5',
-  'body-sm': 'h6',
-  'body-xs': 'h6',
-  'title-xs': 'h5',
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-  h5: 'h5',
-  h6: 'h6',
-  h7: 'h6',
-};
-
-type HeadingProps = {
+type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
   /**
-   * This prop can be used to specify which size heading should
+   * This prop can be used to specify which level heading should
    * actually be rendered, in the case that you want to render an element
-   * as one heading but style it as if it were another. If both an `as` prop
-   * and a `size` prop are passed, the `as` will be used to determine the element
-   * and the `size` will be used to determine the styling.
+   * as one heading but style it as if it were another.
+   *
+   * **Default is `"h1"`**.
    */
   as?: HeadingElement;
   children: React.ReactNode;
@@ -85,19 +20,23 @@ type HeadingProps = {
   /**
    * Prop to set the desired typography value used in design. Acceptable values
    * match those used across the design system.
+   *
+   * For details, see https://chanzuckerberg.github.io/edu-design-system/?path=/story/design-tokens-tier-2-usage--typography
    */
   preset?: Preset;
-  /**
-   * This prop is **deprecated**.
-   * @deprecated
-   */
-  size: HeadingSize;
-  /**
-   * This prop is **deprecated**.
-   * @deprecated
-   */
-  variant?: Variant;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+};
+
+/**
+ * Given a certain HeadingElement, what is the default preset to use?
+ */
+const headingPresetMap: Record<HeadingElement, Preset> = {
+  h1: 'headline-lg',
+  h2: 'headline-md',
+  h3: 'headline-sm',
+  h4: 'title-md',
+  h5: 'title-sm',
+  h6: 'title-xs',
+};
 
 /**
  * `import {Heading} from "@chanzuckerberg/eds";`
@@ -108,41 +47,14 @@ type HeadingProps = {
  */
 export const Heading = forwardRef(
   (
-    {
-      as,
-      children,
-      className,
-      preset,
-      size,
-      variant,
-      /**
-       * Components that wrap typography sometimes require properties such as
-       * event handlers, tabIndex, etc. and/or other native heading element
-       * attributes to be passed down into the element.
-       */ ...other
-    }: HeadingProps,
+    { as = 'h1', children, className, preset, ...other }: HeadingProps,
     ref: React.ForwardedRef<HTMLHeadingElement>,
   ) => {
-    if (process.env.NODE_ENV !== 'production') {
-      if (variant === 'info') {
-        console.warn(
-          'Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.',
-        );
-      }
-      if (size === 'h7') {
-        console.warn(
-          `The ${size} size is deprecated and will be removed in an upcoming release.\n`,
-          'Please bump this heading up to a larger size if possible.',
-        );
-      }
-    }
-
-    const TagName = as || TOKEN_TO_SIZE[size];
+    const TagName = as;
     const componentClassName = clsx(
       styles['heading'],
       preset && styles[`heading--${preset}`],
-      !preset && size && styles[`heading--size-${size}`],
-      !preset && variant && styles[`heading--${variant}`],
+      !preset && styles[`heading--${headingPresetMap[as]}`],
       className,
     );
     return (

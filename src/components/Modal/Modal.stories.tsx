@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { Modal, ModalContent } from './Modal';
 import { Button, ButtonGroup, Heading, Tooltip } from '../../';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
-import { VARIANTS } from '../Heading/Heading';
 
 export default {
   title: 'Components/Modal',
@@ -61,7 +60,7 @@ const getChildren = (
         <Modal.Title>Modal Title</Modal.Title>
       ) : (
         /* Not using Modal.Title here because it can't exist outside of the Dialog component. */
-        <Heading size="h2">Modal Title</Heading>
+        <Heading as="h2">Modal Title</Heading>
       )}
     </Modal.Header>
     <Modal.Body>{bodyContent}</Modal.Body>
@@ -124,40 +123,11 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
       name: 'title "as" prop',
       options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
     },
-    size: {
-      control: 'select',
-      name: 'title "size" prop',
-      // TODO: convert to using `presets` from variant-types and updating modal similar to `Text`
-      options: [
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-        'h6',
-        'h7',
-        'headline-lg',
-        'headline-md',
-        'headline-sm',
-        'title-md',
-        'title-sm',
-        'body-sm',
-        'body-xs',
-        'title-xs',
-      ],
-    },
-    variant: {
-      control: 'select',
-      name: 'title "variant" prop',
-      options: VARIANTS,
-    },
   },
-  render: ({ as, size, variant, ...args }) => (
+  render: ({ as, ...args }) => (
     <InteractiveExample {...args}>
       <Modal.Header>
-        <Modal.Title as={as} size={size} variant={variant}>
-          Modal Title
-        </Modal.Title>
+        <Modal.Title as={as}>Modal Title</Modal.Title>
       </Modal.Header>
       <Modal.Body>Modal Content</Modal.Body>
     </InteractiveExample>
