@@ -140,7 +140,7 @@
   display: flex;
   justify-content: space-between;
 
-  color: var(--eds-theme-color-icon-neutral-default);
+  color: var(--eds-theme-color-text-neutral-default);
 
   /* Calculates offset of the markers to align with actual values */
   padding-left: calc(var(--eds-theme-size-slider-thumb) / 2);

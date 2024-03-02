@@ -40,6 +40,10 @@
   right: var(--eds-size-half);
 }
 
+.banner__description {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+
 /**
  * Dismissable banner
  *

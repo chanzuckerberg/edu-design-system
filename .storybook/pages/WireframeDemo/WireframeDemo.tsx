@@ -279,7 +279,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <div className={styles['watch-page__response']}>
               <Label htmlFor={responseTextareaId} text="Respond to Mikaela" />
               <textarea
-                className={clsx(styles['watch-page__textarea'], 'h-[9.25rem')}
+                className={clsx(styles['watch-page__textarea'], 'h-[9.25rem]')}
                 id={responseTextareaId}
                 onChange={handleTextareaChange}
                 placeholder="Type your response to Mikaela"
