@@ -28,6 +28,8 @@ export interface Props {
   overline?: ReactNode;
   /**
    * "as" prop, passed to Heading Component
+   *
+   * **Default is `"h2"`.
    */
   headingAs?: HeadingElement;
   /**
@@ -52,10 +54,6 @@ export interface Props {
  * `import {Section} from "@chanzuckerberg/eds";`
  *
  * Section component contains a section header and body.
- *
- * The Heading component requires a value for "size", so this headingAs prop is provided
- * a default value of "h2" to allow it to remain optional on Section component.
- * @deprecated
  */
 export const Section = ({
   align,
