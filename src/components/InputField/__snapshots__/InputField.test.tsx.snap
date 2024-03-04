@@ -203,7 +203,7 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
       class="input-field__overline input-field__overline--no-label"
     >
       <span
-        class="text text--sm input-field__required-text"
+        class="text text--body-sm input-field__required-text"
       >
         Required
       </span>
@@ -246,7 +246,7 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
         Input field with fieldNote
       </label>
       <span
-        class="text text--sm input-field__required-text"
+        class="text text--body-sm input-field__required-text"
       >
         Required
       </span>
@@ -352,7 +352,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         test label
       </label>
       <span
-        class="text text--sm input-field__required-text"
+        class="text text--body-sm input-field__required-text"
       >
         Required
       </span>
@@ -405,7 +405,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         test label
       </label>
       <span
-        class="text text--sm input-field__required-text"
+        class="text text--body-sm input-field__required-text"
       >
         Required
       </span>
@@ -457,7 +457,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         test label
       </label>
       <span
-        class="text text--sm input-field__required-text"
+        class="text text--body-sm input-field__required-text"
       >
         Required
       </span>

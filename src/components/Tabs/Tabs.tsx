@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, {
   type ReactNode,
   useCallback,

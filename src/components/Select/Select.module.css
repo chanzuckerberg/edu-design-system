@@ -45,10 +45,15 @@
   color: var(--eds-theme-color-form-label);
 }
 
+.select__overline--no-label {
+  justify-content: flex-end;
+}
+
 /**
  * The container for the individual select options. 
  */
 .select__options {
+  max-height: 25vh;
   z-index: 100;
 }
 
@@ -58,6 +63,15 @@
 
 .select__option-item {
   color: var(--eds-theme-color-icon-brand-primary);
+}
+
+.select__required-text {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  font: var(--eds-theme-typography-body-sm);
+}
+
+.select__required-text--disabled {
+  color: var(--eds-theme-color-text-disabled);
 }
 
 /*------------------------------------*\

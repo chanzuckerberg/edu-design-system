@@ -14,6 +14,7 @@ import PopoverContainer, { defaultPopoverModifiers } from '../PopoverContainer';
 import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
 
 import PopoverListItem from '../PopoverListItem';
+import Text from '../Text';
 import styles from './Select.module.css';
 
 export type OptionsAlignType = 'left' | 'right';
@@ -64,10 +65,15 @@ type SelectProps = ExtractProps<typeof Listbox> &
      * Visible text label for the component.
      */
     label?: string;
+    /**
+     * Indicates that field is required for form to be successfully submitted
+     */
+    required?: boolean;
   };
 
 type SelectLabelProps = ExtractProps<typeof Listbox.Label> & {
   disabled?: boolean;
+  required?: boolean;
 };
 type SelectOptionsProps = ExtractProps<typeof Listbox.Options>;
 type SelectOptionProps = ExtractProps<typeof Listbox.Option> & {
@@ -160,6 +166,7 @@ export function Select(props: SelectProps) {
     optionsAlign,
     optionsClassName,
     placement = 'bottom-start',
+    required,
     strategy,
     variant,
     onChange: theirOnChange,
@@ -259,8 +266,10 @@ export function Select(props: SelectProps) {
           }
         }}
       >
-        {label && (
-          <Select.Label disabled={props.disabled}>{label}</Select.Label>
+        {(label || required) && (
+          <Select.Label disabled={props.disabled} required={required}>
+            {label}
+          </Select.Label>
         )}
         {children}
       </Listbox>
@@ -269,17 +278,37 @@ export function Select(props: SelectProps) {
 }
 
 const SelectLabel = (props: SelectLabelProps) => {
-  const { children, className, disabled } = props;
+  const { children: label, required, className, disabled } = props;
 
   const componentClassName = clsx(
     styles['select__label'],
     disabled && clsx(styles['select__label--disabled']),
     className,
   );
-  const overlineClassName = clsx(styles['select__overline']);
+
+  const requiredTextClassName = clsx(
+    styles['select__required-text'],
+    disabled && styles['select__required-text--disabled'],
+  );
+
+  const overlineClassName = clsx(
+    styles['select__overline'],
+    !label && styles['select__overline--no-label'],
+  );
+
   return (
     <div className={overlineClassName}>
-      <Listbox.Label className={componentClassName}>{children}</Listbox.Label>
+      <Listbox.Label className={componentClassName}>{label}</Listbox.Label>
+      {required && (
+        <Text
+          as="span"
+          className={requiredTextClassName}
+          preset="body-sm"
+          size="sm"
+        >
+          Required
+        </Text>
+      )}
     </div>
   );
 };

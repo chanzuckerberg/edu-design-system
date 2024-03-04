@@ -1,4 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { expect } from '@storybook/test';
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { Select } from './Select';
@@ -475,6 +476,55 @@ export const AdjustedWidth: StoryObj = {
 };
 
 /**
+ * We lock the maximum height of the option list to 1/4 of the available screen height. Scrolling is allowed in the list, and
+ * keyboard navigation (showing the items off the edge of the screen) is handled when used.
+ */
+export const LongOptionList: StoryObj = {
+  args: {
+    ...Default.args,
+    defaultValue: 'test3',
+    className: 'w-60',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open} shouldTruncate>
+              {value}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {Array(30)
+            .fill('test')
+            .map((option, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <Select.Option key={`${option}-${index}`} value={option + index}>
+                {option}
+                {index}
+              </Select.Option>
+            ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  play: async (playOptions) => {
+    const canvas = within(playOptions.canvasElement);
+    const selectButton = await canvas.findByRole('button');
+
+    await openMenu(playOptions);
+    await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{ArrowDown}');
+
+    await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
+  },
+  parameters: {
+    badges: ['1.2'],
+    layout: 'centered',
+    chromatic: { delay: 450 },
+  },
+  decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
+};
+
+/**
  * If you want a different width for the trigger and the dropdown popover, you can control them separately.
  */
 export const SeparateButtonAndMenuWidth: StoryObj = {
@@ -502,6 +552,19 @@ export const Disabled: StoryObj = {
     ...Default.args,
     disabled: true,
   },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
+  },
+};
+
+export const Required: StoryObj = {
+  args: {
+    ...Default.args,
+    required: true,
+    className: 'w-96',
+  },
 };
 
 /**
@@ -512,6 +575,30 @@ export const NoVisibleLabel: StoryObj = {
     ...Default.args,
     label: undefined,
     'aria-label': 'hidden label',
+  },
+};
+
+export const NoVisibleLabelButRequired: StoryObj = {
+  args: {
+    ...Default.args,
+    label: undefined,
+    'aria-label': 'hidden label',
+    required: true,
+    className: 'w-96',
+  },
+};
+
+export const DisabledRequired: StoryObj = {
+  args: {
+    ...Default.args,
+    disabled: true,
+    required: true,
+    className: 'w-96',
+  },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 
