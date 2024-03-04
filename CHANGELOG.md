@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.11.0...v13.12.0) (2024-03-04)
+
+
+### Features
+
+* export ClickableStyleProps ([#1860](https://github.com/chanzuckerberg/edu-design-system/issues/1860)) ([0d1b49e](https://github.com/chanzuckerberg/edu-design-system/commit/0d1b49e525492539a198f97bd98f67c2f8065537))
+* **Select:** add support for required in overline ([#1855](https://github.com/chanzuckerberg/edu-design-system/issues/1855)) ([6e44566](https://github.com/chanzuckerberg/edu-design-system/commit/6e445669e53224274bd7edc9f8d9c9cb6210a0e4))
+
+
+### Bug Fixes
+
+* lodash tree shaking ([#1852](https://github.com/chanzuckerberg/edu-design-system/issues/1852)) ([f55f9cb](https://github.com/chanzuckerberg/edu-design-system/commit/f55f9cb16db9c145ac9d4061f4b714c937888123))
+* **Select:** add max height for Select.Options ([#1858](https://github.com/chanzuckerberg/edu-design-system/issues/1858)) ([24ed8bc](https://github.com/chanzuckerberg/edu-design-system/commit/24ed8bc3c9e93312b53ee9b93f982659842a0bfc))
+
 ## [13.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.11.0-alpha.0...v13.11.0) (2024-02-20)
 
 
