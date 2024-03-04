@@ -570,13 +570,13 @@ exports[`<Slider /> WithHighlightedContent story renders snapshot 1`] = `
           class="slider__thumb-proxy"
         />
       </div>
-      <div
-        class="text-h1"
+      <span
+        class="text text--body-xl"
       >
         <span>
           😐
         </span>
-      </div>
+      </span>
     </div>
     <p
       class="text text--body-md py-3 text-center"
@@ -609,8 +609,8 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
         Mood Slider
          
       </label>
-      <div
-        class="flex w-1/2 justify-between py-4 text-center text-h1"
+      <span
+        class="text text--body-xl flex w-1/2 justify-between py-4 text-center"
       >
         <div
           class=""
@@ -637,7 +637,7 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
         >
           😍
         </div>
-      </div>
+      </span>
       <div
         class="slider w-1/2"
       >
@@ -707,13 +707,13 @@ exports[`<Slider /> WithVisualLabel story renders snapshot 1`] = `
         Mood Slider
          
       </label>
-      <div
-        class="w-1/2 py-4 text-center text-h1"
+      <span
+        class="text text--body-xl w-1/2 py-4 text-center"
       >
         <span>
           😐
         </span>
-      </div>
+      </span>
       <div
         class="slider w-1/2"
       >
