@@ -91,6 +91,8 @@
 .horizontal-step__text {
   /* Hides text for smaller screen sizes. */
   display: none;
+  font-weight: var(--eds-font-weight-bold);
+  
   @media all and (min-width: $eds-bp-md) {
     display: inline;
     /* Hides overflow text with ellipsis. */

@@ -192,9 +192,7 @@ export const HorizontalStep = ({
       <Text
         as="span"
         className={styles['horizontal-step__text']}
-        size="sm"
-        variant="inherit"
-        weight="bold"
+        preset="body-sm"
       >
         {text}
       </Text>

@@ -27,7 +27,6 @@
  */
 .inline-notification__text {
   margin: var(--eds-size-half);
-  font: var(--eds-theme-typography-label-md-subtle);
 }
 
 /**

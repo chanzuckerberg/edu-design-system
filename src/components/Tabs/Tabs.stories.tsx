@@ -221,7 +221,7 @@ const IconTab = ({
     <div className="p-3 text-center">
       <Icon name={icon} purpose="decorative" size="1rem" />
     </div>
-    <Text size="caption-lg">{`${isActive ? '●' : '◦'} ${title}`}</Text>
+    <Text preset="caption-lg">{`${isActive ? '●' : '◦'} ${title}`}</Text>
   </div>
 );
 

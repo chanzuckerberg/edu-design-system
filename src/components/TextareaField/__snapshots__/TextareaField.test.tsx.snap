@@ -175,7 +175,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
       Textarea Field
     </label>
     <p
-      class="text text--sm textarea-field__required-text"
+      class="text text--body-sm textarea-field__required-text"
     >
       Required
     </p>
@@ -298,7 +298,7 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
       Textarea Field
     </label>
     <p
-      class="text text--sm textarea-field__required-text"
+      class="text text--body-sm textarea-field__required-text"
     >
       Required
     </p>
@@ -373,7 +373,7 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
       Textarea Field
     </label>
     <p
-      class="text text--sm textarea-field__required-text"
+      class="text text--body-sm textarea-field__required-text"
     >
       Required
     </p>
@@ -447,7 +447,7 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
       Textarea Field
     </label>
     <p
-      class="text text--sm textarea-field__required-text"
+      class="text text--body-sm textarea-field__required-text"
     >
       Required
     </p>

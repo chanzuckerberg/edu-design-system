@@ -137,7 +137,7 @@ export const Tooltip = ({
   }
 
   const textContent = (
-    <Text as="span" data-testid="tooltip-content" size="caption-lg">
+    <Text as="span" data-testid="tooltip-content" preset="caption-lg">
       {text}
     </Text>
   );

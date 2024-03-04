@@ -2808,7 +2808,7 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
 
 exports[`<Icon /> InText story renders snapshot 1`] = `
 <p
-  class="text text--body"
+  class="text text--body-md"
 >
   The svg icon defaults to the surrounding text size (
   <svg

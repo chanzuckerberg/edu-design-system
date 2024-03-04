@@ -33,10 +33,10 @@ export const Default: StoryObj<Args> = {
 export const Center: StoryObj<Args> = {
   args: {
     align: 'center',
-    overline: <Text size="overline">Overline above title</Text>,
+    overline: <Text preset="overline">Overline above title</Text>,
     title: 'Section Title',
     description: (
-      <Text as="p" preset="body-xs" size="sm">
+      <Text as="p" preset="body-xs">
         This is a description of what the section is
       </Text>
     ),
@@ -47,7 +47,7 @@ export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
     description: (
-      <Text as="p" preset="body-xs" size="sm">
+      <Text as="p" preset="body-xs">
         This is a description of what the section is
       </Text>
     ),
@@ -56,7 +56,7 @@ export const WithDescription: StoryObj<Args> = {
 
 export const WithOverline: StoryObj<Args> = {
   args: {
-    overline: <Text size="overline">Overline above title</Text>,
+    overline: <Text preset="overline">Overline above title</Text>,
     title: 'Section Title',
   },
 };

@@ -22,7 +22,7 @@ exports[`<InlineNotification /> FullWidthLongText story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--body text--success inline-notification__text"
+    class="text text--label-md-subtle inline-notification__text"
   >
     Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </span>
@@ -54,7 +54,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       />
     </svg>
     <span
-      class="text text--body text--brand inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       brand inline notification lorem ipsum
     </span>
@@ -80,7 +80,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       />
     </svg>
     <span
-      class="text text--body text--success inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       success inline notification lorem ipsum
     </span>
@@ -106,7 +106,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       />
     </svg>
     <span
-      class="text text--body text--warning inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       warning inline notification lorem ipsum
     </span>
@@ -136,7 +136,7 @@ exports[`<InlineNotification /> FullWidthSuccess story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--body text--success inline-notification__text"
+    class="text text--label-md-subtle inline-notification__text"
   >
     Inline notifications lorem ipsum text
   </span>
@@ -168,7 +168,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--brand inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       brand inline notification lorem ipsum
     </span>
@@ -194,7 +194,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--success inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       success inline notification lorem ipsum
     </span>
@@ -220,7 +220,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--warning inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       warning inline notification lorem ipsum
     </span>
@@ -250,7 +250,7 @@ exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--body text--success inline-notification__text"
+    class="text text--label-md-subtle inline-notification__text"
   >
     Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </span>
@@ -282,7 +282,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--brand inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       brand inline notification lorem ipsum
     </span>
@@ -308,7 +308,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--success inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       success inline notification lorem ipsum
     </span>
@@ -334,7 +334,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--warning inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       warning inline notification lorem ipsum
     </span>
@@ -367,7 +367,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--brand inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       brand inline notification lorem ipsum
     </span>
@@ -393,7 +393,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--success inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       success inline notification lorem ipsum
     </span>
@@ -419,7 +419,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--warning inline-notification__text"
+      class="text text--label-md-subtle inline-notification__text"
     >
       warning inline notification lorem ipsum
     </span>
@@ -449,7 +449,7 @@ exports[`<InlineNotification /> Success story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--body text--success inline-notification__text"
+    class="text text--label-md-subtle inline-notification__text"
   >
     Inline notifications lorem ipsum text
   </span>
