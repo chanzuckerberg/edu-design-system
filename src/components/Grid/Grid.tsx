@@ -57,8 +57,6 @@ export interface GridItemProps {
  *
  * Grid component used to layout Grid item components into a grid pattern. This is flexible component
  * allowing for a variety of responsive layout components.
- *
- * @deprecated
  */
 export const Grid = ({
   className,
