@@ -2,7 +2,8 @@ import type { StoryObj } from '@storybook/react';
 import { at, capitalize, forEach, merge } from 'lodash';
 
 import React from 'react';
-import { Grid, Section } from '../../../../src';
+import Grid from '../../../../src/components/Grid';
+import Section from '../../../../src/components/Section';
 import breadcrumb from '../../../../src/design-tokens/tier-3-component/breadcrumb-typography.json';
 import button from '../../../../src/design-tokens/tier-3-component/buttons-typography.json';
 import form from '../../../../src/design-tokens/tier-3-component/forms-typography.json';
