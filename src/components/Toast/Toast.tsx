@@ -32,8 +32,6 @@ export type Props = {
  * A toast used to provide information on the state of the page, usually in response to a
  * user action. Ex: The user updates their profile, and a toast pop-up informs them that the
  * data was successfully saved.
- *
- * @deprecated
  */
 export const Toast = ({
   children,

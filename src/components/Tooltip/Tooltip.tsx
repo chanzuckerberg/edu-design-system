@@ -8,17 +8,6 @@ import styles from './Tooltip.module.css';
 // Full list of Tippy props: https://atomiks.github.io/tippyjs/v6/all-props/
 type TooltipProps = {
   /**
-   * Where the tooltip should be placed in relation to the element it's attached to.
-   *
-   * Tippy also supports 'top-start', 'top-end', 'right-start', 'right-end', etc,
-   * but our CSS currently only supports the 4 main sides.
-   *
-   * This is deprecated. Please use `placement` instead.
-   *
-   * @deprecated
-   */
-  align?: 'top' | 'right' | 'bottom' | 'left';
-  /**
    * The element or ref to append the tooltip to.
    * Defaults to the body element.
    * 'parent' is suggested if used in a modal.
@@ -80,11 +69,6 @@ type TooltipProps = {
    */
   text?: React.ReactNode;
   /**
-   * Whether the tooltip has a light or dark background.
-   * @deprecated
-   */
-  variant?: 'light' | 'dark';
-  /**
    * Whether the tooltip is always visible or always invisible.
    *
    * This is most often left undefined so the Tooltip component
@@ -108,24 +92,13 @@ type Plugin = Plugins[number];
  *
  */
 export const Tooltip = ({
-  variant = 'light',
-  align = 'top',
   childNotInteractive,
   className,
   duration = 200,
-  placement,
+  placement = 'top',
   text,
   ...rest
 }: TooltipProps) => {
-  if (variant === 'dark' && process.env.NODE_ENV !== 'production') {
-    console.warn(
-      'The dark variant is deprecated and will be removed in an upcoming release. Please use the default light variant instead.',
-    );
-  }
-
-  // TODO: when removing `align`, remove this line and set `placement={placement}` below
-  const intendedPlacement = placement ?? align;
-
   // Hides tooltip when escape key is pressed, following:
   // https://atomiks.github.io/tippyjs/v6/plugins/#hideonesc
   const hideOnEsc: Plugin = {
@@ -164,7 +137,7 @@ export const Tooltip = ({
   }
 
   const textContent = (
-    <Text as="span" data-testid="tooltip-content" size="caption-lg">
+    <Text as="span" data-testid="tooltip-content" preset="caption-lg">
       {text}
     </Text>
   );
@@ -172,15 +145,10 @@ export const Tooltip = ({
   return (
     <Tippy
       {...rest}
-      className={clsx(
-        styles['tooltip'],
-        variant === 'light' && styles['tooltip--light'],
-        variant === 'dark' && styles['tooltip--dark'],
-        className,
-      )}
+      className={clsx(styles['tooltip'], className)}
       content={textContent}
       duration={duration}
-      placement={intendedPlacement}
+      placement={placement}
       plugins={[hideOnEsc]}
     >
       {children}

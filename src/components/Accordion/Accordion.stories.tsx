@@ -316,7 +316,7 @@ export const UsingComplexHeaders: Story = {
       <>
         <Accordion.Row>
           <Accordion.Button>
-            <Text size="lg">
+            <Text preset="body-lg">
               <Icon
                 className="m-2"
                 name="check-circle"
@@ -335,7 +335,7 @@ export const UsingComplexHeaders: Story = {
         </Accordion.Row>
         <Accordion.Row>
           <Accordion.Button>
-            <Text size="lg">
+            <Text preset="body-lg">
               <Icon
                 className="m-2"
                 name="check-circle"
@@ -373,7 +373,7 @@ export const UsingNumberIconInHeaders: Story = {
           <Accordion.Button>
             <div className="flex flex-wrap items-center gap-2">
               <NumberIcon aria-label="Step 1" number={1} />
-              <Text size="lg">Step 1</Text>
+              <Text preset="body-lg">Step 1</Text>
             </div>
           </Accordion.Button>
           <Accordion.Panel>
@@ -387,7 +387,7 @@ export const UsingNumberIconInHeaders: Story = {
           <Accordion.Button>
             <div className="items flex flex-wrap items-center gap-2">
               <NumberIcon aria-label="Step 2" number={2} />
-              <Text size="lg">Step 2</Text>
+              <Text preset="body-lg">Step 2</Text>
             </div>
           </Accordion.Button>
           <Accordion.Panel>

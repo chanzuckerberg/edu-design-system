@@ -31,7 +31,7 @@ exports[`Modal Brand story renders snapshot 1`] = `
     class="modal-header modal-header--brand"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -104,7 +104,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -180,7 +180,7 @@ exports[`Modal Default story renders snapshot 1`] = `
       class="modal-header"
     >
       <h2
-        class="heading heading--size-headline-md"
+        class="heading heading--headline-md"
         data-headlessui-state="open"
         id="headlessui-dialog-title-:r2:"
       >
@@ -247,7 +247,7 @@ exports[`Modal Medium story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -311,7 +311,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -375,7 +375,7 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
     class="modal-header modal-header--brand"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -448,7 +448,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -512,7 +512,7 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
     class="modal-header modal-header--brand"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -660,7 +660,7 @@ exports[`Modal Small story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -724,7 +724,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -788,7 +788,7 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
     class="modal-header modal-header--brand"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -873,7 +873,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
       class="modal-header"
     >
       <h2
-        class="heading heading--size-headline-md"
+        class="heading heading--headline-md"
         data-headlessui-state="open"
         id="headlessui-dialog-title-:r8:"
       >
@@ -959,7 +959,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--size-h2"
+      class="heading heading--headline-md"
     >
       Modal Title
     </h2>
@@ -1135,7 +1135,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
       class="modal-header"
     >
       <h2
-        class="heading heading--size-headline-md"
+        class="heading heading--headline-md"
         data-headlessui-state="open"
         id="headlessui-dialog-title-:r5:"
       >

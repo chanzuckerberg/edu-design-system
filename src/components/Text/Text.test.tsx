@@ -11,11 +11,7 @@ describe('<Text />', () => {
   generateSnapshots(stories as StoryFile);
 
   it('should add the passthrough className', () => {
-    render(
-      <Text className="passthrough" size="body">
-        Some Text
-      </Text>,
-    );
+    render(<Text className="passthrough">Some Text</Text>);
     expect(screen.getByText('Some Text').classList).toContain('passthrough');
   });
 
@@ -44,17 +40,5 @@ describe('<Text />', () => {
     rerender(<HelperComponent as="span" />);
     expect(screen.getByText('Ref container parent test span')).toBeTruthy();
     await user.click(screen.getByRole('button'));
-  });
-
-  it('should console warn if attempting to use "info" variant', () => {
-    const consoleWarnMock = jest
-      .spyOn(global.console, 'warn')
-      .mockImplementation();
-    render(<Text variant="info">Some Text 2</Text>);
-    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
-    expect(consoleWarnMock).toHaveBeenCalledWith(
-      'Info variant is deprecated, please consider another variant.',
-    );
-    consoleWarnMock.mockRestore();
   });
 });

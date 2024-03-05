@@ -15,16 +15,6 @@
 }
 
 /**
- * Label flag
- *
- * A flag to mark whether or not a field is required or optional. Currently a flag
- * is only present for optional fields.
- */
-.label__flag {
-  font: var(--eds-theme-typography-body-sm);
-}
-
-/**
  * Label after
  *
  * An empty slot for additional element to appear to the right of the label text.

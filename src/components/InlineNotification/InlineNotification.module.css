@@ -27,7 +27,6 @@
  */
 .inline-notification__text {
   margin: var(--eds-size-half);
-  font: var(--eds-theme-typography-label-md-subtle);
 }
 
 /**
@@ -51,12 +50,6 @@
   border: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-utility-warning-strong);
 }
-.inline-notification--yield {
-  @mixin messagingYield;
-
-  border: var(--eds-theme-border-width) solid
-    var(--eds-theme-color-border-grade-revise-strong);
-}
 .inline-notification--subtle {
   background-color: var(--eds-theme-color-background-neutral-default);
 }
@@ -73,15 +66,4 @@
 }
 .inline-notification--full-width-subtle {
   background-color: var(--eds-theme-color-background-neutral-subtle);
-}
-/**
- * Inactive variant of the full width inline notification.
- */
-.inline-notification__icon--inactive {
-  display: none;
-}
-.inline-notification__text--inactive {
-  /* Creates enough space to keep text in the same place. */
-  padding-left: var(--eds-size-3); 
-  color: var(--eds-theme-color-text-neutral-subtle);
 }

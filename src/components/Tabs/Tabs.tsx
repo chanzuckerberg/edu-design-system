@@ -9,7 +9,8 @@ import React, {
   useState,
   type KeyboardEvent,
 } from 'react';
-import { allByType, oneByType } from 'react-children-by-type';
+import { allByType, oneByType, withoutTypes } from 'react-children-by-type';
+
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -17,11 +18,11 @@ import {
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
 import { useId } from '../../util/useId';
+import type { RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
-import Tab from '../Tab';
 import styles from './Tabs.module.css';
 
-export interface Props {
+export interface TabsProps {
   align?: Align;
   /**
    * Reference to another element that describes the purpose of the set of tabs.
@@ -49,6 +50,34 @@ export interface Props {
   activeIndex?: number;
 }
 
+export interface TabProps {
+  /**
+   * aria-labelledby attribute that associates a tab panel with its accompanying tab title
+   */
+  'aria-labelledby'?: string;
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * HTML id for the component
+   */
+  id?: string;
+  /**
+   * Number passed down from Tabs to show the active index state of Tabs
+   */
+  isActiveIndex?: number;
+  /**
+   * Text used to label the tab in the tab list
+   */
+  title: string;
+}
+
+type TabButtonProps = RenderProps<TabContextArgs>;
 export type TabContextArgs = {
   active: boolean;
   title: string;
@@ -70,7 +99,7 @@ export const Tabs = ({
   className,
   onChange,
   ...other
-}: Props) => {
+}: TabsProps) => {
   const activeTabPanelId = useId();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
@@ -276,4 +305,57 @@ function usePrevious<T>(prop: T) {
   return ref.current;
 }
 
+/**
+ * `import {Tab} from "@chanzuckerberg/eds";`
+ *
+ * Individual tab within the Tabs component.
+ * - Use the `title` prop for text-only tab headers
+ * - For more custom tab headers use `<Tab.Button>` which uses a render prop with state information
+ */
+export const Tab = ({
+  children,
+  className,
+  id,
+  // Destructure `title` so it is not applied to the rendered element
+  title,
+  'aria-labelledby': ariaLabelledBy,
+  ...other
+}: TabProps) => {
+  return (
+    <div
+      aria-hidden={false}
+      aria-labelledby={ariaLabelledBy}
+      className={className}
+      id={id}
+      role="tabpanel"
+      {...other}
+    >
+      {withoutTypes(children, TabButton)}
+    </div>
+  );
+};
+
+/**
+ * This component is a stub, and exists to give a type to the custom Tab button.
+ * It cannot be used as a standalone sub-component. See <Tabs> for where we trigger the render prop.
+ *
+ * Allows for control of the Tab Title contents, for custom tab handling
+ *
+ * ```jsx
+ * <Tab.Button>
+ *     {({active, title}) => (
+ *         <SomeCustomComponent isActive={active} title={title} />
+ *     )}
+ * </Tab.Button>
+ * ```
+ */
+const TabButton = (props: TabButtonProps) => {
+  return <div />;
+};
+
+Tab.displayName = 'Tab';
+Tab.Button = TabButton;
+TabButton.displayName = 'Tab.Button';
+
 Tabs.displayName = 'Tabs';
+Tabs.Tab = Tab;

@@ -200,8 +200,8 @@ const AccordionButton = ({
           {...other}
         >
           <Heading
+            as={headingAs || contextHeadingAs}
             className={headingClassName}
-            size={headingAs || contextHeadingAs}
           >
             {children}
           </Heading>

@@ -23,14 +23,6 @@ type SkeletonProps = BaseProps & {
  * `import {Skeleton} from "@chanzuckerberg/eds";`
  *
  * Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout
- *
- * Examples:
- *
- * For text, Use `Skeleton.Text` and specify the height and the width (for example in 'ch' units).
- *
- * For circular objects, use `Skeleton.Circle` and specify the width (which is the same as the height).
- *
- * For rectangular objects, just use `Skeleton` and specify the width and height.
  */
 export const Skeleton = ({
   className,
@@ -111,6 +103,4 @@ TextSkeleton.displayName = 'Skeleton.Text';
 CircleSkeleton.displayName = 'Skeleton.Circle';
 
 Skeleton.Text = TextSkeleton;
-/** @deprecated Use `Skeleton` instead */
-Skeleton.Rect = Skeleton;
 Skeleton.Circle = CircleSkeleton;

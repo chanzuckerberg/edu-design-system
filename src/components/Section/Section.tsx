@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import type { HeadingElement, HeadingSize } from '../Heading';
+import type { HeadingElement } from '../Heading';
 import Heading from '../Heading';
 import styles from './Section.module.css';
 export interface Props {
@@ -28,12 +28,10 @@ export interface Props {
   overline?: ReactNode;
   /**
    * "as" prop, passed to Heading Component
+   *
+   * **Default is `"h2"`.
    */
   headingAs?: HeadingElement;
-  /**
-   * "size" prop, passed to Heading Component
-   */
-  headingSize?: HeadingSize;
   /**
    * Right slot - an area to put right-aligned content after section title
    */
@@ -56,18 +54,13 @@ export interface Props {
  * `import {Section} from "@chanzuckerberg/eds";`
  *
  * Section component contains a section header and body.
- *
- * The Heading component requires a value for "size", so this headingAs prop is provided
- * a default value of "h2" to allow it to remain optional on Section component.
- * @deprecated
  */
 export const Section = ({
   align,
   children,
   className,
   description,
-  headingAs,
-  headingSize = 'h2',
+  headingAs = 'h2',
   overline,
   right,
   title,
@@ -95,11 +88,7 @@ export const Section = ({
               {overline && (
                 <div className={styles['section__overline']}>{overline}</div>
               )}
-              <Heading
-                as={headingAs}
-                className={styles['section__title']}
-                size={headingSize}
-              >
+              <Heading as={headingAs} className={styles['section__title']}>
                 {title}
                 {titleAfter && (
                   <span className={styles['section__title-after']}>

@@ -41,8 +41,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-  font: var(--eds-theme-typography-tag);
 }
 
 /**
@@ -70,12 +68,6 @@
   --tag-primary-color: var(--eds-theme-color-text-utility-warning);
   --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
   --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
-}
-
-:where(.tag--yield) {
-  --tag-primary-color: var(--eds-theme-color-text-grade-revise);
-  --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
-  --tag-outline-color: var(--eds-theme-color-border-grade-revise-default);
 }
 
 :where(.tag--brand) {

@@ -168,12 +168,12 @@ exports[`<Tabs /> Centered story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--size-h3 mb-6"
+          class="heading heading--headline-sm mb-6"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            
@@ -463,12 +463,12 @@ exports[`<Tabs /> CustomTabs story renders snapshot 1`] = `
           class="max-w-xl"
         >
           <h3
-            class="heading heading--size-h3 mb-6"
+            class="heading heading--headline-sm mb-6"
           >
             Tab 1
           </h3>
           <p
-            class="text text--body"
+            class="text text--body-md"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
              
@@ -648,12 +648,12 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--size-h3 mb-6"
+          class="heading heading--headline-sm mb-6"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            
