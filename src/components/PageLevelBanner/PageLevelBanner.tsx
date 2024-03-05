@@ -120,12 +120,16 @@ export const PageLevelBanner = ({
 
       <div>
         {title && (
-          <Heading as={titleAs} size="title-md" variant={variant}>
+          <Heading as={titleAs} preset="title-md">
             {title}
           </Heading>
         )}
         {description && (
-          <Text as={descriptionAs} size="sm" variant="neutral-medium">
+          <Text
+            as={descriptionAs}
+            className={styles['banner__description']}
+            preset="body-sm"
+          >
             {description}
           </Text>
         )}

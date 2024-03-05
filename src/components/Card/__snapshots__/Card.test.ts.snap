@@ -81,7 +81,7 @@ exports[`<Card /> Horizontal story renders snapshot 1`] = `
   class="p-8"
 >
   <article
-    class="card card--horizontal"
+    class="card flex-row"
   >
     <header
       class="card__header"

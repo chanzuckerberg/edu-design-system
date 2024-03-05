@@ -4,7 +4,7 @@ import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './InlineNotification.module.css';
 
-export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
+export const VARIANTS = ['brand', 'success', 'warning'] as const;
 
 const variantToIconAssetsMap: {
   [key in Variant]: {
@@ -12,7 +12,7 @@ const variantToIconAssetsMap: {
       IconName,
       'info' | 'check-circle' | 'warning' | 'error-inverted'
     >;
-    title: 'info' | 'success' | 'alert' | 'yield';
+    title: 'info' | 'success' | 'alert';
   };
 } = {
   brand: {
@@ -27,10 +27,6 @@ const variantToIconAssetsMap: {
     icon: 'warning',
     title: 'alert',
   },
-  yield: {
-    icon: 'error-inverted',
-    title: 'yield',
-  },
 };
 
 type Variant = (typeof VARIANTS)[number];
@@ -40,16 +36,6 @@ type Props = {
    * CSS class names that can be appended to the component for styling.
    */
   className?: string;
-  /**
-   * Indicates an inactive state for the full width variant where the icon
-   * will be hidden and the text will be lighter.
-   * Overrides variant prop and isStrong prop as a result.
-   * Only to be used with isFullWidth.
-   *
-   * **Deprecated**. This will be removed in the next major version.
-   * @deprecated
-   */
-  inactive?: boolean;
   /**
    * Toggles notification that fills the full width of its container.
    */
@@ -64,8 +50,6 @@ type Props = {
   text: React.ReactNode;
   /**
    * The color variant of the tag.
-   *
-   * **Deprecated**. "Yield" will be removed in the next major version.
    */
   variant: Variant;
 };
@@ -77,38 +61,28 @@ type Props = {
  */
 export const InlineNotification = ({
   className,
-  inactive,
   isFullWidth,
   isStrong,
   text,
   variant,
   ...other
 }: Props) => {
-  if (!isFullWidth && inactive && process.env.NODE_ENV !== 'production') {
-    throw new Error('inactive prop must be used with isFullWidth prop.');
-  }
   const subtle = !isStrong;
   const componentClassName = clsx(
     styles['inline-notification'],
     styles[`inline-notification--${variant}`],
     subtle && styles['inline-notification--subtle'],
     isFullWidth && styles[`inline-notification--full-width`],
-    isFullWidth &&
-      (subtle || inactive) &&
-      styles[`inline-notification--full-width-subtle`],
+    isFullWidth && subtle && styles[`inline-notification--full-width-subtle`],
     className,
   );
 
   const iconClassName = clsx(
     styles['inline-notification__icon'],
     styles[`inline-notification__icon--${variant}`],
-    inactive && styles[`inline-notification__icon--inactive`],
   );
 
-  const textClassName = clsx(
-    styles[`inline-notification__text`],
-    inactive && styles[`inline-notification__text--inactive`],
-  );
+  const textClassName = clsx(styles[`inline-notification__text`]);
 
   return (
     <div className={componentClassName} {...other}>
@@ -119,11 +93,7 @@ export const InlineNotification = ({
         size="1.5rem"
         title={variantToIconAssetsMap[variant].title}
       />
-      <Text
-        as="span"
-        className={textClassName}
-        variant={variant === 'yield' ? 'neutral-medium' : variant}
-      >
+      <Text as="span" className={textClassName} preset="label-md-subtle">
         {text}
       </Text>
     </div>

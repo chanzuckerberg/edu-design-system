@@ -15,17 +15,9 @@ export type LinkProps = LinkHTMLElementProps & {
    * The link contents or label.
    */
   children: ReactNode;
-  /**
-   * Toggles link that fills the full width of its container
-   * @deprecated
-   */
-  fullWidth?: boolean;
   'data-testid'?: string;
   /**
    * Link size inherits from the surrounding text.
-   *
-   * **Deprecated**. This will be removed in the next major version.
-   * @deprecated
    */
   size?: Extract<Size, 'sm' | 'md' | 'lg'>;
 } & VariantStatus;
@@ -48,7 +40,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       variant = 'link',
       status = 'brand',
       size = 'lg',
-      fullWidth,
       ...rest
     },
     ref,
@@ -73,8 +64,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       status === 'success' && styles['link--success'],
       status === 'warning' && styles['link--warning'],
       status === 'error' && styles['link--error'],
-      // Other options
-      fullWidth && styles['link--full-width'],
       className,
     );
 

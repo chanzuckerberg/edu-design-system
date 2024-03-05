@@ -26,7 +26,7 @@ exports[`<Section /> Center story renders snapshot 1`] = `
             </p>
           </div>
           <h2
-            class="heading heading--size-h2 section__title"
+            class="heading heading--headline-md section__title"
           >
             Section Title
           </h2>
@@ -34,7 +34,7 @@ exports[`<Section /> Center story renders snapshot 1`] = `
             class="section__description"
           >
             <p
-              class="text text--sm section__text"
+              class="text text--body-xs"
             >
               This is a description of what the section is
             </p>
@@ -68,7 +68,7 @@ exports[`<Section /> Default story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="heading heading--size-h2 section__title"
+            class="heading heading--headline-md section__title"
           >
             Section Title
           </h2>
@@ -101,7 +101,7 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="heading heading--size-h2 section__title"
+            class="heading heading--headline-md section__title"
           >
             Section Title
           </h2>
@@ -109,7 +109,7 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
             class="section__description"
           >
             <p
-              class="text text--sm section__text"
+              class="text text--body-xs"
             >
               This is a description of what the section is
             </p>
@@ -152,7 +152,7 @@ exports[`<Section /> WithOverline story renders snapshot 1`] = `
             </p>
           </div>
           <h2
-            class="heading heading--size-h2 section__title"
+            class="heading heading--headline-md section__title"
           >
             Section Title
           </h2>
@@ -185,7 +185,7 @@ exports[`<Section /> WithRight story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="heading heading--size-h2 section__title"
+            class="heading heading--headline-md section__title"
           >
             Section Title
           </h2>
@@ -228,7 +228,7 @@ exports[`<Section /> WithTitleAfter story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="heading heading--size-h2 section__title"
+            class="heading heading--headline-md section__title"
           >
             Section Title
             <span
@@ -303,7 +303,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h4
-            class="heading heading--size-h4 section__title"
+            class="heading heading--title-md section__title"
           >
             Section Title
           </h4>

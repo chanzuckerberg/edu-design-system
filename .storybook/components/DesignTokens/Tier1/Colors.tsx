@@ -1,6 +1,6 @@
 import React from 'react';
 import '../DesignTokens.css';
-import { Section } from '../../../../src';
+import Section from '../../../../src/components/Section';
 import filterTokens from '../../../util/filterTokens';
 import { ColorList } from '../../ColorList/ColorList';
 

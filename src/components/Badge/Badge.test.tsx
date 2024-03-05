@@ -34,7 +34,7 @@ describe('<Badge />', () => {
           <Badge.Icon />
         </Badge>,
       );
-    }).toThrow(/Name or Icon must be passed to the Badge sub-component/);
+    }).toThrow(/Icon must be passed to the Badge sub-component/);
     consoleErrorMock.mockRestore();
   });
 });

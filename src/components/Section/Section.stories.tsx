@@ -5,7 +5,6 @@ import { Section } from './Section';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
-import styles from './Section.stories.module.css';
 
 export default {
   title: 'Components/Section',
@@ -34,10 +33,10 @@ export const Default: StoryObj<Args> = {
 export const Center: StoryObj<Args> = {
   args: {
     align: 'center',
-    overline: <Text size="overline">Overline above title</Text>,
+    overline: <Text preset="overline">Overline above title</Text>,
     title: 'Section Title',
     description: (
-      <Text as="p" className={styles['section__text']} size="sm">
+      <Text as="p" preset="body-xs">
         This is a description of what the section is
       </Text>
     ),
@@ -48,7 +47,7 @@ export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
     description: (
-      <Text as="p" className={styles['section__text']} size="sm">
+      <Text as="p" preset="body-xs">
         This is a description of what the section is
       </Text>
     ),
@@ -57,7 +56,7 @@ export const WithDescription: StoryObj<Args> = {
 
 export const WithOverline: StoryObj<Args> = {
   args: {
-    overline: <Text size="overline">Overline above title</Text>,
+    overline: <Text preset="overline">Overline above title</Text>,
     title: 'Section Title',
   },
 };
@@ -84,7 +83,6 @@ export const WithTitleBefore: StoryObj<Args> = {
   args: {
     titleBefore: HelpIcon,
     title: 'Section Title',
-    headingSize: 'h4',
     headingAs: 'h4',
   },
 };

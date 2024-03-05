@@ -295,7 +295,7 @@ export const WithHighlightedContent: Story = {
             onChange={({ target }) => setSliderValue(Number(target.value))}
             value={sliderValue}
           />
-          <div className="text-h1">
+          <Text as="span" preset="body-xl">
             {moodData.map((mood, index) => {
               return (
                 sliderValue === mood.value && (
@@ -303,7 +303,7 @@ export const WithHighlightedContent: Story = {
                 )
               );
             })}
-          </div>
+          </Text>
         </div>
         <Text className="py-3 text-center" id="mood-description">
           Current mood:{' '}
@@ -340,7 +340,7 @@ export const WithVisualLabel: Story = {
             id="slider-label"
             text="Mood Slider"
           />
-          <div className="w-1/2 py-4 text-center text-h1">
+          <Text as="span" className="w-1/2 py-4 text-center" preset="body-xl">
             {moodData.map((mood) => {
               return (
                 sliderValue === mood.value && (
@@ -348,7 +348,7 @@ export const WithVisualLabel: Story = {
                 )
               );
             })}
-          </div>
+          </Text>
           <Slider
             aria-label="Mood Slider"
             aria-labelledby="slider-label"
@@ -383,7 +383,11 @@ export const WithMultipleVisualLabels: Story = {
             id="slider-label"
             text="Mood Slider"
           />
-          <div className="flex w-1/2 justify-between py-4 text-center text-h1">
+          <Text
+            as="span"
+            className="flex w-1/2 justify-between py-4 text-center"
+            preset="body-xl"
+          >
             {moodData.map((mood, index) => {
               return (
                 <div
@@ -398,7 +402,7 @@ export const WithMultipleVisualLabels: Story = {
                 </div>
               );
             })}
-          </div>
+          </Text>
           <Slider
             aria-label="Mood Slider"
             aria-labelledby="slider-label"

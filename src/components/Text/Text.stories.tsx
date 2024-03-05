@@ -102,26 +102,15 @@ export const UsingColorTokens: Story = {
       <Text {...args} className="text-utility-warning" preset="body-xl">
         using <code>text-utility-warning</code> utility class
       </Text>
-      <Text
-        {...args}
-        className="text-utility-success"
-        preset="body-lg"
-        weight="bold"
-      >
+      <Text {...args} className="text-utility-success" preset="body-lg">
         using <code>text-utility-success</code> utility class
       </Text>
-      <Text
-        {...args}
-        className="text-utility-error"
-        preset="body-md"
-        variant="white"
-      >
+      <Text {...args} className="text-utility-error" preset="body-md">
         using <code>text-utility-error</code> utility class
       </Text>
       <Text
+        className="text-[var(--eds-theme-color-text-utility-success)]"
         preset="body-sm"
-        size="callout"
-        style={{ color: 'var(--eds-theme-color-text-utility-success)' }}
       >
         using inline color
       </Text>

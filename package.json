@@ -1,15 +1,13 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "13.12.0",
+  "version": "14.0.0",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
+  "type": "commonjs",
   "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
-    },
+    ".": "./lib/index.js",
     "./index.css": "./lib/index.css",
     "./fonts.css": "./lib/tokens/fonts.css",
     "./tailwind.config": "./tailwind.config.ts"
@@ -40,9 +38,8 @@
     "eds-init-theme": "bin/eds-init.js"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:declarations && yarn build:js && yarn copy-fonts-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
-    "build:declarations": "tsc --emitDeclarationOnly --project tsconfig.build.json",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist",
     "build:js": "rollup --config",
     "build:storybook": "storybook build -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",

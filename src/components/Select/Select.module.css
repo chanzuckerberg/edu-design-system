@@ -12,18 +12,6 @@
 }
 
 /**
- * Compact variant.
- * TODO: remove treatment for compact, as it only adjusts the component width, not its overall padding
- */
-.select--compact {
-  width: min-content;
-}
-
-.select-button--compact {
-  padding: var(--eds-size-half);
-}
-
-/**
  * Label on top of the select trigger button to label the select field.
  */
 .select__label {

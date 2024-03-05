@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Section } from '../../../../src';
+import Grid from '../../../../src/components/Grid';
+import Section from '../../../../src/components/Section';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 

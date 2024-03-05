@@ -6,7 +6,6 @@ import { Tabs } from './Tabs';
 import { chromaticViewports } from '../../util/viewports';
 import Heading from '../Heading';
 import Icon, { type IconName } from '../Icon';
-import Tab from '../Tab';
 import Text from '../Text';
 
 export default {
@@ -15,13 +14,12 @@ export default {
   parameters: {
     badges: ['1.0'],
   },
-  subcomponents: { Tabs },
   args: {
     children: (
       <>
-        <Tab title="Tab Title 1">
+        <Tabs.Tab title="Tab Title 1">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 1
             </Heading>
             <Text>
@@ -31,11 +29,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 2">
+        <Tabs.Tab title="Tab Title 2">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 2
             </Heading>
             <Text>
@@ -45,11 +43,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 3">
+        <Tabs.Tab title="Tab Title 3">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 3
             </Heading>
             <Text>
@@ -59,11 +57,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 4">
+        <Tabs.Tab title="Tab Title 4">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 4
             </Heading>
             <Text>
@@ -73,11 +71,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 5">
+        <Tabs.Tab title="Tab Title 5">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 5
             </Heading>
             <Text>
@@ -87,11 +85,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 6">
+        <Tabs.Tab title="Tab Title 6">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 6
             </Heading>
             <Text>
@@ -101,11 +99,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 7">
+        <Tabs.Tab title="Tab Title 7">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 7
             </Heading>
             <Text>
@@ -115,11 +113,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 8">
+        <Tabs.Tab title="Tab Title 8">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 8
             </Heading>
             <Text>
@@ -129,11 +127,11 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 9">
+        <Tabs.Tab title="Tab Title 9">
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 9
             </Heading>
             <Text>
@@ -143,7 +141,7 @@ export default {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
       </>
     ),
   },
@@ -223,7 +221,7 @@ const IconTab = ({
     <div className="p-3 text-center">
       <Icon name={icon} purpose="decorative" size="1rem" />
     </div>
-    <Text size="caption-lg">{`${isActive ? '●' : '◦'} ${title}`}</Text>
+    <Text preset="caption-lg">{`${isActive ? '●' : '◦'} ${title}`}</Text>
   </div>
 );
 
@@ -234,8 +232,8 @@ export const CustomTabs: StoryObj<Args> = {
       source: {
         code: `
 <Tabs>
-  <Tab title="Tab Title 1">
-    <Tab.Button>
+  <Tabs.Tab title="Tab Title 1">
+    <Tabs.Tab.Button>
       {({ active, title }) => (
         <IconTab
           icon={active ? 'person' : 'people'}
@@ -243,7 +241,7 @@ export const CustomTabs: StoryObj<Args> = {
           title={title}
         />
       )}
-    </Tab.Button>
+    </Tabs.Tab.Button>
     <div className="max-w-xl">
       <Heading className="mb-6" size="h3">
         Tab 1
@@ -255,10 +253,10 @@ export const CustomTabs: StoryObj<Args> = {
         nisi ut aliquip ex{' '}
       </Text>
     </div>
-  </Tab>
+  </Tabs.Tab>
 
-  <Tab title="Tab Title 2">
-    <Tab.Button>
+  <Tabs.Tab title="Tab Title 2">
+    <Tabs.Tab.Button>
       {({ active, title }) => (
         <IconTab
           icon={active ? 'person' : 'people'}
@@ -266,7 +264,7 @@ export const CustomTabs: StoryObj<Args> = {
           title={title}
         />
       )}
-    </Tab.Button>
+    </Tabs.Tab.Button>
     <div className="max-w-xl">
       <Heading className="mb-6" size="h3">
         Tab 2
@@ -278,10 +276,10 @@ export const CustomTabs: StoryObj<Args> = {
         nisi ut aliquip ex{' '}
       </Text>
     </div>
-  </Tab>
+  </Tabs.Tab>
 
-  <Tab title="Tab Title 3">
-    <Tab.Button>
+  <Tabs.Tab title="Tab Title 3">
+    <Tabs.Tab.Button>
       {({ active, title }) => (
         <IconTab
           icon={active ? 'person' : 'people'}
@@ -289,7 +287,7 @@ export const CustomTabs: StoryObj<Args> = {
           title={title}
         />
       )}
-    </Tab.Button>
+    </Tabs.Tab.Button>
     <div className="max-w-xl">
       <Heading className="mb-6" size="h3">
         Tab 3
@@ -301,10 +299,10 @@ export const CustomTabs: StoryObj<Args> = {
         nisi ut aliquip ex{' '}
       </Text>
     </div>
-  </Tab>
+  </Tabs.Tab>
 
-  <Tab title="Tab Title 4">
-    <Tab.Button>
+  <Tabs.Tab title="Tab Title 4">
+    <Tabs.Tab.Button>
       {({ active, title }) => (
         <IconTab
           icon={active ? 'person' : 'people'}
@@ -312,7 +310,7 @@ export const CustomTabs: StoryObj<Args> = {
           title={title}
         />
       )}
-    </Tab.Button>
+    </Tabs.Tab.Button>
     <div className="max-w-xl">
       <Heading className="mb-6" size="h3">
         Tab 4
@@ -324,10 +322,10 @@ export const CustomTabs: StoryObj<Args> = {
         nisi ut aliquip ex{' '}
       </Text>
     </div>
-  </Tab>
+  </Tabs.Tab>
 
-  <Tab title="Tab Title 5">
-    <Tab.Button>
+  <Tabs.Tab title="Tab Title 5">
+    <Tabs.Tab.Button>
       {({ active, title }) => (
         <IconTab
           icon={active ? 'person' : 'people'}
@@ -335,7 +333,7 @@ export const CustomTabs: StoryObj<Args> = {
           title={title}
         />
       )}
-    </Tab.Button>
+    </Tabs.Tab.Button>
     <div className="max-w-xl">
       <Heading className="mb-6" size="h3">
         Tab 5
@@ -347,10 +345,10 @@ export const CustomTabs: StoryObj<Args> = {
         nisi ut aliquip ex{' '}
       </Text>
     </div>
-  </Tab>
+  </Tabs.Tab>
 
-  <Tab title="Tab Title 6">
-    <Tab.Button>
+  <Tabs.Tab title="Tab Title 6">
+    <Tabs.Tab.Button>
       {({ active, title }) => (
         <IconTab
           icon={active ? 'person' : 'people'}
@@ -358,7 +356,7 @@ export const CustomTabs: StoryObj<Args> = {
           title={title}
         />
       )}
-    </Tab.Button>
+    </Tabs.Tab.Button>
     <div className="max-w-xl">
       <Heading className="mb-6" size="h3">
         Tab 6
@@ -370,7 +368,7 @@ export const CustomTabs: StoryObj<Args> = {
         nisi ut aliquip ex{' '}
       </Text>
     </div>
-  </Tab>
+  </Tabs.Tab>
 </Tabs>
         `,
       },
@@ -379,8 +377,8 @@ export const CustomTabs: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <Tab title="Tab Title 1">
-          <Tab.Button>
+        <Tabs.Tab title="Tab Title 1">
+          <Tabs.Tab.Button>
             {({ active, title }) => (
               <IconTab
                 icon={active ? 'person' : 'people'}
@@ -388,9 +386,9 @@ export const CustomTabs: StoryObj<Args> = {
                 title={title}
               />
             )}
-          </Tab.Button>
+          </Tabs.Tab.Button>
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 1
             </Heading>
             <Text>
@@ -400,10 +398,10 @@ export const CustomTabs: StoryObj<Args> = {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 2">
-          <Tab.Button>
+        <Tabs.Tab title="Tab Title 2">
+          <Tabs.Tab.Button>
             {({ active, title }) => (
               <IconTab
                 icon={active ? 'person' : 'people'}
@@ -411,9 +409,9 @@ export const CustomTabs: StoryObj<Args> = {
                 title={title}
               />
             )}
-          </Tab.Button>
+          </Tabs.Tab.Button>
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 2
             </Heading>
             <Text>
@@ -423,10 +421,10 @@ export const CustomTabs: StoryObj<Args> = {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 3">
-          <Tab.Button>
+        <Tabs.Tab title="Tab Title 3">
+          <Tabs.Tab.Button>
             {({ active, title }) => (
               <IconTab
                 icon={active ? 'person' : 'people'}
@@ -434,9 +432,9 @@ export const CustomTabs: StoryObj<Args> = {
                 title={title}
               />
             )}
-          </Tab.Button>
+          </Tabs.Tab.Button>
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 3
             </Heading>
             <Text>
@@ -446,10 +444,10 @@ export const CustomTabs: StoryObj<Args> = {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 4">
-          <Tab.Button>
+        <Tabs.Tab title="Tab Title 4">
+          <Tabs.Tab.Button>
             {({ active, title }) => (
               <IconTab
                 icon={active ? 'person' : 'people'}
@@ -457,9 +455,9 @@ export const CustomTabs: StoryObj<Args> = {
                 title={title}
               />
             )}
-          </Tab.Button>
+          </Tabs.Tab.Button>
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 4
             </Heading>
             <Text>
@@ -469,10 +467,10 @@ export const CustomTabs: StoryObj<Args> = {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 5">
-          <Tab.Button>
+        <Tabs.Tab title="Tab Title 5">
+          <Tabs.Tab.Button>
             {({ active, title }) => (
               <IconTab
                 icon={active ? 'person' : 'people'}
@@ -480,9 +478,9 @@ export const CustomTabs: StoryObj<Args> = {
                 title={title}
               />
             )}
-          </Tab.Button>
+          </Tabs.Tab.Button>
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 5
             </Heading>
             <Text>
@@ -492,10 +490,10 @@ export const CustomTabs: StoryObj<Args> = {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
 
-        <Tab title="Tab Title 6">
-          <Tab.Button>
+        <Tabs.Tab title="Tab Title 6">
+          <Tabs.Tab.Button>
             {({ active, title }) => (
               <IconTab
                 icon={active ? 'person' : 'people'}
@@ -503,9 +501,9 @@ export const CustomTabs: StoryObj<Args> = {
                 title={title}
               />
             )}
-          </Tab.Button>
+          </Tabs.Tab.Button>
           <div className="max-w-xl">
-            <Heading className="mb-6" size="h3">
+            <Heading as="h3" className="mb-6">
               Tab 6
             </Heading>
             <Text>
@@ -515,7 +513,7 @@ export const CustomTabs: StoryObj<Args> = {
               nisi ut aliquip ex{' '}
             </Text>
           </div>
-        </Tab>
+        </Tabs.Tab>
       </>
     ),
   },

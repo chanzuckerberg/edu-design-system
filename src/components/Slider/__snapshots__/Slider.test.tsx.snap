@@ -61,27 +61,27 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
       class="slider__markers"
     >
       <p
-        class="text text--body text--neutral-medium slider__marker slider__marker--disabled"
+        class="text text--body-md slider__marker slider__marker--disabled"
       >
         1
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker slider__marker--disabled"
+        class="text text--body-md slider__marker slider__marker--disabled"
       >
         2
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker slider__marker--disabled"
+        class="text text--body-md slider__marker slider__marker--disabled"
       >
         3
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker slider__marker--disabled"
+        class="text text--body-md slider__marker slider__marker--disabled"
       >
         4
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker slider__marker--disabled"
+        class="text text--body-md slider__marker slider__marker--disabled"
       >
         5
       </p>
@@ -160,27 +160,27 @@ exports[`<Slider /> GeneratedMarkers story renders snapshot 1`] = `
       class="slider__markers"
     >
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         1
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         2
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         3
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         4
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         5
       </p>
@@ -224,27 +224,27 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
         class="slider__markers"
       >
         <p
-          class="text text--body text--neutral-medium slider__marker"
+          class="text text--body-md slider__marker"
         >
           0
         </p>
         <p
-          class="text text--body text--neutral-medium slider__marker"
+          class="text text--body-md slider__marker"
         >
           2500
         </p>
         <p
-          class="text text--body text--neutral-medium slider__marker"
+          class="text text--body-md slider__marker"
         >
           5000
         </p>
         <p
-          class="text text--body text--neutral-medium slider__marker"
+          class="text text--body-md slider__marker"
         >
           7500
         </p>
         <p
-          class="text text--body text--neutral-medium slider__marker"
+          class="text text--body-md slider__marker"
         >
           10000
         </p>
@@ -286,27 +286,27 @@ exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
       class="slider__markers"
     >
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         1
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         2
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         3
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         4
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         5
       </p>
@@ -347,27 +347,27 @@ exports[`<Slider /> NegativeNonIntegerMarkers story renders snapshot 1`] = `
       class="slider__markers"
     >
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         -1
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         -0.5
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         0
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         0.5
       </p>
       <p
-        class="text text--body text--neutral-medium slider__marker"
+        class="text text--body-md slider__marker"
       >
         1
       </p>
@@ -419,7 +419,7 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
       –
     </button>
     <p
-      class="text text--body"
+      class="text text--body-md"
     >
       0
     </p>
@@ -442,7 +442,7 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
       />
     </div>
     <p
-      class="text text--body"
+      class="text text--body-md"
     >
       100
     </p>
@@ -465,7 +465,7 @@ exports[`<Slider /> UsingInputDisplay story renders snapshot 1`] = `
     class="flex w-full items-center justify-center gap-2"
   >
     <p
-      class="text text--body"
+      class="text text--body-md"
     >
       0
     </p>
@@ -488,7 +488,7 @@ exports[`<Slider /> UsingInputDisplay story renders snapshot 1`] = `
       />
     </div>
     <p
-      class="text text--body"
+      class="text text--body-md"
     >
       100
     </p>
@@ -541,27 +541,27 @@ exports[`<Slider /> WithHighlightedContent story renders snapshot 1`] = `
           class="slider__markers"
         >
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Very Upset
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Upset
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Neutral
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Happy
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Very Happy
           </p>
@@ -570,16 +570,16 @@ exports[`<Slider /> WithHighlightedContent story renders snapshot 1`] = `
           class="slider__thumb-proxy"
         />
       </div>
-      <div
-        class="text-h1"
+      <span
+        class="text text--body-xl"
       >
         <span>
           😐
         </span>
-      </div>
+      </span>
     </div>
     <p
-      class="text text--body py-3 text-center"
+      class="text text--body-md py-3 text-center"
       id="mood-description"
     >
       Current mood:
@@ -609,8 +609,8 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
         Mood Slider
          
       </label>
-      <div
-        class="flex w-1/2 justify-between py-4 text-center text-h1"
+      <span
+        class="text text--body-xl flex w-1/2 justify-between py-4 text-center"
       >
         <div
           class=""
@@ -637,7 +637,7 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
         >
           😍
         </div>
-      </div>
+      </span>
       <div
         class="slider w-1/2"
       >
@@ -658,27 +658,27 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
           class="slider__markers"
         >
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Very Upset
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Upset
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Neutral
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Happy
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Very Happy
           </p>
@@ -707,13 +707,13 @@ exports[`<Slider /> WithVisualLabel story renders snapshot 1`] = `
         Mood Slider
          
       </label>
-      <div
-        class="w-1/2 py-4 text-center text-h1"
+      <span
+        class="text text--body-xl w-1/2 py-4 text-center"
       >
         <span>
           😐
         </span>
-      </div>
+      </span>
       <div
         class="slider w-1/2"
       >
@@ -734,27 +734,27 @@ exports[`<Slider /> WithVisualLabel story renders snapshot 1`] = `
           class="slider__markers"
         >
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Very Upset
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Upset
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Neutral
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Happy
           </p>
           <p
-            class="text text--body text--neutral-medium slider__marker"
+            class="text text--body-md slider__marker"
           >
             Very Happy
           </p>

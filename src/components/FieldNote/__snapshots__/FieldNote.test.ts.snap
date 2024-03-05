@@ -44,7 +44,7 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
     class="max-w-xl"
   >
     <p
-      class="text text--body mb-6"
+      class="text text--body-md mb-6"
     >
       Here is a field note that involves:
     </p>

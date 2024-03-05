@@ -10,7 +10,6 @@ import {
   Link,
   Select,
   Tabs,
-  Tab,
   Text,
   Tooltip,
 } from '../../../src';
@@ -79,8 +78,8 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
           src={PlaceholderImage}
         />
         <div className="flex flex-col items-center gap-6">
-          <Heading size="h1">Application</Heading>
-          <Heading size="h2">Sign in</Heading>
+          <Heading as="h1">Application</Heading>
+          <Heading as="h2">Sign in</Heading>
           <Text>Remember to use your school email to sign in:</Text>
         </div>
         <img
@@ -153,9 +152,9 @@ const StudentTab = ({
     )}
   >
     <div className={clsx(styles['watch-page__avatar'], 'h-10 w-10')}>
-      <Text size="sm">{studentName.slice(0, 1)}</Text>
+      <Text preset="body-sm">{studentName.slice(0, 1)}</Text>
     </div>
-    <Text className="!mt-2 truncate" size="xs">
+    <Text className="!mt-2 truncate" preset="body-xs">
       {studentName}
     </Text>
   </div>
@@ -195,7 +194,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           </Button>
           <div>
             <Text className="mb-2">Playing reflections in response to:</Text>
-            <Heading as="h1" size="h3">
+            <Heading as="h1" preset="headline-sm">
               What's something in your life, big or small, that you're proud of?
               Why are you proud of it?
             </Heading>
@@ -221,26 +220,26 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           </div>
 
           <Tabs className="mt-4">
-            <Tab title="All (3)">
+            <Tabs.Tab title="All (3)">
               <div className="flex">
                 <StudentTab active studentName="Mikaela" />
                 <StudentTab studentName="Cesar" />
                 <StudentTab studentName="Truman" />
               </div>
-            </Tab>
+            </Tabs.Tab>
 
-            <Tab title="New (1)">
+            <Tabs.Tab title="New (1)">
               <div className="flex">
                 <StudentTab active studentName="Mikaela" />
               </div>
-            </Tab>
+            </Tabs.Tab>
 
-            <Tab title="Open (2)">
+            <Tabs.Tab title="Open (2)">
               <div className="flex">
                 <StudentTab studentName="Cesar" />
                 <StudentTab studentName="Truman" />
               </div>
-            </Tab>
+            </Tabs.Tab>
           </Tabs>
         </div>
 
@@ -250,12 +249,12 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               <div
                 className={clsx(styles['watch-page__avatar'], 'mr-2 h-9 w-9')}
               >
-                <Text size="sm">M</Text>
+                <Text preset="body-sm">M</Text>
               </div>
 
               <div>
-                <Text size="sm">Mikaela</Text>
-                <Text size="xs">3d</Text>
+                <Text preset="body-sm">Mikaela</Text>
+                <Text preset="body-xs">3d</Text>
               </div>
             </div>
             <img
@@ -280,7 +279,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <div className={styles['watch-page__response']}>
               <Label htmlFor={responseTextareaId} text="Respond to Mikaela" />
               <textarea
-                className={clsx(styles['watch-page__textarea'], 'h-[9.25rem')}
+                className={clsx(styles['watch-page__textarea'], 'h-[9.25rem]')}
                 id={responseTextareaId}
                 onChange={handleTextareaChange}
                 placeholder="Type your response to Mikaela"
@@ -313,10 +312,10 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             'm-4 h-[6.25rem] w-[6.25rem]',
           )}
         >
-          <Text size="lg">M</Text>
+          <Text preset="body-lg">M</Text>
         </div>
         <Link className="mb-4">
-          <Heading as="h2" size="h3">
+          <Heading as="h2" preset="headline-sm">
             Mikaela
           </Heading>
         </Link>
@@ -331,22 +330,22 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <thead>
               <tr>
                 <th>
-                  <Text size="xs">Questions received</Text>
+                  <Text preset="body-xs">Questions received</Text>
                 </th>
                 <th>
-                  <Text size="xs">Reflections submitted</Text>
+                  <Text preset="body-xs">Reflections submitted</Text>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <Text className="text-center" size="lg">
+                  <Text className="text-center" preset="body-lg">
                     10
                   </Text>
                 </td>
                 <td>
-                  <Text className="text-center" size="lg">
+                  <Text className="text-center" preset="body-lg">
                     8
                   </Text>
                 </td>
@@ -356,7 +355,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__teacher-notes-heading']}>
-          <Text size="xs">Your personal notes</Text>
+          <Text preset="body-xs">Your personal notes</Text>
           <Tooltip
             childNotInteractive
             text={

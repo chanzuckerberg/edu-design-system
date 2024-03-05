@@ -78,13 +78,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   required?: boolean;
   /**
-   * String for the required label to add additional information if needed. Currently not being used.
-   *
-   * **Deprecated**. This will be removed in the next major version.
-   * @deprecated
-   */
-  requiredLabel?: string;
-  /**
    * Title attribute on input
    */
   title?: string;
@@ -233,7 +226,6 @@ export const InputField: InputFieldType = forwardRef(
                 as="span"
                 className={requiredTextClassName}
                 preset="body-sm"
-                size="sm"
               >
                 Required
               </Text>
