@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.12.0...v14.0.0) (2024-03-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove Grid and Section from exports (#1876)
+* **Text:** remove deprecated props (#1873)
+* **Heading:** remove deprecated props and refactor usages (#1872)
+* **Link:** remove and reset deprecated props (#1871)
+* **Select:** remove deprecated props (#1870)
+* **Label:** remove deprecated props (#1868)
+* **InputField:** remove unused prop requiredLabel (#1869)
+* **InlineNotification:** remove deprecated props from component (#1867)
+* **Card:** deprecate orientation prop (#1866)
+* **Badge:** deprecate name prop on component (#1865)
+* **Skeleton:** deprecate .Rect subcomponent mapping (#1864)
+* **Tag:** remove deprecated props and update API (#1862)
+* **Tooltip:** remove deprecated props (#1861)
+* **Tabs:** combine Tab sub-component into Tabs
+* remove deprecated components
+* output a single, cjs build
+
+### Features
+
+* **Badge:** deprecate name prop on component ([#1865](https://github.com/chanzuckerberg/edu-design-system/issues/1865)) ([cff5d5e](https://github.com/chanzuckerberg/edu-design-system/commit/cff5d5e2d88e5414a821756db5b31e4fe1c4873e))
+* **Card:** deprecate orientation prop ([#1866](https://github.com/chanzuckerberg/edu-design-system/issues/1866)) ([bb160c1](https://github.com/chanzuckerberg/edu-design-system/commit/bb160c14e3a8a26ec2d4ff24a31b6d2f9fca3a98))
+* **Heading:** remove deprecated props and refactor usages ([#1872](https://github.com/chanzuckerberg/edu-design-system/issues/1872)) ([a5d6f76](https://github.com/chanzuckerberg/edu-design-system/commit/a5d6f76a333426ef84a68febf337cec5cdb8d1b9))
+* **InlineNotification:** remove deprecated props from component ([#1867](https://github.com/chanzuckerberg/edu-design-system/issues/1867)) ([efc6b43](https://github.com/chanzuckerberg/edu-design-system/commit/efc6b430dec5440789e35382707b574f5372e30f))
+* **InputField:** remove unused prop requiredLabel ([#1869](https://github.com/chanzuckerberg/edu-design-system/issues/1869)) ([f9d73dd](https://github.com/chanzuckerberg/edu-design-system/commit/f9d73dd2806448a01a4d452fa7bcfc4347a56309))
+* **Label:** remove deprecated props ([#1868](https://github.com/chanzuckerberg/edu-design-system/issues/1868)) ([907cc39](https://github.com/chanzuckerberg/edu-design-system/commit/907cc3966be4e519050c2a16c6f0cfb12509308e))
+* **Link:** remove and reset deprecated props ([#1871](https://github.com/chanzuckerberg/edu-design-system/issues/1871)) ([552945a](https://github.com/chanzuckerberg/edu-design-system/commit/552945a6ee161f0359f9db48123dbb94bec704ba))
+* remove deprecated components ([2538aa6](https://github.com/chanzuckerberg/edu-design-system/commit/2538aa67dc0605210812c9597ce1548bba41070f))
+* remove Grid and Section from exports ([#1876](https://github.com/chanzuckerberg/edu-design-system/issues/1876)) ([a0ec79a](https://github.com/chanzuckerberg/edu-design-system/commit/a0ec79a017bacb70f8c9043c3dcb72eb4da2ec31))
+* **Select:** remove deprecated props ([#1870](https://github.com/chanzuckerberg/edu-design-system/issues/1870)) ([e0ad463](https://github.com/chanzuckerberg/edu-design-system/commit/e0ad4632aacee1d107e658c977c77a5e733843d1))
+* **Skeleton:** deprecate .Rect subcomponent mapping ([#1864](https://github.com/chanzuckerberg/edu-design-system/issues/1864)) ([9d3ffec](https://github.com/chanzuckerberg/edu-design-system/commit/9d3ffecbf8a117a6b6534c2076275f4f1ea5e797))
+* **Tabs:** combine Tab sub-component into Tabs ([0479863](https://github.com/chanzuckerberg/edu-design-system/commit/0479863fd27a362aa16db701d96028c2f9a33b9d))
+* **Tag:** remove deprecated props and update API ([#1862](https://github.com/chanzuckerberg/edu-design-system/issues/1862)) ([dbfbaa3](https://github.com/chanzuckerberg/edu-design-system/commit/dbfbaa3c04369c7c144d724f3f2ff644b0130a33))
+* **Text:** remove deprecated props ([#1873](https://github.com/chanzuckerberg/edu-design-system/issues/1873)) ([13fbc18](https://github.com/chanzuckerberg/edu-design-system/commit/13fbc1808e3cb742ddabc33faa1b30516cde275c))
+* **Tooltip:** remove deprecated props ([#1861](https://github.com/chanzuckerberg/edu-design-system/issues/1861)) ([d444607](https://github.com/chanzuckerberg/edu-design-system/commit/d444607ad42bf6779d14fdf1b7f76d7ad316a285))
+
+
+### Bug Fixes
+
+* output a single, cjs build ([523130e](https://github.com/chanzuckerberg/edu-design-system/commit/523130ed29e411e6ef5d9add27f8b78c2736f88a))
+* remove unnecessary type definitions script ([be341c0](https://github.com/chanzuckerberg/edu-design-system/commit/be341c00d6114afbd06191053fa4411676c60eb2))
+
 ## [13.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.11.0...v13.12.0) (2024-03-04)
 
 
