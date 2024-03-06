@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import type { IconName } from '../Icon';
 import Icon from '../Icon';
 import Text from '../Text';
@@ -34,7 +35,7 @@ type Props = {
   /**
    * The text contents of the tag, nested inside the component, in addition to the icon.
    */
-  text?: React.ReactNode;
+  text?: ReactNode;
   /**
    * Adds an outline for the tag.
    *

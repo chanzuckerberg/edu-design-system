@@ -1,6 +1,7 @@
 import type { Options } from '@popperjs/core';
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import styles from './PopoverContainer.module.css';
 
 export interface Props {
@@ -8,7 +9,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 // Default modifiers for any popover container using PopperJS

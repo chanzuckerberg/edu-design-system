@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import Icon, { type IconName } from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Text from '../Text';
@@ -84,7 +85,7 @@ export const HorizontalStepper = ({
   /**
    * Creates a list of <HorizontalStep> components with lines in between.
    */
-  const stepComponents: React.ReactNode[] = [];
+  const stepComponents: ReactNode[] = [];
   steps.forEach((step, index) => {
     /**
      * If it is not the first step, add a line to stepComponents.

@@ -1,7 +1,7 @@
 import { Popover as HeadlessPopover } from '@headlessui/react';
 import clsx from 'clsx';
-import { useState, createContext, useContext } from 'react';
-import React from 'react';
+import React, { useState, createContext, useContext } from 'react';
+import type { ReactNode, RefObject } from 'react';
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import type { ExtractProps, RenderProps } from '../../util/utility-types';
@@ -42,9 +42,7 @@ export type PopoverContentProps = ExtractProps<typeof HeadlessPopover.Panel> & {
     /**
      * Render prop that closes popover when called.
      */
-    close: (
-      focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
-    ) => void;
+    close: (focusableElement?: HTMLElement | RefObject<HTMLElement>) => void;
   }>;
 
 export const PopoverContext = createContext<PopoverContextType>({});
@@ -64,7 +62,7 @@ export const Popover = ({
   const [referenceElement, setReferenceElement] = useState<Element>();
   const [popperElement, setPopperElement] = useState<HTMLElement>();
 
-  // Leverage usePopper hook from Popper js for additional popover behavior and adds behavior to context for consumption by subcomponents.
+  // Leverage usePopper hook from Popper js for additional popover behavior and adds behavior to context for consumption by sub-components.
   const { styles: popperStyles, attributes } = usePopper(
     referenceElement,
     popperElement,
@@ -143,7 +141,7 @@ const PopoverContent = ({
             className={componentClassName}
           >
             <PopoverContainer className={bodyClassName}>
-              {children as React.ReactNode}
+              {children as ReactNode}
             </PopoverContainer>
           </HeadlessPopover.Panel>,
           document.body,

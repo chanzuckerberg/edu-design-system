@@ -154,7 +154,7 @@ export const Breadcrumbs = ({
   );
 };
 
-const flattenBreadcrumbsItems = (children: React.ReactNode) => {
+const flattenBreadcrumbsItems = (children: ReactNode) => {
   const flattenedChildren = flattenReactChildren(children);
   /**
    * Throws error if children are not BreadcrumbsItems
@@ -201,7 +201,7 @@ type BreadcrumbItemProps = {
    * URLs for the collapsed breadcrumbs variant.
    * Should be <Menu.Item href={href}>{text}</Menu.Item>.
    */
-  menuItems?: React.ReactNode[];
+  menuItems?: ReactNode[];
   /**
    * Custom string separator after current breadcrumb item.
    * Defaults to '/'

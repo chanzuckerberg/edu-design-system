@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import Icon from '../Icon';
 import type { IconName, IconProps } from '../Icon';
 import styles from './Badge.module.css';
@@ -9,7 +10,7 @@ type BadgeProps = {
    * Badgeable object MUST have accessible name describing the attached badge.
    * Wraps the badgeable object and the element on its upper right corner.
    */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */

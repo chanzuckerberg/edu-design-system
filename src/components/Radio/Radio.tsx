@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode, InputHTMLAttributes } from 'react';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 import Icon, { type IconName } from '../Icon';
@@ -21,7 +22,7 @@ type RadioProps = RadioInputProps & {
       /**
        * Visible text label for the component.
        */
-      label: React.ReactNode;
+      label: ReactNode;
     },
     {
       /**
@@ -31,7 +32,7 @@ type RadioProps = RadioInputProps & {
     }
   >;
 type RadioInputProps = Omit<
-  React.InputHTMLAttributes<HTMLInputElement>,
+  InputHTMLAttributes<HTMLInputElement>,
   'id' | 'size'
 > & {
   /**

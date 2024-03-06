@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './InlineNotification.module.css';
@@ -47,7 +48,7 @@ type Props = {
   /**
    * The text contents of the tag, nested inside the component, in addition to the icon.
    */
-  text: React.ReactNode;
+  text: ReactNode;
   /**
    * The color variant of the tag.
    */

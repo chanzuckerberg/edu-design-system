@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import Button from '../Button';
 import Icon, { type IconName } from '../Icon';
 import styles from './Toast.module.css';
@@ -14,7 +15,7 @@ export type Props = {
   /**
    * The child node(s) contains the toast message.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * The color of the Toast, based on EDS defined colors. Also determines the icon used.
    * Note that the Icon mapping matches the style of Banners.

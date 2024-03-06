@@ -8,7 +8,7 @@ import styles from './SearchBar.module.css';
 
 type SearchBarProps = {
   /**
-   * SearchBar subcomponents to be wrapped.
+   * SearchBar sub-components to be wrapped.
    */
   children: ReactNode;
   /**
