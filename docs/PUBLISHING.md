@@ -87,6 +87,7 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 9. Publish the package: `npm publish`
 10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**. Also, enable the discussion feature to handle any question-answering should questions arise.
 
+When naming the release, include the package name before the version number in the release name field (e.g., "@chanzuckerberg/eds vX.X.X")
 
 #### Finishing the release
 
