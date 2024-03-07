@@ -1,6 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
+import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import type { Size } from '../../util/variant-types';
 import Button from '../Button';
@@ -12,7 +13,7 @@ type AccordionProps = {
   /**
    * Child node(s) that can be nested inside component.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Additional classnames passed in for styling.
    */
@@ -41,7 +42,7 @@ type AccordionButtonProps = {
   /**
    * Child node(s) that can be nested inside component.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Additional classnames passed in for styling
    */
@@ -71,7 +72,7 @@ type AccordionPanelProps = {
   /**
    * Child node(s) that can be nested inside component.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Additional classnames passed in for styling
    */
@@ -82,9 +83,7 @@ type AccordionRowProps = {
   /**
    * Child node(s) that can be nested inside component.
    */
-  children:
-    | React.ReactNode
-    | (({ open }: { open: boolean }) => React.ReactNode);
+  children: ReactNode | (({ open }: { open: boolean }) => ReactNode);
   /**
    * Additional classnames passed in for styling.
    */

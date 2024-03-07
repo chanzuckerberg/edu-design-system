@@ -3,6 +3,7 @@ import React, {
   useRef,
   type ChangeEventHandler,
   type CSSProperties,
+  type ReactNode,
 } from 'react';
 import { findLowestTenMultiplier } from '../../util/findLowestTenMultiplier';
 import { useId } from '../../util/useId';
@@ -26,7 +27,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Text under the text input used to describe the slider.
    * Will override the markers if present.
    */
-  fieldNote?: React.ReactNode;
+  fieldNote?: ReactNode;
   /**
    * HTML id for the component
    */

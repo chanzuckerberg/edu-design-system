@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
+import type { ReactNode } from 'react';
 import useForwardedRef from '../../util/useForwardedRef';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
@@ -53,7 +54,7 @@ type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
       /**
        * Visible text label for the component.
        */
-      label: React.ReactNode;
+      label: ReactNode;
     },
     {
       /**

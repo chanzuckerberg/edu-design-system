@@ -1,11 +1,12 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
+import type { ReactNode, HTMLAttributes } from 'react';
 import type { Preset } from '../../util/variant-types';
 import styles from './Heading.module.css';
 
 export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
+type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
   /**
    * This prop can be used to specify which level heading should
    * actually be rendered, in the case that you want to render an element
@@ -14,7 +15,7 @@ type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
    * **Default is `"h1"`**.
    */
   as?: HeadingElement;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   tabIndex?: number;
   /**

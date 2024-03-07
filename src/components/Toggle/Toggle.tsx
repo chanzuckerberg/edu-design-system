@@ -1,6 +1,7 @@
 import { Switch } from '@headlessui/react';
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import type { EitherInclusive, ExtractProps } from '../../util/utility-types';
 
 import styles from './Toggle.module.css';
@@ -9,7 +10,7 @@ type ToggleLabelProps = {
   /**
    * Visible text label for the toggle.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Additional classnames passed in for styling the toggle label.
    */
@@ -36,13 +37,13 @@ type ToggleButtonProps = {
 };
 
 type ToggleProps = ToggleButtonProps & {
-  children?: React.ReactNode;
+  children?: ReactNode;
 } & EitherInclusive<
     {
       /**
        * Visible text label for the component.
        */
-      label: React.ReactNode;
+      label: ReactNode;
     },
     {
       /**
@@ -75,7 +76,7 @@ const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
 );
 
 /**
- * In order to use the individual <Toggle.Label> and <Toggle.Button> subcomponents for customization,
+ * In order to use the individual <Toggle.Label> and <Toggle.Button> sub-components for customization,
  * they need to be wrapped in this <ToggleWrapper> component for some functionality HeadlessUI provides.
  *
  * Instead of direct assignment to ToggleWrapper, wrapping into a custom component prevents TypeScript erroring of using private Headless Switch Group.

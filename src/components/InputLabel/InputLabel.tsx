@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import type { Size } from '../../util/variant-types';
 import styles from './InputLabel.module.css';
 
@@ -7,7 +8,7 @@ export type InputLabelProps = {
   /**
    * Text to render in label.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Additional classnames passed in for styling.
    */

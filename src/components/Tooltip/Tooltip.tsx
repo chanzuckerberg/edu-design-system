@@ -2,6 +2,7 @@ import type { TippyProps } from '@tippyjs/react';
 import Tippy from '@tippyjs/react';
 import clsx from 'clsx';
 import * as React from 'react';
+import type { ReactNode, HTMLAttributes } from 'react';
 import { Text } from '../Text/Text';
 import styles from './Tooltip.module.css';
 
@@ -67,7 +68,7 @@ type TooltipProps = {
   /**
    * The content of the tooltip bubble.
    */
-  text?: React.ReactNode;
+  text?: ReactNode;
   /**
    * Whether the tooltip is always visible or always invisible.
    *
@@ -76,7 +77,7 @@ type TooltipProps = {
    */
   visible?: boolean;
 } & TippyProps &
-  React.HTMLAttributes<HTMLElement>;
+  HTMLAttributes<HTMLElement>;
 
 // @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
 type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;

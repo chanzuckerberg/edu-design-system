@@ -1,6 +1,6 @@
 import { Menu as HeadlessMenu } from '@headlessui/react';
 import clsx from 'clsx';
-import type { MouseEventHandler } from 'react';
+import type { ReactNode, MouseEventHandler } from 'react';
 import { useContext, useState } from 'react';
 import React from 'react';
 import { createPortal } from 'react-dom';
@@ -51,7 +51,7 @@ export type MenuButtonProps = {
   /**
    * The button contents placed left of the chevron icon.
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Allow custom classes to be applied to the menu button.
    */
@@ -199,7 +199,7 @@ const MenuItem = ({
             disabled={disabled}
             icon={icon}
           >
-            {children as React.ReactNode}
+            {children as ReactNode}
           </PopoverListItem>
         );
         return disabled ? (
