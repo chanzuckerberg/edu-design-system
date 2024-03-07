@@ -8,7 +8,7 @@ export default {
   title: 'Components/Link',
   component: Link,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   args: {
     children: 'Link',

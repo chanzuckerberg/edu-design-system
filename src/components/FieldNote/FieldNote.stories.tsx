@@ -9,7 +9,7 @@ export default {
   title: 'Components/FieldNote',
   component: FieldNote,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
 } as Meta<Args>;
 

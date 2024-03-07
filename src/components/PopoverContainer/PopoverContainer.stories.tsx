@@ -8,7 +8,7 @@ export default {
   title: 'Components/PopoverContainer',
   component: PopoverContainer,
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;

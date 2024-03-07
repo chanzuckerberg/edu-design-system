@@ -7,7 +7,7 @@ export default {
   title: 'Components/Tag',
   component: Tag,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   argTypes: {
     variant: {

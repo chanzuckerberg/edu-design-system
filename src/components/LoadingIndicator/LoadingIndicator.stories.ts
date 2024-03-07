@@ -8,7 +8,7 @@ export default {
   component: LoadingIndicator,
   parameters: {
     layout: 'centered',
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
   },
 } as Meta<Args>;
 

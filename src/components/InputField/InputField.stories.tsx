@@ -10,7 +10,7 @@ const meta: Meta<typeof InputField> = {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },
@@ -151,7 +151,7 @@ export const WithBothMaxAndRecommendedLength: Story = {
  */
 export const TabularInput: Story = {
   parameters: {
-    badges: ['1.1', 'implementationExample'],
+    badges: ['intro-1.1', 'implementationExample'],
   },
   render: (args) => (
     <Table>

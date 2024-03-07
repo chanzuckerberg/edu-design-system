@@ -24,18 +24,35 @@ export const decorators = [
   ),
 ];
 
-function createPaperReleaseConfig(usingLabel: string) {
+function createInitialReleaseConfig(usingLabel: string) {
   return {
-    [usingLabel]: {
+    [`intro-${usingLabel}`]: {
       styles: {
         backgroundColor: '#ffffff',
         borderColor: '#000000',
         color: '#000000',
       },
-      title: `${usingLabel}+`,
+      title: `Introduced: ${usingLabel}`,
       tooltip: {
-        title: `Introduced in /paper ${usingLabel}`,
-        desc: `This component was introduced in /paper ${usingLabel}`,
+        title: `Introduced in v${usingLabel}`,
+        desc: `This component was introduced in EDS Design version ${usingLabel}`,
+      },
+    },
+  };
+}
+
+function createCurrentReleaseConfig(usingLabel: string) {
+  return {
+    [`current-${usingLabel}`]: {
+      styles: {
+        backgroundColor: '#ffffff',
+        borderColor: '#000000',
+        color: '#000000',
+      },
+      title: `Current: ${usingLabel}`,
+      tooltip: {
+        title: `Current version v${usingLabel}`,
+        desc: `This component corresponds to EDS Design version ${usingLabel}`,
       },
     },
   };
@@ -62,10 +79,11 @@ export const parameters = {
     ],
   },
   badgesConfig: {
-    ...createPaperReleaseConfig('1.3'),
-    ...createPaperReleaseConfig('1.2'),
-    ...createPaperReleaseConfig('1.1'),
-    ...createPaperReleaseConfig('1.0'),
+    ...createInitialReleaseConfig('1.3'),
+    ...createInitialReleaseConfig('1.2'),
+    ...createInitialReleaseConfig('1.1'),
+    ...createInitialReleaseConfig('1.0'),
+    ...createCurrentReleaseConfig('2.0'),
     implementationExample: {
       styles: {
         backgroundColor: '#ffffff',

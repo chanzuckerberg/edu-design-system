@@ -45,7 +45,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['1.0', BADGE.NEEDS_REVISION],
+    badges: ['intro-1.0', BADGE.NEEDS_REVISION],
     chromatic: {
       diffThreshold,
       diffIncludeAntiAliasing: false,

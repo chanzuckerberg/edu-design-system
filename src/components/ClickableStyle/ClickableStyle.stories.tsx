@@ -15,7 +15,7 @@ export default {
     children: 'example text',
   },
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
     layout: 'centered',
     controls: { expand: true },
   },

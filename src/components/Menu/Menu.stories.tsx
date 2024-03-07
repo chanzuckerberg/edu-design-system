@@ -18,7 +18,7 @@ export default {
     'Menu.Item': Menu.Item,
   },
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
     layout: 'centered',
   },
   argTypes: {
@@ -166,7 +166,7 @@ export const WithCustomButton: StoryObj<MenuProps> = {
 
 export const MenuWithAvatarButton: StoryObj<MenuProps> = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   args: {
     children: (
@@ -225,7 +225,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
       iconName: 'dots-vertical',
     },
     parameters: {
-      badges: ['1.2', 'implementationExample'],
+      badges: ['intro-1.2', 'implementationExample'],
     },
     render: ({ iconName }) => (
       <Menu>

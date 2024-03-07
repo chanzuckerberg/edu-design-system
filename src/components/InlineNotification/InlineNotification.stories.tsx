@@ -6,7 +6,7 @@ export default {
   title: 'Components/InlineNotification',
   component: InlineNotification,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   args: {
     text: 'Inline notifications lorem ipsum text',

@@ -27,7 +27,7 @@ const meta: Meta<typeof Toggle> = {
   },
   parameters: {
     layout: 'centered',
-    badges: ['1.0', BADGE.BETA],
+    badges: ['intro-1.0', BADGE.BETA],
   },
   render: (args) => <InteractiveToggle {...args} />,
 };

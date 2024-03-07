@@ -10,7 +10,7 @@ const meta: Meta<typeof Checkbox> = {
     label: 'Checkbox',
   },
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
 
   decorators: [(Story) => <div className="m-1">{Story()}</div>],

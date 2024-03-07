@@ -13,7 +13,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
   },
   argTypes: {
     children: {
