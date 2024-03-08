@@ -26,7 +26,7 @@ export default {
     },
   },
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
 } as Meta<Args>;

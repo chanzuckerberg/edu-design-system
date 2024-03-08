@@ -9,7 +9,7 @@ const meta: Meta<typeof Select> = {
   title: 'Components/Select',
   component: Select,
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
     layout: 'centered',
   },
   argTypes: {
@@ -517,7 +517,7 @@ export const LongOptionList: StoryObj = {
     await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
   },
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
     layout: 'centered',
     chromatic: { delay: 450 },
   },
@@ -684,7 +684,7 @@ export const UsingFunctionProps: StoryObj = {
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
     layout: 'centered',
     chromatic: { delay: 300, disableSnapshot: true },
   },

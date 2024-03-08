@@ -8,7 +8,7 @@ export default {
   title: 'Components/PageLevelBanner',
   component: PageLevelBanner,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   args: {
     title:

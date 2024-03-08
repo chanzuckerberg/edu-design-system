@@ -14,7 +14,7 @@ const meta: Meta<typeof Slider> = {
   title: 'Components/Slider',
   component: Slider,
   parameters: {
-    badges: ['1.3'],
+    badges: ['intro-1.3'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   argTypes: {
@@ -192,7 +192,7 @@ const moodData = [
 
 export const UsingInputDisplay: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
     axe: {
       disabledRules: ['color-contrast'], // adding for disabled field example
     },
@@ -228,7 +228,7 @@ export const UsingInputDisplay: Story = {
 
 export const UsingControlButtons: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 1, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -274,7 +274,7 @@ export const UsingControlButtons: Story = {
 
 export const WithHighlightedContent: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -326,7 +326,7 @@ export const WithHighlightedContent: Story = {
 
 export const WithVisualLabel: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -369,7 +369,7 @@ export const WithVisualLabel: Story = {
 
 export const WithMultipleVisualLabels: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks

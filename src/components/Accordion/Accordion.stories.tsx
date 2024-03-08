@@ -13,7 +13,7 @@ export default {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
   },
   args: {
     headingAs: 'h2',
@@ -309,7 +309,7 @@ export const WithLargeHeader: Story = {
  */
 export const UsingComplexHeaders: Story = {
   parameters: {
-    badges: ['1.2', 'implementationExample'],
+    badges: ['intro-1.2', 'implementationExample'],
   },
   args: {
     children: (
@@ -364,7 +364,7 @@ export const UsingComplexHeaders: Story = {
  */
 export const UsingNumberIconInHeaders: Story = {
   parameters: {
-    badges: ['1.2', 'implementationExample'],
+    badges: ['intro-1.2', 'implementationExample'],
   },
   args: {
     children: (

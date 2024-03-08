@@ -38,7 +38,7 @@ export default {
     },
   },
   parameters: {
-    badges: ['1.0', BADGE.DEPRECATED],
+    badges: ['intro-1.0', BADGE.DEPRECATED],
   },
   component: Grid,
   subcomponents: { GridItem: Grid.Item },

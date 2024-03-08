@@ -7,7 +7,7 @@ export default {
   title: 'Components/NumberIcon',
   component: NumberIcon,
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   args: {
     'aria-label': 'Step 1',
@@ -96,7 +96,7 @@ export const DifferentNumbers: Story = {
  */
 export const NumberIconList: Story = {
   parameters: {
-    badges: ['1.0', 'implementationExample'],
+    badges: ['intro-1.0', 'implementationExample'],
   },
   render: () => (
     <div className="flex flex-wrap gap-1">

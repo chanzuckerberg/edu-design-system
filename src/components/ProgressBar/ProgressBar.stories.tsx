@@ -11,7 +11,7 @@ export default {
     maxValue: 100,
   },
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },

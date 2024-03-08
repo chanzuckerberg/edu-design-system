@@ -7,7 +7,7 @@ export default {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
-    badges: ['1.3'],
+    badges: ['intro-1.3'],
     layout: 'centered',
   },
 } as Meta<Args>;

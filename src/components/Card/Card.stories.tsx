@@ -17,7 +17,7 @@ export default {
     CardFooter: Card.Footer,
   },
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   args: {
@@ -91,7 +91,7 @@ export const LoadingProfileCard: StoryObj<Args> = {
     isLoading: true,
   },
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ isLoading, ...cardProps }) => {
     return (
