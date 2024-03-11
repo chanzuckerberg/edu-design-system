@@ -75,6 +75,14 @@
       }
     },
     "color": {
+      "white": {
+        "value": "255 255 255",
+        "comment": "Specified as a value to color-func rgb() so that it can be blended"
+      },
+      "black": {
+        "value": "0 0 0",
+        "comment": "Specified as a value to color-func rgb() so that it can be blended"
+      },
       "brand": {
         "grape": {
           "100": {
@@ -126,9 +134,8 @@
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "025": {
-          "value": "#FFFFFF",
-          "group": "color",
-          "comment": "TODO-AH: inserting missing value"
+          "value": "#FDF9F8",
+          "group": "color"
         },
         "050": { "value": "#F9F3F1", "group": "color" },
         "100": { "value": "#EEE7E4", "group": "color" },
@@ -176,20 +183,20 @@
         }
       },
       "red": {
-        "050": { "value": "FCF2F7", "group": "color" },
-        "100": { "value": "F8DDEA", "group": "color" },
-        "150": { "value": "F5CCE0", "group": "color" },
-        "200": { "value": "F1B5D2", "group": "color" },
-        "250": { "value": "EC9EC3", "group": "color" },
-        "350": { "value": "E67EB0", "group": "color" },
-        "450": { "value": "DB458D", "group": "color" },
-        "550": { "value": "C62B73", "group": "color" },
-        "650": { "value": "9F1C55", "group": "color" },
-        "750": { "value": "760C35", "group": "color" },
-        "800": { "value": "620424", "group": "color" },
-        "850": { "value": "4D0118", "group": "color" },
-        "900": { "value": "350110", "group": "color" },
-        "950": { "value": "23010B", "group": "color" }
+        "050": { "value": "#FDF3F4", "group": "color" },
+        "100": { "value": "#FAE2E5", "group": "color" },
+        "150": { "value": "#F6CDD1", "group": "color" },
+        "200": { "value": "#F3B7BD", "group": "color" },
+        "250": { "value": "#EFA0A9", "group": "color" },
+        "350": { "value": "#E9808C", "group": "color" },
+        "450": { "value": "#D8525B", "group": "color" },
+        "550": { "value": "#C42C2F", "group": "color" },
+        "650": { "value": "#A51115", "group": "color" },
+        "750": { "value": "#7D0A16", "group": "color" },
+        "800": { "value": "#660517", "group": "color" },
+        "850": { "value": "#4D0118", "group": "color" },
+        "900": { "value": "#350110", "group": "color" },
+        "950": { "value": "#23010B", "group": "color" }
       },
       "orange": {
         "050": { "value": "#FFEEE5", "group": "color" },
@@ -272,14 +279,14 @@
         "950": { "value": "#190D1E", "group": "color" }
       },
       "opacity": {
-        "10": { "value": ".10", "group": "color" },
-        "20": { "value": ".20", "group": "color" },
-        "30": { "value": ".30", "group": "color" },
-        "40": { "value": ".40", "group": "color" },
-        "50": { "value": ".50", "group": "color" },
-        "60": { "value": ".60", "group": "color" },
-        "70": { "value": ".60", "group": "color" },
-        "80": { "value": ".80", "group": "color" }
+        "10": { "value": "0.10", "group": "color" },
+        "20": { "value": "0.20", "group": "color" },
+        "30": { "value": "0.30", "group": "color" },
+        "40": { "value": "0.40", "group": "color" },
+        "50": { "value": "0.50", "group": "color" },
+        "60": { "value": "0.60", "group": "color" },
+        "70": { "value": "0.60", "group": "color" },
+        "80": { "value": "0.80", "group": "color" }
       },
       "other": {
         "mint": {

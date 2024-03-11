@@ -20,16 +20,13 @@
             },
             "sm": {
               "value": "{eds.border.radius.50}"
+            },
+            "xs": {
+              "value": "{eds.border.radius.none}"
             }
           },
           "tabUnderline": {
-            "default": {
-              "value": "{eds.border.radius.full}"
-            },
-            "sticky": {
-              "value": "{eds.border.radius.full}",
-              "comment": "TODO-AH: this token is marked as deprecated"
-            }
+            "value": "{eds.border.radius.round}"
           }
         },
         "width": {
@@ -92,8 +89,7 @@
         },
         "background": {
           "input": {
-            "value": "rgba(255, 255, 255, 1)",
-            "comment": "TODO-AH: what is the token to use here?"
+            "value": "rgb(var(--eds-color-white) / 1)"
           },
           "neutral": {
             "default": {
@@ -152,22 +148,18 @@
           "utility": {
             "base": {
               "0": {
-                "value": "rgba(255, 255, 255, 1)",
-                "comment": "TODO-AH: what is the token to use here?"
+                "value": "rgb(var(--eds-color-white) / 1)"
               },
               "1": {
-                "value": "{eds.color.neutral.025}",
-                "comment": "TODO-AH: this appears to be missing in the spreadsheet"
+                "value": "{eds.color.neutral.025}"
               }
             },
             "container": {
               "@": {
-                "value": "rgba(255, 255, 255, 1)",
-                "comment": "TODO-AH: what token is this referring to?"
+                "value": "rgb(var(--eds-color-white) / 1)"
               },
               "hover": {
-                "value": "{eds.color.neutral.050}",
-                "comment": "TODO-AH: name format does not match the tier 1"
+                "value": "{eds.color.neutral.050}"
               },
               "active": {
                 "value": "{eds.color.neutral.100}"
@@ -186,12 +178,10 @@
             "neutral": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent",
-                  "comment": "TODO-AH: what token is this referring to?"
+                  "value": "transparent"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.neutral.050}"
                 },
                 "active": {
                   "value": "{eds.color.neutral.100}"
@@ -199,8 +189,7 @@
               },
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.neutral.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.neutral.050}"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.100}"
@@ -224,12 +213,10 @@
             "interactive": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent",
-                  "comment": "TODO-AH: what token is this referring to?"
+                  "value": "transparent"
                 },
                 "hover": {
-                  "value": "{eds.color.blue.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.blue.050}"
                 },
                 "active": {
                   "value": "{eds.color.blue.100}"
@@ -237,8 +224,7 @@
               },
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.blue.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.blue.050}"
                 },
                 "hover": {
                   "value": "{eds.color.blue.100}"
@@ -262,12 +248,10 @@
             "critical": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent",
-                  "comment": "TODO-AH: what token is this referring to?"
+                  "value": "transparent"
                 },
                 "hover": {
-                  "value": "{eds.color.red.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.red.050}"
                 },
                 "active": {
                   "value": "{eds.color.red.100}"
@@ -275,8 +259,7 @@
               },
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.red.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.red.050}"
                 },
                 "hover": {
                   "value": "{eds.color.red.100}"
@@ -300,8 +283,7 @@
             "favorable": {
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.green.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.green.050}"
                 },
                 "hover": {
                   "value": "{eds.color.green.100}"
@@ -325,8 +307,7 @@
             "warning": {
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.yellow.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.yellow.050}"
                 },
                 "hover": {
                   "value": "{eds.color.yellow.100}"
@@ -339,8 +320,7 @@
             "information": {
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.blue.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.blue.050}"
                 },
                 "hover": {
                   "value": "{eds.color.blue.100}"
@@ -352,8 +332,7 @@
             },
             "disabled": {
               "noEmphasis": {
-                "value": "transparent",
-                "comment": "TODO-AH: this appears to be missing in the spreadsheet"
+                "value": "transparent"
               },
               "lowEmphasis": {
                 "value": "{eds.color.neutral.100}"
@@ -365,34 +344,28 @@
             "inverse": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent",
-                  "comment": "TODO-AH: this appears to be missing in the spreadsheet"
+                  "value": "transparent"
                 },
                 "hover": {
-                  "value": "rgba(255,255,255, 0.2)",
-                  "comment": "TODO-AH: missing token to color-mix with opacity 20%"
+                  "value": "rgb(var(--eds-color-white) / 0.2)"
                 },
                 "active": {
-                  "value": "rgba(255, 255, 255, 0.3)",
-                  "comment": "TODO-AH: missing token to color-mix with opacity 20%"
+                  "value": "rgb(var(--eds-color-white) / 0.3)"
                 }
               },
               "highEmphasis": {
                 "@": {
-                  "value": "rgba(255, 255, 255, 1)",
-                  "comment": "TODO-AH: missing token to color-mix with opacity 100%"
+                  "value": "rgb(var(--eds-color-white) / 1)"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.050}",
-                  "comment": "TODO-AH: name format does not match the tier 1"
+                  "value": "{eds.color.neutral.050}"
                 },
                 "active": {
                   "value": "{eds.color.neutral.100}"
                 }
               },
               "disabled": {
-                "value": "rgba(255, 255, 255, 0.5)",
-                "comment": "TODO-AH: missing token to color-mix with opacity 50%"
+                "value": "rgb(var(--eds-color-white) / 0.5)"
               }
             },
             "success": {
@@ -617,12 +590,10 @@
             },
             "inverse": {
               "@": {
-                "value": "rgba(255, 255, 255, 1)",
-                "comment": "TODO-AH: missing token to color-mix with opacity 100%"
+                "value": "rgb(var(--eds-color-white) / 1)"
               },
               "disabled": {
-                "value": "rgba(255, 255, 255, 0.5)",
-                "comment": "TODO-AH: missing token to color-mix with opacity 50%"
+                "value": "rgb(var(--eds-color-white) / 0.5)"
               }
             },
             "success": {
@@ -1783,12 +1754,10 @@
             },
             "inverse": {
               "@": {
-                "value": "rgba(255, 255, 255, 1)",
-                "comment": "TODO-AH: what token is this referring to?"
+                "value": "rgb(var(--eds-color-white) / 1)"
               },
               "disabled": {
-                "value": "rgba(255, 255, 255, 0.5)",
-                "comment": "TODO-AH: what token is this referring to?"
+                "value": "rgb(var(--eds-color-white) / 0.5)"
               }
             },
             "placeholder": {

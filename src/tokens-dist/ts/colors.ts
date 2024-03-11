@@ -1,6 +1,6 @@
 export const EdsThemeColorBodyBackground = '#EEE7E4';
 export const EdsThemeColorBodyBackgroundInverted = '#383C43';
-export const EdsThemeColorBackgroundInput = 'rgba(255, 255, 255, 1)'; // TODO-AH: what is the token to use here?
+export const EdsThemeColorBackgroundInput = 'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundNeutralDefault = '#FFFFFF';
 export const EdsThemeColorBackgroundNeutralDefaultHover = '#EEE7E4';
 export const EdsThemeColorBackgroundNeutralSubtle = '#EEE7E4';
@@ -11,17 +11,19 @@ export const EdsThemeColorBackgroundBrandPrimaryDefault = '#F0F0FC';
 export const EdsThemeColorBackgroundBrandPrimarySubtle = '#F0F0FC';
 export const EdsThemeColorBackgroundBrandPrimaryStrong = '#6B65E2';
 export const EdsThemeColorBackgroundBrandPrimaryStrongHover = '#3E42B1';
-export const EdsThemeColorBackgroundUtilityBase0 = 'rgba(255, 255, 255, 1)'; // TODO-AH: what is the token to use here?
-export const EdsThemeColorBackgroundUtilityBase1 = '#FFFFFF'; // TODO-AH: this appears to be missing in the spreadsheet
-export const EdsThemeColorBackgroundUtilityContainer = 'rgba(255, 255, 255, 1)'; // TODO-AH: what token is this referring to?
-export const EdsThemeColorBackgroundUtilityContainerHover = '#F9F3F1'; // TODO-AH: name format does not match the tier 1
+export const EdsThemeColorBackgroundUtilityBase0 =
+  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundUtilityBase1 = '#FDF9F8';
+export const EdsThemeColorBackgroundUtilityContainer =
+  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundUtilityContainerHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityContainerActive = '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis = '#272625'; // TODO-AH: color-mix with opacity 50%
 export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis = '#272625'; // TODO-AH: color-mix with opacity 80%
-export const EdsThemeColorBackgroundUtilityNeutralNoEmphasis = 'transparent'; // TODO-AH: what token is this referring to?
-export const EdsThemeColorBackgroundUtilityNeutralNoEmphasisHover = '#F9F3F1'; // TODO-AH: name format does not match the tier 1
+export const EdsThemeColorBackgroundUtilityNeutralNoEmphasis = 'transparent';
+export const EdsThemeColorBackgroundUtilityNeutralNoEmphasisHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityNeutralNoEmphasisActive = '#EEE7E4';
-export const EdsThemeColorBackgroundUtilityNeutralLowEmphasis = '#F9F3F1'; // TODO-AH: name format does not match the tier 1
+export const EdsThemeColorBackgroundUtilityNeutralLowEmphasis = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityNeutralLowEmphasisHover = '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityNeutralLowEmphasisActive = '#DFD9D6';
 export const EdsThemeColorBackgroundUtilityNeutralHighEmphasis = '#6C6967';
@@ -29,12 +31,12 @@ export const EdsThemeColorBackgroundUtilityNeutralHighEmphasisHover = '#565352';
 export const EdsThemeColorBackgroundUtilityNeutralHighEmphasisActive =
   '#3F3E3D';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasis =
-  'transparent'; // TODO-AH: what token is this referring to?
+  'transparent';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasisHover =
-  '#EAF4FF'; // TODO-AH: name format does not match the tier 1
+  '#EAF4FF';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasisActive =
   '#CEE6FF';
-export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasis = '#EAF4FF'; // TODO-AH: name format does not match the tier 1
+export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasis = '#EAF4FF';
 export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasisHover =
   '#CEE6FF';
 export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasisActive =
@@ -44,17 +46,19 @@ export const EdsThemeColorBackgroundUtilityInteractiveHighEmphasisHover =
   '#0A164C';
 export const EdsThemeColorBackgroundUtilityInteractiveHighEmphasisActive =
   '#060E30';
-export const EdsThemeColorBackgroundUtilityCriticalNoEmphasis = 'transparent'; // TODO-AH: what token is this referring to?
-export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisHover = 'FCF2F7'; // TODO-AH: name format does not match the tier 1
-export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisActive = 'F8DDEA';
-export const EdsThemeColorBackgroundUtilityCriticalLowEmphasis = 'FCF2F7'; // TODO-AH: name format does not match the tier 1
-export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisHover = 'F8DDEA';
-export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisActive = 'F5CCE0';
-export const EdsThemeColorBackgroundUtilityCriticalHighEmphasis = '9F1C55';
-export const EdsThemeColorBackgroundUtilityCriticalHighEmphasisHover = '760C35';
+export const EdsThemeColorBackgroundUtilityCriticalNoEmphasis = 'transparent';
+export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisHover = '#FDF3F4';
+export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisActive = '#FAE2E5';
+export const EdsThemeColorBackgroundUtilityCriticalLowEmphasis = '#FDF3F4';
+export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisHover = '#FAE2E5';
+export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisActive =
+  '#F6CDD1';
+export const EdsThemeColorBackgroundUtilityCriticalHighEmphasis = '#A51115';
+export const EdsThemeColorBackgroundUtilityCriticalHighEmphasisHover =
+  '#7D0A16';
 export const EdsThemeColorBackgroundUtilityCriticalHighEmphasisActive =
-  '620424';
-export const EdsThemeColorBackgroundUtilityFavorableLowEmphasis = '#E6F5ED'; // TODO-AH: name format does not match the tier 1
+  '#660517';
+export const EdsThemeColorBackgroundUtilityFavorableLowEmphasis = '#E6F5ED';
 export const EdsThemeColorBackgroundUtilityFavorableLowEmphasisHover =
   '#D0EDDD';
 export const EdsThemeColorBackgroundUtilityFavorableLowEmphasisActive =
@@ -64,29 +68,29 @@ export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisHover =
   '#225E43';
 export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisActive =
   '#13462F';
-export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FDF3D3'; // TODO-AH: name format does not match the tier 1
+export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FDF3D3';
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasisHover = '#FBE8AB';
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasisActive = '#F9DA78';
-export const EdsThemeColorBackgroundUtilityInformationLowEmphasis = '#EAF4FF'; // TODO-AH: name format does not match the tier 1
+export const EdsThemeColorBackgroundUtilityInformationLowEmphasis = '#EAF4FF';
 export const EdsThemeColorBackgroundUtilityInformationLowEmphasisHover =
   '#CEE6FF';
 export const EdsThemeColorBackgroundUtilityInformationLowEmphasisActive =
   '#B5DAFF';
-export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis = 'transparent'; // TODO-AH: this appears to be missing in the spreadsheet
+export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis = 'transparent';
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#CFC9C7';
-export const EdsThemeColorBackgroundUtilityInverseNoEmphasis = 'transparent'; // TODO-AH: this appears to be missing in the spreadsheet
+export const EdsThemeColorBackgroundUtilityInverseNoEmphasis = 'transparent';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisHover =
-  'rgba(255,255,255, 0.2)'; // TODO-AH: missing token to color-mix with opacity 20%
+  'rgb(var(--eds-color-white) / 0.2)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisActive =
-  'rgba(255, 255, 255, 0.3)'; // TODO-AH: missing token to color-mix with opacity 20%
+  'rgb(var(--eds-color-white) / 0.3)';
 export const EdsThemeColorBackgroundUtilityInverseHighEmphasis =
-  'rgba(255, 255, 255, 1)'; // TODO-AH: missing token to color-mix with opacity 100%
-export const EdsThemeColorBackgroundUtilityInverseHighEmphasisHover = '#F9F3F1'; // TODO-AH: name format does not match the tier 1
+  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundUtilityInverseHighEmphasisHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityInverseHighEmphasisActive =
   '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityInverseDisabled =
-  'rgba(255, 255, 255, 0.5)'; // TODO-AH: missing token to color-mix with opacity 50%
+  'rgb(var(--eds-color-white) / 0.5)';
 export const EdsThemeColorBackgroundUtilitySuccess = '#ECFFF5'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundUtilityError = '#FFF0F4'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundGradeCompleteDefault = '#008656'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
@@ -119,9 +123,9 @@ export const EdsThemeColorBorderUtilityNeutralHighEmphasisActive = '#0F0F0F';
 export const EdsThemeColorBorderUtilityInteractive = '#0F2163';
 export const EdsThemeColorBorderUtilityInteractiveHover = '#0A164C';
 export const EdsThemeColorBorderUtilityInteractiveActive = '#060E30';
-export const EdsThemeColorBorderUtilityCritical = '9F1C55';
-export const EdsThemeColorBorderUtilityCriticalHover = '760C35';
-export const EdsThemeColorBorderUtilityCriticalActive = '620424';
+export const EdsThemeColorBorderUtilityCritical = '#A51115';
+export const EdsThemeColorBorderUtilityCriticalHover = '#7D0A16';
+export const EdsThemeColorBorderUtilityCriticalActive = '#660517';
 export const EdsThemeColorBorderUtilityFavorable = '#367759';
 export const EdsThemeColorBorderUtilityFavorableHover = '#225E43';
 export const EdsThemeColorBorderUtilityFavorableActive = '#13462F';
@@ -136,9 +140,10 @@ export const EdsThemeColorBorderUtilityInformationalHover = '#254EAC';
 export const EdsThemeColorBorderUtilityInformationalActive = '#1B3889';
 export const EdsThemeColorBorderUtilityDisabled = '#A09C9A';
 export const EdsThemeColorBorderUtilityFocus = '#3165D2';
-export const EdsThemeColorBorderUtilityInverse = 'rgba(255, 255, 255, 1)'; // TODO-AH: missing token to color-mix with opacity 100%
+export const EdsThemeColorBorderUtilityInverse =
+  'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBorderUtilityInverseDisabled =
-  'rgba(255, 255, 255, 0.5)'; // TODO-AH: missing token to color-mix with opacity 50%
+  'rgb(var(--eds-color-white) / 0.5)';
 export const EdsThemeColorBorderUtilitySuccessSubtle = '#B7E9CE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBorderUtilitySuccessDefault = '#8FDCB3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBorderUtilitySuccessStrong = '#59C88C'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
@@ -372,9 +377,9 @@ export const EdsThemeColorTextUtilityInteractiveSecondary = '#3165D2';
 export const EdsThemeColorTextUtilityInteractiveSecondaryHover = '#254EAC';
 export const EdsThemeColorTextUtilityInteractiveSecondaryActive = '#1B3889';
 export const EdsThemeColorTextUtilityInteractiveVisited = '#8A50A7';
-export const EdsThemeColorTextUtilityCritical = '9F1C55';
-export const EdsThemeColorTextUtilityCriticalHover = '760C35';
-export const EdsThemeColorTextUtilityCriticalActive = '620424';
+export const EdsThemeColorTextUtilityCritical = '#A51115';
+export const EdsThemeColorTextUtilityCriticalHover = '#7D0A16';
+export const EdsThemeColorTextUtilityCriticalActive = '#660517';
 export const EdsThemeColorTextUtilityFavorable = '#367759';
 export const EdsThemeColorTextUtilityFavorableHover = '#225E43';
 export const EdsThemeColorTextUtilityFavorableActive = '#13462F';
@@ -386,9 +391,10 @@ export const EdsThemeColorTextUtilityInformationalHover = '#254EAC';
 export const EdsThemeColorTextUtilityInformationalActive = '#1B3889';
 export const EdsThemeColorTextUtilityDisabledPrimary = '#A09C9A';
 export const EdsThemeColorTextUtilityDisabledSecondary = '#CFC9C7';
-export const EdsThemeColorTextUtilityInverse = 'rgba(255, 255, 255, 1)'; // TODO-AH: what token is this referring to?
+export const EdsThemeColorTextUtilityInverse =
+  'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorTextUtilityInverseDisabled =
-  'rgba(255, 255, 255, 0.5)'; // TODO-AH: what token is this referring to?
+  'rgb(var(--eds-color-white) / 0.5)';
 export const EdsThemeColorTextUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorTextUtilitySuccess = '#007249'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorTextUtilityError = '#BD0044';
@@ -416,6 +422,8 @@ export const EdsThemeColorToggleThumb =
 export const EdsThemeColorTransparentBlack0 = 'rgba(0, 0, 0, 0)'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorTransparentBlack30 = 'rgba(0, 0, 0, .3)'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorTransparentWhite0 = 'rgba(255, 255, 255, 0)'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
+export const EdsColorWhite = '255 255 255'; // Specified as a value to color-func rgb() so that it can be blended
+export const EdsColorBlack = '0 0 0'; // Specified as a value to color-func rgb() so that it can be blended
 export const EdsColorBrandGrape100 = '#F0F0FC'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorBrandGrape200 = '#E0E0F9'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorBrandGrape300 = '#C4C1F3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
@@ -443,23 +451,23 @@ export const EdsColorNeutral850 = '#272625';
 export const EdsColorNeutral900 = '#1A1919';
 export const EdsColorNeutral950 = '#0F0F0F';
 export const EdsColorNeutralWhite = '#FFFFFF'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
-export const EdsColorNeutral025 = '#FFFFFF'; // TODO-AH: inserting missing value
+export const EdsColorNeutral025 = '#FDF9F8';
 export const EdsColorNeutral050 = '#F9F3F1';
 export const EdsColorNeutralBlack = '#161B1F'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
-export const EdsColorRed100 = 'F8DDEA';
-export const EdsColorRed150 = 'F5CCE0';
-export const EdsColorRed200 = 'F1B5D2';
-export const EdsColorRed250 = 'EC9EC3';
-export const EdsColorRed350 = 'E67EB0';
-export const EdsColorRed450 = 'DB458D';
-export const EdsColorRed550 = 'C62B73';
-export const EdsColorRed650 = '9F1C55';
-export const EdsColorRed750 = '760C35';
-export const EdsColorRed800 = '620424';
-export const EdsColorRed850 = '4D0118';
-export const EdsColorRed900 = '350110';
-export const EdsColorRed950 = '23010B';
-export const EdsColorRed050 = 'FCF2F7';
+export const EdsColorRed100 = '#FAE2E5';
+export const EdsColorRed150 = '#F6CDD1';
+export const EdsColorRed200 = '#F3B7BD';
+export const EdsColorRed250 = '#EFA0A9';
+export const EdsColorRed350 = '#E9808C';
+export const EdsColorRed450 = '#D8525B';
+export const EdsColorRed550 = '#C42C2F';
+export const EdsColorRed650 = '#A51115';
+export const EdsColorRed750 = '#7D0A16';
+export const EdsColorRed800 = '#660517';
+export const EdsColorRed850 = '#4D0118';
+export const EdsColorRed900 = '#350110';
+export const EdsColorRed950 = '#23010B';
+export const EdsColorRed050 = '#FDF3F4';
 export const EdsColorOrange100 = '#FFDCCA';
 export const EdsColorOrange150 = '#FFC7AB';
 export const EdsColorOrange200 = '#FFB38D';
@@ -530,14 +538,14 @@ export const EdsColorPurple850 = '#311A3C';
 export const EdsColorPurple900 = '#25142E';
 export const EdsColorPurple950 = '#190D1E';
 export const EdsColorPurple050 = '#FBF5FD';
-export const EdsColorOpacity10 = '.10';
-export const EdsColorOpacity20 = '.20';
-export const EdsColorOpacity30 = '.30';
-export const EdsColorOpacity40 = '.40';
-export const EdsColorOpacity50 = '.50';
-export const EdsColorOpacity60 = '.60';
-export const EdsColorOpacity70 = '.60';
-export const EdsColorOpacity80 = '.80';
+export const EdsColorOpacity10 = '0.10';
+export const EdsColorOpacity20 = '0.20';
+export const EdsColorOpacity30 = '0.30';
+export const EdsColorOpacity40 = '0.40';
+export const EdsColorOpacity50 = '0.50';
+export const EdsColorOpacity60 = '0.60';
+export const EdsColorOpacity70 = '0.60';
+export const EdsColorOpacity80 = '0.80';
 export const EdsColorOtherMint100 = '#ECFFF5'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorOtherMint200 = '#B7E9CE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorOtherMint300 = '#8FDCB3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
