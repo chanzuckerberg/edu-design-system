@@ -2,6 +2,33 @@
   "eds": {
     "theme": {
       "border": {
+        "radius": {
+          "actions": {
+            "value": "{eds.border.radius.full}"
+          },
+          "surfaces": {
+            "lg": {
+              "value": "{eds.border.radius.none}"
+            },
+            "md": {
+              "value": "{eds.border.radius.150}"
+            }
+          },
+          "objects": {
+            "md": {
+              "value": "{eds.border.radius.100}"
+            },
+            "sm": {
+              "value": "{eds.border.radius.50}"
+            },
+            "xs": {
+              "value": "{eds.border.radius.none}"
+            }
+          },
+          "tabUnderline": {
+            "value": "{eds.border.radius.round}"
+          }
+        },
         "width": {
           "value": "{eds.border.width.sm}"
         }
@@ -61,6 +88,9 @@
           }
         },
         "background": {
+          "input": {
+            "value": "rgb(var(--eds-color-white) / 1)"
+          },
           "neutral": {
             "default": {
               "@": {
@@ -116,17 +146,237 @@
             }
           },
           "utility": {
-            "success": {
-              "value": "{eds.color.other.mint.100}",
-              "group": "color"
+            "base": {
+              "0": {
+                "value": "rgb(var(--eds-color-white) / 1)"
+              },
+              "1": {
+                "value": "{eds.color.neutral.025}"
+              }
+            },
+            "container": {
+              "@": {
+                "value": "rgb(var(--eds-color-white) / 1)"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.050}"
+              },
+              "active": {
+                "value": "{eds.color.neutral.100}"
+              }
+            },
+            "overlay": {
+              "lowEmphasis": {
+                "value": "{eds.color.neutral.850}",
+                "comment": "TODO-AH: color-mix with opacity 50%"
+              },
+              "highEmphasis": {
+                "value": "{eds.color.neutral.850}",
+                "comment": "TODO-AH: color-mix with opacity 80%"
+              }
+            },
+            "neutral": {
+              "noEmphasis": {
+                "@": {
+                  "value": "transparent"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.050}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.100}"
+                }
+              },
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.neutral.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.100}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.150}"
+                }
+              },
+              "highEmphasis": {
+                "@": {
+                  "value": "{eds.color.neutral.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.650}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.750}"
+                }
+              }
+            },
+            "interactive": {
+              "noEmphasis": {
+                "@": {
+                  "value": "transparent"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.050}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.100}"
+                }
+              },
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.blue.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.100}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.150}"
+                }
+              },
+              "highEmphasis": {
+                "@": {
+                  "value": "{eds.color.blue.850}"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.900}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.950}"
+                }
+              }
+            },
+            "critical": {
+              "noEmphasis": {
+                "@": {
+                  "value": "transparent"
+                },
+                "hover": {
+                  "value": "{eds.color.red.050}"
+                },
+                "active": {
+                  "value": "{eds.color.red.100}"
+                }
+              },
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.red.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.red.100}"
+                },
+                "active": {
+                  "value": "{eds.color.red.150}"
+                }
+              },
+              "highEmphasis": {
+                "@": {
+                  "value": "{eds.color.red.650}"
+                },
+                "hover": {
+                  "value": "{eds.color.red.750}"
+                },
+                "active": {
+                  "value": "{eds.color.red.800}"
+                }
+              }
+            },
+            "favorable": {
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.green.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.green.100}"
+                },
+                "active": {
+                  "value": "{eds.color.green.150}"
+                }
+              },
+              "highEmphasis": {
+                "@": {
+                  "value": "{eds.color.green.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.green.650}"
+                },
+                "active": {
+                  "value": "{eds.color.green.750}"
+                }
+              }
             },
             "warning": {
-              "value": "{eds.color.other.orange.100}",
-              "group": "color"
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.yellow.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.yellow.100}"
+                },
+                "active": {
+                  "value": "{eds.color.yellow.150}"
+                }
+              }
+            },
+            "information": {
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.blue.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.100}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.150}"
+                }
+              }
+            },
+            "disabled": {
+              "noEmphasis": {
+                "value": "transparent"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.neutral.100}"
+              },
+              "mediumEmphasis": {
+                "value": "{eds.color.neutral.200}"
+              }
+            },
+            "inverse": {
+              "noEmphasis": {
+                "@": {
+                  "value": "transparent"
+                },
+                "hover": {
+                  "value": "rgb(var(--eds-color-white) / 0.2)"
+                },
+                "active": {
+                  "value": "rgb(var(--eds-color-white) / 0.3)"
+                }
+              },
+              "highEmphasis": {
+                "@": {
+                  "value": "rgb(var(--eds-color-white) / 1)"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.050}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.100}"
+                }
+              },
+              "disabled": {
+                "value": "rgb(var(--eds-color-white) / 0.5)"
+              }
+            },
+            "success": {
+              "value": "{eds.color.other.mint.100}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             },
             "error": {
               "value": "{eds.color.other.ruby.100}",
-              "group": "color"
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             }
           },
           "grade": {
@@ -227,34 +477,143 @@
             }
           },
           "utility": {
-            "success": {
-              "subtle": {
-                "value": "{eds.color.other.mint.200}",
-                "group": "color"
+            "neutral": {
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.neutral.200}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.250}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.350}"
+                }
               },
-              "default": {
-                "value": "{eds.color.other.mint.300}",
-                "group": "color"
+              "mediumEmphasis": {
+                "@": {
+                  "value": "{eds.color.neutral.450}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.550}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.650}"
+                }
               },
-              "strong": {
-                "value": "{eds.color.other.mint.400}",
-                "group": "color"
+              "highEmphasis": {
+                "@": {
+                  "value": "{eds.color.neutral.850}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.900}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.950}"
+                }
+              }
+            },
+            "interactive": {
+              "@": {
+                "value": "{eds.color.blue.850}"
+              },
+              "hover": {
+                "value": "{eds.color.blue.900}"
+              },
+              "active": {
+                "value": "{eds.color.blue.950}"
+              }
+            },
+            "critical": {
+              "@": {
+                "value": "{eds.color.red.650}"
+              },
+              "hover": {
+                "value": "{eds.color.red.750}"
+              },
+              "active": {
+                "value": "{eds.color.red.800}"
+              }
+            },
+            "favorable": {
+              "@": {
+                "value": "{eds.color.green.550}"
+              },
+              "hover": {
+                "value": "{eds.color.green.650}"
+              },
+              "active": {
+                "value": "{eds.color.green.750}"
               }
             },
             "warning": {
+              "@": {
+                "value": "{eds.color.yellow.550}"
+              },
+              "hover": {
+                "value": "{eds.color.yellow.650}"
+              },
+              "active": {
+                "value": "{eds.color.yellow.750}"
+              },
               "subtle": {
                 "value": "{eds.color.other.orange.200}",
-                "group": "color"
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "default": {
                 "value": "{eds.color.other.orange.300}",
-                "group": "color"
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "strong": {
                 "value": "{eds.color.other.orange.400}",
-                "group": "color"
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
+            "informational": {
+              "@": {
+                "value": "{eds.color.blue.550}"
+              },
+              "hover": {
+                "value": "{eds.color.blue.650}"
+              },
+              "active": {
+                "value": "{eds.color.blue.750}"
+              }
+            },
+            "disabled": {
+              "value": "{eds.color.neutral.350}"
+            },
+            "focus": {
+              "value": "{eds.color.blue.550}"
+            },
+            "inverse": {
+              "@": {
+                "value": "rgb(var(--eds-color-white) / 1)"
+              },
+              "disabled": {
+                "value": "rgb(var(--eds-color-white) / 0.5)"
+              }
+            },
+            "success": {
+              "subtle": {
+                "value": "{eds.color.other.mint.200}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+              },
+              "default": {
+                "value": "{eds.color.other.mint.300}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+              },
+              "strong": {
+                "value": "{eds.color.other.mint.400}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+              }
+            },
+
             "error": {
               "subtle": {
                 "value": "{eds.color.other.ruby.200}",
@@ -1290,13 +1649,124 @@
             }
           },
           "utility": {
-            "success": {
-              "value": "{eds.color.other.mint.700}",
-              "group": "color"
+            "neutral": {
+              "primary": {
+                "@": {
+                  "value": "{eds.color.neutral.850}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.900}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.950}"
+                }
+              },
+              "secondary": {
+                "@": {
+                  "value": "{eds.color.neutral.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.650}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.750}"
+                }
+              }
+            },
+            "interactive": {
+              "primary": {
+                "@": {
+                  "value": "{eds.color.blue.850}"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.900}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.950}"
+                }
+              },
+              "secondary": {
+                "@": {
+                  "value": "{eds.color.blue.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.650}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.750}"
+                }
+              },
+              "visited": {
+                "value": "{eds.color.purple.550}"
+              }
+            },
+            "critical": {
+              "@": {
+                "value": "{eds.color.red.650}"
+              },
+              "hover": {
+                "value": "{eds.color.red.750}"
+              },
+              "active": {
+                "value": "{eds.color.red.800}"
+              }
+            },
+            "favorable": {
+              "@": {
+                "value": "{eds.color.green.550}"
+              },
+              "hover": {
+                "value": "{eds.color.green.650}"
+              },
+              "active": {
+                "value": "{eds.color.green.750}"
+              }
             },
             "warning": {
-              "value": "{eds.color.other.orange.700}",
-              "group": "color"
+              "@": {
+                "value": "{eds.color.yellow.550}"
+              },
+              "hover": {
+                "value": "{eds.color.yellow.650}"
+              },
+              "active": {
+                "value": "{eds.color.yellow.750}"
+              }
+            },
+            "informational": {
+              "@": {
+                "value": "{eds.color.blue.550}"
+              },
+              "hover": {
+                "value": "{eds.color.blue.650}"
+              },
+              "active": {
+                "value": "{eds.color.blue.750}"
+              }
+            },
+            "disabled": {
+              "primary": {
+                "value": "{eds.color.neutral.350}"
+              },
+              "secondary": {
+                "value": "{eds.color.neutral.200}"
+              }
+            },
+            "inverse": {
+              "@": {
+                "value": "rgb(var(--eds-color-white) / 1)"
+              },
+              "disabled": {
+                "value": "rgb(var(--eds-color-white) / 0.5)"
+              }
+            },
+            "placeholder": {
+              "value": "{eds.color.neutral.550}"
+            },
+            "success": {
+              "value": "{eds.color.other.mint.700}",
+              "group": "color",
+              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             },
             "error": {
               "value": "{eds.color.other.ruby.700}",

@@ -287,6 +287,19 @@
         "tag": "var(--eds-typography-preset-009)"
       },
       "border": {
+        "radius": {
+          "actions": "9999px",
+          "surfaces": {
+            "lg": "0px",
+            "md": "6"
+          },
+          "objects": {
+            "md": "4",
+            "sm": "2",
+            "xs": "0px"
+          },
+          "tabUnderline": "50%"
+        },
         "width": "1px"
       },
       "box": {
@@ -311,30 +324,31 @@
       "size": {
         "slider": {
           "track": {
-            "height": "var(--eds-size-base-unit)"
+            "height": "0.5rem"
           },
-          "thumb": "calc(var(--eds-size-base-unit) * 3)"
+          "thumb": "1.5rem"
         }
       },
       "color": {
         "body": {
           "background": {
-            "@": "#F4F6F8",
+            "@": "#EEE7E4",
             "inverted": "#383C43"
           }
         },
         "background": {
+          "input": "rgb(var(--eds-color-white) / 1)",
           "neutral": {
             "default": {
               "@": "#FFFFFF",
-              "hover": "#F4F6F8"
+              "hover": "#EEE7E4"
             },
             "subtle": {
-              "@": "#F4F6F8",
-              "hover": "#E7E8EA"
+              "@": "#EEE7E4",
+              "hover": "#CFC9C7"
             },
             "medium": {
-              "@": "#E7E8EA",
+              "@": "#CFC9C7",
               "hover": "#C0C4C8"
             }
           },
@@ -349,8 +363,115 @@
             }
           },
           "utility": {
+            "base": {
+              "0": "rgb(var(--eds-color-white) / 1)",
+              "1": "#FDF9F8"
+            },
+            "container": {
+              "@": "rgb(var(--eds-color-white) / 1)",
+              "hover": "#F9F3F1",
+              "active": "#EEE7E4"
+            },
+            "overlay": {
+              "lowEmphasis": "#272625",
+              "highEmphasis": "#272625"
+            },
+            "neutral": {
+              "noEmphasis": {
+                "@": "transparent",
+                "hover": "#F9F3F1",
+                "active": "#EEE7E4"
+              },
+              "lowEmphasis": {
+                "@": "#F9F3F1",
+                "hover": "#EEE7E4",
+                "active": "#DFD9D6"
+              },
+              "highEmphasis": {
+                "@": "#6C6967",
+                "hover": "#565352",
+                "active": "#3F3E3D"
+              }
+            },
+            "interactive": {
+              "noEmphasis": {
+                "@": "transparent",
+                "hover": "#EAF4FF",
+                "active": "#CEE6FF"
+              },
+              "lowEmphasis": {
+                "@": "#EAF4FF",
+                "hover": "#CEE6FF",
+                "active": "#B5DAFF"
+              },
+              "highEmphasis": {
+                "@": "#0F2163",
+                "hover": "#0A164C",
+                "active": "#060E30"
+              }
+            },
+            "critical": {
+              "noEmphasis": {
+                "@": "transparent",
+                "hover": "#FDF3F4",
+                "active": "#FAE2E5"
+              },
+              "lowEmphasis": {
+                "@": "#FDF3F4",
+                "hover": "#FAE2E5",
+                "active": "#F6CDD1"
+              },
+              "highEmphasis": {
+                "@": "#A51115",
+                "hover": "#7D0A16",
+                "active": "#660517"
+              }
+            },
+            "favorable": {
+              "lowEmphasis": {
+                "@": "#E6F5ED",
+                "hover": "#D0EDDD",
+                "active": "#B3E1C7"
+              },
+              "highEmphasis": {
+                "@": "#367759",
+                "hover": "#225E43",
+                "active": "#13462F"
+              }
+            },
+            "warning": {
+              "lowEmphasis": {
+                "@": "#FDF3D3",
+                "hover": "#FBE8AB",
+                "active": "#F9DA78"
+              }
+            },
+            "information": {
+              "lowEmphasis": {
+                "@": "#EAF4FF",
+                "hover": "#CEE6FF",
+                "active": "#B5DAFF"
+              }
+            },
+            "disabled": {
+              "noEmphasis": "transparent",
+              "lowEmphasis": "#EEE7E4",
+              "mediumEmphasis": "#CFC9C7"
+            },
+            "inverse": {
+              "noEmphasis": {
+                "@": "transparent",
+                "hover": "rgb(var(--eds-color-white) / 0.2)",
+                "active": "rgb(var(--eds-color-white) / 0.3)"
+              },
+              "highEmphasis": {
+                "@": "rgb(var(--eds-color-white) / 1)",
+                "hover": "#F9F3F1",
+                "active": "#EEE7E4"
+              },
+              "disabled": "rgb(var(--eds-color-white) / 0.5)"
+            },
             "success": "#ECFFF5",
-            "warning": "#FFF1E9",
             "error": "#FFF0F4"
           },
           "grade": {
@@ -372,7 +493,7 @@
         "border": {
           "neutral": {
             "subtle": {
-              "@": "#E7E8EA",
+              "@": "#CFC9C7",
               "hover": "#C0C4C8"
             },
             "default": {
@@ -393,15 +514,61 @@
             }
           },
           "utility": {
+            "neutral": {
+              "lowEmphasis": {
+                "@": "#CFC9C7",
+                "hover": "#BEB8B6",
+                "active": "#A09C9A"
+              },
+              "mediumEmphasis": {
+                "@": "#868281",
+                "hover": "#6C6967",
+                "active": "#565352"
+              },
+              "highEmphasis": {
+                "@": "#272625",
+                "hover": "#1A1919",
+                "active": "#0F0F0F"
+              }
+            },
+            "interactive": {
+              "@": "#0F2163",
+              "hover": "#0A164C",
+              "active": "#060E30"
+            },
+            "critical": {
+              "@": "#A51115",
+              "hover": "#7D0A16",
+              "active": "#660517"
+            },
+            "favorable": {
+              "@": "#367759",
+              "hover": "#225E43",
+              "active": "#13462F"
+            },
+            "warning": {
+              "@": "#876701",
+              "hover": "#695001",
+              "active": "#4D3A01",
+              "subtle": "#FFCBA5",
+              "default": "#FFAF76",
+              "strong": "#F6924A"
+            },
+            "informational": {
+              "@": "#3165D2",
+              "hover": "#254EAC",
+              "active": "#1B3889"
+            },
+            "disabled": "#A09C9A",
+            "focus": "#3165D2",
+            "inverse": {
+              "@": "rgb(var(--eds-color-white) / 1)",
+              "disabled": "rgb(var(--eds-color-white) / 0.5)"
+            },
             "success": {
               "subtle": "#B7E9CE",
               "default": "#8FDCB3",
               "strong": "#59C88C"
-            },
-            "warning": {
-              "subtle": "#FFCBA5",
-              "default": "#FFAF76",
-              "strong": "#F6924A"
             },
             "error": {
               "subtle": "#FFCBD7",
@@ -483,7 +650,7 @@
             "neutral": {
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#E7E8EA",
+                "hover": "#CFC9C7",
                 "active": "#383C43"
               },
               "border": {
@@ -596,12 +763,12 @@
               "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#E7E8EA",
+                "hover": "#CFC9C7",
                 "active": "#5D6369"
               },
               "border": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#E7E8EA",
+                "hover": "#CFC9C7",
                 "active": "#5D6369"
               },
               "text": {
@@ -680,7 +847,7 @@
           }
         },
         "data-bar": {
-          "background": "#F4F6F8",
+          "background": "#EEE7E4",
           "border": "#C0C4C8"
         },
         "focus-ring": {
@@ -690,11 +857,11 @@
         "form": {
           "border": {
             "@": "#878C90",
-            "hover": "#21272D"
+            "hover": "#333231"
           },
           "background": {
             "@": "#FFFFFF",
-            "hover": "#F4F6F8"
+            "hover": "#EEE7E4"
           },
           "label": "#383C43"
         },
@@ -707,7 +874,7 @@
             },
             "strong": {
               "@": "#383C43",
-              "hover": "#21272D"
+              "hover": "#333231"
             },
             "subtle": {
               "@": "#878C90",
@@ -746,7 +913,7 @@
               "hover": "#00A56A"
             },
             "revise": {
-              "@": "#21272D",
+              "@": "#333231",
               "hover": "#161B1F"
             },
             "stop": {
@@ -798,8 +965,8 @@
           }
         },
         "progress-bar": {
-          "background": "#E7E8EA",
-          "border": "#E7E8EA"
+          "background": "#CFC9C7",
+          "border": "#CFC9C7"
         },
         "radio": {
           "brand": {
@@ -814,17 +981,70 @@
               "@": "#383C43",
               "inverse": "#FFFFFF"
             },
-            "strong": "#21272D",
+            "strong": "#333231",
             "subtle": "#5D6369"
           },
           "utility": {
+            "neutral": {
+              "primary": {
+                "@": "#272625",
+                "hover": "#1A1919",
+                "active": "#0F0F0F"
+              },
+              "secondary": {
+                "@": "#6C6967",
+                "hover": "#565352",
+                "active": "#3F3E3D"
+              }
+            },
+            "interactive": {
+              "primary": {
+                "@": "#0F2163",
+                "hover": "#0A164C",
+                "active": "#060E30"
+              },
+              "secondary": {
+                "@": "#3165D2",
+                "hover": "#254EAC",
+                "active": "#1B3889"
+              },
+              "visited": "#8A50A7"
+            },
+            "critical": {
+              "@": "#A51115",
+              "hover": "#7D0A16",
+              "active": "#660517"
+            },
+            "favorable": {
+              "@": "#367759",
+              "hover": "#225E43",
+              "active": "#13462F"
+            },
+            "warning": {
+              "@": "#876701",
+              "hover": "#695001",
+              "active": "#4D3A01"
+            },
+            "informational": {
+              "@": "#3165D2",
+              "hover": "#254EAC",
+              "active": "#1B3889"
+            },
+            "disabled": {
+              "primary": "#A09C9A",
+              "secondary": "#CFC9C7"
+            },
+            "inverse": {
+              "@": "rgb(var(--eds-color-white) / 1)",
+              "disabled": "rgb(var(--eds-color-white) / 0.5)"
+            },
+            "placeholder": "#6C6967",
             "success": "#007249",
-            "warning": "#AC3400",
             "error": "#BD0044"
           },
           "grade": {
             "complete": "#007249",
-            "revise": "#21272D",
+            "revise": "#333231",
             "stop": "#BD0044"
           },
           "disabled": "#C0C4C8",
@@ -834,7 +1054,7 @@
           }
         },
         "text-highlight": {
-          "foreground": "#21272D",
+          "foreground": "#333231",
           "background": "#FDF1D0"
         },
         "toggle": {
@@ -884,6 +1104,11 @@
         "xl": "8px"
       },
       "radius": {
+        "50": "2",
+        "100": "4",
+        "150": "6",
+        "200": "8",
+        "500": "20",
         "none": "0px",
         "md": "4px",
         "lg": "8px",
@@ -893,6 +1118,8 @@
       }
     },
     "color": {
+      "white": "255 255 255",
+      "black": "0 0 0",
       "brand": {
         "grape": {
           "100": "#F0F0FC",
@@ -906,16 +1133,134 @@
         }
       },
       "neutral": {
-        "100": "#F4F6F8",
-        "200": "#E7E8EA",
+        "100": "#EEE7E4",
+        "150": "#DFD9D6",
+        "200": "#CFC9C7",
+        "250": "#BEB8B6",
         "300": "#C0C4C8",
+        "350": "#A09C9A",
         "400": "#999EA3",
+        "450": "#868281",
         "500": "#878C90",
+        "550": "#6C6967",
         "600": "#5D6369",
+        "650": "#565352",
         "700": "#383C43",
-        "800": "#21272D",
+        "750": "#3F3E3D",
+        "800": "#333231",
+        "850": "#272625",
+        "900": "#1A1919",
+        "950": "#0F0F0F",
         "white": "#FFFFFF",
+        "025": "#FDF9F8",
+        "050": "#F9F3F1",
         "black": "#161B1F"
+      },
+      "red": {
+        "100": "#FAE2E5",
+        "150": "#F6CDD1",
+        "200": "#F3B7BD",
+        "250": "#EFA0A9",
+        "350": "#E9808C",
+        "450": "#D8525B",
+        "550": "#C42C2F",
+        "650": "#A51115",
+        "750": "#7D0A16",
+        "800": "#660517",
+        "850": "#4D0118",
+        "900": "#350110",
+        "950": "#23010B",
+        "050": "#FDF3F4"
+      },
+      "orange": {
+        "100": "#FFDCCA",
+        "150": "#FFC7AB",
+        "200": "#FFB38D",
+        "250": "#FFA070",
+        "350": "#E87F4A",
+        "450": "#D0622C",
+        "550": "#B8470F",
+        "650": "#92380C",
+        "750": "#672808",
+        "800": "#532006",
+        "850": "#401805",
+        "900": "#2B1003",
+        "950": "#1B0A02",
+        "050": "#FFEEE5"
+      },
+      "yellow": {
+        "100": "#FBE8AB",
+        "150": "#F9DA78",
+        "200": "#F1CA53",
+        "250": "#E7B724",
+        "350": "#C4970C",
+        "450": "#A57D01",
+        "550": "#876701",
+        "650": "#695001",
+        "750": "#4D3A01",
+        "800": "#392B01",
+        "850": "#2B2001",
+        "900": "#1E1701",
+        "950": "#130E01",
+        "050": "#FDF3D3"
+      },
+      "green": {
+        "100": "#D0EDDD",
+        "150": "#B3E1C7",
+        "200": "#95D5B1",
+        "250": "#74C899",
+        "350": "#57B083",
+        "450": "#3F926D",
+        "550": "#367759",
+        "650": "#225E43",
+        "750": "#13462F",
+        "800": "#0E3423",
+        "850": "#0A271A",
+        "900": "#071B12",
+        "950": "#05120C",
+        "050": "#E6F5ED"
+      },
+      "blue": {
+        "100": "#CEE6FF",
+        "150": "#B5DAFF",
+        "200": "#99CCFF",
+        "250": "#85BAFB",
+        "350": "#6199F3",
+        "450": "#437EED",
+        "550": "#3165D2",
+        "650": "#254EAC",
+        "750": "#1B3889",
+        "800": "#152D76",
+        "850": "#0F2163",
+        "900": "#0A164C",
+        "950": "#060E30",
+        "050": "#EAF4FF"
+      },
+      "purple": {
+        "100": "#F3E5FA",
+        "150": "#EAD1F6",
+        "200": "#E0BAF2",
+        "250": "#D5A2EE",
+        "350": "#C580E7",
+        "450": "#A765C7",
+        "550": "#8A50A7",
+        "650": "#6E3A88",
+        "750": "#562D69",
+        "800": "#452455",
+        "850": "#311A3C",
+        "900": "#25142E",
+        "950": "#190D1E",
+        "050": "#FBF5FD"
+      },
+      "opacity": {
+        "10": "0.10",
+        "20": "0.20",
+        "30": "0.30",
+        "40": "0.40",
+        "50": "0.50",
+        "60": "0.60",
+        "70": "0.60",
+        "80": "0.80"
       },
       "other": {
         "mint": {
@@ -981,24 +1326,24 @@
       "xl": "0px 6px 20px rgba(0, 0, 0, 0.2)"
     },
     "size": {
-      "1": "var(--eds-size-base-unit)",
-      "2": "calc(var(--eds-size-base-unit) * 2)",
-      "3": "calc(var(--eds-size-base-unit) * 3)",
-      "4": "calc(var(--eds-size-base-unit) * 4)",
-      "5": "calc(var(--eds-size-base-unit) * 5)",
-      "6": "calc(var(--eds-size-base-unit) * 6)",
-      "7": "calc(var(--eds-size-base-unit) * 7)",
-      "8": "calc(var(--eds-size-base-unit) * 8)",
-      "9": "calc(var(--eds-size-base-unit) * 9)",
-      "10": "calc(var(--eds-size-base-unit) * 10)",
-      "11": "calc(var(--eds-size-base-unit) * 11)",
-      "12": "calc(var(--eds-size-base-unit) * 12)",
-      "20": "calc(var(--eds-size-base-unit) * 20)",
+      "1": "0.5rem",
+      "2": "1rem",
+      "3": "1.5rem",
+      "4": "2rem",
+      "5": "2.5rem",
+      "6": "3rem",
+      "7": "3.5rem",
+      "8": "4rem",
+      "9": "4.5rem",
+      "10": "5rem",
+      "11": "5.5rem",
+      "12": "6rem",
+      "20": "10rem",
       "base-unit": "0.5rem",
-      "half": "calc(var(--eds-size-base-unit) / 2)",
-      "quarter": "calc(var(--eds-size-base-unit) / 4)",
-      "1-and-half": "calc(var(--eds-size-base-unit) * 1.5)",
-      "2-and-half": "calc(var(--eds-size-base-unit) * 2.5)"
+      "half": "0.25rem",
+      "quarter": "0.125rem",
+      "1-and-half": "0.75rem",
+      "2-and-half": "1.275rem"
     },
     "z-index": {
       "0": "0",
