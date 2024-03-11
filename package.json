@@ -140,10 +140,10 @@
     "@types/jest": "^29.5.12",
     "@types/jsonfile": "^6",
     "@types/lodash": "^4.14.202",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.2.61",
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.64",
     "@types/react-beautiful-dnd": "^13.1.8",
-    "@types/react-dom": "^18.2.19",
+    "@types/react-dom": "^18.2.21",
     "@types/react-portal": "^4.0.7",
     "@types/yargs": "^17.0.32",
     "axe-core": "4.8.4",
@@ -173,7 +173,7 @@
     "prettier-plugin-tailwindcss": "^0.5.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^4.12.0",
+    "rollup": "^4.12.1",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.2.6",
     "standard-version": "^9.5.0",
@@ -194,5 +194,5 @@
       "stylelint --fix --allow-empty-input"
     ]
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.1.1"
 }
