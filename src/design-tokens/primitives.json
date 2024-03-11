@@ -28,16 +28,20 @@
     "border": {
       "width": {
         "sm": {
-          "value": "1px"
+          "value": "1px",
+          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "md": {
-          "value": "2px"
+          "value": "2px",
+          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
-          "value": "4px"
+          "value": "4px",
+          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "xl": {
-          "value": "8px"
+          "value": "8px",
+          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       },
       "radius": {
@@ -45,14 +49,22 @@
           "value": "0px"
         },
         "md": {
-          "value": "4px"
+          "value": "4px",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
-          "value": "8px"
+          "value": "8px",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "xl": {
-          "value": "20px"
+          "value": "20px",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
+        "50": { "value": "2", "group": "size" },
+        "100": { "value": "4", "group": "size" },
+        "150": { "value": "6", "group": "size" },
+        "200": { "value": "8", "group": "size" },
+        "500": { "value": "20", "group": "size" },
         "round": {
           "value": "50%",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
@@ -65,51 +77,294 @@
     "color": {
       "brand": {
         "grape": {
-          "100": { "value": "#F0F0FC", "group": "color" },
-          "200": { "value": "#E0E0F9", "group": "color" },
-          "300": { "value": "#C4C1F3", "group": "color" },
-          "400": { "value": "#A6A3EE", "group": "color" },
-          "500": { "value": "#8984E8", "group": "color" },
-          "600": { "value": "#6B65E2", "group": "color" },
-          "700": { "value": "#5751D2", "group": "color" },
-          "800": { "value": "#3E42B1", "group": "color" }
+          "100": {
+            "value": "#F0F0FC",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "200": {
+            "value": "#E0E0F9",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "300": {
+            "value": "#C4C1F3",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "400": {
+            "value": "#A6A3EE",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "500": {
+            "value": "#8984E8",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "600": {
+            "value": "#6B65E2",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "700": {
+            "value": "#5751D2",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "800": {
+            "value": "#3E42B1",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          }
         }
       },
       "neutral": {
         "white": {
           "value": "#FFFFFF",
-          "group": "color"
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
-        "100": { "value": "#F4F6F8", "group": "color" },
-        "200": { "value": "#E7E8EA", "group": "color" },
-        "300": { "value": "#C0C4C8", "group": "color" },
-        "400": { "value": "#999EA3", "group": "color" },
-        "500": { "value": "#878C90", "group": "color" },
-        "600": { "value": "#5D6369", "group": "color" },
-        "700": { "value": "#383C43", "group": "color" },
-        "800": { "value": "#21272D", "group": "color" },
-        "black": { "value": "#161B1F", "group": "color" }
+        "025": {
+          "value": "#FFFFFF",
+          "group": "color",
+          "comment": "TODO-AH: inserting missing value"
+        },
+        "050": { "value": "#F9F3F1", "group": "color" },
+        "100": { "value": "#EEE7E4", "group": "color" },
+        "150": { "value": "#DFD9D6", "group": "color" },
+        "200": { "value": "#CFC9C7", "group": "color" },
+        "250": { "value": "#BEB8B6", "group": "color" },
+        "300": {
+          "value": "#C0C4C8",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
+        "350": { "value": "#A09C9A", "group": "color" },
+        "400": {
+          "value": "#999EA3",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
+        "450": { "value": "#868281", "group": "color" },
+        "500": {
+          "value": "#878C90",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
+        "550": { "value": "#6C6967", "group": "color" },
+        "600": {
+          "value": "#5D6369",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
+        "650": { "value": "#565352", "group": "color" },
+        "700": {
+          "value": "#383C43",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
+        "750": { "value": "#3F3E3D", "group": "color" },
+        "800": { "value": "#333231", "group": "color" },
+        "850": { "value": "#272625", "group": "color" },
+        "900": { "value": "#1A1919", "group": "color" },
+        "950": { "value": "#0F0F0F", "group": "color" },
+        "black": {
+          "value": "#161B1F",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        }
+      },
+      "red": {
+        "050": { "value": "FCF2F7", "group": "color" },
+        "100": { "value": "F8DDEA", "group": "color" },
+        "150": { "value": "F5CCE0", "group": "color" },
+        "200": { "value": "F1B5D2", "group": "color" },
+        "250": { "value": "EC9EC3", "group": "color" },
+        "350": { "value": "E67EB0", "group": "color" },
+        "450": { "value": "DB458D", "group": "color" },
+        "550": { "value": "C62B73", "group": "color" },
+        "650": { "value": "9F1C55", "group": "color" },
+        "750": { "value": "760C35", "group": "color" },
+        "800": { "value": "620424", "group": "color" },
+        "850": { "value": "4D0118", "group": "color" },
+        "900": { "value": "350110", "group": "color" },
+        "950": { "value": "23010B", "group": "color" }
+      },
+      "orange": {
+        "050": { "value": "#FFEEE5", "group": "color" },
+        "100": { "value": "#FFDCCA", "group": "color" },
+        "150": { "value": "#FFC7AB", "group": "color" },
+        "200": { "value": "#FFB38D", "group": "color" },
+        "250": { "value": "#FFA070", "group": "color" },
+        "350": { "value": "#E87F4A", "group": "color" },
+        "450": { "value": "#D0622C", "group": "color" },
+        "550": { "value": "#B8470F", "group": "color" },
+        "650": { "value": "#92380C", "group": "color" },
+        "750": { "value": "#672808", "group": "color" },
+        "800": { "value": "#532006", "group": "color" },
+        "850": { "value": "#401805", "group": "color" },
+        "900": { "value": "#2B1003", "group": "color" },
+        "950": { "value": "#1B0A02", "group": "color" }
+      },
+      "yellow": {
+        "050": { "value": "#FDF3D3", "group": "color" },
+        "100": { "value": "#FBE8AB", "group": "color" },
+        "150": { "value": "#F9DA78", "group": "color" },
+        "200": { "value": "#F1CA53", "group": "color" },
+        "250": { "value": "#E7B724", "group": "color" },
+        "350": { "value": "#C4970C", "group": "color" },
+        "450": { "value": "#A57D01", "group": "color" },
+        "550": { "value": "#876701", "group": "color" },
+        "650": { "value": "#695001", "group": "color" },
+        "750": { "value": "#4D3A01", "group": "color" },
+        "800": { "value": "#392B01", "group": "color" },
+        "850": { "value": "#2B2001", "group": "color" },
+        "900": { "value": "#1E1701", "group": "color" },
+        "950": { "value": "#130E01", "group": "color" }
+      },
+      "green": {
+        "050": { "value": "#E6F5ED", "group": "color" },
+        "100": { "value": "#D0EDDD", "group": "color" },
+        "150": { "value": "#B3E1C7", "group": "color" },
+        "200": { "value": "#95D5B1", "group": "color" },
+        "250": { "value": "#74C899", "group": "color" },
+        "350": { "value": "#57B083", "group": "color" },
+        "450": { "value": "#3F926D", "group": "color" },
+        "550": { "value": "#367759", "group": "color" },
+        "650": { "value": "#225E43", "group": "color" },
+        "750": { "value": "#13462F", "group": "color" },
+        "800": { "value": "#0E3423", "group": "color" },
+        "850": { "value": "#0A271A", "group": "color" },
+        "900": { "value": "#071B12", "group": "color" },
+        "950": { "value": "#05120C", "group": "color" }
+      },
+      "blue": {
+        "050": { "value": "#EAF4FF", "group": "color" },
+        "100": { "value": "#CEE6FF", "group": "color" },
+        "150": { "value": "#B5DAFF", "group": "color" },
+        "200": { "value": "#99CCFF", "group": "color" },
+        "250": { "value": "#85BAFB", "group": "color" },
+        "350": { "value": "#6199F3", "group": "color" },
+        "450": { "value": "#437EED", "group": "color" },
+        "550": { "value": "#3165D2", "group": "color" },
+        "650": { "value": "#254EAC", "group": "color" },
+        "750": { "value": "#1B3889", "group": "color" },
+        "800": { "value": "#152D76", "group": "color" },
+        "850": { "value": "#0F2163", "group": "color" },
+        "900": { "value": "#0A164C", "group": "color" },
+        "950": { "value": "#060E30", "group": "color" }
+      },
+      "purple": {
+        "050": { "value": "#FBF5FD", "group": "color" },
+        "100": { "value": "#F3E5FA", "group": "color" },
+        "150": { "value": "#EAD1F6", "group": "color" },
+        "200": { "value": "#E0BAF2", "group": "color" },
+        "250": { "value": "#D5A2EE", "group": "color" },
+        "350": { "value": "#C580E7", "group": "color" },
+        "450": { "value": "#A765C7", "group": "color" },
+        "550": { "value": "#8A50A7", "group": "color" },
+        "650": { "value": "#6E3A88", "group": "color" },
+        "750": { "value": "#562D69", "group": "color" },
+        "800": { "value": "#452455", "group": "color" },
+        "850": { "value": "#311A3C", "group": "color" },
+        "900": { "value": "#25142E", "group": "color" },
+        "950": { "value": "#190D1E", "group": "color" }
+      },
+      "opacity": {
+        "10": { "value": ".10", "group": "color" },
+        "20": { "value": ".20", "group": "color" },
+        "30": { "value": ".30", "group": "color" },
+        "40": { "value": ".40", "group": "color" },
+        "50": { "value": ".50", "group": "color" },
+        "60": { "value": ".60", "group": "color" },
+        "70": { "value": ".60", "group": "color" },
+        "80": { "value": ".80", "group": "color" }
       },
       "other": {
         "mint": {
-          "100": { "value": "#ECFFF5", "group": "color" },
-          "200": { "value": "#B7E9CE", "group": "color" },
-          "300": { "value": "#8FDCB3", "group": "color" },
-          "400": { "value": "#59C88C", "group": "color" },
-          "500": { "value": "#00A56A", "group": "color" },
-          "600": { "value": "#008656", "group": "color" },
-          "700": { "value": "#007249", "group": "color" },
-          "800": { "value": "#005939", "group": "color" }
+          "100": {
+            "value": "#ECFFF5",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "200": {
+            "value": "#B7E9CE",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "300": {
+            "value": "#8FDCB3",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "400": {
+            "value": "#59C88C",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "500": {
+            "value": "#00A56A",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "600": {
+            "value": "#008656",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "700": {
+            "value": "#007249",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "800": {
+            "value": "#005939",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          }
         },
         "yellow": {
-          "100": { "value": "#FDF1D0", "group": "color" },
-          "200": { "value": "#FFEBB3", "group": "color" },
-          "300": { "value": "#FFDD80", "group": "color" },
-          "400": { "value": "#F7BE2D", "group": "color" },
-          "500": { "value": "#D18400", "group": "color" },
-          "600": { "value": "#BF7300", "group": "color" },
-          "700": { "value": "#9E5B03", "group": "color" },
-          "800": { "value": "#854C03", "group": "color" }
+          "100": {
+            "value": "#FDF1D0",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "200": {
+            "value": "#FFEBB3",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "300": {
+            "value": "#FFDD80",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "400": {
+            "value": "#F7BE2D",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "500": {
+            "value": "#D18400",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "600": {
+            "value": "#BF7300",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "700": {
+            "value": "#9E5B03",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "800": {
+            "value": "#854C03",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          }
         },
         "lemon": {
           "value": "#F5FF8F",
@@ -122,24 +377,88 @@
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "orange": {
-          "100": { "value": "#FFF1E9", "group": "color" },
-          "200": { "value": "#FFCBA5", "group": "color" },
-          "300": { "value": "#FFAF76", "group": "color" },
-          "400": { "value": "#F6924A", "group": "color" },
-          "500": { "value": "#E06B00", "group": "color" },
-          "600": { "value": "#C64600", "group": "color" },
-          "700": { "value": "#AC3400", "group": "color" },
-          "800": { "value": "#842800", "group": "color" }
+          "100": {
+            "value": "#FFF1E9",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "200": {
+            "value": "#FFCBA5",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "300": {
+            "value": "#FFAF76",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "400": {
+            "value": "#F6924A",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "500": {
+            "value": "#E06B00",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "600": {
+            "value": "#C64600",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "700": {
+            "value": "#AC3400",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "800": {
+            "value": "#842800",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          }
         },
         "ruby": {
-          "100": { "value": "#FFF0F4", "group": "color" },
-          "200": { "value": "#FFCBD7", "group": "color" },
-          "300": { "value": "#FB90B0", "group": "color" },
-          "400": { "value": "#F76C96", "group": "color" },
-          "500": { "value": "#F1497B", "group": "color" },
-          "600": { "value": "#D41E52", "group": "color" },
-          "700": { "value": "#BD0044", "group": "color" },
-          "800": { "value": "#8F0134", "group": "color" }
+          "100": {
+            "value": "#FFF0F4",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "200": {
+            "value": "#FFCBD7",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "300": {
+            "value": "#FB90B0",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "400": {
+            "value": "#F76C96",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "500": {
+            "value": "#F1497B",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "600": {
+            "value": "#D41E52",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "700": {
+            "value": "#BD0044",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          },
+          "800": {
+            "value": "#8F0134",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          }
         }
       }
     },
@@ -160,28 +479,35 @@
     "outline": {
       "width": {
         "sm": {
-          "value": "1px"
+          "value": "1px",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "md": {
-          "value": "2px"
+          "value": "2px",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
-          "value": "4px"
+          "value": "4px",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       }
     },
     "box-shadow": {
       "sm": {
-        "value": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)"
+        "value": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "md": {
-        "value": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)"
+        "value": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "lg": {
-        "value": "0px 4px 12px rgba(0, 0, 0, 0.16)"
+        "value": "0px 4px 12px rgba(0, 0, 0, 0.16)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "xl": {
-        "value": "0px 6px 20px rgba(0, 0, 0, 0.2)"
+        "value": "0px 6px 20px rgba(0, 0, 0, 0.2)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     },
     "size": {
@@ -190,71 +516,71 @@
         "group": "size"
       },
       "half": {
-        "value": "calc(var(--eds-size-base-unit) / 2)",
+        "value": "0.25rem",
         "group": "size"
       },
       "quarter": {
-        "value": "calc(var(--eds-size-base-unit) / 4)",
+        "value": "0.125rem",
         "group": "size"
       },
       "1": {
-        "value": "var(--eds-size-base-unit)",
+        "value": "0.5rem",
         "group": "size"
       },
       "1-and-half": {
-        "value": "calc(var(--eds-size-base-unit) * 1.5)",
+        "value": "0.75rem",
         "group": "size"
       },
       "2": {
-        "value": "calc(var(--eds-size-base-unit) * 2)",
+        "value": "1rem",
         "group": "size"
       },
       "2-and-half": {
-        "value": "calc(var(--eds-size-base-unit) * 2.5)",
+        "value": "1.275rem",
         "group": "size"
       },
       "3": {
-        "value": "calc(var(--eds-size-base-unit) * 3)",
+        "value": "1.5rem",
         "group": "size"
       },
       "4": {
-        "value": "calc(var(--eds-size-base-unit) * 4)",
+        "value": "2rem",
         "group": "size"
       },
       "5": {
-        "value": "calc(var(--eds-size-base-unit) * 5)",
+        "value": "2.5rem",
         "group": "size"
       },
       "6": {
-        "value": "calc(var(--eds-size-base-unit) * 6)",
+        "value": "3rem",
         "group": "size"
       },
       "7": {
-        "value": "calc(var(--eds-size-base-unit) * 7)",
+        "value": "3.5rem",
         "group": "size"
       },
       "8": {
-        "value": "calc(var(--eds-size-base-unit) * 8)",
+        "value": "4rem",
         "group": "size"
       },
       "9": {
-        "value": "calc(var(--eds-size-base-unit) * 9)",
+        "value": "4.5rem`",
         "group": "size"
       },
       "10": {
-        "value": "calc(var(--eds-size-base-unit) * 10)",
+        "value": "5rem",
         "group": "size"
       },
       "11": {
-        "value": "calc(var(--eds-size-base-unit) * 11)",
+        "value": "5.5rem",
         "group": "size"
       },
       "12": {
-        "value": "calc(var(--eds-size-base-unit) * 12)",
+        "value": "6rem",
         "group": "size"
       },
       "20": {
-        "value": "calc(var(--eds-size-base-unit) * 20)",
+        "value": "10rem",
         "group": "size"
       }
     },
