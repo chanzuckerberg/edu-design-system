@@ -60,6 +60,14 @@ export const DefaultRanks: StoryObj<Args> = {
   },
 };
 
+export const Disabled: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    isDisabled: true,
+  },
+  render: DefaultRanks.render,
+};
+
 export const TertiaryStandalone: StoryObj<Args> = {
   args: {
     rank: 'tertiary',
@@ -82,7 +90,11 @@ export const InverseRanks: StoryObj<Args> = {
   },
   render: DefaultRanks.render,
   // TODO-AH: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
-  decorators: [(Story) => <div className="bg-[#0F2163] p-1">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
+    ),
+  ],
 };
 
 export const Sizes: StoryObj<Args> = {
