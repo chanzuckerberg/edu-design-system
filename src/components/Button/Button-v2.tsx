@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import type { Size } from '../../util/variant-types';
 import Icon from '../Icon';
