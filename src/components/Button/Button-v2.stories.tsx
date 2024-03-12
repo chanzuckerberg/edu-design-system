@@ -3,6 +3,8 @@ import React from 'react';
 import { Button } from './Button-v2';
 import { SIZES } from '../ClickableStyle';
 
+// TODO-AH: add documentation to each story
+
 export default {
   title: 'Components/Button (v2)',
   component: Button,
@@ -60,6 +62,14 @@ export const DefaultRanks: StoryObj<Args> = {
   },
 };
 
+export const Disabled: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    isDisabled: true,
+  },
+  render: DefaultRanks.render,
+};
+
 export const TertiaryStandalone: StoryObj<Args> = {
   args: {
     rank: 'tertiary',
@@ -82,7 +92,11 @@ export const InverseRanks: StoryObj<Args> = {
   },
   render: DefaultRanks.render,
   // TODO-AH: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
-  decorators: [(Story) => <div className="bg-[#0F2163] p-1">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
+    ),
+  ],
 };
 
 export const Sizes: StoryObj<Args> = {
@@ -122,6 +136,10 @@ export const LoadingStates: StoryObj<Args> = {
   render: Sizes.render,
 };
 
+/**
+ * `iconLayout` lets you place the icons adjacent to button text, or as the only visible element.
+ * When using `"icon-only"`, you **must** include a label (e.g., via `aria-label`).
+ */
 export const IconLayouts: StoryObj<Args> = {
   args: {
     ...Default.args,
@@ -135,8 +153,12 @@ export const IconLayouts: StoryObj<Args> = {
         <Button {...args} iconLayout="right">
           Right
         </Button>
-        <Button {...args} iconLayout="icon-only">
-          Icon Only
+        <Button
+          {...args}
+          aria-label="Label must be applied with icon-only layout"
+          iconLayout="icon-only"
+        >
+          Icon Only (text not visible)
         </Button>
       </div>
     );

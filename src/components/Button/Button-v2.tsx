@@ -124,18 +124,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonV2Props>(
       isLoading && styles['button--is-loading'],
     );
 
-    const ariaLabel =
-      iconLayout === 'icon-only' && !other['aria-label']
-        ? children
-        : other['aria-label'];
-
     return (
       <button
-        aria-label={ariaLabel}
         className={componentClassName}
         disabled={isDisabled}
         ref={ref}
-        tabIndex={isDisabled ? -1 : undefined}
         type={type}
         {...other}
       >
