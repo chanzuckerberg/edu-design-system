@@ -20,10 +20,12 @@ import {
 import { useId } from '../../util/useId';
 import type { RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
-import styles from './Tabs.module.css';
+import Icon, { type IconName } from '../Icon';
 
-export interface TabsProps {
-  align?: Align;
+import styles from './TabGroup.module.css';
+
+export interface TabGroupProps {
+  // Component API
   /**
    * Reference to another element that describes the purpose of the set of tabs.
    */
@@ -48,9 +50,31 @@ export interface TabsProps {
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
+  // Design API
+  /**
+   * Alignment of the tabs, when there is additional space available (not full width)
+   */
+  align?: Align;
+  /**
+   * Whether the divider line (separating tabs from content) is visible.
+   *
+   * **Default is `"true"`.
+   */
+  hasDivider?: boolean;
+  /**
+   *
+   */
+  isSticky?: boolean;
+  /**
+   * Control how the indidivual tabs take up the available space.
+   *
+   * **Default is `"auto"`.
+   */
+  tabWidth?: 'auto' | 'full';
 }
 
 export interface TabProps {
+  // Component API
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title
    */
@@ -70,38 +94,52 @@ export interface TabProps {
   /**
    * Number passed down from Tabs to show the active index state of Tabs
    */
-  isActiveIndex?: number;
+  activeIndex?: number;
+  // Design API
   /**
    * Text used to label the tab in the tab list
    */
   title: string;
+  /**
+   * Icon name from the defined set of EDS icons
+   *
+   * **NOTE**: this cannot be used with `illustration`.
+   */
+  icon?: IconName;
+  /**
+   * Illustration to appear above the tab text
+   *
+   * **NOTE**: this cannot be used with `icon`
+   */
+  illustration?: ReactNode;
 }
 
 type TabButtonProps = RenderProps<TabContextArgs>;
 export type TabContextArgs = {
-  active: boolean;
+  isActive: boolean;
   title: string;
 };
 
 /**
- * `import {Tabs} from "@chanzuckerberg/eds";`
+ * `import {TabGroup} from "@chanzuckerberg/eds";`
  *
  * List of of links where each link toggles open associated information in a tab panel.
  *
  * Individual tabs allow for a simple text tab header using the `title` prop on each `<Tab>` instance.
  * For a more custom tabs, you can use an additonal `<Tab.Button>` sub-component with a render prop exposing `active` and `title`.
- *
- * @deprecated
  */
-export const Tabs = ({
+export const TabGroup = ({
   activeIndex = 0,
   align,
   'aria-labelledby': ariaLabelledBy,
   children,
   className,
+  hasDivider = true,
+  isSticky = false,
   onChange,
+  tabWidth = 'auto',
   ...other
-}: TabsProps) => {
+}: TabGroupProps) => {
   const activeTabPanelId = useId();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
@@ -247,6 +285,7 @@ export const Tabs = ({
           aria-labelledby={ariaLabelledBy}
           className={clsx(
             styles['tabs__list'],
+            hasDivider && styles['tabs--has-divider'],
             align && styles[`tabs__list--align-${align}`],
           )}
           role="tablist"
@@ -259,6 +298,7 @@ export const Tabs = ({
                 className={clsx(
                   styles['tabs__item'],
                   isActive && styles['eds-is-active'],
+                  tabWidth === 'full' && styles[`tabs--width-${tabWidth}`],
                 )}
                 key={tabIds[i]}
                 role="presentation"
@@ -278,12 +318,29 @@ export const Tabs = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
+                  {tab.props.illustration && (
+                    <div className={styles['tab__illustration']}>
+                      {tab.props.illustration}
+                    </div>
+                  )}
+                  {tab.props.icon && (
+                    <Icon
+                      className={styles['tab__icon']}
+                      name={tab.props.icon}
+                      purpose="decorative"
+                      size="1rem"
+                    />
+                  )}
                   {typeof tabButton?.props.children === 'function'
                     ? tabButton.props.children({
-                        active: isActive,
+                        isActive,
                         title: tab.props.title,
                       })
                     : tab.props.title}
+                  <div
+                    aria-hidden="true"
+                    className={styles['tab__highlight']}
+                  ></div>
                 </a>
               </li>
             );
@@ -315,12 +372,14 @@ function usePrevious<T>(prop: T) {
  * - For more custom tab headers use `<Tab.Button>` which uses a render prop with state information
  */
 export const Tab = ({
+  'aria-labelledby': ariaLabelledBy,
   children,
   className,
+  icon,
   id,
+  illustration,
   // Destructure `title` so it is not applied to the rendered element
   title,
-  'aria-labelledby': ariaLabelledBy,
   ...other
 }: TabProps) => {
   return (
@@ -357,7 +416,7 @@ const TabButton = (props: TabButtonProps) => {
 
 Tab.displayName = 'Tab';
 Tab.Button = TabButton;
-TabButton.displayName = 'Tab.Button';
+TabButton.displayName = 'TabGroup.Button';
 
-Tabs.displayName = 'Tabs';
-Tabs.Tab = Tab;
+TabGroup.displayName = 'TabGroup';
+TabGroup.Tab = Tab;

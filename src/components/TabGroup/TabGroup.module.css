@@ -1,0 +1,209 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TABGROUP
+\*------------------------------------*/
+
+/**
+ * List of of links where each link toggles open associated information
+ */
+
+/**
+ * Tabs header
+ *
+ * Contains the tab list.
+ */
+.tabs__header {
+  /* Tab overflow behavior */
+  overflow-x: auto;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/**
+ * Fade scrollable indicators to display if there is scrollable area on either side.
+ *
+ * The color "white" is arbitrary and any non transparent color can be used here.
+ */
+.tabs--scrollable-left {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    white 4rem
+  );
+}
+
+.tabs--scrollable-left .tabs__list--align-center,
+.tabs--scrollable-right .tabs__list--align-center {
+  justify-content: unset;
+}
+
+.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    right,
+    transparent,
+    white 4rem
+  );
+}
+
+.tabs--scrollable-left.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    white 4rem,
+    white calc(100% - 4rem),
+    transparent 100%
+  );
+}
+
+/**
+ * Tabs list
+ *
+ * Actual unordered list of tabs.
+ */
+.tabs__list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-utility-neutral-low-emphasis);
+  font: var(--eds-theme-typography-tab-lg);
+  line-height: 1.429;
+
+  @media all and (max-width: $eds-bp-md) {
+    font: var(--eds-theme-typography-tab-sm);
+  }
+
+  &:not(.tabs--has-divider) {
+    border-bottom-color: transparent;
+  }
+}
+
+/**
+ * Control the positioning of the tabs: left, center, or right aligned (horizontally)
+ */
+.tabs__list--align-left {
+  justify-content: left;
+}
+
+.tabs__list--align-center {
+  justify-content: center;
+}
+
+.tabs__list--align-right {
+  justify-content: right;
+}
+
+/**
+ * Tabs item
+ */
+.tabs__item {
+  /**
+   * Flex shrink 0 keeps tabs from expanding to fill up the space of the container.
+   */
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 0.125rem; */
+
+  &.eds-is-active {
+    font-weight: 500;
+  }
+
+  &.tabs--width-full {
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    /* use ellipsis */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+/**
+ * Tabs link
+ */
+.tabs__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+
+  text-decoration: none;
+  color: var(--eds-theme-color-text-utility-interactive-primary);
+
+  /* use ellipsis */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-focus);
+  }
+
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  &:hover {
+    background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
+  }
+
+  &:active {
+    background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
+  }
+}
+
+.tab__icon {
+  margin-right: 0.25rem;
+}
+
+.tab__illustration {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin: 0.5rem;
+}
+
+.tab__highlight {
+  border-radius: var(--eds-border-radius-full);
+  transition: bottom var(--eds-anim-fade-quick) var(--eds-anim-ease),
+              width var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  .tabs__item.eds-is-active & {
+    position: absolute;
+    bottom: 0;
+    height: 0.125rem;
+    width: 100%;
+
+    /* TODO-AH: --eds-theme-color-icon-utility-interactive-primary not defined */
+    background-color: var(--eds-theme-color-icon-utility-interactive-primary, currentColor);
+  }
+
+  .tabs__item .tabs__link:focus-visible & {
+    bottom: 0.25rem;
+    width: calc(100% - 0.5rem);
+
+    border-radius: var(--eds-border-radius-full);
+
+  }
+
+
+  .tabs--has-divider & {
+    /* TODO-AH: use token instead of rem values: --eds-theme-border-radius-tab-underline */
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
