@@ -1,0 +1,92 @@
+@import '../../design-tokens/mixins.css';
+/*------------------------------------*\
+    # NUMBER ICON
+\*------------------------------------*/
+
+/**
+ * Number Icon displays a number enclosed in a circle.
+ * 
+ * Centers the number text in the circle.
+ */
+.number-icon {
+  /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* The circle part of the icon, made with borders. */
+  border: var(--eds-border-width-sm) solid;
+  border-color: inherit;
+  border-radius: var(--eds-border-radius-full);
+
+  cursor: pointer;
+}
+
+/**
+ * Size Variants.
+ */
+.number-icon--size-sm {
+  /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
+  line-height: 1;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+}
+
+.number-icon--size-md {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+}
+
+.number-icon--size-lg {
+  height: 2rem;
+  width: 2rem;
+  min-width: 2rem;
+}
+
+/* Colors & Theme */
+
+/**
+ * Interactive States
+ */
+.number-icon--status-default {
+  color: var(--eds-theme-color-text-utility-interactive-primary);
+  border-color: var(--eds-theme-color-border-utility-interactive);
+  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
+
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-interactive-hover);
+    background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-border-utility-interactive-active);
+    background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
+  }
+}
+
+.number-icon--status-completed {
+  color: var(--eds-theme-color-text-utility-inverse);
+  border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis);
+
+  &:hover {
+    border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
+  }
+}
+
+.number-icon--status-incomplete {
+  color: var(--eds-theme-color-text-utility-neutral-secondary);
+  border-color: var(--eds-theme-color-border-utility-neutral-medium-emphasis);
+
+  border-style: dashed;
+  pointer-events: none;
+}
