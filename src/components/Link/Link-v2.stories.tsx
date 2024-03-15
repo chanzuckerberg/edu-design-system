@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, type LinkProps } from './Link-v2';
 
 export default {
-  title: 'Components/Link (v2)',
+  title: 'Components/V2/Link',
   component: Link,
   parameters: {
     badges: ['intro-1.0', 'current-2.0'],
