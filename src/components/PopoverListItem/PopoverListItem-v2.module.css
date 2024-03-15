@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    # POPOVER LIST ITEM
+\*------------------------------------*/
+
+/**
+ * PopoverListItem
+ */
+.popover-list-item {
+  display: flex;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+
+  color: var(--eds-theme-color-text-utility-neutral-primary);
+  background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis);
+
+  &:hover {
+    background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis-hover);
+  }
+
+  &:active {
+    background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis-active);
+  }
+}
+
+.popover-list-item--focused, 
+.popover-list-item:focus-visible {
+  box-shadow: 0 0 0 2px var(--eds-theme-color-border-utility-focus);
+}
+
+.popover-list-item--disabled {
+  pointer-events: none;
+
+  color: var(--eds-theme-color-text-utility-disabled-secondary, red);
+  background-color: var(--eds-theme-color-background-utility-disabled-no-emphasis, red)
+}
+
+.popover-list-item__icon {
+  padding-right: 1rem;
+}
+
+.popover-list-item__no-icon {
+  /* right padding applies space for the icon itself and the padding for that icon container */
+  padding-right: 2rem;
+}
+
+.popover-list-item__sub-label {
+  color: var(--eds-theme-color-text-utility-neutral-secondary);
+}
+
+.popover-list-item--destructive-action {
+  color: var(--eds-theme-color-text-utility-critical);
+
+  &:hover {
+    color: var(--eds-theme-color-text-utility-critical-hover);
+    background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-text-utility-critical-active);
+    background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
+  }
+}
