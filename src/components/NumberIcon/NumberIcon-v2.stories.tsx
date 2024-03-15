@@ -4,7 +4,7 @@ import React from 'react';
 import { NumberIcon } from './NumberIcon-v2';
 
 export default {
-  title: 'Components/NumberIcon (v2)',
+  title: 'Components/V2/NumberIcon',
   component: NumberIcon,
   parameters: {
     badges: ['intro-1.0', 'current-2.0'],
@@ -28,7 +28,6 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <>
-        <NumberIcon number={1} size="sm" {...args} />
         <NumberIcon number={2} size="md" {...args} />
         <NumberIcon number={3} size="lg" {...args} />
       </>
@@ -100,16 +99,16 @@ export const DifferentNumbers: Story = {
  */
 export const NumberIconList: Story = {
   parameters: {
-    badges: ['intro-1.0', 'implementationExample'],
+    badges: ['intro-1.0', 'current-2.0', 'implementationExample'],
   },
   render: () => (
     <div className="flex flex-wrap gap-1">
-      <NumberIcon aria-label="Item 1" number={1} size="sm" />
-      <NumberIcon aria-label="Item 2" number={2} size="sm" />
-      <NumberIcon aria-label="Item 3" number={3} size="sm" />
-      <NumberIcon aria-label="Item 4" number={4} size="sm" />
-      <NumberIcon aria-label="Item 5" number={5} size="sm" />
-      <NumberIcon aria-label="Item 6" number={6} size="sm" />
+      <NumberIcon aria-label="Item 1" number={1} size="md" />
+      <NumberIcon aria-label="Item 2" number={2} size="md" />
+      <NumberIcon aria-label="Item 3" number={3} size="md" />
+      <NumberIcon aria-label="Item 4" number={4} size="md" />
+      <NumberIcon aria-label="Item 5" number={5} size="md" />
+      <NumberIcon aria-label="Item 6" number={6} size="md" />
     </div>
   ),
 };

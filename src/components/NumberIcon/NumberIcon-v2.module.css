@@ -26,14 +26,6 @@
 /**
  * Size Variants.
  */
-.number-icon--size-sm {
-  /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
-  line-height: 1;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-}
-
 .number-icon--size-md {
   height: 1.5rem;
   width: 1.5rem;

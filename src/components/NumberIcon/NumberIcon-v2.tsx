@@ -30,7 +30,7 @@ export interface Props {
    *
    * **Default is `"lg"`**.
    */
-  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
+  size?: Extract<Size, 'md' | 'lg'>;
   /**
    * Indication of the status of the referenced item
    */
