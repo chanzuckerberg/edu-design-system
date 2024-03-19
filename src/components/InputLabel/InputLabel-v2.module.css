@@ -1,0 +1,29 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # INPUT LABEL
+\*------------------------------------*/
+
+/**
+ * Text labeling the input component.
+ */
+.label {
+  color: var(--eds-theme-color-text-utility-neutral-primary);
+}
+
+/**
+ * Disabled variant of the input label.
+ */
+.label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+
+/**
+ * Input label size variants.
+ */
+.label--md {
+  font: var(--eds-theme-typography-body-sm);
+}
+.label--lg {
+  font: var(--eds-theme-typography-body-md);
+}
