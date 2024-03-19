@@ -1,0 +1,93 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # LINK
+\*------------------------------------*/
+
+.link {
+  color: var(--eds-theme-color-text-utility-neutral-primary);
+  display: inline;
+
+  /* TODO-AH: verify the way to sync type tokens and one-off treatments */
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+
+/**
+ * Sub-components
+ */
+.link__icon {
+  padding-left: 0.25rem;
+
+  /* Sub-component spacing */
+  &.link--size-xl,
+  &.link--size-lg { padding-left: 0.5rem; }
+
+  &.link--size-md,
+  &.link--size-sm, 
+  &.link--size-xs { padding-left: 0.25rem; }
+}
+
+/**
+ * Contexts
+ */
+.link--context-standalone {
+  display: block;
+
+  /**
+   * Sizes - using the presets for type ramp matching body-*
+   */
+  &.link--size-xl {
+    font: var(--eds-theme-typography-body-xl);
+  }
+
+  &.link--size-lg {
+    font: var(--eds-theme-typography-body-lg);
+  }
+
+  &.link--size-md {
+    font: var(--eds-theme-typography-body-md);
+  }
+
+  &.link--size-sm {
+    font: var(--eds-theme-typography-body-sm);
+  }
+
+  &.link--size-xs {
+    font: var(--eds-theme-typography-body-xs);
+  }
+}
+
+/**
+ * Emphasis
+ */
+.link--emphasis-high {
+  color: var(--eds-theme-color-text-utility-interactive-secondary);
+}
+
+.link--emphasis-low {
+  color: var(--eds-theme-color-text-utility-neutral-primary);
+  text-decoration: none;
+}
+
+
+/**
+ * States
+ */
+
+.link:hover {
+  color: var(--eds-theme-color-text-utility-interactive-secondary-hover);
+}
+
+.link:active {
+  color: var(--eds-theme-color-text-utility-interactive-secondary-active);
+}
+
+.link:visited {
+  color: var(--eds-theme-color-text-utility-interactive-visited);
+}
+
+.link:focus-visible {
+  outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: 0.125rem;
+}
