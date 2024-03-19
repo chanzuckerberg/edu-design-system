@@ -1,0 +1,24 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+ # POPOVER CONTAINER
+\*------------------------------------*/
+
+/**
+ * Popover container
+ */
+.popover-container {
+  border-radius: var(--eds-theme-border-radius-objects-md);
+  overflow: auto;
+  padding: 0.25rem 0;
+  z-index: 1150;
+
+  /* TODO-AH: Dial in box shadows from design */
+  box-shadow: var(--eds-box-shadow-md);
+  background-color: var(--eds-theme-color-background-utility-container);
+}
+
+.popover-container > *[role=none] + *[role=none] {
+  /* create dividers by looking for groups under the component that wrap using the "none" role */
+  border-top: 1px solid var(--eds-theme-color-border-utility-neutral-low-emphasis);
+}
