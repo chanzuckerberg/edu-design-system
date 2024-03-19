@@ -1,0 +1,143 @@
+/*------------------------------------*\
+    # RADIO BUTTON
+\*------------------------------------*/
+
+/**
+ * A custom individual radio control
+ */
+.radio {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/**
+ * Wraps the visually hidden radio input element and the visible sibling svg element.
+ */
+.input__wrapper {
+  position: relative;
+  /* Centers the radio icon in the wrapper. */
+  display: inline-flex;
+  align-items: center;
+  /* Aligns the radio with the first line of the label. */
+  align-self: flex-start;
+}
+/**
+ * The visually hidden input element for the radio. The visual radio is provided by an svg element.
+ */
+.radio__input {
+  /* Removes default margins placed by browser for radios. */
+  margin: 0;
+  /* Remove the radio from the page flow, positioning it on top of the SVG. */
+  position: absolute;
+  /* Set same dimensions as the RadioSvg element. */
+  height: 1.5rem;
+  width: 1.5rem;
+
+  /**
+   * Hide the input element visually.
+   * This ensures the radio is still "physically" present so that all users,
+   * especially on touch screen readers, still interact with the real radio element
+   * where it would naturally be present.
+   */
+  opacity: 0;
+}
+
+/**
+ * The disabled status of the visually hidden input element.
+ */
+ .radio__input:disabled {
+  /* Needed since the input element overlays the visible svg icon for user input and cursor. */
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.radio__labels {
+  position: relative;
+}
+
+/**
+ * Text that labels a radio input.
+ */
+.radio__label {
+  position: relative;
+}
+
+.radio__sub-label {
+  display: block;
+
+  color: var(--eds-theme-color-text-utility-neutral-secondary);
+}
+
+/**
+ * The visible radio svg icon element
+ */
+.radio__icon {
+  /* Creates space for the border so that there's no jitter when the focus border is visible. */
+  border: 0.125rem solid transparent;
+
+  /* Theming when unchecked */
+  .radio__input:not(:checked) + & {
+    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis);
+  }
+
+  .radio__input:not(:checked):hover + & {
+    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis-hover);
+  }
+
+  .radio__input:not(:checked):active + & {
+    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis-active);
+  }
+
+  .radio__input:not(:checked):disabled + & {
+    color: var(--eds-theme-color-border-utility-disabled);
+    pointer-events: none;
+  }
+
+  /* Theming when checked */
+  .radio__input:checked + & {
+    color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
+  }
+
+  .radio__input:checked:hover ~ & {
+    color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
+  }
+
+  .radio__input:checked:active ~ & {
+    color: var(--eds-theme-color-background-utility-interactive-high-emphasis-active);
+  }
+
+  .radio__input:checked:disabled ~ & {
+    color: var(--eds-theme-color-border-utility-disabled);
+  }
+
+  /**
+   * Error Theming
+   */ 
+  .radio__input.radio--error ~ & {
+    color: var(--eds-theme-color-border-utility-critical);
+  }
+
+  .radio__input.radio--error:hover ~ & {
+    color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+
+  .radio__input.radio--error:active ~ & {
+    color: var(--eds-theme-color-border-utility-critical-active);
+  }
+}
+
+/**
+ * Handling focus ring
+ * TODO-AH: focus ring clamped to the actual radio button, not its bounding label (browser default)
+ */
+.radio__input:focus-visible + .radio__icon {
+  border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+  border-radius: var(--eds-border-radius-full);
+}
+
+@supports not selector(:focus-visible) {
+  .radio__input:focus + .radio__icon {
+    border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+    border-radius: var(--eds-border-radius-full);
+  }
+}
