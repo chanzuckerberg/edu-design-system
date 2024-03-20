@@ -8,7 +8,7 @@
  * Text labeling the input component.
  */
 .label {
-  color: var(--eds-theme-color-text-utility-neutral-primary);
+  color: var(--eds-theme-color-text-utility-default-primary);
 }
 
 /**

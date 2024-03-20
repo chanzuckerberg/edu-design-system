@@ -161,7 +161,7 @@
  */
 
 .button--primary.button--variant-inverse {
-  color: var(--eds-theme-color-text-utility-neutral-primary);
+  color: var(--eds-theme-color-text-utility-default-primary);
   border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
   background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
 }
@@ -265,7 +265,7 @@
 
 .button--secondary.button--variant-default:active,
 .button--tertiary.button--variant-default:active {
-  color: var(--eds-theme-color-text-utility-neutral-primary-active);
+  color: var(--eds-theme-color-text-utility-default-primary-active);
 
   background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
   border-color: var(--eds-theme-color-border-utility-interactive-active);

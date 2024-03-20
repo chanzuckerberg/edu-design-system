@@ -20,5 +20,5 @@
 
 .popover-container > *[role=none] + *[role=none] {
   /* create dividers by looking for groups under the component that wrap using the "none" role */
-  border-top: 1px solid var(--eds-theme-color-border-utility-neutral-low-emphasis);
+  border-top: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
 }

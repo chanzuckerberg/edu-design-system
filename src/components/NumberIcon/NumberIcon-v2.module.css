@@ -76,8 +76,8 @@
 }
 
 .number-icon--status-incomplete {
-  color: var(--eds-theme-color-text-utility-neutral-secondary);
-  border-color: var(--eds-theme-color-border-utility-neutral-medium-emphasis);
+  color: var(--eds-theme-color-text-utility-default-secondary);
+  border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
 
   border-style: dashed;
   pointer-events: none;
