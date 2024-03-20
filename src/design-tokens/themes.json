@@ -175,7 +175,7 @@
                 "comment": "TODO-AH: color-mix with opacity 80%"
               }
             },
-            "neutral": {
+            "default": {
               "noEmphasis": {
                 "@": {
                   "value": "transparent"
@@ -200,13 +200,13 @@
               },
               "highEmphasis": {
                 "@": {
-                  "value": "{eds.color.neutral.550}"
+                  "value": "{eds.color.blue.850}"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.650}"
+                  "value": "{eds.color.blue.900}"
                 },
                 "active": {
-                  "value": "{eds.color.neutral.750}"
+                  "value": "{eds.color.blue.950}"
                 }
               }
             },
@@ -477,7 +477,7 @@
             }
           },
           "utility": {
-            "neutral": {
+            "default": {
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.200}"
@@ -502,13 +502,13 @@
               },
               "highEmphasis": {
                 "@": {
-                  "value": "{eds.color.neutral.850}"
+                  "value": "{eds.color.blue.850}"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.900}"
+                  "value": "{eds.color.blue.900}"
                 },
                 "active": {
-                  "value": "{eds.color.neutral.950}"
+                  "value": "{eds.color.blue.950}"
                 }
               }
             },
@@ -1649,10 +1649,10 @@
             }
           },
           "utility": {
-            "neutral": {
+            "default": {
               "primary": {
                 "@": {
-                  "value": "{eds.color.neutral.850}"
+                  "value": "{eds.color.blue.850}"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.900}"

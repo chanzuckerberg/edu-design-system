@@ -65,7 +65,7 @@
 .radio__sub-label {
   display: block;
 
-  color: var(--eds-theme-color-text-utility-neutral-secondary);
+  color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
 /**
@@ -77,15 +77,15 @@
 
   /* Theming when unchecked */
   .radio__input:not(:checked) + & {
-    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis);
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis);
   }
 
   .radio__input:not(:checked):hover + & {
-    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis-hover);
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
   }
 
   .radio__input:not(:checked):active + & {
-    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis-active);
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
   }
 
   .radio__input:not(:checked):disabled + & {

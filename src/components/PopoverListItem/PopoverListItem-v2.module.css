@@ -12,15 +12,15 @@
   width: 100%;
   text-align: left;
 
-  color: var(--eds-theme-color-text-utility-neutral-primary);
-  background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis);
+  color: var(--eds-theme-color-text-utility-default-primary);
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
 
   &:hover {
-    background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
   }
 
   &:active {
-    background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
   }
 }
 
@@ -46,7 +46,7 @@
 }
 
 .popover-list-item__sub-label {
-  color: var(--eds-theme-color-text-utility-neutral-secondary);
+  color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
 .popover-list-item--destructive-action {
