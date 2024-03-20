@@ -63,20 +63,20 @@
 .checkbox__sub-label {
   display: block;
 
-  color: var(--eds-theme-color-text-utility-neutral-secondary);
+  color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
 .checkbox__input:not(:checked) {
-  color: var(--eds-theme-color-border-utility-neutral-medium-emphasis);
+  color: var(--eds-theme-color-border-utility-default-medium-emphasis);
 
   &:hover {
-    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis-hover);
-    background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis-hover);
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
   }
 
   &:active {
-    color: var(--eds-theme-color-border-utility-neutral-medium-emphasis-active);
-    background-color: var(--eds-theme-color-background-utility-neutral-no-emphasis-active);
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
   }
 
   .checkbox--error & {
@@ -96,14 +96,14 @@
 
 .checkbox__input:checked,
 .checkbox__input:indeterminate {
-  color: var(--eds-theme-color-border-utility-neutral-high-emphasis);
+  color: var(--eds-theme-color-border-utility-default-high-emphasis);
 
   &:hover {
-    color: var(--eds-theme-color-border-utility-neutral-high-emphasis-hover);
+    color: var(--eds-theme-color-border-utility-default-high-emphasis-hover);
   }
 
   &:active {
-    color: var(--eds-theme-color-border-utility-neutral-high-emphasis-active);
+    color: var(--eds-theme-color-border-utility-default-high-emphasis-active);
   }
 
   .checkbox--error & {
