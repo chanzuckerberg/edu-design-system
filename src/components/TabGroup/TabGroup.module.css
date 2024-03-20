@@ -66,7 +66,7 @@
   display: flex;
   gap: 0.5rem;
   border-bottom: var(--eds-theme-border-width) solid
-    var(--eds-theme-color-border-utility-neutral-low-emphasis);
+    var(--eds-theme-color-border-utility-default-low-emphasis);
   font: var(--eds-theme-typography-tab-lg);
   line-height: 1.429;
 

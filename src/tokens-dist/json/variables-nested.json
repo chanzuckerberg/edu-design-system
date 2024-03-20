@@ -376,7 +376,7 @@
               "lowEmphasis": "#272625",
               "highEmphasis": "#272625"
             },
-            "neutral": {
+            "default": {
               "noEmphasis": {
                 "@": "transparent",
                 "hover": "#F9F3F1",
@@ -388,9 +388,9 @@
                 "active": "#DFD9D6"
               },
               "highEmphasis": {
-                "@": "#6C6967",
-                "hover": "#565352",
-                "active": "#3F3E3D"
+                "@": "#0F2163",
+                "hover": "#0A164C",
+                "active": "#060E30"
               }
             },
             "interactive": {
@@ -514,7 +514,7 @@
             }
           },
           "utility": {
-            "neutral": {
+            "default": {
               "lowEmphasis": {
                 "@": "#CFC9C7",
                 "hover": "#BEB8B6",
@@ -526,9 +526,9 @@
                 "active": "#565352"
               },
               "highEmphasis": {
-                "@": "#272625",
-                "hover": "#1A1919",
-                "active": "#0F0F0F"
+                "@": "#0F2163",
+                "hover": "#0A164C",
+                "active": "#060E30"
               }
             },
             "interactive": {
@@ -985,9 +985,9 @@
             "subtle": "#5D6369"
           },
           "utility": {
-            "neutral": {
+            "default": {
               "primary": {
-                "@": "#272625",
+                "@": "#0F2163",
                 "hover": "#1A1919",
                 "active": "#0F0F0F"
               },
