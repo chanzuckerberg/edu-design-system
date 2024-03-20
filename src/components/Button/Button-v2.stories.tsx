@@ -6,7 +6,7 @@ import { SIZES } from '../ClickableStyle';
 // TODO-AH: add documentation to each story
 
 export default {
-  title: 'Components/Button (v2)',
+  title: 'Components/V2/Button',
   component: Button,
   args: {
     children: 'Button',

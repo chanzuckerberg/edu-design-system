@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { PopoverListItem } from './PopoverListItem-v2';
 
 export default {
-  title: 'Components/PopoverListItem (v2)',
+  title: 'Components/V2/PopoverListItem',
   component: PopoverListItem,
   parameters: {
     badges: ['intro-1.2', 'current-2.0'],

@@ -6,7 +6,7 @@ import { PopoverContainer } from './PopoverContainer-v2';
 import { PopoverListItemV2 as PopoverListItem } from '../PopoverListItem';
 
 export default {
-  title: 'Components/PopoverContainer (v2)',
+  title: 'Components/V2/PopoverContainer',
   component: PopoverContainer,
   parameters: {
     badges: ['intro-1.2', 'curent-2.0'],
