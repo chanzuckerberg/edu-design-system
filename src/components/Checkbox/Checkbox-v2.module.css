@@ -1,0 +1,152 @@
+@import '../../design-tokens/mixins.css';
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.checkbox__input {
+  height: 1.125rem;
+  width: 1.125rem;
+
+  /* The parent Checkbox component is a flex container. Make sure the input doesn't shrink. */
+  flex-shrink: 0;
+
+  /* Remove the browser's checkbox styles, allowing us to provide our own. */
+  appearance: none;
+
+  /* Magic value to center the checkbox on its label. */
+  margin: 3px;
+
+  border: 0.125rem solid currentColor;
+
+  /* Place the ::before content smack in the middle of the input. */
+  display: grid;
+  place-content: center;
+
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+}
+
+/* TODO-AH: applying roundrect to the clip-path is tricky. selected / indeterminate state includes a square shape */
+.checkbox__input:checked::before {
+  background-color: currentColor;
+  content: '';
+
+  /* Clip this element in the shape of a checkbox. The element's background color will be visible
+  anywhere the svg path is solid. Whatever is behind the checkbox will show through wherever the
+  svg is transparent. See https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+  clip-path: path(
+    'M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z'
+  );
+
+  /* Because the path does not have an explicit viewbox, this element's bounding box establishes
+  one. In other words, the height/width here need to match the expected viewbox for the path. */
+  height: 1.5rem;
+  width: 1.5rem;
+
+}
+
+.checkbox__input:indeterminate::before {
+  background-color: currentColor;
+  content: '';
+
+  clip-path: path('M7 13H17V11H7V13ZM3 21V3H21V21H3Z');
+
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.checkbox__labels {
+  position: relative;
+}
+
+.checkbox__sub-label {
+  display: block;
+
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.checkbox__input:not(:checked) {
+  color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+
+  &:hover {
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+  }
+
+  .checkbox--error & {
+    color: var(--eds-theme-color-text-utility-critical);
+
+    &:hover {
+      color: var(--eds-theme-color-border-utility-critical-hover);
+      background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
+    }
+
+    &:active {
+      color: var(--eds-theme-color-border-utility-critical-active);
+      background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
+    }
+  }
+}
+
+.checkbox__input:checked,
+.checkbox__input:indeterminate {
+  color: var(--eds-theme-color-border-utility-default-high-emphasis);
+
+  &:hover {
+    color: var(--eds-theme-color-border-utility-default-high-emphasis-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-border-utility-default-high-emphasis-active);
+  }
+
+  .checkbox--error & {
+    color: var(--eds-theme-color-text-utility-critical);
+
+    &:hover {
+      color: var(--eds-theme-color-border-utility-critical-hover);
+    }
+
+    &:active {
+      color: var(--eds-theme-color-border-utility-critical-active);
+    }
+  }
+}
+
+.checkbox__input:disabled {
+  color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+  cursor: not-allowed;
+
+  &:not(:checked) {
+    color: var(--eds-theme-color-border-utility-disabled);
+    background-color: var(--eds-theme-color-text-utility-disabled-secondary);
+  }
+
+  &:checked,
+  &:indeterminate {
+    /* because we cut a hole with the clip-path, the color is the background */
+    color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+    /* the clip path forms a hole, so in this case the background is the color of the check itself */
+    background-color: var(--eds-theme-color-text-utility-disabled-primary);
+  }
+}
+
+/**
+ * Handling focus ring
+ * TODO-AH: focus ring clamped to the actual radio button, not its bounding label (browser default)
+ */
+.checkbox__input:focus-visible {
+  outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+}
+
+@supports not selector(:focus-visible) {
+  .checkbox__input {
+    outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+  }
+}
