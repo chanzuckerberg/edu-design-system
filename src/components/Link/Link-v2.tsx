@@ -14,7 +14,7 @@ export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
    *
    * **Default is `"a"`**.
    */
-  as: string | React.ElementType;
+  as?: string | React.ElementType;
   /**
    * The link contents or label.
    */
