@@ -1,0 +1,155 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # SELECT
+\*------------------------------------*/
+
+/**
+ * Select field used to select one option from a list of options.
+ */
+.select {
+  position: relative;
+}
+
+/**
+ * Wraps the Label and the optional/required hint.
+ * TODO-AH: map the overline styles between Select and InputField
+ */
+.select__overline {
+  display: flex;
+  margin-bottom: 0.25rem;
+  gap: 0.25rem;
+}
+
+.select__overline--no-label {
+  justify-content: flex-start;
+}
+
+/**
+ * The container for the individual select options. 
+ */
+.select__options {
+  max-height: 25vh;
+  z-index: 100;
+}
+
+/**
+ * The button to trigger the display of the select field.
+ */
+.select-button {
+  font: var(--eds-theme-typography-form-input);
+
+  width: 100%;
+  padding: 0.5rem;
+
+  border: var(--eds-border-width-sm) solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  /* TODO-AH: handle placeholder color when no value is selected */
+  color: var(--eds-theme-color-text-utility-default-primary);
+  background-color: var(--eds-theme-color-form-background);
+}
+
+/**
+ * The caret icon to decorate the select trigger button, animated to rotate.
+ */
+.select-button__icon {
+  flex-shrink: 0;
+  transform: rotate(0);
+
+  transition: transform var(--eds-anim-move-medium) ease-out;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.select-button__text--truncated {
+  /* TODO-AH: use as mixin */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select-button__icon--reversed {
+  transform: rotate(180deg);
+}
+
+.select__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select--has-fieldNote {
+  margin-bottom: 0.25rem;
+}
+
+/**
+ * Label on top of the select trigger button to label the select field.
+ */
+.select__label {
+  font: var(--eds-theme-typography-form-label);
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.select__label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+
+.select__option {
+  color: var(--eds-theme-color-text-utility-interactive-secondary);
+}
+
+.select__option-text {
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.select__required-text {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.select-button:disabled {
+  cursor: not-allowed;
+
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+  border-color: var(--eds-theme-color-border-utility-disabled);
+  background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+}
+
+.select-button:focus-visible {
+  border-color: var(--eds-theme-color-border-utility-focus);
+  outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-focus);
+}
+
+.select-button--error {
+  border-color: var(--eds-theme-color-border-utility-critical);
+
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+
+  &:focus-visible {
+    border-color: var(--eds-theme-color-border-utility-critical);
+    outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-critical);
+  }
+}
+
+.select-button--warning {
+  border-color: var(--eds-theme-color-border-utility-warning);
+
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-warning-hover);
+  }
+
+  &:focus-visible {
+    border-color: var(--eds-theme-color-border-utility-warning);
+    outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-warning);
+  }
+}
