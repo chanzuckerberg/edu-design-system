@@ -1,6 +1,7 @@
 /**
  * Link button styles
  */
+/* TODO-AH: to remove */
 @define-mixin textLink {
   font-size: inherit;
   font-weight: var(--eds-font-weight-medium);
@@ -72,6 +73,7 @@
   outline-color: var(--eds-theme-color-focus-ring-inverted);
 }
 
+/* TODO-AH: to remove */
 @define-mixin inputStyles {
   font: var(--eds-theme-typography-form-input);
   font-family: inherit;
@@ -199,4 +201,94 @@
 
   background: var(--eds-theme-color-background-grade-revise-subtle);
   color: var(--eds-theme-color-text-neutral-default);
+}
+
+/**
+ * Component 2.0 Styles
+ */
+
+ @define-mixin inputStylesV2 {
+  font: var(--eds-theme-typography-form-input);
+  font-family: inherit;
+
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+
+  border: var(--eds-border-width-sm) solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+  outline: none;
+  padding: 0.5rem;
+  margin: 0;
+
+  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+  border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+  
+  color: var(--eds-theme-color-text-utility-default-primary);
+  border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+  background-color: var(--eds-theme-color-background-input);
+  
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+  }
+
+  &:focus {
+    border-color: var(--eds-theme-color-border-utility-focus);
+    outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-focus);
+  }
+
+  &:read-only:not(:disabled) {
+    border-color: transparent;
+    padding-left: 0;
+  }
+
+  /**
+   * Input error state
+   */
+  &.error {
+    border-color: var(--eds-theme-color-border-utility-critical);
+
+    &:hover {
+      border-color: var(--eds-theme-color-border-utility-critical-hover);
+    }
+
+    &:focus {
+      border-color: var(--eds-theme-color-border-utility-critical);
+      outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-critical);
+    }
+  }
+
+  &.warning {
+    border-color: var(--eds-theme-color-border-utility-warning);
+
+    &:hover {
+      border-color: var(--eds-theme-color-border-utility-warning-hover);
+    }
+
+    &:focus {
+      border-color: var(--eds-theme-color-border-utility-warning);
+      outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-warning);
+    }
+  }
+
+  /**
+   * Disabled/read-only state
+   */
+  &:disabled,
+  &:disabled::placeholder {
+    cursor: not-allowed;
+
+    color: var(--eds-theme-color-text-utility-disabled-primary);
+    border-color: var(--eds-theme-color-border-utility-disabled);
+    background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+  }
+
+  &::placeholder {
+    color: var(--eds-theme-color-text-utility-default-secondary);
+  }
 }

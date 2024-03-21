@@ -20,6 +20,11 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 export type Align = 'left' | 'center' | 'right';
 
 /**
+ * Hints are form field directions on how to use the field and whether it requires a value.
+ */
+export type Hint = 'none' | 'required' | 'optional';
+
+/**
  * List of tier-2 and -3 tokens for use in types:
  * - src/design-tokens/tier-2-usage/typography.json
  *
