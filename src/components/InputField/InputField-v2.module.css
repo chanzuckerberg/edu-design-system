@@ -3,7 +3,8 @@
 \*------------------------------------*/
 
 /**
- * Wraps the Label and the optional/required indicator.
+ * Wraps the Label and the optional/required hint.
+ * TODO-AH: map the overline styles between Select and InputField
  */
 .input-field__overline {
   display: flex;
