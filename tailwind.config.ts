@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import { eds as edsTokens } from './lib/tokens/json/css-variables-nested.json';
+import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json';
 
 const {
   background: backgroundColorTokens,
