@@ -17,7 +17,7 @@ export const defaultPopoverModifiers: Options['modifiers'] = [
   {
     name: 'offset',
     options: {
-      offset: [0, 10], // spaces the popover from the trigger element
+      offset: [0, 12], // spaces the popover from the trigger element
     },
   },
   {
