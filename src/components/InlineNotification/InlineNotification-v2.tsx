@@ -22,17 +22,17 @@ type InlineNotificationProps = {
   className?: string;
   // Design API
   /**
-   * The text contents of the tag, nested inside the component, in addition to the icon.
-   */
-  title: string;
-  /**
-   * Text used for the main description of the notification
+   * Keyword to characterize the state of the notification
    */
   status?: Status;
   /**
    * Secondary text used to describe the notification in more detail
    */
   subTitle?: string;
+  /**
+   * The text contents of the tag, nested inside the component, in addition to the icon.
+   */
+  title: string;
 };
 
 /**
@@ -53,7 +53,7 @@ function getIconNameFromStatus(status: Status): IconName {
 /**
  * `import {InlineNotification} from "@chanzuckerberg/eds";`
  *
- * This component provides an inline banner accompanied with an icon for messaging users.
+ * An alert placed within a section of a page to provide a contextual notification. For example, an error which applies to multiple fields within a form.
  */
 export const InlineNotification = ({
   className,

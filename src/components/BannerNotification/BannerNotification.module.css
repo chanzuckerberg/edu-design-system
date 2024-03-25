@@ -1,0 +1,87 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BANNER NOTIFICATION
+\*------------------------------------*/
+
+/**
+ * Message of information, success, caution, or warning to the user.
+ */
+.banner {
+  /* Position is relative to allow for absolute-positioned close button. */
+  position: relative;
+  /* Grid is used to separate the icon from the text with correct spacing. */
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  border: 0.125rem solid;
+  border-left: 1rem solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+  &.banner-notification--status-informational {
+    color: var(--eds-theme-color-text-utility-informational);
+    background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+  }
+
+  &.banner-notification--status-critical {
+    color: var(--eds-theme-color-text-utility-critical);
+    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+  }
+
+  &.banner-notification--status-favorable {
+    color: var(--eds-theme-color-text-utility-favorable);
+    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+  }
+
+  &.banner-notification--status-warning {
+    color: var(--eds-theme-color-text-utility-warning);
+    background-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
+  }
+}
+
+.banner-notification__icon {
+  flex-shrink: 0;
+}
+
+.banner-notification__body {
+  flex-grow: 2;
+  display: flex;
+
+  &.banner-notification--has-vertical-cta {
+    flex-direction: column;
+  }
+
+  &.banner-notification--has-horizontal-cta {
+    flex-direction: row;
+  }
+}
+
+.banner-notification__call-to-action {
+  .banner-notification--has-vertical-cta & {
+    margin-top: 1rem;
+  }
+
+  .banner-notificatino-has-horizontal-cta & {
+    margin-left: 1rem;
+  }
+}
+
+.banner-notification__text {
+  flex-grow: 2;
+}
+
+/**
+ * Close button
+ *
+ * Button used to dismiss a banner.
+ */
+.banner-notification__close-button {
+  align-self: flex-start;
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.banner-notification__sub-title {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
