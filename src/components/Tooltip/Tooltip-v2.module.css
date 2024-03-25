@@ -2,27 +2,21 @@
     # TOOLTIP
 \*------------------------------------*/
 
-/**
- * Tippyjs provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow.
- *
- * Tippyjs also attaches data-attribute `data-placement` depending on how the tooltip is aligned.
- */
-
 .tooltip {
   border-style: solid;
   border-width: var(--eds-border-width-sm);
-  border-radius: var(--eds-border-radius-lg);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
+  max-width: 14rem;
 
   @media (prefers-reduced-motion) {
     transition: none;
   }
 
-  border-color: var(--eds-theme-color-border-neutral-default);
-  color: var(--eds-theme-color-text-neutral-default);
-  /* TODO-AH: update the neutral value used here to avoid a color change on old components */
-  background-color: var(--eds-theme-color-background-neutral-subtle);
-  --arrow-color: var(--eds-theme-color-border-neutral-default);
+  border-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  color: var(--eds-theme-color-text-utility-inverse);
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-default-high-emphasis);
 }
 
 /**
@@ -32,11 +26,12 @@
   opacity: 0;
 }
 
+/* TODO-AH: consider finding a way to not use these module semantics, e.g., global: */
 .tooltip :global(.tippy-content) {
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-  padding-bottom: var(--eds-size-1);
-  padding-top: var(--eds-size-1);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 /**
@@ -45,8 +40,8 @@
 .tooltip :global(.tippy-arrow) {
   position: absolute;
 
-  width: var(--eds-size-2);
-  height: var(--eds-size-2);
+  width: 1rem;
+  height: 1rem;
 }
 
 .tooltip :global(.tippy-arrow::before) {
@@ -54,7 +49,7 @@
 
   border-style: solid;
   border-color: transparent;
-  border-width: var(--eds-size-1);
+  border-width: 0.5rem;
 
   content: '';
 }
