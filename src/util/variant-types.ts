@@ -25,6 +25,11 @@ export type Align = 'left' | 'center' | 'right';
 export type Hint = 'none' | 'required' | 'optional';
 
 /**
+ * Statuses tied to the state of information being displayed
+ */
+export type Status = 'informational' | 'warning' | 'favorable' | 'critical';
+
+/**
  * List of tier-2 and -3 tokens for use in types:
  * - src/design-tokens/tier-2-usage/typography.json
  *
