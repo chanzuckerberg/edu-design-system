@@ -8,9 +8,6 @@
  * Message of information, success, caution, or warning to the user.
  */
 .banner {
-  /* Position is relative to allow for absolute-positioned close button. */
-  position: relative;
-  /* Grid is used to separate the icon from the text with correct spacing. */
   display: flex;
   gap: 1rem;
   padding: 1rem;
