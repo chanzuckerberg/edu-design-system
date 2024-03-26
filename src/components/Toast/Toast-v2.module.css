@@ -1,0 +1,35 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # TOAST
+\*------------------------------------*/
+
+.toast {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+
+  border: 0.125rem solid;
+  border-left: 1rem solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+
+  &.toast--status-critical {
+    color: var(--eds-theme-color-text-utility-critical);
+    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+  }
+
+  &.toast--status-favorable {
+    color: var(--eds-theme-color-text-utility-favorable);
+    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+  }
+}
+
+.toast__icon {
+  flex-shrink: 0;
+}
+
+.toast__body {
+  flex-grow: 2;
+}

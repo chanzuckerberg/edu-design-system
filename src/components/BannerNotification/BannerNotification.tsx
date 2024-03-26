@@ -21,12 +21,12 @@ export type BannerNotificationProps = {
    */
   className?: string;
   /**
-   * Callback when banner is dismissed. When passed in, renders banner with a close icon in the top right.
+   * Callback when notification is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
   // Design API
   /**
-   *
+   * Whether the button layout for the call to action is vertical or horizontal.
    */
   buttonLayout?: 'vertical' | 'horizontal';
   /**
@@ -42,7 +42,7 @@ export type BannerNotificationProps = {
    */
   subTitle?: string;
   /**
-   * The title/heading of the banner
+   * The title/heading of the notification
    */
   title?: string;
 };
@@ -125,7 +125,7 @@ export const BannerNotification = ({
           </div>
         )}
       </div>
-
+      {/* TODO-AH: Use `Button` properly */}
       {onDismiss && (
         <button
           className={styles['banner-notification__close-button']}
