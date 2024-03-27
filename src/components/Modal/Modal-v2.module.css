@@ -1,0 +1,212 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # MODAL
+\*------------------------------------*/
+
+/**
+ * The modal wrapper and overlay which takes up the entire screen.
+ */
+.modal,
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* TODO-AH: make sure this doesn't spill out of the container */
+  width: 100%;
+}
+
+/**
+ * The inverted background of the modal to provide contrast with the actual modal.
+ */
+.modal__overlay {
+  /* TODO-AH: opacity of color based on 50% */
+  background-color: var(--eds-theme-color-background-utility-overlay-low-emphasis);
+  opacity: 0.5;
+}
+
+/**
+ * The modal container which positions the modal in the center of the screen.
+ */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  /**
+   * Ensures modal is above other components. This is not a design token for now since we need to align on 
+   * z-indeces across the system
+   */
+  z-index: 1050;
+}
+
+/**
+ * Modal transition animations.
+ */
+.modal__transition--enter {
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.modal__transition--enterFrom {
+  opacity: 0;
+}
+
+.modal__transition--enterTo {
+  opacity: 1;
+}
+
+.modal__transition--leave {
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.modal__transition--leaveFrom {
+  opacity: 1;
+}
+
+.modal__transition--leaveTo {
+  opacity: 0;
+}
+
+/**
+ * The content of the modal, which can wrap header, body, and footer.
+ */
+.modal__content {
+  position: relative;
+  height: 43.125rem;
+  max-height: 90vh;
+  overflow: hidden;
+  
+  /** 
+  * This transparent border is for Window High Contrast Mode, which removes all
+  * background colors but makes borders 100% opacity black. Without this, the
+  * modal would have no clear boundary. 
+  */
+  border: var(--eds-theme-form-border-width) transparent var(--eds-theme-color-background-utility-container);
+  
+  display: flex;
+  flex-direction: column;
+  
+  width: 22.5rem;
+
+  background-color: var(--eds-theme-color-background-utility-container);
+}
+
+/**
+ * The medium modal size used for the md modal.
+ * Also used for the lg modal size for when the screen size is smaller than 75rem.
+ */
+.modal__content--md {
+  @media all and (min-width: $eds-bp-md) {
+    width: 42rem;
+  }
+}
+
+/**
+ * The large modal size used for the lg/default modal.
+ */
+.modal__content--lg {
+  @media all and (min-width: $eds-bp-xl) {
+    width: 64rem;
+    --modal-horizontal-padding: 4rem;
+  }
+}
+
+/**
+ * Allows scrolling of the modal content except for sticky footer.
+ * This functionality is our intended scroll behavior but consuming teams can 
+ * style the body content as they wish to handle overflow in various ways.
+ */
+.modal__content--scrollable {
+  overflow: auto;
+}
+
+/**
+ * The modal close button.
+ * TODO-AH: this should be a `Button`
+ */
+.modal__close-button {
+  border: 0;
+  background-color: transparent;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 3rem;
+  height: 3rem;
+
+  cursor: pointer;
+
+  z-index: 1;
+
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+/**
+ * The modal close icon that resides in the close button.
+ */
+.modal__close-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/*------------------------------------*\
+    # MODAL BODY
+\*------------------------------------*/
+
+/**
+ * The body of the modal
+ */
+ .modal-body {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+/*------------------------------------*\
+    # MODAL FOOTER
+\*------------------------------------*/
+
+/**
+ * Footer for the modal.
+ */
+ .modal-footer {
+  width: 100%;
+  z-index: 1000;
+
+  padding: 1.5rem 2rem;
+
+  background-color: var(--eds-theme-color-background-utility-container);
+}
+
+.modal-footer--sticky {
+  position: sticky;
+  bottom: 0;
+
+  /* TODO-AH: bring in scrollwrapper to handle show/hide of visible elevation (and which box shadow to apply) */
+  box-shadow: var(--eds-box-shadow-xl);
+}
+
+/*------------------------------------*\
+    # MODAL HEADER
+\*------------------------------------*/
+
+/**
+ * Header for the modal.
+ */
+ .modal-header {
+  width: 100%;
+
+  padding: 1.5rem 2rem;
+}
+
+.modal-sub-title {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
