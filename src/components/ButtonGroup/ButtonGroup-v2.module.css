@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    # BUTTON GROUP
+\*------------------------------------*/
+
+/**
+ * A group of buttons displayed in an organized fashion.
+ */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  gap: 0.5rem;
+}
+
+.button-group--horizontal {
+  flex-direction: row-reverse;
+}
+
+.button-group--vertical {
+  flex-direction: column;
+  align-content: center;
+}
+
+.button-group--horizontal-progressive {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
