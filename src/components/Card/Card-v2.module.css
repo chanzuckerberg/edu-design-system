@@ -1,0 +1,136 @@
+/*------------------------------------*\
+    # CARD
+\*------------------------------------*/
+
+/**
+ * A card is a block that typically contains a title, image, text, and/or calls to action.
+ * The `:where` pseudo class function allows easy overriding via className.
+ */
+:where(.card) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.5rem;
+  height: 100%;
+  border: var(--eds-theme-border-width) solid;
+
+
+  &.card--container-style-low {
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
+
+  &.card--container-style-medium {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis)
+  }
+
+  &.card--container-style-high {
+    border-color: var(--eds-theme-color-border-utility-default-high-emphasis);
+  }
+
+  &.card--container-style-none {
+    border-color: transparent;
+  }
+
+  &.card--background-default {
+    background-color: var(--eds-theme-color-background-utility-container);
+
+    &:hover {
+      background-color: var(--eds-theme-color-background-utility-container-hover);
+    }
+
+    &:active {
+      background-color: var(--eds-theme-color-background-utility-container-active);
+    }
+  }
+
+  &.card--background-call-out {
+    background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+
+    &:hover {
+      background-color: var(--eds-theme-color-background-utility-information-low-emphasis-hover);
+    }
+
+    &:active {
+      background-color: var(--eds-theme-color-background-utility-information-low-emphasis-active);
+    }
+  }
+
+  &.card--background-call-out.card--container-style-medium {
+    border-color: var(--eds-theme-color-border-utility-informational);
+  }
+
+  &:focus-visible {
+    outline-offset: 1px;
+    outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+  }
+
+  /**
+   * Error States TODO-AH verify with design error states from interactive state table
+   */
+  &.card--container-style-low.card--background-call-out {
+    border-color: fuchsia;
+    border-style: dashed;
+  }
+  
+}
+
+.card__header {
+  display: flex;
+  
+  &.header--size-sm {
+    gap: 0.5rem
+  }
+
+  &.header--size-md {
+    gap: 1rem;
+  }
+}
+
+.card__top-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+/* TODO-AH: revisit handling the brand colors for top stripe */
+:where(.card__top-stripe) {
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+}
+
+.top-stripe--medium {
+  height: 0.5rem;
+}
+
+.top-stripe--high {
+  height: 1rem;
+}
+
+.header__icon,
+.header__action {
+  flex-grow: 0;
+}
+
+.header__text {
+  flex-grow: 2;
+}
+
+.card__body {
+  flex-grow: 1;
+
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.header__eyebrow {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.header__title {
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.header__sub-title {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
