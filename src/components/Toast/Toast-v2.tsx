@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
 
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 import { ButtonV2 as Button } from '../Button';
-import Icon, { type IconName } from '../Icon';
+import Icon from '../Icon';
 import Text from '../Text';
 
 import styles from './Toast-v2.module.css';
@@ -28,23 +29,6 @@ export type ToastProps = {
    */
   title: string;
 };
-
-/**
- * Map statuses to existing icon names
- * TODO-AH: de-dupe this with the function in InlineNotification
- *
- * @param status component status
- * @returns the matching icon name
- */
-function getIconNameFromStatus(status: Status): IconName {
-  const map: Record<Status, IconName> = {
-    informational: 'info',
-    critical: 'dangerous',
-    warning: 'warning',
-    favorable: 'check-circle',
-  };
-  return map[status];
-}
 
 /**
  * `import {Toast} from "@chanzuckerberg/eds";`
