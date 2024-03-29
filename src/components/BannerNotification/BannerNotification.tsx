@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 import Heading from '../Heading';
-import Icon, { type IconName } from '../Icon';
+import Icon from '../Icon';
 import Text from '../Text';
 
 import styles from './BannerNotification.module.css';
@@ -40,23 +41,6 @@ export type BannerNotificationProps = {
    */
   title?: string;
 };
-
-/**
- * Map statuses to existing icon names
- * TODO-AH: de-dupe this with the function in InlineNotification
- *
- * @param status component status
- * @returns the matching icon name
- */
-function getIconNameFromStatus(status: Status): IconName {
-  const map: Record<Status, IconName> = {
-    informational: 'info',
-    critical: 'dangerous',
-    warning: 'warning',
-    favorable: 'check-circle',
-  };
-  return map[status];
-}
 
 /**
  * `import {BannerNotification} from "@chanzuckerberg/eds";`
