@@ -91,6 +91,10 @@ export const HasLeadingIcon: Story = {
   },
 };
 
+/**
+ * You can add in `NumberIcon` or any other icon in the button for the accordion row.
+ * TODO-AH: Handle color differences when its a number icon or a regular icon
+ */
 export const HasLeadingNumberIcon: Story = {
   args: {
     ...Default.args,

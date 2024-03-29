@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh; /* TODO-AH: make sure this doesn't spill out of the container */
+  height: 100vh;
   width: 100%;
 }
 
@@ -20,7 +20,6 @@
  * The inverted background of the modal to provide contrast with the actual modal.
  */
 .modal__overlay {
-  /* TODO-AH: opacity of color based on 50% */
   background-color: var(--eds-theme-color-background-utility-overlay-low-emphasis);
   opacity: 0.5;
 }
@@ -190,7 +189,7 @@
   position: sticky;
   bottom: 0;
 
-  /* TODO-AH: bring in scrollwrapper to handle show/hide of visible elevation (and which box shadow to apply) */
+  /* TODO-AH: bring in <Scrollwrapper /> to handle show/hide of visible elevation (and which box shadow to apply) */
   box-shadow: var(--eds-box-shadow-xl);
 }
 

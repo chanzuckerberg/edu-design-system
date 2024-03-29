@@ -65,6 +65,5 @@
   padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); 
 }
 .inline-notification--full-width-subtle {
-  /* TODO-AH: revisit when re-theming the inline notification component */
   background-color: var(--eds-theme-color-background-neutral-default);
 }

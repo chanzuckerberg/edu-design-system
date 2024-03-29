@@ -54,6 +54,7 @@
 
   /* TODO-AH: handle placeholder color when no value is selected */
   color: var(--eds-theme-color-text-utility-default-primary);
+  /* TODO-AH: update property value to the new utility token */
   background-color: var(--eds-theme-color-form-background);
 }
 
@@ -72,7 +73,6 @@
 }
 
 .select-button__text--truncated {
-  /* TODO-AH: use as mixin */
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

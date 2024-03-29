@@ -254,6 +254,7 @@
   --eds-theme-color-background-utility-default-no-emphasis: transparent;
   --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-background-utility-base-0: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-neutral-subtle: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
   --eds-theme-typography-tag: var(--eds-typography-preset-009);
   --eds-theme-typography-tab-sm-active: var(--eds-typography-preset-009);
@@ -732,7 +733,6 @@
   --eds-theme-color-background-neutral-medium-hover: var(--eds-color-neutral-300);
   --eds-theme-color-background-neutral-medium: var(--eds-color-neutral-200);
   --eds-theme-color-background-neutral-subtle-hover: var(--eds-color-neutral-200);
-  --eds-theme-color-background-neutral-subtle: var(--eds-color-neutral-100);
   --eds-theme-color-background-neutral-default-hover: var(--eds-color-neutral-100);
   --eds-theme-color-background-neutral-default: var(--eds-color-neutral-white);
   --eds-theme-color-body-background-inverted: var(--eds-color-neutral-700);

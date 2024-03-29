@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 /**
- * Tippyjs provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow.
+ * TippyJS provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow.
  *
- * Tippyjs also attaches data-attribute `data-placement` depending on how the tooltip is aligned.
+ * TippyJS also attaches data-attribute `data-placement` depending on how the tooltip is aligned.
  */
 
 .tooltip {
@@ -20,7 +20,6 @@
 
   border-color: var(--eds-theme-color-border-neutral-default);
   color: var(--eds-theme-color-text-neutral-default);
-  /* TODO-AH: update the neutral value used here to avoid a color change on old components */
   background-color: var(--eds-theme-color-background-neutral-subtle);
   --arrow-color: var(--eds-theme-color-border-neutral-default);
 }

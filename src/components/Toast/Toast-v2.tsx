@@ -8,12 +8,6 @@ import Text from '../Text';
 
 import styles from './Toast-v2.module.css';
 
-/**
- * TODO-AH:
- * - which status is default?
- * - default / min / max widths?
- */
-
 export type ToastProps = {
   // Component API
   /**

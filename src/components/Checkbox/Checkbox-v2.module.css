@@ -137,10 +137,6 @@
   }
 }
 
-/**
- * Handling focus ring
- * TODO-AH: focus ring clamped to the actual radio button, not its bounding label (browser default)
- */
 .checkbox__input:focus-visible {
   outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
 }

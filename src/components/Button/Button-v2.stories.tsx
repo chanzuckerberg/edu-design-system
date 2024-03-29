@@ -3,8 +3,6 @@ import React from 'react';
 import { Button } from './Button-v2';
 import { SIZES } from '../ClickableStyle';
 
-// TODO-AH: add documentation to each story
-
 export default {
   title: 'Components/V2/Button',
   component: Button,
@@ -41,6 +39,9 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+/**
+ * Each button can come in a set of ranks, denoting the importance of the button to the surrounding user interface.
+ */
 export const DefaultRanks: StoryObj<Args> = {
   args: {
     ...Default.args,
@@ -62,6 +63,9 @@ export const DefaultRanks: StoryObj<Args> = {
   },
 };
 
+/**
+ * Buttons can be disabled for each rank
+ */
 export const Disabled: StoryObj<Args> = {
   args: {
     ...DefaultRanks.args,
@@ -70,6 +74,9 @@ export const Disabled: StoryObj<Args> = {
   render: DefaultRanks.render,
 };
 
+/**
+ * Tertiary buttons can have an additional level of emphasis when stood by themselves. Use this case sparingly.
+ */
 export const TertiaryStandalone: StoryObj<Args> = {
   args: {
     rank: 'tertiary',
@@ -77,6 +84,9 @@ export const TertiaryStandalone: StoryObj<Args> = {
   },
 };
 
+/**
+ * Each button has variants denoting criticality, like for changes that are permanent, deletions, etc.
+ */
 export const CriticalRanks: StoryObj<Args> = {
   args: {
     ...DefaultRanks.args,
@@ -85,13 +95,16 @@ export const CriticalRanks: StoryObj<Args> = {
   render: DefaultRanks.render,
 };
 
+/**
+ * Each rank also includes an inverse variant, for use on dark backgrounds.
+ */
 export const InverseRanks: StoryObj<Args> = {
   args: {
     ...DefaultRanks.args,
     variant: 'inverse',
   },
   render: DefaultRanks.render,
-  // TODO-AH: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
+  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
   decorators: [
     (Story) => (
       <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
@@ -99,6 +112,9 @@ export const InverseRanks: StoryObj<Args> = {
   ],
 };
 
+/**
+ * Buttons come in three sizes
+ */
 export const Sizes: StoryObj<Args> = {
   args: {
     ...Default.args,
@@ -120,6 +136,9 @@ export const Sizes: StoryObj<Args> = {
   },
 };
 
+/**
+ * Buttons can come with full width set, which will expand the button to its maximum width (diferent for each size)
+ */
 export const FullWidths: StoryObj<Args> = {
   args: {
     ...Sizes.args,
@@ -128,6 +147,9 @@ export const FullWidths: StoryObj<Args> = {
   render: Sizes.render,
 };
 
+/**
+ * When in the loading state, a button will show a loading indicator in place of the normal button text, maintaining the initial size.
+ */
 export const LoadingStates: StoryObj<Args> = {
   args: {
     ...Sizes.args,

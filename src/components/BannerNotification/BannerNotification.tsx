@@ -8,12 +8,6 @@ import Text from '../Text';
 
 import styles from './BannerNotification.module.css';
 
-/**
- * TODO-AH:
- * - feedback on api naming in figma
- * - handling of aria-live for a11y
- */
-
 export type BannerNotificationProps = {
   // Component API
   /**
@@ -30,7 +24,7 @@ export type BannerNotificationProps = {
    */
   buttonLayout?: 'vertical' | 'horizontal';
   /**
-   * TODO-AH: ensure this is a button
+   * Slot for a button or other interactive element to direct a user to a follow-up action
    */
   callToAction?: ReactNode;
   /**
@@ -104,6 +98,7 @@ export const BannerNotification = ({
         )}
       >
         <div className={styles['banner-notification__text']}>
+          {/* TODO-AH: apply aria-live? */}
           {title && (
             <Heading as="h3" preset="title-md">
               {title}

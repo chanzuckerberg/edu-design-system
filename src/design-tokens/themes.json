@@ -104,8 +104,9 @@
             },
             "subtle": {
               "@": {
-                "value": "{eds.color.neutral.100}",
-                "group": "color"
+                "value": "#F4F6F8",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "hover": {
                 "value": "{eds.color.neutral.200}",

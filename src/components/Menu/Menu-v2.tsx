@@ -13,13 +13,11 @@ import Icon from '../Icon';
 import type { IconName } from '../Icon';
 
 import {
-  // TODO-AH: swap back to default once finished
   PopoverContainerV2 as PopoverContainer,
   defaultPopoverModifiers,
 } from '../PopoverContainer';
 import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
 
-// TODO-AH: swap back to default once finished
 import { PopoverListItemV2 as PopoverListItem } from '../PopoverListItem';
 import styles from './Menu-v2.module.css';
 

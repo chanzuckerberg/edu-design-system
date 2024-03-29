@@ -1,7 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-// TODO-AH: map back to non-V2 names once ready for release
 import { PopoverContainer } from './PopoverContainer-v2';
 import { PopoverListItemV2 as PopoverListItem } from '../PopoverListItem';
 

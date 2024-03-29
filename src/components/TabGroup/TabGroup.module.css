@@ -185,8 +185,7 @@
     height: 0.125rem;
     width: 100%;
 
-    /* TODO-AH: --eds-theme-color-icon-utility-interactive-primary not defined */
-    background-color: var(--eds-theme-color-icon-utility-interactive-primary, currentColor);
+    background-color: var(--eds-theme-color-text-utility-interactive-primary);
   }
 
   .tabs__item .tabs__link:focus-visible & {
@@ -194,9 +193,7 @@
     width: calc(100% - 0.5rem);
 
     border-radius: var(--eds-border-radius-full);
-
   }
-
 
   .tabs--has-divider & {
     /* TODO-AH: use token instead of rem values: --eds-theme-border-radius-tab-underline */

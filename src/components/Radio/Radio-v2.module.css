@@ -126,10 +126,6 @@
   }
 }
 
-/**
- * Handling focus ring
- * TODO-AH: focus ring clamped to the actual radio button, not its bounding label (browser default)
- */
 .radio__input:focus-visible + .radio__icon {
   border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
   border-radius: var(--eds-border-radius-full);

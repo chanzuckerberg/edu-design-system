@@ -148,7 +148,7 @@ export const Tooltip = ({
     </Text>
   );
 
-  // TODO-AH: figure out whay the modifiers don't seem to get applied
+  // TODO-AH: figure out why the modifiers don't seem to get applied
   return (
     <Tippy
       className={clsx(styles['tooltip'], className)}

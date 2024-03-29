@@ -344,7 +344,7 @@
               "hover": "#EEE7E4"
             },
             "subtle": {
-              "@": "#EEE7E4",
+              "@": "#F4F6F8",
               "hover": "#CFC9C7"
             },
             "medium": {

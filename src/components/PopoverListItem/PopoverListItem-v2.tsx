@@ -6,14 +6,6 @@ import Icon from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem-v2.module.css';
 
-/**
- * TODO-AH: for Action Menu Row
- *
- * - This is called `PopoverListItem` in code, and is currently shared between `Menu` and `Select`
- * - in figma, mark isFocused as an interactive state
- * - hasSubLabel => subLabel (presence marks existence for cases like this in code, also with icon)
- *
- */
 export interface PopoverListItemProps {
   /**
    * Child node(s) that can be nested inside component

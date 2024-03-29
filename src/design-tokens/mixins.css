@@ -1,7 +1,7 @@
 /**
  * Link button styles
+ * TODO(2.0): remove unused mixins once 2.0 is released
  */
-/* TODO-AH: to remove */
 @define-mixin textLink {
   font-size: inherit;
   font-weight: var(--eds-font-weight-medium);
@@ -73,7 +73,6 @@
   outline-color: var(--eds-theme-color-focus-ring-inverted);
 }
 
-/* TODO-AH: to remove */
 @define-mixin inputStyles {
   font: var(--eds-theme-typography-form-input);
   font-family: inherit;

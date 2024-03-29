@@ -11,11 +11,6 @@ import Text from '../Text';
 
 import styles from './Accordion-v2.module.css';
 
-/**
- * TODO-AH:
- * - handling for different colors when icon usage is different (NumberIcon or Icon)
- */
-
 type AccordionProps = {
   // Component API
   /**
@@ -223,7 +218,7 @@ const AccordionButton = ({
                 preset={size === 'md' ? 'body-lg' : 'body-md'}
               >
                 {title}
-                {/* TODO-AH: Add check preventing use of title, subtitle, AND children at the same time */}
+                {/* TODO: Add check preventing use of title, subtitle, AND children at the same time */}
                 {children}
               </Text>
             )}
