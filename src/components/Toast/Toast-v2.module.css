@@ -5,6 +5,8 @@
 \*------------------------------------*/
 
 .toast {
+  width: 100%;
+  max-width: 24rem;
   display: flex;
   gap: 1rem;
   padding: 1rem;
