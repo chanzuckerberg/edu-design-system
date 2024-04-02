@@ -118,6 +118,8 @@ export const ShowHint: Story = {
  * You can render certain components **within** an `InputField`, such as a button, icon, or other
  * small component. This facility is used to implement controls that should appear visibly nested
  * within the button, to the right-hand side.
+ *
+ * Please keep the text of the button brief (button width < 128px)
  */
 export const InputWithin: Story = {
   parameters: {

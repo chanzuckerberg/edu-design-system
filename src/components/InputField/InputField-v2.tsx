@@ -14,13 +14,6 @@ import { InputLabelV2 as InputLabel } from '../InputLabel';
 import Text from '../Text';
 import styles from './InputField-v2.module.css';
 
-/**
- * TODO-AH: left to handle:
- * - password inputs with show/hide
- * - clear button to reset field
- * - handling for date field(s) (with icon? or internal handling)
- */
-
 export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   // Component API
   /**
@@ -239,7 +232,6 @@ export const InputField: InputFieldType = forwardRef(
     );
 
     // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
-    // TODO-AH: add suggested limit to the width of the button
     const inputOverlayClassName = clsx(
       leadingIcon && styles['input-field__input--leading-icon'],
       inputWithin && styles['input-field__input--input-within'],
@@ -328,7 +320,7 @@ export const InputField: InputFieldType = forwardRef(
           </div>
         ) : (
           <>
-            {/* TODO-AH: maintained for seamless upgrades; can be removed on next breaking change */}
+            {/* TODO: maintained for seamless upgrades; can be removed on next breaking change */}
             {fieldNote && (
               <FieldNote
                 disabled={disabled}

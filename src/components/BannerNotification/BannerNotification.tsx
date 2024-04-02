@@ -82,7 +82,6 @@ export const BannerNotification = ({
         )}
       >
         <div className={styles['banner-notification__text']}>
-          {/* TODO-AH: apply aria-live? */}
           {title && (
             <Heading as="h3" preset="title-md">
               {title}
@@ -104,7 +103,7 @@ export const BannerNotification = ({
           </div>
         )}
       </div>
-      {/* TODO-AH: Use `Button` properly */}
+      {/* TODO: Use `Button` properly */}
       {onDismiss && (
         <button
           className={styles['banner-notification__close-button']}

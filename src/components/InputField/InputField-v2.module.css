@@ -4,7 +4,7 @@
 
 /**
  * Wraps the Label and the optional/required hint.
- * TODO-AH: match/share the overline styles between Select and InputField
+ * TODO: match/share the overline styles between Select and InputField
  */
 .input-field__overline {
   display: flex;

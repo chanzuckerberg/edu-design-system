@@ -10,13 +10,6 @@ import Text from '../Text';
 
 import styles from './Card-v2.module.css';
 
-/**
- * TODO-AH:
- * - handling of clickable cards (how/when possible)
- * - handling of cards vs container/sections (discussion)
- * - handling/disambiguation of containerStyle, background color that aren't allowed
- */
-
 export interface CardProps extends HTMLAttributes<HTMLElement> {
   // Component API
   /**

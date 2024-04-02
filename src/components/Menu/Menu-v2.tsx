@@ -184,7 +184,6 @@ const MenuItems = (props: MenuItemsProps) => {
 
 /**
  * An individual option that represent an action in the menu
- * TODO-AH: handling for links that should navigate and support frameworks
  */
 const MenuItem = ({
   children,

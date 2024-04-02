@@ -10,7 +10,6 @@ export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   // Component API
   /**
    * Component used to render the element. Meant to support interaction with framework navigation libraries.
-   * TODO-AH: support frameworks that may not use (or replace) `href` for some other prop
    *
    * **Default is `"a"`**.
    */

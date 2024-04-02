@@ -9,12 +9,6 @@ import Text from '../Text';
 
 import styles from './InlineNotification-v2.module.css';
 
-/**
- * TODO-AH:
- * - feedback on api naming in figma
- * - handling of aria-live for a11y
- */
-
 type InlineNotificationProps = {
   // Component API
   /**

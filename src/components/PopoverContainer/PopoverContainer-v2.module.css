@@ -13,7 +13,6 @@
   padding: 0.25rem 0;
   z-index: 1150;
 
-  /* TODO-AH: Dial in box shadows from design */
   box-shadow: var(--eds-box-shadow-md);
   background-color: var(--eds-theme-color-background-utility-container);
 }

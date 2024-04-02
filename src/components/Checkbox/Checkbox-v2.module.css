@@ -27,7 +27,6 @@
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 }
 
-/* TODO-AH: applying roundrect to the clip-path is tricky. selected / indeterminate state includes a square shape */
 .checkbox__input:checked::before {
   background-color: currentColor;
   content: '';

@@ -248,7 +248,6 @@
 }
 
 .button--tertiary.button--variant-inverse:hover {
-  /* TODO-AH: b/c of opacity, the background and borders stack, causing a faint border */
   border-color: var(--eds-theme-color-background-utility-inverse-no-emphasis-hover);
 }
 

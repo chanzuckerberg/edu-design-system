@@ -66,13 +66,13 @@
   }
 
   /**
-   * Error States TODO-AH verify with design error states from interactive state table
-   */
+   * Invalid States
+   
   &.card--container-style-low.card--background-call-out {
     border-color: fuchsia;
     border-style: dashed;
   }
-  
+  */
 }
 
 .card__header {
@@ -95,7 +95,6 @@
   width: 100%;
 }
 
-/* TODO-AH: revisit handling the brand colors for top stripe */
 :where(.card__top-stripe) {
   background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
 }

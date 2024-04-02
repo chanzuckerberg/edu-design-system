@@ -49,7 +49,6 @@ export const Warning: StoryObj<Args> = {
 
 /**
  * When using critical, make sure `Button` has a matching variant specified.
- * TODO-AH: design of the secondary critical button has a customization to the background that needs verification.
  */
 export const Critical: StoryObj<Args> = {
   args: {

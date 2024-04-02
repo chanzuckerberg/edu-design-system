@@ -196,7 +196,6 @@
   }
 
   .tabs--has-divider & {
-    /* TODO-AH: use token instead of rem values: --eds-theme-border-radius-tab-underline */
     border-top-left-radius: 0.125rem;
     border-top-right-radius: 0.125rem;
     border-bottom-left-radius: 0;

@@ -240,6 +240,7 @@ export const ModalContent = (props: ModalContentProps) => {
   return (
     <ModalContext.Provider value={{ isScrollable }}>
       <div className={componentClassName} {...other}>
+        {/* TODO: this should be a button instance? */}
         {!hideCloseButton && (
           <button className={styles['modal__close-button']} onClick={onClose}>
             <Icon

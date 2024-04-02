@@ -25,13 +25,6 @@ import Text from '../Text';
 
 import styles from './Select-v2.module.css';
 
-/**
- * TODO-AH: things to add:
- * - handle placeholder (and color when no value is selected)
- * - handle labelLayout
- * - check handling of field status across components (booleans versus status field)
- */
-
 type SelectProps = ExtractProps<typeof Listbox> &
   PopoverOptions & {
     // Component API

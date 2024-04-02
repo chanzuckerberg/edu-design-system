@@ -25,7 +25,6 @@
  * Disabled variant
  */
 .field-note--disabled {
-  /* TODO-AH: figure out field note treatment and tokens */
   color: var(--eds-theme-color-text-utility-disabled-primary);
 }
 
@@ -36,7 +35,6 @@
   color: var(--eds-theme-color-text-utility-critical);
 
   & > .field-note__icon {
-    /* TODO-AH: using the text token for this icon since they match and no icon tokens existed in the sheet */
     color: var(--eds-theme-color-text-utility-critical);
   }
 }
@@ -46,7 +44,6 @@
   color: var(--eds-theme-color-text-utility-warning);
 
   & > .field-note__icon {
-    /* TODO-AH: using the text token for this icon since they match and no icon tokens existed in the sheet */
     color: var(--eds-theme-color-text-utility-warning);
   }
 }

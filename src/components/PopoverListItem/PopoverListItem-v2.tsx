@@ -70,7 +70,6 @@ export const PopoverListItem = React.forwardRef<
       styles['popover-list-item'],
       isDisabled && styles['popover-list-item--disabled'],
       isDestructiveAction && styles['popover-list-item--destructive-action'],
-      // TODO-AH: should focus mimic the active state like before
       isFocused && styles['popover-list-item--focused'],
       className,
     );

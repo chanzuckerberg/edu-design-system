@@ -13,7 +13,6 @@
 
 /**
  * Wraps the Label and the optional/required hint.
- * TODO-AH: map the overline styles between Select and InputField
  */
 .select__overline {
   display: flex;
@@ -52,9 +51,7 @@
 
   cursor: pointer;
 
-  /* TODO-AH: handle placeholder color when no value is selected */
   color: var(--eds-theme-color-text-utility-default-primary);
-  /* TODO-AH: update property value to the new utility token */
   background-color: var(--eds-theme-color-form-background);
 }
 

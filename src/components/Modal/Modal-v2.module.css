@@ -128,7 +128,6 @@
 
 /**
  * The modal close button.
- * TODO-AH: this should be a `Button`
  */
 .modal__close-button {
   border: 0;
@@ -189,7 +188,6 @@
   position: sticky;
   bottom: 0;
 
-  /* TODO-AH: bring in <Scrollwrapper /> to handle show/hide of visible elevation (and which box shadow to apply) */
   box-shadow: var(--eds-box-shadow-xl);
 }
 

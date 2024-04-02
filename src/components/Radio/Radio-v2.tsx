@@ -126,9 +126,7 @@ export const RadioLabel = ({
  *
  * Radio control indicating if one item is selected or unselected from a set of other options. Uncontrolled by default, it can be used in place of a select field in form data.
  *
- * NOTE: This component requires `label` or `aria-label` prop
- *
- * TODO-AH: Figure out why the docs for radio don't appear in storybook (either component version)
+ * NOTE: This component requires `label` or `aria-label` prop *
  */
 export const Radio = ({
   className,

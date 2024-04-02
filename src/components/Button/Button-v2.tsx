@@ -132,7 +132,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonV2Props>(
         type={type}
         {...other}
       >
-        {/* TODO-AH: revisit sizing when rebuilding LoadingIndicator */}
         <span className={buttonContentClassName}>
           {iconLayout === 'icon-only' && (
             <Icon
