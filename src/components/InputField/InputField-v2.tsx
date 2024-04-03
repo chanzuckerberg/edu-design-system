@@ -174,6 +174,7 @@ export const InputField: InputFieldType = forwardRef(
       leadingIcon,
       maxLength,
       onChange,
+      readOnly,
       recommendedMaxLength,
       required,
       showHint,
@@ -289,6 +290,7 @@ export const InputField: InputFieldType = forwardRef(
               setFieldText(e.target.value);
               onChange && onChange(e);
             }}
+            readOnly={readOnly}
             ref={ref}
             required={required}
             type={type}
