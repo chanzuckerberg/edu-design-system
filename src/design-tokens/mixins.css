@@ -243,6 +243,7 @@
 
   &:read-only:not(:disabled) {
     border-color: transparent;
+    outline: none;
     padding-left: 0;
   }
 
