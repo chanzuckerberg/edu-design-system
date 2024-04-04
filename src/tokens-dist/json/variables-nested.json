@@ -332,7 +332,7 @@
       "color": {
         "body": {
           "background": {
-            "@": "#EEE7E4",
+            "@": "#F4F6F8",
             "inverted": "#383C43"
           }
         },
@@ -341,14 +341,14 @@
           "neutral": {
             "default": {
               "@": "#FFFFFF",
-              "hover": "#EEE7E4"
+              "hover": "#F4F6F8"
             },
             "subtle": {
               "@": "#F4F6F8",
-              "hover": "#CFC9C7"
+              "hover": "#E7E8EA"
             },
             "medium": {
-              "@": "#CFC9C7",
+              "@": "#E7E8EA",
               "hover": "#C0C4C8"
             }
           },
@@ -493,7 +493,7 @@
         "border": {
           "neutral": {
             "subtle": {
-              "@": "#CFC9C7",
+              "@": "#E7E8EA",
               "hover": "#C0C4C8"
             },
             "default": {
@@ -650,7 +650,7 @@
             "neutral": {
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#CFC9C7",
+                "hover": "#E7E8EA",
                 "active": "#383C43"
               },
               "border": {
@@ -763,12 +763,12 @@
               "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#CFC9C7",
+                "hover": "#E7E8EA",
                 "active": "#5D6369"
               },
               "border": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#CFC9C7",
+                "hover": "#E7E8EA",
                 "active": "#5D6369"
               },
               "text": {
@@ -847,7 +847,7 @@
           }
         },
         "data-bar": {
-          "background": "#EEE7E4",
+          "background": "#F4F6F8",
           "border": "#C0C4C8"
         },
         "focus-ring": {
@@ -861,7 +861,7 @@
           },
           "background": {
             "@": "#FFFFFF",
-            "hover": "#EEE7E4"
+            "hover": "#F4F6F8"
           },
           "label": "#383C43"
         },
@@ -965,8 +965,8 @@
           }
         },
         "progress-bar": {
-          "background": "#CFC9C7",
-          "border": "#CFC9C7"
+          "background": "#E7E8EA",
+          "border": "#E7E8EA"
         },
         "radio": {
           "brand": {
