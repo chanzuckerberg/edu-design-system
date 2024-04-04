@@ -226,6 +226,8 @@
   --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
   --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
   --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-progress-bar-border: #E7E8EA;
+  --eds-theme-color-progress-bar-background: #E7E8EA;
   --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
   --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);
@@ -240,9 +242,15 @@
   --eds-theme-color-link-brand-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-link-brand-text-hover: var(--eds-theme-color-text-brand-default);
   --eds-theme-color-link-brand-text: var(--eds-theme-color-text-neutral-strong);
+  --eds-theme-color-form-background-hover: #F4F6F8;
+  --eds-theme-color-data-bar-background: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
+  --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
+  --eds-theme-color-button-secondary-neutral-background-hover: #E7E8EA;
   --eds-theme-color-border-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
   --eds-theme-color-border-utility-inverse: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-border-brand-primary-default: var(--eds-theme-color-border-brand-primary);
+  --eds-theme-color-border-neutral-subtle: #E7E8EA;
   --eds-theme-color-background-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
   --eds-theme-color-background-utility-inverse-high-emphasis: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-background-utility-inverse-no-emphasis-active: rgb(var(--eds-color-white) / 0.3);
@@ -254,8 +262,12 @@
   --eds-theme-color-background-utility-default-no-emphasis: transparent;
   --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-background-utility-base-0: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-neutral-medium: #E7E8EA;
+  --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
   --eds-theme-color-background-neutral-subtle: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-neutral-default-hover: #F4F6F8;
   --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-body-background: #F4F6F8;
   --eds-theme-typography-tag: var(--eds-typography-preset-009);
   --eds-theme-typography-tab-sm-active: var(--eds-typography-preset-009);
   --eds-theme-typography-tab-sm: var(--eds-typography-preset-008-light);
@@ -447,8 +459,6 @@
   --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
   --eds-theme-color-radio-brand-background: var(--eds-color-brand-grape-500);
-  --eds-theme-color-progress-bar-border: var(--eds-color-neutral-200);
-  --eds-theme-color-progress-bar-background: var(--eds-color-neutral-200);
   --eds-theme-color-modal-brand-header-background: var(--eds-color-brand-grape-500);
   --eds-theme-color-icon-disabled: var(--eds-color-neutral-300);
   --eds-theme-color-icon-grade-stop-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
@@ -475,14 +485,12 @@
   --eds-theme-color-icon-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-theme-color-icon-neutral-default: var(--eds-color-neutral-600);
   --eds-theme-color-form-label: var(--eds-color-neutral-700);
-  --eds-theme-color-form-background-hover: var(--eds-color-neutral-100);
   --eds-theme-color-form-background: var(--eds-color-neutral-white);
   --eds-theme-color-form-border-hover: var(--eds-color-neutral-800);
   --eds-theme-color-form-border: var(--eds-color-neutral-500);
   --eds-theme-color-focus-ring-inverted: var(--eds-color-neutral-white);
   --eds-theme-color-focus-ring: var(--eds-color-brand-grape-600);
   --eds-theme-color-data-bar-border: var(--eds-color-neutral-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-data-bar-background: var(--eds-color-neutral-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-checkbox-brand-background: var(--eds-color-brand-grape-500);
   --eds-theme-color-button-icon-error-text-active: var(--eds-color-neutral-white);
   --eds-theme-color-button-icon-error-text-hover: var(--eds-color-other-ruby-700);
@@ -524,10 +532,8 @@
   --eds-theme-color-button-icon-neutral-text-hover: var(--eds-color-neutral-600);
   --eds-theme-color-button-icon-neutral-text: var(--eds-color-neutral-600);
   --eds-theme-color-button-icon-neutral-border-active: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral-border-hover: var(--eds-color-neutral-200);
   --eds-theme-color-button-icon-neutral-border: var(--eds-theme-color-transparent-black-0);
   --eds-theme-color-button-icon-neutral-background-active: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral-background-hover: var(--eds-color-neutral-200);
   --eds-theme-color-button-icon-neutral-background: var(--eds-theme-color-transparent-black-0);
   --eds-theme-color-button-icon-neutral-active: var(--eds-color-neutral-white);
   --eds-theme-color-button-icon-neutral-hover: var(--eds-color-neutral-600);
@@ -590,7 +596,6 @@
   --eds-theme-color-button-secondary-neutral-border-hover: var(--eds-color-neutral-600);
   --eds-theme-color-button-secondary-neutral-border: var(--eds-color-neutral-600);
   --eds-theme-color-button-secondary-neutral-background-active: var(--eds-color-neutral-700);
-  --eds-theme-color-button-secondary-neutral-background-hover: var(--eds-color-neutral-200);
   --eds-theme-color-button-secondary-neutral-background: var(--eds-theme-color-transparent-black-0);
   --eds-theme-color-button-secondary-brand-icon-active: var(--eds-color-neutral-white);
   --eds-theme-color-button-secondary-brand-icon-hover: var(--eds-color-neutral-white);
@@ -671,7 +676,6 @@
   --eds-theme-color-border-neutral-default-hover: var(--eds-color-neutral-400);
   --eds-theme-color-border-neutral-default: var(--eds-color-neutral-300);
   --eds-theme-color-border-neutral-subtle-hover: var(--eds-color-neutral-300);
-  --eds-theme-color-border-neutral-subtle: var(--eds-color-neutral-200);
   --eds-theme-color-background-disabled: var(--eds-color-neutral-300);
   --eds-theme-color-background-grade-stop-subtle: var(--eds-color-other-ruby-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-grade-stop-default: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
@@ -731,12 +735,8 @@
   --eds-theme-color-background-brand-primary-subtle: var(--eds-color-brand-grape-100);
   --eds-theme-color-background-brand-primary-default: var(--eds-color-brand-grape-100);
   --eds-theme-color-background-neutral-medium-hover: var(--eds-color-neutral-300);
-  --eds-theme-color-background-neutral-medium: var(--eds-color-neutral-200);
-  --eds-theme-color-background-neutral-subtle-hover: var(--eds-color-neutral-200);
-  --eds-theme-color-background-neutral-default-hover: var(--eds-color-neutral-100);
   --eds-theme-color-background-neutral-default: var(--eds-color-neutral-white);
   --eds-theme-color-body-background-inverted: var(--eds-color-neutral-700);
-  --eds-theme-color-body-background: var(--eds-color-neutral-100);
   --eds-theme-size-slider-thumb: var(--eds-size-3);
   --eds-theme-size-slider-track-height: var(--eds-size-1);
   --eds-theme-form-border-radius: var(--eds-border-radius-md);

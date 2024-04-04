@@ -78,7 +78,7 @@
         "body": {
           "background": {
             "@": {
-              "value": "{eds.color.neutral.100}",
+              "value": "#F4F6F8",
               "group": "color"
             },
             "inverted": {
@@ -98,7 +98,7 @@
                 "group": "color"
               },
               "hover": {
-                "value": "{eds.color.neutral.100}",
+                "value": "#F4F6F8",
                 "group": "color"
               }
             },
@@ -109,13 +109,13 @@
                 "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },
               "hover": {
-                "value": "{eds.color.neutral.200}",
+                "value": "#E7E8EA",
                 "group": "color"
               }
             },
             "medium": {
               "@": {
-                "value": "{eds.color.neutral.200}",
+                "value": "#E7E8EA",
                 "group": "color"
               },
               "hover": {
@@ -427,7 +427,7 @@
           "neutral": {
             "subtle": {
               "@": {
-                "value": "{eds.color.neutral.200}",
+                "value": "#E7E8EA",
                 "group": "color"
               },
               "hover": {
@@ -821,7 +821,7 @@
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.200}",
+                  "value": "#E7E8EA",
                   "group": "color"
                 },
                 "active": {
@@ -1123,7 +1123,7 @@
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.200}",
+                  "value": "#E7E8EA",
                   "group": "color"
                 },
                 "active": {
@@ -1137,7 +1137,7 @@
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.200}",
+                  "value": "#E7E8EA",
                   "group": "color"
                 },
                 "active": {
@@ -1342,7 +1342,7 @@
         },
         "data-bar": {
           "background": {
-            "value": "{eds.color.neutral.100}",
+            "value": "#F4F6F8",
             "group": "color",
             "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           },
@@ -1379,7 +1379,7 @@
               "group": "color"
             },
             "hover": {
-              "value": "{eds.color.neutral.100}",
+              "value": "#F4F6F8",
               "group": "color"
             }
           },
@@ -1612,10 +1612,10 @@
         },
         "progress-bar": {
           "background": {
-            "value": "{eds.color.neutral.200}"
+            "value": "#E7E8EA"
           },
           "border": {
-            "value": "{eds.color.neutral.200}"
+            "value": "#E7E8EA"
           }
         },
         "radio": {
