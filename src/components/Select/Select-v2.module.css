@@ -41,7 +41,7 @@
   width: 100%;
   padding: 0.5rem;
 
-  border: var(--eds-border-width-sm) solid;
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   display: flex;
@@ -62,7 +62,7 @@
   flex-shrink: 0;
   transform: rotate(0);
 
-  transition: transform var(--eds-anim-move-medium) ease-out;
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-out;
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -122,7 +122,7 @@
 
 .select-button:focus-visible {
   border-color: var(--eds-theme-color-border-utility-focus);
-  outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-focus);
 }
 
 .select-button--error {
@@ -134,7 +134,7 @@
 
   &:focus-visible {
     border-color: var(--eds-theme-color-border-utility-critical);
-    outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-critical);
+    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-critical);
   }
 }
 
@@ -147,6 +147,6 @@
 
   &:focus-visible {
     border-color: var(--eds-theme-color-border-utility-warning);
-    outline: var(--eds-border-width-sm) solid var(--eds-theme-color-border-utility-warning);
+    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-warning);
   }
 }

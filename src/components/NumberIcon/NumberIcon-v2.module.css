@@ -16,9 +16,9 @@
   align-items: center;
 
   /* The circle part of the icon, made with borders. */
-  border: var(--eds-border-width-sm) solid;
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
   border-color: inherit;
-  border-radius: var(--eds-border-radius-full);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   cursor: pointer;
 }

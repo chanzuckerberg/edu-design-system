@@ -13,22 +13,22 @@
   width: 100%;
   max-width: 25rem;
 
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-1);
+  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-1) / 16 * 1rem);
 
   display: grid;
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
   grid-template-columns: 1fr min-content;
   align-items: center;
 
   border-style: solid;
-  border-width: var(--eds-border-width-sm);
+  border-width: calc(var(--eds-border-width-sm) * 1px);
   /**
    * The thick left border operates as a foreground band of color, 
    * so foreground rather than border is used
    */
-  border-left-width: var(--eds-border-width-lg);
-  border-radius: var(--eds-size-half);
+  border-left-width: calc(var(--eds-border-width-lg) * 1px);
+  border-radius: calc(var(--eds-size-half) / 16 * 1rem);
   /**
    * The border CSS variables are defined in the messaging mixins    
    */
@@ -50,13 +50,13 @@
  * The toast content, usually an icon and text message. Does not include the optional close button
  */
 .toast__content {
-  padding-top: var(--eds-size-2);
-  padding-bottom: var(--eds-size-2);
+  padding-top: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-bottom: calc(var(--eds-size-2) / 16 * 1rem);
   /**
    * Grid places the icon on the left and message on the right, with both vertically aligned to the center.   
    */
   display: grid;
-  gap: var(--eds-size-2);
+  gap: calc(var(--eds-size-2) / 16 * 1rem);
   grid-template-columns: min-content 1fr;
   align-items: center;
 }

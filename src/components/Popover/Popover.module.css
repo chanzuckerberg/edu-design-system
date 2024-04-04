@@ -17,28 +17,28 @@
 @define-mixin down-arrow {
   bottom: -0.25rem;
 
-  border: var(--eds-size-half) solid transparent;
+  border: calc(var(--eds-size-half) / 16 * 1rem) solid transparent;
   border-top-color: var(--eds-theme-color-background-neutral-default);
   border-bottom: none;
 }
 @define-mixin up-arrow {
   top: -0.25rem;
 
-  border: var(--eds-size-half) solid transparent;
+  border: calc(var(--eds-size-half) / 16 * 1rem) solid transparent;
   border-bottom-color: var(--eds-theme-color-background-neutral-default);
   border-top: none;
 }
 @define-mixin left-arrow {
   left: -0.25rem;
 
-  border: var(--eds-size-half) solid transparent;
+  border: calc(var(--eds-size-half) / 16 * 1rem) solid transparent;
   border-right-color: var(--eds-theme-color-background-neutral-default);
   border-left: none;
 }
 @define-mixin right-arrow {
   right: -0.25rem;
 
-  border: var(--eds-size-half) solid transparent;
+  border: calc(var(--eds-size-half) / 16 * 1rem) solid transparent;
   border-left-color: var(--eds-theme-color-background-neutral-default);
   border-right: none;
 }
@@ -47,42 +47,42 @@
  * Arrow placement according to popover placement.
  */
 :where([data-popper-placement='top-start'] > .popover-content__arrow) {
-  left: var(--eds-size-2);
+  left: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin down-arrow;
 }
 :where([data-popper-placement='top-end'] > .popover-content__arrow) {
-  right: var(--eds-size-2);
+  right: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin down-arrow;
 }
 :where([data-popper-placement='bottom-start'] > .popover-content__arrow) {
-  left: var(--eds-size-2);
+  left: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin up-arrow;
 }
 :where([data-popper-placement='bottom-end'] > .popover-content__arrow) {
-  right: var(--eds-size-2);
+  right: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin up-arrow;
 }
 :where([data-popper-placement='right-start'] > .popover-content__arrow) {
-  top: var(--eds-size-2);
+  top: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin left-arrow;
 }
 :where([data-popper-placement='right-end'] > .popover-content__arrow) {
-  bottom: var(--eds-size-2);
+  bottom: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin left-arrow;
 }
 :where([data-popper-placement='left-start'] > .popover-content__arrow) {
-  top: var(--eds-size-2);
+  top: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin right-arrow;
 }
 :where([data-popper-placement='left-end'] > .popover-content__arrow) {
-  bottom: var(--eds-size-2);
+  bottom: calc(var(--eds-size-2) / 16 * 1rem);
 
   @mixin right-arrow;
 }

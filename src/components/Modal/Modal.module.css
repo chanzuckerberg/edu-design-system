@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--eds-size-2);
+  padding: calc(var(--eds-size-2) / 16 * 1rem);
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
    * z-indeces across the app and in the platform. https://app.shortcut.com/czi-edu/story/203871.
@@ -43,7 +43,7 @@
  * Modal transition animations.
  */
 .modal__transition--enter {
-  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -55,7 +55,7 @@
   opacity: 1;
 }
 .modal__transition--leave {
-  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -75,7 +75,7 @@
   height: 43.125rem;
   max-height: 90vh;
   overflow: hidden;
-  border-radius: var(--eds-border-radius-lg);
+  border-radius: calc(var(--eds-border-radius-lg) * 1px);
   background-color: var(--eds-theme-color-background-neutral-default);
   /** 
   * This transparent border is for Window High Contrast Mode, which removes all
@@ -93,7 +93,7 @@
   flex-direction: column;
 
   width: 22.5rem;
-  --modal-horizontal-padding: var(--eds-size-4);
+  --modal-horizontal-padding: calc(var(--eds-size-4) / 16 * 1rem);
 }
 
 /**
@@ -103,7 +103,7 @@
 .modal__content--md {
   @media all and (min-width: $eds-bp-md) {
     width: 42rem;
-    --modal-horizontal-padding: var(--eds-size-6);
+    --modal-horizontal-padding: calc(var(--eds-size-6) / 16 * 1rem);
   }
 }
 
@@ -113,7 +113,7 @@
 .modal__content--lg {
   @media all and (min-width: $eds-bp-xl) {
     width: 64rem;
-    --modal-horizontal-padding: var(--eds-size-8);
+    --modal-horizontal-padding: calc(var(--eds-size-8) / 16 * 1rem);
   }
 }
 
@@ -138,8 +138,8 @@
   right: 0;
 
   /* Minimum button target size is 44px, but 3rem (48px) is next closest ramp size. */
-  width: var(--eds-size-6);
-  height: var(--eds-size-6);
+  width: calc(var(--eds-size-6) / 16 * 1rem);
+  height: calc(var(--eds-size-6) / 16 * 1rem);
 
   cursor: pointer;
 
@@ -151,8 +151,8 @@
  */
 .modal__close-icon {
   position: absolute;
-  top: var(--eds-size-1);
-  right: var(--eds-size-1);
+  top: calc(var(--eds-size-1) / 16 * 1rem);
+  right: calc(var(--eds-size-1) / 16 * 1rem);
   color: var(--eds-theme-color-icon-neutral-subtle);
 }
 
@@ -171,7 +171,7 @@
  * The body of the modal
  */
  .modal-body {
-  padding: var(--eds-size-4) var(--modal-horizontal-padding);
+  padding: calc(var(--eds-size-4) / 16 * 1rem) var(--modal-horizontal-padding);
   flex: 1;
 }
 
@@ -193,16 +193,16 @@
  * Footer for the modal.
  */
  .modal-footer {
-  padding-top: var(--eds-size-2-and-half);
-  padding-bottom: var(--eds-size-2-and-half);
+  padding-top: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  padding-bottom: calc(var(--eds-size-2-and-half) / 16 * 1rem);
   padding-left: var(--modal-horizontal-padding);
-  padding-right: var(--eds-size-3);
+  padding-right: calc(var(--eds-size-3) / 16 * 1rem);
 
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
 
-  border-bottom-left-radius: var(--eds-border-radius-lg);
-  border-bottom-right-radius: var(--eds-border-radius-lg);
+  border-bottom-left-radius: calc(var(--eds-border-radius-lg) * 1px);
+  border-bottom-right-radius: calc(var(--eds-border-radius-lg) * 1px);
 
   z-index: 100;
 }
@@ -227,7 +227,7 @@
  .modal-header {
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
-  padding-top: var(--eds-size-7);
+  padding-top: calc(var(--eds-size-7) / 16 * 1rem);
   padding-left: var(--modal-horizontal-padding);
   padding-right: var(--modal-horizontal-padding);
 }
@@ -260,7 +260,7 @@
     font: var(--eds-theme-typography-headline-secondary-lg);
     
     @media all and (min-width: $eds-bp-sm-2) {
-      margin-bottom: var(--eds-size-3);
+      margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
     }
     @media all and (min-width: $eds-bp-xl) {
       font: var(--eds-theme-typography-headline-secondary-md);
@@ -275,8 +275,8 @@
 .modal-header__brand-asset {
   align-self: flex-end;
   position: relative;
-  top: var(--eds-size-2);
-  left: var(--eds-size-2);
+  top: calc(var(--eds-size-2) / 16 * 1rem);
+  left: calc(var(--eds-size-2) / 16 * 1rem);
 
   width: 8.5rem;
   height: 8.5rem;
@@ -290,7 +290,7 @@
     display: block;
     width: 14rem;
     height: 14rem;
-    left: var(--eds-size-3);
+    left: calc(var(--eds-size-3) / 16 * 1rem);
   }
 
   @media all and (min-width: $eds-bp-xl) {
@@ -310,5 +310,5 @@
  .modal-stepper {
   color: var(--eds-theme-color-icon-neutral-default);
   display: flex;
-  gap: var(--eds-size-1-and-half);
+  gap: calc(var(--eds-size-1-and-half) / 16 * 1rem);
 }

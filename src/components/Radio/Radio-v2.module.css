@@ -128,12 +128,12 @@
 
 .radio__input:focus-visible + .radio__icon {
   border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
-  border-radius: var(--eds-border-radius-full);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 @supports not selector(:focus-visible) {
   .radio__input:focus + .radio__icon {
     border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
-    border-radius: var(--eds-border-radius-full);
+    border-radius: calc(var(--eds-border-radius-full) * 1px);
   }
 }

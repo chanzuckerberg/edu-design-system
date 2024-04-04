@@ -29,7 +29,7 @@
 .select__overline {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--eds-size-half);
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
   color: var(--eds-theme-color-form-label);
 }
 
@@ -75,12 +75,12 @@
   font-size: inherit;
   color: var(--eds-theme-color-text-neutral-subtle);
 
-  height: var(--eds-size-5);
+  height: calc(var(--eds-size-5) / 16 * 1rem);
   width: 100%;
-  padding: 0 var(--eds-size-2);
+  padding: 0 calc(var(--eds-size-2) / 16 * 1rem);
 
-  border: var(--eds-theme-border-width) solid var(--eds-theme-color-form-border);
-  border-radius: var(--eds-border-radius-md);
+  border: calc(var(--eds-theme-border-width) * 1px) solid var(--eds-theme-color-form-border);
+  border-radius: calc(var(--eds-border-radius-md) * 1px);
 
   display: flex;
   /* Place button text on the left and the expand more icon on the right. */
@@ -110,7 +110,7 @@
   flex-shrink: 0;
   transform: rotate(0);
 
-  transition: transform var(--eds-anim-move-medium) ease-out;
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-out;
   @media (prefers-reduced-motion) {
     /* Turns off animation if user prefers reduced motion. */
     transition: none;

@@ -4,7 +4,7 @@
 
 .tooltip {
   border-style: solid;
-  border-width: var(--eds-border-width-sm);
+  border-width: calc(var(--eds-border-width-sm) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
   max-width: 14rem;

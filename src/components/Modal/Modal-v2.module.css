@@ -44,7 +44,7 @@
  * Modal transition animations.
  */
 .modal__transition--enter {
-  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -59,7 +59,7 @@
 }
 
 .modal__transition--leave {
-  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
   @media (prefers-reduced-motion) {
     transition: none;
   }

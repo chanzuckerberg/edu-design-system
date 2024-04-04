@@ -6,8 +6,8 @@
 
 .button {
   position: relative;
-  border-radius: var(--eds-border-radius-full);
-  border: var(--eds-border-width-sm) solid;
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
   overflow: hidden;
   display: flex;
 }

@@ -59,7 +59,7 @@
  */
 .breadcrumbs__item-back {
   display: flex;
-  margin-right: var(--eds-size-1-and-half);
+  margin-right: calc(var(--eds-size-1-and-half) / 16 * 1rem);
   @media all and (min-width: $eds-bp-md) {
     /* Hidden for larger breakpoints. */
     display: none;
@@ -125,8 +125,8 @@
  */
 .breadcrumbs__separator {
   color: var(--eds-theme-color-icon-neutral-subtle);
-  margin-left: var(--eds-size-1);
-  margin-right: var(--eds-size-1);
+  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
+  margin-right: calc(var(--eds-size-1) / 16 * 1rem);
   cursor: default;
 }
 

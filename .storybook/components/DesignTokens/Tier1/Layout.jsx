@@ -15,10 +15,12 @@ export class Tier1Layout extends Component {
                 <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      maxWidth: `var(${listItem.name})`,
+                      maxWidth: `calc(var(${listItem.name}) / 16 * 1rem)`,
                     }}
                     name={listItem.name}
-                    value={listItem.value}
+                    value={
+                      listItem.value + 'px' + ` (${listItem.value / 16} rem)`
+                    }
                   />
                 </Grid.Item>
               );

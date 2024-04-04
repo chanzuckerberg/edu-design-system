@@ -3,21 +3,26 @@
     "anim": {
       "fade": {
         "quick": {
-          "value": "0.15s"
+          "value": "0.15",
+          "comment": "Seconds (s)"
         },
         "long": {
-          "value": "0.4s"
+          "value": "0.4",
+          "comment": "Seconds (s)"
         }
       },
       "move": {
         "quick": {
-          "value": "0.15s"
+          "value": "0.15",
+          "comment": "Seconds (s)"
         },
         "medium": {
-          "value": "0.3s"
+          "value": "0.3",
+          "comment": "Seconds (s)"
         },
         "long": {
-          "value": "0.4s"
+          "value": "0.4",
+          "comment": "Seconds (s)"
         }
       },
       "ease": {
@@ -28,36 +33,36 @@
     "border": {
       "width": {
         "sm": {
-          "value": "1px",
-          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          "value": "1",
+          "comment": "TODO-AH @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "md": {
-          "value": "2px",
-          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          "value": "2",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
-          "value": "4px",
-          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          "value": "4",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "xl": {
-          "value": "8px",
-          "comment":"@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          "value": "8",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       },
       "radius": {
         "none": {
-          "value": "0px"
+          "value": "0"
         },
         "md": {
-          "value": "4px",
+          "value": "4",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
-          "value": "8px",
+          "value": "8",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "xl": {
-          "value": "20px",
+          "value": "20",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "50": { "value": "2", "group": "size" },
@@ -66,11 +71,11 @@
         "200": { "value": "8", "group": "size" },
         "500": { "value": "20", "group": "size" },
         "round": {
-          "value": "50%",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          "value": "50",
+          "comment": "Percentage (%) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "full": {
-          "value": "9999px"
+          "value": "9999"
         }
       }
     },
@@ -476,30 +481,30 @@
     },
     "l": {
       "max-width": {
-        "value": "71.25rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        "value": "1140",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "sidebar-width": {
-        "value": "13.5rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        "value": "216",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "linelength-width": {
-        "value": "36rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        "value": "576",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     },
     "outline": {
       "width": {
         "sm": {
-          "value": "1px",
+          "value": "1",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "md": {
-          "value": "2px",
+          "value": "2",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
-          "value": "4px",
+          "value": "4",
           "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       }
@@ -524,76 +529,94 @@
     },
     "size": {
       "base-unit": {
-        "value": "0.5rem",
-        "group": "size"
+        "value": "8",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "half": {
-        "value": "0.25rem",
-        "group": "size"
+        "value": "4",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "quarter": {
-        "value": "0.125rem",
-        "group": "size"
+        "value": "2",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "1": {
-        "value": "0.5rem",
-        "group": "size"
+        "value": "8",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "1-and-half": {
-        "value": "0.75rem",
-        "group": "size"
+        "value": "12",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "2": {
-        "value": "1rem",
-        "group": "size"
+        "value": "16",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "2-and-half": {
-        "value": "1.275rem",
-        "group": "size"
+        "value": "20",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "3": {
-        "value": "1.5rem",
-        "group": "size"
+        "value": "24",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "4": {
-        "value": "2rem",
-        "group": "size"
+        "value": "32",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "5": {
-        "value": "2.5rem",
-        "group": "size"
+        "value": "40",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "6": {
-        "value": "3rem",
-        "group": "size"
+        "value": "48",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "7": {
-        "value": "3.5rem",
-        "group": "size"
+        "value": "56",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "8": {
-        "value": "4rem",
-        "group": "size"
+        "value": "64",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "9": {
-        "value": "4.5rem",
-        "group": "size"
+        "value": "72",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "10": {
-        "value": "5rem",
-        "group": "size"
+        "value": "80",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "11": {
-        "value": "5.5rem",
-        "group": "size"
+        "value": "88",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "12": {
-        "value": "6rem",
-        "group": "size"
+        "value": "96",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       },
       "20": {
-        "value": "10rem",
-        "group": "size"
+        "value": "320",
+        "group": "size",
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     },
     "z-index": {

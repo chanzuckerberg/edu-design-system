@@ -65,7 +65,7 @@
   list-style: none;
   display: flex;
   gap: 0.5rem;
-  border-bottom: var(--eds-theme-border-width) solid
+  border-bottom: calc(var(--eds-theme-border-width) * 1px) solid
     var(--eds-theme-color-border-utility-default-low-emphasis);
   font: var(--eds-theme-typography-tab-lg);
   line-height: 1.429;
@@ -140,9 +140,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
-    box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
-    background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  transition: color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
+    box-shadow calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
+    background-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
 
   &:focus-visible {
     box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-focus);
@@ -175,9 +175,9 @@
 }
 
 .tab__highlight {
-  border-radius: var(--eds-border-radius-full);
-  transition: bottom var(--eds-anim-fade-quick) var(--eds-anim-ease),
-              width var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  transition: bottom calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
+              width calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
 
   .tabs__item.eds-is-active & {
     position: absolute;
@@ -192,7 +192,7 @@
     bottom: 0.25rem;
     width: calc(100% - 0.5rem);
 
-    border-radius: var(--eds-border-radius-full);
+    border-radius: calc(var(--eds-border-radius-full) * 1px);
   }
 
   .tabs--has-divider & {

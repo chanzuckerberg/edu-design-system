@@ -13,7 +13,7 @@
 
   padding: 1.5rem;
   height: 100%;
-  border: var(--eds-theme-border-width) solid;
+  border: calc(var(--eds-theme-border-width) * 1px) solid;
 
 
   &.card--container-style-low {

@@ -25,7 +25,7 @@
 .logged-out-page {
   background-color: var(--eds-theme-color-background-brand-primary-default);
   min-height: 100vh;
-  padding: var(--eds-size-4);
+  padding: calc(var(--eds-size-4) / 16 * 1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,8 +41,8 @@
 }
 
 .logged-out-page__button-group {
-  gap: var(--eds-size-2);
-  margin: var(--eds-size-2) 0 var(--eds-size-4) 0;
+  gap: calc(var(--eds-size-2) / 16 * 1rem);
+  margin: calc(var(--eds-size-2) / 16 * 1rem) 0 calc(var(--eds-size-4) / 16 * 1rem) 0;
 }
 
 /**
@@ -77,7 +77,7 @@
 .watch-page__avatar {
   background-color: var(--eds-theme-color-background-brand-primary-strong);
   color: var(--eds-theme-color-text-neutral-default-inverse);
-  border-radius: var(--eds-border-radius-full);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
   display: flex;
   justify-content: center;
   align-items: center;

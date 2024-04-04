@@ -7,7 +7,7 @@
  */
 .radio {
   display: flex;
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -29,10 +29,10 @@
   margin: 0;
   /* Remove the radio from the page flow, positioning it on top of the SVG. */
   position: absolute;
-  left: var(--eds-size-half);
+  left: calc(var(--eds-size-half) / 16 * 1rem);
   /* Set same dimensions as the RadioSvg element. */
-  height: var(--eds-size-2);
-  width: var(--eds-size-2);
+  height: calc(var(--eds-size-2) / 16 * 1rem);
+  width: calc(var(--eds-size-2) / 16 * 1rem);
   /**
    * Hide the input element visually.
    * This ensures the radio is still "physically" present so that all users,
@@ -48,17 +48,17 @@
 .radio__icon {
   color: var(--eds-theme-color-radio-brand-background);
   /* Creates space for the border so that there's no jitter when the focus border is visible. */
-  border: var(--eds-border-width-sm) solid transparent;
+  border: calc(var(--eds-border-width-sm) * 1px) solid transparent;
 }
 .radio__input:focus-visible + .radio__icon {
-  border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-  border-radius: var(--eds-border-radius-full);
+  border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-focus-ring);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 @supports not selector(:focus-visible) {
   .radio__input:focus + .radio__icon {
-    border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-    border-radius: var(--eds-border-radius-full);
+    border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-focus-ring);
+    border-radius: calc(var(--eds-border-radius-full) * 1px);
   }
 }
 
@@ -89,7 +89,7 @@
  * Used for centering the label with the radio input button.
  */
 .radio__label--md {
-  top: var(--eds-size-quarter);
+  top: calc(var(--eds-size-quarter) / 16 * 1rem);
 }
 .radio__label--lg {
   /* This is a 1px increase in top spacing from the md variant. Size is too specific to have a token. */

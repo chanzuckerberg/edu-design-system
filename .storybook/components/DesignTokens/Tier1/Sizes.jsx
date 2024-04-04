@@ -15,12 +15,12 @@ export class Tier1Sizes extends Component {
                 <TokenSpecimen
                   comment="Calculated from a multiple of the base font size"
                   inlineStyles={{
-                    width: `var(${listItem.name})`,
-                    height: `var(${listItem.name})`,
+                    width: `calc(var(${listItem.name}) / 16 * 1rem)`,
+                    height: `calc(var(${listItem.name}) /16 * 1rem)`,
                     minHeight: '0',
                   }}
                   name={listItem.name}
-                  value={listItem.value}
+                  value={listItem.value + 'px' + ` (${listItem.value / 16}rem)`}
                 />
               </Grid.Item>
             ))}
@@ -35,12 +35,14 @@ export class Tier1Sizes extends Component {
                   <Grid.Item key={listItem.name}>
                     <TokenSpecimen
                       inlineStyles={{
-                        width: `var(${listItem.name})`,
-                        height: `var(${listItem.name})`,
+                        width: `calc(var(${listItem.name}) / 16 * 1rem)`,
+                        height: `calc(var(${listItem.name}) / 16 * 1rem)`,
                         minHeight: '0',
                       }}
                       name={listItem.name}
-                      value={listItem.value}
+                      value={
+                        listItem.value + 'px' + ` (${listItem.value / 16}rem)`
+                      }
                     />
                   </Grid.Item>
                 );

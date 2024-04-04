@@ -7,34 +7,34 @@
   --eds-z-index-200: 200; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-z-index-100: 100; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-z-index-0: 0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-size-2-and-half: 1.275rem;
-  --eds-size-1-and-half: 0.75rem;
-  --eds-size-quarter: 0.125rem;
-  --eds-size-half: 0.25rem;
-  --eds-size-base-unit: 0.5rem;
-  --eds-size-20: 10rem;
-  --eds-size-12: 6rem;
-  --eds-size-11: 5.5rem;
-  --eds-size-10: 5rem;
-  --eds-size-9: 4.5rem;
-  --eds-size-8: 4rem;
-  --eds-size-7: 3.5rem;
-  --eds-size-6: 3rem;
-  --eds-size-5: 2.5rem;
-  --eds-size-4: 2rem;
-  --eds-size-3: 1.5rem;
-  --eds-size-2: 1rem;
-  --eds-size-1: 0.5rem;
+  --eds-size-2-and-half: 20; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-1-and-half: 12; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-quarter: 2; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-half: 4; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-20: 320; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-12: 96; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-11: 88; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-10: 80; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-9: 72; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-8: 64; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-7: 56; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-6: 48; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-5: 40; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-4: 32; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-3: 24; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-2: 16; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-1: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-outline-width-lg: 4px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-outline-width-md: 2px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-outline-width-sm: 1px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-l-linelength-width: 36rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-l-sidebar-width: 13.5rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-l-max-width: 71.25rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-outline-width-lg: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-outline-width-md: 2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-outline-width-sm: 1; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-linelength-width: 576; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-sidebar-width: 216; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-max-width: 1140; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-other-ruby-800: #8F0134; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-other-ruby-700: #BD0044; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-other-ruby-600: #D41E52; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
@@ -196,27 +196,27 @@
   --eds-color-brand-grape-100: #F0F0FC; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-black: 0 0 0; /* Specified as a value to color-func rgb() so that it can be blended */
   --eds-color-white: 255 255 255; /* Specified as a value to color-func rgb() so that it can be blended */
-  --eds-border-radius-full: 9999px;
-  --eds-border-radius-round: 50%; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-xl: 20px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-lg: 8px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-md: 4px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-none: 0px;
+  --eds-border-radius-full: 9999;
+  --eds-border-radius-round: 50; /* Percentage (%) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-xl: 20; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-lg: 8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-md: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-none: 0;
   --eds-border-radius-500: 20;
   --eds-border-radius-200: 8;
   --eds-border-radius-150: 6;
   --eds-border-radius-100: 4;
   --eds-border-radius-50: 2;
-  --eds-border-width-xl: 8px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-width-lg: 4px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-width-md: 2px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-width-sm: 1px; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-xl: 8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-lg: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-md: 2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-sm: 1; /* TODO-AH @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-anim-ease: ease; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-anim-move-long: 0.4s;
-  --eds-anim-move-medium: 0.3s;
-  --eds-anim-move-quick: 0.15s;
-  --eds-anim-fade-long: 0.4s;
-  --eds-anim-fade-quick: 0.15s;
+  --eds-anim-move-long: 0.4; /* Seconds (s) */
+  --eds-anim-move-medium: 0.3; /* Seconds (s) */
+  --eds-anim-move-quick: 0.15; /* Seconds (s) */
+  --eds-anim-fade-long: 0.4; /* Seconds (s) */
+  --eds-anim-fade-quick: 0.15; /* Seconds (s) */
   --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */

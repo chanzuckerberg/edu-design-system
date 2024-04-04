@@ -14,20 +14,20 @@
   align-items: center;
   /* Adds a gap between children to automatically handle spacing between icons and text. */
   gap: 0.75rem;
-  border-width: var(--eds-theme-border-width);
+  border-width: calc(var(--eds-theme-border-width) * 1px);
   border-style: solid;
-  border-radius: var(--eds-theme-box-button-border-radius);
+  border-radius: calc(var(--eds-theme-box-button-border-radius) * 1px);
   cursor: pointer;
   /* Removes the underline in the case that the rendered element is an <a> tag. */
   text-decoration: none;
   transition-property: color, background-color, border-color;
-  transition-duration: var(--eds-anim-fade-quick);
+  transition-duration: calc(var(--eds-anim-fade-quick) * 1s);
   transition-timing-function: var(--eds-anim-ease);
 
   :where(svg) {
     /* Adds default size for icons passed in for consistency. */
     --icon-size-default: 2em;
-    transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+    transition: color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
 
     @media screen and (prefers-reduced-motion) {
       transition: none;
@@ -493,8 +493,8 @@ button:where(.clickable-style--link) {
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  height: var(--eds-size-3);
-  padding: 0 var(--eds-size-1);
+  height: calc(var(--eds-size-3) / 16 * 1rem);
+  padding: 0 calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -505,8 +505,8 @@ button:where(.clickable-style--link) {
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  height: var(--eds-size-4);
-  padding: 0 var(--eds-size-1);
+  height: calc(var(--eds-size-4) / 16 * 1rem);
+  padding: 0 calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -517,8 +517,8 @@ button:where(.clickable-style--link) {
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  height: var(--eds-size-5);
-  padding: 0 var(--eds-size-2);
+  height: calc(var(--eds-size-5) / 16 * 1rem);
+  padding: 0 calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 /**

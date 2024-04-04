@@ -89,6 +89,10 @@ export const LongTriggerText: Story = {
   args: {
     children: <div className="fpo p-1">Longer text to test placement</div>,
   },
+  parameters: {
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300 },
+  },
 };
 
 /**
