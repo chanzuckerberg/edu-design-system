@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.0...v15.0.0-alpha.1) (2024-04-05)
+
+
+### Bug Fixes
+
+* disambiguate old token colors ([#1913](https://github.com/chanzuckerberg/edu-design-system/issues/1913)) ([758eb2d](https://github.com/chanzuckerberg/edu-design-system/commit/758eb2d06a2851a895198998e788fff2f60ec302))
+
 ## [15.0.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v14.0.0...v15.0.0-alpha.0) (2024-04-04)
 
 
