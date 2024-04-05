@@ -47,3 +47,26 @@ export { default as Tooltip } from './components/Tooltip';
  */
 export type { ClickableStyleProps } from './components/ClickableStyle';
 export type { IconName } from './components/Icon';
+
+/**
+ * 2.0 component and type exports
+ */
+export { AccordionV2 } from './components/Accordion';
+export { ButtonV2 } from './components/Button';
+export { ButtonGroupV2 } from './components/ButtonGroup';
+export { CardV2 } from './components/Card';
+export { CheckboxV2 } from './components/Checkbox';
+export { FieldNoteV2 } from './components/FieldNote';
+export { InlineNotificationV2 } from './components/InlineNotification';
+export { InputFieldV2 } from './components/InputField';
+export { LinkV2 } from './components/Link';
+export { MenuV2 } from './components/Menu';
+export { ModalV2 } from './components/Modal';
+export { NumberIconV2 } from './components/NumberIcon';
+export { PopoverListItemV2 } from './components/PopoverListItem';
+export { RadioV2 } from './components/Radio';
+export { SelectV2 } from './components/Select';
+export { default as TabGroup } from './components/TabGroup';
+export { TextareaFieldV2 } from './components/TextareaField';
+export { ToastV2 } from './components/Toast';
+export { TooltipV2 } from './components/Tooltip';
