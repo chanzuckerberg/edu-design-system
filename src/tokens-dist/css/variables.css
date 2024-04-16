@@ -91,6 +91,9 @@
   --eds-color-purple-200: #E0BAF2;
   --eds-color-purple-150: #EAD1F6;
   --eds-color-purple-100: #F3E5FA;
+  --eds-color-pink-550: #C62B73;
+  --eds-color-pink-450: #DB458D;
+  --eds-color-pink-350: #E67EB0;
   --eds-color-blue-050: #EAF4FF;
   --eds-color-blue-950: #060E30;
   --eds-color-blue-900: #0A164C;
@@ -730,6 +733,15 @@
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-base-1: var(--eds-color-neutral-025);
+  --eds-theme-color-background-brand-pink: var(--eds-color-pink-450);
+  --eds-theme-color-background-brand-purple: var(--eds-color-purple-350);
+  --eds-theme-color-background-brand-blue-3: var(--eds-color-blue-850);
+  --eds-theme-color-background-brand-blue-2: var(--eds-color-blue-550);
+  --eds-theme-color-background-brand-blue-1: var(--eds-color-blue-200);
+  --eds-theme-color-background-brand-green: var(--eds-color-green-350);
+  --eds-theme-color-background-brand-yellow: var(--eds-color-yellow-150);
+  --eds-theme-color-background-brand-orange: var(--eds-color-orange-250);
+  --eds-theme-color-background-brand-red: var(--eds-color-red-850);
   --eds-theme-color-background-brand-primary-strong-hover: var(--eds-color-brand-grape-800);
   --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-600);
   --eds-theme-color-background-brand-primary-subtle: var(--eds-color-brand-grape-100);

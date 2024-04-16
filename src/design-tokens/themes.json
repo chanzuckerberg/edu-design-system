@@ -144,6 +144,35 @@
                   "group": "color"
                 }
               }
+            },
+            "red": {
+              "value": "{eds.color.red.850}"
+            },
+            "orange": {
+              "value": "{eds.color.orange.250}"
+            },
+            "yellow": {
+              "value": "{eds.color.yellow.150}"
+            },
+            "green": {
+              "value": "{eds.color.green.350}"
+            },
+            "blue": {
+              "1": {
+                "value": "{eds.color.blue.200}"
+              },
+              "2": {
+                "value": "{eds.color.blue.550}"
+              },
+              "3": {
+                "value": "{eds.color.blue.850}"
+              }
+            },
+            "purple": {
+              "value": "{eds.color.purple.350}"
+            },
+            "pink": {
+              "value": "{eds.color.pink.450}"
             }
           },
           "utility": {
