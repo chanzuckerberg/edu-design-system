@@ -14,13 +14,21 @@ export const Tier1Colors = () => {
     }));
   return (
     <div>
+      <Section title="Brand Colors 2.0">
+        <ColorList listItems={getListItems('eds-color-red', 'red')} />
+        <ColorList listItems={getListItems('eds-color-orange', 'orange')} />
+        <ColorList listItems={getListItems('eds-color-yellow', 'yellow')} />
+        <ColorList listItems={getListItems('eds-color-green', 'green')} />
+        <ColorList listItems={getListItems('eds-color-blue', 'blue')} />
+        <ColorList listItems={getListItems('eds-color-pink', 'pink')} />
+      </Section>
       <Section title="Neutral Colors">
         <ColorList listItems={getListItems('eds-color-neutral', 'neutral')} />
       </Section>
-      <Section title="Brand Colors">
+      <Section title="Legacy Brand Colors">
         <ColorList listItems={getListItems('eds-color-brand', 'brand-grape')} />
       </Section>
-      <Section className="flex flex-col gap-3" title="Other Colors">
+      <Section className="flex flex-col gap-3" title="Legacy Other Colors">
         <ColorList
           listItems={getListItems('eds-color-other-orange', 'orange')}
         />
