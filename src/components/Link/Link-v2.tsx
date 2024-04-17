@@ -6,40 +6,42 @@ import Icon from '../Icon';
 
 import styles from './Link-v2.module.css';
 
-export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  // Component API
-  /**
-   * Component used to render the element. Meant to support interaction with framework navigation libraries.
-   *
-   * **Default is `"a"`**.
-   */
-  as?: string | React.ElementType;
-  /**
-   * The link contents or label.
-   */
-  children: string;
-  // Design API
-  /**
-   * Where `Link` sits alongside other text and content:
-   *
-   * * **inline** - Inline link inherits the text size established within the `<p>` paragraph they are embedded in.
-   * * **standalone** - Users can choose from the available sizes.
-   */
-  context?: 'inline' | 'standalone';
-  /**
-   * (trailing) icon to use with the link
-   */
-  icon?: Extract<IconName, 'chevron-right' | 'open-in-new'>;
-  /**
-   * Extra or lowered colors added to a link
-   */
-  emphasis?: 'default' | 'high' | 'low';
+export type LinkProps<ExtendedElement = unknown> =
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    // Component API
+    /**
+     * Component used to render the element. Meant to support interaction with framework navigation libraries.
+     *
+     * **Default is `"a"`**.
+     */
+    as?: string | React.ElementType;
+    /**
+     * The link contents or label.
+     */
+    children: string;
+    // Design API
+    /**
+     * Where `Link` sits alongside other text and content:
+     *
+     * * **inline** - Inline link inherits the text size established within the `<p>` paragraph they are embedded in.
+     * * **standalone** - Users can choose from the available sizes.
+     */
+    context?: 'inline' | 'standalone';
+    /**
+     * (trailing) icon to use with the link
+     */
+    icon?: Extract<IconName, 'chevron-right' | 'open-in-new'>;
+    /**
+     * Extra or lowered colors added to a link
+     */
+    emphasis?: 'default' | 'high' | 'low';
 
-  /**
-   * Link size inherits from the surrounding text.
-   */
-  size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
-};
+    /**
+     * Link size inherits from the surrounding text.
+     */
+    size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+    // };
+  } & ExtendedElement;
 
 /**
  * `import {Link} from "@chanzuckerberg/eds";`

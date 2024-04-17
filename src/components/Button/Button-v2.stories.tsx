@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Button } from './Button-v2';
+import { Button, type ButtonV2Props } from './Button-v2';
 import { SIZES } from '../ClickableStyle';
 
 export default {
@@ -185,4 +185,50 @@ export const IconLayouts: StoryObj<Args> = {
       </div>
     );
   },
+};
+
+// Here, we introduce a special type extension to LinkProps, then use it in a
+// composed component, to demonstrate the ability to offer custom props to a component
+type ExtendArgs = ButtonV2Props<{ to: string }>;
+function ExtendedButton(args: ExtendArgs) {
+  return (
+    // eslint-disable-next-line no-alert
+    <Button {...args} onClick={() => alert(`handle to value: ${args.to}`)} />
+  );
+}
+
+/**
+ * You can extend a component's props for use with libraries that aid navigation, e.g., react-dom-router, et al.
+ *
+ * Steps to use:
+ *
+ * * import `ButtonProps`
+ * * use the type param. to augment the types for `Button` with the libraries type, e.g., `type ExtendedProps = ButtonProps<typeof CustomButton>;`
+ * * Now export a new function component that uses the new prop type and returns a composed function
+ *
+ * When using this pattern, you likely want to also specify the library's Button component using `as`
+ *
+ * ```tsx
+ * type ExtendedProps = ButtonProps<typeof CustomButton>;
+ *
+ * export default function Button({children, ...other}: ExtendedProps) {
+ *   return (
+ *    <Button as={CustomButton} {...other}>
+ *      {children}
+ *    </Button>
+ *   );
+ * }
+ * ```
+ */
+export const UsingExtendedLink: StoryObj<ExtendArgs> = {
+  render: (args) => (
+    <div>
+      Lorem ipsum dolor sit amet,{' '}
+      <ExtendedButton {...args} to="test">
+        consectetur adipiscing elit
+      </ExtendedButton>
+      . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
+      Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
+    </div>
+  ),
 };
