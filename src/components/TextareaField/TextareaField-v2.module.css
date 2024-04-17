@@ -9,6 +9,7 @@
  */
 .textarea {
   @mixin inputStylesV2;
+  padding: 0.5rem 0.75rem;
 }
 
 /**
