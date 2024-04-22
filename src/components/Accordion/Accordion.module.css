@@ -11,8 +11,8 @@
  */
 .accordion--outline {
   border: var(--eds-theme-color-border-neutral-subtle) solid
-    var(--eds-border-width-sm);
-  border-radius: var(--eds-border-radius-md);
+    calc(var(--eds-border-width-sm) * 1px);
+  border-radius: calc(var(--eds-border-radius-md) * 1px);
 }
 
 /**
@@ -25,7 +25,7 @@
   border: 0;
   border-radius: 0;
 
-  padding: var(--eds-size-1-and-half) var(--eds-size-1);
+  padding: calc(var(--eds-size-1-and-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
   height: unset;
   min-height: 3.375rem;
 
@@ -40,7 +40,7 @@
  * Small variant.
  */
 .accordion-button--sm {
-  padding: var(--eds-size-half) var(--eds-size-1);
+  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
   min-height: 2.25rem;
 }
 
@@ -48,14 +48,14 @@
  * Outline variant.
  */
 .accordion-button--outline {
-  padding: var(--eds-size-1-and-half) var(--eds-size-3);
+  padding: calc(var(--eds-size-1-and-half) / 16 * 1rem) calc(var(--eds-size-3) / 16 * 1rem);
 }
 
 /**
  * Small outline variant.
  */
 .accordion-button--sm.accordion-button--outline {
-  padding: var(--eds-size-half) var(--eds-size-2);
+  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 /**
@@ -93,7 +93,7 @@
  * Animates the icon rotation when opening and closing.
  */
 .accordion-button > .accordion-button__icon {
-  transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
@@ -105,8 +105,8 @@
  * Reveals itself below the associated Accordion Button.
  */
 .accordion-panel {
-  padding-left: var(--eds-size-1);
-  padding-right: var(--eds-size-3);
+  padding-left: calc(var(--eds-size-1) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-3) / 16 * 1rem);
   padding-bottom: 1.625rem;
 
   font: var(--eds-theme-typography-body-sm);
@@ -128,23 +128,23 @@
  * Outline variant.
  */
 .accordion-panel--outline {
-  padding-left: var(--eds-size-3);
-  padding-right: var(--eds-size-5);
+  padding-left: calc(var(--eds-size-3) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-5) / 16 * 1rem);
 }
 
 /**
  * Small outline variant.
  */
 .accordion-panel--sm.accordion-panel--outline {
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-4);
+  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-4) / 16 * 1rem);
 }
 
 /**
  * Accordion Row houses one Accordion Button subcomponent and its relevant Accordion Panel subcomponent.
  */
 .accordion-row {
-  border-bottom: var(--eds-border-width-sm) solid
+  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid
     var(--eds-theme-color-border-neutral-subtle);
 }
 

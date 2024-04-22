@@ -16,9 +16,9 @@
   align-items: center;
 
   /* The circle part of the icon, made with borders. */
-  border: var(--eds-border-width-sm) solid;
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
   border-color: inherit;
-  border-radius: var(--eds-border-radius-full);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 .number-icon--incomplete {
@@ -33,15 +33,15 @@
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   /* Height and width should be the same to make the icon a circle and not oblong. */
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
-  min-width: var(--eds-size-2-and-half);
+  height: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  width: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  min-width: calc(var(--eds-size-2-and-half) / 16 * 1rem);
 }
 
 .number-icon--lg {
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
-  min-width: var(--eds-size-3);
+  height: calc(var(--eds-size-3) / 16 * 1rem);
+  width: calc(var(--eds-size-3) / 16 * 1rem);
+  min-width: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
 /**

@@ -26,12 +26,12 @@ export const Borders: StoryObj = {
                 <TokenSpecimen
                   inlineStyles={{
                     backgroundColor: 'transparent',
-                    borderWidth: `var(${listItem.name})`,
+                    borderWidth: `calc(var(${listItem.name}) * 1px)`,
                     borderStyle: 'solid',
                     borderColor: 'black',
                   }}
                   name={listItem.name}
-                  value={listItem.value}
+                  value={listItem.value + 'px'}
                 />
               </Grid.Item>
             );

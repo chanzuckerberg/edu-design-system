@@ -10,8 +10,8 @@
 
 .tooltip {
   border-style: solid;
-  border-width: var(--eds-border-width-sm);
-  border-radius: var(--eds-border-radius-lg);
+  border-width: calc(var(--eds-border-width-sm) * 1px);
+  border-radius: calc(var(--eds-border-radius-lg) * 1px);
   box-shadow: var(--eds-box-shadow-md);
 
   @media (prefers-reduced-motion) {
@@ -32,10 +32,10 @@
 }
 
 .tooltip :global(.tippy-content) {
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-  padding-bottom: var(--eds-size-1);
-  padding-top: var(--eds-size-1);
+  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-bottom: calc(var(--eds-size-1) / 16 * 1rem);
+  padding-top: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -44,8 +44,8 @@
 .tooltip :global(.tippy-arrow) {
   position: absolute;
 
-  width: var(--eds-size-2);
-  height: var(--eds-size-2);
+  width: calc(var(--eds-size-2) / 16 * 1rem);
+  height: calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 .tooltip :global(.tippy-arrow::before) {
@@ -53,7 +53,7 @@
 
   border-style: solid;
   border-color: transparent;
-  border-width: var(--eds-size-1);
+  border-width: calc(var(--eds-size-1) / 16 * 1rem);
 
   content: '';
 }

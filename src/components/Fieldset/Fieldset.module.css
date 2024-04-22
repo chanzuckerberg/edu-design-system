@@ -10,7 +10,7 @@
 .fieldset {
   @mixin fieldsetStyles;
    /* Overrides default browser styling. */
-  margin: var(--eds-size-2);
+  margin: calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 /*------------------------------------*\
@@ -21,7 +21,7 @@
  * The contents of the fieldset. Spaces them apart.
  */
  .fieldset-items > :not(:last-child) {
-  margin-bottom: var(--eds-size-1-and-half);
+  margin-bottom: calc(var(--eds-size-1-and-half) / 16 * 1rem);
 }
 
 /*------------------------------------*\
@@ -38,7 +38,7 @@
   @mixin legendReset;
   font: var(--eds-theme-typography-form-label);
   /* Adjust margin between legend and option list */
-  margin-bottom: var(--eds-size-2);
+  margin-bottom: calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 /**

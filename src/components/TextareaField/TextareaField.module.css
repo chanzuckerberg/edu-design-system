@@ -21,7 +21,7 @@
 .textarea-field__overline {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--eds-size-half);
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 .textarea-field__overline--no-label {

@@ -8,7 +8,7 @@
 .input-field__overline {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--eds-size-half);
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
   color: var(--eds-theme-color-form-label);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .input-field--has-fieldNote {
-  margin-bottom: var(--eds-size-half);
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 .input-field--invalid-length {
@@ -71,7 +71,7 @@
  */
 .input-field__input-within {
   position: absolute;
-  right: var(--eds-size-2);
+  right: calc(var(--eds-size-2) / 16 * 1rem);
   top: 0;
   bottom: 0;
   display: grid;

@@ -15,7 +15,7 @@
  * Spacing variants.
  */
 .button-group--spacing-1x {
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 .button-group--spacing-max {

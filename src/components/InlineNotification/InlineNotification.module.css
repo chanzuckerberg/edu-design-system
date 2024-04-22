@@ -9,8 +9,8 @@
  */
 .inline-notification {
   display: inline-flex;
-  padding: var(--eds-size-quarter) var(--eds-size-half);
-  border-radius: var(--eds-border-radius-md);
+  padding: calc(var(--eds-size-quarter) / 16 * 1rem) calc(var(--eds-size-half) / 16 * 1rem);
+  border-radius: calc(var(--eds-border-radius-md) * 1px);
 }
 
 /**
@@ -26,7 +26,7 @@
  * Text that sits right of the icon.
  */
 .inline-notification__text {
-  margin: var(--eds-size-half);
+  margin: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 /**
@@ -35,19 +35,19 @@
 .inline-notification--brand {
   @mixin messagingBrand;
 
-  border: var(--eds-theme-border-width) solid
+  border: calc(var(--eds-theme-border-width) * 1px) solid
     var(--eds-theme-color-border-brand-primary-strong);
 }
 .inline-notification--success {
   @mixin messagingSuccess;
 
-  border: var(--eds-theme-border-width) solid
+  border: calc(var(--eds-theme-border-width) * 1px) solid
     var(--eds-theme-color-border-utility-success-default);
 }
 .inline-notification--warning {
   @mixin messagingWarning;
 
-  border: var(--eds-theme-border-width) solid
+  border: calc(var(--eds-theme-border-width) * 1px) solid
     var(--eds-theme-color-border-utility-warning-strong);
 }
 .inline-notification--subtle {
@@ -62,7 +62,7 @@
   border: 0;
   border-radius: 0;
   /*  Accounts for the lack of border in height to make it 44px. */
-  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); 
+  padding: calc(calc(var(--eds-size-1) / 16 * 1rem) + calc(var(--eds-theme-border-width) * 1px)); 
 }
 .inline-notification--full-width-subtle {
   background-color: var(--eds-theme-color-background-neutral-default);

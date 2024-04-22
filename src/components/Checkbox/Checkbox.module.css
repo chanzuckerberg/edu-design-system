@@ -2,7 +2,7 @@
 
 .checkbox {
   display: flex;
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 .checkbox__input {

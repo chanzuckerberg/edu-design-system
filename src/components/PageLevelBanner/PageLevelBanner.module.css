@@ -12,11 +12,11 @@
   position: relative;
   /* Grid is used to separate the icon from the text with correct spacing. */
   display: grid;
-  gap: var(--eds-size-2);
+  gap: calc(var(--eds-size-2) / 16 * 1rem);
   grid-template-columns: min-content 1fr;
-  padding: var(--eds-size-2) var(--eds-size-4);
+  padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-4) / 16 * 1rem);
   background-color: var(--eds-theme-color-neutral-subtle-background);
-  border-bottom: var(--eds-border-width-md) solid var(--messaging-border-color);
+  border-bottom: calc(var(--eds-border-width-md) * 1px) solid var(--messaging-border-color);
 }
 
 /**
@@ -26,7 +26,7 @@
  */
 .banner__icon {
   color: var(--messaging-icon-color);
-  --icon-size-default: var(--eds-size-3);
+  --icon-size-default: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
 /**
@@ -36,8 +36,8 @@
  */
 .banner__close-btn.banner__close-btn {
   position: absolute;
-  top: var(--eds-size-half);
-  right: var(--eds-size-half);
+  top: calc(var(--eds-size-half) / 16 * 1rem);
+  right: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 .banner__description {
@@ -50,7 +50,7 @@
  * Add extra right padding to account for close button.
  */
 .banner--dismissable {
-  padding-right: var(--eds-size-9);
+  padding-right: calc(var(--eds-size-9) / 16 * 1rem);
 }
 
 /*------------------------------------*\

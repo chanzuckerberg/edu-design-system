@@ -9,10 +9,10 @@
 :where(.card) {
   display: flex;
   flex-direction: column;
-  padding: var(--eds-size-2);
+  padding: calc(var(--eds-size-2) / 16 * 1rem);
   height: 100%;
-  border-radius: var(--eds-border-radius-lg);
-  border-width: var(--eds-theme-border-width);
+  border-radius: calc(var(--eds-border-radius-lg) * 1px);
+  border-width: calc(var(--eds-theme-border-width) * 1px);
   border-style: solid;
   border-color: var(--eds-theme-color-border-neutral-subtle);
   background-color: var(--eds-theme-color-background-neutral-default);

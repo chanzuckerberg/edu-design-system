@@ -29,7 +29,7 @@
   justify-content: space-evenly;
   align-items: center;
 
-  border-radius: var(--eds-border-radius-md);
+  border-radius: calc(var(--eds-border-radius-md) * 1px);
 }
 .menu__plain-button:hover {
   background-color: var(--eds-theme-color-button-secondary-neutral-background-hover);

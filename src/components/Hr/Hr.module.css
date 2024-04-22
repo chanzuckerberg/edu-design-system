@@ -7,12 +7,12 @@
  * 
  */
 .hr {
-  margin-top: var(--eds-size-4);
-  margin-bottom: var(--eds-size-4);
+  margin-top: calc(var(--eds-size-4) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-size-4) / 16 * 1rem);
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom-width: var(--eds-border-width-sm);
+  border-bottom-width: calc(var(--eds-border-width-sm) * 1px);
   border-bottom-style: solid;
   border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 }
@@ -21,7 +21,7 @@
  * Horizontal rule with a thick border.
  */
 .hr--lg {
-  border-width: var(--eds-border-width-lg);
+  border-width: calc(var(--eds-border-width-lg) * 1px);
 }
 
 /**

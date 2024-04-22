@@ -9,5 +9,5 @@
  */
 .input {
   @mixin inputStyles;
-  padding-left: var(--eds-size-2);
+  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
 }

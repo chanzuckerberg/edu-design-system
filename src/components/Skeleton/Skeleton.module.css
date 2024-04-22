@@ -15,7 +15,7 @@
  * Skeleton
  */
 .skeleton {
-  border-radius: var(--eds-border-radius-lg);
+  border-radius: calc(var(--eds-border-radius-lg) * 1px);
   background-color: var(--eds-theme-color-background-neutral-medium);
   background-image: linear-gradient(
     to right,
@@ -30,7 +30,7 @@
 }
 
 .skeleton.skeleton-circle {
-  border-radius: var(--eds-border-radius-full);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
