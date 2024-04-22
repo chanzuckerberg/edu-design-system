@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.1...v15.0.0-alpha.2) (2024-04-22)
+
+
+### Features
+
+* add support for extended nav and action components ([#1918](https://github.com/chanzuckerberg/edu-design-system/issues/1918)) ([f4a541e](https://github.com/chanzuckerberg/edu-design-system/commit/f4a541e84a8fb91a2a5261eb5542323b30391233))
+
 ## [15.0.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.0...v15.0.0-alpha.1) (2024-04-05)
 
 
