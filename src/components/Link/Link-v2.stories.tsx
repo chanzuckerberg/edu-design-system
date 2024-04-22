@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Link, type LinkProps } from './Link-v2';
+import { Link, type LinkV2Props } from './Link-v2';
 
 export default {
   title: 'Components/V2/Link',
@@ -62,7 +62,7 @@ export const Emphasis: StoryObj<Args> = {
 export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
   render: (
     args: React.JSX.IntrinsicAttributes &
-      (LinkProps & React.RefAttributes<HTMLAnchorElement>),
+      (LinkV2Props & React.RefAttributes<HTMLAnchorElement>),
   ) => (
     <div>
       Lorem ipsum dolor sit amet,{' '}
@@ -89,7 +89,7 @@ export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
 
 // Here, we introduce a special type extension to LinkProps, then use it in a
 // composed component, to demonstrate the ability to offer custom props to a component
-type ExtendArgs = LinkProps<{ to: string }>;
+type ExtendArgs = LinkV2Props<{ to: string }>;
 function ExtendedLink(args: ExtendArgs) {
   return (
     // eslint-disable-next-line no-alert

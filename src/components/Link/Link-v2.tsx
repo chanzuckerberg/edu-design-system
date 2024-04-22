@@ -6,7 +6,7 @@ import Icon from '../Icon';
 
 import styles from './Link-v2.module.css';
 
-export type LinkProps<ExtendedElement = unknown> =
+export type LinkV2Props<ExtendedElement = unknown> =
   React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     // Component API
     /**
@@ -49,7 +49,7 @@ export type LinkProps<ExtendedElement = unknown> =
  * Component for making styled anchor tags. Links allow users to navigate within or between a web page(s) or app(s).
  *
  */
-export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
+export const Link = forwardRef<HTMLAnchorElement, LinkV2Props>(
   (
     {
       as: Component = 'a',
