@@ -9,73 +9,74 @@ import styles from './Button-v2.module.css';
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-type ButtonV2Props = ButtonHTMLElementProps & {
-  // Component API
-  /**
-   * `Button` contents or label.
-   */
-  children: string;
-  /**
-   * Determine the behavior of the button upon click:
-   * - **button** `Button` is a clickable button with no default behavior
-   * - **submit** `Button` is a clickable button that submits form data
-   * - **reset** `Button` is a clickable button that resets the form-data to its initial values
-   */
-  type?: 'button' | 'reset' | 'submit';
+export type ButtonV2Props<ExtendedElement = unknown> =
+  ButtonHTMLElementProps & {
+    // Component API
+    /**
+     * `Button` contents or label.
+     */
+    children: string;
+    /**
+     * Determine the behavior of the button upon click:
+     * - **button** `Button` is a clickable button with no default behavior
+     * - **submit** `Button` is a clickable button that submits form data
+     * - **reset** `Button` is a clickable button that resets the form-data to its initial values
+     */
+    type?: 'button' | 'reset' | 'submit';
 
-  // Design API
-  /**
-   * Sets the hierarchy rank of the button
-   *
-   * **Default is `"primary"`**.
-   */
-  rank?: 'primary' | 'secondary' | 'tertiary';
+    // Design API
+    /**
+     * Sets the hierarchy rank of the button
+     *
+     * **Default is `"primary"`**.
+     */
+    rank?: 'primary' | 'secondary' | 'tertiary';
 
-  /**
-   * The size of the button on screen
-   */
-  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
+    /**
+     * The size of the button on screen
+     */
+    size?: Extract<Size, 'sm' | 'md' | 'lg'>;
 
-  /**
-   * The variant of the default tertiary button.
-   */
-  context?: 'default' | 'standalone';
+    /**
+     * The variant of the default tertiary button.
+     */
+    context?: 'default' | 'standalone';
 
-  /**
-   * Icon from the set of defined EDS icon set, when `iconLayout` is used.
-   */
-  icon?: IconName;
+    /**
+     * Icon from the set of defined EDS icon set, when `iconLayout` is used.
+     */
+    icon?: IconName;
 
-  /**
-   * Allows configuation of the icon's positioning within `Button`.
-   *
-   * - When set to a value besides `"none"`, an icon must be specified.
-   * - When `"icon-only"`, `aria-label` must be given a value.
-   */
-  iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
+    /**
+     * Allows configuation of the icon's positioning within `Button`.
+     *
+     * - When set to a value besides `"none"`, an icon must be specified.
+     * - When `"icon-only"`, `aria-label` must be given a value.
+     */
+    iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
 
-  /**
-   * Status (color) variant for `Button`.
-   *
-   * **Default is `"default"`**.
-   */
-  variant?: 'default' | 'critical' | 'inverse';
+    /**
+     * Status (color) variant for `Button`.
+     *
+     * **Default is `"default"`**.
+     */
+    variant?: 'default' | 'critical' | 'inverse';
 
-  /**
-   * Whether the width of the button is set to the full layout.
-   */
-  isFullWidth?: boolean;
+    /**
+     * Whether the width of the button is set to the full layout.
+     */
+    isFullWidth?: boolean;
 
-  /**
-   * Whether `Button` is set to disabled state (disables interaction and updates appearance).
-   */
-  isDisabled?: boolean;
+    /**
+     * Whether `Button` is set to disabled state (disables interaction and updates appearance).
+     */
+    isDisabled?: boolean;
 
-  /**
-   * Loading state passed down from higher level used to trigger loader and text change.
-   */
-  isLoading?: boolean;
-};
+    /**
+     * Loading state passed down from higher level used to trigger loader and text change.
+     */
+    isLoading?: boolean;
+  } & ExtendedElement;
 
 /**
  * `import {Button} from "@chanzuckerberg/eds";`

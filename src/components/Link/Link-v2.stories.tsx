@@ -59,7 +59,7 @@ export const Emphasis: StoryObj<Args> = {
   },
 };
 
-export const LinkInParagraphContext: StoryObj<Args> = {
+export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
   render: (
     args: React.JSX.IntrinsicAttributes &
       (LinkProps & React.RefAttributes<HTMLAnchorElement>),
@@ -83,6 +83,52 @@ export const LinkInParagraphContext: StoryObj<Args> = {
         vel pulvinar
       </Link>{' '}
       euismod, risus eros ullamcorper lectus, non blandit nulla dui eget massa.
+    </div>
+  ),
+};
+
+// Here, we introduce a special type extension to LinkProps, then use it in a
+// composed component, to demonstrate the ability to offer custom props to a component
+type ExtendArgs = LinkProps<{ to: string }>;
+function ExtendedLink(args: ExtendArgs) {
+  return (
+    // eslint-disable-next-line no-alert
+    <Link {...args} onClick={() => alert(`handle to value: ${args.to}`)} />
+  );
+}
+
+/**
+ * You can extend a component's props for use with libraries that aid navigation, e.g., react-dom-router, et al.
+ *
+ * Steps to use:
+ *
+ * * import `LinkProps`
+ * * use the type param. to augment the types for `Link` with the libraries type, e.g., `type ExtendedProps = LinkProps<typeof CustomLink>;`
+ * * Now export a new function component that uses the new prop type and returns a composed function
+ *
+ * When using this pattern, you likely want to also specify the library's Link component using `as`
+ *
+ * ```tsx
+ * type ExtendedProps = LinkProps<typeof CustomLink>;
+ *
+ * export default function Link({children, ...other}: ExtendedProps) {
+ *   return (
+ *    <Link as={CustomLink} {...other}>
+ *      {children}
+ *    </Link>
+ *   );
+ * }
+ * ```
+ */
+export const UsingExtendedLink: StoryObj<ExtendArgs> = {
+  render: (args) => (
+    <div>
+      Lorem ipsum dolor sit amet,{' '}
+      <ExtendedLink {...args} href="https://go.czi.team/eds" to="test">
+        consectetur adipiscing elit
+      </ExtendedLink>
+      . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
+      Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
     </div>
   ),
 };
