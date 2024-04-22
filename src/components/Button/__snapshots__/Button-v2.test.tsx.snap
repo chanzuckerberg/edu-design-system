@@ -1,0 +1,588 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
+<div
+  class="flex gap-1"
+>
+  <button
+    class="button button--layout-none button--primary button--lg button--variant-critical"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Primary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--secondary button--lg button--variant-critical"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Secondary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--tertiary button--lg button--variant-critical"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Tertiary
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> Default story renders snapshot 1`] = `
+<button
+  class="button button--layout-none button--primary button--lg button--variant-default"
+  type="button"
+>
+  <span
+    class="button__text"
+  >
+    Default
+  </span>
+</button>
+`;
+
+exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
+<div
+  class="flex gap-1"
+>
+  <button
+    class="button button--layout-none button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Primary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--secondary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Secondary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--tertiary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Tertiary
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> Disabled story renders snapshot 1`] = `
+<div
+  class="flex gap-1"
+>
+  <button
+    class="button button--layout-none button--disabled button--primary button--lg button--variant-default"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Primary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--disabled button--secondary button--lg button--variant-default"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Secondary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--disabled button--tertiary button--lg button--variant-default"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Tertiary
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> FullWidths story renders snapshot 1`] = `
+<div
+  class="flex items-center gap-1"
+>
+  <button
+    class="button button--layout-none button--full-width button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Large
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--full-width button--primary button--md button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Medium
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--full-width button--primary button--sm button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Small
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> IconLayouts story renders snapshot 1`] = `
+<div
+  class="flex items-center gap-1"
+>
+  <button
+    class="button button--layout-left button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1rem"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
+        />
+      </svg>
+      Left
+    </span>
+  </button>
+  <button
+    class="button button--layout-right button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Right
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1rem"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
+        />
+      </svg>
+    </span>
+  </button>
+  <button
+    aria-label="Label must be applied with icon-only layout"
+    class="button button--layout-icon-only button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> InverseRanks story renders snapshot 1`] = `
+<div
+  class="bg-[var(--eds-color-blue-850)] p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="button button--layout-none button--primary button--lg button--variant-inverse"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--secondary button--lg button--variant-inverse"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--tertiary button--lg button--variant-inverse"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> LoadingStates story renders snapshot 1`] = `
+<div
+  class="flex items-center gap-1"
+>
+  <button
+    class="button button--layout-none button--loading button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text button--is-loading"
+    >
+      Large
+    </span>
+    <div
+      aria-busy="true"
+      aria-label="loading"
+      class="loading-indicator button__loader"
+      data-testid="oval-loading"
+      role="status"
+    >
+      <svg
+        data-testid="oval-svg"
+        height="24"
+        stroke="transparent"
+        viewBox="-20 -20 42 42"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            data-testid="oval-secondary-group"
+            stroke-width="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="0"
+              cy="0"
+              r="20"
+              stroke="transparent"
+              stroke-opacity=".5"
+              stroke-width="2"
+            />
+            <path
+              d="M20 0c0-9.94-8.06-20-20-20"
+            >
+              <animatetransform
+                attributeName="transform"
+                dur="1s"
+                from="0 0 0"
+                repeatCount="indefinite"
+                to="360 0 0"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </button>
+  <button
+    class="button button--layout-none button--loading button--primary button--md button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text button--is-loading"
+    >
+      Medium
+    </span>
+    <div
+      aria-busy="true"
+      aria-label="loading"
+      class="loading-indicator button__loader"
+      data-testid="oval-loading"
+      role="status"
+    >
+      <svg
+        data-testid="oval-svg"
+        height="24"
+        stroke="transparent"
+        viewBox="-20 -20 42 42"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            data-testid="oval-secondary-group"
+            stroke-width="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="0"
+              cy="0"
+              r="20"
+              stroke="transparent"
+              stroke-opacity=".5"
+              stroke-width="2"
+            />
+            <path
+              d="M20 0c0-9.94-8.06-20-20-20"
+            >
+              <animatetransform
+                attributeName="transform"
+                dur="1s"
+                from="0 0 0"
+                repeatCount="indefinite"
+                to="360 0 0"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </button>
+  <button
+    class="button button--layout-none button--loading button--primary button--sm button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text button--is-loading"
+    >
+      Small
+    </span>
+    <div
+      aria-busy="true"
+      aria-label="loading"
+      class="loading-indicator button__loader"
+      data-testid="oval-loading"
+      role="status"
+    >
+      <svg
+        data-testid="oval-svg"
+        height="24"
+        stroke="transparent"
+        viewBox="-20 -20 42 42"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            data-testid="oval-secondary-group"
+            stroke-width="2"
+            transform="translate(1 1)"
+          >
+            <circle
+              cx="0"
+              cy="0"
+              r="20"
+              stroke="transparent"
+              stroke-opacity=".5"
+              stroke-width="2"
+            />
+            <path
+              d="M20 0c0-9.94-8.06-20-20-20"
+            >
+              <animatetransform
+                attributeName="transform"
+                dur="1s"
+                from="0 0 0"
+                repeatCount="indefinite"
+                to="360 0 0"
+                type="rotate"
+              />
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<Button /> Sizes story renders snapshot 1`] = `
+<div
+  class="flex items-center gap-1"
+>
+  <button
+    class="button button--layout-none button--primary button--lg button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Large
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--primary button--md button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Medium
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--primary button--sm button--variant-default"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Small
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> TertiaryStandalone story renders snapshot 1`] = `
+<button
+  class="button button--context-standalone button--layout-none button--tertiary button--lg button--variant-default"
+  type="button"
+>
+  <span
+    class="button__text"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
+<div>
+  Lorem ipsum dolor sit amet,
+   
+  <button
+    class="button button--layout-none button--primary button--lg button--variant-default"
+    to="test"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      consectetur adipiscing elit
+    </span>
+  </button>
+  . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
+   
+</div>
+`;
+
+exports[`<Button /> passes class names down properly 1`] = `
+<button
+  class="button button--layout-none button--primary button--lg button--variant-default exampleClassName"
+  data-testid="example-class-name"
+  type="button"
+>
+  <span
+    class="button__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`<Button /> passes test ids down properly 1`] = `
+<button
+  class="button button--layout-none button--primary button--lg button--variant-default"
+  data-testid="example-test-id"
+  type="button"
+>
+  <span
+    class="button__text"
+  >
+    Click
+  </span>
+</button>
+`;

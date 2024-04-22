@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> Checked story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      checked=""
+      class="checkbox__input"
+      id=":r3:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r3:"
+      >
+        Checkbox
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Default story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r0:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r0:"
+      >
+        Checkbox
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="p-0"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":r5:"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg label--disabled"
+          for=":r5:"
+        >
+          Disabled
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        checked=""
+        class="checkbox__input"
+        disabled=""
+        id=":r6:"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg label--disabled"
+          for=":r6:"
+        >
+          Disabled
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":r7:"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg label--disabled"
+          for=":r7:"
+        >
+          Disabled
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
+<div
+  class="checkbox"
+>
+  <input
+    class="checkbox__input"
+    disabled=""
+    id=":ra:"
+    type="checkbox"
+  />
+  <div
+    class="checkbox__labels"
+  >
+    <label
+      class="label label--lg label--disabled"
+      for=":ra:"
+    >
+      Disabled
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Error story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox checkbox--error"
+  >
+    <input
+      class="checkbox__input"
+      id=":r2:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r2:"
+      >
+        In error state
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r4:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r4:"
+      >
+        Checkbox
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r9:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r9:"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      class="checkbox__input"
+      id=":r1:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r1:"
+      >
+        Checkbox
+      </label>
+      <span
+        class="text text--body-sm checkbox__sub-label"
+      >
+        Additional descriptive text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="checkbox"
+  >
+    <input
+      aria-label="a checkbox has no name"
+      class="checkbox__input"
+      id=":r8:"
+      type="checkbox"
+    />
+    <div
+      class="checkbox__labels"
+    />
+  </div>
+</div>
+`;
