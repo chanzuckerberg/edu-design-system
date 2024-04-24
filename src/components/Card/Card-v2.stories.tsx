@@ -38,6 +38,23 @@ export default {
         type: null,
       },
     },
+    topStripeColor: {
+      options: [
+        '',
+        'bg-brand-blue-1',
+        'bg-brand-blue-2',
+        'bg-brand-blue-3',
+        'bg-brand-green',
+        'bg-brand-orange',
+        'bg-brand-pink',
+        'bg-brand-purple',
+        'bg-brand-red',
+        'bg-brand-yellow',
+      ],
+      control: {
+        type: 'select',
+      },
+    },
   },
 } as Meta<Args>;
 
@@ -174,6 +191,13 @@ export const WithHorizontalPrimaryButton: StoryObj<Args> = {
   },
 };
 
+export const CustomBrandCard: StoryObj<Args> = {
+  args: {
+    containerColor: 'custom-brand',
+    className: 'border-brand-red bg-brand-red',
+  },
+};
+
 export const TopStripe: StoryObj<Args> = {
   args: {
     topStripe: 'medium',
@@ -205,7 +229,7 @@ export const TopStripe: StoryObj<Args> = {
 export const CustomTopStripe: StoryObj<Args> = {
   args: {
     topStripe: 'high',
-    topStripeClassName: 'bg-utility-favorable-highEmphasis-hover',
+    topStripeColor: 'bg-brand-purple',
     children: (
       <>
         <Card.Header
@@ -233,9 +257,7 @@ export const CustomTopStripe: StoryObj<Args> = {
 
 export const BackgroundCallout: StoryObj<Args> = {
   args: {
-    background: 'call-out',
-    containerStyle: 'medium',
-    topStripeClassName: 'bg-utility-favorable-highEmphasis-hover',
+    containerColor: 'call-out',
     children: (
       <>
         <Card.Header
@@ -261,32 +283,40 @@ export const BackgroundCallout: StoryObj<Args> = {
   },
 };
 
-export const Focusable: StoryObj<Args> = {
+/**
+ * Cards have hierarchy, and can contain other cards with one level. When using a nested card, you can use `.ChildCard`,
+ * which comes preconfigured with some settings and defaults applied. All the sub-components of card work within `.Childcard`.
+ */
+export const ChildCards: StoryObj<Args> = {
   args: {
-    tabIndex: 0,
-    topStripeClassName: 'bg-utility-favorable-highEmphasis-hover',
+    containerColor: 'call-out',
+    topStripe: 'high',
+    containerStyle: 'high',
     children: (
       <>
-        <Card.Header
-          action={<CardMenu />}
-          eyebrow="Recommended for you"
-          size="md"
-          subTitle="Get to know your colleagues"
-          title="Question of the day"
-        />
+        <Card.Header size="md" title="Card Group"></Card.Header>
         <Card.Body>
-          <div className="fpo my-4">Card Body</div>
+          <Card.ChildCard draggable="true">
+            <Card.Header
+              action={<CardMenu />}
+              eyebrow="Eyebrow Text"
+              subTitle="Sub-title text"
+              title="Title text"
+            />
+          </Card.ChildCard>
         </Card.Body>
-        <Card.Footer>
-          <ButtonGroup>
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Button onClick={() => {}} rank="primary">
-              Primary Action
-            </Button>
-          </ButtonGroup>
-        </Card.Footer>
       </>
     ),
+  },
+};
+
+/**
+ * Cards can be marked as currently being dragged. This can be used in combination with the `draggable` attribute from HTML,
+ * or to work with a drag-n-drop library.
+ */
+export const WhileDragging: StoryObj<Args> = {
+  args: {
+    isDragging: true,
   },
 };
 

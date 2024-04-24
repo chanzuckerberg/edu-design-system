@@ -671,6 +671,15 @@
   --eds-theme-color-border-utility-default-low-emphasis-active: var(--eds-color-neutral-350);
   --eds-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
   --eds-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
+  --eds-theme-color-border-brand-pink: var(--eds-color-pink-450);
+  --eds-theme-color-border-brand-purple: var(--eds-color-purple-350);
+  --eds-theme-color-border-brand-blue-3: var(--eds-color-blue-850);
+  --eds-theme-color-border-brand-blue-2: var(--eds-color-blue-550);
+  --eds-theme-color-border-brand-blue-1: var(--eds-color-blue-200);
+  --eds-theme-color-border-brand-green: var(--eds-color-green-350);
+  --eds-theme-color-border-brand-yellow: var(--eds-color-yellow-150);
+  --eds-theme-color-border-brand-orange: var(--eds-color-orange-250);
+  --eds-theme-color-border-brand-red: var(--eds-color-red-850);
   --eds-theme-color-border-brand-primary-strong: var(--eds-color-brand-grape-400);
   --eds-theme-color-border-brand-primary: var(--eds-color-brand-grape-300); /* @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
   --eds-theme-color-border-brand-primary-subtle: var(--eds-color-brand-grape-200);

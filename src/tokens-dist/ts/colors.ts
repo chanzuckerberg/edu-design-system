@@ -120,6 +120,15 @@ export const EdsThemeColorBorderBrandPrimaryDefault =
   'var(--eds-theme-color-border-brand-primary)';
 export const EdsThemeColorBorderBrandPrimary = '#C4C1F3'; // @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead
 export const EdsThemeColorBorderBrandPrimaryStrong = '#A6A3EE';
+export const EdsThemeColorBorderBrandRed = '#4D0118';
+export const EdsThemeColorBorderBrandOrange = '#FFA070';
+export const EdsThemeColorBorderBrandYellow = '#F9DA78';
+export const EdsThemeColorBorderBrandGreen = '#57B083';
+export const EdsThemeColorBorderBrandBlue1 = '#99CCFF';
+export const EdsThemeColorBorderBrandBlue2 = '#3165D2';
+export const EdsThemeColorBorderBrandBlue3 = '#0F2163';
+export const EdsThemeColorBorderBrandPurple = '#C580E7';
+export const EdsThemeColorBorderBrandPink = '#DB458D';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasis = '#CFC9C7';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasisHover = '#BEB8B6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasisActive = '#A09C9A';
