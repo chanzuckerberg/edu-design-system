@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .button-group--horizontal {
