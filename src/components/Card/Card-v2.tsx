@@ -22,29 +22,35 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
   className?: string;
   // Design API
   /**
+   * Treatment for the card's container element. When using `"custom-brand"`, set the
+   * container background and border color using the brand border/bg utility classes.
    *
    * **Default is `"default"`**.
    */
-  background: 'default' | 'call-out';
+  containerColor?: 'default' | 'call-out' | 'custom-brand';
   /**
    * The bounding box and other container emphasis details
    *
    * **Default is `"low"`**.
    */
-  containerStyle: 'none' | 'low' | 'medium' | 'high';
+  containerStyle?: 'none' | 'low' | 'high';
   /**
-   * Decorative top bar used to cause a highlight on a given card. Use
-   * utility classes to adjust background color.
+   * State to trigger when the card is being dragged. Can be combined with the HTML `draggable` property,
+   * or used programmatically with drag and drop libraries
+   */
+  isDragging?: boolean;
+  /**
+   * Decorative top bar used to cause a highlight on a given card. When present, this
+   * corresponds to a specified emphasis level.
    *
    * **Default is `"none"`**.
    */
-  topStripe: 'none' | 'medium' | 'high';
+  topStripe?: 'none' | 'medium' | 'high';
   /**
-   * Class to adjust top stripe color.
+   * Class to adjust top stripe background color. Choose from brand-background tokens utility classes.
    */
-  topStripeClassName: string;
+  topStripeColor?: string;
 }
-
 export interface CardSubComponentProps {
   // Component API
   /**
@@ -101,18 +107,21 @@ export interface CardHeaderProps {
  * text, and/or calls to action.
  */
 export const Card = ({
-  background = 'default',
+  containerColor = 'default',
   className,
   children,
   containerStyle = 'low',
+  isDragging,
   topStripe = 'none',
-  topStripeClassName,
+  topStripeColor = '',
   ...other
 }: CardProps) => {
   const componentClassName = clsx(
     styles['card'],
     styles[`card--container-style-${containerStyle}`],
-    styles[`card--background-${background}`],
+    styles[`card--container-color-${containerColor}`],
+    typeof isDragging !== 'undefined' &&
+      styles[`card--is-dragging-${isDragging}`],
     className,
   );
   return (
@@ -123,7 +132,7 @@ export const Card = ({
           className={clsx(
             styles['card__top-stripe'],
             styles[`top-stripe--${topStripe}`],
-            topStripeClassName,
+            topStripeColor,
           )}
         ></div>
       )}
@@ -240,11 +249,18 @@ const CardHeader = ({
   );
 };
 
+const ChildCard = ({ className, ...other }: CardProps) => {
+  const childClassName = clsx(className, styles['child-card']);
+  return <Card {...other} className={childClassName} containerStyle="high" />;
+};
+
 Card.displayName = 'Card';
 CardBody.displayName = 'Card.Body';
 CardFooter.displayName = 'Card.Footer';
 CardHeader.displayName = 'Card.Header';
+ChildCard.displayName = 'Card.ChildCard';
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;
 Card.Header = CardHeader;
+Card.ChildCard = ChildCard;
