@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.3](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.2...v15.0.0-alpha.3) (2024-04-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tokens:** remove units from design system tokens (#1912)
+
+### Features
+
+* **tokens:** remove units from design system tokens ([#1912](https://github.com/chanzuckerberg/edu-design-system/issues/1912)) ([ab666cf](https://github.com/chanzuckerberg/edu-design-system/commit/ab666cfafd2d4fcfedddbaf49799f21b58da04a4))
+
 ## [15.0.0-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.1...v15.0.0-alpha.2) (2024-04-22)
 
 
