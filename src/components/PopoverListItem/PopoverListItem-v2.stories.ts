@@ -20,7 +20,7 @@ export const Default: StoryObj<Args> = {
 export const WithAnIcon: StoryObj<Args> = {
   args: {
     children: 'Test with Icon',
-    icon: 'add-circle',
+    icon: 'add-encircled',
   },
 };
 
@@ -34,7 +34,7 @@ export const Disabled: StoryObj<Args> = {
 export const Descructive: StoryObj<Args> = {
   args: {
     children: 'Is destructive',
-    icon: 'delete',
+    icon: 'trash',
     isDestructiveAction: true,
   },
 };
@@ -50,6 +50,6 @@ export const WithSublabel: StoryObj<Args> = {
 export const WithIconAndSubLabel: StoryObj<Args> = {
   args: {
     ...WithSublabel.args,
-    icon: 'feedback',
+    icon: 'comment-critical',
   },
 };

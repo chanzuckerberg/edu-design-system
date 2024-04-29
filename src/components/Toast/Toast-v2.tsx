@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import getIconNameFromStatus from '../../util/getIconNameFromStatus-v2';
 import type { Status } from '../../util/variant-types';
 import { ButtonV2 as Button } from '../Button';
-import Icon from '../Icon';
+import { IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
 import styles from './Toast-v2.module.css';

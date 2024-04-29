@@ -53,7 +53,7 @@ export const Default: StoryObj<MenuProps> = {
           <Menu.Item href="#index" onClick={() => console.log('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -86,7 +86,7 @@ export const WithLongButtonText: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -117,7 +117,7 @@ export const WithShortButtonText: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -150,7 +150,7 @@ export const WithCustomButton: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -186,7 +186,7 @@ export const MenuWithAvatarButton: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -249,7 +249,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>

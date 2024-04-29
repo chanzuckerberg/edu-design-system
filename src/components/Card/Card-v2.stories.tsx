@@ -91,7 +91,7 @@ export const WithFullHeaderAndIcon: StoryObj<Args> = {
       <>
         <Card.Header
           eyebrow="Recommended for you"
-          icon="account-circle"
+          icon="person-encircled"
           subTitle="Get to know your colleagues"
           title="Question of the day"
         />
@@ -133,7 +133,7 @@ function CardMenu() {
         <Menu.Item href="#index" onClick={() => console.log('Item clicked')}>
           Trigger Action
         </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning">
+        <Menu.Item disabled href="https://example.org/" icon="warning-filled">
           Not Possible (disabled)
         </Menu.Item>
       </Menu.Items>
@@ -148,7 +148,7 @@ export const WithSmallFullHeaderAndIcon: StoryObj<Args> = {
         <Card.Header
           action={<CardMenu />}
           eyebrow="Recommended for you"
-          icon="account-circle"
+          icon="person-encircled"
           size="sm"
           subTitle="Get to know your colleagues"
           title="Question of the day"

@@ -20,7 +20,7 @@ import {
 import { useId } from '../../util/useId';
 import type { RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 
 import styles from './TabGroup.module.css';
 

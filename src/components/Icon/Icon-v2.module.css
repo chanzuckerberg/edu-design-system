@@ -1,0 +1,27 @@
+/* ------------------------------------*\
+    # ICON
+\*------------------------------------ */
+
+/**
+ * Small graphic that represents functionality.
+ */
+.icon {
+  display: inline-block;
+  /**
+   * Size Priority:
+   * 1: --icon-size, passed through props
+   * 2: --icon-size-default, determined by context (text, button, pill)
+   * default: 1em, same size as surrounding text
+   *
+   * Inspired by https://www.youtube.com/watch?v=EDyiaDJJu-4
+   */
+  width: var(--icon-size, var(--icon-size-default, 1em));
+  height: var(--icon-size, var(--icon-size-default, 1em));
+}
+
+/**
+ * A block icon fills 100% of the width of its container
+ */
+.icon--full-width {
+  display: block;
+}

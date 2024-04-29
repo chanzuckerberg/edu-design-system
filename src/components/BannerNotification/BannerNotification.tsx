@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import getIconNameFromStatus from '../../util/getIconNameFromStatus-v2';
 import type { Status } from '../../util/variant-types';
 import Heading from '../Heading';
-import Icon from '../Icon';
+import { IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
 import styles from './BannerNotification.module.css';

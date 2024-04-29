@@ -8,7 +8,7 @@ import type {
   ForwardedRefComponent,
 } from '../../util/utility-types';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
-import Icon, { type IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import { InputV2 as Input } from '../Input';
 import { InputLabelV2 as InputLabel } from '../InputLabel';
 import Text from '../Text';

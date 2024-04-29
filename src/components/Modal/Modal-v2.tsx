@@ -6,7 +6,7 @@ import React from 'react';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 import Heading from '../Heading';
-import { Icon } from '../Icon/Icon';
+import { IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
 import styles from './Modal-v2.module.css';

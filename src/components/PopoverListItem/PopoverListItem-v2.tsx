@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import type { IconName } from '../Icon';
-import Icon from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem-v2.module.css';
 

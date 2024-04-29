@@ -130,7 +130,7 @@ export const WithTabIcons: StoryObj<Args> = {
     ...Centered.args,
     children: (
       <>
-        <TabGroup.Tab icon="account-circle" title="Tab Title 1">
+        <TabGroup.Tab icon="person-encircled" title="Tab Title 1">
           <div className="max-w-xl">
             <Heading as="h3" className="mb-6">
               Tab 1
@@ -144,7 +144,7 @@ export const WithTabIcons: StoryObj<Args> = {
           </div>
         </TabGroup.Tab>
 
-        <TabGroup.Tab icon="add-alarm" title="Tab Title 2">
+        <TabGroup.Tab icon="alarm-add" title="Tab Title 2">
           <div className="max-w-xl">
             <Heading as="h3" className="mb-6">
               Tab 2
