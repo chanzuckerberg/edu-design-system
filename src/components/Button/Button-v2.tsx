@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import type { Size } from '../../util/variant-types';
-import Icon from '../Icon';
-import type { IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import LoadingIndicator from '../LoadingIndicator';
 
 import styles from './Button-v2.module.css';
@@ -94,7 +93,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonV2Props>(
       children,
       className,
       context,
-      icon = 'empty-circle',
+      icon = 'circle',
       iconLayout = 'none',
       isDisabled,
       isFullWidth,

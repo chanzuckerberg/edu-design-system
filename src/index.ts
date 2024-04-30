@@ -57,6 +57,7 @@ export { ButtonGroupV2 } from './components/ButtonGroup';
 export { CardV2 } from './components/Card';
 export { CheckboxV2 } from './components/Checkbox';
 export { FieldNoteV2 } from './components/FieldNote';
+export { IconV2 } from './components/Icon';
 export { InlineNotificationV2 } from './components/InlineNotification';
 export { InputFieldV2 } from './components/InputField';
 export { LinkV2, type LinkV2Props } from './components/Link';
@@ -70,3 +71,5 @@ export { default as TabGroup } from './components/TabGroup';
 export { TextareaFieldV2 } from './components/TextareaField';
 export { ToastV2 } from './components/Toast';
 export { TooltipV2 } from './components/Tooltip';
+
+export type { IconNameV2 } from './components/Icon';

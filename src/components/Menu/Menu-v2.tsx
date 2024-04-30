@@ -9,8 +9,7 @@ import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
-import Icon from '../Icon';
-import type { IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 
 import {
   PopoverContainerV2 as PopoverContainer,
@@ -61,9 +60,9 @@ export type MenuButtonProps = {
    */
   className?: string;
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Icon override for component. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'expand-more'>;
+  icon?: Extract<IconName, 'chevron-down'>;
 };
 
 export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
@@ -119,7 +118,7 @@ export const Menu = ({
 const MenuButton = ({
   children,
   className,
-  icon = 'expand-more',
+  icon = 'chevron-down',
   ...other
 }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);

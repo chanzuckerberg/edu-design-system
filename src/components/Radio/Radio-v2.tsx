@@ -3,7 +3,7 @@ import React from 'react';
 import type { ReactNode, InputHTMLAttributes } from 'react';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
-import Icon, { type IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import { InputLabel, type InputLabelProps } from '../InputLabel/InputLabel';
 import Text from '../Text';
 import styles from './Radio-v2.module.css';
@@ -57,6 +57,7 @@ type RadioInputProps = Omit<
   isError?: boolean;
 };
 
+// TODO-AH: don't use external svgs in here
 const RadioSvg = ({ checked }: Pick<RadioProps, 'checked'>) => {
   const iconClassName = clsx(styles['radio__icon']);
   const icon: IconName = checked ? 'radio-selected' : 'radio-unselected';

@@ -27,12 +27,12 @@ export const Default: StoryObj<Args> = {
     children: (
       <>
         <div role="none">
-          <PopoverListItem icon="arrow-downward">test 1</PopoverListItem>
-          <PopoverListItem icon="arrow-narrow-left">test 2</PopoverListItem>
-          <PopoverListItem icon="arrow-upward">test 3</PopoverListItem>
+          <PopoverListItem icon="arrow-down">test 1</PopoverListItem>
+          <PopoverListItem icon="arrow-left-narrow">test 2</PopoverListItem>
+          <PopoverListItem icon="arrow-up">test 3</PopoverListItem>
         </div>
         <div role="none">
-          <PopoverListItem icon="arrow-narrow-right" isDestructiveAction>
+          <PopoverListItem icon="arrow-right-narrow" isDestructiveAction>
             test 4
           </PopoverListItem>
         </div>

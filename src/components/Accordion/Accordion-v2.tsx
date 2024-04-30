@@ -6,7 +6,7 @@ import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import type { Size } from '../../util/variant-types';
 
 import Heading, { type HeadingElement } from '../Heading';
-import Icon, { type IconName } from '../Icon';
+import { type IconNameV2 as IconName, IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
 import styles from './Accordion-v2.module.css';
@@ -77,7 +77,7 @@ type AccordionButtonProps = {
    *
    * **Default is `"expand-more"`**.
    */
-  trailingIcon?: Extract<IconName, 'expand-more'>;
+  trailingIcon?: Extract<IconName, 'chevron-down'>;
 };
 
 type AccordionPanelProps = {
@@ -159,7 +159,7 @@ const AccordionButton = ({
   headingAs,
   leadingIcon,
   title,
-  trailingIcon = 'expand-more',
+  trailingIcon = 'chevron-down',
   subtitle,
   onClose,
   onOpen,

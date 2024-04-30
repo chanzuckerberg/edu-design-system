@@ -13,7 +13,7 @@ import { usePopper } from 'react-popper';
 import { useId } from '../../util/useId';
 import type { ExtractProps } from '../../util/utility-types';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
-import Icon, { type IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import { InputLabelV2 as InputLabel } from '../InputLabel';
 import {
   defaultPopoverModifiers,
@@ -99,9 +99,9 @@ type SelectOptionProps = ExtractProps<typeof Listbox.Option> & {
 type SelectButtonProps = ExtractProps<typeof Listbox.Button> & {
   // Design API
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Icon override for component. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'expand-more'>;
+  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Indicates state of the select, used to style the button.
    */
@@ -120,9 +120,9 @@ type SelectButtonWrapperProps = {
   className?: string;
   // Design API
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Icon override for component. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'expand-more'>;
+  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Whether there is an error state for the field note text (and icon)
    *
@@ -484,7 +484,7 @@ export const SelectButtonWrapper = React.forwardRef<
     {
       children,
       className,
-      icon = 'expand-more',
+      icon = 'chevron-down',
       isError,
       isOpen,
       isWarning,

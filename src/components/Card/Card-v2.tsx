@@ -3,9 +3,8 @@ import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
 import type { Size } from '../../util/variant-types';
-import type { IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 
-import Icon from '../Icon';
 import Text from '../Text';
 
 import styles from './Card-v2.module.css';

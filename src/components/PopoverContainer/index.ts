@@ -6,4 +6,4 @@ export {
   PopoverContainer as PopoverContainerV2,
   defaultPopoverModifiers as defaultPopoverModifiersV2,
 } from './PopoverContainer-v2';
-export type { PopoverOptions, PopoverContext } from './PopoverContainer';
+export type { PopoverOptions, PopoverContext } from './PopoverContainer-v2';

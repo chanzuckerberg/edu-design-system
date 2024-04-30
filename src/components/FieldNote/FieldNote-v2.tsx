@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import Icon, { type IconName } from '../Icon';
+import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import styles from './FieldNote-v2.module.css';
 
 export interface Props {
@@ -64,7 +64,7 @@ export const FieldNote = ({
   if (isError) {
     iconToUse = 'dangerous';
   } else if (isWarning) {
-    iconToUse = 'warning';
+    iconToUse = 'warning-filled';
   } else if (icon) {
     iconToUse = icon;
   }
