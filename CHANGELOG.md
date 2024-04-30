@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.5](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.4...v15.0.0-alpha.5) (2024-04-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icon:** introduce 2.0 component (#1925)
+
+### Features
+
+* **Icon:** introduce 2.0 component ([#1925](https://github.com/chanzuckerberg/edu-design-system/issues/1925)) ([3e40638](https://github.com/chanzuckerberg/edu-design-system/commit/3e40638e869929eda64cabcc9c6cfde5e4fb8166))
+
 ## [15.0.0-alpha.4](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.3...v15.0.0-alpha.4) (2024-04-29)
 
 ## [15.0.0-alpha.3](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.2...v15.0.0-alpha.3) (2024-04-26)
