@@ -629,41 +629,6 @@ const icons = {
     viewBox: '0 0 24 24',
     content: (
       <>
-        <g clipPath="url(#clip0_6658_733)">
-          <path
-            d="M11.5236 2.95215H2.95215V11.5236H11.5236V2.95215Z"
-            fill="#F25022"
-          />
-          <path
-            d="M11.5236 12.4766H2.95215V21.048H11.5236V12.4766Z"
-            fill="#00A4EF"
-          />
-          <path
-            d="M21.0475 2.95215H12.4761V11.5236H21.0475V2.95215Z"
-            fill="#7FBA00"
-          />
-          <path
-            d="M21.0475 12.4766H12.4761V21.048H21.0475V12.4766Z"
-            fill="#FFB900"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_6658_733">
-            <rect
-              fill="white"
-              height="20"
-              transform="translate(2 2)"
-              width="20"
-            />
-          </clipPath>
-        </defs>
-      </>
-    ),
-  },
-  'logo-microsoft-polychrome': {
-    viewBox: '0 0 24 24',
-    content: (
-      <>
         <g clipPath="url(#clip0_6658_850)">
           <path
             d="M21.6 12.2271C21.6 11.518 21.5364 10.8362 21.4182 10.1816H12V14.0498H17.3818C17.15 15.2998 16.4455 16.3589 15.3864 17.068V19.5771H18.6182C20.5091 17.8362 21.6 15.2725 21.6 12.2271Z"
@@ -684,6 +649,41 @@ const icons = {
         </g>
         <defs>
           <clipPath id="clip0_6658_850">
+            <rect
+              fill="white"
+              height="20"
+              transform="translate(2 2)"
+              width="20"
+            />
+          </clipPath>
+        </defs>
+      </>
+    ),
+  },
+  'logo-microsoft-polychrome': {
+    viewBox: '0 0 24 24',
+    content: (
+      <>
+        <g clipPath="url(#clip0_6658_733)">
+          <path
+            d="M11.5236 2.95215H2.95215V11.5236H11.5236V2.95215Z"
+            fill="#F25022"
+          />
+          <path
+            d="M11.5236 12.4766H2.95215V21.048H11.5236V12.4766Z"
+            fill="#00A4EF"
+          />
+          <path
+            d="M21.0475 2.95215H12.4761V11.5236H21.0475V2.95215Z"
+            fill="#7FBA00"
+          />
+          <path
+            d="M21.0475 12.4766H12.4761V21.048H21.0475V12.4766Z"
+            fill="#FFB900"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_6658_733">
             <rect
               fill="white"
               height="20"
