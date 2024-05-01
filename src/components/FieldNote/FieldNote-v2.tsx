@@ -24,9 +24,11 @@ export interface Props {
    */
   disabled?: boolean;
   /**
-   * Icon to use when an "icon" variant of the avatar. Default is "dangerous"
+   * Icon to use when an "icon" variant of the avatar.
+   *
+   * **Default is `"dangerous"`**.
    */
-  icon?: IconName;
+  icon?: Extract<IconName, 'dangerous' | 'warning-filled'>;
   /**
    * Whether there is an error state for the field note text (and icon)
    */

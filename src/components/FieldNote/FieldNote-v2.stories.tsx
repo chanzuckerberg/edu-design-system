@@ -26,7 +26,7 @@ export const WithErrorIcon: StoryObj<Args> = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'person-add',
+    icon: 'warning-filled',
     isError: true,
   },
 };
@@ -35,7 +35,7 @@ export const WithIcon: StoryObj<Args> = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'person-add',
+    icon: 'warning-filled',
   },
 };
 
