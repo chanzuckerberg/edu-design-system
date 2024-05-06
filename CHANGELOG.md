@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.6](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.5...v15.0.0-alpha.6) (2024-05-06)
+
 ## [15.0.0-alpha.5](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.4...v15.0.0-alpha.5) (2024-04-30)
 
 
