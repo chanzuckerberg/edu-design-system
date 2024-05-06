@@ -67,7 +67,7 @@ export { NumberIconV2 } from './components/NumberIcon';
 export { PopoverListItemV2 } from './components/PopoverListItem';
 export { RadioV2 } from './components/Radio';
 export { SelectV2 } from './components/Select';
-export { default as TabGroup } from './components/TabGroup';
+export { default as TabGroup } from './components/TabGroup'; // TODO-AH: rename to V2
 export { TextareaFieldV2 } from './components/TextareaField';
 export { ToastV2 } from './components/Toast';
 export { TooltipV2 } from './components/Tooltip';
