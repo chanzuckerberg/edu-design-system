@@ -3,7 +3,10 @@
 /*------------------------------------*\
     # ACCORDION
 \*------------------------------------*/
-
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
 /**
  * Accordion Panel that expands and collapses.
  * Reveals itself below the associated Accordion Button.
@@ -100,7 +103,7 @@
 }
 
 .accordion-button__leading-icon {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: var(--eds-theme-color-icon-utility-default-primary);
 }
 
 .accordion-button__title {

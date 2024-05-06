@@ -3,7 +3,10 @@
 /*------------------------------------*\
     # FIELD NOTE
 \*------------------------------------*/
-
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
 /**
  * Fieldnote
  */
@@ -44,6 +47,6 @@
   color: var(--eds-theme-color-text-utility-warning);
 
   & > .field-note__icon {
-    color: var(--eds-theme-color-text-utility-warning);
+    color: var(--eds-theme-color-icon-utility-warning);
   }
 }

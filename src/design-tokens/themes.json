@@ -228,6 +228,17 @@
                   "value": "{eds.color.neutral.150}"
                 }
               },
+              "mediumEmphasis": {
+                "@": {
+                  "value": "{eds.color.neutral.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.650}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.750}"
+                }
+              },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.blue.850}"
@@ -550,13 +561,13 @@
               },
               "mediumEmphasis": {
                 "@": {
-                  "value": "{eds.color.neutral.450}"
-                },
-                "hover": {
                   "value": "{eds.color.neutral.550}"
                 },
-                "active": {
+                "hover": {
                   "value": "{eds.color.neutral.650}"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.750}"
                 }
               },
               "highEmphasis": {
@@ -1508,6 +1519,149 @@
             }
           },
           "utility": {
+            "default": {
+              "primary": {
+                "@": {
+                  "value": "{eds.color.blue.850}",
+                  "group": "color"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.900}",
+                  "group": "color"
+                },
+                "active": {
+                  "value": "{eds.color.blue.950}",
+                  "group": "color"
+                }
+              },
+              "secondary": {
+                "@": {
+                  "value": "{eds.color.neutral.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.650}",
+                  "group": "color"
+                },
+                "active": {
+                  "value": "{eds.color.neutral.750}",
+                  "group": "color"
+                }
+              }
+            },
+            "interactive": {
+              "primary": {
+                "@": {
+                  "value": "{eds.color.blue.850}",
+                  "group": "color"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.900}",
+                  "group": "color"
+                },
+                "active": {
+                  "value": "{eds.color.blue.950}",
+                  "group": "color"
+                }
+              },
+              "secondary": {
+                "@": {
+                  "value": "{eds.color.blue.550}",
+                  "group": "color"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.650}",
+                  "group": "color"
+                },
+                "active": {
+                  "value": "{eds.color.blue.750}",
+                  "group": "color"
+                }
+              },
+              "visited": {
+                "value": "{eds.color.purple.550}",
+                "group": "color"
+              }
+            },
+            "critical": {
+              "@": {
+                "value": "{eds.color.red.650}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.red.750}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.red.800}",
+                "group": "color"
+              }
+            },
+            "favorable": {
+              "@": {
+                "value": "{eds.color.green.550}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.green.650}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.green.750}",
+                "group": "color"
+              }
+            },
+            "warning": {
+              "@": {
+                "value": "{eds.color.yellow.550}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.yellow.650}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.yellow.750}",
+                "group": "color"
+              }
+            },
+            "informational": {
+              "@": {
+                "value": "{eds.color.blue.550}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.blue.650}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.blue.750}",
+                "group": "color"
+              }
+            },
+            "disabled": {
+              "primary": {
+                "value": "{eds.color.neutral.350}",
+                "group": "color"
+              },
+              "secondary": {
+                "value": "{eds.color.neutral.200}",
+                "group": "color"
+              }
+            },
+            "inverse": {
+              "@": {
+                "value": "{eds.color.neutral.white}",
+                "group": "color"
+              },
+              "disabled": {
+                "value": "{eds.color.white}",
+                "group": "color",
+                "comment": "Use with rgb()"
+              }
+            },
+            "placeholder": {
+              "value": "{eds.color.neutral.550}"
+            },
             "success": {
               "@": {
                 "value": "{eds.color.other.mint.500}",
@@ -1515,16 +1669,6 @@
               },
               "hover": {
                 "value": "{eds.color.other.mint.600}",
-                "group": "color"
-              }
-            },
-            "warning": {
-              "@": {
-                "value": "{eds.color.other.orange.500}",
-                "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.other.orange.600}",
                 "group": "color"
               }
             },

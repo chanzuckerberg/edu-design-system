@@ -3,7 +3,10 @@
 /*------------------------------------*\
     # BANNER NOTIFICATION
 \*------------------------------------*/
-
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
 /**
  * Message of information, success, caution, or warning to the user.
  */

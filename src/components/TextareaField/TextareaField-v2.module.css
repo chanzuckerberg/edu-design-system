@@ -3,6 +3,9 @@
 /*------------------------------------*\
     # TEXTAREA FIELD
 \*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
 
 /**
  * Default input styles 
