@@ -3,6 +3,9 @@
 /*------------------------------------*\
     # LINK
 \*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
 
 .link {
   color: var(--eds-theme-color-text-utility-default-primary);

@@ -1,7 +1,10 @@
 /*------------------------------------*\
     # INPUT FIELD
 \*------------------------------------*/
-
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
 /**
  * Wraps the Label and the optional/required hint.
  * TODO: match/share the overline styles between Select and InputField
@@ -43,7 +46,7 @@
   align-items: center;
   justify-content: center;
 
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: var(--eds-theme-color-icon-utility-default-secondary);
 }
 
 /**

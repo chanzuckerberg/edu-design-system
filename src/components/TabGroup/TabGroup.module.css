@@ -3,7 +3,10 @@
 /*------------------------------------*\
     #TABGROUP
 \*------------------------------------*/
-
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
 /**
  * List of of links where each link toggles open associated information
  */
