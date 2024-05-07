@@ -326,6 +326,29 @@ export const WithFieldName: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
 };
 
 export const WithFieldNote: StoryObj = {
@@ -381,6 +404,27 @@ export const UncontrolledHeadless: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <button className="fpo">{value.label}</button>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
 };
 
 /**
@@ -410,6 +454,29 @@ export const StyledUncontrolled: StoryObj = {
         </Select.Options>
       </>
     ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
 };
 
@@ -457,22 +524,20 @@ export const Multiple: StoryObj = {
     docs: {
       source: {
         code: `
-<Select>
+<Select multiple>
   <Select.Button>
     {({ value, open, disabled }) => (
-      <Select.ButtonWrapper
-        isOpen={open}
-        >
+      <Select.ButtonWrapper isOpen={open}>
         {value.length > 0 ? value.length : 'none'} selected
       </Select.ButtonWrapper>
     )}
   </Select.Button>
   <Select.Options>
-    {exampleOptions.map((option) => (
-      <Select.Option key={option.key} value={option}>
-        {option.label}
-      </Select.Option>
-    ))}
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
   </Select.Options>
 </Select>`,
       },
@@ -512,6 +577,30 @@ export const MultipleWithTruncation: StoryObj = {
         </Select.Options>
       </>
     ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select multiple>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open} shouldTruncate>
+        {value.length > 0 ? value.length : 'none'} long selected
+        description
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
 };
 
@@ -567,9 +656,34 @@ export const LongOptionList: StoryObj = {
     await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
   },
   parameters: {
-    badges: ['intro-1.2'],
+    badges: ['intro-1.2', 'current-2.0'],
     layout: 'centered',
     chromatic: { delay: 450 },
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open} shouldTruncate>
+        {value}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {Array(30)
+    .fill('test')
+    .map((option, index) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <Select.Option key={\`$\{option}-$\{index}\`} value={option + index}>
+        {option}
+        {index}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
   decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
 };

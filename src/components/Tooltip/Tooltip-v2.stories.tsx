@@ -14,6 +14,11 @@ const defaultArgs = {
   // this turns animation off to ensure stable visual snapshots
   duration: 0,
   visible: true,
+  parameters: {
+    chromatic: {
+      delay: 300,
+    },
+  },
 };
 
 export default {
