@@ -14,11 +14,6 @@ const defaultArgs = {
   // this turns animation off to ensure stable visual snapshots
   duration: 0,
   visible: true,
-  parameters: {
-    chromatic: {
-      delay: 300,
-    },
-  },
 };
 
 export default {
@@ -46,6 +41,7 @@ export default {
     layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
     chromatic: {
+      delay: 300,
       diffThreshold,
       diffIncludeAntiAliasing: false,
     },
