@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
+exports[`<Button /> (v2) CriticalRanks story renders snapshot 1`] = `
 <div
   class="flex gap-1"
 >
@@ -37,7 +37,7 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Default story renders snapshot 1`] = `
+exports[`<Button /> (v2) Default story renders snapshot 1`] = `
 <button
   class="button button--layout-none button--primary button--lg button--variant-default"
   type="button"
@@ -50,7 +50,7 @@ exports[`<Button /> Default story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
+exports[`<Button /> (v2) DefaultRanks story renders snapshot 1`] = `
 <div
   class="flex gap-1"
 >
@@ -87,7 +87,7 @@ exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Disabled story renders snapshot 1`] = `
+exports[`<Button /> (v2) Disabled story renders snapshot 1`] = `
 <div
   class="flex gap-1"
 >
@@ -127,7 +127,7 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> FullWidths story renders snapshot 1`] = `
+exports[`<Button /> (v2) FullWidths story renders snapshot 1`] = `
 <div
   class="flex items-center gap-1"
 >
@@ -164,7 +164,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> IconLayouts story renders snapshot 1`] = `
+exports[`<Button /> (v2) IconLayouts story renders snapshot 1`] = `
 <div
   class="flex items-center gap-1"
 >
@@ -243,7 +243,7 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> InverseRanks story renders snapshot 1`] = `
+exports[`<Button /> (v2) InverseRanks story renders snapshot 1`] = `
 <div
   class="bg-[var(--eds-color-blue-850)] p-1"
 >
@@ -284,7 +284,7 @@ exports[`<Button /> InverseRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> LoadingStates story renders snapshot 1`] = `
+exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
 <div
   class="flex items-center gap-1"
 >
@@ -465,7 +465,44 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Sizes story renders snapshot 1`] = `
+exports[`<Button /> (v2) NeutralRanks story renders snapshot 1`] = `
+<div
+  class="flex gap-1"
+>
+  <button
+    class="button button--layout-none button--primary button--lg button--variant-neutral"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Primary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--secondary button--lg button--variant-neutral"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Secondary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--tertiary button--lg button--variant-neutral"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Tertiary
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> (v2) Sizes story renders snapshot 1`] = `
 <div
   class="flex items-center gap-1"
 >
@@ -502,7 +539,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> TertiaryStandalone story renders snapshot 1`] = `
+exports[`<Button /> (v2) TertiaryStandalone story renders snapshot 1`] = `
 <button
   class="button button--context-standalone button--layout-none button--tertiary button--lg button--variant-default"
   type="button"
@@ -515,7 +552,7 @@ exports[`<Button /> TertiaryStandalone story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
+exports[`<Button /> (v2) UsingExtendedLink story renders snapshot 1`] = `
 <div>
   Lorem ipsum dolor sit amet,
    
@@ -535,7 +572,7 @@ exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> passes class names down properly 1`] = `
+exports[`<Button /> (v2) passes class names down properly 1`] = `
 <button
   class="button button--layout-none button--primary button--lg button--variant-default exampleClassName"
   data-testid="example-class-name"
@@ -549,7 +586,7 @@ exports[`<Button /> passes class names down properly 1`] = `
 </button>
 `;
 
-exports[`<Button /> passes test ids down properly 1`] = `
+exports[`<Button /> (v2) passes test ids down properly 1`] = `
 <button
   class="button button--layout-none button--primary button--lg button--variant-default"
   data-testid="example-test-id"

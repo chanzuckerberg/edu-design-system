@@ -59,7 +59,7 @@ export type ButtonV2Props<ExtendedElement = unknown> =
      *
      * **Default is `"default"`**.
      */
-    variant?: 'default' | 'critical' | 'inverse';
+    variant?: 'default' | 'neutral' | 'critical' | 'inverse';
 
     /**
      * Whether the width of the button is set to the full layout.

@@ -96,6 +96,17 @@ export const CriticalRanks: StoryObj<Args> = {
 };
 
 /**
+ * There is also a neutral variant, to combine into other components, or provide a muted appearance.
+ */
+export const NeutralRanks: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    variant: 'neutral',
+  },
+  render: DefaultRanks.render,
+};
+
+/**
  * Each rank also includes an inverse variant, for use on dark backgrounds.
  */
 export const InverseRanks: StoryObj<Args> = {
