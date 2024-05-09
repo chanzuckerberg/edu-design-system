@@ -22,6 +22,11 @@
   justify-content: center;
 
   width: 100%;
+
+  .button--sm & {
+    /* Offset to better align text in small button */
+    transform: translateY(-1px);
+  }
 }
 
 .button__text.button--is-loading {
@@ -70,6 +75,7 @@
   min-width: 3rem;
   max-width: 12rem;
   max-height: 1.5rem;
+
 }
 
 .button--full-width {
@@ -78,6 +84,7 @@
 
 /**
  * Anatomy and iconLayout (w/ size)
+ * lg=40, md=32, sm=24 when layout is icon-only
  */
 .button--layout-icon-only {
   min-width: unset;
@@ -93,14 +100,17 @@
 
 .button--lg.button--layout-icon-only {
   padding: 0.5rem;
+  width: 2.5rem;
 }
 
 .button--md.button--layout-icon-only {
-  padding: 0.5rem
+  padding: 0.5rem;
+  width: 2rem;
 }
 
 .button--sm.button--layout-icon-only {
   padding: 0.25rem;
+  width: 1.5rem;
 }
 
 .button:focus-visible {
@@ -116,6 +126,7 @@
 
 /**
  * Rank & Emphasis
+ * TODO-AH: nest the states under the relevant variants/ranks
  */
 .button--primary.button--variant-default {
   color: var(--eds-theme-color-text-utility-inverse);
@@ -151,12 +162,60 @@
 .button--secondary.button--variant-critical {
   color: var(--eds-theme-color-background-utility-critical-high-emphasis);
   border-color: currentColor;
-  background-color:  var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis)
 }
 
 .button--tertiary.button--variant-critical {
   color: var(--eds-theme-color-background-utility-critical-high-emphasis);
   border-color:  var(--eds-theme-color-background-utility-inverse-high-emphasis);
+}
+
+.button--primary.button--variant-neutral {
+  color: var(--eds-theme-color-text-utility-inverse);
+  border-color: var(--eds-theme-color-background-utility-default-medium-emphasis);
+  background-color: var(--eds-theme-color-background-utility-default-medium-emphasis);
+
+  &:hover {
+    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-medium-emphasis-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-medium-emphasis-active);
+  }
+}
+
+.button--secondary.button--variant-neutral {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+  border-color: currentColor;
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+  }
+}
+
+.button--tertiary.button--variant-neutral {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+  border-color: transparent;
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+
+  &:hover {
+    border-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+  }
 }
 
 /**
@@ -185,8 +244,9 @@
  * Disabled
  */
 
-.button--variant-default.button--disabled,
-.button--variant-critical.button--disabled {
+.button--primary.button--variant-default.button--disabled,
+.button--primary.button--variant-critical.button--disabled,
+.button--primary.button--variant-neutral.button--disabled {
   color: var(--eds-theme-color-text-utility-disabled-primary);
   border-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
   background-color:  var(--eds-theme-color-background-utility-disabled-medium-emphasis);
@@ -194,10 +254,29 @@
   pointer-events: none;
 }
 
-.button--variant-inverse.button--disabled {
+.button--primary.button--variant-inverse.button--disabled {
   color: var(--eds-theme-color-text-utility-inverse-disabled);
   border-color: var(--eds-theme-color-background-utility-inverse-disabled);
   background-color: var(--eds-theme-color-background-utility-inverse-disabled);
+
+  pointer-events: none;
+}
+
+.button--secondary.button--variant-default.button--disabled,
+.button--secondary.button--variant-critical.button--disabled,
+.button--secondary.button--variant-neutral.button--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+  border-color: var(--eds-theme-color-border-disabled);
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+
+  pointer-events: none;
+}
+
+.button--tertiary.button--variant-default.button--disabled,
+.button--tertiary.button--variant-critical.button--disabled,
+.button--tertiary.button--variant-neutral.button--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
 
   pointer-events: none;
 }

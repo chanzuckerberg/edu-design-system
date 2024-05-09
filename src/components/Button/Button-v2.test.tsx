@@ -6,7 +6,7 @@ import React from 'react';
 import { Button } from './Button-v2';
 import * as stories from './Button-v2.stories';
 
-describe('<Button />', () => {
+describe('<Button /> (v2)', () => {
   generateSnapshots(stories as StoryFile);
 
   it('renders the text in the button', () => {
