@@ -3,13 +3,15 @@ import React, { type ReactNode } from 'react';
 
 import getIconNameFromStatus from '../../util/getIconNameFromStatus-v2';
 import type { Status } from '../../util/variant-types';
+
+import { ButtonV2 as Button } from '../Button';
 import Heading from '../Heading';
 import { IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
-import styles from './BannerNotification.module.css';
+import styles from './PageNotification.module.css';
 
-export type BannerNotificationProps = {
+export type PageNotificationProps = {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -43,11 +45,11 @@ export type BannerNotificationProps = {
 };
 
 /**
- * `import {BannerNotification} from "@chanzuckerberg/eds";`
+ * `import {PageNotification} from "@chanzuckerberg/eds";`
  *
  * An alert placed at the top of a page which impacts the entire experience on a screen.
  */
-export const BannerNotification = ({
+export const PageNotification = ({
   buttonLayout = 'vertical',
   callToAction,
   className,
@@ -55,20 +57,20 @@ export const BannerNotification = ({
   onDismiss,
   status = 'informational',
   title,
-}: BannerNotificationProps) => {
+}: PageNotificationProps) => {
   const componentClassName = clsx(
     // Base styles
-    styles['banner'],
-    status && styles[`banner-notification--status-${status}`],
+    styles['page-notification'],
+    status && styles[`page-notification--status-${status}`],
     // Other options
-    onDismiss && styles['banner--dismissable'],
+    onDismiss && styles['page-notification--dismissable'],
     className,
   );
 
   return (
     <aside className={componentClassName}>
       <Icon
-        className={styles['banner-notification__icon']}
+        className={styles['page-notification__icon']}
         name={getIconNameFromStatus(status)}
         purpose="decorative"
         size="1.5rem"
@@ -76,12 +78,11 @@ export const BannerNotification = ({
 
       <div
         className={clsx(
-          styles['banner-notification__body'],
-          buttonLayout &&
-            styles[`banner-notification--has-${buttonLayout}-cta`],
+          styles['page-notification__body'],
+          buttonLayout && styles[`page-notification--has-${buttonLayout}-cta`],
         )}
       >
-        <div className={styles['banner-notification__text']}>
+        <div className={styles['page-notification__text']}>
           {title && (
             <Heading as="h3" preset="title-md">
               {title}
@@ -90,7 +91,7 @@ export const BannerNotification = ({
           {subTitle && (
             <Text
               as="p"
-              className={styles['banner-notification__sub-title']}
+              className={styles['page-notification__sub-title']}
               preset="body-sm"
             >
               {subTitle}
@@ -98,27 +99,27 @@ export const BannerNotification = ({
           )}
         </div>
         {callToAction && (
-          <div className={styles['banner-notification__call-to-action']}>
+          <div className={styles['page-notification__call-to-action']}>
             {callToAction}
           </div>
         )}
       </div>
-      {/* TODO: Use `Button` properly */}
       {onDismiss && (
-        <button
-          className={styles['banner-notification__close-button']}
+        <Button
+          aria-label="Dismiss the notification"
+          className={styles['page-notification__close-button']}
+          icon="close"
+          iconLayout="icon-only"
           onClick={onDismiss}
+          rank="tertiary"
+          size="lg"
+          variant="neutral"
         >
-          <Icon
-            name="close"
-            purpose="informative"
-            size="1.5rem"
-            title="dismiss notification"
-          />
-        </button>
+          Close
+        </Button>
       )}
     </aside>
   );
 };
 
-BannerNotification.displayName = 'BannerNotification';
+PageNotification.displayName = 'PageNotification';

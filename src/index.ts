@@ -52,7 +52,7 @@ export type { IconName } from './components/Icon';
  * 2.0 component and type exports
  */
 export { AccordionV2 } from './components/Accordion';
-export { ButtonV2, type ButtonV2Props } from './components/Button';
+export { ButtonV2 } from './components/Button';
 export { ButtonGroupV2 } from './components/ButtonGroup';
 export { CardV2 } from './components/Card';
 export { CheckboxV2 } from './components/Checkbox';
@@ -60,10 +60,11 @@ export { FieldNoteV2 } from './components/FieldNote';
 export { IconV2 } from './components/Icon';
 export { InlineNotificationV2 } from './components/InlineNotification';
 export { InputFieldV2 } from './components/InputField';
-export { LinkV2, type LinkV2Props } from './components/Link';
+export { LinkV2 } from './components/Link';
 export { MenuV2 } from './components/Menu';
 export { ModalV2 } from './components/Modal';
 export { NumberIconV2 } from './components/NumberIcon';
+export { default as PageNotificationV2 } from './components/PageNotification';
 export { PopoverListItemV2 } from './components/PopoverListItem';
 export { RadioV2 } from './components/Radio';
 export { SelectV2 } from './components/Select';
@@ -73,3 +74,6 @@ export { ToastV2 } from './components/Toast';
 export { TooltipV2 } from './components/Tooltip';
 
 export type { IconNameV2 } from './components/Icon';
+export type { ButtonV2Props } from './components/Button';
+export type { LinkV2Props } from './components/Link';
+export type { PageNotificationProps as PageNotificationV2Props } from './components/PageNotification';

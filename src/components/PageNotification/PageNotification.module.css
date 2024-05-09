@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    # BANNER NOTIFICATION
+    # PAGE NOTIFICATION
 \*------------------------------------*/
 /**
  * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
@@ -10,7 +10,7 @@
 /**
  * Message of information, success, caution, or warning to the user.
  */
-.banner {
+.page-notification {
   display: flex;
   gap: 1rem;
   padding: 1rem;
@@ -19,55 +19,56 @@
   border-left: 1rem solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
-  &.banner-notification--status-informational {
+  &.page-notification--status-informational {
     color: var(--eds-theme-color-text-utility-informational);
     background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
   }
 
-  &.banner-notification--status-critical {
+  &.page-notification--status-critical {
     color: var(--eds-theme-color-text-utility-critical);
     background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
   }
 
-  &.banner-notification--status-favorable {
+  &.page-notification--status-favorable {
     color: var(--eds-theme-color-text-utility-favorable);
     background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
   }
 
-  &.banner-notification--status-warning {
+  &.page-notification--status-warning {
     color: var(--eds-theme-color-text-utility-warning);
     background-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
   }
 }
 
-.banner-notification__icon {
+.page-notification__icon {
   flex-shrink: 0;
+  transform: translateY(0.25rem);
 }
 
-.banner-notification__body {
+.page-notification__body {
   flex-grow: 2;
   display: flex;
 
-  &.banner-notification--has-vertical-cta {
+  &.page-notification--has-vertical-cta {
     flex-direction: column;
   }
 
-  &.banner-notification--has-horizontal-cta {
+  &.page-notification--has-horizontal-cta {
     flex-direction: row;
   }
 }
 
-.banner-notification__call-to-action {
-  .banner-notification--has-vertical-cta & {
+.page-notification__call-to-action {
+  .page-notification--has-vertical-cta & {
     margin-top: 1rem;
   }
 
-  .banner-notificatino-has-horizontal-cta & {
+  .page-notificatino-has-horizontal-cta & {
     margin-left: 1rem;
   }
 }
 
-.banner-notification__text {
+.page-notification__text {
   flex-grow: 2;
 }
 
@@ -76,12 +77,8 @@
  *
  * Button used to dismiss a banner.
  */
-.banner-notification__close-button {
-  align-self: flex-start;
-  color: var(--eds-theme-color-text-utility-default-secondary);
-}
-
-.banner-notification__sub-title {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+.page-notification__close-button {
+  /* Adjust the positioning to slip into the padding of the container */
+  margin: -0.5rem;
 }
 
