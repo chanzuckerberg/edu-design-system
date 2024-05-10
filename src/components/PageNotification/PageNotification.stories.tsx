@@ -1,12 +1,12 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { BannerNotification } from './BannerNotification';
+import { PageNotification } from './PageNotification';
 import { ButtonV2 as Button } from '../Button';
 
 export default {
-  title: 'Components/V2/BannerNotification',
-  component: BannerNotification,
+  title: 'Components/V2/PageNotification',
+  component: PageNotification,
   parameters: {
     badges: ['intro-1.0', 'current-2.0'],
   },
@@ -14,7 +14,7 @@ export default {
     title: 'Alert title which communicates info to the user',
     subTitle: ' Subtitle which provides additional detail',
     callToAction: (
-      <Button rank="secondary" size="sm" variant="default">
+      <Button rank="secondary" size="sm" variant="neutral">
         Call to Action
       </Button>
     ),
@@ -33,7 +33,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof BannerNotification>;
+type Args = React.ComponentProps<typeof PageNotification>;
 
 const dismissMethod = () => {
   console.log('dismissing~');
@@ -54,7 +54,7 @@ export const Critical: StoryObj<Args> = {
   args: {
     status: 'critical',
     callToAction: (
-      <Button rank="secondary" size="sm" variant="critical">
+      <Button rank="secondary" size="sm" variant="neutral">
         Call to Action
       </Button>
     ),
@@ -66,7 +66,7 @@ export const CriticalHorizontal: StoryObj<Args> = {
     status: 'critical',
     buttonLayout: 'horizontal',
     callToAction: (
-      <Button rank="secondary" size="sm" variant="critical">
+      <Button rank="secondary" size="sm" variant="neutral">
         Call to Action
       </Button>
     ),
@@ -82,5 +82,12 @@ export const Favorable: StoryObj<Args> = {
 export const Dismissable: StoryObj<Args> = {
   args: {
     onDismiss: dismissMethod,
+  },
+};
+
+export const HorizontalDismissable: StoryObj<Args> = {
+  args: {
+    ...Dismissable.args,
+    ...CriticalHorizontal.args,
   },
 };
