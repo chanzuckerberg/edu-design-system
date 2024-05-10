@@ -12,7 +12,7 @@ export const StackedCardsToTable = () => {
   /**
    * Display data as cards if mobile, table if not.
    */
-  const tableBreakpoint = parseInt(breakpoint['eds-bp-md'], 10) * 16;
+  const tableBreakpoint = parseInt(breakpoint['eds-bp-md'], 10);
   const updateScreenSize = debounce(
     () => {
       if (window.innerWidth >= tableBreakpoint && !isTable) {

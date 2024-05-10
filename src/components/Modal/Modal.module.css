@@ -241,10 +241,10 @@
 
   min-height: 10.75rem;
 
-  @media all and (min-height: $eds-bp-sm-2) {
+  @media all and (min-height: $eds-bp-sm) {
     min-height: 19.75rem;
   }
-  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm) {
     flex-direction: row;
   }
 
@@ -259,7 +259,7 @@
     flex: 1;
     font: var(--eds-theme-typography-headline-secondary-lg);
     
-    @media all and (min-width: $eds-bp-sm-2) {
+    @media all and (min-width: $eds-bp-sm) {
       margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
     }
     @media all and (min-width: $eds-bp-xl) {
@@ -282,11 +282,11 @@
   height: 8.5rem;
 
   /* For mobile landscape orientation. */
-  @media all and (min-width: $eds-bp-sm-2) {
+  @media all and (min-width: $eds-bp-sm) {
     display: none;
   }
 
-  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm) {
     display: block;
     width: 14rem;
     height: 14rem;
