@@ -48,7 +48,3 @@
 .inline-notification__body {
   flex-grow: 2;
 }
-
-.inline-notification__sub-title {
-  color: var(--eds-theme-color-text-utility-default-secondary)
-}
