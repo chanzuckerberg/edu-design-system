@@ -2771,7 +2771,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.6.3"
     "@geometricpanda/storybook-addon-badges": "npm:^2.0.2"
     "@headlessui/react": "npm:^1.7.19"
-    "@omlet/cli": "npm:^1.5.2"
+    "@omlet/cli": "npm:^1.6.0"
     "@popperjs/core": "npm:^2.11.8"
     "@rollup/plugin-node-resolve": "npm:^15.2.3"
     "@rollup/plugin-typescript": "npm:^11.1.6"
@@ -2786,20 +2786,20 @@ __metadata:
     "@storybook/test": "npm:^7.6.19"
     "@storybook/testing-library": "npm:^0.2.2"
     "@storybook/testing-react": "npm:^2.0.1"
-    "@testing-library/jest-dom": "npm:^6.4.3"
+    "@testing-library/jest-dom": "npm:^6.4.5"
     "@testing-library/react": "npm:^14.3.1"
     "@testing-library/user-event": "npm:^14.5.2"
     "@tippyjs/react": "npm:^4.2.6"
     "@types/jest": "npm:^29.5.12"
     "@types/jsonfile": "npm:^6"
-    "@types/lodash": "npm:^4.17.0"
-    "@types/node": "npm:^20.12.8"
+    "@types/lodash": "npm:^4.17.1"
+    "@types/node": "npm:^20.12.11"
     "@types/react": "npm:^18.3.1"
     "@types/react-beautiful-dnd": "npm:^13.1.8"
     "@types/react-dom": "npm:^18.3.0"
     "@types/react-portal": "npm:^4.0.7"
     "@types/yargs": "npm:^17.0.32"
-    axe-core: "npm:4.9.0"
+    axe-core: "npm:4.9.1"
     chalk: "npm:^4.1.2"
     chromatic: "npm:^9.1.0"
     clsx: "npm:^2.1.1"
@@ -3930,66 +3930,66 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@omlet/cli-darwin-arm64@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-darwin-arm64@npm:1.5.2"
+"@omlet/cli-darwin-arm64@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-darwin-arm64@npm:1.6.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@omlet/cli-darwin-x64@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-darwin-x64@npm:1.5.2"
+"@omlet/cli-darwin-x64@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-darwin-x64@npm:1.6.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-arm64-gnu@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-linux-arm64-gnu@npm:1.5.2"
+"@omlet/cli-linux-arm64-gnu@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-linux-arm64-gnu@npm:1.6.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-arm64-musl@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-linux-arm64-musl@npm:1.5.2"
+"@omlet/cli-linux-arm64-musl@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-linux-arm64-musl@npm:1.6.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-x64-gnu@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-linux-x64-gnu@npm:1.5.2"
+"@omlet/cli-linux-x64-gnu@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-linux-x64-gnu@npm:1.6.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@omlet/cli-linux-x64-musl@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-linux-x64-musl@npm:1.5.2"
+"@omlet/cli-linux-x64-musl@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-linux-x64-musl@npm:1.6.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@omlet/cli-win32-x64-msvc@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli-win32-x64-msvc@npm:1.5.2"
+"@omlet/cli-win32-x64-msvc@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli-win32-x64-msvc@npm:1.6.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@omlet/cli@npm:^1.5.2":
-  version: 1.5.2
-  resolution: "@omlet/cli@npm:1.5.2"
+"@omlet/cli@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@omlet/cli@npm:1.6.0"
   dependencies:
-    "@omlet/cli-darwin-arm64": "npm:1.5.2"
-    "@omlet/cli-darwin-x64": "npm:1.5.2"
-    "@omlet/cli-linux-arm64-gnu": "npm:1.5.2"
-    "@omlet/cli-linux-arm64-musl": "npm:1.5.2"
-    "@omlet/cli-linux-x64-gnu": "npm:1.5.2"
-    "@omlet/cli-linux-x64-musl": "npm:1.5.2"
-    "@omlet/cli-win32-x64-msvc": "npm:1.5.2"
+    "@omlet/cli-darwin-arm64": "npm:1.6.0"
+    "@omlet/cli-darwin-x64": "npm:1.6.0"
+    "@omlet/cli-linux-arm64-gnu": "npm:1.6.0"
+    "@omlet/cli-linux-arm64-musl": "npm:1.6.0"
+    "@omlet/cli-linux-x64-gnu": "npm:1.6.0"
+    "@omlet/cli-linux-x64-musl": "npm:1.6.0"
+    "@omlet/cli-win32-x64-msvc": "npm:1.6.0"
     "@sentry/node": "npm:^7.108.0"
     ci-info: "npm:^4.0.0"
     colorette: "npm:^2.0.19"
@@ -4041,7 +4041,7 @@ __metadata:
       optional: true
   bin:
     omlet: bin/omlet
-  checksum: 10/cf89dd49bb72cac9bdde9e7ade45e45fe0fdad7010d4b07131195823cd4903d00797c85686e90e80c33169ad3a8d57ddab5d5a99ee1c171ef1e413aba59ed9f8
+  checksum: 10/e879aadc639a81c18bd1f58ab68fdb5a755fba9abe54e533c634488977c8c3cdfa64f85764407b678875e7ff2a4e2ebaf80611cde7e8b82234c5acd1c1d6674c
   languageName: node
   linkType: hard
 
@@ -6360,7 +6360,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.4.3":
+"@testing-library/jest-dom@npm:^6.4.5":
   version: 6.4.5
   resolution: "@testing-library/jest-dom@npm:6.4.5"
   dependencies:
@@ -6815,10 +6815,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.17.0":
-  version: 4.17.0
-  resolution: "@types/lodash@npm:4.17.0"
-  checksum: 10/2053203292b5af99352d108656ceb15d39da5922fc3fb8186e1552d65c82d6e545372cc97f36c95873aa7186404d59d9305e9d49254d4ae55e77df1e27ab7b5d
+"@types/lodash@npm:^4.17.1":
+  version: 4.17.1
+  resolution: "@types/lodash@npm:4.17.1"
+  checksum: 10/384bdd29348a000f8e815f94839a1a8c7f5a4ca856b016ade7f2abdc1df0b4e3e009c113b69db320a8fde51d1f38e60c19462b9bf3e82e0e2e32d3ac3e7ba2c4
   languageName: node
   linkType: hard
 
@@ -6885,12 +6885,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.12.8":
-  version: 20.12.8
-  resolution: "@types/node@npm:20.12.8"
+"@types/node@npm:^20.12.11":
+  version: 20.12.11
+  resolution: "@types/node@npm:20.12.11"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/1feab4c8cb08588eea10811ed4d02485a5cde47fdf92e7b3193fc9f8ee39ea556f6e3124dc6d5378354466ed5f7e5fbe5e20f625908de40ea37560368a50f72c
+  checksum: 10/c6afe7c2c4504a4f488814d7b306ebad16bf42cbb43bf9db9fe1aed8c5fb99235593c3be5088979a64526b106cf022256688e2f002811be8273d87dc2e0d484f
   languageName: node
   linkType: hard
 
@@ -8115,10 +8115,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:4.9.0":
-  version: 4.9.0
-  resolution: "axe-core@npm:4.9.0"
-  checksum: 10/d337c4600e522bb85ed7b242e8eea322892025bc3c951fcda4845a664f9cfb065c509bc17428315c7f8571a4b5c55552d9011d752a6aae8be006bfa54d725a42
+"axe-core@npm:4.9.1":
+  version: 4.9.1
+  resolution: "axe-core@npm:4.9.1"
+  checksum: 10/9d4944f6d3289428e1c6b41a80516f6558a960889f59c3c00f0fb88b955eda81edf9ca377c2cbc2a775f4003596d2aeaa35acca5aad3e1fc6b3d1e26e82b02cc
   languageName: node
   linkType: hard
 
