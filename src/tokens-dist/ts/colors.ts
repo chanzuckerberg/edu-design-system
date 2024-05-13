@@ -339,8 +339,8 @@ export const EdsThemeColorIconLinkDefaultHover = '#5751D2';
 export const EdsThemeColorIconBrandPrimary = '#8984E8';
 export const EdsThemeColorIconBrandPrimaryHover = '#6B65E2';
 export const EdsThemeColorIconUtilityDefaultPrimary = '#0F2163';
-export const EdsThemeColorIconUtilityDefaultPrimaryHover = '#0A164C';
-export const EdsThemeColorIconUtilityDefaultPrimaryActive = '#060E30';
+export const EdsThemeColorIconUtilityDefaultPrimaryHover = '#1A1919';
+export const EdsThemeColorIconUtilityDefaultPrimaryActive = '#0F0F0F';
 export const EdsThemeColorIconUtilityDefaultSecondary = '#6C6967';
 export const EdsThemeColorIconUtilityDefaultSecondaryHover = '#565352';
 export const EdsThemeColorIconUtilityDefaultSecondaryActive = '#3F3E3D';
@@ -365,8 +365,10 @@ export const EdsThemeColorIconUtilityInformationalHover = '#254EAC';
 export const EdsThemeColorIconUtilityInformationalActive = '#1B3889';
 export const EdsThemeColorIconUtilityDisabledPrimary = '#A09C9A';
 export const EdsThemeColorIconUtilityDisabledSecondary = '#CFC9C7';
-export const EdsThemeColorIconUtilityInverse = '#FFFFFF';
-export const EdsThemeColorIconUtilityInverseDisabled = '255 255 255'; // Use with rgb()
+export const EdsThemeColorIconUtilityInverse =
+  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorIconUtilityInverseDisabled =
+  'rgb(var(--eds-color-white) / 0.5)'; // Use with rgb()
 export const EdsThemeColorIconUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorIconUtilitySuccess = '#00A56A';
 export const EdsThemeColorIconUtilitySuccessHover = '#008656';
