@@ -27,9 +27,9 @@ const meta: Meta<typeof Icon> = {
       // For now, take the variables and convert to equivalent tokens for the UI
       options: [
         'currentColor',
-        ...Object.keys(ColorTokens).map(
-          (tokenVarName) => `var(--${kebabCase(tokenVarName)})`,
-        ),
+        ...Object.keys(ColorTokens)
+          .filter((tokenVarName) => tokenVarName.indexOf('Icon') !== -1)
+          .map((tokenVarName) => `var(--${kebabCase(tokenVarName)})`),
       ],
     },
   },
@@ -75,7 +75,7 @@ export const CustomColor: Story = {
   ...Default,
   args: {
     ...Default.args,
-    color: 'var(--eds-color-brand-grape-400)',
+    color: 'var(--eds-theme-color-icon-utility-critical)',
     size: '2em',
   },
 };

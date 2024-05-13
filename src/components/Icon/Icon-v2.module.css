@@ -18,10 +18,3 @@
   width: var(--icon-size, var(--icon-size-default, 1em));
   height: var(--icon-size, var(--icon-size-default, 1em));
 }
-
-/**
- * A block icon fills 100% of the width of its container
- */
-.icon--full-width {
-  display: block;
-}
