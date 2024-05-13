@@ -217,6 +217,10 @@ export const TextareaField: TextareaFieldType = forwardRef(
         styles['textarea-field--invalid-length'],
     );
 
+    const textareaClassName = clsx(
+      readOnly && styles['textarea-field__textarea--read-only'],
+    );
+
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
@@ -247,11 +251,18 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 (Optional)
               </Text>
             )}
+            {maxLengthShown && (
+              <div className={styles['textarea-field__character-counter']}>
+                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
+                / {maxLengthShown}
+              </div>
+            )}
           </div>
         )}
         <TextArea
           aria-describedby={ariaDescribedByVar}
           aria-disabled={disabled}
+          className={textareaClassName}
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
@@ -281,12 +292,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
               >
                 {fieldNote}
               </FieldNote>
-            )}
-            {maxLengthShown && (
-              <div className={styles['textarea-field__character-counter']}>
-                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLengthShown}
-              </div>
             )}
           </div>
         )}

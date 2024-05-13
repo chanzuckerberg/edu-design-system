@@ -13,6 +13,11 @@
 .textarea {
   @mixin inputStylesV2;
   padding: 0.5rem 0.75rem;
+
+  &:read-only:not(:disabled) {
+    border: 0;
+    border-bottom: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
 }
 
 /**
