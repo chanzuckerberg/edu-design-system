@@ -924,8 +924,8 @@
             "default": {
               "primary": {
                 "@": "#0F2163",
-                "hover": "#1A1919",
-                "active": "#0F0F0F"
+                "hover": "#0A164C",
+                "active": "#060E30"
               },
               "secondary": {
                 "@": "#6C6967",
@@ -1065,8 +1065,8 @@
             "default": {
               "primary": {
                 "@": "#0F2163",
-                "hover": "#1A1919",
-                "active": "#0F0F0F"
+                "hover": "#0A164C",
+                "active": "#060E30"
               },
               "secondary": {
                 "@": "#6C6967",
