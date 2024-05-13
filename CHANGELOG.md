@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.7](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.6...v15.0.0-alpha.7) (2024-05-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* adjust responsive and spacing tokens/config (#1933)
+
+### Features
+
+* adjust responsive and spacing tokens/config ([#1933](https://github.com/chanzuckerberg/edu-design-system/issues/1933)) ([b19e453](https://github.com/chanzuckerberg/edu-design-system/commit/b19e453db72ddf2e5863e4bf1cb4011847f4d151))
+
+
+### Bug Fixes
+
+* **Button:** align disabled treatment to latest design ([#1931](https://github.com/chanzuckerberg/edu-design-system/issues/1931)) ([01a9d71](https://github.com/chanzuckerberg/edu-design-system/commit/01a9d7108946c7840646ab03e11e5b809a70a24a))
+* sync color tokens with design ([#1929](https://github.com/chanzuckerberg/edu-design-system/issues/1929)) ([146df70](https://github.com/chanzuckerberg/edu-design-system/commit/146df70565f82a1093f255cfd465af6c1df22d2d))
+
 ## [15.0.0-alpha.6](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.5...v15.0.0-alpha.6) (2024-05-06)
 
 ## [15.0.0-alpha.5](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.4...v15.0.0-alpha.5) (2024-04-30)
