@@ -26,6 +26,12 @@
   .button--sm & {
     /* Offset to better align text in small button */
     transform: translateY(-1px);
+    gap: 0.25rem;
+  }
+
+  .button--md &,
+  .button--lg & {
+    gap: 0.5rem;
   }
 }
 
