@@ -33,27 +33,37 @@ type Args = React.ComponentProps<typeof ButtonGroup>;
 
 export const Default: StoryObj<Args> = {};
 
+/**
+ * Buttons can have a vertical layout.
+ */
 export const Vertical: StoryObj<Args> = {
   args: {
     buttonLayout: 'vertical',
   },
 };
 
+/**
+ * Primary and secondary buttons can be put along the edges of the tertiary `Button`.
+ */
 export const HorizontalProgressive: StoryObj<Args> = {
   args: {
     buttonLayout: 'horizontal-progressive',
   },
 };
 
-export const WithFiveButtons: StoryObj<Args> = {
+/**
+ * When using a tertiary button, you may adjust the layout to nudge the button's alignment to better flow
+ * with adjacent content. Use `-ml-X` to set a negative margin within the `ButtonGroup`.
+ */
+export const HorizontalProgressiveTertiary: StoryObj<Args> = {
   args: {
+    buttonLayout: 'horizontal-progressive',
     children: (
       <>
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-        <Button rank="primary">Button 5</Button>
+        <Button rank="primary">Primary Button</Button>
+        <Button className="-ml-size-2" rank="tertiary">
+          Tertiary Button
+        </Button>
       </>
     ),
   },
