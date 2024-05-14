@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontFamilies } from './FontFamilies';
-import { FontSizes } from './FontSizes';
 import { FontWeights } from './FontWeights';
 import { Tier1TypographyPresets } from './TypographyPresets';
 export default {
@@ -14,9 +13,6 @@ export default {
 };
 export const FontFamily = {
   render: () => <FontFamilies />,
-};
-export const FontSize = {
-  render: () => <FontSizes />,
 };
 export const FontWeight = {
   render: () => <FontWeights />,

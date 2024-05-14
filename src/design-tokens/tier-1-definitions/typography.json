@@ -5,57 +5,13 @@
         "value": "'Graphik', sans-serif"
       },
       "secondary": {
-        "value": "'Mint Grotesk V1.1', sans-serif"
+        "value": "'Argent', serif"
       }
     },
     "font-size": {
       "base": {
-        "value": "16px",
-        "comment": "Base font size for design system in px"
-      },
-      "40": {
-        "value": "2.5rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "32": {
-        "value": "2rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "28": {
-        "value": "1.75rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "24": {
-        "value": "1.5rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "22": {
-        "value": "1.375rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "20": {
-        "value": "1.25rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "18": {
-        "value": "1.125rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "16": {
-        "value": "1rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "14": {
-        "value": "0.875rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "12": {
-        "value": "0.75rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "11": {
-        "value": "0.6875rem",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        "value": "16",
+        "comment": "(pixels) Base font size for design system in px"
       }
     },
     "font-weight": {
@@ -71,7 +27,8 @@
     },
     "letter-spacing": {
       "sm": {
-        "value": "0.5px"
+        "value": "0.5",
+        "comment": "(pixels) Spacing token used between characters in a text"
       }
     },
     "typography": {

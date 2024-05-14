@@ -41,43 +41,8 @@
 }
 
 @font-face {
-  font-family: 'Mint Grotesk V1.1';
+  font-family: 'Argent';
   font-weight: 400;
-  font-style: normal;
-  src: url('./fonts/MintGroteskV1.1-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mint Grotesk V1.1';
-  font-weight: 400;
-  font-style: normal;
-  src: url('./fonts/MintGroteskV1.1-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mint Grotesk V1.1';
-  font-weight: 500;
-  font-style: normal;
-  src: url('./fonts/MintGroteskV1.1-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mint Grotesk V1.1';
-  font-weight: 500;
-  font-style: normal;
-  src: url('./fonts/MintGroteskV1.1-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mint Grotesk V1.1';
-  font-weight: 600;
-  font-style: normal;
-  src: url('./fonts/MintGroteskV1.1-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mint Grotesk V1.1';
-  font-weight: 600;
-  font-style: normal;
-  src: url('./fonts/MintGroteskV1.1-Bold.woff2') format('woff2');
+  font-style: italic;
+  src: url('./fonts/ArgentCF-LightItalic.otf') format('opentype');
 }

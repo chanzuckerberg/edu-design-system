@@ -402,23 +402,12 @@
   --eds-typography-preset-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary);
   --eds-typography-preset-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary);
   --eds-typography-preset-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-letter-spacing-sm: 0.5px;
+  --eds-letter-spacing-sm: 0.5; /* (pixels) Spacing token used between characters in a text */
   --eds-font-weight-bold: 600;
   --eds-font-weight-medium: 500;
   --eds-font-weight-light: 400;
-  --eds-font-size-base: 16px; /* Base font size for design system in px */
-  --eds-font-size-40: 2.5rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-32: 2rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-28: 1.75rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-24: 1.5rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-22: 1.375rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-20: 1.25rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-18: 1.125rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-16: 1rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-14: 0.875rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-12: 0.75rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-size-11: 0.6875rem; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-font-family-secondary: 'Mint Grotesk V1.1', sans-serif;
+  --eds-font-size-base: 16; /* (pixels) Base font size for design system in px */
+  --eds-font-family-secondary: 'Argent', serif;
   --eds-font-family-primary: 'Graphik', sans-serif;
   --eds-theme-color-text-highlight-background: var(--eds-color-other-yellow-100);
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
