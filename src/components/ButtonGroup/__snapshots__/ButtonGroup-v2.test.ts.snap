@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
+exports[`<ButtonGroup /> (v2) Default story renders snapshot 1`] = `
 <div
   class="p-8"
 >
@@ -31,7 +31,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
+exports[`<ButtonGroup /> (v2) HorizontalProgressive story renders snapshot 1`] = `
 <div
   class="p-8"
 >
@@ -62,7 +62,38 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
+exports[`<ButtonGroup /> (v2) HorizontalProgressiveTertiary story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="button-group button-group--horizontal-progressive"
+  >
+    <button
+      class="button button--layout-none button--primary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Primary Button
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--tertiary button--lg button--variant-default -ml-size-2"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Tertiary Button
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<ButtonGroup /> (v2) Vertical story renders snapshot 1`] = `
 <div
   class="p-8"
 >
@@ -87,67 +118,6 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
         class="button__text"
       >
         Button 2
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`<ButtonGroup /> WithFiveButtons story renders snapshot 1`] = `
-<div
-  class="p-8"
->
-  <div
-    class="button-group button-group--horizontal"
-  >
-    <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
-      type="button"
-    >
-      <span
-        class="button__text"
-      >
-        Button 1
-      </span>
-    </button>
-    <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
-      type="button"
-    >
-      <span
-        class="button__text"
-      >
-        Button 2
-      </span>
-    </button>
-    <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
-      type="button"
-    >
-      <span
-        class="button__text"
-      >
-        Button 3
-      </span>
-    </button>
-    <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
-      type="button"
-    >
-      <span
-        class="button__text"
-      >
-        Button 4
-      </span>
-    </button>
-    <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
-      type="button"
-    >
-      <span
-        class="button__text"
-      >
-        Button 5
       </span>
     </button>
   </div>
