@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import type { StoryFile } from '@storybook/testing-react';
 
-import * as stories from './Toast.stories';
+import * as stories from './Toast-v2.stories';
 
 describe('<Toast /> (v2)', () => {
   generateSnapshots(stories as StoryFile);
