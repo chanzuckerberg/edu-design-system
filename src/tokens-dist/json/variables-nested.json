@@ -2,21 +2,10 @@
   "eds": {
     "font-family": {
       "primary": "'Graphik', sans-serif",
-      "secondary": "'Mint Grotesk V1.1', sans-serif"
+      "secondary": "'Argent', serif"
     },
     "font-size": {
-      "11": "0.6875rem",
-      "12": "0.75rem",
-      "14": "0.875rem",
-      "16": "1rem",
-      "18": "1.125rem",
-      "20": "1.25rem",
-      "22": "1.375rem",
-      "24": "1.5rem",
-      "28": "1.75rem",
-      "32": "2rem",
-      "40": "2.5rem",
-      "base": "16px"
+      "base": "16"
     },
     "font-weight": {
       "light": "400",
@@ -24,7 +13,7 @@
       "bold": "600"
     },
     "letter-spacing": {
-      "sm": "0.5px"
+      "sm": "0.5"
     },
     "typography": {
       "preset": {
