@@ -141,11 +141,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonV2Props>(
             />
           )}
           {iconLayout === 'left' && (
-            <Icon name={icon} purpose="decorative" size="1rem" />
+            <Icon
+              name={icon}
+              purpose="decorative"
+              size={size === 'lg' ? '1.5rem' : '1rem'}
+            />
           )}
           {iconLayout !== 'icon-only' && children}
           {iconLayout === 'right' && (
-            <Icon name={icon} purpose="decorative" size="1rem" />
+            <Icon
+              name={icon}
+              purpose="decorative"
+              size={size === 'lg' ? '1.5rem' : '1rem'}
+            />
           )}
         </span>
         {isLoading && (
