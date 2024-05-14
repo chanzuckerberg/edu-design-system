@@ -107,7 +107,8 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  /* border-radius: 0.125rem; */
+  border-top-left-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  border-top-right-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   &.eds-is-active {
     font-weight: 500;
@@ -185,7 +186,7 @@
   .tabs__item.eds-is-active & {
     position: absolute;
     bottom: 0;
-    height: 0.125rem;
+    height: 0.25rem;
     width: 100%;
 
     background-color: var(--eds-theme-color-text-utility-interactive-primary);
@@ -199,8 +200,8 @@
   }
 
   .tabs--has-divider & {
-    border-top-left-radius: 0.125rem;
-    border-top-right-radius: 0.125rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
