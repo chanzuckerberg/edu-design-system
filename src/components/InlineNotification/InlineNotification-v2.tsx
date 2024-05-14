@@ -65,11 +65,7 @@ export const InlineNotification = ({
           {title}
         </Text>
         {subTitle && (
-          <Text
-            as="div"
-            className={styles[`inline-notification__sub-title`]}
-            preset="body-xs"
-          >
+          <Text as="div" preset="body-xs">
             {subTitle}
           </Text>
         )}
