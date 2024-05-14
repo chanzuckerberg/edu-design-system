@@ -75,9 +75,12 @@ type TooltipProps = {
    * Where the tooltip should be placed in relation to the element it's attached to.
    * See: https://atomiks.github.io/tippyjs/v6/all-props/#placement
    *
-   * **Default is `"top"`**.
+   * **Default is `"auto"`**.
    */
-  placement?: TippyProps['placement'];
+  placement?: Extract<
+    TippyProps['placement'],
+    'auto' | 'top' | 'right' | 'bottom' | 'left'
+  >;
   /**
    * The content of the tooltip bubble.
    */
@@ -101,7 +104,7 @@ export const Tooltip = ({
   childNotInteractive,
   className,
   duration = 200,
-  placement = 'top',
+  placement = 'auto',
   text,
   ...rest
 }: TooltipProps) => {
