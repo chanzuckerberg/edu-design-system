@@ -31,9 +31,19 @@ export default {
         type: null,
       },
     },
-    placement: {
+    visible: {
       table: {
-        defaultValue: { summary: 'top' },
+        disable: true,
+      },
+    },
+    delay: {
+      control: {
+        type: 'number',
+      },
+    },
+    reference: {
+      control: {
+        type: null,
       },
     },
   },
