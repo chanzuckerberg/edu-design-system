@@ -1,11 +1,11 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
 
-import { Toast } from './Toast-v2';
+import { ToastNotification } from './ToastNotification';
 
 export default {
-  title: 'Components/V2/Toast',
-  component: Toast,
+  title: 'Components/V2/ToastNotification',
+  component: ToastNotification,
   parameters: {
     badges: ['intro-1.0', 'current-2.0'],
   },
@@ -15,7 +15,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = ComponentProps<typeof Toast>;
+type Args = ComponentProps<typeof ToastNotification>;
 
 export const Default: StoryObj<Args> = {};
 

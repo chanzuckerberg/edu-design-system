@@ -7,9 +7,9 @@ import { ButtonV2 as Button } from '../Button';
 import { IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
-import styles from './Toast-v2.module.css';
+import styles from './ToastNotification.module.css';
 
-export type ToastProps = {
+export type ToastNotificationProps = {
   // Component API
   /**
    * Additional class names that can be appended to the component, passed in for styling.
@@ -31,17 +31,17 @@ export type ToastProps = {
 };
 
 /**
- * `import {Toast} from "@chanzuckerberg/eds";`
+ * `import {ToastNotification} from "@chanzuckerberg/eds";`
  *
  * Toasts display brief, temporary notifications. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.
  */
-export const Toast = ({
+export const ToastNotification = ({
   className,
   onDismiss,
   status = 'favorable',
   title,
   ...other
-}: ToastProps) => {
+}: ToastNotificationProps) => {
   const componentClassName = clsx(
     styles['toast'],
     status && styles[`toast--status-${status}`],
@@ -63,11 +63,13 @@ export const Toast = ({
       {onDismiss && (
         <Button
           aria-label="close"
+          className={styles['toast__dismiss-button']}
           context="default"
           icon="close"
           iconLayout="icon-only"
           onClick={onDismiss}
           rank="tertiary"
+          variant="neutral"
         >
           Close
         </Button>
