@@ -70,7 +70,7 @@ export { RadioV2 } from './components/Radio';
 export { SelectV2 } from './components/Select';
 export { default as TabGroupV2 } from './components/TabGroup';
 export { TextareaFieldV2 } from './components/TextareaField';
-export { ToastV2 } from './components/Toast';
+export { default as ToastNotificationV2 } from './components/ToastNotification';
 export { TooltipV2 } from './components/Tooltip';
 
 export type { IconNameV2 } from './components/Icon';

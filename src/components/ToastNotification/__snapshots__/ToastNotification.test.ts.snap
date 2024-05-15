@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Toast /> (v2) Critical story renders snapshot 1`] = `
+exports[`<ToastNotification /> (v2) Critical story renders snapshot 1`] = `
 <div
   class="toast toast--status-critical"
 >
@@ -30,7 +30,7 @@ exports[`<Toast /> (v2) Critical story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Toast /> (v2) Default story renders snapshot 1`] = `
+exports[`<ToastNotification /> (v2) Default story renders snapshot 1`] = `
 <div
   class="toast toast--status-favorable"
 >
@@ -60,7 +60,7 @@ exports[`<Toast /> (v2) Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Toast /> (v2) Favorable story renders snapshot 1`] = `
+exports[`<ToastNotification /> (v2) Favorable story renders snapshot 1`] = `
 <div
   class="toast toast--status-favorable"
 >
@@ -90,7 +90,7 @@ exports[`<Toast /> (v2) Favorable story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Toast /> (v2) NotDismissable story renders snapshot 1`] = `
+exports[`<ToastNotification /> (v2) NotDismissable story renders snapshot 1`] = `
 <div
   class="toast toast--status-favorable"
 >
