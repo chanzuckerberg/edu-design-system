@@ -52,6 +52,7 @@ export type { IconName } from './components/Icon';
  * 2.0 component and type exports
  */
 export { AccordionV2 } from './components/Accordion';
+export { default as AppNotificationV2 } from './components/AppNotification';
 export { ButtonV2 } from './components/Button';
 export { ButtonGroupV2 } from './components/ButtonGroup';
 export { CardV2 } from './components/Card';

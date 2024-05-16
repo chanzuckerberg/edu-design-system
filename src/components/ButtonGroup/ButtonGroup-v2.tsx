@@ -19,8 +19,14 @@ type ButtonGroupProps = {
   // Design API
   /**
    * Whether the buttons should be laid out horizontally or stacked vertically (along with relative button position).
+   *
+   * (**Note**: `horizontal-align-left` should ONLY be used in combination with `AppNotification`)
    */
-  buttonLayout?: 'horizontal' | 'vertical' | 'horizontal-progressive';
+  buttonLayout?:
+    | 'horizontal'
+    | 'vertical'
+    | 'horizontal-progressive'
+    | 'horizontal-align-left';
 };
 
 /**

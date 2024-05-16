@@ -26,3 +26,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+
+.button-group--horizontal-align-left {
+  flex-direction: row;
+}
