@@ -79,6 +79,7 @@ export const parameters = {
     ],
   },
   badgesConfig: {
+    ...createInitialReleaseConfig('2.0'),
     ...createInitialReleaseConfig('1.3'),
     ...createInitialReleaseConfig('1.2'),
     ...createInitialReleaseConfig('1.1'),

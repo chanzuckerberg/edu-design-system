@@ -17,6 +17,9 @@ export default {
     ),
   },
   argTypes: {
+    buttonLayout: {
+      options: ['horizontal', 'vertical', 'horizontal-progressive'],
+    },
     children: {
       control: {
         type: null,
