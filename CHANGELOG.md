@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.8](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.7...v15.0.0-alpha.8) (2024-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **AppNotification:** introduce 2.0 component (#1945)
+* **ToastNotification:** rename from Toast to ToastNotification (#1944)
+* **typography:** update typography tokens and fonts (#1942)
+
+### Features
+
+* **AppNotification:** introduce 2.0 component ([#1945](https://github.com/chanzuckerberg/edu-design-system/issues/1945)) ([489e8d9](https://github.com/chanzuckerberg/edu-design-system/commit/489e8d96a5da49d13c0f62c2bfe4baba2fb380d4))
+* **ToastNotification:** rename from Toast to ToastNotification ([#1944](https://github.com/chanzuckerberg/edu-design-system/issues/1944)) ([07284c2](https://github.com/chanzuckerberg/edu-design-system/commit/07284c265ef630c1ef6edb61ce7f187b60cb976f))
+* **typography:** update typography tokens and fonts ([#1942](https://github.com/chanzuckerberg/edu-design-system/issues/1942)) ([3140996](https://github.com/chanzuckerberg/edu-design-system/commit/3140996e697358aa4a89063c60416cbf611ebe20))
+
+
+### Bug Fixes
+
+* **Button:** address QA design feedback ([#1940](https://github.com/chanzuckerberg/edu-design-system/issues/1940)) ([1e431b4](https://github.com/chanzuckerberg/edu-design-system/commit/1e431b4fa0dd5106f57000ca83ff9cf669a96023))
+* **ButtonGroup:** address QA design updates ([#1943](https://github.com/chanzuckerberg/edu-design-system/issues/1943)) ([1595a18](https://github.com/chanzuckerberg/edu-design-system/commit/1595a18090954aa46c114c979553393e3ca26454))
+* **InlineNotification:** address QA updates ([#1937](https://github.com/chanzuckerberg/edu-design-system/issues/1937)) ([d96ab79](https://github.com/chanzuckerberg/edu-design-system/commit/d96ab79ca29fe8c356f424f66f61a71d0cb5ea4a))
+* **TabGroup:** address QA comments and designs ([#1938](https://github.com/chanzuckerberg/edu-design-system/issues/1938)) ([48e92d4](https://github.com/chanzuckerberg/edu-design-system/commit/48e92d481ab73d5d438956c1ab67c15e1aab084c))
+* **TextareaField:** address QA updates ([#1936](https://github.com/chanzuckerberg/edu-design-system/issues/1936)) ([3aa5c94](https://github.com/chanzuckerberg/edu-design-system/commit/3aa5c9454706c9029b7a50cf73fdf9590afdef09))
+* update token and theming ([#1946](https://github.com/chanzuckerberg/edu-design-system/issues/1946)) ([5546205](https://github.com/chanzuckerberg/edu-design-system/commit/5546205996edfdc7fdc744180f07375fecc96c64))
+
 ## [15.0.0-alpha.7](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.6...v15.0.0-alpha.7) (2024-05-13)
 
 
