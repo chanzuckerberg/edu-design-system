@@ -1,35 +1,14 @@
 #!/usr/bin/env node
 (async function () {
   const StyleDictionary = require('style-dictionary');
-  const path = require('path');
-  const fs = require('fs');
   const {
     formatEdsTokens,
     getConfig,
-    isStrictSubset,
     minifyDictionaryUsingFormat,
   } = require('./_util');
 
-  let packageRootPath;
-  try {
-    packageRootPath =
-      path.dirname(require.resolve('@chanzuckerberg/eds')) + '/tokens/json/';
-  } catch (e) {
-    // used for working on theming within EDS
-    console.error('EDS package not installed. Using local path...');
-    packageRootPath = path.dirname(require.main.path) + '/lib/tokens/json/';
-  }
-
   // Read the config to sort out where to read JSON from and where to write the CSS file
   const config = await getConfig();
-
-  // read and parse JSON files on disk
-  const localTheme = JSON.parse(
-    fs.readFileSync(`${config.src}app-theme.json`, 'utf8'),
-  );
-  const baseTheme = JSON.parse(
-    fs.readFileSync(`${packageRootPath}theme-base.json`, 'utf8'),
-  );
 
   // define the header to use in the resulting CSS file so people know not to edit it directly
   StyleDictionary.registerFileHeader({
@@ -85,8 +64,6 @@
   });
 
   try {
-    // Keys in the theme file must be a strict subset of those in the base file
-    isStrictSubset(baseTheme, localTheme);
     EDSStyleDictionary.buildAllPlatforms();
   } catch (error) {
     // TODO: if theme has things not in base, error showing where the conflict
