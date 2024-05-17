@@ -15,9 +15,9 @@ export type LinkV2Props<ExtendedElement = unknown> =
      */
     as?: string | React.ElementType;
     /**
-     * The link contents or label.
+     * The link contents or label. Using ReactNode to support customized text treatments
      */
-    children: string;
+    children: React.ReactNode;
     // Design API
     /**
      * Where `Link` sits alongside other text and content:
@@ -34,7 +34,6 @@ export type LinkV2Props<ExtendedElement = unknown> =
      * Extra or lowered colors added to a link
      */
     emphasis?: 'default' | 'high' | 'low';
-
     /**
      * Link size inherits from the surrounding text.
      */

@@ -37,6 +37,14 @@ export const LinkWithOpenIcon: StoryObj<Args> = {
   },
 };
 
+export const LinkWithFormattedChildren: StoryObj<Args> = {
+  args: {
+    children: <em>emphasized link</em>,
+    context: 'standalone',
+    icon: 'open-in-new',
+  },
+};
+
 export const Emphasis: StoryObj<Args> = {
   args: {
     size: 'md',
