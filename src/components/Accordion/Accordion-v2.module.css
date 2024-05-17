@@ -103,7 +103,12 @@
 }
 
 .accordion-button__leading-icon {
-  color: var(--eds-theme-color-icon-utility-default-primary);
+  color: var(--eds-theme-color-icon-utility-default-secondary);
+
+  /* Targeting NumberIcons and other images used in this specific context */
+  & [role='img'] {
+    display: inline-flex;
+  }
 }
 
 .accordion-button__title {

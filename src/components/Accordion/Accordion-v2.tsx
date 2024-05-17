@@ -109,7 +109,7 @@ type AccordionRowProps = {
    */
   isExpandable?: boolean;
   /**
-   *
+   * Whether the row has a leading icon on the row's trigger
    */
   hasLeadingIcon?: boolean;
 };
