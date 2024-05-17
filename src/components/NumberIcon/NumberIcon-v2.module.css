@@ -20,7 +20,9 @@
   border-color: inherit;
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
-  cursor: pointer;
+  &.number-icon--is-interactive {
+    cursor: pointer;
+  }
 }
 
 /**
@@ -48,14 +50,16 @@
   border-color: var(--eds-theme-color-border-utility-interactive);
   background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
 
-  &:hover {
-    border-color: var(--eds-theme-color-border-utility-interactive-hover);
-    background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
-  }
+  &.number-icon--is-interactive {
+    &:hover {
+      border-color: var(--eds-theme-color-border-utility-interactive-hover);
+      background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
+    }
 
-  &:active {
-    border-color: var(--eds-theme-color-border-utility-interactive-active);
-    background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
+    &:active {
+      border-color: var(--eds-theme-color-border-utility-interactive-active);
+      background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
+    }
   }
 }
 
@@ -64,14 +68,16 @@
   border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis);
   background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis);
 
-  &:hover {
-    border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
-    background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
-  }
+  &.number-icon--is-interactive {
+    &:hover {
+      border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
+      background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
+    }
 
-  &:active {
-    border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
-    background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
+    &:active {
+      border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
+      background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
+    }
   }
 }
 

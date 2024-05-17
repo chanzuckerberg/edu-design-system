@@ -314,7 +314,7 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
         >
           <span
             aria-label="Numero uno"
-            class="text text--caption-sm number-icon number-icon--size-md number-icon--status-default"
+            class="text text--label-md-subtle number-icon number-icon--size-md number-icon--status-default"
             role="img"
             tabindex="-1"
           >

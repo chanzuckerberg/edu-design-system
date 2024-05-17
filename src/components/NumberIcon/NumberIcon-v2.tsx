@@ -54,6 +54,7 @@ export const NumberIcon = ({
   const componentClassName = clsx(
     className,
     styles['number-icon'],
+    isInteractive && styles['number-icon--is-interactive'],
     size && styles[`number-icon--size-${size}`],
     status && styles[`number-icon--status-${status}`],
   );
@@ -62,7 +63,7 @@ export const NumberIcon = ({
     <Text
       as="span"
       className={componentClassName}
-      preset={['sm', 'md'].includes(size) ? 'caption-sm' : 'caption-lg'}
+      preset={size === 'md' ? 'label-md-subtle' : 'label-lg-subtle'}
       role="img"
       tabIndex={isInteractive ? 0 : -1}
       {...other}
