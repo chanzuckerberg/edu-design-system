@@ -4,7 +4,7 @@ import { ButtonV2 as Button } from '../Button';
 import Text from '../Text';
 import styles from './AppNotification.module.css';
 
-export interface Props {
+export interface AppNotificationProps {
   // Design API
   /**
    * The title/heading of the notification
@@ -47,7 +47,7 @@ export const AppNotification = ({
   subTitle,
   title,
   ...other
-}: Props) => {
+}: AppNotificationProps) => {
   const componentClassName = clsx(
     styles['app-notification'],
     color && styles[`app-notification--color-${color}`],

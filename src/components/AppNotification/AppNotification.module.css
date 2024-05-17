@@ -46,6 +46,10 @@
     max-width: 1320px;
     display: flex;
     gap: 0.5rem;
+
+    & > section {
+        width: 100%;
+    }
 }
 
 .app-notification__close-btn {
