@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.9](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.8...v15.0.0-alpha.9) (2024-05-17)
+
+
+### Features
+
+* **Link:** allow nodes to be used in link body ([#1950](https://github.com/chanzuckerberg/edu-design-system/issues/1950)) ([01970a2](https://github.com/chanzuckerberg/edu-design-system/commit/01970a2ada87de05d016ff4adee86fdcd260689a))
+
+
+### Bug Fixes
+
+* **Accordion:** address QA updates from design ([#1948](https://github.com/chanzuckerberg/edu-design-system/issues/1948)) ([56fa437](https://github.com/chanzuckerberg/edu-design-system/commit/56fa437e69d47d5bda5e624d4ff2aa2ffc70cc1d))
+* **AppNotification:** apply usage feedback ([#1949](https://github.com/chanzuckerberg/edu-design-system/issues/1949)) ([06cc194](https://github.com/chanzuckerberg/edu-design-system/commit/06cc194bcbb57b8067f0cd16188578abbecfeaf1))
+* **NumberIcon:** address QA design notes ([#1947](https://github.com/chanzuckerberg/edu-design-system/issues/1947)) ([007d757](https://github.com/chanzuckerberg/edu-design-system/commit/007d757e16245dbc945c84b7ffd9c2053fff9a42))
+
 ## [15.0.0-alpha.8](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.7...v15.0.0-alpha.8) (2024-05-16)
 
 
