@@ -38,6 +38,17 @@ export const Sizes: Story = {
   ],
 };
 
+/**
+ * `NumberIcon` can be used in interactive contexts, when wrapped by a navigable or interactive element.
+ */
+export const IsInteractive: Story = {
+  args: {
+    ...Sizes.args,
+    isInteractive: true,
+  },
+  render: Sizes.render,
+};
+
 export const Completed: Story = {
   args: {
     ...Sizes.args,
