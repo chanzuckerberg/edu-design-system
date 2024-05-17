@@ -224,7 +224,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
       <p
         class="text text--body-md app-notification__sub-title"
       >
-        Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
+        Limited subtitle text
       </p>
       <div
         class="app-notification__actions"

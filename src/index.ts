@@ -78,3 +78,4 @@ export type { IconNameV2 } from './components/Icon';
 export type { ButtonV2Props } from './components/Button';
 export type { LinkV2Props } from './components/Link';
 export type { PageNotificationProps as PageNotificationV2Props } from './components/PageNotification';
+export type { AppNotificationProps as AppNotificationV2Props } from './components/AppNotification';

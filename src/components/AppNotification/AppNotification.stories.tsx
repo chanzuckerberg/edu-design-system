@@ -24,6 +24,9 @@ export default {
         type: null,
       },
     },
+    subTitle: {
+      control: 'text',
+    },
   },
 } as Meta<Args>;
 
@@ -63,6 +66,7 @@ export const LightColor: StoryObj<Args> = {
 export const WithDismissAndControls: StoryObj<Args> = {
   args: {
     ...WithControls.args,
+    subTitle: 'Limited subtitle text',
     onDismiss: () => {
       console.log('dismissing!');
     },
