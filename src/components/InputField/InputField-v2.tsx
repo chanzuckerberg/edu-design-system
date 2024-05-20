@@ -7,10 +7,10 @@ import type {
   EitherInclusive,
   ForwardedRefComponent,
 } from '../../util/utility-types';
+import FieldLabel from '../FieldLabel';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
 import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import { InputV2 as Input } from '../Input';
-import { InputLabelV2 as InputLabel } from '../InputLabel';
 import Text from '../Text';
 import styles from './InputField-v2.module.css';
 
@@ -149,7 +149,7 @@ type InputFieldType = ForwardedRefComponent<
   InputFieldProps
 > & {
   Input?: typeof Input;
-  Label?: typeof InputLabel;
+  Label?: typeof FieldLabel;
 };
 
 /**
@@ -245,9 +245,9 @@ export const InputField: InputFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <InputLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel className={labelClassName} htmlFor={idVar}>
                 {label}
-              </InputLabel>
+              </FieldLabel>
             )}
             {required && showHint && (
               <Text
@@ -342,4 +342,4 @@ export const InputField: InputFieldType = forwardRef(
 
 InputField.displayName = 'InputField';
 InputField.Input = Input;
-InputField.Label = InputLabel;
+InputField.Label = FieldLabel;

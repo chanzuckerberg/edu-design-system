@@ -57,6 +57,7 @@ export { ButtonV2 } from './components/Button';
 export { ButtonGroupV2 } from './components/ButtonGroup';
 export { CardV2 } from './components/Card';
 export { CheckboxV2 } from './components/Checkbox';
+export { default as FieldLabelV2 } from './components/FieldLabel';
 export { FieldNoteV2 } from './components/FieldNote';
 export { IconV2 } from './components/Icon';
 export { InlineNotificationV2 } from './components/InlineNotification';

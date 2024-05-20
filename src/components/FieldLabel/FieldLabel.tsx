@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 import type { Size } from '../../util/variant-types';
-import styles from './InputLabel-v2.module.css';
+import styles from './FieldLabel.module.css';
 
-export type InputLabelProps = {
+export type FieldLabelProps = {
   // Component API
   /**
    * Text to render in label.
@@ -31,11 +31,11 @@ export type InputLabelProps = {
 };
 
 /**
- * `import {InputLabel} from "@chanzuckerberg/eds";`
+ * `import {FieldLabel} from "@chanzuckerberg/eds";`
  *
- * Label associated with an input element such as a radio or checkbox.
+ * Label associated with an input element or field.
  */
-export const InputLabel = React.forwardRef<HTMLLabelElement, InputLabelProps>(
+export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
   ({ children, className, htmlFor, size = 'lg', disabled }, ref) => {
     const componentClassName = clsx(
       styles['label'],
@@ -52,4 +52,4 @@ export const InputLabel = React.forwardRef<HTMLLabelElement, InputLabelProps>(
   },
 );
 
-InputLabel.displayName = 'InputLabel';
+FieldLabel.displayName = 'FieldLabel';
