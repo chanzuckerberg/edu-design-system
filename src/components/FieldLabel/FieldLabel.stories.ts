@@ -1,20 +1,20 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
 
-import { InputLabel } from './InputLabel-v2';
+import { FieldLabel } from './FieldLabel';
 
 export default {
-  title: 'Components/V2/InputLabel',
-  component: InputLabel,
+  title: 'Components/V2/FieldLabel',
+  component: FieldLabel,
   args: {
     children: 'Label',
   },
   parameters: {
-    badges: ['intro-1.0'],
+    badges: ['intro-2.0', 'current-2.0'],
   },
 } as Meta<Args>;
 
-type Args = ComponentProps<typeof InputLabel>;
+type Args = ComponentProps<typeof FieldLabel>;
 
 export const Default: StoryObj<Args> = {};
 

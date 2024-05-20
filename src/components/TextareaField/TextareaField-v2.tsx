@@ -8,8 +8,8 @@ import type {
   ForwardedRefComponent,
 } from '../../util/utility-types';
 
+import FieldLabel from '../FieldLabel';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
-import { InputLabelV2 as InputLabel } from '../InputLabel';
 import Text from '../Text';
 
 import styles from './TextareaField-v2.module.css';
@@ -78,7 +78,7 @@ type TextareaFieldType = ForwardedRefComponent<
   TextareaFieldProps
 > & {
   TextArea?: typeof TextArea;
-  Label?: typeof InputLabel;
+  Label?: typeof FieldLabel;
 };
 
 type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -229,9 +229,9 @@ export const TextareaField: TextareaFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <InputLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel className={labelClassName} htmlFor={idVar}>
                 {label}
-              </InputLabel>
+              </FieldLabel>
             )}
             {required && showHint && (
               <Text
@@ -304,4 +304,4 @@ TextareaField.displayName = 'TextareaField';
 TextArea.displayName = 'TextareaField.Textarea';
 
 TextareaField.TextArea = TextArea;
-TextareaField.Label = InputLabel;
+TextareaField.Label = FieldLabel;

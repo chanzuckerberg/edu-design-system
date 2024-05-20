@@ -1,25 +1,25 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    # INPUT LABEL
+    # FIELD LABEL
 \*------------------------------------*/
 
 /**
- * Text labeling the input component.
+ * Text labeling the field component.
  */
 .label {
   color: var(--eds-theme-color-text-utility-default-primary);
 }
 
 /**
- * Disabled variant of the input label.
+ * Disabled variant of the field label.
  */
 .label--disabled {
   color: var(--eds-theme-color-text-utility-disabled-primary);
 }
 
 /**
- * Input label size variants.
+ * Field label size variants.
  */
 .label--md {
   font: var(--eds-theme-typography-body-sm);

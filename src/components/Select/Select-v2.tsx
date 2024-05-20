@@ -12,9 +12,9 @@ import { usePopper } from 'react-popper';
 
 import { useId } from '../../util/useId';
 import type { ExtractProps } from '../../util/utility-types';
+import FieldLabel from '../FieldLabel';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
 import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
-import { InputLabelV2 as InputLabel } from '../InputLabel';
 import {
   defaultPopoverModifiers,
   PopoverContainerV2 as PopoverContainer,
@@ -350,7 +350,7 @@ const SelectLabel = ({
   return (
     <div className={overlineClassName}>
       <Listbox.Label
-        as={InputLabel}
+        as={FieldLabel}
         className={componentClassName}
         htmlFor={htmlFor}
       >
