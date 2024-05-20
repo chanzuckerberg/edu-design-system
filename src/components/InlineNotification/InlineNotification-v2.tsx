@@ -21,11 +21,11 @@ type InlineNotificationProps = {
    */
   status?: Status;
   /**
-   * Secondary text used to describe the notification in more detail
+   * Secondary text used to describe the content in more detail
    */
-  subTitle?: string;
+  subTitle?: React.ReactNode;
   /**
-   * The text contents of the tag, nested inside the component, in addition to the icon.
+   * The title/heading of the component
    */
   title: string;
 };

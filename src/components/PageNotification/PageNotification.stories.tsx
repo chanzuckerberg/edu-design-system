@@ -47,6 +47,13 @@ export const Warning: StoryObj<Args> = {
   },
 };
 
+export const WarningWithSubtitle: StoryObj<Args> = {
+  args: {
+    status: 'warning',
+    subTitle: <span>Subtitle text</span>,
+  },
+};
+
 /**
  * When using critical, make sure `Button` has a matching variant specified.
  */

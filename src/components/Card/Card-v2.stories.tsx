@@ -92,7 +92,7 @@ export const WithFullHeaderAndIcon: StoryObj<Args> = {
         <Card.Header
           eyebrow="Recommended for you"
           icon="person-encircled"
-          subTitle="Get to know your colleagues"
+          subTitle={<span>Get to know your colleagues</span>}
           title="Question of the day"
         />
         <Card.Body>

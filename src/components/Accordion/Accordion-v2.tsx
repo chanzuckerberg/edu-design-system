@@ -61,15 +61,15 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   *
+   * Icon to preceed the text in an accordion header
    */
   leadingIcon?: ReactNode;
   /**
-   *
+   * Secondary text used to describe the content in more detail
    */
-  subtitle?: string;
+  subtitle?: ReactNode;
   /**
-   *
+   * The title/heading of the component
    */
   title?: string;
   /**

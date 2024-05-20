@@ -53,7 +53,7 @@ export const TitleAndSubtitle: Story = {
       <Accordion.Row>
         <Accordion.Button
           data-testid="accordion-button"
-          subtitle="Quam lacus maecenas nibh malesuada."
+          subtitle={<span>"Quam lacus maecenas nibh malesuada."</span>}
           title="Massa quam egestas massa."
         ></Accordion.Button>
         <Accordion.Panel data-testid="accordion-panel">

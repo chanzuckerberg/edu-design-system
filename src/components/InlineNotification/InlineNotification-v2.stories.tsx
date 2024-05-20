@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import React from 'react';
+
 import { InlineNotification } from './InlineNotification-v2';
 
 export default {
@@ -20,6 +22,17 @@ export const WithSubTitle: StoryObj<Args> = {
   args: {
     ...Default.args,
     subTitle: 'Additional text which provides additional detail',
+  },
+};
+
+export const WithFormattedSubTitle: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    subTitle: (
+      <span>
+        <em>Additional text</em> which provides additional detail
+      </span>
+    ),
   },
 };
 
