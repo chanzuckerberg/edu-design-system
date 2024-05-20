@@ -418,3 +418,58 @@ exports[`<PageNotification /> (v2) Warning story renders snapshot 1`] = `
   </div>
 </aside>
 `;
+
+exports[`<PageNotification /> (v2) WarningWithSubtitle story renders snapshot 1`] = `
+<aside
+  class="page-notification page-notification--status-warning"
+>
+  <svg
+    aria-hidden="true"
+    class="icon page-notification__icon"
+    fill="currentColor"
+    height="1.5rem"
+    style="--icon-size: 1.5rem;"
+    viewBox="0 0 24 24"
+    width="1.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
+    />
+  </svg>
+  <div
+    class="page-notification__body page-notification--has-vertical-cta"
+  >
+    <div
+      class="page-notification__text"
+    >
+      <h3
+        class="heading heading--title-md"
+      >
+        Alert title which communicates info to the user
+      </h3>
+      <p
+        class="text text--body-sm page-notification__sub-title"
+      >
+        <span>
+          Subtitle text
+        </span>
+      </p>
+    </div>
+    <div
+      class="page-notification__call-to-action"
+    >
+      <button
+        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        type="button"
+      >
+        <span
+          class="button__text"
+        >
+          Call to Action
+        </span>
+      </button>
+    </div>
+  </div>
+</aside>
+`;

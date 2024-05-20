@@ -90,11 +90,11 @@ export interface CardHeaderProps {
    */
   size?: Extract<Size, 'sm' | 'md'>;
   /**
-   * Text below the main title of the card, to add supplementary information about the title
+   * Secondary text used to describe the content in more detail
    */
-  subTitle?: string;
+  subTitle?: ReactNode;
   /**
-   * Main title of the card
+   * The title/heading of the component
    */
   title?: string;
 }

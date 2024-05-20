@@ -675,7 +675,9 @@ exports[`<Card /> (v2) WithFullHeaderAndIcon story renders snapshot 1`] = `
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
-          Get to know your colleagues
+          <span>
+            Get to know your colleagues
+          </span>
         </div>
       </div>
     </header>

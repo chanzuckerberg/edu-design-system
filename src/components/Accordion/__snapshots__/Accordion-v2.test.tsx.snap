@@ -1167,7 +1167,9 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
           <span
             class="text text--body-md accordion-button__subtitle"
           >
-            Quam lacus maecenas nibh malesuada.
+            <span>
+              "Quam lacus maecenas nibh malesuada."
+            </span>
           </span>
         </h2>
         <svg

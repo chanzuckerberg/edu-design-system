@@ -35,11 +35,11 @@ export type PageNotificationProps = {
    */
   status?: Status;
   /**
-   * Secondary text used to describe the notification in more detail
+   * Secondary text used to describe the content in more detail
    */
-  subTitle?: string;
+  subTitle?: ReactNode;
   /**
-   * The title/heading of the notification
+   * The title/heading of the component
    */
   title?: string;
 };
