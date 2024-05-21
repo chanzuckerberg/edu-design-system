@@ -60,7 +60,7 @@ describe('Modal', () => {
     });
     await user.click(openModalButton);
     const closeButton = await screen.findByRole('button', {
-      name: 'close modal',
+      name: 'close',
     });
     await user.click(closeButton);
     await waitFor(() => {

@@ -7,7 +7,6 @@ import { Heading, Text } from '../../';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import { ButtonV2 as Button } from '../Button';
 import { ButtonGroupV2 as ButtonGroup } from '../ButtonGroup';
-import { TooltipV2 as Tooltip } from '../Tooltip';
 
 export default {
   title: 'Components/V2/Modal',
@@ -41,6 +40,14 @@ export default {
       description:
         'Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.',
       type: 'boolean',
+    },
+    size: {
+      description: 'Max size of the modal, which responds to the viewport',
+      control: {
+        type: 'select',
+      },
+      options: ['sm', 'lg'],
+      defaultValue: 'lg',
     },
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
@@ -87,12 +94,9 @@ export const Default: StoryObj<Args> = {
       </Modal.Body>
       <Modal.Footer>
         <ButtonGroup>
-          {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-          <Tooltip text="Tooltip should spawn on top of modal">
-            <Button onClick={() => {}} rank="primary">
-              Primary Action
-            </Button>
-          </Tooltip>
+          <Button onClick={() => {}} rank="primary">
+            Primary Action
+          </Button>
           <Button onClick={() => {}} rank="secondary">
             Secondary
           </Button>
@@ -100,6 +104,16 @@ export const Default: StoryObj<Args> = {
       </Modal.Footer>
     </InteractiveExample>
   ),
+};
+
+/**
+ * Modals can also have a more emphasized backdrop overlay
+ */
+export const HighEmphasis: StoryObj<Args> = {
+  args: {
+    overlayEmphasis: 'high',
+  },
+  render: Default.render,
 };
 
 /**
@@ -187,12 +201,9 @@ export const WithLongTextScrollable: StoryObj<InteractiveArgs> = {
       </Modal.Body>
       <Modal.Footer>
         <ButtonGroup>
-          {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-          <Tooltip text="Tooltip should spawn on top of modal">
-            <Button onClick={() => {}} rank="primary">
-              Primary Action
-            </Button>
-          </Tooltip>
+          <Button onClick={() => {}} rank="primary">
+            Primary Action
+          </Button>
           <Button onClick={() => {}} rank="secondary">
             Secondary
           </Button>
@@ -235,12 +246,9 @@ export const ContentDefault: Story = {
         </Modal.Body>
         <Modal.Footer>
           <ButtonGroup>
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Tooltip text="Tooltip should spawn on top of modal">
-              <Button onClick={() => {}} rank="primary">
-                Primary Action
-              </Button>
-            </Tooltip>
+            <Button onClick={() => {}} rank="primary">
+              Primary Action
+            </Button>
             <Button onClick={() => {}} rank="secondary">
               Secondary
             </Button>
@@ -259,13 +267,13 @@ export const ContentDefault: Story = {
 
 /**
  * `Modal` provides `size`, which allows control over the natural width of the modal. This does not affect the contents
- * of the modal.
+ * of the modal except to wrap text.
  */
-export const Medium: Story = {
+export const Large: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
-    size: 'md',
+    size: 'lg',
   },
 };
 
@@ -288,7 +296,7 @@ export const LayoutVertical: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
-    size: 'md',
+    size: 'lg',
     children: (
       <>
         <Modal.Header>
@@ -300,12 +308,9 @@ export const LayoutVertical: Story = {
         </Modal.Body>
         <Modal.Footer>
           <ButtonGroup buttonLayout="vertical">
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Tooltip text="Tooltip should spawn on top of modal">
-              <Button isFullWidth onClick={() => {}} rank="primary">
-                Primary Action
-              </Button>
-            </Tooltip>
+            <Button isFullWidth onClick={() => {}} rank="primary">
+              Primary Action
+            </Button>
             <Button isFullWidth onClick={() => {}} rank="secondary">
               Secondary
             </Button>
@@ -334,7 +339,7 @@ export const LayoutVerticalWithTertiary: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
-    size: 'md',
+    size: 'lg',
     children: (
       <>
         <Modal.Header>
@@ -346,12 +351,9 @@ export const LayoutVerticalWithTertiary: Story = {
         </Modal.Body>
         <Modal.Footer>
           <ButtonGroup buttonLayout="vertical">
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Tooltip text="Tooltip should spawn on top of modal">
-              <Button isFullWidth onClick={() => {}} rank="primary">
-                Primary Action
-              </Button>
-            </Tooltip>
+            <Button isFullWidth onClick={() => {}} rank="primary">
+              Primary Action
+            </Button>
             <Button isFullWidth onClick={() => {}} rank="tertiary">
               Tertiary
             </Button>
@@ -379,7 +381,7 @@ export const WithCriticalButton: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
-    size: 'md',
+    size: 'lg',
     children: (
       <>
         <Modal.Header>
@@ -391,12 +393,9 @@ export const WithCriticalButton: Story = {
         </Modal.Body>
         <Modal.Footer>
           <ButtonGroup>
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Tooltip text="Tooltip should spawn on top of modal">
-              <Button onClick={() => {}} rank="primary" variant="critical">
-                Critical Action
-              </Button>
-            </Tooltip>
+            <Button onClick={() => {}} rank="primary" variant="critical">
+              Critical Action
+            </Button>
           </ButtonGroup>
         </Modal.Footer>
       </>
