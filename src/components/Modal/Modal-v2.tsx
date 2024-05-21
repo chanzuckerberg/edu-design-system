@@ -5,8 +5,9 @@ import React from 'react';
 
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
+
+import { ButtonV2 as Button } from '../Button';
 import Heading from '../Heading';
-import { IconV2 as Icon } from '../Icon';
 import Text from '../Text';
 
 import styles from './Modal-v2.module.css';
@@ -78,12 +79,17 @@ type ModalContentProps = {
   onClose: () => void;
   // Design API
   /**
-   * Max size of the modal. Defaults to 'lg'.
-   * Will still break responsively.
+   * Max size of the modal, which responds to the viewport
    *
    * **Default is `"lg"`**.
    */
-  size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+  size?: Extract<Size, 'sm' | 'lg'>;
+  /**
+   * Emphasis used on the backgound overlay (behind the modal)
+   *
+   * **Default is `"low"`**.
+   */
+  overlayEmphasis?: 'low' | 'high';
 };
 
 type ModalProps = ModalContentProps & {
@@ -230,29 +236,27 @@ export const ModalContent = (props: ModalContentProps) => {
   const componentClassName = clsx(
     styles['modal__content'],
     isScrollable && styles['modal__content--scrollable'],
-    (size === 'md' || size === 'lg') && styles['modal__content--md'],
-    size === 'lg' && styles['modal__content--lg'],
+    size && styles[`modal__content--${size}`],
     className,
   );
-
-  const closeIconClassName = clsx(styles['modal__close-icon']);
 
   return (
     <ModalContext.Provider value={{ isScrollable }}>
       <div className={componentClassName} {...other}>
-        {/* TODO: this should be a button instance? */}
         {!hideCloseButton && (
-          <button className={styles['modal__close-button']} onClick={onClose}>
-            <Icon
-              className={closeIconClassName}
-              name="close"
-              purpose="informative"
-              size="1.5rem"
-              title="close modal"
-            />
-          </button>
+          <Button
+            aria-label="close"
+            className={styles['modal__close-button']}
+            context="default"
+            icon="close"
+            iconLayout="icon-only"
+            onClick={onClose}
+            rank="tertiary"
+            variant="neutral"
+          >
+            Close
+          </Button>
         )}
-
         {children}
       </div>
     </ModalContext.Provider>
@@ -277,6 +281,7 @@ export const Modal = (props: ModalProps) => {
     modalContainerClassName,
     onClose,
     open,
+    overlayEmphasis = 'low',
     ...rest
   } = props;
   const { children } = rest;
@@ -310,7 +315,13 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <Dialog.Overlay className={styles['modal__overlay']} />
+        <Dialog.Overlay
+          className={clsx(
+            styles['modal__overlay'],
+            overlayEmphasis &&
+              styles[`modal__overlay--emphasis-${overlayEmphasis}`],
+          )}
+        />
 
         <ModalContent onClose={onClose} {...rest} />
       </Dialog>
