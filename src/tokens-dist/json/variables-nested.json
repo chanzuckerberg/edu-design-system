@@ -350,16 +350,32 @@
                 "hover": "#3E42B1"
               }
             },
-            "red": "#4D0118",
-            "orange": "#FFA070",
-            "yellow": "#F9DA78",
-            "green": "#57B083",
+            "red": {
+              "@": "#4D0118",
+              "lowEmphasis": "#FDF3F4"
+            },
+            "orange": {
+              "@": "#FFA070",
+              "lowEmphasis": "#FFEEE5"
+            },
+            "yellow": {
+              "@": "#F9DA78",
+              "lowEmphasis": "#FDF3D3"
+            },
+            "green": {
+              "@": "#57B083",
+              "lowEmphasis": "#E6F5ED"
+            },
             "blue": {
               "1": "#99CCFF",
               "2": "#3165D2",
-              "3": "#0F2163"
+              "3": "#0F2163",
+              "lowEmphasis": "#EAF4FF"
             },
-            "purple": "#C580E7",
+            "purple": {
+              "@": "#C580E7",
+              "lowEmphasis": "#FBF5FD"
+            },
             "pink": "#DB458D"
           },
           "utility": {

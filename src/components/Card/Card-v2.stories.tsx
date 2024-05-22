@@ -40,16 +40,13 @@ export default {
     },
     topStripeColor: {
       options: [
-        '',
-        'bg-brand-blue-1',
-        'bg-brand-blue-2',
-        'bg-brand-blue-3',
-        'bg-brand-green',
-        'bg-brand-orange',
-        'bg-brand-pink',
-        'bg-brand-purple',
-        'bg-brand-red',
-        'bg-brand-yellow',
+        'bg-brand-blue-lowEmphasis',
+        'bg-brand-green-lowEmphasis',
+        'bg-brand-orange-lowEmphasis',
+        'bg-brand-pink-lowEmphasis',
+        'bg-brand-purple-lowEmphasis',
+        'bg-brand-red-lowEmphasis',
+        'bg-brand-yellow-lowEmphasis',
       ],
       control: {
         type: 'select',
@@ -65,6 +62,19 @@ type Args = React.ComponentProps<typeof Card>;
  */
 export const Default: StoryObj<Args> = {};
 
+/**
+ * Cards can be made interactive by using `isInteractive`. With this, it will require being linked to `Link` or some control that performs an action or is being dragged.
+ */
+export const IsInteractive: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    isInteractive: true,
+  },
+};
+
+/**
+ * This demonstrates all that's possible with the header component
+ */
 export const WithFullHeader: StoryObj<Args> = {
   args: {
     children: (
@@ -85,12 +95,14 @@ export const WithFullHeader: StoryObj<Args> = {
   },
 };
 
+/**
+ * When using an icon in the header, we should not use `eyebrow` as it causes a noisy appearance. This is, however, technically possible.
+ */
 export const WithFullHeaderAndIcon: StoryObj<Args> = {
   args: {
     children: (
       <>
         <Card.Header
-          eyebrow="Recommended for you"
           icon="person-encircled"
           subTitle={<span>Get to know your colleagues</span>}
           title="Question of the day"
@@ -106,6 +118,10 @@ export const WithFullHeaderAndIcon: StoryObj<Args> = {
   },
 };
 
+/**
+ * Example implementation of a menu with a clickable icon button, to demonstrate adding a menu to a card
+ * @returns ReactNode
+ */
 function CardMenu() {
   return (
     <Menu>
@@ -141,18 +157,41 @@ function CardMenu() {
   );
 }
 
+/**
+ * You can combine a small header with a menu icon in the top-right.
+ */
 export const WithSmallFullHeaderAndIcon: StoryObj<Args> = {
   args: {
     children: (
       <>
         <Card.Header
           action={<CardMenu />}
-          eyebrow="Recommended for you"
           icon="person-encircled"
           size="sm"
           subTitle="Get to know your colleagues"
           title="Question of the day"
         />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </>
+    ),
+  },
+};
+
+/**
+ * It's possible to customize the card header with formatted text and content, which replaces the pre-defined slots
+ */
+export const WithCustomizedHeader: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Card.Header className="mb-size-2">
+          Displaying <strong>some text</strong> with <em>mixed formatting</em>.
+        </Card.Header>
         <Card.Body>
           <div className="fpo">Card Body</div>
         </Card.Body>
@@ -198,6 +237,9 @@ export const CustomBrandCard: StoryObj<Args> = {
   },
 };
 
+/**
+ * You can add a stripe along the top of a card to enhance and emphasis its appearance
+ */
 export const TopStripe: StoryObj<Args> = {
   args: {
     topStripe: 'medium',
@@ -226,10 +268,13 @@ export const TopStripe: StoryObj<Args> = {
   },
 };
 
+/**
+ * Cards also allow for using custom top stripe colors. Use one of the low-emphasis brand colors (see the control above to test)
+ */
 export const CustomTopStripe: StoryObj<Args> = {
   args: {
     topStripe: 'high',
-    topStripeColor: 'bg-brand-purple',
+    topStripeColor: 'bg-brand-purple-lowEmphasis',
     children: (
       <>
         <Card.Header
@@ -255,6 +300,9 @@ export const CustomTopStripe: StoryObj<Args> = {
   },
 };
 
+/**
+ * Another visual change to cards allow for adjusting the background color, to change how the card looks, using `containerColor`
+ */
 export const BackgroundCallout: StoryObj<Args> = {
   args: {
     containerColor: 'call-out',

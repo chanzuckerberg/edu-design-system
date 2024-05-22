@@ -39,6 +39,12 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
    */
   isDragging?: boolean;
   /**
+   * Whether `Card` itself is directly interactive (clicking will perform some navigation or action)
+   *
+   * **Default is `false`**.
+   */
+  isInteractive?: boolean;
+  /**
    * Decorative top bar used to cause a highlight on a given card. When present, this
    * corresponds to a specified emphasis level.
    *
@@ -111,6 +117,7 @@ export const Card = ({
   children,
   containerStyle = 'low',
   isDragging,
+  isInteractive = false,
   topStripe = 'none',
   topStripeColor = '',
   ...other
@@ -121,6 +128,7 @@ export const Card = ({
     styles[`card--container-color-${containerColor}`],
     typeof isDragging !== 'undefined' &&
       styles[`card--is-dragging-${isDragging}`],
+    isInteractive && styles['card--is-interactive'],
     className,
   );
   return (
@@ -201,7 +209,7 @@ const CardHeader = ({
 
   return children ? (
     <header className={componentClassName} {...other}>
-      {children}
+      <div className={styles['header__custom']}>{children}</div>
     </header>
   ) : (
     <header className={componentClassName} {...other}>
