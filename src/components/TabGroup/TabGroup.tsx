@@ -58,7 +58,7 @@ export interface TabGroupProps {
   /**
    * Whether the divider line (separating tabs from content) is visible.
    *
-   * **Default is `"true"`.
+   * **Default is `"true"`**.
    */
   hasDivider?: boolean;
   /**
@@ -68,7 +68,7 @@ export interface TabGroupProps {
   /**
    * Control how the indidivual tabs take up the available space.
    *
-   * **Default is `"auto"`.
+   * **Default is `"auto"`**.
    */
   tabWidth?: 'auto' | 'full';
 }
