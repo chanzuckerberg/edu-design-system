@@ -146,30 +146,72 @@
               }
             },
             "red": {
-              "value": "{eds.color.red.850}"
+              "@": {
+                "value": "{eds.color.red.850}",
+                "group": "color"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.red.050}",
+                "group": "color"
+              }
             },
             "orange": {
-              "value": "{eds.color.orange.250}"
+              "@": {
+                "value": "{eds.color.orange.250}",
+                "group": "color"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.orange.050}",
+                "group": "color"
+              }
             },
             "yellow": {
-              "value": "{eds.color.yellow.150}"
+              "@": {
+                "value": "{eds.color.yellow.150}",
+                "group": "color"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.yellow.050}",
+                "group": "color"
+              }
             },
             "green": {
-              "value": "{eds.color.green.350}"
+              "@": {
+                "value": "{eds.color.green.350}",
+                "group": "color"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.green.050}",
+                "group": "color"
+              }
             },
             "blue": {
               "1": {
-                "value": "{eds.color.blue.200}"
+                "value": "{eds.color.blue.200}",
+                "group": "color"
               },
               "2": {
-                "value": "{eds.color.blue.550}"
+                "value": "{eds.color.blue.550}",
+                "group": "color"
               },
               "3": {
-                "value": "{eds.color.blue.850}"
+                "value": "{eds.color.blue.850}",
+                "group": "color"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.blue.050}",
+                "group": "color"
               }
             },
             "purple": {
-              "value": "{eds.color.purple.350}"
+              "@": {
+                "value": "{eds.color.purple.350}",
+                "group": "color"
+              },
+              "lowEmphasis": {
+                "value": "{eds.color.purple.050}",
+                "group": "color"
+              }
             },
             "pink": {
               "value": "{eds.color.pink.450}"
