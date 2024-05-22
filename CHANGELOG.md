@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.10](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.9...v15.0.0-alpha.10) (2024-05-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **FieldLabel:** introduce 2.0 component (#1953)
+
+### Features
+
+* allow react nodes on subtitle ([#1954](https://github.com/chanzuckerberg/edu-design-system/issues/1954)) ([fc6bb78](https://github.com/chanzuckerberg/edu-design-system/commit/fc6bb7862cde9a7cf5ff611e60ec521a6b9a5eb0))
+* **FieldLabel:** introduce 2.0 component ([#1953](https://github.com/chanzuckerberg/edu-design-system/issues/1953)) ([6198b9e](https://github.com/chanzuckerberg/edu-design-system/commit/6198b9e17c5e3209b53b3da86156883b48e0cf7f))
+
+
+### Bug Fixes
+
+* **Card:** address QA design and eng feedback ([#1958](https://github.com/chanzuckerberg/edu-design-system/issues/1958)) ([14c73fe](https://github.com/chanzuckerberg/edu-design-system/commit/14c73feed267bc3bf2f64e6558bf50a7bd33c318))
+* **Modal:** address QA updates ([#1957](https://github.com/chanzuckerberg/edu-design-system/issues/1957)) ([0d5a414](https://github.com/chanzuckerberg/edu-design-system/commit/0d5a414c7dfa8c9ab8f3cb42e8232ef8f3dfd42f))
+
 ## [15.0.0-alpha.9](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.8...v15.0.0-alpha.9) (2024-05-17)
 
 
