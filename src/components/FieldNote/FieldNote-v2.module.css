@@ -11,6 +11,9 @@
  * Fieldnote
  */
 .field-note {
+  display: flex;
+  align-items: center;
+  
   font: var(--eds-theme-typography-body-sm);
 
   color: var(--eds-theme-color-text-utility-default-secondary);
