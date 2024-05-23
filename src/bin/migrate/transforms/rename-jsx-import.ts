@@ -28,7 +28,11 @@ export default function transform({ file, changes }: TransformOptions) {
   /**
    * Used to keep track of which JSXElements need to be renamed
    */
-  const appliedChanges: Change[] = [];
+  const jsxElementsToRename: Array<{
+    oldName: string;
+    newName: string;
+  }> = [];
+
   importsToTransform.forEach((importDeclaration) => {
     const namedImports = importDeclaration.getNamedImports();
 
@@ -39,7 +43,14 @@ export default function transform({ file, changes }: TransformOptions) {
       );
 
       if (changeToApply) {
-        namedImport.getNameNode;
+        const jsxElementName =
+          namedImport.getAliasNode()?.getText() || namedImport.getName();
+
+        jsxElementsToRename.push({
+          oldName: jsxElementName,
+          newName: changeToApply.alias || changeToApply.newImportName,
+        });
+
         namedImport.setName(changeToApply.newImportName);
         namedImport.getNameNode().rename(changeToApply.newImportName);
         if (changeToApply.removeAlias) {
@@ -47,7 +58,6 @@ export default function transform({ file, changes }: TransformOptions) {
         } else if (changeToApply.alias) {
           namedImport.renameAlias(changeToApply.alias);
         }
-        appliedChanges.push(changeToApply);
       }
     });
   });
@@ -58,13 +68,13 @@ export default function transform({ file, changes }: TransformOptions) {
     const openingTagNameNode = openingElement.getTagNameNode();
     const closingTagNameNode = closingElement.getTagNameNode();
 
-    const appliedChange = appliedChanges.find(
-      (change) => change.oldImportName === openingTagNameNode.getText(),
+    const renameInfo = jsxElementsToRename.find(
+      ({ oldName }) => oldName === openingTagNameNode.getText(),
     );
 
-    if (appliedChange) {
-      openingTagNameNode.replaceWithText(appliedChange.newImportName);
-      closingTagNameNode.replaceWithText(appliedChange.newImportName);
+    if (renameInfo) {
+      openingTagNameNode.replaceWithText(renameInfo.newName);
+      closingTagNameNode.replaceWithText(renameInfo.newName);
     }
   });
 
@@ -72,11 +82,11 @@ export default function transform({ file, changes }: TransformOptions) {
     .getDescendantsOfKind(SyntaxKind.JsxSelfClosingElement)
     .forEach((element) => {
       const tagNameNode = element.getTagNameNode();
-      const appliedChange = appliedChanges.find(
-        (change) => change.oldImportName === tagNameNode.getText(),
+      const renameInfo = jsxElementsToRename.find(
+        ({ oldName }) => oldName === tagNameNode.getText(),
       );
-      if (appliedChange) {
-        tagNameNode.replaceWithText(appliedChange.newImportName);
+      if (renameInfo) {
+        tagNameNode.replaceWithText(renameInfo.newName);
       }
     });
 }

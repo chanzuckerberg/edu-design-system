@@ -42,8 +42,9 @@ export default async function runMigration(
   const pathToMigration = path.join(MIGRATION_DIR, `${name}.js`);
   try {
     console.log(`Running the following migration: "${name}"`);
-    const { default: migration } = await import(pathToMigration);
-    migration(project);
+    const module = await import(pathToMigration);
+    // This syntax seems odd to need when the code is packaged
+    module.default.default(project);
   } catch (error) {
     console.error('Error importing module:', error);
   }

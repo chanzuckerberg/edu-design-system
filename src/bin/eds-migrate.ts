@@ -33,6 +33,17 @@ export async function run() {
       console.log(`  ${migration}`);
     });
   } else if (name) {
+    const migrations = listMigrations();
+    if (!migrations.includes(name)) {
+      console.warn(
+        chalk.red(`Migrate: Oops we do not have a migration named "${name}"!`),
+      );
+      console.log('Here is a list of migrations available');
+      listMigrations().forEach((migration) => {
+        console.log(`  ${migration}`);
+      });
+      return;
+    }
     await runMigration(name, { isVerbose });
   } else {
     console.warn(

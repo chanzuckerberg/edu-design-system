@@ -140,4 +140,42 @@ describe('transform', () => {
       }
     `);
   });
+
+  it('uses the alias to rename the JsxElement', () => {
+    const sourceFileText = dedent`
+      import {Button} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <div>
+            <Button variant="secondary">Something over there</Button>
+          </div>
+        )
+      }
+    `;
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          oldImportName: 'Button',
+          newImportName: 'ButtonV2',
+          alias: 'ButtonAlias',
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {ButtonV2 as ButtonAlias} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <div>
+            <ButtonAlias variant="secondary">Something over there</ButtonAlias>
+          </div>
+        )
+      }
+    `);
+  });
 });
