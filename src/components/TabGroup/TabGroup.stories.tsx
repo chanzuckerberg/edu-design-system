@@ -96,6 +96,84 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+/**
+ * TabGroups have an inverted variant, for use on dark backgrounds. Depending on how the background is applied, you can use
+ * text color tokens to style the individual tabs in the group.
+ */
+export const Inverted: StoryObj<Args> = {
+  args: {
+    variant: 'inverse',
+    children: (
+      <>
+        <TabGroup.Tab title="Tab Title 1">
+          <div className="max-w-xl text-utility-inverse">
+            <Heading as="h3" className="mb-6">
+              Tab 1
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </TabGroup.Tab>
+
+        <TabGroup.Tab title="Tab Title 2">
+          <div className="max-w-xl text-utility-inverse">
+            <Heading as="h3" className="mb-6">
+              Tab 2
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </TabGroup.Tab>
+
+        <TabGroup.Tab title="Tab Title 3">
+          <div className="max-w-xl text-utility-inverse">
+            <Heading as="h3" className="mb-6">
+              Tab 3
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </TabGroup.Tab>
+
+        <TabGroup.Tab title="Tab Title 4">
+          <div className="max-w-xl text-utility-inverse">
+            <Heading as="h3" className="mb-6">
+              Tab 4
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </Text>
+          </div>
+        </TabGroup.Tab>
+      </>
+    ),
+  },
+  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
+  decorators: [
+    (Story) => (
+      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
+    ),
+  ],
+  parameters: {
+    ...Default.parameters,
+  },
+};
+
 export const Centered: StoryObj<Args> = {
   args: {
     align: 'center',

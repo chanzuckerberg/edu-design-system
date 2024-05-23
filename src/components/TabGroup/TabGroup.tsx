@@ -71,6 +71,12 @@ export interface TabGroupProps {
    * **Default is `"auto"`**.
    */
   tabWidth?: 'auto' | 'full';
+  /**
+   * Controls whether we are using the default or inverted pallet for this component
+   *
+   * **Default is `"default"`**.
+   */
+  variant?: 'default' | 'inverse';
 }
 
 export interface TabProps {
@@ -138,6 +144,7 @@ export const TabGroup = ({
   isSticky = false,
   onChange,
   tabWidth = 'auto',
+  variant = 'default',
   ...other
 }: TabGroupProps) => {
   const activeTabPanelId = useId();
@@ -287,6 +294,7 @@ export const TabGroup = ({
             styles['tabs__list'],
             hasDivider && styles['tabs--has-divider'],
             align && styles[`tabs__list--align-${align}`],
+            variant && styles[`tabs__list--variant-${variant}`],
           )}
           role="tablist"
         >
