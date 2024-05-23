@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.11](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.10...v15.0.0-alpha.11) (2024-05-23)
+
+
+### Features
+
+* add eds-migrate command ([b45061e](https://github.com/chanzuckerberg/edu-design-system/commit/b45061ec8dfb322ac569b842a4b24da91e741c3c))
+* **tokens:** add border-utility-inteactive-secondary tokens ([#1959](https://github.com/chanzuckerberg/edu-design-system/issues/1959)) ([72daa0b](https://github.com/chanzuckerberg/edu-design-system/commit/72daa0b137b674272fe14a23c49bacc0700b2187))
+
 ## [15.0.0-alpha.10](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.9...v15.0.0-alpha.10) (2024-05-22)
 
 
