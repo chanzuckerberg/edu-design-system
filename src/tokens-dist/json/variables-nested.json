@@ -566,7 +566,12 @@
             "interactive": {
               "@": "#0F2163",
               "hover": "#0A164C",
-              "active": "#060E30"
+              "active": "#060E30",
+              "secondary": {
+                "@": "#3165D2",
+                "hover": "#254EAC",
+                "active": "#1B3889"
+              }
             },
             "critical": {
               "@": "#A51115",

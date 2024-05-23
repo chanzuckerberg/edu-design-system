@@ -633,6 +633,17 @@
               },
               "active": {
                 "value": "{eds.color.blue.950}"
+              },
+              "secondary": {
+                "@": {
+                  "value": "{eds.color.blue.550}"
+                },
+                "hover": {
+                  "value": "{eds.color.blue.650}"
+                },
+                "active": {
+                  "value": "{eds.color.blue.750}"
+                }
               }
             },
             "critical": {
