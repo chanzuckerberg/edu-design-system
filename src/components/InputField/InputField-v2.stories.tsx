@@ -28,12 +28,29 @@ export const Default: Story = {
   },
 };
 
+/**
+ * Fields, when containing text, have a theme matching the rest of the interface.
+ */
+export const WithText: Story = {
+  args: {
+    label: 'Default input field',
+    fieldNote: 'This is a fieldnote.',
+    defaultValue: 'Text value',
+  },
+};
+
+/**
+ * Fields do not required a `fieldNote`.
+ */
 export const NoFieldnote: Story = {
   args: {
     label: 'Default input field',
   },
 };
 
+/**
+ * Fields can have an error state.
+ */
 export const Error: Story = {
   args: {
     label: 'Error input field',
@@ -42,6 +59,9 @@ export const Error: Story = {
   },
 };
 
+/**
+ * Fields can have a warning state.
+ */
 export const Warning: Story = {
   args: {
     label: 'Warning input field',
@@ -51,6 +71,9 @@ export const Warning: Story = {
   },
 };
 
+/**
+ * Read-only fields can have a value and are not editable, but are different from disabled fields.
+ */
 export const ReadOnly: Story = {
   args: {
     label: 'Read-only field',
@@ -60,6 +83,9 @@ export const ReadOnly: Story = {
   },
 };
 
+/**
+ * Fields can be marked as disabled (and contain a value in such cases).
+ */
 export const Disabled: Story = {
   args: {
     label: 'Disabled input field',
@@ -75,6 +101,9 @@ export const Disabled: Story = {
   },
 };
 
+/**
+ * Fields can have a leading icon, indicating what kind of content can go into the field.
+ */
 export const LeadingIcon: Story = {
   args: {
     leadingIcon: 'search',
@@ -83,6 +112,9 @@ export const LeadingIcon: Story = {
   },
 };
 
+/**
+ * Fields can be marked as required.
+ */
 export const Required: Story = {
   args: {
     label: 'Input field with fieldNote',
@@ -92,6 +124,9 @@ export const Required: Story = {
   },
 };
 
+/**
+ * When not using a visible label with `InputField`, you must apply some time of ARIA label to the component, like `aria-label`.
+ */
 export const NoVisibleLabel: Story = {
   args: {
     'aria-label': 'Input for no visible label',
@@ -100,6 +135,9 @@ export const NoVisibleLabel: Story = {
   },
 };
 
+/**
+ * Password fields show dots instead of characters, to help with security.
+ */
 export const Password: Story = {
   args: {
     label: 'Password',
@@ -107,6 +145,9 @@ export const Password: Story = {
   },
 };
 
+/**
+ * Fields can have an optional field hint added, for extra clarity.
+ */
 export const ShowHint: Story = {
   args: {
     label: 'Field with Optional Hint',
