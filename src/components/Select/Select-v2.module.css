@@ -35,6 +35,18 @@
   z-index: 100;
 }
 
+.select--label-layout-vertical {
+  flex-direction: column;
+}
+
+.select--label-layout-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  gap: 0.5rem;
+}
+
 /**
  * The button to trigger the display of the select field.
  */

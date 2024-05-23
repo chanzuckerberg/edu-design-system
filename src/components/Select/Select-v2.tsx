@@ -79,6 +79,12 @@ type SelectProps = ExtractProps<typeof Listbox> &
      */
     label?: string;
     /**
+     * Whether the label is adjacent to the field (horizontal) or above the field (vertical)
+     *
+     * **Default is `"vertical"`**.
+     */
+    labelLayout?: 'vertical' | 'horizontal';
+    /**
      * Whether it should show the field hint or not
      *
      * **Default is `"false"`**.
@@ -196,6 +202,7 @@ export function Select({
   isError,
   isWarning,
   label,
+  labelLayout = 'vertical',
   modifiers = defaultPopoverModifiers,
   name,
   onFirstUpdate,
@@ -243,6 +250,7 @@ export function Select({
   const componentClassName = clsx(
     styles['select'],
     fieldNote && styles['select--has-fieldNote'],
+    labelLayout && styles[`select--label-layout-${labelLayout}`],
     className,
   );
   const sharedProps = {
