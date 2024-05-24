@@ -37,18 +37,18 @@ const loaderSize = {
 
 // Given a loader size, the stroke widths can change
 const loaderStrokeSize = {
-  xs: 2,
-  sm: 2,
-  md: 3,
+  xs: 4,
+  sm: 4,
+  md: 4,
   lg: 4,
 };
 
 // The viewport changes based on adjustments to handle the stroke width
 const loaderViewportSize = {
-  xs: '-20 -20 42 42',
-  sm: '-20 -20 42 42',
-  md: '-20.5 -20.5 43 43',
-  lg: '-21 -21 44 44',
+  xs: '-22 -22 46 46',
+  sm: '-22 -22 46 46',
+  md: '-22 -22 46 46',
+  lg: '-22 -22 46 46',
 };
 
 /**
