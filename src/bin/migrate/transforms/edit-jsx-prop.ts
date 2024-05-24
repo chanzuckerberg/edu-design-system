@@ -15,11 +15,23 @@ type Edit =
   | {
       type: 'remove';
       propName: string;
+      /** Only performs edit if the callback returns truthy */
+      callback?: ({
+        currentPropValue,
+      }: {
+        currentPropValue: string;
+      }) => boolean;
     }
   | {
       type: 'update_name';
       oldPropName: string;
       newPropName: string;
+      /** Only performs edit if the callback returns truthy */
+      callback?: ({
+        currentPropValue,
+      }: {
+        currentPropValue: string;
+      }) => boolean;
     }
   | {
       type: 'update_value';
@@ -28,13 +40,45 @@ type Edit =
       newPropValue: string;
     };
 
+function removeProp(
+  element: JsxOpeningElement | JsxSelfClosingElement,
+  edit: Extract<Edit, { type: 'remove' }>,
+) {
+  const attribute = element.getAttribute(edit.propName);
+  if (attribute && 'getNameNode' in attribute) {
+    const initializer = attribute.getInitializer();
+    const performEdit =
+      !edit.callback ||
+      edit.callback({
+        currentPropValue:
+          initializer?.asKind(SyntaxKind.StringLiteral)?.getLiteralValue() ||
+          '',
+      });
+
+    if (performEdit) {
+      attribute.remove();
+    }
+  }
+}
+
 function updatePropName(
   element: JsxOpeningElement | JsxSelfClosingElement,
   edit: Extract<Edit, { type: 'update_name' }>,
 ) {
   const attribute = element.getAttribute(edit.oldPropName);
   if (attribute && 'getNameNode' in attribute) {
-    attribute.setName(edit.newPropName);
+    const initializer = attribute.getInitializer();
+    const performEdit =
+      !edit.callback ||
+      edit.callback({
+        currentPropValue:
+          initializer?.asKind(SyntaxKind.StringLiteral)?.getLiteralValue() ||
+          '',
+      });
+
+    if (performEdit) {
+      attribute.setName(edit.newPropName);
+    }
   }
 }
 
@@ -75,7 +119,6 @@ type TransformOptions = {
 };
 
 export default function transform({ file, changes }: TransformOptions) {
-  // console warning two changes for same component
   const importDeclarations = file
     .getImportDeclarations()
     .filter(
@@ -124,7 +167,7 @@ export default function transform({ file, changes }: TransformOptions) {
             });
             break;
           case 'remove':
-            element.getAttribute(edit.propName)?.remove();
+            removeProp(element, edit);
             break;
           case 'update_name':
             updatePropName(element, edit);

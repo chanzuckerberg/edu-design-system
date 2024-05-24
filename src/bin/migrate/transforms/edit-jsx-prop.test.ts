@@ -229,6 +229,185 @@ describe('transform', () => {
     `);
   });
 
+  it('does not update the name when the callback returns falsy', () => {
+    const sourceFileText = dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Icon text="add item to cart" />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'text',
+              newPropName: 'title',
+              callback: ({ currentPropValue }) => currentPropValue === 'red',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Icon text="add item to cart" />
+        )
+      }
+    `);
+  });
+
+  it('updates the name when the callback returns truthy', () => {
+    const sourceFileText = dedent`
+      import {Button} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Button
+            onClick={() => {
+              doSomething();
+            }}
+            variant="primary"
+          >
+            Click me
+          </Button>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Button',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'variant',
+              newPropName: 'rank',
+              callback: ({ currentPropValue }) => {
+                console.log({ currentPropValue });
+                return currentPropValue === 'primary';
+              },
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Button} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Button
+            onClick={() => {
+              doSomething();
+            }}
+            rank="primary"
+          >
+            Click me
+          </Button>
+        )
+      }
+    `);
+  });
+
+  it('does not remove the prop when the callback returns falsy', () => {
+    const sourceFileText = dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Icon text="add item to cart" size="lg" />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ currentPropValue }) => currentPropValue === 'md',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Icon text="add item to cart" size="lg" />
+        )
+      }
+    `);
+  });
+
+  it('removes the prop when the callback returns truthy', () => {
+    const sourceFileText = dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Icon text="add item to cart" size="lg" />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ currentPropValue }) => currentPropValue === 'lg',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Icon text="add item to cart" />
+        )
+      }
+    `);
+  });
+
   it('edits multiple props on the same component', () => {
     const sourceFileText = dedent`
     import {Button, ButtonGroup} from '@chanzuckerberg/eds';

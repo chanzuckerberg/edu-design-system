@@ -1,8 +1,130 @@
 import type { Project } from 'ts-morph';
 import editJsxProp from '../transforms/edit-jsx-prop';
 import type { Change as EditJsxPropChange } from '../transforms/edit-jsx-prop';
+import renameJsxImport from '../transforms/rename-jsx-import';
+import type { Change as RenameJsxImportChange } from '../transforms/rename-jsx-import';
 
-const PropChanges: EditJsxPropChange[] = [
+/**
+ * Import paths that changed from EDS v15 alpha to v15
+ *
+ * @example
+ * ```
+ * // Before:
+ * import {ButtonV2 as Button} from '@chanzuckerberg/eds';
+ *
+ * // After:
+ * import {Button} from '@chanzuckerberg/eds';
+ * ```
+ */
+const ImportChanges: RenameJsxImportChange[] = [
+  {
+    removeAlias: true,
+    oldImportName: 'AccordionV2',
+    newImportName: 'Accordion',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'ButtonV2',
+    newImportName: 'Button',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'ButtonGroupV2',
+    newImportName: 'ButtonGroup',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'CardV2',
+    newImportName: 'Card',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'CheckboxV2',
+    newImportName: 'Checkbox',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'FieldNoteV2',
+    newImportName: 'FieldNote',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'IconV2',
+    newImportName: 'Icon',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'InlineNotificationV2',
+    newImportName: 'InlineNotification',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'InputFieldV2',
+    newImportName: 'InputField',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'LinkV2',
+    newImportName: 'Link',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'MenuV2',
+    newImportName: 'Menu',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'ModalV2',
+    newImportName: 'Modal',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'NumberIconV2',
+    newImportName: 'NumberIcon',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'PageNotificationV2',
+    newImportName: 'PageNotification',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'PopoverListItemV2',
+    newImportName: 'PopoverListItem',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'RadioV2',
+    newImportName: 'Radio',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'SelectV2',
+    newImportName: 'Select',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'TabGroupV2',
+    newImportName: 'TabGroup',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'TextareaFieldV2',
+    newImportName: 'TextareaField',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'ToastV2',
+    newImportName: 'Toast',
+  },
+  {
+    removeAlias: true,
+    oldImportName: 'TooltipV2',
+    newImportName: 'Tooltip',
+  },
+];
+
+export const PropChanges: EditJsxPropChange[] = [
   {
     // There were a lot of <Icon /> changes *phew*
     componentName: 'Icon',
@@ -315,6 +437,20 @@ const PropChanges: EditJsxPropChange[] = [
       },
     ],
   },
+  {
+    componentName: 'Button',
+    edits: [
+      {
+        // variant="primary" --> rank="primary"
+        // variant="secondary" --> rank="secondary"
+        type: 'update_name',
+        oldPropName: 'variant',
+        newPropName: 'rank',
+        callback: ({ currentPropValue }) =>
+          currentPropValue === 'primary' || currentPropValue === 'secondary',
+      },
+    ],
+  },
 ];
 
 /**
@@ -327,6 +463,7 @@ export default function migration(project: Project) {
   console.debug(`Running migration on ${sourceFiles.length} file(s)`);
 
   sourceFiles.forEach((sourceFile) => {
+    renameJsxImport({ file: sourceFile, changes: ImportChanges });
     editJsxProp({ file: sourceFile, changes: PropChanges });
   });
 }

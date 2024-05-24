@@ -1,9 +1,20 @@
 import type { Project } from 'ts-morph';
+import { PropChanges } from './14-to-15';
+import editJsxProp from '../transforms/edit-jsx-prop';
 import renameJsxImport from '../transforms/rename-jsx-import';
 import type { Change as RenameJsxImportChange } from '../transforms/rename-jsx-import';
 
 /**
  * Import paths that changed from EDS v14 to v15 alpha
+ *
+ * @example
+ * ```
+ * // Before:
+ * import {Button} from '@chanzuckerberg/eds';
+ *
+ * // After:
+ * import {ButtonV2 as Button} from '@chanzuckerberg/eds';
+ * ```
  */
 const ImportChanges: RenameJsxImportChange[] = [
   {
@@ -124,5 +135,6 @@ export default function migration(project: Project) {
 
   sourceFiles.forEach((sourceFile) => {
     renameJsxImport({ file: sourceFile, changes: ImportChanges });
+    editJsxProp({ file: sourceFile, changes: PropChanges });
   });
 }
