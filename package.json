@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "15.0.0-alpha.10",
+  "version": "15.0.0-alpha.12",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -35,10 +35,12 @@
   "bin": {
     "eds-apply-theme": "bin/eds-apply-theme.js",
     "eds-import-from-figma": "bin/eds-import-from-figma.js",
-    "eds-init-theme": "bin/eds-init.js"
+    "eds-init-theme": "bin/eds-init.js",
+    "eds-migrate": "bin/eds-migrate.js"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn copy-fonts-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:bin && yarn copy-fonts-to-lib",
+    "build:bin": "tsc -p src/bin/tsconfig.json",
     "build:clean": "rm -rf lib/",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist",
     "build:js": "rollup --config",
@@ -67,7 +69,7 @@
     "plop": "plop component",
     "test": "jest",
     "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
-    "types": "tsc --noEmit"
+    "types": "tsc --noEmit && npm run build:bin -- --noEmit"
   },
   "size-limit": [
     {
@@ -105,6 +107,8 @@
     "react-uid": "^2.3.3",
     "style-dictionary": "^3.9.2",
     "svg4everybody": "^2.1.9",
+    "ts-dedent": "^2.2.0",
+    "ts-morph": "^22.0.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
