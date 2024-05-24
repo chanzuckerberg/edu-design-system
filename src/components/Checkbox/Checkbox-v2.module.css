@@ -25,34 +25,39 @@
   place-content: center;
 
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
 
 .checkbox__input:checked::before {
-  background-color: currentColor;
-  content: '';
-
-  /* Clip this element in the shape of a checkbox. The element's background color will be visible
-  anywhere the svg path is solid. Whatever is behind the checkbox will show through wherever the
-  svg is transparent. See https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
-  clip-path: path(
-    'M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z'
-  );
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  content: '✓';
+  text-align: center;
 
   /* Because the path does not have an explicit viewbox, this element's bounding box establishes
   one. In other words, the height/width here need to match the expected viewbox for the path. */
   height: 1.5rem;
   width: 1.5rem;
+}
 
+.checkbox__input:checked {
+  background-color: currentColor;
+  border: currentColor;
 }
 
 .checkbox__input:indeterminate::before {
-  background-color: currentColor;
-  content: '';
-
-  clip-path: path('M7 13H17V11H7V13ZM3 21V3H21V21H3Z');
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  content: '–';
+  text-align: center;
 
   height: 1.5rem;
   width: 1.5rem;
+  transform: translateY(-1px);
+}
+
+.checkbox__input:indeterminate {
+  background-color: currentColor;
+  border: currentColor;
 }
 
 .checkbox__labels {
@@ -65,7 +70,7 @@
   color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
-.checkbox__input:not(:checked) {
+.checkbox__input:not(:checked):not(:indeterminate) {
   color: var(--eds-theme-color-border-utility-default-medium-emphasis);
 
   &:hover {
@@ -129,10 +134,12 @@
 
   &:checked,
   &:indeterminate {
-    /* because we cut a hole with the clip-path, the color is the background */
-    color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
-    /* the clip path forms a hole, so in this case the background is the color of the check itself */
-    background-color: var(--eds-theme-color-text-utility-disabled-primary);
+    background-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+
+    &::before {
+      color: var(--eds-theme-color-text-utility-disabled-primary);
+
+    }
   }
 }
 
