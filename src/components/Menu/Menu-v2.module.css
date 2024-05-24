@@ -25,6 +25,7 @@
 }
 
 .menu__item {
+  display: block;
   text-decoration: none;
   color: inherit;
 }

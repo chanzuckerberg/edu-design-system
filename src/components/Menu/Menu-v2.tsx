@@ -8,8 +8,8 @@ import { usePopper } from 'react-popper';
 
 import type { ExtractProps } from '../../util/utility-types';
 
-import Button from '../Button';
-import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
+import { ButtonV2 as Button } from '../Button';
+import { type IconNameV2 as IconName } from '../Icon';
 
 import {
   PopoverContainerV2 as PopoverContainer,
@@ -54,7 +54,7 @@ export type MenuButtonProps = {
   /**
    * The button contents placed left of the chevron icon.
    */
-  children: ReactNode;
+  children: string;
   /**
    * Allow custom classes to be applied to the menu button.
    */
@@ -126,14 +126,14 @@ const MenuButton = ({
 
   return (
     <HeadlessMenu.Button as={React.Fragment} ref={setReferenceElement}>
-      <Button className={buttonClassNames} status="neutral" {...other}>
+      <Button
+        className={buttonClassNames}
+        icon={icon}
+        iconLayout="right"
+        rank="primary"
+        {...other}
+      >
         {children}
-        <Icon
-          className={styles['menu__button--with-chevron']}
-          name={icon}
-          purpose="decorative"
-          size="1.25rem"
-        />
       </Button>
     </HeadlessMenu.Button>
   );

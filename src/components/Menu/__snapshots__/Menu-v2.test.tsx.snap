@@ -9,26 +9,30 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     aria-controls="headlessui-menu-items-:r1:"
     aria-expanded="true"
     aria-haspopup="menu"
-    class="button button--lg button--secondary button--neutral menu__button"
+    class="button button--layout-right button--primary button--lg button--variant-default menu__button"
     data-headlessui-state="open"
     id="headlessui-menu-button-:r0:"
     type="button"
   >
-    Documentation Links
-    <svg
-      aria-hidden="true"
-      class="icon menu__button--with-chevron"
-      fill="currentColor"
-      height="1.25rem"
-      style="--icon-size: 1.25rem;"
-      viewBox="0 0 24 24"
-      width="1.25rem"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      class="button__text"
     >
-      <path
-        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
-      />
-    </svg>
+      Documentation Links
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+        />
+      </svg>
+    </span>
   </button>
 </div>
 `;
@@ -125,26 +129,30 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     aria-controls="headlessui-menu-items-:r7:"
     aria-expanded="true"
     aria-haspopup="menu"
-    class="button button--lg button--secondary button--neutral menu__button"
+    class="button button--layout-right button--primary button--lg button--variant-default menu__button"
     data-headlessui-state="open"
     id="headlessui-menu-button-:r6:"
     type="button"
   >
-    Long Trigger Button Text to Demonstrate Popover Matching
-    <svg
-      aria-hidden="true"
-      class="icon menu__button--with-chevron"
-      fill="currentColor"
-      height="1.25rem"
-      style="--icon-size: 1.25rem;"
-      viewBox="0 0 24 24"
-      width="1.25rem"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      class="button__text"
     >
-      <path
-        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
-      />
-    </svg>
+      Long Trigger Button Text to Demonstrate Popover Matching
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+        />
+      </svg>
+    </span>
   </button>
 </div>
 `;
@@ -158,26 +166,30 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     aria-controls="headlessui-menu-items-:rd:"
     aria-expanded="true"
     aria-haspopup="menu"
-    class="button button--lg button--secondary button--neutral menu__button"
+    class="button button--layout-right button--primary button--lg button--variant-default menu__button"
     data-headlessui-state="open"
     id="headlessui-menu-button-:rc:"
     type="button"
   >
-    Menu
-    <svg
-      aria-hidden="true"
-      class="icon menu__button--with-chevron"
-      fill="currentColor"
-      height="1.25rem"
-      style="--icon-size: 1.25rem;"
-      viewBox="0 0 24 24"
-      width="1.25rem"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      class="button__text"
     >
-      <path
-        d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
-      />
-    </svg>
+      Menu
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+        />
+      </svg>
+    </span>
   </button>
 </div>
 `;

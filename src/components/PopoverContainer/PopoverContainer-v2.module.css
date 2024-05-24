@@ -15,6 +15,10 @@
 
   box-shadow: var(--eds-box-shadow-md);
   background-color: var(--eds-theme-color-background-utility-container);
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .popover-container > *[role=none] + *[role=none] {
