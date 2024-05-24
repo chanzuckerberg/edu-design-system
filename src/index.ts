@@ -63,6 +63,7 @@ export { IconV2 } from './components/Icon';
 export { InlineNotificationV2 } from './components/InlineNotification';
 export { InputFieldV2 } from './components/InputField';
 export { LinkV2 } from './components/Link';
+export { LoadingIndicatorV2 } from './components/LoadingIndicator';
 export { MenuV2 } from './components/Menu';
 export { ModalV2 } from './components/Modal';
 export { NumberIconV2 } from './components/NumberIcon';

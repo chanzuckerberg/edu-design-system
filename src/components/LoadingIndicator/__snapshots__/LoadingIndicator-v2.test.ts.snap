@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingIndicator /> (v2) Default story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="40"
+    stroke="transparent"
+    viewBox="-20.5 -20.5 43 43"
+    width="40"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="3"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="3"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> (v2) ExtraSmall story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="16"
+    stroke="transparent"
+    viewBox="-20 -20 42 42"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="2"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="2"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> (v2) Invisible story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator loading-indicator--invisible"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="40"
+    stroke="transparent"
+    viewBox="-20.5 -20.5 43 43"
+    width="40"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="3"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="3"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> (v2) Large story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="56"
+    stroke="transparent"
+    viewBox="-21 -21 44 44"
+    width="56"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="4"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="4"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> (v2) Medium story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="40"
+    stroke="transparent"
+    viewBox="-20.5 -20.5 43 43"
+    width="40"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="3"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="3"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> (v2) Small story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="24"
+    stroke="transparent"
+    viewBox="-20 -20 42 42"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="2"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="2"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> (v2) WithAriaLabel story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="Loading, Please Wait"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="40"
+    stroke="transparent"
+    viewBox="-20.5 -20.5 43 43"
+    width="40"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="3"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="3"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
