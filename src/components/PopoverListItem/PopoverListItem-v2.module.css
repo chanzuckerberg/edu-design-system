@@ -27,9 +27,8 @@
   }
 }
 
-.popover-list-item--focused, 
-.popover-list-item:focus-visible {
-  box-shadow: 0 0 0 2px var(--eds-theme-color-border-utility-focus);
+.popover-list-item--focused {
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
 }
 
 .popover-list-item--disabled {

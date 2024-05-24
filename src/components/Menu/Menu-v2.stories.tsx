@@ -62,6 +62,9 @@ export const Default: StoryObj<MenuProps> = {
   },
 };
 
+/**
+ * Be careful when using a lot of text for a menu trigger. The UI will force the text out of the button container. Use brief text for menu triggers.
+ */
 export const WithLongButtonText: StoryObj<MenuProps> = {
   args: {
     children: (
