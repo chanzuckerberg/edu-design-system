@@ -306,10 +306,10 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
     >
       <svg
         data-testid="oval-svg"
-        height="24"
+        height="16"
         stroke="transparent"
-        viewBox="-20 -20 42 42"
-        width="24"
+        viewBox="-22 -22 46 46"
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -318,7 +318,7 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
         >
           <g
             data-testid="oval-secondary-group"
-            stroke-width="2"
+            stroke-width="4"
             transform="translate(1 1)"
           >
             <circle
@@ -327,7 +327,7 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
               r="20"
               stroke="transparent"
               stroke-opacity=".5"
-              stroke-width="2"
+              stroke-width="4"
             />
             <path
               d="M20 0c0-9.94-8.06-20-20-20"
@@ -364,10 +364,10 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
     >
       <svg
         data-testid="oval-svg"
-        height="24"
+        height="16"
         stroke="transparent"
-        viewBox="-20 -20 42 42"
-        width="24"
+        viewBox="-22 -22 46 46"
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -376,7 +376,7 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
         >
           <g
             data-testid="oval-secondary-group"
-            stroke-width="2"
+            stroke-width="4"
             transform="translate(1 1)"
           >
             <circle
@@ -385,7 +385,7 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
               r="20"
               stroke="transparent"
               stroke-opacity=".5"
-              stroke-width="2"
+              stroke-width="4"
             />
             <path
               d="M20 0c0-9.94-8.06-20-20-20"
@@ -422,10 +422,10 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
     >
       <svg
         data-testid="oval-svg"
-        height="24"
+        height="16"
         stroke="transparent"
-        viewBox="-20 -20 42 42"
-        width="24"
+        viewBox="-22 -22 46 46"
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
@@ -434,7 +434,7 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
         >
           <g
             data-testid="oval-secondary-group"
-            stroke-width="2"
+            stroke-width="4"
             transform="translate(1 1)"
           >
             <circle
@@ -443,7 +443,7 @@ exports[`<Button /> (v2) LoadingStates story renders snapshot 1`] = `
               r="20"
               stroke="transparent"
               stroke-opacity=".5"
-              stroke-width="2"
+              stroke-width="4"
             />
             <path
               d="M20 0c0-9.94-8.06-20-20-20"

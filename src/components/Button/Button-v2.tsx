@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import type { Size } from '../../util/variant-types';
 import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
-import LoadingIndicator from '../LoadingIndicator';
+import { LoadingIndicatorV2 as LoadingIndicator } from '../LoadingIndicator';
 
 import styles from './Button-v2.module.css';
 
@@ -157,7 +157,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonV2Props>(
           )}
         </span>
         {isLoading && (
-          <LoadingIndicator className={styles['button__loader']} size="sm" />
+          <LoadingIndicator className={styles['button__loader']} size="xs" />
         )}
       </button>
     );
