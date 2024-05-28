@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.13](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.10...v15.0.0-alpha.13) (2024-05-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **LoadingIndicator:** introduce 2.0 component (#1963)
+
+### Features
+
+* add `eds-migrate` script for running codemods on major version upgrades ([#1951](https://github.com/chanzuckerberg/edu-design-system/issues/1951)) ([109a0e5](https://github.com/chanzuckerberg/edu-design-system/commit/109a0e583198e79a4ae819e2be5ba67b83b2264a))
+* **LoadingIndicator:** introduce 2.0 component ([#1963](https://github.com/chanzuckerberg/edu-design-system/issues/1963)) ([26faab7](https://github.com/chanzuckerberg/edu-design-system/commit/26faab7c27d8adf5d97fbb33068cf0ec3c66f5b4))
+* **LoadingIndicator:** update stroke width in Button ([#1964](https://github.com/chanzuckerberg/edu-design-system/issues/1964)) ([bac3594](https://github.com/chanzuckerberg/edu-design-system/commit/bac35945124906ac26c1508c0154aab25a4146d9))
+* **Menu:** set new default for menu trigger ([#1965](https://github.com/chanzuckerberg/edu-design-system/issues/1965)) ([24815c2](https://github.com/chanzuckerberg/edu-design-system/commit/24815c276d5e8f4698a84dcc21f6fdd6b6b44d09))
+* **Select:** support horizontal labels ([#1962](https://github.com/chanzuckerberg/edu-design-system/issues/1962)) ([675ad5f](https://github.com/chanzuckerberg/edu-design-system/commit/675ad5fa45f4127bedf38722273f3e7bb83c8a53))
+* **TabGroup:** add inverse variant treatment ([#1960](https://github.com/chanzuckerberg/edu-design-system/issues/1960)) ([402e433](https://github.com/chanzuckerberg/edu-design-system/commit/402e433ae3358c3d9326d48ebba9c5a4019bcd35))
+* **tokens:** add border-utility-inteactive-secondary tokens ([#1959](https://github.com/chanzuckerberg/edu-design-system/issues/1959)) ([72daa0b](https://github.com/chanzuckerberg/edu-design-system/commit/72daa0b137b674272fe14a23c49bacc0700b2187))
+
+
+### Bug Fixes
+
+* **FieldNote:** adjust layout for icon and text lockup ([5788fe5](https://github.com/chanzuckerberg/edu-design-system/commit/5788fe509bee8123150a4a0ee7333ae7398f7b22))
+
 ## [15.0.0-alpha.12](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.11...v15.0.0-alpha.12) (2024-05-23)
 
 
