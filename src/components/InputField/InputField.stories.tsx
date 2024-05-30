@@ -10,6 +10,7 @@ const meta: Meta<typeof InputField> = {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
     backgrounds: {
       default: 'eds-color-neutral-white',

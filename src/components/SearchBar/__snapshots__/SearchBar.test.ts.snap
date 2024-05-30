@@ -2,7 +2,7 @@
 
 exports[`<SearchField /> Custom story renders snapshot 1`] = `
 <div
-  style="padding: 0.5rem; background-color: white;"
+  class="p-8"
 >
   <div
     style="margin-bottom: 1rem;"
@@ -79,10 +79,10 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
 
 exports[`<SearchField /> Default story renders snapshot 1`] = `
 <div
-  style="padding: 0.5rem; background-color: white;"
+  class="p-8"
 >
   <div
-    class="search-bar"
+    class="search-bar w-96"
   >
     <div
       class="search-field"
@@ -122,10 +122,10 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
 
 exports[`<SearchField /> Disabled story renders snapshot 1`] = `
 <div
-  style="padding: 0.5rem; background-color: white;"
+  class="p-8"
 >
   <div
-    class="search-bar"
+    class="search-bar w-96"
   >
     <div
       class="search-field"
@@ -168,10 +168,10 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
 
 exports[`<SearchField /> SearchButton story renders snapshot 1`] = `
 <div
-  style="padding: 0.5rem; background-color: white;"
+  class="p-8"
 >
   <button
-    class="button button--lg button--primary button--brand search-button"
+    class="button button--lg button--primary button--brand search-button w-96"
     type="button"
   >
     Search
@@ -181,13 +181,13 @@ exports[`<SearchField /> SearchButton story renders snapshot 1`] = `
 
 exports[`<SearchField /> SearchField story renders snapshot 1`] = `
 <div
-  style="padding: 0.5rem; background-color: white;"
+  class="p-8"
 >
   <div
     class="search-field"
   >
     <input
-      class="input search-field__input"
+      class="input search-field__input w-96"
       placeholder="Search"
       type="search"
     />

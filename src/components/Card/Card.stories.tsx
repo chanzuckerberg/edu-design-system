@@ -17,10 +17,12 @@ export default {
     CardFooter: Card.Footer,
   },
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   args: {
+    className: 'w-96',
     children: (
       <>
         <Card.Header>

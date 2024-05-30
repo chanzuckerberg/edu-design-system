@@ -8,15 +8,16 @@ export default {
   title: 'Components/SearchBar',
   component: SearchBar,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.1', BADGE.NEEDS_REVISION],
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
-        {Story()}
-      </div>
-    ),
-  ],
+  args: {
+    className: 'w-96',
+  },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
   argTypes: {
     children: {
       control: {

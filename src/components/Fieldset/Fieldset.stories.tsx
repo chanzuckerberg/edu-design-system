@@ -8,6 +8,7 @@ export default {
   title: 'Components/Fieldset',
   component: Fieldset,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   subcomponents: {

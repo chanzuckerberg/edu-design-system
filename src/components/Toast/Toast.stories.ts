@@ -7,6 +7,7 @@ export default {
   title: 'Components/Toast',
   component: Toast,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', BADGE.DEPRECATED],
   },
   argTypes: { onDismiss: { action: 'dismissed' } },

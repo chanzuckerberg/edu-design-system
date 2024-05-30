@@ -13,10 +13,12 @@ export default {
   title: 'Components/V2/Accordion',
   component: Accordion,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.2', 'current-2.0'],
   },
   args: {
     headingAs: 'h2',
+    className: 'w-96',
     children: (
       <Accordion.Row>
         <Accordion.Button

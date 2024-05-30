@@ -13,6 +13,7 @@ export default {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.2'],
   },
   args: {

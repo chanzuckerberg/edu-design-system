@@ -2,7 +2,7 @@
 
 exports[`<ToastNotification /> (v2) Critical story renders snapshot 1`] = `
 <div
-  class="toast toast--status-critical"
+  class="toast toast--status-critical w-96"
 >
   <svg
     aria-hidden="true"
@@ -32,7 +32,7 @@ exports[`<ToastNotification /> (v2) Critical story renders snapshot 1`] = `
 
 exports[`<ToastNotification /> (v2) Default story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable"
+  class="toast toast--status-favorable w-96"
 >
   <svg
     aria-hidden="true"
@@ -62,7 +62,7 @@ exports[`<ToastNotification /> (v2) Default story renders snapshot 1`] = `
 
 exports[`<ToastNotification /> (v2) Favorable story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable"
+  class="toast toast--status-favorable w-96"
 >
   <svg
     aria-hidden="true"
@@ -92,7 +92,7 @@ exports[`<ToastNotification /> (v2) Favorable story renders snapshot 1`] = `
 
 exports[`<ToastNotification /> (v2) NotDismissable story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable"
+  class="toast toast--status-favorable w-96"
 >
   <svg
     aria-hidden="true"

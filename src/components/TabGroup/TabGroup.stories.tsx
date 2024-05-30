@@ -11,6 +11,7 @@ export default {
   title: 'Components/V2/TabGroup',
   component: TabGroup,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   args: {
@@ -456,6 +457,7 @@ export const ScrollMiddle: StoryObj<Args> = {
     // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
     chromatic: { viewports: [chromaticViewports.googlePixel2] },
+    layout: 'padded',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

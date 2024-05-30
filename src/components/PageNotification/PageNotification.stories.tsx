@@ -8,6 +8,7 @@ export default {
   title: 'Components/V2/PageNotification',
   component: PageNotification,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   args: {
@@ -18,6 +19,7 @@ export default {
         Call to Action
       </Button>
     ),
+    className: 'w-96',
   },
   argTypes: {
     subTitle: {

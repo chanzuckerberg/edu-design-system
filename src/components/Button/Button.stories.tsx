@@ -43,6 +43,7 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
 } as Meta<Args>;

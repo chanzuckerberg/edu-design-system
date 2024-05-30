@@ -8,6 +8,7 @@ export default {
   title: 'Components/PopoverContainer',
   component: PopoverContainer,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.2'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],

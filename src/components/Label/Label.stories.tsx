@@ -8,6 +8,7 @@ export default {
   title: 'Components/Label',
   component: Label,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
 } as Meta<Args>;

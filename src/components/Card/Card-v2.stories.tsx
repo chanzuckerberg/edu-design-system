@@ -14,10 +14,12 @@ export default {
   title: 'Components/V2/Card',
   component: Card,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   args: {
+    className: 'w-96',
     children: (
       <>
         <Card.Header>
@@ -233,7 +235,7 @@ export const WithHorizontalPrimaryButton: StoryObj<Args> = {
 export const CustomBrandCard: StoryObj<Args> = {
   args: {
     containerColor: 'custom-brand',
-    className: 'border-brand-red bg-brand-red',
+    className: 'border-brand-red bg-brand-red w-96',
   },
 };
 

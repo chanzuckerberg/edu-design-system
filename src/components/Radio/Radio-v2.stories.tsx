@@ -7,6 +7,7 @@ const meta: Meta<typeof Radio> = {
   title: 'Components/V2/Radio',
   component: Radio,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],

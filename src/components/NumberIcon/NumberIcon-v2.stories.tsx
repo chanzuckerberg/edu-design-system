@@ -7,6 +7,7 @@ export default {
   title: 'Components/V2/NumberIcon',
   component: NumberIcon,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   args: {

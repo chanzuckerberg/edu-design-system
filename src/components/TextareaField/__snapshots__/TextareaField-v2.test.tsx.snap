@@ -5,7 +5,7 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -49,7 +49,7 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline textarea-field__overline--disabled"
@@ -94,7 +94,7 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -154,7 +154,7 @@ exports[`<TextareaField /> WhenNoDefaultValue story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -182,7 +182,7 @@ exports[`<TextareaField /> WhenOptional story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -230,7 +230,7 @@ exports[`<TextareaField /> WhenReadOnly story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -274,7 +274,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -323,7 +323,7 @@ exports[`<TextareaField /> WhenUsingChildren story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -366,7 +366,7 @@ exports[`<TextareaField /> WhenWarning story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -426,7 +426,7 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -469,7 +469,7 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -543,7 +543,7 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"
@@ -616,7 +616,7 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
   class="p-8"
 >
   <div
-    class="textarea-field"
+    class="textarea-field w-96"
   >
     <div
       class="textarea-field__overline"

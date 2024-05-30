@@ -5,7 +5,7 @@ exports[`<Slider /> Default story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <label
       class="label"
@@ -36,7 +36,7 @@ exports[`<Slider /> Disabled story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <label
       class="label slider__label--disabled"
@@ -98,7 +98,7 @@ exports[`<Slider /> FieldNote story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <label
       class="label"
@@ -136,7 +136,7 @@ exports[`<Slider /> GeneratedMarkers story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <label
       class="label"
@@ -197,62 +197,58 @@ exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="w-80"
+    class="slider w-96"
   >
-    <div
-      class="slider"
+    <label
+      class="label"
+      for=":rc:"
     >
-      <label
-        class="label"
-        for=":rc:"
+      Slider Label
+       
+    </label>
+    <input
+      class="slider__input"
+      id=":rc:"
+      max="10000"
+      min="0"
+      step="2500"
+      style="--ratio: 0.5;"
+      type="range"
+      value="5000"
+    />
+    <div
+      aria-hidden="true"
+      class="slider__markers"
+    >
+      <p
+        class="text text--body-md slider__marker"
       >
-        Slider Label
-         
-      </label>
-      <input
-        class="slider__input"
-        id=":rc:"
-        max="10000"
-        min="0"
-        step="2500"
-        style="--ratio: 0.5;"
-        type="range"
-        value="5000"
-      />
-      <div
-        aria-hidden="true"
-        class="slider__markers"
+        0
+      </p>
+      <p
+        class="text text--body-md slider__marker"
       >
-        <p
-          class="text text--body-md slider__marker"
-        >
-          0
-        </p>
-        <p
-          class="text text--body-md slider__marker"
-        >
-          2500
-        </p>
-        <p
-          class="text text--body-md slider__marker"
-        >
-          5000
-        </p>
-        <p
-          class="text text--body-md slider__marker"
-        >
-          7500
-        </p>
-        <p
-          class="text text--body-md slider__marker"
-        >
-          10000
-        </p>
-      </div>
-      <div
-        class="slider__thumb-proxy"
-      />
+        2500
+      </p>
+      <p
+        class="text text--body-md slider__marker"
+      >
+        5000
+      </p>
+      <p
+        class="text text--body-md slider__marker"
+      >
+        7500
+      </p>
+      <p
+        class="text text--body-md slider__marker"
+      >
+        10000
+      </p>
     </div>
+    <div
+      class="slider__thumb-proxy"
+    />
   </div>
 </div>
 `;
@@ -262,7 +258,7 @@ exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <label
       class="label"
@@ -323,7 +319,7 @@ exports[`<Slider /> NegativeNonIntegerMarkers story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <label
       class="label"
@@ -384,7 +380,7 @@ exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
   class="p-8"
 >
   <div
-    class="slider"
+    class="slider w-96"
   >
     <input
       aria-label="Not visible slider label"
@@ -424,7 +420,7 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
       0
     </p>
     <div
-      class="slider w-1/2"
+      class="slider w-96"
     >
       <input
         aria-label="select a value"
@@ -470,7 +466,7 @@ exports[`<Slider /> UsingInputDisplay story renders snapshot 1`] = `
       0
     </p>
     <div
-      class="slider w-1/2"
+      class="slider w-96"
     >
       <input
         aria-label="Slider with input"
@@ -522,7 +518,7 @@ exports[`<Slider /> WithHighlightedContent story renders snapshot 1`] = `
       class="items-top flex justify-center gap-10"
     >
       <div
-        class="slider w-1/2"
+        class="slider w-96"
       >
         <input
           aria-describedby="mood-description"
@@ -603,14 +599,14 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
       class="items-top flex flex-col justify-center "
     >
       <label
-        class="label w-1/2 py-4 text-center"
+        class="label py-4 text-center"
         id="slider-label"
       >
         Mood Slider
          
       </label>
       <span
-        class="text text--body-xl flex w-1/2 justify-between py-4 text-center"
+        class="text text--body-xl flex justify-between py-4 text-center"
       >
         <div
           class=""
@@ -639,7 +635,7 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
         </div>
       </span>
       <div
-        class="slider w-1/2"
+        class="slider w-96"
       >
         <input
           aria-label="Mood Slider"
@@ -701,21 +697,21 @@ exports[`<Slider /> WithVisualLabel story renders snapshot 1`] = `
       class="items-top flex flex-col justify-center "
     >
       <label
-        class="label w-1/2 py-4 text-center"
+        class="label py-4 text-center"
         id="slider-label"
       >
         Mood Slider
          
       </label>
       <span
-        class="text text--body-xl w-1/2 py-4 text-center"
+        class="text text--body-xl py-4 text-center"
       >
         <span>
           😐
         </span>
       </span>
       <div
-        class="slider w-1/2"
+        class="slider w-96"
       >
         <input
           aria-label="Mood Slider"

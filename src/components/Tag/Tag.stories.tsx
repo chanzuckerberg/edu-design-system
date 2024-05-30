@@ -7,6 +7,7 @@ export default {
   title: 'Components/Tag',
   component: Tag,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   argTypes: {

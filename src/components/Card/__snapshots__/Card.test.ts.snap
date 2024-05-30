@@ -5,7 +5,7 @@ exports[`<Card /> Default story renders snapshot 1`] = `
   class="p-8"
 >
   <article
-    class="card"
+    class="card w-96"
   >
     <header
       class="card__header"
@@ -43,7 +43,7 @@ exports[`<Card /> Dragging story renders snapshot 1`] = `
   class="p-8"
 >
   <article
-    class="card card--dragging"
+    class="card card--dragging w-96"
   >
     <header
       class="card__header"
@@ -143,7 +143,7 @@ exports[`<Card /> LoadingProfileCard story renders snapshot 1`] = `
     role="status"
   >
     <article
-      class="card"
+      class="card w-96"
     >
       <div
         class="card__body"
@@ -187,7 +187,7 @@ exports[`<Card /> Raised story renders snapshot 1`] = `
   class="p-8"
 >
   <article
-    class="card card--raised"
+    class="card card--raised w-96"
   >
     <header
       class="card__header"

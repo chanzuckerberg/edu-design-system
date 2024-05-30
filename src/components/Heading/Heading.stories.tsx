@@ -7,6 +7,7 @@ export default {
   title: 'Components/Heading',
   component: Heading,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
 } as Meta<Args>;

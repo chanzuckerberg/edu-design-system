@@ -6,6 +6,7 @@ export default {
   title: 'Components/V2/Link',
   component: Link,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   args: {

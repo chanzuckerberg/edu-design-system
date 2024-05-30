@@ -7,10 +7,12 @@ export default {
   title: 'Components/V2/InlineNotification',
   component: InlineNotification,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   args: {
     title: 'Inline notifications lorem ipsum text',
+    className: 'w-96',
   },
 } as Meta<Args>;
 

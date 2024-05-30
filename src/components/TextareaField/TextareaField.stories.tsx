@@ -17,6 +17,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
     spellCheck: false,
   },
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.3'],
   },
 };

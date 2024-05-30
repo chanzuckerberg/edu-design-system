@@ -6,6 +6,7 @@ export default {
   title: 'Components/InlineNotification',
   component: InlineNotification,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   args: {

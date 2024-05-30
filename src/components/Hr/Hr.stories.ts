@@ -7,7 +7,11 @@ export default {
   title: 'Components/Hr',
   component: Hr,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
+  },
+  args: {
+    className: 'w-96',
   },
 } as Meta<Args>;
 

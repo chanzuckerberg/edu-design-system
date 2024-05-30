@@ -10,6 +10,7 @@ export default {
   title: 'Components/Table',
   component: Table,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.1'],
   },
   argTypes: {
@@ -253,6 +254,7 @@ export const SortableInteractive: Story = {
  */
 export const StackedCardsExample: Story = {
   parameters: {
+    layout: 'padded',
     badges: ['intro-1.1', 'implementationExample'],
     chromatic: {
       viewports: [

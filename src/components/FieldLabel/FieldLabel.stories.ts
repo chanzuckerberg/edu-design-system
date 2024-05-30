@@ -10,6 +10,7 @@ export default {
     children: 'Label',
   },
   parameters: {
+    layout: 'centered',
     badges: ['intro-2.0', 'current-2.0'],
   },
 } as Meta<Args>;

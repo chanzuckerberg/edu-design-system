@@ -11,6 +11,7 @@ export default {
   title: 'Components/V2/AppNotification',
   component: AppNotification,
   parameters: {
+    layout: 'centered',
     badges: [BADGE.BETA, 'intro-2.0', 'current-2.0'],
   },
   args: {
