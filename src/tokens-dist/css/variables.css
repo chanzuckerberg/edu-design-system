@@ -314,10 +314,16 @@
   --eds-theme-typography-title-md: var(--eds-typography-preset-004);
   --eds-theme-typography-title-lg-bold: var(--eds-typography-preset-004-bold);
   --eds-theme-typography-title-lg: var(--eds-typography-preset-004);
+  --eds-theme-typography-headline-secondary-sm-mobile: var(--eds-typography-preset-secondary-mobile-003-light);
+  --eds-theme-typography-headline-secondary-sm-bold-mobile: var(--eds-typography-preset-secondary-mobile-003-bold);
   --eds-theme-typography-headline-secondary-sm-bold: var(--eds-typography-preset-secondary-003);
   --eds-theme-typography-headline-secondary-sm: var(--eds-typography-preset-secondary-003-light);
+  --eds-theme-typography-headline-secondary-md-mobile: var(--eds-typography-preset-mobile-002-light);
+  --eds-theme-typography-headline-secondary-md-bold-mobile: var(--eds-typography-secondary-mobile-002-bold);
   --eds-theme-typography-headline-secondary-md-bold: var(--eds-typography-preset-secondary-002);
   --eds-theme-typography-headline-secondary-md: var(--eds-typography-preset-secondary-002-light);
+  --eds-theme-typography-headline-secondary-lg-mobile: var(--eds-typography-preset-secondary-mobile-001-light);
+  --eds-theme-typography-headline-secondary-lg-bold-mobile: var(--eds-typography-preset-secondary-mobile-001-bold);
   --eds-theme-typography-headline-secondary-lg-bold: var(--eds-typography-preset-secondary-001);
   --eds-theme-typography-headline-secondary-lg: var(--eds-typography-preset-secondary-001-light);
   --eds-theme-typography-headline-sm-mobile: var(--eds-typography-preset-mobile-003-light);
@@ -343,8 +349,9 @@
   --eds-typography-preset-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
   --eds-typography-preset-secondary-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-008-light: var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary);
@@ -357,12 +364,14 @@
   --eds-typography-preset-secondary-005: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-004-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-004: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
   --eds-typography-preset-secondary-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-secondary);
   --eds-typography-preset-012-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
   --eds-typography-preset-012-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
   --eds-typography-preset-012: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
@@ -391,10 +400,10 @@
   --eds-typography-preset-004-light: var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary);
   --eds-typography-preset-004: var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary);
   --eds-typography-preset-003-mobile: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.375rem/1.45454545 var(--eds-font-family-primary);
-  --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.375rem/1.45454545 var(--eds-font-family-primary);
-  --eds-typography-preset-003: var(--eds-font-weight-medium) 1.375rem/1.45454545 var(--eds-font-family-primary);
-  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.75rem/1.2857 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-typography-preset-002-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
   --eds-typography-preset-002-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
   --eds-typography-preset-002: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
