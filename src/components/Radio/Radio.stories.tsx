@@ -11,6 +11,7 @@ const meta: Meta<typeof Radio> = {
     checked: false,
   },
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   decorators: [(Story) => <div style={{ margin: '0.25rem' }}>{Story()}</div>],

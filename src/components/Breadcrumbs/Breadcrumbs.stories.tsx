@@ -26,6 +26,7 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
@@ -97,14 +98,18 @@ export const LongText: StoryObj<Args> = {
         chromaticViewports.chromebook,
       ],
     },
+    layout: 'padded',
   },
 };
 
 export const LongTextCustomSeparator: StoryObj<Args> = {
-  ...LongText,
   args: {
     ...LongText.args,
     separator: '>',
+  },
+  parameters: {
+    ...LongText.parameters,
+    layout: 'padded',
   },
 };
 
@@ -130,6 +135,7 @@ export const LongTextMenu: StoryObj<Args> = {
     snapshot: {
       skip: true,
     },
+    layout: 'padded',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

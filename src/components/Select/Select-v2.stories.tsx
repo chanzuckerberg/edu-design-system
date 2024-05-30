@@ -8,8 +8,8 @@ const meta: Meta<typeof Select> = {
   title: 'Components/V2/Select',
   component: Select,
   parameters: {
-    badges: ['intro-1.2', 'current-2.0'],
     layout: 'centered',
+    badges: ['intro-1.2', 'current-2.0'],
   },
   argTypes: {
     multiple: {

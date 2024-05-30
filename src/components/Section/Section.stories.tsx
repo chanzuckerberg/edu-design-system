@@ -10,6 +10,7 @@ export default {
   title: 'Components/Section',
   component: Section,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', BADGE.DEPRECATED],
   },
   args: {

@@ -12,6 +12,7 @@ export default {
   title: 'Components/Tabs',
   component: Tabs,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   args: {

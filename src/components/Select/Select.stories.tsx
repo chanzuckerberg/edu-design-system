@@ -9,8 +9,8 @@ const meta: Meta<typeof Select> = {
   title: 'Components/Select',
   component: Select,
   parameters: {
-    badges: ['intro-1.2'],
     layout: 'centered',
+    badges: ['intro-1.2'],
   },
   argTypes: {
     multiple: {

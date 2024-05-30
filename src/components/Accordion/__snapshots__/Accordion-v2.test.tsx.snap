@@ -4,7 +4,9 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -52,7 +54,9 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -226,7 +230,9 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -297,7 +303,9 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -362,7 +370,9 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -410,7 +420,9 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -584,7 +596,9 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -777,7 +791,9 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -951,7 +967,9 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -1144,7 +1162,9 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -1199,7 +1219,9 @@ exports[`<Accordion /> UsingComplexHeaders story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >
@@ -1369,7 +1391,9 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
 <div
   class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="accordion-row"
     >

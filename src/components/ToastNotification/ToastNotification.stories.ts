@@ -7,11 +7,13 @@ export default {
   title: 'Components/V2/ToastNotification',
   component: ToastNotification,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
   argTypes: { onDismiss: { action: 'dismissed' } },
   args: {
     title: "You've got a temporary notification!",
+    className: 'w-96',
   },
 } as Meta<Args>;
 

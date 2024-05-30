@@ -14,7 +14,11 @@ const meta: Meta<typeof Slider> = {
   title: 'Components/Slider',
   component: Slider,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.3'],
+  },
+  args: {
+    className: 'w-96',
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   argTypes: {
@@ -115,7 +119,6 @@ export const MarkersLargeValues: Story = {
     step: 2500,
     markers: 'number',
   },
-  decorators: [(Story) => <div className="w-80">{Story()}</div>],
 };
 
 export const FieldNote: Story = {
@@ -206,7 +209,6 @@ export const UsingInputDisplay: Story = {
         <Text>{min}</Text>
         <Slider
           aria-label="Slider with input"
-          className="w-1/2"
           max={max}
           min={min}
           step={step}
@@ -248,7 +250,6 @@ export const UsingControlButtons: Story = {
         <Text>{min}</Text>
         <Slider
           aria-label="select a value"
-          className="w-1/2"
           max={max}
           min={min}
           step={step}
@@ -286,7 +287,6 @@ export const WithHighlightedContent: Story = {
           <Slider
             aria-describedby="mood-description"
             aria-label="Mood Slider"
-            className="w-1/2"
             markers={moodData.map((mood) => mood.description)}
             max={max}
             min={min}
@@ -336,11 +336,11 @@ export const WithVisualLabel: Story = {
       <article>
         <div className="items-top flex flex-col justify-center ">
           <Label
-            className="w-1/2 py-4 text-center"
+            className="py-4 text-center"
             id="slider-label"
             text="Mood Slider"
           />
-          <Text as="span" className="w-1/2 py-4 text-center" preset="body-xl">
+          <Text as="span" className="py-4 text-center" preset="body-xl">
             {moodData.map((mood) => {
               return (
                 sliderValue === mood.value && (
@@ -352,7 +352,6 @@ export const WithVisualLabel: Story = {
           <Slider
             aria-label="Mood Slider"
             aria-labelledby="slider-label"
-            className="w-1/2"
             markers={moodData.map((mood) => mood.description)}
             max={max}
             min={min}
@@ -379,13 +378,13 @@ export const WithMultipleVisualLabels: Story = {
       <article>
         <div className="items-top flex flex-col justify-center ">
           <Label
-            className="w-1/2 py-4 text-center"
+            className="py-4 text-center"
             id="slider-label"
             text="Mood Slider"
           />
           <Text
             as="span"
-            className="flex w-1/2 justify-between py-4 text-center"
+            className="flex justify-between py-4 text-center"
             preset="body-xl"
           >
             {moodData.map((mood, index) => {
@@ -406,7 +405,6 @@ export const WithMultipleVisualLabels: Story = {
           <Slider
             aria-label="Mood Slider"
             aria-labelledby="slider-label"
-            className="w-1/2"
             markers={moodData.map((mood) => mood.description)}
             max={max}
             min={min}

@@ -14,6 +14,7 @@ export default {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   tags: ['autodocs'],

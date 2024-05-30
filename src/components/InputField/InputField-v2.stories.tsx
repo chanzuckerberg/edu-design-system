@@ -10,10 +10,14 @@ const meta: Meta<typeof InputField> = {
   title: 'Components/V2/InputField',
   component: InputField,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },
+  },
+  args: {
+    className: 'w-96',
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };

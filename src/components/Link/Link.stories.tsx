@@ -8,6 +8,7 @@ export default {
   title: 'Components/Link',
   component: Link,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   args: {

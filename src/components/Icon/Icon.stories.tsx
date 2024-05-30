@@ -11,6 +11,7 @@ const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
   component: Icon,
   parameters: {
+    layout: 'centered',
     badges: ['intro-1.0'],
   },
   argTypes: {

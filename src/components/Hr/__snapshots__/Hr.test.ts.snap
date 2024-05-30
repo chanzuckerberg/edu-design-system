@@ -2,18 +2,18 @@
 
 exports[`<Hr /> Brand story renders snapshot 1`] = `
 <hr
-  class="hr hr--brand"
+  class="hr hr--brand w-96"
 />
 `;
 
 exports[`<Hr /> Default story renders snapshot 1`] = `
 <hr
-  class="hr"
+  class="hr w-96"
 />
 `;
 
 exports[`<Hr /> Large story renders snapshot 1`] = `
 <hr
-  class="hr hr--lg"
+  class="hr hr--lg w-96"
 />
 `;
