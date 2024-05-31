@@ -200,6 +200,7 @@
   }
 }
 
+/* TODO-AH: EDS-1344 confirm color: var(--eds-theme-color-text-utility-interactive-secondary-hover) and -active */
 .button--secondary.button--variant-neutral {
   color: var(--eds-theme-color-text-utility-default-secondary);
   border-color: currentColor;
@@ -216,18 +217,19 @@
   }
 }
 
+/* TODO-AH: EDS-1344 confirm color: var(--eds-theme-color-text-utility-interactive-secondary-hover) and -active */
 .button--tertiary.button--variant-neutral {
   color: var(--eds-theme-color-text-utility-default-secondary);
   border-color: transparent;
   background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
 
   &:hover {
-    border-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-hover);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-active);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
   }
 }
@@ -314,7 +316,7 @@
 }
 
 .button--tertiary.button--variant-default:hover {
-  border-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
+  border-color: var(--eds-theme-color-border-utility-interactive-hover);
 }
 
 .button--variant-critical:hover {
@@ -331,7 +333,7 @@
 }
 
 .button--tertiary.button--variant-critical:hover {
-  border-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
+  border-color: var(--eds-theme-color-border-utility-critical-hover);
 }
 
 .button--primary.button--variant-inverse:hover {
@@ -344,7 +346,7 @@
 }
 
 .button--tertiary.button--variant-inverse:hover {
-  border-color: var(--eds-theme-color-background-utility-inverse-no-emphasis-hover);
+  border-color: var(--eds-theme-color-border-utility-inverse);
 }
 
 .button--tertiary.button--context-standalone:hover {
@@ -366,7 +368,7 @@
 }
 
 .button--tertiary.button--variant-default:active {
-  border-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
+  border-color: var(--eds-theme-color-border-utility-interactive-active);
 }
 
 .button--variant-critical:active {
@@ -380,14 +382,6 @@
 
   background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
   border-color: var(--eds-theme-color-border-utility-critical-active);
-}
-
-.button--tertiary.button--variant-critical:active {
-  border-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
-}
-
-.button--primary.button--variant-inverse:active {
-  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis-active);
 }
 
 .button--secondary.button--variant-inverse:active,

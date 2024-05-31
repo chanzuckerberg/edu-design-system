@@ -215,13 +215,13 @@ function ExtendedButton(args: ExtendArgs) {
  * Steps to use:
  *
  * * import `ButtonProps`
- * * use the type param. to augment the types for `Button` with the libraries type, e.g., `type ExtendedProps = ButtonProps<typeof CustomButton>;`
+ * * use the type param. to augment the types for `Button` with the libraries type, e.g., `type ExtendedProps = ButtonProps<CustomButtonProps>;`
  * * Now export a new function component that uses the new prop type and returns a composed function
  *
  * When using this pattern, you likely want to also specify the library's Button component using `as`
  *
  * ```tsx
- * type ExtendedProps = ButtonProps<typeof CustomButton>;
+ * type ExtendedProps = ButtonProps<CustomButtonType>;
  *
  * export default function Button({children, ...other}: ExtendedProps) {
  *   return (
@@ -235,12 +235,12 @@ function ExtendedButton(args: ExtendArgs) {
 export const UsingExtendedLink: StoryObj<ExtendArgs> = {
   render: (args) => (
     <div>
-      Lorem ipsum dolor sit amet,{' '}
+      Lorem ipsum dolor sit amet, . Morbi porta at ante quis molestie. Nam
+      scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id
+      tellus ante.{' '}
       <ExtendedButton {...args} to="test">
         consectetur adipiscing elit
       </ExtendedButton>
-      . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
-      Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
     </div>
   ),
 };
