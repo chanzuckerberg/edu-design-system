@@ -57,7 +57,15 @@
                 "value": "var(--eds-typography-preset-secondary-001-light)"
               },
               "bold": {
-                "value": "var(--eds-typography-preset-secondary-001)"
+                "@": {
+                  "value": "var(--eds-typography-preset-secondary-001)"
+                },
+                "mobile": {
+                  "value": "var(--eds-typography-preset-secondary-mobile-001-bold)"
+                }
+              },
+              "mobile": {
+                "value": "var(--eds-typography-preset-secondary-mobile-001-light)"
               }
             },
             "md": {
@@ -65,7 +73,15 @@
                 "value": "var(--eds-typography-preset-secondary-002-light)"
               },
               "bold": {
-                "value": "var(--eds-typography-preset-secondary-002)"
+                "@": {
+                  "value": "var(--eds-typography-preset-secondary-002)"
+                },
+                "mobile": {
+                  "value": "var(--eds-typography-secondary-mobile-002-bold)"
+                }
+              },
+              "mobile": {
+                "value": "var(--eds-typography-preset-mobile-002-light)"
               }
             },
             "sm": {
@@ -73,7 +89,15 @@
                 "value": "var(--eds-typography-preset-secondary-003-light)"
               },
               "bold": {
-                "value": "var(--eds-typography-preset-secondary-003)"
+                "@": {
+                  "value": "var(--eds-typography-preset-secondary-003)"
+                },
+                "mobile": {
+                  "value": "var(--eds-typography-preset-secondary-mobile-003-bold)"
+                }
+              },
+              "mobile": {
+                "value": "var(--eds-typography-preset-secondary-mobile-003-light)"
               }
             }
           }

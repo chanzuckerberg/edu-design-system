@@ -59,19 +59,19 @@
             "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
           },
           "mobile": {
-            "value": "var(--eds-font-weight-bold) 1.75rem/1.2857 var(--eds-font-family-primary)",
+            "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)",
             "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "003": {
           "@": {
-            "value": "var(--eds-font-weight-medium) 1.375rem/1.45454545 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary)"
           },
           "light": {
-            "value": "var(--eds-font-weight-light) 1.375rem/1.45454545 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary)"
           },
           "bold": {
-            "value": "var(--eds-font-weight-bold) 1.375rem/1.45454545 var(--eds-font-family-primary)"
+            "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)"
           },
           "mobile": {
             "value": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)",
@@ -186,10 +186,13 @@
         "secondary": {
           "001": {
             "@": {
-              "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-secondary)"
+            },
+            "bold": {
+              "value": "var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-secondary)"
             }
           },
           "002": {
@@ -202,10 +205,13 @@
           },
           "003": {
             "@": {
-              "value": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
             },
             "light": {
-              "value": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary)"
+              "value": "var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
+            },
+            "bold": {
+              "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
             }
           },
           "004": {
@@ -259,10 +265,13 @@
             },
             "002": {
               "light": {
-                "value": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
               },
               "@": {
-                "value": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
+                "value": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
+              },
+              "bold": {
+                "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
               }
             },
             "003": {
