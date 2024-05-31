@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.14](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.13...v15.0.0-alpha.14) (2024-05-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* update tier 1 and 2 typography tokens (#1969)
+
+### Features
+
+* **Button:** update interactive styles for tertiary buttons ([#1970](https://github.com/chanzuckerberg/edu-design-system/issues/1970)) ([288da8c](https://github.com/chanzuckerberg/edu-design-system/commit/288da8cb2b781894a64092c13b5209d7202aa2f3))
+* update tier 1 and 2 typography tokens ([#1969](https://github.com/chanzuckerberg/edu-design-system/issues/1969)) ([9dea463](https://github.com/chanzuckerberg/edu-design-system/commit/9dea4632abb40d77cc2dc79d74900988bc005154))
+
 ## [15.0.0-alpha.13](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.10...v15.0.0-alpha.13) (2024-05-28)
 
 
