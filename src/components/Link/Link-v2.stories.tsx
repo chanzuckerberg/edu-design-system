@@ -71,7 +71,7 @@ export const Emphasis: StoryObj<Args> = {
 /**
  * We also include an inverse variant, for use on dark backgrounds.
  */
-export const InverseRanks: StoryObj<Args> = {
+export const Inverse: StoryObj<Args> = {
   args: {
     variant: 'inverse',
   },

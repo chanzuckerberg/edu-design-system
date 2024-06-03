@@ -32,7 +32,7 @@ exports[`<Link /> Emphasis story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> InverseRanks story renders snapshot 1`] = `
+exports[`<Link /> Inverse story renders snapshot 1`] = `
 <div
   class="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center"
 >
