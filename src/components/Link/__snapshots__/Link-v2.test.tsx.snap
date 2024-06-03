@@ -32,6 +32,19 @@ exports[`<Link /> Emphasis story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Link /> InverseRanks story renders snapshot 1`] = `
+<div
+  class="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center"
+>
+  <a
+    class="link link--emphasis-default link--size-lg link--variant-inverse"
+    href="https://go.czi.team/eds"
+  >
+    Link
+  </a>
+</div>
+`;
+
 exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
 <div>
   Lorem ipsum dolor sit amet,

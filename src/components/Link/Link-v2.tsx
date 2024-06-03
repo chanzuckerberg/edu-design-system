@@ -38,7 +38,12 @@ export type LinkV2Props<ExtendedElement = unknown> =
      * Link size inherits from the surrounding text.
      */
     size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
-    // };
+    /**
+     * The variant treatment for links (use "inverse" on dark backgrounds).
+     *
+     * **Default is `"default"`**.
+     */
+    variant?: 'default' | 'inverse';
   } & ExtendedElement;
 
 /**
@@ -57,6 +62,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkV2Props>(
       emphasis = 'default',
       icon,
       size = 'md',
+      variant = 'default',
       ...other
     },
     ref,
@@ -68,6 +74,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkV2Props>(
       emphasis && styles[`link--emphasis-${emphasis}`],
       icon && styles['link--has-right-icon'],
       size && styles[`link--size-${size}`],
+      variant === 'inverse' && styles[`link--variant-${variant}`],
     );
 
     const iconSize = size && (['xl', 'lg'].includes(size) ? '1.5rem' : '1rem');
