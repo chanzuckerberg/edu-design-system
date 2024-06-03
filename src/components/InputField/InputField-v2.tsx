@@ -7,6 +7,7 @@ import type {
   EitherInclusive,
   ForwardedRefComponent,
 } from '../../util/utility-types';
+import type { Status } from '../../util/variant-types';
 import FieldLabel from '../FieldLabel';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
 import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
@@ -95,18 +96,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   fieldNote?: ReactNode;
   /**
-   * Whether there is an error state for the field note text (and icon)
-   *
-   * **Default is `false`**.
-   */
-  isError?: boolean;
-  /**
-   * Whether there is a warning state for the field note text (and icon)
-   *
-   * **Default is `false`**.
-   */
-  isWarning?: boolean;
-  /**
    * An icon that prefixes the field input.
    */
   leadingIcon?: IconName;
@@ -129,6 +118,12 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    * **Default is `"false"`**.
    */
   showHint?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 } & EitherInclusive<
     {
       /**
@@ -168,8 +163,6 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote,
       id,
       inputWithin,
-      isError,
-      isWarning,
       label,
       leadingIcon,
       maxLength,
@@ -178,6 +171,7 @@ export const InputField: InputFieldType = forwardRef(
       recommendedMaxLength,
       required,
       showHint,
+      status = 'default',
       type = 'text',
       ...other
     },
@@ -217,7 +211,7 @@ export const InputField: InputFieldType = forwardRef(
         : false;
 
     const shouldRenderError =
-      isError || textExceedsMaxLength || textExceedsRecommendedLength;
+      textExceedsMaxLength || textExceedsRecommendedLength;
 
     const generatedIdVar = useId();
     const idVar = id || generatedIdVar;
@@ -279,12 +273,10 @@ export const InputField: InputFieldType = forwardRef(
         <div className={inputBodyClassName}>
           <Input
             aria-describedby={ariaDescribedByVar}
-            aria-invalid={!!isError}
+            aria-invalid={!!(status === 'critical')}
             className={inputOverlayClassName}
             disabled={disabled}
             id={idVar}
-            isError={shouldRenderError}
-            isWarning={isWarning}
             maxLength={maxLength}
             onChange={(e) => {
               setFieldText(e.target.value);
@@ -293,6 +285,7 @@ export const InputField: InputFieldType = forwardRef(
             readOnly={readOnly}
             ref={ref}
             required={required}
+            status={shouldRenderError ? 'critical' : status}
             type={type}
             {...other}
           />
@@ -313,8 +306,7 @@ export const InputField: InputFieldType = forwardRef(
               <FieldNote
                 disabled={disabled}
                 id={ariaDescribedByVar}
-                isError={shouldRenderError}
-                isWarning={isWarning}
+                status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
               </FieldNote>
@@ -327,8 +319,7 @@ export const InputField: InputFieldType = forwardRef(
               <FieldNote
                 disabled={disabled}
                 id={ariaDescribedByVar}
-                isError={shouldRenderError}
-                isWarning={isWarning}
+                status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
               </FieldNote>

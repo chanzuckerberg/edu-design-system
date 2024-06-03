@@ -58,7 +58,7 @@ export const NoFieldnote: Story = {
 export const Error: Story = {
   args: {
     label: 'Error input field',
-    isError: true,
+    status: 'critical',
     fieldNote: 'This is a fieldnote with an error.',
   },
 };
@@ -69,7 +69,7 @@ export const Error: Story = {
 export const Warning: Story = {
   args: {
     label: 'Warning input field',
-    isWarning: true,
+    status: 'warning',
     fieldNote:
       'This uses the warning treatment and also applies to the field note',
   },
