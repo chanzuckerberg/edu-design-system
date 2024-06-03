@@ -73,6 +73,17 @@
   text-decoration: none;
 }
 
+/**
+ * Variants
+ */
+.link.link--variant-inverse {
+  color: var(--eds-theme-color-text-utility-inverse);
+
+  &:active,
+  &:visited {
+    color: var(--eds-theme-color-text-utility-inverse);
+  }
+}
 
 /**
  * States

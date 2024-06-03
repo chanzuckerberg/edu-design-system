@@ -68,6 +68,23 @@ export const Emphasis: StoryObj<Args> = {
   },
 };
 
+/**
+ * We also include an inverse variant, for use on dark backgrounds.
+ */
+export const InverseRanks: StoryObj<Args> = {
+  args: {
+    variant: 'inverse',
+  },
+  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
+  decorators: [
+    (Story) => (
+      <div className="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center">
+        {Story()}
+      </div>
+    ),
+  ],
+};
+
 export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
   render: (
     args: React.JSX.IntrinsicAttributes &
