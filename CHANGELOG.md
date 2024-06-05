@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.15](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.14...v15.0.0-alpha.15) (2024-06-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* move from isWarning and isError to status prop (#1973)
+
+### Features
+
+* **Link:** add inverse variant (with variant prop) ([#1972](https://github.com/chanzuckerberg/edu-design-system/issues/1972)) ([bdbf9df](https://github.com/chanzuckerberg/edu-design-system/commit/bdbf9dffd0abcea31c4c003d2be0187db84fdbca))
+* move from isWarning and isError to status prop ([#1973](https://github.com/chanzuckerberg/edu-design-system/issues/1973)) ([56066ae](https://github.com/chanzuckerberg/edu-design-system/commit/56066ae6246cef5af05b8d4a621e76dce07b25ee))
+
 ## [15.0.0-alpha.14](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.13...v15.0.0-alpha.14) (2024-05-31)
 
 
