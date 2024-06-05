@@ -26,9 +26,9 @@ export const EdsThemeColorBackgroundBrandBlueLowEmphasis = '#EAF4FF';
 export const EdsThemeColorBackgroundBrandPurple = '#C580E7';
 export const EdsThemeColorBackgroundBrandPurpleLowEmphasis = '#FBF5FD';
 export const EdsThemeColorBackgroundBrandPink = '#DB458D';
-export const EdsThemeColorBackgroundUtilityBase0 =
+export const EdsThemeColorBackgroundUtilityBase1 =
   'rgb(var(--eds-color-white) / 1)';
-export const EdsThemeColorBackgroundUtilityBase1 = '#FDF9F8';
+export const EdsThemeColorBackgroundUtilityBase2 = '#FDF9F8';
 export const EdsThemeColorBackgroundUtilityContainer =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundUtilityContainerHover = '#F9F3F1';
