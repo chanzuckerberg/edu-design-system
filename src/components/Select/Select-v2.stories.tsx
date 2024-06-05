@@ -796,7 +796,7 @@ export const Optional: StoryObj = {
 export const Error: StoryObj = {
   args: {
     ...Required.args,
-    isError: true,
+    status: 'critical',
     fieldNote: 'Some text describing error',
   },
   parameters: {
@@ -810,7 +810,7 @@ export const Error: StoryObj = {
 export const Warning: StoryObj = {
   args: {
     ...Optional.args,
-    isWarning: true,
+    status: 'warning',
     fieldNote: 'Some text describing warning',
   },
   parameters: {

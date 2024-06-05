@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
+import type { Status } from '../../util/variant-types';
 import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
 import styles from './FieldNote-v2.module.css';
 
@@ -30,13 +31,11 @@ export interface Props {
    */
   icon?: Extract<IconName, 'dangerous' | 'warning-filled'>;
   /**
-   * Whether there is an error state for the field note text (and icon)
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
    */
-  isError?: boolean;
-  /**
-   * Whether there is a warning state for the field note text (and icon)
-   */
-  isWarning?: boolean;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 }
 
 /**
@@ -50,36 +49,36 @@ export const FieldNote = ({
   id,
   disabled,
   icon,
-  isError,
-  isWarning,
+  status,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
     disabled && styles['field-note--disabled'],
-    isError && styles['field-note--error'],
-    isWarning && styles['field-note--warning'],
+    status === 'critical' && styles['field-note--error'],
+    status === 'warning' && styles['field-note--warning'],
     className,
   );
 
   let iconToUse = icon;
-  if (isError) {
+  let title = 'fieldnote status icon';
+  if (status === 'critical') {
     iconToUse = 'dangerous';
-  } else if (isWarning) {
+    title = 'error';
+  } else if (status === 'warning') {
     iconToUse = 'warning-filled';
-  } else if (icon) {
-    iconToUse = icon;
+    title = 'warning';
   }
 
   return (
     <div className={componentClassName} id={id} {...other}>
-      {(isError || isWarning || iconToUse) && (
+      {(status === 'critical' || status === 'warning' || iconToUse) && (
         <Icon
           className={styles['field-note__icon']}
           name={iconToUse}
           purpose="informative"
           size="1rem"
-          title={isError ? 'error' : 'warning'}
+          title={title}
         />
       )}
       {children}

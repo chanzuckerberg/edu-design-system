@@ -82,20 +82,40 @@ export const WhenReadOnly: Story = {
   },
 };
 
+/**
+ * The default status isn't really anything, but exists to allow a value to be set if needed. This applies
+ * the neutral styles.
+ */
+export const WhenDefaultStatus: Story = {
+  args: {
+    status: 'default',
+    fieldNote: 'Text should be at least 100 characters',
+  },
+};
+
+/**
+ * When in an error state, this is the status to use. It matches other components which have a critical status.
+ */
 export const WhenError: Story = {
   args: {
-    isError: true,
+    status: 'critical',
     fieldNote: 'Text should be at least 100 characters',
   },
 };
 
+/**
+ * You can also apply a warning status.
+ */
 export const WhenWarning: Story = {
   args: {
-    isWarning: true,
+    status: 'warning',
     fieldNote: 'Text should be at least 100 characters',
   },
 };
 
+/**
+ * Textarea components can be set as required.
+ */
 export const WhenRequired: Story = {
   args: {
     required: true,
@@ -103,6 +123,9 @@ export const WhenRequired: Story = {
   },
 };
 
+/**
+ * ... or optional.
+ */
 export const WhenOptional: Story = {
   args: {
     required: false,

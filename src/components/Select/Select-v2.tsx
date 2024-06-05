@@ -12,6 +12,7 @@ import { usePopper } from 'react-popper';
 
 import { useId } from '../../util/useId';
 import type { ExtractProps } from '../../util/utility-types';
+import type { Status } from '../../util/variant-types';
 import FieldLabel from '../FieldLabel';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
 import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
@@ -63,18 +64,6 @@ type SelectProps = ExtractProps<typeof Listbox> &
      */
     fieldNote?: ReactNode;
     /**
-     * Whether there is an error state for the field note text (and icon)
-     *
-     * **Default is `false`**.
-     */
-    isError?: boolean;
-    /**
-     * Whether there is a warning state for the field note text (and icon)
-     *
-     * **Default is `false`**.
-     */
-    isWarning?: boolean;
-    /**
      * Visible text label for the component.
      */
     label?: string;
@@ -90,6 +79,12 @@ type SelectProps = ExtractProps<typeof Listbox> &
      * **Default is `"false"`**.
      */
     showHint?: boolean;
+    /**
+     * Status for the field state
+     *
+     * **Default is `"default"`**.
+     */
+    status?: 'default' | Extract<Status, 'warning' | 'critical'>;
   };
 
 type SelectLabelProps = ExtractProps<typeof Listbox.Label> & {
@@ -130,18 +125,6 @@ type SelectButtonWrapperProps = {
    */
   icon?: Extract<IconName, 'chevron-down'>;
   /**
-   * Whether there is an error state for the field note text (and icon)
-   *
-   * **Default is `false`**.
-   */
-  isError?: boolean;
-  /**
-   * Whether there is a warning state for the field note text (and icon)
-   *
-   * **Default is `false`**.
-   */
-  isWarning?: boolean;
-  /**
    * Indicates state of the select, used to style the button.
    */
   isOpen?: boolean;
@@ -153,12 +136,17 @@ type SelectButtonWrapperProps = {
    * Whether we should truncate the text displayed in the select field
    */
   shouldTruncate?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' & Extract<Status, 'warning' | 'critical'>;
 };
 
 type SelectContextType = PopoverContext & {
   optionsClassName?: string;
-  isWarning?: boolean;
-  isError?: boolean;
+  status?: SelectButtonWrapperProps['status'];
 };
 
 let showNameWarning = true;
@@ -199,8 +187,6 @@ export function Select({
   disabled,
   fieldNote,
   id,
-  isError,
-  isWarning,
   label,
   labelLayout = 'vertical',
   modifiers = defaultPopoverModifiers,
@@ -210,6 +196,7 @@ export function Select({
   placement = 'bottom-start',
   required,
   showHint,
+  status,
   strategy,
   onChange: theirOnChange,
   ...other
@@ -272,8 +259,7 @@ export function Select({
     { setPopperElement },
     { popperStyles: popperStyles.popper },
     { popperAttributes: popperAttributes.popper },
-    { isError },
-    { isWarning },
+    { status },
   );
 
   if (typeof children === 'function') {
@@ -318,11 +304,7 @@ export function Select({
       </Listbox>
       {fieldNote && (
         <div className={styles['select__footer']}>
-          <FieldNote
-            disabled={disabled}
-            isError={isError}
-            isWarning={isWarning}
-          >
+          <FieldNote disabled={disabled} status={status}>
             {fieldNote}
           </FieldNote>
         </div>
@@ -383,7 +365,7 @@ const SelectLabel = ({
  */
 const SelectButton = function (props: SelectButtonProps) {
   const { children, className, onClick: theirOnClick, ...other } = props;
-  const { setReferenceElement, isWarning, isError } = useContext(SelectContext);
+  const { setReferenceElement, status } = useContext(SelectContext);
   return (
     <Listbox.Button
       // Render as a fragment instead of the default element. We're rendering our own element in
@@ -399,12 +381,11 @@ const SelectButton = function (props: SelectButtonProps) {
         ) : (
           <SelectButtonWrapper
             className={className}
-            isError={isError}
             isOpen={renderProps.open}
-            isWarning={isWarning}
             onClick={(event) => {
               theirOnClick && theirOnClick(event);
             }}
+            status={status}
           >
             {children}
           </SelectButtonWrapper>
@@ -493,25 +474,19 @@ export const SelectButtonWrapper = React.forwardRef<
       children,
       className,
       icon = 'chevron-down',
-      isError,
       isOpen,
-      isWarning,
-      shouldTruncate = false,
       onClick: theirOnClick,
+      shouldTruncate = false,
       ...other
     },
     ref,
   ) => {
-    const { isWarning: contextWarning, isError: contextError } =
-      useContext(SelectContext);
-    const showWarning =
-      typeof isWarning !== 'undefined' ? isWarning : contextWarning;
-    const showError = typeof isError !== 'undefined' ? isError : contextError;
+    const { status } = useContext(SelectContext);
 
     const componentClassName = clsx(
       styles['select-button'],
-      showWarning && styles['select-button--warning'],
-      showError && styles['select-button--error'],
+      status === 'warning' && styles['select-button--warning'],
+      status === 'critical' && styles['select-button--error'],
       className,
     );
     const iconClassName = clsx(

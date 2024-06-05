@@ -8,6 +8,7 @@ import type {
   ForwardedRefComponent,
 } from '../../util/utility-types';
 
+import type { Status } from '../../util/variant-types';
 import FieldLabel from '../FieldLabel';
 import { FieldNoteV2 as FieldNote } from '../FieldNote';
 import Text from '../Text';
@@ -38,16 +39,6 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   id?: string;
   // Design API
   /**
-   * Error state of the form field
-   */
-  isError?: boolean;
-  /**
-   * Whether there is a warning state for the field note text (and icon)
-   *
-   * **Default is `false`**.
-   */
-  isWarning?: boolean;
-  /**
    * Behaves similar to `maxLength` but allows the user to continue typing more text.
    * Should not be larger than `maxLength`, if present.
    */
@@ -58,6 +49,12 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * **Default is `"false"`**.
    */
   showHint?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 } & EitherInclusive<
     {
       /**
@@ -95,15 +92,11 @@ type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    */
   disabled?: boolean;
   /**
-   * Whether the error state is active
-   */
-  isError?: boolean;
-  /**
-   * Whether there is a warning state for the field note text (and icon)
+   * Status for the field state
    *
-   * **Default is `false`**.
+   * **Default is `"default"`**.
    */
-  isWarning?: boolean;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 };
 
 /**
@@ -116,17 +109,16 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       children,
       disabled,
       defaultValue = '',
-      isError = false,
-      isWarning,
       readOnly,
+      status = 'default',
       ...other
     },
     ref,
   ) => {
     const componentClassName = clsx(
       styles['textarea'],
-      isError && styles['error'],
-      isWarning && styles['warning'],
+      status === 'critical' && styles['error'],
+      status === 'warning' && styles['warning'],
       disabled && styles['textarea--disabled'],
       className,
     );
@@ -163,8 +155,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
       disabled,
       fieldNote,
       id,
-      isError,
-      isWarning,
       label,
       maxLength,
       onChange,
@@ -172,6 +162,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       recommendedMaxLength,
       required,
       showHint,
+      status = 'default',
       ...other
     },
     ref,
@@ -192,7 +183,9 @@ export const TextareaField: TextareaFieldType = forwardRef(
         : false;
 
     const shouldRenderError =
-      isError || textExceedsMaxLength || textExceedsRecommendedLength;
+      status === 'critical' ||
+      textExceedsMaxLength ||
+      textExceedsRecommendedLength;
 
     const ariaDescribedByVar = fieldNote
       ? ariaDescribedBy || generatedAriaDescribedById
@@ -266,8 +259,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
-          isError={shouldRenderError}
-          isWarning={isWarning}
           maxLength={maxLength}
           onChange={(e) => {
             setFieldText(e.target.value);
@@ -276,6 +267,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
           readOnly={readOnly}
           ref={ref}
           required={required}
+          status={shouldRenderError ? 'critical' : status}
           {...other}
         >
           {children}
@@ -287,8 +279,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 className={styles['textarea-field__field-note']}
                 disabled={disabled}
                 id={ariaDescribedByVar}
-                isError={shouldRenderError}
-                isWarning={isWarning}
+                status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
               </FieldNote>

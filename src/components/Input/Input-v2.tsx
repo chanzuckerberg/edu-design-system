@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler } from 'react';
 import React, { forwardRef } from 'react';
+import type { Status } from '../../util/variant-types';
 import styles from './Input-v2.module.css';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -78,24 +79,22 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   defaultValue?: string | number;
   // Design API
   /**
-   * Error state of the form field
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
    */
-  isError?: boolean;
-  /**
-   * Whether there is a warning state for the field note text (and icon)
-   */
-  isWarning?: boolean;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 };
 
 /**
  * Input component for one line of text.
  */
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, disabled, id, isError, isWarning, ...other }, ref) => {
+  ({ className, disabled, id, status, ...other }, ref) => {
     const componentClassName = clsx(
       styles['input'],
-      isError && styles['error'],
-      isWarning && styles['warning'],
+      status === 'critical' && styles['error'],
+      status === 'warning' && styles['warning'],
       className,
     );
 
