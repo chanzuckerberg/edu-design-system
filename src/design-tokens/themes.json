@@ -219,10 +219,10 @@
           },
           "utility": {
             "base": {
-              "0": {
+              "1": {
                 "value": "rgb(var(--eds-color-white) / 1)"
               },
-              "1": {
+              "2": {
                 "value": "{eds.color.neutral.025}"
               }
             },
