@@ -68,6 +68,8 @@ export type ButtonV2Props<ExtendedElement = unknown> =
 
     /**
      * Whether `Button` is set to disabled state (disables interaction and updates appearance).
+     *
+     * Note: this will set the internal field to `disabled` as well. Prefer this to just setting `disabled`.
      */
     isDisabled?: boolean;
 
