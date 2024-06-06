@@ -243,6 +243,50 @@ exports[`<Button /> (v2) IconLayouts story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Button /> (v2) InverseDisabledRanks story renders snapshot 1`] = `
+<div
+  class="bg-[var(--eds-color-blue-850)] p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="button button--layout-none button--disabled button--primary button--lg button--variant-inverse"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--disabled button--secondary button--lg button--variant-inverse"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--disabled button--tertiary button--lg button--variant-inverse"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`<Button /> (v2) InverseRanks story renders snapshot 1`] = `
 <div
   class="bg-[var(--eds-color-blue-850)] p-1"
