@@ -6,6 +6,8 @@ import React from 'react';
 import { AppNotification } from './AppNotification';
 import { ButtonV2 as Button } from '../Button';
 import { ButtonGroupV2 as ButtonGroup } from '../ButtonGroup';
+import { LinkV2 as Link } from '../Link';
+import Text from '../Text';
 
 export default {
   title: 'Components/V2/AppNotification',
@@ -48,6 +50,20 @@ export const WithControls: StoryObj<Args> = {
           Other action
         </Button>
       </ButtonGroup>
+    ),
+  },
+};
+
+export const WithLinkInSubtitle: StoryObj<Args> = {
+  args: {
+    subTitle: (
+      <Text as="span">
+        Some text with a{' '}
+        <Link href="https://example.com/" variant="inverse">
+          link
+        </Link>{' '}
+        in.
+      </Text>
     ),
   },
 };

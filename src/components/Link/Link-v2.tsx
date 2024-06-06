@@ -79,6 +79,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkV2Props>(
 
     const iconSize = size && (['xl', 'lg'].includes(size) ? '1.5rem' : '1rem');
 
+    // TODO-AH: Inline links cannot be lowEmphasis (add runtime warning)
+    // TODO-AH: chevron-right only allowr when lowEmphasis is used (add runtime warning)
     return (
       <Component className={componentClassName} ref={ref} {...other}>
         {children}

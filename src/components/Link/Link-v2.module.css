@@ -8,7 +8,6 @@
  */
 
 .link {
-  color: var(--eds-theme-color-text-utility-default-primary);
   display: inline;
 
   /* TODO: verify the way to sync type tokens and one-off treatments */
@@ -17,7 +16,7 @@
 }
 
 /**
- * Sub-components
+ * Sub-components (only should apply to standalone links
  */
 .link__icon {
   padding-left: 0.25rem;
@@ -36,6 +35,15 @@
  */
 .link--context-standalone {
   display: block;
+
+  &.link--emphasis-default {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  &.link--emphasis-low {
+    color: var(--eds-theme-color-text-utility-default-primary);
+    text-decoration: none;
+  }
 
   /**
    * Sizes - using the presets for type ramp matching body-*
@@ -64,31 +72,25 @@
 /**
  * Emphasis
  */
+.link--emphasis-default {
+  color: inherit;
+}
+
 .link--emphasis-high {
   color: var(--eds-theme-color-text-utility-interactive-secondary);
 }
 
-.link--emphasis-low {
-  color: var(--eds-theme-color-text-utility-default-primary);
-  text-decoration: none;
-}
-
 /**
- * Variants
+ * Inverse variant
  */
-.link.link--variant-inverse {
-  color: var(--eds-theme-color-text-utility-inverse);
-
-  &:active,
-  &:visited {
+.link.link--variant-inverse:hover,
+.link.link--variant-inverse:active {
     color: var(--eds-theme-color-text-utility-inverse);
-  }
 }
 
 /**
  * States
  */
-
 .link:hover {
   color: var(--eds-theme-color-text-utility-interactive-secondary-hover);
 }
