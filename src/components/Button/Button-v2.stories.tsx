@@ -125,6 +125,24 @@ export const InverseRanks: StoryObj<Args> = {
 };
 
 /**
+ * Inverse buttons can be disabled as well
+ */
+export const InverseDisabledRanks: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    variant: 'inverse',
+    isDisabled: true,
+  },
+  render: DefaultRanks.render,
+  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
+  decorators: [
+    (Story) => (
+      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
+    ),
+  ],
+};
+
+/**
  * Buttons come in three sizes
  */
 export const Sizes: StoryObj<Args> = {
