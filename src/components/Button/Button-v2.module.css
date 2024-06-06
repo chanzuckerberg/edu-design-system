@@ -259,57 +259,65 @@
 /**
  * Disabled
  */
+.button--disabled {
+  &.button--primary.button--variant-default,
+  &.button--primary.button--variant-critical,
+  &.button--primary.button--variant-neutral {
+    color: var(--eds-theme-color-text-utility-disabled-primary);
+    border-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+    background-color:  var(--eds-theme-color-background-utility-disabled-medium-emphasis);
 
-.button--primary.button--variant-default.button--disabled,
-.button--primary.button--variant-critical.button--disabled,
-.button--primary.button--variant-neutral.button--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
-  border-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
-  background-color:  var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+    pointer-events: none;
+  }
 
-  pointer-events: none;
+  &.button--primary.button--variant-inverse {
+    color: var(--eds-theme-color-text-utility-inverse-disabled);
+    /* Using transparent for border color to avoid blending opacity of border and background */
+    border-color: transparent;
+    background-color: var(--eds-theme-color-background-utility-inverse-disabled);
+
+    pointer-events: none;
+  }
+
+  &.button--secondary.button--variant-default,
+  &.button--secondary.button--variant-critical,
+  &.button--secondary.button--variant-neutral {
+    color: var(--eds-theme-color-text-utility-disabled-primary);
+    border-color: var(--eds-theme-color-border-disabled);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+
+    pointer-events: none;
+  }
+
+  &.button--secondary.button--variant-inverse {
+    color: var(--eds-theme-color-text-utility-inverse-disabled);
+    border-color: var(--eds-theme-color-border-utility-inverse-disabled);
+
+    pointer-events: none;
+  }
+
+  &.button--tertiary.button--variant-default,
+  &.button--tertiary.button--variant-critical,
+  &.button--tertiary.button--variant-neutral {
+    color: var(--eds-theme-color-text-utility-disabled-primary);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+
+    pointer-events: none;
+  }
+
+  &.button--tertiary.button--variant-inverse {
+    color: var(--eds-theme-color-text-utility-disabled-primary);
+    border-color: transparent;
+
+    pointer-events: none;
+  }
 }
 
-.button--primary.button--variant-inverse.button--disabled {
-  color: var(--eds-theme-color-text-utility-inverse-disabled);
-  /* Using transparent for border color to avoid blending opacity of border and background */
-  border-color: transparent;
-  background-color: var(--eds-theme-color-background-utility-inverse-disabled);
-
-  pointer-events: none;
-}
-
-.button--secondary.button--variant-default.button--disabled,
-.button--secondary.button--variant-critical.button--disabled,
-.button--secondary.button--variant-neutral.button--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
-  border-color: var(--eds-theme-color-border-disabled);
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
-
-  pointer-events: none;
-}
-
-.button--secondary.button--variant-inverse.button--disabled {
-  color: var(--eds-theme-color-text-utility-inverse-disabled);
-  border-color: var(--eds-theme-color-border-utility-inverse-disabled);
-
-  pointer-events: none;
-}
-
-.button--tertiary.button--variant-default.button--disabled,
-.button--tertiary.button--variant-critical.button--disabled,
-.button--tertiary.button--variant-neutral.button--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
-
-  pointer-events: none;
-}
-
-.button--tertiary.button--variant-inverse.button--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
-  border-color: transparent;
-
-  pointer-events: none;
+/**
+ * Flag usages of just :disabled as erroneous
+ */
+.button:disabled:not(.button--disabled) {
+  outline: 2px dashed var(--eds-theme-color-border-utility-critical);
 }
 
 /**

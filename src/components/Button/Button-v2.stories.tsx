@@ -36,7 +36,7 @@ type Args = React.ComponentProps<typeof Button>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    children: 'Default',
+    children: 'Button',
   },
 };
 
@@ -65,7 +65,7 @@ export const DefaultRanks: StoryObj<Args> = {
 };
 
 /**
- * Buttons can be disabled for each rank
+ * Buttons can be disabled for each rank using `isDisabled`
  */
 export const Disabled: StoryObj<Args> = {
   args: {
@@ -73,6 +73,18 @@ export const Disabled: StoryObj<Args> = {
     isDisabled: true,
   },
   render: DefaultRanks.render,
+};
+
+/**
+ * Since `isDisabled` will set the form's proper disabled state, don't use just `disabled`. This will show a visual error.
+ */
+export const JustDisabledProp: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    disabled: true,
+  },
+  render: DefaultRanks.render,
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 };
 
 /**
