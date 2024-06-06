@@ -12,16 +12,22 @@ export default {
   args: {
     children: 'Link',
     size: 'lg',
-    href: 'https://go.czi.team/eds',
+    href: 'http://example.org/',
     // stop link from navigating to another page so we can click the link for testing
     onClick: (event: any) => event.preventDefault(),
   },
+  decorators: [
+    (Story) => <div className="text-utility-default-primary">{Story()}</div>,
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Link>;
 
 export const Default: StoryObj<Args> = {};
 
+/**
+ * When using context, you can specify a trailing icon for the link.
+ */
 export const LinkWithChevron: StoryObj<Args> = {
   args: {
     children: 'Default',
@@ -30,6 +36,9 @@ export const LinkWithChevron: StoryObj<Args> = {
   },
 };
 
+/**
+ * When using context, you can specify a trailing icon for the link. When using the open icon, make sure that a new tab/window is opened.
+ */
 export const LinkWithOpenIcon: StoryObj<Args> = {
   args: {
     children: 'Default',
@@ -38,6 +47,9 @@ export const LinkWithOpenIcon: StoryObj<Args> = {
   },
 };
 
+/**
+ * You can add formatting to the link if needed.
+ */
 export const LinkWithFormattedChildren: StoryObj<Args> = {
   args: {
     children: <em>emphasized link</em>,
@@ -46,6 +58,9 @@ export const LinkWithFormattedChildren: StoryObj<Args> = {
   },
 };
 
+/**
+ * Standalone links can have additional emphasis or minimized emphasis applied.
+ */
 export const Emphasis: StoryObj<Args> = {
   args: {
     size: 'md',
@@ -78,7 +93,7 @@ export const Inverse: StoryObj<Args> = {
   // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
   decorators: [
     (Story) => (
-      <div className="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center">
+      <div className="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center text-utility-inverse">
         {Story()}
       </div>
     ),
@@ -86,18 +101,15 @@ export const Inverse: StoryObj<Args> = {
 };
 
 export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
-  render: (
-    args: React.JSX.IntrinsicAttributes &
-      (LinkV2Props & React.RefAttributes<HTMLAnchorElement>),
-  ) => (
+  render: (args) => (
     <div>
       Lorem ipsum dolor sit amet,{' '}
-      <Link {...args} href="https://go.czi.team/eds">
+      <Link {...args} href="https://example.com/">
         consectetur adipiscing elit
       </Link>
       . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
       Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
-      <Link {...args} href="https://go.czi.team/eds">
+      <Link {...args} href="https://example.org">
         Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est.
         Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non
         dui dignissim fermentum.
@@ -105,7 +117,7 @@ export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
       Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce
       vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas.
       Sed sed quam id nisl bibendum convallis. Proin suscipit, odio{' '}
-      <Link {...args} href="https://go.czi.team/eds">
+      <Link {...args} href="https://example.edu">
         vel pulvinar
       </Link>{' '}
       euismod, risus eros ullamcorper lectus, non blandit nulla dui eget massa.
@@ -113,8 +125,44 @@ export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
   ),
 };
 
-// Here, we introduce a special type extension to LinkProps, then use it in a
-// composed component, to demonstrate the ability to offer custom props to a component
+/**
+ * Links will inherit the color from the surrounding text color definition (default emphasis, inline links)
+ */
+export const InheritColor: StoryObj<Args> = {
+  args: {
+    children: 'Inheriting',
+  },
+  render: (args) => (
+    <div>
+      Lorem ipsum dolor sit amet,{' '}
+      <Link {...args} href="https://example.com/">
+        consectetur adipiscing elit
+      </Link>
+      . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
+      Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
+      <Link {...args} href="https://example.org">
+        Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est.
+        Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non
+        dui dignissim fermentum.
+      </Link>{' '}
+      Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce
+      vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas.
+      Sed sed quam id nisl bibendum convallis. Proin suscipit, odio{' '}
+      <Link {...args} href="https://example.edu">
+        vel pulvinar
+      </Link>{' '}
+      euismod, risus eros ullamcorper lectus, non blandit nulla dui eget massa.
+    </div>
+  ),
+  decorators: [
+    (Story) => <div className="text-utility-critical">{Story()}</div>,
+  ],
+};
+
+/**
+ * Here, we introduce a special type extension to LinkProps, then use it in a
+ * composed component, to demonstrate the ability to offer custom props to a component
+ */
 type ExtendArgs = LinkV2Props<{ to: string }>;
 function ExtendedLink(args: ExtendArgs) {
   return (
@@ -150,7 +198,11 @@ export const UsingExtendedLink: StoryObj<ExtendArgs> = {
   render: (args) => (
     <div>
       Lorem ipsum dolor sit amet,{' '}
-      <ExtendedLink {...args} href="https://go.czi.team/eds" to="test">
+      <ExtendedLink
+        {...args}
+        href="https://example.org/extended-link/"
+        to="test"
+      >
         consectetur adipiscing elit
       </ExtendedLink>
       . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
