@@ -182,7 +182,7 @@ exports[`<Card /> (v2) ChildCards story renders snapshot 1`] = `
       class="card__body"
     >
       <article
-        class="card card--container-style-high card--container-color-default child-card"
+        class="card card--container-style-high card--container-color-default card--is-interactive child-card"
         draggable="true"
       >
         <header

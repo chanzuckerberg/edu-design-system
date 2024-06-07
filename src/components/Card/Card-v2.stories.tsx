@@ -346,7 +346,7 @@ export const ChildCards: StoryObj<Args> = {
       <>
         <Card.Header size="md" title="Card Group"></Card.Header>
         <Card.Body>
-          <Card.ChildCard draggable="true">
+          <Card.ChildCard draggable="true" isInteractive>
             <Card.Header
               action={<CardMenu />}
               eyebrow="Eyebrow Text"
