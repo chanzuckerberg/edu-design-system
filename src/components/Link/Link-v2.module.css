@@ -86,7 +86,11 @@
  */
 .link.link--variant-inverse:hover,
 .link.link--variant-inverse:active {
-    color: var(--eds-theme-color-text-utility-inverse);
+  color: var(--eds-theme-color-text-utility-inverse);
+}
+
+.link.link--variant-inverse:visited {
+  color: var(--eds-theme-color-text-utility-inverse-interactive-visited);
 }
 
 /**
