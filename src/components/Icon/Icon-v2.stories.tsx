@@ -141,4 +141,7 @@ const IconsInGrid = (args: IconProps) => (
  */
 export const IconGrid: Story = {
   render: (args) => <IconsInGrid {...args} />,
+  parameters: {
+    layout: 'padded',
+  },
 };
