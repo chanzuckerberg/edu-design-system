@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import getIconNameFromStatus from '../../util/getIconNameFromStatus-v2';
 import type { Status } from '../../util/variant-types';
@@ -19,7 +19,18 @@ export type ToastNotificationProps = {
    * Callback when notification is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
+  /**
+   * Length of time to wait until `onDismiss` is called
+   */
+  timeout?: number;
   // Design API
+  /**
+   * Determines whether the toast notification will dismiss on its own, or due to user action. When set to `"auto"`,
+   * it will dismiss after 8 seconds.
+   *
+   * **Default is `"manual"`**.
+   */
+  dissmissType?: 'manual' | 'auto';
   /**
    * Keyword to characterize the state of the notification
    */
@@ -37,8 +48,10 @@ export type ToastNotificationProps = {
  */
 export const ToastNotification = ({
   className,
+  dissmissType = 'manual',
   onDismiss,
   status = 'favorable',
+  timeout = 8000,
   title,
   ...other
 }: ToastNotificationProps) => {
@@ -47,6 +60,18 @@ export const ToastNotification = ({
     status && styles[`toast--status-${status}`],
     className,
   );
+
+  useEffect(() => {
+    const expireId =
+      dissmissType === 'auto'
+        ? setTimeout(() => {
+            onDismiss && onDismiss();
+          }, timeout)
+        : undefined;
+
+    return () => clearTimeout(expireId);
+  }, [onDismiss, dissmissType, timeout]);
+
   return (
     <div className={componentClassName} {...other}>
       <Icon
