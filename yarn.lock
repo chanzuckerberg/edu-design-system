@@ -2872,7 +2872,7 @@ __metadata:
     "@chanzuckerberg/eslint-config-edu-ts": "npm:^1.0.9"
     "@chanzuckerberg/eslint-plugin-edu-react": "npm:^1.1.9"
     "@chanzuckerberg/eslint-plugin-stories": "npm:^3.2.14"
-    "@chanzuckerberg/story-utils": "npm:^4.0.0"
+    "@chanzuckerberg/story-utils": "npm:^4.0.8"
     "@commitlint/cli": "npm:^18.6.1"
     "@commitlint/config-conventional": "npm:^18.6.3"
     "@geometricpanda/storybook-addon-badges": "npm:^2.0.2"
@@ -2899,7 +2899,7 @@ __metadata:
     "@types/jest": "npm:^29.5.12"
     "@types/jsonfile": "npm:^6"
     "@types/lodash": "npm:^4.17.4"
-    "@types/node": "npm:^20.12.12"
+    "@types/node": "npm:^20.12.13"
     "@types/react": "npm:^18.3.3"
     "@types/react-beautiful-dnd": "npm:^13.1.8"
     "@types/react-dom": "npm:^18.3.0"
@@ -2957,7 +2957,7 @@ __metadata:
     svg4everybody: "npm:^2.1.9"
     tailwindcss: "npm:^3.4.3"
     ts-dedent: "npm:^2.2.0"
-    ts-jest: "npm:^29.1.3"
+    ts-jest: "npm:^29.1.4"
     ts-morph: "npm:^22.0.0"
     typescript: "npm:^5.2.2"
     yargs: "npm:^17.7.2"
@@ -3017,14 +3017,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/story-utils@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@chanzuckerberg/story-utils@npm:4.0.0"
+"@chanzuckerberg/story-utils@npm:^4.0.8":
+  version: 4.0.8
+  resolution: "@chanzuckerberg/story-utils@npm:4.0.8"
   peerDependencies:
-    "@storybook/react": ^7.0.0
+    "@storybook/react": ">=7.1.1 <9"
     "@testing-library/react": ">=11.0.0"
     react: "*"
-  checksum: 10/8674fa67de60f19be7dd15d30e21fcb1092d56f7fb1a175d036aa7a19599a2559533e59e268bdeb4c3b2396591472f73be1baf75ff1fc685632323a60b80f8b8
+  checksum: 10/003eb9e1bb1b4d65d99299e603d802435537e9e407ec322fabc51b197df6b4a4c7eba208c057f7a6f8e6b1dddcb5eead5a7c06d54a4fa86fdcff1a17b3196f44
   languageName: node
   linkType: hard
 
@@ -7006,12 +7006,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.12.12":
-  version: 20.12.12
-  resolution: "@types/node@npm:20.12.12"
+"@types/node@npm:^20.12.13":
+  version: 20.14.0
+  resolution: "@types/node@npm:20.14.0"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/e3945da0a3017bdc1f88f15bdfb823f526b2a717bd58d4640082d6eb0bd2794b5c99bfb914b9e9324ec116dce36066990353ed1c777e8a7b0641f772575793c4
+  checksum: 10/49b332fbf8aee4dc4f61cc1f1f6e130632510f795dd7b274e55894516feaf4bec8a3d13ea764e2443e340a64ce9bbeb006d14513bf6ccdd4f21161eccc7f311e
   languageName: node
   linkType: hard
 
@@ -20885,9 +20885,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^29.1.3":
-  version: 29.1.3
-  resolution: "ts-jest@npm:29.1.3"
+"ts-jest@npm:^29.1.4":
+  version: 29.1.4
+  resolution: "ts-jest@npm:29.1.4"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
@@ -20917,7 +20917,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 10/cc1f608bb5859e112ffb8a6d84ddb5c20954b7ec8c89a8c7f95e373368d8946b5843594fe7779078eec2b7e825962848f1a1ba7a44c71b8a08ed4e75d3a3f8d8
+  checksum: 10/3103c0e2f9937ae6bb51918105883565bb2d11cae1121ae20aedd1c4374f843341463a4a1986e02a958d119be0d3a9b996d761bc4aac85152a29385e609fed3c
   languageName: node
   linkType: hard
 
