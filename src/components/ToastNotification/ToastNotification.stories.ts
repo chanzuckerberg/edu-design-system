@@ -10,7 +10,10 @@ export default {
     layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
-  argTypes: { onDismiss: { action: 'dismissed' } },
+  argTypes: {
+    onDismiss: { action: 'dismissed' },
+    timeout: { table: { disable: true } },
+  },
   args: {
     title: "You've got a temporary notification!",
     className: 'w-96',
@@ -37,5 +40,14 @@ export const NotDismissable: StoryObj<Args> = {
   args: {
     ...Default.args,
     onDismiss: undefined,
+  },
+};
+
+export const AutoDismiss: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    dissmissType: 'auto',
+    timeout: 500,
+    onDismiss: () => console.log('trigger onDismiss'),
   },
 };
