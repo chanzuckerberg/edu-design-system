@@ -34,7 +34,8 @@
  * Contexts
  */
 .link--context-standalone {
-  display: block;
+  display: inline-flex;
+  align-items: center;
 
   &.link--emphasis-default {
     color: var(--eds-theme-color-text-utility-default-primary);
