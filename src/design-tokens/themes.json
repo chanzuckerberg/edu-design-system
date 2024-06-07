@@ -2014,6 +2014,11 @@
               },
               "disabled": {
                 "value": "rgb(var(--eds-color-white) / 0.5)"
+              },
+              "interactive": {
+                "visited": {
+                  "value": "{eds.color.purple.350}"
+                }
               }
             },
             "placeholder": {

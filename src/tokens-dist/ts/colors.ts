@@ -457,6 +457,7 @@ export const EdsThemeColorTextUtilityInverse =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorTextUtilityInverseDisabled =
   'rgb(var(--eds-color-white) / 0.5)';
+export const EdsThemeColorTextUtilityInverseInteractiveVisited = '#C580E7';
 export const EdsThemeColorTextUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorTextUtilitySuccess = '#007249'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorTextUtilityError = '#BD0044';
