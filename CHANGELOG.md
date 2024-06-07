@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.16](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.15...v15.0.0-alpha.16) (2024-06-07)
+
+
+### Features
+
+* **Icon:** add new and updated icons ([#1981](https://github.com/chanzuckerberg/edu-design-system/issues/1981)) ([fc7f842](https://github.com/chanzuckerberg/edu-design-system/commit/fc7f8424935554b1e4768fab8f59d2377a4b9d22))
+* **Link:** add inverse text visited color token and apply ([#1982](https://github.com/chanzuckerberg/edu-design-system/issues/1982)) ([98dec99](https://github.com/chanzuckerberg/edu-design-system/commit/98dec9936a4377834c8c0241f670bf6dbe83fb23))
+* **ToastNotification:** add dismissType with automated dismissing ([#1980](https://github.com/chanzuckerberg/edu-design-system/issues/1980)) ([8545f14](https://github.com/chanzuckerberg/edu-design-system/commit/8545f144589d5f7ae38f857428770b3620978553))
+
+
+### Bug Fixes
+
+* **Button:** add in missing inverse disabled treatments ([#1976](https://github.com/chanzuckerberg/edu-design-system/issues/1976)) ([8389f35](https://github.com/chanzuckerberg/edu-design-system/commit/8389f35a8820c2e5c5823b31b3a9f2dd512263d9))
+* **Button:** mark disable usage as invalid ([#1977](https://github.com/chanzuckerberg/edu-design-system/issues/1977)) ([99a70d3](https://github.com/chanzuckerberg/edu-design-system/commit/99a70d3bd5027f6bceb149c206bce4ce8412c8bc))
+* **Button:** use text-utility-default state tokens ([#1979](https://github.com/chanzuckerberg/edu-design-system/issues/1979)) ([e754588](https://github.com/chanzuckerberg/edu-design-system/commit/e754588af113cad67309b63825310427791499ac))
+* **Link:** address problems with link color inheritance ([#1975](https://github.com/chanzuckerberg/edu-design-system/issues/1975)) ([78d173e](https://github.com/chanzuckerberg/edu-design-system/commit/78d173e6366e60180685cbe85a096d88912e1f27))
+* **Link:** align icons in flexed standalone container ([#1978](https://github.com/chanzuckerberg/edu-design-system/issues/1978)) ([3a6a20d](https://github.com/chanzuckerberg/edu-design-system/commit/3a6a20dfe9322622475e9572f653a20963ddde25))
+
 ## [15.0.0-alpha.15](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.14...v15.0.0-alpha.15) (2024-06-05)
 
 
