@@ -85,6 +85,12 @@ type TooltipProps = {
    * The content of the tooltip bubble.
    */
   text?: string;
+  /**
+   * The variant treatment for tooltips
+   *
+   * **Default is `"default"`**.
+   */
+  variant?: 'default' | 'inverse';
 } & TippyProps &
   HTMLAttributes<HTMLElement>;
 
@@ -106,6 +112,7 @@ export const Tooltip = ({
   duration = 200,
   placement = 'auto',
   text,
+  variant = 'default',
   ...rest
 }: TooltipProps) => {
   // Hides tooltip when escape key is pressed, following:
@@ -151,10 +158,16 @@ export const Tooltip = ({
     </Text>
   );
 
+  const tooltipClassNames = clsx(
+    styles['tooltip'],
+    variant && styles[`tooltip--variant-${variant}`],
+    className,
+  );
+
   // TODO: figure out why the modifiers don't seem to get applied
   return (
     <Tippy
-      className={clsx(styles['tooltip'], className)}
+      className={tooltipClassNames}
       content={textContent}
       duration={duration}
       placement={placement}
