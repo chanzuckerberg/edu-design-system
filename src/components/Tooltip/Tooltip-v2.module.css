@@ -12,11 +12,6 @@
   @media (prefers-reduced-motion) {
     transition: none;
   }
-
-  border-color: var(--eds-theme-color-background-utility-default-high-emphasis);
-  color: var(--eds-theme-color-text-utility-inverse);
-  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
-  --arrow-color: var(--eds-theme-color-background-utility-default-high-emphasis);
 }
 
 /**
@@ -105,4 +100,18 @@
   border-right-color: var(--arrow-color);
   border-left-width: 0;
   left: -7px;
+}
+
+.tooltip--variant-default {
+  color: var(--eds-theme-color-text-utility-inverse);
+  border-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+}
+
+.tooltip--variant-inverse {
+  color: var(--eds-theme-color-text-utility-default-primary);
+  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
 }

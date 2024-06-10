@@ -64,6 +64,7 @@ export const parameters = {
   },
   backgrounds: {
     values: [
+      // TODO: remove the following three when the last 1.0 components have been migrated
       {
         name: 'eds-color-neutral-white',
         value: '#ffffff',
@@ -75,6 +76,14 @@ export const parameters = {
       {
         name: 'eds-color-neutral-700',
         value: '#21272D',
+      },
+      {
+        name: 'background-utility-default-high-emphasis',
+        value: '#0F2163',
+      },
+      {
+        name: 'background-utility-inverse-high-emphasis',
+        value: '#FFFFFF',
       },
     ],
   },

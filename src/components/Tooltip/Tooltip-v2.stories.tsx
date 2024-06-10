@@ -51,7 +51,7 @@ export default {
     layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
     chromatic: {
-      delay: 300,
+      delay: 500,
       diffThreshold,
       diffIncludeAntiAliasing: false,
     },
@@ -103,6 +103,16 @@ export const LongTriggerText: Story = {
   parameters: {
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300 },
+  },
+};
+
+export const InverseVariant: Story = {
+  args: {
+    ...LeftPlacement.args,
+    variant: 'inverse',
+  },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
   },
 };
 
