@@ -24,6 +24,10 @@ export type LinkV2Props<ExtendedElement = unknown> =
      *
      * * **inline** - Inline link inherits the text size established within the `<p>` paragraph they are embedded in.
      * * **standalone** - Users can choose from the available sizes.
+     *
+     * **Default is `"inline"`**.
+     *
+     * Note: Icons will only be visible when `"standalone"` is used
      */
     context?: 'inline' | 'standalone';
     /**
@@ -80,6 +84,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkV2Props>(
     const iconSize = size && (['xl', 'lg'].includes(size) ? '1.5rem' : '1rem');
 
     // TODO-AH: Inline links cannot be lowEmphasis (add runtime warning)
+    // TODO-AH: Inline links won't show icons (add runtime warning)
     // TODO-AH: chevron-right only allowr when lowEmphasis is used (add runtime warning)
     return (
       <Component className={componentClassName} ref={ref} {...other}>
