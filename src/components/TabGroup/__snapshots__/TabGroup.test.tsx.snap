@@ -240,9 +240,9 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TabGroup /> Inverted story renders snapshot 1`] = `
+exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
 <div
-  class="bg-[var(--eds-color-blue-850)] p-1"
+  class="p-1"
 >
   <div
     class="tabs"

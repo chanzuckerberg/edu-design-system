@@ -127,13 +127,11 @@ export const InverseRanks: StoryObj<Args> = {
     ...DefaultRanks.args,
     variant: 'inverse',
   },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
   render: DefaultRanks.render,
-  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
-  decorators: [
-    (Story) => (
-      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 };
 
 /**
@@ -145,13 +143,11 @@ export const InverseDisabledRanks: StoryObj<Args> = {
     variant: 'inverse',
     isDisabled: true,
   },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
   render: DefaultRanks.render,
-  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
-  decorators: [
-    (Story) => (
-      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 };
 
 /**

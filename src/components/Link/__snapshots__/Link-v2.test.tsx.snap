@@ -80,12 +80,12 @@ exports[`<Link /> InheritColor story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> Inverse story renders snapshot 1`] = `
+exports[`<Link /> InverseVariant story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <div
-    class="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center text-utility-inverse"
+    class="w-96 p-1 text-center text-utility-inverse"
   >
     <a
       class="link link--emphasis-default link--size-lg link--variant-inverse"
