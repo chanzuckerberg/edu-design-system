@@ -245,7 +245,7 @@ exports[`<Button /> (v2) IconLayouts story renders snapshot 1`] = `
 
 exports[`<Button /> (v2) InverseDisabledRanks story renders snapshot 1`] = `
 <div
-  class="bg-[var(--eds-color-blue-850)] p-1"
+  class="p-1"
 >
   <div
     class="flex gap-1"
@@ -289,7 +289,7 @@ exports[`<Button /> (v2) InverseDisabledRanks story renders snapshot 1`] = `
 
 exports[`<Button /> (v2) InverseRanks story renders snapshot 1`] = `
 <div
-  class="bg-[var(--eds-color-blue-850)] p-1"
+  class="p-1"
 >
   <div
     class="flex gap-1"

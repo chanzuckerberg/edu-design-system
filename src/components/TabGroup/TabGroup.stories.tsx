@@ -101,7 +101,7 @@ export const Default: StoryObj<Args> = {
  * TabGroups have an inverted variant, for use on dark backgrounds. Depending on how the background is applied, you can use
  * text color tokens to style the individual tabs in the group.
  */
-export const Inverted: StoryObj<Args> = {
+export const InverseVariant: StoryObj<Args> = {
   args: {
     variant: 'inverse',
     children: (
@@ -164,14 +164,10 @@ export const Inverted: StoryObj<Args> = {
       </>
     ),
   },
-  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
-  decorators: [
-    (Story) => (
-      <div className="bg-[var(--eds-color-blue-850)] p-1">{Story()}</div>
-    ),
-  ],
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
   parameters: {
     ...Default.parameters,
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
   },
 };
 

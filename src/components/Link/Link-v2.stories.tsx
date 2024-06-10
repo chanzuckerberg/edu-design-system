@@ -86,16 +86,16 @@ export const Emphasis: StoryObj<Args> = {
 /**
  * We also include an inverse variant, for use on dark backgrounds.
  */
-export const Inverse: StoryObj<Args> = {
+export const InverseVariant: StoryObj<Args> = {
   args: {
     variant: 'inverse',
   },
-  // TODO: find a cleaner way to decorate with unavailable tokens using parameters:backgounds:
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
   decorators: [
     (Story) => (
-      <div className="w-96 bg-[var(--eds-color-blue-850)] p-1 text-center text-utility-inverse">
-        {Story()}
-      </div>
+      <div className="w-96 p-1 text-center text-utility-inverse">{Story()}</div>
     ),
   ],
 };
