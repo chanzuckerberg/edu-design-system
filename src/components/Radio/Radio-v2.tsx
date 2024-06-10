@@ -1,12 +1,38 @@
 import clsx from 'clsx';
 import React from 'react';
-import type { ReactNode, InputHTMLAttributes } from 'react';
+import type { ReactNode } from 'react';
+
+import { FieldLabelV2 as FieldLabel } from '../..';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
-import { IconV2 as Icon, type IconNameV2 as IconName } from '../Icon';
-import { InputLabel, type InputLabelProps } from '../InputLabel/InputLabel';
+
 import Text from '../Text';
+
 import styles from './Radio-v2.module.css';
+
+type RadioHTMLElementProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'checked' | 'id' | 'name'
+>;
+
+type RadioInputProps = RadioHTMLElementProps & {
+  /**
+   * Whether checkbox is checked.
+   */
+  checked?: boolean;
+  /**
+   * Additional classnames passed in for styling.
+   */
+  className?: string;
+  /**
+   * Radio ID. Used to connect the input with a label for accessibility purposes.
+   */
+  id?: string;
+  /**
+   * Whether the radio button is in an error state
+   */
+  isError?: boolean;
+};
 
 type RadioProps = RadioInputProps & {
   // Component API
@@ -15,6 +41,10 @@ type RadioProps = RadioInputProps & {
    * will generate an id to use for accessibility.
    */
   id?: string;
+  /**
+   * The field name to use in a form
+   */
+  name?: string;
   // Design API
   /**
    * Whether the radio button is in an error state
@@ -39,43 +69,11 @@ type RadioProps = RadioInputProps & {
     }
   >;
 
-type RadioInputProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  'id' | 'size'
-> & {
-  /**
-   * Additional classnames passed in for styling.
-   */
-  className?: string;
-  /**
-   * Radio ID. Used to connect the input with a label for accessibility purposes.
-   */
-  id?: string;
-  /**
-   * Whether the radio button is in an error state
-   */
-  isError?: boolean;
-};
-
-// TODO-AH: don't use external svgs in here
-const RadioSvg = ({ checked }: Pick<RadioProps, 'checked'>) => {
-  const iconClassName = clsx(styles['radio__icon']);
-  const icon: IconName = checked ? 'radio-selected' : 'radio-unselected';
-  return (
-    <Icon
-      className={iconClassName}
-      name={icon}
-      purpose="decorative"
-      size="1.5rem"
-    />
-  );
-};
-
 /**
  * Radio input element, exported for greater flexibility.
  * You must provide an `id` prop and connect it to a visible label.
  */
-export const RadioInput = ({
+const RadioInput = ({
   checked,
   className,
   disabled,
@@ -100,26 +98,10 @@ export const RadioInput = ({
         type="radio"
         {...other}
       />
-      <RadioSvg checked={checked} />
+      <span className={styles['radio__container']}></span>
+      <span className={styles['radio__selected']}></span>
     </span>
   );
-};
-
-/**
- * Radio label element, styles and relies on the InputLabel component.
- */
-export const RadioLabel = ({
-  className,
-  size = 'lg',
-  ...other
-}: InputLabelProps) => {
-  const componentClassName = clsx(
-    styles['radio__label'],
-    styles[`radio__label--${size}`],
-    className,
-  );
-
-  return <InputLabel className={componentClassName} size={size} {...other} />;
 };
 
 /**
@@ -127,7 +109,7 @@ export const RadioLabel = ({
  *
  * Radio control indicating if one item is selected or unselected from a set of other options. Uncontrolled by default, it can be used in place of a select field in form data.
  *
- * NOTE: This component requires `label` or `aria-label` prop *
+ * NOTE: This component requires `label` or `aria-label` prop
  */
 export const Radio = ({
   className,
@@ -156,9 +138,9 @@ export const Radio = ({
         {...other}
       />
       <div className={styles['radio__labels']}>
-        <RadioLabel disabled={disabled} htmlFor={radioId}>
+        <FieldLabel disabled={disabled} htmlFor={radioId}>
           {label}
-        </RadioLabel>
+        </FieldLabel>
         {subLabel && (
           <Text
             as="span"
@@ -175,7 +157,6 @@ export const Radio = ({
 
 Radio.displayName = 'Radio';
 RadioInput.displayName = 'Radio.Input';
-RadioLabel.displayName = 'Radio.Label';
 
 Radio.Input = RadioInput;
-Radio.Label = RadioLabel;
+Radio.Label = FieldLabel;

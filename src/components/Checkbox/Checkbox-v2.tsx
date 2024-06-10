@@ -1,16 +1,16 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import type { ReactNode } from 'react';
+
+import { FieldLabelV2 as FieldLabel } from '../..';
 import useForwardedRef from '../../util/useForwardedRef';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
-import { InputLabel, type InputLabelProps } from '../InputLabel/InputLabel';
 import Text from '../Text';
 
 import styles from './Checkbox-v2.module.css';
 
-type CheckboxLabelProps = InputLabelProps;
 type CheckboxHTMLElementProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   'checked' | 'id' | 'size'
@@ -98,12 +98,6 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputProps>(
   },
 );
 
-const CheckboxLabel = ({ className, ...other }: CheckboxLabelProps) => {
-  const componentClassName = clsx(className);
-
-  return <InputLabel className={componentClassName} {...other} />;
-};
-
 /**
  * `import {Checkbox} from "@chanzuckerberg/eds";`
  *
@@ -137,9 +131,9 @@ export const Checkbox = Object.assign(
         />
         <div className={styles['checkbox__labels']}>
           {label && (
-            <CheckboxLabel disabled={disabled} htmlFor={checkboxId}>
+            <FieldLabel disabled={disabled} htmlFor={checkboxId}>
               {label}
-            </CheckboxLabel>
+            </FieldLabel>
           )}
           {subLabel && (
             <Text
@@ -156,7 +150,7 @@ export const Checkbox = Object.assign(
   }),
   {
     Input: CheckboxInput,
-    Label: CheckboxLabel,
+    Label: FieldLabel,
   },
 );
 

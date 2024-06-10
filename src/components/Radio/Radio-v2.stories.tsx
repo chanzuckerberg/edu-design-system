@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Radio } from './Radio-v2';
 
-const meta: Meta<typeof Radio> = {
+export default {
   title: 'Components/V2/Radio',
   component: Radio,
   parameters: {
@@ -11,9 +11,7 @@ const meta: Meta<typeof Radio> = {
     badges: ['intro-1.0', 'current-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
-};
-
-export default meta;
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Radio>;
 type Story = StoryObj<Args>;
