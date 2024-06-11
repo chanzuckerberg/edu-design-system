@@ -239,7 +239,11 @@ export const InputField: InputFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <FieldLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel
+                className={labelClassName}
+                disabled={disabled}
+                htmlFor={idVar}
+              >
                 {label}
               </FieldLabel>
             )}

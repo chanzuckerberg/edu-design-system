@@ -71,7 +71,12 @@ export const FieldNote = ({
   }
 
   return (
-    <div className={componentClassName} id={id} {...other}>
+    <div
+      aria-disabled={disabled ?? undefined}
+      className={componentClassName}
+      id={id}
+      {...other}
+    >
       {(status === 'critical' || status === 'warning' || iconToUse) && (
         <Icon
           className={styles['field-note__icon']}

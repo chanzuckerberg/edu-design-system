@@ -122,6 +122,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
       class="textarea-field__footer"
     >
       <div
+        aria-disabled="true"
         class="field-note field-note--disabled textarea-field__field-note"
         id=":r7:"
       >

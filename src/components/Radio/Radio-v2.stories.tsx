@@ -20,7 +20,6 @@ export const Default: Story = {
   args: {
     name: 'option-1',
     label: 'Option 1',
-    disabled: false,
     checked: false,
     readOnly: true,
   },
@@ -40,11 +39,6 @@ export const Disabled: Story = {
     ...Default.args,
     name: 'option-disabled',
     disabled: true,
-  },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
   },
 };
 
@@ -86,11 +80,6 @@ export const WithoutVisibleLabel: Story = {
     label: undefined,
     'aria-label': 'unchecked radio button',
   },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
-  },
 };
 
 export const LongLabels = {
@@ -109,10 +98,5 @@ export const LongLabels = {
         <Radio checked label={label} name="option-long-label" readOnly />
       </div>
     );
-  },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
   },
 };

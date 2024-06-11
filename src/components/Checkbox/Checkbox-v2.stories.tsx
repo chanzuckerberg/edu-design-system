@@ -7,7 +7,6 @@ const meta: Meta<typeof Checkbox> = {
   title: 'Components/V2/Checkbox',
   component: Checkbox,
   args: {
-    disabled: false,
     label: 'Checkbox',
   },
   parameters: {
@@ -59,11 +58,6 @@ export const Disabled: Story = {
       <Checkbox {...args} disabled indeterminate label="Disabled" />
     </div>
   ),
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
-  },
 };
 
 /**
@@ -83,10 +77,5 @@ export const WithoutVisibleLabel: Story = {
 export const LongLabels: Story = {
   args: {
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
   },
 };

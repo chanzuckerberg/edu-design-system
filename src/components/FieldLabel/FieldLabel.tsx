@@ -19,15 +19,15 @@ export type FieldLabelProps = {
   htmlFor: string;
   // Design API
   /**
+   * Indicates disabled state of the input.
+   */
+  disabled?: boolean;
+  /**
    * Size of the label.
    *
    * **Default is `"lg"`**.
    */
   size?: Extract<Size, 'md' | 'lg'>;
-  /**
-   * Indicates disabled state of the input.
-   */
-  disabled?: boolean;
 };
 
 /**
@@ -45,7 +45,12 @@ export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
       className,
     );
     return (
-      <label className={componentClassName} htmlFor={htmlFor} ref={ref}>
+      <label
+        aria-disabled={disabled ?? undefined}
+        className={componentClassName}
+        htmlFor={htmlFor}
+        ref={ref}
+      >
         {children}
       </label>
     );

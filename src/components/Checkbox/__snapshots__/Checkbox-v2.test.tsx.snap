@@ -73,6 +73,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
+          aria-disabled="true"
           class="label label--lg label--disabled"
           for=":r5:"
         >
@@ -94,6 +95,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
+          aria-disabled="true"
           class="label label--lg label--disabled"
           for=":r6:"
         >
@@ -114,6 +116,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
+          aria-disabled="true"
           class="label label--lg label--disabled"
           for=":r7:"
         >
@@ -139,6 +142,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
     class="checkbox__labels"
   >
     <label
+      aria-disabled="true"
       class="label label--lg label--disabled"
       for=":ra:"
     >
