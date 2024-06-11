@@ -64,6 +64,8 @@
  * Sizes and Widths
  */
 .button--lg {
+  align-items: center;
+
   padding: 0.5rem 1.25rem;
   font: var(--eds-theme-typography-button-lg);
 
@@ -73,6 +75,8 @@
 }
 
 .button--md {
+  align-items: center;
+
   padding: 0.25rem 1rem;
   font: var(--eds-theme-typography-button-md);
 
@@ -89,7 +93,6 @@
   min-width: 3rem;
   max-width: 12rem;
   max-height: 1.5rem;
-
 }
 
 .button--full-width {

@@ -182,6 +182,9 @@ export const FullWidths: StoryObj<Args> = {
     ...Sizes.args,
     isFullWidth: true,
   },
+  parameters: {
+    layout: 'padded',
+  },
   render: Sizes.render,
 };
 
@@ -203,6 +206,7 @@ export const LoadingStates: StoryObj<Args> = {
 export const IconLayouts: StoryObj<Args> = {
   args: {
     ...Default.args,
+    icon: 'open-in-new',
   },
   render: (args) => {
     return (
