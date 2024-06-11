@@ -73,12 +73,12 @@
 .checkbox__input:not(:checked):not(:indeterminate) {
   color: var(--eds-theme-color-border-utility-default-medium-emphasis);
 
-  &:hover {
+  &:not(:disabled):hover {
     color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
   }
 
-  &:active {
+  &:not(:disabled):active {
     color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
   }

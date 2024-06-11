@@ -106,6 +106,7 @@ exports[`<Radio /> (v2) Disabled story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
+        aria-disabled="true"
         class="label label--lg label--disabled"
         for=":r2:"
       >
@@ -146,6 +147,7 @@ exports[`<Radio /> (v2) DisabledAndChecked story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
+        aria-disabled="true"
         class="label label--lg label--disabled"
         for=":r3:"
       >

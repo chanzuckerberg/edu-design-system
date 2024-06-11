@@ -751,9 +751,6 @@ export const Disabled: StoryObj = {
     disabled: true,
   },
   parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
     docs: {
       ...Default.parameters?.docs,
     },
@@ -860,9 +857,6 @@ export const DisabledRequired: StoryObj = {
     className: 'w-96',
   },
   parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
     docs: {
       ...Default.parameters?.docs,
     },

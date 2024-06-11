@@ -342,6 +342,7 @@ const SelectLabel = ({
       <Listbox.Label
         as={FieldLabel}
         className={componentClassName}
+        disabled={disabled}
         htmlFor={htmlFor}
       >
         {label}
