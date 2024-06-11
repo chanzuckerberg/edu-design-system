@@ -11,16 +11,47 @@
 }
 
 /**
- * Wraps the visually hidden radio input element and the visible sibling svg element.
+ * Wraps the visually hidden radio input element and the visible sibling container element.
  */
 .input__wrapper {
   position: relative;
-  /* Centers the radio icon in the wrapper. */
   display: inline-flex;
   align-items: center;
-  /* Aligns the radio with the first line of the label. */
   align-self: flex-start;
+  flex-shrink: 0;
+
+  width: 1.5rem;
+  height: 1.5rem;
 }
+
+.radio__container,
+.radio__selected {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.radio__container {
+  border: 0.125rem solid currentColor;
+  border-radius: 50%;
+  content: '';
+
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.radio__selected {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: transparent;
+
+  content: '';
+  pointer-events: none;
+}
+
 /**
  * The visually hidden input element for the radio. The visual radio is provided by an svg element.
  */
@@ -39,13 +70,14 @@
    * especially on touch screen readers, still interact with the real radio element
    * where it would naturally be present.
    */
+  display: block;
   opacity: 0;
 }
 
 /**
  * The disabled status of the visually hidden input element.
  */
- .radio__input:disabled {
+.radio__input:disabled {
   /* Needed since the input element overlays the visible svg icon for user input and cursor. */
   cursor: not-allowed;
   pointer-events: none;
@@ -55,85 +87,134 @@
   position: relative;
 }
 
-/**
- * Text that labels a radio input.
- */
-.radio__label {
-  position: relative;
-}
-
 .radio__sub-label {
   display: block;
 
   color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
-/**
- * The visible radio svg icon element
- */
-.radio__icon {
-  /* Creates space for the border so that there's no jitter when the focus border is visible. */
-  border: 0.125rem solid transparent;
-
-  /* Theming when unchecked */
-  .radio__input:not(:checked) + & {
-    color: var(--eds-theme-color-border-utility-default-medium-emphasis);
-  }
-
-  .radio__input:not(:checked):hover + & {
-    color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
-  }
-
-  .radio__input:not(:checked):active + & {
-    color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
-  }
-
-  .radio__input:not(:checked):disabled + & {
-    color: var(--eds-theme-color-border-utility-disabled);
-    pointer-events: none;
-  }
-
-  /* Theming when checked */
-  .radio__input:checked + & {
-    color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
-  }
-
-  .radio__input:checked:hover ~ & {
-    color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
-  }
-
-  .radio__input:checked:active ~ & {
-    color: var(--eds-theme-color-background-utility-interactive-high-emphasis-active);
-  }
-
-  .radio__input:checked:disabled ~ & {
-    color: var(--eds-theme-color-border-utility-disabled);
-  }
-
-  /**
-   * Error Theming
-   */ 
-  .radio__input.radio--error ~ & {
-    color: var(--eds-theme-color-border-utility-critical);
-  }
-
-  .radio__input.radio--error:hover ~ & {
-    color: var(--eds-theme-color-border-utility-critical-hover);
-  }
-
-  .radio__input.radio--error:active ~ & {
-    color: var(--eds-theme-color-border-utility-critical-active);
+.radio__input:not(:checked) {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
   }
 }
 
-.radio__input:focus-visible + .radio__icon {
-  border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+.radio__input:not(:checked):hover {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-border-utility-default-medium-emphasis-hover
+    );
+  }
+}
+
+.radio__input:not(:checked):active {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-border-utility-default-medium-emphasis-active
+    );
+  }
+}
+
+.radio__input:not(:checked):disabled {
+  pointer-events: none;
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-disabled);
+    background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+  }
+}
+
+.radio__input:checked {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis
+    );
+  }
+
+  & ~ .radio__selected {
+    background-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis
+    );
+  }
+}
+
+.radio__input:checked:hover {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-hover
+    );
+  }
+
+  & ~ .radio__selected {
+    background-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-hover
+    );
+  }
+}
+
+.radio__input:checked:active {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-active
+    );
+  }
+
+  & ~ .radio__selected {
+    background-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-active
+    );
+  }
+}
+
+.radio__input:checked:disabled {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-disabled);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-disabled);
+  }
+}
+
+.radio__input.radio--error {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-critical);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-critical);
+  }
+}
+
+.radio__input.radio--error:hover {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+}
+
+.radio__input.radio--error:active {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-critical-active);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-critical-active);
+  }
+}
+
+.radio__input:focus-visible + .radio__container {
+  outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: 0.125rem;
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 @supports not selector(:focus-visible) {
-  .radio__input:focus + .radio__icon {
-    border: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+  .radio__input:focus + .radio__container {
+    outline: 0.125rem solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: 0.125rem;
     border-radius: calc(var(--eds-border-radius-full) * 1px);
   }
 }
