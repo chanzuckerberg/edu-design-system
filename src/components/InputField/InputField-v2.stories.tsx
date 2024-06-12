@@ -123,6 +123,19 @@ export const Required: Story = {
 };
 
 /**
+ * Fields can be marked as required.
+ */
+export const RequiredDisabled: Story = {
+  args: {
+    label: 'Input field with fieldNote',
+    showHint: true,
+    required: true,
+    disabled: true,
+    fieldNote: 'This is a fieldnote for a required input field.',
+  },
+};
+
+/**
  * When not using a visible label with `InputField`, you must apply some time of ARIA label to the component, like `aria-label`.
  */
 export const NoVisibleLabel: Story = {

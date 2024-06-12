@@ -348,12 +348,22 @@ const SelectLabel = ({
         {label}
       </Listbox.Label>
       {required && showHint && (
-        <Text as="span" className={requiredTextClassName} preset="body-sm">
+        <Text
+          aria-disabled={disabled ?? undefined}
+          as="span"
+          className={requiredTextClassName}
+          preset="body-sm"
+        >
           (Required)
         </Text>
       )}
       {!required && showHint && (
-        <Text as="span" className={requiredTextClassName} preset="body-sm">
+        <Text
+          aria-disabled={disabled ?? undefined}
+          as="span"
+          className={requiredTextClassName}
+          preset="body-sm"
+        >
           (Optional)
         </Text>
       )}

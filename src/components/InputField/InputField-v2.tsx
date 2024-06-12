@@ -249,6 +249,7 @@ export const InputField: InputFieldType = forwardRef(
             )}
             {required && showHint && (
               <Text
+                aria-disabled={disabled ?? undefined}
                 as="span"
                 className={requiredTextClassName}
                 preset="body-sm"
@@ -258,6 +259,7 @@ export const InputField: InputFieldType = forwardRef(
             )}
             {!required && showHint && (
               <Text
+                aria-disabled={disabled ?? undefined}
                 as="span"
                 className={requiredTextClassName}
                 preset="body-sm"
