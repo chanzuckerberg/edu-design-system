@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
 
-import { FieldLabelV2 as FieldLabel } from '../..';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
+import FieldLabel from '../FieldLabel';
 import Text from '../Text';
 
 import styles from './Radio-v2.module.css';

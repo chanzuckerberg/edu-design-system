@@ -2,11 +2,11 @@ import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import type { ReactNode } from 'react';
 
-import { FieldLabelV2 as FieldLabel } from '../..';
 import useForwardedRef from '../../util/useForwardedRef';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
+import FieldLabel from '../FieldLabel';
 import Text from '../Text';
 
 import styles from './Checkbox-v2.module.css';
