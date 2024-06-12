@@ -11,9 +11,10 @@ import '../src/design-tokens/tier-1-definitions/fonts.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-import type { Story } from '@storybook/react';
+import type { Preview, Story } from '@storybook/react';
 import React from 'react';
 
+import Theme from './Theme';
 import { storybookViewports } from '../src/util/viewports';
 
 export const decorators = [
@@ -58,9 +59,12 @@ function createCurrentReleaseConfig(usingLabel: string) {
   };
 }
 
-export const parameters = {
+export const parameters: Preview['parameters'] = {
   viewport: {
     viewports: storybookViewports,
+  },
+  docs: {
+    theme: Theme,
   },
   backgrounds: {
     values: [
