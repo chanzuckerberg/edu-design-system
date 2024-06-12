@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.17](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.16...v15.0.0-alpha.17) (2024-06-12)
+
+
+### Features
+
+* **Tooltip:** add inverse variant ([#1984](https://github.com/chanzuckerberg/edu-design-system/issues/1984)) ([d6ccc8d](https://github.com/chanzuckerberg/edu-design-system/commit/d6ccc8d7911ea297c4b5bce4924c56291aa7495b))
+
+
+### Bug Fixes
+
+* **Button:** align button icons and text with layouts ([#1988](https://github.com/chanzuckerberg/edu-design-system/issues/1988)) ([33fbd51](https://github.com/chanzuckerberg/edu-design-system/commit/33fbd5162f79e62a44d6215d0703c6276c2d86ae))
+* remove circular dependency for radio/checkbox ([dffed3c](https://github.com/chanzuckerberg/edu-design-system/commit/dffed3c4ba4b45012d4cdcdea7a859b327fb4b7b))
+* use aria-disabled when disabled prop is applied ([#1987](https://github.com/chanzuckerberg/edu-design-system/issues/1987)) ([1fe3b0f](https://github.com/chanzuckerberg/edu-design-system/commit/1fe3b0f08ecec651634840d3bd4a8aafa1b900e6))
+
 ## [15.0.0-alpha.16](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.15...v15.0.0-alpha.16) (2024-06-07)
 
 
