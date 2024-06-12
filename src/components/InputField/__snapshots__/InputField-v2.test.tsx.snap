@@ -145,7 +145,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":ro:"
+        for=":rq:"
       >
         Input field with button inside
       </label>
@@ -156,7 +156,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input input-field__input--input-within"
-        id=":ro:"
+        id=":rq:"
         type="text"
       />
       <div
@@ -264,18 +264,18 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":rj:"
+        aria-describedby=":rl:"
         aria-invalid="false"
         aria-label="Input for no visible label"
         class="input"
-        id=":ri:"
+        id=":rk:"
         required=""
         type="text"
       />
     </div>
     <div
       class="field-note"
-      id=":rj:"
+      id=":rl:"
     >
       This input field has no visible label
     </div>
@@ -295,7 +295,7 @@ exports[`<InputField /> Password story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rk:"
+        for=":rm:"
       >
         Password
       </label>
@@ -306,7 +306,7 @@ exports[`<InputField /> Password story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input"
-        id=":rk:"
+        id=":rm:"
         type="password"
       />
     </div>
@@ -398,6 +398,54 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        aria-disabled="true"
+        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        for=":ri:"
+      >
+        Input field with fieldNote
+      </label>
+      <span
+        aria-disabled="true"
+        class="text text--body-sm input-field__required-text input-field__required-text--disabled"
+      >
+        (Required)
+      </span>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":rj:"
+        aria-invalid="false"
+        class="input"
+        disabled=""
+        id=":ri:"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      aria-disabled="true"
+      class="field-note field-note--disabled"
+      id=":rj:"
+    >
+      This is a fieldnote for a required input field.
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 <div
   class="p-8"
@@ -410,7 +458,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rm:"
+        for=":ro:"
       >
         Field with Optional Hint
       </label>
@@ -426,7 +474,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input"
-        id=":rm:"
+        id=":ro:"
         type="text"
       />
     </div>
@@ -565,7 +613,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rq:"
+        for=":rs:"
       >
         test label
       </label>
@@ -588,7 +636,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input error"
-        id=":rq:"
+        id=":rs:"
         maxlength="15"
         required=""
         type="text"
@@ -614,7 +662,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rs:"
+        for=":ru:"
       >
         Shortened Length Field
       </label>
@@ -637,7 +685,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input error"
-        id=":rs:"
+        id=":ru:"
         required=""
         type="text"
         value="Some initial text"
@@ -662,7 +710,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     >
       <label
         class="label label--lg input-field__label"
-        for=":ru:"
+        for=":r10:"
       >
         test label
       </label>
@@ -683,10 +731,10 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":rv:"
+        aria-describedby=":r11:"
         aria-invalid="false"
         class="input error"
-        id=":ru:"
+        id=":r10:"
         maxlength="20"
         required=""
         type="text"
@@ -698,7 +746,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     >
       <div
         class="field-note field-note--error"
-        id=":rv:"
+        id=":r11:"
       >
         <svg
           class="icon field-note__icon"

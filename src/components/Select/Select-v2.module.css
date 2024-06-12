@@ -103,6 +103,7 @@
   margin-bottom: 0.25rem;
 }
 
+
 /**
  * Label on top of the select trigger button to label the select field.
  */
@@ -164,4 +165,8 @@
     border-color: var(--eds-theme-color-border-utility-warning);
     outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-warning);
   }
+}
+
+.select__required-text--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
 }
