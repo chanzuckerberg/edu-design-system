@@ -132,7 +132,12 @@
   font: var(--eds-theme-typography-caption-sm-bold);
 }
 .text--overline {
+  /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS." */
   font: var(--eds-theme-typography-overline);
+  text-transform: uppercase;
+}
+.text--overline-lg {
+  font: var(--eds-theme-typography-overline-lg);
   text-transform: uppercase;
 }
 .text--overline-md {

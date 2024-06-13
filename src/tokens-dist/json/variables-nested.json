@@ -255,6 +255,7 @@
         },
         "overline": {
           "@": "var(--eds-typography-preset-011)",
+          "lg": "var(--eds-typography-preset-005)",
           "md": "var(--eds-typography-preset-011)",
           "sm": "var(--eds-typography-preset-012)"
         },

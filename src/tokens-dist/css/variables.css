@@ -290,6 +290,7 @@
   --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
   --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);
   --eds-theme-typography-overline-md: var(--eds-typography-preset-011);
+  --eds-theme-typography-overline-lg: var(--eds-typography-preset-005);
   --eds-theme-typography-overline: var(--eds-typography-preset-011); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010);
   --eds-theme-typography-caption-sm: var(--eds-typography-preset-010-light);

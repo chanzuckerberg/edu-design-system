@@ -80,7 +80,8 @@ export const presets = [
   'caption-md-bold',
   'caption-sm',
   'caption-sm-bold',
-  'overline',
+  'overline', // @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+  'overline-lg',
   'overline-md',
   'overline-sm',
   'callout',
