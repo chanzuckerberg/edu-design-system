@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0-alpha.18](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.17...v15.0.0-alpha.18) (2024-06-13)
+
+
+### Features
+
+* **Typography:** add typography-overline-lg ([#1993](https://github.com/chanzuckerberg/edu-design-system/issues/1993)) ([36eb3c9](https://github.com/chanzuckerberg/edu-design-system/commit/36eb3c9986214d0cda7039aba6b0fca7e740c94e))
+
+
+### Bug Fixes
+
+* handle required disabled field hints ([#1990](https://github.com/chanzuckerberg/edu-design-system/issues/1990)) ([11c0883](https://github.com/chanzuckerberg/edu-design-system/commit/11c088329494b173cce8bce65dea46fbd1aa4be4))
+* **Select:** allow attachment of headlessUI props to label ([#1991](https://github.com/chanzuckerberg/edu-design-system/issues/1991)) ([c3ce70f](https://github.com/chanzuckerberg/edu-design-system/commit/c3ce70f555903d8061bca62cfd53095e126cb980))
+
 ## [15.0.0-alpha.17](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.16...v15.0.0-alpha.17) (2024-06-12)
 
 
