@@ -202,6 +202,9 @@
             "value": "var(--eds-typography-preset-011)",
             "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           },
+          "lg": {
+            "value": "var(--eds-typography-preset-005)"
+          },
           "md": {
             "value": "var(--eds-typography-preset-011)"
           },
