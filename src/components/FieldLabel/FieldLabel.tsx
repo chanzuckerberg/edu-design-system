@@ -16,7 +16,7 @@ export type FieldLabelProps = {
   /**
    * ID of input that label is associated with.
    */
-  htmlFor: string;
+  htmlFor?: string;
   // Design API
   /**
    * Indicates disabled state of the input.
@@ -36,7 +36,7 @@ export type FieldLabelProps = {
  * Label associated with an input element or field.
  */
 export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
-  ({ children, className, htmlFor, size = 'lg', disabled }, ref) => {
+  ({ children, className, htmlFor, size = 'lg', disabled, ...other }, ref) => {
     const componentClassName = clsx(
       styles['label'],
       size === 'md' && styles['label--md'],
@@ -50,6 +50,7 @@ export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
         className={componentClassName}
         htmlFor={htmlFor}
         ref={ref}
+        {...other}
       >
         {children}
       </label>

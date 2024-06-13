@@ -97,7 +97,7 @@ describe('<Select />', () => {
         onChange={() => undefined}
         value={exampleOptions[0]}
       >
-        <Select.Label htmlFor="non-throwing-select">Options:</Select.Label>
+        <Select.Label>Options:</Select.Label>
         <Select.Button>Select</Select.Button>
 
         <Select.Options>
