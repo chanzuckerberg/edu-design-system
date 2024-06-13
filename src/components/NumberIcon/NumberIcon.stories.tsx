@@ -8,10 +8,10 @@ export default {
   component: NumberIcon,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
   },
   args: {
-    'aria-label': 'Step 1',
+    'aria-label': 'number icon example',
     number: 1,
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
@@ -22,36 +22,50 @@ type Story = StoryObj<Args>;
 
 export const Default: Story = {};
 
-export const Small: Story = {
+export const Sizes: Story = {
   args: {
-    size: 'sm',
+    status: 'default',
   },
-};
-
-export const Success: Story = {
-  args: {
-    variant: 'success',
+  render: (args) => {
+    return (
+      <>
+        <NumberIcon number={2} size="md" {...args} />
+        <NumberIcon number={3} size="lg" {...args} />
+      </>
+    );
   },
-};
-
-export const SuccessSmall: Story = {
-  args: {
-    size: 'sm',
-    variant: 'success',
-  },
+  decorators: [
+    (Story) => <div className="flex flex-wrap gap-1">{Story()}</div>,
+  ],
 };
 
 /**
- * When `incomplete` is defined and there is a `numberIconTitle` on the circle icon, then this will render
- * the proper icon with the incomplete text provided foro that component instance.
+ * `NumberIcon` can be used in interactive contexts, when wrapped by a navigable or interactive element.
  */
+export const IsInteractive: Story = {
+  args: {
+    ...Sizes.args,
+    isInteractive: true,
+  },
+  render: Sizes.render,
+};
+
+export const Completed: Story = {
+  args: {
+    ...Sizes.args,
+    status: 'completed',
+  },
+  render: Sizes.render,
+  decorators: Sizes.decorators,
+};
+
 export const Incomplete: Story = {
   args: {
-    size: 'sm',
-    incomplete: true,
-    number: undefined,
-    numberIconTitle: 'Incomplete',
+    ...Sizes.args,
+    status: 'incomplete',
   },
+  render: Sizes.render,
+  decorators: Sizes.decorators,
 };
 
 /**
@@ -97,40 +111,16 @@ export const DifferentNumbers: Story = {
  */
 export const NumberIconList: Story = {
   parameters: {
-    badges: ['intro-1.0', 'implementationExample'],
+    badges: ['intro-1.0', 'current-2.0', 'implementationExample'],
   },
   render: () => (
     <div className="flex flex-wrap gap-1">
-      <NumberIcon aria-label="Item 1" number={1} size="sm" />
-      <NumberIcon
-        aria-label="Item 2"
-        incomplete
-        number={2}
-        numberIconTitle="incomplete step 2"
-        size="sm"
-      />
-      <NumberIcon aria-label="Item 3" number={3} size="sm" />
-      <NumberIcon
-        aria-label="Item 4"
-        incomplete
-        number={4}
-        numberIconTitle="incomplete step 4"
-        size="sm"
-      />
-      <NumberIcon
-        aria-label="Item 5"
-        incomplete
-        number={5}
-        numberIconTitle="incomplete step 5"
-        size="sm"
-      />
-      <NumberIcon
-        aria-label="Item 6"
-        incomplete
-        number={6}
-        numberIconTitle="incomplete step 6"
-        size="sm"
-      />
+      <NumberIcon aria-label="Item 1" number={1} size="md" />
+      <NumberIcon aria-label="Item 2" number={2} size="md" />
+      <NumberIcon aria-label="Item 3" number={3} size="md" />
+      <NumberIcon aria-label="Item 4" number={4} size="md" />
+      <NumberIcon aria-label="Item 5" number={5} size="md" />
+      <NumberIcon aria-label="Item 6" number={6} size="md" />
     </div>
   ),
 };

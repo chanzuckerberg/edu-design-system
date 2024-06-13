@@ -2,9 +2,11 @@
 
 exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline"
     >
@@ -38,15 +40,18 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
 
 exports[`<InputField /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label input-field__label--disabled"
-        for=":r6:"
+        aria-disabled="true"
+        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        for=":rc:"
       >
         Disabled input field
       </label>
@@ -55,17 +60,19 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":r7:"
+        aria-describedby=":rd:"
         aria-invalid="false"
         class="input"
         disabled=""
-        id=":r6:"
+        id=":rc:"
         type="text"
+        value="Text in disabled field"
       />
     </div>
     <div
+      aria-disabled="true"
       class="field-note field-note--disabled"
-      id=":r7:"
+      id=":rd:"
     >
       This InputField is disabled
     </div>
@@ -75,15 +82,17 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 
 exports[`<InputField /> Error story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline"
     >
       <label
         class="label label--lg input-field__label"
-        for=":r4:"
+        for=":r6:"
       >
         Error input field
       </label>
@@ -92,16 +101,16 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":r5:"
+        aria-describedby=":r7:"
         aria-invalid="true"
         class="input error"
-        id=":r4:"
+        id=":r6:"
         type="text"
       />
     </div>
     <div
       class="field-note field-note--error"
-      id=":r5:"
+      id=":r7:"
     >
       <svg
         class="icon field-note__icon"
@@ -128,7 +137,7 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
 
 exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
   <div>
     <div
@@ -136,7 +145,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rc:"
+        for=":rq:"
       >
         Input field with button inside
       </label>
@@ -146,19 +155,64 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
     >
       <input
         aria-invalid="false"
-        class="input"
-        id=":rc:"
+        class="input input-field__input--input-within"
+        id=":rq:"
         type="text"
       />
       <div
         class="input-field__input-within"
       >
         <button
-          class="button button--sm button--icon button--brand"
+          class="button button--layout-none button--secondary button--sm button--variant-default"
           type="button"
         >
-          Button
+          <span
+            class="button__text"
+          >
+            Button
+          </span>
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-invalid="false"
+        aria-label="search field"
+        class="input input-field__input--leading-icon"
+        id=":re:"
+        placeholder="Search..."
+        type="text"
+      />
+      <div
+        class="input-field__leading-icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -167,15 +221,17 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline"
     >
       <label
         class="label label--lg input-field__label"
-        for=":r2:"
+        for=":r4:"
       >
         Default input field
       </label>
@@ -186,7 +242,7 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input"
-        id=":r2:"
+        id=":r4:"
         type="text"
       />
     </div>
@@ -196,34 +252,30 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 
 exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline input-field__overline--no-label"
-    >
-      <span
-        class="text text--body-sm input-field__required-text"
-      >
-        Required
-      </span>
-    </div>
+    />
     <div
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":rb:"
+        aria-describedby=":rl:"
         aria-invalid="false"
         aria-label="Input for no visible label"
         class="input"
-        id=":ra:"
+        id=":rk:"
         required=""
         type="text"
       />
     </div>
     <div
       class="field-note"
-      id=":rb:"
+      id=":rl:"
     >
       This input field has no visible label
     </div>
@@ -231,41 +283,114 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> Required story renders snapshot 1`] = `
+exports[`<InputField /> Password story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline"
     >
       <label
         class="label label--lg input-field__label"
-        for=":r8:"
+        for=":rm:"
+      >
+        Password
+      </label>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-invalid="false"
+        class="input"
+        id=":rm:"
+        type="password"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":ra:"
+      >
+        Read-only field
+      </label>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":rb:"
+        aria-invalid="false"
+        class="input"
+        id=":ra:"
+        readonly=""
+        type="text"
+        value="some read-only information"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":rb:"
+    >
+      This will show up like text, but not be interactive
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> Required story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":rg:"
       >
         Input field with fieldNote
       </label>
       <span
         class="text text--body-sm input-field__required-text"
       >
-        Required
+        (Required)
       </span>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":r9:"
+        aria-describedby=":rh:"
         aria-invalid="false"
         class="input"
-        id=":r8:"
+        id=":rg:"
         required=""
         type="text"
       />
     </div>
     <div
       class="field-note"
-      id=":r9:"
+      id=":rh:"
     >
       This is a fieldnote for a required input field.
     </div>
@@ -273,9 +398,93 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        aria-disabled="true"
+        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        for=":ri:"
+      >
+        Input field with fieldNote
+      </label>
+      <span
+        aria-disabled="true"
+        class="text text--body-sm input-field__required-text input-field__required-text--disabled"
+      >
+        (Required)
+      </span>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":rj:"
+        aria-invalid="false"
+        class="input"
+        disabled=""
+        id=":ri:"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      aria-disabled="true"
+      class="field-note field-note--disabled"
+      id=":rj:"
+    >
+      This is a fieldnote for a required input field.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> ShowHint story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":ro:"
+      >
+        Field with Optional Hint
+      </label>
+      <span
+        class="text text--body-sm input-field__required-text"
+      >
+        (Optional)
+      </span>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-invalid="false"
+        class="input"
+        id=":ro:"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> TabularInput story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
   <table
     class="table"
@@ -287,12 +496,20 @@ exports[`<InputField /> TabularInput story renders snapshot 1`] = `
         <th
           class="table-header-cell"
         >
-          Label
+          <div
+            class="table-header-cell__container"
+          >
+            Label
+          </div>
         </th>
         <th
           class="table-header-cell"
         >
-          Field
+          <div
+            class="table-header-cell__container"
+          >
+            Field
+          </div>
         </th>
       </tr>
     </thead>
@@ -337,25 +554,89 @@ exports[`<InputField /> TabularInput story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
+exports[`<InputField /> Warning story renders snapshot 1`] = `
 <div
-  class="p-2"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="input-field__overline"
     >
       <label
         class="label label--lg input-field__label"
-        for=":re:"
+        for=":r8:"
+      >
+        Warning input field
+      </label>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":r9:"
+        aria-invalid="false"
+        class="input warning"
+        id=":r8:"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note field-note--warning"
+      id=":r9:"
+    >
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          warning
+        </title>
+        <path
+          d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
+        />
+      </svg>
+      This uses the warning treatment and also applies to the field note
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":rs:"
       >
         test label
       </label>
-      <span
-        class="text text--body-sm input-field__required-text"
+      <div
+        class="input-field__character-counter"
       >
-        Required
-      </span>
+        <span
+          class="input-field--invalid-length"
+        >
+          17
+        </span>
+         
+        / 
+        15
+      </div>
     </div>
     <div
       class="input-field__body"
@@ -363,7 +644,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input error"
-        id=":re:"
+        id=":rs:"
         maxlength="15"
         required=""
         type="text"
@@ -372,7 +653,27 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
     </div>
     <div
       class="input-field__footer"
+    />
+  </div>
+</div>
+`;
+
+exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
     >
+      <label
+        class="label label--lg input-field__label"
+        for=":ru:"
+      >
+        Shortened Length Field
+      </label>
       <div
         class="input-field__character-counter"
       >
@@ -385,30 +686,6 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         / 
         15
       </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
-<div
-  class="p-2"
->
-  <div>
-    <div
-      class="input-field__overline"
-    >
-      <label
-        class="label label--lg input-field__label"
-        for=":rg:"
-      >
-        test label
-      </label>
-      <span
-        class="text text--body-sm input-field__required-text"
-      >
-        Required
-      </span>
     </div>
     <div
       class="input-field__body"
@@ -416,7 +693,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input error"
-        id=":rg:"
+        id=":ru:"
         required=""
         type="text"
         value="Some initial text"
@@ -424,7 +701,27 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
     </div>
     <div
       class="input-field__footer"
+    />
+  </div>
+</div>
+`;
+
+exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
     >
+      <label
+        class="label label--lg input-field__label"
+        for=":r10:"
+      >
+        test label
+      </label>
       <div
         class="input-field__character-counter"
       >
@@ -438,38 +735,14 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         15
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
-<div
-  class="p-2"
->
-  <div>
-    <div
-      class="input-field__overline"
-    >
-      <label
-        class="label label--lg input-field__label"
-        for=":ri:"
-      >
-        test label
-      </label>
-      <span
-        class="text text--body-sm input-field__required-text"
-      >
-        Required
-      </span>
-    </div>
     <div
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":rj:"
+        aria-describedby=":r11:"
         aria-invalid="false"
         class="input error"
-        id=":ri:"
+        id=":r10:"
         maxlength="20"
         required=""
         type="text"
@@ -481,7 +754,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     >
       <div
         class="field-note field-note--error"
-        id=":rj:"
+        id=":r11:"
       >
         <svg
           class="icon field-note__icon"
@@ -502,18 +775,45 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         </svg>
         Longer Field Description
       </div>
-      <div
-        class="input-field__character-counter"
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> WithText story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":r2:"
       >
-        <span
-          class="input-field--invalid-length"
-        >
-          17
-        </span>
-         
-        / 
-        15
-      </div>
+        Default input field
+      </label>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":r3:"
+        aria-invalid="false"
+        class="input"
+        id=":r2:"
+        type="text"
+        value="Text value"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":r3:"
+    >
+      This is a fieldnote.
     </div>
   </div>
 </div>

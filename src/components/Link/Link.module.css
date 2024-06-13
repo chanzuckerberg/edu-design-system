@@ -3,525 +3,112 @@
 /*------------------------------------*\
     # LINK
 \*------------------------------------*/
-
 /**
- * Styled clickable element that should look like a button or link.
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
  */
+
 .link {
-  font: var(--eds-theme-typography-button-label);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  /* Adds a gap between children to automatically handle spacing between icons and text. */
-  gap: 0.75rem;
-  border-width: calc(var(--eds-theme-border-width) * 1px);
-  border-style: solid;
-  border-radius: calc(var(--eds-theme-box-button-border-radius) * 1px);
-  cursor: pointer;
-  /* Removes the underline in the case that the rendered element is an <a> tag. */
-  text-decoration: none;
-  transition-property: color, background-color, border-color;
-  transition-duration: calc(var(--eds-anim-fade-quick) * 1s);
-  transition-timing-function: var(--eds-anim-ease);
-
-  :where(svg) {
-    /* Adds default size for icons passed in for consistency. */
-    --icon-size-default: 2em;
-    transition: color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
-
-    @media screen and (prefers-reduced-motion) {
-      transition: none;
-    }
-  }
-
-  &:focus-visible {
-    @mixin focus;
-  }
-
-  @supports not selector(:focus-visible) {
-    &:focus {
-      @mixin focus;
-    }
-  }
-
-  @media screen and (prefers-reduced-motion) {
-    transition: none;
-  }
-}
-
-/**
- * Margin 0 added becuase Safari has margin on buttons.
- * Needs `:where` pseudoclass to reduce specificity so class overrides
- *    for margin can happen where used.
- */
-:where(.link) {
-  margin: 0;
-}
-
-
-/**
- * Link button styles
- */
- .link--link {
-  @mixin textLink;
-
   display: inline;
+
+  /* TODO: verify the way to sync type tokens and one-off treatments */
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+
+/**
+ * Sub-components (only should apply to standalone links
+ */
+.link__icon {
+  padding-left: calc(var(--eds-size-half) / 16 * 1rem);
+
+  /* Sub-component spacing */
+  &.link--size-xl,
+  &.link--size-lg { padding-left: calc(var(--eds-size-1) / 16 * 1rem); }
+
+  &.link--size-md,
+  &.link--size-sm, 
+  &.link--size-xs { padding-left: calc(var(--eds-size-half) / 16 * 1rem); }
+}
+
+/**
+ * Contexts
+ */
+.link--context-standalone {
+  display: inline-flex;
+  align-items: center;
+
+  &.link--emphasis-default {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  &.link--emphasis-low {
+    color: var(--eds-theme-color-text-utility-default-primary);
+    text-decoration: none;
+  }
+
   /**
-   * Override default Clickable styles
+   * Sizes - using the presets for type ramp matching body-*
    */
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-  /**
-   * Smaller gap between text and icon in link button style
-   */
-  gap: 0.25em;
-}
-
-/**
- * Needs `:where` pseudoclass to reduce specificity so class overrides
- * for margin can happen where used, but needs to be specific enough to override preflight.
- */
-a:where(.link--link),
-button:where(.link--link) {
-  /* 2px padding gives the text breathing room in the focus state */
-  padding: 2px;
-  /**
-   * -2px margin compensates for the padding so the link doesn't have too much space between it
-   *  and surrounding text
-   */
-  margin: -2px;
-}
-
-/**
- * Link neutral clickable style
- */
-:where(.link--link).link--neutral {
-  text-decoration-color: var(--eds-theme-color-link-neutral-text-decoration);
-
-  &:hover {
-    text-decoration-color: var(--eds-theme-color-link-neutral-text-decoration-hover);
+  &.link--size-xl {
+    font: var(--eds-theme-typography-body-xl);
   }
 
-  &:focus-visible {
-    background-color: var(--eds-theme-color-link-neutral-background-focus);
+  &.link--size-lg {
+    font: var(--eds-theme-typography-body-lg);
   }
 
-  @supports not selector(:focus-visible) {
-    &:focus {
-      background-color: var(--eds-theme-color-link-neutral-background-focus);
-    }
-  }
-}
-
-/** TODO: Remove the below styles at the next major version, so links only have link-like look/feel */
-
-/**
- * Primary brand clickable style
- */
-:where(.link--primary).link--brand {
-  border-color: var(--eds-theme-color-button-primary-brand-border);
-  background-color: var(--eds-theme-color-button-primary-brand-background);
-  color: var(--eds-theme-color-button-primary-brand-text);
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-primary-brand-border-hover);
-    background-color: var(--eds-theme-color-button-primary-brand-background-hover);
-    color: var(--eds-theme-color-button-primary-brand-text-hover);
+  &.link--size-md {
+    font: var(--eds-theme-typography-body-md);
   }
 
-  &:active {
-    border-color: var(--eds-theme-color-button-primary-brand-border-active);
-    background-color: var(--eds-theme-color-button-primary-brand-background-active);
-    color: var(--eds-theme-color-button-primary-brand-text-active);
+  &.link--size-sm {
+    font: var(--eds-theme-typography-body-sm);
+  }
+
+  &.link--size-xs {
+    font: var(--eds-theme-typography-body-xs);
   }
 }
 
 /**
- * Primary error clickable style
+ * Emphasis
  */
-:where(.link--primary).link--error {
-  border-color: var(--eds-theme-color-button-primary-error-border);
-  background-color: var(--eds-theme-color-button-primary-error-background);
-  color: var(--eds-theme-color-button-primary-error-text);
+.link--emphasis-default {
+  color: inherit;
+}
 
-  &:hover {
-    border-color: var(--eds-theme-color-button-primary-error-border-hover);
-    background-color: var(--eds-theme-color-button-primary-error-background-hover);
-    color: var(--eds-theme-color-button-primary-error-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-primary-error-border-active);
-    background-color: var(--eds-theme-color-button-primary-error-background-active);
-    color: var(--eds-theme-color-button-primary-error-text-active);
-  }
+.link--emphasis-high {
+  color: var(--eds-theme-color-text-utility-interactive-secondary);
 }
 
 /**
- * Secondary brand clickable style
+ * Inverse variant
  */
-:where(.link--secondary).link--brand {
-  border-color: var(--eds-theme-color-button-secondary-brand-border);
-  background-color: var(--eds-theme-color-button-secondary-brand-background);
-  color: var(--eds-theme-color-button-secondary-brand-text);
+.link.link--variant-inverse:hover,
+.link.link--variant-inverse:active {
+  color: var(--eds-theme-color-text-utility-inverse);
+}
 
-  :where(svg) {
-    color: var(--eds-theme-color-button-secondary-brand-icon);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-secondary-brand-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-brand-background-hover);
-    color: var(--eds-theme-color-button-secondary-brand-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-brand-icon-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-secondary-brand-border-active);
-    background-color: var(--eds-theme-color-button-secondary-brand-background-active);
-    color: var(--eds-theme-color-button-secondary-brand-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-brand-icon-focus);
-    }
-  }
+.link.link--variant-inverse:visited {
+  color: var(--eds-theme-color-text-utility-inverse-interactive-visited);
 }
 
 /**
- * Secondary neutral clickable style
+ * States
  */
-:where(.link--secondary).link--neutral {
-  border-color: var(--eds-theme-color-button-secondary-neutral-border);
-  background-color: var(--eds-theme-color-button-secondary-neutral-background);
-  color: var(--eds-theme-color-button-secondary-neutral-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-secondary-neutral-icon);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-secondary-neutral-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-neutral-background-hover);
-    color: var(--eds-theme-color-button-secondary-neutral-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-neutral-icon-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-secondary-neutral-border-active);
-    background-color: var(--eds-theme-color-button-secondary-neutral-background-active);
-    color: var(--eds-theme-color-button-secondary-neutral-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-neutral-icon-active);
-    }
-  }
+.link:hover {
+  color: var(--eds-theme-color-text-utility-interactive-secondary-hover);
 }
 
-/**
- * Secondary success clickable style
- */
-:where(.link--secondary).link--success {
-  border-color: var(--eds-theme-color-button-secondary-success-border);
-  background-color: var(--eds-theme-color-button-secondary-success-background);
-  color: var(--eds-theme-color-button-secondary-success-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-secondary-success-icon);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-secondary-success-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-success-background-hover);
-    color: var(--eds-theme-color-button-secondary-success-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-success-icon-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-secondary-success-border-active);
-    background-color: var(--eds-theme-color-button-secondary-success-background-active);
-    color: var(--eds-theme-color-button-secondary-success-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-success-icon-active);
-    }
-  }
+.link:active {
+  color: var(--eds-theme-color-text-utility-interactive-secondary-active);
 }
 
-/**
- * Secondary warning clickable style
- */
-:where(.link--secondary).link--warning {
-  border-color: var(--eds-theme-color-button-secondary-warning-border);
-  background-color: var(--eds-theme-color-button-secondary-warning-background);
-  color: var(--eds-theme-color-button-secondary-warning-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-secondary-warning-icon);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-secondary-warning-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-warning-background-hover);
-    color: var(--eds-theme-color-button-secondary-warning-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-warning-icon-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-secondary-warning-border-active);
-    background-color: var(--eds-theme-color-button-secondary-warning-background-active);
-    color: var(--eds-theme-color-button-secondary-warning-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-warning-icon-active);
-    }
-  }
+.link:visited {
+  color: var(--eds-theme-color-text-utility-interactive-visited);
 }
 
-/**
- * Secondary error clickable style
- */
-:where(.link--secondary).link--error {
-  border-color: var(--eds-theme-color-button-secondary-error-border);
-  background-color: var(--eds-theme-color-button-secondary-error-background);
-  color: var(--eds-theme-color-button-secondary-error-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-secondary-error-icon);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-secondary-error-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-error-background-hover);
-    color: var(--eds-theme-color-button-secondary-error-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-error-icon-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-secondary-error-border-active);
-    background-color: var(--eds-theme-color-button-secondary-error-background-active);
-    color: var(--eds-theme-color-button-secondary-error-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-secondary-error-icon-active);
-    }
-  }
+.link:focus-visible {
+  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-size-quarter) / 16 * 1rem);
 }
-
-/**
- * Icon brand clickable style
- * 
- * A clickable style that strips out borders, backgrounds, etc.
- *
- * Use for Close "X" buttons, tooltip icons, and other.
- */
-:where(.link--icon).link--brand {
-  border-color: var(--eds-theme-color-button-icon-brand-border);
-  background-color: var(--eds-theme-color-button-icon-brand-background);
-  color: var(--eds-theme-color-button-icon-brand-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-icon-brand);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-icon-brand-border-hover);
-    background-color: var(--eds-theme-color-button-icon-brand-background-hover);
-    color: var(--eds-theme-color-button-icon-brand-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-brand-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-brand-border-active);
-    background-color: var(--eds-theme-color-button-icon-brand-background-active);
-    color: var(--eds-theme-color-button-icon-brand-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-brand-active);
-    }
-  }
-}
-
-/**
- * Icon neutral clickable style
- * 
- * A clickable style that strips out borders, backgrounds, etc.
- *
- * Use for Close "X" buttons, tooltip icons, and other.
- */
-:where(.link--icon).link--neutral {
-  border-color: var(--eds-theme-color-button-icon-neutral-border);
-  background-color: var(--eds-theme-color-button-icon-neutral-background);
-  color: var(--eds-theme-color-button-icon-neutral-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-icon-neutral);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-icon-neutral-border-hover);
-    background-color: var(--eds-theme-color-button-icon-neutral-background-hover);
-    color: var(--eds-theme-color-button-icon-neutral-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-neutral-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-neutral-border-active);
-    background-color: var(--eds-theme-color-button-icon-neutral-background-active);
-    color: var(--eds-theme-color-button-icon-neutral-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-neutral-active);
-    }
-  }
-}
-
-/**
- * Icon success clickable style
- * 
- * A clickable style that strips out borders, backgrounds, etc.
- *
- * Use for Close "X" buttons, tooltip icons, and other.
- */
-:where(.link--icon).link--success {
-  border-color: var(--eds-theme-color-button-icon-success-border);
-  background-color: var(--eds-theme-color-button-icon-success-background);
-  color: var(--eds-theme-color-button-icon-success-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-icon-success);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-icon-success-border-hover);
-    background-color: var(--eds-theme-color-button-icon-success-background-hover);
-    color: var(--eds-theme-color-button-icon-success-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-success-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-success-border-active);
-    background-color: var(--eds-theme-color-button-icon-success-background-active);
-    color: var(--eds-theme-color-button-icon-success-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-success-active);
-    }
-  }
-}
-
-/**
- * Icon warning clickable style
- * 
- * A clickable style that strips out borders, backgrounds, etc.
- *
- * Use for Close "X" buttons, tooltip icons, and other.
- */
-:where(.link--icon).link--warning {
-  border-color: var(--eds-theme-color-button-icon-warning-border);
-  background-color: var(--eds-theme-color-button-icon-warning-background);
-  color: var(--eds-theme-color-button-icon-warning-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-icon-warning);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-icon-warning-border-hover);
-    background-color: var(--eds-theme-color-button-icon-warning-background-hover);
-    color: var(--eds-theme-color-button-icon-warning-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-warning-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-warning-border-active);
-    background-color: var(--eds-theme-color-button-icon-warning-background-active);
-    color: var(--eds-theme-color-button-icon-warning-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-warning-active);
-    }
-  }
-}
-
-/**
- * Icon error clickable style
- * 
- * A clickable style that strips out borders, backgrounds, etc.
- *
- * Use for Close "X" buttons, tooltip icons, and other.
- */
-:where(.link--icon).link--error {
-  border-color: var(--eds-theme-color-button-icon-error-border);
-  background-color: var(--eds-theme-color-button-icon-error-background);
-  color: var(--eds-theme-color-button-icon-error-text);
-
-  :where(svg) {
-    color: var(--eds-theme-color-button-icon-error);
-  }
-
-  &:hover {
-    border-color: var(--eds-theme-color-button-icon-error-border-hover);
-    background-color: var(--eds-theme-color-button-icon-error-background-hover);
-    color: var(--eds-theme-color-button-icon-error-text-hover);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-error-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-error-border-active);
-    background-color: var(--eds-theme-color-button-icon-error-background-active);
-    color: var(--eds-theme-color-button-icon-error-text-active);
-    :where(svg) {
-      color: var(--eds-theme-color-button-icon-error-active);
-    }
-  }
-}
-
-/**
- * Small link 
- */
- .link--sm {
-  font: var(--eds-theme-typography-button-label-sm);
-  /**
-   * Height is used instead of vertical padding because the icon size we use would
-   * cause the height to expand
-   */
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  padding: 0 calc(var(--eds-size-1) / 16 * 1rem);
-}
-
-/**
- * Medium link style
- */
-.link--md {
-  /**
-   * Height is used instead of vertical padding because the icon size we use would
-   * cause the height to expand
-   */
-  height: calc(var(--eds-size-4) / 16 * 1rem);
-  padding: 0 calc(var(--eds-size-1) / 16 * 1rem);
-}
-
-/**
- * Large link style
- */
-.link--lg {
-  /**
-   * Height is used instead of vertical padding because the icon size we use would
-   * cause the height to expand
-   */
-  height: calc(var(--eds-size-5) / 16 * 1rem);
-  padding: 0 calc(var(--eds-size-2) / 16 * 1rem);
-}
-

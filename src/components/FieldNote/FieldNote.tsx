@@ -1,10 +1,12 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
+import type { Status } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 import styles from './FieldNote.module.css';
 
 export interface Props {
+  // Component API
   /**
    * Child node(s) that can be nested inside component
    */
@@ -14,21 +16,26 @@ export interface Props {
    */
   className?: string;
   /**
+   * HTML id for the component
+   */
+  id?: string;
+  // Design API
+  /**
    * Toggles disabled styling of the field note.
    */
   disabled?: boolean;
   /**
-   * Icon to use when an "icon" variant of the avatar. Default is "dangerous"
+   * Icon to use when an "icon" variant of the avatar.
+   *
+   * **Default is `"dangerous"`**.
    */
-  icon?: IconName;
+  icon?: Extract<IconName, 'dangerous' | 'warning-filled'>;
   /**
-   * HTML id for the component
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
    */
-  id?: string;
-  /**
-   * Error state of the form field
-   */
-  isError?: boolean;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 }
 
 /**
@@ -37,29 +44,46 @@ export interface Props {
  * Fieldnote component wraps text to describe other components.
  */
 export const FieldNote = ({
-  className,
-  disabled,
-  icon = 'dangerous',
-  id,
-  isError,
   children,
+  className,
+  id,
+  disabled,
+  icon,
+  status,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
     disabled && styles['field-note--disabled'],
-    isError && styles['field-note--error'],
+    status === 'critical' && styles['field-note--error'],
+    status === 'warning' && styles['field-note--warning'],
     className,
   );
+
+  let iconToUse = icon;
+  let title = 'fieldnote status icon';
+  if (status === 'critical') {
+    iconToUse = 'dangerous';
+    title = 'error';
+  } else if (status === 'warning') {
+    iconToUse = 'warning-filled';
+    title = 'warning';
+  }
+
   return (
-    <div className={componentClassName} id={id} {...other}>
-      {isError && (
+    <div
+      aria-disabled={disabled ?? undefined}
+      className={componentClassName}
+      id={id}
+      {...other}
+    >
+      {(status === 'critical' || status === 'warning' || iconToUse) && (
         <Icon
           className={styles['field-note__icon']}
-          name={icon}
+          name={iconToUse}
           purpose="informative"
           size="1rem"
-          title="error"
+          title={title}
         />
       )}
       {children}

@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react';
 import { ToastNotification } from './ToastNotification';
 
 export default {
-  title: 'Components/V2/ToastNotification',
+  title: 'Components/ToastNotification',
   component: ToastNotification,
   parameters: {
     layout: 'centered',

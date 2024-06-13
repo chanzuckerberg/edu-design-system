@@ -11,27 +11,47 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       <th
         class="table-header-cell"
       >
-        Name
+        <div
+          class="table-header-cell__container"
+        >
+          Name
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Status
+        <div
+          class="table-header-cell__container"
+        >
+          Status
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Chart
+        <div
+          class="table-header-cell__container"
+        >
+          Chart
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Window
+        <div
+          class="table-header-cell__container"
+        >
+          Window
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Last Update
+        <div
+          class="table-header-cell__container"
+        >
+          Last Update
+        </div>
       </th>
     </tr>
   </thead>
@@ -167,34 +187,44 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       <th
         class="table-header-cell"
       >
-        <button
-          class="button button--link button--brand table-header-cell__sort-button"
-          type="button"
+        <div
+          class="table-header-cell__container"
         >
           Sortable
-          <svg
-            class="icon"
-            fill="currentColor"
-            height="1rem"
-            role="img"
-            style="--icon-size: 1rem;"
-            viewBox="0 0 24 24"
-            width="1rem"
-            xmlns="http://www.w3.org/2000/svg"
+          <button
+            class="button button--layout-icon-only button--tertiary button--sm button--variant-default"
+            title="Sort"
+            type="button"
           >
-            <title>
-              Sort
-            </title>
-            <path
-              d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7c-.39-.39-1.02-.39-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L12 18.17z"
-            />
-          </svg>
-        </button>
+            <span
+              class="button__text"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1rem"
+                style="--icon-size: 1rem;"
+                viewBox="0 0 24 24"
+                width="1rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7c-.39-.39-1.02-.39-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L12 18.17z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Not sortable
+        <div
+          class="table-header-cell__container"
+        >
+          Not sortable
+        </div>
       </th>
     </tr>
   </thead>
@@ -271,22 +301,38 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
         <th
           class="table-header-cell"
         >
-          Students
+          <div
+            class="table-header-cell__container"
+          >
+            Students
+          </div>
         </th>
         <th
           class="table-header-cell"
         >
-          Status
+          <div
+            class="table-header-cell__container"
+          >
+            Status
+          </div>
         </th>
         <th
           class="table-header-cell"
         >
-          Cog skill
+          <div
+            class="table-header-cell__container"
+          >
+            Cog skill
+          </div>
         </th>
         <th
           class="table-header-cell"
         >
-          Time submitted
+          <div
+            class="table-header-cell__container"
+          >
+            Time submitted
+          </div>
         </th>
       </tr>
     </thead>
@@ -526,27 +572,47 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       <th
         class="table-header-cell"
       >
-        Name
+        <div
+          class="table-header-cell__container"
+        >
+          Name
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Status
+        <div
+          class="table-header-cell__container"
+        >
+          Status
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Chart
+        <div
+          class="table-header-cell__container"
+        >
+          Chart
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Window
+        <div
+          class="table-header-cell__container"
+        >
+          Window
+        </div>
       </th>
       <th
         class="table-header-cell"
       >
-        Last Update
+        <div
+          class="table-header-cell__container"
+        >
+          Last Update
+        </div>
       </th>
     </tr>
   </thead>

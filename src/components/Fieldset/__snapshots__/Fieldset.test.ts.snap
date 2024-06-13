@@ -21,12 +21,16 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         id=":r0:"
         type="checkbox"
       />
-      <label
-        class="label label--lg"
-        for=":r0:"
+      <div
+        class="checkbox__labels"
       >
-        Checkbox label 1
-      </label>
+        <label
+          class="label label--lg"
+          for=":r0:"
+        >
+          Checkbox label 1
+        </label>
+      </div>
     </div>
     <div
       class="checkbox"
@@ -36,12 +40,16 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         id=":r1:"
         type="checkbox"
       />
-      <label
-        class="label label--lg"
-        for=":r1:"
+      <div
+        class="checkbox__labels"
       >
-        Checkbox label 2
-      </label>
+        <label
+          class="label label--lg"
+          for=":r1:"
+        >
+          Checkbox label 2
+        </label>
+      </div>
     </div>
     <div
       class="checkbox"
@@ -51,12 +59,16 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         id=":r2:"
         type="checkbox"
       />
-      <label
-        class="label label--lg"
-        for=":r2:"
+      <div
+        class="checkbox__labels"
       >
-        Checkbox label 3
-      </label>
+        <label
+          class="label label--lg"
+          for=":r2:"
+        >
+          Checkbox label 3
+        </label>
+      </div>
     </div>
     <div
       class="checkbox"
@@ -66,12 +78,16 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         id=":r3:"
         type="checkbox"
       />
-      <label
-        class="label label--lg"
-        for=":r3:"
+      <div
+        class="checkbox__labels"
       >
-        Checkbox label 4
-      </label>
+        <label
+          class="label label--lg"
+          for=":r3:"
+        >
+          Checkbox label 4
+        </label>
+      </div>
     </div>
     <div
       class="checkbox"
@@ -81,12 +97,16 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         id=":r4:"
         type="checkbox"
       />
-      <label
-        class="label label--lg"
-        for=":r4:"
+      <div
+        class="checkbox__labels"
       >
-        Checkbox label 5
-      </label>
+        <label
+          class="label label--lg"
+          for=":r4:"
+        >
+          Checkbox label 5
+        </label>
+      </div>
     </div>
   </div>
 </fieldset>

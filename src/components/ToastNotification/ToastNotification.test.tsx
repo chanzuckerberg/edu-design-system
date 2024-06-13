@@ -9,7 +9,7 @@ const { AutoDismiss } = composeStories(stories);
 
 const { AutoDismiss: skip, ...staticStories } = stories;
 
-describe('<ToastNotification /> (v2)', () => {
+describe('<ToastNotification />', () => {
   afterEach(() => {
     jest.resetAllMocks();
   });

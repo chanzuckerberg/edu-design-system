@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PageNotification /> (v2) Critical story renders snapshot 1`] = `
+exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-critical w-96"
 >
@@ -53,7 +53,7 @@ exports[`<PageNotification /> (v2) Critical story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) CriticalHorizontal story renders snapshot 1`] = `
+exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-critical w-96"
 >
@@ -106,7 +106,7 @@ exports[`<PageNotification /> (v2) CriticalHorizontal story renders snapshot 1`]
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) Default story renders snapshot 1`] = `
+exports[`<PageNotification /> Default story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-informational w-96"
 >
@@ -159,7 +159,7 @@ exports[`<PageNotification /> (v2) Default story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) Dismissable story renders snapshot 1`] = `
+exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-informational page-notification--dismissable w-96"
 >
@@ -236,7 +236,7 @@ exports[`<PageNotification /> (v2) Dismissable story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) Favorable story renders snapshot 1`] = `
+exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-favorable w-96"
 >
@@ -289,7 +289,7 @@ exports[`<PageNotification /> (v2) Favorable story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) HorizontalDismissable story renders snapshot 1`] = `
+exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-critical page-notification--dismissable w-96"
 >
@@ -366,7 +366,7 @@ exports[`<PageNotification /> (v2) HorizontalDismissable story renders snapshot 
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) Warning story renders snapshot 1`] = `
+exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-warning w-96"
 >
@@ -419,7 +419,7 @@ exports[`<PageNotification /> (v2) Warning story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> (v2) WarningWithSubtitle story renders snapshot 1`] = `
+exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
 <aside
   class="page-notification page-notification--status-warning w-96"
 >

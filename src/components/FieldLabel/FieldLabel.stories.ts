@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react';
 import { FieldLabel } from './FieldLabel';
 
 export default {
-  title: 'Components/V2/FieldLabel',
+  title: 'Components/FieldLabel',
   component: FieldLabel,
   args: {
     children: 'Label',

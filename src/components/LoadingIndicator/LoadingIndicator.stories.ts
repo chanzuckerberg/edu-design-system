@@ -8,13 +8,19 @@ export default {
   component: LoadingIndicator,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.2'],
+    badges: ['intro-1.2', 'current-2.0'],
   },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof LoadingIndicator>;
 
 export const Default: StoryObj<Args> = {};
+
+export const ExtraSmall: StoryObj<Args> = {
+  args: {
+    size: 'xs',
+  },
+};
 
 export const Small: StoryObj<Args> = {
   args: {
@@ -36,7 +42,7 @@ export const Large: StoryObj<Args> = {
 
 export const Invisible: StoryObj<Args> = {
   args: {
-    visible: false,
+    isVisible: false,
   },
 };
 

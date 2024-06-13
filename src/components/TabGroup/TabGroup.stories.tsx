@@ -8,7 +8,7 @@ import Heading from '../Heading';
 import Text from '../Text';
 
 export default {
-  title: 'Components/V2/TabGroup',
+  title: 'Components/TabGroup',
   component: TabGroup,
   parameters: {
     layout: 'centered',

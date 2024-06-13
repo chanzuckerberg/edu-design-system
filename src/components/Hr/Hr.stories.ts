@@ -8,7 +8,7 @@ export default {
   component: Hr,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-1.3'],
   },
   args: {
     className: 'w-96',

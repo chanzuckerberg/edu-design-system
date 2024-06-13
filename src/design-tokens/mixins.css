@@ -180,7 +180,6 @@
 
 @define-mixin messagingWarning {
   --messaging-border-color: var(--eds-theme-color-border-utility-warning-subtle);
-  /* TODO-AH: remove hard-coded value to bridge to the new styles eds.color.other.orange.500 */
   --messaging-icon-color: #E06B00;
 
   background: var(--eds-theme-color-background-utility-warning);

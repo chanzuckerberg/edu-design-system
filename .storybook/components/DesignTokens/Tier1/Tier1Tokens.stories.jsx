@@ -2,7 +2,6 @@ import React from 'react';
 import { Tier1Animation } from './Animation';
 import { Tier1Borders } from './Borders';
 import { Tier1Colors } from './Colors';
-import { Tier1Layout } from './Layout';
 import { Tier1Shadows } from './Shadows';
 import { Tier1Sizes } from './Sizes';
 
@@ -22,6 +21,8 @@ export default {
   },
 };
 
+// TODO: Tokens to document: eds-color-opacity
+
 export const Colors = {
   render: () => <Tier1Colors />,
 };
@@ -36,10 +37,6 @@ export const Borders = {
 
 export const Sizes = {
   render: () => <Tier1Sizes />,
-};
-
-export const Layout = {
-  render: () => <Tier1Layout />,
 };
 
 export const Shadows = {

@@ -14,6 +14,9 @@ export default {
   },
 };
 
+const camelCaseWarning =
+  'NOTE: emphasis tokens have a camelCase suffix for the emphasis (e.g., lowEmphasis)';
+
 const getListItems = ({
   filterTerm,
   figmaTokenHeader,
@@ -35,15 +38,15 @@ const getListItems = ({
     };
   });
 
-export const Text: StoryObj = {
+export const TextUtility: StoryObj = {
   render: () => (
     <div>
-      <Section title="Text Colors">
+      <Section title="Text Colors (utility)">
         <ColorList
           listItems={getListItems({
-            filterTerm: 'eds-theme-color-text',
+            filterTerm: 'eds-theme-color-text-utility',
             figmaTokenHeader: 'text',
-            tailwindClassHeader: 'text',
+            tailwindClassHeader: 'text-utility',
           })}
         />
       </Section>
@@ -51,15 +54,15 @@ export const Text: StoryObj = {
   ),
 };
 
-export const Icon: StoryObj = {
+export const IconUtility: StoryObj = {
   render: () => (
     <div>
-      <Section title="Icon Colors">
+      <Section title="Icon Colors (utility)">
         <ColorList
           listItems={getListItems({
-            filterTerm: 'eds-theme-color-icon',
+            filterTerm: 'eds-theme-color-icon-utility',
             figmaTokenHeader: 'icon',
-            tailwindClassHeader: 'text-icon',
+            tailwindClassHeader: 'text-icon-utility',
           })}
         />
       </Section>
@@ -67,15 +70,18 @@ export const Icon: StoryObj = {
   ),
 };
 
-export const Background: StoryObj = {
+export const BackgroundUtility: StoryObj = {
   render: () => (
     <div>
-      <Section title="Background Colors">
+      <Section
+        description={camelCaseWarning}
+        title="Background Colors (utility)"
+      >
         <ColorList
           listItems={getListItems({
-            filterTerm: 'eds-theme-color-background',
+            filterTerm: 'eds-theme-color-background-utility',
             figmaTokenHeader: 'background',
-            tailwindClassHeader: 'bg',
+            tailwindClassHeader: 'bg-utility',
           })}
         />
       </Section>
@@ -83,15 +89,53 @@ export const Background: StoryObj = {
   ),
 };
 
-export const Border: StoryObj = {
+export const BackgroundBrand: StoryObj = {
   render: () => (
     <div>
-      <Section title="Border Colors">
+      <Section description={camelCaseWarning} title="Background Colors (brand)">
         <ColorList
           listItems={getListItems({
-            filterTerm: 'eds-theme-color-border',
+            filterTerm: 'eds-theme-color-background-brand',
+            figmaTokenHeader: 'background',
+            tailwindClassHeader: 'bg-brand',
+          }).filter((item) => {
+            // remove legacy primary tokens
+            return item.name.indexOf('primary') === -1;
+          })}
+        />
+      </Section>
+    </div>
+  ),
+};
+
+export const BorderUtility: StoryObj = {
+  render: () => (
+    <div>
+      <Section description={camelCaseWarning} title="Border Colors (utility)">
+        <ColorList
+          listItems={getListItems({
+            filterTerm: 'eds-theme-color-border-utility',
             figmaTokenHeader: 'border',
-            tailwindClassHeader: 'border',
+            tailwindClassHeader: 'border-utility',
+          })}
+        />
+      </Section>
+    </div>
+  ),
+};
+
+export const BorderBrand: StoryObj = {
+  render: () => (
+    <div>
+      <Section description={camelCaseWarning} title="Border Colors (brand)">
+        <ColorList
+          listItems={getListItems({
+            filterTerm: 'eds-theme-color-border-brand',
+            figmaTokenHeader: 'border',
+            tailwindClassHeader: 'border-brand',
+          }).filter((item) => {
+            // remove legacy primary tokens
+            return item.name.indexOf('primary') === -1;
           })}
         />
       </Section>

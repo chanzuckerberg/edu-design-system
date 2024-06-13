@@ -2,6 +2,7 @@ import type { Options } from '@popperjs/core';
 import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
+
 import styles from './PopoverContainer.module.css';
 
 export interface Props {
@@ -17,7 +18,7 @@ export const defaultPopoverModifiers: Options['modifiers'] = [
   {
     name: 'offset',
     options: {
-      offset: [0, 10], // spaces the popover from the trigger element
+      offset: [0, 12], // spaces the popover from the trigger element
     },
   },
   {

@@ -3,8 +3,8 @@ import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { Checkbox } from './Checkbox-v2';
-import * as stories from './Checkbox-v2.stories';
+import { Checkbox } from './Checkbox';
+import * as stories from './Checkbox.stories';
 
 describe('<Checkbox />', () => {
   generateSnapshots(stories as StoryFile);

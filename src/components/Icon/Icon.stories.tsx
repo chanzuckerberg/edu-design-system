@@ -2,9 +2,10 @@ import type { StoryObj, Meta } from '@storybook/react';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';
-import icons, { type IconName } from '../../icons/spritemap';
+import icons, { type IconName } from '../../icons/spritemap-v2';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
 import Text from '../Text';
+
 import styles from './Icon.stories.module.css';
 
 const meta: Meta<typeof Icon> = {
@@ -12,7 +13,7 @@ const meta: Meta<typeof Icon> = {
   component: Icon,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
   },
   argTypes: {
     name: {
@@ -28,9 +29,9 @@ const meta: Meta<typeof Icon> = {
       // For now, take the variables and convert to equivalent tokens for the UI
       options: [
         'currentColor',
-        ...Object.keys(ColorTokens).map(
-          (tokenVarName) => `var(--${kebabCase(tokenVarName)})`,
-        ),
+        ...Object.keys(ColorTokens)
+          .filter((tokenVarName) => tokenVarName.indexOf('Icon') !== -1)
+          .map((tokenVarName) => `var(--${kebabCase(tokenVarName)})`),
       ],
     },
   },
@@ -76,7 +77,7 @@ export const CustomColor: Story = {
   ...Default,
   args: {
     ...Default.args,
-    color: 'var(--eds-color-brand-grape-400)',
+    color: 'var(--eds-theme-color-icon-utility-critical)',
     size: '2em',
   },
 };
@@ -94,7 +95,7 @@ export const InText: Story = {
         The svg icon defaults to the surrounding text size (
         <Icon
           {...args}
-          name="account-circle"
+          name="add-encircled"
           purpose="informative"
           title="icon with 1em line height"
         />
@@ -127,62 +128,6 @@ const IconsInGrid = (args: IconProps) => (
           <li className={styles['icon-grid__item']} key={name}>
             <Icon className={styles['icon-grid__icon']} name={name} {...args} />
             <span className={styles['icon-grid__text']}>{name}</span>
-            {name === 'avatar' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  {...args}
-                />
-                This has been replaced by person. This will be deprecated
-              </div>
-            )}
-            {name === 'class-copy' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  {...args}
-                />
-                This has been replaced by book. This will be deprecated
-              </div>
-            )}
-            {name === 'file-copy' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  {...args}
-                />
-                This has been replaced by copy. This will be deprecated
-              </div>
-            )}
-            {name === 'more-vert' && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  {...args}
-                />
-                This has been replaced by dots-vertical. This will be deprecated
-              </div>
-            )}
-            {[
-              'status-check-circle',
-              'status-error',
-              'status-info',
-              'status-warning',
-            ].includes(name) && (
-              <div className={styles['icon-grid__deprecation']}>
-                <Icon
-                  className={styles['icon-grid__deprecation-icon']}
-                  name="status-error"
-                  {...args}
-                />
-                Icons with baked-in colors are not recommended. This will be
-                deprecated.
-              </div>
-            )}
           </li>
         );
       })}
@@ -197,4 +142,7 @@ const IconsInGrid = (args: IconProps) => (
  */
 export const IconGrid: Story = {
   render: (args) => <IconsInGrid {...args} />,
+  parameters: {
+    layout: 'padded',
+  },
 };

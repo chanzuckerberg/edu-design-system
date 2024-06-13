@@ -10,7 +10,7 @@ export default {
   component: FieldNote,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
   },
 } as Meta<Args>;
 
@@ -23,12 +23,21 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const WithIcon: StoryObj<Args> = {
+export const WithErrorIcon: StoryObj<Args> = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'person-add',
-    isError: true,
+    icon: 'warning-filled',
+    status: 'critical',
+  },
+};
+
+export const WithWarningIcon: StoryObj<Args> = {
+  args: {
+    children: 'This is a fieldnote.',
+    id: 'field-1',
+    icon: 'warning-filled',
+    status: 'warning',
   },
 };
 

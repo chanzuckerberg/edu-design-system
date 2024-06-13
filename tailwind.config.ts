@@ -68,7 +68,7 @@ export default {
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
     // Docs: https://tailwindcss.com/docs/responsive-design#customizing-your-theme
     screens: {
-      xs: '0px', // TODO-AH: reconcile the difference in the grid to be mobile first
+      xs: '0px',
       sm: '600px',
       md: '768px',
       lg: '1040px',

@@ -1,76 +1,100 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import type { Size } from '../../util/variant-types';
-import type { VariantStatus } from '../ClickableStyle';
+import Icon, { type IconName } from '../Icon';
+
 import styles from './Link.module.css';
 
-type LinkHTMLElementProps = Omit<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  'disabled'
->;
-
-export type LinkProps = LinkHTMLElementProps & {
-  /**
-   * The link contents or label.
-   */
-  children: ReactNode;
-  'data-testid'?: string;
-  /**
-   * Link size inherits from the surrounding text.
-   */
-  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
-} & VariantStatus;
+export type LinkProps<ExtendedElement = unknown> =
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    // Component API
+    /**
+     * Component used to render the element. Meant to support interaction with framework navigation libraries.
+     *
+     * **Default is `"a"`**.
+     */
+    as?: string | React.ElementType;
+    /**
+     * The link contents or label. Using ReactNode to support customized text treatments
+     */
+    children: React.ReactNode;
+    // Design API
+    /**
+     * Where `Link` sits alongside other text and content:
+     *
+     * * **inline** - Inline link inherits the text size established within the `<p>` paragraph they are embedded in.
+     * * **standalone** - Users can choose from the available sizes.
+     *
+     * **Default is `"inline"`**.
+     *
+     * Note: Icons will only be visible when `"standalone"` is used
+     */
+    context?: 'inline' | 'standalone';
+    /**
+     * (trailing) icon to use with the link
+     */
+    icon?: Extract<IconName, 'chevron-right' | 'open-in-new'>;
+    /**
+     * Extra or lowered colors added to a link
+     */
+    emphasis?: 'default' | 'high' | 'low';
+    /**
+     * Link size inherits from the surrounding text.
+     */
+    size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+    /**
+     * The variant treatment for links (use "inverse" on dark backgrounds).
+     *
+     * **Default is `"default"`**.
+     */
+    variant?: 'default' | 'inverse';
+  } & ExtendedElement;
 
 /**
  * `import {Link} from "@chanzuckerberg/eds";`
  *
- * Component for making styled anchor tags. It supports neutral and brand statuses (all other variant/status combinations will be removed in a future release).
+ * Component for making styled anchor tags. Links allow users to navigate within or between a web page(s) or app(s).
  *
- * This component is called Link because it should be used to make `<a>` elements.
- *
- * - If you need to style a `<button>` element to look like a link, please use the `Button` component.
- * - If you need to style a different element or component like a button or link, you can use the `ClickableStyle` component.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
     {
+      as: Component = 'a',
       children,
       className,
-      variant = 'link',
-      status = 'brand',
-      size = 'lg',
-      ...rest
+      context,
+      emphasis = 'default',
+      icon,
+      size = 'md',
+      variant = 'default',
+      ...other
     },
     ref,
   ) => {
     const componentClassName = clsx(
-      // Base styles
-      styles['link'],
-      // Sizes
-      variant !== 'link' && [
-        size === 'sm' && styles['link--sm'],
-        size === 'md' && styles['link--md'],
-        size === 'lg' && styles['link--lg'],
-      ],
-      // Variants
-      variant === 'primary' && styles['link--primary'],
-      variant === 'secondary' && styles['link--secondary'],
-      variant === 'icon' && styles['link--icon'],
-      variant === 'link' && styles['link--link'],
-      // Colors
-      status === 'brand' && styles['link--brand'],
-      status === 'neutral' && styles['link--neutral'],
-      status === 'success' && styles['link--success'],
-      status === 'warning' && styles['link--warning'],
-      status === 'error' && styles['link--error'],
       className,
+      styles['link'],
+      context && styles[`link--context-${context}`],
+      emphasis && styles[`link--emphasis-${emphasis}`],
+      icon && styles['link--has-right-icon'],
+      size && styles[`link--size-${size}`],
+      variant === 'inverse' && styles[`link--variant-${variant}`],
     );
 
+    const iconSize = size && (['xl', 'lg'].includes(size) ? '1.5rem' : '1rem');
+
     return (
-      <a className={componentClassName} ref={ref} {...rest}>
+      <Component className={componentClassName} ref={ref} {...other}>
         {children}
-      </a>
+        {icon && context === 'standalone' && (
+          <Icon
+            className={styles['link__icon']}
+            name={icon}
+            purpose="decorative"
+            size={iconSize}
+          />
+        )}
+      </Component>
     );
   },
 );

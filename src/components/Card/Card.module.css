@@ -1,41 +1,142 @@
 /*------------------------------------*\
     # CARD
 \*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
 
 /**
  * A card is a block that typically contains a title, image, text, and/or calls to action.
  * The `:where` pseudo class function allows easy overriding via className.
  */
 :where(.card) {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: calc(var(--eds-size-2) / 16 * 1rem);
+
+  padding: calc(var(--eds-size-3) / 16 * 1rem);
   height: 100%;
-  border-radius: calc(var(--eds-border-radius-lg) * 1px);
-  border-width: calc(var(--eds-theme-border-width) * 1px);
-  border-style: solid;
-  border-color: var(--eds-theme-color-border-neutral-subtle);
-  background-color: var(--eds-theme-color-background-neutral-default);
+  border: calc(var(--eds-theme-border-width) * 1px) solid;
+
+  &:focus-visible {
+    outline-offset: 1px;
+    outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  }
+
+  &.card--is-interactive {
+    cursor: pointer;
+  }
+}
+
+:where(.child-card) {
+  margin-top: calc(var(--eds-size-2) / 16 * 1rem);
+  border-radius: calc(var(--eds-border-radius-md) / 16 * 1rem);
 }
 
 /**
- * Card that appears raised to show interactivity/emphasis.
+ * Container styles are reduced to be overridden by any containerColor settings
  */
-.card--raised {
-  box-shadow: var(--eds-box-shadow-md);
-  border-color: var(--eds-theme-color-background-neutral-default);
+:where(.card--container-style-low) {
+  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
 }
 
-/**
- * Card that is being dragged in drag and drop.
- */
-.card--dragging {
-  box-shadow: var(--eds-box-shadow-xl);
+:where(.card--container-style-high) {
+  border-color: var(--eds-theme-color-border-utility-default-high-emphasis);
 }
 
-/**
- * Card body.
- */
+:where(.card--container-style-none) {
+  border-color: transparent;
+}
+
+.card--container-color-default {
+  background-color: var(--eds-theme-color-background-utility-container);
+
+  &.card--is-interactive {
+    &:hover {
+      background-color: var(--eds-theme-color-background-utility-container-hover);
+    }
+
+    &:active {
+      background-color: var(--eds-theme-color-background-utility-container-active);
+    }
+  }
+}
+
+.card--container-color-call-out {
+  background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+  border-color: var(--eds-theme-color-border-utility-informational);
+
+  &.card--is-interactive {
+    &:hover {
+      background-color: var(--eds-theme-color-background-utility-information-low-emphasis-hover);
+    }
+
+    &:active {
+      background-color: var(--eds-theme-color-background-utility-information-low-emphasis-active);
+    }
+  }
+}
+
+.card--is-dragging-true {
+  box-shadow: var(--eds-box-shadow-lg);
+}
+
+.card__header {
+  display: flex;
+  
+  &.header--size-sm {
+    gap: calc(var(--eds-size-1) / 16 * 1rem)
+  }
+
+  &.header--size-md {
+    gap: calc(var(--eds-size-2) / 16 * 1rem);
+  }
+}
+
+.card__top-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+:where(.card__top-stripe) {
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+}
+
+.top-stripe--medium {
+  height: calc(var(--eds-size-1) / 16 * 1rem);
+}
+
+.top-stripe--high {
+  height: calc(var(--eds-size-2) / 16 * 1rem);
+}
+
+.header__icon,
+.header__action {
+  flex-grow: 0;
+}
+
+.header__text,
+.header__custom {
+  flex-grow: 2;
+}
+
 .card__body {
-  flex: 1;
+  flex-grow: 1;
+
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.header__eyebrow {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.header__title {
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.header__sub-title {
+  color: var(--eds-theme-color-text-utility-default-secondary);
 }

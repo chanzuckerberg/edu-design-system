@@ -13,7 +13,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.2'],
+    badges: ['intro-1.2', 'current-1.3'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },

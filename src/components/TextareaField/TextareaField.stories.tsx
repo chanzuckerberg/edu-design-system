@@ -7,6 +7,7 @@ const meta: Meta<typeof TextareaField> = {
   title: 'Components/TextareaField',
   component: TextareaField,
   args: {
+    className: 'w-96',
     placeholder: 'Enter long-form text here',
     defaultValue: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
 dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -18,8 +19,9 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.3'],
+    badges: ['intro-1.3', 'current-2.0'],
   },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };
 
 export default meta;
@@ -67,16 +69,67 @@ export const WhenDisabled: Story = {
   },
 };
 
-export const WhenError: Story = {
+export const WhenReadOnly: Story = {
   args: {
-    isError: true,
+    readOnly: true,
+    rows: 2,
+  },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
+};
+
+/**
+ * The default status isn't really anything, but exists to allow a value to be set if needed. This applies
+ * the neutral styles.
+ */
+export const WhenDefaultStatus: Story = {
+  args: {
+    status: 'default',
     fieldNote: 'Text should be at least 100 characters',
   },
 };
 
+/**
+ * When in an error state, this is the status to use. It matches other components which have a critical status.
+ */
+export const WhenError: Story = {
+  args: {
+    status: 'critical',
+    fieldNote: 'Text should be at least 100 characters',
+  },
+};
+
+/**
+ * You can also apply a warning status.
+ */
+export const WhenWarning: Story = {
+  args: {
+    status: 'warning',
+    fieldNote: 'Text should be at least 100 characters',
+  },
+};
+
+/**
+ * Textarea components can be set as required.
+ */
 export const WhenRequired: Story = {
   args: {
     required: true,
+    showHint: true,
+  },
+};
+
+/**
+ * ... or optional.
+ */
+export const WhenOptional: Story = {
+  args: {
+    required: false,
+    showHint: true,
   },
 };
 

@@ -15,6 +15,7 @@ const {
   SeparateButtonAndMenuWidth,
   EventHandlingOnRenderProp,
   EventHandlingOnStandardButton,
+  Multiple,
   ...closedStories
 } = stories;
 
