@@ -10,7 +10,6 @@ import React, {
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 
-import { useId } from '../../util/useId';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 import FieldLabel from '../FieldLabel';
@@ -89,7 +88,6 @@ type SelectProps = ExtractProps<typeof Listbox> &
 
 type SelectLabelProps = ExtractProps<typeof Listbox.Label> & {
   disabled?: boolean;
-  htmlFor: string;
   required?: boolean;
   showHint?: boolean;
 };
@@ -231,9 +229,6 @@ export function Select({
     other.value !== undefined ? other.value : other.defaultValue,
   );
 
-  const generatedIdVar = useId();
-  const idVar = id || generatedIdVar;
-
   const componentClassName = clsx(
     styles['select'],
     fieldNote && styles['select--has-fieldNote'],
@@ -247,7 +242,6 @@ export function Select({
     // Otherwise we get an error.
     as: 'div' as const,
     disabled,
-    id: idVar,
     name,
     ...other,
   };
@@ -293,7 +287,6 @@ export function Select({
         {(label || required) && (
           <Select.Label
             disabled={disabled}
-            htmlFor={idVar}
             required={required}
             showHint={showHint}
           >
@@ -318,7 +311,6 @@ const SelectLabel = ({
   required,
   className,
   disabled,
-  htmlFor,
   showHint,
 }: SelectLabelProps) => {
   const componentClassName = clsx(
@@ -343,7 +335,6 @@ const SelectLabel = ({
         as={FieldLabel}
         className={componentClassName}
         disabled={disabled}
-        htmlFor={htmlFor}
       >
         {label}
       </Listbox.Label>
