@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';
-import icons, { type IconName } from '../../icons/spritemap-v2';
+import icons, { type IconName } from '../../icons/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
 import Text from '../Text';
 

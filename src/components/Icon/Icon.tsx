@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
 import React from 'react';
-import icons, { type IconName } from '../../icons/spritemap-v2';
+import icons, { type IconName } from '../../icons/spritemap';
 import styles from './Icon.module.css';
 
-export type { IconName } from '../../icons/spritemap-v2';
+export type { IconName } from '../../icons/spritemap';
 
 // TODO: export union utility type of "Extract<IconName, T> | (renderProps) => ReactNode" when updating IconName usages
 

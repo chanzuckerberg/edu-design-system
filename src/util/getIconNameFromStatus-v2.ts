@@ -1,5 +1,5 @@
 import type { Status } from './variant-types';
-import type { IconName } from '../icons/spritemap-v2';
+import type { IconName } from '../icons/spritemap';
 
 /**
  * Map statuses to existing icon names

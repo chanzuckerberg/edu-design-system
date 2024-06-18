@@ -5,7 +5,7 @@ import React from 'react';
 import { Menu } from './Menu';
 import type { MenuProps } from './Menu';
 import icons from '../../icons/spritemap';
-import type { IconName } from '../../icons/spritemap-v2';
+import type { IconName } from '../../icons/spritemap';
 import { Avatar } from '../Avatar/Avatar';
 
 import { Icon } from '../Icon/Icon';

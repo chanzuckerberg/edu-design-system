@@ -12,11 +12,11 @@ EDS provides utilitarian UI icons (e.g. magnifying glass, menu, triangles, caret
 
 ### Adding a new icon
 
-1. Export SVG icon asset(s) from Figma
-2. If necessary, remove the `fill` attribute on the `<path>` in the exported SVG file(s). In the very rare case that an icon needs colors defined in the icon (like the `status-` icons), only use tier 2 or tier 3 CSS variables for the color.
-3. In a new feature branch, locate `src/icons/spritemap` and add new icon contents (everything but the `<svg>` element) to the object.
-4. In Storybook, view the "Icon Grid" component to see the new component added to the available list of icons, which is now ready to use in EDS components.
-5. Submit PR to [edu-design-system](https://github.com/chanzuckerberg/edu-design-system)
+- Retrieve the icons from a design partner (e.g., from Figma, or from file sharing service like Google drive)
+- If necessary, remove the `fill` attribute on the `<path>` in the exported SVG file(s). In the very rare case that an icon needs colors defined in the icon (like the `status-` icons), only use tier 2 or tier 3 CSS variables for the color.
+- In a new feature branch, locate `src/icons/spritemap` and add new icon contents (everything but the `<svg>` element) to the object.
+- In Storybook, view the "Icon Grid" component to see the new component added to the available list of icons, which is now ready to use in EDS components.
+- Submit PR to [edu-design-system](https://github.com/chanzuckerberg/edu-design-system)
 
 For more information on contributing to EDS, please review our [contribution guidelines][contributing].
 
