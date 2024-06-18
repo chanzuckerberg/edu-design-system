@@ -11,6 +11,12 @@ type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
   // Component API
   /**
+   * Component used to render the element. Meant to support interaction with framework navigation libraries.
+   *
+   * **Default is `"button"`**.
+   */
+  as?: string | React.ElementType;
+  /**
    * `Button` contents or label.
    */
   children?: string;
@@ -91,6 +97,7 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
+      as: Component = 'button',
       children,
       className,
       context,
@@ -126,7 +133,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
 
     return (
-      <button
+      <Component
         className={componentClassName}
         disabled={isDisabled}
         ref={ref}
@@ -160,7 +167,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <LoadingIndicator className={styles['button__loader']} size="xs" />
         )}
-      </button>
+      </Component>
     );
   },
 );
