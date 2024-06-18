@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { useEffect } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus-v2';
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
 import Icon from '../Icon';

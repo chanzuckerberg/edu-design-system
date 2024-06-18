@@ -185,7 +185,7 @@ function ExtendedLink(args: ExtendArgs) {
  * ```tsx
  * type CustomLinkProps = React.ComponentProps<typeof CustomLink>;
  * type ExtendedProps = LinkProps<CustomLinkProps>;
- * *
+ *
  * export default function Link({children, ...other}: ExtendedProps) {
  *   return (
  *    <Link as={CustomLink} {...other}>

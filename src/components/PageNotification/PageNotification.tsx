@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus-v2';
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 
 import Button from '../Button';
