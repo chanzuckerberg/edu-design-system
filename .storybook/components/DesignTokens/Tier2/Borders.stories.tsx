@@ -15,20 +15,21 @@ export default {
   },
 };
 
-export const Borders: StoryObj = {
+export const BorderRadii: StoryObj = {
   render: () => (
     <div>
-      <Section title="Border Width">
+      <Section title="Border Radii">
         <Grid>
-          {filterTokens(`eds-theme-border-width`).map(function (listItem) {
+          {filterTokens(`eds-theme-border-radius`).map(function (listItem) {
             return (
               <Grid.Item key={listItem.name}>
                 <TokenSpecimen
                   inlineStyles={{
                     backgroundColor: 'transparent',
-                    borderWidth: `calc(var(${listItem.name}) * 1px)`,
                     borderStyle: 'solid',
+                    borderWidth: '1px',
                     borderColor: 'black',
+                    borderRadius: `calc(var(${listItem.name}) * 1px)`,
                   }}
                   name={listItem.name}
                   value={listItem.value + 'px'}

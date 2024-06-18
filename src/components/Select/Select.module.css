@@ -3,6 +3,9 @@
 /*------------------------------------*\
     # SELECT
 \*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
 
 /**
  * Select field used to select one option from a list of options.
@@ -12,29 +15,16 @@
 }
 
 /**
- * Label on top of the select trigger button to label the select field.
- */
-.select__label {
-  font: var(--eds-theme-typography-form-label);
-  display: inline-block;
-}
-
-.select__label--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
-
-/**
- * Wraps the Label and the optional/required indicator.
+ * Wraps the Label and the optional/required hint.
  */
 .select__overline {
   display: flex;
-  justify-content: space-between;
   margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
-  color: var(--eds-theme-color-form-label);
+  gap: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 .select__overline--no-label {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 /**
@@ -45,62 +35,39 @@
   z-index: 100;
 }
 
-.select__option-text {
-  color: var(--eds-theme-color-text-neutral-default);
+.select--label-layout-vertical {
+  flex-direction: column;
 }
 
-.select__option-item {
-  color: var(--eds-theme-color-icon-brand-primary);
-}
+.select--label-layout-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 
-.select__required-text {
-  color: var(--eds-theme-color-text-neutral-subtle);
-  font: var(--eds-theme-typography-body-sm);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 }
-
-.select__required-text--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
-
-/*------------------------------------*\
-    # SELECT BUTTON
-\*------------------------------------*/
 
 /**
  * The button to trigger the display of the select field.
  */
 .select-button {
-  font: var(--eds-theme-typography-body-md);
-  /* Allow select component font to shrink in contexts where body font size is smaller. */
-  font-size: inherit;
-  color: var(--eds-theme-color-text-neutral-subtle);
+  font: var(--eds-theme-typography-form-input);
 
-  height: calc(var(--eds-size-5) / 16 * 1rem);
   width: 100%;
-  padding: 0 calc(var(--eds-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-size-1) / 16 * 1rem);
 
-  border: calc(var(--eds-theme-border-width) * 1px) solid var(--eds-theme-color-form-border);
-  border-radius: calc(var(--eds-border-radius-md) * 1px);
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   display: flex;
-  /* Place button text on the left and the expand more icon on the right. */
   justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 
   cursor: pointer;
 
+  color: var(--eds-theme-color-text-utility-default-primary);
   background-color: var(--eds-theme-color-form-background);
-
-  &:focus-visible {
-    @mixin focus;
-    border-color: var(--eds-theme-color-focus-ring);
-  }
-}
-
-.select-button:disabled {
-  cursor: not-allowed;
-  color: var(--eds-theme-color-text-disabled);
 }
 
 /**
@@ -111,8 +78,8 @@
   transform: rotate(0);
 
   transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-out;
+
   @media (prefers-reduced-motion) {
-    /* Turns off animation if user prefers reduced motion. */
     transition: none;
   }
 }
@@ -125,4 +92,81 @@
 
 .select-button__icon--reversed {
   transform: rotate(180deg);
+}
+
+.select__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select--has-fieldNote {
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
+}
+
+
+/**
+ * Label on top of the select trigger button to label the select field.
+ */
+.select__label {
+  font: var(--eds-theme-typography-form-label);
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.select__label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+
+.select__option {
+  color: var(--eds-theme-color-text-utility-interactive-secondary);
+}
+
+.select__option-text {
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.select__required-text {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.select-button:disabled {
+  cursor: not-allowed;
+
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+  border-color: var(--eds-theme-color-border-utility-disabled);
+  background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+}
+
+.select-button:focus-visible {
+  border-color: var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-focus);
+}
+
+.select-button--error {
+  border-color: var(--eds-theme-color-border-utility-critical);
+
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+
+  &:focus-visible {
+    border-color: var(--eds-theme-color-border-utility-critical);
+    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-critical);
+  }
+}
+
+.select-button--warning {
+  border-color: var(--eds-theme-color-border-utility-warning);
+
+  &:hover {
+    border-color: var(--eds-theme-color-border-utility-warning-hover);
+  }
+
+  &:focus-visible {
+    border-color: var(--eds-theme-color-border-utility-warning);
+    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-warning);
+  }
+}
+
+.select__required-text--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
 }

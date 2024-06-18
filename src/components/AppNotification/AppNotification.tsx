@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { ButtonV2 as Button } from '../Button';
+import Button from '../Button';
 import Text from '../Text';
 import styles from './AppNotification.module.css';
 

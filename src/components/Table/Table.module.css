@@ -30,6 +30,13 @@
   text-align: left;
 }
 
+:where(.table-header-cell__container) {
+  display: flex;
+  align-items: center;
+  /* Match height to a sort icon if one exists to create alignment */
+  min-height: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+}
+
 /**
  * Table header cell within table body
  *

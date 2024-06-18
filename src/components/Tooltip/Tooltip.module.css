@@ -2,26 +2,16 @@
     # TOOLTIP
 \*------------------------------------*/
 
-/**
- * TippyJS provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow.
- *
- * TippyJS also attaches data-attribute `data-placement` depending on how the tooltip is aligned.
- */
-
 .tooltip {
   border-style: solid;
   border-width: calc(var(--eds-border-width-sm) * 1px);
-  border-radius: calc(var(--eds-border-radius-lg) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
+  max-width: 14rem;
 
   @media (prefers-reduced-motion) {
     transition: none;
   }
-
-  border-color: var(--eds-theme-color-border-neutral-default);
-  color: var(--eds-theme-color-text-neutral-default);
-  background-color: var(--eds-theme-color-background-neutral-subtle);
-  --arrow-color: var(--eds-theme-color-border-neutral-default);
 }
 
 /**
@@ -110,4 +100,18 @@
   border-right-color: var(--arrow-color);
   border-left-width: 0;
   left: -7px;
+}
+
+.tooltip--variant-default {
+  color: var(--eds-theme-color-text-utility-inverse);
+  border-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+}
+
+.tooltip--variant-inverse {
+  color: var(--eds-theme-color-text-utility-default-primary);
+  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
 }

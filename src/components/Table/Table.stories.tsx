@@ -11,7 +11,7 @@ export default {
   component: Table,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.1'],
+    badges: ['intro-1.1', 'current-1.3'],
   },
   argTypes: {
     children: {
@@ -175,6 +175,7 @@ export const SortableInteractive: Story = {
         type: 'dynamic',
       },
     },
+    layout: 'fullscreen',
   },
   render: () => {
     const values = [

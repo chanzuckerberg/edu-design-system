@@ -6,6 +6,7 @@ import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier1Borders extends Component {
   render() {
+    // TODO: what are the width tokens to document?
     return (
       <div>
         <Section title="Border Width">

@@ -728,7 +728,6 @@ const icons = {
       </>
     ),
   },
-  // TODO-AH: remove hard-coded value to bridge to the new styles for utility-warning-hover eds.color.other.orange.600
   'status-warning': {
     viewBox: '0 0 24 24',
     content: (

@@ -8,10 +8,14 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
     style="margin-bottom: 1rem;"
   >
     <button
-      class="button button--lg button--primary button--brand search-button"
+      class="button button--layout-none button--primary button--lg button--variant-default search-button"
       type="button"
     >
-      Search
+      <span
+        class="button__text"
+      >
+        Search
+      </span>
     </button>
     <div
       class="search-field"
@@ -68,10 +72,14 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
       </svg>
     </div>
     <button
-      class="button button--lg button--primary button--brand search-button"
+      class="button button--layout-none button--primary button--lg button--variant-default search-button"
       type="button"
     >
-      Search
+      <span
+        class="button__text"
+      >
+        Search
+      </span>
     </button>
   </div>
 </div>
@@ -111,10 +119,14 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
       </svg>
     </div>
     <button
-      class="button button--lg button--primary button--brand search-button"
+      class="button button--layout-none button--primary button--lg button--variant-default search-button"
       type="button"
     >
-      Search
+      <span
+        class="button__text"
+      >
+        Search
+      </span>
     </button>
   </div>
 </div>
@@ -155,12 +167,15 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
       </svg>
     </div>
     <button
-      class="button button--lg button--primary button--brand button--disabled search-button"
+      class="button button--layout-none button--disabled button--primary button--lg button--variant-default search-button"
       disabled=""
-      tabindex="-1"
       type="button"
     >
-      Search
+      <span
+        class="button__text"
+      >
+        Search
+      </span>
     </button>
   </div>
 </div>
@@ -171,10 +186,14 @@ exports[`<SearchField /> SearchButton story renders snapshot 1`] = `
   class="p-8"
 >
   <button
-    class="button button--lg button--primary button--brand search-button w-96"
+    class="button button--layout-none button--primary button--lg button--variant-default search-button w-96"
     type="button"
   >
-    Search
+    <span
+      class="button__text"
+    >
+      Search
+    </span>
   </button>
 </div>
 `;

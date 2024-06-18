@@ -1,8 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { PopoverListItem } from './PopoverListItem-v2';
+import { PopoverListItem } from './PopoverListItem';
 
 export default {
-  title: 'Components/V2/PopoverListItem',
+  title: 'Components/PopoverListItem',
   component: PopoverListItem,
   parameters: {
     layout: 'centered',

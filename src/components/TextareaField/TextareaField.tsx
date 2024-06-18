@@ -7,12 +7,16 @@ import type {
   EitherInclusive,
   ForwardedRefComponent,
 } from '../../util/utility-types';
+
+import type { Status } from '../../util/variant-types';
+import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import InputLabel from '../InputLabel';
 import Text from '../Text';
+
 import styles from './TextareaField.module.css';
 
 type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  // Component API
   /**
    * Text content of the field upon instantiation
    */
@@ -33,15 +37,24 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * HTML id for the component. Can be used with a custom Label component
    */
   id?: string;
-  /**
-   * Error state of the form field
-   */
-  isError?: boolean;
+  // Design API
   /**
    * Behaves similar to `maxLength` but allows the user to continue typing more text.
    * Should not be larger than `maxLength`, if present.
    */
   recommendedMaxLength?: number;
+  /**
+   * Whether it should show the field hint or not
+   *
+   * **Default is `"false"`**.
+   */
+  showHint?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 } & EitherInclusive<
     {
       /**
@@ -62,7 +75,7 @@ type TextareaFieldType = ForwardedRefComponent<
   TextareaFieldProps
 > & {
   TextArea?: typeof TextArea;
-  Label?: typeof InputLabel;
+  Label?: typeof FieldLabel;
 };
 
 type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -79,9 +92,11 @@ type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    */
   disabled?: boolean;
   /**
-   * Whether the error state is active
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
    */
-  isError?: boolean;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 };
 
 /**
@@ -94,14 +109,16 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       children,
       disabled,
       defaultValue = '',
-      isError = false,
+      readOnly,
+      status = 'default',
       ...other
     },
     ref,
   ) => {
     const componentClassName = clsx(
       styles['textarea'],
-      isError && styles['error'],
+      status === 'critical' && styles['error'],
+      status === 'warning' && styles['warning'],
       disabled && styles['textarea--disabled'],
       className,
     );
@@ -110,6 +127,8 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       <textarea
         className={componentClassName}
         defaultValue={children || defaultValue}
+        disabled={disabled}
+        readOnly={readOnly}
         ref={ref}
         {...other}
       ></textarea>
@@ -136,12 +155,14 @@ export const TextareaField: TextareaFieldType = forwardRef(
       disabled,
       fieldNote,
       id,
-      isError,
       label,
       maxLength,
       onChange,
+      readOnly,
       recommendedMaxLength,
       required,
+      showHint,
+      status = 'default',
       ...other
     },
     ref,
@@ -162,7 +183,9 @@ export const TextareaField: TextareaFieldType = forwardRef(
         : false;
 
     const shouldRenderError =
-      isError || textExceedsMaxLength || textExceedsRecommendedLength;
+      status === 'critical' ||
+      textExceedsMaxLength ||
+      textExceedsRecommendedLength;
 
     const ariaDescribedByVar = fieldNote
       ? ariaDescribedBy || generatedAriaDescribedById
@@ -180,12 +203,15 @@ export const TextareaField: TextareaFieldType = forwardRef(
     );
 
     const requiredTextClassName = clsx(
-      styles['textarea-field__required-text'],
       disabled && styles['textarea-field__required-text--disabled'],
     );
     const fieldLengthCountClassName = clsx(
       (textExceedsMaxLength || textExceedsRecommendedLength) &&
         styles['textarea-field--invalid-length'],
+    );
+
+    const textareaClassName = clsx(
+      readOnly && styles['textarea-field__textarea--read-only'],
     );
 
     // Pick the smallest of the lengths to set as the maximum value allowed
@@ -196,32 +222,52 @@ export const TextareaField: TextareaFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <InputLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel className={labelClassName} htmlFor={idVar}>
                 {label}
-              </InputLabel>
+              </FieldLabel>
             )}
-            {required && (
-              <Text as="p" className={requiredTextClassName} preset="body-sm">
-                Required
+            {required && showHint && (
+              <Text
+                as="span"
+                className={requiredTextClassName}
+                preset="body-sm"
+              >
+                (Required)
               </Text>
+            )}
+            {!required && showHint && (
+              <Text
+                as="span"
+                className={requiredTextClassName}
+                preset="body-sm"
+              >
+                (Optional)
+              </Text>
+            )}
+            {maxLengthShown && (
+              <div className={styles['textarea-field__character-counter']}>
+                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
+                / {maxLengthShown}
+              </div>
             )}
           </div>
         )}
         <TextArea
           aria-describedby={ariaDescribedByVar}
           aria-disabled={disabled}
+          className={textareaClassName}
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
-          isError={shouldRenderError}
           maxLength={maxLength}
           onChange={(e) => {
             setFieldText(e.target.value);
             onChange && onChange(e);
           }}
-          readOnly={disabled}
+          readOnly={readOnly}
           ref={ref}
           required={required}
+          status={shouldRenderError ? 'critical' : status}
           {...other}
         >
           {children}
@@ -233,16 +279,10 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 className={styles['textarea-field__field-note']}
                 disabled={disabled}
                 id={ariaDescribedByVar}
-                isError={shouldRenderError}
+                status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
               </FieldNote>
-            )}
-            {maxLengthShown && (
-              <div className={styles['textarea-field__character-counter']}>
-                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLengthShown}
-              </div>
             )}
           </div>
         )}
@@ -255,4 +295,4 @@ TextareaField.displayName = 'TextareaField';
 TextArea.displayName = 'TextareaField.Textarea';
 
 TextareaField.TextArea = TextArea;
-TextareaField.Label = InputLabel;
+TextareaField.Label = FieldLabel;

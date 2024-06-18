@@ -1,24 +1,33 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import type { ReactNode, MouseEventHandler } from 'react';
 
-import React, { useContext, useState } from 'react';
+import React, {
+  useContext,
+  useState,
+  type ReactNode,
+  type MouseEventHandler,
+} from 'react';
 import { createPortal } from 'react-dom';
-
 import { usePopper } from 'react-popper';
+
 import type { ExtractProps } from '../../util/utility-types';
-
+import type { Status } from '../../util/variant-types';
+import FieldLabel from '../FieldLabel';
+import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
-
-import PopoverContainer, { defaultPopoverModifiers } from '../PopoverContainer';
+import {
+  defaultPopoverModifiers,
+  PopoverContainerV2 as PopoverContainer,
+} from '../PopoverContainer';
 import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
-
 import PopoverListItem from '../PopoverListItem';
 import Text from '../Text';
+
 import styles from './Select.module.css';
 
 type SelectProps = ExtractProps<typeof Listbox> &
   PopoverOptions & {
+    // Component API
     /**
      * Screen-reader text for the select's label.
      *
@@ -45,28 +54,53 @@ type SelectProps = ExtractProps<typeof Listbox> &
      */
     optionsClassName?: string;
     /**
+     * Indicates that field is required for form to be successfully submitted
+     */
+    required?: boolean;
+    // Design API
+    /**
+     * Text under the text input used to provide a description or error message to describe the input.
+     */
+    fieldNote?: ReactNode;
+    /**
      * Visible text label for the component.
      */
     label?: string;
     /**
-     * Indicates that field is required for form to be successfully submitted
+     * Whether the label is adjacent to the field (horizontal) or above the field (vertical)
+     *
+     * **Default is `"vertical"`**.
      */
-    required?: boolean;
+    labelLayout?: 'vertical' | 'horizontal';
+    /**
+     * Whether it should show the field hint or not
+     *
+     * **Default is `"false"`**.
+     */
+    showHint?: boolean;
+    /**
+     * Status for the field state
+     *
+     * **Default is `"default"`**.
+     */
+    status?: 'default' | Extract<Status, 'warning' | 'critical'>;
   };
 
 type SelectLabelProps = ExtractProps<typeof Listbox.Label> & {
   disabled?: boolean;
   required?: boolean;
+  showHint?: boolean;
 };
 type SelectOptionsProps = ExtractProps<typeof Listbox.Options>;
 type SelectOptionProps = ExtractProps<typeof Listbox.Option> & {
   optionClassName?: string;
 };
 type SelectButtonProps = ExtractProps<typeof Listbox.Button> & {
+  // Design API
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Icon override for component. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'expand-more'>;
+  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Indicates state of the select, used to style the button.
    */
@@ -74,18 +108,20 @@ type SelectButtonProps = ExtractProps<typeof Listbox.Button> & {
 };
 
 type SelectButtonWrapperProps = {
-  /**
-   * Optional className for additional styling.
-   */
-  className?: string;
+  // Component API
   /**
    * Text placed inside the button to describe the field.
    */
   children?: ReactNode;
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Optional className for additional styling.
    */
-  icon?: Extract<IconName, 'expand-more'>;
+  className?: string;
+  // Design API
+  /**
+   * Icon override for component. Default is 'chevron-down'
+   */
+  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Indicates state of the select, used to style the button.
    */
@@ -98,10 +134,17 @@ type SelectButtonWrapperProps = {
    * Whether we should truncate the text displayed in the select field
    */
   shouldTruncate?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' & Extract<Status, 'warning' | 'critical'>;
 };
 
 type SelectContextType = PopoverContext & {
   optionsClassName?: string;
+  status?: SelectButtonWrapperProps['status'];
 };
 
 let showNameWarning = true;
@@ -135,27 +178,31 @@ const SelectContext = React.createContext<SelectContextType>({});
  * Supports controlled and uncontrolled behavior, using a render prop in the latter case.
  *
  */
-export function Select(props: SelectProps) {
-  const {
-    'aria-label': ariaLabel,
-    children,
-    className,
-    label,
-    modifiers = defaultPopoverModifiers,
-    name,
-    onFirstUpdate,
-    optionsClassName,
-    placement = 'bottom-start',
-    required,
-    strategy,
-    onChange: theirOnChange,
-    ...other
-  } = props;
-
+export function Select({
+  'aria-label': ariaLabel,
+  children,
+  className,
+  disabled,
+  fieldNote,
+  id,
+  label,
+  labelLayout = 'vertical',
+  modifiers = defaultPopoverModifiers,
+  name,
+  onFirstUpdate,
+  optionsClassName,
+  placement = 'bottom-start',
+  required,
+  showHint,
+  status,
+  strategy,
+  onChange: theirOnChange,
+  ...other
+}: SelectProps) {
   if (process.env.NODE_ENV !== 'production') {
     const childrenHaveLabel =
       children && childrenHaveLabelComponent(children as ReactNode);
-    if (!props['aria-label'] && !props.label && !childrenHaveLabel) {
+    if (!ariaLabel && !label && !childrenHaveLabel) {
       throw new Error('You must provide a visible label or `aria-label`.');
     }
     if (!name && showNameWarning) {
@@ -182,13 +229,19 @@ export function Select(props: SelectProps) {
     other.value !== undefined ? other.value : other.defaultValue,
   );
 
-  const componentClassName = clsx(styles['select'], className);
+  const componentClassName = clsx(
+    styles['select'],
+    fieldNote && styles['select--has-fieldNote'],
+    labelLayout && styles[`select--label-layout-${labelLayout}`],
+    className,
+  );
   const sharedProps = {
     className: componentClassName,
     // Provide a wrapping <div> element for the select. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
+    disabled,
     name,
     ...other,
   };
@@ -200,6 +253,7 @@ export function Select(props: SelectProps) {
     { setPopperElement },
     { popperStyles: popperStyles.popper },
     { popperAttributes: popperAttributes.popper },
+    { status },
   );
 
   if (typeof children === 'function') {
@@ -231,19 +285,34 @@ export function Select(props: SelectProps) {
         }}
       >
         {(label || required) && (
-          <Select.Label disabled={props.disabled} required={required}>
+          <Select.Label
+            disabled={disabled}
+            required={required}
+            showHint={showHint}
+          >
             {label}
           </Select.Label>
         )}
         {children}
       </Listbox>
+      {fieldNote && (
+        <div className={styles['select__footer']}>
+          <FieldNote disabled={disabled} status={status}>
+            {fieldNote}
+          </FieldNote>
+        </div>
+      )}
     </SelectContext.Provider>
   );
 }
 
-const SelectLabel = (props: SelectLabelProps) => {
-  const { children: label, required, className, disabled } = props;
-
+const SelectLabel = ({
+  children: label,
+  required,
+  className,
+  disabled,
+  showHint,
+}: SelectLabelProps) => {
   const componentClassName = clsx(
     styles['select__label'],
     disabled && clsx(styles['select__label--disabled']),
@@ -262,10 +331,31 @@ const SelectLabel = (props: SelectLabelProps) => {
 
   return (
     <div className={overlineClassName}>
-      <Listbox.Label className={componentClassName}>{label}</Listbox.Label>
-      {required && (
-        <Text as="span" className={requiredTextClassName} preset="body-sm">
-          Required
+      <Listbox.Label
+        as={FieldLabel}
+        className={componentClassName}
+        disabled={disabled}
+      >
+        {label}
+      </Listbox.Label>
+      {required && showHint && (
+        <Text
+          aria-disabled={disabled ?? undefined}
+          as="span"
+          className={requiredTextClassName}
+          preset="body-sm"
+        >
+          (Required)
+        </Text>
+      )}
+      {!required && showHint && (
+        <Text
+          aria-disabled={disabled ?? undefined}
+          as="span"
+          className={requiredTextClassName}
+          preset="body-sm"
+        >
+          (Optional)
         </Text>
       )}
     </div>
@@ -277,8 +367,7 @@ const SelectLabel = (props: SelectLabelProps) => {
  */
 const SelectButton = function (props: SelectButtonProps) {
   const { children, className, onClick: theirOnClick, ...other } = props;
-  const { setReferenceElement } = useContext(SelectContext);
-
+  const { setReferenceElement, status } = useContext(SelectContext);
   return (
     <Listbox.Button
       // Render as a fragment instead of the default element. We're rendering our own element in
@@ -298,6 +387,7 @@ const SelectButton = function (props: SelectButtonProps) {
             onClick={(event) => {
               theirOnClick && theirOnClick(event);
             }}
+            status={status}
           >
             {children}
           </SelectButtonWrapper>
@@ -342,7 +432,8 @@ const SelectOptions = function (props: SelectOptionsProps) {
  */
 const SelectOption = function (props: SelectOptionProps) {
   const { children, className, optionClassName, ...other } = props;
-  const optionClasses = clsx(styles['select__option-item'], optionClassName);
+
+  const optionItemClassName = clsx(optionClassName, styles['select__option']);
 
   return (
     <Listbox.Option
@@ -357,10 +448,10 @@ const SelectOption = function (props: SelectOptionProps) {
         : ({ active, disabled, selected }) => {
             return (
               <PopoverListItem
-                active={active}
-                className={optionClasses}
-                disabled={disabled}
+                className={optionItemClassName}
                 icon={selected ? 'check' : undefined}
+                isDisabled={disabled}
+                isFocused={active}
               >
                 <span className={styles['select__option-text']}>
                   {children}
@@ -384,15 +475,22 @@ export const SelectButtonWrapper = React.forwardRef<
     {
       children,
       className,
-      icon = 'expand-more',
+      icon = 'chevron-down',
       isOpen,
-      shouldTruncate = false,
       onClick: theirOnClick,
+      shouldTruncate = false,
       ...other
     },
     ref,
   ) => {
-    const componentClassName = clsx(styles['select-button'], className);
+    const { status } = useContext(SelectContext);
+
+    const componentClassName = clsx(
+      styles['select-button'],
+      status === 'warning' && styles['select-button--warning'],
+      status === 'critical' && styles['select-button--error'],
+      className,
+    );
     const iconClassName = clsx(
       styles['select-button__icon'],
       isOpen && styles['select-button__icon--reversed'],
@@ -418,7 +516,7 @@ export const SelectButtonWrapper = React.forwardRef<
           className={iconClassName}
           name={icon}
           purpose="decorative"
-          size="1.25rem"
+          size="1.5rem"
         />
       </button>
     );

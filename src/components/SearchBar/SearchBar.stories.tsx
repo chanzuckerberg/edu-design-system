@@ -9,7 +9,7 @@ export default {
   component: SearchBar,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.1', BADGE.NEEDS_REVISION],
+    badges: [BADGE.NEEDS_REVISION, 'intro-1.1', 'current-1.3'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },

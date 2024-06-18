@@ -409,10 +409,14 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
   >
     <button
       aria-label="Decrement"
-      class="button button--lg button--secondary button--neutral"
+      class="button button--layout-none button--secondary button--lg button--variant-default"
       type="button"
     >
-      –
+      <span
+        class="button__text"
+      >
+        –
+      </span>
     </button>
     <p
       class="text text--body-md"
@@ -444,10 +448,14 @@ exports[`<Slider /> UsingControlButtons story renders snapshot 1`] = `
     </p>
     <button
       aria-label="Increment"
-      class="button button--lg button--secondary button--neutral"
+      class="button button--layout-none button--secondary button--lg button--variant-default"
       type="button"
     >
-      +
+      <span
+        class="button__text"
+      >
+        +
+      </span>
     </button>
   </div>
 </div>
@@ -489,7 +497,7 @@ exports[`<Slider /> UsingInputDisplay story renders snapshot 1`] = `
       100
     </p>
     <div
-      class="mx-2  w-14"
+      class="mx-2 w-14"
     >
       <div
         class="input-field__body"
@@ -499,7 +507,6 @@ exports[`<Slider /> UsingInputDisplay story renders snapshot 1`] = `
           aria-label="display value"
           class="input"
           id=":ri:"
-          readonly=""
           type="text"
           value="50"
         />

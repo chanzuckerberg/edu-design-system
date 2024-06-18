@@ -1,20 +1,20 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
+
 import { Checkbox } from './Checkbox';
 
 const meta: Meta<typeof Checkbox> = {
   title: 'Components/Checkbox',
   component: Checkbox,
   args: {
-    disabled: false,
     label: 'Checkbox',
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
   },
 
-  decorators: [(Story) => <div className="m-1">{Story()}</div>],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };
 
 export default meta;
@@ -23,25 +23,21 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const Default: Story = {};
 
+export const WithSublabel: Story = {
+  args: { subLabel: 'Additional descriptive text' },
+};
+
+export const Error: Story = {
+  args: {
+    isError: true,
+    label: 'In error state',
+  },
+};
+
 export const Checked: Story = {
   ...Default,
   args: {
     defaultChecked: true,
-  },
-};
-
-export const Medium: Story = {
-  ...Default,
-  args: {
-    size: 'md',
-  },
-};
-
-export const MediumChecked: Story = {
-  ...Medium,
-  args: {
-    ...Checked.args,
-    ...Medium.args,
   },
 };
 
@@ -62,11 +58,6 @@ export const Disabled: Story = {
       <Checkbox {...args} disabled indeterminate label="Disabled" />
     </div>
   ),
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
-  },
 };
 
 /**
@@ -86,10 +77,5 @@ export const WithoutVisibleLabel: Story = {
 export const LongLabels: Story = {
   args: {
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
   },
 };

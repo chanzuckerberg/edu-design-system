@@ -8,6 +8,5 @@
  * Default input styles 
  */
 .input {
-  @mixin inputStyles;
-  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
+  @mixin inputStylesV2;
 }

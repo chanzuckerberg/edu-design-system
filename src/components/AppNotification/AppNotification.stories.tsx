@@ -1,20 +1,20 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import React from 'react';
 
 import { AppNotification } from './AppNotification';
-import { ButtonV2 as Button } from '../Button';
-import { ButtonGroupV2 as ButtonGroup } from '../ButtonGroup';
-import { LinkV2 as Link } from '../Link';
+
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Link from '../Link';
 import Text from '../Text';
 
 export default {
-  title: 'Components/V2/AppNotification',
+  title: 'Components/AppNotification',
   component: AppNotification,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.BETA, 'intro-2.0', 'current-2.0'],
+    badges: ['intro-2.0', 'current-2.0'],
   },
   args: {
     title: 'This is an AppNotification title',
@@ -98,5 +98,3 @@ export const LightWithDismissAndControls: StoryObj<Args> = {
     },
   },
 };
-
-// TODO-AH: add in responsive tests for each breakpoint to cover layout and spacing

@@ -1,6 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
-import isChromatic from 'chromatic/isChromatic';
+import { userEvent } from '@storybook/testing-library';
 import React, { useState } from 'react';
 
 import { Slider } from './Slider';
@@ -15,7 +14,7 @@ const meta: Meta<typeof Slider> = {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.3'],
+    badges: ['intro-1.3', 'current-1.3'],
   },
   args: {
     className: 'w-96',
@@ -129,46 +128,6 @@ export const FieldNote: Story = {
   },
 };
 
-export const Tooltip: Story = {
-  args: {
-    label: 'Slider With Tooltip',
-    min: 0,
-    max: 5,
-    step: 1,
-    value: 3,
-    fieldNote: 'Hover to view tooltip with the value',
-  },
-  render: ({ value, ...args }: Args) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [sliderValue, setSliderValue] = useState(value);
-    return (
-      <Slider
-        tooltip={sliderValue + ''}
-        {...args}
-        onChange={(e) => setSliderValue(Number(e.target.value))}
-        value={sliderValue}
-      />
-    );
-  },
-  parameters: {
-    /**
-     * No point snapping the button as this story is testing visual regression on the tooltip.
-     */
-    snapshot: { skip: true },
-    chromatic: {
-      diffThreshold: 0.5,
-    },
-  },
-  play: async ({ canvasElement }) => {
-    if (isChromatic()) {
-      const canvas = within(canvasElement);
-      const slider = await canvas.findByRole('slider');
-
-      await userEvent.hover(slider);
-    }
-  },
-};
-
 // For visual regression test
 export const Focus: Story = {
   args: {
@@ -219,8 +178,7 @@ export const UsingInputDisplay: Story = {
         <Text>{max}</Text>
         <InputField
           aria-label="display value"
-          className="mx-2  w-14"
-          readOnly
+          className="mx-2 w-14"
           value={sliderValue}
         />
       </div>
@@ -230,7 +188,7 @@ export const UsingInputDisplay: Story = {
 
 export const UsingControlButtons: Story = {
   parameters: {
-    badges: ['intro-1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'current-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 1, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -242,8 +200,7 @@ export const UsingControlButtons: Story = {
           aria-label="Decrement"
           disabled={sliderValue === min}
           onClick={() => setSliderValue(Math.max(min, sliderValue - 1))}
-          status="neutral"
-          variant="secondary"
+          rank="secondary"
         >
           &ndash;
         </Button>
@@ -263,8 +220,7 @@ export const UsingControlButtons: Story = {
           aria-label="Increment"
           disabled={sliderValue === max}
           onClick={() => setSliderValue(Math.min(max, sliderValue + 1))}
-          status="neutral"
-          variant="secondary"
+          rank="secondary"
         >
           +
         </Button>

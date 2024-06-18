@@ -4,12 +4,15 @@ import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import type { Size } from '../../util/variant-types';
-import Button from '../Button';
+
 import Heading, { type HeadingElement } from '../Heading';
 import Icon, { type IconName } from '../Icon';
+import Text from '../Text';
+
 import styles from './Accordion.module.css';
 
 type AccordionProps = {
+  // Component API
   /**
    * Child node(s) that can be nested inside component.
    */
@@ -18,12 +21,7 @@ type AccordionProps = {
    * Additional classnames passed in for styling.
    */
   className?: string;
-  /**
-   * Outline variant adds adjusts the `Accordion` style by defining a containing border and other layout adjustments.
-   *
-   * **Default is `false`**.
-   */
-  hasOutline?: boolean;
+  // Design API
   /**
    * Used to specify which heading element should be rendered for each `Accordion.Title` child.
    *
@@ -39,25 +37,15 @@ type AccordionProps = {
 };
 
 type AccordionButtonProps = {
+  // Component API
   /**
    * Child node(s) that can be nested inside component.
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * Additional classnames passed in for styling
    */
   className?: string;
-  /**
-   * Icon override for component.
-   *
-   * **Default is `"expand-more"`**.
-   */
-  icon?: Extract<IconName, 'expand-more'>;
-  /**
-   * Used to specify which heading element should be rendered for the title.
-   * If provided, overrides parent <Accordion> headingAs prop.
-   */
-  headingAs?: HeadingElement;
   /**
    * Callback for when accordion is closed.
    */
@@ -66,6 +54,30 @@ type AccordionButtonProps = {
    * Callback for when according is opened.
    */
   onOpen?: () => void;
+  // Design API
+  /**
+   * Used to specify which heading element should be rendered for the title.
+   * If provided, overrides parent <Accordion> headingAs prop.
+   */
+  headingAs?: HeadingElement;
+  /**
+   * Icon to preceed the text in an accordion header
+   */
+  leadingIcon?: ReactNode;
+  /**
+   * Secondary text used to describe the content in more detail
+   */
+  subtitle?: ReactNode;
+  /**
+   * The title/heading of the component
+   */
+  title?: string;
+  /**
+   * Icon override for component's expand/collapse indicator.
+   *
+   * **Default is `"expand-more"`**.
+   */
+  trailingIcon?: Extract<IconName, 'chevron-down'>;
 };
 
 type AccordionPanelProps = {
@@ -74,7 +86,7 @@ type AccordionPanelProps = {
    */
   children: ReactNode;
   /**
-   * Additional classnames passed in for styling
+   * Additional class names passed in for styling
    */
   className?: string;
 };
@@ -85,7 +97,7 @@ type AccordionRowProps = {
    */
   children: ReactNode | (({ open }: { open: boolean }) => ReactNode);
   /**
-   * Additional classnames passed in for styling.
+   * Additional class names passed in for styling.
    */
   className?: string;
   /**
@@ -96,18 +108,24 @@ type AccordionRowProps = {
    * Whether the row can show expandable content
    */
   isExpandable?: boolean;
+  /**
+   * Whether the row has a leading icon on the row's trigger
+   */
+  hasLeadingIcon?: boolean;
 };
 
 const AccordionContext = createContext<{
   headingAs: HeadingElement;
-  hasOutline?: AccordionProps['hasOutline'];
   size?: AccordionProps['size'];
 }>({
   headingAs: 'h2',
 });
 
-const AccordionRowContext = createContext<{ isExpandable?: boolean }>({
+const AccordionRowContext = createContext<
+  Pick<AccordionRowProps, 'isExpandable' | 'hasLeadingIcon'>
+>({
   isExpandable: true,
+  hasLeadingIcon: false,
 });
 
 /**
@@ -122,18 +140,13 @@ const AccordionRowContext = createContext<{ isExpandable?: boolean }>({
 export const Accordion = ({
   children,
   className,
-  hasOutline,
   headingAs,
   size = 'md',
   ...other
 }: AccordionProps) => {
-  const componentClassName = clsx(
-    hasOutline && styles['accordion--outline'],
-    className,
-  );
   return (
-    <AccordionContext.Provider value={{ headingAs, hasOutline, size }}>
-      <div className={componentClassName} {...other}>
+    <AccordionContext.Provider value={{ headingAs, size }}>
+      <div className={className} {...other}>
         {children}
       </div>
     </AccordionContext.Provider>
@@ -144,38 +157,30 @@ const AccordionButton = ({
   children,
   className,
   headingAs,
-  icon = 'expand-more',
+  leadingIcon,
+  title,
+  trailingIcon = 'chevron-down',
+  subtitle,
   onClose,
   onOpen,
   ...other
 }: AccordionButtonProps) => {
-  const {
-    hasOutline,
-    headingAs: contextHeadingAs,
-    size,
-  } = useContext(AccordionContext);
+  const { headingAs: contextHeadingAs, size } = useContext(AccordionContext);
 
   const { isExpandable } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-button'],
-    size === 'sm' && styles['accordion-button--sm'],
-    hasOutline && styles['accordion-button--outline'],
+    size && styles[`accordion-button--${size}`],
     !isExpandable && styles['accordion-button--empty'],
     className,
-  );
-
-  const headingClassName = clsx(
-    styles['accordion-button__heading'],
-    size === 'sm' && styles['accordion-button__heading--sm'],
   );
 
   return (
     <Disclosure.Button as={React.Fragment}>
       {({ open }) => (
-        <Button
+        <button
           className={componentClassName}
-          fullWidth
           onClick={() => {
             if (open && isExpandable && onClose) {
               onClose();
@@ -194,29 +199,52 @@ const AccordionButton = ({
               }
             }
           }}
-          status="neutral"
-          variant="icon"
           {...other}
         >
+          {leadingIcon && (
+            <span className={styles['accordion-button__leading-icon']}>
+              {leadingIcon}
+            </span>
+          )}
           <Heading
             as={headingAs || contextHeadingAs}
-            className={headingClassName}
+            className={styles['accordion-button__heading']}
+            preset={size === 'md' ? 'body-lg' : 'body-md'}
           >
-            {children}
+            {(title || children) && (
+              <Text
+                as="span"
+                className={styles['accordion-button__title']}
+                preset={size === 'md' ? 'body-lg' : 'body-md'}
+              >
+                {title}
+                {/* TODO: Add check preventing use of title, subtitle, AND children at the same time */}
+                {children}
+              </Text>
+            )}
+            {subtitle && (
+              <Text
+                as="span"
+                className={styles['accordion-button__subtitle']}
+                preset={size === 'md' ? 'body-md' : 'body-sm'}
+              >
+                {subtitle}
+              </Text>
+            )}
           </Heading>
           {isExpandable && (
             <Icon
               className={clsx(
-                styles['accordion-button__icon'],
-                open && styles['accordion-button__icon--open'],
+                styles['accordion-button__trailing-icon'],
+                open && styles['accordion-button__trailing-icon--open'],
               )}
-              name="expand-more"
+              name={trailingIcon}
               purpose="informative"
-              size="1.625rem"
+              size="1.5rem"
               title={open ? 'hide content' : 'show content'}
             />
           )}
-        </Button>
+        </button>
       )}
     </Disclosure.Button>
   );
@@ -227,14 +255,14 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { hasOutline, size } = useContext(AccordionContext);
-  const { isExpandable } = useContext(AccordionRowContext);
+  const { size } = useContext(AccordionContext);
+  const { isExpandable, hasLeadingIcon } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
     size === 'sm' && styles['accordion-panel--sm'],
-    hasOutline && styles['accordion-panel--outline'],
     !isExpandable && styles['accordion-panel--hidden'],
+    hasLeadingIcon && styles['accordion-panel--leading-icon'],
     className,
   );
 
@@ -250,16 +278,12 @@ const AccordionRow = ({
   defaultOpen,
   children,
   isExpandable = true,
+  hasLeadingIcon,
   ...other
 }: AccordionRowProps) => {
-  const { hasOutline } = useContext(AccordionContext);
-  const componentClassName = clsx(
-    styles['accordion-row'],
-    hasOutline && styles['accordion-row--outline'],
-    className,
-  );
+  const componentClassName = clsx(styles['accordion-row'], className);
   return (
-    <AccordionRowContext.Provider value={{ isExpandable }}>
+    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingIcon }}>
       <Disclosure defaultOpen={defaultOpen}>
         {({ open }) => (
           <div className={componentClassName} {...other}>

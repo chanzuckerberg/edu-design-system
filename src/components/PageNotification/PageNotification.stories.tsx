@@ -2,10 +2,10 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PageNotification } from './PageNotification';
-import { ButtonV2 as Button } from '../Button';
+import Button from '../Button';
 
 export default {
-  title: 'Components/V2/PageNotification',
+  title: 'Components/PageNotification',
   component: PageNotification,
   parameters: {
     layout: 'centered',

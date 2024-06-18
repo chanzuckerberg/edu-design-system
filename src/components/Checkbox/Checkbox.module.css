@@ -6,8 +6,8 @@
 }
 
 .checkbox__input {
-  height: 18px;
-  width: 18px;
+  height: 1.125rem;
+  width: 1.125rem;
 
   /* The parent Checkbox component is a flex container. Make sure the input doesn't shrink. */
   flex-shrink: 0;
@@ -18,59 +18,137 @@
   /* Magic value to center the checkbox on its label. */
   margin: 3px;
 
-  color: var(--eds-theme-color-checkbox-brand-background);
-  border: 2px solid currentColor;
+  border: calc(var(--eds-size-quarter) / 16 * 1rem) solid currentColor;
 
   /* Place the ::before content smack in the middle of the input. */
   display: grid;
   place-content: center;
+
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
 
 .checkbox__input:checked::before {
-  background-color: currentColor;
-  content: '';
-
-  /* Clip this element in the shape of a checkbox. The element's background color will be visible
-  anywhere the svg path is solid. Whatever is behind the checkbox will show through wherever the
-  svg is transparent. See https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
-  clip-path: path(
-    'M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z'
-  );
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  content: '✓';
+  text-align: center;
 
   /* Because the path does not have an explicit viewbox, this element's bounding box establishes
   one. In other words, the height/width here need to match the expected viewbox for the path. */
-  height: 24px;
-  width: 24px;
+  height: calc(var(--eds-size-3) / 16 * 1rem);
+  width: calc(var(--eds-size-3) / 16 * 1rem);
+}
+
+.checkbox__input:checked {
+  background-color: currentColor;
+  border: currentColor;
 }
 
 .checkbox__input:indeterminate::before {
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  content: '–';
+  text-align: center;
+
+  height: calc(var(--eds-size-3) / 16 * 1rem);
+  width: calc(var(--eds-size-3) / 16 * 1rem);
+  transform: translateY(-1px);
+}
+
+.checkbox__input:indeterminate {
   background-color: currentColor;
-  content: '';
-
-  clip-path: path('M7 13H17V11H7V13ZM3 21V3H21V21H3Z');
-
-  height: 24px;
-  width: 24px;
+  border: currentColor;
 }
 
-.checkbox__input:focus-visible {
-  @mixin focus;
+.checkbox__labels {
+  position: relative;
 }
 
-@supports not selector(:focus-visible) {
-  .checkbox__input:focus {
-    @mixin focus;
-    outline-offset: 1px;
+.checkbox__sub-label {
+  display: block;
+
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.checkbox__input:not(:checked):not(:indeterminate) {
+  color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+
+  &:not(:disabled):hover {
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  }
+
+  &:not(:disabled):active {
+    color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+  }
+
+  .checkbox--error & {
+    color: var(--eds-theme-color-text-utility-critical);
+
+    &:hover {
+      color: var(--eds-theme-color-border-utility-critical-hover);
+      background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
+    }
+
+    &:active {
+      color: var(--eds-theme-color-border-utility-critical-active);
+      background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
+    }
+  }
+}
+
+.checkbox__input:checked,
+.checkbox__input:indeterminate {
+  color: var(--eds-theme-color-border-utility-default-high-emphasis);
+
+  &:hover {
+    color: var(--eds-theme-color-border-utility-default-high-emphasis-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-border-utility-default-high-emphasis-active);
+  }
+
+  .checkbox--error & {
+    color: var(--eds-theme-color-text-utility-critical);
+
+    &:hover {
+      color: var(--eds-theme-color-border-utility-critical-hover);
+    }
+
+    &:active {
+      color: var(--eds-theme-color-border-utility-critical-active);
+    }
   }
 }
 
 .checkbox__input:disabled {
-  color: var(--eds-theme-color-icon-disabled);
+  color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
   cursor: not-allowed;
+
+  &:not(:checked) {
+    color: var(--eds-theme-color-border-utility-disabled);
+    background-color: var(--eds-theme-color-text-utility-disabled-secondary);
+  }
+
+  &:checked,
+  &:indeterminate {
+    background-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+
+    &::before {
+      color: var(--eds-theme-color-text-utility-disabled-primary);
+
+    }
+  }
 }
 
-.checkbox__label--md {
-  /* Center the first line of the medium label with the checkbox. */
-  position: relative;
-  top: 0.0625rem;
+.checkbox__input:focus-visible {
+  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+}
+
+@supports not selector(:focus-visible) {
+  .checkbox__input {
+    outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  }
 }

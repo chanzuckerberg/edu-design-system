@@ -11,12 +11,15 @@ const meta: Meta<typeof InputField> = {
   component: InputField,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },
   },
-  decorators: [(Story) => <div className="p-2">{Story()}</div>],
+  args: {
+    className: 'w-96',
+  },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };
 
 export default meta;
@@ -29,42 +32,112 @@ export const Default: Story = {
   },
 };
 
+/**
+ * Fields, when containing text, have a theme matching the rest of the interface.
+ */
+export const WithText: Story = {
+  args: {
+    label: 'Default input field',
+    fieldNote: 'This is a fieldnote.',
+    defaultValue: 'Text value',
+  },
+};
+
+/**
+ * Fields do not required a `fieldNote`.
+ */
 export const NoFieldnote: Story = {
   args: {
     label: 'Default input field',
   },
 };
 
+/**
+ * Fields can have an error state.
+ */
 export const Error: Story = {
   args: {
     label: 'Error input field',
-    isError: true,
+    status: 'critical',
     fieldNote: 'This is a fieldnote with an error.',
   },
 };
 
+/**
+ * Fields can have a warning state.
+ */
+export const Warning: Story = {
+  args: {
+    label: 'Warning input field',
+    status: 'warning',
+    fieldNote:
+      'This uses the warning treatment and also applies to the field note',
+  },
+};
+
+/**
+ * Read-only fields can have a value and are not editable, but are different from disabled fields.
+ */
+export const ReadOnly: Story = {
+  args: {
+    label: 'Read-only field',
+    readOnly: true,
+    defaultValue: 'some read-only information',
+    fieldNote: 'This will show up like text, but not be interactive',
+  },
+};
+
+/**
+ * Fields can be marked as disabled (and contain a value in such cases).
+ */
 export const Disabled: Story = {
   args: {
     label: 'Disabled input field',
     disabled: true,
     fieldNote: 'This InputField is disabled',
-  },
-  parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
-    },
+    defaultValue: 'Text in disabled field',
   },
 };
 
+/**
+ * Fields can have a leading icon, indicating what kind of content can go into the field.
+ */
+export const LeadingIcon: Story = {
+  args: {
+    leadingIcon: 'search',
+    'aria-label': 'search field',
+    placeholder: 'Search...',
+  },
+};
+
+/**
+ * Fields can be marked as required.
+ */
 export const Required: Story = {
   args: {
     label: 'Input field with fieldNote',
+    showHint: true,
     required: true,
     fieldNote: 'This is a fieldnote for a required input field.',
   },
 };
 
+/**
+ * Fields can be marked as required.
+ */
+export const RequiredDisabled: Story = {
+  args: {
+    label: 'Input field with fieldNote',
+    showHint: true,
+    required: true,
+    disabled: true,
+    fieldNote: 'This is a fieldnote for a required input field.',
+  },
+};
+
+/**
+ * When not using a visible label with `InputField`, you must apply some time of ARIA label to the component, like `aria-label`.
+ */
 export const NoVisibleLabel: Story = {
   args: {
     'aria-label': 'Input for no visible label',
@@ -74,9 +147,31 @@ export const NoVisibleLabel: Story = {
 };
 
 /**
+ * Password fields show dots instead of characters, to help with security.
+ */
+export const Password: Story = {
+  args: {
+    label: 'Password',
+    type: 'password',
+  },
+};
+
+/**
+ * Fields can have an optional field hint added, for extra clarity.
+ */
+export const ShowHint: Story = {
+  args: {
+    label: 'Field with Optional Hint',
+    showHint: true,
+  },
+};
+
+/**
  * You can render certain components **within** an `InputField`, such as a button, icon, or other
  * small component. This facility is used to implement controls that should appear visibly nested
  * within the button, to the right-hand side.
+ *
+ * Please keep the text of the button brief (button width < 128px)
  */
 export const InputWithin: Story = {
   parameters: {
@@ -90,7 +185,7 @@ export const InputWithin: Story = {
   render: () => (
     <InputField
       inputWithin={
-        <Button size="sm" variant="icon">
+        <Button rank="secondary" size="sm">
           Button
         </Button>
       }
@@ -123,7 +218,7 @@ export const WithAMaxLength: Story = {
 export const WithARecommendedLength: Story = {
   args: {
     defaultValue: 'Some initial text',
-    label: 'test label',
+    label: 'Shortened Length Field',
     recommendedMaxLength: 15,
     required: true,
   },

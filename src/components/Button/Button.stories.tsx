@@ -1,50 +1,33 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Button } from './Button';
-import { SIZES, STATUSES } from '../ClickableStyle';
-
-import Icon from '../Icon';
+import { Button, type ButtonProps } from './Button';
 
 export default {
   title: 'Components/Button',
   component: Button,
   args: {
     children: 'Button',
-    variant: 'secondary',
-    status: 'brand',
-    fullWidth: false,
+    isFullWidth: false,
     size: 'lg',
-    loading: false,
+    isLoading: false,
   },
   argTypes: {
-    variant: {
-      control: {
-        type: 'select',
-      },
-      options: ['primary', 'secondary', 'icon'],
-    },
-    status: {
-      control: {
-        type: 'select',
-      },
-      options: STATUSES,
-    },
-    size: {
-      control: {
-        type: 'select',
-      },
-      options: SIZES,
-    },
-    fullWidth: {
+    // size: {
+    //   control: {
+    //     type: 'select',
+    //   },
+    //   options: SIZES,
+    // },
+    isFullWidth: {
       control: 'boolean',
     },
-    loading: {
+    isLoading: {
       control: 'boolean',
     },
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
   },
 } as Meta<Args>;
 
@@ -52,326 +35,242 @@ type Args = React.ComponentProps<typeof Button>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    variant: 'secondary',
+    children: 'Button',
   },
 };
 
-export const Primary: StoryObj<Args> = {
+/**
+ * Each button can come in a set of ranks, denoting the importance of the button to the surrounding user interface.
+ */
+export const DefaultRanks: StoryObj<Args> = {
   args: {
-    variant: 'primary',
+    ...Default.args,
+  },
+  render: (args) => {
+    return (
+      <div className="flex gap-1">
+        <Button {...args} rank="primary">
+          Primary
+        </Button>
+        <Button {...args} rank="secondary">
+          Secondary
+        </Button>
+        <Button {...args} rank="tertiary">
+          Tertiary
+        </Button>
+      </div>
+    );
   },
 };
 
-export const PrimaryDisabled: StoryObj<Args> = {
+/**
+ * Buttons can be disabled for each rank using `isDisabled`
+ */
+export const Disabled: StoryObj<Args> = {
   args: {
-    disabled: true,
-    variant: 'primary',
+    ...DefaultRanks.args,
+    isDisabled: true,
   },
+  render: DefaultRanks.render,
 };
 
-export const PrimaryLeftIcon: StoryObj<Args> = {
+/**
+ * Since `isDisabled` will set the form's proper disabled state, don't use just `disabled`. This will show a visual error.
+ */
+export const JustDisabledProp: StoryObj<Args> = {
   args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
-    variant: 'primary',
-  },
-};
-
-export const PrimaryRightIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    variant: 'primary',
-  },
-};
-
-export const PrimaryMedium: StoryObj<Args> = {
-  args: {
-    size: 'md',
-    variant: 'primary',
-  },
-};
-
-export const PrimarySmall: StoryObj<Args> = {
-  args: {
-    size: 'sm',
-    variant: 'primary',
-  },
-};
-
-export const SecondaryDisabled: StoryObj<Args> = {
-  args: {
+    ...DefaultRanks.args,
     disabled: true,
   },
+  render: DefaultRanks.render,
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 };
 
-export const SecondaryLeftIcon: StoryObj<Args> = {
+/**
+ * Tertiary buttons can have an additional level of emphasis when stood by themselves. Use this case sparingly.
+ */
+export const TertiaryStandalone: StoryObj<Args> = {
   args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
+    rank: 'tertiary',
+    context: 'standalone',
   },
 };
 
-export const SecondaryRightIcon: StoryObj<Args> = {
+/**
+ * Each button has variants denoting criticality, like for changes that are permanent, deletions, etc.
+ */
+export const CriticalRanks: StoryObj<Args> = {
   args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
+    ...DefaultRanks.args,
+    variant: 'critical',
+  },
+  render: DefaultRanks.render,
+};
+
+/**
+ * There is also a neutral variant, to combine into other components, or provide a muted appearance.
+ */
+export const NeutralRanks: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    variant: 'neutral',
+  },
+  render: DefaultRanks.render,
+};
+
+/**
+ * Each rank also includes an inverse variant, for use on dark backgrounds.
+ */
+export const InverseRanks: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    variant: 'inverse',
+  },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
+  render: DefaultRanks.render,
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
+};
+
+/**
+ * Inverse buttons can be disabled as well
+ */
+export const InverseDisabledRanks: StoryObj<Args> = {
+  args: {
+    ...DefaultRanks.args,
+    variant: 'inverse',
+    isDisabled: true,
+  },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
+  render: DefaultRanks.render,
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
+};
+
+/**
+ * Buttons come in three sizes
+ */
+export const Sizes: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+  },
+  render: (args) => {
+    return (
+      <div className="flex items-center gap-1">
+        <Button {...args} size="lg">
+          Large
+        </Button>
+        <Button {...args} size="md">
+          Medium
+        </Button>
+        <Button {...args} size="sm">
+          Small
+        </Button>
+      </div>
+    );
   },
 };
 
-export const SecondaryMedium: StoryObj<Args> = {
+/**
+ * Buttons can come with full width set, which will expand the button to its maximum width (diferent for each size)
+ */
+export const FullWidths: StoryObj<Args> = {
   args: {
-    variant: 'secondary',
-    size: 'md',
+    ...Sizes.args,
+    isFullWidth: true,
+  },
+  parameters: {
+    layout: 'padded',
+  },
+  render: Sizes.render,
+};
+
+/**
+ * When in the loading state, a button will show a loading indicator in place of the normal button text, maintaining the initial size.
+ */
+export const LoadingStates: StoryObj<Args> = {
+  args: {
+    ...Sizes.args,
+    isLoading: true,
+  },
+  render: Sizes.render,
+};
+
+/**
+ * `iconLayout` lets you place the icons adjacent to button text, or as the only visible element.
+ * When using `"icon-only"`, you **must** include a label (e.g., via `aria-label`).
+ */
+export const IconLayouts: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    icon: 'open-in-new',
+  },
+  render: (args) => {
+    return (
+      <div className="flex items-center gap-1">
+        <Button {...args} iconLayout="left">
+          Left
+        </Button>
+        <Button {...args} iconLayout="right">
+          Right
+        </Button>
+        <Button
+          {...args}
+          aria-label="Label must be applied with icon-only layout"
+          iconLayout="icon-only"
+        >
+          Icon Only (text not visible)
+        </Button>
+      </div>
+    );
   },
 };
 
-export const SecondarySmall: StoryObj<Args> = {
-  args: { variant: 'secondary', size: 'sm' },
-};
+// Here, we introduce a special type extension to LinkProps, then use it in a
+// composed component, to demonstrate the ability to offer custom props to a component
+type ExtendArgs = ButtonProps<{ to: string }>;
+function ExtendedButton(args: ExtendArgs) {
+  return (
+    // eslint-disable-next-line no-alert
+    <Button {...args} onClick={() => alert(`handle to value: ${args.to}`)} />
+  );
+}
 
-export const Tertiary: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-  },
-};
-
-export const TertiaryDisabled: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    disabled: true,
-  },
-};
-
-export const TertiaryLeftIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
-    status: 'neutral',
-  },
-};
-
-export const TertiaryRightIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    status: 'neutral',
-  },
-};
-
-export const TertiaryMedium: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    size: 'md',
-  },
-};
-
-export const TertiarySmall: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    size: 'sm',
-  },
-};
-
-export const IconButtonLeftIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
-    variant: 'icon',
-  },
-};
-
-export const IconButtonDisabled: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
-    variant: 'icon',
-    disabled: true,
-  },
-};
-
-export const IconButtonRightIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    variant: 'icon',
-  },
-};
-
-export const IconButtonIconOnly: StoryObj<Args> = {
-  args: {
-    children: <Icon name="arrow-back" purpose="informative" title="go back" />,
-    variant: 'icon',
-  },
-};
-
-export const IconButtonLeftIconSmall: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
-    variant: 'icon',
-    size: 'sm',
-  },
-};
-
-export const IconButtonRightIconSmall: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    variant: 'icon',
-    size: 'sm',
-  },
-};
-
-export const IconButtonIconOnlySmall: StoryObj<Args> = {
-  args: {
-    children: <Icon name="arrow-back" purpose="informative" title="go back" />,
-    variant: 'icon',
-    size: 'sm',
-  },
-};
-
-export const Destructive: StoryObj<Args> = {
-  args: {
-    status: 'error',
-    variant: 'primary',
-  },
-};
-
-export const DestructiveLeftIcon: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <Icon name="arrow-back" purpose="decorative" />
-        Button
-      </>
-    ),
-    status: 'error',
-    variant: 'primary',
-  },
-};
-
-export const FullWidth: StoryObj<Args> = {
-  args: { fullWidth: true },
-};
-
-export const Loading: StoryObj<Args> = {
-  args: {
-    loading: true,
-    disabled: true,
-  },
-};
-
-export const SecondarySuccess: StoryObj<Args> = {
-  args: {
-    status: 'success',
-  },
-};
-
-export const SecondaryWarning: StoryObj<Args> = {
-  args: {
-    status: 'warning',
-  },
-};
-
-export const SecondaryError: StoryObj<Args> = {
-  args: {
-    status: 'error',
-  },
-};
-
-export const IconNeutral: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    status: 'neutral',
-    variant: 'icon',
-  },
-};
-
-export const IconSuccess: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    status: 'success',
-    variant: 'icon',
-  },
-};
-
-export const IconWarning: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    status: 'warning',
-    variant: 'icon',
-  },
-};
-
-export const IconError: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        Button
-        <Icon name="arrow-forward" purpose="decorative" />
-      </>
-    ),
-    status: 'error',
-    variant: 'icon',
-  },
+/**
+ * You can extend a component's props for use with libraries that aid navigation, e.g., react-dom-router, et al.
+ *
+ * Steps to use:
+ *
+ * * import `ButtonProps`
+ * * use the type param. to augment the types for `Button` with the library's type
+ * * Now export a new function component that uses the new prop type and returns a composed function
+ *
+ * When using this pattern, you likely want to also specify the library's Button component using `as`
+ *
+ * ```tsx
+ * type CustomLinkProps = React.ComponentProps<typeof CustomLink>;
+ * type ExtendedProps = LinkProps<CustomLinkProps>;
+ *
+ * export default function Button({children, ...other}: ExtendedProps) {
+ *   return (
+ *    <Button as={CustomButton} {...other}>
+ *      {children}
+ *    </Button>
+ *   );
+ * }
+ * ```
+ */
+export const UsingExtendedLink: StoryObj<ExtendArgs> = {
+  render: (args) => (
+    <div>
+      Lorem ipsum dolor sit amet, . Morbi porta at ante quis molestie. Nam
+      scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id
+      tellus ante.{' '}
+      <ExtendedButton {...args} to="test">
+        consectetur adipiscing elit
+      </ExtendedButton>
+    </div>
+  ),
 };

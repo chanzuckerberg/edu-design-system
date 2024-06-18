@@ -11,14 +11,14 @@ import '../src/design-tokens/tier-1-definitions/fonts.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-import type { Preview, Story } from '@storybook/react';
+import type { Preview, StoryFn } from '@storybook/react';
 import React from 'react';
 
 import Theme from './Theme';
 import { storybookViewports } from '../src/util/viewports';
 
 export const decorators = [
-  (Story: Story) => (
+  (Story: StoryFn) => (
     <div dir="ltr">
       <Story />
     </div>
@@ -68,19 +68,6 @@ export const parameters: Preview['parameters'] = {
   },
   backgrounds: {
     values: [
-      // TODO: remove the following three when the last 1.0 components have been migrated
-      {
-        name: 'eds-color-neutral-white',
-        value: '#ffffff',
-      },
-      {
-        name: 'eds-color-neutral-100',
-        value: '#f4f6f8',
-      },
-      {
-        name: 'eds-color-neutral-700',
-        value: '#21272D',
-      },
       {
         name: 'background-utility-default-high-emphasis',
         value: '#0F2163',
@@ -97,6 +84,7 @@ export const parameters: Preview['parameters'] = {
     ...createInitialReleaseConfig('1.2'),
     ...createInitialReleaseConfig('1.1'),
     ...createInitialReleaseConfig('1.0'),
+    ...createCurrentReleaseConfig('1.3'),
     ...createCurrentReleaseConfig('2.0'),
     implementationExample: {
       styles: {

@@ -1,20 +1,14 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+
 import { Tooltip } from './Tooltip';
 
 // diminishing the threshold of this component to avoid sub-pixel jittering
 // https://www.chromatic.com/docs/threshold
 const diffThreshold = 0.75;
 const defaultArgs = {
-  text: (
-    <span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-      <strong>Donec a erat eu augue consequat eleifend non vel sem.</strong>{' '}
-      Praesent efficitur mauris ac leo semper accumsan.
-    </span>
-  ),
-  children: <div className="fpo w-3 p-1">&bull;</div>,
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan.',
+  children: <div className="fpo p-1">Target Component</div>,
   placement: 'right',
   // most stories show a visible, non-interactive tooltip.
   // this turns animation off to ensure stable visual snapshots
@@ -37,16 +31,27 @@ export default {
         type: null,
       },
     },
-    placement: {
+    visible: {
       table: {
-        defaultValue: { summary: 'top' },
+        disable: true,
+      },
+    },
+    delay: {
+      control: {
+        type: 'number',
+      },
+    },
+    reference: {
+      control: {
+        type: null,
       },
     },
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', BADGE.NEEDS_REVISION],
+    badges: ['intro-1.0', 'current-2.0'],
     chromatic: {
+      delay: 500,
       diffThreshold,
       diffIncludeAntiAliasing: false,
     },
@@ -64,7 +69,7 @@ type Story = StoryObj<Args>;
 export const LeftPlacement: Story = {
   args: {
     placement: 'left',
-    children: <div className="fpo w-3 p-1">&bull;</div>,
+    children: <div className="fpo p-1">Target Component</div>,
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -74,36 +79,40 @@ export const LeftPlacement: Story = {
 export const TopPlacement: Story = {
   args: {
     placement: 'top',
-    children: <div className="fpo w-3 p-1">&bull;</div>,
+    children: <div className="fpo p-1">Target Component</div>,
   },
 };
 
 export const BottomPlacement: Story = {
   args: {
     placement: 'bottom',
-    children: <div className="fpo w-3 p-1">&bull;</div>,
+    children: <div className="fpo p-1">Target Component</div>,
   },
 };
 
 export const LongText: Story = {
   args: {
-    text: (
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-        <b>Donec a erat eu augue consequat eleifend non vel sem.</b> Praesent
-        efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum.
-        Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed
-        tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu
-        leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id
-        nulla id, laoreet facilisis est.
-      </span>
-    ),
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.',
   },
 };
 
 export const LongTriggerText: Story = {
   args: {
     children: <div className="fpo p-1">Longer text to test placement</div>,
+  },
+  parameters: {
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300 },
+  },
+};
+
+export const InverseVariant: Story = {
+  args: {
+    ...LeftPlacement.args,
+    variant: 'inverse',
+  },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
   },
 };
 
@@ -115,7 +124,7 @@ export const Interactive: Story = {
     // reset prop values defined in defaultArgs
     duration: undefined,
     visible: undefined,
-    children: <button className="fpo w-3 p-1">&bull;</button>,
+    children: <button className="fpo p-1">Target Component</button>,
   },
 };
 
@@ -133,7 +142,7 @@ export const InteractiveDisabled: Story = {
       placement="top"
       text={defaultArgs.text}
     >
-      <div className="fpo p-1">&bull;</div>
+      <div className="fpo p-1">Target Component</div>
     </Tooltip>
   ),
 };

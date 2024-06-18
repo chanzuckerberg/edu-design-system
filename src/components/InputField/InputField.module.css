@@ -1,65 +1,22 @@
 /*------------------------------------*\
     # INPUT FIELD
 \*------------------------------------*/
-
 /**
- * Wraps the Label and the optional/required indicator.
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
+/**
+ * Wraps the Label and the optional/required hint.
+ * TODO: match/share the overline styles between Select and InputField
  */
 .input-field__overline {
   display: flex;
-  justify-content: space-between;
   margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
-  color: var(--eds-theme-color-form-label);
+  gap: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 .input-field__overline--no-label {
-  justify-content: flex-end;
-}
-
-/**
- * Input field body
- */
-.input-field__body {
-  position: relative;
-}
-
-.input-field__label {
-  color: var(--eds-theme-color-form-label);
-  font: var(--eds-theme-typography-form-label);
-}
-
-.input-field__label--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
-
-.input-field__required-text {
-  color: var(--eds-theme-color-text-neutral-subtle);
-  font: var(--eds-theme-typography-body-sm);
-}
-
-.input-field__required-text--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
-
-.input-field__footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.input-field__character-counter {
-  font: var(--eds-theme-typography-body-sm);
-
-  color: var(--eds-theme-color-text-neutral-default);
-  flex: 1 0 50%;
-  text-align: right;
-}
-
-.input-field--has-fieldNote {
-  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
-}
-
-.input-field--invalid-length {
-  color: var(--eds-theme-color-text-utility-error);
+  justify-content: flex-start;
 }
 
 /**
@@ -71,10 +28,78 @@
  */
 .input-field__input-within {
   position: absolute;
-  right: calc(var(--eds-size-2) / 16 * 1rem);
+  right: calc(var(--eds-size-1) / 16 * 1rem);
   top: 0;
   bottom: 0;
   display: grid;
   align-items: center;
   justify-content: center;
 }
+
+.input-field__leading-icon {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--eds-size-1) / 16 * 1rem);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--eds-theme-color-icon-utility-default-secondary);
+}
+
+/**
+ * Input field body
+ */
+.input-field__body {
+  position: relative;
+}
+
+.input-field__input--leading-icon {
+  padding-left: 2.25rem;
+}
+
+.input-field__input--input-within {
+  padding-right: 8rem;
+}
+
+.input-field__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field--has-fieldNote {
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
+}
+
+.input-field__label {
+  color: var(--eds-theme-color-text-utility-default-primary);
+  font: var(--eds-theme-typography-form-label);
+}
+
+.input-field__label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+
+.input-field__required-text {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+  font: var(--eds-theme-typography-body-sm);
+}
+
+.input-field__character-counter {
+  font: var(--eds-theme-typography-body-sm);
+  text-align: right;
+  flex: 1 0 50%;
+
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.input-field--invalid-length {
+  color: var(--eds-theme-color-text-utility-critical);
+}
+
+.input-field__required-text--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+

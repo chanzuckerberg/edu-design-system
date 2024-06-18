@@ -2,7 +2,7 @@
 
 exports[`<Radio /> Checked story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="p-8"
 >
   <div
     class="radio"
@@ -13,78 +13,35 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
       <input
         checked=""
         class="radio__input"
-        id=":r2:"
+        id=":r1:"
+        name="option-checked"
+        readonly=""
         type="radio"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 17C13.3833 17 14.5627 16.5123 15.538 15.537C16.5127 14.5623 17 13.3833 17 12C17 10.6167 16.5127 9.43733 15.538 8.462C14.5627 7.48733 13.3833 7 12 7C10.6167 7 9.43767 7.48733 8.463 8.462C7.48767 9.43733 7 10.6167 7 12C7 13.3833 7.48767 14.5623 8.463 15.537C9.43767 16.5123 10.6167 17 12 17ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
-    </span>
-    <label
-      class="label label--lg radio__label radio__label--lg"
-      for=":r2:"
-    >
-      Option 1
-    </label>
-  </div>
-</div>
-`;
-
-exports[`<Radio /> CheckedMedium story renders snapshot 1`] = `
-<div
-  style="margin: 0.25rem;"
->
-  <div
-    class="radio"
-  >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        checked=""
-        class="radio__input"
-        id=":r3:"
-        type="radio"
+      <span
+        class="radio__container"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 17C13.3833 17 14.5627 16.5123 15.538 15.537C16.5127 14.5623 17 13.3833 17 12C17 10.6167 16.5127 9.43733 15.538 8.462C14.5627 7.48733 13.3833 7 12 7C10.6167 7 9.43767 7.48733 8.463 8.462C7.48767 9.43733 7 10.6167 7 12C7 13.3833 7.48767 14.5623 8.463 15.537C9.43767 16.5123 10.6167 17 12 17ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
+      <span
+        class="radio__selected"
+      />
     </span>
-    <label
-      class="label label--md radio__label radio__label--md"
-      for=":r3:"
+    <div
+      class="radio__labels"
     >
-      Option 1
-    </label>
+      <label
+        class="label label--lg"
+        for=":r1:"
+      >
+        Option 1
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Radio /> Default story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="p-8"
 >
   <div
     class="radio"
@@ -95,36 +52,34 @@ exports[`<Radio /> Default story renders snapshot 1`] = `
       <input
         class="radio__input"
         id=":r0:"
+        name="option-1"
+        readonly=""
         type="radio"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
     </span>
-    <label
-      class="label label--lg radio__label radio__label--lg"
-      for=":r0:"
+    <div
+      class="radio__labels"
     >
-      Option 1
-    </label>
+      <label
+        class="label label--lg"
+        for=":r0:"
+      >
+        Option 1
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Radio /> Disabled story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="p-8"
 >
   <div
     class="radio"
@@ -135,37 +90,154 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
       <input
         class="radio__input"
         disabled=""
-        id=":r4:"
+        id=":r2:"
+        name="option-disabled"
+        readonly=""
         type="radio"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon radio__icon--disabled"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
     </span>
-    <label
-      class="label label--lg label--disabled radio__label radio__label--lg"
-      for=":r4:"
+    <div
+      class="radio__labels"
     >
-      Option 1
-    </label>
+      <label
+        aria-disabled="true"
+        class="label label--lg label--disabled"
+        for=":r2:"
+      >
+        Option 1
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper input__wrapper--disabled"
+    >
+      <input
+        checked=""
+        class="radio__input"
+        disabled=""
+        id=":r3:"
+        name="option-disabled"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
+    </span>
+    <div
+      class="radio__labels"
+    >
+      <label
+        aria-disabled="true"
+        class="label label--lg label--disabled"
+        for=":r3:"
+      >
+        Option 1
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> Error story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="radio radio--error"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        class="radio--error radio__input"
+        id=":r4:"
+        name="option-error"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
+    </span>
+    <div
+      class="radio__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r4:"
+      >
+        Option 1
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="radio radio--error"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        checked=""
+        class="radio--error radio__input"
+        id=":r5:"
+        name="option-error"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
+    </span>
+    <div
+      class="radio__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r5:"
+      >
+        Option 1
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Radio /> LongLabels story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="p-8"
 >
   <div
     style="display: grid; width: 20rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem;"
@@ -177,142 +249,38 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
         class="input__wrapper"
       >
         <input
+          checked=""
           class="radio__input"
-          id=":r9:"
+          id=":r8:"
+          name="option-long-label"
           readonly=""
           type="radio"
         />
-        <svg
-          aria-hidden="true"
-          class="icon radio__icon"
-          fill="currentColor"
-          height="1.625rem"
-          style="--icon-size: 1.625rem;"
-          viewBox="0 0 24 24"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--lg radio__label radio__label--lg"
-        for=":r9:"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
-    </div>
-    <div
-      class="radio"
-    >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="radio__input"
-          id=":ra:"
-          readonly=""
-          type="radio"
+        <span
+          class="radio__container"
         />
-        <svg
-          aria-hidden="true"
-          class="icon radio__icon"
-          fill="currentColor"
-          height="1.625rem"
-          style="--icon-size: 1.625rem;"
-          viewBox="0 0 24 24"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--md radio__label radio__label--md"
-        for=":ra:"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
-    </div>
-    <div
-      class="radio"
-    >
-      <span
-        class="input__wrapper input__wrapper--disabled"
-      >
-        <input
-          class="radio__input"
-          disabled=""
-          id=":rb:"
-          type="radio"
+        <span
+          class="radio__selected"
         />
-        <svg
-          aria-hidden="true"
-          class="icon radio__icon radio__icon--disabled"
-          fill="currentColor"
-          height="1.625rem"
-          style="--icon-size: 1.625rem;"
-          viewBox="0 0 24 24"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-          />
-        </svg>
       </span>
-      <label
-        class="label label--lg label--disabled radio__label radio__label--lg"
-        for=":rb:"
+      <div
+        class="radio__labels"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
-    </div>
-    <div
-      class="radio"
-    >
-      <span
-        class="input__wrapper input__wrapper--disabled"
-      >
-        <input
-          class="radio__input"
-          disabled=""
-          id=":rc:"
-          type="radio"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon radio__icon radio__icon--disabled"
-          fill="currentColor"
-          height="1.625rem"
-          style="--icon-size: 1.625rem;"
-          viewBox="0 0 24 24"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
+        <label
+          class="label label--lg"
+          for=":r8:"
         >
-          <path
-            d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--md label--disabled radio__label radio__label--md"
-        for=":rc:"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </label>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`<Radio /> Medium story renders snapshot 1`] = `
+exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="p-8"
 >
   <div
     class="radio"
@@ -322,78 +290,40 @@ exports[`<Radio /> Medium story renders snapshot 1`] = `
     >
       <input
         class="radio__input"
-        id=":r1:"
-        type="radio"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
-    </span>
-    <label
-      class="label label--md radio__label radio__label--md"
-      for=":r1:"
-    >
-      Option 1
-    </label>
-  </div>
-</div>
-`;
-
-exports[`<Radio /> WithCustomPositioning story renders snapshot 1`] = `
-<div
-  style="margin: 0.25rem;"
->
-  <div
-    style="display: flex; align-items: center;"
-  >
-    <label
-      class="label label--lg radio__label radio__label--lg"
-      for="test"
-    >
-      Label on Left
-    </label>
-    <span
-      class="input__wrapper"
-    >
-      <input
-        class="radio__input"
-        id="test"
+        id=":r6:"
+        name="option-1"
         readonly=""
         type="radio"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
     </span>
+    <div
+      class="radio__labels"
+    >
+      <label
+        class="label label--lg"
+        for=":r6:"
+      >
+        Option 1
+      </label>
+      <span
+        class="text text--body-sm radio__sub-label"
+      >
+        Some additional label text
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
 <div
-  style="margin: 0.25rem;"
+  class="p-8"
 >
   <div
     class="radio"
@@ -402,132 +332,28 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
       class="input__wrapper"
     >
       <input
-        aria-label="unchecked radio"
+        aria-label="unchecked radio button"
         class="radio__input"
-        id=":r5:"
-        readonly=""
-        type="radio"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
-    </span>
-    <label
-      class="label label--lg radio__label radio__label--lg"
-      for=":r5:"
-    />
-  </div>
-  <div
-    class="radio"
-  >
-    <span
-      class="input__wrapper"
-    >
-      <input
-        aria-label="checked radio"
-        checked=""
-        class="radio__input"
-        id=":r6:"
-        readonly=""
-        type="radio"
-      />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 17C13.3833 17 14.5627 16.5123 15.538 15.537C16.5127 14.5623 17 13.3833 17 12C17 10.6167 16.5127 9.43733 15.538 8.462C14.5627 7.48733 13.3833 7 12 7C10.6167 7 9.43767 7.48733 8.463 8.462C7.48767 9.43733 7 10.6167 7 12C7 13.3833 7.48767 14.5623 8.463 15.537C9.43767 16.5123 10.6167 17 12 17ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
-    </span>
-    <label
-      class="label label--lg radio__label radio__label--lg"
-      for=":r6:"
-    />
-  </div>
-  <div
-    class="radio"
-  >
-    <span
-      class="input__wrapper input__wrapper--disabled"
-    >
-      <input
-        aria-label="unchecked disabled radio"
-        class="radio__input"
-        disabled=""
         id=":r7:"
+        name="option-1"
+        readonly=""
         type="radio"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon radio__icon--disabled"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
+      <span
+        class="radio__container"
+      />
+      <span
+        class="radio__selected"
+      />
     </span>
-    <label
-      class="label label--lg label--disabled radio__label radio__label--lg"
-      for=":r7:"
-    />
-  </div>
-  <div
-    class="radio"
-  >
-    <span
-      class="input__wrapper input__wrapper--disabled"
+    <div
+      class="radio__labels"
     >
-      <input
-        aria-label="checked disabled radio"
-        checked=""
-        class="radio__input"
-        disabled=""
-        id=":r8:"
-        type="radio"
+      <label
+        class="label label--lg"
+        for=":r7:"
       />
-      <svg
-        aria-hidden="true"
-        class="icon radio__icon radio__icon--disabled"
-        fill="currentColor"
-        height="1.625rem"
-        style="--icon-size: 1.625rem;"
-        viewBox="0 0 24 24"
-        width="1.625rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 17C13.3833 17 14.5627 16.5123 15.538 15.537C16.5127 14.5623 17 13.3833 17 12C17 10.6167 16.5127 9.43733 15.538 8.462C14.5627 7.48733 13.3833 7 12 7C10.6167 7 9.43767 7.48733 8.463 8.462C7.48767 9.43733 7 10.6167 7 12C7 13.3833 7.48767 14.5623 8.463 15.537C9.43767 16.5123 10.6167 17 12 17ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z"
-        />
-      </svg>
-    </span>
-    <label
-      class="label label--lg label--disabled radio__label radio__label--lg"
-      for=":r8:"
-    />
+    </div>
   </div>
 </div>
 `;

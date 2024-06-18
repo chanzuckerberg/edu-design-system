@@ -7,13 +7,17 @@ exports[`<Popover /> Bottom story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rh:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:rf:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -32,13 +36,17 @@ exports[`<Popover /> BottomEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1a:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r18:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -57,13 +65,17 @@ exports[`<Popover /> BottomStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r15:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r13:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -82,13 +94,17 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r2:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r0:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -107,13 +123,17 @@ exports[`<Popover /> FocusClickableElement story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r23:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r21:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -132,13 +152,17 @@ exports[`<Popover /> Left story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rm:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:rk:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -157,13 +181,17 @@ exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1u:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1s:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -182,13 +210,17 @@ exports[`<Popover /> LeftStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1p:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1n:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -207,13 +239,17 @@ exports[`<Popover /> Right story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rc:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:ra:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -232,13 +268,17 @@ exports[`<Popover /> RightEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1k:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1i:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -257,13 +297,17 @@ exports[`<Popover /> RightStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r1f:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r1d:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -282,13 +326,17 @@ exports[`<Popover /> Top story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r7:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:r5:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -307,13 +355,17 @@ exports[`<Popover /> TopEnd story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:r10:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:ru:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
@@ -332,13 +384,17 @@ exports[`<Popover /> TopStart story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-:rr:"
     aria-expanded="true"
-    class="button button--lg button--secondary button--brand"
+    class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
     id="headlessui-popover-button-:rp:"
     type="button"
   >
-    Open Popover
+    <span
+      class="button__text"
+    >
+      Open Popover
+    </span>
   </button>
   <button
     aria-hidden="true"
