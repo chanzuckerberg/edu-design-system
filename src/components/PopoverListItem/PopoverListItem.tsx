@@ -1,32 +1,40 @@
 import clsx from 'clsx';
-import React from 'react';
-import type { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 
-import Icon from '../Icon';
-import type { IconName } from '../Icon';
+import Icon, { type IconName } from '../Icon';
+import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
-export interface Props {
-  /**
-   * Whether the list item is treated as highlighted in its container
-   */
-  active?: boolean;
+export interface PopoverListItemProps {
   /**
    * Child node(s) that can be nested inside component
    */
   children: ReactNode;
   /**
-   * Whether the list item is treated as disabled
-   */
-  disabled?: boolean;
-  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // Design API
   /**
    * Icon from the set of defined EDS icon set
    */
   icon?: IconName;
+  /**
+   * Handling behavior for whether the marked menu item is destructive or not (deletes, removes, etc.)
+   */
+  isDestructiveAction?: boolean;
+  /**
+   * Whether the component is in focus (programmatically or otherwise)
+   */
+  isFocused?: boolean;
+  /**
+   * Whether the list item is treated as disabled
+   */
+  isDisabled?: boolean;
+  /**
+   * Text below the main menu item call-to-action, briefly describing the menu item's function
+   */
+  subLabel?: string;
 }
 
 /**
@@ -40,16 +48,32 @@ export interface Props {
  * Given headless implements listbox options as a renderProp, this can work for both
  * Listbox and Menu examples, in the latter case not specifying an icon
  */
-export const PopoverListItem = React.forwardRef<HTMLDivElement, Props>(
-  ({ active, className, disabled, children, icon, ...other }, ref) => {
+export const PopoverListItem = React.forwardRef<
+  HTMLDivElement,
+  PopoverListItemProps
+>(
+  (
+    {
+      className,
+      isDestructiveAction = false,
+      isDisabled = false,
+      isFocused = false,
+      children,
+      icon,
+      subLabel,
+      ...other
+    },
+    ref,
+  ) => {
     const componentClassName = clsx(
       styles['popover-list-item'],
-      active && styles['popover-list-item--active'],
-      disabled && styles['popover-list-item--disabled'],
+      isDisabled && styles['popover-list-item--disabled'],
+      isDestructiveAction && styles['popover-list-item--destructive-action'],
+      isFocused && styles['popover-list-item--focused'],
       className,
     );
 
-    const ariaIsDisabled = disabled
+    const ariaIsDisabled = isDisabled
       ? {
           'aria-disabled': true,
         }
@@ -64,13 +88,25 @@ export const PopoverListItem = React.forwardRef<HTMLDivElement, Props>(
       >
         {icon ? (
           <div className={styles['popover-list-item__icon']}>
-            {/* TODO: can link to CSS Var? var(--eds-size-1-and-half) */}
-            <Icon name={icon} purpose="decorative" size="1.5rem" />
+            <Icon name={icon} purpose="decorative" size="1rem" />
           </div>
         ) : (
           <div className={styles['popover-list-item__no-icon']}></div>
         )}
-        {children}
+        <div className={styles['popover-list-item__menu-labels']}>
+          <Text as="div" preset="body-md">
+            {children}
+          </Text>
+          {subLabel && (
+            <Text
+              as="div"
+              className={styles['popover-list-item__sub-label']}
+              preset="body-sm"
+            >
+              {subLabel}
+            </Text>
+          )}
+        </div>
       </div>
     );
   },

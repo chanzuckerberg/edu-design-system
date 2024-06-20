@@ -3,14 +3,13 @@ import { expect } from '@storybook/test';
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { Select } from './Select';
-import Icon from '../Icon';
 
 const meta: Meta<typeof Select> = {
   title: 'Components/Select',
   component: Select,
   parameters: {
-    badges: ['1.2'],
     layout: 'centered',
+    badges: ['intro-1.2', 'current-2.0'],
   },
   argTypes: {
     multiple: {
@@ -115,6 +114,7 @@ export const Default: StoryObj = {
     'data-testid': 'dropdown',
     defaultValue: exampleOptions[0],
     name: 'select',
+    className: 'w-60',
     children: (
       <>
         <Select.Button>
@@ -158,6 +158,18 @@ export const Default: StoryObj = {
 </Select>`,
       },
     },
+  },
+};
+
+export const HorizontalLabel: StoryObj = {
+  args: {
+    ...Default.args,
+    className: 'w-60',
+    labelLayout: 'horizontal',
+    label: 'Animal?',
+  },
+  parameters: {
+    ...Default.parameters,
   },
 };
 
@@ -326,6 +338,57 @@ export const WithFieldName: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
+};
+
+export const WithFieldNote: StoryObj = {
+  args: {
+    ...Default.args,
+    fieldNote: 'Choose your beast',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  parameters: {
+    ...Default.parameters,
+  },
 };
 
 /**
@@ -343,7 +406,15 @@ export const UncontrolledHeadless: StoryObj = {
       <>
         <Select.Button>
           {({ value, open, disabled }) => (
-            <button className="fpo">{value.label}</button>
+            <button className="fpo">
+              {
+                {
+                  Birds: '🐦🦆🦜',
+                  Dogs: '🐶🐕🐩',
+                  Cats: '🐈🐱🐈‍⬛',
+                }[value.label as string]
+              }
+            </button>
           )}
         </Select.Button>
         <Select.Options>
@@ -355,6 +426,35 @@ export const UncontrolledHeadless: StoryObj = {
         </Select.Options>
       </>
     ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <button className="fpo">
+      {
+        {
+          Birds: '🐦🦆🦜',
+          Dogs: '🐶🐕🐩',
+          Cats: '🐈🐱🐈‍⬛',
+        }[value.label as string]
+      }
+      </button>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
 };
 
@@ -386,6 +486,29 @@ export const StyledUncontrolled: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
 };
 
 /**
@@ -405,7 +528,7 @@ export const Multiple: StoryObj = {
     ...Default.args,
     label: 'Favorite Animal(s)',
     multiple: true,
-    'data-testid': 'dropdown',
+    'data-testid': 'select-field',
     defaultValue: [exampleOptions[0]],
     className: 'w-60',
     name: 'standard-button',
@@ -427,6 +550,29 @@ export const Multiple: StoryObj = {
         </Select.Options>
       </>
     ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select multiple>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.length > 0 ? value.length : 'none'} selected
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
 };
 
@@ -462,6 +608,30 @@ export const MultipleWithTruncation: StoryObj = {
         </Select.Options>
       </>
     ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select multiple>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open} shouldTruncate>
+        {value.length > 0 ? value.length : 'none'} long selected
+        description
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
 };
 
@@ -517,9 +687,34 @@ export const LongOptionList: StoryObj = {
     await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
   },
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2', 'current-2.0'],
     layout: 'centered',
     chromatic: { delay: 450 },
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open} shouldTruncate>
+        {value}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {Array(30)
+    .fill('test')
+    .map((option, index) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <Select.Option key={\`$\{option}-$\{index}\`} value={option + index}>
+        {option}
+        {index}
+      </Select.Option>
+    ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
   },
   decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
 };
@@ -539,6 +734,9 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
       diffIncludeAntiAliasing: false,
       diffThreshold: 0.72,
     },
+    docs: {
+      ...Default.parameters?.docs,
+    },
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };
@@ -553,17 +751,67 @@ export const Disabled: StoryObj = {
     disabled: true,
   },
   parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
+    docs: {
+      ...Default.parameters?.docs,
     },
   },
 };
 
+/**
+ * Select fields can be marked as required by using the `required` prop.
+ */
 export const Required: StoryObj = {
   args: {
     ...Default.args,
     required: true,
+    showHint: true,
     className: 'w-96',
+  },
+  parameters: {
+    ...Default.parameters,
+  },
+};
+
+/**
+ * Fields can be marked as optional by using `required` as false, but `showHint` as true.
+ */
+export const Optional: StoryObj = {
+  args: {
+    ...Default.args,
+    required: false,
+    showHint: true,
+    className: 'w-96',
+  },
+  parameters: {
+    ...Default.parameters,
+  },
+};
+
+/**
+ * You can supply a warning field note by specifing the status of "error".
+ */
+export const Error: StoryObj = {
+  args: {
+    ...Required.args,
+    status: 'critical',
+    fieldNote: 'Some text describing error',
+  },
+  parameters: {
+    ...Required.parameters,
+  },
+};
+
+/**
+ * You can supply a warning field note by specifing the status of "warning".
+ */
+export const Warning: StoryObj = {
+  args: {
+    ...Optional.args,
+    status: 'warning',
+    fieldNote: 'Some text describing warning',
+  },
+  parameters: {
+    ...Optional.parameters,
   },
 };
 
@@ -576,8 +824,14 @@ export const NoVisibleLabel: StoryObj = {
     label: undefined,
     'aria-label': 'hidden label',
   },
+  parameters: {
+    ...Default.parameters,
+  },
 };
 
+/**
+ * No visible label is required. In such cases, you must use an equivalent label for accessibility, like `aria-label`.
+ */
 export const NoVisibleLabelButRequired: StoryObj = {
   args: {
     ...Default.args,
@@ -586,18 +840,25 @@ export const NoVisibleLabelButRequired: StoryObj = {
     required: true,
     className: 'w-96',
   },
+  parameters: {
+    ...Default.parameters,
+  },
 };
 
+/**
+ * `Select` can be both disabled and required.
+ */
 export const DisabledRequired: StoryObj = {
   args: {
     ...Default.args,
     disabled: true,
     required: true,
+    showHint: true,
     className: 'w-96',
   },
   parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
+    docs: {
+      ...Default.parameters?.docs,
     },
   },
 };
@@ -613,6 +874,9 @@ export const OptionsRightAligned: StoryObj = {
     chromatic: {
       delay: 300,
     },
+    docs: {
+      ...Default.parameters?.docs,
+    },
   },
   args: {
     ...Default.args,
@@ -625,68 +889,17 @@ export const OptionsRightAligned: StoryObj = {
 };
 
 /**
- * As an alternative rendering method, you can use several types of render props for fine-grained control of the button rendering, and
- * the rendering of the list itself. Here, we use a render prop to control the contents of `Select`
- *
- * For more information on `Select` render props, review: https://headlessui.com/react/listbox#using-render-props
- */
-export const UsingFunctionProps: StoryObj = {
-  render: () => {
-    const [selectedOption, setSelectedOption] =
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      React.useState<(typeof exampleOptions)[0]>();
-
-    return (
-      <Select
-        aria-label="Favorite Animal"
-        as="div"
-        data-testid="dropdown"
-        name="interactive-with-children"
-        onChange={setSelectedOption}
-        value={selectedOption}
-      >
-        {({ open }) => (
-          <>
-            <Select.Button
-              // Because we're using a render prop to completely control the styling and icon of the
-              // button, we need to configure this component to render as a Fragment. Otherwise we'd
-              // render two, nested buttons.
-              as={React.Fragment}
-            >
-              {() => (
-                <button aria-expanded={open} className="fpo">
-                  {selectedOption?.label || 'Select'}
-                  <Icon
-                    className="ml-4"
-                    name="filter-list"
-                    purpose="decorative"
-                  />
-                </button>
-              )}
-            </Select.Button>
-            <Select.Options>
-              {exampleOptions.map((option) => (
-                <Select.Option key={option.key} value={option}>
-                  {option.label}
-                </Select.Option>
-              ))}
-            </Select.Options>
-          </>
-        )}
-      </Select>
-    );
-  },
-};
-
-/**
  * This shows the contents of `Select` upon render. Mostly to demonstrate it is possible, to capture a snapshot of the appearance.
  */
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2', 'current-2.0'],
     layout: 'centered',
     chromatic: { delay: 300, disableSnapshot: true },
+    docs: {
+      ...Default.parameters?.docs,
+    },
   },
   play: selectCat,
 };

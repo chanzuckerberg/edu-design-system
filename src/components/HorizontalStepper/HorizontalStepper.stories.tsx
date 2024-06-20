@@ -4,7 +4,6 @@ import React from 'react';
 import { HorizontalStepper } from './HorizontalStepper';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import Icon from '../Icon';
 
 export default {
   title: 'Components/HorizontalStepper',
@@ -14,15 +13,11 @@ export default {
     steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'],
   },
   parameters: {
-    badges: ['1.0'],
+    layout: 'centered',
+    badges: ['intro-1.0', 'current-1.3'],
   },
 
-  decorators: [
-    (Story) => (
-      // Pushes contents away from storybook borders.
-      <div className="m-4">{Story()}</div>
-    ),
-  ],
+  decorators: [(Story) => <div className="m-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof HorizontalStepper>;
@@ -60,12 +55,16 @@ const InteractiveHorizontalStepper = ({ steps }: Args) => {
       <HorizontalStepper activeIndex={activeIndex} steps={steps} />
       <br />
       <ButtonGroup>
-        <Button onClick={onClickBack} variant="secondary">
+        <Button onClick={onClickBack} rank="secondary">
           Back
         </Button>
-        <Button onClick={onClickNext} variant="primary">
+        <Button
+          icon="arrow-right"
+          iconLayout="right"
+          onClick={onClickNext}
+          rank="primary"
+        >
           Next
-          <Icon name="arrow-forward" purpose="decorative" size="1.5rem" />
         </Button>
       </ButtonGroup>
     </>

@@ -2,26 +2,16 @@
     # TOOLTIP
 \*------------------------------------*/
 
-/**
- * Tippyjs provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow.
- *
- * Tippyjs also attaches data-attribute `data-placement` depending on how the tooltip is aligned.
- */
-
 .tooltip {
   border-style: solid;
-  border-width: var(--eds-border-width-sm);
-  border-radius: var(--eds-border-radius-lg);
+  border-width: calc(var(--eds-border-width-sm) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
+  max-width: 14rem;
 
   @media (prefers-reduced-motion) {
     transition: none;
   }
-
-  border-color: var(--eds-theme-color-border-neutral-default);
-  color: var(--eds-theme-color-text-neutral-default);
-  background-color: var(--eds-theme-color-background-neutral-subtle);
-  --arrow-color: var(--eds-theme-color-border-neutral-default);
 }
 
 /**
@@ -32,10 +22,10 @@
 }
 
 .tooltip :global(.tippy-content) {
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-  padding-bottom: var(--eds-size-1);
-  padding-top: var(--eds-size-1);
+  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-bottom: calc(var(--eds-size-1) / 16 * 1rem);
+  padding-top: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -44,8 +34,8 @@
 .tooltip :global(.tippy-arrow) {
   position: absolute;
 
-  width: var(--eds-size-2);
-  height: var(--eds-size-2);
+  width: calc(var(--eds-size-2) / 16 * 1rem);
+  height: calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 .tooltip :global(.tippy-arrow::before) {
@@ -53,7 +43,7 @@
 
   border-style: solid;
   border-color: transparent;
-  border-width: var(--eds-size-1);
+  border-width: calc(var(--eds-size-1) / 16 * 1rem);
 
   content: '';
 }
@@ -110,4 +100,18 @@
   border-right-color: var(--arrow-color);
   border-left-width: 0;
   left: -7px;
+}
+
+.tooltip--variant-default {
+  color: var(--eds-theme-color-text-utility-inverse);
+  border-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+}
+
+.tooltip--variant-inverse {
+  color: var(--eds-theme-color-text-utility-default-primary);
+  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  --arrow-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
 }

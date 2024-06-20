@@ -3,87 +3,82 @@ import React from 'react';
 
 import { Radio } from './Radio';
 
-const meta: Meta<typeof Radio> = {
+export default {
   title: 'Components/Radio',
   component: Radio,
-  args: {
-    label: 'Option 1',
-    checked: false,
-  },
   parameters: {
-    badges: ['1.0'],
+    layout: 'centered',
+    badges: ['intro-1.0', 'current-2.0'],
   },
-  decorators: [(Story) => <div style={{ margin: '0.25rem' }}>{Story()}</div>],
-};
-
-export default meta;
-
-/**
- * Controlled example to make checked stories interactive.
- */
-function RadioExample(args: Args) {
-  const [checked, setChecked] = React.useState(args.checked);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return <Radio {...args} checked={checked} onChange={handleChange} />;
-}
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Radio>;
-type Story = StoryObj<typeof Radio>;
+type Story = StoryObj<Args>;
 
 export const Default: Story = {
-  render: (args) => <RadioExample {...args} />,
-};
-
-export const Medium: Story = {
   args: {
-    size: 'md',
+    name: 'option-1',
+    label: 'Option 1',
+    checked: false,
+    readOnly: true,
   },
-  render: (args) => <RadioExample {...args} />,
 };
 
 export const Checked: Story = {
   args: {
+    ...Default.args,
+    name: 'option-checked',
     checked: true,
+    readOnly: true,
   },
-  render: (args) => <RadioExample {...args} />,
-};
-
-export const CheckedMedium: Story = {
-  args: {
-    checked: true,
-    size: 'md',
-  },
-  render: (args) => <RadioExample {...args} />,
 };
 
 export const Disabled: Story = {
   args: {
+    ...Default.args,
+    name: 'option-disabled',
     disabled: true,
   },
-  render: (args) => <RadioExample {...args} />,
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
+};
+
+export const DisabledAndChecked: Story = {
+  args: {
+    ...Disabled.args,
+    checked: true,
+    readOnly: true,
+  },
+};
+
+export const Error: Story = {
+  args: {
+    ...Default.args,
+    name: 'option-error',
+    isError: true,
+  },
+};
+
+export const ErrorAndChecked: Story = {
+  args: {
+    ...Error.args,
+    name: 'option-error',
+    checked: true,
+    readOnly: true,
+  },
+};
+
+export const WithSublabel: Story = {
+  args: {
+    ...Default.args,
+    subLabel: 'Some additional label text',
   },
 };
 
 export const WithoutVisibleLabel: Story = {
-  render: () => (
-    <>
-      <Radio aria-label="unchecked radio" readOnly />
-      <Radio aria-label="checked radio" checked readOnly />
-      <Radio aria-label="unchecked disabled radio" disabled />
-      <Radio aria-label="checked disabled radio" checked disabled />
-    </>
-  ),
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
+  args: {
+    ...Default.args,
+    label: undefined,
+    'aria-label': 'unchecked radio button',
   },
 };
 
@@ -100,25 +95,8 @@ export const LongLabels = {
           gap: '1rem',
         }}
       >
-        <Radio label={label} readOnly />
-        <Radio label={label} readOnly size="md" />
-        <Radio disabled label={label} />
-        <Radio disabled label={label} size="md" />
+        <Radio checked label={label} name="option-long-label" readOnly />
       </div>
     );
   },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
-  },
-};
-
-export const WithCustomPositioning = {
-  render: () => (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Radio.Label htmlFor="test">Label on Left</Radio.Label>
-      <Radio.Input checked={false} id="test" readOnly />
-    </div>
-  ),
 };

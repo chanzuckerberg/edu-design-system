@@ -55,6 +55,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
           destination: 'lib/tokens/json/theme-base.json',
           filter: function (token) {
             // don't allow theming on legacy tokens
+            // TODO: remove filter once all legacy tokens are removed
             return token.attributes.category !== 'legacy';
           },
         },
@@ -63,13 +64,6 @@ const EDSStyleDictionary = StyleDictionary.extend({
     tailwind: {
       transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
       files: [
-        {
-          format: 'json/nested-css-variables',
-          // useful for tailwind configs in consuming apps
-          // NOTE: this will be replaced by the output utility config in a future version
-          destination: 'lib/tokens/json/css-variables-nested.json',
-          outputReferences: true,
-        },
         {
           format: 'json/tailwind-utility-config',
           // useful for tailwind configs in consuming apps
@@ -87,18 +81,6 @@ EDSStyleDictionary.registerFormat({
     const minifiedCssDictionary = minifyDictionaryUsingFormat(
       dictionary.properties,
       (obj) => `${obj.value}`,
-    );
-    formatEdsTokens(minifiedCssDictionary);
-    return JSON.stringify(minifiedCssDictionary, null, 2);
-  },
-});
-
-EDSStyleDictionary.registerFormat({
-  name: 'json/nested-css-variables',
-  formatter: function (dictionary) {
-    const minifiedCssDictionary = minifyDictionaryUsingFormat(
-      dictionary.properties,
-      (obj) => `var(--${obj.name})`,
     );
     formatEdsTokens(minifiedCssDictionary);
     return JSON.stringify(minifiedCssDictionary, null, 2);

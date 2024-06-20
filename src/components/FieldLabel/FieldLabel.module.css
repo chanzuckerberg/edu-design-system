@@ -1,0 +1,29 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # FIELD LABEL
+\*------------------------------------*/
+
+/**
+ * Text labeling the field component.
+ */
+.label {
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+/**
+ * Disabled variant of the field label.
+ */
+.label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+
+/**
+ * Field label size variants.
+ */
+.label--md {
+  font: var(--eds-theme-typography-body-sm);
+}
+.label--lg {
+  font: var(--eds-theme-typography-body-md);
+}

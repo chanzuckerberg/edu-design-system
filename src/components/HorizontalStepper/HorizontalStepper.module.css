@@ -17,13 +17,13 @@
  * The decorative line between steps.
  */
 .horizontal-stepper__line {
-  border: var(--eds-theme-border-width) solid
+  border: calc(var(--eds-theme-border-width) * 1px) solid
     var(--eds-theme-color-border-neutral-default);
-  margin-left: var(--eds-size-1);
-  margin-right: var(--eds-size-1);
+  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
+  margin-right: calc(var(--eds-size-1) / 16 * 1rem);
   /* Used to grow and shrink lines before wrapping step text. */
   flex-grow: 1;
-  min-width: var(--eds-size-2);
+  min-width: calc(var(--eds-size-2) / 16 * 1rem);
 }
 
 /*------------------------------------*\
@@ -36,7 +36,7 @@
  .horizontal-step {
   display: flex;
   align-items: center;
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
   /**
    * Required to prevent overflowing outside container.
    */
@@ -80,8 +80,8 @@
  * Horizontal Step Incomplete.
  */
 .horizontal-step__incomplete-icon {
-  margin-left: var(--eds-size-1);
-  margin-right: var(--eds-size-1);
+  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
+  margin-right: calc(var(--eds-size-1) / 16 * 1rem);
   fill: var(--eds-theme-color-icon-disabled);
 }
 

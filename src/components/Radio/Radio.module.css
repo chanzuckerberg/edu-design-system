@@ -7,66 +7,71 @@
  */
 .radio {
   display: flex;
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
- * Wraps the visually hidden radio input element and the visible sibling svg element.
+ * Wraps the visually hidden radio input element and the visible sibling container element.
  */
 .input__wrapper {
   position: relative;
-  /* Centers the radio icon in the wrapper. */
   display: inline-flex;
   align-items: center;
-  /* Aligns the radio with the first line of the label. */
   align-self: flex-start;
+  flex-shrink: 0;
+
+  width: calc(var(--eds-size-3) / 16 * 1rem);
+  height: calc(var(--eds-size-3) / 16 * 1rem);
 }
+
+.radio__container,
+.radio__selected {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.radio__container {
+  border: calc(var(--eds-size-quarter) / 16 * 1rem) solid currentColor;
+  border-radius: 50%;
+  content: '';
+
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.radio__selected {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: transparent;
+
+  content: '';
+  pointer-events: none;
+}
+
 /**
  * The visually hidden input element for the radio. The visual radio is provided by an svg element.
  */
 .radio__input {
-  /* Removes default margins placed by browser for radioes. */
+  /* Removes default margins placed by browser for radios. */
   margin: 0;
   /* Remove the radio from the page flow, positioning it on top of the SVG. */
   position: absolute;
-  left: var(--eds-size-half);
   /* Set same dimensions as the RadioSvg element. */
-  height: var(--eds-size-2);
-  width: var(--eds-size-2);
+  height: calc(var(--eds-size-3) / 16 * 1rem);
+  width: calc(var(--eds-size-3) / 16 * 1rem);
+
   /**
    * Hide the input element visually.
    * This ensures the radio is still "physically" present so that all users,
    * especially on touch screen readers, still interact with the real radio element
    * where it would naturally be present.
    */
+  display: block;
   opacity: 0;
-}
-
-/**
- * The visible radio svg icon element.
- */
-.radio__icon {
-  color: var(--eds-theme-color-radio-brand-background);
-  /* Creates space for the border so that there's no jitter when the focus border is visible. */
-  border: var(--eds-border-width-sm) solid transparent;
-}
-.radio__input:focus-visible + .radio__icon {
-  border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-  border-radius: var(--eds-border-radius-full);
-}
-
-@supports not selector(:focus-visible) {
-  .radio__input:focus + .radio__icon {
-    border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-    border-radius: var(--eds-border-radius-full);
-  }
-}
-
-/**
- * The disabled variant of the visible radio svg icon.
- */
-.radio__icon--disabled {
-  color: var(--eds-theme-color-icon-disabled);
 }
 
 /**
@@ -75,23 +80,141 @@
 .radio__input:disabled {
   /* Needed since the input element overlays the visible svg icon for user input and cursor. */
   cursor: not-allowed;
+  pointer-events: none;
 }
 
-/**
- * Text that labels a radio input.
- */
-.radio__label {
+.radio__labels {
   position: relative;
 }
 
-/**
- * Radio label size variants.
- * Used for centering the label with the radio input button.
- */
-.radio__label--md {
-  top: var(--eds-size-quarter);
+.radio__sub-label {
+  display: block;
+
+  color: var(--eds-theme-color-text-utility-default-secondary);
 }
-.radio__label--lg {
-  /* This is a 1px increase in top spacing from the md variant. Size is too specific to have a token. */
-  top: 0.0625rem;
+
+.radio__input:not(:checked) {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+  }
+}
+
+.radio__input:not(:checked):hover {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-border-utility-default-medium-emphasis-hover
+    );
+  }
+}
+
+.radio__input:not(:checked):active {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-border-utility-default-medium-emphasis-active
+    );
+  }
+}
+
+.radio__input:not(:checked):disabled {
+  pointer-events: none;
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-disabled);
+    background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+  }
+}
+
+.radio__input:checked {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis
+    );
+  }
+
+  & ~ .radio__selected {
+    background-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis
+    );
+  }
+}
+
+.radio__input:checked:hover {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-hover
+    );
+  }
+
+  & ~ .radio__selected {
+    background-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-hover
+    );
+  }
+}
+
+.radio__input:checked:active {
+  & ~ .radio__container {
+    border-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-active
+    );
+  }
+
+  & ~ .radio__selected {
+    background-color: var(
+      --eds-theme-color-background-utility-interactive-high-emphasis-active
+    );
+  }
+}
+
+.radio__input:checked:disabled {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-disabled);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-disabled);
+  }
+}
+
+.radio__input.radio--error {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-critical);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-critical);
+  }
+}
+
+.radio__input.radio--error:hover {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-critical-hover);
+  }
+}
+
+.radio__input.radio--error:active {
+  & ~ .radio__container {
+    border-color: var(--eds-theme-color-border-utility-critical-active);
+  }
+
+  & ~ .radio__selected {
+    background-color: var(--eds-theme-color-border-utility-critical-active);
+  }
+}
+
+.radio__input:focus-visible + .radio__container {
+  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-size-quarter) / 16 * 1rem);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
+}
+
+@supports not selector(:focus-visible) {
+  .radio__input:focus + .radio__container {
+    outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: calc(var(--eds-size-quarter) / 16 * 1rem);
+    border-radius: calc(var(--eds-border-radius-full) * 1px);
+  }
 }

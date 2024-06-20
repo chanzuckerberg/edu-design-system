@@ -17,7 +17,7 @@
 :where(.table-cell) {
   font: var(--eds-theme-typography-body-sm);
 
-  padding: var(--eds-size-2) var(--eds-size-1);
+  padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -26,8 +26,15 @@
  */
 :where(.table-header-cell) {
   font: var(--eds-theme-typography-label-sm);
-  padding: var(--eds-size-1) var(--eds-size-1);
+  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
   text-align: left;
+}
+
+:where(.table-header-cell__container) {
+  display: flex;
+  align-items: center;
+  /* Match height to a sort icon if one exists to create alignment */
+  min-height: calc(var(--eds-size-2-and-half) / 16 * 1rem);
 }
 
 /**
@@ -36,7 +43,7 @@
  * Adjusts the padding to match the table__cell padding for alignment.
  */
 .table-header-cell--body {
-  padding: var(--eds-size-2) var(--eds-size-1);
+  padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -45,7 +52,7 @@
  * On table header cells that are sortable, the content is wrapped by a <Button>.
  */
 .table-header-cell__sort-button {
-  gap: var(--eds-size-half);
+  gap: calc(var(--eds-size-half) / 16 * 1rem);
   text-decoration: none;
   font-weight: var(--eds-font-weight-bold);
 }
@@ -55,7 +62,7 @@
  */
 .table-row {
   vertical-align: top;
-  border-bottom-width: var(--eds-theme-border-width);
+  border-bottom-width: calc(var(--eds-theme-border-width) * 1px);
   border-bottom-style: solid;
   border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 }

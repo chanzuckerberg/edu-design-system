@@ -1,6 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
-import isChromatic from 'chromatic/isChromatic';
+import { userEvent } from '@storybook/testing-library';
 import React, { useState } from 'react';
 
 import { Slider } from './Slider';
@@ -14,7 +13,11 @@ const meta: Meta<typeof Slider> = {
   title: 'Components/Slider',
   component: Slider,
   parameters: {
-    badges: ['1.3'],
+    layout: 'centered',
+    badges: ['intro-1.3', 'current-1.3'],
+  },
+  args: {
+    className: 'w-96',
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   argTypes: {
@@ -115,7 +118,6 @@ export const MarkersLargeValues: Story = {
     step: 2500,
     markers: 'number',
   },
-  decorators: [(Story) => <div className="w-80">{Story()}</div>],
 };
 
 export const FieldNote: Story = {
@@ -123,46 +125,6 @@ export const FieldNote: Story = {
     label: 'Slider Label',
     fieldNote: 'This is a fieldnote. It overrides the markers',
     markers: 'number',
-  },
-};
-
-export const Tooltip: Story = {
-  args: {
-    label: 'Slider With Tooltip',
-    min: 0,
-    max: 5,
-    step: 1,
-    value: 3,
-    fieldNote: 'Hover to view tooltip with the value',
-  },
-  render: ({ value, ...args }: Args) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [sliderValue, setSliderValue] = useState(value);
-    return (
-      <Slider
-        tooltip={sliderValue + ''}
-        {...args}
-        onChange={(e) => setSliderValue(Number(e.target.value))}
-        value={sliderValue}
-      />
-    );
-  },
-  parameters: {
-    /**
-     * No point snapping the button as this story is testing visual regression on the tooltip.
-     */
-    snapshot: { skip: true },
-    chromatic: {
-      diffThreshold: 0.5,
-    },
-  },
-  play: async ({ canvasElement }) => {
-    if (isChromatic()) {
-      const canvas = within(canvasElement);
-      const slider = await canvas.findByRole('slider');
-
-      await userEvent.hover(slider);
-    }
   },
 };
 
@@ -192,7 +154,7 @@ const moodData = [
 
 export const UsingInputDisplay: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
     axe: {
       disabledRules: ['color-contrast'], // adding for disabled field example
     },
@@ -206,7 +168,6 @@ export const UsingInputDisplay: Story = {
         <Text>{min}</Text>
         <Slider
           aria-label="Slider with input"
-          className="w-1/2"
           max={max}
           min={min}
           step={step}
@@ -217,8 +178,7 @@ export const UsingInputDisplay: Story = {
         <Text>{max}</Text>
         <InputField
           aria-label="display value"
-          className="mx-2  w-14"
-          readOnly
+          className="mx-2 w-14"
           value={sliderValue}
         />
       </div>
@@ -228,7 +188,7 @@ export const UsingInputDisplay: Story = {
 
 export const UsingControlButtons: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'current-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 1, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -240,15 +200,13 @@ export const UsingControlButtons: Story = {
           aria-label="Decrement"
           disabled={sliderValue === min}
           onClick={() => setSliderValue(Math.max(min, sliderValue - 1))}
-          status="neutral"
-          variant="secondary"
+          rank="secondary"
         >
           &ndash;
         </Button>
         <Text>{min}</Text>
         <Slider
           aria-label="select a value"
-          className="w-1/2"
           max={max}
           min={min}
           step={step}
@@ -262,8 +220,7 @@ export const UsingControlButtons: Story = {
           aria-label="Increment"
           disabled={sliderValue === max}
           onClick={() => setSliderValue(Math.min(max, sliderValue + 1))}
-          status="neutral"
-          variant="secondary"
+          rank="secondary"
         >
           +
         </Button>
@@ -274,7 +231,7 @@ export const UsingControlButtons: Story = {
 
 export const WithHighlightedContent: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -286,7 +243,6 @@ export const WithHighlightedContent: Story = {
           <Slider
             aria-describedby="mood-description"
             aria-label="Mood Slider"
-            className="w-1/2"
             markers={moodData.map((mood) => mood.description)}
             max={max}
             min={min}
@@ -326,7 +282,7 @@ export const WithHighlightedContent: Story = {
 
 export const WithVisualLabel: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -336,11 +292,11 @@ export const WithVisualLabel: Story = {
       <article>
         <div className="items-top flex flex-col justify-center ">
           <Label
-            className="w-1/2 py-4 text-center"
+            className="py-4 text-center"
             id="slider-label"
             text="Mood Slider"
           />
-          <Text as="span" className="w-1/2 py-4 text-center" preset="body-xl">
+          <Text as="span" className="py-4 text-center" preset="body-xl">
             {moodData.map((mood) => {
               return (
                 sliderValue === mood.value && (
@@ -352,7 +308,6 @@ export const WithVisualLabel: Story = {
           <Slider
             aria-label="Mood Slider"
             aria-labelledby="slider-label"
-            className="w-1/2"
             markers={moodData.map((mood) => mood.description)}
             max={max}
             min={min}
@@ -369,7 +324,7 @@ export const WithVisualLabel: Story = {
 
 export const WithMultipleVisualLabels: Story = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -379,13 +334,13 @@ export const WithMultipleVisualLabels: Story = {
       <article>
         <div className="items-top flex flex-col justify-center ">
           <Label
-            className="w-1/2 py-4 text-center"
+            className="py-4 text-center"
             id="slider-label"
             text="Mood Slider"
           />
           <Text
             as="span"
-            className="flex w-1/2 justify-between py-4 text-center"
+            className="flex justify-between py-4 text-center"
             preset="body-xl"
           >
             {moodData.map((mood, index) => {
@@ -406,7 +361,6 @@ export const WithMultipleVisualLabels: Story = {
           <Slider
             aria-label="Mood Slider"
             aria-labelledby="slider-label"
-            className="w-1/2"
             markers={moodData.map((mood) => mood.description)}
             max={max}
             min={min}

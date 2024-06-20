@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ForwardedRef } from 'react';
+import type { ReactNode, ForwardedRef } from 'react';
 import React, { forwardRef } from 'react';
 
 import type { Preset } from '../../util/variant-types';
@@ -12,8 +12,8 @@ export type TextProps = {
    *
    * **Default is `"p"`**.
    */
-  as?: 'p' | 'span';
-  children: React.ReactNode;
+  as?: 'p' | 'span' | 'div';
+  children: ReactNode;
   className?: string;
   tabIndex?: number;
   /**

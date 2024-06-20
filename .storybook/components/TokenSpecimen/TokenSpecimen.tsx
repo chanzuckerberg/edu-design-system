@@ -1,11 +1,12 @@
 import clsx from 'clsx';
 import React from 'react';
+import type { ReactNode } from 'react';
 import './TokenSpecimen.css';
 
 type Props = {
   name: string;
   value: any;
-  children?: React.ReactNode;
+  children?: ReactNode;
   comment?: string;
   inlineStyles?: Record<string, string>;
   variant?: string;

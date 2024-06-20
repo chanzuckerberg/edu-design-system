@@ -1,101 +1,75 @@
 import clsx from 'clsx';
 import React from 'react';
-import Icon, { type IconName } from '../Icon';
+
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import type { Status } from '../../util/variant-types';
+
+import Icon from '../Icon';
 import Text from '../Text';
+
 import styles from './InlineNotification.module.css';
 
-export const VARIANTS = ['brand', 'success', 'warning'] as const;
-
-const variantToIconAssetsMap: {
-  [key in Variant]: {
-    icon: Extract<
-      IconName,
-      'info' | 'check-circle' | 'warning' | 'error-inverted'
-    >;
-    title: 'info' | 'success' | 'alert';
-  };
-} = {
-  brand: {
-    icon: 'info',
-    title: 'info',
-  },
-  success: {
-    icon: 'check-circle',
-    title: 'success',
-  },
-  warning: {
-    icon: 'warning',
-    title: 'alert',
-  },
-};
-
-type Variant = (typeof VARIANTS)[number];
-
-type Props = {
+type InlineNotificationProps = {
+  // Component API
   /**
    * CSS class names that can be appended to the component for styling.
    */
   className?: string;
+  // Design API
   /**
-   * Toggles notification that fills the full width of its container.
+   * Keyword to characterize the state of the notification
    */
-  isFullWidth?: boolean;
+  status?: Status;
   /**
-   * Toggles the stronger background variants.
+   * Secondary text used to describe the content in more detail
    */
-  isStrong?: boolean;
+  subTitle?: React.ReactNode;
   /**
-   * The text contents of the tag, nested inside the component, in addition to the icon.
+   * The title/heading of the component
    */
-  text: React.ReactNode;
-  /**
-   * The color variant of the tag.
-   */
-  variant: Variant;
+  title: string;
 };
 
 /**
  * `import {InlineNotification} from "@chanzuckerberg/eds";`
  *
- * This component provides an inline banner accompanied with an icon for messaging users.
+ * An alert placed within a section of a page to provide a contextual notification. For example, an error which applies to multiple fields within a form.
  */
 export const InlineNotification = ({
   className,
-  isFullWidth,
-  isStrong,
-  text,
-  variant,
+  status = 'informational',
+  subTitle,
+  title,
   ...other
-}: Props) => {
-  const subtle = !isStrong;
+}: InlineNotificationProps) => {
   const componentClassName = clsx(
     styles['inline-notification'],
-    styles[`inline-notification--${variant}`],
-    subtle && styles['inline-notification--subtle'],
-    isFullWidth && styles[`inline-notification--full-width`],
-    isFullWidth && subtle && styles[`inline-notification--full-width-subtle`],
+    status && styles[`inline-notification--status-${status}`],
     className,
   );
-
-  const iconClassName = clsx(
-    styles['inline-notification__icon'],
-    styles[`inline-notification__icon--${variant}`],
-  );
-
-  const textClassName = clsx(styles[`inline-notification__text`]);
 
   return (
     <div className={componentClassName} {...other}>
       <Icon
-        className={iconClassName}
-        name={variantToIconAssetsMap[variant].icon}
-        purpose="informative"
-        size="1.5rem"
-        title={variantToIconAssetsMap[variant].title}
+        className={styles['inline-notification__icon']}
+        name={getIconNameFromStatus(status)}
+        purpose="decorative"
+        size="1rem"
       />
-      <Text as="span" className={textClassName} preset="label-md-subtle">
-        {text}
-      </Text>
+      <div className={styles['inline-notication__body']}>
+        <Text
+          as="div"
+          className={styles[`inline-notification__title`]}
+          preset="title-xs"
+        >
+          {title}
+        </Text>
+        {subTitle && (
+          <Text as="div" preset="body-xs">
+            {subTitle}
+          </Text>
+        )}
+      </div>
     </div>
   );
 };

@@ -2,86 +2,95 @@
 
 exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
 <div
-  class="m-4"
+  class="p-8"
 >
-  <div>
-    <div>
-      <div
-        class="progress-bar__label-wrapper"
+  <div
+    class="w-96"
+  >
+    <div
+      class="progress-bar__label-wrapper"
+    >
+      <label
+        class="progress-bar__label"
+        id=":r8:"
       >
-        <label
-          class="progress-bar__label"
-          id=":r8:"
-        >
-          Progress Bar Label
-        </label>
-        <span
-          class="text text--caption-md progress-bar__caption"
-          id=":r9:"
-        >
-          100/100
-        </span>
-      </div>
+        Progress Bar
+      </label>
+      <span
+        class="text text--caption-md progress-bar__caption"
+        id=":r9:"
+      >
+        100/100
+      </span>
+    </div>
+    <div
+      aria-describedby=":r9:"
+      aria-labelledby=":r8:"
+      aria-valuemax="100"
+      aria-valuenow="100"
+      class="progress-bar"
+      role="progressbar"
+    >
       <div
-        aria-describedby=":r9:"
-        aria-labelledby=":r8:"
-        aria-valuemax="100"
-        aria-valuenow="100"
-        class="progress-bar"
-        role="progressbar"
+        class="progress-bar__segments-wrapper"
+        style="width: 100%;"
       >
         <div
-          class="progress-bar__segments-wrapper"
-          style="width: 100%;"
-        >
-          <div
-            class="progress-bar__segment"
-          />
-        </div>
+          class="progress-bar__segment"
+        />
       </div>
     </div>
-    <div>
-      <div
-        class="progress-bar__label-wrapper"
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> CompleteSegmented story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="progress-bar__label-wrapper"
+    >
+      <label
+        class="progress-bar__label"
+        id=":ra:"
       >
-        <label
-          class="progress-bar__label"
-          id=":ra:"
-        >
-          Progress Bar Label
-        </label>
-        <span
-          class="text text--caption-md progress-bar__caption"
-          id=":rb:"
-        >
-          100/100
-        </span>
-      </div>
+        Progress Bar
+      </label>
+      <span
+        class="text text--caption-md progress-bar__caption"
+        id=":rb:"
+      >
+        100/100
+      </span>
+    </div>
+    <div
+      aria-describedby=":rb:"
+      aria-labelledby=":ra:"
+      aria-valuemax="100"
+      aria-valuenow="100"
+      class="progress-bar"
+      role="progressbar"
+    >
       <div
-        aria-describedby=":rb:"
-        aria-labelledby=":ra:"
-        aria-valuemax="100"
-        aria-valuenow="100"
-        class="progress-bar"
-        role="progressbar"
+        class="progress-bar__segments-wrapper"
+        style="width: 100%;"
       >
         <div
-          class="progress-bar__segments-wrapper"
-          style="width: 100%;"
-        >
-          <div
-            class="progress-bar__segment"
-          />
-          <div
-            class="progress-bar__segment"
-          />
-          <div
-            class="progress-bar__segment"
-          />
-          <div
-            class="progress-bar__segment"
-          />
-        </div>
+          class="progress-bar__segment"
+        />
+        <div
+          class="progress-bar__segment"
+        />
+        <div
+          class="progress-bar__segment"
+        />
+        <div
+          class="progress-bar__segment"
+        />
       </div>
     </div>
   </div>
@@ -90,9 +99,11 @@ exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
 
 exports[`<ProgressBar /> Default story renders snapshot 1`] = `
 <div
-  class="m-4"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="progress-bar__label-wrapper"
     >
@@ -132,9 +143,11 @@ exports[`<ProgressBar /> Default story renders snapshot 1`] = `
 
 exports[`<ProgressBar /> Empty story renders snapshot 1`] = `
 <div
-  class="m-4"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="progress-bar__label-wrapper"
     >
@@ -174,9 +187,11 @@ exports[`<ProgressBar /> Empty story renders snapshot 1`] = `
 
 exports[`<ProgressBar /> TwoSegments story renders snapshot 1`] = `
 <div
-  class="m-4"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="progress-bar__label-wrapper"
     >
@@ -219,9 +234,11 @@ exports[`<ProgressBar /> TwoSegments story renders snapshot 1`] = `
 
 exports[`<ProgressBar /> WithCustomCaption story renders snapshot 1`] = `
 <div
-  class="m-4"
+  class="p-8"
 >
-  <div>
+  <div
+    class="w-96"
+  >
     <div
       class="progress-bar__label-wrapper"
     >

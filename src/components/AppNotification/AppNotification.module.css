@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    # APP NOTIFICATION
+\*------------------------------------*/
+
+/**
+ * AppNotification
+ */
+.app-notification {
+    padding: 1.5rem;
+
+    &.app-notification--color-dark {
+        color: var(--eds-theme-color-text-utility-inverse);
+        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);    
+    }
+
+    &.app-notification--color-light {
+        color: var(--eds-theme-color-text-utility-default-primary-active);
+        background-color: var(--eds-theme-color-background-utility-container);
+    }
+
+    @media (min-width: $eds-bp-sm) {
+        padding-left: calc(var(--eds-size-6) * 1px);
+        padding-right: calc(var(--eds-size-6) * 1px);
+    }
+
+    @media (min-width: $eds-bp-xl) {
+        .app-notification__content {
+            margin: 0 auto;
+        }
+    }
+}
+
+.app-notification__title {
+    margin-bottom: 0.5rem;
+}
+
+/* .app-notification__sub-title {
+} */
+
+.app-notification__actions {
+    margin-top: 1.5rem;
+}
+
+.app-notification__content {
+    /* TODO: should this magic number exist as some token? */
+    max-width: 1320px;
+    display: flex;
+    gap: 0.5rem;
+
+    & > section {
+        width: 100%;
+    }
+}
+
+.app-notification__close-btn {
+    flex-shrink: 0;
+    margin-top: -0.5rem;
+    margin-right: -0.5rem;
+}

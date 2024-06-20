@@ -8,13 +8,20 @@
  * Popover container
  */
 .popover-container {
-  border-radius: var(--eds-border-radius-md);
+  border-radius: var(--eds-theme-border-radius-objects-md);
   overflow: auto;
+  padding: calc(var(--eds-size-half) / 16 * 1rem) 0;
+  z-index: 1150;
+
   box-shadow: var(--eds-box-shadow-md);
-  background-color: var(--eds-theme-color-background-neutral-default);
-  z-index: 100;
+  background-color: var(--eds-theme-color-background-utility-container);
 
   &:focus-visible {
-    @mixin focus;
+    outline: none;
   }
+}
+
+.popover-container > *[role=none] + *[role=none] {
+  /* create dividers by looking for groups under the component that wrap using the "none" role */
+  border-top: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
 }

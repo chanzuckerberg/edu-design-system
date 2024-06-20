@@ -2,6 +2,289 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.18...v15.0.0) (2024-06-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* pre-cleanup changes to prepare for v15 (#1992)
+
+### Features
+
+* pre-cleanup changes to prepare for v15 ([#1992](https://github.com/chanzuckerberg/edu-design-system/issues/1992)) ([dbce0d2](https://github.com/chanzuckerberg/edu-design-system/commit/dbce0d27ddba515248658b0708f1cb1f8af82052))
+
+
+### Bug Fixes
+
+* **Button:** allow as prop on button ([#1994](https://github.com/chanzuckerberg/edu-design-system/issues/1994)) ([37d1f5b](https://github.com/chanzuckerberg/edu-design-system/commit/37d1f5b0d95cb47b2eaa1d81234f576f283122e4))
+* **FieldNote:** fix icon alignment and size issues ([367717e](https://github.com/chanzuckerberg/edu-design-system/commit/367717ebb16c01890ac240b53899d530368f72da))
+
+## [15.0.0-alpha.18](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.17...v15.0.0-alpha.18) (2024-06-13)
+
+
+### Features
+
+* **Typography:** add typography-overline-lg ([#1993](https://github.com/chanzuckerberg/edu-design-system/issues/1993)) ([36eb3c9](https://github.com/chanzuckerberg/edu-design-system/commit/36eb3c9986214d0cda7039aba6b0fca7e740c94e))
+
+
+### Bug Fixes
+
+* handle required disabled field hints ([#1990](https://github.com/chanzuckerberg/edu-design-system/issues/1990)) ([11c0883](https://github.com/chanzuckerberg/edu-design-system/commit/11c088329494b173cce8bce65dea46fbd1aa4be4))
+* **Select:** allow attachment of headlessUI props to label ([#1991](https://github.com/chanzuckerberg/edu-design-system/issues/1991)) ([c3ce70f](https://github.com/chanzuckerberg/edu-design-system/commit/c3ce70f555903d8061bca62cfd53095e126cb980))
+
+## [15.0.0-alpha.17](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.16...v15.0.0-alpha.17) (2024-06-12)
+
+
+### Features
+
+* **Tooltip:** add inverse variant ([#1984](https://github.com/chanzuckerberg/edu-design-system/issues/1984)) ([d6ccc8d](https://github.com/chanzuckerberg/edu-design-system/commit/d6ccc8d7911ea297c4b5bce4924c56291aa7495b))
+
+
+### Bug Fixes
+
+* **Button:** align button icons and text with layouts ([#1988](https://github.com/chanzuckerberg/edu-design-system/issues/1988)) ([33fbd51](https://github.com/chanzuckerberg/edu-design-system/commit/33fbd5162f79e62a44d6215d0703c6276c2d86ae))
+* remove circular dependency for radio/checkbox ([dffed3c](https://github.com/chanzuckerberg/edu-design-system/commit/dffed3c4ba4b45012d4cdcdea7a859b327fb4b7b))
+* use aria-disabled when disabled prop is applied ([#1987](https://github.com/chanzuckerberg/edu-design-system/issues/1987)) ([1fe3b0f](https://github.com/chanzuckerberg/edu-design-system/commit/1fe3b0f08ecec651634840d3bd4a8aafa1b900e6))
+
+## [15.0.0-alpha.16](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.15...v15.0.0-alpha.16) (2024-06-07)
+
+
+### Features
+
+* **Icon:** add new and updated icons ([#1981](https://github.com/chanzuckerberg/edu-design-system/issues/1981)) ([fc7f842](https://github.com/chanzuckerberg/edu-design-system/commit/fc7f8424935554b1e4768fab8f59d2377a4b9d22))
+* **Link:** add inverse text visited color token and apply ([#1982](https://github.com/chanzuckerberg/edu-design-system/issues/1982)) ([98dec99](https://github.com/chanzuckerberg/edu-design-system/commit/98dec9936a4377834c8c0241f670bf6dbe83fb23))
+* **ToastNotification:** add dismissType with automated dismissing ([#1980](https://github.com/chanzuckerberg/edu-design-system/issues/1980)) ([8545f14](https://github.com/chanzuckerberg/edu-design-system/commit/8545f144589d5f7ae38f857428770b3620978553))
+
+
+### Bug Fixes
+
+* **Button:** add in missing inverse disabled treatments ([#1976](https://github.com/chanzuckerberg/edu-design-system/issues/1976)) ([8389f35](https://github.com/chanzuckerberg/edu-design-system/commit/8389f35a8820c2e5c5823b31b3a9f2dd512263d9))
+* **Button:** mark disable usage as invalid ([#1977](https://github.com/chanzuckerberg/edu-design-system/issues/1977)) ([99a70d3](https://github.com/chanzuckerberg/edu-design-system/commit/99a70d3bd5027f6bceb149c206bce4ce8412c8bc))
+* **Button:** use text-utility-default state tokens ([#1979](https://github.com/chanzuckerberg/edu-design-system/issues/1979)) ([e754588](https://github.com/chanzuckerberg/edu-design-system/commit/e754588af113cad67309b63825310427791499ac))
+* **Link:** address problems with link color inheritance ([#1975](https://github.com/chanzuckerberg/edu-design-system/issues/1975)) ([78d173e](https://github.com/chanzuckerberg/edu-design-system/commit/78d173e6366e60180685cbe85a096d88912e1f27))
+* **Link:** align icons in flexed standalone container ([#1978](https://github.com/chanzuckerberg/edu-design-system/issues/1978)) ([3a6a20d](https://github.com/chanzuckerberg/edu-design-system/commit/3a6a20dfe9322622475e9572f653a20963ddde25))
+
+## [15.0.0-alpha.15](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.14...v15.0.0-alpha.15) (2024-06-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* move from isWarning and isError to status prop (#1973)
+
+### Features
+
+* **Link:** add inverse variant (with variant prop) ([#1972](https://github.com/chanzuckerberg/edu-design-system/issues/1972)) ([bdbf9df](https://github.com/chanzuckerberg/edu-design-system/commit/bdbf9dffd0abcea31c4c003d2be0187db84fdbca))
+* move from isWarning and isError to status prop ([#1973](https://github.com/chanzuckerberg/edu-design-system/issues/1973)) ([56066ae](https://github.com/chanzuckerberg/edu-design-system/commit/56066ae6246cef5af05b8d4a621e76dce07b25ee))
+
+## [15.0.0-alpha.14](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.13...v15.0.0-alpha.14) (2024-05-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* update tier 1 and 2 typography tokens (#1969)
+
+### Features
+
+* **Button:** update interactive styles for tertiary buttons ([#1970](https://github.com/chanzuckerberg/edu-design-system/issues/1970)) ([288da8c](https://github.com/chanzuckerberg/edu-design-system/commit/288da8cb2b781894a64092c13b5209d7202aa2f3))
+* update tier 1 and 2 typography tokens ([#1969](https://github.com/chanzuckerberg/edu-design-system/issues/1969)) ([9dea463](https://github.com/chanzuckerberg/edu-design-system/commit/9dea4632abb40d77cc2dc79d74900988bc005154))
+
+## [15.0.0-alpha.13](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.10...v15.0.0-alpha.13) (2024-05-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **LoadingIndicator:** introduce 2.0 component (#1963)
+
+### Features
+
+* add `eds-migrate` script for running codemods on major version upgrades ([#1951](https://github.com/chanzuckerberg/edu-design-system/issues/1951)) ([109a0e5](https://github.com/chanzuckerberg/edu-design-system/commit/109a0e583198e79a4ae819e2be5ba67b83b2264a))
+* **LoadingIndicator:** introduce 2.0 component ([#1963](https://github.com/chanzuckerberg/edu-design-system/issues/1963)) ([26faab7](https://github.com/chanzuckerberg/edu-design-system/commit/26faab7c27d8adf5d97fbb33068cf0ec3c66f5b4))
+* **LoadingIndicator:** update stroke width in Button ([#1964](https://github.com/chanzuckerberg/edu-design-system/issues/1964)) ([bac3594](https://github.com/chanzuckerberg/edu-design-system/commit/bac35945124906ac26c1508c0154aab25a4146d9))
+* **Menu:** set new default for menu trigger ([#1965](https://github.com/chanzuckerberg/edu-design-system/issues/1965)) ([24815c2](https://github.com/chanzuckerberg/edu-design-system/commit/24815c276d5e8f4698a84dcc21f6fdd6b6b44d09))
+* **Select:** support horizontal labels ([#1962](https://github.com/chanzuckerberg/edu-design-system/issues/1962)) ([675ad5f](https://github.com/chanzuckerberg/edu-design-system/commit/675ad5fa45f4127bedf38722273f3e7bb83c8a53))
+* **TabGroup:** add inverse variant treatment ([#1960](https://github.com/chanzuckerberg/edu-design-system/issues/1960)) ([402e433](https://github.com/chanzuckerberg/edu-design-system/commit/402e433ae3358c3d9326d48ebba9c5a4019bcd35))
+* **tokens:** add border-utility-inteactive-secondary tokens ([#1959](https://github.com/chanzuckerberg/edu-design-system/issues/1959)) ([72daa0b](https://github.com/chanzuckerberg/edu-design-system/commit/72daa0b137b674272fe14a23c49bacc0700b2187))
+
+
+### Bug Fixes
+
+* **FieldNote:** adjust layout for icon and text lockup ([5788fe5](https://github.com/chanzuckerberg/edu-design-system/commit/5788fe509bee8123150a4a0ee7333ae7398f7b22))
+
+## [15.0.0-alpha.12](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.11...v15.0.0-alpha.12) (2024-05-23)
+
+
+### Bug Fixes
+
+* handle more cases ([a7e5830](https://github.com/chanzuckerberg/edu-design-system/commit/a7e5830cf1a831e6df3f79a42e8c49003f11a538))
+
+## [15.0.0-alpha.11](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.10...v15.0.0-alpha.11) (2024-05-23)
+
+
+### Features
+
+* add eds-migrate command ([b45061e](https://github.com/chanzuckerberg/edu-design-system/commit/b45061ec8dfb322ac569b842a4b24da91e741c3c))
+* **tokens:** add border-utility-inteactive-secondary tokens ([#1959](https://github.com/chanzuckerberg/edu-design-system/issues/1959)) ([72daa0b](https://github.com/chanzuckerberg/edu-design-system/commit/72daa0b137b674272fe14a23c49bacc0700b2187))
+
+## [15.0.0-alpha.10](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.9...v15.0.0-alpha.10) (2024-05-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **FieldLabel:** introduce 2.0 component (#1953)
+
+### Features
+
+* allow react nodes on subtitle ([#1954](https://github.com/chanzuckerberg/edu-design-system/issues/1954)) ([fc6bb78](https://github.com/chanzuckerberg/edu-design-system/commit/fc6bb7862cde9a7cf5ff611e60ec521a6b9a5eb0))
+* **FieldLabel:** introduce 2.0 component ([#1953](https://github.com/chanzuckerberg/edu-design-system/issues/1953)) ([6198b9e](https://github.com/chanzuckerberg/edu-design-system/commit/6198b9e17c5e3209b53b3da86156883b48e0cf7f))
+
+
+### Bug Fixes
+
+* **Card:** address QA design and eng feedback ([#1958](https://github.com/chanzuckerberg/edu-design-system/issues/1958)) ([14c73fe](https://github.com/chanzuckerberg/edu-design-system/commit/14c73feed267bc3bf2f64e6558bf50a7bd33c318))
+* **Modal:** address QA updates ([#1957](https://github.com/chanzuckerberg/edu-design-system/issues/1957)) ([0d5a414](https://github.com/chanzuckerberg/edu-design-system/commit/0d5a414c7dfa8c9ab8f3cb42e8232ef8f3dfd42f))
+
+## [15.0.0-alpha.9](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.8...v15.0.0-alpha.9) (2024-05-17)
+
+
+### Features
+
+* **Link:** allow nodes to be used in link body ([#1950](https://github.com/chanzuckerberg/edu-design-system/issues/1950)) ([01970a2](https://github.com/chanzuckerberg/edu-design-system/commit/01970a2ada87de05d016ff4adee86fdcd260689a))
+
+
+### Bug Fixes
+
+* **Accordion:** address QA updates from design ([#1948](https://github.com/chanzuckerberg/edu-design-system/issues/1948)) ([56fa437](https://github.com/chanzuckerberg/edu-design-system/commit/56fa437e69d47d5bda5e624d4ff2aa2ffc70cc1d))
+* **AppNotification:** apply usage feedback ([#1949](https://github.com/chanzuckerberg/edu-design-system/issues/1949)) ([06cc194](https://github.com/chanzuckerberg/edu-design-system/commit/06cc194bcbb57b8067f0cd16188578abbecfeaf1))
+* **NumberIcon:** address QA design notes ([#1947](https://github.com/chanzuckerberg/edu-design-system/issues/1947)) ([007d757](https://github.com/chanzuckerberg/edu-design-system/commit/007d757e16245dbc945c84b7ffd9c2053fff9a42))
+
+## [15.0.0-alpha.8](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.7...v15.0.0-alpha.8) (2024-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **AppNotification:** introduce 2.0 component (#1945)
+* **ToastNotification:** rename from Toast to ToastNotification (#1944)
+* **typography:** update typography tokens and fonts (#1942)
+
+### Features
+
+* **AppNotification:** introduce 2.0 component ([#1945](https://github.com/chanzuckerberg/edu-design-system/issues/1945)) ([489e8d9](https://github.com/chanzuckerberg/edu-design-system/commit/489e8d96a5da49d13c0f62c2bfe4baba2fb380d4))
+* **ToastNotification:** rename from Toast to ToastNotification ([#1944](https://github.com/chanzuckerberg/edu-design-system/issues/1944)) ([07284c2](https://github.com/chanzuckerberg/edu-design-system/commit/07284c265ef630c1ef6edb61ce7f187b60cb976f))
+* **typography:** update typography tokens and fonts ([#1942](https://github.com/chanzuckerberg/edu-design-system/issues/1942)) ([3140996](https://github.com/chanzuckerberg/edu-design-system/commit/3140996e697358aa4a89063c60416cbf611ebe20))
+
+
+### Bug Fixes
+
+* **Button:** address QA design feedback ([#1940](https://github.com/chanzuckerberg/edu-design-system/issues/1940)) ([1e431b4](https://github.com/chanzuckerberg/edu-design-system/commit/1e431b4fa0dd5106f57000ca83ff9cf669a96023))
+* **ButtonGroup:** address QA design updates ([#1943](https://github.com/chanzuckerberg/edu-design-system/issues/1943)) ([1595a18](https://github.com/chanzuckerberg/edu-design-system/commit/1595a18090954aa46c114c979553393e3ca26454))
+* **InlineNotification:** address QA updates ([#1937](https://github.com/chanzuckerberg/edu-design-system/issues/1937)) ([d96ab79](https://github.com/chanzuckerberg/edu-design-system/commit/d96ab79ca29fe8c356f424f66f61a71d0cb5ea4a))
+* **TabGroup:** address QA comments and designs ([#1938](https://github.com/chanzuckerberg/edu-design-system/issues/1938)) ([48e92d4](https://github.com/chanzuckerberg/edu-design-system/commit/48e92d481ab73d5d438956c1ab67c15e1aab084c))
+* **TextareaField:** address QA updates ([#1936](https://github.com/chanzuckerberg/edu-design-system/issues/1936)) ([3aa5c94](https://github.com/chanzuckerberg/edu-design-system/commit/3aa5c9454706c9029b7a50cf73fdf9590afdef09))
+* update token and theming ([#1946](https://github.com/chanzuckerberg/edu-design-system/issues/1946)) ([5546205](https://github.com/chanzuckerberg/edu-design-system/commit/5546205996edfdc7fdc744180f07375fecc96c64))
+
+## [15.0.0-alpha.7](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.6...v15.0.0-alpha.7) (2024-05-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* adjust responsive and spacing tokens/config (#1933)
+
+### Features
+
+* adjust responsive and spacing tokens/config ([#1933](https://github.com/chanzuckerberg/edu-design-system/issues/1933)) ([b19e453](https://github.com/chanzuckerberg/edu-design-system/commit/b19e453db72ddf2e5863e4bf1cb4011847f4d151))
+
+
+### Bug Fixes
+
+* **Button:** align disabled treatment to latest design ([#1931](https://github.com/chanzuckerberg/edu-design-system/issues/1931)) ([01a9d71](https://github.com/chanzuckerberg/edu-design-system/commit/01a9d7108946c7840646ab03e11e5b809a70a24a))
+* sync color tokens with design ([#1929](https://github.com/chanzuckerberg/edu-design-system/issues/1929)) ([146df70](https://github.com/chanzuckerberg/edu-design-system/commit/146df70565f82a1093f255cfd465af6c1df22d2d))
+
+## [15.0.0-alpha.6](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.5...v15.0.0-alpha.6) (2024-05-06)
+
+## [15.0.0-alpha.5](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.4...v15.0.0-alpha.5) (2024-04-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Icon:** introduce 2.0 component (#1925)
+
+### Features
+
+* **Icon:** introduce 2.0 component ([#1925](https://github.com/chanzuckerberg/edu-design-system/issues/1925)) ([3e40638](https://github.com/chanzuckerberg/edu-design-system/commit/3e40638e869929eda64cabcc9c6cfde5e4fb8166))
+
+## [15.0.0-alpha.4](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.3...v15.0.0-alpha.4) (2024-04-29)
+
+## [15.0.0-alpha.3](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.2...v15.0.0-alpha.3) (2024-04-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tokens:** remove units from design system tokens (#1912)
+
+### Features
+
+* **tokens:** remove units from design system tokens ([#1912](https://github.com/chanzuckerberg/edu-design-system/issues/1912)) ([ab666cf](https://github.com/chanzuckerberg/edu-design-system/commit/ab666cfafd2d4fcfedddbaf49799f21b58da04a4))
+
+## [15.0.0-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.1...v15.0.0-alpha.2) (2024-04-22)
+
+
+### Features
+
+* add support for extended nav and action components ([#1918](https://github.com/chanzuckerberg/edu-design-system/issues/1918)) ([f4a541e](https://github.com/chanzuckerberg/edu-design-system/commit/f4a541e84a8fb91a2a5261eb5542323b30391233))
+
+## [15.0.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.0...v15.0.0-alpha.1) (2024-04-05)
+
+
+### Bug Fixes
+
+* disambiguate old token colors ([#1913](https://github.com/chanzuckerberg/edu-design-system/issues/1913)) ([758eb2d](https://github.com/chanzuckerberg/edu-design-system/commit/758eb2d06a2851a895198998e788fff2f60ec302))
+
+## [15.0.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v14.0.0...v15.0.0-alpha.0) (2024-04-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **TextareaField:** introduce 2.0 component (#1911)
+* **Card:** introduce 2.0 component (#1908)
+* **Modal:** introduce 2.0 component (#1907)
+* **Toast:** introduce 2.0 component (#1906)
+* **Tooltip:** introduce 2.0 component (#1905)
+* **BannerNotification:** introduce 2.0 component (#1904)
+* **InlineNotification:** introduce 2.0 component (#1903)
+* **Accordion:** introduce 2.0 component (#1901)
+* **Select:** introduce 2.0 component (#1899)
+* **config:** use literal values in style-dictionary config (#1900)
+* **InputField:** introduce 2.0 component (#1898)
+* **Checkbox:** introduce 2.0 component (#1897)
+* **Radio:** introduce 2.0 component (#1895)
+* **Menu:** introduce 2.0 component (#1894)
+* **TabGroup:** introduce 2.0 component (#1892)
+* **NumberIcon:** introduce 2.0 component (#1891)
+* **Link:** introduce v2.0 component (#1890)
+* **Button:** introduce v2.0 component (#1889)
+
+### Features
+
+* **Accordion:** introduce 2.0 component ([#1901](https://github.com/chanzuckerberg/edu-design-system/issues/1901)) ([cf2086b](https://github.com/chanzuckerberg/edu-design-system/commit/cf2086b52607cb4a04fbdd57d173adece1082fe1))
+* add new v2.0 component tokens ([#1888](https://github.com/chanzuckerberg/edu-design-system/issues/1888)) ([3607a5d](https://github.com/chanzuckerberg/edu-design-system/commit/3607a5d16828331f611a6cc75ccd33c05faea2b7))
+* **BannerNotification:** introduce 2.0 component ([#1904](https://github.com/chanzuckerberg/edu-design-system/issues/1904)) ([cda9e4b](https://github.com/chanzuckerberg/edu-design-system/commit/cda9e4bda52ea994cc1a78d3579c00bd6db5400b))
+* **Button:** introduce v2.0 component ([#1889](https://github.com/chanzuckerberg/edu-design-system/issues/1889)) ([a6b446f](https://github.com/chanzuckerberg/edu-design-system/commit/a6b446f73d9d0c399f5dadecd94fe5dcb69c7003))
+* **Card:** introduce 2.0 component ([#1908](https://github.com/chanzuckerberg/edu-design-system/issues/1908)) ([cd21b49](https://github.com/chanzuckerberg/edu-design-system/commit/cd21b494e007dba90b635b607f7f42d149996292))
+* **Checkbox:** introduce 2.0 component ([#1897](https://github.com/chanzuckerberg/edu-design-system/issues/1897)) ([f3fc767](https://github.com/chanzuckerberg/edu-design-system/commit/f3fc7672c870f69c9efde2db0f2af9463664329f))
+* **config:** use literal values in style-dictionary config ([#1900](https://github.com/chanzuckerberg/edu-design-system/issues/1900)) ([e470f4b](https://github.com/chanzuckerberg/edu-design-system/commit/e470f4b150f86bad058231198530efc6ef08d37b))
+* **InlineNotification:** introduce 2.0 component ([#1903](https://github.com/chanzuckerberg/edu-design-system/issues/1903)) ([7bff52d](https://github.com/chanzuckerberg/edu-design-system/commit/7bff52d90489e7b15ee5373c0d1c12c95c6ddf38))
+* **InputField:** introduce 2.0 component ([#1898](https://github.com/chanzuckerberg/edu-design-system/issues/1898)) ([a3d3984](https://github.com/chanzuckerberg/edu-design-system/commit/a3d3984555ca76f228a0d8e02744137983025d24))
+* **Link:** introduce v2.0 component ([#1890](https://github.com/chanzuckerberg/edu-design-system/issues/1890)) ([bdce10a](https://github.com/chanzuckerberg/edu-design-system/commit/bdce10a700950ab7c8e16e04aa5f4e49b35f88cb))
+* **Menu:** introduce 2.0 component ([#1894](https://github.com/chanzuckerberg/edu-design-system/issues/1894)) ([3f540f9](https://github.com/chanzuckerberg/edu-design-system/commit/3f540f9dc25cd99b4ae21363e3772220024f985b))
+* **Modal:** introduce 2.0 component ([#1907](https://github.com/chanzuckerberg/edu-design-system/issues/1907)) ([d14c963](https://github.com/chanzuckerberg/edu-design-system/commit/d14c963f9e94454982afcdc5b0ab90f484e47834))
+* **NumberIcon:** introduce 2.0 component ([#1891](https://github.com/chanzuckerberg/edu-design-system/issues/1891)) ([cc7e140](https://github.com/chanzuckerberg/edu-design-system/commit/cc7e14094e4d553cfc4cd46a27f509c2ce03d9c5))
+* **Radio:** introduce 2.0 component ([#1895](https://github.com/chanzuckerberg/edu-design-system/issues/1895)) ([8ef797f](https://github.com/chanzuckerberg/edu-design-system/commit/8ef797f40c3eaefddb58ee62a9274617238704e8))
+* **Select:** introduce 2.0 component ([#1899](https://github.com/chanzuckerberg/edu-design-system/issues/1899)) ([1164b90](https://github.com/chanzuckerberg/edu-design-system/commit/1164b90d6a0a49b8aa26bc24e08e600daf7131d8))
+* **TabGroup:** introduce 2.0 component ([#1892](https://github.com/chanzuckerberg/edu-design-system/issues/1892)) ([e952d33](https://github.com/chanzuckerberg/edu-design-system/commit/e952d33cd59b7d87d886408e1819d4d1498b7c7d))
+* **TextareaField:** introduce 2.0 component ([#1911](https://github.com/chanzuckerberg/edu-design-system/issues/1911)) ([a68a255](https://github.com/chanzuckerberg/edu-design-system/commit/a68a2557829dc3288bb4ec1a4af8d063d36d2c58))
+* **Toast:** introduce 2.0 component ([#1906](https://github.com/chanzuckerberg/edu-design-system/issues/1906)) ([8bce819](https://github.com/chanzuckerberg/edu-design-system/commit/8bce819fa8ca035de488d5e3ad9684fe19aadc63))
+* **Tooltip:** introduce 2.0 component ([#1905](https://github.com/chanzuckerberg/edu-design-system/issues/1905)) ([ded98b2](https://github.com/chanzuckerberg/edu-design-system/commit/ded98b27751f90ce859c206fa80ef78aa78866fc))
+
 ## [14.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v13.12.0...v14.0.0) (2024-03-05)
 
 

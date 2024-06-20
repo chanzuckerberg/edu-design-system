@@ -1,6 +1,6 @@
 import { Canvas, Meta } from '@storybook/blocks';
 
-<Meta title="Documentation/Guidelines/Components" />
+<Meta title="Documentation/Contributor Guidelines/Adding Components" />
 
 # Working with EDS Components
 
@@ -21,18 +21,18 @@ yarn add @chanzuckerberg/eds
 Next, import any needed components from the EDS component library into your application like so:
 
 ```js
-import { Button, Grid } from '@chanzuckerberg/eds';
+import { Button } from '@chanzuckerberg/eds';
 ```
 
 From there, call EDS components in your React application and pass in the desired values into each component's API:
 
 ```jsx
 <Button
-  variant="primary"
+  rank="primary"
   onClick={...}
 >
   Submit
-  <Icon name="chevron-right" purpose="decorative" />
+  <Icon name="arrow-right" purpose="decorative" />
 </Button>
 ```
 
@@ -42,8 +42,6 @@ If you have questions or are experiencing any issues when working with EDS's com
 
 ### Creating a component
 
-**NOTE**: Refer to this [Tag](https://github.com/chanzuckerberg/edu-design-system/tree/upcoming-components) for examples of potential upcoming components. If you see one you like, you can use it as a baseline for implementation.
-
 1. To create a component, run `yarn plop` in the command line.
 2. The command will ask, "What is your component name?" Add your component name (you can either type `PageHeader` or `page header` and it will automatically generate the proper casing).
 3. Edit component source code in accordance with [EDS's code guidelines][code-guidelines]
@@ -51,7 +49,7 @@ If you have questions or are experiencing any issues when working with EDS's com
 
 ### Component Beta status
 
-When components are first created using the `plop` feature, they're given a beta tag in the `.stories` file and a line is added to the component docstring stating that the component is in beta. When the component is first officially released/announced internally, the component will be in beta, but it will leave beta in the following release. We expect these releases to happen about once/month, and the removal of the beta information will happen as part of the release process.
+When components are first created using the `plop` feature, they're given a beta tag in the `.stories` file and a line is added to the component docstring stating that the component is in beta. When the component is first officially released/announced internally, the component will be in beta, but it will leave beta in the following release.
 
 Exceptions can be made for components that are still fluctuating and experiencing a lot of changes when the second release comes around.
 
@@ -64,7 +62,7 @@ The component stucture is as follows:
 ```
 Components
 --Component Name
-----Component Stories
+----Component Stories & Files
 ```
 
 [code-guidelines]: ./?path=/story/documentation-guidelines-code-guidelines--page

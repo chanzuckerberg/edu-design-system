@@ -8,7 +8,8 @@ export default {
   title: 'Components/Fieldset',
   component: Fieldset,
   parameters: {
-    badges: ['1.0'],
+    layout: 'centered',
+    badges: ['intro-1.0', 'current-1.3'],
   },
   subcomponents: {
     FieldsetLegend: Fieldset.Legend,

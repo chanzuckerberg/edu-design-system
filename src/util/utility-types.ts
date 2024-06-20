@@ -1,4 +1,4 @@
-import type React from 'react';
+import type { ReactNode } from 'react';
 
 /**
  * HeadlessUI 1.6.0 changed the way components were typed, such that React.ComponentProps no longer correctly inferred props https://github.com/tailwindlabs/headlessui/issues/1394#issuecomment-1120911944.
@@ -37,7 +37,7 @@ export type EitherInclusive<T, U> = EitherExclusive<T, U> | (T & U);
 
 /**
  * The return type of React.forwardRef, and utilized similarly by passing <RefAttachedElement, Props>.
- * Used to be extended to include subcomponents. i.e.: type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> * {Input?: typeof Input};
+ * Used to be extended to include sub-components. i.e.: type InputFieldType = ForwardedRefComponent<HTMLInputElement, Props> * {Input?: typeof Input};
  */
 export type ForwardedRefComponent<T, P> = React.ForwardRefExoticComponent<
   React.PropsWithoutRef<P> & React.RefAttributes<T>
@@ -48,5 +48,5 @@ export type ForwardedRefComponent<T, P> = React.ForwardRefExoticComponent<
  * members of the render prop when not a `ReactNode`.
  */
 export type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
+  children: ReactNode | ((args: RenderPropArgs) => React.ReactElement);
 };

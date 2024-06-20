@@ -8,7 +8,8 @@ export default {
   title: 'Components/PopoverContainer',
   component: PopoverContainer,
   parameters: {
-    badges: ['1.2'],
+    layout: 'centered',
+    badges: ['intro-1.2', 'current-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
@@ -16,18 +17,27 @@ export default {
 type Args = React.ComponentProps<typeof PopoverContainer>;
 
 export const Default: StoryObj<Args> = {
-  args: {
-    children: 'Default container',
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
   },
-};
-
-export const WithRows: StoryObj<Args> = {
-  render: () => (
-    <PopoverContainer>
-      <PopoverListItem icon="arrow-downward">test 1</PopoverListItem>
-      <PopoverListItem icon="arrow-narrow-left">test 2</PopoverListItem>
-      <PopoverListItem icon="arrow-upward">test 3</PopoverListItem>
-      <PopoverListItem icon="arrow-narrow-right">test 4</PopoverListItem>
-    </PopoverContainer>
-  ),
+  args: {
+    children: (
+      <>
+        <div role="none">
+          <PopoverListItem icon="arrow-down">test 1</PopoverListItem>
+          <PopoverListItem icon="arrow-left-narrow">test 2</PopoverListItem>
+          <PopoverListItem icon="arrow-up">test 3</PopoverListItem>
+        </div>
+        <div role="none">
+          <PopoverListItem icon="arrow-right-narrow" isDestructiveAction>
+            test 4
+          </PopoverListItem>
+        </div>
+      </>
+    ),
+  },
 };

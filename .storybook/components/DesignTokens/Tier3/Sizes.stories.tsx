@@ -25,12 +25,16 @@ export const Sizes: StoryObj = {
               <Grid.Item key={listItem.name}>
                 <TokenSpecimen
                   inlineStyles={{
-                    width: `var(${listItem.name})`,
-                    height: `var(${listItem.name})`,
+                    width: `calc(var(${listItem.name}) / 16 * 1rem)`,
+                    height: `calc(var(${listItem.name}) / 16 * 1rem)`,
                     minHeight: '0',
                   }}
                   name={listItem.name}
-                  value={listItem.value}
+                  value={
+                    listItem.value +
+                    'px' +
+                    ` (${Number(listItem.value) / 16} rem)`
+                  }
                 />
               </Grid.Item>
             );

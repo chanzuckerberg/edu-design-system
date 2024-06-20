@@ -24,7 +24,7 @@
   display: inline-block;
   position: relative;
   top: 3px;
-  margin-left: var(--eds-size-1);
+  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**

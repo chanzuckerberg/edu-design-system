@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler } from 'react';
 import React, { forwardRef } from 'react';
+import type { Status } from '../../util/variant-types';
 import styles from './Input.module.css';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -32,10 +33,6 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'none'
     | 'numeric'
     | 'decimal';
-  /**
-   * Error state of the form field
-   */
-  isError?: boolean;
   /**
    * Maximum number the input can take.
    */
@@ -80,16 +77,24 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
    * The default value of the input
    */
   defaultValue?: string | number;
+  // Design API
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 };
 
 /**
  * Input component for one line of text.
  */
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, disabled, id, isError, ...other }, ref) => {
+  ({ className, disabled, id, status, ...other }, ref) => {
     const componentClassName = clsx(
       styles['input'],
-      isError && styles['error'],
+      status === 'critical' && styles['error'],
+      status === 'warning' && styles['warning'],
       className,
     );
 

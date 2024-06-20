@@ -1,8 +1,7 @@
 import { Menu as HeadlessMenu } from '@headlessui/react';
 import clsx from 'clsx';
-import type { MouseEventHandler } from 'react';
-import { useContext, useState } from 'react';
-import React from 'react';
+import type { ReactNode, MouseEventHandler } from 'react';
+import React, { useContext, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { usePopper } from 'react-popper';
@@ -10,10 +9,12 @@ import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
-import Icon from '../Icon';
-import type { IconName } from '../Icon';
+import { type IconName } from '../Icon';
 
-import PopoverContainer, { defaultPopoverModifiers } from '../PopoverContainer';
+import {
+  PopoverContainerV2 as PopoverContainer,
+  defaultPopoverModifiers,
+} from '../PopoverContainer';
 import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
 
 import PopoverListItem from '../PopoverListItem';
@@ -29,6 +30,7 @@ export type MenuProps = ExtractProps<typeof HeadlessMenu> &
   };
 
 export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
+  // Component API
   /**
    * Allow custom classes to be applied to the menu container.
    */
@@ -48,18 +50,19 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
 };
 
 export type MenuButtonProps = {
+  // Component API
   /**
    * The button contents placed left of the chevron icon.
    */
-  children: React.ReactNode;
+  children: string;
   /**
    * Allow custom classes to be applied to the menu button.
    */
   className?: string;
   /**
-   * Icon override for component. Default is 'expand-more'
+   * Icon override for component. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'expand-more'>;
+  icon?: Extract<IconName, 'chevron-down'>;
 };
 
 export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
@@ -115,7 +118,7 @@ export const Menu = ({
 const MenuButton = ({
   children,
   className,
-  icon = 'expand-more',
+  icon = 'chevron-down',
   ...other
 }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
@@ -123,14 +126,14 @@ const MenuButton = ({
 
   return (
     <HeadlessMenu.Button as={React.Fragment} ref={setReferenceElement}>
-      <Button className={buttonClassNames} status="neutral" {...other}>
+      <Button
+        className={buttonClassNames}
+        icon={icon}
+        iconLayout="right"
+        rank="primary"
+        {...other}
+      >
         {children}
-        <Icon
-          className={styles['menu__button--with-chevron']}
-          name={icon}
-          purpose="decorative"
-          size="1.25rem"
-        />
       </Button>
     </HeadlessMenu.Button>
   );
@@ -140,7 +143,7 @@ const MenuButton = ({
  * A minimally styled button that when clicked, shows or hides the Options.
  */
 const MenuPlainButton = ({ className, ...other }: MenuPlainButtonProps) => {
-  const buttonClassNames = clsx(styles['menu__plain-button'], className);
+  const buttonClassNames = clsx(className);
   const { setReferenceElement } = useContext(MenuContext);
 
   return (
@@ -194,12 +197,12 @@ const MenuItem = ({
       {({ active, disabled }) => {
         const listItemView = (
           <PopoverListItem
-            active={active}
             className={className}
-            disabled={disabled}
             icon={icon}
+            isDisabled={disabled}
+            isFocused={active}
           >
-            {children as React.ReactNode}
+            {children as ReactNode}
           </PopoverListItem>
         );
         return disabled ? (

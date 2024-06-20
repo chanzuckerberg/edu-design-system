@@ -9,8 +9,8 @@
  */
 .progress-bar {
   border: var(--eds-theme-color-progress-bar-border) solid
-    var(--eds-border-width-sm);
-  border-radius: var(--eds-border-radius-full);
+    calc(var(--eds-border-width-sm) * 1px);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   /* Prevents child segments from clipping outside the borders */
   overflow: hidden;
@@ -26,7 +26,7 @@
  */
 .progress-bar__segments-wrapper {
   display: flex;
-  gap: var(--eds-size-half);
+  gap: calc(var(--eds-size-half) / 16 * 1rem);
 
   height: 100%;
 }
@@ -47,7 +47,7 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: var(--eds-size-1);
+  margin-bottom: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**

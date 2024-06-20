@@ -15,10 +15,10 @@ export class Tier1Animation extends Component {
                 <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      transitionDuration: `var(${listItem.name})`,
+                      transitionDuration: `calc(var(${listItem.name}) * 1s)`,
                     }}
                     name={listItem.name}
-                    value={listItem.value}
+                    value={listItem.value + 's'}
                     variant="animation-fade"
                   />
                 </Grid.Item>
@@ -34,10 +34,10 @@ export class Tier1Animation extends Component {
                 <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      transitionDuration: `var(${listItem.name})`,
+                      transitionDuration: `calc(var(${listItem.name}) * 1s)`,
                     }}
                     name={listItem.name}
-                    value={listItem.value}
+                    value={listItem.value + 's'}
                     variant="animation-move"
                   />
                 </Grid.Item>
@@ -53,7 +53,7 @@ export class Tier1Animation extends Component {
                 <Grid.Item key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      transitionTimingFunction: `var(${listItem.name})`,
+                      transitionTimingFunction: `calc(var(${listItem.name}) * 1s)`,
                     }}
                     name={listItem.name}
                     value={listItem.value}

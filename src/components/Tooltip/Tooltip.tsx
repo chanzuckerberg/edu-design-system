@@ -2,11 +2,16 @@ import type { TippyProps } from '@tippyjs/react';
 import Tippy from '@tippyjs/react';
 import clsx from 'clsx';
 import * as React from 'react';
+import type { HTMLAttributes } from 'react';
+
+import { defaultPopoverModifiersV2 as defaults } from '../PopoverContainer';
 import { Text } from '../Text/Text';
+
 import styles from './Tooltip.module.css';
 
 // Full list of Tippy props: https://atomiks.github.io/tippyjs/v6/all-props/
 type TooltipProps = {
+  // Component API
   /**
    * The element or ref to append the tooltip to.
    * Defaults to the body element.
@@ -51,12 +56,6 @@ type TooltipProps = {
    */
   duration?: number;
   /**
-   * Where the tooltip should be placed in relation to the element it's attached to.
-   *
-   * **Default is `"top"`**.
-   */
-  placement?: 'top' | 'right' | 'bottom' | 'left';
-  /**
    * The trigger element the tooltip appears next to.
    *
    * Use this instead of `children` if the trigger element is being
@@ -65,18 +64,35 @@ type TooltipProps = {
    */
   reference?: React.RefObject<Element> | Element;
   /**
-   * The content of the tooltip bubble.
-   */
-  text?: React.ReactNode;
-  /**
    * Whether the tooltip is always visible or always invisible.
    *
    * This is most often left undefined so the Tooltip component
    * controls if/when the bubble appears (on hover, click, focus, etc).
    */
   visible?: boolean;
+  // Design API
+  /**
+   * Where the tooltip should be placed in relation to the element it's attached to.
+   * See: https://atomiks.github.io/tippyjs/v6/all-props/#placement
+   *
+   * **Default is `"auto"`**.
+   */
+  placement?: Extract<
+    TippyProps['placement'],
+    'auto' | 'top' | 'right' | 'bottom' | 'left'
+  >;
+  /**
+   * The content of the tooltip bubble.
+   */
+  text?: string;
+  /**
+   * The variant treatment for tooltips
+   *
+   * **Default is `"default"`**.
+   */
+  variant?: 'default' | 'inverse';
 } & TippyProps &
-  React.HTMLAttributes<HTMLElement>;
+  HTMLAttributes<HTMLElement>;
 
 // @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
 type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;
@@ -87,16 +103,16 @@ type Plugin = Plugins[number];
  *
  * A floating information box, attached to other components on the page. Used to display option, additional information.
  *
- * https://atomiks.github.io/tippyjs/
- * https://github.com/atomiks/tippyjs-react
- *
+ * - https://atomiks.github.io/tippyjs/
+ * - https://github.com/atomiks/tippyjs-react
  */
 export const Tooltip = ({
   childNotInteractive,
   className,
   duration = 200,
-  placement = 'top',
+  placement = 'auto',
   text,
+  variant = 'default',
   ...rest
 }: TooltipProps) => {
   // Hides tooltip when escape key is pressed, following:
@@ -137,19 +153,29 @@ export const Tooltip = ({
   }
 
   const textContent = (
-    <Text as="span" data-testid="tooltip-content" preset="caption-lg">
+    <Text as="span" data-testid="tooltip-content" preset="body-sm">
       {text}
     </Text>
   );
 
+  const tooltipClassNames = clsx(
+    styles['tooltip'],
+    variant && styles[`tooltip--variant-${variant}`],
+    className,
+  );
+
+  // TODO: figure out why the modifiers don't seem to get applied
   return (
     <Tippy
-      {...rest}
-      className={clsx(styles['tooltip'], className)}
+      className={tooltipClassNames}
       content={textContent}
       duration={duration}
       placement={placement}
       plugins={[hideOnEsc]}
+      popperOptions={{
+        modifiers: defaults,
+      }}
+      {...rest}
     >
       {children}
     </Tippy>

@@ -1,6 +1,6 @@
 import { Canvas, Meta } from '@storybook/blocks';
 
-<Meta title="Documentation/Guidelines/Code Guidelines" />
+<Meta title="Documentation/Contributor Guidelines/Code Guidelines" />
 
 # Code Guidelines
 
@@ -187,7 +187,7 @@ Examples:
 
 ```css
 .dropdown-button__icon {
-  transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) var(--eds-anim-ease);
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -222,36 +222,18 @@ For example:
 
 /**
  * Full width button.
- *
- * Class is doubled to increase specificity.
  */
-.button--full-width.button--full-width {
+.button--full-width {
   background: red;
   /* Pushes the button away from the other content because it lives in a flexbox container */
   margin-right: auto;
   width: 100%;
-  /* I know this a weird magic number, but [succinct-but-clear explanation] */
-  height: 37px;
 }
 ```
 
 Not all CSS declarations warrant a comment, but non-obvious declarations (like context-specific styles, magic numbers, or styles dependent on other selector styles) should be accompanied by a comment.
 
-### Other CSS Rules
-
-- EDS generally arranges CSS properties in the following manner (although more as a guideline than a strictly-enforced convention):
-
-```css
-.element {
-  [mixin includes, including typography]
-  [positioning]
-  [box model]
-  [color]
-  [transition]
-}
-```
-
-- Media queries should live inside each class name. This makes it easier for a developer to focus on a class name, rather than finding confusion with class names written twice in a file and getting lost.
+Also, media queries should live inside each class name. This makes it easier for a developer to focus on a class name, rather than finding confusion with class names written twice in a file and getting lost.
 
 Instead of:
 
@@ -286,14 +268,14 @@ Instead of:
 ```
 import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
 
-<Icon color={EdsThemeColorUtilitySuccessForeground} />;
+<SomeComponent color={EdsThemeColorUtilitySuccessForeground} />;
 ```
 
 Use:
 
 ```css
 .banner__icon {
-  fill: var(--eds-theme-color-utility-success-foreground);
+  fill: var(--eds-theme-color-utility-favorable);
 }
 ```
 
@@ -460,7 +442,7 @@ i.e. in `src/components/{componentFolder}/index.ts`
 export { ComponentName as default } from './ComponentName';
 ```
 
-and in `src/index.ts`
+...and in `src/index.ts`
 
 ```tsx
 ...
@@ -470,11 +452,11 @@ export { default as ComponentName } from './components/ComponentName';
 
 ### Children
 
-When a component uses `children` as a prop, use the type `React.ReactNode` unless context dictates otherwise, including `ReactNode` as a named import.
+When a component uses `children` as a prop, use the type `ReactNode` unless context dictates otherwise, including `ReactNode` as a named import.
 
 ```tsx
-import React, { ReactNode } from 'react';
-
+import React, from 'react';
+import type { ReactNode } from 'react';
 ...
 
 export const ComponentName = ({ children }: { children: ReactNode }) => {
@@ -531,7 +513,7 @@ return <div className={componentClassName} {...other} />;
 
 ### Compound Components
 
-Certain components (such as `<Tabs />` and `<Table />`) require splitting up into smaller subcomponents.
+Certain components (such as `<Tabs />` and `<Table />`) require splitting up into smaller sub-components.
 
 By default, we err towards more centralized control over the component architecture in order to prevent undesired results (for instance, we don't want users to put a `<Card />` inside of `<Breadcrumbs />`). However, certain components will require more flexibility and will therefore be architected to be composable and flexible (such as `<Card>`).
 
@@ -541,10 +523,10 @@ By default, we err towards more centralized control over the component architect
 - Compound component children must be declared within the parent component file.
 - Compound component children names must always begin with the parent name. A parent component `Table` means that all child components related to it must begin with `Table` (such as `Table.Body`, `Table.Row` and `Table.Cell`).
 - Compound components never have an associated `.stories.tsx` file as they rely on the parent component's stories to render properly.
-- Compound components should be exported as subcomponents from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
+- Compound components should be exported as sub-components from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
 
 ```ts
-// This demonstrates how bound subcomponents are attached
+// This demonstrates how bound sub-components are attached
 Card.Header = CardHeader;
 Card.Footer = CardFooter;
 ```
@@ -570,22 +552,18 @@ EDS adheres to the following API naming conventions:
 
 The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
-- `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
-- `inverted` should be used consistently for stylistic `variation`s that "invert" the color schemes (e.g. `inverted=true`) to work on a darker background.
-- `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="md"`>). Use abbreviations for sizes (ex: `xs`, `sm`, `md`, `lg`).
-- `behavior` should be used for functional variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
-- `orientation` should be used for controlling the layout or orientation of a component (e.g. `<ButtonGroup orientation="stacked">`)
-- `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled />`)
-- `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
-- `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
+- `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
+- `size` should be used for adjusting size attributes (e.g. `<Button rank="secondary" size="sm">` or `<Button size="md"`>). Use abbreviations for sizes (ex: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`).
+- `isDisabled` boolean should be used to control the interactivity of a component (e.g. `<Button isDisabled />`)
 
 ### Text, Labels, Titles, and Children
 
 - Default to `text` for short strings of text, such as `<BreadCrumbsItem text="My Courses">` or `<Badge text="Overdue" />`.
-- For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
-- Default to `description` for text that serves as a descriptor, such as `<PageHeader title="Project name" description="Brief overview of the project..." />`
-- For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<Fieldset.Legend text="Grade level">`).
-- `children` can be used for components that only have one main block of content being passed in (so there will be no confusion with other content props) and when it's safe for that content to be a `ReactNode`. (If it's important for the content to only come in the form of a string, use a different prop name, like `text`.)
+- For headings, default to `title`, such as `<Card.Header title="My Page Title" />`.
+- Default to `subTitle` for text that serves as a descriptor, such as `<Card.Header title="Project name" subTitle="Brief overview of the project..." />`
+- For form-related components, use the semantic `label` or `legend` (e.g. `<InputField label="first name" />` and `<Fieldset.Legend text="Grade level">`).
+- `children` can be used for components that only have one main block of content being passed in (so there will be no confusion with other content props) and when it's safe for that content to be a `ReactNode`. (If it's important for the content to only come in the form of a string, restrict the type to `string`).
+- instead of styling text using internal typography tokens, use `Text` and `Heading` components with the appropriate `preset` to match design.
 
 ### Tag name
 

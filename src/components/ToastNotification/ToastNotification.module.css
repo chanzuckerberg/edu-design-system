@@ -1,0 +1,46 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # TOAST
+\*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+
+.toast {
+  width: 100%;
+  max-width: 24rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: top;
+
+  border: 0.125rem solid;
+  border-left: 1rem solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+
+  &.toast--status-critical {
+    color: var(--eds-theme-color-text-utility-critical);
+    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+  }
+
+  &.toast--status-favorable {
+    color: var(--eds-theme-color-text-utility-favorable);
+    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+  }
+}
+
+.toast__icon {
+  flex-shrink: 0;
+}
+
+.toast__body {
+  flex-grow: 2;
+}
+
+.toast__dismiss-button {
+  flex-shrink: 0;
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
+}

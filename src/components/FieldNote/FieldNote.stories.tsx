@@ -9,7 +9,8 @@ export default {
   title: 'Components/FieldNote',
   component: FieldNote,
   parameters: {
-    badges: ['1.0'],
+    layout: 'centered',
+    badges: ['intro-1.0', 'current-2.0'],
   },
 } as Meta<Args>;
 
@@ -22,12 +23,29 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const WithIcon: StoryObj<Args> = {
+export const WithErrorIcon: StoryObj<Args> = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'person-add',
-    isError: true,
+    icon: 'warning-filled',
+    status: 'critical',
+  },
+};
+
+export const WithLongText: StoryObj<Args> = {
+  args: {
+    ...WithErrorIcon.args,
+    children:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. Attristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.',
+  },
+};
+
+export const WithWarningIcon: StoryObj<Args> = {
+  args: {
+    children: 'This is a fieldnote.',
+    id: 'field-1',
+    icon: 'warning-filled',
+    status: 'warning',
   },
 };
 

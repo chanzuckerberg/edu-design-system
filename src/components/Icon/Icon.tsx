@@ -33,11 +33,6 @@ interface IconPropsBase {
    */
   color?: string;
   /**
-   * If true, the element will be displayed as a block, otherwise
-   * default is inline like images
-   */
-  fullWidth?: boolean;
-  /**
    * ID used so the svg can read the title of the SVG icon to the user when accessibility is needed
    */
   id?: string;
@@ -52,6 +47,7 @@ interface IconPropsBase {
   size?: string;
   /**
    * viewBox for the svg, used when the svg information is passed via children.
+   * To match included icons, recommend view box of "0 0 24 24"
    */
   viewBox?: string;
 }
@@ -98,18 +94,13 @@ export const Icon = (props: IconProps) => {
     className,
     color = 'currentColor',
     name,
-    fullWidth = false,
     id,
     purpose,
     size,
     viewBox,
   } = props;
 
-  const componentClassName = clsx(
-    styles['icon'],
-    fullWidth && styles['icon--full-width'],
-    className,
-  );
+  const componentClassName = clsx(styles['icon'], className);
   const style: SvgStyle = {
     '--icon-size': size,
   };

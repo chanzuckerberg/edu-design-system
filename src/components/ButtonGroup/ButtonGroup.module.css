@@ -6,36 +6,27 @@
  * A group of buttons displayed in an organized fashion.
  */
 .button-group {
-  display: inline-flex;
-  /* Wrap buttons if overflow, usually for smaller screen sizes. */
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  gap: calc(var(--eds-size-2) / 16 * 1rem);
 }
 
-/**
- * Spacing variants.
- */
-.button-group--spacing-1x {
-  gap: var(--eds-size-1);
+.button-group--horizontal {
+  flex-direction: row-reverse;
 }
 
-.button-group--spacing-max {
-  width: 100%;
-  justify-content: space-between;
-}
-
-/**
- * Vertical orientation variant.
- */
 .button-group--vertical {
   flex-direction: column;
+  align-content: center;
 }
 
-/**
- * Vertical spacing max variant.
- * Hopefully no one actually ever uses this... 
- */
-.button-group--spacing-max.button-group--vertical {
-  width: 100%;
-  height: 100%;
+.button-group--horizontal-progressive {
+  flex-direction: row-reverse;
   justify-content: space-between;
+}
+
+.button-group--horizontal-align-left {
+  flex-direction: row;
 }

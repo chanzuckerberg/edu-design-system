@@ -8,7 +8,7 @@ import styles from './SearchBar.module.css';
 
 type SearchBarProps = {
   /**
-   * SearchBar subcomponents to be wrapped.
+   * SearchBar sub-components to be wrapped.
    */
   children: ReactNode;
   /**
@@ -74,11 +74,16 @@ const SearchField = ({
 /**
  * A button styled for use with the SearchBar.
  */
-const SearchButton = ({ className, ...other }: SearchButtonProps) => {
+const SearchButton = ({ className, disabled, ...other }: SearchButtonProps) => {
   const componentClassName = clsx(styles['search-button'], className);
 
   return (
-    <Button className={componentClassName} variant="primary" {...other}>
+    <Button
+      className={componentClassName}
+      isDisabled={disabled}
+      rank="primary"
+      {...other}
+    >
       Search
     </Button>
   );
