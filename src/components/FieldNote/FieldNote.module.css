@@ -24,6 +24,9 @@
  */
 .field-note__icon {
   position: relative;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: calc(var(--eds-size-half) / 16 * 1rem);
   margin-right: calc(var(--eds-size-half) / 16 * 1rem);
 }
 

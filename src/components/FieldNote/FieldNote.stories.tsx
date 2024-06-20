@@ -32,6 +32,14 @@ export const WithErrorIcon: StoryObj<Args> = {
   },
 };
 
+export const WithLongText: StoryObj<Args> = {
+  args: {
+    ...WithErrorIcon.args,
+    children:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. Attristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.',
+  },
+};
+
 export const WithWarningIcon: StoryObj<Args> = {
   args: {
     children: 'This is a fieldnote.',
