@@ -3,16 +3,21 @@
 /*------------------------------------*\
     # TEXTAREA FIELD
 \*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
 
 /**
  * Default input styles 
  */
 .textarea {
-  @mixin inputStyles;
-}
+  @mixin inputStylesV2;
+  padding: calc(var(--eds-size-1) / 16 * 1rem) 0.75rem;
 
-.textarea--disabled:focus {
-  outline: none;
+  &:read-only:not(:disabled) {
+    border: 0;
+    border-bottom: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
 }
 
 /**
@@ -20,32 +25,24 @@
  */
 .textarea-field__overline {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--eds-size-half);
+  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
 .textarea-field__overline--no-label {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .textarea-field__label {
-  color: var(--eds-theme-color-form-label);
   font: var(--eds-theme-typography-form-label);
 }
-.textarea-field__label--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
 
-.textarea-field__required-text {
-  color: var(--eds-theme-color-text-neutral-subtle);
-  font: var(--eds-theme-typography-body-sm);
-}
-.textarea-field__required-text--disabled {
-  color: var(--eds-theme-color-text-disabled);
+.textarea-field__label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
 }
 
 .textarea-field--invalid-length {
-  color: var(--eds-theme-color-text-utility-error);
+  color: var(--eds-theme-color-text-utility-critical);
 }
 
 .textarea-field__footer {
@@ -60,7 +57,6 @@
 .textarea-field__character-counter {
   font: var(--eds-theme-typography-body-sm);
 
-  color: var(--eds-theme-color-text-neutral-default);
   flex: 1 0 50%;
   text-align: right;
 }

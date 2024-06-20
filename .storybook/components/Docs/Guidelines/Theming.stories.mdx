@@ -21,7 +21,64 @@ module.exports = {
 };
 ```
 
-If you only want part of the provided settings, you can review the [Tailwind Theme Customization][tailwind-theme] documentation, and the contents of the [provided config][eds-tailwind-config], and apply the parts you want to use.
+If you need to preserve any existing theme values, you can use `extend` and pull contents from the imported theme file. Options to extend include:
+
+- `colors`
+- `fontWeight`
+- `fontFamily`
+- `screens`
+
+You can review the [Tailwind Theme Customization][tailwind-theme] documentation, and the contents of the [provided config][eds-tailwind-config], and apply the parts you want to use.
+
+### Tailwind color options and guidance
+
+With the proper tailwind setup, there are several options one can use to access the EDS tokens. Here are guidelines
+for which utility classes to use when you need color tokens (in order of preference):
+
+#### ✅ Using EDS token utility classes
+
+These map to the higher-tier token names, and are semantic- (or component-) based. 
+
+```tsx
+<div className="text-utility-interactive-visited">Option 1</div>
+```
+
+#### ✅ Token name referecnes as custom utility classes
+
+If there is no existing utility class for the use case, you can reference the token directly in a class. While less preferable to the above, this still plugs into EDS.
+
+```tsx
+<div className="bg-[var(--eds-theme-color-text-utility-interactive-visited)]">Option 2</div>
+```
+
+Cons:
+
+- less useful IntelliSense (no color chip)
+- longer class names that may cause wrapping, and are harder to scan visually
+
+#### ❌ Token name references pointing to tier-1 (primitive) tokens
+
+This is similar to the above, but instead of using semantically-named tokens, uses the raw token primitives. This is equivalent to hard-coding magic numbers and has the same consequences.
+
+```tsx
+<div className="bg-[var(--eds-color-purple-550)]">Option 3</div>
+```
+
+Cons (same as above, plus):
+
+- would require delicate refactoring if any usages change (which references should remain and which should change?)
+
+#### ❌ Using inline hex values
+
+This is the worst option, which fully detaches from EDS. ONLY appropriate if there is no intent to be consistent with the rest of the app theme. Use at your own risk!
+
+```tsx
+<div className="bg-[#8A50A7]">Option 4</div>
+```
+
+Cons (same as above, plus):
+
+- fully detached from EDS, and harder to control or maintain.
 
 [tailwind-theme]: https://tailwindcss.com/docs/theme
 [eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.ts
@@ -70,7 +127,7 @@ Once run, you will have a set of theme files written to the configured `dest` pa
 
 To use, add this file to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
 
-### eds-import-from-Figma
+### eds-import-from-figma
 
 Command to run: `npx eds-import-from-figma`
 

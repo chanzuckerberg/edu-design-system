@@ -2,15 +2,18 @@ import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
+
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
+
+import Button from '../Button';
 import Heading from '../Heading';
-import { Icon, type IconName } from '../Icon/Icon';
+import Text from '../Text';
+
 import styles from './Modal.module.css';
 
-type Variant = 'brand';
-
 type ModalContentProps = {
+  // Component API
   /**
    * Optional aria-label for the modal.
    *
@@ -74,17 +77,19 @@ type ModalContentProps = {
    * ```
    */
   onClose: () => void;
+  // Design API
   /**
-   * Max size of the modal. Defaults to 'lg'.
-   * Will still break responsively.
+   * Max size of the modal, which responds to the viewport
    *
    * **Default is `"lg"`**.
    */
-  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
+  size?: Extract<Size, 'sm' | 'lg'>;
   /**
-   * Color variants of the modal.
+   * Emphasis used on the backgound overlay (behind the modal)
+   *
+   * **Default is `"low"`**.
    */
-  variant?: Variant;
+  overlayEmphasis?: 'low' | 'high';
 };
 
 type ModalProps = ModalContentProps & {
@@ -110,6 +115,19 @@ type ModalProps = ModalContentProps & {
 };
 
 type ModalTitleProps = ExtractProps<typeof Heading> & {
+  // Component API
+  /**
+   * Contents for the modal title.
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+};
+
+type ModalSubTitleProps = ExtractProps<typeof Text> & {
+  // Component API
   /**
    * Contents for the modal title.
    */
@@ -121,6 +139,7 @@ type ModalTitleProps = ExtractProps<typeof Heading> & {
 };
 
 type ModalBodyProps = {
+  // Component API
   /**
    * Child node(s) that can be nested inside component. `Modal.Header`,
    * `Modal.Body`, and `Model.Footer` are the only permissible children of the Modal.
@@ -130,6 +149,7 @@ type ModalBodyProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // Design API
   /**
    * Toggles focusable variant of the modal. Used to attach a tabIndex for keyboard scrolling
    * and focus indicator outline.
@@ -140,6 +160,7 @@ type ModalBodyProps = {
 };
 
 type ModalHeaderProps = {
+  // Component API
   /**
    * Child node(s) to place inside the Modal header.
    * Should include the <Modal.Title>
@@ -149,21 +170,11 @@ type ModalHeaderProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Adjusts height, color, and text of the header.
-   */
-  variant?: Variant;
-  /**
-   * Placeholder for brand asset.
-   */
-  brandAsset?: ReactNode;
-  /**
-   * CSS class names that can be appended to the brand asset.
-   */
-  assetClassName?: string;
+  // Design API
 };
 
 type ModalFooterProps = {
+  // Component API
   /**
    * Child node(s) to place inside the Modal footer.
    */
@@ -172,6 +183,7 @@ type ModalFooterProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // Design API
   /**
    * Toggles sticky variant of the footer. If modal is scrollable, footer is sticky.
    * Also adds border and shadow to indicate sticky status.
@@ -180,25 +192,8 @@ type ModalFooterProps = {
   isSticky?: boolean;
 };
 
-type ModalStepperProps = {
-  /**
-   * Indicates which step is the active step. Must be one or more.
-   */
-  activeStep: number;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Indicates how many steps to represent. Must be one or more and
-   * greater than or equal to activeStep.
-   */
-  totalSteps: number;
-};
-
 type Context = {
   isScrollable?: boolean;
-  variant?: Variant;
 };
 
 const ModalContext = React.createContext<Context>({});
@@ -225,7 +220,7 @@ function childrenHaveModalTitle(children?: ReactNode): boolean {
 /**
  * The actual modal, without the dark overlay behind it.
  *
- * This is only for testing purposes; please do not import and use this directly.
+ * This is only exported for testing purposes; please do not import and use this directly.
  */
 export const ModalContent = (props: ModalContentProps) => {
   const {
@@ -235,38 +230,33 @@ export const ModalContent = (props: ModalContentProps) => {
     isScrollable,
     onClose,
     size = 'lg',
-    variant,
     ...other
   } = props;
 
   const componentClassName = clsx(
     styles['modal__content'],
     isScrollable && styles['modal__content--scrollable'],
-    (size === 'md' || size === 'lg') && styles['modal__content--md'],
-    size === 'lg' && styles['modal__content--lg'],
+    size && styles[`modal__content--${size}`],
     className,
   );
 
-  const closeIconClassName = clsx(
-    styles['modal__close-icon'],
-    variant === 'brand' && styles['modal__close-icon--brand'],
-  );
-
   return (
-    <ModalContext.Provider value={{ isScrollable, variant }}>
+    <ModalContext.Provider value={{ isScrollable }}>
       <div className={componentClassName} {...other}>
         {!hideCloseButton && (
-          <button className={styles['modal__close-button']} onClick={onClose}>
-            <Icon
-              className={closeIconClassName}
-              name="close"
-              purpose="informative"
-              size="1.5rem"
-              title="close modal"
-            />
-          </button>
+          <Button
+            aria-label="close"
+            className={styles['modal__close-button']}
+            context="default"
+            icon="close"
+            iconLayout="icon-only"
+            onClick={onClose}
+            rank="tertiary"
+            variant="neutral"
+          >
+            Close
+          </Button>
         )}
-
         {children}
       </div>
     </ModalContext.Provider>
@@ -291,6 +281,7 @@ export const Modal = (props: ModalProps) => {
     modalContainerClassName,
     onClose,
     open,
+    overlayEmphasis = 'low',
     ...rest
   } = props;
   const { children } = rest;
@@ -324,7 +315,13 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <Dialog.Overlay className={styles['modal__overlay']} />
+        <Dialog.Overlay
+          className={clsx(
+            styles['modal__overlay'],
+            overlayEmphasis &&
+              styles[`modal__overlay--emphasis-${overlayEmphasis}`],
+          )}
+        />
 
         <ModalContent onClose={onClose} {...rest} />
       </Dialog>
@@ -378,74 +375,11 @@ const ModalFooter = ({
 /**
  * Component defines the Header section of the modal.
  */
-const ModalHeader = ({
-  assetClassName,
-  brandAsset,
-  children,
-  className,
-  variant,
-  ...other
-}: ModalHeaderProps) => {
-  const componentClassName = clsx(
-    styles['modal-header'],
-    variant === 'brand' && styles['modal-header--brand'],
-    className,
-  );
-  const brandAssetClassName = clsx(
-    styles['modal-header__brand-asset'],
-    assetClassName,
-  );
+const ModalHeader = ({ children, className, ...other }: ModalHeaderProps) => {
+  const componentClassName = clsx(styles['modal-header'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}
-      {variant === 'brand' && brandAsset && (
-        <div className={brandAssetClassName}>{brandAsset}</div>
-      )}
-    </div>
-  );
-};
-
-/**
- * Stepper for the modal to indicate page status.
- * TODO: Separate the stepper from the modal, and make into a standalone component.
- */
-const ModalStepper = ({
-  activeStep,
-  className,
-  totalSteps,
-  ...other
-}: ModalStepperProps) => {
-  const componentClassName = clsx(styles['modal-stepper'], className);
-  if (process.env.NODE_ENV !== 'production') {
-    if (totalSteps < 1) {
-      throw new Error('Must have more than one step in totalSteps.');
-    }
-    if (activeStep < 1) {
-      throw new Error('activeStep must be one or more.');
-    }
-    if (totalSteps < activeStep) {
-      throw new Error('activeStep cannot exceed totalSteps');
-    }
-  }
-
-  const stepIcons = [];
-  for (let i = 0; i < totalSteps; i++) {
-    const isActivestep = i + 1 === activeStep;
-    const icon: IconName = isActivestep ? 'circle' : 'empty-circle';
-    const title = isActivestep ? `Active Step ${i + 1}` : `Step ${i + 1}`;
-    stepIcons.push(
-      <Icon
-        key={i}
-        name={icon}
-        purpose="informative"
-        size="0.5rem"
-        title={title}
-      />,
-    );
-  }
-  return (
-    <div className={componentClassName} {...other}>
-      {stepIcons}
     </div>
   );
 };
@@ -466,13 +400,26 @@ const ModalTitle = ({
   </Dialog.Title>
 );
 
+const ModalSubTitle = ({
+  children,
+  className,
+  preset = 'headline-sm',
+  ...other
+}: ModalSubTitleProps) => {
+  const componentClassName = clsx(styles['modal-sub-title'], className);
+  return (
+    <Text as="div" className={componentClassName} preset={preset} {...other}>
+      {children}
+    </Text>
+  );
+};
+
 /**
  * Variations of the subcomponent to pass props from parent Modal component.
  * Same prop passed directly to subcomponent has priority over prop passed from Modal component.
  */
 const VariantModalHeader = (props: ModalHeaderProps) => {
-  const { variant } = React.useContext(ModalContext);
-  return <ModalHeader variant={variant} {...props} />;
+  return <ModalHeader {...props} />;
 };
 
 const FocusableModalBody = (props: ModalBodyProps) => {
@@ -488,12 +435,12 @@ const StickyModalFooter = (props: ModalFooterProps) => {
 Modal.displayName = 'Modal';
 VariantModalHeader.displayName = 'Modal.Header';
 ModalTitle.displayName = 'Modal.Title';
+ModalSubTitle.displayName = 'Modal.SubTitle';
 FocusableModalBody.displayName = 'Modal.Body';
 StickyModalFooter.displayName = 'Modal.Footer';
-ModalStepper.displayName = 'Modal.Stepper';
 
 Modal.Header = VariantModalHeader;
 Modal.Title = ModalTitle;
+Modal.SubTitle = ModalSubTitle;
 Modal.Body = FocusableModalBody;
 Modal.Footer = StickyModalFooter;
-Modal.Stepper = ModalStepper;

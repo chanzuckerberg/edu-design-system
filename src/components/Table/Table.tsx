@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import type { MouseEventHandler, ReactNode } from 'react';
 import React from 'react';
 import Button from '../Button';
-import Icon, { type IconName } from '../Icon';
+import { type IconName } from '../Icon';
 import styles from './Table.module.css';
 
 type TableBodyProps = {
@@ -75,11 +75,11 @@ type TableHeaderProps = React.HTMLAttributes<HTMLTableSectionElement> & {
    */
   className?: string;
 };
-type TableHeaderCellProps = React.ThHTMLAttributes<HTMLTableCellElement> & {
+type TableHeaderCellProps = React.HTMLAttributes<HTMLTableCellElement> & {
   /**
    * Child node(s) that can be nested inside component
    */
-  children?: ReactNode;
+  children?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -220,9 +220,9 @@ const TableHeaderCell = ({
 
   const icon: IconName =
     sortDirection === 'ascending'
-      ? 'arrow-narrow-up'
+      ? 'arrow-up'
       : sortDirection === 'descending'
-        ? 'arrow-narrow-down'
+        ? 'arrow-down'
         : 'unfold-more';
 
   const iconTitle =
@@ -242,23 +242,25 @@ const TableHeaderCell = ({
       className={componentClassName}
       {...other}
     >
-      {sortDirection ? (
-        <Button
-          className={clsx(styles['table-header-cell__sort-button'])}
-          onClick={onSortClick}
-          variant="link"
-        >
-          {children}
-          <Icon
-            name={icon}
-            purpose="informative"
-            size="1rem"
-            title={iconTitle}
-          />
-        </Button>
-      ) : (
-        children
-      )}
+      <div className={styles['table-header-cell__container']}>
+        {sortDirection ? (
+          <>
+            {children}
+            <Button
+              icon={icon}
+              iconLayout="icon-only"
+              onClick={onSortClick}
+              rank="tertiary"
+              size="sm"
+              title={iconTitle}
+            >
+              {children}
+            </Button>
+          </>
+        ) : (
+          children
+        )}
+      </div>
     </th>
   );
 };

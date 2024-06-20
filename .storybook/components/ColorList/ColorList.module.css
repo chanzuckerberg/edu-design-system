@@ -1,7 +1,7 @@
 .color-list__label {
   width: fit-content;
-  padding: var(--eds-size-half);
-  border-radius: var(--eds-theme-box-button-border-radius);
+  padding: calc(var(--eds-size-half) / 16 * 1rem);
+  border-radius: calc(var(--eds-theme-box-button-border-radius) * 1px);
 
   font: var(--eds-theme-typography-label-md-subtle);
   color: rgb(235, 87, 87);
@@ -13,9 +13,9 @@
   width: 100%;
   height: 5rem;
   border: var(--eds-theme-color-border-neutral-subtle) solid
-    var(--eds-border-width-sm);
+    calc(var(--eds-border-width-sm) * 1px);
   outline: var(--eds-theme-color-border-neutral-strong) solid
-    var(--eds-border-width-sm);
+    calc(var(--eds-border-width-sm) * 1px);
 }
 
 .color-list__input::-webkit-color-swatch {

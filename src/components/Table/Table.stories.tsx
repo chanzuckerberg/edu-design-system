@@ -10,7 +10,8 @@ export default {
   title: 'Components/Table',
   component: Table,
   parameters: {
-    badges: ['1.1'],
+    layout: 'centered',
+    badges: ['intro-1.1', 'current-1.3'],
   },
   argTypes: {
     children: {
@@ -174,6 +175,7 @@ export const SortableInteractive: Story = {
         type: 'dynamic',
       },
     },
+    layout: 'fullscreen',
   },
   render: () => {
     const values = [
@@ -253,7 +255,8 @@ export const SortableInteractive: Story = {
  */
 export const StackedCardsExample: Story = {
   parameters: {
-    badges: ['1.1', 'implementationExample'],
+    layout: 'padded',
+    badges: ['intro-1.1', 'implementationExample'],
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,

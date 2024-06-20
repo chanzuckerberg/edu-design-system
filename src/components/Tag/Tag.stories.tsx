@@ -7,7 +7,8 @@ export default {
   title: 'Components/Tag',
   component: Tag,
   parameters: {
-    badges: ['1.0'],
+    layout: 'centered',
+    badges: ['intro-1.0', 'current-1.3'],
   },
   argTypes: {
     variant: {
@@ -76,7 +77,7 @@ export const OutlineVariants: Story = {
 export const WithIcon: Story = {
   ...Default,
   args: {
-    icon: 'favorite',
+    icon: 'star-filled',
   },
   render: (args) => (
     <div className={styles.tagList}>

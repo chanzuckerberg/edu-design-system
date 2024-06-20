@@ -2,113 +2,124 @@
 
 exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-1x"
+  class="p-8"
 >
-  <button
-    class="button button--lg button--secondary button--neutral"
-    type="button"
+  <div
+    class="button-group button-group--horizontal"
   >
-    Button 1
-  </button>
-  <button
-    class="button button--lg button--primary button--brand"
-    type="button"
-  >
-    Button 2
-  </button>
+    <button
+      class="button button--layout-none button--primary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Button 1
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--secondary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Button 2
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
-exports[`<ButtonGroup /> SpacingMax story renders snapshot 1`] = `
+exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-max"
+  class="p-8"
 >
-  <button
-    class="button button--lg button--secondary button--neutral"
-    type="button"
+  <div
+    class="button-group button-group--horizontal-progressive"
   >
-    Button 1
-  </button>
-  <button
-    class="button button--lg button--primary button--brand"
-    type="button"
-  >
-    Button 2
-  </button>
+    <button
+      class="button button--layout-none button--primary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Button 1
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--secondary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Button 2
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
-exports[`<ButtonGroup /> SpacingNone story renders snapshot 1`] = `
+exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`] = `
 <div
-  class="button-group"
+  class="p-8"
 >
-  <button
-    class="button button--lg button--secondary button--neutral"
-    type="button"
+  <div
+    class="button-group button-group--horizontal-progressive"
   >
-    Button 1
-  </button>
-  <button
-    class="button button--lg button--primary button--brand"
-    type="button"
-  >
-    Button 2
-  </button>
+    <button
+      class="button button--layout-none button--primary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Primary Button
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--tertiary button--lg button--variant-default -ml-size-2"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Tertiary Button
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
 exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-1x button-group--vertical"
+  class="p-8"
 >
-  <button
-    class="button button--lg button--secondary button--neutral"
-    type="button"
+  <div
+    class="button-group button-group--vertical"
   >
-    Button 1
-  </button>
-  <button
-    class="button button--lg button--primary button--brand"
-    type="button"
-  >
-    Button 2
-  </button>
-</div>
-`;
-
-exports[`<ButtonGroup /> WithFiveButtons story renders snapshot 1`] = `
-<div
-  class="button-group button-group--spacing-1x"
->
-  <button
-    class="button button--lg button--secondary button--brand"
-    type="button"
-  >
-    Button 1
-  </button>
-  <button
-    class="button button--lg button--secondary button--brand"
-    type="button"
-  >
-    Button 2
-  </button>
-  <button
-    class="button button--lg button--secondary button--brand"
-    type="button"
-  >
-    Button 3
-  </button>
-  <button
-    class="button button--lg button--secondary button--brand"
-    type="button"
-  >
-    Button 4
-  </button>
-  <button
-    class="button button--lg button--primary button--brand"
-    type="button"
-  >
-    Button 5
-  </button>
+    <button
+      class="button button--layout-none button--primary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Button 1
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--secondary button--lg button--variant-default"
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Button 2
+      </span>
+    </button>
+  </div>
 </div>
 `;

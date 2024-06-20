@@ -3,5 +3,5 @@
 \*------------------------------------*/
 
 .tagList > :not(:last-child) {
-  margin-right: var(--eds-size-half);
+  margin-right: calc(var(--eds-size-half) / 16 * 1rem);
 }

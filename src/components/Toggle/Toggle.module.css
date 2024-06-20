@@ -5,23 +5,23 @@
  */
 .toggle__button {
   /* The transparent border is used to support Windows high contrast mode and reduce potential jiggling with adding / removing borders */
-  border: var(--eds-theme-border-width) solid transparent;
+  border: calc(var(--eds-theme-border-width) * 1px) solid transparent;
   padding: 0;
 
   position: relative;
   display: inline-flex;
 
-  height: var(--eds-size-3);
-  width: var(--eds-size-7);
+  height: calc(var(--eds-size-3) / 16 * 1rem);
+  width: calc(var(--eds-size-7) / 16 * 1rem);
 
   flex-shrink: 0;
   align-items: center;
 
-  border-radius: var(--eds-border-radius-full);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   cursor: pointer;
 
-  transition: background-color var(--eds-anim-move-quick) var(--eds-anim-ease);
+  transition: background-color calc(var(--eds-anim-move-quick) * 1s) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
@@ -81,7 +81,7 @@
   display: flex;
   align-items: center;
 
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -90,16 +90,16 @@
 .toggle__button-thumb {
   display: inline-block;
 
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
+  height: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  width: calc(var(--eds-size-2-and-half) / 16 * 1rem);
 
   /* The transparent border is used to support Windows high contrast mode and reduce potential jiggling with adding / removing borders */
-  border: var(--eds-theme-border-width) solid transparent;
-  border-radius: var(--eds-border-radius-full);
+  border: calc(var(--eds-theme-border-width) * 1px) solid transparent;
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   background-color: var(--eds-theme-color-toggle-thumb);
 
-  transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
+  transition: transform calc(var(--eds-anim-move-quick) * 1s) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
     transition: none;

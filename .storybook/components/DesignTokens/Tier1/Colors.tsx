@@ -12,23 +12,59 @@ export const Tier1Colors = () => {
       figmaToken:
         figmaTokenHeader + '/' + name.slice(name.lastIndexOf('-') + 1),
     }));
+
+  // filter down to the neutral tokens which were introduced or redefined in the new brand
+  const nonLegacyNeutralItems = getListItems(
+    'eds-color-neutral',
+    'neutral',
+  ).filter((item) => {
+    // TODO: remove this filter once the deprecated neutral tokens are deleted
+    return [
+      '025',
+      '050',
+      '100',
+      '150',
+      '200',
+      '250',
+      '350',
+      '450',
+      '550',
+      '650',
+      '750',
+      '800',
+      '850',
+      '900',
+      '950',
+    ].includes(item.figmaToken.split('/')[1]);
+  });
   return (
     <div>
-      <Section title="Neutral Colors">
-        <ColorList listItems={getListItems('eds-color-neutral', 'neutral')} />
+      <Section
+        description="These base colors are used in higher tier tokens and not linked for use via Tailwind"
+        title="Brand Red Colors"
+      >
+        <ColorList listItems={getListItems('eds-color-red', 'red')} />
       </Section>
-      <Section title="Brand Colors">
-        <ColorList listItems={getListItems('eds-color-brand', 'brand-grape')} />
+      <Section title="Brand Orange Colors">
+        <ColorList listItems={getListItems('eds-color-orange', 'orange')} />
       </Section>
-      <Section className="flex flex-col gap-3" title="Other Colors">
-        <ColorList
-          listItems={getListItems('eds-color-other-orange', 'orange')}
-        />
-        <ColorList listItems={getListItems('eds-color-other-mint', 'mint')} />
-        <ColorList
-          listItems={getListItems('eds-color-other-yellow', 'yellow')}
-        />
-        <ColorList listItems={getListItems('eds-color-other-ruby', 'ruby')} />
+      <Section title="Brand Yellow Colors">
+        <ColorList listItems={getListItems('eds-color-yellow', 'yellow')} />
+      </Section>
+      <Section title="Brand Green Colors">
+        <ColorList listItems={getListItems('eds-color-green', 'green')} />
+      </Section>
+      <Section title="Brand Blue Colors">
+        <ColorList listItems={getListItems('eds-color-blue', 'blue')} />
+      </Section>
+      <Section title="Brand Purple Colors">
+        <ColorList listItems={getListItems('eds-color-purple', 'purple')} />
+      </Section>
+      <Section title="Brand Pink Colors">
+        <ColorList listItems={getListItems('eds-color-pink', 'pink')} />
+      </Section>
+      <Section title="Brand Neutral Colors">
+        <ColorList listItems={nonLegacyNeutralItems} />
       </Section>
     </div>
   );

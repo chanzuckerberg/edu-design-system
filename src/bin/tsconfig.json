@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig",
+  "include": ["**/*"],
+  "exclude": ["**/*.test.*"],
+  "compilerOptions": {
+    "outDir": "../../lib/bin",
+    "declaration": false,
+    "declarationDir": null,
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
+  }
+}

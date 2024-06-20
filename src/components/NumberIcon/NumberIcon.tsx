@@ -3,30 +3,27 @@ import React from 'react';
 
 import type { Size } from '../../util/variant-types';
 
-import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
+
 import styles from './NumberIcon.module.css';
 
 export interface Props {
+  // Component API
   /**
-   * Screen-reader text for the number icon.
+   * (Required) Screen-reader text for the number icon.
    */
   'aria-label': string;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // Design API
   /**
-   * Icon override for component.
+   * Whether `NumberIcon` can be focused on, clicked, etc.
    */
-  icon?: Extract<IconName, 'circle'>;
-
+  isInteractive?: boolean;
   /**
-   * Incomplete prop to show incomplete state
-   */
-  incomplete?: boolean;
-  /**
-   * Number to be shown as the icon.
+   * Number to be shown as the icon. Maximum of two digits.
    */
   number?: number;
   /**
@@ -34,21 +31,11 @@ export interface Props {
    *
    * **Default is `"lg"`**.
    */
-  size?: Extract<Size, 'sm' | 'lg'>;
+  size?: Extract<Size, 'md' | 'lg'>;
   /**
-   * The variant of the icon.
-   *
-   * **Default is `"base"`**.
-   *
-   * Variant `success` will use a symbol to mark success, along with different color tokens
+   * Indication of the status of the referenced item
    */
-  variant?: 'base' | 'success';
-  /**
-   * Number icon title
-   *
-   * When using `incomplete` this is required.
-   */
-  numberIconTitle?: string;
+  status?: 'completed' | 'incomplete' | 'default';
 }
 
 /**
@@ -59,45 +46,30 @@ export interface Props {
  */
 export const NumberIcon = ({
   className,
+  isInteractive = false,
   number,
+  status = 'default',
   size = 'lg',
-  variant = 'base',
-  icon = 'circle',
-  incomplete,
-  numberIconTitle,
   ...other
 }: Props) => {
   const componentClassName = clsx(
-    styles['number-icon'],
-    styles[`number-icon--${variant}`],
-    size && styles[`number-icon--${size}`],
-    incomplete && styles['number-icon--incomplete'],
     className,
+    styles['number-icon'],
+    isInteractive && styles['number-icon--is-interactive'],
+    size && styles[`number-icon--size-${size}`],
+    status && styles[`number-icon--status-${status}`],
   );
 
   return (
     <Text
       as="span"
       className={componentClassName}
-      preset={size === 'sm' ? 'body-xs' : 'body-sm'}
+      preset={size === 'md' ? 'label-md-subtle' : 'label-lg-subtle'}
       role="img"
+      tabIndex={isInteractive ? 0 : -1}
       {...other}
     >
-      {incomplete && numberIconTitle ? (
-        <Icon
-          className={styles['number-icon__icon']}
-          color="inherit"
-          name={icon}
-          purpose="informative"
-          size={size === 'sm' ? '0.25rem' : '0.5rem'}
-          title={numberIconTitle}
-        />
-      ) : (
-        /**
-         * If this is not incomplete, then the number prop provided will show within the border.
-         */
-        number
-      )}
+      {number}
     </Text>
   );
 };

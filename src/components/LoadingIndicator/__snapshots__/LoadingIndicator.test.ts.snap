@@ -12,7 +12,7 @@ exports[`<LoadingIndicator /> Default story renders snapshot 1`] = `
     data-testid="oval-svg"
     height="40"
     stroke="transparent"
-    viewBox="-20.5 -20.5 43 43"
+    viewBox="-22 -22 46 46"
     width="40"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -22,7 +22,7 @@ exports[`<LoadingIndicator /> Default story renders snapshot 1`] = `
     >
       <g
         data-testid="oval-secondary-group"
-        stroke-width="3"
+        stroke-width="4"
         transform="translate(1 1)"
       >
         <circle
@@ -31,7 +31,58 @@ exports[`<LoadingIndicator /> Default story renders snapshot 1`] = `
           r="20"
           stroke="transparent"
           stroke-opacity=".5"
-          stroke-width="3"
+          stroke-width="4"
+        />
+        <path
+          d="M20 0c0-9.94-8.06-20-20-20"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            from="0 0 0"
+            repeatCount="indefinite"
+            to="360 0 0"
+            type="rotate"
+          />
+        </path>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<LoadingIndicator /> ExtraSmall story renders snapshot 1`] = `
+<div
+  aria-busy="true"
+  aria-label="loading"
+  class="loading-indicator"
+  data-testid="oval-loading"
+  role="status"
+>
+  <svg
+    data-testid="oval-svg"
+    height="16"
+    stroke="transparent"
+    viewBox="-22 -22 46 46"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <g
+        data-testid="oval-secondary-group"
+        stroke-width="4"
+        transform="translate(1 1)"
+      >
+        <circle
+          cx="0"
+          cy="0"
+          r="20"
+          stroke="transparent"
+          stroke-opacity=".5"
+          stroke-width="4"
         />
         <path
           d="M20 0c0-9.94-8.06-20-20-20"
@@ -63,7 +114,7 @@ exports[`<LoadingIndicator /> Invisible story renders snapshot 1`] = `
     data-testid="oval-svg"
     height="40"
     stroke="transparent"
-    viewBox="-20.5 -20.5 43 43"
+    viewBox="-22 -22 46 46"
     width="40"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -73,7 +124,7 @@ exports[`<LoadingIndicator /> Invisible story renders snapshot 1`] = `
     >
       <g
         data-testid="oval-secondary-group"
-        stroke-width="3"
+        stroke-width="4"
         transform="translate(1 1)"
       >
         <circle
@@ -82,7 +133,7 @@ exports[`<LoadingIndicator /> Invisible story renders snapshot 1`] = `
           r="20"
           stroke="transparent"
           stroke-opacity=".5"
-          stroke-width="3"
+          stroke-width="4"
         />
         <path
           d="M20 0c0-9.94-8.06-20-20-20"
@@ -114,7 +165,7 @@ exports[`<LoadingIndicator /> Large story renders snapshot 1`] = `
     data-testid="oval-svg"
     height="56"
     stroke="transparent"
-    viewBox="-21 -21 44 44"
+    viewBox="-22 -22 46 46"
     width="56"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -165,7 +216,7 @@ exports[`<LoadingIndicator /> Medium story renders snapshot 1`] = `
     data-testid="oval-svg"
     height="40"
     stroke="transparent"
-    viewBox="-20.5 -20.5 43 43"
+    viewBox="-22 -22 46 46"
     width="40"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -175,7 +226,7 @@ exports[`<LoadingIndicator /> Medium story renders snapshot 1`] = `
     >
       <g
         data-testid="oval-secondary-group"
-        stroke-width="3"
+        stroke-width="4"
         transform="translate(1 1)"
       >
         <circle
@@ -184,7 +235,7 @@ exports[`<LoadingIndicator /> Medium story renders snapshot 1`] = `
           r="20"
           stroke="transparent"
           stroke-opacity=".5"
-          stroke-width="3"
+          stroke-width="4"
         />
         <path
           d="M20 0c0-9.94-8.06-20-20-20"
@@ -216,7 +267,7 @@ exports[`<LoadingIndicator /> Small story renders snapshot 1`] = `
     data-testid="oval-svg"
     height="24"
     stroke="transparent"
-    viewBox="-20 -20 42 42"
+    viewBox="-22 -22 46 46"
     width="24"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -226,7 +277,7 @@ exports[`<LoadingIndicator /> Small story renders snapshot 1`] = `
     >
       <g
         data-testid="oval-secondary-group"
-        stroke-width="2"
+        stroke-width="4"
         transform="translate(1 1)"
       >
         <circle
@@ -235,7 +286,7 @@ exports[`<LoadingIndicator /> Small story renders snapshot 1`] = `
           r="20"
           stroke="transparent"
           stroke-opacity=".5"
-          stroke-width="2"
+          stroke-width="4"
         />
         <path
           d="M20 0c0-9.94-8.06-20-20-20"
@@ -267,7 +318,7 @@ exports[`<LoadingIndicator /> WithAriaLabel story renders snapshot 1`] = `
     data-testid="oval-svg"
     height="40"
     stroke="transparent"
-    viewBox="-20.5 -20.5 43 43"
+    viewBox="-22 -22 46 46"
     width="40"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -277,7 +328,7 @@ exports[`<LoadingIndicator /> WithAriaLabel story renders snapshot 1`] = `
     >
       <g
         data-testid="oval-secondary-group"
-        stroke-width="3"
+        stroke-width="4"
         transform="translate(1 1)"
       >
         <circle
@@ -286,7 +337,7 @@ exports[`<LoadingIndicator /> WithAriaLabel story renders snapshot 1`] = `
           r="20"
           stroke="transparent"
           stroke-opacity=".5"
-          stroke-width="3"
+          stroke-width="4"
         />
         <path
           d="M20 0c0-9.94-8.06-20-20-20"

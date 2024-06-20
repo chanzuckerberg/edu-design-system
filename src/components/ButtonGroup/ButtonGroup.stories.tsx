@@ -1,22 +1,25 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
+
+import { ButtonGroup } from './ButtonGroup';
 import Button from '../Button';
-import ButtonGroup from '../ButtonGroup';
 
 export default {
   title: 'Components/ButtonGroup',
   component: ButtonGroup,
   args: {
-    spacing: '1x' as const,
-    orientation: 'horizontal' as const,
+    orientation: 'horizontal',
     children: (
       <>
-        <Button status="neutral">Button 1</Button>
-        <Button variant="primary">Button 2</Button>
+        <Button rank="primary">Button 1</Button>
+        <Button rank="secondary">Button 2</Button>
       </>
     ),
   },
   argTypes: {
+    buttonLayout: {
+      options: ['horizontal', 'vertical', 'horizontal-progressive'],
+    },
     children: {
       control: {
         type: null,
@@ -24,41 +27,46 @@ export default {
     },
   },
   parameters: {
-    badges: ['1.0'],
+    badges: ['intro-1.0', 'current-2.0'],
   },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ButtonGroup>;
 
 export const Default: StoryObj<Args> = {};
 
-export const SpacingNone: StoryObj<Args> = {
-  args: {
-    spacing: 'none',
-  },
-};
-
-export const SpacingMax: StoryObj<Args> = {
-  args: {
-    spacing: 'max',
-  },
-};
-
+/**
+ * Buttons can have a vertical layout.
+ */
 export const Vertical: StoryObj<Args> = {
   args: {
-    orientation: 'vertical',
+    buttonLayout: 'vertical',
   },
 };
 
-export const WithFiveButtons: StoryObj<Args> = {
+/**
+ * Primary and secondary buttons can be put along the edges of the tertiary `Button`.
+ */
+export const HorizontalProgressive: StoryObj<Args> = {
   args: {
+    buttonLayout: 'horizontal-progressive',
+  },
+};
+
+/**
+ * When using a tertiary button, you may adjust the layout to nudge the button's alignment to better flow
+ * with adjacent content. Use `-ml-X` to set a negative margin within the `ButtonGroup`.
+ */
+export const HorizontalProgressiveTertiary: StoryObj<Args> = {
+  args: {
+    buttonLayout: 'horizontal-progressive',
     children: (
       <>
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-        <Button variant="primary">Button 5</Button>
+        <Button rank="primary">Primary Button</Button>
+        <Button className="-ml-size-2" rank="tertiary">
+          Tertiary Button
+        </Button>
       </>
     ),
   },

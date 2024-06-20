@@ -12,13 +12,8 @@ import { Icon } from '../Icon/Icon';
 export default {
   title: 'Components/Menu',
   component: Menu,
-  subcomponents: {
-    'Menu.Button': Menu.Button,
-    'Menu.Items': Menu.Items,
-    'Menu.Item': Menu.Item,
-  },
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2', 'current-2.0'],
     layout: 'centered',
   },
   argTypes: {
@@ -58,7 +53,7 @@ export const Default: StoryObj<MenuProps> = {
           <Menu.Item href="#index" onClick={() => console.log('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -67,6 +62,9 @@ export const Default: StoryObj<MenuProps> = {
   },
 };
 
+/**
+ * Be careful when using a lot of text for a menu trigger. The UI will force the text out of the button container. Use brief text for menu triggers.
+ */
 export const WithLongButtonText: StoryObj<MenuProps> = {
   args: {
     children: (
@@ -91,7 +89,7 @@ export const WithLongButtonText: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -122,7 +120,7 @@ export const WithShortButtonText: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -155,7 +153,7 @@ export const WithCustomButton: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -166,7 +164,7 @@ export const WithCustomButton: StoryObj<MenuProps> = {
 
 export const MenuWithAvatarButton: StoryObj<MenuProps> = {
   parameters: {
-    badges: ['1.3', 'implementationExample'],
+    badges: ['intro-1.3', 'implementationExample'],
   },
   args: {
     children: (
@@ -191,7 +189,7 @@ export const MenuWithAvatarButton: StoryObj<MenuProps> = {
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -225,7 +223,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
       iconName: 'dots-vertical',
     },
     parameters: {
-      badges: ['1.2', 'implementationExample'],
+      badges: ['intro-1.2', 'implementationExample'],
     },
     render: ({ iconName }) => (
       <Menu>
@@ -254,7 +252,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
           <Menu.Item onClick={() => alert('Item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning">
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>

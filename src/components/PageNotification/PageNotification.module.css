@@ -1,0 +1,84 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # PAGE NOTIFICATION
+\*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
+ 
+/**
+ * Message of information, success, caution, or warning to the user.
+ */
+.page-notification {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  border: 0.125rem solid;
+  border-left: 1rem solid;
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+  &.page-notification--status-informational {
+    color: var(--eds-theme-color-text-utility-informational);
+    background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+  }
+
+  &.page-notification--status-critical {
+    color: var(--eds-theme-color-text-utility-critical);
+    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+  }
+
+  &.page-notification--status-favorable {
+    color: var(--eds-theme-color-text-utility-favorable);
+    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+  }
+
+  &.page-notification--status-warning {
+    color: var(--eds-theme-color-text-utility-warning);
+    background-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
+  }
+}
+
+.page-notification__icon {
+  flex-shrink: 0;
+  transform: translateY(0.25rem);
+}
+
+.page-notification__body {
+  flex-grow: 2;
+  display: flex;
+
+  &.page-notification--has-vertical-cta {
+    flex-direction: column;
+  }
+
+  &.page-notification--has-horizontal-cta {
+    flex-direction: row;
+  }
+}
+
+.page-notification__call-to-action {
+  .page-notification--has-vertical-cta & {
+    margin-top: 1rem;
+  }
+
+  .page-notificatino-has-horizontal-cta & {
+    margin-left: 1rem;
+  }
+}
+
+.page-notification__text {
+  flex-grow: 2;
+}
+
+/**
+ * Close button
+ *
+ * Button used to dismiss a banner.
+ */
+.page-notification__close-button {
+  /* Adjust the positioning to slip into the padding of the container */
+  margin: -0.5rem;
+}
+

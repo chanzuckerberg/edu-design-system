@@ -1,5 +1,6 @@
 {
   "include": ["src", ".storybook/**/*", "./jest/jest.setup.ts"],
+  "exclude": ["src/bin"],
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,

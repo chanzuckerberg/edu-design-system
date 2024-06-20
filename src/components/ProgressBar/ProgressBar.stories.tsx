@@ -9,14 +9,16 @@ export default {
     label: 'Progress Bar Label',
     currentValue: 20,
     maxValue: 100,
+    className: 'w-96',
   },
   parameters: {
-    badges: ['1.2'],
+    layout: 'centered',
+    badges: ['intro-1.2', 'current-1.3'],
     backgrounds: {
       default: 'eds-color-neutral-white',
     },
   },
-  decorators: [(Story) => <div className="m-4">{Story()}</div>],
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ProgressBar>;
@@ -42,21 +44,18 @@ export const TwoSegments: StoryObj<Args> = {
 };
 
 export const Complete: StoryObj<Args> = {
-  render: () => (
-    <div>
-      <ProgressBar
-        currentValue={100}
-        label="Progress Bar Label"
-        maxValue={100}
-      />
-      <ProgressBar
-        currentValue={100}
-        label="Progress Bar Label"
-        maxValue={100}
-        totalSegments={4}
-      />
-    </div>
-  ),
+  args: {
+    currentValue: 100,
+    label: 'Progress Bar',
+    maxValue: 100,
+  },
+};
+
+export const CompleteSegmented: StoryObj<Args> = {
+  args: {
+    ...Complete.args,
+    totalSegments: 4,
+  },
 };
 
 const InteractiveProgressBar = () => {

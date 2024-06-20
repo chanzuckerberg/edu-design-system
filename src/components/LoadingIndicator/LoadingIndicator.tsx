@@ -1,33 +1,35 @@
 import clsx from 'clsx';
 import React from 'react';
 
+import type { Size } from '../../util/variant-types';
+
 import styles from './LoadingIndicator.module.css';
 
-export type Props = {
+export type LoadingIndicatorProps = {
+  // Component API
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-
-  /**
-   * Layout size of the loader. This affects the overall size and associated
-   * stroke width.
-   */
-  size?: 'sm' | 'md' | 'lg';
-
   /**
    * Aria label of the oval. Default is "loading". Will be overridden if ariaLabel is passed in props
    */
   ariaLabel?: string;
-
+  // Design API
+  /**
+   * Layout size of the loader. This affects the overall size and associated
+   * stroke width.
+   */
+  size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg'>;
   /**
    * Whether the oval is visible. Default is true.
    */
-  visible?: boolean;
+  isVisible?: boolean;
 };
 
 // Pixel sizes corresponding to EDS size units
 const loaderSize = {
+  xs: 16, // --eds-size-1
   sm: 24, // --eds-size-2-and-half
   md: 40, // --eds-size-5
   lg: 56, // --eds-size-7
@@ -35,16 +37,18 @@ const loaderSize = {
 
 // Given a loader size, the stroke widths can change
 const loaderStrokeSize = {
-  sm: 2,
-  md: 3,
+  xs: 4,
+  sm: 4,
+  md: 4,
   lg: 4,
 };
 
 // The viewport changes based on adjustments to handle the stroke width
 const loaderViewportSize = {
-  sm: '-20 -20 42 42',
-  md: '-20.5 -20.5 43 43',
-  lg: '-21 -21 44 44',
+  xs: '-22 -22 46 46',
+  sm: '-22 -22 46 46',
+  md: '-22 -22 46 46',
+  lg: '-22 -22 46 46',
 };
 
 /**
@@ -58,9 +62,9 @@ export const LoadingIndicator = ({
   ariaLabel = 'loading',
   className,
   size = 'md',
-  visible = true,
+  isVisible: visible = true,
   ...other
-}: Props) => {
+}: LoadingIndicatorProps) => {
   const componentClassName = clsx(
     styles['loading-indicator'],
     !visible && styles['loading-indicator--invisible'],

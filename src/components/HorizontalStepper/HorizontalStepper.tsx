@@ -33,9 +33,9 @@ export type StepProps = {
    */
   className?: string;
   /**
-   * Icon override for component. Default is 'check-circle'
+   * Icon override for component.'
    */
-  icon?: Extract<IconName, 'check-circle'>;
+  icon?: Extract<IconName, 'checkmark-encircled-filled'>;
   /**
    * Indicates which number the step is.
    */
@@ -150,7 +150,7 @@ export const HorizontalStepper = ({
  */
 export const HorizontalStep = ({
   className,
-  icon = 'check-circle',
+  icon = 'checkmark-encircled-filled',
   stepNumber,
   text,
   variant,
@@ -169,16 +169,16 @@ export const HorizontalStep = ({
         className={styles['horizontal-step__complete-icon']}
         name={icon}
         purpose="informative"
-        size="1.5rem"
+        size="1.75rem"
         title={`completed step ${stepNumber} ${text}`}
       />
     ) : (
       <NumberIcon
         aria-label={`current step ${stepNumber} ${text}`}
         className={numberIconClassName}
-        incomplete={variant !== 'active'}
         number={stepNumber}
-        numberIconTitle={`incomplete step ${stepNumber} ${text}`}
+        size="md"
+        status={variant === 'active' ? 'default' : 'incomplete'}
       />
     );
 

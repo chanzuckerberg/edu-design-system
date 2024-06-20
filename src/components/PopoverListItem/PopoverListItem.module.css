@@ -1,35 +1,66 @@
 /*------------------------------------*\
     # POPOVER LIST ITEM
 \*------------------------------------*/
+/**
+ * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
+ */
 
 /**
  * PopoverListItem
  */
 .popover-list-item {
   display: flex;
-  font-size: 0.875rem;
-  padding: var(--eds-size-1) var(--eds-size-2);
-  background-color: var(--eds-theme-color-form-background);
+  padding: calc(var(--eds-size-half) / 16 * 1rem) 0.75rem;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
+
+  color: var(--eds-theme-color-text-utility-default-primary);
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+
+  &:hover {
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  }
+
+  &:active {
+    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+  }
 }
 
-.popover-list-item--active {
-  color: var(--eds-theme-color-text-neutral-default);
-  background-color: var(--eds-theme-color-background-neutral-default-hover);
+.popover-list-item--focused {
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
 }
 
 .popover-list-item--disabled {
-  color: var(--eds-theme-color-text-disabled);
-  cursor: not-allowed;
+  pointer-events: none;
+
+  color: var(--eds-theme-color-text-utility-disabled-secondary, red);
+  background-color: var(--eds-theme-color-background-utility-disabled-no-emphasis, red)
 }
 
 .popover-list-item__icon {
-  padding-right: var(--eds-size-1-and-half);
-  /* This var. matches the height set in the icon, but makes sure it is locked to only that height */
-  height: var(--eds-size-1-and-half);
+  padding-right: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 .popover-list-item__no-icon {
   /* right padding applies space for the icon itself and the padding for that icon container */
-  padding-right: calc(var(--eds-size-3) + var(--eds-size-1-and-half));
+  padding-right: calc(var(--eds-size-3) / 16 * 1rem);
+}
+
+.popover-list-item__sub-label {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.popover-list-item--destructive-action {
+  color: var(--eds-theme-color-text-utility-critical);
+
+  &:hover {
+    color: var(--eds-theme-color-text-utility-critical-hover);
+    background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-text-utility-critical-active);
+    background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
+  }
 }

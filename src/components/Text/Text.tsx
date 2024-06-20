@@ -12,7 +12,7 @@ export type TextProps = {
    *
    * **Default is `"p"`**.
    */
-  as?: 'p' | 'span';
+  as?: 'p' | 'span' | 'div';
   children: ReactNode;
   className?: string;
   tabIndex?: number;

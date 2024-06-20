@@ -11,61 +11,81 @@ import '../src/design-tokens/tier-1-definitions/fonts.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-import type { Story } from '@storybook/react';
+import type { Preview, StoryFn } from '@storybook/react';
 import React from 'react';
 
+import Theme from './Theme';
 import { storybookViewports } from '../src/util/viewports';
 
 export const decorators = [
-  (Story: Story) => (
+  (Story: StoryFn) => (
     <div dir="ltr">
       <Story />
     </div>
   ),
 ];
 
-function createPaperReleaseConfig(usingLabel: string) {
+function createInitialReleaseConfig(usingLabel: string) {
   return {
-    [usingLabel]: {
+    [`intro-${usingLabel}`]: {
       styles: {
         backgroundColor: '#ffffff',
         borderColor: '#000000',
         color: '#000000',
       },
-      title: `${usingLabel}+`,
+      title: `Introduced: ${usingLabel}`,
       tooltip: {
-        title: `Introduced in /paper ${usingLabel}`,
-        desc: `This component was introduced in /paper ${usingLabel}`,
+        title: `Introduced in v${usingLabel}`,
+        desc: `This component was introduced in EDS Design version ${usingLabel}`,
       },
     },
   };
 }
 
-export const parameters = {
+function createCurrentReleaseConfig(usingLabel: string) {
+  return {
+    [`current-${usingLabel}`]: {
+      styles: {
+        backgroundColor: '#ffffff',
+        borderColor: '#000000',
+        color: '#000000',
+      },
+      title: `Current: ${usingLabel}`,
+      tooltip: {
+        title: `Current version v${usingLabel}`,
+        desc: `This component corresponds to EDS Design version ${usingLabel}`,
+      },
+    },
+  };
+}
+
+export const parameters: Preview['parameters'] = {
   viewport: {
     viewports: storybookViewports,
+  },
+  docs: {
+    theme: Theme,
   },
   backgrounds: {
     values: [
       {
-        name: 'eds-color-neutral-white',
-        value: '#ffffff',
+        name: 'background-utility-default-high-emphasis',
+        value: '#0F2163',
       },
       {
-        name: 'eds-color-neutral-100',
-        value: '#f4f6f8',
-      },
-      {
-        name: 'eds-color-neutral-700',
-        value: '#21272D',
+        name: 'background-utility-inverse-high-emphasis',
+        value: '#FFFFFF',
       },
     ],
   },
   badgesConfig: {
-    ...createPaperReleaseConfig('1.3'),
-    ...createPaperReleaseConfig('1.2'),
-    ...createPaperReleaseConfig('1.1'),
-    ...createPaperReleaseConfig('1.0'),
+    ...createInitialReleaseConfig('2.0'),
+    ...createInitialReleaseConfig('1.3'),
+    ...createInitialReleaseConfig('1.2'),
+    ...createInitialReleaseConfig('1.1'),
+    ...createInitialReleaseConfig('1.0'),
+    ...createCurrentReleaseConfig('1.3'),
+    ...createCurrentReleaseConfig('2.0'),
     implementationExample: {
       styles: {
         backgroundColor: '#ffffff',

@@ -20,7 +20,7 @@
    * Custom property allows for easy change of downstream size handling.
    * Kind of a source of truth for badge size related properties.
    */
-  --badge-height: calc(var(--eds-size-2-and-half) + 2 * var(--eds-border-width-sm));
+  --badge-height: calc(calc(var(--eds-size-2-and-half) / 16 * 1rem) + 2 * calc(var(--eds-border-width-sm) * 1px));
 
   z-index: 100;
 
@@ -36,11 +36,11 @@
   min-width: var(--badge-height);
 
   border: var(--eds-theme-color-text-neutral-default-inverse) solid
-    var(--eds-border-width-sm);
-  border-radius: var(--eds-border-radius-full);
+    calc(var(--eds-border-width-sm) * 1px);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
 
-  padding-left: var(--eds-size-half);
-  padding-right: var(--eds-size-half);
+  padding-left: calc(var(--eds-size-half) / 16 * 1rem);
+  padding-right: calc(var(--eds-size-half) / 16 * 1rem);
 
   background-color: var(--eds-theme-color-background-brand-primary-strong);
   color: var(--eds-theme-color-text-neutral-default-inverse);
@@ -52,6 +52,6 @@
  * Empty badge variant for visual indication purposes.
  */
 .badge--empty {
-  --badge-height: var(--eds-size-2);
+  --badge-height: calc(var(--eds-size-2) / 16 * 1rem);
   padding: 0;
 }

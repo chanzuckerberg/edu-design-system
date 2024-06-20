@@ -7,25 +7,28 @@ import type {
   EitherInclusive,
   ForwardedRefComponent,
 } from '../../util/utility-types';
+import type { Status } from '../../util/variant-types';
+import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
+import Icon, { type IconName } from '../Icon';
 import Input from '../Input';
-import InputLabel from '../InputLabel';
 import Text from '../Text';
 import styles from './InputField.module.css';
 
 export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  // Component API
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
   /**
+   * Default value passed down from higher levels for initial state
+   */
+  defaultValue?: string | number;
+  /**
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
-  /**
-   * Text under the text input used to provide a description or error message to describe the input.
-   */
-  fieldNote?: ReactNode;
   /**
    * HTML id for the component
    */
@@ -35,15 +38,9 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   inputMode?: React.InputHTMLAttributes<HTMLInputElement>['inputMode'];
   /**
-   * Node(s) that can be nested within the input field
+   * Node(s) that can be nested within the input field (e.g., secondary and tertiary `Button` components)
    */
   inputWithin?: ReactNode;
-  /**
-   * Error variant of the form field
-   *
-   * **Default is `false`**.
-   */
-  isError?: boolean;
   /**
    * Maximum value allowed for the input, if type is 'number'.
    */
@@ -61,22 +58,9 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   onChange?: ChangeEventHandler<HTMLInputElement>;
   /**
-   * Placeholder attribute for input. Note: placeholder should be used sparingly
-   */
-  placeholder?: string;
-  /**
    * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
    */
   readOnly?: boolean;
-  /**
-   * Behaves similar to `maxLength` but allows the user to continue typing more text.
-   * Should not be larger than `maxLength`, if present.
-   */
-  recommendedMaxLength?: number;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
   /**
    * Title attribute on input
    */
@@ -106,10 +90,40 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    * Value passed down from higher levels for initial state
    */
   value?: string | number;
+  // Design API
   /**
-   * Default value passed down from higher levels for initial state
+   * Text under the text input used to provide a description or error message to describe the input.
    */
-  defaultValue?: string | number;
+  fieldNote?: ReactNode;
+  /**
+   * An icon that prefixes the field input.
+   */
+  leadingIcon?: IconName;
+  /**
+   * Placeholder attribute for input. Note: placeholder should be used sparingly
+   */
+  placeholder?: string;
+  /**
+   * Behaves similar to `maxLength` but allows the user to continue typing more text.
+   * Should not be larger than `maxLength`, if present.
+   */
+  recommendedMaxLength?: number;
+  /**
+   * Indicates that field is required for form to be successfully submitted
+   */
+  required?: boolean;
+  /**
+   * Whether it should show the field hint or not
+   *
+   * **Default is `"false"`**.
+   */
+  showHint?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 } & EitherInclusive<
     {
       /**
@@ -130,7 +144,7 @@ type InputFieldType = ForwardedRefComponent<
   InputFieldProps
 > & {
   Input?: typeof Input;
-  Label?: typeof InputLabel;
+  Label?: typeof FieldLabel;
 };
 
 /**
@@ -149,12 +163,15 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote,
       id,
       inputWithin,
-      isError,
       label,
+      leadingIcon,
       maxLength,
       onChange,
+      readOnly,
       recommendedMaxLength,
       required,
+      showHint,
+      status = 'default',
       type = 'text',
       ...other
     },
@@ -194,7 +211,7 @@ export const InputField: InputFieldType = forwardRef(
         : false;
 
     const shouldRenderError =
-      isError || textExceedsMaxLength || textExceedsRecommendedLength;
+      textExceedsMaxLength || textExceedsRecommendedLength;
 
     const generatedIdVar = useId();
     const idVar = id || generatedIdVar;
@@ -209,6 +226,11 @@ export const InputField: InputFieldType = forwardRef(
         styles['input-field--invalid-length'],
     );
 
+    // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
+    const inputOverlayClassName = clsx(
+      leadingIcon && styles['input-field__input--leading-icon'],
+      inputWithin && styles['input-field__input--input-within'],
+    );
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
@@ -217,18 +239,39 @@ export const InputField: InputFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <InputLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel
+                className={labelClassName}
+                disabled={disabled}
+                htmlFor={idVar}
+              >
                 {label}
-              </InputLabel>
+              </FieldLabel>
             )}
-            {required && (
+            {required && showHint && (
               <Text
+                aria-disabled={disabled ?? undefined}
                 as="span"
                 className={requiredTextClassName}
                 preset="body-sm"
               >
-                Required
+                (Required)
               </Text>
+            )}
+            {!required && showHint && (
+              <Text
+                aria-disabled={disabled ?? undefined}
+                as="span"
+                className={requiredTextClassName}
+                preset="body-sm"
+              >
+                (Optional)
+              </Text>
+            )}
+            {maxLengthShown && (
+              <div className={styles['input-field__character-counter']}>
+                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
+                / {maxLengthShown}
+              </div>
             )}
           </div>
         )}
@@ -236,23 +279,30 @@ export const InputField: InputFieldType = forwardRef(
         <div className={inputBodyClassName}>
           <Input
             aria-describedby={ariaDescribedByVar}
-            aria-invalid={!!isError}
+            aria-invalid={!!(status === 'critical')}
+            className={inputOverlayClassName}
             disabled={disabled}
             id={idVar}
-            isError={shouldRenderError}
             maxLength={maxLength}
-            onChange={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setFieldText(e.target.value);
               onChange && onChange(e);
             }}
+            readOnly={readOnly}
             ref={ref}
             required={required}
+            status={shouldRenderError ? 'critical' : status}
             type={type}
             {...other}
           />
           {inputWithin && (
             <div className={styles['input-field__input-within']}>
               {inputWithin}
+            </div>
+          )}
+          {leadingIcon && (
+            <div className={styles['input-field__leading-icon']}>
+              <Icon name={leadingIcon} purpose="decorative" size="1.5rem" />
             </div>
           )}
         </div>
@@ -262,26 +312,20 @@ export const InputField: InputFieldType = forwardRef(
               <FieldNote
                 disabled={disabled}
                 id={ariaDescribedByVar}
-                isError={shouldRenderError}
+                status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
               </FieldNote>
             )}
-            {maxLengthShown && (
-              <div className={styles['input-field__character-counter']}>
-                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLengthShown}
-              </div>
-            )}
           </div>
         ) : (
           <>
-            {/* maintained for seamless upgrades; can be removed on next breaking change */}
+            {/* TODO: maintained for seamless upgrades; can be removed on next breaking change */}
             {fieldNote && (
               <FieldNote
                 disabled={disabled}
                 id={ariaDescribedByVar}
-                isError={shouldRenderError}
+                status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
               </FieldNote>
@@ -295,4 +339,4 @@ export const InputField: InputFieldType = forwardRef(
 
 InputField.displayName = 'InputField';
 InputField.Input = Input;
-InputField.Label = InputLabel;
+InputField.Label = FieldLabel;

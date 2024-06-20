@@ -41,12 +41,10 @@ export const ColorList = (props: Props) => (
           <Table.Cell>{listItem.tailwindClass}</Table.Cell>
           <Table.Cell>{listItem.value}</Table.Cell>
           <Table.Cell>
-            <input
+            <div
               className={styles['color-list__input']}
               id={listItem.name}
-              readOnly
-              type="color"
-              value={listItem.value}
+              style={{ backgroundColor: listItem.value }}
             />
           </Table.Cell>
         </Table.Row>

@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -27,7 +26,7 @@ const meta: Meta<typeof Toggle> = {
   },
   parameters: {
     layout: 'centered',
-    badges: ['1.0', BADGE.BETA],
+    badges: ['intro-1.0', 'current-1.3'],
   },
   render: (args) => <InteractiveToggle {...args} />,
 };

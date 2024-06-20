@@ -20,6 +20,16 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 export type Align = 'left' | 'center' | 'right';
 
 /**
+ * Hints are form field directions on how to use the field and whether it requires a value.
+ */
+export type Hint = 'none' | 'required' | 'optional';
+
+/**
+ * Statuses tied to the state of information being displayed
+ */
+export type Status = 'informational' | 'warning' | 'favorable' | 'critical';
+
+/**
  * List of tier-2 and -3 tokens for use in types:
  * - src/design-tokens/tier-2-usage/typography.json
  *
@@ -70,7 +80,8 @@ export const presets = [
   'caption-md-bold',
   'caption-sm',
   'caption-sm-bold',
-  'overline',
+  'overline', // @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+  'overline-lg',
   'overline-md',
   'overline-sm',
   'callout',

@@ -7,7 +7,7 @@ export default {
   title: 'Components/Skeleton',
   component: Skeleton,
   parameters: {
-    badges: ['1.2'],
+    badges: ['intro-1.2', 'current-1.3'],
     layout: 'centered',
     backgrounds: {
       default: 'eds-color-neutral-white',

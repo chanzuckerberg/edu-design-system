@@ -8,8 +8,8 @@
  * A section is a discrete section of a web page.
  */
 .section {
-  padding-top: var(--eds-size-4);
-  padding-bottom: var(--eds-size-4);
+  padding-top: calc(var(--eds-size-4) / 16 * 1rem);
+  padding-bottom: calc(var(--eds-size-4) / 16 * 1rem);
 }
 
 /**
@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: var(--eds-size-1);
-  margin-bottom: var(--eds-size-3);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
 
   /**
    * Section header within centered section
@@ -45,7 +45,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  gap: var(--eds-size-1);
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
   /*  To center the header, flex-grow must be disabled. */
   .section--center & {
     flex-grow: 0;
@@ -102,7 +102,7 @@
 */
 .section__overline {
   margin-top: 0;
-  margin-bottom: var(--eds-size-1);
+  margin-bottom: calc(var(--eds-size-1) / 16 * 1rem);
 }
 
 /**
@@ -111,7 +111,7 @@
  * Optional string that appears beneath the section title.
  */
 .section__description {
-  margin-top: var(--eds-size-half);
+  margin-top: calc(var(--eds-size-half) / 16 * 1rem);
   margin-bottom: 0;
 }
 

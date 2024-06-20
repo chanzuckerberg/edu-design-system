@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import { eds as edsTokens } from './lib/tokens/json/css-variables-nested.json';
+import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json';
 
 const {
   background: backgroundColorTokens,
@@ -7,6 +7,22 @@ const {
   text: textColorTokens,
   ...colorTokens
 } = edsTokens.theme.color;
+
+// Add a type to the token sizes to avoid literals for keys
+const sizes: { [x: string]: string } = edsTokens.size;
+
+const sizeTokens = {
+  // We pull the spacing tokens and format them such that names are like 'size-${name} = ${value}px'
+  ...Object.keys(sizes)
+    .map((sizeKey) => {
+      return { [`size-${sizeKey}`]: `${sizes[sizeKey]}px` };
+    })
+    .reduce((accumulate, current) => {
+      const entry = Object.entries(current)[0];
+      accumulate[entry[0]] = entry[1];
+      return accumulate;
+    }, {}),
+};
 
 export default {
   /**
@@ -33,6 +49,9 @@ export default {
       textColor: {
         ...textColorTokens,
       },
+      spacing: {
+        ...sizeTokens,
+      },
     },
     fontWeight: {
       normal: edsTokens['font-weight'].light,
@@ -47,13 +66,13 @@ export default {
       secondary: edsTokens['font-family'].secondary,
     },
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
+    // Docs: https://tailwindcss.com/docs/responsive-design#customizing-your-theme
     screens: {
-      xs: '375px',
-      sm: '560px',
+      xs: '0px',
+      sm: '600px',
       md: '768px',
-      lg: '960px',
-      xl: '1200px',
-      xxl: '1400px',
+      lg: '1040px',
+      xl: '1440px',
     },
   },
 } satisfies Config;

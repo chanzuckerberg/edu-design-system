@@ -2932,11 +2932,13 @@ __metadata:
     "@storybook/addon-interactions": "npm:^7.6.19"
     "@storybook/addon-links": "npm:^7.6.19"
     "@storybook/addon-styling": "npm:^1.3.7"
+    "@storybook/manager-api": "npm:^7.6.19"
     "@storybook/react": "npm:^7.6.19"
     "@storybook/react-webpack5": "npm:^7.6.19"
     "@storybook/test": "npm:^7.6.19"
     "@storybook/testing-library": "npm:^0.2.2"
     "@storybook/testing-react": "npm:^2.0.1"
+    "@storybook/theming": "npm:^7.6.19"
     "@testing-library/jest-dom": "npm:^6.4.6"
     "@testing-library/react": "npm:^14.3.1"
     "@testing-library/user-event": "npm:^14.5.2"
@@ -2952,7 +2954,7 @@ __metadata:
     "@types/yargs": "npm:^17.0.32"
     axe-core: "npm:4.9.1"
     chalk: "npm:^4.1.2"
-    chromatic: "npm:^9.1.0"
+    chromatic: "npm:^11.3.5"
     clsx: "npm:^2.1.1"
     codecov: "npm:^3.8.3"
     copyfiles: "npm:^2.4.1"
@@ -3001,7 +3003,9 @@ __metadata:
     stylelint-config-recommended: "npm:^13.0.0"
     svg4everybody: "npm:^2.1.9"
     tailwindcss: "npm:^3.4.4"
+    ts-dedent: "npm:^2.2.0"
     ts-jest: "npm:^29.1.4"
+    ts-morph: "npm:^22.0.0"
     typescript: "npm:^5.2.2"
     yargs: "npm:^17.7.2"
   peerDependencies:
@@ -3011,6 +3015,7 @@ __metadata:
     eds-apply-theme: bin/eds-apply-theme.js
     eds-import-from-figma: bin/eds-import-from-figma.js
     eds-init-theme: bin/eds-init.js
+    eds-migrate: bin/eds-migrate.js
   languageName: unknown
   linkType: soft
 
@@ -5908,7 +5913,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-api@npm:7.6.19":
+"@storybook/manager-api@npm:7.6.19, @storybook/manager-api@npm:^7.6.19":
   version: 7.6.19
   resolution: "@storybook/manager-api@npm:7.6.19"
   dependencies:
@@ -6238,7 +6243,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:7.6.19":
+"@storybook/theming@npm:7.6.19, @storybook/theming@npm:^7.6.19":
   version: 7.6.19
   resolution: "@storybook/theming@npm:7.6.19"
   dependencies:
@@ -6604,6 +6609,18 @@ __metadata:
   version: 0.2.0
   resolution: "@trysound/sax@npm:0.2.0"
   checksum: 10/7379713eca480ac0d9b6c7b063e06b00a7eac57092354556c81027066eb65b61ea141a69d0cc2e15d32e05b2834d4c9c2184793a5e36bbf5daf05ee5676af18c
+  languageName: node
+  linkType: hard
+
+"@ts-morph/common@npm:~0.23.0":
+  version: 0.23.0
+  resolution: "@ts-morph/common@npm:0.23.0"
+  dependencies:
+    fast-glob: "npm:^3.3.2"
+    minimatch: "npm:^9.0.3"
+    mkdirp: "npm:^3.0.1"
+    path-browserify: "npm:^1.0.1"
+  checksum: 10/05eabbab5a63d71a7dac17202519d23d4d4ec30780364d4dc3096ca86291e19f0284d0592a6ee89ec257204075a985d00f4788d816a89c41d0c1e0c8d281c480
   languageName: node
   linkType: hard
 
@@ -9063,14 +9080,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "chromatic@npm:9.1.0"
+"chromatic@npm:^11.3.5":
+  version: 11.3.5
+  resolution: "chromatic@npm:11.3.5"
+  peerDependencies:
+    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
+    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+  peerDependenciesMeta:
+    "@chromatic-com/cypress":
+      optional: true
+    "@chromatic-com/playwright":
+      optional: true
   bin:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 10/e015aebb77ee266fc3a3da7d366cfb6132b27f540236dd23bcd5ed5985a9727f5e6398eb1880127e791d37febba04f80654519073d7e31b69fc59c256d1d6401
+  checksum: 10/405483e7c3fa2c2fd1f57d2350d90ff7e9a7d3fb3a1ad1acd8ea47d15bc6e0c80adb68513c6b4e7b042b5c8d0b0001b0c5022ac90c87a5b17b8de64796d3a1ef
   languageName: node
   linkType: hard
 
@@ -9277,6 +9302,13 @@ __metadata:
   version: 4.6.0
   resolution: "co@npm:4.6.0"
   checksum: 10/a5d9f37091c70398a269e625cedff5622f200ed0aa0cff22ee7b55ed74a123834b58711776eb0f1dc58eb6ebbc1185aa7567b57bd5979a948c6e4f85073e2c05
+  languageName: node
+  linkType: hard
+
+"code-block-writer@npm:^13.0.1":
+  version: 13.0.1
+  resolution: "code-block-writer@npm:13.0.1"
+  checksum: 10/3da803b1149d05a09b99e150df0e6d2ac5007bcf2ddd23d72e8b3e827cb6b7cb69b695472cfbc8b46a2bca4e7c11636788b9a7e7d518f3b45d0bddcac240b4af
   languageName: node
   linkType: hard
 
@@ -11801,7 +11833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0, fast-glob@npm:^3.3.1":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0, fast-glob@npm:^3.3.1, fast-glob@npm:^3.3.2":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
@@ -15925,6 +15957,15 @@ __metadata:
   dependencies:
     brace-expansion: "npm:^2.0.1"
   checksum: 10/c81b47d28153e77521877649f4bab48348d10938df9e8147a58111fe00ef89559a2938de9f6632910c4f7bf7bb5cd81191a546167e58d357f0cfb1e18cecc1c5
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^9.0.3":
+  version: 9.0.4
+  resolution: "minimatch@npm:9.0.4"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: 10/4cdc18d112b164084513e890d6323370db14c22249d536ad1854539577a895e690a27513dc346392f61a4a50afbbd8abc88f3f25558bfbbbb862cd56508b20f5
   languageName: node
   linkType: hard
 
@@ -20912,6 +20953,16 @@ __metadata:
   bin:
     ts-jest: cli.js
   checksum: 10/3103c0e2f9937ae6bb51918105883565bb2d11cae1121ae20aedd1c4374f843341463a4a1986e02a958d119be0d3a9b996d761bc4aac85152a29385e609fed3c
+  languageName: node
+  linkType: hard
+
+"ts-morph@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "ts-morph@npm:22.0.0"
+  dependencies:
+    "@ts-morph/common": "npm:~0.23.0"
+    code-block-writer: "npm:^13.0.1"
+  checksum: 10/e5d81d0d8d990fa9f86e285bd4052bcfa462e2f798f7eda86e11afc7d884dfdb053998dcbf79942942e8032070f8b266745e017771674a169731494fe035e192
   languageName: node
   linkType: hard
 
