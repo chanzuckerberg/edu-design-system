@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.18...v15.0.0) (2024-06-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* pre-cleanup changes to prepare for v15 (#1992)
+
+### Features
+
+* pre-cleanup changes to prepare for v15 ([#1992](https://github.com/chanzuckerberg/edu-design-system/issues/1992)) ([dbce0d2](https://github.com/chanzuckerberg/edu-design-system/commit/dbce0d27ddba515248658b0708f1cb1f8af82052))
+
+
+### Bug Fixes
+
+* **Button:** allow as prop on button ([#1994](https://github.com/chanzuckerberg/edu-design-system/issues/1994)) ([37d1f5b](https://github.com/chanzuckerberg/edu-design-system/commit/37d1f5b0d95cb47b2eaa1d81234f576f283122e4))
+* **FieldNote:** fix icon alignment and size issues ([367717e](https://github.com/chanzuckerberg/edu-design-system/commit/367717ebb16c01890ac240b53899d530368f72da))
+
 ## [15.0.0-alpha.18](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.17...v15.0.0-alpha.18) (2024-06-13)
 
 
