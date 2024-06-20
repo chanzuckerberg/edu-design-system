@@ -22,7 +22,7 @@ export default create({
   appContentBg: '#FFFFFF', // Main documentation container : eds-color-white
   appPreviewBg: '#FFFFFF', // Story Preview container : eds-color-white
   appBorderColor: '#EEE7E4', // neutral-100
-  appBorderRadius: 4, // border-radius-md
+  appBorderRadius: 0, //
 
   // Text Colors
   textColor: '#212121', // NOTE: zeroheight's default color

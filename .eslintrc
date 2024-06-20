@@ -25,7 +25,6 @@
           "**/*.config.{js,ts,mjs}",
           "**/*.setup.{js,ts}",
           ".storybook/**",
-          ".storybook/*.{ts,js}",
           "scripts/stylelint/**",
           "plopfile.js"
         ]
