@@ -14,11 +14,11 @@ exports[`<AppNotification /> Default story renders snapshot 1`] = `
       >
         This is an AppNotification title
       </div>
-      <p
+      <span
         class="text text--body-md app-notification__sub-title"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
-      </p>
+      </span>
       <div
         class="app-notification__actions"
       />
@@ -41,11 +41,11 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
       >
         This is an AppNotification title
       </div>
-      <p
+      <span
         class="text text--body-md app-notification__sub-title"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
-      </p>
+      </span>
       <div
         class="app-notification__actions"
       >
@@ -93,11 +93,11 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
       >
         This is an AppNotification title
       </div>
-      <p
+      <span
         class="text text--body-md app-notification__sub-title"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
-      </p>
+      </span>
       <div
         class="app-notification__actions"
       >
@@ -169,11 +169,11 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
       >
         This is an AppNotification title
       </div>
-      <p
+      <span
         class="text text--body-md app-notification__sub-title"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
-      </p>
+      </span>
       <div
         class="app-notification__actions"
       >
@@ -221,11 +221,11 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
       >
         This is an AppNotification title
       </div>
-      <p
+      <span
         class="text text--body-md app-notification__sub-title"
       >
         Limited subtitle text
-      </p>
+      </span>
       <div
         class="app-notification__actions"
       >
@@ -297,7 +297,7 @@ exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
       >
         This is an AppNotification title
       </div>
-      <p
+      <span
         class="text text--body-md app-notification__sub-title"
       >
         <span
@@ -314,7 +314,7 @@ exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
            
           in.
         </span>
-      </p>
+      </span>
       <div
         class="app-notification__actions"
       />
