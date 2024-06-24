@@ -66,7 +66,7 @@ export const AppNotification = ({
             {title}
           </Text>
           <Text
-            as="p"
+            as="span"
             className={styles['app-notification__sub-title']}
             preset="body-md"
           >
