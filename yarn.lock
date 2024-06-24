@@ -2946,7 +2946,7 @@ __metadata:
     "@types/jest": "npm:^29.5.12"
     "@types/jsonfile": "npm:^6"
     "@types/lodash": "npm:^4.17.5"
-    "@types/node": "npm:^20.14.2"
+    "@types/node": "npm:^20.14.7"
     "@types/react": "npm:^18.3.3"
     "@types/react-beautiful-dnd": "npm:^13.1.8"
     "@types/react-dom": "npm:^18.3.0"
@@ -2954,7 +2954,7 @@ __metadata:
     "@types/yargs": "npm:^17.0.32"
     axe-core: "npm:4.9.1"
     chalk: "npm:^4.1.2"
-    chromatic: "npm:^11.3.5"
+    chromatic: "npm:^11.5.4"
     clsx: "npm:^2.1.1"
     codecov: "npm:^3.8.3"
     copyfiles: "npm:^2.4.1"
@@ -3004,7 +3004,7 @@ __metadata:
     svg4everybody: "npm:^2.1.9"
     tailwindcss: "npm:^3.4.4"
     ts-dedent: "npm:^2.2.0"
-    ts-jest: "npm:^29.1.4"
+    ts-jest: "npm:^29.1.5"
     ts-morph: "npm:^22.0.0"
     typescript: "npm:^5.2.2"
     yargs: "npm:^17.7.2"
@@ -7042,12 +7042,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.14.2":
-  version: 20.14.2
-  resolution: "@types/node@npm:20.14.2"
+"@types/node@npm:^20.14.7":
+  version: 20.14.8
+  resolution: "@types/node@npm:20.14.8"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/c38e47b190fa0a8bdfde24b036dddcf9401551f2fb170a90ff33625c7d6f218907e81c74e0fa6e394804a32623c24c60c50e249badc951007830f0d02c48ee0f
+  checksum: 10/73822f66f269ce865df7e2f586787ac7444bd1169fd265cbed1e851b72787f1170517c5b616e0308ec2fbc0934ec6403b0f28d4152acbb0486071aec41167d51
   languageName: node
   linkType: hard
 
@@ -9080,9 +9080,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.3.5":
-  version: 11.3.5
-  resolution: "chromatic@npm:11.3.5"
+"chromatic@npm:^11.5.4":
+  version: 11.5.4
+  resolution: "chromatic@npm:11.5.4"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -9095,7 +9095,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 10/405483e7c3fa2c2fd1f57d2350d90ff7e9a7d3fb3a1ad1acd8ea47d15bc6e0c80adb68513c6b4e7b042b5c8d0b0001b0c5022ac90c87a5b17b8de64796d3a1ef
+  checksum: 10/7d89292a2f3470f57f342d64776c915c6a27e83b0fc422d2bb9018ea0d838b330c81373dd188b27f48eb1adb0b3aafb6a750f9720bdb29e478932c92c3978fd1
   languageName: node
   linkType: hard
 
@@ -20920,9 +20920,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^29.1.4":
-  version: 29.1.4
-  resolution: "ts-jest@npm:29.1.4"
+"ts-jest@npm:^29.1.5":
+  version: 29.1.5
+  resolution: "ts-jest@npm:29.1.5"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
@@ -20952,7 +20952,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 10/3103c0e2f9937ae6bb51918105883565bb2d11cae1121ae20aedd1c4374f843341463a4a1986e02a958d119be0d3a9b996d761bc4aac85152a29385e609fed3c
+  checksum: 10/11a29a49130f1c9bef5aebe8007f6be3e630af6c2dea6b00ff5a86d649321854a43966b4990a43960d77a3f98d7a753b9b7e19c20c42a2d38341d6e67a3e48d1
   languageName: node
   linkType: hard
 
