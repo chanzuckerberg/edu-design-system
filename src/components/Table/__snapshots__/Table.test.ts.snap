@@ -736,3 +736,192 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
   </tbody>
 </table>
 `;
+
+exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
+<table
+  class="table"
+>
+  <caption>
+    Optional caption for the table. Must be first descendant of Table if used.
+  </caption>
+  <thead>
+    <tr
+      class="table-row table-row--header"
+    >
+      <th
+        class="table-header-cell"
+      >
+        <div
+          class="table-header-cell__container"
+        >
+          <em>
+            Name
+          </em>
+        </div>
+      </th>
+      <th
+        class="table-header-cell"
+      >
+        <div
+          class="table-header-cell__container"
+        >
+          <em>
+            Status
+          </em>
+        </div>
+      </th>
+      <th
+        class="table-header-cell"
+      >
+        <div
+          class="table-header-cell__container"
+        >
+          <em>
+            Chart
+          </em>
+        </div>
+      </th>
+      <th
+        class="table-header-cell"
+      >
+        <div
+          class="table-header-cell__container"
+        >
+          <em>
+            Window
+          </em>
+        </div>
+      </th>
+      <th
+        class="table-header-cell"
+      >
+        <div
+          class="table-header-cell__container"
+        >
+          <em>
+            Last Update
+          </em>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        Table Row 1, Table Cell 1
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 1, Table Cell 2
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 1, Table Cell 3
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 1, Table Cell 4
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 1, Table Cell 5
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        Table Row 2, Table Cell 1
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 2, Table Cell 2
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 2, Table Cell 3
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 2, Table Cell 4
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 2, Table Cell 5
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        Table Row 3, Table Cell 1
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 3, Table Cell 2
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 3, Table Cell 3
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 3, Table Cell 4
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 3, Table Cell 5
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        Table Row 4, Table Cell 1
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 4, Table Cell 2
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 4, Table Cell 3
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 4, Table Cell 4
+      </td>
+      <td
+        class="table-cell"
+      >
+        Table Row 4, Table Cell 5
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

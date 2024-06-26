@@ -79,7 +79,7 @@ type TableHeaderCellProps = React.HTMLAttributes<HTMLTableCellElement> & {
   /**
    * Child node(s) that can be nested inside component
    */
-  children?: string;
+  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -253,9 +253,7 @@ const TableHeaderCell = ({
               rank="tertiary"
               size="sm"
               title={iconTitle}
-            >
-              {children}
-            </Button>
+            ></Button>
           </>
         ) : (
           children
