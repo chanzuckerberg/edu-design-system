@@ -301,7 +301,6 @@ describe('transform', () => {
               oldPropName: 'variant',
               newPropName: 'rank',
               callback: ({ currentPropValue }) => {
-                console.log({ currentPropValue });
                 return currentPropValue === 'primary';
               },
             },
