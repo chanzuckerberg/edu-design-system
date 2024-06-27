@@ -163,6 +163,48 @@ export const TableWithCaption: Story = {
 };
 
 /**
+ * Headers can be more than text.
+ */
+export const TableWithStyledHeader: Story = {
+  args: {
+    children: (
+      <>
+        <Table.Caption>
+          Optional caption for the table. Must be first descendant of Table if
+          used.
+        </Table.Caption>
+
+        <Table.Header>
+          <Table.Row variant="header">
+            {tableColumns.map((item) => {
+              return (
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
+                  <em>{item.title}</em>
+                </Table.HeaderCell>
+              );
+            })}
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map((item) => {
+            return (
+              <Table.Row key={item.value1.slice(0, 11)}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+
+/**
  * This implementation example shows how one might implement sort. Sort can be implemented to work based
  * on the current content (if the full table is already rendered), or using request results from the server
  * if the table needs to contain any additional logic to sort (e.g., sorting needs to fetch different search
