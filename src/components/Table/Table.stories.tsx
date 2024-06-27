@@ -17,9 +17,7 @@ export default {
     children: {
       description:
         'Contains the sub-components for a table, including `.Body`, `.Cell`, `.Header`, `.Footer`, `.HeaderCell`, `.Row`, and `.Caption`',
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
   backgrounds: {

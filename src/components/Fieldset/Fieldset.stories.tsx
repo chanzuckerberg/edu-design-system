@@ -11,15 +11,14 @@ export default {
     layout: 'centered',
     badges: ['intro-1.0', 'current-1.3'],
   },
+  // TODO: fix up the sub-component documentation for Fieldset.Legend
   subcomponents: {
     FieldsetLegend: Fieldset.Legend,
     FieldsetItems: Fieldset.Items,
   },
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
 } as Meta<Args>;

@@ -12,18 +12,18 @@ export default {
     layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
-} as Meta<Args>;
+} as Meta<typeof FieldNote>;
 
-type Args = React.ComponentProps<typeof FieldNote>;
+type Story = StoryObj<typeof FieldNote>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
   },
 };
 
-export const WithErrorIcon: StoryObj<Args> = {
+export const WithErrorIcon: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
@@ -32,7 +32,7 @@ export const WithErrorIcon: StoryObj<Args> = {
   },
 };
 
-export const WithLongText: StoryObj<Args> = {
+export const WithLongText: Story = {
   args: {
     ...WithErrorIcon.args,
     children:
@@ -40,7 +40,7 @@ export const WithLongText: StoryObj<Args> = {
   },
 };
 
-export const WithWarningIcon: StoryObj<Args> = {
+export const WithWarningIcon: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
@@ -49,7 +49,7 @@ export const WithWarningIcon: StoryObj<Args> = {
   },
 };
 
-export const WithText: StoryObj<Args> = {
+export const WithText: Story = {
   args: {
     children: (
       <div className="max-w-xl">

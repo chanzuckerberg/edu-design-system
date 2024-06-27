@@ -6,14 +6,14 @@ import { chromaticViewports } from '../../util/viewports';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 
-type Args = React.ComponentProps<typeof Accordion>;
-
 export default {
   title: 'Components/Accordion',
   component: Accordion,
+  // TODO: add subcomponents like Badge has
   parameters: {
     layout: 'centered',
     badges: ['intro-1.2', 'current-2.0'],
+    controls: { sort: 'requiredFirst' },
   },
   args: {
     headingAs: 'h2',
@@ -35,15 +35,16 @@ export default {
   },
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
+    },
+    size: {
+      control: { type: 'radio' },
     },
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
-} as Meta<Args>;
+} as Meta<typeof Accordion>;
 
-type Story = StoryObj<Args>;
+type Story = StoryObj<typeof Accordion>;
 
 export const Default: Story = {};
 

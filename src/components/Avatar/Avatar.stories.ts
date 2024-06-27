@@ -1,8 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { Avatar } from './Avatar';
 
-type Args = React.ComponentProps<typeof Avatar>;
-
 export default {
   title: 'Components/Avatar',
   component: Avatar,
@@ -10,9 +8,9 @@ export default {
     badges: ['intro-1.3', 'current-1.3'],
     layout: 'centered',
   },
-} as Meta<Args>;
+} as Meta<typeof Avatar>;
 
-type Story = StoryObj<Args>;
+type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {};
 

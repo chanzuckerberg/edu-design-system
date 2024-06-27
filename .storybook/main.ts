@@ -9,17 +9,16 @@ import type { Configuration } from 'webpack';
  * We should refrain from using the staticDirs option in this configuration until
  * https://github.com/chromaui/chromatic-cli/issues/462 is resolved.
  */
-const config: StorybookConfig = {
+const config = {
   stories: [
-    './components/**/*.stories.mdx',
+    './components/**/*.mdx',
     './components/**/*.stories.@(js|jsx|ts|tsx)',
     '../src/components',
-    './**/*.stories.mdx',
+    './**/*.mdx',
     './**/*.stories.@(js|jsx|ts|tsx)',
   ],
-
   addons: [
-    '@storybook/addon-essentials',
+    '@storybook/addon-essentials', // See: https://storybook.js.org/docs/essentials
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-interactions',
@@ -31,6 +30,8 @@ const config: StorybookConfig = {
         cssModules: true,
       },
     },
+    '@storybook/addon-webpack5-compiler-babel',
+    '@chromatic-com/storybook',
   ],
 
   framework: {
@@ -38,15 +39,11 @@ const config: StorybookConfig = {
     options: {},
   },
 
-  docs: {
-    autodocs: true,
-  },
-
   core: {
     disableTelemetry: true,
   },
 
-  babel: (config) => {
+  babel: () => {
     return {
       sourceType: 'unambiguous',
       presets: [
@@ -66,13 +63,22 @@ const config: StorybookConfig = {
       plugins: [],
     };
   },
+
   webpackFinal(config, { configType }) {
     if (configType === 'DEVELOPMENT') {
       updateCSSLoaderPlugin(config);
     }
     return config;
   },
-};
+
+  /**
+   * This config enables deep parsing of TypeScript types in the table UI, which can interpret
+   * the values of unions, and TypeScript utils like `Extract`, `Pick`, etc.
+   */
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
+} satisfies StorybookConfig;
 
 /**
  * Updates the `css-loader` webpack plugin to make class names human readable.

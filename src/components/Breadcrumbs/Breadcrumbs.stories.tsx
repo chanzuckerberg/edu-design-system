@@ -8,6 +8,7 @@ import { chromaticViewports } from '../../util/viewports';
 export default {
   title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
+  // TODO: update subcomponent documentation here
   subcomponents: { 'Breadcrumbs.Item': Breadcrumbs.Item },
   args: {
     children: (
@@ -18,31 +19,29 @@ export default {
       </>
     ),
   },
-  argTypes: {
-    children: {
-      control: {
-        type: null,
-      },
-    },
-  },
   parameters: {
     layout: 'centered',
     badges: ['intro-1.0', 'current-1.3'],
   },
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
   decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
-} as Meta<Args>;
+} as Meta<typeof Breadcrumbs>;
 
-type Args = React.ComponentProps<typeof Breadcrumbs>;
+type Story = StoryObj<typeof Breadcrumbs>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const OneCrumb: StoryObj<Args> = {
+export const OneCrumb: Story = {
   args: {
     children: <Breadcrumbs.Item href="#" text="Breadcrumb 1" />,
   },
 };
 
-export const TwoCrumbs: StoryObj<Args> = {
+export const TwoCrumbs: Story = {
   args: {
     children: (
       <>
@@ -53,7 +52,7 @@ export const TwoCrumbs: StoryObj<Args> = {
   },
 };
 
-export const LongList: StoryObj<Args> = {
+export const LongList: Story = {
   args: {
     children: (
       <>
@@ -73,7 +72,7 @@ export const LongList: StoryObj<Args> = {
   },
 };
 
-export const LongText: StoryObj<Args> = {
+export const LongText: Story = {
   args: {
     children: (
       <>
@@ -102,7 +101,7 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
-export const LongTextCustomSeparator: StoryObj<Args> = {
+export const LongTextCustomSeparator: Story = {
   args: {
     ...LongText.args,
     separator: '>',
@@ -116,7 +115,7 @@ export const LongTextCustomSeparator: StoryObj<Args> = {
 /**
  * Mostly for visual regression testing.
  */
-export const LongTextMenu: StoryObj<Args> = {
+export const LongTextMenu: Story = {
   args: {
     ...LongText.args,
   },

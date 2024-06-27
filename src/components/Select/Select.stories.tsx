@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { expect } from '@storybook/test';
+// TODO: Using @storybook/test below leads to superfluous act() warnings
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { Select } from './Select';
@@ -14,11 +15,6 @@ const meta: Meta<typeof Select> = {
   argTypes: {
     multiple: {
       description: 'Whether multiple values are allowed in this instance',
-    },
-    children: {
-      control: {
-        type: null,
-      },
     },
     value: {
       table: {
@@ -39,6 +35,9 @@ const meta: Meta<typeof Select> = {
         },
         default: 'void',
       },
+    },
+    children: {
+      control: false,
     },
     onChange: {
       description:

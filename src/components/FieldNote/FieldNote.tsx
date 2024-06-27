@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
 import type { Status } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import Icon from '../Icon';
+import type { IconName } from '../Icon';
 import styles from './FieldNote.module.css';
 
 export interface Props {

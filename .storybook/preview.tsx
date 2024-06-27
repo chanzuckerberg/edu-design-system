@@ -100,3 +100,4 @@ export const parameters: Preview['parameters'] = {
     },
   },
 };
+export const tags = ['autodocs'];

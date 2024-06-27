@@ -28,9 +28,7 @@ export default {
       },
     },
     callToAction: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
 } as Meta<Args>;

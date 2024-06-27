@@ -15,8 +15,17 @@ type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
    * **Default is `"h1"`**.
    */
   as?: HeadingElement;
+  /**
+   * The contents of the header tag, usually just text, but can include other content.
+   */
   children: ReactNode;
+  /**
+   * Additional classnames passed in for styling.
+   */
   className?: string;
+  /**
+   * The specified tab index of the heading element (used for focusing in tabbing)
+   */
   tabIndex?: number;
   /**
    * Prop to set the desired typography value used in design. Acceptable values

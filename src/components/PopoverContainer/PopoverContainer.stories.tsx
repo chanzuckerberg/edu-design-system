@@ -11,19 +11,15 @@ export default {
     layout: 'centered',
     badges: ['intro-1.2', 'current-2.0'],
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
-} as Meta<Args>;
-
-type Args = React.ComponentProps<typeof PopoverContainer>;
-
-export const Default: StoryObj<Args> = {
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+} as Meta<typeof PopoverContainer>;
+
+export const Default: StoryObj<typeof PopoverContainer> = {
   args: {
     children: (
       <>
