@@ -1,10 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Radio } from './Radio';
 import * as stories from './Radio.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 describe('<Radio />', () => {
   generateSnapshots(stories as StoryFile);

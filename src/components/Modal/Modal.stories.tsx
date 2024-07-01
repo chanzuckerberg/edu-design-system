@@ -21,9 +21,6 @@ export default {
   argTypes: {
     // For some reason, storybook is not able to pick up the doc.s automatically. Adding manually.
     children: {
-      control: {
-        type: null,
-      },
       description:
         'Contains the sub-components for a Modal, including `.Header` , `.Title` , `.Body` , `.Footer` , `.Stepper`',
     },
@@ -82,7 +79,7 @@ function InteractiveExample(args: InteractiveArgs) {
  * **Note**: this only works from certain screens in Storybook. If it doesn't work as expected, view from the
  * "docs" sub-page.
  */
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
@@ -109,7 +106,7 @@ export const Default: StoryObj<Args> = {
 /**
  * Modals can also have a more emphasized backdrop overlay
  */
-export const HighEmphasis: StoryObj<Args> = {
+export const HighEmphasis: Story = {
   args: {
     overlayEmphasis: 'high',
   },

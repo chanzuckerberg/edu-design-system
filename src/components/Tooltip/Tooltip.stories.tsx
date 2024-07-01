@@ -26,11 +26,6 @@ export default {
         type: 'text',
       },
     },
-    children: {
-      control: {
-        type: null,
-      },
-    },
     visible: {
       table: {
         disable: true,
@@ -41,10 +36,8 @@ export default {
         type: 'number',
       },
     },
-    reference: {
-      control: {
-        type: null,
-      },
+    children: {
+      control: false,
     },
   },
   parameters: {

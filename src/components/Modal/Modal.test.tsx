@@ -1,12 +1,12 @@
 import { generateSnapshots, wait } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
-import { composeStories } from '@storybook/testing-react';
+import { composeStories } from '@storybook/react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Modal } from './Modal';
 import * as stories from './Modal.stories';
 import '../../../jest/helpers/removeModalTransitionStylesJestSerializer';
+import type { StoryFile } from '../../util/utility-types';
 
 const { Default } = composeStories(stories);
 

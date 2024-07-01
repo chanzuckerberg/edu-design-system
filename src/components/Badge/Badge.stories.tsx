@@ -17,16 +17,14 @@ export default {
   },
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
-} as Meta<Args>;
+} as Meta<typeof Badge>;
 
-type Args = React.ComponentProps<typeof Badge>;
+type Story = StoryObj<typeof Badge>;
 
-export const Dot: StoryObj<Args> = {
+export const Dot: Story = {
   args: {
     children: (
       <>
@@ -42,7 +40,7 @@ export const Dot: StoryObj<Args> = {
   },
 };
 
-export const SmallNumber: StoryObj<Args> = {
+export const SmallNumber: Story = {
   args: {
     children: (
       <>
@@ -58,7 +56,7 @@ export const SmallNumber: StoryObj<Args> = {
   },
 };
 
-export const LargeNumber: StoryObj<Args> = {
+export const LargeNumber: Story = {
   args: {
     children: (
       <>
@@ -74,7 +72,7 @@ export const LargeNumber: StoryObj<Args> = {
   },
 };
 
-export const OverNineThousand: StoryObj<Args> = {
+export const OverNineThousand: Story = {
   args: {
     children: (
       <>
@@ -90,7 +88,7 @@ export const OverNineThousand: StoryObj<Args> = {
   },
 };
 
-export const IconBadge: StoryObj<Args> = {
+export const IconBadge: Story = {
   args: {
     children: (
       <>
@@ -106,7 +104,7 @@ export const IconBadge: StoryObj<Args> = {
   },
 };
 
-export const IconBadgeUsingIcon: StoryObj<Args> = {
+export const IconBadgeUsingIcon: Story = {
   args: {
     children: (
       <>
@@ -122,7 +120,7 @@ export const IconBadgeUsingIcon: StoryObj<Args> = {
   },
 };
 
-export const LargeBadgeableObject: StoryObj<Args> = {
+export const LargeBadgeableObject: Story = {
   args: {
     children: (
       <>

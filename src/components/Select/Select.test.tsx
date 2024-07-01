@@ -1,5 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStory } from '@storybook/testing-react';
+import { composeStory } from '@storybook/react';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';

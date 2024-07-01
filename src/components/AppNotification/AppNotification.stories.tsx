@@ -23,23 +23,21 @@ export default {
   },
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
     subTitle: {
       control: 'text',
     },
   },
-} as Meta<Args>;
+} as Meta<typeof AppNotification>;
 
-type Args = React.ComponentProps<typeof AppNotification>;
+type Story = StoryObj<typeof AppNotification>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   args: {},
 };
 
-export const WithControls: StoryObj<Args> = {
+export const WithControls: Story = {
   args: {
     children: (
       <ButtonGroup buttonLayout="horizontal" className="!flex-row">
@@ -54,7 +52,7 @@ export const WithControls: StoryObj<Args> = {
   },
 };
 
-export const WithLinkInSubtitle: StoryObj<Args> = {
+export const WithLinkInSubtitle: Story = {
   args: {
     subTitle: (
       <Text as="span">
@@ -68,7 +66,7 @@ export const WithLinkInSubtitle: StoryObj<Args> = {
   },
 };
 
-export const LightColor: StoryObj<Args> = {
+export const LightColor: Story = {
   args: {
     color: 'light',
     children: (
@@ -80,7 +78,7 @@ export const LightColor: StoryObj<Args> = {
   },
 };
 
-export const WithDismissAndControls: StoryObj<Args> = {
+export const WithDismissAndControls: Story = {
   args: {
     ...WithControls.args,
     subTitle: 'Limited subtitle text',
@@ -90,7 +88,7 @@ export const WithDismissAndControls: StoryObj<Args> = {
   },
 };
 
-export const LightWithDismissAndControls: StoryObj<Args> = {
+export const LightWithDismissAndControls: Story = {
   args: {
     ...LightColor.args,
     onDismiss: () => {

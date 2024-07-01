@@ -7,6 +7,8 @@ import type { PopoverProps } from './Popover';
 import Button from '../Button';
 import Hr from '../Hr';
 
+// Fix row showing for children
+
 export default {
   title: 'Components/Popover',
   component: Popover,
@@ -49,11 +51,6 @@ export default {
         },
       },
     },
-    children: {
-      control: {
-        type: null,
-      },
-    },
     refName: {
       table: {
         disable: true,
@@ -63,6 +60,9 @@ export default {
       table: {
         disable: true,
       },
+    },
+    children: {
+      control: false,
     },
   },
   decorators: [(Story) => <div className="m-10 p-8">{Story()}</div>],

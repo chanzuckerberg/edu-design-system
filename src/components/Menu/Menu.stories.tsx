@@ -5,22 +5,22 @@ import React from 'react';
 import { Menu } from './Menu';
 import type { MenuProps } from './Menu';
 import icons from '../../icons/spritemap';
+
 import type { IconName } from '../../icons/spritemap';
 import { Avatar } from '../Avatar/Avatar';
-
 import { Icon } from '../Icon/Icon';
+
 export default {
   title: 'Components/Menu',
   component: Menu,
+  // TODO: Add sub-components section
   parameters: {
     badges: ['intro-1.2', 'current-2.0'],
     layout: 'centered',
   },
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
   decorators: [
@@ -32,7 +32,9 @@ export default {
   ],
 } as Meta<MenuProps>;
 
-export const Default: StoryObj<MenuProps> = {
+type Story = StoryObj<MenuProps>;
+
+export const Default: Story = {
   args: {
     children: (
       <>
@@ -65,7 +67,7 @@ export const Default: StoryObj<MenuProps> = {
 /**
  * Be careful when using a lot of text for a menu trigger. The UI will force the text out of the button container. Use brief text for menu triggers.
  */
-export const WithLongButtonText: StoryObj<MenuProps> = {
+export const WithLongButtonText: Story = {
   args: {
     children: (
       <>
@@ -98,7 +100,7 @@ export const WithLongButtonText: StoryObj<MenuProps> = {
   },
 };
 
-export const WithShortButtonText: StoryObj<MenuProps> = {
+export const WithShortButtonText: Story = {
   args: {
     children: (
       <>
@@ -129,7 +131,7 @@ export const WithShortButtonText: StoryObj<MenuProps> = {
   },
 };
 
-export const WithCustomButton: StoryObj<MenuProps> = {
+export const WithCustomButton: Story = {
   args: {
     children: (
       <>
@@ -162,7 +164,7 @@ export const WithCustomButton: StoryObj<MenuProps> = {
   },
 };
 
-export const MenuWithAvatarButton: StoryObj<MenuProps> = {
+export const MenuWithAvatarButton: Story = {
   parameters: {
     badges: ['intro-1.3', 'implementationExample'],
   },
@@ -198,7 +200,7 @@ export const MenuWithAvatarButton: StoryObj<MenuProps> = {
   },
 };
 
-export const Opened: StoryObj<MenuProps> = {
+export const Opened: Story = {
   ...Default,
   parameters: {
     ...Default.parameters,

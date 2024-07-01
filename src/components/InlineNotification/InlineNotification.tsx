@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
 import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
@@ -23,7 +23,7 @@ type InlineNotificationProps = {
   /**
    * Secondary text used to describe the content in more detail
    */
-  subTitle?: React.ReactNode;
+  subTitle?: ReactNode;
   /**
    * The title/heading of the component
    */

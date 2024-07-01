@@ -1,11 +1,11 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
-import { composeStories } from '@storybook/testing-react';
+import { composeStories } from '@storybook/react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Accordion } from './Accordion';
 import * as stories from './Accordion.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const { Default } = composeStories(stories);
 

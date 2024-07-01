@@ -27,7 +27,8 @@ type Props = {
   id?: string;
   /**
    * Custom string separator between individual breadcrumbs
-   * Defaults to '/'
+   *
+   * **Defaults to `"/"`**.
    */
   separator?: Separators;
 };

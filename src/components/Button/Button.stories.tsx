@@ -12,12 +12,6 @@ export default {
     isLoading: false,
   },
   argTypes: {
-    // size: {
-    //   control: {
-    //     type: 'select',
-    //   },
-    //   options: SIZES,
-    // },
     isFullWidth: {
       control: 'boolean',
     },
@@ -29,11 +23,11 @@ export default {
     layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
   },
-} as Meta<Args>;
+} as Meta<ButtonProps>;
 
-type Args = React.ComponentProps<typeof Button>;
+type Story = StoryObj<ButtonProps>;
 
-export const Default: StoryObj<Args> = {
+export const Default: Story = {
   args: {
     children: 'Button',
   },
@@ -42,7 +36,7 @@ export const Default: StoryObj<Args> = {
 /**
  * Each button can come in a set of ranks, denoting the importance of the button to the surrounding user interface.
  */
-export const DefaultRanks: StoryObj<Args> = {
+export const DefaultRanks: Story = {
   args: {
     ...Default.args,
   },
@@ -66,7 +60,7 @@ export const DefaultRanks: StoryObj<Args> = {
 /**
  * Buttons can be disabled for each rank using `isDisabled`
  */
-export const Disabled: StoryObj<Args> = {
+export const Disabled: Story = {
   args: {
     ...DefaultRanks.args,
     isDisabled: true,
@@ -77,7 +71,7 @@ export const Disabled: StoryObj<Args> = {
 /**
  * Since `isDisabled` will set the form's proper disabled state, don't use just `disabled`. This will show a visual error.
  */
-export const JustDisabledProp: StoryObj<Args> = {
+export const JustDisabledProp: Story = {
   args: {
     ...DefaultRanks.args,
     disabled: true,
@@ -89,7 +83,7 @@ export const JustDisabledProp: StoryObj<Args> = {
 /**
  * Tertiary buttons can have an additional level of emphasis when stood by themselves. Use this case sparingly.
  */
-export const TertiaryStandalone: StoryObj<Args> = {
+export const TertiaryStandalone: Story = {
   args: {
     rank: 'tertiary',
     context: 'standalone',
@@ -99,7 +93,7 @@ export const TertiaryStandalone: StoryObj<Args> = {
 /**
  * Each button has variants denoting criticality, like for changes that are permanent, deletions, etc.
  */
-export const CriticalRanks: StoryObj<Args> = {
+export const CriticalRanks: Story = {
   args: {
     ...DefaultRanks.args,
     variant: 'critical',
@@ -110,7 +104,7 @@ export const CriticalRanks: StoryObj<Args> = {
 /**
  * There is also a neutral variant, to combine into other components, or provide a muted appearance.
  */
-export const NeutralRanks: StoryObj<Args> = {
+export const NeutralRanks: Story = {
   args: {
     ...DefaultRanks.args,
     variant: 'neutral',
@@ -121,7 +115,7 @@ export const NeutralRanks: StoryObj<Args> = {
 /**
  * Each rank also includes an inverse variant, for use on dark backgrounds.
  */
-export const InverseRanks: StoryObj<Args> = {
+export const InverseRanks: Story = {
   args: {
     ...DefaultRanks.args,
     variant: 'inverse',
@@ -136,7 +130,7 @@ export const InverseRanks: StoryObj<Args> = {
 /**
  * Inverse buttons can be disabled as well
  */
-export const InverseDisabledRanks: StoryObj<Args> = {
+export const InverseDisabledRanks: Story = {
   args: {
     ...DefaultRanks.args,
     variant: 'inverse',
@@ -152,7 +146,7 @@ export const InverseDisabledRanks: StoryObj<Args> = {
 /**
  * Buttons come in three sizes
  */
-export const Sizes: StoryObj<Args> = {
+export const Sizes: Story = {
   args: {
     ...Default.args,
   },
@@ -176,7 +170,7 @@ export const Sizes: StoryObj<Args> = {
 /**
  * Buttons can come with full width set, which will expand the button to its maximum width (diferent for each size)
  */
-export const FullWidths: StoryObj<Args> = {
+export const FullWidths: Story = {
   args: {
     ...Sizes.args,
     isFullWidth: true,
@@ -190,7 +184,7 @@ export const FullWidths: StoryObj<Args> = {
 /**
  * When in the loading state, a button will show a loading indicator in place of the normal button text, maintaining the initial size.
  */
-export const LoadingStates: StoryObj<Args> = {
+export const LoadingStates: Story = {
   args: {
     ...Sizes.args,
     isLoading: true,
@@ -202,7 +196,7 @@ export const LoadingStates: StoryObj<Args> = {
  * `iconLayout` lets you place the icons adjacent to button text, or as the only visible element.
  * When using `"icon-only"`, you **must** include a label (e.g., via `aria-label`).
  */
-export const IconLayouts: StoryObj<Args> = {
+export const IconLayouts: Story = {
   args: {
     ...Default.args,
     icon: 'open-in-new',

@@ -1,5 +1,4 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type { ComponentProps } from 'react';
 
 import { FieldLabel } from './FieldLabel';
 
@@ -13,19 +12,19 @@ export default {
     layout: 'centered',
     badges: ['intro-2.0', 'current-2.0'],
   },
-} as Meta<Args>;
+} as Meta<typeof FieldLabel>;
 
-type Args = ComponentProps<typeof FieldLabel>;
+type Story = StoryObj<typeof FieldLabel>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const Medium: StoryObj<Args> = {
+export const Medium: Story = {
   args: {
     size: 'md',
   },
 };
 
-export const LargeDisabled: StoryObj<Args> = {
+export const LargeDisabled: Story = {
   args: {
     disabled: true,
   },
@@ -36,7 +35,7 @@ export const LargeDisabled: StoryObj<Args> = {
   },
 };
 
-export const MediumDisabled: StoryObj<Args> = {
+export const MediumDisabled: Story = {
   args: {
     disabled: true,
     size: 'md',
@@ -48,7 +47,7 @@ export const MediumDisabled: StoryObj<Args> = {
   },
 };
 
-export const LongCopy: StoryObj<Args> = {
+export const LongCopy: Story = {
   args: {
     children:
       'Long label lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id velit ut egestas arcu. Atmaecenas urna, risus donec praesent eu consectetur.',

@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
 import * as stories from './SearchBar.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 describe('<SearchField />', () => {
   generateSnapshots(stories as StoryFile);
