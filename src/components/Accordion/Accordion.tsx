@@ -134,7 +134,7 @@ const AccordionRowContext = createContext<
  * Displays one or more headers stacked on top of one another that can reveal or hide associated content.
  * This component is based on the [Disclosure](https://headlessui.com/react/disclosure) component, provided by HeadlessUI.
  *
- * @see https://headlessui.com/react/disclosure
+ * More Information: https://headlessui.com/react/disclosure
  *
  */
 export const Accordion = ({

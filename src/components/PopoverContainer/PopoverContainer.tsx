@@ -5,13 +5,16 @@ import type { ReactNode } from 'react';
 
 import styles from './PopoverContainer.module.css';
 
-export interface Props {
+export type PopoverContainerProps = {
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Child node(s) that can be nested inside component.
+   */
   children: ReactNode;
-}
+};
 
 // Default modifiers for any popover container using PopperJS
 export const defaultPopoverModifiers: Options['modifiers'] = [
@@ -100,16 +103,17 @@ export type PopoverContext = {
   >;
 };
 
-export const PopoverContainer = React.forwardRef<HTMLDivElement, Props>(
-  ({ className, children, ...other }, ref) => {
-    const componentClassName = clsx(styles['popover-container'], className);
+export const PopoverContainer = React.forwardRef<
+  HTMLDivElement,
+  PopoverContainerProps
+>(({ className, children, ...other }, ref) => {
+  const componentClassName = clsx(styles['popover-container'], className);
 
-    return (
-      <div className={componentClassName} {...other} ref={ref}>
-        {children}
-      </div>
-    );
-  },
-);
+  return (
+    <div className={componentClassName} {...other} ref={ref}>
+      {children}
+    </div>
+  );
+});
 
 PopoverContainer.displayName = 'PopoverContainer';

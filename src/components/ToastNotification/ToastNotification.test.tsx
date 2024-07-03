@@ -1,9 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories, type StoryFile } from '@storybook/testing-react';
+import { composeStories } from '@storybook/react';
 import { render, waitFor } from '@testing-library/react';
 
 import React from 'react';
 import * as stories from './ToastNotification.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const { AutoDismiss } = composeStories(stories);
 

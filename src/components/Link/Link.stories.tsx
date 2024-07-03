@@ -19,16 +19,16 @@ export default {
   decorators: [
     (Story) => <div className="text-utility-default-primary">{Story()}</div>,
   ],
-} as Meta<Args>;
+} as Meta<typeof Link>;
 
-type Args = React.ComponentProps<typeof Link>;
+type Story = StoryObj<typeof Link>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
 /**
  * When using context, you can specify a trailing icon for the link.
  */
-export const LinkWithChevron: StoryObj<Args> = {
+export const LinkWithChevron: Story = {
   args: {
     children: 'Default',
     context: 'standalone',
@@ -39,7 +39,7 @@ export const LinkWithChevron: StoryObj<Args> = {
 /**
  * When using context, you can specify a trailing icon for the link. When using the open icon, make sure that a new tab/window is opened.
  */
-export const LinkWithOpenIcon: StoryObj<Args> = {
+export const LinkWithOpenIcon: Story = {
   args: {
     children: 'Default',
     context: 'standalone',
@@ -50,7 +50,7 @@ export const LinkWithOpenIcon: StoryObj<Args> = {
 /**
  * You can add formatting to the link if needed.
  */
-export const LinkWithFormattedChildren: StoryObj<Args> = {
+export const LinkWithFormattedChildren: Story = {
   args: {
     children: <em>emphasized link</em>,
     context: 'standalone',
@@ -61,7 +61,7 @@ export const LinkWithFormattedChildren: StoryObj<Args> = {
 /**
  * Standalone links can have additional emphasis or minimized emphasis applied.
  */
-export const Emphasis: StoryObj<Args> = {
+export const Emphasis: Story = {
   args: {
     size: 'md',
     context: 'standalone',
@@ -86,7 +86,7 @@ export const Emphasis: StoryObj<Args> = {
 /**
  * We also include an inverse variant, for use on dark backgrounds.
  */
-export const InverseVariant: StoryObj<Args> = {
+export const InverseVariant: Story = {
   args: {
     variant: 'inverse',
   },
@@ -128,7 +128,7 @@ export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
 /**
  * Links will inherit the color from the surrounding text color definition (default emphasis, inline links)
  */
-export const InheritColor: StoryObj<Args> = {
+export const InheritColor: Story = {
   args: {
     children: 'Inheriting',
   },

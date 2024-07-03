@@ -52,6 +52,15 @@ type AvatarProps = {
   src?: string;
   /**
    * The user associated with this avatar
+   *
+   * `UserData` takes the format ([] is optional):
+   *
+   * ```
+   * - fullName (string)
+   * - [id] (string | number)
+   * - [displayName] (string)
+   * - [key:string] (string | number | boolean)
+   * ```
    */
   user?: UserData;
   /**

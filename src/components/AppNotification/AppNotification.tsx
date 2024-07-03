@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { type ReactNode } from 'react';
 import Button from '../Button';
 import Text from '../Text';
 import styles from './AppNotification.module.css';
@@ -13,7 +13,7 @@ export interface AppNotificationProps {
   /**
    * Secondary text used to describe the notification in more detail
    */
-  subTitle: React.ReactNode;
+  subTitle: ReactNode;
   /**
    * Treatment for component (whether it is dark on light text, or light on dark text)
    */
@@ -23,7 +23,7 @@ export interface AppNotificationProps {
   /**
    * Contents of the component below the title and sub-title (used mainly for `ButtonGroup`)
    */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */

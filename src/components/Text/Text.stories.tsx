@@ -18,10 +18,9 @@ export default {
     },
   },
   decorators: [(Story) => <div className="m-1">{Story()}</div>],
-} as Meta<Args>;
+} as Meta<typeof Text>;
 
-type Args = React.ComponentProps<typeof Text>;
-type Story = StoryObj<Args>;
+type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {

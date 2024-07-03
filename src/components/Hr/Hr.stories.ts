@@ -1,5 +1,4 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type { ComponentProps } from 'react';
 
 import { Hr } from './Hr';
 
@@ -13,19 +12,27 @@ export default {
   args: {
     className: 'w-96',
   },
-} as Meta<Args>;
+  argTypes: {
+    size: {
+      control: 'radio',
+    },
+    variant: {
+      control: 'radio',
+    },
+  },
+} as Meta<typeof Hr>;
 
-type Args = ComponentProps<typeof Hr>;
+type Story = StoryObj<typeof Hr>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
-export const Large: StoryObj<Args> = {
+export const Large: Story = {
   args: {
     size: 'lg',
   },
 };
 
-export const Brand: StoryObj<Args> = {
+export const Brand: Story = {
   args: {
     variant: 'brand',
   },

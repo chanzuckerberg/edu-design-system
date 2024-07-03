@@ -1,11 +1,11 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Text } from './Text';
 import * as stories from './Text.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 describe('<Text />', () => {
   generateSnapshots(stories as StoryFile);

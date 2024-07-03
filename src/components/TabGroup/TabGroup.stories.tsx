@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { within } from '@storybook/test';
 import React from 'react';
 
 import { TabGroup } from './TabGroup';
@@ -77,9 +77,7 @@ export default {
   },
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
 } as Meta<Args>;
@@ -458,7 +456,7 @@ export const ScrollMiddle: StoryObj<Args> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const tablist = await canvas.findByRole('tablist');
-    // eslint-disable-next-line testing-library/no-node-access
+
     tablist?.parentElement?.scroll(50, 0);
   },
 };

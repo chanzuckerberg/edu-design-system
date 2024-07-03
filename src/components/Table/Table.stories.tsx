@@ -17,9 +17,7 @@ export default {
     children: {
       description:
         'Contains the sub-components for a table, including `.Body`, `.Cell`, `.Header`, `.Footer`, `.HeaderCell`, `.Row`, and `.Caption`',
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
   backgrounds: {
@@ -138,6 +136,48 @@ export const TableWithCaption: Story = {
               return (
                 <Table.HeaderCell key={'table-header-row-' + item.title}>
                   {item.title}
+                </Table.HeaderCell>
+              );
+            })}
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map((item) => {
+            return (
+              <Table.Row key={item.value1.slice(0, 11)}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+
+/**
+ * Headers can be more than text.
+ */
+export const TableWithStyledHeader: Story = {
+  args: {
+    children: (
+      <>
+        <Table.Caption>
+          Optional caption for the table. Must be first descendant of Table if
+          used.
+        </Table.Caption>
+
+        <Table.Header>
+          <Table.Row variant="header">
+            {tableColumns.map((item) => {
+              return (
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
+                  <em>{item.title}</em>
                 </Table.HeaderCell>
               );
             })}

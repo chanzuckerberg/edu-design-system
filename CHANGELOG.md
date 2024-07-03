@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0...v15.0.1) (2024-07-02)
+
+
+### Bug Fixes
+
+* P in P ([#1999](https://github.com/chanzuckerberg/edu-design-system/issues/1999)) ([7566e2c](https://github.com/chanzuckerberg/edu-design-system/commit/7566e2c627f56792bcc6dd8858458425ea7b35a7))
+* **Table:** allow nodes in header cells ([#2001](https://github.com/chanzuckerberg/edu-design-system/issues/2001)) ([e471fad](https://github.com/chanzuckerberg/edu-design-system/commit/e471fadee83c07fdb784e9c15ae46f3f2a285be7))
+
 ## [15.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0-alpha.18...v15.0.0) (2024-06-20)
 
 

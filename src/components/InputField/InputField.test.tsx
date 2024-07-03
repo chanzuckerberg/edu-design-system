@@ -1,5 +1,4 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
@@ -7,6 +6,7 @@ import React from 'react';
 import { InputField } from './InputField';
 
 import * as stories from './InputField.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 describe('<InputField />', () => {
   generateSnapshots(stories as StoryFile);

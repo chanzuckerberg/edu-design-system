@@ -1,8 +1,8 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import type { StoryFile } from '@storybook/testing-react';
 import { render } from '@testing-library/react';
 import React from 'react';
 import * as stories from './Slider.stories';
+import type { StoryFile } from '../../util/utility-types';
 import Slider from './';
 
 describe('<Slider />', () => {

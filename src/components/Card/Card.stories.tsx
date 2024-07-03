@@ -34,11 +34,6 @@ export default {
     ),
   },
   argTypes: {
-    children: {
-      control: {
-        type: null,
-      },
-    },
     topStripeColor: {
       options: [
         'bg-brand-blue-lowEmphasis',
@@ -53,20 +48,29 @@ export default {
         type: 'select',
       },
     },
+    children: {
+      control: false,
+    },
+    isInteractive: {
+      control: 'boolean',
+    },
+    isDragging: {
+      control: 'boolean',
+    },
   },
-} as Meta<Args>;
+} as Meta<typeof Card>;
 
-type Args = React.ComponentProps<typeof Card>;
+type Story = StoryObj<typeof Card>;
 
 /**
  * Cards come with structural containers for semantic grouping.
  */
-export const Default: StoryObj<Args> = {};
+export const Default: Story = {};
 
 /**
  * Cards can be made interactive by using `isInteractive`. With this, it will require being linked to `Link` or some control that performs an action or is being dragged.
  */
-export const IsInteractive: StoryObj<Args> = {
+export const IsInteractive: Story = {
   args: {
     ...Default.args,
     isInteractive: true,
@@ -76,7 +80,7 @@ export const IsInteractive: StoryObj<Args> = {
 /**
  * This demonstrates all that's possible with the header component
  */
-export const WithFullHeader: StoryObj<Args> = {
+export const WithFullHeader: Story = {
   args: {
     children: (
       <>
@@ -99,7 +103,7 @@ export const WithFullHeader: StoryObj<Args> = {
 /**
  * When using an icon in the header, we should not use `eyebrow` as it causes a noisy appearance. This is, however, technically possible.
  */
-export const WithFullHeaderAndIcon: StoryObj<Args> = {
+export const WithFullHeaderAndIcon: Story = {
   args: {
     children: (
       <>
@@ -161,7 +165,7 @@ function CardMenu() {
 /**
  * You can combine a small header with a menu icon in the top-right.
  */
-export const WithSmallFullHeaderAndIcon: StoryObj<Args> = {
+export const WithSmallFullHeaderAndIcon: Story = {
   args: {
     children: (
       <>
@@ -186,7 +190,7 @@ export const WithSmallFullHeaderAndIcon: StoryObj<Args> = {
 /**
  * It's possible to customize the card header with formatted text and content, which replaces the pre-defined slots
  */
-export const WithCustomizedHeader: StoryObj<Args> = {
+export const WithCustomizedHeader: Story = {
   args: {
     children: (
       <>
@@ -204,7 +208,7 @@ export const WithCustomizedHeader: StoryObj<Args> = {
   },
 };
 
-export const WithHorizontalPrimaryButton: StoryObj<Args> = {
+export const WithHorizontalPrimaryButton: Story = {
   args: {
     children: (
       <>
@@ -231,7 +235,7 @@ export const WithHorizontalPrimaryButton: StoryObj<Args> = {
   },
 };
 
-export const CustomBrandCard: StoryObj<Args> = {
+export const CustomBrandCard: Story = {
   args: {
     containerColor: 'custom-brand',
     className: 'border-brand-red bg-brand-red w-96',
@@ -241,7 +245,7 @@ export const CustomBrandCard: StoryObj<Args> = {
 /**
  * You can add a stripe along the top of a card to enhance and emphasis its appearance
  */
-export const TopStripe: StoryObj<Args> = {
+export const TopStripe: Story = {
   args: {
     topStripe: 'medium',
     children: (
@@ -272,7 +276,7 @@ export const TopStripe: StoryObj<Args> = {
 /**
  * Cards also allow for using custom top stripe colors. Use one of the low-emphasis brand colors (see the control above to test)
  */
-export const CustomTopStripe: StoryObj<Args> = {
+export const CustomTopStripe: Story = {
   args: {
     topStripe: 'high',
     topStripeColor: 'bg-brand-purple-lowEmphasis',
@@ -304,7 +308,7 @@ export const CustomTopStripe: StoryObj<Args> = {
 /**
  * Another visual change to cards allow for adjusting the background color, to change how the card looks, using `containerColor`
  */
-export const BackgroundCallout: StoryObj<Args> = {
+export const BackgroundCallout: Story = {
   args: {
     containerColor: 'call-out',
     children: (
@@ -336,7 +340,7 @@ export const BackgroundCallout: StoryObj<Args> = {
  * Cards have hierarchy, and can contain other cards with one level. When using a nested card, you can use `.ChildCard`,
  * which comes preconfigured with some settings and defaults applied. All the sub-components of card work within `.Childcard`.
  */
-export const ChildCards: StoryObj<Args> = {
+export const ChildCards: Story = {
   args: {
     containerColor: 'call-out',
     topStripe: 'high',
@@ -363,7 +367,7 @@ export const ChildCards: StoryObj<Args> = {
  * Cards can be marked as currently being dragged. This can be used in combination with the `draggable` attribute from HTML,
  * or to work with a drag-n-drop library.
  */
-export const WhileDragging: StoryObj<Args> = {
+export const WhileDragging: Story = {
   args: {
     isDragging: true,
   },
@@ -372,7 +376,7 @@ export const WhileDragging: StoryObj<Args> = {
 /**
  * Implementation Example: Cancelling a card membership
  */
-export const CancelMembership: StoryObj<Args> = {
+export const CancelMembership: Story = {
   parameters: {
     badges: ['intro-1.0', 'current-2.0', 'implementationExample'],
   },

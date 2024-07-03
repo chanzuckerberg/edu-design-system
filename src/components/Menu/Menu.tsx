@@ -23,6 +23,7 @@ import styles from './Menu.module.css';
 // Note: added className here to prevent private interface collision within HeadlessUI
 export type MenuProps = ExtractProps<typeof HeadlessMenu> &
   PopoverOptions & {
+    // TODO: document children?
     /**
      * Allow custom classes to be applied to the menu container.
      */

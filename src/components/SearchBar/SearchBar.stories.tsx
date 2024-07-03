@@ -17,14 +17,12 @@ export default {
   args: {
     className: 'w-96',
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
+      control: false,
     },
   },
+  decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SearchBar>;
