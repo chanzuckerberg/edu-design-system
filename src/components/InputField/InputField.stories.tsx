@@ -1,4 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 
 import { InputField } from './InputField';
@@ -18,6 +19,26 @@ const meta: Meta<typeof InputField> = {
   },
   args: {
     className: 'w-96',
+  },
+  argTypes: {
+    type: {
+      control: 'select',
+      options: [
+        'text',
+        'password',
+        'datetime',
+        'datetime-local',
+        'date',
+        'month',
+        'time',
+        'week',
+        'number',
+        'email',
+        'url',
+        'search',
+        'tel',
+      ],
+    },
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };
@@ -147,12 +168,29 @@ export const NoVisibleLabel: Story = {
 };
 
 /**
- * Password fields show dots instead of characters, to help with security.
+ * Password fields show dots instead of characters, to help with security. They allow for show/hide of the field
+ * contents.
  */
 export const Password: Story = {
   args: {
     label: 'Password',
     type: 'password',
+    defaultValue: 'secret123',
+  },
+};
+
+/**
+ * Password fields show dots instead of characters, to help with security. They allow for show/hide of the field
+ * contents, and resetting.
+ */
+export const PasswordWithShownText: Story = {
+  args: {
+    ...Password.args,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const showHideButton = await canvas.findByRole('button');
+    await userEvent.click(showHideButton);
   },
 };
 
