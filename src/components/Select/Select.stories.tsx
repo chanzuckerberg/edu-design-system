@@ -306,6 +306,19 @@ export const WithSelectedOption: StoryObj<typeof Select> = {
 };
 
 /**
+ * Use the `by` option to determine the selection (when using objects for the value list).
+ * - The type comparison can be by a named key in the object `by={'id'}` or using a comparison function
+ *
+ * See: https://headlessui.com/v1/react/listbox#listbox
+ */
+export const WithSelectedBy: StoryObj<typeof Select> = {
+  args: {
+    ...WithSelectedOption.args,
+    by: 'key',
+  },
+};
+
+/**
  * You can add a `name` prop to generate form fields for the value object.
  *
  * In this example, the field name is `"interactive-select"`, and the value is an object storing `{label: string, key: string}`.

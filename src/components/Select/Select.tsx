@@ -1,4 +1,4 @@
-import { Listbox } from '@headlessui/react';
+import { Listbox, type ListboxProps } from '@headlessui/react';
 import clsx from 'clsx';
 
 import React, {
@@ -6,6 +6,7 @@ import React, {
   useState,
   type ReactNode,
   type MouseEventHandler,
+  type ElementType,
 } from 'react';
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
@@ -25,7 +26,12 @@ import Text from '../Text';
 
 import styles from './Select.module.css';
 
-type SelectProps = ExtractProps<typeof Listbox> &
+// https://github.com/tailwindlabs/headlessui/blob/%40headlessui/react%40v1.7.19/packages/%40headlessui-react/src/components/listbox/listbox.tsx#L349
+type SelectProps = ListboxProps<
+  ElementType,
+  string | { [k: string]: unknown },
+  { [k: string]: unknown }
+> &
   PopoverOptions & {
     // Component API
     /**
@@ -235,7 +241,7 @@ export function Select({
     labelLayout && styles[`select--label-layout-${labelLayout}`],
     className,
   );
-  const sharedProps = {
+  const sharedProps: SelectProps = {
     className: componentClassName,
     // Provide a wrapping <div> element for the select. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
