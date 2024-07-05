@@ -7,6 +7,17 @@ import * as stories from './Button.stories';
 import type { StoryFile } from '../../util/utility-types';
 
 describe('<Button />', () => {
+  beforeEach(() => {
+    const consoleMock = jest.spyOn(console, 'error');
+    const consoleWarnMock = jest.spyOn(console, 'warn');
+    consoleMock.mockImplementation();
+    consoleWarnMock.mockImplementation();
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   generateSnapshots(stories as StoryFile);
 
   it('renders the text in the button', () => {
@@ -46,5 +57,27 @@ describe('<Button />', () => {
 
     const button = screen.getByRole('button');
     expect(button).toHaveFocus();
+  });
+
+  describe('emits warnings when misused', () => {
+    it('errors engineers when disable is used', () => {
+      const consoleMock = jest.spyOn(console, 'error');
+      consoleMock.mockImplementation();
+      render(<Button disabled>Click</Button>);
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('warns when icon-only Button instances contain children', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Button icon="add" iconLayout="icon-only">
+          Click
+        </Button>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
   });
 });
