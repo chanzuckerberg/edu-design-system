@@ -26,7 +26,6 @@ const meta: Meta<typeof InputField> = {
       options: [
         'text',
         'password',
-        'datetime',
         'datetime-local',
         'date',
         'month',
@@ -191,6 +190,39 @@ export const PasswordWithShownText: Story = {
     const canvas = within(canvasElement);
     const showHideButton = await canvas.findByRole('button');
     await userEvent.click(showHideButton);
+  },
+};
+
+/**
+ * You can specify dates of varying details (including full date, month and year, etc.).
+ * It uses the built-in browser UI to handle date/time input.
+ */
+export const DateHandling: Story = {
+  args: {
+    ...Default.args,
+    type: 'date',
+  },
+  argTypes: {
+    type: {
+      control: 'select',
+      options: ['datetime-local', 'date', 'month', 'time', 'week'],
+    },
+  },
+};
+
+/**
+ * You can specify time as well, which uses a different internal glyph to trigger the browser UI.
+ */
+export const TimeHandling: Story = {
+  args: {
+    ...Default.args,
+    type: 'time',
+  },
+  argTypes: {
+    type: {
+      control: 'select',
+      options: ['datetime-local', 'date', 'month', 'time', 'week'],
+    },
   },
 };
 
