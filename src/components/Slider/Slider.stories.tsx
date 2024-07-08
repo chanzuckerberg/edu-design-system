@@ -198,7 +198,7 @@ export const UsingControlButtons: Story = {
       <div className="flex w-full items-center justify-center gap-2">
         <Button
           aria-label="Decrement"
-          disabled={sliderValue === min}
+          isDisabled={sliderValue === min}
           onClick={() => setSliderValue(Math.max(min, sliderValue - 1))}
           rank="secondary"
         >
@@ -218,7 +218,7 @@ export const UsingControlButtons: Story = {
         <Text>{max}</Text>
         <Button
           aria-label="Increment"
-          disabled={sliderValue === max}
+          isDisabled={sliderValue === max}
           onClick={() => setSliderValue(Math.min(max, sliderValue + 1))}
           rank="secondary"
         >

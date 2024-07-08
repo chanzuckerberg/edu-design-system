@@ -253,9 +253,7 @@ export const ModalContent = (props: ModalContentProps) => {
             onClick={onClose}
             rank="tertiary"
             variant="neutral"
-          >
-            Close
-          </Button>
+          ></Button>
         )}
         {children}
       </div>

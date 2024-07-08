@@ -95,9 +95,7 @@ export const ToastNotification = ({
           onClick={onDismiss}
           rank="tertiary"
           variant="neutral"
-        >
-          Close
-        </Button>
+        ></Button>
       )}
     </div>
   );

@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
+import { assertEdsUsage } from '../../util/logging';
 import type { Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 
@@ -82,6 +83,21 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     );
 
     const iconSize = size && (['xl', 'lg'].includes(size) ? '1.5rem' : '1rem');
+
+    assertEdsUsage(
+      [context === 'inline' && emphasis === 'low'],
+      'Inline links cannot be lowEmphasis',
+    );
+
+    assertEdsUsage(
+      [context === 'inline' && !!icon],
+      'Inline links cannot show icons',
+    );
+
+    assertEdsUsage(
+      [icon === 'chevron-right' && emphasis !== 'low'],
+      'Icon "chevron-right" only allowed when lowEmphasis is used',
+    );
 
     return (
       <Component className={componentClassName} ref={ref} {...other}>

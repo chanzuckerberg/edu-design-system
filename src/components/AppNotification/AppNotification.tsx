@@ -84,9 +84,7 @@ export const AppNotification = ({
             onClick={onDismiss}
             rank="tertiary"
             variant={color === 'dark' ? 'inverse' : 'neutral'}
-          >
-            Close
-          </Button>
+          ></Button>
         )}
       </div>
     </div>

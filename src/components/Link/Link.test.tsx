@@ -7,6 +7,15 @@ import * as stories from './Link.stories';
 import type { StoryFile } from '../../util/utility-types';
 
 describe('<Link />', () => {
+  beforeEach(() => {
+    const consoleMock = jest.spyOn(console, 'warn');
+    consoleMock.mockImplementation();
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   generateSnapshots(stories as StoryFile);
 
   it('renders the text in the link', () => {
@@ -62,5 +71,43 @@ describe('<Link />', () => {
 
     const link = screen.getByRole('link');
     expect(link).toHaveFocus();
+  });
+
+  describe('emits warnings when misused', () => {
+    it('warns when inline links are using emphasis=low', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Link context="inline" emphasis="low">
+          Click
+        </Link>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('warns when inline links have icons specified', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Link context="inline" icon="open-in-new">
+          Click
+        </Link>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('warns when chevron-right is not used in low emphasis mode', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Link emphasis="high" icon="chevron-right">
+          Click
+        </Link>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
   });
 });

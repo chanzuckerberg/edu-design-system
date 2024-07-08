@@ -1,3 +1,5 @@
+import { assertEdsUsage } from './logging';
+
 /**
  * Returns the lowest multiple of 10 that multiplies with all numbers in a list to make them integers.
  * Useful for floating point math.
@@ -8,12 +10,12 @@
  * @returns {number} Lowest multiple of 10.
  */
 export function findLowestTenMultiplier(numbers: number[]): number {
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    numbers.some((number) => !Number.isFinite(number))
-  ) {
-    throw 'Number should be a real finite number';
-  }
+  assertEdsUsage(
+    [numbers.some((number) => !Number.isFinite(number))],
+    'Number should be a real finite number',
+    'error',
+  );
+
   let multiplier = 1;
   while (
     numbers.some((number) => !Number.isInteger((number * multiplier) % 1))

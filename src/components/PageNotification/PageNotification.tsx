@@ -114,9 +114,7 @@ export const PageNotification = ({
           rank="tertiary"
           size="lg"
           variant="neutral"
-        >
-          Close
-        </Button>
+        ></Button>
       )}
     </aside>
   );
