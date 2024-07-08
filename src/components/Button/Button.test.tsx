@@ -8,6 +8,7 @@ import type { StoryFile } from '../../util/utility-types';
 
 describe('<Button />', () => {
   beforeEach(() => {
+    // Add in mocks for the calls that can occur in implementation to suppress logging in tests
     const consoleMock = jest.spyOn(console, 'error');
     const consoleWarnMock = jest.spyOn(console, 'warn');
     consoleMock.mockImplementation();
@@ -59,25 +60,31 @@ describe('<Button />', () => {
     expect(button).toHaveFocus();
   });
 
-  describe('emits warnings when misused', () => {
+  describe('emits messages when misused', () => {
+    let consoleErrorMock: jest.SpyInstance, consoleWarnMock: jest.SpyInstance;
+    beforeEach(() => {
+      consoleWarnMock = jest.spyOn(console, 'warn');
+      consoleErrorMock = jest.spyOn(console, 'error');
+      consoleWarnMock.mockImplementation();
+      consoleErrorMock.mockImplementation();
+    });
+
     it('errors engineers when disable is used', () => {
-      const consoleMock = jest.spyOn(console, 'error');
-      consoleMock.mockImplementation();
       render(<Button disabled>Click</Button>);
 
-      expect(consoleMock).toHaveBeenCalledTimes(1);
+      expect(consoleWarnMock).toHaveBeenCalledTimes(0);
+      expect(consoleErrorMock).toHaveBeenCalledTimes(1);
     });
 
     it('warns when icon-only Button instances contain children', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
       render(
         <Button icon="add" iconLayout="icon-only">
           Click
         </Button>,
       );
 
-      expect(consoleMock).toHaveBeenCalledTimes(1);
+      expect(consoleWarnMock).toHaveBeenCalledTimes(1);
+      expect(consoleErrorMock).toHaveBeenCalledTimes(0);
     });
   });
 });
