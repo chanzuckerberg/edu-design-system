@@ -306,7 +306,7 @@ export const WithSelectedOption: StoryObj<typeof Select> = {
 };
 
 /**
- * Use the `by` option to determine the selection (when using objects for the value list).
+ * Use the `by` option to determine the selection (when using objects for the value list). This helps when you want to compare by value, not reference.
  * - The type comparison can be by a named key in the object `by={'id'}` or using a comparison function
  *
  * See: https://headlessui.com/v1/react/listbox#listbox
@@ -314,6 +314,7 @@ export const WithSelectedOption: StoryObj<typeof Select> = {
 export const WithSelectedBy: StoryObj<typeof Select> = {
   args: {
     ...WithSelectedOption.args,
+    defaultValue: { ...exampleOptions[1] },
     by: 'key',
   },
 };
