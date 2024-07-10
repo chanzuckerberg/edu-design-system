@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 
+import { assertEdsUsage } from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
@@ -302,7 +303,11 @@ export const Modal = (props: ModalProps) => {
     }
   }
 
-  // TODO-AH: add check to make sure folks aren't using size="lg" with "height"
+  // check to make sure folks aren't using size="lg" with "height"
+  assertEdsUsage(
+    [rest.size !== 'lg' && typeof rest.height !== 'undefined'],
+    'Height is only supported when size is set to "lg"',
+  );
 
   const componentClassName = clsx(styles['modal'], modalContainerClassName);
 
