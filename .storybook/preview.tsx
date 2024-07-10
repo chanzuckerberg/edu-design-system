@@ -86,6 +86,7 @@ export const parameters: Preview['parameters'] = {
     ...createInitialReleaseConfig('1.0'),
     ...createCurrentReleaseConfig('1.3'),
     ...createCurrentReleaseConfig('2.0'),
+    ...createCurrentReleaseConfig('2.1'),
     implementationExample: {
       styles: {
         backgroundColor: '#ffffff',

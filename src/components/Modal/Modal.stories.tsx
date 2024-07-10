@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { useState } from 'react';
 
-import { Modal, ModalContent } from './Modal';
+import { Modal } from './Modal';
 import { Heading, Text } from '../../';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
@@ -15,38 +15,9 @@ export default {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['intro-1.0', 'current-2.1'],
   },
   tags: ['autodocs'],
-  argTypes: {
-    // For some reason, storybook is not able to pick up the doc.s automatically. Adding manually.
-    children: {
-      description:
-        'Contains the sub-components for a Modal, including `.Header` , `.Title` , `.Body` , `.Footer` , `.Stepper`',
-    },
-    open: {
-      type: 'boolean',
-      description: 'Whether or not the modal is visible.',
-    },
-    hideCloseButton: {
-      description:
-        'Hides the close button in the top right of the modal. **Default is `false`**.',
-      type: 'boolean',
-    },
-    isScrollable: {
-      description:
-        'Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.',
-      type: 'boolean',
-    },
-    size: {
-      description: 'Max size of the modal, which responds to the viewport',
-      control: {
-        type: 'select',
-      },
-      options: ['sm', 'lg'],
-      defaultValue: 'lg',
-    },
-  },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<typeof Modal>;
 
@@ -224,7 +195,7 @@ export const ContentDefault: Story = {
   render: (args) => (
     <div className="flex items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
-      <ModalContent
+      <Modal.Content
         {...args}
         data-testid="non-interactive"
         onClose={() => {}}
@@ -275,6 +246,30 @@ export const Large: Story = {
 };
 
 /**
+ * Large modals can have height set to auto, which will allow the modal's height to vary based on the contents of the modal container.
+ *
+ * This can be as large as the viewport allows, or as short as the content specifies.
+ */
+export const LargeAuto: Story = {
+  ...Large,
+  args: {
+    ...Large.args,
+    height: 'auto',
+  },
+};
+
+/**
+ * Large modals can have height set to max, which will take up the maxiumum vertical height allowed in the viewport.
+ */
+export const LargeMax: Story = {
+  ...Large,
+  args: {
+    ...Large.args,
+    height: 'max',
+  },
+};
+
+/**
  * `Modal` also allows for `small`.
  */
 export const Small: Story = {
@@ -319,7 +314,7 @@ export const LayoutVertical: Story = {
   render: (args) => (
     <div className="flex items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
-      <ModalContent
+      <Modal.Content
         {...args}
         data-testid="non-interactive"
         onClose={() => {}}
@@ -362,7 +357,7 @@ export const LayoutVerticalWithTertiary: Story = {
   render: (args) => (
     <div className="flex items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
-      <ModalContent
+      <Modal.Content
         {...args}
         data-testid="non-interactive"
         onClose={() => {}}
@@ -401,7 +396,7 @@ export const WithCriticalButton: Story = {
   render: (args) => (
     <div className="flex items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
-      <ModalContent
+      <Modal.Content
         {...args}
         data-testid="non-interactive"
         onClose={() => {}}

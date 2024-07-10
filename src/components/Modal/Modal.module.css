@@ -20,19 +20,6 @@
 }
 
 /**
- * The inverted background of the modal to provide contrast with the actual modal.
- */
-.modal__overlay {
-  &.modal__overlay--emphasis-high {
-    background-color: rgb(from var(--eds-theme-color-background-utility-overlay-high-emphasis) r g b / 0.8);
-  }
-  
-  &.modal__overlay--emphasis-low {
-    background-color: rgb(from var(--eds-theme-color-background-utility-overlay-low-emphasis) r g b / 0.5);
-  }
-}
-
-/**
  * The modal container which positions the modal in the center of the screen.
  */
 .modal {
@@ -46,6 +33,65 @@
    * z-indeces across the system
    */
   z-index: 1050;
+}
+
+/**
+ * The content of the modal, which can wrap header, body, and footer.
+ */
+.modal__content {
+  position: relative;
+  overflow: hidden;
+
+  /** 
+  * This transparent border is for Window High Contrast Mode, which removes all
+  * background colors but makes borders 100% opacity black. Without this, the
+  * modal would have no clear boundary. 
+  */
+  border: var(--eds-theme-form-border-width) transparent
+    var(--eds-theme-color-background-utility-container);
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--eds-theme-color-background-utility-container);
+}
+
+/**
+ * Header for the modal.
+ */
+.modal-header {
+  width: 100%;
+
+  padding: calc(var(--eds-size-3) / 16 * 1rem)
+    calc(var(--eds-size-4) / 16 * 1rem);
+}
+
+/**
+ * The body of the modal
+ */
+.modal-body {
+  flex: 1;
+  padding: 0 calc(var(--eds-size-4) / 16 * 1rem);
+}
+
+/**
+ * Footer for the modal.
+ */
+.modal-footer {
+  width: 100%;
+  z-index: 1000;
+
+  padding: calc(var(--eds-size-3) / 16 * 1rem)
+    calc(var(--eds-size-4) / 16 * 1rem);
+
+  background-color: var(--eds-theme-color-background-utility-container);
+}
+
+.modal-footer--sticky {
+  position: sticky;
+  bottom: 0;
+
+  box-shadow: var(--eds-box-shadow-xl);
 }
 
 /**
@@ -82,60 +128,97 @@
 }
 
 /**
- * The content of the modal, which can wrap header, body, and footer.
- */
-.modal__content {
-  position: relative;
-  overflow: hidden;
-  
-  /** 
-  * This transparent border is for Window High Contrast Mode, which removes all
-  * background colors but makes borders 100% opacity black. Without this, the
-  * modal would have no clear boundary. 
-  */
-  border: var(--eds-theme-form-border-width) transparent var(--eds-theme-color-background-utility-container);
-  
-  display: flex;
-  flex-direction: column;
-  
-  background-color: var(--eds-theme-color-background-utility-container);
-}
-
-/**
  * The large modal size used for the lg/default modal.
  */
 .modal__content--lg {
-  @media all and (min-width: $eds-bp-xs) {
-    width: 100%;
-    height: 100%;
+  &.modal__content--height-fixed {
+    @media all and (min-width: $eds-bp-xs) {
+      width: 100%;
+      height: 100%;
+      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-sm) {
+      max-height: 40rem;
+      max-width: 50rem;
+    }
+
+    @media all and (min-width: $eds-bp-md) {
+      max-height: 40rem;
+      max-width: 50rem;
+    }
+
+    @media all and (min-width: $eds-bp-lg) {
+      max-height: 40rem;
+      max-width: 60rem;
+    }
+
+    @media all and (min-width: $eds-bp-xl) {
+      max-height: 40rem;
+      max-width: 60rem;
+    }
   }
 
-  @media all and (min-width: $eds-bp-sm) {
-    max-height: 40rem;
-    max-width: 50rem;
+  &.modal__content--height-auto {
+    @media all and (min-width: $eds-bp-xs) {
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-sm) {
+      max-width: 50rem;
+      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-md) {
+      max-width: 50rem;
+      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-lg) {
+      max-width: 60rem;
+      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-xl) {
+      max-width: 60rem;
+      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
   }
 
-  @media all and (min-width: $eds-bp-md) {
-    max-height: 40rem;
-    max-width: 50rem;
-  }
+  &.modal__content--height-max {
+    @media all and (min-width: $eds-bp-xs) {
+      width: 100%;
+      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
 
-  @media all and (min-width: $eds-bp-lg) {
-    max-height: 40rem;
-    max-width: 60rem;
-  }
+    @media all and (min-width: $eds-bp-sm) {
+      max-width: 50rem;
+      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
 
-  @media all and (min-width: $eds-bp-xl) {
-    max-height: 40rem;
-    max-width: 60rem;
-    --modal-horizontal-padding: calc(var(--eds-size-8) / 16 * 1rem);
+    @media all and (min-width: $eds-bp-md) {
+      max-width: 50rem;
+      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-lg) {
+      max-width: 60rem;
+      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
+
+    @media all and (min-width: $eds-bp-xl) {
+      max-width: 60rem;
+      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+    }
   }
 }
 
 /**
  * The small modal size used for the modal.
  */
- .modal__content--sm {
+.modal__content--sm {
   @media all and (min-width: $eds-bp-xs) {
     max-height: 30rem;
     max-width: 35rem;
@@ -154,10 +237,8 @@
   @media all and (min-width: $eds-bp-xl) {
     max-height: 30rem;
     max-width: 35rem;
-    --modal-horizontal-padding: calc(var(--eds-size-8) / 16 * 1rem);
   }
 }
-
 
 /**
  * Allows scrolling of the modal content except for sticky footer.
@@ -177,54 +258,25 @@
   right: 0;
 }
 
-/*------------------------------------*\
-    # MODAL BODY
-\*------------------------------------*/
-
-/**
- * The body of the modal
- */
- .modal-body {
-  flex: 1;
-  padding: 0 calc(var(--eds-size-4) / 16 * 1rem);
-}
-
-/*------------------------------------*\
-    # MODAL FOOTER
-\*------------------------------------*/
-
-/**
- * Footer for the modal.
- */
- .modal-footer {
-  width: 100%;
-  z-index: 1000;
-
-  padding: calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-4) / 16 * 1rem);
-
-  background-color: var(--eds-theme-color-background-utility-container);
-}
-
-.modal-footer--sticky {
-  position: sticky;
-  bottom: 0;
-
-  box-shadow: var(--eds-box-shadow-xl);
-}
-
-/*------------------------------------*\
-    # MODAL HEADER
-\*------------------------------------*/
-
-/**
- * Header for the modal.
- */
- .modal-header {
-  width: 100%;
-
-  padding: calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-4) / 16 * 1rem);
-}
-
 .modal-sub-title {
   color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+/**
+ * The inverted background of the modal to provide contrast with the actual modal.
+ */
+.modal__overlay {
+  &.modal__overlay--emphasis-high {
+    background-color: rgb(
+      from var(--eds-theme-color-background-utility-overlay-high-emphasis) r g b /
+        0.8
+    );
+  }
+
+  &.modal__overlay--emphasis-low {
+    background-color: rgb(
+      from var(--eds-theme-color-background-utility-overlay-low-emphasis) r g b /
+        0.5
+    );
+  }
 }

@@ -131,4 +131,26 @@ describe('Modal', () => {
     expect(renderMethod).toThrow(Error);
     consoleErrorMock.mockRestore();
   });
+
+  it('prints a warning when height is used with size="sm"', () => {
+    const modalWithoutTitleOrAriaLabel = (
+      <Modal height="auto" onClose={() => {}} open size="sm">
+        <Modal.Header>
+          <Modal.Title>Modal Title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Modal body content.</Modal.Body>
+        <Modal.Footer>Modal footer content.</Modal.Footer>
+      </Modal>
+    );
+    const renderMethod = () => {
+      render(modalWithoutTitleOrAriaLabel);
+    };
+
+    // expect console error from react, suppressed.
+    const consoleWarningMock = jest.spyOn(console, 'warn');
+    consoleWarningMock.mockImplementation();
+    expect(renderMethod).not.toThrow();
+    expect(consoleWarningMock).toHaveBeenCalledTimes(1);
+    consoleWarningMock.mockRestore();
+  });
 });

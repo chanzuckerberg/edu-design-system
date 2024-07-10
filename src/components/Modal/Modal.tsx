@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 
+import { assertEdsUsage } from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
@@ -79,17 +80,24 @@ type ModalContentProps = {
   onClose: () => void;
   // Design API
   /**
-   * Max size of the modal, which responds to the viewport
-   *
-   * **Default is `"lg"`**.
+   * Determine how the height of the modal container is calculated when `size` is `"lg"`:
+   * - `"fixed"` applies the fixed dimensions, which will not adjust
+   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
+   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
    */
-  size?: Extract<Size, 'sm' | 'lg'>;
+  height?: 'fixed' | 'auto' | 'max';
   /**
    * Emphasis used on the backgound overlay (behind the modal)
    *
    * **Default is `"low"`**.
    */
   overlayEmphasis?: 'low' | 'high';
+  /**
+   * Fixed sizes for the modal's height and width. Used in conjunction with `height` when using size `lg`.
+   *
+   * **Default is `"lg"`**.
+   */
+  size?: Extract<Size, 'sm' | 'lg'>;
 };
 
 type ModalProps = ModalContentProps & {
@@ -222,10 +230,11 @@ function childrenHaveModalTitle(children?: ReactNode): boolean {
  *
  * This is only exported for testing purposes; please do not import and use this directly.
  */
-export const ModalContent = (props: ModalContentProps) => {
+const ModalContent = (props: ModalContentProps) => {
   const {
     children,
     className,
+    height = 'fixed',
     hideCloseButton = false,
     isScrollable,
     onClose,
@@ -235,6 +244,7 @@ export const ModalContent = (props: ModalContentProps) => {
 
   const componentClassName = clsx(
     styles['modal__content'],
+    height && styles[`modal__content--height-${height}`],
     isScrollable && styles['modal__content--scrollable'],
     size && styles[`modal__content--${size}`],
     className,
@@ -292,6 +302,12 @@ export const Modal = (props: ModalProps) => {
       );
     }
   }
+
+  // check to make sure folks aren't using size="lg" with "height"
+  assertEdsUsage(
+    [rest.size !== 'lg' && typeof rest.height !== 'undefined'],
+    'Height is only supported when size is set to "lg"',
+  );
 
   const componentClassName = clsx(styles['modal'], modalContainerClassName);
 
@@ -438,6 +454,7 @@ FocusableModalBody.displayName = 'Modal.Body';
 StickyModalFooter.displayName = 'Modal.Footer';
 
 Modal.Header = VariantModalHeader;
+Modal.Content = ModalContent;
 Modal.Title = ModalTitle;
 Modal.SubTitle = ModalSubTitle;
 Modal.Body = FocusableModalBody;
