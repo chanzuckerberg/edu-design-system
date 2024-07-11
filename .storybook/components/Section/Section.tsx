@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import type { HeadingElement } from '../Heading';
-import Heading from '../Heading';
+import { Heading } from '../../../src/';
+import type { HeadingElement } from '../../../src/components/Heading';
 import styles from './Section.module.css';
 export interface Props {
   /**

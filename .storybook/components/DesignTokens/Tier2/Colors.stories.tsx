@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
-import Section from '../../../../src/components/Section';
 import filterTokens from '../../../util/filterTokens';
 import { ColorList } from '../../ColorList/ColorList';
+import Section from '../../Section';
 
 export default {
   title: 'Design Tokens/Tier 2: Usage/Colors',

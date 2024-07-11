@@ -1,8 +1,8 @@
 import React from 'react';
 import '../DesignTokens.css';
-import Section from '../../../../src/components/Section';
 import filterTokens from '../../../util/filterTokens';
 import { ColorList } from '../../ColorList/ColorList';
+import Section from '../../Section';
 
 export const Tier1Colors = () => {
   const getListItems = (filterTerm: string, figmaTokenHeader: string) =>
