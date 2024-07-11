@@ -75,7 +75,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
     React.InputHTMLAttributes<HTMLInputElement>['type'],
     | 'text'
     | 'password'
-    | 'datetime'
     | 'datetime-local'
     | 'date'
     | 'month'
