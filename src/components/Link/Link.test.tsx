@@ -109,5 +109,17 @@ describe('<Link />', () => {
 
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });
+
+    it('warns when size is used with context standalone', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Link context="inline" size="lg">
+          Click
+        </Link>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
   });
 });

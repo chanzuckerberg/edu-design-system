@@ -306,7 +306,7 @@ exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
           Some text with a
            
           <a
-            class="link link--emphasis-default link--size-md link--variant-inverse"
+            class="link link--emphasis-default link--variant-inverse"
             href="https://example.com/"
           >
             link
