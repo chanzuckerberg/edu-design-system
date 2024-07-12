@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.1...v15.1.0) (2024-07-12)
+
+
+### Features
+
+* add runtime warning/errors to components ([#2007](https://github.com/chanzuckerberg/edu-design-system/issues/2007)) ([661130b](https://github.com/chanzuckerberg/edu-design-system/commit/661130b6917d3f80831863f6e3e447a35b048795))
+* **InputField:** add show/hide button for password field type ([#2006](https://github.com/chanzuckerberg/edu-design-system/issues/2006)) ([52d9ca0](https://github.com/chanzuckerberg/edu-design-system/commit/52d9ca04dd2ecf9b0c492e4b541e787cf8fd9860))
+* **Modal:** add height property to modal API ([#2011](https://github.com/chanzuckerberg/edu-design-system/issues/2011)) ([8d0c68f](https://github.com/chanzuckerberg/edu-design-system/commit/8d0c68f6d91910590872e10e9dd5fe4671f4807b))
+
+
+### Bug Fixes
+
+* **Select:** expose generic types to allow by to pass type checks ([#2008](https://github.com/chanzuckerberg/edu-design-system/issues/2008)) ([421c91b](https://github.com/chanzuckerberg/edu-design-system/commit/421c91b41d2691441f94bd71801bbfdeca529d5f))
+
 ### [15.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.0...v15.0.1) (2024-07-02)
 
 
