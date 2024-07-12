@@ -24,7 +24,7 @@ export type LinkProps<ExtendedElement = unknown> =
      * Where `Link` sits alongside other text and content:
      *
      * * **inline** - Inline link inherits the text size established within the `<p>` paragraph they are embedded in.
-     * * **standalone** - Users can choose from the available sizes.
+     * * **standalone** - Users can choose from the available sizes, and add trailing icons.
      *
      * **Default is `"inline"`**.
      *
@@ -32,7 +32,7 @@ export type LinkProps<ExtendedElement = unknown> =
      */
     context?: 'inline' | 'standalone';
     /**
-     * (trailing) icon to use with the link
+     * (trailing) icon to use with the link (when `context` is `"standalone"`)
      */
     icon?: Extract<IconName, 'chevron-right' | 'open-in-new'>;
     /**
@@ -40,7 +40,9 @@ export type LinkProps<ExtendedElement = unknown> =
      */
     emphasis?: 'default' | 'high' | 'low';
     /**
-     * Link size inherits from the surrounding text.
+     * The size of the link (when its context is "standalone").
+     *
+     * **NOTE**: when `context` is `"inline"`, size is ignored (and inherits from the associated text container)
      */
     size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
     /**
@@ -66,7 +68,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       context,
       emphasis = 'default',
       icon,
-      size = 'md',
+      size,
       variant = 'default',
       ...other
     },
@@ -92,6 +94,11 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     assertEdsUsage(
       [context === 'inline' && !!icon],
       'Inline links cannot show icons',
+    );
+
+    assertEdsUsage(
+      [context === 'inline' && typeof size !== 'undefined'],
+      'Size can only be used when context is "standalone"',
     );
 
     assertEdsUsage(

@@ -238,7 +238,7 @@ exports[`<Link /> UsingExtendedLink story renders snapshot 1`] = `
 
 exports[`<Link /> passes class names down properly 1`] = `
 <a
-  class="exampleClassName link link--emphasis-default link--size-md"
+  class="exampleClassName link link--emphasis-default"
   data-testid="example-class-name"
   href="/"
 >
@@ -248,7 +248,7 @@ exports[`<Link /> passes class names down properly 1`] = `
 
 exports[`<Link /> passes test ids down properly 1`] = `
 <a
-  class="link link--emphasis-default link--size-md"
+  class="link link--emphasis-default"
   data-testid="example-test-id"
   href="/"
 >
