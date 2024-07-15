@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<InputField /> DateHandling story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":rm:"
+      >
+        Default input field
+      </label>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":rn:"
+        aria-invalid="false"
+        class="input"
+        id=":rm:"
+        type="date"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":rn:"
+    >
+      This is a fieldnote.
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
   class="p-8"
@@ -145,7 +183,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rq:"
+        for=":rs:"
       >
         Input field with button inside
       </label>
@@ -156,7 +194,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input input-field__input--input-within"
-        id=":rq:"
+        id=":rs:"
         type="text"
       />
       <div
@@ -278,37 +316,6 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
       id=":rl:"
     >
       This input field has no visible label
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<InputField /> Password story renders snapshot 1`] = `
-<div
-  class="p-8"
->
-  <div
-    class="w-96"
-  >
-    <div
-      class="input-field__overline"
-    >
-      <label
-        class="label label--lg input-field__label"
-        for=":rm:"
-      >
-        Password
-      </label>
-    </div>
-    <div
-      class="input-field__body"
-    >
-      <input
-        aria-invalid="false"
-        class="input"
-        id=":rm:"
-        type="password"
-      />
     </div>
   </div>
 </div>
@@ -458,7 +465,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":ro:"
+        for=":rq:"
       >
         Field with Optional Hint
       </label>
@@ -474,7 +481,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input"
-        id=":ro:"
+        id=":rq:"
         type="text"
       />
     </div>
@@ -554,6 +561,44 @@ exports[`<InputField /> TabularInput story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    class="w-96"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--lg input-field__label"
+        for=":ro:"
+      >
+        Default input field
+      </label>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":rp:"
+        aria-invalid="false"
+        class="input"
+        id=":ro:"
+        type="time"
+      />
+    </div>
+    <div
+      class="field-note"
+      id=":rp:"
+    >
+      This is a fieldnote.
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> Warning story renders snapshot 1`] = `
 <div
   class="p-8"
@@ -621,7 +666,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":rs:"
+        for=":ru:"
       >
         test label
       </label>
@@ -644,7 +689,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input error"
-        id=":rs:"
+        id=":ru:"
         maxlength="15"
         required=""
         type="text"
@@ -670,7 +715,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
     >
       <label
         class="label label--lg input-field__label"
-        for=":ru:"
+        for=":r10:"
       >
         Shortened Length Field
       </label>
@@ -693,7 +738,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
       <input
         aria-invalid="false"
         class="input error"
-        id=":ru:"
+        id=":r10:"
         required=""
         type="text"
         value="Some initial text"
@@ -718,7 +763,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     >
       <label
         class="label label--lg input-field__label"
-        for=":r10:"
+        for=":r12:"
       >
         test label
       </label>
@@ -739,10 +784,10 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
       class="input-field__body input-field--has-fieldNote"
     >
       <input
-        aria-describedby=":r11:"
+        aria-describedby=":r13:"
         aria-invalid="false"
         class="input error"
-        id=":r10:"
+        id=":r12:"
         maxlength="20"
         required=""
         type="text"
@@ -754,7 +799,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     >
       <div
         class="field-note field-note--error"
-        id=":r11:"
+        id=":r13:"
       >
         <svg
           class="icon field-note__icon"

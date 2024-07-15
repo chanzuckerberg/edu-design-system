@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
+import { assertEdsUsage } from '../../util/logging';
 import type { Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 import LoadingIndicator from '../LoadingIndicator';
@@ -130,6 +131,20 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const buttonContentClassName = clsx(
       styles['button__text'],
       isLoading && styles['button--is-loading'],
+    );
+
+    assertEdsUsage(
+      [
+        typeof isDisabled === 'undefined' &&
+          typeof other.disabled !== 'undefined',
+      ],
+      'Use "isDisabled" instead of "disabled" on button instances',
+      'error',
+    );
+
+    assertEdsUsage(
+      [iconLayout === 'icon-only' && typeof children !== 'undefined'],
+      'Specifying content for "children" when using icon-only layout is not required and can be removed.',
     );
 
     return (

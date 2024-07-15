@@ -58,16 +58,17 @@ EDS follows [BEM](http://getbem.com/introduction/) syntax for component class na
 
 - **Block** is the primary component block (e.g. `.button`)
 - **Element** is a child of the primary block (e.g. `.button__text`)
-- **Modifier** is a variation of a component style (e.g. `.button--secondary`)
+- **Modifier** is a variation of a component style (e.g. `.button--variant-secondary`)
 
-BEM conventions result in an explicit (and yes, sometimes verbose) class string that allows developers to quickly deduce what role any selector plays.
+BEM conventions result in an explicit (and yes, sometimes verbose) class string that allows developers to quickly deduce what role any selector plays. One
+note about **Modifier** class name parts; by convention in EDS, modifiers should include the property name with the value, for clarity, e.g., `[block]--[propName]-[propValue]`
 
 Let's take a look at the following example:
 
-`.button--full-width`
+`.button--width-full`
 
 - `button` is the block name (“Block” being the “B” in BEM)
-- `--full-width` is a modifier, indicating a stylistic variation of the block (“Modifier” being the “M” in BEM)
+- `--width-full` is a modifier, indicating a stylistic variation of the block (“Modifier” being the “M” in BEM)
 
 Here's another example:
 
@@ -116,7 +117,7 @@ We use focus-visible for most focus states. This ensures that the focus state wi
 However, we currently support some browser versions that do not support the focus-visible CSS feature, so we also use a fallback block in conjunciton with focus-visible.
 
 ```css
-.button--primary {
+.button--rank-primary {
   &:focus-visible {
     @mixin focus;
   }
@@ -132,7 +133,7 @@ However, we currently support some browser versions that do not support the focu
 #### States and pseudo-selectors
 
 ```css
-.button--primary {
+.button--rank-primary {
   background: var(--eds-theme-color-background-brand-primary-strong);
 
   &:hover,
@@ -158,22 +159,22 @@ Use the following conventions:
   /* button code */
 }
 
-.button--secondary {
+.button--rank-secondary {
   /* button--secondary styles */
 }
 
-.button--sm {
+.button--size-sm {
   /* button--sm styles */
 }
 
 .button__text {
   /* button__text styles */
 
-  .button--secondary & {
+  .button--rank-secondary & {
     /* button__text within button--secondary styles */
   }
 
-  .button--sm & {
+  .button--size-sm & {
     /* button__text within button--sm styles */
   }
 }
@@ -223,7 +224,7 @@ For example:
 /**
  * Full width button.
  */
-.button--full-width {
+.button--width-full {
   background: red;
   /* Pushes the button away from the other content because it lives in a flexbox container */
   margin-right: auto;
@@ -348,7 +349,7 @@ import { Icon } from '../Icon/Icon';
 ### Prop Type definitions
 
 ```tsx
-export interface Props {
+export interface ComponentNameProps {
   /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
    */
@@ -427,7 +428,7 @@ export const ComponentName = ({
   of,
   props
   ...other
-}: Props) => {
+}: ComponentNameProps) => {
   ...
 }
 ```
@@ -497,7 +498,7 @@ The last thing that appears above the `return` statement is the `componentClassN
 
 ```tsx
 const componentClassName = clsx(styles['my-component'], className, {
-  [styles['my-component--lg']]: size === 'lg',
+  [styles['my-component--size-lg']]: size === 'lg',
 });
 ```
 
@@ -552,7 +553,7 @@ EDS adheres to the following API naming conventions:
 
 The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
-- `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
+- `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card topStripe="medium">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
 - `size` should be used for adjusting size attributes (e.g. `<Button rank="secondary" size="sm">` or `<Button size="md"`>). Use abbreviations for sizes (ex: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`).
 - `isDisabled` boolean should be used to control the interactivity of a component (e.g. `<Button isDisabled />`)
 

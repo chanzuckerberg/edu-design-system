@@ -2,12 +2,12 @@ import type { StoryObj } from '@storybook/react';
 import { at, capitalize, forEach } from 'lodash';
 
 import React from 'react';
-import Grid from '../../../../src/components/Grid';
-import Section from '../../../../src/components/Section';
 import usages from '../../../../src/design-tokens/tier-2-usage/typography.json';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore importing of a legacy utility file results in some 'any's, which is acceptable for this docs page
 import flatten from '../../../util/flattenToken';
+import Grid from '../../Grid';
+import Section from '../../Section';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export default {

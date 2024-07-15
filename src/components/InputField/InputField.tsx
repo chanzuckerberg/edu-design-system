@@ -8,6 +8,7 @@ import type {
   ForwardedRefComponent,
 } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
+import Button from '../Button';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
@@ -74,7 +75,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
     React.InputHTMLAttributes<HTMLInputElement>['type'],
     | 'text'
     | 'password'
-    | 'datetime'
     | 'datetime-local'
     | 'date'
     | 'month'
@@ -179,6 +179,10 @@ export const InputField: InputFieldType = forwardRef(
   ) => {
     const shouldRenderOverline = !!(label || required);
     const [fieldText, setFieldText] = useState(other.defaultValue);
+
+    // Handling of behavior when field type is password. Show/hide button
+    const revealShowHideButton = type === 'password';
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const overlineClassName = clsx(
       styles['input-field__overline'],
@@ -292,12 +296,24 @@ export const InputField: InputFieldType = forwardRef(
             ref={ref}
             required={required}
             status={shouldRenderError ? 'critical' : status}
-            type={type}
+            type={isPasswordVisible ? 'text' : type}
             {...other}
           />
-          {inputWithin && (
+          {(inputWithin || type === 'password') && (
             <div className={styles['input-field__input-within']}>
               {inputWithin}
+              {revealShowHideButton && fieldText && (
+                <Button
+                  aria-label={`${isPasswordVisible ? 'Hide' : 'Show'} password`}
+                  icon={isPasswordVisible ? 'eye-closed' : 'eye-open'}
+                  iconLayout="icon-only"
+                  onClick={() => {
+                    setIsPasswordVisible(!isPasswordVisible);
+                  }}
+                  rank="tertiary"
+                  size="md"
+                />
+              )}
             </div>
           )}
           {leadingIcon && (

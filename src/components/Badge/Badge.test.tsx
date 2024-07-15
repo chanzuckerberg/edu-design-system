@@ -3,9 +3,10 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { Badge } from './Badge';
 import * as stories from './Badge.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 describe('<Badge />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   it('throws an error if Badge.Text length is > 3', () => {
     // expect console error from react, suppressed.

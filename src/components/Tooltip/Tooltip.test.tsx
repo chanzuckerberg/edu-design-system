@@ -5,11 +5,12 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import * as TooltipStoryFile from './Tooltip.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const { Interactive, InteractiveDisabled } = composeStories(TooltipStoryFile);
 
 describe('<Tooltip />', () => {
-  generateSnapshots(TooltipStoryFile, {
+  generateSnapshots(TooltipStoryFile as StoryFile, {
     // Tippy renders tooltip as a child of <body> and hence is why baseElement needs to be targetted
     getElement: (wrapper) => {
       return wrapper.baseElement;

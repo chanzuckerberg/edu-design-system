@@ -2,7 +2,7 @@
 
 exports[`Modal ContentDefault story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -100,7 +100,7 @@ exports[`Modal Default story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-:r1:"
   />
   <div
-    class="modal__content modal__content--lg"
+    class="modal__content modal__content--height-fixed modal__content--lg"
   >
     <button
       aria-label="close"
@@ -199,7 +199,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-:r4:"
   />
   <div
-    class="modal__content modal__content--lg"
+    class="modal__content modal__content--height-fixed modal__content--lg"
   >
     <button
       aria-label="close"
@@ -284,7 +284,175 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
 
 exports[`Modal Large story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    aria-label="close"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
+        />
+      </svg>
+    </span>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--headline-md"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="text text--headline-sm modal-sub-title"
+    >
+      Modal Sub-title
+    </div>
+  </div>
+  <div
+    class="modal-body"
+  >
+    <div
+      class="fpo h-full w-full"
+    >
+      Modal Content
+    </div>
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="button-group button-group--horizontal"
+    >
+      <button
+        class="button button--layout-none button--primary button--lg button--variant-default"
+        type="button"
+      >
+        <span
+          class="button__text"
+        >
+          Primary Action
+        </span>
+      </button>
+      <button
+        class="button button--layout-none button--secondary button--lg button--variant-default"
+        type="button"
+      >
+        <span
+          class="button__text"
+        >
+          Secondary
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal LargeAuto story renders snapshot 1`] = `
+<div
+  class="modal__content modal__content--height-auto modal__content--lg"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    aria-label="close"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
+        />
+      </svg>
+    </span>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--headline-md"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="text text--headline-sm modal-sub-title"
+    >
+      Modal Sub-title
+    </div>
+  </div>
+  <div
+    class="modal-body"
+  >
+    <div
+      class="fpo h-full w-full"
+    >
+      Modal Content
+    </div>
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="button-group button-group--horizontal"
+    >
+      <button
+        class="button button--layout-none button--primary button--lg button--variant-default"
+        type="button"
+      >
+        <span
+          class="button__text"
+        >
+          Primary Action
+        </span>
+      </button>
+      <button
+        class="button button--layout-none button--secondary button--lg button--variant-default"
+        type="button"
+      >
+        <span
+          class="button__text"
+        >
+          Secondary
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal LargeMax story renders snapshot 1`] = `
+<div
+  class="modal__content modal__content--height-max modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -368,7 +536,7 @@ exports[`Modal Large story renders snapshot 1`] = `
 
 exports[`Modal LayoutVertical story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -452,7 +620,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
 
 exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -536,7 +704,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
 
 exports[`Modal Mobile story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -620,7 +788,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
 
 exports[`Modal MobileLandscape story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -704,7 +872,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
 
 exports[`Modal Small story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--sm"
+  class="modal__content modal__content--height-fixed modal__content--sm"
   data-testid="non-interactive"
   open=""
 >
@@ -788,7 +956,7 @@ exports[`Modal Small story renders snapshot 1`] = `
 
 exports[`Modal Tablet story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -872,7 +1040,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
 
 exports[`Modal WithCriticalButton story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -960,7 +1128,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-:r7:"
   />
   <div
-    class="modal__content modal__content--scrollable modal__content--lg"
+    class="modal__content modal__content--height-fixed modal__content--scrollable modal__content--lg"
   >
     <button
       aria-label="close"

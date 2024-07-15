@@ -23,11 +23,15 @@
 
   /* Sub-component spacing */
   &.link--size-xl,
-  &.link--size-lg { padding-left: calc(var(--eds-size-1) / 16 * 1rem); }
+  &.link--size-lg {
+    padding-left: calc(var(--eds-size-1) / 16 * 1rem);
+  }
 
   &.link--size-md,
-  &.link--size-sm, 
-  &.link--size-xs { padding-left: calc(var(--eds-size-half) / 16 * 1rem); }
+  &.link--size-sm,
+  &.link--size-xs {
+    padding-left: calc(var(--eds-size-half) / 16 * 1rem);
+  }
 }
 
 /**
@@ -51,22 +55,27 @@
    */
   &.link--size-xl {
     font: var(--eds-theme-typography-body-xl);
+    font-weight: 500;
   }
 
   &.link--size-lg {
     font: var(--eds-theme-typography-body-lg);
+    font-weight: 500;
   }
 
   &.link--size-md {
     font: var(--eds-theme-typography-body-md);
+    font-weight: 500;
   }
 
   &.link--size-sm {
     font: var(--eds-theme-typography-body-sm);
+    font-weight: 500;
   }
 
   &.link--size-xs {
     font: var(--eds-theme-typography-body-xs);
+    font-weight: 500;
   }
 }
 
@@ -109,6 +118,7 @@
 }
 
 .link:focus-visible {
-  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid
+    var(--eds-theme-color-border-utility-focus);
   outline-offset: calc(var(--eds-size-quarter) / 16 * 1rem);
 }

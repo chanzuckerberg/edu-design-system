@@ -5,6 +5,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Select } from './Select';
 import * as stories from './Select.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const {
   OpenByDefault,
@@ -38,7 +39,7 @@ const exampleOptions = [
 
 describe('<Select />', () => {
   describe('Generated Snapshots', () => {
-    generateSnapshots(closedStories, {
+    generateSnapshots(closedStories as StoryFile, {
       getElement: async () => {
         const user = userEvent.setup();
         const openButton = await screen.findByRole('button');

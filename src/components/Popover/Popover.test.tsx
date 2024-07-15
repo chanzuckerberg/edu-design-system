@@ -4,11 +4,12 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './Popover.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const { Default } = composeStories(stories);
 
 describe('<Popover />', () => {
-  generateSnapshots(stories, {
+  generateSnapshots(stories as StoryFile, {
     getElement: async () => {
       const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');
