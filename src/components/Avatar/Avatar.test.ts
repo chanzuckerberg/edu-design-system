@@ -1,9 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { getInitials } from './Avatar';
 import * as stories from './Avatar.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 describe('<Avatar />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   // Testing handling of surrogate pairs, et al
   // https://javascript.info/unicode#surrogate-pairs

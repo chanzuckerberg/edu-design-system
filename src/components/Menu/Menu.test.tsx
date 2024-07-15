@@ -6,6 +6,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Menu } from './Menu';
 import * as stories from './Menu.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const { Default } = composeStories(stories);
 
@@ -16,7 +17,7 @@ describe('<Menu />', () => {
   afterEach(() => {
     jest.resetAllMocks();
   });
-  generateSnapshots(staticStories, {
+  generateSnapshots(staticStories as StoryFile, {
     getElement: async () => {
       const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');
