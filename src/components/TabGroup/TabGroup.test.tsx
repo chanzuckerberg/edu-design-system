@@ -4,12 +4,13 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './TabGroup.stories';
+import type { StoryFile } from '../../util/utility-types';
 import TabGroup from '../TabGroup';
 
 const { Default } = composeStories(stories);
 
 describe('<TabGroup />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   it('should focus and select with keyboard controls', async () => {
     const user = userEvent.setup();

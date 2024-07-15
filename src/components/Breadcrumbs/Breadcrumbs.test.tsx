@@ -3,11 +3,12 @@ import { composeStories } from '@storybook/react';
 import { render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import * as stories from './Breadcrumbs.stories';
+import type { StoryFile } from '../../util/utility-types';
 
 const { LongList } = composeStories(stories);
 
 describe('<Breadcrumbs />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories as StoryFile);
 
   describe('truncation', () => {
     it('truncates when its content overflows', async () => {
