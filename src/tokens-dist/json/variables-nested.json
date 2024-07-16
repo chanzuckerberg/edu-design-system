@@ -262,8 +262,9 @@
         "callout": "var(--eds-typography-preset-002-light)",
         "breadcrumb": "var(--eds-typography-preset-009)",
         "button": {
-          "lg": "var(--eds-typography-preset-006)",
-          "md": "var(--eds-typography-preset-006)",
+          "lg": "var(--eds-typography-preset-005)",
+          "md": "var(--eds-typography-preset-005)",
+          "sm": "var(--eds-typography-preset-009)",
           "label": {
             "@": "var(--eds-typography-preset-006)",
             "sm": "var(--eds-typography-preset-008-bold)"

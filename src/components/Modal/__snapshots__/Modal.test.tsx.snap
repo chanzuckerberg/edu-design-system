@@ -66,7 +66,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -164,7 +164,7 @@ exports[`Modal Default story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
         <button
@@ -263,7 +263,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
         <button
@@ -348,7 +348,7 @@ exports[`Modal Large story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -432,7 +432,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -516,7 +516,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -600,7 +600,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -684,7 +684,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -768,7 +768,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -852,7 +852,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -936,7 +936,7 @@ exports[`Modal Small story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -1020,7 +1020,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
         <span
           class="button__text"
         >
-          Primary Action
+          Primary
         </span>
       </button>
       <button
@@ -1238,7 +1238,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
         <button
