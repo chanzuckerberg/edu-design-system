@@ -63,7 +63,7 @@ export const Default: Story = {
       <Modal.Footer>
         <ButtonGroup>
           <Button onClick={() => {}} rank="primary">
-            Primary Action
+            Primary
           </Button>
           <Button onClick={() => {}} rank="secondary">
             Secondary
@@ -170,7 +170,7 @@ export const WithLongTextScrollable: StoryObj<InteractiveArgs> = {
       <Modal.Footer>
         <ButtonGroup>
           <Button onClick={() => {}} rank="primary">
-            Primary Action
+            Primary
           </Button>
           <Button onClick={() => {}} rank="secondary">
             Secondary
@@ -215,7 +215,7 @@ export const ContentDefault: Story = {
         <Modal.Footer>
           <ButtonGroup>
             <Button onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
             <Button onClick={() => {}} rank="secondary">
               Secondary
@@ -301,7 +301,7 @@ export const LayoutVertical: Story = {
         <Modal.Footer>
           <ButtonGroup buttonLayout="vertical">
             <Button isFullWidth onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
             <Button isFullWidth onClick={() => {}} rank="secondary">
               Secondary
@@ -344,7 +344,7 @@ export const LayoutVerticalWithTertiary: Story = {
         <Modal.Footer>
           <ButtonGroup buttonLayout="vertical">
             <Button isFullWidth onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
             <Button isFullWidth onClick={() => {}} rank="tertiary">
               Tertiary

@@ -226,7 +226,7 @@ export const WithHorizontalPrimaryButton: Story = {
           <ButtonGroup>
             {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
             <Button onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
           </ButtonGroup>
         </Card.Footer>
@@ -264,7 +264,7 @@ export const TopStripe: Story = {
           <ButtonGroup>
             {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
             <Button onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
           </ButtonGroup>
         </Card.Footer>
@@ -296,7 +296,7 @@ export const CustomTopStripe: Story = {
           <ButtonGroup>
             {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
             <Button onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
           </ButtonGroup>
         </Card.Footer>
@@ -327,7 +327,7 @@ export const BackgroundCallout: Story = {
           <ButtonGroup>
             {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
             <Button onClick={() => {}} rank="primary">
-              Primary Action
+              Primary
             </Button>
           </ButtonGroup>
         </Card.Footer>
