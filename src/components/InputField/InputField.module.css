@@ -26,6 +26,10 @@
  *
  * Typically used for buttons and icon buttons to enable things like show/hide password buttons .
  */
+.input-field__input--input-within {
+  padding-right: calc(var(--eds-size-12) / 16 * 1rem);
+}
+
 .input-field__input-within {
   position: absolute;
   right: calc(var(--eds-size-1) / 16 * 1rem);
@@ -34,6 +38,9 @@
   display: grid;
   align-items: center;
   justify-content: center;
+
+  /* max width is padding size minus right position size */
+  max-width: calc(var(--eds-size-11) / 16 * 1rem);
 }
 
 .input-field__leading-icon {
@@ -58,10 +65,6 @@
 
 .input-field__input--leading-icon {
   padding-left: 2.25rem;
-}
-
-.input-field__input--input-within {
-  padding-right: 8rem;
 }
 
 .input-field__footer {

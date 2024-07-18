@@ -241,7 +241,7 @@ export const ShowHint: Story = {
  * small component. This facility is used to implement controls that should appear visibly nested
  * within the button, to the right-hand side.
  *
- * Please keep the text of the button brief (button width < 128px)
+ * Please keep the text of the button brief (button width < 96px)
  */
 export const InputWithin: Story = {
   parameters: {
@@ -257,6 +257,34 @@ export const InputWithin: Story = {
       inputWithin={
         <Button rank="secondary" size="sm">
           Button
+        </Button>
+      }
+      label="Input field with button inside"
+      type="text"
+    />
+  ),
+};
+
+/**
+ * The button has a maximum width, so if more text is placed in the button than this width can handle, it
+ * will be trimmed.
+ *
+ * Please keep the text of the button brief (button width < 96px)
+ */
+export const LongInputWithin: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+  },
+  render: () => (
+    <InputField
+      inputWithin={
+        <Button icon="open-in-new" iconLayout="left" rank="secondary" size="sm">
+          Button with extra text
         </Button>
       }
       label="Input field with button inside"
