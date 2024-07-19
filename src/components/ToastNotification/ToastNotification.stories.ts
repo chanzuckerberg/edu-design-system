@@ -11,7 +11,7 @@ export default {
     badges: ['intro-1.0', 'current-2.0'],
   },
   argTypes: {
-    onDismiss: { action: 'dismissed' },
+    onDismiss: { action: 'trigger dismiss' },
     timeout: { table: { disable: true } },
   },
   args: {
@@ -30,12 +30,18 @@ export const Favorable: StoryObj<Args> = {
   },
 };
 
+/**
+ * Notifications can have different status, to indicate errors or destructive actions have completed.
+ */
 export const Critical: StoryObj<Args> = {
   args: {
     status: 'critical',
   },
 };
 
+/**
+ * We can restrict the ability to dismiss the notification by not specifying the `onDismiss` method.
+ */
 export const NotDismissable: StoryObj<Args> = {
   args: {
     ...Default.args,
@@ -43,6 +49,10 @@ export const NotDismissable: StoryObj<Args> = {
   },
 };
 
+/**
+ * Tooltips can be instructed to auto-close after a certain period. After the timeout, the component will call the defined
+ * `onDismiss` method. The behavior of the dissmisal is left up to the user, which allows for complete control.
+ */
 export const AutoDismiss: StoryObj<Args> = {
   args: {
     ...Default.args,

@@ -11,7 +11,7 @@ export default {
     layout: 'centered',
     badges: [BADGE.NEEDS_REVISION, 'intro-1.1', 'current-1.3'],
     backgrounds: {
-      default: 'eds-color-neutral-white',
+      default: 'background-utility-inverse-high-emphasis',
     },
   },
   args: {

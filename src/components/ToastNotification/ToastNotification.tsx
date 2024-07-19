@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { useEffect } from 'react';
 
 import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import { assertEdsUsage } from '../../util/logging';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
 import Icon from '../Icon';
@@ -59,6 +60,12 @@ export const ToastNotification = ({
     styles['toast'],
     status && styles[`toast--status-${status}`],
     className,
+  );
+
+  assertEdsUsage(
+    [!!timeout && typeof onDismiss === 'undefined' && dissmissType === 'auto'],
+    'When using dismissType=auto, an onDismiss method must be defined',
+    'error',
   );
 
   useEffect(() => {
