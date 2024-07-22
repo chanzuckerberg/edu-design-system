@@ -1,84 +1,147 @@
 import clsx from 'clsx';
-import type { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
-import React from 'react';
+import React, { createContext, useContext } from 'react';
+
+import { assertEdsUsage } from '../../util/logging';
+import type { RenderProps } from '../../util/utility-types';
+import type { Status } from '../../util/variant-types';
+
+import FieldLabel from '../FieldLabel';
+import FieldNote from '../FieldNote';
+import Text from '../Text';
+
 import styles from './Fieldset.module.css';
 
-type FieldsetProps = {
+type FieldsetSharedProps = {
   /**
-   * The contents of the fieldset. We suggest a FieldsetLegend followed by
-   * interactive elements.
+   * Indicates disabled state of the input.
+   */
+  isDisabled?: boolean;
+  /**
+   * Status for the field state
    *
-   * Should be wrapped in a fragment to allow our styling to control the spacing
-   * between elements.
+   * **Default is `"default"`**.
    */
-  children: ReactNode;
-  /**
-   * Additional classnames passed in for styling.
-   */
-  className?: string;
-} & React.HTMLAttributes<HTMLFieldSetElement>;
-
-export type FieldsetItemsProps<T extends ElementType> = {
-  /**
-   * The content of the control elements in the fieldset.
-   */
-  children: ReactNode;
-  /**
-   * Type of element the immediate wrapper around the contents should be.
-   * @default 'div'
-   */
-  as?: T;
-  /**
-   * Additional classnames passed in for styling.
-   */
-  className?: string;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 };
 
-export type FieldsetLegendProps = {
+type FieldsetProps = {
+  // Component API
+  /**
+   * The contents of the fieldset. We suggest a Fieldset.Legend followed by
+   * interactive elements within Fieldset.Items.
+   */
+  children: ReactNode;
+  /**
+   * Additional classnames passed in for styling.
+   */
+  className?: string;
+  // Design API
+  /**
+   * Text under the component used to provide a description or error message to describe the state.
+   */
+  fieldNote?: string;
+} & FieldsetSharedProps &
+  React.HTMLAttributes<HTMLFieldSetElement>;
+
+type FieldsetItemsProps = {
+  // Component API
+  /**
+   * Type of element the immediate wrapper around the contents should be.
+   *
+   * **Default is `"div"`**.
+   */
+  as?: string | React.ElementType;
+  /**
+   * Additional classnames passed in for styling.
+   */
+  className?: string;
+} & RenderProps<FieldsetSharedProps>;
+
+type FieldsetLegendProps = {
+  // Component API
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // Design API
   /**
    * String to indicate required or optional state.
+   *
+   * **This prop is deprecated**.
    */
   optionalLabel?: '(required)' | '(optional)';
   /**
-   * Legend text string that names the fieldset.
+   * Indicates that field is required for form to be successfully submitted
    */
-  text: string;
-};
+  required?: boolean;
+  /**
+   * Whether it should show the field hint or not
+   *
+   * **Default is `"false"`**.
+   */
+  showHint?: boolean;
+  /**
+   * Secondary text used to describe the content in more detail
+   */
+  subtitle?: string;
+  /**
+   * Legend text string that names the fieldset.
+   *
+   * **This prop is deprecated**.
+   */
+  text?: string;
+  /**
+   * The title/heading of the component
+   */
+  title?: string;
+} & FieldsetSharedProps;
+
+const FieldsetContext = createContext<FieldsetSharedProps>({});
 
 /**
  * `import {Fieldset} from "@chanzuckerberg/eds";`
  *
- * A container for a fieldset that includes a legend and one or more form inputs.
+ * A reusable container for a fieldset that includes a legend and
+ * one or more form inputs, like radio buttons or checkboxes.
  */
-export function Fieldset({ children, className }: FieldsetProps) {
-  const componentClassName = clsx(styles['fieldset'], className);
-  return <fieldset className={componentClassName}>{children}</fieldset>;
+export function Fieldset({
+  children,
+  className,
+  fieldNote,
+  isDisabled,
+  status,
+}: FieldsetProps) {
+  return (
+    <FieldsetContext.Provider value={{ isDisabled, status }}>
+      <fieldset className={className}>{children}</fieldset>
+      {fieldNote && (
+        <div className={styles['fieldset__footer']}>
+          <FieldNote disabled={isDisabled} status={status}>
+            {fieldNote}
+          </FieldNote>
+        </div>
+      )}
+    </FieldsetContext.Provider>
+  );
 }
 
 /**
  * Helper sub-component for styling the control elements in the component.
  */
-export const FieldsetItems = <T extends ElementType = 'div'>({
+export const FieldsetItems = ({
   children,
-  as,
+  as: Component = 'div',
   className,
-  ...props
-}: FieldsetItemsProps<T> &
-  Omit<ComponentPropsWithoutRef<T>, keyof FieldsetItemsProps<T>>) => {
+  ...other
+}: FieldsetItemsProps) => {
+  const props = useContext(FieldsetContext);
+
   const componentClassName = clsx(styles['fieldset-items'], className);
-  const Component = as || 'div';
-  // Disable this once EDS is updated to React 18+ or lib specifies version.
-  // There is a type mismatch betwwen what gets pulled in via react-beautiful-dnd
-  // and React 16. that library imports the latest react types regardless of
-  // installed version.
   return (
-    <Component className={componentClassName} {...props}>
-      {children}
+    <Component className={componentClassName} {...other}>
+      {typeof children === 'function' ? children(props) : <>{children}</>}
     </Component>
   );
 };
@@ -88,17 +151,70 @@ export const FieldsetItems = <T extends ElementType = 'div'>({
  */
 const FieldsetLegend = ({
   className,
+  isDisabled: _,
   optionalLabel,
+  required,
+  showHint,
+  subtitle,
   text,
+  title,
   ...other
 }: FieldsetLegendProps) => {
-  const componentClassName = clsx(styles['fieldset-legend'], className);
+  const { isDisabled } = useContext(FieldsetContext);
+
+  const componentClassName = clsx(
+    styles['fieldset-legend'],
+    isDisabled && styles['fieldset-legend--disabled'],
+    className,
+  );
+
+  assertEdsUsage(
+    [typeof text !== 'undefined'],
+    'text is deprecated and will removed from EDS in a future release. Use "title" instead.',
+  );
+  assertEdsUsage(
+    [typeof optionalLabel !== 'undefined'],
+    'optionalLabel is deprecated and will be removed from EDS in a future release. Use "showHint" and "required" instead.',
+  );
+  assertEdsUsage(
+    [!title && !!subtitle],
+    'When using "subtitle" you must also use "title',
+  );
+
   return (
-    <legend className={componentClassName} {...other}>
+    <legend
+      aria-disabled={isDisabled ?? undefined}
+      className={componentClassName}
+      {...other}
+    >
       {text}{' '}
       {optionalLabel && (
         <span className={styles['fieldset-legend__flag']}>{optionalLabel}</span>
       )}
+      {title && (
+        <div className={styles['fieldset-legend__overline']}>
+          {title && <FieldLabel disabled={isDisabled}>{title}</FieldLabel>}
+          {required && showHint && (
+            <Text
+              aria-disabled={isDisabled ?? undefined}
+              as="span"
+              preset="body-sm"
+            >
+              (Required)
+            </Text>
+          )}
+          {!required && showHint && (
+            <Text
+              aria-disabled={isDisabled ?? undefined}
+              as="span"
+              preset="body-sm"
+            >
+              (Optional)
+            </Text>
+          )}
+        </div>
+      )}
+      {subtitle && <FieldNote disabled={isDisabled}>{subtitle}</FieldNote>}
     </legend>
   );
 };
