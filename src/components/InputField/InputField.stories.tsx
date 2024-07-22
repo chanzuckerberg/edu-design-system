@@ -14,7 +14,7 @@ const meta: Meta<typeof InputField> = {
     layout: 'centered',
     badges: ['intro-1.0', 'current-2.0'],
     backgrounds: {
-      default: 'eds-color-neutral-white',
+      default: 'background-utility-inverse-high-emphasis',
     },
   },
   args: {

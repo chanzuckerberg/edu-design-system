@@ -10,7 +10,7 @@ export default {
     badges: ['intro-1.2', 'current-1.3'],
     layout: 'centered',
     backgrounds: {
-      default: 'eds-color-neutral-white',
+      default: 'background-utility-inverse-high-emphasis',
     },
   },
 } as Meta<typeof Skeleton>;

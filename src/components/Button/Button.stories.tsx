@@ -199,6 +199,7 @@ export const LoadingStates: Story = {
 export const IconLayouts: Story = {
   args: {
     ...Default.args,
+    children: undefined,
     icon: 'open-in-new',
   },
   render: (args) => {
@@ -214,9 +215,7 @@ export const IconLayouts: Story = {
           {...args}
           aria-label="Label must be applied with icon-only layout"
           iconLayout="icon-only"
-        >
-          Icon Only (text not visible)
-        </Button>
+        />
       </div>
     );
   },
