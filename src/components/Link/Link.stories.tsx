@@ -28,7 +28,7 @@ export const Default: Story = {};
 /**
  * When using context, you can specify a trailing icon for the link.
  *
- * **NOTE**: support for applying the chevron only works with `emphasis` is set to "low".
+ * **NOTE**: support for applying the chevron only works when `emphasis` is set to "low".
  */
 export const LinkWithChevron: Story = {
   args: {
