@@ -1,32 +1,16 @@
-@import '../../design-tokens/mixins.css';
+.fieldset__footer {
+  display: flex;
+  justify-content: space-between;
 
-/*------------------------------------*\
-    # FIELDSET
-\*------------------------------------*/
-
-/**
- * The fieldset groups a legend and several controls.
- */
-.fieldset {
-  @mixin fieldsetStyles;
-   /* Overrides default browser styling. */
-  margin: calc(var(--eds-size-2) / 16 * 1rem);
+  margin-top: calc(var(--eds-size-3) / 16 * 1rem);
 }
-
-/*------------------------------------*\
-    # FIELDSET ITEMS
-\*------------------------------------*/
 
 /**
  * The contents of the fieldset. Spaces them apart.
  */
  .fieldset-items > :not(:last-child) {
-  margin-bottom: calc(var(--eds-size-1-and-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-size-2) / 16 * 1rem);
 }
-
-/*------------------------------------*\
-    # FIELDSET LEGEND
-\*------------------------------------*/
 
 /**
  * A label that's rendered as a <legend> for fieldsets.
@@ -34,17 +18,21 @@
  * but semantically/stylistically a bit different.
  */
 .fieldset-legend {
-  /* Removes some default browser styles. */
-  @mixin legendReset;
-  font: var(--eds-theme-typography-form-label);
-  /* Adjust margin between legend and option list */
-  margin-bottom: calc(var(--eds-size-2) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
 /**
  * Label flag to mark whether or not a field is required
  * or optional. Currently a flag is only present for optional fields
+ *
+ * TODO: remove as deprecated with v16 of EDS
  */
 .fieldset-legend__flag {
   font: var(--eds-theme-typography-body-sm);
+}
+
+.fieldset-legend__overline {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--eds-size-half) / 16 * 1rem);
 }

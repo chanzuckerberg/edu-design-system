@@ -1,0 +1,629 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Fieldset /> Default story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    class="fieldset-legend"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        class="label label--lg"
+      >
+        Legend
+      </label>
+    </div>
+  </legend>
+  <div
+    class="fieldset-items fpo"
+  >
+    <div>
+      Fieldset Content (Radio Buttons or Checkboxes)
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> FieldsetLegend story renders snapshot 1`] = `
+<legend
+  class="fieldset-legend"
+>
+   
+  <div
+    class="fieldset-legend__overline"
+  >
+    <label
+      class="label label--lg"
+    >
+      Legend
+    </label>
+  </div>
+</legend>
+`;
+
+exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
+<legend
+  class="fieldset-legend"
+>
+   
+  <div
+    class="fieldset-legend__overline"
+  >
+    <label
+      class="label label--lg"
+    >
+      Legend
+    </label>
+    <span
+      class="text text--body-sm"
+    >
+      (Optional)
+    </span>
+  </div>
+</legend>
+`;
+
+exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
+<legend
+  class="fieldset-legend"
+>
+   
+  <div
+    class="fieldset-legend__overline"
+  >
+    <label
+      class="label label--lg"
+    >
+      Legend
+    </label>
+    <span
+      class="text text--body-sm"
+    >
+      (Required)
+    </span>
+  </div>
+</legend>
+`;
+
+exports[`<Fieldset /> FieldsetLegendWithSubtitle story renders snapshot 1`] = `
+<legend
+  class="fieldset-legend"
+>
+   
+  <div
+    class="fieldset-legend__overline"
+  >
+    <label
+      class="label label--lg"
+    >
+      Legend
+    </label>
+  </div>
+  <div
+    class="field-note"
+  >
+    With additional Subtitle
+  </div>
+</legend>
+`;
+
+exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    class="fieldset-legend"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        class="label label--lg"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      class="field-note"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        id=":r0:"
+        name="test-checkbox"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r0:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        id=":r1:"
+        name="test-checkbox"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r1:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    class="fieldset-legend"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        class="label label--lg"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      class="field-note"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items fpo"
+  >
+    <div>
+      Fieldset Content (Radio Button or Checkbox)
+    </div>
+    <div>
+      Fieldset Content (Radio Button or Checkbox)
+    </div>
+    <div>
+      Fieldset Content (Radio Button or Checkbox)
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    aria-disabled="true"
+    class="fieldset-legend fieldset-legend--disabled"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        aria-disabled="true"
+        class="label label--lg label--disabled"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      aria-disabled="true"
+      class="field-note field-note--disabled"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":r2:"
+        name="test-checkbox"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          aria-disabled="true"
+          class="label label--lg label--disabled"
+          for=":r2:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":r3:"
+        name="test-checkbox"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          aria-disabled="true"
+          class="label label--lg label--disabled"
+          for=":r3:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    aria-disabled="true"
+    class="fieldset-legend fieldset-legend--disabled"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        aria-disabled="true"
+        class="label label--lg label--disabled"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      aria-disabled="true"
+      class="field-note field-note--disabled"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items"
+  >
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper input__wrapper--disabled"
+      >
+        <input
+          class="radio__input"
+          disabled=""
+          id=":r8:"
+          name="test-radio"
+          type="radio"
+        />
+        <span
+          class="radio__container"
+        />
+        <span
+          class="radio__selected"
+        />
+      </span>
+      <div
+        class="radio__labels"
+      >
+        <label
+          aria-disabled="true"
+          class="label label--lg label--disabled"
+          for=":r8:"
+        >
+          Radio Button
+        </label>
+      </div>
+    </div>
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper input__wrapper--disabled"
+      >
+        <input
+          class="radio__input"
+          disabled=""
+          id=":r9:"
+          name="test-radio"
+          type="radio"
+        />
+        <span
+          class="radio__container"
+        />
+        <span
+          class="radio__selected"
+        />
+      </span>
+      <div
+        class="radio__labels"
+      >
+        <label
+          aria-disabled="true"
+          class="label label--lg label--disabled"
+          for=":r9:"
+        >
+          Radio Button
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    class="fieldset-legend"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        class="label label--lg"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      class="field-note"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items"
+  >
+    <div
+      class="checkbox checkbox--error"
+    >
+      <input
+        class="checkbox__input"
+        id=":r4:"
+        name="test-checkbox"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r4:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox checkbox--error"
+    >
+      <input
+        class="checkbox__input"
+        id=":r5:"
+        name="test-checkbox"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r5:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    class="fieldset-legend"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        class="label label--lg"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      class="field-note"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items"
+  >
+    <div
+      class="radio radio--error"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="radio--error radio__input"
+          id=":ra:"
+          name="test-radio"
+          type="radio"
+        />
+        <span
+          class="radio__container"
+        />
+        <span
+          class="radio__selected"
+        />
+      </span>
+      <div
+        class="radio__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":ra:"
+        >
+          Radio Button
+        </label>
+      </div>
+    </div>
+    <div
+      class="radio radio--error"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="radio--error radio__input"
+          id=":rb:"
+          name="test-radio"
+          type="radio"
+        />
+        <span
+          class="radio__container"
+        />
+        <span
+          class="radio__selected"
+        />
+      </span>
+      <div
+        class="radio__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":rb:"
+        >
+          Radio Button
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    class="fieldset-legend"
+  >
+     
+    <div
+      class="fieldset-legend__overline"
+    >
+      <label
+        class="label label--lg"
+      >
+        Critical Fieldset
+      </label>
+    </div>
+    <div
+      class="field-note"
+    >
+      Some extra descriptive text
+    </div>
+  </legend>
+  <div
+    class="fieldset-items"
+  >
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="radio__input"
+          id=":r6:"
+          name="test-radio"
+          type="radio"
+        />
+        <span
+          class="radio__container"
+        />
+        <span
+          class="radio__selected"
+        />
+      </span>
+      <div
+        class="radio__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r6:"
+        >
+          Radio Button
+        </label>
+      </div>
+    </div>
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="radio__input"
+          id=":r7:"
+          name="test-radio"
+          type="radio"
+        />
+        <span
+          class="radio__container"
+        />
+        <span
+          class="radio__selected"
+        />
+      </span>
+      <div
+        class="radio__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r7:"
+        >
+          Radio Button
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;

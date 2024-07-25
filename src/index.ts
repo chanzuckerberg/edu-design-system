@@ -20,11 +20,6 @@ export { default as Text } from './components/Text';
 export { default as Toggle } from './components/Toggle';
 
 /**
- * Prop types, exported for convenience
- */
-// export type { ClickableStyleProps } from './components/ClickableStyle'; // Remove
-
-/**
  * 2.0 component and type exports
  */
 export { default as Accordion } from './components/Accordion';
@@ -53,6 +48,9 @@ export { default as TextareaField } from './components/TextareaField';
 export { default as ToastNotification } from './components/ToastNotification';
 export { default as Tooltip } from './components/Tooltip';
 
+/**
+ * 2.0 prop types, exported for convenience
+ */
 export type { IconName } from './components/Icon';
 export type { ButtonProps } from './components/Button';
 export type { LinkProps } from './components/Link';
