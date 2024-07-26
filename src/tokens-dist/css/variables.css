@@ -287,8 +287,9 @@
   --eds-theme-typography-form-label: var(--eds-typography-preset-006);
   --eds-theme-typography-button-label-sm: var(--eds-typography-preset-008-bold); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-typography-button-label: var(--eds-typography-preset-006); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-typography-button-md: var(--eds-typography-preset-006);
-  --eds-theme-typography-button-lg: var(--eds-typography-preset-006);
+  --eds-theme-typography-button-sm: var(--eds-typography-preset-009);
+  --eds-theme-typography-button-md: var(--eds-typography-preset-005);
+  --eds-theme-typography-button-lg: var(--eds-typography-preset-005);
   --eds-theme-typography-breadcrumb: var(--eds-typography-preset-009);
   --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
   --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);

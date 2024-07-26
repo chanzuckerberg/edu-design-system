@@ -87,7 +87,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
       </div>
@@ -387,7 +387,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
       </div>
@@ -576,7 +576,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
       </div>
@@ -894,7 +894,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           <span
             class="button__text"
           >
-            Primary Action
+            Primary
           </span>
         </button>
       </div>

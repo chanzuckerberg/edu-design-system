@@ -87,8 +87,7 @@
 
 .button--sm {
   padding: calc(var(--eds-size-half) / 16 * 1rem) 1.33333333rem;
-  /* TODO: need eds-theme-typography-button-sm => preset-009 */
-  font: var(--eds-typography-preset-009);
+  font: var(--eds-theme-typography-button-sm);
 
   min-width: calc(var(--eds-size-6) / 16 * 1rem);
   max-width: calc(var(--eds-size-24) / 16 * 1rem);;

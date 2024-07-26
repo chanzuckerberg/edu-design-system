@@ -180,7 +180,7 @@
     border-color: var(--eds-theme-color-border-utility-critical);
   }
 
-  & ~ .radio__selected {
+  &:checked ~ .radio__selected {
     background-color: var(--eds-theme-color-border-utility-critical);
   }
 }
@@ -190,7 +190,7 @@
     border-color: var(--eds-theme-color-border-utility-critical-hover);
   }
 
-  & ~ .radio__selected {
+  &:checked ~ .radio__selected {
     background-color: var(--eds-theme-color-border-utility-critical-hover);
   }
 }
@@ -200,7 +200,7 @@
     border-color: var(--eds-theme-color-border-utility-critical-active);
   }
 
-  & ~ .radio__selected {
+  &:checked ~ .radio__selected {
     background-color: var(--eds-theme-color-border-utility-critical-active);
   }
 }

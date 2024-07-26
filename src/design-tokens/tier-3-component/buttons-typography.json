@@ -4,10 +4,13 @@
       "typography": {
         "button": {
           "lg": {
-            "value": "var(--eds-typography-preset-006)"
+            "value": "var(--eds-typography-preset-005)"
           },
           "md": {
-            "value": "var(--eds-typography-preset-006)"
+            "value": "var(--eds-typography-preset-005)"
+          },
+          "sm": {
+            "value": "var(--eds-typography-preset-009)"
           },
           "label": {
             "@": {

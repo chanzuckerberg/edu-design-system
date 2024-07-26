@@ -3,6 +3,7 @@ import { composeStories } from '@storybook/react';
 import { render, waitFor } from '@testing-library/react';
 
 import React from 'react';
+import { ToastNotification } from './ToastNotification';
 import * as stories from './ToastNotification.stories';
 import type { StoryFile } from '../../util/utility-types';
 
@@ -23,5 +24,22 @@ describe('<ToastNotification />', () => {
     render(<AutoDismiss />);
 
     await waitFor(() => expect(consoleSpy).toHaveBeenCalledTimes(1));
+  });
+
+  describe('emits messages when misused', () => {
+    let consoleErrorMock: jest.SpyInstance;
+    beforeEach(() => {
+      consoleErrorMock = jest.spyOn(console, 'error');
+      consoleErrorMock.mockImplementation();
+    });
+
+    it('generates an error when onDissmiss and type=auto are misused', async () => {
+      // One must use onDismiss if auto is used
+      render(
+        <ToastNotification dissmissType="auto" timeout={50} title="test" />,
+      );
+
+      await waitFor(() => expect(consoleErrorMock).toHaveBeenCalledTimes(1));
+    });
   });
 });

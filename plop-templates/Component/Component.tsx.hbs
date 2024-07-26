@@ -3,10 +3,13 @@ import React from 'react';
 import styles from './{{pascalCase name}}.module.css';
 
 export interface Props {
+  // Component API
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // Design API
+  // Insert props/values as defined in figma for {{pascalCase name}}
 }
 
 /**
@@ -18,6 +21,7 @@ export interface Props {
  */
 export const {{pascalCase name}} = ({
   className,
+  // Add other deferenced props to use
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['{{dashCase name}}'], className);
@@ -25,6 +29,7 @@ export const {{pascalCase name}} = ({
   return (
     <div
       className={componentClassName}
+      // Other de-referenced props go here
       {...other}
     >
       Hello!

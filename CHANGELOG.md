@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.1.0...v15.2.0) (2024-07-25)
+
+
+### Features
+
+* **Fieldset:** update styles to support new 2.0 components ([#2023](https://github.com/chanzuckerberg/edu-design-system/issues/2023)) ([e542b32](https://github.com/chanzuckerberg/edu-design-system/commit/e542b32a5e205236baf02597d1595b71185cccd7))
+
+
+### Bug Fixes
+
+* **Button:** update typography tokens to match design ([#2019](https://github.com/chanzuckerberg/edu-design-system/issues/2019)) ([3b94114](https://github.com/chanzuckerberg/edu-design-system/commit/3b9411443323050ef829e509443b2bde6db135e4))
+* **InputField:** align text content with inputWithin spacing ([#2020](https://github.com/chanzuckerberg/edu-design-system/issues/2020)) ([e87767b](https://github.com/chanzuckerberg/edu-design-system/commit/e87767bd00bd81828b67a8e651e16df0b955e585))
+
 ## [15.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.0.1...v15.1.0) (2024-07-15)
 
 
