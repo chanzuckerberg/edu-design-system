@@ -66,7 +66,7 @@
 .button--lg {
   align-items: center;
 
-  padding: calc(var(--eds-size-1) / 16 * 1rem) 1.25rem;
+  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-2-and-half) / 16 * 1rem);
   font: var(--eds-theme-typography-button-lg);
 
   min-width:calc(var(--eds-size-9) / 16 * 1rem);
@@ -86,11 +86,11 @@
 }
 
 .button--sm {
-  padding: calc(var(--eds-size-half) / 16 * 1rem) 1.33333333rem;
+  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1-and-half) / 16 * 1rem);
   font: var(--eds-theme-typography-button-sm);
 
   min-width: calc(var(--eds-size-6) / 16 * 1rem);
-  max-width: calc(var(--eds-size-24) / 16 * 1rem);;
+  max-width: calc(var(--eds-size-24) / 16 * 1rem);
   max-height: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
