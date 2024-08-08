@@ -66,28 +66,6 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       <input
         class="checkbox__input"
         disabled=""
-        id=":r5:"
-        type="checkbox"
-      />
-      <div
-        class="checkbox__labels"
-      >
-        <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
-          for=":r5:"
-        >
-          Disabled
-        </label>
-      </div>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <input
-        checked=""
-        class="checkbox__input"
-        disabled=""
         id=":r6:"
         type="checkbox"
       />
@@ -107,6 +85,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       class="checkbox"
     >
       <input
+        checked=""
         class="checkbox__input"
         disabled=""
         id=":r7:"
@@ -124,6 +103,27 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         </label>
       </div>
     </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        class="checkbox__input"
+        disabled=""
+        id=":r8:"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          aria-disabled="true"
+          class="label label--lg label--disabled"
+          for=":r8:"
+        >
+          Disabled
+        </label>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -135,7 +135,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
   <input
     class="checkbox__input"
     disabled=""
-    id=":ra:"
+    id=":rb:"
     type="checkbox"
   />
   <div
@@ -144,7 +144,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
     <label
       aria-disabled="true"
       class="label label--lg label--disabled"
-      for=":ra:"
+      for=":rb:"
     >
       Disabled
     </label>
@@ -178,6 +178,37 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
+<div
+  class="p-8"
+>
+  <div
+    style="font-size: 10px;"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        checked=""
+        class="checkbox__input"
+        id=":r4:"
+        type="checkbox"
+      />
+      <div
+        class="checkbox__labels"
+      >
+        <label
+          class="label label--lg"
+          for=":r4:"
+        >
+          Checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 <div
   class="p-8"
@@ -187,7 +218,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
   >
     <input
       class="checkbox__input"
-      id=":r4:"
+      id=":r5:"
       type="checkbox"
     />
     <div
@@ -195,7 +226,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
     >
       <label
         class="label label--lg"
-        for=":r4:"
+        for=":r5:"
       >
         Checkbox
       </label>
@@ -213,7 +244,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
   >
     <input
       class="checkbox__input"
-      id=":r9:"
+      id=":ra:"
       type="checkbox"
     />
     <div
@@ -221,7 +252,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     >
       <label
         class="label label--lg"
-        for=":r9:"
+        for=":ra:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -271,7 +302,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     <input
       aria-label="a checkbox has no name"
       class="checkbox__input"
-      id=":r8:"
+      id=":r9:"
       type="checkbox"
     />
     <div
