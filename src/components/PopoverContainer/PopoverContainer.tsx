@@ -53,7 +53,6 @@ export const defaultPopoverModifiers: Options['modifiers'] = [
 ];
 
 export type PopoverOptions = {
-  // TODO: switch to PopperJS's full placement type
   /**
    * Popover placement options relative to the trigger element.
    */
@@ -62,10 +61,6 @@ export type PopoverOptions = {
     | 'top-end'
     | 'bottom-start'
     | 'bottom-end'
-    | 'right-start'
-    | 'right-end'
-    | 'left-start'
-    | 'left-end'
     | 'top'
     | 'bottom'
     | 'left'

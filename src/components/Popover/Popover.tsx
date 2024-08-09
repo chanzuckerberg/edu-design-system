@@ -1,5 +1,4 @@
 import { Popover as HeadlessPopover } from '@headlessui/react';
-import clsx from 'clsx';
 import React, { useState, createContext, useContext } from 'react';
 import type { ReactNode, RefObject } from 'react';
 import { createPortal } from 'react-dom';
@@ -11,7 +10,6 @@ import type {
 } from '../PopoverContainer';
 import { defaultPopoverModifiers } from '../PopoverContainer';
 import PopoverContainer from '../PopoverContainer';
-import styles from './Popover.module.css';
 
 export type PopoverProps = ExtractProps<typeof HeadlessPopover> &
   PopoverOptions & {
@@ -130,7 +128,6 @@ const PopoverContent = ({
     style: popperStyles,
   };
 
-  const componentClassName = clsx(styles['popover-content'], className);
   if (typeof document !== 'undefined') {
     return (
       <>
@@ -138,7 +135,7 @@ const PopoverContent = ({
           <HeadlessPopover.Panel
             {...allProps}
             as="article"
-            className={componentClassName}
+            className={className}
           >
             <PopoverContainer className={bodyClassName}>
               {children as ReactNode}
