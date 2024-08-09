@@ -27,6 +27,9 @@ export const WithSublabel: Story = {
   args: { subLabel: 'Additional descriptive text' },
 };
 
+/**
+ * Checkboxes can have an error state
+ */
 export const Error: Story = {
   args: {
     isError: true,
@@ -34,6 +37,9 @@ export const Error: Story = {
   },
 };
 
+/**
+ * Checkboxes can, of course, can be checked
+ */
 export const Checked: Story = {
   ...Default,
   args: {
@@ -41,6 +47,20 @@ export const Checked: Story = {
   },
 };
 
+/**
+ * The checkbox glyph is not affected by any wrapping of font resizing
+ */
+export const GlyphIsConsistent: Story = {
+  ...Default,
+  args: {
+    defaultChecked: true,
+  },
+  decorators: [(Story) => <div style={{ fontSize: '10px' }}>{Story()}</div>],
+};
+
+/**
+ * Checkboxes can be in an indeterminate state, marking a partially checked state
+ */
 export const Indeterminate: Story = {
   args: {
     indeterminate: true,
