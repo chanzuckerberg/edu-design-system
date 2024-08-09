@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.2.0...v15.2.1) (2024-08-09)
+
+
+### Bug Fixes
+
+* **Button:** update button padding to match design ([#2027](https://github.com/chanzuckerberg/edu-design-system/issues/2027)) ([15644d3](https://github.com/chanzuckerberg/edu-design-system/commit/15644d38935d32a8660fb5ed47c404d68c8f36ff))
+* **Checkbox:** specify a font size for the checked glyph ([#2030](https://github.com/chanzuckerberg/edu-design-system/issues/2030)) ([6777316](https://github.com/chanzuckerberg/edu-design-system/commit/6777316b10ae772fe70e4821536c6e9d8d61b30a))
+* **Menu:** remove style overrides to Menu.Button ([#2029](https://github.com/chanzuckerberg/edu-design-system/issues/2029)) ([2ad7b4c](https://github.com/chanzuckerberg/edu-design-system/commit/2ad7b4c3380da2e3572646c75df455d53a13e504))
+
 ## [15.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.1.0...v15.2.0) (2024-07-25)
 
 
