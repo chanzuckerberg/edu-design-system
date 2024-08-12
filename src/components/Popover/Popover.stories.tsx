@@ -5,9 +5,6 @@ import React from 'react';
 import { Popover } from './Popover';
 import type { PopoverProps } from './Popover';
 import Button from '../Button';
-import Hr from '../Hr';
-
-// Fix row showing for children
 
 export default {
   title: 'Components/Popover',
@@ -71,6 +68,22 @@ export default {
 type Story = StoryObj<PopoverProps>;
 
 export const Default: Story = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Popover>
+  <Popover.Button as={Button} data-testid="popover-trigger-button">
+    Open Popover
+  </Popover.Button>
+  <Popover.Content data-testid="popover-content">
+    <div className="fpo m-2 p-6">Popover Content goes here</div>
+  </Popover.Content>
+</Popover>
+        `,
+      },
+    },
+  },
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.
@@ -142,34 +155,6 @@ export const BottomEnd: Story = {
   ...Default,
 };
 
-export const RightStart: Story = {
-  args: {
-    placement: 'right-start',
-  },
-  ...Default,
-};
-
-export const RightEnd: Story = {
-  args: {
-    placement: 'right-end',
-  },
-  ...Default,
-};
-
-export const LeftStart: Story = {
-  args: {
-    placement: 'left-start',
-  },
-  ...Default,
-};
-
-export const LeftEnd: Story = {
-  args: {
-    placement: 'left-end',
-  },
-  ...Default,
-};
-
 /**
  * The trigger for `Popover` can receive focus, by convention.
  */
@@ -192,7 +177,6 @@ export const FocusClickableElement: Story = {
         <Popover.Content data-testid="popover-content" focus>
           <div className="fpo m-2 p-6">
             Popover Content goes here
-            <Hr />
             <Button>Focus on me upon open</Button>
           </div>
         </Popover.Content>
