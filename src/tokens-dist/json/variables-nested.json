@@ -964,12 +964,14 @@
               "primary": {
                 "@": "#0F2163",
                 "hover": "#0A164C",
-                "active": "#060E30"
+                "active": "#060E30",
+                "visited": "#0F2163"
               },
               "secondary": {
                 "@": "#3165D2",
                 "hover": "#254EAC",
-                "active": "#1B3889"
+                "active": "#1B3889",
+                "visited": "#3165D2"
               },
               "visited": "#8A50A7"
             },
@@ -1105,12 +1107,14 @@
               "primary": {
                 "@": "#0F2163",
                 "hover": "#0A164C",
-                "active": "#060E30"
+                "active": "#060E30",
+                "visited": "#0F2163"
               },
               "secondary": {
                 "@": "#3165D2",
                 "hover": "#254EAC",
-                "active": "#1B3889"
+                "active": "#1B3889",
+                "visited": "#3165D2"
               },
               "visited": "#8A50A7"
             },
@@ -1142,7 +1146,7 @@
               "@": "rgb(var(--eds-color-white) / 1)",
               "disabled": "rgb(var(--eds-color-white) / 0.5)",
               "interactive": {
-                "visited": "#C580E7"
+                "visited": "rgb(var(--eds-color-white) / 1)"
               }
             },
             "placeholder": "#6C6967",

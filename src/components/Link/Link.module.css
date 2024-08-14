@@ -114,7 +114,7 @@
 }
 
 .link:visited {
-  color: var(--eds-theme-color-text-utility-interactive-visited);
+  color: var(--eds-theme-color-text-utility-interactive-primary-visited);
 }
 
 .link:focus-visible {
