@@ -40,7 +40,7 @@ for which utility classes to use when you need color tokens (in order of prefere
 These map to the higher-tier token names, and are semantic- (or component-) based. 
 
 ```tsx
-<div className="text-utility-interactive-visited">Option 1</div>
+<div className="text-utility-interactive-primary-visited">Option 1</div>
 ```
 
 #### ✅ Token name referecnes as custom utility classes
@@ -48,7 +48,7 @@ These map to the higher-tier token names, and are semantic- (or component-) base
 If there is no existing utility class for the use case, you can reference the token directly in a class. While less preferable to the above, this still plugs into EDS.
 
 ```tsx
-<div className="bg-[var(--eds-theme-color-text-utility-interactive-visited)]">Option 2</div>
+<div className="bg-[var(--eds-theme-color-text-utility-interactive-primary-visited)]">Option 2</div>
 ```
 
 Cons:
