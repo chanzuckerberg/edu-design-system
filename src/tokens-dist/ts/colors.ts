@@ -26,6 +26,10 @@ export const EdsThemeColorBackgroundBrandBlueLowEmphasis = '#EAF4FF';
 export const EdsThemeColorBackgroundBrandPurple = '#C580E7';
 export const EdsThemeColorBackgroundBrandPurpleLowEmphasis = '#FBF5FD';
 export const EdsThemeColorBackgroundBrandPink = '#DB458D';
+export const EdsThemeColorBackgroundTableRowStripe1 = '#F5FAFF';
+export const EdsThemeColorBackgroundTableRowStripe2 =
+  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundTableRowSelected = '#CEE6FF';
 export const EdsThemeColorBackgroundUtilityBase1 =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundUtilityBase2 = '#FDF9F8';
@@ -586,6 +590,7 @@ export const EdsColorBlue800 = '#152D76';
 export const EdsColorBlue850 = '#0F2163';
 export const EdsColorBlue900 = '#0A164C';
 export const EdsColorBlue950 = '#060E30';
+export const EdsColorBlue025 = '#F5FAFF';
 export const EdsColorBlue050 = '#EAF4FF';
 export const EdsColorPink350 = '#E67EB0';
 export const EdsColorPink450 = '#DB458D';

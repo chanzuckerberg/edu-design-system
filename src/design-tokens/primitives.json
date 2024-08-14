@@ -278,6 +278,7 @@
         "950": { "value": "#05120C", "group": "color" }
       },
       "blue": {
+        "025": { "value": "#F5FAFF", "group": "color" },
         "050": { "value": "#EAF4FF", "group": "color" },
         "100": { "value": "#CEE6FF", "group": "color" },
         "150": { "value": "#B5DAFF", "group": "color" },

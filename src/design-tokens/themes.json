@@ -221,6 +221,20 @@
               "value": "{eds.color.pink.450}"
             }
           },
+          "tableRow": {
+            "stripe": {
+              "1": {
+                "value": "{eds.color.blue.025}",
+                "group": "color"
+              },
+              "2": {
+                "value": "{eds.theme.color.background.utility.base.1}"
+              }
+            },
+            "selected": {
+              "value": "{eds.color.blue.100}"
+            }
+          },
           "utility": {
             "base": {
               "1": {
