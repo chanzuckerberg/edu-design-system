@@ -74,7 +74,8 @@ const ToastNotificationManager = (args: Args) => {
     { id: number | string; text: string; show?: boolean }[]
   >([]);
 
-  // TODO: clean up `toasts` after .show is set to false (using useEffect?)
+  // TODO: clean up `toasts` after .show is set to false (using useEffect? and .debounce)
+  // - In a production implementation, you can filter out any toasts where show=false
 
   return (
     <div className="flex h-[90vh] w-[90vw] items-center justify-center">
@@ -90,20 +91,20 @@ const ToastNotificationManager = (args: Args) => {
           ]);
         }}
       >
-        Add Toast
+        Trigger A Toast Notification
       </Button>
       <div
-        className="absolute bottom-0 left-0 flex flex-col gap-size-2"
+        className="dur absolute bottom-0 left-0 flex flex-col gap-size-2"
         id="toast-container"
       >
         {toasts.map((toast) => (
           <Transition
             appear
-            enter="transition-all duration-300"
+            enter="transition-all duration-medium"
             enterFrom="opacity-0 transform-gpu scale-0"
             enterTo="opacity-100 transform-gpu scale-100"
             key={toast.id}
-            leave="ease-in-out transition-all duration-300"
+            leave="ease-in-out transition-all duration-medium"
             leaveFrom="opacity-100 transform-gpu translate-x-[0px]"
             leaveTo="opacity-0 transform-gpu translate-x-[-100%]"
             show={toast.show}
@@ -130,9 +131,15 @@ const ToastNotificationManager = (args: Args) => {
 };
 
 /**
- * This implementation example shows how you can use toasts with state to ghandle multiple, stacking notifications
+ * This implementation example shows how you can use toasts with state to handle multiple, stacking notifications.
+ *
+ * For a full, production-ready implementation, clean up any toasts with show=false after the animation has completed.
+ * - Consider using lodash.debounce to time the re-render, and useEffect that watches the list of toasts
+ * - Any debouncing should map to whatever duration is used in `Transition`
+ *
+ * Here, we use `<Transition>` provided by [HeadlessUI](https://github.com/chanzuckerberg/edu-design-system/blob/main/package.json#L91-L93).
  */
-export const IEDismissingToasts: Story = {
+export const ExampleDismissingToasts: Story = {
   render: (args) => <ToastNotificationManager {...args} />,
   parameters: {
     // For interactive use, low value in snap testing again since already covered in other stories.

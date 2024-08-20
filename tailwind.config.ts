@@ -11,6 +11,19 @@ const {
 // Add a type to the token sizes to avoid literals for keys
 const sizes: { [x: string]: string } = edsTokens.size;
 
+// add a type to the token sizes for movement durations
+const movement: { [x: string]: string } = {
+  ...Object.keys(edsTokens.anim.move)
+    .map((movement) => {
+      return { [movement]: `${edsTokens.anim.move[movement]}s` };
+    })
+    .reduce((accumulate, current) => {
+      const entry = Object.entries(current)[0];
+      accumulate[entry[0]] = entry[1];
+      return accumulate;
+    }, {}),
+};
+
 const sizeTokens = {
   // We pull the spacing tokens and format them such that names are like 'size-${name} = ${value}px'
   ...Object.keys(sizes)
@@ -51,6 +64,9 @@ export default {
       },
       spacing: {
         ...sizeTokens,
+      },
+      transitionDuration: {
+        ...movement,
       },
     },
     fontWeight: {
