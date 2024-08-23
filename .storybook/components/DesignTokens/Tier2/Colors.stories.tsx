@@ -54,22 +54,6 @@ export const TextUtility: StoryObj = {
   ),
 };
 
-export const IconUtility: StoryObj = {
-  render: () => (
-    <div>
-      <Section title="Icon Colors (utility)">
-        <ColorList
-          listItems={getListItems({
-            filterTerm: 'eds-theme-color-icon-utility',
-            figmaTokenHeader: 'icon',
-            tailwindClassHeader: 'text-icon-utility',
-          })}
-        />
-      </Section>
-    </div>
-  ),
-};
-
 export const BackgroundUtility: StoryObj = {
   render: () => (
     <div>

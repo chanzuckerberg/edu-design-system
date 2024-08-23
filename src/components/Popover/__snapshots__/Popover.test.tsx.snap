@@ -121,12 +121,12 @@ exports[`<Popover /> FocusClickableElement story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-popover-panel-:r23:"
+    aria-controls="headlessui-popover-panel-:r1f:"
     aria-expanded="true"
     class="button button--layout-none button--primary button--lg button--variant-default"
     data-headlessui-state="open"
     data-testid="popover-trigger-button"
-    id="headlessui-popover-button-:r21:"
+    id="headlessui-popover-button-:r1d:"
     type="button"
   >
     <span
@@ -138,7 +138,7 @@ exports[`<Popover /> FocusClickableElement story renders snapshot 1`] = `
   <button
     aria-hidden="true"
     data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-:r22:"
+    id="headlessui-focus-sentinel-:r1e:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />
@@ -174,64 +174,6 @@ exports[`<Popover /> Left story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
-<div
-  data-headlessui-state="open"
->
-  <button
-    aria-controls="headlessui-popover-panel-:r1u:"
-    aria-expanded="true"
-    class="button button--layout-none button--primary button--lg button--variant-default"
-    data-headlessui-state="open"
-    data-testid="popover-trigger-button"
-    id="headlessui-popover-button-:r1s:"
-    type="button"
-  >
-    <span
-      class="button__text"
-    >
-      Open Popover
-    </span>
-  </button>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-:r1t:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-</div>
-`;
-
-exports[`<Popover /> LeftStart story renders snapshot 1`] = `
-<div
-  data-headlessui-state="open"
->
-  <button
-    aria-controls="headlessui-popover-panel-:r1p:"
-    aria-expanded="true"
-    class="button button--layout-none button--primary button--lg button--variant-default"
-    data-headlessui-state="open"
-    data-testid="popover-trigger-button"
-    id="headlessui-popover-button-:r1n:"
-    type="button"
-  >
-    <span
-      class="button__text"
-    >
-      Open Popover
-    </span>
-  </button>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-:r1o:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-</div>
-`;
-
 exports[`<Popover /> Right story renders snapshot 1`] = `
 <div
   data-headlessui-state="open"
@@ -255,64 +197,6 @@ exports[`<Popover /> Right story renders snapshot 1`] = `
     aria-hidden="true"
     data-headlessui-focus-guard="true"
     id="headlessui-focus-sentinel-:rb:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-</div>
-`;
-
-exports[`<Popover /> RightEnd story renders snapshot 1`] = `
-<div
-  data-headlessui-state="open"
->
-  <button
-    aria-controls="headlessui-popover-panel-:r1k:"
-    aria-expanded="true"
-    class="button button--layout-none button--primary button--lg button--variant-default"
-    data-headlessui-state="open"
-    data-testid="popover-trigger-button"
-    id="headlessui-popover-button-:r1i:"
-    type="button"
-  >
-    <span
-      class="button__text"
-    >
-      Open Popover
-    </span>
-  </button>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-:r1j:"
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-    type="button"
-  />
-</div>
-`;
-
-exports[`<Popover /> RightStart story renders snapshot 1`] = `
-<div
-  data-headlessui-state="open"
->
-  <button
-    aria-controls="headlessui-popover-panel-:r1f:"
-    aria-expanded="true"
-    class="button button--layout-none button--primary button--lg button--variant-default"
-    data-headlessui-state="open"
-    data-testid="popover-trigger-button"
-    id="headlessui-popover-button-:r1d:"
-    type="button"
-  >
-    <span
-      class="button__text"
-    >
-      Open Popover
-    </span>
-  </button>
-  <button
-    aria-hidden="true"
-    data-headlessui-focus-guard="true"
-    id="headlessui-focus-sentinel-:r1e:"
     style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
     type="button"
   />

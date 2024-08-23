@@ -83,6 +83,10 @@
 
 .card__header {
   display: flex;
+
+  & .header__eyebrow {
+    margin-bottom: calc(var(--eds-size-1) / 16 * 1rem);
+  }
   
   &.header--size-sm {
     gap: calc(var(--eds-size-1) / 16 * 1rem)

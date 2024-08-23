@@ -23,12 +23,14 @@ export type LinkProps<ExtendedElement = unknown> =
     /**
      * Where `Link` sits alongside other text and content:
      *
-     * * **inline** - Inline link inherits the text size established within the `<p>` paragraph they are embedded in.
-     * * **standalone** - Users can choose from the available sizes, and add trailing icons.
+     * * **inline** - Inline link inherits the text size/color established within the `<p>` or other tag they are embedded in.
+     * * **standalone** - Users can choose from the available sizes, select variants, and add a trailing icon.
      *
      * **Default is `"inline"`**.
      *
-     * Note: Icons will only be visible when `"standalone"` is used
+     * ----
+     *
+     * **Note**: This will only apply when `"standalone"` is used
      */
     context?: 'inline' | 'standalone';
     /**
@@ -40,15 +42,21 @@ export type LinkProps<ExtendedElement = unknown> =
      */
     emphasis?: 'default' | 'high' | 'low';
     /**
-     * The size of the link (when its context is "standalone").
+     * The size of the link (when its context is `"standalone"`).
      *
-     * **NOTE**: when `context` is `"inline"`, size is ignored (and inherits from the associated text container)
+     * ----
+     *
+     * **Note**: This will only apply when `"standalone"` is used
      */
     size?: Extract<Size, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
     /**
-     * The variant treatment for links (use "inverse" on dark backgrounds).
+     * The variant treatment for **standalone** links (use "inverse" on dark backgrounds).
      *
      * **Default is `"default"`**.
+     *
+     * ----
+     *
+     * **Note**: This will only apply when `"standalone"` is used
      */
     variant?: 'default' | 'inverse';
   } & ExtendedElement;
@@ -58,6 +66,7 @@ export type LinkProps<ExtendedElement = unknown> =
  *
  * Component for making styled anchor tags. Links allow users to navigate within or between a web page(s) or app(s).
  *
+ * Inline links inherit the color of the surrounding container, while when using `context` set to `standalone`, links have specific colors.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
@@ -94,6 +103,11 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     assertEdsUsage(
       [context === 'inline' && !!icon],
       'Inline links cannot show icons',
+    );
+
+    assertEdsUsage(
+      [context === 'inline' && variant === 'inverse'],
+      'Variant can only be used when context is "standalone"',
     );
 
     assertEdsUsage(

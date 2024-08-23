@@ -50,6 +50,10 @@
     text-decoration: none;
   }
 
+  &.link--variant-inverse {
+    color: var(--eds-theme-color-text-utility-inverse);
+  }
+
   /**
    * Sizes - using the presets for type ramp matching body-*
    */
@@ -114,7 +118,7 @@
 }
 
 .link:visited {
-  color: var(--eds-theme-color-text-utility-interactive-visited);
+  color: var(--eds-theme-color-text-utility-interactive-primary-visited);
 }
 
 .link:focus-visible {

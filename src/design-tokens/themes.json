@@ -221,6 +221,20 @@
               "value": "{eds.color.pink.450}"
             }
           },
+          "tableRow": {
+            "stripe": {
+              "1": {
+                "value": "{eds.color.blue.025}",
+                "group": "color"
+              },
+              "2": {
+                "value": "{eds.theme.color.background.utility.base.1}"
+              }
+            },
+            "selected": {
+              "value": "{eds.color.blue.100}"
+            }
+          },
           "utility": {
             "base": {
               "1": {
@@ -1699,6 +1713,10 @@
                 "active": {
                   "value": "{eds.theme.color.text.utility.interactive.primary.active}",
                   "group": "color"
+                },
+                "visited": {
+                  "value": "{eds.theme.color.text.utility.interactive.primary.visited}",
+                  "group": "color"
                 }
               },
               "secondary": {
@@ -1713,11 +1731,16 @@
                 "active": {
                   "value": "{eds.theme.color.text.utility.interactive.secondary.active}",
                   "group": "color"
+                },
+                "visited": {
+                  "value": "{eds.theme.color.text.utility.interactive.secondary.visited}",
+                  "group": "color"
                 }
               },
               "visited": {
                 "value": "{eds.theme.color.text.utility.interactive.visited}",
-                "group": "color"
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
             "critical": {
@@ -2033,6 +2056,9 @@
                 },
                 "active": {
                   "value": "{eds.color.blue.950}"
+                },
+                "visited": {
+                  "value": "{eds.color.blue.850}"
                 }
               },
               "secondary": {
@@ -2044,10 +2070,14 @@
                 },
                 "active": {
                   "value": "{eds.color.blue.750}"
+                },
+                "visited": {
+                  "value": "{eds.color.blue.550}"
                 }
               },
               "visited": {
-                "value": "{eds.color.purple.550}"
+                "value": "{eds.color.purple.550}",
+                "comment": "@deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
               }
             },
             "critical": {
@@ -2111,7 +2141,7 @@
               },
               "interactive": {
                 "visited": {
-                  "value": "{eds.color.purple.350}"
+                  "value": "rgb(var(--eds-color-white) / 1)"
                 }
               }
             },

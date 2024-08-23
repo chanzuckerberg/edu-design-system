@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.2.1...v15.3.0) (2024-08-23)
+
+
+### Features
+
+* **config:** add transition durations for tailwind ([#2036](https://github.com/chanzuckerberg/edu-design-system/issues/2036)) ([aed0f09](https://github.com/chanzuckerberg/edu-design-system/commit/aed0f0941d9d09f8a7b96f2219f6801eefa4ee50))
+* **Popover:** update theming to 2.0 ([#2031](https://github.com/chanzuckerberg/edu-design-system/issues/2031)) ([c5ab351](https://github.com/chanzuckerberg/edu-design-system/commit/c5ab3515e1bfe8eafde89ec308547b6d34e0b44d))
+* **tokens:** add in additional table tokens ([#2035](https://github.com/chanzuckerberg/edu-design-system/issues/2035)) ([a698a5b](https://github.com/chanzuckerberg/edu-design-system/commit/a698a5b4a65af8a7dffa7da908be9d7e05ffc570))
+* **tokens:** update visited tokens ([#2034](https://github.com/chanzuckerberg/edu-design-system/issues/2034)) ([df84c87](https://github.com/chanzuckerberg/edu-design-system/commit/df84c87ecd2ad34b37b90d6774bea284da50d045))
+
+
+### Bug Fixes
+
+* **Card:** add spacing between eyebrow and title ([#2040](https://github.com/chanzuckerberg/edu-design-system/issues/2040)) ([d6ee15d](https://github.com/chanzuckerberg/edu-design-system/commit/d6ee15d71d9f3df76fe68f1639ac1e442e6cd686))
+* **Link:** handle inverse variant for standalone links ([#2042](https://github.com/chanzuckerberg/edu-design-system/issues/2042)) ([351d7fd](https://github.com/chanzuckerberg/edu-design-system/commit/351d7fd850196c44da17985b82d8f150fd37a62b))
+* **Popover:** update component version number ([#2038](https://github.com/chanzuckerberg/edu-design-system/issues/2038)) ([9940d76](https://github.com/chanzuckerberg/edu-design-system/commit/9940d76d6ac60e112dee2e39d227bbb695057564))
+
 ### [15.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.2.0...v15.2.1) (2024-08-09)
 
 

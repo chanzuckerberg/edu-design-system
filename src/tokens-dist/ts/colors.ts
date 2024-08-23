@@ -26,6 +26,10 @@ export const EdsThemeColorBackgroundBrandBlueLowEmphasis = '#EAF4FF';
 export const EdsThemeColorBackgroundBrandPurple = '#C580E7';
 export const EdsThemeColorBackgroundBrandPurpleLowEmphasis = '#FBF5FD';
 export const EdsThemeColorBackgroundBrandPink = '#DB458D';
+export const EdsThemeColorBackgroundTableRowStripe1 = '#F5FAFF';
+export const EdsThemeColorBackgroundTableRowStripe2 =
+  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundTableRowSelected = '#CEE6FF';
 export const EdsThemeColorBackgroundUtilityBase1 =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundUtilityBase2 = '#FDF9F8';
@@ -356,10 +360,12 @@ export const EdsThemeColorIconUtilityDefaultSecondaryActive = '#3F3E3D';
 export const EdsThemeColorIconUtilityInteractivePrimary = '#0F2163';
 export const EdsThemeColorIconUtilityInteractivePrimaryHover = '#0A164C';
 export const EdsThemeColorIconUtilityInteractivePrimaryActive = '#060E30';
+export const EdsThemeColorIconUtilityInteractivePrimaryVisited = '#0F2163';
 export const EdsThemeColorIconUtilityInteractiveSecondary = '#3165D2';
 export const EdsThemeColorIconUtilityInteractiveSecondaryHover = '#254EAC';
 export const EdsThemeColorIconUtilityInteractiveSecondaryActive = '#1B3889';
-export const EdsThemeColorIconUtilityInteractiveVisited = '#8A50A7';
+export const EdsThemeColorIconUtilityInteractiveSecondaryVisited = '#3165D2';
+export const EdsThemeColorIconUtilityInteractiveVisited = '#8A50A7'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorIconUtilityCritical = '#A51115';
 export const EdsThemeColorIconUtilityCriticalHover = '#7D0A16';
 export const EdsThemeColorIconUtilityCriticalActive = '#660517';
@@ -435,10 +441,12 @@ export const EdsThemeColorTextUtilityDefaultSecondaryActive = '#3F3E3D';
 export const EdsThemeColorTextUtilityInteractivePrimary = '#0F2163';
 export const EdsThemeColorTextUtilityInteractivePrimaryHover = '#0A164C';
 export const EdsThemeColorTextUtilityInteractivePrimaryActive = '#060E30';
+export const EdsThemeColorTextUtilityInteractivePrimaryVisited = '#0F2163';
 export const EdsThemeColorTextUtilityInteractiveSecondary = '#3165D2';
 export const EdsThemeColorTextUtilityInteractiveSecondaryHover = '#254EAC';
 export const EdsThemeColorTextUtilityInteractiveSecondaryActive = '#1B3889';
-export const EdsThemeColorTextUtilityInteractiveVisited = '#8A50A7';
+export const EdsThemeColorTextUtilityInteractiveSecondaryVisited = '#3165D2';
+export const EdsThemeColorTextUtilityInteractiveVisited = '#8A50A7'; // @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead
 export const EdsThemeColorTextUtilityCritical = '#A51115';
 export const EdsThemeColorTextUtilityCriticalHover = '#7D0A16';
 export const EdsThemeColorTextUtilityCriticalActive = '#660517';
@@ -457,7 +465,8 @@ export const EdsThemeColorTextUtilityInverse =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorTextUtilityInverseDisabled =
   'rgb(var(--eds-color-white) / 0.5)';
-export const EdsThemeColorTextUtilityInverseInteractiveVisited = '#C580E7';
+export const EdsThemeColorTextUtilityInverseInteractiveVisited =
+  'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorTextUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorTextUtilitySuccess = '#007249'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorTextUtilityError = '#BD0044'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
@@ -586,6 +595,7 @@ export const EdsColorBlue800 = '#152D76';
 export const EdsColorBlue850 = '#0F2163';
 export const EdsColorBlue900 = '#0A164C';
 export const EdsColorBlue950 = '#060E30';
+export const EdsColorBlue025 = '#F5FAFF';
 export const EdsColorBlue050 = '#EAF4FF';
 export const EdsColorPink350 = '#E67EB0';
 export const EdsColorPink450 = '#DB458D';
