@@ -121,5 +121,17 @@ describe('<Link />', () => {
 
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });
+
+    it('warns when variant is used with context inline', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Link context="inline" variant="inverse">
+          Click
+        </Link>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
   });
 });
