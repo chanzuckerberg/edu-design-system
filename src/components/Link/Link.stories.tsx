@@ -26,7 +26,7 @@ type Story = StoryObj<typeof Link>;
 export const Default: Story = {};
 
 /**
- * When using context, you can specify a trailing icon for the link.
+ * When using standalone context, you can specify a trailing icon for the link.
  *
  * **NOTE**: support for applying the chevron only works when `emphasis` is set to "low".
  */
@@ -40,7 +40,7 @@ export const LinkWithChevron: Story = {
 };
 
 /**
- * When using context, you can specify a trailing icon for the link. When using the open icon, make sure that a new tab/window is opened.
+ * When using standalone context, you can specify a trailing icon for the link. When using the open icon, make sure that a new tab/window is opened.
  */
 export const LinkWithOpenIcon: Story = {
   args: {
@@ -51,7 +51,7 @@ export const LinkWithOpenIcon: Story = {
 };
 
 /**
- * You can add formatting to the link if needed.
+ * You can add formatting to a link if needed.
  */
 export const LinkWithFormattedChildren: Story = {
   args: {
@@ -75,9 +75,11 @@ export const Emphasis: Story = {
         <Link {...args} emphasis="default">
           Default Emphasis
         </Link>
+        <br />
         <Link {...args} emphasis="high">
           High Emphasis
         </Link>
+        <br />
         <Link {...args} emphasis="low">
           Low Emphasis
         </Link>
@@ -87,7 +89,20 @@ export const Emphasis: Story = {
 };
 
 /**
- * We also include an inverse variant, for use on dark backgrounds.
+ * Standalone inverse links take on a specific inverse color.
+ */
+export const StandaloneInverseVariant: Story = {
+  args: {
+    context: 'standalone',
+    variant: 'inverse',
+  },
+  parameters: {
+    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
+};
+
+/**
+ * Inline always take on the color of the container. When using an inline link, wrap the text with a proper color text token.
  */
 export const InverseVariant: Story = {
   args: {
@@ -129,7 +144,7 @@ export const LinkInParagraphContext: StoryObj<ExtendArgs> = {
 };
 
 /**
- * Links will inherit the color from the surrounding text color definition (default emphasis, inline links)
+ * Inline links will inherit the color from the surrounding text color definition (default emphasis)
  */
 export const InheritColor: Story = {
   args: {

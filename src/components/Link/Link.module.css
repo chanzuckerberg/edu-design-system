@@ -50,6 +50,10 @@
     text-decoration: none;
   }
 
+  &.link--variant-inverse {
+    color: var(--eds-theme-color-text-utility-inverse);
+  }
+
   /**
    * Sizes - using the presets for type ramp matching body-*
    */
