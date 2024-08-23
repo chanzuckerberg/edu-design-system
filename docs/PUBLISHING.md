@@ -85,21 +85,21 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 
 8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn install && yarn build`
 9. Publish the package: `npm publish`
-10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the new tag. Use the same text used for the pull request description above (from CHANGELOG.md). Also include the link for the built storybook in the description. This will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**. Also, enable the discussion feature to handle any question-answering should questions arise.
+10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the newly-created tag.
 
-When naming the release, include the package name before the version number in the release name field (e.g., "@chanzuckerberg/eds vX.X.X")
+To prepare the message:
+
+* Include the package name before the version number in the release name field (e.g., "@chanzuckerberg/eds@X.Y.Z")
+* Use the same text used for the pull request description above (from CHANGELOG.md).
+* Include any additional notes from the [System Designers](https://github.com/orgs/chanzuckerberg/teams/edu-systems-designers).
+* Include the link for the built storybook in the description.
+
+The latter will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**.
 
 #### Finishing the release
 
 11. Lastly, run the following to "back merge" release changes to `next`:
     - `git checkout main && git pull origin main && git checkout next && git merge main && git push`
-
-Once complete, you can update the package in the main apps that use it (for major versions):
-
-- [edu-stack](https://github.com/chanzuckerberg/edu-stack) - in the package.json
-- [edu-stack-service](https://github.com/chanzuckerberg/edu-stack-service) - in the package.json
-
-Take note of the details here, which will also be mentioned in that month's newsletter, and updates to ZeroHeight (What's New).
 
 #### Alpha release
 
