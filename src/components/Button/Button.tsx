@@ -92,8 +92,7 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
  * or other in-page activity.
  *
  * - If you need to style a navigation anchor, please use the `Link` component.
- * - If you need to style a different element or component to
- *   look like a button or link, you can use the `ClickableStyle` component.
+ * - If you need the button to use some other tag or component, use the `as` prop.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
