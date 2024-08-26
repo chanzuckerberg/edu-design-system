@@ -8,14 +8,14 @@ const {
   ...colorTokens
 } = edsTokens.theme.color;
 
-// Add a type to the token sizes to avoid literals for keys
+// Add a type to the tokens to avoid literals for keys
 const sizes: { [x: string]: string } = edsTokens.size;
+const movements: { [x: string]: string } = edsTokens.anim.move;
 
-// add a type to the token sizes for movement durations
-const movement: { [x: string]: string } = {
-  ...Object.keys(edsTokens.anim.move)
+const movementTokens = {
+  ...Object.keys(movements)
     .map((movement) => {
-      return { [movement]: `${edsTokens.anim.move[movement]}s` };
+      return { [movement]: `${movements[movement]}s` };
     })
     .reduce((accumulate, current) => {
       const entry = Object.entries(current)[0];
@@ -66,7 +66,7 @@ export default {
         ...sizeTokens,
       },
       transitionDuration: {
-        ...movement,
+        ...movementTokens,
       },
     },
     fontWeight: {

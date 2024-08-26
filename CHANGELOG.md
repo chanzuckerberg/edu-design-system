@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.3.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.0...v15.3.1) (2024-08-26)
+
+
+### Bug Fixes
+
+* **tailwind:** update animation token export types ([#2047](https://github.com/chanzuckerberg/edu-design-system/issues/2047)) ([0f95301](https://github.com/chanzuckerberg/edu-design-system/commit/0f9530114f7f323b065688c4b5472ce2f041d64d))
+
 ## [15.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.2.1...v15.3.0) (2024-08-23)
 
 
