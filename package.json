@@ -112,7 +112,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@chanzuckerberg/axe-storybook-testing": "^8.2.0",
@@ -148,8 +148,8 @@
     "@types/jest": "^29.5.12",
     "@types/jsonfile": "^6",
     "@types/lodash": "^4.17.7",
-    "@types/node": "^20.14.15",
-    "@types/react": "^18.3.3",
+    "@types/node": "^20.16.1",
+    "@types/react": "^18.3.4",
     "@types/react-beautiful-dnd": "^13.1.8",
     "@types/react-dom": "^18.3.0",
     "@types/react-portal": "^4.0.7",
@@ -181,7 +181,7 @@
     "prettier-plugin-tailwindcss": "^0.5.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^4.20.0",
+    "rollup": "^4.21.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.2.6",
     "standard-version": "^9.5.0",
