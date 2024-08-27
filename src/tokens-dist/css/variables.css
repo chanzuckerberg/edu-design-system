@@ -13,6 +13,7 @@
   --eds-size-half: 4; /* Relative EMs (rem) */
   --eds-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-size-40: 320; /* Relative EMs (rem) */
+  --eds-size-34: 272; /* Relative EMs (rem) */
   --eds-size-32: 256; /* Relative EMs (rem) */
   --eds-size-24: 192; /* Relative EMs (rem) */
   --eds-size-20: 160; /* Relative EMs (rem) */
