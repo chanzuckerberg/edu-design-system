@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    # DATA TABLE
+\*------------------------------------*/
+
+/**
+ * DataTable
+ */
+
+ /* Visible table caption */
+.data-table__caption-container {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-6) / 16 * 1rem);
+
+  text-align: start;
+  margin: 0 calc(var(--eds-size-3) / 16 * 1rem)  calc(var(--eds-size-4) / 16 * 1rem);
+}
+
+.data-table__caption-text {
+  flex-grow: 1;
+}
+
+/* Invisible table caption (a11y) */
+.data-table__aria-caption {
+  display: none;
+}
+
+.data-table__caption {
+  caption-side: top;
+  font: var(--eds-theme-typography-headline-md-bold);
+}
+
+.data-table__subcaption {
+  font: var(--eds-theme-typography-headline-sm);
+}
+
+.data-table__table {
+  border: 1px solid;
+  width: 100%;
+
+  .data-table__caption + &,
+  .data-table__subcaption + & {
+    margin-top: calc(var(--eds-size-4) / 16 * 1rem);
+  }
+}
+
+.data-table__search {
+  width: calc(var(--eds-size-34) / 16 * 1rem);
+}
+
+/**
+ * Color Tokens
+ */
+.data-table {
+  display: block;
+
+  .data-table__caption {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table__subcaption {
+    color: var(--eds-theme-color-text-utility-default-secondary);
+  }
+}
