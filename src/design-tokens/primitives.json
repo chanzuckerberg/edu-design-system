@@ -655,6 +655,11 @@
         "group": "size",
         "comment": "Relative EMs (rem)"
       },
+      "34": {
+        "value": "272",
+        "group": "size",
+        "comment": "Relative EMs (rem)"
+      },
       "40": {
         "value": "320",
         "group": "size",
