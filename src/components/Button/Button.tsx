@@ -116,14 +116,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const componentClassName = clsx(
       styles['button'],
-      context && clsx(styles[`button--context-${context}`]),
-      iconLayout && clsx(styles[`button--layout-${iconLayout}`]),
-      isDisabled && clsx(styles['button--disabled']),
-      isFullWidth && clsx(styles['button--full-width']),
-      isLoading && clsx(styles['button--loading']),
-      rank && clsx(styles[`button--${rank}`]),
-      size && clsx(styles[`button--${size}`]),
-      variant && clsx(styles[`button--variant-${variant}`]),
+      context && styles[`button--context-${context}`],
+      iconLayout && styles[`button--layout-${iconLayout}`],
+      isDisabled && styles['button--disabled'],
+      isFullWidth && styles['button--full-width'],
+      isLoading && styles['button--loading'],
+      rank && styles[`button--${rank}`],
+      size && styles[`button--${size}`],
+      variant && styles[`button--variant-${variant}`],
       className,
     );
 
@@ -137,7 +137,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         typeof isDisabled === 'undefined' &&
           typeof other.disabled !== 'undefined',
       ],
-      'Use "isDisabled" instead of "disabled" on button instances',
+      'Use "isDisabled" instead of "disabled" on Button instances',
       'error',
     );
 
@@ -146,7 +146,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'Specifying content for "children" when using icon-only layout is not required and can be removed.',
     );
 
-    return (
+    const coreButton = (
       <Component
         className={componentClassName}
         disabled={isDisabled}
@@ -182,6 +182,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <LoadingIndicator className={styles['button__loader']} size="xs" />
         )}
       </Component>
+    );
+
+    // Wrap the button in a simple SPAN to allow for adding the not-allowed cursor
+    return isDisabled ? (
+      <span className={styles['button__disabled']}>{coreButton}</span>
+    ) : (
+      coreButton
     );
   },
 );

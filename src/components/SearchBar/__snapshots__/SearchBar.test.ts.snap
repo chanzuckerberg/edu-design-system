@@ -166,17 +166,21 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
         />
       </svg>
     </div>
-    <button
-      class="button button--layout-none button--disabled button--primary button--lg button--variant-default search-button"
-      disabled=""
-      type="button"
+    <span
+      class="button__disabled"
     >
-      <span
-        class="button__text"
+      <button
+        class="button button--layout-none button--disabled button--primary button--lg button--variant-default search-button"
+        disabled=""
+        type="button"
       >
-        Search
-      </span>
-    </button>
+        <span
+          class="button__text"
+        >
+          Search
+        </span>
+      </button>
+    </span>
   </div>
 </div>
 `;
