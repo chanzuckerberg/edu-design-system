@@ -11,7 +11,7 @@
  * Default input styles 
  */
 .textarea {
-  @mixin inputStylesV2;
+  @mixin inputStyles;
   padding: calc(var(--eds-size-1) / 16 * 1rem) 0.75rem;
 
   &:read-only:not(:disabled) {
