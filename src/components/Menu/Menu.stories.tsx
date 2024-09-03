@@ -8,6 +8,7 @@ import icons from '../../icons/spritemap';
 
 import type { IconName } from '../../icons/spritemap';
 import { Avatar } from '../Avatar/Avatar';
+import Button from '../Button';
 import { Icon } from '../Icon/Icon';
 
 export default {
@@ -34,6 +35,11 @@ export default {
 
 type Story = StoryObj<MenuProps>;
 
+/**
+ * The Default `Menu` allows for clickable menu items, and provides a default trigger
+ * button that applies `Button` with `rank` `"primary"`, `iconLayout` `"right", `icon`
+ * either missing, or set to `"chevron-down"`, and a configurable text label.
+ */
 export const Default: Story = {
   args: {
     children: (
@@ -100,6 +106,9 @@ export const WithLongButtonText: Story = {
   },
 };
 
+/**
+ * `Menu.Button` instances can, of course, use shorter text for the trigger, which is preferred.
+ */
 export const WithShortButtonText: Story = {
   args: {
     children: (
@@ -131,6 +140,13 @@ export const WithShortButtonText: Story = {
   },
 };
 
+/**
+ * `Menu` allows for using various contents in a `PlainButton` wrapper. This lets you specify
+ * the component to use as the clickable target, which includes other non-interactive components,
+ * or a separate `Button` component.
+ *
+ * Use `Button` if the UI requires using other treatments than what is provided by `Menu.Button`.
+ */
 export const WithCustomButton: Story = {
   args: {
     children: (
@@ -164,6 +180,48 @@ export const WithCustomButton: Story = {
   },
 };
 
+/**
+ * When using `.PlainButton`, you can also use a `Button` instance within it to specify any other
+ * button details, including alternative icon/text combinations, ranks, etc.
+ *
+ * **Note**: here we use `React.Fragment` to avoid nesting `<button>` tags within a `<button>` tag.
+ */
+export const WithCustomSecondaryButton: Story = {
+  args: {
+    children: (
+      <>
+        <Menu.PlainButton as={React.Fragment}>
+          <Button rank="secondary">Secondary Button</Button>
+        </Menu.PlainButton>
+        <Menu.Items data-testid="menu-content">
+          <Menu.Item
+            href="https://headlessui.com/react/menu#menu-button"
+            icon="link"
+          >
+            Headless UI Docs
+          </Menu.Item>
+          <Menu.Item
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+            icon="link"
+          >
+            MDN: Menu
+          </Menu.Item>
+          {/* eslint-disable-next-line no-alert */}
+          <Menu.Item onClick={() => alert('Item clicked')}>
+            Trigger Action
+          </Menu.Item>
+          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
+            Not Possible (disabled)
+          </Menu.Item>
+        </Menu.Items>
+      </>
+    ),
+  },
+};
+
+/**
+ * Use an `Avatar` component within `.PlainButton` to achieve a clickable avatar with menu attached.
+ */
 export const MenuWithAvatarButton: Story = {
   parameters: {
     badges: ['intro-1.3', 'implementationExample'],
@@ -200,6 +258,9 @@ export const MenuWithAvatarButton: Story = {
   },
 };
 
+/**
+ * For testing purposes: This triggers an open menu.
+ */
 export const Opened: Story = {
   ...Default,
   parameters: {
@@ -213,6 +274,9 @@ export const Opened: Story = {
   },
 };
 
+/**
+ * This Implementation Example shows how to use a menu using an `Icon` for the clickable target.
+ */
 export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
   {
     argTypes: {
