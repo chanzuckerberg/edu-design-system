@@ -263,14 +263,14 @@
  * Disabled
  */
 .button--disabled {
+  pointer-events: none;
+
   &.button--primary.button--variant-default,
   &.button--primary.button--variant-critical,
   &.button--primary.button--variant-neutral {
     color: var(--eds-theme-color-text-utility-disabled-primary);
     border-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
     background-color:  var(--eds-theme-color-background-utility-disabled-medium-emphasis);
-
-    pointer-events: none;
   }
 
   &.button--primary.button--variant-inverse {
@@ -278,8 +278,6 @@
     /* Using transparent for border color to avoid blending opacity of border and background */
     border-color: transparent;
     background-color: var(--eds-theme-color-background-utility-inverse-disabled);
-
-    pointer-events: none;
   }
 
   &.button--secondary.button--variant-default,
@@ -288,15 +286,11 @@
     color: var(--eds-theme-color-text-utility-disabled-primary);
     border-color: var(--eds-theme-color-border-disabled);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
-
-    pointer-events: none;
   }
 
   &.button--secondary.button--variant-inverse {
     color: var(--eds-theme-color-text-utility-inverse-disabled);
     border-color: var(--eds-theme-color-border-utility-inverse-disabled);
-
-    pointer-events: none;
   }
 
   &.button--tertiary.button--variant-default,
@@ -304,16 +298,16 @@
   &.button--tertiary.button--variant-neutral {
     color: var(--eds-theme-color-text-utility-disabled-primary);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
-
-    pointer-events: none;
   }
 
   &.button--tertiary.button--variant-inverse {
     color: var(--eds-theme-color-text-utility-disabled-primary);
     border-color: transparent;
-
-    pointer-events: none;
   }
+}
+
+.button__disabled {
+  cursor: not-allowed;
 }
 
 /**

@@ -91,39 +91,51 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
 <div
   class="flex gap-1"
 >
-  <button
-    class="button button--layout-none button--disabled button--primary button--lg button--variant-default"
-    disabled=""
-    type="button"
+  <span
+    class="button__disabled"
   >
-    <span
-      class="button__text"
+    <button
+      class="button button--layout-none button--disabled button--primary button--lg button--variant-default"
+      disabled=""
+      type="button"
     >
-      Primary
-    </span>
-  </button>
-  <button
-    class="button button--layout-none button--disabled button--secondary button--lg button--variant-default"
-    disabled=""
-    type="button"
+      <span
+        class="button__text"
+      >
+        Primary
+      </span>
+    </button>
+  </span>
+  <span
+    class="button__disabled"
   >
-    <span
-      class="button__text"
+    <button
+      class="button button--layout-none button--disabled button--secondary button--lg button--variant-default"
+      disabled=""
+      type="button"
     >
-      Secondary
-    </span>
-  </button>
-  <button
-    class="button button--layout-none button--disabled button--tertiary button--lg button--variant-default"
-    disabled=""
-    type="button"
+      <span
+        class="button__text"
+      >
+        Secondary
+      </span>
+    </button>
+  </span>
+  <span
+    class="button__disabled"
   >
-    <span
-      class="button__text"
+    <button
+      class="button button--layout-none button--disabled button--tertiary button--lg button--variant-default"
+      disabled=""
+      type="button"
     >
-      Tertiary
-    </span>
-  </button>
+      <span
+        class="button__text"
+      >
+        Tertiary
+      </span>
+    </button>
+  </span>
 </div>
 `;
 
@@ -250,39 +262,51 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
   <div
     class="flex gap-1"
   >
-    <button
-      class="button button--layout-none button--disabled button--primary button--lg button--variant-inverse"
-      disabled=""
-      type="button"
+    <span
+      class="button__disabled"
     >
-      <span
-        class="button__text"
+      <button
+        class="button button--layout-none button--disabled button--primary button--lg button--variant-inverse"
+        disabled=""
+        type="button"
       >
-        Primary
-      </span>
-    </button>
-    <button
-      class="button button--layout-none button--disabled button--secondary button--lg button--variant-inverse"
-      disabled=""
-      type="button"
+        <span
+          class="button__text"
+        >
+          Primary
+        </span>
+      </button>
+    </span>
+    <span
+      class="button__disabled"
     >
-      <span
-        class="button__text"
+      <button
+        class="button button--layout-none button--disabled button--secondary button--lg button--variant-inverse"
+        disabled=""
+        type="button"
       >
-        Secondary
-      </span>
-    </button>
-    <button
-      class="button button--layout-none button--disabled button--tertiary button--lg button--variant-inverse"
-      disabled=""
-      type="button"
+        <span
+          class="button__text"
+        >
+          Secondary
+        </span>
+      </button>
+    </span>
+    <span
+      class="button__disabled"
     >
-      <span
-        class="button__text"
+      <button
+        class="button button--layout-none button--disabled button--tertiary button--lg button--variant-inverse"
+        disabled=""
+        type="button"
       >
-        Tertiary
-      </span>
-    </button>
+        <span
+          class="button__text"
+        >
+          Tertiary
+        </span>
+      </button>
+    </span>
   </div>
 </div>
 `;
