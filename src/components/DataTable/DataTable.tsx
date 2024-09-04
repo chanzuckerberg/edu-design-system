@@ -1,7 +1,8 @@
+import { flexRender, type Table } from '@tanstack/react-table';
 import clsx from 'clsx';
 import React from 'react';
 
-import type { Status } from '../../util/variant-types';
+import type { Size, Status } from '../../util/variant-types';
 
 import ButtonGroup from '../ButtonGroup';
 import type { IconName } from '../Icon/Icon';
@@ -9,20 +10,24 @@ import InputField from '../InputField';
 
 import styles from './DataTable.module.css';
 
-export type DataTableProps = {
+export type DataTableProps<T = unknown> = {
   // Component API
   /**
    * Collection of buttons/menus to control the table contents
    */
   actions?: React.ReactNode;
   /**
-   * TODO: remove once table implementation is chosen
+   * Table content (used when basic table abstractions don't meet the needs. SEE helpers)
    */
   children?: React.ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Data table controller for rendering the contents of the table
+   */
+  table?: Table<T>;
   /**
    * Method to call when content is entered into the search field. Also causes the field
    * to appear.
@@ -36,9 +41,21 @@ export type DataTableProps = {
    */
   caption?: string;
   /**
+   * Controls whether the table allows the selection of its rows.
+   */
+  isSelectable?: boolean;
+  /**
+   * Controls whether the rows allow for a status color/icon treatment.
+   */
+  isStatusEligible?: boolean;
+  /**
    * Controls the treatment of alternating rows in the table.
    */
   rowStyle?: 'striped' | 'lined';
+  /**
+   * Size of the padding for the table
+   */
+  size: Extract<Size, 'sm' | 'md'>;
   /**
    * Sub-caption text to use for the table. This text should be used with `caption` and is not
    * meant to be standalone.
@@ -48,14 +65,6 @@ export type DataTableProps = {
    * Controls the treatment of the table container.
    */
   tableStyle?: 'basic' | 'border';
-  /**
-   * Controls whether the table allows the selection of its rows.
-   */
-  isSelectable?: boolean;
-  /**
-   * Controls whether the rows allow for a status color/icon treatment.
-   */
-  isStatusEligible?: boolean;
 };
 
 // TODO: DataTableColumnProps
@@ -109,10 +118,21 @@ export const DataTable = ({
   // Add other deferenced props to use
   caption,
   onSearchChange,
+  rowStyle = 'lined', // TODO-AH: is this the default?
+  size = 'md',
   subcaption,
+  table,
+  tableStyle = 'basic',
   ...other
 }: DataTableProps) => {
   const componentClassName = clsx(styles['data-table'], className);
+
+  const tableClassName = clsx(
+    styles['data-table__table'],
+    tableStyle && styles[`data-table--tableStyle-${tableStyle}`],
+    rowStyle && styles[`data-table--rowStyle-${rowStyle}`],
+    size && styles[`data-table--size-${size}`],
+  );
 
   /**
    * to handle (sub-)caption, render outside the table, but put the combined text in
@@ -134,6 +154,7 @@ export const DataTable = ({
                 </div>
               )}
               {subcaption && (
+                // TODO: Warn when only using subcaption
                 <div
                   aria-hidden="true"
                   className={styles['data-table__subcaption']}
@@ -156,21 +177,59 @@ export const DataTable = ({
           )}
         </div>
       )}
-      {/* // TODO: replace with param.s that implement table semantics */}
-      {children}
+      {/*
+        Do the below when `children` is undefined, and warn when both are specified
+
+        For table header
+        - when generating thead, use isSortable to determine contents
+
+        For table body for each row:
+        - when isSelectable, generate status column and add checkboxes
+        - when isStatusEligable, generate status column and add checkboxes
+          Following: https://tanstack.com/table/latest/docs/framework/react/examples/basic
+       */}
+      {children ?? (
+        <table className={tableClassName}>
+          {(caption || subcaption) && (
+            <caption className={styles['data-table__aria-caption']}>
+              {`${caption}${subcaption ? ': ' + subcaption : ''}`}
+            </caption>
+          )}
+          <thead className={styles['data-table__header-row']}>
+            {table?.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <th
+                    className={styles['data-table__header-cell']}
+                    key={header.id}
+                  >
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext(),
+                        )}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table?.getRowModel().rows.map((row) => (
+              <tr className={styles['data-table__row']} key={row.id}>
+                {row.getVisibleCells().map((cell) => (
+                  <td className={styles['data-table__cell']} key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };
-
-// const tableClassName = clsx(styles['data-table__table']);
-/* 
-  TODO-AH: restore this once table implementation is chosen
-    {(caption || subcaption) && (
-      <caption className={styles['data-table__aria-caption']}>
-        {`${caption}${subcaption ? ': ' + subcaption : ''}`}
-      </caption>
-    )}
-*/
 
 const DataTableSearch = () => {
   return (

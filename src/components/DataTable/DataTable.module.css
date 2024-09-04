@@ -6,6 +6,7 @@
  * DataTable
  */
 
+
  /* Visible table caption */
 .data-table__caption-container {
   display: flex;
@@ -37,7 +38,6 @@
 }
 
 .data-table__table {
-  border: 1px solid;
   width: 100%;
 
   .data-table__caption + &,
@@ -50,11 +50,67 @@
   width: calc(var(--eds-size-34) / 16 * 1rem);
 }
 
+.data-table--tableStyle-border {
+  /* TODO-AH: token for 1px */
+  border: 1px solid;
+}
+
+.data-table__header-cell {
+  font: var(--eds-theme-typography-title-md);
+  text-align: left;
+
+  .data-table--size-sm & {
+    padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md &{
+    padding: calc(var(--eds-size-2) / 16 * 1rem);
+  }
+}
+
+.data-table__cell {
+  font: var(--eds-theme-typography-body-md);
+
+  .data-table--size-sm & {
+    padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md &{
+    padding: calc(var(--eds-size-2) / 16 * 1rem);
+  }
+}
+
+.data-table__row {
+  .data-table--rowStyle-lined & {
+    border-bottom: 1px solid;
+  }
+
+  .data-table--rowStyle-striped &:nth-child(even) {
+    background-color: var(--eds-theme-color-background-table-row-stripe-2);
+  }
+
+  .data-table--rowStyle-striped &:nth-child(odd) {
+    background-color: var(--eds-theme-color-background-table-row-stripe-1);
+  }
+}
+
+.data-table__header-row {
+  border-bottom: 1px solid;
+  /* TODO-AH: figure out positioning styles for sticky headers/columns */
+  position: sticky;
+  top: 0;
+}
+
 /**
  * Color Tokens
  */
 .data-table {
   display: block;
+  position: relative;
+
+  .data-table__table {
+    background-color: var(--eds-theme-color-background-utility-base-1);
+  }
 
   .data-table__caption {
     color: var(--eds-theme-color-text-utility-default-primary);
@@ -62,5 +118,21 @@
 
   .data-table__subcaption {
     color: var(--eds-theme-color-text-utility-default-secondary);
+  }
+
+  .data-table--tableStyle-border, .data-table__header-row {
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
+
+  .data-table__header-cell {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table__cell {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table--rowStyle-lined {
+    color: var(--eds-theme-color-border-utility-default-low-emphasis);
   }
 }
