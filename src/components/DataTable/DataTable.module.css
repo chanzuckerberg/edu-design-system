@@ -2,11 +2,8 @@
     # DATA TABLE
 \*------------------------------------*/
 
-/**
- * DataTable
- */
-
  /* Visible table caption */
+ /* TODO-AH: make it so that we have the search bar and actions wrap together instead of separately */
 .data-table__caption-container {
   display: flex;
   align-items: flex-end;
@@ -15,7 +12,7 @@
   gap: calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-6) / 16 * 1rem);
 
   text-align: start;
-  margin: 0 calc(var(--eds-size-3) / 16 * 1rem)  calc(var(--eds-size-4) / 16 * 1rem);
+  margin: 0 calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-4) / 16 * 1rem);
 }
 
 .data-table__caption-text {
@@ -37,8 +34,14 @@
 }
 
 .data-table__table {
-  border: 1px solid;
+  table-layout: fixed;
   width: 100%;
+
+  /* add class instead of tag for styles? */
+  th, td {
+    padding: 0;
+    vertical-align: top;
+  }
 
   .data-table__caption + &,
   .data-table__subcaption + & {
@@ -50,17 +53,142 @@
   width: calc(var(--eds-size-34) / 16 * 1rem);
 }
 
+.data-table--tableStyle-border {
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
+}
+
+.data-table__cell-text {
+  text-align: start;
+
+  .data-table__cell--alignment-leading & {
+    text-align: start;
+  }
+
+  .data-table__cell--alignment-trailing & {
+    text-align: end;
+  }
+}
+
+.data-table__cell--alignment-leading {
+  justify-content: flex-start;
+}
+
+.data-table__cell--alignment-trailing {
+  justify-content: flex-end;
+}
+
+.data-table__cell-sublabel {
+  display: block;
+  font: var(--eds-theme-typography-body-sm);
+}
+
+.data-table__header-cell {
+  display: flex;
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  align-items: flex-start;
+  font: var(--eds-theme-typography-title-md);
+
+  .data-table--size-sm & {
+    font: var(--eds-theme-typography-title-sm);
+    /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
+    padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md & {
+    padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-3) / 16 * 1rem);
+  }
+
+  .data-cell__cell--icon {
+    margin-top: calc(var(--eds-size-1) / 16 * 1rem);
+    flex-shrink: 0;
+
+    .data-table--size-sm & {
+      margin-top: calc(var(--eds-size-half) / 16 * 1rem);
+    }
+  }
+}
+
+.data-table__cell {
+  display: flex;
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  align-items: flex-start;
+  font: var(--eds-theme-typography-body-md);
+
+  .data-table--size-sm & {
+    font: var(--eds-theme-typography-body-sm);
+    padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md & {
+    padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-3) / 16 * 1rem);
+  }
+
+  .data-cell__cell--icon {
+    margin-top: calc(var(--eds-size-half) / 16 * 1rem);
+    flex-shrink: 0;
+  }
+}
+
+.data-table__row {
+  .data-table--rowStyle-lined & {
+    border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
+  }
+
+  .data-table--rowStyle-striped &:nth-child(even) {
+    background-color: var(--eds-theme-color-background-table-row-stripe-2);
+  }
+
+  .data-table--rowStyle-striped &:nth-child(odd) {
+    background-color: var(--eds-theme-color-background-table-row-stripe-1);
+  }
+}
+
+.data-table__header-row {
+  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
+  position: sticky;
+  top: 0;
+}
+
 /**
  * Color Tokens
  */
 .data-table {
   display: block;
+  position: relative;
+
+  .data-table__table {
+    background-color: var(--eds-theme-color-background-utility-base-1);
+
+    th {
+      background-color: var(--eds-theme-color-background-utility-base-1);
+    }
+  }
 
   .data-table__caption {
     color: var(--eds-theme-color-text-utility-default-primary);
   }
 
   .data-table__subcaption {
+    color: var(--eds-theme-color-text-utility-default-secondary);
+  }
+
+  .data-table--tableStyle-border, .data-table__header-row {
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
+
+  .data-table__header-cell {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table__cell {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table--rowStyle-lined {
+    color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
+
+  .data-table__cell-sublabel, .data-table__header-cell-sublabel {
     color: var(--eds-theme-color-text-utility-default-secondary);
   }
 }
