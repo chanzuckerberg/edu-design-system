@@ -294,6 +294,7 @@ export const TableRow = ({
  */
 export const Table = ({ children, className, ...other }: TableProps) => {
   const componentClassName = clsx(styles['table'], className);
+  // TODO(next-major): decide if we should warn when used
   return (
     <table className={componentClassName} {...other}>
       {children}
