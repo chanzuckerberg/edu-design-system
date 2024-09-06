@@ -30,6 +30,7 @@ export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
 export { default as DataTable } from './components/DataTable';
+export { utils as DataTableUtils } from './components/DataTable';
 export { default as FieldLabel } from './components/FieldLabel';
 export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
@@ -61,6 +62,6 @@ export type { LinkProps } from './components/Link';
 export type { PageNotificationProps } from './components/PageNotification';
 export type { AppNotificationProps } from './components/AppNotification';
 
-// TODO: Remove the below types at the next major release
+// TODO(next-major): Remove the below types at the next major release
 export type { PageNotificationProps as PageNotificationV2Props } from './components/PageNotification';
 export type { AppNotificationProps as AppNotificationV2Props } from './components/AppNotification';
