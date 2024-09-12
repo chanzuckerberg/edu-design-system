@@ -35,7 +35,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
     <thead
       class="data-table__header-row"
     >
-      <tr>
+      <tr
+        class="data-table__row"
+      >
         <th
           style="width: 150px;"
         >
@@ -934,7 +936,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
     <thead
       class="data-table__header-row"
     >
-      <tr>
+      <tr
+        class="data-table__row"
+      >
         <th
           style="width: 150px;"
         >
@@ -1840,7 +1844,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
     <thead
       class="data-table__header-row"
     >
-      <tr>
+      <tr
+        class="data-table__row"
+      >
         <th
           style="width: 32px;"
         >
@@ -1964,7 +1970,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
     </thead>
     <tbody>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2065,7 +2071,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2166,7 +2172,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2267,7 +2273,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2368,7 +2374,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2469,7 +2475,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2570,7 +2576,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2671,7 +2677,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2772,7 +2778,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2873,7 +2879,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -2974,7 +2980,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -3075,7 +3081,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="data-table__row"
+        class="data-table__row data-table__row--is-interactive"
       >
         <td>
           <div
@@ -3190,7 +3196,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
     <thead
       class="data-table__header-row"
     >
-      <tr>
+      <tr
+        class="data-table__row"
+      >
         <th
           style="width: 150px;"
         >
@@ -4071,7 +4079,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
     <thead
       class="data-table__header-row"
     >
-      <tr>
+      <tr
+        class="data-table__row"
+      >
         <th
           style="width: 150px;"
         >

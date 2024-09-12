@@ -18,6 +18,12 @@ export type DataTableProps<T = unknown> = EDSBase & {
    */
   actions?: React.ReactNode;
   /**
+   * Set whether the table has interactive rows
+   *
+   * **Default is `false`**.
+   */
+  isInteractive?: boolean;
+  /**
    * Data table controller for rendering the contents of the table
    *
    * See Doc.s: https://tanstack.com/table/latest/docs/framework/react/guide/table-state
@@ -72,8 +78,9 @@ export type DataTableTableProps = EDSBase &
   Pick<DataTableProps, 'size' | 'tableStyle' | 'tableClassName' | 'rowStyle'>;
 
 // TODO: Implement as followup
-export type DataTableRowProps = {
+export type DataTableRowProps = Pick<EDSBase, 'children' | 'className'> & {
   isInteractive?: boolean;
+  isSelected?: boolean;
   status?: Extract<Status, 'error' | 'favorable' | 'warning'>;
 };
 
@@ -88,6 +95,7 @@ export type DataTableHeaderCellProps = EDSBase & {
    * Determines the edge alignment of content within the cell
    */
   alignment?: Extract<Align, 'leading' | 'trailing'>;
+  hasHorizontalDivider?: boolean;
   /**
    * Marks the header cell as sortable (used in conjunction with `sortDirection`)
    */
@@ -116,6 +124,7 @@ const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 
 export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
 
+// TODO-AH: support cellformat to apply padding and alignment value
 export type DataTableDataCellProps = DataTableHeaderCellProps & {
   children: React.ReactNode;
 };
@@ -132,6 +141,7 @@ export function DataTable<T>({
   children,
   className,
   caption,
+  isInteractive = false,
   onSearchChange,
   rowStyle = 'striped',
   size = 'md',
@@ -185,10 +195,6 @@ export function DataTable<T>({
           )}
         </div>
       )}
-      {/*
-        TODO (miscellaneous)
-        - Implement grouping sections and group by prop
-       */}
       {children ?? (
         <DataTableTable
           className={tableClassName}
@@ -207,7 +213,9 @@ export function DataTable<T>({
                 {headerGroup.headers.map((header) => (
                   <th
                     key={header.id}
-                    style={{ width: `${header.getSize()}px` }}
+                    style={{
+                      width: `${header.getSize()}px`,
+                    }}
                   >
                     {header.isPlaceholder
                       ? null
@@ -222,7 +230,11 @@ export function DataTable<T>({
           </DataTableHeader>
           <tbody>
             {table?.getRowModel().rows.map((row) => (
-              <DataTableRow className={styles['data-table__row']} key={row.id}>
+              <DataTableRow
+                isInteractive={isInteractive}
+                isSelected={row.getIsSelected()}
+                key={row.id}
+              >
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -271,6 +283,7 @@ export const DataTableHeaderCell = ({
   alignment,
   children,
   className,
+  hasHorizontalDivider,
   isSortable,
   leadingIcon,
   sortDirection = 'default',
@@ -281,6 +294,7 @@ export const DataTableHeaderCell = ({
   const headerCellClassName = clsx(
     styles['data-table__header-cell'],
     alignment && styles[`data-table__cell--alignment-${alignment}`],
+    hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
   );
   return (
     <div className={headerCellClassName} {...rest}>
@@ -319,6 +333,7 @@ export const DataTableDataCell = ({
   alignment = 'leading',
   children,
   className,
+  hasHorizontalDivider,
   leadingIcon,
   sublabel,
   ...rest
@@ -326,6 +341,7 @@ export const DataTableDataCell = ({
   const dataCellClassName = clsx(
     styles['data-table__cell'],
     alignment && styles[`data-table__cell--alignment-${alignment}`],
+    hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
   );
   return (
     <div className={dataCellClassName} {...rest}>
@@ -382,9 +398,22 @@ export const DataTableHeader = ({
 
 export const DataTableRow = ({
   children,
+  className,
+  isInteractive,
+  isSelected,
   ...rest
-}: Pick<EDSBase, 'children' | 'className'>) => {
-  return <tr {...rest}>{children}</tr>;
+}: DataTableRowProps) => {
+  const componnentClassName = clsx(
+    className,
+    styles['data-table__row'],
+    isInteractive && styles['data-table__row--is-interactive'],
+    isSelected && styles['data-table__row--is-selected'],
+  );
+  return (
+    <tr className={componnentClassName} {...rest}>
+      {children}
+    </tr>
+  );
 };
 
 /**
