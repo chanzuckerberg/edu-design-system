@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.4.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.1...v15.4.0-alpha.0) (2024-09-12)
+
+
+### Features
+
+* **Button:** support for not-allowed cursor when disabled ([#2052](https://github.com/chanzuckerberg/edu-design-system/issues/2052)) ([46cb9f6](https://github.com/chanzuckerberg/edu-design-system/commit/46cb9f61b75e3fee77813e574c09bf220c625151))
+* **DataTable:** implement TanStack Table ([#2055](https://github.com/chanzuckerberg/edu-design-system/issues/2055)) ([a4dbf21](https://github.com/chanzuckerberg/edu-design-system/commit/a4dbf2119ccded549162cacd9399c5f43a139ed9))
+* **DataTable:** introduce 1.0 component ([269ba31](https://github.com/chanzuckerberg/edu-design-system/commit/269ba31b1d09eb575f018fc97b25d15cd8d6e1d3))
+
 ### [15.3.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.0...v15.3.1) (2024-08-26)
 
 
