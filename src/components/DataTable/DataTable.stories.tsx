@@ -290,8 +290,6 @@ export const RowStyleLined: StoryObj<Args> = {
   },
 };
 
-// TODO-AH: hook up style for selected row
-// TODO-AH: hook up isInteractive
 /**
  * Implementation example of how to build selectable rows.
  *
@@ -301,10 +299,11 @@ export const Selectable: StoryObj<Args> = {
   args: {
     caption: 'Test table',
     subcaption: 'Additional Subcaption',
+    isInteractive: true,
   },
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [rowSelection, setRowSelection] = React.useState({});
+    const [rowSelection, setRowSelection] = React.useState({}); // TODO: demonstrate one is selected
 
     // TODO(docs): Why must `any` be passed as second type param to avoid `unknown`?
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -433,6 +432,10 @@ export const Selectable: StoryObj<Args> = {
     return <DataTable {...args} table={table} />;
   },
 };
+
+// TODO-AH: Sticky column pinning (https://tanstack.com/table/latest/docs/framework/react/examples/column-pinning-sticky)
+// TODO-AH: GroupBy example https://tanstack.com/table/latest/docs/framework/react/examples/grouping
+// TODO-AH: Column Border example (hasHorizontalDivider)
 
 export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
