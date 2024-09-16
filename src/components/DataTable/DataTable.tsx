@@ -195,6 +195,7 @@ export function DataTable<T>({
           )}
         </div>
       )}
+      {/* Provide an escape hatch for specifying all aspects of a table using `children` and Sub-components directly */}
       {children ?? (
         <DataTableTable
           className={tableClassName}
@@ -212,6 +213,7 @@ export function DataTable<T>({
               <DataTableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <th
+                    colSpan={header.colSpan}
                     key={header.id}
                     style={{
                       width: `${header.getSize()}px`,
@@ -229,19 +231,46 @@ export function DataTable<T>({
             ))}
           </DataTableHeader>
           <tbody>
-            {table?.getRowModel().rows.map((row) => (
-              <DataTableRow
-                isInteractive={isInteractive}
-                isSelected={row.getIsSelected()}
-                key={row.id}
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <td key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </DataTableRow>
-            ))}
+            {table?.getRowModel().rows.map((row) => {
+              return (
+                <React.Fragment key={row.id}>
+                  {row.getCanExpand() ? (
+                    <>
+                      <DataTableGroupRow
+                        colSpan={3}
+                        title={String(row.getAllCells()[0].renderValue())}
+                      />
+                      {row.getLeafRows().map((row) => (
+                        <DataTableRow key={row.id}>
+                          {row.getVisibleCells().map((cell) => (
+                            <td key={cell.id}>
+                              {flexRender(
+                                cell.column.columnDef.cell,
+                                cell.getContext(),
+                              )}
+                            </td>
+                          ))}
+                        </DataTableRow>
+                      ))}
+                    </>
+                  ) : (
+                    <DataTableRow
+                      isInteractive={isInteractive}
+                      isSelected={row.getIsSelected()}
+                    >
+                      {row.getVisibleCells().map((cell) => (
+                        <td key={cell.id}>
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext(),
+                          )}
+                        </td>
+                      ))}
+                    </DataTableRow>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </tbody>
         </DataTableTable>
       )}
@@ -416,6 +445,22 @@ export const DataTableRow = ({
   );
 };
 
+export const DataTableGroupRow = ({
+  colSpan,
+  title,
+}: {
+  title: string;
+  colSpan: number;
+}) => {
+  return (
+    <tr>
+      <td className={styles['data-table__group-row']} colSpan={colSpan}>
+        {title}
+      </td>
+    </tr>
+  );
+};
+
 /**
  * For future development
  */
@@ -442,5 +487,6 @@ DataTable.Actions = DataTableActions;
 DataTable.Table = DataTableTable;
 DataTable.Header = DataTableHeader;
 DataTable.Row = DataTableRow;
+DataTable.GroupRow = DataTableGroupRow;
 DataTable.HeaderCell = DataTableHeaderCell;
 DataTable.DataCell = DataTableDataCell;

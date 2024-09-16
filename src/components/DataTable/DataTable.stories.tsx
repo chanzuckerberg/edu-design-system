@@ -433,9 +433,274 @@ export const Selectable: StoryObj<Args> = {
   },
 };
 
+/**
+ * Implementation example of how to build selectable rows.
+ *
+ * TODO: verify if selection will interfere with row groupings
+ *
+ * For more information: https://tanstack.com/table/latest/docs/framework/react/examples/row-selection
+ */
+export const VerticalDivider: StoryObj<Args> = {
+  args: {
+    caption: 'Test table',
+    subcaption: 'Additional Subcaption',
+    isInteractive: true,
+  },
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [rowSelection, setRowSelection] = React.useState({}); // TODO: demonstrate one is selected
+
+    // TODO(docs): Why must `any` be passed as second type param to avoid `unknown`?
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const selectableColumns = React.useMemo<
+      DataTableUtils.ColumnDef<Person, any>[]
+    >(
+      () => [
+        {
+          id: 'select',
+          header: ({ table }) => (
+            <DataTable.HeaderCell>
+              <Checkbox
+                {...{
+                  checked: table.getIsAllRowsSelected(),
+                  indeterminate: table.getIsSomeRowsSelected(),
+                  onChange: table.getToggleAllRowsSelectedHandler(),
+                  'aria-label': 'check',
+                }}
+              />
+            </DataTable.HeaderCell>
+          ),
+          cell: ({ row }) => (
+            <DataTable.DataCell>
+              <Checkbox
+                {...{
+                  checked: row.getIsSelected(),
+                  disabled: !row.getCanSelect(),
+                  indeterminate: row.getIsSomeSelected(),
+                  onChange: row.getToggleSelectedHandler(),
+                  'aria-label': 'check',
+                }}
+              />
+            </DataTable.DataCell>
+          ),
+          // Widths can be set on header cells (using pixels)
+          // More information: https://tanstack.com/table/latest/docs/guide/column-sizing#column-widths
+          // TODO(design): what is the column size for the selectable column
+          size: 32,
+        },
+        columnHelper.accessor('firstName', {
+          header: () => (
+            <DataTable.HeaderCell
+              hasHorizontalDivider
+              leadingIcon="person-add"
+              sortDirection="ascending"
+              sublabel="Given Name"
+            >
+              First Name
+            </DataTable.HeaderCell>
+          ),
+          cell: (info) => (
+            <DataTable.DataCell hasHorizontalDivider leadingIcon="person-add">
+              {info.getValue()}
+            </DataTable.DataCell>
+          ),
+        }),
+        columnHelper.accessor((row) => row.lastName, {
+          id: 'lastName',
+          header: () => (
+            <DataTable.HeaderCell hasHorizontalDivider sublabel="Surname">
+              Last Name
+            </DataTable.HeaderCell>
+          ),
+          cell: (info) => (
+            <DataTable.DataCell hasHorizontalDivider>
+              {info.getValue()}
+            </DataTable.DataCell>
+          ),
+        }),
+        columnHelper.accessor('age', {
+          header: () => (
+            <DataTable.HeaderCell alignment="trailing" hasHorizontalDivider>
+              Age
+            </DataTable.HeaderCell>
+          ),
+          cell: (info) => (
+            <DataTable.DataCell alignment="trailing" hasHorizontalDivider>
+              {info.renderValue()}
+            </DataTable.DataCell>
+          ),
+        }),
+        columnHelper.accessor('visits', {
+          header: () => (
+            <DataTable.HeaderCell alignment="trailing" hasHorizontalDivider>
+              Visits
+            </DataTable.HeaderCell>
+          ),
+          cell: (info) => (
+            <DataTable.DataCell alignment="trailing" hasHorizontalDivider>
+              {info.renderValue()}
+            </DataTable.DataCell>
+          ),
+        }),
+        columnHelper.accessor('progress', {
+          header: () => (
+            <DataTable.HeaderCell
+              alignment="trailing"
+              hasHorizontalDivider
+              sublabel='"Complete" is > 80%'
+            >
+              Profile Progress
+            </DataTable.HeaderCell>
+          ),
+          cell: (info) => (
+            <DataTable.DataCell
+              alignment="trailing"
+              hasHorizontalDivider
+              sublabel={
+                Number(info.renderValue()) >= 80 ? 'Complete' : 'Incomplete'
+              }
+            >
+              {info.renderValue()}
+            </DataTable.DataCell>
+          ),
+        }),
+      ],
+      [],
+    );
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: defaultData,
+      columns: selectableColumns,
+      state: {
+        rowSelection,
+      },
+      enableRowSelection: true,
+      onRowSelectionChange: setRowSelection,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
+    });
+
+    return <DataTable {...args} table={table} />;
+  },
+};
+
+/**
+ * Implementation example showing how you can achieve grouping by creating a nested data object,
+ * and specify that grouping should be enabled in the data models.
+ *
+ * See:
+ * - https://tanstack.com/table/latest/docs/guide/expanding
+ * - https://tanstack.com/table/latest/docs/api/core/row#getleafrows
+ */
+export const Grouping: StoryObj<Args> = {
+  args: {
+    caption: 'Types of Wine',
+    tableStyle: 'border',
+    rowStyle: 'lined',
+  },
+  render: (args) => {
+    type Wine = {
+      name: string;
+      country?: string;
+      year?: number;
+    };
+    type GroupedWine = Wine & { wines?: Wine[] };
+    const wineData: GroupedWine[] = [
+      {
+        name: 'Reds',
+        wines: [
+          {
+            name: 'Merlot',
+            country: 'France',
+            year: 2016,
+          },
+          {
+            name: 'Pinot Noir',
+            country: 'France',
+            year: 2018,
+          },
+          {
+            name: 'Chianti',
+            country: 'Italy',
+            year: 2018,
+          },
+        ],
+      },
+      {
+        name: 'Whites',
+        wines: [
+          {
+            name: 'Chardonnay',
+            country: 'France',
+            year: 2016,
+          },
+          {
+            name: 'Riesling',
+            country: 'Germany',
+            year: 2018,
+          },
+        ],
+      },
+      {
+        name: 'Rosés',
+        wines: [
+          {
+            name: 'Rosado',
+            country: 'Spain',
+            year: 2021,
+          },
+          {
+            name: 'Rosato',
+            country: 'Italy',
+            year: 2024,
+          },
+        ],
+      },
+    ];
+
+    const columnHelper = DataTableUtils.createColumnHelper<GroupedWine>();
+
+    const wineColumns = [
+      columnHelper.accessor('name', {
+        header: () => <DataTable.HeaderCell>Name</DataTable.HeaderCell>,
+        cell: (info) => (
+          <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>
+        ),
+      }),
+      columnHelper.accessor('country', {
+        id: 'lastName',
+        header: () => (
+          <DataTable.HeaderCell>Country of Origin</DataTable.HeaderCell>
+        ),
+        cell: (info) => (
+          <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>
+        ),
+      }),
+      columnHelper.accessor('year', {
+        header: () => (
+          <DataTable.HeaderCell alignment="trailing">Year</DataTable.HeaderCell>
+        ),
+        cell: (info) => (
+          <DataTable.DataCell alignment="trailing">
+            {info.renderValue()}
+          </DataTable.DataCell>
+        ),
+      }),
+    ];
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: wineData,
+      columns: wineColumns,
+      getSubRows: (row) => row.wines,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
+      getExpandedRowModel: DataTableUtils.getExpandedRowModel(),
+    });
+
+    return <DataTable {...args} table={table} />;
+  },
+};
+
 // TODO-AH: Sticky column pinning (https://tanstack.com/table/latest/docs/framework/react/examples/column-pinning-sticky)
-// TODO-AH: GroupBy example https://tanstack.com/table/latest/docs/framework/react/examples/grouping
-// TODO-AH: Column Border example (hasHorizontalDivider)
 
 export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
