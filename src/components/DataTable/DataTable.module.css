@@ -5,7 +5,7 @@
 /* Visible table caption */
 /* TODO-AH: make it so that we have the search bar and actions wrap together instead of separately */
 /* TODO-AH: implement showing of shadow below sticky headers and column */
-/* TODO-AH: handle caption padding syncing with table cell padding using size */
+/* - https://stackoverflow.com/questions/38122751/positionsticky-adding-style-when-the-element-detaches-from-normal-flow */
 .data-table__caption-container {
   display: flex;
   align-items: flex-end;
@@ -166,6 +166,25 @@
   top: 0;
 }
 
+.data-table__group-row {
+  font: var(--eds-theme-typography-label-sm);
+  position: sticky;
+  top: -1px;
+
+  pointer-events: none;
+
+  .data-table--size-sm & {
+    padding: calc(var(--eds-size-half) / 16 * 1rem)
+      calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md & {
+    padding: calc(var(--eds-size-2) / 16 * 1rem)
+      calc(var(--eds-size-3) / 16 * 1rem);
+  }
+
+}
+
 /**
  * Color Tokens
  */
@@ -202,7 +221,6 @@
     }
   }
 }
-
 
 .data-table {
   display: block;
@@ -261,5 +279,10 @@
       position: relative;
       z-index: 1;
     }
+  }
+
+  .data-table__group-row {
+    color: var(--eds-theme-color-text-utility-default-primary);
+    background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis);
   }
 }
