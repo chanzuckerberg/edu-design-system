@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.4.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.1...v15.4.0-alpha.1) (2024-09-17)
+
+
+### Features
+
+* **Button:** support for not-allowed cursor when disabled ([#2052](https://github.com/chanzuckerberg/edu-design-system/issues/2052)) ([46cb9f6](https://github.com/chanzuckerberg/edu-design-system/commit/46cb9f61b75e3fee77813e574c09bf220c625151))
+* **DataTable:** add groupBy support ([894fc62](https://github.com/chanzuckerberg/edu-design-system/commit/894fc62c7802b960676830d7ab03602da13c9520))
+* **DataTable:** handle conditional shadow on pinned header ([142bd6e](https://github.com/chanzuckerberg/edu-design-system/commit/142bd6eb81d12a04ac4a403489dae71c35ef250d))
+* **DataTable:** implement TanStack Table ([#2055](https://github.com/chanzuckerberg/edu-design-system/issues/2055)) ([2912518](https://github.com/chanzuckerberg/edu-design-system/commit/2912518bc421059adb273da31741927f7f4ae135))
+* **DataTable:** introduce 1.0 component ([8ee0249](https://github.com/chanzuckerberg/edu-design-system/commit/8ee024908ff3381c85275e4d82e57a2918314765))
+* **DataTable:** support selection and additional column styling ([7b08ea6](https://github.com/chanzuckerberg/edu-design-system/commit/7b08ea6b9136cb10965e3284a82550aca4771395))
+
 ## [15.4.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.1...v15.4.0-alpha.0) (2024-09-12)
 
 
