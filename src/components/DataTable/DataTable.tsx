@@ -1,6 +1,6 @@
 import { flexRender, type Table } from '@tanstack/react-table';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
@@ -410,6 +410,44 @@ export const DataTableTable = ({
     rowStyle && styles[`data-table--rowStyle-${rowStyle}`],
     size && styles[`data-table--size-${size}`],
   );
+
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
+  useEffect(() => {
+    /**
+     * Here, we set up a selector on the header of a table, and look for it to start
+     * clipping off the top edge of its visible area. Once it does the observer will trigger
+     * causing the state class to be added / removed (depending on the intersection value).
+     *
+     * We use the generated class names from the module for both the trigger and whats toggled
+     */
+    let observer: IntersectionObserver;
+    let el: Element | null;
+    function triggerEffect() {
+      el = document.querySelector(`.${styles['data-table__table']} thead`);
+      if (el && typeof window !== 'undefined') {
+        observer = new IntersectionObserver(
+          ([event]) => {
+            return event.target.classList.toggle(
+              styles['data-table--is-pinned'],
+              event.intersectionRatio < 1,
+            );
+          },
+
+          { threshold: [1] },
+        );
+
+        observer.observe(el);
+      }
+    }
+    triggerEffect();
+
+    // TODO: anything to de-allocate when using `observer`?
+    return () => {
+      if (el) {
+        observer.unobserve(el);
+      }
+    };
+  });
 
   return <table className={tableClassNames}>{children}</table>;
 };
