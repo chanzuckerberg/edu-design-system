@@ -4,8 +4,6 @@
 
 /* Visible table caption */
 /* TODO-AH: make it so that we have the search bar and actions wrap together instead of separately */
-/* TODO-AH: implement showing of shadow below sticky headers and column */
-/* - https://stackoverflow.com/questions/38122751/positionsticky-adding-style-when-the-element-detaches-from-normal-flow */
 .data-table__caption-container {
   display: flex;
   align-items: flex-end;
@@ -163,7 +161,7 @@
 .data-table__header-row {
   border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
   position: sticky;
-  top: 0;
+  top: -1px;
 }
 
 .data-table__group-row {
@@ -182,6 +180,10 @@
     padding: calc(var(--eds-size-2) / 16 * 1rem)
       calc(var(--eds-size-3) / 16 * 1rem);
   }
+}
+
+.data-table--is-pinned {
+  box-shadow: var(--eds-box-shadow-sm);
 
 }
 
