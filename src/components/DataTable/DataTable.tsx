@@ -124,7 +124,7 @@ const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 
 export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
 
-// TODO-AH: support cellformat to apply padding and alignment value
+// TODO: support cellformat to apply padding and alignment value
 export type DataTableDataCellProps = DataTableHeaderCellProps & {
   children: React.ReactNode;
 };

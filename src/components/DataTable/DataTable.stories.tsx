@@ -700,7 +700,7 @@ export const Grouping: StoryObj<Args> = {
   },
 };
 
-// TODO-AH: Sticky column pinning (https://tanstack.com/table/latest/docs/framework/react/examples/column-pinning-sticky)
+// TODO: Story for sticky column pinning (https://tanstack.com/table/latest/docs/framework/react/examples/column-pinning-sticky)
 
 export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
