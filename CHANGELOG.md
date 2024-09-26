@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.1...v15.4.0) (2024-09-26)
+
+
+### Features
+
+* **Button:** support for not-allowed cursor when disabled ([#2052](https://github.com/chanzuckerberg/edu-design-system/issues/2052)) ([46cb9f6](https://github.com/chanzuckerberg/edu-design-system/commit/46cb9f61b75e3fee77813e574c09bf220c625151))
+* **DataTable:** introduce 1.0 component ([#2050](https://github.com/chanzuckerberg/edu-design-system/issues/2050)) ([ffd0e82](https://github.com/chanzuckerberg/edu-design-system/commit/ffd0e82ae0baf1762888afc925d10b1201435f1e)), closes [#2055](https://github.com/chanzuckerberg/edu-design-system/issues/2055)
+
+
+### Bug Fixes
+
+* **Button:** apply external styles when disabled ([#2060](https://github.com/chanzuckerberg/edu-design-system/issues/2060)) ([e762d8b](https://github.com/chanzuckerberg/edu-design-system/commit/e762d8b5356dc5d5e2c7b4e72358c92ba5226836))
+
 ### [15.3.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.3.0...v15.3.1) (2024-08-26)
 
 
