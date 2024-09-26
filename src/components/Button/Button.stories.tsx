@@ -43,13 +43,13 @@ export const DefaultRanks: Story = {
   render: (args) => {
     return (
       <div className="flex gap-1">
-        <Button {...args} rank="primary">
+        <Button {...args} className="btn-primary" rank="primary">
           Primary
         </Button>
-        <Button {...args} rank="secondary">
+        <Button {...args} className="btn-secondary" rank="secondary">
           Secondary
         </Button>
-        <Button {...args} rank="tertiary">
+        <Button {...args} className="btn-tertiary" rank="tertiary">
           Tertiary
         </Button>
       </div>
