@@ -167,10 +167,10 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
       </svg>
     </div>
     <span
-      class="button__disabled"
+      class="search-button button__disabled"
     >
       <button
-        class="button button--layout-none button--disabled button--primary button--lg button--variant-default search-button"
+        class="button button--layout-none button--disabled button--primary button--lg button--variant-default"
         disabled=""
         type="button"
       >
