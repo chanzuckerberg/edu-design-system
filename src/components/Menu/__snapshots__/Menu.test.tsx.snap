@@ -43,12 +43,12 @@ exports[`<Menu /> MenuWithAvatarButton story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-:rp:"
+    aria-controls="headlessui-menu-items-:rv:"
     aria-expanded="true"
     aria-haspopup="menu"
     class=""
     data-headlessui-state="open"
-    id="headlessui-menu-button-:ro:"
+    id="headlessui-menu-button-:ru:"
     type="button"
   >
     <div
@@ -68,12 +68,12 @@ exports[`<Menu /> MenuWithIconButton story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-:rv:"
+    aria-controls="headlessui-menu-items-:r15:"
     aria-expanded="true"
     aria-haspopup="menu"
     class=""
     data-headlessui-state="open"
-    id="headlessui-menu-button-:ru:"
+    id="headlessui-menu-button-:r14:"
     type="button"
   >
     <svg
@@ -116,6 +116,29 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
     >
       Menu Button
     </div>
+  </button>
+</div>
+`;
+
+exports[`<Menu /> WithCustomSecondaryButton story renders snapshot 1`] = `
+<div
+  class="menu"
+  data-headlessui-state="open"
+>
+  <button
+    aria-controls="headlessui-menu-items-:rp:"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    class="button button--layout-none button--secondary button--lg button--variant-default"
+    data-headlessui-state="open"
+    id="headlessui-menu-button-:ro:"
+    type="button"
+  >
+    <span
+      class="button__text"
+    >
+      Secondary Button
+    </span>
   </button>
 </div>
 `;

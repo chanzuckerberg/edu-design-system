@@ -1,0 +1,291 @@
+/*------------------------------------*\
+    # DATA TABLE
+\*------------------------------------*/
+
+/* Visible table caption */
+
+/* TODO: make it so that we have the search bar and actions wrap together instead of separately */
+.data-table__caption-container {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-6) / 16 * 1rem);
+
+  text-align: start;
+  margin: 0 calc(var(--eds-size-3) / 16 * 1rem)
+    calc(var(--eds-size-4) / 16 * 1rem);
+}
+
+.data-table__caption-text {
+  flex-grow: 1;
+}
+
+/* Invisible table caption (a11y) */
+.data-table__aria-caption {
+  display: none;
+}
+
+.data-table__caption {
+  caption-side: top;
+  font: var(--eds-theme-typography-headline-md-bold);
+}
+
+.data-table__subcaption {
+  font: var(--eds-theme-typography-headline-sm);
+}
+
+.data-table__table {
+  table-layout: fixed;
+  width: 100%;
+
+  /* add class instead of tag for styles? */
+  th,
+  td {
+    padding: 0;
+    vertical-align: top;
+    /**
+     * inherit height from 1px size of table rows. This allows height: 100% on cells containers
+     *  to affect full height of cell
+     */
+    height: inherit;
+  }
+
+  .data-table__caption + &,
+  .data-table__subcaption + & {
+    margin-top: calc(var(--eds-size-4) / 16 * 1rem);
+  }
+}
+
+.data-table__search {
+  width: calc(var(--eds-size-34) / 16 * 1rem);
+}
+
+.data-table--tableStyle-border {
+  border: calc(var(--eds-border-width-sm) * 1px) solid;
+}
+
+.data-table__cell-text {
+  text-align: start;
+
+  .data-table__cell--alignment-leading & {
+    text-align: start;
+  }
+
+  .data-table__cell--alignment-trailing & {
+    text-align: end;
+  }
+}
+
+.data-table__cell--alignment-leading {
+  justify-content: flex-start;
+}
+
+.data-table__cell--alignment-trailing {
+  justify-content: flex-end;
+}
+
+.data-table__cell-sublabel {
+  display: block;
+  font: var(--eds-theme-typography-body-sm);
+}
+
+.data-table__header-cell {
+  display: flex;
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  align-items: flex-start;
+  font: var(--eds-theme-typography-title-md);
+  height: 100%;
+
+  border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
+
+  &.data-table__cell--has-horizontal-divider {
+    border-right-color: var(
+      --eds-theme-color-border-utility-default-low-emphasis
+    );
+  }
+
+  .data-table--size-sm & {
+    font: var(--eds-theme-typography-title-sm);
+    /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
+    padding: calc(var(--eds-size-half) / 16 * 1rem)
+      calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md & {
+    padding: calc(var(--eds-size-2) / 16 * 1rem)
+      calc(var(--eds-size-3) / 16 * 1rem);
+  }
+
+  .data-cell__cell--icon {
+    margin-top: calc(var(--eds-size-1) / 16 * 1rem);
+    flex-shrink: 0;
+
+    .data-table--size-sm & {
+      margin-top: calc(var(--eds-size-half) / 16 * 1rem);
+    }
+  }
+}
+
+.data-table__cell {
+  display: flex;
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  align-items: flex-start;
+  font: var(--eds-theme-typography-body-md);
+  height: 100%;
+
+  border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
+
+  &.data-table__cell--has-horizontal-divider {
+    border-right-color: var(
+      --eds-theme-color-border-utility-default-low-emphasis
+    );
+  }
+
+  .data-table--size-sm & {
+    font: var(--eds-theme-typography-body-sm);
+    padding: calc(var(--eds-size-half) / 16 * 1rem)
+      calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md & {
+    padding: calc(var(--eds-size-2) / 16 * 1rem)
+      calc(var(--eds-size-3) / 16 * 1rem);
+  }
+
+  .data-cell__cell--icon {
+    margin-top: calc(var(--eds-size-half) / 16 * 1rem);
+    flex-shrink: 0;
+  }
+}
+
+.data-table__header-row {
+  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
+  position: sticky;
+  top: -1px;
+}
+
+.data-table__group-row {
+  font: var(--eds-theme-typography-label-sm);
+  position: sticky;
+  top: -1px;
+
+  pointer-events: none;
+
+  .data-table--size-sm & {
+    padding: calc(var(--eds-size-half) / 16 * 1rem)
+      calc(var(--eds-size-1) / 16 * 1rem);
+  }
+
+  .data-table--size-md & {
+    padding: calc(var(--eds-size-2) / 16 * 1rem)
+      calc(var(--eds-size-3) / 16 * 1rem);
+  }
+}
+
+.data-table--is-pinned {
+  box-shadow: var(--eds-box-shadow-sm);
+
+}
+
+/**
+ * Color Tokens
+ */
+
+.data-table__row {
+  /* setting the height to 1px so that later, table cell containers can take up 100% of height */
+  height: 1px;
+
+  &.data-table__row--is-selected {
+    background-color: var(--eds-theme-color-background-table-row-selected);
+  }
+
+  .data-table--rowStyle-lined & {
+    border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
+
+    &.data-table__row--is-selected {
+      background-color: var(--eds-theme-color-background-table-row-selected);
+    }
+  }
+
+  .data-table--rowStyle-striped &:nth-child(even) {
+    background-color: var(--eds-theme-color-background-table-row-stripe-2);
+
+    &.data-table__row--is-selected {
+      background-color: var(--eds-theme-color-background-table-row-selected);
+    }
+  }
+
+  .data-table--rowStyle-striped &:nth-child(odd) {
+    background-color: var(--eds-theme-color-background-table-row-stripe-1);
+
+    &.data-table__row--is-selected {
+      background-color: var(--eds-theme-color-background-table-row-selected);
+    }
+  }
+}
+
+.data-table {
+  display: block;
+  position: relative;
+
+  .data-table__table {
+    background-color: var(--eds-theme-color-background-utility-base-1);
+
+    th {
+      background-color: var(--eds-theme-color-background-utility-base-1);
+    }
+  }
+
+  .data-table__caption {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table__subcaption {
+    color: var(--eds-theme-color-text-utility-default-secondary);
+  }
+
+  .data-table--tableStyle-border,
+  .data-table__header-row {
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
+
+  .data-table__header-cell {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table__cell {
+    color: var(--eds-theme-color-text-utility-default-primary);
+  }
+
+  .data-table--rowStyle-lined {
+    color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  }
+
+  .data-table__cell-sublabel,
+  .data-table__header-cell-sublabel {
+    color: var(--eds-theme-color-text-utility-default-secondary);
+  }
+
+  .data-table__row--is-interactive {
+    /**
+     * TODO: Add in handling for when focused (i dont think you can do?)
+    */
+    &:hover {
+      box-shadow: var(--eds-box-shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover:active {
+      box-shadow: var(--eds-box-shadow-md);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .data-table__group-row {
+    color: var(--eds-theme-color-text-utility-default-primary);
+    background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis);
+  }
+}

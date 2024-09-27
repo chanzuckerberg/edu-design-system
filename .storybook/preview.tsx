@@ -84,6 +84,7 @@ export const parameters: Preview['parameters'] = {
     ...createInitialReleaseConfig('1.2'),
     ...createInitialReleaseConfig('1.1'),
     ...createInitialReleaseConfig('1.0'),
+    ...createCurrentReleaseConfig('1.0'),
     ...createCurrentReleaseConfig('1.3'),
     ...createCurrentReleaseConfig('2.0'),
     ...createCurrentReleaseConfig('2.1'),

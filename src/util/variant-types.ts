@@ -1,11 +1,26 @@
 /**
  * This contains the broad types of the common programmatic variants: e.g.,
+ * - base component props
  * - size
  * - align
  * - preset
  *
  * use Extract to trim any unsupported variants
  */
+
+/**
+ * Component props used by any/every cmoponent in the system. Pick<> to grab any subset
+ */
+export type EDSBase = {
+  /**
+   * Sub-components and other elements appropriate for this parent component (See Sub-components if applicable)
+   */
+  children?: React.ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+};
 
 /**
  * Size range for components, set at named intervals. Sizes need not be precisely
@@ -16,8 +31,9 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 /**
  * Alignment variants, for horizontal components and sub-components
+ * TODO(next-major): warn on using left/right
  */
-export type Align = 'left' | 'center' | 'right';
+export type Align = 'leading' | 'trailing' | 'left' | 'center' | 'right';
 
 /**
  * Hints are form field directions on how to use the field and whether it requires a value.

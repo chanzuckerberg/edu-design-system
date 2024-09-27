@@ -8,5 +8,5 @@
  * Default input styles 
  */
 .input {
-  @mixin inputStylesV2;
+  @mixin inputStyles;
 }
