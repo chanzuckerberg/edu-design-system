@@ -192,7 +192,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
         >
           Sortable
           <button
-            class="button button--layout-icon-only button--tertiary button--sm button--variant-default"
+            class="button button--layout-icon-only button--tertiary button--sm button--size-sm button--variant-default"
             title="Sort"
             type="button"
           >

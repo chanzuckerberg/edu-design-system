@@ -201,7 +201,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
         class="input-field__input-within"
       >
         <button
-          class="button button--layout-none button--secondary button--sm button--variant-default"
+          class="button button--layout-none button--secondary button--sm button--size-sm button--variant-default"
           type="button"
         >
           <span
@@ -285,7 +285,7 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
         class="input-field__input-within"
       >
         <button
-          class="button button--layout-left button--secondary button--sm button--variant-default"
+          class="button button--layout-left button--secondary button--sm button--size-sm button--variant-default"
           type="button"
         >
           <span

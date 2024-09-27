@@ -81,7 +81,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -140,7 +140,7 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--md button--variant-critical"
+          class="button button--layout-none button--primary button--md button--size-md button--variant-critical"
           type="button"
         >
           <span
@@ -381,7 +381,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -570,7 +570,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -888,7 +888,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span

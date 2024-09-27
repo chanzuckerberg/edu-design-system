@@ -123,6 +123,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       isLoading && styles['button--loading'],
       rank && styles[`button--${rank}`],
       size && styles[`button--${size}`],
+      size && styles[`button--size-${size}`],
       variant && styles[`button--variant-${variant}`],
       !isDisabled && className,
     );
@@ -186,7 +187,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     // Wrap the button in a simple SPAN to allow for adding the not-allowed cursor
     return isDisabled ? (
-      <span className={clsx(className, styles['button__disabled'])}>
+      <span
+        className={clsx(
+          className,
+          iconLayout && styles[`button--layout-${iconLayout}`],
+          isFullWidth && styles['button--full-width'],
+          size && styles[`button--size-${size}`],
+          styles['button__disabled'],
+        )}
+      >
         {coreButton}
       </span>
     ) : (

@@ -8,7 +8,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -60,7 +60,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -70,7 +70,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -104,7 +104,7 @@ exports[`Modal Default story renders snapshot 1`] = `
   >
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
       type="button"
     >
       <span
@@ -158,7 +158,7 @@ exports[`Modal Default story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -168,7 +168,7 @@ exports[`Modal Default story renders snapshot 1`] = `
           </span>
         </button>
         <button
-          class="button button--layout-none button--secondary button--lg button--variant-default"
+          class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -203,7 +203,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
   >
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
       type="button"
     >
       <span
@@ -257,7 +257,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -267,7 +267,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
           </span>
         </button>
         <button
-          class="button button--layout-none button--secondary button--lg button--variant-default"
+          class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -290,7 +290,7 @@ exports[`Modal Large story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -342,7 +342,7 @@ exports[`Modal Large story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -352,7 +352,7 @@ exports[`Modal Large story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -374,7 +374,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -426,7 +426,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -436,7 +436,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -458,7 +458,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -510,7 +510,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -520,7 +520,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -542,7 +542,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -594,7 +594,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
       class="button-group button-group--vertical"
     >
       <button
-        class="button button--layout-none button--full-width button--primary button--lg button--variant-default"
+        class="button button--layout-none button--full-width button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -604,7 +604,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--full-width button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--full-width button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -626,7 +626,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -678,7 +678,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
       class="button-group button-group--vertical"
     >
       <button
-        class="button button--layout-none button--full-width button--primary button--lg button--variant-default"
+        class="button button--layout-none button--full-width button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -688,7 +688,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--full-width button--tertiary button--lg button--variant-default"
+        class="button button--layout-none button--full-width button--tertiary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -710,7 +710,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -762,7 +762,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -772,7 +772,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -794,7 +794,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -846,7 +846,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -856,7 +856,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -878,7 +878,7 @@ exports[`Modal Small story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -930,7 +930,7 @@ exports[`Modal Small story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -940,7 +940,7 @@ exports[`Modal Small story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -962,7 +962,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -1014,7 +1014,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-default"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -1024,7 +1024,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
         </span>
       </button>
       <button
-        class="button button--layout-none button--secondary button--lg button--variant-default"
+        class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
         type="button"
       >
         <span
@@ -1046,7 +1046,7 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
 >
   <button
     aria-label="close"
-    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+    class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
     type="button"
   >
     <span
@@ -1098,7 +1098,7 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
       class="button-group button-group--horizontal"
     >
       <button
-        class="button button--layout-none button--primary button--lg button--variant-critical"
+        class="button button--layout-none button--primary button--lg button--size-lg button--variant-critical"
         type="button"
       >
         <span
@@ -1132,7 +1132,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
   >
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral modal__close-button"
+      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral modal__close-button"
       type="button"
     >
       <span
@@ -1232,7 +1232,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--variant-default"
+          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -1242,7 +1242,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
           </span>
         </button>
         <button
-          class="button button--layout-none button--secondary button--lg button--variant-default"
+          class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
