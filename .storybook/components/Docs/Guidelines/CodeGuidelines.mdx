@@ -6,6 +6,7 @@ import { Canvas, Meta } from '@storybook/blocks';
 
 EDS component code follows these principles and conventions for HTML, CSS, and JavaScript/TypeScript/React:
 
+- [Reading Figma APIs](#figma)
 - [HTML](#html)
 - [CSS](#css)
   - [CSS design principles](#css-design-principles)
@@ -21,6 +22,24 @@ EDS component code follows these principles and conventions for HTML, CSS, and J
   - [Component API naming conventions](#api-naming)
 - [Accessibility](#accessibility)
   - [Tools](#accessibility-tools)
+
+# Reading Figma APIs <a name="figma"></a>
+
+Both code and figma component documentation have different needs. Tackling the API is not an exact science, so we include some guidelines on how to read and implement the APIs.
+
+## Exact matching APIs
+
+Cases where the API names match **exactly** between code and figma:
+
+- **boolean fields** (e.g., `isFullWidth`, `hasLeadingIcon`) - match the names of boolean fields between code and figma, to avoid ambiguity and confusion
+
+## Figma APIs not in Code
+
+- By convention, some APIs shown in Figma are for designers and should not be implemented in code. These should include a marker both in the API table and figma component UI (e.g., the gear emoji)
+
+## Code APIs not in Figma
+
+- In code, there will be APIs for handling events, controlling other UI behaviors, and some props needed for React implementations. We annotate these by grouping the APIs in the props in the types either under `// Component API` or `// Design API`.
 
 # HTML principles and conventions <a name="html"></a>
 
