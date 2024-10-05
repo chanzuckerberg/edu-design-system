@@ -8,7 +8,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
     class="button-group button-group--horizontal"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span
@@ -18,7 +18,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--variant-default"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span
@@ -39,7 +39,7 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
     class="button-group button-group--horizontal-progressive"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span
@@ -49,7 +49,7 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--variant-default"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span
@@ -70,7 +70,7 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
     class="button-group button-group--horizontal-progressive"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span
@@ -80,7 +80,7 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--variant-default -ml-size-2"
+      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default -ml-size-2"
       type="button"
     >
       <span
@@ -101,7 +101,7 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
     class="button-group button-group--vertical"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--variant-default"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span
@@ -111,7 +111,7 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--variant-default"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
       type="button"
     >
       <span

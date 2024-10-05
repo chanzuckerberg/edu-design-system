@@ -53,7 +53,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
           class="button-group button-group--horizontal-align-left"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--variant-default"
+            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
             type="button"
           >
             <span
@@ -63,7 +63,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--variant-default"
+            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default"
             type="button"
           >
             <span
@@ -105,7 +105,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
           class="button-group button-group--horizontal-align-left"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--variant-default"
+            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
             type="button"
           >
             <span
@@ -115,7 +115,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--variant-default"
+            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default"
             type="button"
           >
             <span
@@ -129,7 +129,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
     </section>
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-neutral app-notification__close-btn"
+      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral app-notification__close-btn"
       type="button"
     >
       <span
@@ -181,7 +181,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
           class="button-group button-group--horizontal !flex-row"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--variant-inverse"
+            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse"
             type="button"
           >
             <span
@@ -191,7 +191,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--variant-inverse"
+            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-inverse"
             type="button"
           >
             <span
@@ -233,7 +233,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
           class="button-group button-group--horizontal !flex-row"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--variant-inverse"
+            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse"
             type="button"
           >
             <span
@@ -243,7 +243,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--variant-inverse"
+            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-inverse"
             type="button"
           >
             <span
@@ -257,7 +257,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
     </section>
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--variant-inverse app-notification__close-btn"
+      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-inverse app-notification__close-btn"
       type="button"
     >
       <span

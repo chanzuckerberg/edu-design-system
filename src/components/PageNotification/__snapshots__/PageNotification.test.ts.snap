@@ -39,7 +39,7 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -92,7 +92,7 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -145,7 +145,7 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -198,7 +198,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -211,7 +211,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
   </div>
   <button
     aria-label="Dismiss the notification"
-    class="button button--layout-icon-only button--tertiary button--lg button--variant-neutral page-notification__close-button"
+    class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral page-notification__close-button"
     type="button"
   >
     <span
@@ -275,7 +275,7 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -328,7 +328,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -341,7 +341,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
   </div>
   <button
     aria-label="Dismiss the notification"
-    class="button button--layout-icon-only button--tertiary button--lg button--variant-neutral page-notification__close-button"
+    class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral page-notification__close-button"
     type="button"
   >
     <span
@@ -405,7 +405,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span
@@ -460,7 +460,7 @@ exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
       class="page-notification__call-to-action"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--variant-neutral"
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
         type="button"
       >
         <span

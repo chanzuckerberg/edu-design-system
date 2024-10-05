@@ -6863,11 +6863,11 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <span
-          class="button__disabled"
+          class="button--layout-icon-only button--size-lg button__disabled"
         >
           <button
             aria-label="Add a row"
-            class="button button--layout-icon-only button--disabled button--secondary button--lg button--variant-default"
+            class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
             disabled=""
             type="button"
           >
@@ -6922,11 +6922,11 @@ exports[`<DataTable /> WithOnlyActions story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <span
-          class="button__disabled"
+          class="button--layout-icon-only button--size-lg button__disabled"
         >
           <button
             aria-label="Add a row"
-            class="button button--layout-icon-only button--disabled button--secondary button--lg button--variant-default"
+            class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
             disabled=""
             type="button"
           >
@@ -7109,11 +7109,11 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
         class="button-group button-group--horizontal"
       >
         <span
-          class="button__disabled"
+          class="button--layout-icon-only button--size-lg button__disabled"
         >
           <button
             aria-label="Add a row"
-            class="button button--layout-icon-only button--disabled button--secondary button--lg button--variant-default"
+            class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
             disabled=""
             type="button"
           >
@@ -7222,7 +7222,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
       >
         <button
           aria-label="add item"
-          class="button button--layout-icon-only button--primary button--lg button--variant-default"
+          class="button button--layout-icon-only button--primary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -7245,7 +7245,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
           </span>
         </button>
         <button
-          class="button button--layout-left button--secondary button--lg button--variant-default"
+          class="button button--layout-left button--secondary button--lg button--size-lg button--variant-default"
           type="button"
         >
           <span
@@ -7276,7 +7276,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             aria-label="show more actions"
-            class="button button--layout-icon-only button--secondary button--lg button--variant-default"
+            class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
             data-headlessui-state=""
             id="headlessui-menu-button-:r10:"
             type="button"

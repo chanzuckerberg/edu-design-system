@@ -182,6 +182,21 @@ export const FullWidths: Story = {
 };
 
 /**
+ * Buttons can come with full width set, which will expand the button to its maximum width (diferent for each size). Respects Disabled
+ */
+export const DisabledFullWidths: Story = {
+  args: {
+    ...Sizes.args,
+    isFullWidth: true,
+    isDisabled: true,
+  },
+  parameters: {
+    layout: 'padded',
+  },
+  render: Sizes.render,
+};
+
+/**
  * When in the loading state, a button will show a loading indicator in place of the normal button text, maintaining the initial size.
  */
 export const LoadingStates: Story = {

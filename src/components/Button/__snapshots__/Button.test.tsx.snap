@@ -5,7 +5,7 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
   class="flex gap-1"
 >
   <button
-    class="button button--layout-none button--primary button--lg button--variant-critical btn-primary"
+    class="button button--layout-none button--primary button--lg button--size-lg button--variant-critical btn-primary"
     type="button"
   >
     <span
@@ -15,7 +15,7 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--secondary button--lg button--variant-critical btn-secondary"
+    class="button button--layout-none button--secondary button--lg button--size-lg button--variant-critical btn-secondary"
     type="button"
   >
     <span
@@ -25,7 +25,7 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--tertiary button--lg button--variant-critical btn-tertiary"
+    class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-critical btn-tertiary"
     type="button"
   >
     <span
@@ -39,7 +39,7 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
 
 exports[`<Button /> Default story renders snapshot 1`] = `
 <button
-  class="button button--layout-none button--primary button--lg button--variant-default"
+  class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
   type="button"
 >
   <span
@@ -55,7 +55,7 @@ exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
   class="flex gap-1"
 >
   <button
-    class="button button--layout-none button--primary button--lg button--variant-default btn-primary"
+    class="button button--layout-none button--primary button--lg button--size-lg button--variant-default btn-primary"
     type="button"
   >
     <span
@@ -65,7 +65,7 @@ exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--secondary button--lg button--variant-default btn-secondary"
+    class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default btn-secondary"
     type="button"
   >
     <span
@@ -75,7 +75,7 @@ exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--tertiary button--lg button--variant-default btn-tertiary"
+    class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default btn-tertiary"
     type="button"
   >
     <span
@@ -92,10 +92,10 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
   class="flex gap-1"
 >
   <span
-    class="btn-primary button__disabled"
+    class="btn-primary button--layout-none button--size-lg button__disabled"
   >
     <button
-      class="button button--layout-none button--disabled button--primary button--lg button--variant-default"
+      class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-default"
       disabled=""
       type="button"
     >
@@ -107,10 +107,10 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
     </button>
   </span>
   <span
-    class="btn-secondary button__disabled"
+    class="btn-secondary button--layout-none button--size-lg button__disabled"
   >
     <button
-      class="button button--layout-none button--disabled button--secondary button--lg button--variant-default"
+      class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-default"
       disabled=""
       type="button"
     >
@@ -122,10 +122,10 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
     </button>
   </span>
   <span
-    class="btn-tertiary button__disabled"
+    class="btn-tertiary button--layout-none button--size-lg button__disabled"
   >
     <button
-      class="button button--layout-none button--disabled button--tertiary button--lg button--variant-default"
+      class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-default"
       disabled=""
       type="button"
     >
@@ -139,12 +139,64 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
+<div
+  class="flex items-center gap-1"
+>
+  <span
+    class="button--layout-none button--full-width button--size-lg button__disabled"
+  >
+    <button
+      class="button button--layout-none button--disabled button--full-width button--primary button--lg button--size-lg button--variant-default"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Large
+      </span>
+    </button>
+  </span>
+  <span
+    class="button--layout-none button--full-width button--size-md button__disabled"
+  >
+    <button
+      class="button button--layout-none button--disabled button--full-width button--primary button--md button--size-md button--variant-default"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Medium
+      </span>
+    </button>
+  </span>
+  <span
+    class="button--layout-none button--full-width button--size-sm button__disabled"
+  >
+    <button
+      class="button button--layout-none button--disabled button--full-width button--primary button--sm button--size-sm button--variant-default"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="button__text"
+      >
+        Small
+      </span>
+    </button>
+  </span>
+</div>
+`;
+
 exports[`<Button /> FullWidths story renders snapshot 1`] = `
 <div
   class="flex items-center gap-1"
 >
   <button
-    class="button button--layout-none button--full-width button--primary button--lg button--variant-default"
+    class="button button--layout-none button--full-width button--primary button--lg button--size-lg button--variant-default"
     type="button"
   >
     <span
@@ -154,7 +206,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--full-width button--primary button--md button--variant-default"
+    class="button button--layout-none button--full-width button--primary button--md button--size-md button--variant-default"
     type="button"
   >
     <span
@@ -164,7 +216,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--full-width button--primary button--sm button--variant-default"
+    class="button button--layout-none button--full-width button--primary button--sm button--size-sm button--variant-default"
     type="button"
   >
     <span
@@ -181,7 +233,7 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
   class="flex items-center gap-1"
 >
   <button
-    class="button button--layout-left button--primary button--lg button--variant-default"
+    class="button button--layout-left button--primary button--lg button--size-lg button--variant-default"
     type="button"
   >
     <span
@@ -205,7 +257,7 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-right button--primary button--lg button--variant-default"
+    class="button button--layout-right button--primary button--lg button--size-lg button--variant-default"
     type="button"
   >
     <span
@@ -230,7 +282,7 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
   </button>
   <button
     aria-label="Label must be applied with icon-only layout"
-    class="button button--layout-icon-only button--primary button--lg button--variant-default"
+    class="button button--layout-icon-only button--primary button--lg button--size-lg button--variant-default"
     type="button"
   >
     <span
@@ -263,10 +315,10 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <span
-      class="btn-primary button__disabled"
+      class="btn-primary button--layout-none button--size-lg button__disabled"
     >
       <button
-        class="button button--layout-none button--disabled button--primary button--lg button--variant-inverse"
+        class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-inverse"
         disabled=""
         type="button"
       >
@@ -278,10 +330,10 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
       </button>
     </span>
     <span
-      class="btn-secondary button__disabled"
+      class="btn-secondary button--layout-none button--size-lg button__disabled"
     >
       <button
-        class="button button--layout-none button--disabled button--secondary button--lg button--variant-inverse"
+        class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-inverse"
         disabled=""
         type="button"
       >
@@ -293,10 +345,10 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
       </button>
     </span>
     <span
-      class="btn-tertiary button__disabled"
+      class="btn-tertiary button--layout-none button--size-lg button__disabled"
     >
       <button
-        class="button button--layout-none button--disabled button--tertiary button--lg button--variant-inverse"
+        class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-inverse"
         disabled=""
         type="button"
       >
@@ -319,7 +371,7 @@ exports[`<Button /> InverseRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--variant-inverse btn-primary"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-inverse btn-primary"
       type="button"
     >
       <span
@@ -329,7 +381,7 @@ exports[`<Button /> InverseRanks story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--variant-inverse btn-secondary"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse btn-secondary"
       type="button"
     >
       <span
@@ -339,7 +391,7 @@ exports[`<Button /> InverseRanks story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--variant-inverse btn-tertiary"
+      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-inverse btn-tertiary"
       type="button"
     >
       <span
@@ -360,7 +412,7 @@ exports[`<Button /> JustDisabledProp story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--variant-default btn-primary"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default btn-primary"
       disabled=""
       type="button"
     >
@@ -371,7 +423,7 @@ exports[`<Button /> JustDisabledProp story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--variant-default btn-secondary"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default btn-secondary"
       disabled=""
       type="button"
     >
@@ -382,7 +434,7 @@ exports[`<Button /> JustDisabledProp story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--variant-default btn-tertiary"
+      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default btn-tertiary"
       disabled=""
       type="button"
     >
@@ -401,7 +453,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
   class="flex items-center gap-1"
 >
   <button
-    class="button button--layout-none button--loading button--primary button--lg button--variant-default"
+    class="button button--layout-none button--loading button--primary button--lg button--size-lg button--variant-default"
     type="button"
   >
     <span
@@ -459,7 +511,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
     </div>
   </button>
   <button
-    class="button button--layout-none button--loading button--primary button--md button--variant-default"
+    class="button button--layout-none button--loading button--primary button--md button--size-md button--variant-default"
     type="button"
   >
     <span
@@ -517,7 +569,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
     </div>
   </button>
   <button
-    class="button button--layout-none button--loading button--primary button--sm button--variant-default"
+    class="button button--layout-none button--loading button--primary button--sm button--size-sm button--variant-default"
     type="button"
   >
     <span
@@ -582,7 +634,7 @@ exports[`<Button /> NeutralRanks story renders snapshot 1`] = `
   class="flex gap-1"
 >
   <button
-    class="button button--layout-none button--primary button--lg button--variant-neutral btn-primary"
+    class="button button--layout-none button--primary button--lg button--size-lg button--variant-neutral btn-primary"
     type="button"
   >
     <span
@@ -592,7 +644,7 @@ exports[`<Button /> NeutralRanks story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--secondary button--lg button--variant-neutral btn-secondary"
+    class="button button--layout-none button--secondary button--lg button--size-lg button--variant-neutral btn-secondary"
     type="button"
   >
     <span
@@ -602,7 +654,7 @@ exports[`<Button /> NeutralRanks story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--tertiary button--lg button--variant-neutral btn-tertiary"
+    class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-neutral btn-tertiary"
     type="button"
   >
     <span
@@ -619,7 +671,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
   class="flex items-center gap-1"
 >
   <button
-    class="button button--layout-none button--primary button--lg button--variant-default"
+    class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
     type="button"
   >
     <span
@@ -629,7 +681,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--primary button--md button--variant-default"
+    class="button button--layout-none button--primary button--md button--size-md button--variant-default"
     type="button"
   >
     <span
@@ -639,7 +691,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
     </span>
   </button>
   <button
-    class="button button--layout-none button--primary button--sm button--variant-default"
+    class="button button--layout-none button--primary button--sm button--size-sm button--variant-default"
     type="button"
   >
     <span
@@ -653,7 +705,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
 
 exports[`<Button /> TertiaryStandalone story renders snapshot 1`] = `
 <button
-  class="button button--context-standalone button--layout-none button--tertiary button--lg button--variant-default"
+  class="button button--context-standalone button--layout-none button--tertiary button--lg button--size-lg button--variant-default"
   type="button"
 >
   <span
@@ -669,7 +721,7 @@ exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
   Lorem ipsum dolor sit amet, . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
    
   <button
-    class="button button--layout-none button--primary button--lg button--variant-default"
+    class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
     to="test"
     type="button"
   >
@@ -684,7 +736,7 @@ exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
 
 exports[`<Button /> passes class names down properly 1`] = `
 <button
-  class="button button--layout-none button--primary button--lg button--variant-default exampleClassName"
+  class="button button--layout-none button--primary button--lg button--size-lg button--variant-default exampleClassName"
   data-testid="example-class-name"
   type="button"
 >
@@ -698,7 +750,7 @@ exports[`<Button /> passes class names down properly 1`] = `
 
 exports[`<Button /> passes test ids down properly 1`] = `
 <button
-  class="button button--layout-none button--primary button--lg button--variant-default"
+  class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
   data-testid="example-test-id"
   type="button"
 >

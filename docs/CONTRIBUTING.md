@@ -35,7 +35,7 @@ This project uses [Git-flow](https://nvie.com/posts/a-successful-git-branching-m
 
 - The `main` always represents the latest production-ready version of the design system. Each commit to `main` indicates a new release (either from changes on `release` or from `hotfix`).
 - `next` represents the unpublished changes for the next release of the design system. These can be standalone commits, or merged in from `feature`.
-- `feature` branches are for standalone/larger product features, and are created using the syntax `[FIRSTINITIAL][LASTNAME]/[FEATURE NAME]`.
+- `feature` branches are for standalone/larger product features, and are created using the syntax `[FIRSTINITIAL][LASTNAME]/[FEATURE NAME|TICKET NUMBER]`.
 - `release` branches are for preparing the next release of the design system from `next`. Only bug fixes and metadata changes should happen in release branches.
 - `hotfix` branches are for urgent fixes that need to be production.
 
@@ -43,13 +43,13 @@ EDS follows the process outlined in [this article](https://nvie.com/posts/a-succ
 
 ## Contribution workflow
 
-**Note**: For urgent hotfixes, use `main` instead of `next` as the base of your changes.
+**Note**: For releasing urgent changes, read about how to publish hot fixes in [Publishing](./PUBLISHING.md).
 **Note**: If you suspect your change will be breaking, flag the team ahead of time to discuss any conflicts with EDS release planning.
 
 In order to contribute to EDS, please follow this workflow:
 
-1. Create a feature branch from `next` called `[FIRSTINITIAL][LASTNAME]/[FEATURE NAME]` (e.g. `ahu/add-tertiary-button`)
-2. Do feature work in accordance to the library's [code guidelines](./CODE_GUIDELINES.md). EDS uses [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), so each commit should follow commit guidelines reflecting the nature of the work.
+1. Create a feature branch from `next` called `[FIRSTINITIAL][LASTNAME]/[FEATURE NAME|TICKET NUMBER]` (e.g. `ahu/add-tertiary-button` OR `aholloway/EDS-1234`)
+2. Do feature work in accordance to the library's [code guidelines](https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-contributor-guidelines-code-guidelines--docs). EDS uses [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), so each commit should follow commit guidelines reflecting the nature of the work.
 3. When work is ready for review, issue a pull request into `next` following the pull request guidelines. Tag `chanzuckerberg/edu-design-system` as reviewers for every PR.
 4. The library owners and trusted contributors will review the work and suggest revisions or approve the pull request
 5. Upon approval, feature gets **Squash and merged** into `next` to be slated for the next library release
@@ -60,7 +60,7 @@ A few notes about breaking changes:
 
 - If you anticipate a breaking changes is inbound, let the team know as soon as possible. This is to give everyone a chance to double-check the sequence of commits or create a `release` branch if needed.
 - Not all breaking changes are equal! Changes removing deprecated components/APIs require careful communication. Changes affecting in-use components also require more scrutiny.
-- Consider writing a codemod (using [JSCodeShift](https://github.com/facebook/jscodeshift) for systematic changes.
+- Consider writing a codemod (using [TS Morph](https://ts-morph.com/)) for systematic changes. See examples in src/bin/migrate.
 - There may be a way to make the change in a backwards-compatible way. Consider this during implementation, providing some rationale in cases where it is not feasible/practical to do so.
 
 ## Making Edits to Tokens
