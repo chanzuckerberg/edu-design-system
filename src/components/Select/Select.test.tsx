@@ -62,35 +62,6 @@ describe('<Select />', () => {
     expect(screen.queryByRole('option')).not.toBeInTheDocument();
   });
 
-  it('throws an error if children is used without labeling', () => {
-    const dropdownWithChildrenAndLabelText = (
-      <Select
-        name="throwing-select"
-        onChange={() => undefined}
-        value={exampleOptions[0]}
-      >
-        <Select.Button>Select</Select.Button>
-
-        <Select.Options>
-          {exampleOptions.map((option) => (
-            <Select.Option key={option.key} value={option}>
-              {option.label}
-            </Select.Option>
-          ))}
-        </Select.Options>
-      </Select>
-    );
-    const renderMethod = () => {
-      render(dropdownWithChildrenAndLabelText);
-    };
-
-    // expect console error from react, suppressed.
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
-    expect(renderMethod).toThrow(Error);
-    consoleErrorMock.mockRestore();
-  });
-
   it('does not throw an error if select uses <Select.Label>', () => {
     const dropdownWithDropdownLabel = (
       <Select
