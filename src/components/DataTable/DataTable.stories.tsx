@@ -16,6 +16,7 @@ import {
 // We import all of the utilities from tanstack here, and this can contain other custom utilities
 import { Button, Menu, Checkbox, DataTableUtils } from '../..';
 
+import type { Status } from '../../util/variant-types';
 import { chromaticViewports } from '../../util/viewports';
 
 export default {
@@ -59,6 +60,8 @@ type Person = {
   age: number;
   visits: number;
   progress: number;
+  // This column is used for tables that are eligible for status
+  status?: Extract<Status, 'critical' | 'favorable' | 'warning'>;
 };
 
 // Specifying the example (static) data for the table to use with tanstack primitives
@@ -76,6 +79,7 @@ const defaultData: Person[] = [
     age: 40,
     visits: 40,
     progress: 80,
+    status: 'warning',
   },
   {
     firstName: 'Tanner',
@@ -90,6 +94,7 @@ const defaultData: Person[] = [
     age: 45,
     visits: 20,
     progress: 10,
+    status: 'critical',
   },
   {
     firstName: 'Tandy',
@@ -111,6 +116,7 @@ const defaultData: Person[] = [
     age: 45,
     visits: 20,
     progress: 10,
+    status: 'favorable',
   },
   {
     firstName: 'Tandy',
@@ -694,6 +700,97 @@ export const Grouping: StoryObj<Args> = {
       getSubRows: (row) => row.wines,
       getCoreRowModel: DataTableUtils.getCoreRowModel(),
       getExpandedRowModel: DataTableUtils.getExpandedRowModel(),
+    });
+
+    return <DataTable {...args} table={table} />;
+  },
+};
+
+/**
+ * You can specify detailed statuses for each row in a table, matching a few common options.
+ * Extend the data type to include `status` which maps to the internal type
+ *
+ * Use the Utility type StatusDataTable (TODO-AH)
+ *
+ * TODO:
+ * - should indent table caption and subcaption to align to status column?
+ */
+export const StatusRows: StoryObj<Args> = {
+  args: {
+    caption: 'Test table',
+    subcaption: 'Additional Subcaption',
+    isStatusEligible: true,
+    tableStyle: 'border',
+    rowStyle: 'lined',
+  },
+  render: (args) => {
+    const columns = [
+      columnHelper.accessor('status', {
+        header: () => {
+          <DataTable.StatusHeaderCell />;
+        },
+        cell: (info) => <DataTable.StatusCell status={info.getValue()} />,
+        // TODO-AH: figure out cell size to make 28x32
+        size: 32,
+      }),
+      columnHelper.accessor('firstName', {
+        header: () => (
+          <DataTable.HeaderCell sortDirection="ascending">
+            First Name
+          </DataTable.HeaderCell>
+        ),
+        cell: (info) => (
+          <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>
+        ),
+      }),
+      columnHelper.accessor((row) => row.lastName, {
+        id: 'lastName',
+        header: () => <DataTable.HeaderCell>Last Name</DataTable.HeaderCell>,
+        cell: (info) => (
+          <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>
+        ),
+      }),
+      columnHelper.accessor('age', {
+        header: () => (
+          <DataTable.HeaderCell alignment="trailing">Age</DataTable.HeaderCell>
+        ),
+        cell: (info) => (
+          <DataTable.DataCell alignment="trailing">
+            {info.renderValue()}
+          </DataTable.DataCell>
+        ),
+      }),
+      columnHelper.accessor('visits', {
+        header: () => (
+          <DataTable.HeaderCell alignment="trailing">
+            Visits
+          </DataTable.HeaderCell>
+        ),
+        cell: (info) => (
+          <DataTable.DataCell alignment="trailing">
+            {info.renderValue()}
+          </DataTable.DataCell>
+        ),
+      }),
+      columnHelper.accessor('progress', {
+        header: () => (
+          <DataTable.HeaderCell alignment="trailing">
+            Profile Progress
+          </DataTable.HeaderCell>
+        ),
+        cell: (info) => (
+          <DataTable.DataCell alignment="trailing">
+            {info.renderValue()}
+          </DataTable.DataCell>
+        ),
+      }),
+    ];
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: defaultData,
+      columns,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
     });
 
     return <DataTable {...args} table={table} />;
