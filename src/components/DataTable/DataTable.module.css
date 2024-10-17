@@ -36,24 +36,24 @@
 }
 
 .data-table__table {
+  height: fit-content;
   table-layout: fixed;
   width: 100%;
-
-  /* add class instead of tag for styles? */
-  th,
-  td {
-    padding: 0;
-    vertical-align: top;
-    /**
-     * inherit height from 1px size of table rows. This allows height: 100% on cells containers
-     *  to affect full height of cell
-     */
-    height: inherit;
-  }
 
   .data-table__caption + &,
   .data-table__subcaption + & {
     margin-top: calc(var(--eds-size-4) / 16 * 1rem);
+  }
+}
+
+.data-table__cell-container, .data-table__header-cell-container {
+  padding: 0;
+  vertical-align: top;
+
+  &:last-child {
+    .data-table__cell, .data-table__header-cell {
+      border-width: 0;
+    }
   }
 }
 
@@ -193,8 +193,7 @@
  */
 
 .data-table__row {
-  /* setting the height to 1px so that later, table cell containers can take up 100% of height */
-  height: 1px;
+  height: 100%;
 
   &.data-table__row--is-selected {
     background-color: var(--eds-theme-color-background-table-row-selected);

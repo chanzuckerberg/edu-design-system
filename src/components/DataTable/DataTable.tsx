@@ -213,6 +213,7 @@ export function DataTable<T>({
               <DataTableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <th
+                    className={styles['data-table__header-cell-container']}
                     colSpan={header.colSpan}
                     key={header.id}
                     style={{
@@ -243,7 +244,10 @@ export function DataTable<T>({
                       {row.getLeafRows().map((row) => (
                         <DataTableRow key={row.id}>
                           {row.getVisibleCells().map((cell) => (
-                            <td key={cell.id}>
+                            <td
+                              className={styles['data-table__cell-container']}
+                              key={cell.id}
+                            >
                               {flexRender(
                                 cell.column.columnDef.cell,
                                 cell.getContext(),
@@ -259,7 +263,10 @@ export function DataTable<T>({
                       isSelected={row.getIsSelected()}
                     >
                       {row.getVisibleCells().map((cell) => (
-                        <td key={cell.id}>
+                        <td
+                          className={styles['data-table__cell-container']}
+                          key={cell.id}
+                        >
                           {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext(),
