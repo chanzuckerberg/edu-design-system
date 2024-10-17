@@ -2,6 +2,7 @@ import { flexRender, type Table } from '@tanstack/react-table';
 import clsx from 'clsx';
 import React, { useEffect } from 'react';
 
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
@@ -46,7 +47,7 @@ export type DataTableProps<T = unknown> = EDSBase & {
    */
   caption?: string;
   /**
-   * Controls whether the rows allow for a status color/icon treatment.
+   * Controls whether the table allows rows for a status color/icon treatment.
    */
   isStatusEligible?: boolean;
   /**
@@ -77,11 +78,11 @@ export type DataTableProps<T = unknown> = EDSBase & {
 export type DataTableTableProps = EDSBase &
   Pick<DataTableProps, 'size' | 'tableStyle' | 'tableClassName' | 'rowStyle'>;
 
-// TODO: Implement as followup
 export type DataTableRowProps = Pick<EDSBase, 'children' | 'className'> & {
+  'aria-label'?: string;
   isInteractive?: boolean;
   isSelected?: boolean;
-  status?: Extract<Status, 'error' | 'favorable' | 'warning'>;
+  status?: Extract<Status, 'critical' | 'favorable' | 'warning'>;
 };
 
 export type DataTableHeaderCellProps = EDSBase & {
@@ -129,6 +130,11 @@ export type DataTableDataCellProps = DataTableHeaderCellProps & {
   children: React.ReactNode;
 };
 
+export type DataTableStatusCellProps = {
+  'aria-label'?: string;
+  status?: Extract<Status, 'critical' | 'favorable' | 'warning'>;
+};
+
 /**
  * `import {DataTable} from "@chanzuckerberg/eds";`
  *
@@ -142,6 +148,7 @@ export function DataTable<T>({
   className,
   caption,
   isInteractive = false,
+  isStatusEligible,
   onSearchChange,
   rowStyle = 'striped',
   size = 'md',
@@ -149,7 +156,7 @@ export function DataTable<T>({
   table,
   tableClassName,
   tableStyle = 'basic',
-  ...other
+  ...rest
 }: DataTableProps<T>) {
   const componentClassName = clsx(styles['data-table'], className);
 
@@ -159,7 +166,7 @@ export function DataTable<T>({
    * header, search field, and actions, and preserve accessibility.
    */
   return (
-    <div className={componentClassName} {...other}>
+    <div className={componentClassName} {...rest}>
       {(caption || subcaption || onSearchChange || actions) && (
         <div className={styles['data-table__caption-container']}>
           {(caption || subcaption) && (
@@ -261,6 +268,9 @@ export function DataTable<T>({
                     <DataTableRow
                       isInteractive={isInteractive}
                       isSelected={row.getIsSelected()}
+                      status={
+                        isStatusEligible ? row.getValue('status') : undefined
+                      }
                     >
                       {row.getVisibleCells().map((cell) => (
                         <td
@@ -403,6 +413,55 @@ export const DataTableDataCell = ({
   );
 };
 
+export const DataTableStatusHeaderCell = ({
+  'aria-label': ariaLabel,
+  status,
+  ...rest
+}: DataTableStatusCellProps) => {
+  return (
+    <div
+      className={styles['data-table__status-header-cell']}
+      role="columnheader"
+      {...rest}
+    >
+      Status Column
+    </div>
+  );
+};
+
+export const DataTableStatusCell = ({
+  'aria-label': ariaLabel,
+  status,
+  ...rest
+}: DataTableStatusCellProps) => {
+  const statusCellClassName = clsx(
+    styles['data-table__status-cell'],
+    status && styles[`data-table--status-${status}`],
+  );
+
+  // Set the label to manual, otherwise lookup the default label given "status"
+  const statusLabel =
+    ariaLabel ||
+    (status &&
+      {
+        favorable: 'favorable',
+        critical: 'critical',
+        warning: 'warning',
+      }[status]);
+
+  return (
+    <div className={statusCellClassName} {...rest} aria-label={statusLabel}>
+      {status && (
+        <Icon
+          name={getIconNameFromStatus(status)}
+          purpose="decorative"
+          size="1.125rem"
+        />
+      )}
+    </div>
+  );
+};
+
 export const DataTableTable = ({
   children,
   tableClassName,
@@ -471,10 +530,12 @@ export const DataTableHeader = ({
 };
 
 export const DataTableRow = ({
+  'aria-label': ariaLabel,
   children,
   className,
   isInteractive,
   isSelected,
+  status,
   ...rest
 }: DataTableRowProps) => {
   const componnentClassName = clsx(
@@ -482,9 +543,20 @@ export const DataTableRow = ({
     styles['data-table__row'],
     isInteractive && styles['data-table__row--is-interactive'],
     isSelected && styles['data-table__row--is-selected'],
+    status && styles[`data-table--status-${status}`],
   );
+
+  const rowA11yDesc =
+    ariaLabel ||
+    (status &&
+      {
+        favorable: 'This table row has a favorable status',
+        critical: 'This table row has a critical status',
+        warning: 'This table row has a warning status',
+      }[status]);
+
   return (
-    <tr className={componnentClassName} {...rest}>
+    <tr aria-label={rowA11yDesc} className={componnentClassName} {...rest}>
       {children}
     </tr>
   );
@@ -535,3 +607,7 @@ DataTable.Row = DataTableRow;
 DataTable.GroupRow = DataTableGroupRow;
 DataTable.HeaderCell = DataTableHeaderCell;
 DataTable.DataCell = DataTableDataCell;
+
+// Special Cell Sub-types
+DataTable.StatusCell = DataTableStatusCell;
+DataTable.StatusHeaderCell = DataTableStatusHeaderCell;
