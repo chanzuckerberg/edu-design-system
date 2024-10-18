@@ -1,7 +1,8 @@
 import { flexRender, type Table } from '@tanstack/react-table';
 import clsx from 'clsx';
-import React, { useEffect } from 'react';
+import React, { useEffect, createContext, useContext } from 'react';
 
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
@@ -46,7 +47,7 @@ export type DataTableProps<T = unknown> = EDSBase & {
    */
   caption?: string;
   /**
-   * Controls whether the rows allow for a status color/icon treatment.
+   * Controls whether the table allows rows for a status color/icon treatment.
    */
   isStatusEligible?: boolean;
   /**
@@ -77,12 +78,12 @@ export type DataTableProps<T = unknown> = EDSBase & {
 export type DataTableTableProps = EDSBase &
   Pick<DataTableProps, 'size' | 'tableStyle' | 'tableClassName' | 'rowStyle'>;
 
-// TODO: Implement as followup
-export type DataTableRowProps = Pick<EDSBase, 'children' | 'className'> & {
-  isInteractive?: boolean;
-  isSelected?: boolean;
-  status?: Extract<Status, 'error' | 'favorable' | 'warning'>;
-};
+export type DataTableRowProps = Pick<EDSBase, 'children' | 'className'> &
+  StatusColumn & {
+    'aria-label'?: string;
+    isInteractive?: boolean;
+    isSelected?: boolean;
+  };
 
 export type DataTableHeaderCellProps = EDSBase & {
   // Component API
@@ -95,6 +96,9 @@ export type DataTableHeaderCellProps = EDSBase & {
    * Determines the edge alignment of content within the cell
    */
   alignment?: Extract<Align, 'leading' | 'trailing'>;
+  /**
+   * Whether the cell has a divider between adjacent cells
+   */
   hasHorizontalDivider?: boolean;
   /**
    * Marks the header cell as sortable (used in conjunction with `sortDirection`)
@@ -120,6 +124,11 @@ export type DataTableHeaderCellProps = EDSBase & {
   sortDirection?: SortDirectionsType;
 };
 
+// Used to augment the data model shown in the table with a provided status column type
+type StatusColumn = {
+  status?: Extract<Status, 'critical' | 'favorable' | 'warning'>;
+};
+
 const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 
 export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
@@ -128,6 +137,16 @@ export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
 export type DataTableDataCellProps = DataTableHeaderCellProps & {
   children: React.ReactNode;
 };
+
+export type DataTableStatusCellProps = StatusColumn & {
+  'aria-label'?: string;
+};
+
+export type DataTableWithStatus<S> = S & StatusColumn;
+
+const DataTableContext = createContext<Pick<DataTableProps, 'size'>>({
+  size: 'md',
+});
 
 /**
  * `import {DataTable} from "@chanzuckerberg/eds";`
@@ -142,6 +161,7 @@ export function DataTable<T>({
   className,
   caption,
   isInteractive = false,
+  isStatusEligible,
   onSearchChange,
   rowStyle = 'striped',
   size = 'md',
@@ -149,7 +169,7 @@ export function DataTable<T>({
   table,
   tableClassName,
   tableStyle = 'basic',
-  ...other
+  ...rest
 }: DataTableProps<T>) {
   const componentClassName = clsx(styles['data-table'], className);
 
@@ -159,129 +179,140 @@ export function DataTable<T>({
    * header, search field, and actions, and preserve accessibility.
    */
   return (
-    <div className={componentClassName} {...other}>
-      {(caption || subcaption || onSearchChange || actions) && (
-        <div className={styles['data-table__caption-container']}>
-          {(caption || subcaption) && (
-            <div className={styles['data-table__caption-text']}>
-              {caption && (
-                <div
-                  aria-hidden="true"
-                  className={styles['data-table__caption']}
-                >
-                  {caption}
-                </div>
-              )}
-              {subcaption && (
-                // TODO: Warn when only using subcaption
-                <div
-                  aria-hidden="true"
-                  className={styles['data-table__subcaption']}
-                >
-                  {subcaption}
-                </div>
-              )}
-            </div>
-          )}
-          {onSearchChange && (
-            <div className={styles['data-table__search']}>
-              <DataTableSearch />
-            </div>
-          )}
-          {actions && (
-            <div className={styles['data-table__actions']}>
-              <DataTableActions>{actions}</DataTableActions>
-            </div>
-          )}
-        </div>
-      )}
-      {/* Provide an escape hatch for specifying all aspects of a table using `children` and Sub-components directly */}
-      {children ?? (
-        <DataTableTable
-          className={tableClassName}
-          rowStyle={rowStyle}
-          size={size}
-          tableStyle={tableStyle}
-        >
-          {(caption || subcaption) && (
-            <caption className={styles['data-table__aria-caption']}>
-              {`${caption}${subcaption ? ': ' + subcaption : ''}`}
-            </caption>
-          )}
-          <DataTableHeader>
-            {table?.getHeaderGroups().map((headerGroup) => (
-              <DataTableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <th
-                    className={styles['data-table__header-cell-container']}
-                    colSpan={header.colSpan}
-                    key={header.id}
-                    style={{
-                      width: `${header.getSize()}px`,
-                    }}
+    <DataTableContext.Provider value={{ size }}>
+      <div className={componentClassName} {...rest}>
+        {(caption || subcaption || onSearchChange || actions) && (
+          <div className={styles['data-table__caption-container']}>
+            {(caption || subcaption) && (
+              <div className={styles['data-table__caption-text']}>
+                {caption && (
+                  <div
+                    aria-hidden="true"
+                    className={styles['data-table__caption']}
                   >
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext(),
-                        )}
-                  </th>
-                ))}
-              </DataTableRow>
-            ))}
-          </DataTableHeader>
-          <tbody>
-            {table?.getRowModel().rows.map((row) => {
-              return (
-                <React.Fragment key={row.id}>
-                  {row.getCanExpand() ? (
-                    <>
-                      <DataTableGroupRow
-                        colSpan={3}
-                        title={String(row.getAllCells()[0].renderValue())}
-                      />
-                      {row.getLeafRows().map((row) => (
-                        <DataTableRow key={row.id}>
-                          {row.getVisibleCells().map((cell) => (
-                            <td
-                              className={styles['data-table__cell-container']}
-                              key={cell.id}
-                            >
-                              {flexRender(
-                                cell.column.columnDef.cell,
-                                cell.getContext(),
-                              )}
-                            </td>
-                          ))}
-                        </DataTableRow>
-                      ))}
-                    </>
-                  ) : (
-                    <DataTableRow
-                      isInteractive={isInteractive}
-                      isSelected={row.getIsSelected()}
-                    >
-                      {row.getVisibleCells().map((cell) => (
-                        <td
-                          className={styles['data-table__cell-container']}
-                          key={cell.id}
-                        >
-                          {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext(),
-                          )}
-                        </td>
-                      ))}
-                    </DataTableRow>
-                  )}
-                </React.Fragment>
-              );
-            })}
-          </tbody>
-        </DataTableTable>
-      )}
-    </div>
+                    {caption}
+                  </div>
+                )}
+                {subcaption && (
+                  // TODO: Warn when only using subcaption
+                  <div
+                    aria-hidden="true"
+                    className={styles['data-table__subcaption']}
+                  >
+                    {subcaption}
+                  </div>
+                )}
+              </div>
+            )}
+            {onSearchChange && (
+              <div className={styles['data-table__search']}>
+                <DataTableSearch />
+              </div>
+            )}
+            {actions && (
+              <div className={styles['data-table__actions']}>
+                <DataTableActions>{actions}</DataTableActions>
+              </div>
+            )}
+          </div>
+        )}
+        {/* Provide an escape hatch for specifying all aspects of a table using `children` and Sub-components directly */}
+        {children ?? (
+          <DataTableTable
+            className={tableClassName}
+            rowStyle={rowStyle}
+            size={size}
+            tableStyle={tableStyle}
+          >
+            {(caption || subcaption) && (
+              <caption className={styles['data-table__aria-caption']}>
+                {`${caption}${subcaption ? ': ' + subcaption : ''}`}
+              </caption>
+            )}
+            <DataTableHeader>
+              {table?.getHeaderGroups().map((headerGroup) => (
+                <DataTableRow key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => {
+                    const columnWidth =
+                      header.getSize() !== 150
+                        ? `${header.getSize()}px`
+                        : undefined;
+                    return (
+                      <th
+                        className={styles['data-table__header-cell-container']}
+                        colSpan={header.colSpan}
+                        key={header.id}
+                        style={{
+                          width: columnWidth,
+                        }}
+                      >
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(
+                              header.column.columnDef.header,
+                              header.getContext(),
+                            )}
+                      </th>
+                    );
+                  })}
+                </DataTableRow>
+              ))}
+            </DataTableHeader>
+            <tbody>
+              {table?.getRowModel().rows.map((row) => {
+                return (
+                  <React.Fragment key={row.id}>
+                    {row.getCanExpand() ? (
+                      <>
+                        <DataTableGroupRow
+                          colSpan={3}
+                          title={String(row.getAllCells()[0].renderValue())}
+                        />
+                        {row.getLeafRows().map((row) => (
+                          <DataTableRow key={row.id}>
+                            {row.getVisibleCells().map((cell) => (
+                              <td
+                                className={styles['data-table__cell-container']}
+                                key={cell.id}
+                              >
+                                {flexRender(
+                                  cell.column.columnDef.cell,
+                                  cell.getContext(),
+                                )}
+                              </td>
+                            ))}
+                          </DataTableRow>
+                        ))}
+                      </>
+                    ) : (
+                      <DataTableRow
+                        isInteractive={isInteractive}
+                        isSelected={row.getIsSelected()}
+                        status={
+                          isStatusEligible ? row.getValue('status') : undefined
+                        }
+                      >
+                        {row.getVisibleCells().map((cell) => (
+                          <td
+                            className={styles['data-table__cell-container']}
+                            key={cell.id}
+                          >
+                            {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext(),
+                            )}
+                          </td>
+                        ))}
+                      </DataTableRow>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </tbody>
+          </DataTableTable>
+        )}
+      </div>
+    </DataTableContext.Provider>
   );
 }
 
@@ -403,6 +434,43 @@ export const DataTableDataCell = ({
   );
 };
 
+export const DataTableStatusHeaderCell = ({
+  'aria-label': ariaLabel,
+  status,
+  ...rest
+}: DataTableStatusCellProps) => {
+  return (
+    <div className={styles['data-table__status-header-cell']} {...rest}>
+      Status Column
+    </div>
+  );
+};
+
+export const DataTableStatusCell = ({
+  'aria-label': ariaLabel,
+  status,
+  ...rest
+}: DataTableStatusCellProps) => {
+  const statusCellClassName = clsx(
+    styles['data-table__status-cell'],
+    status && styles[`data-table--status-${status}`],
+  );
+
+  const { size } = useContext(DataTableContext);
+
+  return (
+    <div className={statusCellClassName} {...rest}>
+      {status && (
+        <Icon
+          name={getIconNameFromStatus(status)}
+          purpose="decorative"
+          size={size === 'sm' ? '1rem' : '1.5rem'}
+        />
+      )}
+    </div>
+  );
+};
+
 export const DataTableTable = ({
   children,
   tableClassName,
@@ -471,10 +539,12 @@ export const DataTableHeader = ({
 };
 
 export const DataTableRow = ({
+  'aria-label': ariaLabel,
   children,
   className,
   isInteractive,
   isSelected,
+  status,
   ...rest
 }: DataTableRowProps) => {
   const componnentClassName = clsx(
@@ -482,9 +552,20 @@ export const DataTableRow = ({
     styles['data-table__row'],
     isInteractive && styles['data-table__row--is-interactive'],
     isSelected && styles['data-table__row--is-selected'],
+    status && styles[`data-table--status-${status}`],
   );
+
+  const rowA11yDesc =
+    ariaLabel ||
+    (status &&
+      {
+        favorable: 'This table row has a favorable status',
+        critical: 'This table row has a critical status',
+        warning: 'This table row has a warning status',
+      }[status]);
+
   return (
-    <tr className={componnentClassName} {...rest}>
+    <tr aria-label={rowA11yDesc} className={componnentClassName} {...rest}>
       {children}
     </tr>
   );
@@ -535,3 +616,8 @@ DataTable.Row = DataTableRow;
 DataTable.GroupRow = DataTableGroupRow;
 DataTable.HeaderCell = DataTableHeaderCell;
 DataTable.DataCell = DataTableDataCell;
+
+// Special Cell Sub-types and data
+DataTable.StatusCell = DataTableStatusCell;
+DataTable.StatusHeaderCell = DataTableStatusHeaderCell;
+DataTable.__StatusColumnId__ = 'status' as const;
