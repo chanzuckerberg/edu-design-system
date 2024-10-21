@@ -99,7 +99,8 @@ The latter will automatically post to [relevant slack channels](https://slack.gi
 #### Finishing the release
 
 11. Lastly, run the following to "back merge" release changes to `next`:
-    - `git checkout main && git pull origin main && git checkout next && git merge main && git push`
+
+```git checkout main && git pull origin main && git checkout next && git pull && git merge main && git push```
 
 #### Alpha release
 
