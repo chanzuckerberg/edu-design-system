@@ -92,7 +92,7 @@
     "@popperjs/core": "^2.11.8",
     "@tanstack/react-table": "^8.20.5",
     "@tippyjs/react": "^4.2.6",
-    "chalk": "^4.1.2",
+    "chalk": "^5.3.0",
     "clsx": "^2.1.1",
     "enquirer": "^2.4.1",
     "graphemer": "^1.4.0",
