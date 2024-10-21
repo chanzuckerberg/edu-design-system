@@ -39,8 +39,8 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -72,8 +72,8 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -91,8 +91,8 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -105,8 +105,8 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -119,8 +119,8 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -143,7 +143,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -154,7 +156,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -165,7 +169,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -176,7 +182,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -187,7 +195,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -207,7 +217,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -218,7 +230,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -229,7 +243,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -240,7 +256,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -251,7 +269,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -271,7 +291,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -282,7 +304,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -293,7 +317,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -304,7 +330,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -315,7 +343,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -335,7 +365,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -346,7 +378,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -357,7 +391,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -368,7 +404,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -379,7 +417,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -399,7 +439,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -410,7 +452,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -421,7 +465,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -432,7 +478,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -443,7 +491,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -463,7 +513,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -474,7 +526,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -485,7 +539,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -496,7 +552,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -507,7 +565,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -527,7 +587,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -538,7 +600,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -549,7 +613,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -560,7 +626,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -571,7 +639,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -591,7 +661,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -602,7 +674,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -613,7 +687,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -624,7 +700,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -635,7 +713,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -655,7 +735,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -666,7 +748,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -677,7 +761,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -688,7 +774,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -699,7 +787,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -719,7 +809,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -730,7 +822,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -741,7 +835,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -752,7 +848,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -763,7 +861,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -783,7 +883,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -794,7 +896,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -805,7 +909,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -816,7 +922,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -827,7 +935,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -847,7 +957,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -858,7 +970,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -869,7 +983,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -880,7 +996,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -891,7 +1009,9 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -923,7 +1043,7 @@ exports[`<DataTable /> DefaultWithCustomTable story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -964,8 +1084,8 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -978,8 +1098,8 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -992,8 +1112,8 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -1019,7 +1139,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1030,7 +1152,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1041,7 +1165,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1056,7 +1182,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1067,7 +1195,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1078,7 +1208,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1093,7 +1225,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1104,7 +1238,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1115,7 +1251,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1138,7 +1276,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1149,7 +1289,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1160,7 +1302,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1175,7 +1319,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1186,7 +1332,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1197,7 +1345,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1220,7 +1370,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1231,7 +1383,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1242,7 +1396,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1257,7 +1413,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1268,7 +1426,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1279,7 +1439,9 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1310,8 +1472,8 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -1343,8 +1505,8 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -1362,8 +1524,8 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -1376,8 +1538,8 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -1390,8 +1552,8 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -1414,7 +1576,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1425,7 +1589,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1436,7 +1602,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1447,7 +1615,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1458,7 +1628,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1478,7 +1650,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1489,7 +1663,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1500,7 +1676,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1511,7 +1689,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1522,7 +1702,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1542,7 +1724,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1553,7 +1737,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1564,7 +1750,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1575,7 +1763,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1586,7 +1776,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1606,7 +1798,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1617,7 +1811,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1628,7 +1824,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1639,7 +1837,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1650,7 +1850,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1670,7 +1872,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1681,7 +1885,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1692,7 +1898,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1703,7 +1911,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1714,7 +1924,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1734,7 +1946,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1745,7 +1959,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1756,7 +1972,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1767,7 +1985,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1778,7 +1998,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1798,7 +2020,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1809,7 +2033,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1820,7 +2046,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1831,7 +2059,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1842,7 +2072,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1862,7 +2094,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1873,7 +2107,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1884,7 +2120,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1895,7 +2133,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1906,7 +2146,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1926,7 +2168,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1937,7 +2181,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -1948,7 +2194,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1959,7 +2207,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1970,7 +2220,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -1990,7 +2242,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2001,7 +2255,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2012,7 +2268,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2023,7 +2281,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2034,7 +2294,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2054,7 +2316,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2065,7 +2329,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2076,7 +2342,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2087,7 +2355,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2098,7 +2368,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2118,7 +2390,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2129,7 +2403,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2140,7 +2416,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2151,7 +2429,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2162,7 +2442,9 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2223,6 +2505,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
           style="width: 32px;"
         >
@@ -2249,8 +2532,8 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -2282,8 +2565,8 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -2301,8 +2584,8 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -2315,8 +2598,8 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -2329,8 +2612,8 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -2353,7 +2636,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2376,7 +2661,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2401,7 +2688,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2412,7 +2701,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2423,7 +2714,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2434,7 +2727,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2454,7 +2749,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2477,7 +2774,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2502,7 +2801,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2513,7 +2814,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2524,7 +2827,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2535,7 +2840,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2555,7 +2862,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2578,7 +2887,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2603,7 +2914,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2614,7 +2927,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2625,7 +2940,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2636,7 +2953,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2656,7 +2975,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2679,7 +3000,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2704,7 +3027,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2715,7 +3040,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2726,7 +3053,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2737,7 +3066,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2757,7 +3088,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2780,7 +3113,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2805,7 +3140,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2816,7 +3153,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2827,7 +3166,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2838,7 +3179,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2858,7 +3201,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2881,7 +3226,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2906,7 +3253,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2917,7 +3266,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2928,7 +3279,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2939,7 +3292,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -2959,7 +3314,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -2982,7 +3339,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3007,7 +3366,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3018,7 +3379,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3029,7 +3392,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3040,7 +3405,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3060,7 +3427,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3083,7 +3452,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3108,7 +3479,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3119,7 +3492,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3130,7 +3505,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3141,7 +3518,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3161,7 +3540,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3184,7 +3565,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3209,7 +3592,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3220,7 +3605,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3231,7 +3618,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3242,7 +3631,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3262,7 +3653,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3285,7 +3678,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3310,7 +3705,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3321,7 +3718,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3332,7 +3731,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3343,7 +3744,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3363,7 +3766,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3386,7 +3791,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3411,7 +3818,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3422,7 +3831,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3433,7 +3844,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3444,7 +3857,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3464,7 +3879,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3487,7 +3904,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3512,7 +3931,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3523,7 +3944,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3534,7 +3957,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3545,7 +3970,9 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3558,6 +3985,1093 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               >
                 Incomplete
               </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
+<div
+  class="data-table"
+>
+  <div
+    class="data-table__caption-container"
+  >
+    <div
+      class="data-table__caption-text"
+    >
+      <div
+        aria-hidden="true"
+        class="data-table__caption"
+      >
+        Test table
+      </div>
+      <div
+        aria-hidden="true"
+        class="data-table__subcaption"
+      >
+        Additional Subcaption
+      </div>
+    </div>
+  </div>
+  <table
+    class="data-table__table data-table--tableStyle-border data-table--rowStyle-lined data-table--size-sm"
+  >
+    <caption
+      class="data-table__aria-caption"
+    >
+      Test table: Additional Subcaption
+    </caption>
+    <thead
+      class="data-table__header-row"
+    >
+      <tr
+        class="data-table__row"
+      >
+        <th
+          class="data-table__header-cell-container"
+          colspan="1"
+          style="width: 32px;"
+        >
+          <div
+            class="data-table__status-header-cell"
+          >
+            Status Column
+          </div>
+        </th>
+        <th
+          class="data-table__header-cell-container"
+          colspan="1"
+        >
+          <div
+            class="data-table__header-cell"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              First Name
+            </div>
+          </div>
+        </th>
+        <th
+          class="data-table__header-cell-container"
+          colspan="1"
+        >
+          <div
+            class="data-table__header-cell"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Last Name
+            </div>
+          </div>
+        </th>
+        <th
+          class="data-table__header-cell-container"
+          colspan="1"
+        >
+          <div
+            class="data-table__header-cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Age
+            </div>
+          </div>
+        </th>
+        <th
+          class="data-table__header-cell-container"
+          colspan="1"
+        >
+          <div
+            class="data-table__header-cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Visits
+            </div>
+          </div>
+        </th>
+        <th
+          class="data-table__header-cell-container"
+          colspan="1"
+        >
+          <div
+            class="data-table__header-cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Profile Progress
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-label="This table row has a warning status"
+        class="data-table__row data-table--status-warning"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell data-table--status-warning"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
+              />
+            </svg>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-label="This table row has a critical status"
+        class="data-table__row data-table--status-critical"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell data-table--status-critical"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
+              />
+            </svg>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-label="This table row has a favorable status"
+        class="data-table__row data-table--status-favorable"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell data-table--status-favorable"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1rem"
+              style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM10.6 16.6L17.65 9.55L16.25 8.15L10.6 13.8L7.75 10.95L6.35 12.35L10.6 16.6Z"
+              />
+            </svg>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__status-cell"
+          />
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-leading"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="data-table__cell-container"
+        >
+          <div
+            class="data-table__cell data-table__cell--alignment-trailing"
+          >
+            <div
+              class="data-table__cell-text"
+            >
+              50
             </div>
           </div>
         </td>
@@ -3581,8 +5095,8 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -3614,8 +5128,8 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -3633,8 +5147,8 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -3647,8 +5161,8 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -3661,8 +5175,8 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -3685,7 +5199,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3696,7 +5212,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3707,7 +5225,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3718,7 +5238,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3729,7 +5251,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3749,7 +5273,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3760,7 +5286,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3771,7 +5299,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3782,7 +5312,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3793,7 +5325,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3813,7 +5347,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3824,7 +5360,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3835,7 +5373,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3846,7 +5386,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3857,7 +5399,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3877,7 +5421,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3888,7 +5434,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3899,7 +5447,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3910,7 +5460,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3921,7 +5473,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3941,7 +5495,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3952,7 +5508,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -3963,7 +5521,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3974,7 +5534,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -3985,7 +5547,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4005,7 +5569,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4016,7 +5582,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4027,7 +5595,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4038,7 +5608,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4049,7 +5621,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4069,7 +5643,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4080,7 +5656,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4091,7 +5669,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4102,7 +5682,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4113,7 +5695,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4133,7 +5717,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4144,7 +5730,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4155,7 +5743,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4166,7 +5756,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4177,7 +5769,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4197,7 +5791,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4208,7 +5804,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4219,7 +5817,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4230,7 +5830,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4241,7 +5843,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4261,7 +5865,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4272,7 +5878,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4283,7 +5891,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4294,7 +5904,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4305,7 +5917,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4325,7 +5939,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4336,7 +5952,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4347,7 +5965,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4358,7 +5978,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4369,7 +5991,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4389,7 +6013,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4400,7 +6026,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4411,7 +6039,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4422,7 +6052,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4433,7 +6065,9 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4469,8 +6103,8 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -4502,8 +6136,8 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell"
@@ -4521,8 +6155,8 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -4535,8 +6169,8 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -4549,8 +6183,8 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing"
@@ -4573,7 +6207,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4584,7 +6220,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4595,7 +6233,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4606,7 +6246,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4617,7 +6259,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4637,7 +6281,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4648,7 +6294,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4659,7 +6307,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4670,7 +6320,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4681,7 +6333,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4701,7 +6355,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4712,7 +6368,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4723,7 +6381,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4734,7 +6394,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4745,7 +6407,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4765,7 +6429,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4776,7 +6442,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4787,7 +6455,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4798,7 +6468,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4809,7 +6481,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4829,7 +6503,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4840,7 +6516,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4851,7 +6529,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4862,7 +6542,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4873,7 +6555,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4893,7 +6577,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4904,7 +6590,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4915,7 +6603,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4926,7 +6616,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4937,7 +6629,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4957,7 +6651,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4968,7 +6664,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -4979,7 +6677,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -4990,7 +6690,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5001,7 +6703,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5021,7 +6725,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5032,7 +6738,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5043,7 +6751,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5054,7 +6764,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5065,7 +6777,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5085,7 +6799,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5096,7 +6812,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5107,7 +6825,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5118,7 +6838,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5129,7 +6851,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5149,7 +6873,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5160,7 +6886,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5171,7 +6899,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5182,7 +6912,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5193,7 +6925,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5213,7 +6947,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5224,7 +6960,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5235,7 +6973,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5246,7 +6986,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5257,7 +6999,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5277,7 +7021,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
       <tr
         class="data-table__row"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5288,7 +7034,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5299,7 +7047,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5310,7 +7060,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5321,7 +7073,9 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing"
           >
@@ -5382,6 +7136,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
         class="data-table__row"
       >
         <th
+          class="data-table__header-cell-container"
           colspan="1"
           style="width: 32px;"
         >
@@ -5408,8 +7163,8 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--has-horizontal-divider"
@@ -5441,8 +7196,8 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--has-horizontal-divider"
@@ -5460,8 +7215,8 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
@@ -5474,8 +7229,8 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
@@ -5488,8 +7243,8 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           </div>
         </th>
         <th
+          class="data-table__header-cell-container"
           colspan="1"
-          style="width: 150px;"
         >
           <div
             class="data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
@@ -5512,7 +7267,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5535,7 +7292,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5560,7 +7319,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5571,7 +7332,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5582,7 +7345,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5593,7 +7358,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5613,7 +7380,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5636,7 +7405,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5661,7 +7432,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5672,7 +7445,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5683,7 +7458,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5694,7 +7471,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5714,7 +7493,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5737,7 +7518,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5762,7 +7545,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5773,7 +7558,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5784,7 +7571,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5795,7 +7584,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5815,7 +7606,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5838,7 +7631,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5863,7 +7658,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5874,7 +7671,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5885,7 +7684,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5896,7 +7697,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5916,7 +7719,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -5939,7 +7744,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5964,7 +7771,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -5975,7 +7784,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5986,7 +7797,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -5997,7 +7810,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6017,7 +7832,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6040,7 +7857,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6065,7 +7884,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6076,7 +7897,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6087,7 +7910,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6098,7 +7923,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6118,7 +7945,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6141,7 +7970,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6166,7 +7997,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6177,7 +8010,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6188,7 +8023,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6199,7 +8036,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6219,7 +8058,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6242,7 +8083,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6267,7 +8110,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6278,7 +8123,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6289,7 +8136,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6300,7 +8149,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6320,7 +8171,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6343,7 +8196,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6368,7 +8223,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6379,7 +8236,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6390,7 +8249,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6401,7 +8262,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6421,7 +8284,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6444,7 +8309,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6469,7 +8336,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6480,7 +8349,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6491,7 +8362,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6502,7 +8375,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6522,7 +8397,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6545,7 +8422,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6570,7 +8449,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6581,7 +8462,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6592,7 +8475,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6603,7 +8488,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6623,7 +8510,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
       <tr
         class="data-table__row data-table__row--is-interactive"
       >
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading"
           >
@@ -6646,7 +8535,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6671,7 +8562,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-leading data-table__cell--has-horizontal-divider"
           >
@@ -6682,7 +8575,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6693,7 +8588,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6704,7 +8601,9 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="data-table__cell-container"
+        >
           <div
             class="data-table__cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
@@ -6750,7 +8649,7 @@ exports[`<DataTable /> WithBasicCaption story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -6788,7 +8687,7 @@ exports[`<DataTable /> WithFullCaption story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -6900,7 +8799,7 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -6959,7 +8858,7 @@ exports[`<DataTable /> WithOnlyActions story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -7034,7 +8933,7 @@ exports[`<DataTable /> WithSearch story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -7146,7 +9045,7 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>
@@ -7310,7 +9209,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
     >
       <tr>
         <td>
-          TODO: Custom table rows/cells here
+          Custom or standard table rows/cells here
         </td>
       </tr>
     </tbody>

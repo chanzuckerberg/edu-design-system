@@ -18,7 +18,7 @@ import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
 import {
   defaultPopoverModifiers,
-  PopoverContainerV2 as PopoverContainer,
+  default as PopoverContainer,
 } from '../PopoverContainer';
 import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
@@ -155,25 +155,6 @@ type SelectContextType = PopoverContext & {
 
 let showNameWarning = true;
 
-function childrenHaveLabelComponent(children?: ReactNode): boolean {
-  const childrenArray = React.Children.toArray(children);
-  return childrenArray.some((child) => {
-    if (typeof child === 'string' || typeof child === 'number') {
-      return false;
-    } else if (
-      'props' in child &&
-      child.type &&
-      typeof child.type !== 'string' &&
-      child.type?.name === 'SelectLabel'
-    ) {
-      return true;
-    } else if ('props' in child && child.props.children) {
-      return childrenHaveLabelComponent(child.props.children);
-    }
-    return false;
-  });
-}
-
 const SelectContext = React.createContext<SelectContextType>({});
 
 /**
@@ -206,11 +187,6 @@ export function Select({
   ...other
 }: SelectProps) {
   if (process.env.NODE_ENV !== 'production') {
-    const childrenHaveLabel =
-      children && childrenHaveLabelComponent(children as ReactNode);
-    if (!ariaLabel && !label && !childrenHaveLabel) {
-      throw new Error('You must provide a visible label or `aria-label`.');
-    }
     if (!name && showNameWarning) {
       console.warn(
         "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",

@@ -36,24 +36,24 @@
 }
 
 .data-table__table {
+  height: fit-content;
   table-layout: fixed;
   width: 100%;
-
-  /* add class instead of tag for styles? */
-  th,
-  td {
-    padding: 0;
-    vertical-align: top;
-    /**
-     * inherit height from 1px size of table rows. This allows height: 100% on cells containers
-     *  to affect full height of cell
-     */
-    height: inherit;
-  }
 
   .data-table__caption + &,
   .data-table__subcaption + & {
     margin-top: calc(var(--eds-size-4) / 16 * 1rem);
+  }
+}
+
+.data-table__cell-container, .data-table__header-cell-container {
+  padding: 0;
+  vertical-align: top;
+
+  &:last-child {
+    .data-table__cell, .data-table__header-cell {
+      border-width: 0;
+    }
   }
 }
 
@@ -96,6 +96,7 @@
   align-items: flex-start;
   font: var(--eds-theme-typography-title-md);
   height: 100%;
+  overflow: hidden;
 
   border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
 
@@ -127,12 +128,28 @@
   }
 }
 
+.data-table__status-cell {
+  height: 100%; 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-table__status-header-cell {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  text-indent: 9999;
+}
+
 .data-table__cell {
   display: flex;
   gap: calc(var(--eds-size-1) / 16 * 1rem);
   align-items: flex-start;
   font: var(--eds-theme-typography-body-md);
   height: 100%;
+  overflow: hidden;
 
   border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
 
@@ -193,8 +210,7 @@
  */
 
 .data-table__row {
-  /* setting the height to 1px so that later, table cell containers can take up 100% of height */
-  height: 1px;
+  height: 100%;
 
   &.data-table__row--is-selected {
     background-color: var(--eds-theme-color-background-table-row-selected);
@@ -287,5 +303,33 @@
   .data-table__group-row {
     color: var(--eds-theme-color-text-utility-default-primary);
     background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis);
+  }
+}
+
+.data-table .data-table__status-cell {
+  &.data-table--status-critical {
+    color: var(--eds-theme-color-icon-utility-critical)
+  }
+
+  &.data-table--status-favorable {
+    color: var(--eds-theme-color-icon-utility-favorable);
+  }
+
+  &.data-table--status-warning {
+    color: var(--eds-theme-color-icon-utility-warning);
+  }
+}
+
+.data-table .data-table__row {
+  &.data-table--status-critical {
+    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+  }
+
+  &.data-table--status-favorable {
+    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+  }
+
+  &.data-table--status-warning {
+    background-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
   }
 }

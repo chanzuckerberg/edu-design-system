@@ -1,5 +1,9 @@
 export { DataTable as default } from './DataTable';
-export type { DataTableProps } from './DataTable';
+export type {
+  DataTableProps,
+  DataTableRowProps,
+  DataTableWithStatus,
+} from './DataTable';
 
 // Re-export Tanstack hooks and functions to consumers
 // https://tanstack.com/table/latest

@@ -61,7 +61,18 @@ export type { ButtonProps } from './components/Button';
 export type { LinkProps } from './components/Link';
 export type { PageNotificationProps } from './components/PageNotification';
 export type { AppNotificationProps } from './components/AppNotification';
+export type {
+  DataTableProps,
+  DataTableRowProps,
+  DataTableWithStatus,
+} from './components/DataTable';
 
 // TODO(next-major): Remove the below types at the next major release
 export type { PageNotificationProps as PageNotificationV2Props } from './components/PageNotification';
 export type { AppNotificationProps as AppNotificationV2Props } from './components/AppNotification';
+
+/**
+ * Utilities re-exported from dependent libraries
+ */
+// https://headlessui.com/v1/react/transition
+export { Transition } from '@headlessui/react';

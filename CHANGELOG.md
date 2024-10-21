@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.4.1...v15.5.0) (2024-10-18)
+
+
+### Features
+
+* **DataTable:** add support for table row statuses ([#2073](https://github.com/chanzuckerberg/edu-design-system/issues/2073)) ([c109f52](https://github.com/chanzuckerberg/edu-design-system/commit/c109f52e3f0f3c1aaa16a1cfd698a649aa962290))
+* re-export HeadlessUI's Transition component ([#2069](https://github.com/chanzuckerberg/edu-design-system/issues/2069)) ([a4a5fc8](https://github.com/chanzuckerberg/edu-design-system/commit/a4a5fc825f876c8e2e63f1c2bc1952976b949575))
+
+
+### Bug Fixes
+
+* **DataTable:** fix cell size and border in FF ([#2072](https://github.com/chanzuckerberg/edu-design-system/issues/2072)) ([7ffbd56](https://github.com/chanzuckerberg/edu-design-system/commit/7ffbd5631b86b137aabe4d91284cb5e230297b85))
+* **Select:** remove label checks from component ([#2068](https://github.com/chanzuckerberg/edu-design-system/issues/2068)) ([8ede09d](https://github.com/chanzuckerberg/edu-design-system/commit/8ede09d24cccc9fdd2a1824a3142b630d10cedc0))
+
 ### [15.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.4.0...v15.4.1) (2024-10-04)
 
 
