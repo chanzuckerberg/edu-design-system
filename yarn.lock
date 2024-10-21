@@ -2125,7 +2125,7 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     jest-preset-stylelint: "npm:^6.3.2"
     jsonfile: "npm:^6.1.0"
-    lilconfig: "npm:^2.1.0"
+    lilconfig: "npm:^3.1.2"
     lint-staged: "npm:^13.3.0"
     lodash: "npm:^4.17.21"
     ora: "npm:^8.1.0"
@@ -13692,6 +13692,13 @@ __metadata:
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
   checksum: 10/b1314a2e55319013d5e7d7d08be39015829d2764a1eaee130129545d40388499d81b1c31b0f9b3417d4db12775a88008b72ec33dd06e0184cf7503b32ca7cc0b
+  languageName: node
+  linkType: hard
+
+"lilconfig@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "lilconfig@npm:3.1.2"
+  checksum: 10/8058403850cfad76d6041b23db23f730e52b6c17a8c28d87b90766639ca0ee40c748a3e85c2d7bd133d572efabff166c4b015e5d25e01fd666cb4b13cfada7f0
   languageName: node
   linkType: hard
 
