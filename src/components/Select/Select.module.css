@@ -32,7 +32,7 @@
  */
 .select__options {
   max-height: 25vh;
-  z-index: 100;
+  z-index: var(--eds-z-index-top);
 }
 
 .select--label-layout-vertical {
