@@ -4,14 +4,18 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r1:"
+    aria-controls="headlessui-menu-items-:r3:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-right button--primary button--lg button--size-lg button--variant-default menu__button"
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:r0:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:r2:"
     type="button"
   >
     <span
@@ -41,14 +45,18 @@ exports[`<Menu /> MenuWithAvatarButton story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:rv:"
+    aria-controls="headlessui-menu-items-:r1l:"
     aria-expanded="true"
     aria-haspopup="menu"
     class=""
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:ru:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:r1k:"
     type="button"
   >
     <div
@@ -66,14 +74,18 @@ exports[`<Menu /> MenuWithIconButton story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r15:"
+    aria-controls="headlessui-menu-items-:r1v:"
     aria-expanded="true"
     aria-haspopup="menu"
     class=""
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:r14:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:r1u:"
     type="button"
   >
     <svg
@@ -101,14 +113,18 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:rj:"
+    aria-controls="headlessui-menu-items-:r11:"
     aria-expanded="true"
     aria-haspopup="menu"
     class=""
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:ri:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:r10:"
     type="button"
   >
     <div
@@ -124,14 +140,18 @@ exports[`<Menu /> WithCustomSecondaryButton story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:rp:"
+    aria-controls="headlessui-menu-items-:r1b:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:ro:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:r1a:"
     type="button"
   >
     <span
@@ -147,14 +167,18 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r7:"
+    aria-controls="headlessui-menu-items-:rd:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-right button--primary button--lg button--size-lg button--variant-default menu__button"
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:r6:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:rc:"
     type="button"
   >
     <span
@@ -184,14 +208,18 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
 <div
   class="menu"
   data-headlessui-state="open"
+  data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:rd:"
+    aria-controls="headlessui-menu-items-:rn:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-right button--primary button--lg button--size-lg button--variant-default menu__button"
-    data-headlessui-state="open"
-    id="headlessui-menu-button-:rc:"
+    data-active=""
+    data-headlessui-state="open active hover"
+    data-hover=""
+    data-open=""
+    id="headlessui-menu-button-:rm:"
     type="button"
   >
     <span
