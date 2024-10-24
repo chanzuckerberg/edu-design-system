@@ -329,15 +329,16 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <Dialog.Overlay
+        <div
           className={clsx(
             styles['modal__overlay'],
             overlayEmphasis &&
               styles[`modal__overlay--emphasis-${overlayEmphasis}`],
           )}
         />
-
-        <ModalContent onClose={onClose} {...rest} />
+        <Dialog.Panel>
+          <ModalContent onClose={onClose} {...rest} />
+        </Dialog.Panel>
       </Dialog>
     </Transition>
   );
