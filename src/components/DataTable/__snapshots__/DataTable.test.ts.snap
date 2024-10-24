@@ -8730,7 +8730,7 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
             aria-label="search"
             class="input input-field__input--leading-icon"
             disabled=""
-            id=":r12:"
+            id=":r16:"
             placeholder="Search..."
             type="search"
           />
@@ -9177,7 +9177,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
             aria-label="show more actions"
             class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r10:"
+            id="headlessui-menu-button-:r12:"
             type="button"
           >
             <span

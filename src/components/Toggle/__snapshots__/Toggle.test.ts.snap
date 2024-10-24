@@ -8,6 +8,7 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
     aria-checked="true"
     aria-labelledby="headlessui-label-:r3:"
     class="toggle__button toggle__button--checked"
+    data-checked=""
     data-headlessui-state="checked"
     id="headlessui-switch-:r2:"
     role="switch"
@@ -20,6 +21,7 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
+    data-headlessui-state=""
     for="headlessui-switch-:r2:"
     id="headlessui-label-:r3:"
   >
@@ -34,6 +36,7 @@ exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
 >
   <label
     class="toggle__label"
+    data-headlessui-state=""
     for="headlessui-switch-:r8:"
     id="headlessui-label-:r7:"
   >
@@ -76,6 +79,7 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
+    data-headlessui-state=""
     for="headlessui-switch-:r0:"
     id="headlessui-label-:r1:"
   >
@@ -92,7 +96,8 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
     aria-checked="false"
     aria-labelledby="headlessui-label-:r5:"
     class="toggle__button toggle__button--unchecked"
-    data-headlessui-state=""
+    data-disabled=""
+    data-headlessui-state="disabled"
     disabled=""
     id="headlessui-switch-:r4:"
     role="switch"
@@ -105,6 +110,7 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
+    data-headlessui-state=""
     for="headlessui-switch-:r4:"
     id="headlessui-label-:r5:"
   >

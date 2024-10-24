@@ -9,6 +9,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -59,12 +60,15 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rr:"
         aria-expanded="true"
         class="accordion-button accordion-button--md accordion-button--empty"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:rq:"
         type="button"
       >
@@ -81,17 +85,21 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--hidden"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:rr:"
       />
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rt:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:rs:"
         type="button"
       >
@@ -125,6 +133,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:rt:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -132,12 +141,15 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rv:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:ru:"
         type="button"
       >
@@ -171,6 +183,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:rv:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -178,12 +191,15 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r11:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r10:"
         type="button"
       >
@@ -217,6 +233,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r11:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -235,6 +252,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -308,6 +326,7 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -375,6 +394,7 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -425,12 +445,15 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rb:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         data-testid="accordion-button-1"
         id="headlessui-disclosure-button-:ra:"
         type="button"
@@ -465,6 +488,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         data-testid="accordion-panel-1"
         id="headlessui-disclosure-panel-:rb:"
       >
@@ -473,6 +497,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -512,6 +537,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -551,6 +577,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -601,12 +628,15 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r13:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r12:"
         type="button"
       >
@@ -640,6 +670,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r13:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -647,12 +678,15 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r15:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r14:"
         type="button"
       >
@@ -686,6 +720,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r15:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -693,12 +728,15 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r17:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r16:"
         type="button"
       >
@@ -732,6 +770,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r17:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -739,12 +778,15 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r19:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r18:"
         type="button"
       >
@@ -778,6 +820,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r19:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -796,12 +839,15 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rj:"
         aria-expanded="true"
         class="accordion-button accordion-button--sm"
         data-headlessui-state="open"
+        data-open=""
         data-testid="accordion-button-1"
         id="headlessui-disclosure-button-:ri:"
         type="button"
@@ -836,6 +882,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--sm"
         data-headlessui-state="open"
+        data-open=""
         data-testid="accordion-panel-1"
         id="headlessui-disclosure-panel-:rj:"
       >
@@ -844,6 +891,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -883,6 +931,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -922,6 +971,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -972,12 +1022,15 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1b:"
         aria-expanded="true"
         class="accordion-button accordion-button--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r1a:"
         type="button"
       >
@@ -1011,6 +1064,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r1b:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -1018,12 +1072,15 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1d:"
         aria-expanded="true"
         class="accordion-button accordion-button--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r1c:"
         type="button"
       >
@@ -1057,6 +1114,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r1d:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -1064,12 +1122,15 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1f:"
         aria-expanded="true"
         class="accordion-button accordion-button--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r1e:"
         type="button"
       >
@@ -1103,6 +1164,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r1f:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -1110,12 +1172,15 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
     </div>
     <div
       class="accordion-row"
+      data-headlessui-state="open"
+      data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1h:"
         aria-expanded="true"
         class="accordion-button accordion-button--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-button-:r1g:"
         type="button"
       >
@@ -1149,6 +1214,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--sm"
         data-headlessui-state="open"
+        data-open=""
         id="headlessui-disclosure-panel-:r1h:"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -1167,6 +1233,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -1222,6 +1289,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
   <div>
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
@@ -1273,6 +1341,7 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
   >
     <div
       class="accordion-row"
+      data-headlessui-state=""
     >
       <button
         aria-expanded="false"
