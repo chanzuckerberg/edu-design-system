@@ -1,20 +1,23 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
+import type {
+  HasDisplayName,
+  PolymorphicProps,
+} from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 
 import styles from './Link.module.css';
 
-export type LinkProps<ExtendedElement = unknown> =
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+const DEFAULT_LINK_TAG = 'a' as const;
+
+export type LinkProps<
+  ElementTag extends React.ElementType = typeof DEFAULT_LINK_TAG,
+> = PolymorphicProps<
+  ElementTag,
+  {
     // Component API
-    /**
-     * Component used to render the element. Meant to support interaction with framework navigation libraries.
-     *
-     * **Default is `"a"`**.
-     */
-    as?: string | React.ElementType;
     /**
      * The link contents or label. Using ReactNode to support customized text treatments
      */
@@ -59,7 +62,19 @@ export type LinkProps<ExtendedElement = unknown> =
      * **Note**: This will only apply when `"standalone"` is used
      */
     variant?: 'default' | 'inverse';
-  } & ExtendedElement;
+  }
+>;
+
+/**
+ * Internal type, used to cast the exported Link component. This helps us type "as" correctly
+ * since we are using forwardRef.
+ */
+type internal_Link = (<
+  ElementTag extends React.ElementType = typeof DEFAULT_LINK_TAG,
+>(
+  props: LinkProps<ElementTag> & React.RefAttributes<any>,
+) => React.JSX.Element) &
+  HasDisplayName;
 
 /**
  * `import {Link} from "@chanzuckerberg/eds";`
@@ -68,9 +83,12 @@ export type LinkProps<ExtendedElement = unknown> =
  *
  * Inline links inherit the color of the surrounding container, while when using `context` set to `standalone`, links have specific colors.
  */
-export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  (
-    {
+export const Link = forwardRef(
+  <ElementTag extends React.ElementType = typeof DEFAULT_LINK_TAG>(
+    props: LinkProps<ElementTag>,
+    ref: React.Ref<any>,
+  ) => {
+    const {
       as: Component = 'a',
       children,
       className,
@@ -80,9 +98,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       size,
       variant = 'default',
       ...other
-    },
-    ref,
-  ) => {
+    } = props;
+
     const componentClassName = clsx(
       className,
       styles['link'],
@@ -134,6 +151,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       </Component>
     );
   },
-);
+) as internal_Link;
 
 Link.displayName = 'Link';

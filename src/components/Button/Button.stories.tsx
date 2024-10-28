@@ -236,16 +236,6 @@ export const IconLayouts: Story = {
   },
 };
 
-// Here, we introduce a special type extension to LinkProps, then use it in a
-// composed component, to demonstrate the ability to offer custom props to a component
-type ExtendArgs = ButtonProps<{ to: string }>;
-function ExtendedButton(args: ExtendArgs) {
-  return (
-    // eslint-disable-next-line no-alert
-    <Button {...args} onClick={() => alert(`handle to value: ${args.to}`)} />
-  );
-}
-
 /**
  * You can extend a component's props for use with libraries that aid navigation, e.g., react-dom-router, et al.
  *
@@ -270,15 +260,15 @@ function ExtendedButton(args: ExtendArgs) {
  * }
  * ```
  */
-export const UsingExtendedLink: StoryObj<ExtendArgs> = {
-  render: (args) => (
+export const UsingExtendedLink: Story = {
+  render: () => (
     <div>
       Lorem ipsum dolor sit amet, . Morbi porta at ante quis molestie. Nam
       scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id
       tellus ante.{' '}
-      <ExtendedButton {...args} to="test">
+      <Button as="a" href="/">
         consectetur adipiscing elit
-      </ExtendedButton>
+      </Button>
     </div>
   ),
 };

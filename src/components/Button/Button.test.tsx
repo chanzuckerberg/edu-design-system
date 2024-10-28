@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from './Button';
 import * as stories from './Button.stories';
 import type { StoryFile } from '../../util/utility-types';
@@ -30,7 +30,7 @@ describe('<Button />', () => {
   it('fires callback on click', async () => {
     const user = userEvent.setup();
     const onClick = jest.fn();
-    render(<Button onClick={onClick}>Click</Button>);
+    render(<Button onClick={onClick} />);
 
     await user.click(screen.getByRole('button'));
     expect(onClick).toHaveBeenCalled();
@@ -88,3 +88,40 @@ describe('<Button />', () => {
     });
   });
 });
+
+function TestAsPropTypes() {
+  const ref = useRef();
+  function ExampleComponent(props: { color: string; shape: string }) {
+    return <div />;
+  }
+
+  const inlineHtmlElement = <Button as="a" href="/" target="_blank" />;
+
+  const inlineHtmlElementWrongProps = (
+    // @ts-expect-error "href" prop isn't valid on a <div>
+    <Button as="div" href="/" />
+  );
+
+  const customComponent = (
+    <Button as={ExampleComponent} color="red" shape="circle" />
+  );
+
+  const customComponentRef = (
+    <Button as={ExampleComponent} color="red" ref={ref} shape="circle" />
+  );
+
+  const customComponentWrongProps = (
+    // @ts-expect-error "color" prop is missing
+    <Button as={ExampleComponent} shape="circle" />
+  );
+
+  // Add a log statement so the typescript compiler thinks these variables
+  // are being used.
+  console.log({
+    inlineHtmlElement,
+    inlineHtmlElementWrongProps,
+    customComponent,
+    customComponentRef,
+    customComponentWrongProps,
+  });
+}

@@ -1,89 +1,103 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
+import type {
+  HasDisplayName,
+  PolymorphicProps,
+} from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 import LoadingIndicator from '../LoadingIndicator';
 
 import styles from './Button.module.css';
 
-type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+const DEFAULT_BUTTON_TAG = 'button' as const;
 
-export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
-  // Component API
-  /**
-   * Component used to render the element. Meant to support interaction with framework navigation libraries.
-   *
-   * **Default is `"button"`**.
-   */
-  as?: string | React.ElementType;
-  /**
-   * `Button` contents or label.
-   */
-  children?: string;
-  /**
-   * Determine the behavior of the button upon click:
-   * - **button** `Button` is a clickable button with no default behavior
-   * - **submit** `Button` is a clickable button that submits form data
-   * - **reset** `Button` is a clickable button that resets the form-data to its initial values
-   */
-  type?: 'button' | 'reset' | 'submit';
+export type ButtonProps<
+  ElementTag extends React.ElementType = typeof DEFAULT_BUTTON_TAG,
+> = PolymorphicProps<
+  ElementTag,
+  {
+    // Component API
+    /**
+     * `Button` contents or label.
+     */
+    children?: string;
+    /**
+     * Determine the behavior of the button upon click:
+     * - **button** `Button` is a clickable button with no default behavior
+     * - **submit** `Button` is a clickable button that submits form data
+     * - **reset** `Button` is a clickable button that resets the form-data to its initial values
+     */
+    type?: 'button' | 'reset' | 'submit';
 
-  // Design API
-  /**
-   * Sets the hierarchy rank of the button
-   *
-   * **Default is `"primary"`**.
-   */
-  rank?: 'primary' | 'secondary' | 'tertiary';
+    // Design API
+    /**
+     * Sets the hierarchy rank of the button
+     *
+     * **Default is `"primary"`**.
+     */
+    rank?: 'primary' | 'secondary' | 'tertiary';
 
-  /**
-   * The size of the button on screen
-   */
-  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
+    /**
+     * The size of the button on screen
+     */
+    size?: Extract<Size, 'sm' | 'md' | 'lg'>;
 
-  /**
-   * The variant of the default tertiary button.
-   */
-  context?: 'default' | 'standalone';
+    /**
+     * The variant of the default tertiary button.
+     */
+    context?: 'default' | 'standalone';
 
-  /**
-   * Icon from the set of defined EDS icon set, when `iconLayout` is used.
-   */
-  icon?: IconName;
+    /**
+     * Icon from the set of defined EDS icon set, when `iconLayout` is used.
+     */
+    icon?: IconName;
 
-  /**
-   * Allows configuation of the icon's positioning within `Button`.
-   *
-   * - When set to a value besides `"none"`, an icon must be specified.
-   * - When `"icon-only"`, `aria-label` must be given a value.
-   */
-  iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
+    /**
+     * Allows configuation of the icon's positioning within `Button`.
+     *
+     * - When set to a value besides `"none"`, an icon must be specified.
+     * - When `"icon-only"`, `aria-label` must be given a value.
+     */
+    iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
 
-  /**
-   * Status (color) variant for `Button`.
-   *
-   * **Default is `"default"`**.
-   */
-  variant?: 'default' | 'neutral' | 'critical' | 'inverse';
+    /**
+     * Status (color) variant for `Button`.
+     *
+     * **Default is `"default"`**.
+     */
+    variant?: 'default' | 'neutral' | 'critical' | 'inverse';
 
-  /**
-   * Whether the width of the button is set to the full layout.
-   */
-  isFullWidth?: boolean;
+    /**
+     * Whether the width of the button is set to the full layout.
+     */
+    isFullWidth?: boolean;
 
-  /**
-   * Whether `Button` is set to disabled state (disables interaction and updates appearance).
-   *
-   * Note: this will set the internal field to `disabled` as well. Prefer this to just setting `disabled`.
-   */
-  isDisabled?: boolean;
+    /**
+     * Whether `Button` is set to disabled state (disables interaction and updates appearance).
+     *
+     * Note: this will set the internal field to `disabled` as well. Prefer this to just setting `disabled`.
+     */
+    isDisabled?: boolean;
 
-  /**
-   * Loading state passed down from higher level used to trigger loader and text change.
-   */
-  isLoading?: boolean;
-} & ExtendedElement;
+    /**
+     * Loading state passed down from higher level used to trigger loader and text change.
+     */
+    isLoading?: boolean;
+  }
+>;
+
+/**
+ * Internal type, used to cast the exported Button component. This helps us type "as" correctly
+ * since we are using forwardRef.
+ */
+type internal_Button = (<
+  ElementTag extends React.ElementType = typeof DEFAULT_BUTTON_TAG,
+>(
+  props: ButtonProps<ElementTag> & React.RefAttributes<any>,
+) => React.JSX.Element) &
+  HasDisplayName;
 
 /**
  * `import {Button} from "@chanzuckerberg/eds";`
@@ -94,10 +108,13 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
  * - If you need to style a navigation anchor, please use the `Link` component.
  * - If you need the button to use some other tag or component, use the `as` prop.
  */
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      as: Component = 'button',
+export const Button = forwardRef(
+  <ElementTag extends React.ElementType = typeof DEFAULT_BUTTON_TAG>(
+    props: ButtonProps<ElementTag>,
+    ref: React.Ref<any>,
+  ) => {
+    const {
+      as: Component = DEFAULT_BUTTON_TAG,
       children,
       className,
       context,
@@ -111,9 +128,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'lg',
       variant = 'default',
       ...other
-    },
-    ref,
-  ) => {
+    } = props;
+
     const componentClassName = clsx(
       styles['button'],
       context && styles[`button--context-${context}`],
@@ -202,6 +218,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       coreButton
     );
   },
-);
+) as internal_Button;
 
 Button.displayName = 'Button';
