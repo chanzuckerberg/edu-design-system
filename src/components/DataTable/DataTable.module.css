@@ -180,6 +180,9 @@
   border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
   position: sticky;
   top: -1px;
+
+  /* adding to z-index above any of the contents of tbody */
+  z-index: 2;
 }
 
 .data-table__group-row {
@@ -200,9 +203,30 @@
   }
 }
 
-.data-table--is-pinned {
+.data-table--row-is-pinned {
   box-shadow: var(--eds-box-shadow-sm);
+}
 
+.data-table--column-is-pinned {
+  /* When pinning columns, width and offset position are dynamic */
+  
+  /* inherit the background color from the enclosing row */
+  background-color: inherit;
+  position: sticky;
+  z-index: 1;
+
+  &::after {
+    /* TODO: re-attach to a proper token value if possible */
+    box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.25), 2px 0 3px 0 rgba(0, 0, 0, 0.25);
+    display: block;
+    height: 100%;
+    content: ' ';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+  }
 }
 
 /**

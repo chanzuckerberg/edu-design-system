@@ -172,7 +172,6 @@ export function DataTable<T>({
   ...rest
 }: DataTableProps<T>) {
   const componentClassName = clsx(styles['data-table'], className);
-
   /**
    * to handle (sub-)caption, render outside the table, but put the combined text in
    * <caption>, and set to hidden in css. that way you can control the layout of the combined
@@ -237,13 +236,23 @@ export function DataTable<T>({
                       header.getSize() !== 150
                         ? `${header.getSize()}px`
                         : undefined;
+
+                    const headerClassNames = clsx(
+                      styles['data-table__header-cell-container'],
+                      header.column.getIsPinned() === 'left' &&
+                        styles['data-table--column-is-pinned'],
+                    );
                     return (
                       <th
-                        className={styles['data-table__header-cell-container']}
+                        className={headerClassNames}
                         colSpan={header.colSpan}
                         key={header.id}
                         style={{
                           width: columnWidth,
+                          left:
+                            header.column.getIsPinned() === 'left'
+                              ? `${header.column.getStart('left')}px`
+                              : undefined,
                         }}
                       >
                         {header.isPlaceholder
@@ -270,17 +279,30 @@ export function DataTable<T>({
                         />
                         {row.getLeafRows().map((row) => (
                           <DataTableRow key={row.id}>
-                            {row.getVisibleCells().map((cell) => (
-                              <td
-                                className={styles['data-table__cell-container']}
-                                key={cell.id}
-                              >
-                                {flexRender(
-                                  cell.column.columnDef.cell,
-                                  cell.getContext(),
-                                )}
-                              </td>
-                            ))}
+                            {row.getVisibleCells().map((cell) => {
+                              const cellClassNames = clsx(
+                                styles['data-table__cell-container'],
+                                cell.column.getIsPinned() === 'left' &&
+                                  styles['data-table--column-is-pinned'],
+                              );
+                              return (
+                                <td
+                                  className={cellClassNames}
+                                  key={cell.id}
+                                  style={{
+                                    left:
+                                      cell.column.getIsPinned() === 'left'
+                                        ? `${cell.column.getStart('left')}px`
+                                        : undefined,
+                                  }}
+                                >
+                                  {flexRender(
+                                    cell.column.columnDef.cell,
+                                    cell.getContext(),
+                                  )}
+                                </td>
+                              );
+                            })}
                           </DataTableRow>
                         ))}
                       </>
@@ -292,17 +314,30 @@ export function DataTable<T>({
                           isStatusEligible ? row.getValue('status') : undefined
                         }
                       >
-                        {row.getVisibleCells().map((cell) => (
-                          <td
-                            className={styles['data-table__cell-container']}
-                            key={cell.id}
-                          >
-                            {flexRender(
-                              cell.column.columnDef.cell,
-                              cell.getContext(),
-                            )}
-                          </td>
-                        ))}
+                        {row.getVisibleCells().map((cell) => {
+                          const cellClassNames = clsx(
+                            styles['data-table__cell-container'],
+                            cell.column.getIsPinned() === 'left' &&
+                              styles['data-table--column-is-pinned'],
+                          );
+                          return (
+                            <td
+                              className={cellClassNames}
+                              key={cell.id}
+                              style={{
+                                left:
+                                  cell.column.getIsPinned() === 'left'
+                                    ? `${cell.column.getStart('left')}px`
+                                    : undefined,
+                              }}
+                            >
+                              {flexRender(
+                                cell.column.columnDef.cell,
+                                cell.getContext(),
+                              )}
+                            </td>
+                          );
+                        })}
                       </DataTableRow>
                     )}
                   </React.Fragment>
@@ -503,7 +538,7 @@ export const DataTableTable = ({
         observer = new IntersectionObserver(
           ([event]) => {
             return event.target.classList.toggle(
-              styles['data-table--is-pinned'],
+              styles['data-table--row-is-pinned'],
               event.intersectionRatio < 1,
             );
           },
