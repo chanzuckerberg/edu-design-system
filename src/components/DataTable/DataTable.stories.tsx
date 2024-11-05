@@ -161,11 +161,7 @@ const columnHelper = DataTableUtils.createColumnHelper<Person>();
 const columns = [
   columnHelper.accessor('firstName', {
     header: () => (
-      <DataTable.HeaderCell
-        leadingIcon="person-add"
-        sortDirection="ascending"
-        sublabel="Given Name"
-      >
+      <DataTable.HeaderCell sortDirection="ascending" sublabel="Given Name">
         First Name
       </DataTable.HeaderCell>
     ),
@@ -792,7 +788,36 @@ export const StatusRows: StoryObj<Args> = {
   },
 };
 
-// TODO: Story for sticky column pinning (https://tanstack.com/table/latest/docs/framework/react/examples/column-pinning-sticky)
+/**
+ * Allow for fixing some columns to not scroll off the screen, like freezing a column
+ *
+ * * This first column is sticky by default
+ * * Subsequent rows can be made sticky as well
+ *
+ * See: https://tanstack.com/table/latest/docs/framework/react/examples/column-pinning-sticky
+ * See: https://tanstack.com/table/latest/docs/guide/column-pinning
+ */
+export const HorizontalScrolling: StoryObj<Args> = {
+  args: {
+    tableStyle: 'border',
+    size: 'sm',
+  },
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: [...defaultData, ...defaultData],
+      columns,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
+      initialState: {
+        columnPinning: {
+          left: ['firstName'],
+        },
+      },
+    });
+
+    return <DataTable {...args} className="w-[800px]" table={table} />;
+  },
+};
 
 export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
