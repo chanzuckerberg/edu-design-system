@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.5.0...v15.6.0) (2024-11-05)
+
+
+### Features
+
+* **DataTable:** allow for pinning columns ([#2084](https://github.com/chanzuckerberg/edu-design-system/issues/2084)) ([86d7d07](https://github.com/chanzuckerberg/edu-design-system/commit/86d7d0716ad9dc7af6bfd56c98166b1cf931e571))
+
+
+### Bug Fixes
+
+* **deps:** update dependency lilconfig to v3 ([#2079](https://github.com/chanzuckerberg/edu-design-system/issues/2079)) ([6f720a4](https://github.com/chanzuckerberg/edu-design-system/commit/6f720a452a0c2e6982ad1f42175c4fc62a9268bc))
+* **Select:** pull z-index of select options to top ([#2081](https://github.com/chanzuckerberg/edu-design-system/issues/2081)) ([6f73cfb](https://github.com/chanzuckerberg/edu-design-system/commit/6f73cfb57dbcd95be2f62e51d463ab442a3cacb7))
+
 ## [15.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.4.1...v15.5.0) (2024-10-18)
 
 
