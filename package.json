@@ -176,7 +176,7 @@
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "postcss-mixins": "^9.0.4",
-    "postcss-nested": "^6.2.0",
+    "postcss-nested": "^7.0.2",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
