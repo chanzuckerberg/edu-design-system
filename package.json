@@ -174,7 +174,7 @@
     "plop": "^4.0.1",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
-    "postcss-import": "^15.1.0",
+    "postcss-import": "^16.1.0",
     "postcss-mixins": "^9.0.4",
     "postcss-nested": "^6.2.0",
     "postcss-simple-vars": "^7.0.1",
