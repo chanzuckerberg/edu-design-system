@@ -603,7 +603,7 @@ exports[`<Slider /> WithMultipleVisualLabels story renders snapshot 1`] = `
 >
   <article>
     <div
-      class="items-top flex flex-col justify-center "
+      class="items-top flex flex-col justify-center"
     >
       <label
         class="label py-4 text-center"
@@ -701,7 +701,7 @@ exports[`<Slider /> WithVisualLabel story renders snapshot 1`] = `
 >
   <article>
     <div
-      class="items-top flex flex-col justify-center "
+      class="items-top flex flex-col justify-center"
     >
       <label
         class="label py-4 text-center"

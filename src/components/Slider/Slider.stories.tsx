@@ -290,7 +290,7 @@ export const WithVisualLabel: Story = {
 
     return (
       <article>
-        <div className="items-top flex flex-col justify-center ">
+        <div className="items-top flex flex-col justify-center">
           <Label
             className="py-4 text-center"
             id="slider-label"
@@ -332,7 +332,7 @@ export const WithMultipleVisualLabels: Story = {
 
     return (
       <article>
-        <div className="items-top flex flex-col justify-center ">
+        <div className="items-top flex flex-col justify-center">
           <Label
             className="py-4 text-center"
             id="slider-label"
