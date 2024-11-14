@@ -10,23 +10,22 @@
 .tag {
   width: max-content;
   height: calc(var(--eds-size-3) / 16 * 1rem);
-  padding-left: calc(var(--eds-size-1-and-half) / 16 * 1rem);
-  padding-right: calc(var(--eds-size-1-and-half) / 16 * 1rem);
+  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
 
   display: inline-flex;
   align-items: center;
 
   /* border color matches the background color, unless a color variant is applied */
   border: calc(var(--eds-theme-border-width) * 1px) solid var(--tag-secondary-color) ;
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border-radius: calc(var(--eds-border-radius-md) * 1px);
 
   background-color: var(--tag-secondary-color);
   color: var(--tag-primary-color);
-  --icon-size-default: 0.875rem;
 }
 
 /**
- * If tags are used inline, ensures spacing between tags.
+ * Spacing between icon and label text, if icon present
+ * TODO: perhaps use gap?
  */
 .tag > :not(:last-child) {
   margin-right: calc(var(--eds-size-half) / 16 * 1rem);
@@ -45,6 +44,7 @@
 
 /**
  * Color variants.
+ * TODO(next-major): remove these status colors
  */
 :where(.tag--neutral) {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);
@@ -77,7 +77,31 @@
 }
 
 /**
+ * Status color treatments
+ */
+:where(.tag--status-critical) {
+  --tag-primary-color: var(--eds-theme-color-icon-utility-critical);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+}
+
+:where(.tag--status-favorable) {
+  --tag-primary-color: var(--eds-theme-color-icon-utility-favorable);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+}
+
+:where(.tag--status-warning) {
+  --tag-primary-color: var(--eds-theme-color-icon-utility-warning);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
+}
+
+:where(.tag--status-informational) {
+  --tag-primary-color: var(--eds-theme-color-text-utility-informational);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+}
+
+/**
  * Adds outline to the tag.
+ * TODO(next-major): remove handling for outline in 2.0 component
  */
 .tag--outline {
   border-color: var(--tag-outline-color);

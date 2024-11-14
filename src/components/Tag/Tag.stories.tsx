@@ -1,72 +1,46 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Tag, VARIANTS } from './Tag';
-import styles from './Tag.stories.module.css';
+import { Tag } from './Tag';
 
 export default {
   title: 'Components/Tag',
   component: Tag,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-1.3'],
-  },
-  argTypes: {
-    variant: {
-      control: {
-        type: 'select',
-      },
-      options: VARIANTS,
-    },
+    badges: ['intro-1.0', 'current-2.0'],
   },
   args: {
-    text: 'Tag text',
-    variant: 'neutral' as const,
+    label: 'Tag text',
+  },
+  argTypes: {
+    hasOutline: {
+      table: {
+        disable: true,
+      },
+    },
+    text: {
+      table: {
+        disable: true,
+      },
+    },
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tag>;
 type Story = StoryObj<Args>;
 
-export const Default: Story = {};
-
-/**
- * `Tag` variants correspond to named use cases. Each variant defines a text color, background/surface color, and potential outline color.
- */
-export const Variants: Story = {
+export const Default: Story = {
   render: (args) => (
-    <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
-        return (
-          <Tag
-            data-testid="test"
-            key={variant}
-            {...args}
-            text={variant}
-            variant={variant}
-          />
-        );
-      })}
-    </div>
-  ),
-};
-
-/**
- * `Tag` can have an outside border, which corresponds to the variant selected. When false, the border will be set to match the background color.
- */
-export const OutlineVariants: Story = {
-  render: (args) => (
-    <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
-        return (
-          <Tag
-            key={variant}
-            {...args}
-            hasOutline
-            text={variant}
-            variant={variant}
-          />
-        );
-      })}
+    <div className="flex gap-size-2">
+      <Tag {...args} status="informational" />
+      <Tag {...args} status="favorable" />
+      <Tag {...args} status="warning" />
+      <Tag {...args} status="critical" />
     </div>
   ),
 };
@@ -79,37 +53,4 @@ export const WithIcon: Story = {
   args: {
     icon: 'star-filled',
   },
-  render: (args) => (
-    <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
-        return (
-          <Tag
-            key={variant}
-            {...args}
-            hasOutline
-            text={variant}
-            variant={variant}
-          />
-        );
-      })}
-    </div>
-  ),
-};
-
-/**
- * `Tag` can support lengthy text, but should be kept as brief as possible.
- */
-export const WithLongTextAndIcon: Story = {
-  ...Default,
-  args: {
-    text: 'This tag has a really long text message',
-    icon: 'star',
-  },
-  render: (args) => (
-    <div className={styles.tagList}>
-      {VARIANTS.map((variant) => {
-        return <Tag key={variant} {...args} hasOutline variant={variant} />;
-      })}
-    </div>
-  ),
 };
