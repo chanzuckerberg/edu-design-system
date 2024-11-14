@@ -76,3 +76,4 @@ export type { AppNotificationProps as AppNotificationV2Props } from './component
  */
 // https://headlessui.com/v1/react/transition
 export { Transition } from '@headlessui/react';
+export { default as InputChip } from './components/InputChip';
