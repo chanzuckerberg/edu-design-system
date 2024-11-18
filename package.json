@@ -189,7 +189,7 @@
     "storybook": "^8.4.2",
     "style-dictionary": "^3.9.2",
     "stylelint": "^16.10.0",
-    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-recommended": "^14.0.1",
     "tailwindcss": "^3.4.14",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3"
