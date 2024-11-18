@@ -52,7 +52,11 @@ export default function transform({ file, changes }: TransformOptions) {
         });
 
         namedImport.setName(changeToApply.newImportName);
-        namedImport.getNameNode().rename(changeToApply.newImportName);
+        const namedNode = namedImport.getNameNode();
+        if ('rename' in namedNode) {
+          namedNode.rename(changeToApply.newImportName);
+        }
+
         if (changeToApply.removeAlias) {
           namedImport.removeAliasWithRename();
         } else if (changeToApply.alias) {
