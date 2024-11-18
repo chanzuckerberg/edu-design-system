@@ -2132,7 +2132,7 @@ __metadata:
     tailwindcss: "npm:^3.4.14"
     ts-dedent: "npm:^2.2.0"
     ts-jest: "npm:^29.2.5"
-    ts-morph: "npm:^22.0.0"
+    ts-morph: "npm:^24.0.0"
     typescript: "npm:^5.6.3"
     yargs: "npm:^17.7.2"
   peerDependencies:
@@ -5318,15 +5318,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ts-morph/common@npm:~0.23.0":
-  version: 0.23.0
-  resolution: "@ts-morph/common@npm:0.23.0"
+"@ts-morph/common@npm:~0.25.0":
+  version: 0.25.0
+  resolution: "@ts-morph/common@npm:0.25.0"
   dependencies:
-    fast-glob: "npm:^3.3.2"
-    minimatch: "npm:^9.0.3"
-    mkdirp: "npm:^3.0.1"
+    minimatch: "npm:^9.0.4"
     path-browserify: "npm:^1.0.1"
-  checksum: 10/05eabbab5a63d71a7dac17202519d23d4d4ec30780364d4dc3096ca86291e19f0284d0592a6ee89ec257204075a985d00f4788d816a89c41d0c1e0c8d281c480
+    tinyglobby: "npm:^0.2.9"
+  checksum: 10/9b192dfebb7179e96267ea1720f6afe77964f9f89ecaca41d372da206cdfd838a77c1080026c73115a5d3a88752b1504ec7380907e26b6424e8fb7f7625c7461
   languageName: node
   linkType: hard
 
@@ -7846,10 +7845,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"code-block-writer@npm:^13.0.1":
-  version: 13.0.1
-  resolution: "code-block-writer@npm:13.0.1"
-  checksum: 10/3da803b1149d05a09b99e150df0e6d2ac5007bcf2ddd23d72e8b3e827cb6b7cb69b695472cfbc8b46a2bca4e7c11636788b9a7e7d518f3b45d0bddcac240b4af
+"code-block-writer@npm:^13.0.3":
+  version: 13.0.3
+  resolution: "code-block-writer@npm:13.0.3"
+  checksum: 10/771546224f38610eecee0598e83c9e0f86dcd600ea316dbf27c2cfebaab4fed51b042325aa460b8e0f131fac5c1de208f6610a1ddbffe4b22e76f9b5256707cb
   languageName: node
   linkType: hard
 
@@ -14603,15 +14602,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.3":
-  version: 9.0.4
-  resolution: "minimatch@npm:9.0.4"
-  dependencies:
-    brace-expansion: "npm:^2.0.1"
-  checksum: 10/4cdc18d112b164084513e890d6323370db14c22249d536ad1854539577a895e690a27513dc346392f61a4a50afbbd8abc88f3f25558bfbbbb862cd56508b20f5
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
@@ -19215,7 +19205,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.7":
+"tinyglobby@npm:^0.2.7, tinyglobby@npm:^0.2.9":
   version: 0.2.10
   resolution: "tinyglobby@npm:0.2.10"
   dependencies:
@@ -19405,13 +19395,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-morph@npm:^22.0.0":
-  version: 22.0.0
-  resolution: "ts-morph@npm:22.0.0"
+"ts-morph@npm:^24.0.0":
+  version: 24.0.0
+  resolution: "ts-morph@npm:24.0.0"
   dependencies:
-    "@ts-morph/common": "npm:~0.23.0"
-    code-block-writer: "npm:^13.0.1"
-  checksum: 10/e5d81d0d8d990fa9f86e285bd4052bcfa462e2f798f7eda86e11afc7d884dfdb053998dcbf79942942e8032070f8b266745e017771674a169731494fe035e192
+    "@ts-morph/common": "npm:~0.25.0"
+    code-block-writer: "npm:^13.0.3"
+  checksum: 10/560f64eac91429f852277af7588d116b83f91ace2e6ba89c71893b364a42c1e9a658fb40ad2c8d1b48af14d744ba1d4ee7a7efeae033d14ad7a6b5f50b83ccca
   languageName: node
   linkType: hard
 
