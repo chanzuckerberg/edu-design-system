@@ -1,829 +1,829 @@
 :root {
-  --eds-z-index-bottom: -100;
-  --eds-z-index-top: 99999;
-  --eds-z-index-500: 500; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-z-index-400: 400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-z-index-300: 300; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-z-index-200: 200; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-z-index-100: 100; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-z-index-0: 0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-size-2-and-half: 20; /* Relative EMs (rem) */
-  --eds-size-1-and-half: 12; /* Relative EMs (rem) */
-  --eds-size-quarter: 2; /* Relative EMs (rem) */
-  --eds-size-half: 4; /* Relative EMs (rem) */
-  --eds-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-size-40: 320; /* Relative EMs (rem) */
-  --eds-size-34: 272; /* Relative EMs (rem) */
-  --eds-size-32: 256; /* Relative EMs (rem) */
-  --eds-size-24: 192; /* Relative EMs (rem) */
-  --eds-size-20: 160; /* Relative EMs (rem) */
-  --eds-size-12: 96; /* Relative EMs (rem) */
-  --eds-size-11: 88; /* Relative EMs (rem) */
-  --eds-size-10: 80; /* Relative EMs (rem) */
-  --eds-size-9: 72; /* Relative EMs (rem) */
-  --eds-size-8: 64; /* Relative EMs (rem) */
-  --eds-size-7: 56; /* Relative EMs (rem) */
-  --eds-size-6: 48; /* Relative EMs (rem) */
-  --eds-size-5: 40; /* Relative EMs (rem) */
-  --eds-size-4: 32; /* Relative EMs (rem) */
-  --eds-size-3: 24; /* Relative EMs (rem) */
-  --eds-size-2: 16; /* Relative EMs (rem) */
-  --eds-size-1: 8; /* Relative EMs (rem) */
-  --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-outline-width-lg: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-outline-width-md: 2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-outline-width-sm: 1; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-l-linelength-width: 576; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-l-sidebar-width: 216; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-l-max-width: 1140; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-800: #8F0134; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-700: #BD0044; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-600: #D41E52; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-500: #F1497B; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-400: #F76C96; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-300: #FB90B0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-200: #FFCBD7; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-ruby-100: #FFF0F4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-800: #842800; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-700: #AC3400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-600: #C64600; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-500: #E06B00; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-400: #F6924A; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-300: #FFAF76; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-200: #FFCBA5; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-orange-100: #FFF1E9; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-eraser: #F3DCE2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-lemon: #F5FF8F; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-800: #854C03; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-700: #9E5B03; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-600: #BF7300; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-500: #D18400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-400: #F7BE2D; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-300: #FFDD80; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-200: #FFEBB3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-yellow-100: #FDF1D0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-800: #005939; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-700: #007249; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-600: #008656; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-500: #00A56A; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-400: #59C88C; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-300: #8FDCB3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-200: #B7E9CE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-other-mint-100: #ECFFF5; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-opacity-80: 0.80;
-  --eds-color-opacity-70: 0.60;
-  --eds-color-opacity-60: 0.60;
-  --eds-color-opacity-50: 0.50;
-  --eds-color-opacity-40: 0.40;
-  --eds-color-opacity-30: 0.30;
-  --eds-color-opacity-20: 0.20;
-  --eds-color-opacity-10: 0.10;
-  --eds-color-purple-050: #FBF5FD;
-  --eds-color-purple-950: #190D1E;
-  --eds-color-purple-900: #25142E;
-  --eds-color-purple-850: #311A3C;
-  --eds-color-purple-800: #452455;
-  --eds-color-purple-750: #562D69;
-  --eds-color-purple-650: #6E3A88;
-  --eds-color-purple-550: #8A50A7;
-  --eds-color-purple-450: #A765C7;
-  --eds-color-purple-350: #C580E7;
-  --eds-color-purple-250: #D5A2EE;
-  --eds-color-purple-200: #E0BAF2;
-  --eds-color-purple-150: #EAD1F6;
-  --eds-color-purple-100: #F3E5FA;
-  --eds-color-pink-550: #C62B73;
-  --eds-color-pink-450: #DB458D;
-  --eds-color-pink-350: #E67EB0;
-  --eds-color-blue-050: #EAF4FF;
-  --eds-color-blue-025: #F5FAFF;
-  --eds-color-blue-950: #060E30;
-  --eds-color-blue-900: #0A164C;
-  --eds-color-blue-850: #0F2163;
-  --eds-color-blue-800: #152D76;
-  --eds-color-blue-750: #1B3889;
-  --eds-color-blue-650: #254EAC;
-  --eds-color-blue-550: #3165D2;
-  --eds-color-blue-450: #437EED;
-  --eds-color-blue-350: #6199F3;
-  --eds-color-blue-250: #85BAFB;
-  --eds-color-blue-200: #99CCFF;
-  --eds-color-blue-150: #B5DAFF;
-  --eds-color-blue-100: #CEE6FF;
-  --eds-color-green-050: #E6F5ED;
-  --eds-color-green-950: #05120C;
-  --eds-color-green-900: #071B12;
-  --eds-color-green-850: #0A271A;
-  --eds-color-green-800: #0E3423;
-  --eds-color-green-750: #13462F;
-  --eds-color-green-650: #225E43;
-  --eds-color-green-550: #367759;
-  --eds-color-green-450: #3F926D;
-  --eds-color-green-350: #57B083;
-  --eds-color-green-250: #74C899;
-  --eds-color-green-200: #95D5B1;
-  --eds-color-green-150: #B3E1C7;
-  --eds-color-green-100: #D0EDDD;
-  --eds-color-yellow-050: #FDF3D3;
-  --eds-color-yellow-950: #130E01;
-  --eds-color-yellow-900: #1E1701;
-  --eds-color-yellow-850: #2B2001;
-  --eds-color-yellow-800: #392B01;
-  --eds-color-yellow-750: #4D3A01;
-  --eds-color-yellow-650: #695001;
-  --eds-color-yellow-550: #876701;
-  --eds-color-yellow-450: #A57D01;
-  --eds-color-yellow-350: #C4970C;
-  --eds-color-yellow-250: #E7B724;
-  --eds-color-yellow-200: #F1CA53;
-  --eds-color-yellow-150: #F9DA78;
-  --eds-color-yellow-100: #FBE8AB;
-  --eds-color-orange-050: #FFEEE5;
-  --eds-color-orange-950: #1B0A02;
-  --eds-color-orange-900: #2B1003;
-  --eds-color-orange-850: #401805;
-  --eds-color-orange-800: #532006;
-  --eds-color-orange-750: #672808;
-  --eds-color-orange-650: #92380C;
-  --eds-color-orange-550: #B8470F;
-  --eds-color-orange-450: #D0622C;
-  --eds-color-orange-350: #E87F4A;
-  --eds-color-orange-250: #FFA070;
-  --eds-color-orange-200: #FFB38D;
-  --eds-color-orange-150: #FFC7AB;
-  --eds-color-orange-100: #FFDCCA;
-  --eds-color-red-050: #FDF3F4;
-  --eds-color-red-950: #23010B;
-  --eds-color-red-900: #350110;
-  --eds-color-red-850: #4D0118;
-  --eds-color-red-800: #660517;
-  --eds-color-red-750: #7D0A16;
-  --eds-color-red-650: #A51115;
-  --eds-color-red-550: #C42C2F;
-  --eds-color-red-450: #D8525B;
-  --eds-color-red-350: #E9808C;
-  --eds-color-red-250: #EFA0A9;
-  --eds-color-red-200: #F3B7BD;
-  --eds-color-red-150: #F6CDD1;
-  --eds-color-red-100: #FAE2E5;
-  --eds-color-neutral-black: #161B1F; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-050: #F9F3F1;
-  --eds-color-neutral-025: #FDF9F8;
-  --eds-color-neutral-white: #FFFFFF; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-950: #0F0F0F;
-  --eds-color-neutral-900: #1A1919;
-  --eds-color-neutral-850: #272625;
-  --eds-color-neutral-800: #333231;
-  --eds-color-neutral-750: #3F3E3D;
-  --eds-color-neutral-700: #383C43; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-650: #565352;
-  --eds-color-neutral-600: #5D6369; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-550: #6C6967;
-  --eds-color-neutral-500: #878C90; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-450: #868281;
-  --eds-color-neutral-400: #999EA3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-350: #A09C9A;
-  --eds-color-neutral-300: #C0C4C8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-neutral-250: #BEB8B6;
-  --eds-color-neutral-200: #CFC9C7;
-  --eds-color-neutral-150: #DFD9D6;
-  --eds-color-neutral-100: #EEE7E4;
-  --eds-color-brand-grape-800: #3E42B1; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-700: #5751D2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-600: #6B65E2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-500: #8984E8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-400: #A6A3EE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-300: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-200: #E0E0F9; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-brand-grape-100: #F0F0FC; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-color-black: 0 0 0; /* Specified as a value to color-func rgb() so that it can be blended */
-  --eds-color-white: 255 255 255; /* Specified as a value to color-func rgb() so that it can be blended */
-  --eds-border-radius-full: 9999; /* pixels (px) */
-  --eds-border-radius-round: 50; /* Percentage (%) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-xl: 20; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-lg: 8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-md: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-border-radius-none: 0; /* pixels (px) */
-  --eds-border-radius-500: 20; /* pixels (px) */
-  --eds-border-radius-200: 8; /* pixels (px) */
-  --eds-border-radius-150: 6; /* pixels (px) */
-  --eds-border-radius-100: 4; /* pixels (px) */
-  --eds-border-radius-50: 2; /* pixels (px) */
-  --eds-border-width-xl: 8; /* pixels (px) */
-  --eds-border-width-lg: 4; /* pixels (px) */
-  --eds-border-width-md: 2; /* pixels (px) */
-  --eds-border-width-sm: 1; /* pixels (px) */
-  --eds-anim-ease: ease; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-anim-move-long: 0.4; /* Seconds (s) */
-  --eds-anim-move-medium: 0.3; /* Seconds (s) */
-  --eds-anim-move-quick: 0.15; /* Seconds (s) */
-  --eds-anim-fade-long: 0.4; /* Seconds (s) */
   --eds-anim-fade-quick: 0.15; /* Seconds (s) */
-  --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
-  --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
-  --eds-theme-color-toggle-disabled-background: var(--eds-theme-color-icon-disabled);
-  --eds-theme-color-toggle-off-background: var(--eds-theme-color-icon-neutral-subtle);
-  --eds-theme-color-toggle-on-background: var(--eds-theme-color-background-brand-primary-strong);
-  --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
-  --eds-theme-color-text-utility-inverse-interactive-visited: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-progress-bar-border: #E7E8EA;
-  --eds-theme-color-progress-bar-background: #E7E8EA;
-  --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
-  --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-neutral-text-decoration: var(--eds-theme-color-text-neutral-default);
-  --eds-theme-color-link-neutral-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-link-neutral-text-hover: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-neutral-text: var(--eds-theme-color-text-neutral-strong);
-  --eds-theme-color-link-brand-background-focus: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-brand-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-link-brand-text-decoration-hover: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-brand-text-decoration: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-brand-text-focus: var(--eds-theme-color-text-neutral-default-inverse); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-link-brand-text-hover: var(--eds-theme-color-text-brand-default); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-link-brand-text: var(--eds-theme-color-text-neutral-strong); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-form-background-hover: #F4F6F8;
-  --eds-theme-color-data-bar-background: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
-  --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
-  --eds-theme-color-button-secondary-neutral-background-hover: #E7E8EA;
-  --eds-theme-color-border-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-border-utility-inverse: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-border-brand-primary-default: var(--eds-theme-color-border-brand-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-neutral-subtle: #E7E8EA;
-  --eds-theme-color-background-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-background-utility-inverse-high-emphasis: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-utility-inverse-no-emphasis-active: rgb(var(--eds-color-white) / 0.3);
-  --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgb(var(--eds-color-white) / 0.2);
-  --eds-theme-color-background-utility-inverse-no-emphasis: transparent;
-  --eds-theme-color-background-utility-disabled-no-emphasis: transparent;
-  --eds-theme-color-background-utility-critical-no-emphasis: transparent;
-  --eds-theme-color-background-utility-interactive-no-emphasis: transparent;
-  --eds-theme-color-background-utility-default-no-emphasis: transparent;
-  --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-utility-base-1: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-neutral-medium: #E7E8EA;
-  --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
-  --eds-theme-color-background-neutral-subtle: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-neutral-default-hover: #F4F6F8;
-  --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
+  --eds-anim-fade-long: 0.4; /* Seconds (s) */
+  --eds-anim-move-quick: 0.15; /* Seconds (s) */
+  --eds-anim-move-medium: 0.3; /* Seconds (s) */
+  --eds-anim-move-long: 0.4; /* Seconds (s) */
+  --eds-anim-ease: ease; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-sm: 1; /* pixels (px) */
+  --eds-border-width-md: 2; /* pixels (px) */
+  --eds-border-width-lg: 4; /* pixels (px) */
+  --eds-border-width-xl: 8; /* pixels (px) */
+  --eds-border-radius-50: 2; /* pixels (px) */
+  --eds-border-radius-100: 4; /* pixels (px) */
+  --eds-border-radius-150: 6; /* pixels (px) */
+  --eds-border-radius-200: 8; /* pixels (px) */
+  --eds-border-radius-500: 20; /* pixels (px) */
+  --eds-border-radius-none: 0; /* pixels (px) */
+  --eds-border-radius-md: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-lg: 8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-xl: 20; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-round: 50; /* Percentage (%) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-radius-full: 9999; /* pixels (px) */
+  --eds-color-white: 255 255 255; /* Specified as a value to color-func rgb() so that it can be blended */
+  --eds-color-black: 0 0 0; /* Specified as a value to color-func rgb() so that it can be blended */
+  --eds-color-brand-grape-100: #F0F0FC; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-200: #E0E0F9; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-300: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-400: #A6A3EE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-500: #8984E8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-600: #6B65E2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-700: #5751D2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-brand-grape-800: #3E42B1; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-100: #EEE7E4;
+  --eds-color-neutral-150: #DFD9D6;
+  --eds-color-neutral-200: #CFC9C7;
+  --eds-color-neutral-250: #BEB8B6;
+  --eds-color-neutral-300: #C0C4C8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-350: #A09C9A;
+  --eds-color-neutral-400: #999EA3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-450: #868281;
+  --eds-color-neutral-500: #878C90; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-550: #6C6967;
+  --eds-color-neutral-600: #5D6369; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-650: #565352;
+  --eds-color-neutral-700: #383C43; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-750: #3F3E3D;
+  --eds-color-neutral-800: #333231;
+  --eds-color-neutral-850: #272625;
+  --eds-color-neutral-900: #1A1919;
+  --eds-color-neutral-950: #0F0F0F;
+  --eds-color-neutral-white: #FFFFFF; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-025: #FDF9F8;
+  --eds-color-neutral-050: #F9F3F1;
+  --eds-color-neutral-black: #161B1F; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-red-100: #FAE2E5;
+  --eds-color-red-150: #F6CDD1;
+  --eds-color-red-200: #F3B7BD;
+  --eds-color-red-250: #EFA0A9;
+  --eds-color-red-350: #E9808C;
+  --eds-color-red-450: #D8525B;
+  --eds-color-red-550: #C42C2F;
+  --eds-color-red-650: #A51115;
+  --eds-color-red-750: #7D0A16;
+  --eds-color-red-800: #660517;
+  --eds-color-red-850: #4D0118;
+  --eds-color-red-900: #350110;
+  --eds-color-red-950: #23010B;
+  --eds-color-red-050: #FDF3F4;
+  --eds-color-orange-100: #FFDCCA;
+  --eds-color-orange-150: #FFC7AB;
+  --eds-color-orange-200: #FFB38D;
+  --eds-color-orange-250: #FFA070;
+  --eds-color-orange-350: #E87F4A;
+  --eds-color-orange-450: #D0622C;
+  --eds-color-orange-550: #B8470F;
+  --eds-color-orange-650: #92380C;
+  --eds-color-orange-750: #672808;
+  --eds-color-orange-800: #532006;
+  --eds-color-orange-850: #401805;
+  --eds-color-orange-900: #2B1003;
+  --eds-color-orange-950: #1B0A02;
+  --eds-color-orange-050: #FFEEE5;
+  --eds-color-yellow-100: #FBE8AB;
+  --eds-color-yellow-150: #F9DA78;
+  --eds-color-yellow-200: #F1CA53;
+  --eds-color-yellow-250: #E7B724;
+  --eds-color-yellow-350: #C4970C;
+  --eds-color-yellow-450: #A57D01;
+  --eds-color-yellow-550: #876701;
+  --eds-color-yellow-650: #695001;
+  --eds-color-yellow-750: #4D3A01;
+  --eds-color-yellow-800: #392B01;
+  --eds-color-yellow-850: #2B2001;
+  --eds-color-yellow-900: #1E1701;
+  --eds-color-yellow-950: #130E01;
+  --eds-color-yellow-050: #FDF3D3;
+  --eds-color-green-100: #D0EDDD;
+  --eds-color-green-150: #B3E1C7;
+  --eds-color-green-200: #95D5B1;
+  --eds-color-green-250: #74C899;
+  --eds-color-green-350: #57B083;
+  --eds-color-green-450: #3F926D;
+  --eds-color-green-550: #367759;
+  --eds-color-green-650: #225E43;
+  --eds-color-green-750: #13462F;
+  --eds-color-green-800: #0E3423;
+  --eds-color-green-850: #0A271A;
+  --eds-color-green-900: #071B12;
+  --eds-color-green-950: #05120C;
+  --eds-color-green-050: #E6F5ED;
+  --eds-color-blue-100: #CEE6FF;
+  --eds-color-blue-150: #B5DAFF;
+  --eds-color-blue-200: #99CCFF;
+  --eds-color-blue-250: #85BAFB;
+  --eds-color-blue-350: #6199F3;
+  --eds-color-blue-450: #437EED;
+  --eds-color-blue-550: #3165D2;
+  --eds-color-blue-650: #254EAC;
+  --eds-color-blue-750: #1B3889;
+  --eds-color-blue-800: #152D76;
+  --eds-color-blue-850: #0F2163;
+  --eds-color-blue-900: #0A164C;
+  --eds-color-blue-950: #060E30;
+  --eds-color-blue-025: #F5FAFF;
+  --eds-color-blue-050: #EAF4FF;
+  --eds-color-pink-350: #E67EB0;
+  --eds-color-pink-450: #DB458D;
+  --eds-color-pink-550: #C62B73;
+  --eds-color-purple-100: #F3E5FA;
+  --eds-color-purple-150: #EAD1F6;
+  --eds-color-purple-200: #E0BAF2;
+  --eds-color-purple-250: #D5A2EE;
+  --eds-color-purple-350: #C580E7;
+  --eds-color-purple-450: #A765C7;
+  --eds-color-purple-550: #8A50A7;
+  --eds-color-purple-650: #6E3A88;
+  --eds-color-purple-750: #562D69;
+  --eds-color-purple-800: #452455;
+  --eds-color-purple-850: #311A3C;
+  --eds-color-purple-900: #25142E;
+  --eds-color-purple-950: #190D1E;
+  --eds-color-purple-050: #FBF5FD;
+  --eds-color-opacity-10: 0.10;
+  --eds-color-opacity-20: 0.20;
+  --eds-color-opacity-30: 0.30;
+  --eds-color-opacity-40: 0.40;
+  --eds-color-opacity-50: 0.50;
+  --eds-color-opacity-60: 0.60;
+  --eds-color-opacity-70: 0.60;
+  --eds-color-opacity-80: 0.80;
+  --eds-color-other-mint-100: #ECFFF5; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-200: #B7E9CE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-300: #8FDCB3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-400: #59C88C; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-500: #00A56A; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-600: #008656; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-700: #007249; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-mint-800: #005939; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-100: #FDF1D0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-200: #FFEBB3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-300: #FFDD80; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-400: #F7BE2D; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-500: #D18400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-600: #BF7300; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-700: #9E5B03; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-yellow-800: #854C03; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-lemon: #F5FF8F; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-eraser: #F3DCE2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-100: #FFF1E9; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-200: #FFCBA5; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-300: #FFAF76; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-400: #F6924A; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-500: #E06B00; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-600: #C64600; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-700: #AC3400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-orange-800: #842800; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-100: #FFF0F4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-200: #FFCBD7; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-300: #FB90B0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-400: #F76C96; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-500: #F1497B; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-600: #D41E52; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-700: #BD0044; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-other-ruby-800: #8F0134; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-max-width: 1140; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-sidebar-width: 216; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-l-linelength-width: 576; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-outline-width-sm: 1; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-outline-width-md: 2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-outline-width-lg: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-1: 8; /* Relative EMs (rem) */
+  --eds-size-2: 16; /* Relative EMs (rem) */
+  --eds-size-3: 24; /* Relative EMs (rem) */
+  --eds-size-4: 32; /* Relative EMs (rem) */
+  --eds-size-5: 40; /* Relative EMs (rem) */
+  --eds-size-6: 48; /* Relative EMs (rem) */
+  --eds-size-7: 56; /* Relative EMs (rem) */
+  --eds-size-8: 64; /* Relative EMs (rem) */
+  --eds-size-9: 72; /* Relative EMs (rem) */
+  --eds-size-10: 80; /* Relative EMs (rem) */
+  --eds-size-11: 88; /* Relative EMs (rem) */
+  --eds-size-12: 96; /* Relative EMs (rem) */
+  --eds-size-20: 160; /* Relative EMs (rem) */
+  --eds-size-24: 192; /* Relative EMs (rem) */
+  --eds-size-32: 256; /* Relative EMs (rem) */
+  --eds-size-34: 272; /* Relative EMs (rem) */
+  --eds-size-40: 320; /* Relative EMs (rem) */
+  --eds-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-size-half: 4; /* Relative EMs (rem) */
+  --eds-size-quarter: 2; /* Relative EMs (rem) */
+  --eds-size-1-and-half: 12; /* Relative EMs (rem) */
+  --eds-size-2-and-half: 20; /* Relative EMs (rem) */
+  --eds-z-index-0: 0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-100: 100; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-200: 200; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-300: 300; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-400: 400; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-500: 500; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-z-index-top: 99999;
+  --eds-z-index-bottom: -100;
   --eds-theme-color-body-background: #F4F6F8;
-  --eds-theme-typography-tag: var(--eds-typography-preset-009);
-  --eds-theme-typography-tab-sm-active: var(--eds-typography-preset-009);
-  --eds-theme-typography-tab-sm: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-tab-lg-active: var(--eds-typography-preset-006);
-  --eds-theme-typography-tab-lg: var(--eds-typography-preset-006-light);
-  --eds-theme-typography-link-xs: var(--eds-typography-preset-009);
-  --eds-theme-typography-link-sm: var(--eds-typography-preset-007);
-  --eds-theme-typography-link-md: var(--eds-typography-preset-005);
-  --eds-theme-typography-link-lg: var(--eds-typography-preset-004);
-  --eds-theme-typography-form-input: var(--eds-typography-preset-005-light);
-  --eds-theme-typography-form-label: var(--eds-typography-preset-006);
-  --eds-theme-typography-button-label-sm: var(--eds-typography-preset-008-bold); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-typography-button-label: var(--eds-typography-preset-006); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-typography-button-sm: var(--eds-typography-preset-009);
-  --eds-theme-typography-button-md: var(--eds-typography-preset-005);
-  --eds-theme-typography-button-lg: var(--eds-typography-preset-005);
-  --eds-theme-typography-breadcrumb: var(--eds-typography-preset-009);
-  --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
-  --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);
-  --eds-theme-typography-overline-md: var(--eds-typography-preset-011);
-  --eds-theme-typography-overline-lg: var(--eds-typography-preset-005);
-  --eds-theme-typography-overline: var(--eds-typography-preset-011); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010);
-  --eds-theme-typography-caption-sm: var(--eds-typography-preset-010-light);
-  --eds-theme-typography-caption-md-bold: var(--eds-typography-preset-008);
-  --eds-theme-typography-caption-md: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-caption-lg-bold: var(--eds-typography-preset-006);
-  --eds-theme-typography-caption-lg: var(--eds-typography-preset-006-light);
-  --eds-theme-typography-body-xs: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-body-sm: var(--eds-typography-preset-006-light);
-  --eds-theme-typography-body-md: var(--eds-typography-preset-005-light);
-  --eds-theme-typography-body-lg: var(--eds-typography-preset-004-light);
-  --eds-theme-typography-body-xl: var(--eds-typography-preset-003-light);
-  --eds-theme-typography-label-sm: var(--eds-typography-preset-009-bold);
-  --eds-theme-typography-label-md-subtle: var(--eds-typography-preset-007);
-  --eds-theme-typography-label-md: var(--eds-typography-preset-007-bold);
-  --eds-theme-typography-label-lg-subtle: var(--eds-typography-preset-005);
-  --eds-theme-typography-title-xs-bold: var(--eds-typography-preset-007-bold);
-  --eds-theme-typography-title-xs: var(--eds-typography-preset-007);
-  --eds-theme-typography-title-sm-bold: var(--eds-typography-preset-005-bold);
-  --eds-theme-typography-title-sm: var(--eds-typography-preset-005);
-  --eds-theme-typography-title-md-bold: var(--eds-typography-preset-004-bold);
-  --eds-theme-typography-title-md: var(--eds-typography-preset-004);
-  --eds-theme-typography-title-lg-bold: var(--eds-typography-preset-004-bold);
-  --eds-theme-typography-title-lg: var(--eds-typography-preset-004);
-  --eds-theme-typography-headline-secondary-sm-mobile: var(--eds-typography-preset-secondary-mobile-003-light);
-  --eds-theme-typography-headline-secondary-sm-bold-mobile: var(--eds-typography-preset-secondary-mobile-003-bold);
-  --eds-theme-typography-headline-secondary-sm-bold: var(--eds-typography-preset-secondary-003);
-  --eds-theme-typography-headline-secondary-sm: var(--eds-typography-preset-secondary-003-light);
-  --eds-theme-typography-headline-secondary-md-mobile: var(--eds-typography-preset-mobile-002-light);
-  --eds-theme-typography-headline-secondary-md-bold-mobile: var(--eds-typography-secondary-mobile-002-bold);
-  --eds-theme-typography-headline-secondary-md-bold: var(--eds-typography-preset-secondary-002);
-  --eds-theme-typography-headline-secondary-md: var(--eds-typography-preset-secondary-002-light);
-  --eds-theme-typography-headline-secondary-lg-mobile: var(--eds-typography-preset-secondary-mobile-001-light);
-  --eds-theme-typography-headline-secondary-lg-bold-mobile: var(--eds-typography-preset-secondary-mobile-001-bold);
-  --eds-theme-typography-headline-secondary-lg-bold: var(--eds-typography-preset-secondary-001);
-  --eds-theme-typography-headline-secondary-lg: var(--eds-typography-preset-secondary-001-light);
-  --eds-theme-typography-headline-sm-mobile: var(--eds-typography-preset-mobile-003-light);
-  --eds-theme-typography-headline-sm-bold-mobile: var(--eds-typography-preset-mobile-003);
-  --eds-theme-typography-headline-sm-bold: var(--eds-typography-preset-003);
-  --eds-theme-typography-headline-sm: var(--eds-typography-preset-003-light);
-  --eds-theme-typography-headline-md-mobile: var(--eds-typography-preset-mobile-002-light);
-  --eds-theme-typography-headline-md-bold-mobile: var(--eds-typography-preset-mobile-002);
-  --eds-theme-typography-headline-md-bold: var(--eds-typography-preset-002);
-  --eds-theme-typography-headline-md: var(--eds-typography-preset-002-light);
-  --eds-theme-typography-headline-lg-mobile: var(--eds-typography-preset-mobile-001-light);
-  --eds-theme-typography-headline-lg-bold-mobile: var(--eds-typography-preset-mobile-001);
-  --eds-theme-typography-headline-lg-bold: var(--eds-typography-preset-001);
+  --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-neutral-default-hover: #F4F6F8;
+  --eds-theme-color-background-neutral-subtle: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
+  --eds-theme-color-background-neutral-medium: #E7E8EA;
+  --eds-theme-color-background-utility-base-1: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-utility-default-no-emphasis: transparent;
+  --eds-theme-color-background-utility-interactive-no-emphasis: transparent;
+  --eds-theme-color-background-utility-critical-no-emphasis: transparent;
+  --eds-theme-color-background-utility-disabled-no-emphasis: transparent;
+  --eds-theme-color-background-utility-inverse-no-emphasis: transparent;
+  --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgb(var(--eds-color-white) / 0.2);
+  --eds-theme-color-background-utility-inverse-no-emphasis-active: rgb(var(--eds-color-white) / 0.3);
+  --eds-theme-color-background-utility-inverse-high-emphasis: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
+  --eds-theme-color-border-neutral-subtle: #E7E8EA;
+  --eds-theme-color-border-brand-primary-default: var(--eds-theme-color-border-brand-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-border-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
+  --eds-theme-color-button-secondary-neutral-background-hover: #E7E8EA;
+  --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
+  --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
+  --eds-theme-color-data-bar-background: #F4F6F8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-form-background-hover: #F4F6F8;
+  --eds-theme-color-link-brand-text: var(--eds-theme-color-text-neutral-strong); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-link-brand-text-hover: var(--eds-theme-color-text-brand-default); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-link-brand-text-focus: var(--eds-theme-color-text-neutral-default-inverse); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-link-brand-text-decoration: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-brand-text-decoration-hover: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-brand-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-brand-background-focus: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-neutral-text: var(--eds-theme-color-text-neutral-strong);
+  --eds-theme-color-link-neutral-text-hover: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-neutral-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-neutral-text-decoration: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-progress-bar-background: #E7E8EA;
+  --eds-theme-color-progress-bar-border: #E7E8EA;
+  --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
+  --eds-theme-color-text-utility-inverse-interactive-visited: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
+  --eds-theme-color-toggle-on-background: var(--eds-theme-color-background-brand-primary-strong);
+  --eds-theme-color-toggle-off-background: var(--eds-theme-color-icon-neutral-subtle);
+  --eds-theme-color-toggle-disabled-background: var(--eds-theme-color-icon-disabled);
+  --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
+  --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-typography-headline-lg: var(--eds-typography-preset-001-light);
-  --eds-typography-preset-mobile-003-bold: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002-bold: var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-secondary-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-008-light: var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-008: var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-007-light: var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-007: var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-006-light: var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-006: var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-005-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-005: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-004-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-004: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-secondary);
-  --eds-typography-preset-012-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-012-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-012: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-010-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-010-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-010: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-009-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-009-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-009: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-008-bold: var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-008-light: var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-008: var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-007-bold: var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-007-light: var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-007: var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-006-bold: var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-006-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-006: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-005-bold: var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-005-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-005: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-004-bold: var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-004-light: var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-004: var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-003-mobile: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-typography-preset-002-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-002-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-002: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-001-mobile: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-typography-preset-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-typography-preset-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-typography-preset-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-letter-spacing-sm: 0.5; /* (pixels) Spacing token used between characters in a text */
-  --eds-font-weight-bold: 600;
-  --eds-font-weight-medium: 500;
-  --eds-font-weight-light: 400;
-  --eds-font-size-base: 16; /* (pixels) Base font size for design system in px */
-  --eds-font-family-secondary: 'Argent', serif;
+  --eds-theme-typography-headline-lg-bold: var(--eds-typography-preset-001);
+  --eds-theme-typography-headline-lg-bold-mobile: var(--eds-typography-preset-mobile-001);
+  --eds-theme-typography-headline-lg-mobile: var(--eds-typography-preset-mobile-001-light);
+  --eds-theme-typography-headline-md: var(--eds-typography-preset-002-light);
+  --eds-theme-typography-headline-md-bold: var(--eds-typography-preset-002);
+  --eds-theme-typography-headline-md-bold-mobile: var(--eds-typography-preset-mobile-002);
+  --eds-theme-typography-headline-md-mobile: var(--eds-typography-preset-mobile-002-light);
+  --eds-theme-typography-headline-sm: var(--eds-typography-preset-003-light);
+  --eds-theme-typography-headline-sm-bold: var(--eds-typography-preset-003);
+  --eds-theme-typography-headline-sm-bold-mobile: var(--eds-typography-preset-mobile-003);
+  --eds-theme-typography-headline-sm-mobile: var(--eds-typography-preset-mobile-003-light);
+  --eds-theme-typography-headline-secondary-lg: var(--eds-typography-preset-secondary-001-light);
+  --eds-theme-typography-headline-secondary-lg-bold: var(--eds-typography-preset-secondary-001);
+  --eds-theme-typography-headline-secondary-lg-bold-mobile: var(--eds-typography-preset-secondary-mobile-001-bold);
+  --eds-theme-typography-headline-secondary-lg-mobile: var(--eds-typography-preset-secondary-mobile-001-light);
+  --eds-theme-typography-headline-secondary-md: var(--eds-typography-preset-secondary-002-light);
+  --eds-theme-typography-headline-secondary-md-bold: var(--eds-typography-preset-secondary-002);
+  --eds-theme-typography-headline-secondary-md-bold-mobile: var(--eds-typography-secondary-mobile-002-bold);
+  --eds-theme-typography-headline-secondary-md-mobile: var(--eds-typography-preset-mobile-002-light);
+  --eds-theme-typography-headline-secondary-sm: var(--eds-typography-preset-secondary-003-light);
+  --eds-theme-typography-headline-secondary-sm-bold: var(--eds-typography-preset-secondary-003);
+  --eds-theme-typography-headline-secondary-sm-bold-mobile: var(--eds-typography-preset-secondary-mobile-003-bold);
+  --eds-theme-typography-headline-secondary-sm-mobile: var(--eds-typography-preset-secondary-mobile-003-light);
+  --eds-theme-typography-title-lg: var(--eds-typography-preset-004);
+  --eds-theme-typography-title-lg-bold: var(--eds-typography-preset-004-bold);
+  --eds-theme-typography-title-md: var(--eds-typography-preset-004);
+  --eds-theme-typography-title-md-bold: var(--eds-typography-preset-004-bold);
+  --eds-theme-typography-title-sm: var(--eds-typography-preset-005);
+  --eds-theme-typography-title-sm-bold: var(--eds-typography-preset-005-bold);
+  --eds-theme-typography-title-xs: var(--eds-typography-preset-007);
+  --eds-theme-typography-title-xs-bold: var(--eds-typography-preset-007-bold);
+  --eds-theme-typography-label-lg-subtle: var(--eds-typography-preset-005);
+  --eds-theme-typography-label-md: var(--eds-typography-preset-007-bold);
+  --eds-theme-typography-label-md-subtle: var(--eds-typography-preset-007);
+  --eds-theme-typography-label-sm: var(--eds-typography-preset-009-bold);
+  --eds-theme-typography-body-xl: var(--eds-typography-preset-003-light);
+  --eds-theme-typography-body-lg: var(--eds-typography-preset-004-light);
+  --eds-theme-typography-body-md: var(--eds-typography-preset-005-light);
+  --eds-theme-typography-body-sm: var(--eds-typography-preset-006-light);
+  --eds-theme-typography-body-xs: var(--eds-typography-preset-008-light);
+  --eds-theme-typography-caption-lg: var(--eds-typography-preset-006-light);
+  --eds-theme-typography-caption-lg-bold: var(--eds-typography-preset-006);
+  --eds-theme-typography-caption-md: var(--eds-typography-preset-008-light);
+  --eds-theme-typography-caption-md-bold: var(--eds-typography-preset-008);
+  --eds-theme-typography-caption-sm: var(--eds-typography-preset-010-light);
+  --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010);
+  --eds-theme-typography-overline: var(--eds-typography-preset-011); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-typography-overline-lg: var(--eds-typography-preset-005);
+  --eds-theme-typography-overline-md: var(--eds-typography-preset-011);
+  --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);
+  --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
+  --eds-theme-typography-breadcrumb: var(--eds-typography-preset-009);
+  --eds-theme-typography-button-lg: var(--eds-typography-preset-005);
+  --eds-theme-typography-button-md: var(--eds-typography-preset-005);
+  --eds-theme-typography-button-sm: var(--eds-typography-preset-009);
+  --eds-theme-typography-button-label: var(--eds-typography-preset-006); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-typography-button-label-sm: var(--eds-typography-preset-008-bold); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-typography-form-label: var(--eds-typography-preset-006);
+  --eds-theme-typography-form-input: var(--eds-typography-preset-005-light);
+  --eds-theme-typography-link-lg: var(--eds-typography-preset-004);
+  --eds-theme-typography-link-md: var(--eds-typography-preset-005);
+  --eds-theme-typography-link-sm: var(--eds-typography-preset-007);
+  --eds-theme-typography-link-xs: var(--eds-typography-preset-009);
+  --eds-theme-typography-tab-lg: var(--eds-typography-preset-006-light);
+  --eds-theme-typography-tab-lg-active: var(--eds-typography-preset-006);
+  --eds-theme-typography-tab-sm: var(--eds-typography-preset-008-light);
+  --eds-theme-typography-tab-sm-active: var(--eds-typography-preset-009);
+  --eds-theme-typography-tag: var(--eds-typography-preset-009);
   --eds-font-family-primary: 'Graphik', sans-serif;
-  --eds-theme-color-text-highlight-background: var(--eds-color-other-yellow-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
-  --eds-theme-color-text-brand-primary: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. Please use eds-theme-color-text-brand-default instead. */
-  --eds-theme-color-text-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-text-grade-stop: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-text-grade-revise: var(--eds-color-neutral-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-text-grade-complete: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-text-utility-error: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-text-utility-success: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-text-utility-placeholder: var(--eds-color-neutral-550);
-  --eds-theme-color-text-utility-disabled-secondary: var(--eds-color-neutral-200);
-  --eds-theme-color-text-utility-disabled-primary: var(--eds-color-neutral-350);
-  --eds-theme-color-text-utility-informational-active: var(--eds-color-blue-750);
-  --eds-theme-color-text-utility-informational-hover: var(--eds-color-blue-650);
-  --eds-theme-color-text-utility-informational: var(--eds-color-blue-550);
-  --eds-theme-color-text-utility-warning-active: var(--eds-color-yellow-750);
-  --eds-theme-color-text-utility-warning-hover: var(--eds-color-yellow-650);
-  --eds-theme-color-text-utility-warning: var(--eds-color-yellow-550);
-  --eds-theme-color-text-utility-favorable-active: var(--eds-color-green-750);
-  --eds-theme-color-text-utility-favorable-hover: var(--eds-color-green-650);
-  --eds-theme-color-text-utility-favorable: var(--eds-color-green-550);
-  --eds-theme-color-text-utility-critical-active: var(--eds-color-red-800);
-  --eds-theme-color-text-utility-critical-hover: var(--eds-color-red-750);
-  --eds-theme-color-text-utility-critical: var(--eds-color-red-650);
-  --eds-theme-color-text-utility-interactive-visited: var(--eds-color-purple-550); /* @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
-  --eds-theme-color-text-utility-interactive-secondary-visited: var(--eds-color-blue-550);
-  --eds-theme-color-text-utility-interactive-secondary-active: var(--eds-color-blue-750);
-  --eds-theme-color-text-utility-interactive-secondary-hover: var(--eds-color-blue-650);
-  --eds-theme-color-text-utility-interactive-secondary: var(--eds-color-blue-550);
-  --eds-theme-color-text-utility-interactive-primary-visited: var(--eds-color-blue-850);
-  --eds-theme-color-text-utility-interactive-primary-active: var(--eds-color-blue-950);
-  --eds-theme-color-text-utility-interactive-primary-hover: var(--eds-color-blue-900);
-  --eds-theme-color-text-utility-interactive-primary: var(--eds-color-blue-850);
-  --eds-theme-color-text-utility-default-secondary-active: var(--eds-color-neutral-750);
-  --eds-theme-color-text-utility-default-secondary-hover: var(--eds-color-neutral-650);
-  --eds-theme-color-text-utility-default-secondary: var(--eds-color-neutral-550);
-  --eds-theme-color-text-utility-default-primary-active: var(--eds-color-blue-950);
-  --eds-theme-color-text-utility-default-primary-hover: var(--eds-color-blue-900);
-  --eds-theme-color-text-utility-default-primary: var(--eds-color-blue-850);
-  --eds-theme-color-text-neutral-subtle: var(--eds-color-neutral-600);
-  --eds-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
-  --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
-  --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
-  --eds-theme-color-radio-brand-background: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-modal-brand-header-background: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-icon-grade-stop-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-grade-stop: var(--eds-color-other-ruby-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-grade-revise-hover: var(--eds-color-neutral-black); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-grade-revise: var(--eds-color-neutral-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-grade-complete-hover: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-grade-complete: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-utility-error-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-utility-error: var(--eds-color-other-ruby-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-utility-success-hover: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-utility-success: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
-  --eds-theme-color-icon-utility-inverse: var(--eds-theme-color-text-utility-inverse);
-  --eds-theme-color-icon-brand-primary-hover: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-brand-primary: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-link-default-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-link-default: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-neutral-subtle-hover: var(--eds-color-neutral-600);
-  --eds-theme-color-icon-neutral-subtle: var(--eds-color-neutral-500);
-  --eds-theme-color-icon-neutral-strong-hover: var(--eds-color-neutral-800);
-  --eds-theme-color-icon-neutral-strong: var(--eds-color-neutral-700);
-  --eds-theme-color-icon-neutral-default-hover: var(--eds-color-neutral-700);
-  --eds-theme-color-icon-neutral-default-inverse: var(--eds-color-neutral-white);
-  --eds-theme-color-icon-neutral-default: var(--eds-color-neutral-600);
-  --eds-theme-color-form-label: var(--eds-color-neutral-700);
-  --eds-theme-color-form-background: var(--eds-color-neutral-white);
-  --eds-theme-color-form-border-hover: var(--eds-color-neutral-800);
-  --eds-theme-color-form-border: var(--eds-color-neutral-500);
-  --eds-theme-color-focus-ring-inverted: var(--eds-color-neutral-white);
-  --eds-theme-color-focus-ring: var(--eds-color-brand-grape-600);
-  --eds-theme-color-data-bar-border: var(--eds-color-neutral-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-checkbox-brand-background: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-error-text-hover: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-text: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-border-active: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-border-hover: var(--eds-color-other-ruby-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-background-active: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-background-hover: var(--eds-color-other-ruby-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-error-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-error: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-warning-text-hover: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-text: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-border-active: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-border-hover: var(--eds-color-other-orange-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-background-active: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-background-hover: var(--eds-color-other-orange-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-warning-hover: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-warning: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-success-text-hover: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-text: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-border-active: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-border-hover: var(--eds-color-other-mint-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-background-active: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-background-hover: var(--eds-color-other-mint-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-success-hover: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-success: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-neutral-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-neutral-text-hover: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral-text: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral-border-active: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-neutral-background-active: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral-background: var(--eds-theme-color-transparent-black-0);
-  --eds-theme-color-button-icon-neutral-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-neutral-hover: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-neutral: var(--eds-color-neutral-600);
-  --eds-theme-color-button-icon-brand-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-brand-text-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand-text: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand-border-active: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand-border-hover: var(--eds-color-brand-grape-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand-border: var(--eds-theme-color-transparent-black-0);
-  --eds-theme-color-button-icon-brand-background-active: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand-background-hover: var(--eds-color-brand-grape-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand-background: var(--eds-theme-color-transparent-black-0);
-  --eds-theme-color-button-icon-brand-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-icon-brand-hover: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-icon-brand: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-icon-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-error-icon-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-error-icon: var(--eds-color-other-ruby-600);
-  --eds-theme-color-button-secondary-error-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-error-text-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-error-text: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-border-active: var(--eds-color-other-ruby-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-border-hover: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-border: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-background-active: var(--eds-color-other-ruby-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-background-hover: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-error-background: var(--eds-theme-color-transparent-black-0);
-  --eds-theme-color-button-secondary-warning-icon-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-warning-icon-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-warning-icon: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-warning-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-warning-text-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-warning-text: var(--eds-color-other-orange-700);
-  --eds-theme-color-button-secondary-warning-border-active: var(--eds-color-other-orange-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-warning-border-hover: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-warning-border: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-warning-background-active: var(--eds-color-other-orange-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-warning-background-hover: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-warning-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-icon-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-success-icon-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-success-icon: var(--eds-color-other-mint-600);
-  --eds-theme-color-button-secondary-success-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-success-text-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-success-text: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-border-active: var(--eds-color-other-mint-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-border-hover: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-border: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-background-active: var(--eds-color-other-mint-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-background-hover: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-success-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-neutral-icon-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-neutral-icon-hover: var(--eds-color-neutral-400);
-  --eds-theme-color-button-secondary-neutral-icon: var(--eds-color-neutral-400);
-  --eds-theme-color-button-secondary-neutral-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-neutral-text-hover: var(--eds-color-neutral-600);
-  --eds-theme-color-button-secondary-neutral-text: var(--eds-color-neutral-600);
-  --eds-theme-color-button-secondary-neutral-border-active: var(--eds-color-neutral-700);
-  --eds-theme-color-button-secondary-neutral-border-hover: var(--eds-color-neutral-600);
-  --eds-theme-color-button-secondary-neutral-border: var(--eds-color-neutral-600);
-  --eds-theme-color-button-secondary-neutral-background-active: var(--eds-color-neutral-700);
-  --eds-theme-color-button-secondary-neutral-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-icon-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-brand-icon-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-brand-icon: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-brand-text-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-secondary-brand-text: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-border-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-border-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-border: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-background-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-background-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-secondary-brand-background: var(--eds-theme-color-transparent-black-0);
-  --eds-theme-color-button-primary-error-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-primary-error-text-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-primary-error-text: var(--eds-color-neutral-white);
-  --eds-theme-color-button-primary-error-border-active: var(--eds-color-other-ruby-800);
-  --eds-theme-color-button-primary-error-border-hover: var(--eds-color-other-ruby-700);
-  --eds-theme-color-button-primary-error-border: var(--eds-color-other-ruby-600);
-  --eds-theme-color-button-primary-error-background-active: var(--eds-color-other-ruby-800);
-  --eds-theme-color-button-primary-error-background-hover: var(--eds-color-other-ruby-700);
-  --eds-theme-color-button-primary-error-background: var(--eds-color-other-ruby-600);
-  --eds-theme-color-button-primary-brand-text-active: var(--eds-color-neutral-white);
-  --eds-theme-color-button-primary-brand-text-hover: var(--eds-color-neutral-white);
-  --eds-theme-color-button-primary-brand-text: var(--eds-color-neutral-white);
-  --eds-theme-color-button-primary-brand-border-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-primary-brand-border-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-primary-brand-border: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-primary-brand-background-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-primary-brand-background-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-button-primary-brand-background: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-border-grade-stop: var(--eds-color-other-ruby-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-grade-revise-strong: var(--eds-color-other-yellow-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-grade-revise-default: var(--eds-color-other-yellow-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-grade-revise-subtle: var(--eds-color-other-yellow-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-grade-complete: var(--eds-color-other-mint-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-error-strong: var(--eds-color-other-ruby-400);
-  --eds-theme-color-border-utility-error-default: var(--eds-color-other-ruby-300);
-  --eds-theme-color-border-utility-error-subtle: var(--eds-color-other-ruby-200);
-  --eds-theme-color-border-utility-success-strong: var(--eds-color-other-mint-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-success-default: var(--eds-color-other-mint-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-success-subtle: var(--eds-color-other-mint-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-focus: var(--eds-color-blue-550);
-  --eds-theme-color-border-utility-disabled: var(--eds-color-neutral-350);
-  --eds-theme-color-border-utility-informational-active: var(--eds-color-blue-750);
-  --eds-theme-color-border-utility-informational-hover: var(--eds-color-blue-650);
-  --eds-theme-color-border-utility-informational: var(--eds-color-blue-550);
-  --eds-theme-color-border-utility-warning-strong: var(--eds-color-other-orange-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-warning-default: var(--eds-color-other-orange-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-warning-subtle: var(--eds-color-other-orange-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-utility-warning-active: var(--eds-color-yellow-750);
-  --eds-theme-color-border-utility-warning-hover: var(--eds-color-yellow-650);
-  --eds-theme-color-border-utility-warning: var(--eds-color-yellow-550);
-  --eds-theme-color-border-utility-favorable-active: var(--eds-color-green-750);
-  --eds-theme-color-border-utility-favorable-hover: var(--eds-color-green-650);
-  --eds-theme-color-border-utility-favorable: var(--eds-color-green-550);
-  --eds-theme-color-border-utility-critical-active: var(--eds-color-red-800);
-  --eds-theme-color-border-utility-critical-hover: var(--eds-color-red-750);
-  --eds-theme-color-border-utility-critical: var(--eds-color-red-650);
-  --eds-theme-color-border-utility-interactive-secondary-active: var(--eds-color-blue-750);
-  --eds-theme-color-border-utility-interactive-secondary-hover: var(--eds-color-blue-650);
-  --eds-theme-color-border-utility-interactive-secondary: var(--eds-color-blue-550);
-  --eds-theme-color-border-utility-interactive-active: var(--eds-color-blue-950);
-  --eds-theme-color-border-utility-interactive-hover: var(--eds-color-blue-900);
-  --eds-theme-color-border-utility-interactive: var(--eds-color-blue-850);
-  --eds-theme-color-border-utility-default-high-emphasis-active: var(--eds-color-blue-950);
-  --eds-theme-color-border-utility-default-high-emphasis-hover: var(--eds-color-blue-900);
-  --eds-theme-color-border-utility-default-high-emphasis: var(--eds-color-blue-850);
-  --eds-theme-color-border-utility-default-medium-emphasis-active: var(--eds-color-neutral-750);
-  --eds-theme-color-border-utility-default-medium-emphasis-hover: var(--eds-color-neutral-650);
-  --eds-theme-color-border-utility-default-medium-emphasis: var(--eds-color-neutral-550);
-  --eds-theme-color-border-utility-default-low-emphasis-active: var(--eds-color-neutral-350);
-  --eds-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
-  --eds-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
-  --eds-theme-color-border-brand-pink: var(--eds-color-pink-450);
-  --eds-theme-color-border-brand-purple: var(--eds-color-purple-350);
-  --eds-theme-color-border-brand-blue-3: var(--eds-color-blue-850);
-  --eds-theme-color-border-brand-blue-2: var(--eds-color-blue-550);
-  --eds-theme-color-border-brand-blue-1: var(--eds-color-blue-200);
-  --eds-theme-color-border-brand-green: var(--eds-color-green-350);
-  --eds-theme-color-border-brand-yellow: var(--eds-color-yellow-150);
-  --eds-theme-color-border-brand-orange: var(--eds-color-orange-250);
-  --eds-theme-color-border-brand-red: var(--eds-color-red-850);
-  --eds-theme-color-border-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-brand-primary: var(--eds-color-brand-grape-300); /* @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
-  --eds-theme-color-border-brand-primary-subtle: var(--eds-color-brand-grape-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-border-neutral-strong-hover: var(--eds-color-neutral-500);
-  --eds-theme-color-border-neutral-strong: var(--eds-color-neutral-400);
-  --eds-theme-color-border-neutral-default-hover: var(--eds-color-neutral-400);
-  --eds-theme-color-border-neutral-default: var(--eds-color-neutral-300);
-  --eds-theme-color-border-neutral-subtle-hover: var(--eds-color-neutral-300);
-  --eds-theme-color-background-disabled: var(--eds-color-neutral-300);
-  --eds-theme-color-background-grade-stop-subtle: var(--eds-color-other-ruby-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-grade-stop-default: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-grade-revise-subtle: var(--eds-color-other-yellow-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-grade-revise-default: var(--eds-color-other-yellow-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-grade-complete-subtle: var(--eds-color-other-mint-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-grade-complete-default: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-utility-error: var(--eds-color-other-ruby-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-utility-success: var(--eds-color-other-mint-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
-  --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-information-low-emphasis-active: var(--eds-color-blue-150);
-  --eds-theme-color-background-utility-information-low-emphasis-hover: var(--eds-color-blue-100);
-  --eds-theme-color-background-utility-information-low-emphasis: var(--eds-color-blue-050);
-  --eds-theme-color-background-utility-warning-low-emphasis-active: var(--eds-color-yellow-150);
-  --eds-theme-color-background-utility-warning-low-emphasis-hover: var(--eds-color-yellow-100);
-  --eds-theme-color-background-utility-warning-low-emphasis: var(--eds-color-yellow-050);
-  --eds-theme-color-background-utility-favorable-high-emphasis-active: var(--eds-color-green-750);
-  --eds-theme-color-background-utility-favorable-high-emphasis-hover: var(--eds-color-green-650);
-  --eds-theme-color-background-utility-favorable-high-emphasis: var(--eds-color-green-550);
-  --eds-theme-color-background-utility-favorable-low-emphasis-active: var(--eds-color-green-150);
-  --eds-theme-color-background-utility-favorable-low-emphasis-hover: var(--eds-color-green-100);
-  --eds-theme-color-background-utility-favorable-low-emphasis: var(--eds-color-green-050);
-  --eds-theme-color-background-utility-critical-high-emphasis-active: var(--eds-color-red-800);
-  --eds-theme-color-background-utility-critical-high-emphasis-hover: var(--eds-color-red-750);
-  --eds-theme-color-background-utility-critical-high-emphasis: var(--eds-color-red-650);
-  --eds-theme-color-background-utility-critical-low-emphasis-active: var(--eds-color-red-150);
-  --eds-theme-color-background-utility-critical-low-emphasis-hover: var(--eds-color-red-100);
-  --eds-theme-color-background-utility-critical-low-emphasis: var(--eds-color-red-050);
-  --eds-theme-color-background-utility-critical-no-emphasis-active: var(--eds-color-red-100);
-  --eds-theme-color-background-utility-critical-no-emphasis-hover: var(--eds-color-red-050);
-  --eds-theme-color-background-utility-interactive-high-emphasis-active: var(--eds-color-blue-950);
-  --eds-theme-color-background-utility-interactive-high-emphasis-hover: var(--eds-color-blue-900);
-  --eds-theme-color-background-utility-interactive-high-emphasis: var(--eds-color-blue-850);
-  --eds-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-blue-150);
-  --eds-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-blue-100);
-  --eds-theme-color-background-utility-interactive-low-emphasis: var(--eds-color-blue-050);
-  --eds-theme-color-background-utility-interactive-no-emphasis-active: var(--eds-color-blue-100);
-  --eds-theme-color-background-utility-interactive-no-emphasis-hover: var(--eds-color-blue-050);
-  --eds-theme-color-background-utility-default-high-emphasis-active: var(--eds-color-blue-950);
-  --eds-theme-color-background-utility-default-high-emphasis-hover: var(--eds-color-blue-900);
-  --eds-theme-color-background-utility-default-high-emphasis: var(--eds-color-blue-850);
-  --eds-theme-color-background-utility-default-medium-emphasis-active: var(--eds-color-neutral-750);
-  --eds-theme-color-background-utility-default-medium-emphasis-hover: var(--eds-color-neutral-650);
-  --eds-theme-color-background-utility-default-medium-emphasis: var(--eds-color-neutral-550);
-  --eds-theme-color-background-utility-default-low-emphasis-active: var(--eds-color-neutral-150);
-  --eds-theme-color-background-utility-default-low-emphasis-hover: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-overlay-high-emphasis: var(--eds-color-neutral-850); /* NOTE: use with opacity: 80% */
-  --eds-theme-color-background-utility-overlay-low-emphasis: var(--eds-color-neutral-850); /* NOTE: use with opacity: 50% */
-  --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-base-2: var(--eds-color-neutral-025);
-  --eds-theme-color-background-table-row-selected: var(--eds-color-blue-100);
-  --eds-theme-color-background-table-row-stripe-2: var(--eds-theme-color-background-utility-base-1);
-  --eds-theme-color-background-table-row-stripe-1: var(--eds-color-blue-025);
-  --eds-theme-color-background-brand-pink: var(--eds-color-pink-450);
-  --eds-theme-color-background-brand-purple-low-emphasis: var(--eds-color-purple-050);
-  --eds-theme-color-background-brand-purple: var(--eds-color-purple-350);
-  --eds-theme-color-background-brand-blue-low-emphasis: var(--eds-color-blue-050);
-  --eds-theme-color-background-brand-blue-3: var(--eds-color-blue-850);
-  --eds-theme-color-background-brand-blue-2: var(--eds-color-blue-550);
-  --eds-theme-color-background-brand-blue-1: var(--eds-color-blue-200);
-  --eds-theme-color-background-brand-green-low-emphasis: var(--eds-color-green-050);
-  --eds-theme-color-background-brand-green: var(--eds-color-green-350);
-  --eds-theme-color-background-brand-yellow-low-emphasis: var(--eds-color-yellow-050);
-  --eds-theme-color-background-brand-yellow: var(--eds-color-yellow-150);
-  --eds-theme-color-background-brand-orange-low-emphasis: var(--eds-color-orange-050);
-  --eds-theme-color-background-brand-orange: var(--eds-color-orange-250);
-  --eds-theme-color-background-brand-red-low-emphasis: var(--eds-color-red-050);
-  --eds-theme-color-background-brand-red: var(--eds-color-red-850);
-  --eds-theme-color-background-brand-primary-strong-hover: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-brand-primary-subtle: var(--eds-color-brand-grape-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-brand-primary-default: var(--eds-color-brand-grape-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-neutral-medium-hover: var(--eds-color-neutral-300);
-  --eds-theme-color-background-neutral-default: var(--eds-color-neutral-white);
-  --eds-theme-color-body-background-inverted: var(--eds-color-neutral-700);
-  --eds-theme-size-slider-thumb: var(--eds-size-3);
-  --eds-theme-size-slider-track-height: var(--eds-size-1);
-  --eds-theme-form-border-radius: var(--eds-border-radius-md);
-  --eds-theme-form-border-width: var(--eds-border-width-sm);
-  --eds-theme-box-focus-ring-outline-offset: var(--eds-outline-width-md);
-  --eds-theme-box-focus-ring-outline-width: var(--eds-outline-width-sm);
-  --eds-theme-box-button-border-radius: var(--eds-border-radius-md);
-  --eds-theme-border-width: var(--eds-border-width-sm);
-  --eds-theme-border-radius-tab-underline: var(--eds-border-radius-round);
-  --eds-theme-border-radius-objects-xs: var(--eds-border-radius-none);
-  --eds-theme-border-radius-objects-sm: var(--eds-border-radius-50);
-  --eds-theme-border-radius-objects-md: var(--eds-border-radius-100);
-  --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-150);
-  --eds-theme-border-radius-surfaces-lg: var(--eds-border-radius-none);
+  --eds-font-family-secondary: 'Argent', serif;
+  --eds-font-size-base: 16; /* (pixels) Base font size for design system in px */
+  --eds-font-weight-light: 400;
+  --eds-font-weight-medium: 500;
+  --eds-font-weight-bold: 600;
+  --eds-letter-spacing-sm: 0.5; /* (pixels) Spacing token used between characters in a text */
+  --eds-typography-preset-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary);
+  --eds-typography-preset-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary);
+  --eds-typography-preset-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary);
+  --eds-typography-preset-001-mobile: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-002: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-002-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-002-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-003-mobile: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-typography-preset-004: var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary);
+  --eds-typography-preset-004-light: var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary);
+  --eds-typography-preset-004-bold: var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary);
+  --eds-typography-preset-005: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary);
+  --eds-typography-preset-005-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary);
+  --eds-typography-preset-005-bold: var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary);
+  --eds-typography-preset-006: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary);
+  --eds-typography-preset-006-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary);
+  --eds-typography-preset-006-bold: var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary);
+  --eds-typography-preset-007: var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-007-light: var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-007-bold: var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-008: var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary);
+  --eds-typography-preset-008-light: var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary);
+  --eds-typography-preset-008-bold: var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary);
+  --eds-typography-preset-009: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-009-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-009-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-010: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary);
+  --eds-typography-preset-010-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary);
+  --eds-typography-preset-010-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary);
+  --eds-typography-preset-011: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-011-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-011-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-012: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-012-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-012-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
+  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-004: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-004-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-005: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-005-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-006: var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-006-light: var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-007: var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-007-light: var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-008: var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-008-light: var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-002-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-secondary-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
+  --eds-typography-preset-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-001-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-002-bold: var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary);
+  --eds-typography-preset-mobile-003-bold: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary);
   --eds-theme-border-radius-actions: var(--eds-border-radius-full);
-  --eds-theme-color-icon-utility-placeholder: var(--eds-theme-color-text-utility-placeholder);
-  --eds-theme-color-icon-utility-disabled-secondary: var(--eds-theme-color-text-utility-disabled-secondary);
-  --eds-theme-color-icon-utility-disabled-primary: var(--eds-theme-color-text-utility-disabled-primary);
-  --eds-theme-color-icon-utility-informational-active: var(--eds-theme-color-text-utility-informational-active);
-  --eds-theme-color-icon-utility-informational-hover: var(--eds-theme-color-text-utility-informational-hover);
-  --eds-theme-color-icon-utility-informational: var(--eds-theme-color-text-utility-informational);
-  --eds-theme-color-icon-utility-warning-active: var(--eds-theme-color-text-utility-warning-active);
-  --eds-theme-color-icon-utility-warning-hover: var(--eds-theme-color-text-utility-warning-hover);
-  --eds-theme-color-icon-utility-warning: var(--eds-theme-color-text-utility-warning);
-  --eds-theme-color-icon-utility-favorable-active: var(--eds-theme-color-text-utility-favorable-active);
-  --eds-theme-color-icon-utility-favorable-hover: var(--eds-theme-color-text-utility-favorable-hover);
-  --eds-theme-color-icon-utility-favorable: var(--eds-theme-color-text-utility-favorable);
-  --eds-theme-color-icon-utility-critical-active: var(--eds-theme-color-text-utility-critical-active);
-  --eds-theme-color-icon-utility-critical-hover: var(--eds-theme-color-text-utility-critical-hover);
-  --eds-theme-color-icon-utility-critical: var(--eds-theme-color-text-utility-critical);
-  --eds-theme-color-icon-utility-interactive-visited: var(--eds-theme-color-text-utility-interactive-visited); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-icon-utility-interactive-secondary-visited: var(--eds-theme-color-text-utility-interactive-secondary-visited);
-  --eds-theme-color-icon-utility-interactive-secondary-active: var(--eds-theme-color-text-utility-interactive-secondary-active);
-  --eds-theme-color-icon-utility-interactive-secondary-hover: var(--eds-theme-color-text-utility-interactive-secondary-hover);
-  --eds-theme-color-icon-utility-interactive-secondary: var(--eds-theme-color-text-utility-interactive-secondary);
-  --eds-theme-color-icon-utility-interactive-primary-visited: var(--eds-theme-color-text-utility-interactive-primary-visited);
-  --eds-theme-color-icon-utility-interactive-primary-active: var(--eds-theme-color-text-utility-interactive-primary-active);
-  --eds-theme-color-icon-utility-interactive-primary-hover: var(--eds-theme-color-text-utility-interactive-primary-hover);
-  --eds-theme-color-icon-utility-interactive-primary: var(--eds-theme-color-text-utility-interactive-primary);
-  --eds-theme-color-icon-utility-default-secondary-active: var(--eds-theme-color-text-utility-default-secondary-active);
-  --eds-theme-color-icon-utility-default-secondary-hover: var(--eds-theme-color-text-utility-default-secondary-hover);
-  --eds-theme-color-icon-utility-default-secondary: var(--eds-theme-color-text-utility-default-secondary);
-  --eds-theme-color-icon-utility-default-primary-active: var(--eds-theme-color-text-utility-default-primary-active);
-  --eds-theme-color-icon-utility-default-primary-hover: var(--eds-theme-color-text-utility-default-primary-hover);
+  --eds-theme-border-radius-surfaces-lg: var(--eds-border-radius-none);
+  --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-150);
+  --eds-theme-border-radius-objects-md: var(--eds-border-radius-100);
+  --eds-theme-border-radius-objects-sm: var(--eds-border-radius-50);
+  --eds-theme-border-radius-objects-xs: var(--eds-border-radius-none);
+  --eds-theme-border-radius-tab-underline: var(--eds-border-radius-round);
+  --eds-theme-border-width: var(--eds-border-width-sm);
+  --eds-theme-box-button-border-radius: var(--eds-border-radius-md);
+  --eds-theme-box-focus-ring-outline-width: var(--eds-outline-width-sm);
+  --eds-theme-box-focus-ring-outline-offset: var(--eds-outline-width-md);
+  --eds-theme-form-border-width: var(--eds-border-width-sm);
+  --eds-theme-form-border-radius: var(--eds-border-radius-md);
+  --eds-theme-size-slider-track-height: var(--eds-size-1);
+  --eds-theme-size-slider-thumb: var(--eds-size-3);
+  --eds-theme-color-body-background-inverted: var(--eds-color-neutral-700);
+  --eds-theme-color-background-neutral-default: var(--eds-color-neutral-white);
+  --eds-theme-color-background-neutral-medium-hover: var(--eds-color-neutral-300);
+  --eds-theme-color-background-brand-primary-default: var(--eds-color-brand-grape-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-brand-primary-subtle: var(--eds-color-brand-grape-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-brand-primary-strong-hover: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-brand-red: var(--eds-color-red-850);
+  --eds-theme-color-background-brand-red-low-emphasis: var(--eds-color-red-050);
+  --eds-theme-color-background-brand-orange: var(--eds-color-orange-250);
+  --eds-theme-color-background-brand-orange-low-emphasis: var(--eds-color-orange-050);
+  --eds-theme-color-background-brand-yellow: var(--eds-color-yellow-150);
+  --eds-theme-color-background-brand-yellow-low-emphasis: var(--eds-color-yellow-050);
+  --eds-theme-color-background-brand-green: var(--eds-color-green-350);
+  --eds-theme-color-background-brand-green-low-emphasis: var(--eds-color-green-050);
+  --eds-theme-color-background-brand-blue-1: var(--eds-color-blue-200);
+  --eds-theme-color-background-brand-blue-2: var(--eds-color-blue-550);
+  --eds-theme-color-background-brand-blue-3: var(--eds-color-blue-850);
+  --eds-theme-color-background-brand-blue-low-emphasis: var(--eds-color-blue-050);
+  --eds-theme-color-background-brand-purple: var(--eds-color-purple-350);
+  --eds-theme-color-background-brand-purple-low-emphasis: var(--eds-color-purple-050);
+  --eds-theme-color-background-brand-pink: var(--eds-color-pink-450);
+  --eds-theme-color-background-table-row-stripe-1: var(--eds-color-blue-025);
+  --eds-theme-color-background-table-row-stripe-2: var(--eds-theme-color-background-utility-base-1);
+  --eds-theme-color-background-table-row-selected: var(--eds-color-blue-100);
+  --eds-theme-color-background-utility-base-2: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-overlay-low-emphasis: var(--eds-color-neutral-850); /* NOTE: use with opacity: 50% */
+  --eds-theme-color-background-utility-overlay-high-emphasis: var(--eds-color-neutral-850); /* NOTE: use with opacity: 80% */
+  --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-default-low-emphasis-hover: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-default-low-emphasis-active: var(--eds-color-neutral-150);
+  --eds-theme-color-background-utility-default-medium-emphasis: var(--eds-color-neutral-550);
+  --eds-theme-color-background-utility-default-medium-emphasis-hover: var(--eds-color-neutral-650);
+  --eds-theme-color-background-utility-default-medium-emphasis-active: var(--eds-color-neutral-750);
+  --eds-theme-color-background-utility-default-high-emphasis: var(--eds-color-blue-850);
+  --eds-theme-color-background-utility-default-high-emphasis-hover: var(--eds-color-blue-900);
+  --eds-theme-color-background-utility-default-high-emphasis-active: var(--eds-color-blue-950);
+  --eds-theme-color-background-utility-interactive-no-emphasis-hover: var(--eds-color-blue-050);
+  --eds-theme-color-background-utility-interactive-no-emphasis-active: var(--eds-color-blue-100);
+  --eds-theme-color-background-utility-interactive-low-emphasis: var(--eds-color-blue-050);
+  --eds-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-blue-100);
+  --eds-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-blue-150);
+  --eds-theme-color-background-utility-interactive-high-emphasis: var(--eds-color-blue-850);
+  --eds-theme-color-background-utility-interactive-high-emphasis-hover: var(--eds-color-blue-900);
+  --eds-theme-color-background-utility-interactive-high-emphasis-active: var(--eds-color-blue-950);
+  --eds-theme-color-background-utility-critical-no-emphasis-hover: var(--eds-color-red-050);
+  --eds-theme-color-background-utility-critical-no-emphasis-active: var(--eds-color-red-100);
+  --eds-theme-color-background-utility-critical-low-emphasis: var(--eds-color-red-050);
+  --eds-theme-color-background-utility-critical-low-emphasis-hover: var(--eds-color-red-100);
+  --eds-theme-color-background-utility-critical-low-emphasis-active: var(--eds-color-red-150);
+  --eds-theme-color-background-utility-critical-high-emphasis: var(--eds-color-red-650);
+  --eds-theme-color-background-utility-critical-high-emphasis-hover: var(--eds-color-red-750);
+  --eds-theme-color-background-utility-critical-high-emphasis-active: var(--eds-color-red-800);
+  --eds-theme-color-background-utility-favorable-low-emphasis: var(--eds-color-green-050);
+  --eds-theme-color-background-utility-favorable-low-emphasis-hover: var(--eds-color-green-100);
+  --eds-theme-color-background-utility-favorable-low-emphasis-active: var(--eds-color-green-150);
+  --eds-theme-color-background-utility-favorable-high-emphasis: var(--eds-color-green-550);
+  --eds-theme-color-background-utility-favorable-high-emphasis-hover: var(--eds-color-green-650);
+  --eds-theme-color-background-utility-favorable-high-emphasis-active: var(--eds-color-green-750);
+  --eds-theme-color-background-utility-warning-low-emphasis: var(--eds-color-yellow-050);
+  --eds-theme-color-background-utility-warning-low-emphasis-hover: var(--eds-color-yellow-100);
+  --eds-theme-color-background-utility-warning-low-emphasis-active: var(--eds-color-yellow-150);
+  --eds-theme-color-background-utility-information-low-emphasis: var(--eds-color-blue-050);
+  --eds-theme-color-background-utility-information-low-emphasis-hover: var(--eds-color-blue-100);
+  --eds-theme-color-background-utility-information-low-emphasis-active: var(--eds-color-blue-150);
+  --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
+  --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-success: var(--eds-color-other-mint-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-utility-error: var(--eds-color-other-ruby-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-complete-default: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-complete-subtle: var(--eds-color-other-mint-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-revise-default: var(--eds-color-other-yellow-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-revise-subtle: var(--eds-color-other-yellow-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-stop-default: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-grade-stop-subtle: var(--eds-color-other-ruby-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-disabled: var(--eds-color-neutral-300);
+  --eds-theme-color-border-neutral-subtle-hover: var(--eds-color-neutral-300);
+  --eds-theme-color-border-neutral-default: var(--eds-color-neutral-300);
+  --eds-theme-color-border-neutral-default-hover: var(--eds-color-neutral-400);
+  --eds-theme-color-border-neutral-strong: var(--eds-color-neutral-400);
+  --eds-theme-color-border-neutral-strong-hover: var(--eds-color-neutral-500);
+  --eds-theme-color-border-brand-primary-subtle: var(--eds-color-brand-grape-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-brand-primary: var(--eds-color-brand-grape-300); /* @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
+  --eds-theme-color-border-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-brand-red: var(--eds-color-red-850);
+  --eds-theme-color-border-brand-orange: var(--eds-color-orange-250);
+  --eds-theme-color-border-brand-yellow: var(--eds-color-yellow-150);
+  --eds-theme-color-border-brand-green: var(--eds-color-green-350);
+  --eds-theme-color-border-brand-blue-1: var(--eds-color-blue-200);
+  --eds-theme-color-border-brand-blue-2: var(--eds-color-blue-550);
+  --eds-theme-color-border-brand-blue-3: var(--eds-color-blue-850);
+  --eds-theme-color-border-brand-purple: var(--eds-color-purple-350);
+  --eds-theme-color-border-brand-pink: var(--eds-color-pink-450);
+  --eds-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
+  --eds-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
+  --eds-theme-color-border-utility-default-low-emphasis-active: var(--eds-color-neutral-350);
+  --eds-theme-color-border-utility-default-medium-emphasis: var(--eds-color-neutral-550);
+  --eds-theme-color-border-utility-default-medium-emphasis-hover: var(--eds-color-neutral-650);
+  --eds-theme-color-border-utility-default-medium-emphasis-active: var(--eds-color-neutral-750);
+  --eds-theme-color-border-utility-default-high-emphasis: var(--eds-color-blue-850);
+  --eds-theme-color-border-utility-default-high-emphasis-hover: var(--eds-color-blue-900);
+  --eds-theme-color-border-utility-default-high-emphasis-active: var(--eds-color-blue-950);
+  --eds-theme-color-border-utility-interactive: var(--eds-color-blue-850);
+  --eds-theme-color-border-utility-interactive-hover: var(--eds-color-blue-900);
+  --eds-theme-color-border-utility-interactive-active: var(--eds-color-blue-950);
+  --eds-theme-color-border-utility-interactive-secondary: var(--eds-color-blue-550);
+  --eds-theme-color-border-utility-interactive-secondary-hover: var(--eds-color-blue-650);
+  --eds-theme-color-border-utility-interactive-secondary-active: var(--eds-color-blue-750);
+  --eds-theme-color-border-utility-critical: var(--eds-color-red-650);
+  --eds-theme-color-border-utility-critical-hover: var(--eds-color-red-750);
+  --eds-theme-color-border-utility-critical-active: var(--eds-color-red-800);
+  --eds-theme-color-border-utility-favorable: var(--eds-color-green-550);
+  --eds-theme-color-border-utility-favorable-hover: var(--eds-color-green-650);
+  --eds-theme-color-border-utility-favorable-active: var(--eds-color-green-750);
+  --eds-theme-color-border-utility-warning: var(--eds-color-yellow-550);
+  --eds-theme-color-border-utility-warning-hover: var(--eds-color-yellow-650);
+  --eds-theme-color-border-utility-warning-active: var(--eds-color-yellow-750);
+  --eds-theme-color-border-utility-warning-subtle: var(--eds-color-other-orange-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-warning-default: var(--eds-color-other-orange-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-warning-strong: var(--eds-color-other-orange-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-informational: var(--eds-color-blue-550);
+  --eds-theme-color-border-utility-informational-hover: var(--eds-color-blue-650);
+  --eds-theme-color-border-utility-informational-active: var(--eds-color-blue-750);
+  --eds-theme-color-border-utility-disabled: var(--eds-color-neutral-350);
+  --eds-theme-color-border-utility-focus: var(--eds-color-blue-550);
+  --eds-theme-color-border-utility-success-subtle: var(--eds-color-other-mint-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-success-default: var(--eds-color-other-mint-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-success-strong: var(--eds-color-other-mint-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-utility-error-subtle: var(--eds-color-other-ruby-200);
+  --eds-theme-color-border-utility-error-default: var(--eds-color-other-ruby-300);
+  --eds-theme-color-border-utility-error-strong: var(--eds-color-other-ruby-400);
+  --eds-theme-color-border-grade-complete: var(--eds-color-other-mint-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-revise-subtle: var(--eds-color-other-yellow-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-revise-default: var(--eds-color-other-yellow-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-revise-strong: var(--eds-color-other-yellow-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-grade-stop: var(--eds-color-other-ruby-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-border-disabled: var(--eds-color-neutral-300);
+  --eds-theme-color-button-primary-brand-background: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-primary-brand-background-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-primary-brand-background-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-primary-brand-border: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-primary-brand-border-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-primary-brand-border-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-primary-brand-text: var(--eds-color-neutral-white);
+  --eds-theme-color-button-primary-brand-text-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-primary-brand-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-primary-error-background: var(--eds-color-other-ruby-600);
+  --eds-theme-color-button-primary-error-background-hover: var(--eds-color-other-ruby-700);
+  --eds-theme-color-button-primary-error-background-active: var(--eds-color-other-ruby-800);
+  --eds-theme-color-button-primary-error-border: var(--eds-color-other-ruby-600);
+  --eds-theme-color-button-primary-error-border-hover: var(--eds-color-other-ruby-700);
+  --eds-theme-color-button-primary-error-border-active: var(--eds-color-other-ruby-800);
+  --eds-theme-color-button-primary-error-text: var(--eds-color-neutral-white);
+  --eds-theme-color-button-primary-error-text-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-primary-error-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-brand-background: var(--eds-theme-color-transparent-black-0);
+  --eds-theme-color-button-secondary-brand-background-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-background-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-border: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-border-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-border-active: var(--eds-color-brand-grape-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-text: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-text-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-brand-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-brand-icon: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-brand-icon-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-brand-icon-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-neutral-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-neutral-background-active: var(--eds-color-neutral-700);
+  --eds-theme-color-button-secondary-neutral-border: var(--eds-color-neutral-600);
+  --eds-theme-color-button-secondary-neutral-border-hover: var(--eds-color-neutral-600);
+  --eds-theme-color-button-secondary-neutral-border-active: var(--eds-color-neutral-700);
+  --eds-theme-color-button-secondary-neutral-text: var(--eds-color-neutral-600);
+  --eds-theme-color-button-secondary-neutral-text-hover: var(--eds-color-neutral-600);
+  --eds-theme-color-button-secondary-neutral-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-neutral-icon: var(--eds-color-neutral-400);
+  --eds-theme-color-button-secondary-neutral-icon-hover: var(--eds-color-neutral-400);
+  --eds-theme-color-button-secondary-neutral-icon-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-success-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-background-hover: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-background-active: var(--eds-color-other-mint-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-border: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-border-hover: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-border-active: var(--eds-color-other-mint-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-text: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-success-text-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-success-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-success-icon: var(--eds-color-other-mint-600);
+  --eds-theme-color-button-secondary-success-icon-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-success-icon-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-warning-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-background-hover: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-background-active: var(--eds-color-other-orange-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-border: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-border-hover: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-border-active: var(--eds-color-other-orange-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-text: var(--eds-color-other-orange-700);
+  --eds-theme-color-button-secondary-warning-text-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-warning-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-warning-icon: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-warning-icon-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-warning-icon-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-error-background: var(--eds-theme-color-transparent-black-0);
+  --eds-theme-color-button-secondary-error-background-hover: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-error-background-active: var(--eds-color-other-ruby-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-error-border: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-error-border-hover: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-error-border-active: var(--eds-color-other-ruby-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-error-text: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-secondary-error-text-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-error-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-error-icon: var(--eds-color-other-ruby-600);
+  --eds-theme-color-button-secondary-error-icon-hover: var(--eds-color-neutral-white);
+  --eds-theme-color-button-secondary-error-icon-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-brand: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-hover: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-brand-background: var(--eds-theme-color-transparent-black-0);
+  --eds-theme-color-button-icon-brand-background-hover: var(--eds-color-brand-grape-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-background-active: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-border: var(--eds-theme-color-transparent-black-0);
+  --eds-theme-color-button-icon-brand-border-hover: var(--eds-color-brand-grape-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-border-active: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-text: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-text-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-brand-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-neutral: var(--eds-color-neutral-600);
+  --eds-theme-color-button-icon-neutral-hover: var(--eds-color-neutral-600);
+  --eds-theme-color-button-icon-neutral-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-neutral-background: var(--eds-theme-color-transparent-black-0);
+  --eds-theme-color-button-icon-neutral-background-active: var(--eds-color-neutral-600);
+  --eds-theme-color-button-icon-neutral-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-neutral-border-active: var(--eds-color-neutral-600);
+  --eds-theme-color-button-icon-neutral-text: var(--eds-color-neutral-600);
+  --eds-theme-color-button-icon-neutral-text-hover: var(--eds-color-neutral-600);
+  --eds-theme-color-button-icon-neutral-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-success: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-hover: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-success-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-background-hover: var(--eds-color-other-mint-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-background-active: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-border-hover: var(--eds-color-other-mint-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-border-active: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-text: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-text-hover: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-success-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-warning: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-hover: var(--eds-color-other-orange-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-warning-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-background-hover: var(--eds-color-other-orange-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-background-active: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-border-hover: var(--eds-color-other-orange-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-border-active: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-text: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-text-hover: var(--eds-color-other-orange-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-warning-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-error: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-active: var(--eds-color-neutral-white);
+  --eds-theme-color-button-icon-error-background: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-background-hover: var(--eds-color-other-ruby-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-background-active: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-border: var(--eds-theme-color-transparent-black-0); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-border-hover: var(--eds-color-other-ruby-200); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-border-active: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-text: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-text-hover: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-button-icon-error-text-active: var(--eds-color-neutral-white);
+  --eds-theme-color-checkbox-brand-background: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-data-bar-border: var(--eds-color-neutral-300); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-focus-ring: var(--eds-color-brand-grape-600);
+  --eds-theme-color-focus-ring-inverted: var(--eds-color-neutral-white);
+  --eds-theme-color-form-border: var(--eds-color-neutral-500);
+  --eds-theme-color-form-border-hover: var(--eds-color-neutral-800);
+  --eds-theme-color-form-background: var(--eds-color-neutral-white);
+  --eds-theme-color-form-label: var(--eds-color-neutral-700);
+  --eds-theme-color-icon-neutral-default: var(--eds-color-neutral-600);
+  --eds-theme-color-icon-neutral-default-inverse: var(--eds-color-neutral-white);
+  --eds-theme-color-icon-neutral-default-hover: var(--eds-color-neutral-700);
+  --eds-theme-color-icon-neutral-strong: var(--eds-color-neutral-700);
+  --eds-theme-color-icon-neutral-strong-hover: var(--eds-color-neutral-800);
+  --eds-theme-color-icon-neutral-subtle: var(--eds-color-neutral-500);
+  --eds-theme-color-icon-neutral-subtle-hover: var(--eds-color-neutral-600);
+  --eds-theme-color-icon-link-default: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-link-default-hover: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-brand-primary: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-brand-primary-hover: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-utility-inverse: var(--eds-theme-color-text-utility-inverse);
+  --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
+  --eds-theme-color-icon-utility-success: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-utility-success-hover: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-utility-error: var(--eds-color-other-ruby-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-utility-error-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-complete: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-complete-hover: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-revise: var(--eds-color-neutral-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-revise-hover: var(--eds-color-neutral-black); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-stop: var(--eds-color-other-ruby-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-grade-stop-hover: var(--eds-color-other-ruby-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-disabled: var(--eds-color-neutral-300);
+  --eds-theme-color-modal-brand-header-background: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-radio-brand-background: var(--eds-color-brand-grape-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
+  --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
+  --eds-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
+  --eds-theme-color-text-neutral-subtle: var(--eds-color-neutral-600);
+  --eds-theme-color-text-utility-default-primary: var(--eds-color-blue-850);
+  --eds-theme-color-text-utility-default-primary-hover: var(--eds-color-blue-900);
+  --eds-theme-color-text-utility-default-primary-active: var(--eds-color-blue-950);
+  --eds-theme-color-text-utility-default-secondary: var(--eds-color-neutral-550);
+  --eds-theme-color-text-utility-default-secondary-hover: var(--eds-color-neutral-650);
+  --eds-theme-color-text-utility-default-secondary-active: var(--eds-color-neutral-750);
+  --eds-theme-color-text-utility-interactive-primary: var(--eds-color-blue-850);
+  --eds-theme-color-text-utility-interactive-primary-hover: var(--eds-color-blue-900);
+  --eds-theme-color-text-utility-interactive-primary-active: var(--eds-color-blue-950);
+  --eds-theme-color-text-utility-interactive-primary-visited: var(--eds-color-blue-850);
+  --eds-theme-color-text-utility-interactive-secondary: var(--eds-color-blue-550);
+  --eds-theme-color-text-utility-interactive-secondary-hover: var(--eds-color-blue-650);
+  --eds-theme-color-text-utility-interactive-secondary-active: var(--eds-color-blue-750);
+  --eds-theme-color-text-utility-interactive-secondary-visited: var(--eds-color-blue-550);
+  --eds-theme-color-text-utility-interactive-visited: var(--eds-color-purple-550); /* @deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead */
+  --eds-theme-color-text-utility-critical: var(--eds-color-red-650);
+  --eds-theme-color-text-utility-critical-hover: var(--eds-color-red-750);
+  --eds-theme-color-text-utility-critical-active: var(--eds-color-red-800);
+  --eds-theme-color-text-utility-favorable: var(--eds-color-green-550);
+  --eds-theme-color-text-utility-favorable-hover: var(--eds-color-green-650);
+  --eds-theme-color-text-utility-favorable-active: var(--eds-color-green-750);
+  --eds-theme-color-text-utility-warning: var(--eds-color-yellow-550);
+  --eds-theme-color-text-utility-warning-hover: var(--eds-color-yellow-650);
+  --eds-theme-color-text-utility-warning-active: var(--eds-color-yellow-750);
+  --eds-theme-color-text-utility-informational: var(--eds-color-blue-550);
+  --eds-theme-color-text-utility-informational-hover: var(--eds-color-blue-650);
+  --eds-theme-color-text-utility-informational-active: var(--eds-color-blue-750);
+  --eds-theme-color-text-utility-disabled-primary: var(--eds-color-neutral-350);
+  --eds-theme-color-text-utility-disabled-secondary: var(--eds-color-neutral-200);
+  --eds-theme-color-text-utility-placeholder: var(--eds-color-neutral-550);
+  --eds-theme-color-text-utility-success: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-utility-error: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-grade-complete: var(--eds-color-other-mint-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-grade-revise: var(--eds-color-neutral-800); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-grade-stop: var(--eds-color-other-ruby-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-text-disabled: var(--eds-color-neutral-300);
+  --eds-theme-color-text-brand-primary: var(--eds-color-brand-grape-700); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. Please use eds-theme-color-text-brand-default instead. */
+  --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
+  --eds-theme-color-text-highlight-background: var(--eds-color-other-yellow-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-icon-utility-default-primary: var(--eds-theme-color-text-utility-default-primary);
+  --eds-theme-color-icon-utility-default-primary-hover: var(--eds-theme-color-text-utility-default-primary-hover);
+  --eds-theme-color-icon-utility-default-primary-active: var(--eds-theme-color-text-utility-default-primary-active);
+  --eds-theme-color-icon-utility-default-secondary: var(--eds-theme-color-text-utility-default-secondary);
+  --eds-theme-color-icon-utility-default-secondary-hover: var(--eds-theme-color-text-utility-default-secondary-hover);
+  --eds-theme-color-icon-utility-default-secondary-active: var(--eds-theme-color-text-utility-default-secondary-active);
+  --eds-theme-color-icon-utility-interactive-primary: var(--eds-theme-color-text-utility-interactive-primary);
+  --eds-theme-color-icon-utility-interactive-primary-hover: var(--eds-theme-color-text-utility-interactive-primary-hover);
+  --eds-theme-color-icon-utility-interactive-primary-active: var(--eds-theme-color-text-utility-interactive-primary-active);
+  --eds-theme-color-icon-utility-interactive-primary-visited: var(--eds-theme-color-text-utility-interactive-primary-visited);
+  --eds-theme-color-icon-utility-interactive-secondary: var(--eds-theme-color-text-utility-interactive-secondary);
+  --eds-theme-color-icon-utility-interactive-secondary-hover: var(--eds-theme-color-text-utility-interactive-secondary-hover);
+  --eds-theme-color-icon-utility-interactive-secondary-active: var(--eds-theme-color-text-utility-interactive-secondary-active);
+  --eds-theme-color-icon-utility-interactive-secondary-visited: var(--eds-theme-color-text-utility-interactive-secondary-visited);
+  --eds-theme-color-icon-utility-interactive-visited: var(--eds-theme-color-text-utility-interactive-visited); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-utility-critical: var(--eds-theme-color-text-utility-critical);
+  --eds-theme-color-icon-utility-critical-hover: var(--eds-theme-color-text-utility-critical-hover);
+  --eds-theme-color-icon-utility-critical-active: var(--eds-theme-color-text-utility-critical-active);
+  --eds-theme-color-icon-utility-favorable: var(--eds-theme-color-text-utility-favorable);
+  --eds-theme-color-icon-utility-favorable-hover: var(--eds-theme-color-text-utility-favorable-hover);
+  --eds-theme-color-icon-utility-favorable-active: var(--eds-theme-color-text-utility-favorable-active);
+  --eds-theme-color-icon-utility-warning: var(--eds-theme-color-text-utility-warning);
+  --eds-theme-color-icon-utility-warning-hover: var(--eds-theme-color-text-utility-warning-hover);
+  --eds-theme-color-icon-utility-warning-active: var(--eds-theme-color-text-utility-warning-active);
+  --eds-theme-color-icon-utility-informational: var(--eds-theme-color-text-utility-informational);
+  --eds-theme-color-icon-utility-informational-hover: var(--eds-theme-color-text-utility-informational-hover);
+  --eds-theme-color-icon-utility-informational-active: var(--eds-theme-color-text-utility-informational-active);
+  --eds-theme-color-icon-utility-disabled-primary: var(--eds-theme-color-text-utility-disabled-primary);
+  --eds-theme-color-icon-utility-disabled-secondary: var(--eds-theme-color-text-utility-disabled-secondary);
+  --eds-theme-color-icon-utility-placeholder: var(--eds-theme-color-text-utility-placeholder);
 }
