@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-const stylelint = require('stylelint');
+import stylelint from 'stylelint';
 
 const ruleName = 'eds/no-tier-1-color-variable';
 
@@ -39,4 +39,4 @@ function rule(actual) {
 
 rule.ruleName = ruleName;
 rule.messages = messages;
-module.exports = rule;
+export default rule;

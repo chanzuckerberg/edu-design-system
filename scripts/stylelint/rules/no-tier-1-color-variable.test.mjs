@@ -1,7 +1,7 @@
-const getTestRule = require('jest-preset-stylelint/getTestRule');
-const { messages, ruleName } = require('./no-tier-1-color-variable');
+import getTestRule from 'jest-preset-stylelint/getTestRule';
+import { messages, ruleName } from './no-tier-1-color-variable.mjs';
 
-const testRule = getTestRule({ plugins: ['./scripts/stylelint/index.js'] });
+const testRule = getTestRule({ plugins: ['./scripts/stylelint/index.mjs'] });
 
 testRule({
   ruleName,

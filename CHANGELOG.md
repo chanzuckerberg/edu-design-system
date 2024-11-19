@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.6.0...v15.7.0) (2024-11-18)
+
+
+### Features
+
+* **InputChip:** add 1.0 component ([#2097](https://github.com/chanzuckerberg/edu-design-system/issues/2097)) ([2f68041](https://github.com/chanzuckerberg/edu-design-system/commit/2f68041191bffd02f5843839eac7a18c96079dd7))
+* **Tag:** update to 2.0 styles ([#2087](https://github.com/chanzuckerberg/edu-design-system/issues/2087)) ([a344222](https://github.com/chanzuckerberg/edu-design-system/commit/a3442228991c866ca3c8c62137085cf1ca2a3b48))
+
+
+### Bug Fixes
+
+* **deps:** update dependency ts-morph to v24 ([#2102](https://github.com/chanzuckerberg/edu-design-system/issues/2102)) ([350c72b](https://github.com/chanzuckerberg/edu-design-system/commit/350c72b244a85a053fc943224f019227d1bf4729))
+
 ## [15.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.5.0...v15.6.0) (2024-11-05)
 
 

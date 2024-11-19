@@ -1,7 +1,0 @@
-/*------------------------------------*\
-    # TAG STORIES
-\*------------------------------------*/
-
-.tagList > :not(:last-child) {
-  margin-right: calc(var(--eds-size-half) / 16 * 1rem);
-}

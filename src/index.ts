@@ -36,6 +36,7 @@ export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
 export { default as Icon } from './components/Icon';
 export { default as InlineNotification } from './components/InlineNotification';
+export { default as InputChip } from './components/InputChip';
 export { default as InputField } from './components/InputField';
 export { default as Link } from './components/Link';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
