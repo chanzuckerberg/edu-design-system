@@ -5,8 +5,6 @@
     formatEdsTokens,
   } = require('./bin/_util');
 
-  console.log(StyleDictionary.transformGroup);
-
   const EDSStyleDictionary = new StyleDictionary({
     source: ['src/design-tokens/**/*.json'],
     platforms: {
@@ -64,7 +62,7 @@
             destination: 'lib/tokens/json/theme-base.json',
             filter: function (token) {
               // don't allow theming on legacy tokens
-              // TODO: remove filter once all legacy tokens are removed
+              // TODO(next-major): remove filter once all legacy tokens are removed
               return token.attributes.category !== 'legacy';
             },
           },
@@ -93,7 +91,7 @@
     name: 'json/tailwind-utility-config',
     format: function ({ dictionary }) {
       const minifiedCssDictionary = minifyDictionaryUsingFormat(
-        dictionary.properties,
+        dictionary.tokens,
         (obj) => `${obj.value}`,
       );
       formatEdsTokens(minifiedCssDictionary);
@@ -114,7 +112,7 @@
     name: 'json/value',
     format: function ({ dictionary }) {
       return JSON.stringify(
-        minifyDictionaryUsingFormat(dictionary.properties, (obj) => ({
+        minifyDictionaryUsingFormat(dictionary.tokens, (obj) => ({
           value: obj.value,
         })),
         null,
@@ -123,5 +121,6 @@
     },
   });
 
+  // TODO: enable? await EDSStyleDictionary.cleanAllPlatforms();
   await EDSStyleDictionary.buildAllPlatforms();
 })();
