@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 (async function () {
-  const StyleDictionary = require('style-dictionary');
+  const StyleDictionary = (await import('style-dictionary')).default;
   const {
     formatEdsTokens,
     getConfig,
@@ -21,7 +21,7 @@
 
   StyleDictionary.registerFormat({
     name: 'json/tailwind-utility-config',
-    formatter: function (dictionary) {
+    format: function (dictionary) {
       const minifiedCssDictionary = minifyDictionaryUsingFormat(
         dictionary.properties,
         (obj) => `${obj.value}`,
@@ -31,11 +31,11 @@
     },
   });
 
-  const EDSStyleDictionary = StyleDictionary.extend({
+  const EDSStyleDictionary = new StyleDictionary({
     source: [config.src + 'app-theme.json'],
     platforms: {
       css: {
-        transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
+        transforms: [...StyleDictionary.transformGroup.css, 'name/kebab'],
         buildPath: config.dest,
         files: [
           {
@@ -63,8 +63,10 @@
     },
   });
 
+  await EDSStyleDictionary.hasInitialized;
+
   try {
-    EDSStyleDictionary.buildAllPlatforms();
+    await EDSStyleDictionary.buildAllPlatforms();
   } catch (error) {
     // TODO: if theme has things not in base, error showing where the conflict
     console.error('EDS theming error:', error.message);
