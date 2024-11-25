@@ -2,7 +2,7 @@
 import './tokens-dist/css/variables.css';
 
 /**
- * 1.x component exports
+ * 1.x component theme exports
  */
 export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
@@ -21,7 +21,7 @@ export { default as Text } from './components/Text';
 export { default as Toggle } from './components/Toggle';
 
 /**
- * 2.x component exports
+ * 2.x component theme exports
  */
 export { default as Accordion } from './components/Accordion';
 export { default as AppNotification } from './components/AppNotification';
@@ -49,6 +49,7 @@ export { default as PopoverContainer } from './components/PopoverContainer';
 export { default as PopoverListItem } from './components/PopoverListItem';
 export { default as Radio } from './components/Radio';
 export { default as Select } from './components/Select';
+export { default as SelectionChip } from './components/SelectionChip';
 export { default as TabGroup } from './components/TabGroup';
 export { default as TextareaField } from './components/TextareaField';
 export { default as ToastNotification } from './components/ToastNotification';
