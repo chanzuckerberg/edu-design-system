@@ -2051,7 +2051,7 @@ __metadata:
     "@popperjs/core": "npm:^2.11.8"
     "@rollup/plugin-node-resolve": "npm:^15.3.0"
     "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@size-limit/file": "npm:^8.2.6"
+    "@size-limit/file": "npm:^11.1.6"
     "@storybook/addon-a11y": "npm:^8.4.2"
     "@storybook/addon-essentials": "npm:^8.4.2"
     "@storybook/addon-interactions": "npm:^8.4.2"
@@ -4376,14 +4376,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "@size-limit/file@npm:8.2.6"
-  dependencies:
-    semver: "npm:7.5.3"
+"@size-limit/file@npm:^11.1.6":
+  version: 11.1.6
+  resolution: "@size-limit/file@npm:11.1.6"
   peerDependencies:
-    size-limit: 8.2.6
-  checksum: 10/bfff3d28e21752eabb64b94bb1d5741fe0293a1a639e6c027051a1e839b4cb67a14fa9d3d4c01ffee69eeb7fdfafbf94f8f08647363e9c2370fdfed785e2b099
+    size-limit: 11.1.6
+  checksum: 10/5d26178cb9488d4ec8446c4cfee770a48450755636984ce0748255e3782555cf0a7cd944f879ad3dc5e661e6b57b0996b0feead72a73596b8d13aef6d2a0bfcf
   languageName: node
   linkType: hard
 
@@ -18071,17 +18069,6 @@ __metadata:
   bin:
     semver: bin/semver
   checksum: 10/fca14418a174d4b4ef1fecb32c5941e3412d52a4d3d85165924ce3a47fbc7073372c26faf7484ceb4bbc2bde25880c6b97e492473dc7e9708fdfb1c6a02d546e
-  languageName: node
-  linkType: hard
-
-"semver@npm:7.5.3":
-  version: 7.5.3
-  resolution: "semver@npm:7.5.3"
-  dependencies:
-    lru-cache: "npm:^6.0.0"
-  bin:
-    semver: bin/semver.js
-  checksum: 10/80b4b3784abff33bacf200727e012dc66768ed5835441e0a802ba9f3f5dd6b10ee366294711f5e7e13d73b82a6127ea55f11f9884d35e76a6a618dc11bc16ccf
   languageName: node
   linkType: hard
 
