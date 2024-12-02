@@ -2097,7 +2097,7 @@ __metadata:
     identity-obj-proxy: "npm:^3.0.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
-    jest-preset-stylelint: "npm:^6.3.2"
+    jest-preset-stylelint: "npm:^7.1.0"
     jsonfile: "npm:^6.1.0"
     lilconfig: "npm:^3.1.2"
     lint-staged: "npm:^15.2.10"
@@ -12936,12 +12936,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-preset-stylelint@npm:^6.3.2":
-  version: 6.3.2
-  resolution: "jest-preset-stylelint@npm:6.3.2"
+"jest-preset-stylelint@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "jest-preset-stylelint@npm:7.1.0"
   peerDependencies:
     jest: ^29.0.2
-  checksum: 10/1d96bb19548147d88438095853ad5f66b7b69bea3df83b57c5395f59565429649f08b7a6322e80dee2388d04b4234ced40ccf8d50e58a6df6404dcbc29dfff33
+  checksum: 10/b0ec9b68f756ed89a8e50c9a58cdfabd6298314d1b12e1d3f10a7b6cca76799e88671c266fb70bc8c180e4c8f3c4dba4e6f15f57e90655ad34582720b5112d7c
   languageName: node
   linkType: hard
 
