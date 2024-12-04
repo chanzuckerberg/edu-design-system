@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './Grid.module.css';
 
-export interface Props {
+export type GridProps = {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -35,9 +35,9 @@ export interface Props {
     | '4up'
     | '1-2-4up'
     | '1-2-1up';
-}
+};
 
-export interface GridItemProps {
+export type GridItemProps = {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -46,7 +46,7 @@ export interface GridItemProps {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-}
+};
 
 /**
  * The Grid component is deprecated and will be removed in an upcoming release.
@@ -64,7 +64,7 @@ export const Grid = ({
   children,
   gap,
   ...other
-}: Props) => {
+}: GridProps) => {
   const componentClassName = clsx(
     styles['grid'],
     variant && styles[`grid--${variant}`],

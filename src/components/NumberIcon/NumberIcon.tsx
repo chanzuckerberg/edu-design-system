@@ -7,7 +7,7 @@ import Text from '../Text';
 
 import styles from './NumberIcon.module.css';
 
-export interface Props {
+export type NumberIconProps = {
   // Component API
   /**
    * (Required) Screen-reader text for the number icon.
@@ -36,7 +36,7 @@ export interface Props {
    * Indication of the status of the referenced item
    */
   status?: 'completed' | 'incomplete' | 'default';
-}
+};
 
 /**
  * `import {NumberIcon} from "@chanzuckerberg/eds";`
@@ -51,7 +51,7 @@ export const NumberIcon = ({
   status = 'default',
   size = 'lg',
   ...other
-}: Props) => {
+}: NumberIconProps) => {
   const componentClassName = clsx(
     className,
     styles['number-icon'],

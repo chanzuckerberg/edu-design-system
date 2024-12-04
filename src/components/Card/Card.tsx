@@ -9,7 +9,7 @@ import Text from '../Text';
 
 import styles from './Card.module.css';
 
-export interface CardProps extends HTMLAttributes<HTMLElement> {
+export type CardProps = HTMLAttributes<HTMLElement> & {
   // Component API
   /**
    * Child node(s) that can be nested inside component
@@ -55,8 +55,8 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
    * Class to adjust top stripe background color. Choose from brand-background tokens utility classes.
    */
   topStripeColor?: string;
-}
-export interface CardSubComponentProps {
+};
+export type CardSubComponentProps = {
   // Component API
   /**
    * Child node(s) that can be nested inside component
@@ -66,9 +66,9 @@ export interface CardSubComponentProps {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-}
+};
 
-export interface CardHeaderProps {
+export type CardHeaderProps = {
   // Component API
   /**
    * Child node(s) that can be nested inside component. Used in place of any of the above named slots.
@@ -103,7 +103,7 @@ export interface CardHeaderProps {
    * The title/heading of the component
    */
   title?: string;
-}
+};
 
 /**
  * `import {Card} from "@chanzuckerberg/eds";`

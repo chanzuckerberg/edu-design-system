@@ -5,7 +5,7 @@ import React from 'react';
 import Text from '../Text';
 import styles from './Label.module.css';
 
-export interface Props {
+export type LabelProps = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -34,7 +34,7 @@ export interface Props {
    * The label text string
    */
   text: string;
-}
+};
 
 /**
  * `import {Label} from "@chanzuckerberg/eds";`
@@ -50,7 +50,7 @@ export const Label = ({
   required = true,
   text,
   ...other
-}: Props) => {
+}: LabelProps) => {
   const componentClassName = clsx(
     styles['label'],
     hideLabel && styles['u-is-vishidden'],

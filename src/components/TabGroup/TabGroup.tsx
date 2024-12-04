@@ -24,7 +24,7 @@ import Icon, { type IconName } from '../Icon';
 
 import styles from './TabGroup.module.css';
 
-export interface TabGroupProps {
+export type TabGroupProps = {
   // Component API
   /**
    * Reference to another element that describes the purpose of the set of tabs.
@@ -77,9 +77,9 @@ export interface TabGroupProps {
    * **Default is `"default"`**.
    */
   variant?: 'default' | 'inverse';
-}
+};
 
-export interface TabProps {
+export type TabProps = {
   // Component API
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title
@@ -118,7 +118,7 @@ export interface TabProps {
    * **NOTE**: this cannot be used with `icon`
    */
   illustration?: ReactNode;
-}
+};
 
 type TabButtonProps = RenderProps<TabContextArgs>;
 export type TabContextArgs = {

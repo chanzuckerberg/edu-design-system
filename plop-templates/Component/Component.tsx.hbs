@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './{{pascalCase name}}.module.css';
 
-export interface Props {
+export type {{pascalCase name}}Props = {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -10,7 +10,7 @@ export interface Props {
   className?: string;
   // Design API
   // Insert props/values as defined in figma for {{pascalCase name}}
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -21,9 +21,9 @@ export interface Props {
  */
 export const {{pascalCase name}} = ({
   className,
-  // Add other deferenced props to use
+  // Add other destructured props to reference
   ...other
-}: Props) => {
+}: {{pascalCase name}}Props) => {
   const componentClassName = clsx(styles['{{dashCase name}}'], className);
 
   return (

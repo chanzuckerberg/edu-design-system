@@ -4,7 +4,8 @@ import React from 'react';
 import { Heading } from '../../../src/';
 import type { HeadingElement } from '../../../src/components/Heading';
 import styles from './Section.module.css';
-export interface Props {
+
+export type SectionProps = {
   /**
    * Align variations:
    * - **center** yields a center-aligned section header
@@ -48,7 +49,7 @@ export interface Props {
    * Slot for node to appear to the left of the section title. Typically used for images or avatars
    */
   titleBefore?: ReactNode;
-}
+};
 
 /**
  * `import {Section} from "@chanzuckerberg/eds";`
@@ -67,7 +68,7 @@ export const Section = ({
   titleAfter,
   titleBefore,
   ...other
-}: Props) => {
+}: SectionProps) => {
   const componentClassName = clsx(
     styles['section'],
     align === 'center' && styles['section--center'],

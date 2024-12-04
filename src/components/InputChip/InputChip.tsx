@@ -6,7 +6,7 @@ import Text from '../Text';
 
 import styles from './InputChip.module.css';
 
-export interface Props {
+export type InputChipProps = {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -33,7 +33,7 @@ export interface Props {
    * The display size of the chip
    */
   size?: Extract<Size, 'sm' | 'md'>;
-}
+};
 
 /**
  * `import {InputChip} from "@chanzuckerberg/eds";`
@@ -48,7 +48,7 @@ export const InputChip = ({
   onClick,
   size = 'md',
   ...other
-}: Props) => {
+}: InputChipProps) => {
   const componentClassName = clsx(
     styles['input-chip'],
     isDisabled && styles[`input-chip--disabled`],

@@ -207,7 +207,8 @@ Examples:
 
 ```css
 .dropdown-button__icon {
-  transition: transform calc(var(--eds-anim-move-medium) * 1s) var(--eds-anim-ease);
+  transition: transform calc(var(--eds-anim-move-medium) * 1s)
+    var(--eds-anim-ease);
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -368,7 +369,7 @@ import { Icon } from '../Icon/Icon';
 ### Prop Type definitions
 
 ```tsx
-export interface ComponentNameProps {
+export type ComponentNameProps = {
   /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
    */
@@ -388,7 +389,7 @@ The comment should begin with an import example, include a general description o
 
 Example:
 
-```tsx
+````tsx
 /**
  * `import {ButtonGroup} from "@chanzuckerberg/eds";`
  *
@@ -408,13 +409,13 @@ Example:
  * ```
  */
  export const ButtonGroup = ({ ... })
-```
+````
 
 Do not use [jsdoc tags](https://devhints.io/jsdoc) (e.g. `@example`) if possible because these will break the documentation in storybook and cause all following text to not be shown on the page. For important jsdoc tags that we really want to include, place them at the end of the comment to avoid hiding comment content. For example, we use the `@deprecated` tag so Visual Studio Code will indicate a component is deprecated for developers, but we place that at the end of a component's docstring to avoid disrupting any of the other text.
 
 Example:
 
-```tsx
+````tsx
 /**
  * The Banner component is deprecated and will be removed in an upcoming release.
  *
@@ -437,7 +438,7 @@ Example:
  *
  * @deprecated
  */
-```
+````
 
 ### Export module
 
