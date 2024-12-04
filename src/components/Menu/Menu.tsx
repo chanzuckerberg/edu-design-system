@@ -20,7 +20,7 @@ import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 import styles from './Menu.module.css';
 
-// Note: added className here to prevent private interface collision within HeadlessUI
+// Note: added className here to prevent private API collision within HeadlessUI
 export type MenuProps = ExtractProps<typeof HeadlessMenu> &
   PopoverOptions & {
     // TODO: document children?
