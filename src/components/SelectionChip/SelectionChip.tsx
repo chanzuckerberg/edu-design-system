@@ -56,7 +56,6 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
       name,
       onChange,
       type = 'checkbox',
-      // Add other deferenced props to use
       ...other
     },
     ref,
