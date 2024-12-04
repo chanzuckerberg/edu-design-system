@@ -21,7 +21,7 @@ export type {{pascalCase name}}Props = {
  */
 export const {{pascalCase name}} = ({
   className,
-  // Add other deferenced props to use
+  // Add other destructured props to reference
   ...other
 }: {{pascalCase name}}Props) => {
   const componentClassName = clsx(styles['{{dashCase name}}'], className);
