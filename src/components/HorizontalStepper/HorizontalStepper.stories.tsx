@@ -14,7 +14,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-1.3'],
+    badges: ['api-1.3', 'theme-1.0'],
   },
 
   decorators: [(Story) => <div className="m-4">{Story()}</div>],

@@ -6,7 +6,7 @@ export default {
   component: PopoverListItem,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.2', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
 } as Meta<Args>;
 

@@ -14,7 +14,7 @@ export default {
   component: Card,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
   args: {
@@ -378,7 +378,7 @@ export const WhileDragging: Story = {
  */
 export const CancelMembership: Story = {
   parameters: {
-    badges: ['intro-1.0', 'current-2.0', 'implementationExample'],
+    badges: ['api-1.0', 'theme-2.0', 'implementationExample'],
   },
   args: {
     children: (

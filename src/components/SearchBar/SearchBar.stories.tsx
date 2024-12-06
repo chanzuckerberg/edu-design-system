@@ -9,7 +9,7 @@ export default {
   component: SearchBar,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.NEEDS_REVISION, 'intro-1.1', 'current-1.3'],
+    badges: [BADGE.NEEDS_REVISION, 'api-1.3', 'theme-2.0'],
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },

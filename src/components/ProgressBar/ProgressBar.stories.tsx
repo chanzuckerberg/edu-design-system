@@ -13,7 +13,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.2', 'current-1.3'],
+    badges: ['api-1.3', 'theme-1.0'],
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },

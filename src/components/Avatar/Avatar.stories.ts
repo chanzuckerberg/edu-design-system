@@ -5,7 +5,7 @@ export default {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
-    badges: ['intro-1.3', 'current-1.3'],
+    badges: ['api-1.3', 'theme-1.0'],
     layout: 'centered',
   },
 } as Meta<typeof Avatar>;

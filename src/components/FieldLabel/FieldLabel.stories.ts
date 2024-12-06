@@ -10,7 +10,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-2.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
 } as Meta<typeof FieldLabel>;
 

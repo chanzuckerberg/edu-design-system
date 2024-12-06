@@ -7,7 +7,7 @@ export default {
   title: 'Components/SelectionChip',
   component: SelectionChip,
   parameters: {
-    badges: ['intro-1.0', 'current-1.0'],
+    badges: ['api-1.0', 'theme-2.0'],
   },
 } as Meta<Args>;
 

@@ -10,7 +10,7 @@ const meta: Meta<typeof Select> = {
   component: Select,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.2', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     multiple: {
@@ -700,7 +700,7 @@ export const LongOptionList: StoryObj = {
     await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
   },
   parameters: {
-    badges: ['intro-1.2', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
     layout: 'centered',
     chromatic: { delay: 450 },
     docs: {
@@ -907,7 +907,7 @@ export const OptionsRightAligned: StoryObj = {
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
-    badges: ['intro-1.2', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
     layout: 'centered',
     chromatic: { delay: 300, disableSnapshot: true },
     docs: {

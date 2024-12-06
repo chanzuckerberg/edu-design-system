@@ -11,7 +11,7 @@ export default {
   component: Table,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.1', 'current-1.3'],
+    badges: ['api-1.3', 'theme-1.0'],
   },
   argTypes: {
     children: {
@@ -296,7 +296,7 @@ export const SortableInteractive: Story = {
 export const StackedCardsExample: Story = {
   parameters: {
     layout: 'padded',
-    badges: ['intro-1.1', 'implementationExample'],
+    badges: ['api-1.3', 'implementationExample'],
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,

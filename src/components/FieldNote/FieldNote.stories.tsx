@@ -10,7 +10,7 @@ export default {
   component: FieldNote,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
 } as Meta<typeof FieldNote>;
 

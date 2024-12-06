@@ -9,7 +9,7 @@ export default {
   component: Label,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-1.3'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
 } as Meta<Args>;
 

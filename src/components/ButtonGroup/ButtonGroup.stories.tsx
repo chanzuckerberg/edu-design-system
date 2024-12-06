@@ -24,7 +24,7 @@ export default {
     },
   },
   parameters: {
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 } as Meta<typeof ButtonGroup>;
