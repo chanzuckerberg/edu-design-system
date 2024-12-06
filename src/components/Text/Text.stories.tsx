@@ -8,7 +8,7 @@ export default {
   component: Text,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-1.3', 'theme-2.0'],
   },
   argTypes: {
     children: {

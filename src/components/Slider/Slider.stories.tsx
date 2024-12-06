@@ -14,7 +14,7 @@ const meta: Meta<typeof Slider> = {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.3', 'current-1.3'],
+    badges: ['api-1.3', 'theme-1.0'],
   },
   args: {
     className: 'w-96',
@@ -154,7 +154,7 @@ const moodData = [
 
 export const UsingInputDisplay: Story = {
   parameters: {
-    badges: ['intro-1.3', 'implementationExample'],
+    badges: ['api-1.3', 'implementationExample'],
     axe: {
       disabledRules: ['color-contrast'], // adding for disabled field example
     },
@@ -188,7 +188,7 @@ export const UsingInputDisplay: Story = {
 
 export const UsingControlButtons: Story = {
   parameters: {
-    badges: ['intro-1.3', 'current-1.3', 'implementationExample'],
+    badges: ['api-1.3', 'current-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 1, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -231,7 +231,7 @@ export const UsingControlButtons: Story = {
 
 export const WithHighlightedContent: Story = {
   parameters: {
-    badges: ['intro-1.3', 'implementationExample'],
+    badges: ['api-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -282,7 +282,7 @@ export const WithHighlightedContent: Story = {
 
 export const WithVisualLabel: Story = {
   parameters: {
-    badges: ['intro-1.3', 'implementationExample'],
+    badges: ['api-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -324,7 +324,7 @@ export const WithVisualLabel: Story = {
 
 export const WithMultipleVisualLabels: Story = {
   parameters: {
-    badges: ['intro-1.3', 'implementationExample'],
+    badges: ['api-1.3', 'implementationExample'],
   },
   render: ({ min = 0, max = 100, step = 25, value = 50, ...rest }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks

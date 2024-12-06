@@ -12,7 +12,7 @@ const meta: Meta<typeof InputField> = {
   component: InputField,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },
@@ -345,7 +345,7 @@ export const WithBothMaxAndRecommendedLength: Story = {
  */
 export const TabularInput: Story = {
   parameters: {
-    badges: ['intro-1.1', 'implementationExample'],
+    badges: ['api-2.0', 'implementationExample'],
   },
   render: (args) => (
     <Table>

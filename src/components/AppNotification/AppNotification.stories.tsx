@@ -14,7 +14,7 @@ export default {
   component: AppNotification,
   parameters: {
     layout: 'centered',
-    badges: ['intro-2.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     title: 'This is an AppNotification title',

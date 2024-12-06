@@ -7,7 +7,7 @@ export default {
   title: 'Components/InputChip',
   component: InputChip,
   parameters: {
-    badges: ['intro-1.0', 'current-1.0'],
+    badges: ['api-1.0', 'theme-2.0'],
   },
   argTypes: {
     onClick: {

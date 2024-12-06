@@ -32,7 +32,7 @@ export default {
     'DataTable.DataCell': DataTableDataCell,
   },
   parameters: {
-    badges: [BADGE.BETA, 'intro-1.0', 'current-1.0'],
+    badges: [BADGE.BETA, 'api-1.0', 'theme-2.0'],
     chromatic: {
       viewports: [
         chromaticViewports.ipadMini,
