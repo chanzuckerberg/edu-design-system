@@ -19,7 +19,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
   },
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.3', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   decorators: [(Story) => <div className="p-8">{Story()}</div>],
 };

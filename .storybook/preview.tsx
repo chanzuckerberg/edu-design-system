@@ -25,35 +25,35 @@ export const decorators = [
   ),
 ];
 
-function createInitialReleaseConfig(usingLabel: string) {
+function createComponentVersion(usingLabel: string) {
   return {
-    [`intro-${usingLabel}`]: {
+    [`api-${usingLabel}`]: {
       styles: {
         backgroundColor: '#ffffff',
         borderColor: '#000000',
         color: '#000000',
       },
-      title: `Introduced: ${usingLabel}`,
+      title: `Component API Version: ${usingLabel}`,
       tooltip: {
-        title: `Introduced in v${usingLabel}`,
-        desc: `This component was introduced in EDS Design version ${usingLabel}`,
+        title: `Code / API v${usingLabel}`,
+        desc: `This component's API version is at ${usingLabel}`,
       },
     },
   };
 }
 
-function createCurrentReleaseConfig(usingLabel: string) {
+function createThemeVersion(usingLabel: string) {
   return {
-    [`current-${usingLabel}`]: {
+    [`theme-${usingLabel}`]: {
       styles: {
         backgroundColor: '#ffffff',
         borderColor: '#000000',
         color: '#000000',
       },
-      title: `Current: ${usingLabel}`,
+      title: `Theme Version: ${usingLabel}`,
       tooltip: {
-        title: `Current version v${usingLabel}`,
-        desc: `This component corresponds to EDS Design version ${usingLabel}`,
+        title: `Current Theme version v${usingLabel}`,
+        desc: `This component's theme corresponds to Edu Design System Version is at ${usingLabel}`,
       },
     },
   };
@@ -79,15 +79,13 @@ export const parameters: Preview['parameters'] = {
     ],
   },
   badgesConfig: {
-    ...createInitialReleaseConfig('2.0'),
-    ...createInitialReleaseConfig('1.3'),
-    ...createInitialReleaseConfig('1.2'),
-    ...createInitialReleaseConfig('1.1'),
-    ...createInitialReleaseConfig('1.0'),
-    ...createCurrentReleaseConfig('1.0'),
-    ...createCurrentReleaseConfig('1.3'),
-    ...createCurrentReleaseConfig('2.0'),
-    ...createCurrentReleaseConfig('2.1'),
+    ...createComponentVersion('2.0'),
+    ...createComponentVersion('1.3'),
+    ...createComponentVersion('1.2'),
+    ...createComponentVersion('1.1'),
+    ...createComponentVersion('1.0'),
+    ...createThemeVersion('1.0'),
+    ...createThemeVersion('2.0'),
     implementationExample: {
       styles: {
         backgroundColor: '#ffffff',
