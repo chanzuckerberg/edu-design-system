@@ -9,7 +9,7 @@ export default {
   component: Fieldset,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   // TODO: fix up the sub-component documentation for Fieldset.Legend
   subcomponents: {
@@ -122,7 +122,7 @@ export const FieldsetLegendWithSubtitle: StoryObj<LegendArgs> = {
  * ```
  */
 export const WithCheckboxes: StoryObj<Args> = {
-  parameters: { badges: ['intro-1.3', 'current-2.0', 'implementationExample'] },
+  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
   args: {
     fieldNote: 'Attached field note to field set',
     children: (
@@ -157,7 +157,7 @@ export const WithCheckboxes: StoryObj<Args> = {
 };
 
 export const WithDisabledCheckboxes: StoryObj<Args> = {
-  parameters: { badges: ['intro-1.3', 'current-2.0', 'implementationExample'] },
+  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
   args: {
     fieldNote: 'Attached field note to field set',
     isDisabled: true,
@@ -166,7 +166,7 @@ export const WithDisabledCheckboxes: StoryObj<Args> = {
 };
 
 export const WithErrorCheckboxes: StoryObj<Args> = {
-  parameters: { badges: ['intro-1.3', 'current-2.0', 'implementationExample'] },
+  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
   args: {
     fieldNote: 'Attached field note to field set',
     status: 'critical',
@@ -175,7 +175,7 @@ export const WithErrorCheckboxes: StoryObj<Args> = {
 };
 
 export const WithRadioButton: StoryObj<Args> = {
-  parameters: { badges: ['intro-1.3', 'current-2.0', 'implementationExample'] },
+  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
   args: {
     fieldNote: 'Attached field note to field set',
     children: (
@@ -210,7 +210,7 @@ export const WithRadioButton: StoryObj<Args> = {
 };
 
 export const WithDisabledRadioButton: StoryObj<Args> = {
-  parameters: { badges: ['intro-1.3', 'current-2.0', 'implementationExample'] },
+  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
   args: {
     fieldNote: 'Attached field note to field set',
     isDisabled: true,
@@ -219,7 +219,7 @@ export const WithDisabledRadioButton: StoryObj<Args> = {
 };
 
 export const WithErrorRadioButton: StoryObj<Args> = {
-  parameters: { badges: ['intro-1.3', 'current-2.0', 'implementationExample'] },
+  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
   args: {
     fieldNote: 'Attached field note to field set',
     status: 'critical',

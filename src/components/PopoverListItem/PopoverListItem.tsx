@@ -5,7 +5,7 @@ import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
-export interface PopoverListItemProps {
+export type PopoverListItemProps = {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -35,7 +35,7 @@ export interface PopoverListItemProps {
    * Text below the main menu item call-to-action, briefly describing the menu item's function
    */
   subLabel?: string;
-}
+};
 
 /**
  * `import {PopoverListItem} from "@chanzuckerberg/eds";`

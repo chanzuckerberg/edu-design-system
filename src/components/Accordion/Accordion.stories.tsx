@@ -12,7 +12,7 @@ export default {
   // TODO: add subcomponents like Badge has
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.2', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
     controls: { sort: 'requiredFirst' },
   },
   args: {

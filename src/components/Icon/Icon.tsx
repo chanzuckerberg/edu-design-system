@@ -7,7 +7,7 @@ import styles from './Icon.module.css';
 export type { IconName } from '../../icons/spritemap';
 
 // TODO: export union utility type of "Extract<IconName, T> | (renderProps) => ReactNode" when updating IconName usages
-// TODO: convert to types for consistency
+// TODO(next-major): convert to types for consistency
 interface IconPropsBase {
   /**
    * CSS class names that can be appended to the component.
@@ -52,6 +52,7 @@ interface IconPropsBase {
   viewBox?: string;
 }
 
+// TODO(next-major): convert to types for consistency
 interface InformativeIconProps extends IconPropsBase {
   /**
    * The role of the icon.
@@ -63,6 +64,7 @@ interface InformativeIconProps extends IconPropsBase {
   title: string;
 }
 
+// TODO(next-major): convert to types for consistency
 interface DecorativeIconProps extends IconPropsBase {
   /**
    * The role of the icon.
@@ -76,6 +78,7 @@ interface DecorativeIconProps extends IconPropsBase {
 
 export type IconProps = DecorativeIconProps | InformativeIconProps;
 
+// TODO(next-major): convert to types for consistency
 interface SvgStyle extends CSSProperties {
   '--icon-size'?: string;
 }

@@ -7,7 +7,7 @@ export default {
   title: 'Components/Skeleton',
   component: Skeleton,
   parameters: {
-    badges: ['intro-1.2', 'current-1.3'],
+    badges: ['api-1.3', 'theme-1.0'],
     layout: 'centered',
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',

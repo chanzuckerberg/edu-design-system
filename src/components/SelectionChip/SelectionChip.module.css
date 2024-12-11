@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    # SELECTION CHIP
+\*------------------------------------*/
+
+/**
+ * SelectionChip
+ */
+.selection-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  overflow: hidden;
+
+  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem);
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
+
+  color: var(--eds-theme-color-text-utility-interactive-primary);
+  border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
+}
+
+.selection-chip__label {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.selection-chip__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  outline: none;
+}
+
+.selection-chip--has-icon {
+  padding-right: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+}
+
+.selection-chip:has(.selection-chip__input:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+}
+
+@supports not selector(:focus-visible) {
+  .selection-chip:has(.selection-chip__input:focus) {
+    outline: none;
+    box-shadow: 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+  }
+}
+
+/**
+ * Color theme tokens
+ */
+
+.selection-chip:hover {
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+}
+
+.selection-chip:active {
+  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+}
+
+.selection-chip:has(.selection-chip__input:checked) {
+  border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-interactive);
+  box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) var(--eds-theme-color-border-utility-interactive);
+  background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis);
+}
+
+.selection-chip:has(.selection-chip__input:checked):hover {
+  border-color: var(--eds-theme-color-border-utility-interactive-hover);
+  background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis-hover);
+}
+
+.selection-chip:has(.selection-chip__input:checked):active {
+  border-color: var(--eds-theme-color-border-utility-interactive-active);
+  background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis-active);
+}
+
+.selection-chip:has(.selection-chip__input:focus-visible:checked) {
+  outline: none;
+  box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) var(--eds-theme-color-border-utility-interactive), 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+}
+
+@supports not selector(:focus-visible) {
+  .selection-chip:has(.selection-chip__input:focus:checked) {
+    outline: none;
+    box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) var(--eds-theme-color-border-utility-interactive), 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+  }
+}

@@ -4,6 +4,7 @@ import Button from '../Button';
 import Text from '../Text';
 import styles from './AppNotification.module.css';
 
+// TODO(next-major): change export to type for consistency
 export interface AppNotificationProps {
   // Design API
   /**

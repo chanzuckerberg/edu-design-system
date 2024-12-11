@@ -16,7 +16,7 @@ export default {
   component: Menu,
   // TODO: Add sub-components section
   parameters: {
-    badges: ['intro-1.2', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
     layout: 'centered',
   },
   argTypes: {
@@ -224,7 +224,7 @@ export const WithCustomSecondaryButton: Story = {
  */
 export const MenuWithAvatarButton: Story = {
   parameters: {
-    badges: ['intro-1.3', 'implementationExample'],
+    badges: ['api-2.0', 'implementationExample'],
   },
   args: {
     children: (
@@ -289,7 +289,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
       iconName: 'dots-vertical',
     },
     parameters: {
-      badges: ['intro-1.2', 'implementationExample'],
+      badges: ['api-2.0', 'implementationExample'],
     },
     render: ({ iconName }) => (
       <Menu>

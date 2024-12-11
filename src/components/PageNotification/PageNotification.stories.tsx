@@ -9,7 +9,7 @@ export default {
   component: PageNotification,
   parameters: {
     layout: 'centered',
-    badges: ['intro-1.0', 'current-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     title: 'Alert title which communicates info to the user',

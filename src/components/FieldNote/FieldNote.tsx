@@ -6,7 +6,7 @@ import Icon from '../Icon';
 import type { IconName } from '../Icon';
 import styles from './FieldNote.module.css';
 
-export interface Props {
+export type FieldNoteProps = {
   // Component API
   /**
    * Child node(s) that can be nested inside component
@@ -37,7 +37,7 @@ export interface Props {
    * **Default is `"default"`**.
    */
   status?: 'default' | Extract<Status, 'warning' | 'critical'>;
-}
+};
 
 /**
  * `import {FieldNote} from "@chanzuckerberg/eds";`
@@ -52,7 +52,7 @@ export const FieldNote = ({
   icon,
   status,
   ...other
-}: Props) => {
+}: FieldNoteProps) => {
   const componentClassName = clsx(
     styles['field-note'],
     disabled && styles['field-note--disabled'],
