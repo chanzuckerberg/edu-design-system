@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.7.0...v15.8.0) (2024-12-11)
+
+
+### Features
+
+* **SelectionChip:** introduce 1.0 component ([#2112](https://github.com/chanzuckerberg/edu-design-system/issues/2112)) ([6d4a3f4](https://github.com/chanzuckerberg/edu-design-system/commit/6d4a3f42b0473306dd69a27a160df47c6a57baf1))
+
 ## [15.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.6.0...v15.7.0) (2024-11-18)
 
 
