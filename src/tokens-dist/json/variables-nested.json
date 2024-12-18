@@ -402,6 +402,10 @@
             },
             "selected": "#CEE6FF"
           },
+          "visualPageIndicator": {
+            "@": "#CFC9C7",
+            "current": "#DB458D"
+          },
           "utility": {
             "base": {
               "1": "rgb(var(--eds-color-white) / 1)",
