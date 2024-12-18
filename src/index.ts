@@ -78,3 +78,4 @@ export type { AppNotificationProps as AppNotificationV2Props } from './component
  */
 // https://headlessui.com/v1/react/transition
 export { Transition } from '@headlessui/react';
+export { default as VisualPageIndicator } from './components/VisualPageIndicator';
