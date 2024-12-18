@@ -34,4 +34,4 @@ export const FivePages: StoryObj<Args> = {
   },
 };
 
-// TODO-AH: add implementation example showing usage of state with a label for a11y handling
+// TODO: add implementation example showing usage of state with a label for a11y handling

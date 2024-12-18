@@ -26,3 +26,9 @@
 .visual-page-indicator--active {
     --visual-page-indicator-bg: var(--eds-theme-color-background-visual-page-indicator-current);
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .visual-page-indicator__item {
+        transition: none;
+    }
+}
