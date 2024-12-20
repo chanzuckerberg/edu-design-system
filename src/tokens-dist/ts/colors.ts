@@ -30,6 +30,8 @@ export const EdsThemeColorBackgroundTableRowStripe1 = '#F5FAFF';
 export const EdsThemeColorBackgroundTableRowStripe2 =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundTableRowSelected = '#CEE6FF';
+export const EdsThemeColorBackgroundVisualPageIndicator = '#CFC9C7';
+export const EdsThemeColorBackgroundVisualPageIndicatorCurrent = '#DB458D';
 export const EdsThemeColorBackgroundUtilityBase1 =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundUtilityBase2 = '#FDF9F8';

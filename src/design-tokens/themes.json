@@ -235,6 +235,16 @@
               "value": "{eds.color.blue.100}"
             }
           },
+          "visualPageIndicator": {
+            "@": {
+              "value": "{eds.color.neutral.200}",
+              "group": "color"
+            },
+            "current": {
+              "value": "{eds.theme.color.background.brand.pink}",
+              "group": "color"
+            }
+          },
           "utility": {
             "base": {
               "1": {

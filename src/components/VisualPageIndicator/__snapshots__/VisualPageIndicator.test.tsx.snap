@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VisualPageIndicator /> Default story renders snapshot 1`] = `
+<ul
+  class="visual-page-indicator"
+>
+  <li
+    class="visual-page-indicator__item visual-page-indicator--active"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+</ul>
+`;
+
+exports[`<VisualPageIndicator /> FivePages story renders snapshot 1`] = `
+<ul
+  class="visual-page-indicator"
+>
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item visual-page-indicator--active"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item"
+  />
+</ul>
+`;
+
+exports[`<VisualPageIndicator /> MinimumPages story renders snapshot 1`] = `
+<ul
+  class="visual-page-indicator"
+>
+  <li
+    class="visual-page-indicator__item"
+  />
+  <li
+    class="visual-page-indicator__item visual-page-indicator--active"
+  />
+</ul>
+`;
