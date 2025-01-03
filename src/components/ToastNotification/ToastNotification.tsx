@@ -32,7 +32,6 @@ export type ToastNotificationProps = {
    * **Default is `"manual"`**.
    */
   dismissType?: 'manual' | 'auto';
-  dissmissType?: 'manual' | 'auto'; // TODO(next-major): remove this misspelled prop at next major release
   /**
    * Keyword to characterize the state of the notification
    */
@@ -41,6 +40,8 @@ export type ToastNotificationProps = {
    * The title/heading of the notification
    */
   title: string;
+  /** @deprecated Please use `dismissType` instead */
+  dissmissType?: 'manual' | 'auto'; // TODO(next-major): remove this misspelled prop at next major release
 };
 
 /**
@@ -64,7 +65,7 @@ export const ToastNotification = ({
     className,
   );
 
-  // if both are defined, temporarily prefer the original (misspelled) prop for now, but throw a warning
+  // if both are defined, temporarily prefer the original value of dissmissType to avoid accidental overrides
   const tempDismissType =
     dissmissType && dismissType ? dissmissType : dismissType;
 
