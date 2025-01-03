@@ -31,7 +31,8 @@ export type ToastNotificationProps = {
    *
    * **Default is `"manual"`**.
    */
-  dissmissType?: 'manual' | 'auto';
+  dismissType?: 'manual' | 'auto';
+  dissmissType?: 'manual' | 'auto'; // TODO(next-major): remove this misspelled prop at next major release
   /**
    * Keyword to characterize the state of the notification
    */
@@ -49,7 +50,8 @@ export type ToastNotificationProps = {
  */
 export const ToastNotification = ({
   className,
-  dissmissType = 'manual',
+  dismissType = 'manual',
+  dissmissType,
   onDismiss,
   status = 'favorable',
   timeout = 8000,
@@ -62,22 +64,37 @@ export const ToastNotification = ({
     className,
   );
 
+  // if both are defined, temporarily prefer the original (misspelled) prop for now, but throw a warning
+  const tempDismissType =
+    dissmissType && dismissType ? dissmissType : dismissType;
+
   assertEdsUsage(
-    [!!timeout && typeof onDismiss === 'undefined' && dissmissType === 'auto'],
+    [
+      !!timeout &&
+        typeof onDismiss === 'undefined' &&
+        tempDismissType === 'auto',
+    ],
     'When using dismissType=auto, an onDismiss method must be defined',
+    'error',
+  );
+
+  // TODO(next-major): remove this misspelled prop at next major release
+  assertEdsUsage(
+    [typeof dissmissType !== 'undefined'],
+    '`dissmissType` should not be used. Use `dismissType` instead',
     'error',
   );
 
   useEffect(() => {
     const expireId =
-      dissmissType === 'auto'
+      tempDismissType === 'auto'
         ? setTimeout(() => {
             onDismiss && onDismiss();
           }, timeout)
         : undefined;
 
     return () => clearTimeout(expireId);
-  }, [onDismiss, dissmissType, timeout]);
+  }, [onDismiss, tempDismissType, timeout]);
 
   return (
     <div className={componentClassName} {...other}>
