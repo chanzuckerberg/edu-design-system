@@ -62,7 +62,7 @@ export const NotDismissable: Story = {
 export const AutoDismiss: Story = {
   args: {
     ...Default.args,
-    dissmissType: 'auto',
+    dismissType: 'auto',
     timeout: 500,
     onDismiss: () => console.log('trigger onDismiss'),
   },
@@ -111,7 +111,7 @@ const ToastNotificationManager = (args: Args) => {
           >
             <ToastNotification
               {...args}
-              dissmissType="auto"
+              dismissType="auto"
               onDismiss={() => {
                 setToasts(
                   toasts.map((thisToast) => {
