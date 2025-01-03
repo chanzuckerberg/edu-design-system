@@ -66,8 +66,7 @@ export const ToastNotification = ({
   );
 
   // if both are defined, temporarily prefer the original value of dissmissType to avoid accidental overrides
-  const tempDismissType =
-    dissmissType && dismissType ? dissmissType : dismissType;
+  const tempDismissType = dissmissType ?? dismissType;
 
   assertEdsUsage(
     [
