@@ -16,9 +16,9 @@ If you need to create a major release (e.g., one with breaking changes), it is v
 
 For an example of what this can look like, see [the release notes for EDS v13](https://github.com/chanzuckerberg/edu-design-system/releases/tag/v13.0.0).
 
-* Create a `details` block for each change, using the change text in the `summary`
-* Supply steps an engineer would take to port old code to the new format
-* If the change is very complex, link to a [codemod](https://github.com/facebook/jscodeshift) that can be run to automate the migration
+- Create a `details` block for each change, using the change text in the `summary`
+- Supply steps an engineer would take to port old code to the new format
+- If the change is very complex, link to a [codemod](https://github.com/facebook/jscodeshift) that can be run to automate the migration
 
 ---
 
@@ -89,10 +89,10 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 
 To prepare the message:
 
-* Include the package name before the version number in the release name field (e.g., "@chanzuckerberg/eds@X.Y.Z")
-* Use the same text used for the pull request description above (from CHANGELOG.md).
-* Include any additional notes from the [System Designers](https://github.com/orgs/chanzuckerberg/teams/edu-systems-designers).
-* Include the link for the built storybook in the description.
+- Include the package name before the version number in the release name field (e.g., "@chanzuckerberg/eds@X.Y.Z")
+- Use the same text used for the pull request description above (from CHANGELOG.md).
+- Include any additional notes from the [System Designers](https://github.com/orgs/chanzuckerberg/teams/edu-systems-designers).
+- Include the link for the built storybook in the description.
 
 The latter will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**.
 
@@ -100,7 +100,9 @@ The latter will automatically post to [relevant slack channels](https://slack.gi
 
 11. Lastly, run the following to "back merge" release changes to `next`:
 
-```git checkout main && git pull origin main && git checkout next && git pull && git merge main && git push```
+`git checkout main && git pull origin main && git checkout next && git pull && git merge main && yarn install && git push`
+
+**NOTE**: We run `yarn install` here to ensure any package updates saved to `next` get applied.
 
 #### Alpha release
 
