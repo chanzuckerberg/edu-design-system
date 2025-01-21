@@ -6,7 +6,7 @@
 /**
  * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
  */
- 
+
 /**
  * List of of links where each link toggles open associated information
  */
@@ -29,11 +29,9 @@
  * The color "white" is arbitrary and any non transparent color can be used here.
  */
 .tabs--scrollable-left {
-  -webkit-mask-image: -webkit-linear-gradient(
-    left,
-    transparent,
-    white 4rem
-  );
+  -webkit-mask-image: -webkit-linear-gradient(left,
+      transparent,
+      white 4rem);
 }
 
 .tabs--scrollable-left .tabs__list--align-center,
@@ -42,21 +40,17 @@
 }
 
 .tabs--scrollable-right {
-  -webkit-mask-image: -webkit-linear-gradient(
-    right,
-    transparent,
-    white 4rem
-  );
+  -webkit-mask-image: -webkit-linear-gradient(right,
+      transparent,
+      white 4rem);
 }
 
 .tabs--scrollable-left.tabs--scrollable-right {
-  -webkit-mask-image: -webkit-linear-gradient(
-    left,
-    transparent,
-    white 4rem,
-    white calc(100% - 4rem),
-    transparent 100%
-  );
+  -webkit-mask-image: -webkit-linear-gradient(left,
+      transparent,
+      white 4rem,
+      white calc(100% - 4rem),
+      transparent 100%);
 }
 
 /**
@@ -106,8 +100,6 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  border-top-left-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
-  border-top-right-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   &.eds-is-active {
     font-weight: 500;
@@ -170,13 +162,15 @@
 .tab__highlight {
   border-radius: calc(var(--eds-border-radius-full) * 1px);
   transition: bottom calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-              width calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
+    width calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease), background-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
 
-  .tabs__item.eds-is-active & {
+  .tabs__item & {
     position: absolute;
     bottom: 0;
     height: 0.25rem;
     width: 100%;
+
+    background-color: transparent;
   }
 
   .tabs__item .tabs__link:focus-visible & {
@@ -203,14 +197,11 @@
     &:focus-visible {
       box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-focus);
     }
+  }
 
-    &:hover {
-      background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
-    }
-
-    &:active {
-      background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
-    }
+  /* add in handling of showing highlight on hover */
+  .tabs__item:hover .tab__highlight {
+    background-color: var(--eds-theme-color-text-utility-interactive-primary);
   }
 
   .tabs__item.eds-is-active .tab__highlight {
@@ -227,14 +218,11 @@
     &:focus-visible {
       box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-inverse);
     }
+  }
 
-    &:hover {
-      background-color: var(--eds-theme-color-background-utility-inverse-no-emphasis-hover);
-    }
-
-    &:active {
-      background-color: var(--eds-theme-color-background-utility-inverse-no-emphasis-active);
-    }
+  /* add in handling of showing highlight on hover */
+  .tabs__item:hover .tab__highlight {
+    background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
   }
 
   .tabs__item.eds-is-active .tab__highlight {
