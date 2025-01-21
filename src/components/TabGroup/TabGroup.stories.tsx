@@ -12,7 +12,7 @@ export default {
   component: TabGroup,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-2.0', 'theme-2.0.1'],
   },
   args: {
     children: (

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.9.0...v15.10.0) (2025-01-21)
+
+
+### Features
+
+* **TabGroup:** update handling for tab item hover states ([#2124](https://github.com/chanzuckerberg/edu-design-system/issues/2124)) ([8b6cb4e](https://github.com/chanzuckerberg/edu-design-system/commit/8b6cb4e151766ae1dbec2f098fd9407d452b1939))
+
+
+### Bug Fixes
+
+* **ToastNotification:** fix typo in prop name ([#2122](https://github.com/chanzuckerberg/edu-design-system/issues/2122)) ([8c70d28](https://github.com/chanzuckerberg/edu-design-system/commit/8c70d281a711a9c9099e56155e7023c3650caaa6))
+
 ## [15.9.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.8.0...v15.9.0) (2024-12-20)
 
 

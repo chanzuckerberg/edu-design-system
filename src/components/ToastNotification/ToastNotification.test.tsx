@@ -36,10 +36,22 @@ describe('<ToastNotification />', () => {
     it('generates an error when onDissmiss and type=auto are misused', async () => {
       // One must use onDismiss if auto is used
       render(
-        <ToastNotification dissmissType="auto" timeout={50} title="test" />,
+        <ToastNotification dismissType="auto" timeout={50} title="test" />,
       );
 
       await waitFor(() => expect(consoleErrorMock).toHaveBeenCalledTimes(1));
+    });
+
+    it('[EDS-1453] generates an error message when using the dissmissType prop', async () => {
+      render(<ToastNotification dissmissType="manual" title="test" />);
+
+      await waitFor(() => expect(consoleErrorMock).toHaveBeenCalledTimes(1));
+    });
+
+    it('[EDS-1453] generates no error when using the correct dismissType prop', async () => {
+      render(<ToastNotification dismissType="manual" title="test" />);
+
+      await waitFor(() => expect(consoleErrorMock).toHaveBeenCalledTimes(0));
     });
   });
 });
