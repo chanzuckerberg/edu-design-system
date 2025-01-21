@@ -86,6 +86,7 @@ export const parameters: Preview['parameters'] = {
     ...createComponentVersion('1.0'),
     ...createThemeVersion('1.0'),
     ...createThemeVersion('2.0'),
+    ...createThemeVersion('2.0.1'),
     ...createThemeVersion('2.1'),
     implementationExample: {
       styles: {
