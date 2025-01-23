@@ -64,7 +64,7 @@
     "release:alpha": "yarn release --prerelease alpha",
     "start": "yarn build:tokens && yarn storybook",
     "storybook": "storybook dev -p 9000",
-    "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
+    "storybook:axe": "yarn run build:storybook --test && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "plop": "plop component",
     "test": "jest",
