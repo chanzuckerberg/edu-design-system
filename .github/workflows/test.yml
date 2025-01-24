@@ -79,8 +79,8 @@ jobs:
             --auto-accept-changes '{main,next}' \
             --only-changed \
             --skip 'dependabot/**'
-      - name: Run Accessibility Tests 💛
-        run: yarn run storybook:axeOnly
+      - name: Build and Run Accessibility Tests 💛
+        run: yarn run storybook:axe
 
   lint:
     runs-on: ubuntu-latest
