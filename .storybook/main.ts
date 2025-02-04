@@ -39,6 +39,12 @@ const config = {
     options: {},
   },
 
+  build: {
+    test: {
+      disabledAddons: ['@storybook/addon-a11y'],
+    },
+  },
+
   core: {
     disableTelemetry: true,
   },
