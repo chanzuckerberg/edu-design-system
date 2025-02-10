@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+// TODO(next-major): remove this with the next major release (replaced by eds-import-from-figma-api)
 
 (async function () {
   const jsonfile = require('jsonfile');
   const chalk = require('chalk');
   const { prompt } = require('enquirer');
   const set = require('lodash/set');
-  const { default: ora } = await import('ora');
+  const ora = require('ora');
 
   // eslint-disable-next-line import/extensions
   const { hideBin } = require('yargs/helpers');
@@ -25,6 +26,16 @@
         });
       },
     )
+    .command(
+      '$0 file [file_id]',
+      'Fetch the variables from Figma using the API',
+      (yargs) => {
+        yargs.positional('file_id', {
+          type: 'string',
+          describe: 'the figma file where the published variables are defined',
+        });
+      },
+    )
     .option('verbose', {
       describe: 'Print additional details for debugging purposes',
       type: 'boolean',
@@ -37,9 +48,29 @@
   // read in the config from config file, package json "eds", etc.
   const config = await getConfig();
 
-  // Read the figma import file, and parse out the modes to select from, prompting the user to pick one,
-  // and load in the local theme file. We want to look up keys in there
-  const figmaThemeData = jsonfile.readFileSync(args.figma_file);
+  let figmaThemeData;
+  // Decide file source (either a downloaded JSON file or via API)
+  if (args.file) {
+    const figmaFileResponse = await fetch(
+      `https://api.figma.com/v1/files/${args.file_id}/variables/published`,
+      {
+        headers: {
+          'X-FIGMA-TOKEN': config.token,
+        },
+      },
+    );
+
+    if (!figmaFileResponse.ok) {
+      throw new Error('cannot access figma file: ' + figmaFileResponse.status);
+    }
+
+    figmaThemeData = await figmaFileResponse.json();
+  } else {
+    // Read the figma import file, and parse out the modes to select from, prompting the user to pick one,
+    figmaThemeData = jsonfile.readFileSync(args.figma_file);
+  }
+
+  // now, load in the local theme file. We want to look up keys in there
   const localTheme = jsonfile.readFileSync(`${config.src}app-theme.json`);
 
   // Determine which of the modes in the file should be used
