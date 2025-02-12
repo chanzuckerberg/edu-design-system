@@ -6,7 +6,7 @@
 /**
  * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
  */
- 
+
 .button {
   position: relative;
   border-radius: calc(var(--eds-border-radius-full) * 1px);
@@ -83,13 +83,14 @@
 }
 
 .button--size-lg {
-  min-width:calc(var(--eds-size-9) / 16 * 1rem);
-  max-width:calc(var(--eds-size-40) / 16 * 1rem);
+  min-width: calc(var(--eds-size-9) / 16 * 1rem);
+  max-width: calc(var(--eds-size-40) / 16 * 1rem);
   max-height: calc(var(--eds-size-5) / 16 * 1rem);
 }
 
 .button--size-md {
-  min-width: 3.75rem; /* TODO: missing size token */
+  min-width: 3.75rem;
+  /* TODO: missing size token */
   max-width: calc(var(--eds-size-32) / 16 * 1rem);
   max-height: calc(var(--eds-size-4) / 16 * 1rem);
 }
@@ -108,10 +109,6 @@
  * Anatomy and iconLayout (w/ size)
  * lg=40, md=32, sm=24 when layout is icon-only
  */
-.button--layout-icon-only {
-  min-width: unset;
-}
-
 .button--lg.button--layout-left {
   padding-left: calc(var(--eds-size-2) / 16 * 1rem);
 }
@@ -123,16 +120,19 @@
 .button--lg.button--layout-icon-only {
   padding: calc(var(--eds-size-1) / 16 * 1rem);
   width: calc(var(--eds-size-5) / 16 * 1rem);
+  min-width: calc(var(--eds-size-5) / 16 * 1rem);
 }
 
 .button--md.button--layout-icon-only {
   padding: calc(var(--eds-size-1) / 16 * 1rem);
   width: calc(var(--eds-size-4) / 16 * 1rem);
+  min-width: calc(var(--eds-size-4) / 16 * 1rem);
 }
 
 .button--sm.button--layout-icon-only {
   padding: calc(var(--eds-size-half) / 16 * 1rem);
   width: calc(var(--eds-size-3) / 16 * 1rem);
+  min-width: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
 .button:focus-visible {
@@ -188,7 +188,7 @@
 
 .button--tertiary.button--variant-critical {
   color: var(--eds-theme-color-background-utility-critical-high-emphasis);
-  border-color:  var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
 }
 
 .button--primary.button--variant-neutral {
@@ -276,7 +276,7 @@
   &.button--primary.button--variant-neutral {
     color: var(--eds-theme-color-text-utility-disabled-primary);
     border-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
-    background-color:  var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+    background-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
   }
 
   &.button--primary.button--variant-inverse {
@@ -327,7 +327,7 @@
  * States
  */
 
- /* Hover */
+/* Hover */
 .button--variant-default:hover {
   background-color: var(--eds-theme-color-border-utility-interactive-hover);
   border-color: var(--eds-theme-color-border-utility-interactive-hover);
