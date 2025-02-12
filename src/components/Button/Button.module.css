@@ -109,6 +109,10 @@
  * Anatomy and iconLayout (w/ size)
  * lg=40, md=32, sm=24 when layout is icon-only
  */
+.button--layout-icon-only {
+  min-width: unset;
+}
+
 .button--lg.button--layout-left {
   padding-left: calc(var(--eds-size-2) / 16 * 1rem);
 }
