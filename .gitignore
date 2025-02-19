@@ -27,6 +27,7 @@ storybook-components
 .env.production.local
 .cache
 .idea
+.edsrc.json
 
 npm-debug.log*
 yarn-debug.log*

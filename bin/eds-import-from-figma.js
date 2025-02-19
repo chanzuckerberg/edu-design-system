@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+// TODO(next-major): remove this with the next major release (replaced by eds-import-from-figma-api)
 
 (async function () {
   const jsonfile = require('jsonfile');
   const chalk = require('chalk');
   const { prompt } = require('enquirer');
   const set = require('lodash/set');
-  const { default: ora } = await import('ora');
+  const ora = require('ora');
 
   // eslint-disable-next-line import/extensions
   const { hideBin } = require('yargs/helpers');
@@ -40,6 +41,8 @@
   // Read the figma import file, and parse out the modes to select from, prompting the user to pick one,
   // and load in the local theme file. We want to look up keys in there
   const figmaThemeData = jsonfile.readFileSync(args.figma_file);
+
+  // now, load in the local theme file. We want to look up keys in there
   const localTheme = jsonfile.readFileSync(`${config.src}app-theme.json`);
 
   // Determine which of the modes in the file should be used
