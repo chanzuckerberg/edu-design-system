@@ -54,6 +54,7 @@ export { default as TabGroup } from './components/TabGroup';
 export { default as TextareaField } from './components/TextareaField';
 export { default as ToastNotification } from './components/ToastNotification';
 export { default as Tooltip } from './components/Tooltip';
+export { default as VisualPageIndicator } from './components/VisualPageIndicator';
 
 /**
  * 2.x prop type exports
@@ -67,6 +68,7 @@ export type {
   DataTableProps,
   DataTableRowProps,
   DataTableWithStatus,
+  DataTableSortDirection,
 } from './components/DataTable';
 
 // TODO(next-major): Remove the below types at the next major release
@@ -78,4 +80,3 @@ export type { AppNotificationProps as AppNotificationV2Props } from './component
  */
 // https://headlessui.com/v1/react/transition
 export { Transition } from '@headlessui/react';
-export { default as VisualPageIndicator } from './components/VisualPageIndicator';

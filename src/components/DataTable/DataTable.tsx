@@ -121,7 +121,7 @@ export type DataTableHeaderCellProps = EDSBase & {
    *
    * **Default is `"default"`**.
    */
-  sortDirection?: SortDirectionsType;
+  sortDirection?: DataTableSortDirection;
 };
 
 // Used to augment the data model shown in the table with a provided status column type
@@ -129,9 +129,13 @@ type StatusColumn = {
   status?: Extract<Status, 'critical' | 'favorable' | 'warning'>;
 };
 
-const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
+export const SORT_DIRECTION = {
+  ascending: 'ascending',
+  descending: 'descending',
+  default: 'default',
+};
 
-export type SortDirectionsType = (typeof SORT_DIRECTIONS)[number];
+export type DataTableSortDirection = keyof typeof SORT_DIRECTION;
 
 // TODO: support cellformat to apply padding and alignment value
 export type DataTableDataCellProps = DataTableHeaderCellProps & {
@@ -359,20 +363,20 @@ export function DataTable<T>({
  * Sort button utilities
  */
 function sortAttrs(
-  sort: SortDirectionsType,
+  sort: DataTableSortDirection,
 ): Pick<ButtonProps, 'aria-label' | 'icon'> {
   switch (sort) {
-    case 'ascending':
+    case SORT_DIRECTION.ascending:
       return {
         'aria-label': 'Sort Descending',
         icon: 'arrow-up',
       };
-    case 'descending':
+    case SORT_DIRECTION.descending:
       return {
         'aria-label': 'Remove sort',
         icon: 'arrow-down',
       };
-    case 'default':
+    case SORT_DIRECTION.default:
     default:
       return {
         'aria-label': 'Sort Ascending',
@@ -656,3 +660,4 @@ DataTable.DataCell = DataTableDataCell;
 DataTable.StatusCell = DataTableStatusCell;
 DataTable.StatusHeaderCell = DataTableStatusHeaderCell;
 DataTable.__StatusColumnId__ = 'status' as const;
+DataTable.SORT_DIRECTION = SORT_DIRECTION;
