@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.10.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.10.1...v15.10.2) (2025-02-15)
+
+
+### Bug Fixes
+
+* **button:** update button sizes in icon only to have a minimum width ([#2130](https://github.com/chanzuckerberg/edu-design-system/issues/2130)) ([8a312e8](https://github.com/chanzuckerberg/edu-design-system/commit/8a312e8c0e6acbe9e9b0aeeb5325bf97761b0298))
+
 ### [15.10.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.10.0...v15.10.1) (2025-02-03)
 
 ## [15.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.9.0...v15.10.0) (2025-01-21)
