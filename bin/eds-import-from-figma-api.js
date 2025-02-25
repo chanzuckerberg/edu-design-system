@@ -27,6 +27,10 @@
         });
       },
     )
+    .option('local', {
+      describe: 'Run in local mode (will apply theme updates to EDS itself)',
+      type: 'boolean',
+    })
     .option('token', {
       describe: 'Figma API token',
       type: 'string',
@@ -41,7 +45,7 @@
     }).argv;
 
   // read in the config from config file, package json "eds", etc.
-  const config = await getConfig();
+  const config = !args.local && (await getConfig());
   const isVerbose = args.v;
   const canWrite = !args.dryRun;
 
@@ -98,8 +102,12 @@
 
   const spinner = ora('Parsing tokens...').start();
 
+  const filePath = args.local
+    ? 'src/design-tokens/core-tokens.json'
+    : `${config.src}app-theme.json`;
+
   // now, load in the local theme file. We want to look up keys in there
-  const localTheme = jsonfile.readFileSync(`${config.src}app-theme.json`);
+  const localTheme = jsonfile.readFileSync(filePath);
 
   figmaApiReader
     .getVariablesByCollectionId(edsCollection.id)
@@ -140,11 +148,18 @@
             );
           }
 
-          canWrite && set(localTheme, writePath, variable.value);
+          canWrite &&
+            args.local &&
+            set(localTheme, writePath, variable.valueRef);
+          canWrite && !args.local && set(localTheme, writePath, variable.value);
 
           // write the value using the calculated path and parsed value
           if (isVerbose || !canWrite) {
-            spinner.succeed('Write: ' + variable.value + ' to ' + writePath);
+            spinner.succeed(
+              `Write: ${
+                args.local ? variable.valueRef : variable.value
+              } to ${writePath}`,
+            );
           }
 
           spinner.text = chalk.bold(variable.name) + ': Done!';
@@ -168,7 +183,7 @@
     });
 
   if (canWrite) {
-    jsonfile.writeFileSync(`${config.src}app-theme.json`, localTheme, {
+    jsonfile.writeFileSync(filePath, localTheme, {
       spaces: 2,
       finalEOL: false,
     });

@@ -37,18 +37,20 @@ for which utility classes to use when you need color tokens (in order of prefere
 
 #### ✅ Using EDS token utility classes
 
-These map to the higher-tier token names, and are semantic- (or component-) based. 
+These map to the higher-tier token names, and are semantic- (or component-) based.
 
 ```tsx
 <div className="text-utility-interactive-primary-visited">Option 1</div>
 ```
 
-#### ✅ Token name referecnes as custom utility classes
+#### ✅ Token name references using CSS variables
 
 If there is no existing utility class for the use case, you can reference the token directly in a class. While less preferable to the above, this still plugs into EDS.
 
 ```tsx
-<div className="bg-[var(--eds-theme-color-text-utility-interactive-primary-visited)]">Option 2</div>
+<div className="bg-[var(--eds-theme-color-text-utility-interactive-primary-visited)]">
+  Option 2
+</div>
 ```
 
 Cons:
@@ -104,7 +106,8 @@ First, create a configuration file to determine the source and destination direc
 }
 ```
 
-`src` determines where the core theme file will be copied to (upon running `eds-init-theme`) OR read from (upon running `eds-apply-theme`), and `dest` determines where the generated project files will be written to. Once created, you can use the provided commands.
+- `src` determines where the core theme file will be copied to (upon running `eds-init-theme`) OR read from (upon running `eds-apply-theme`)
+- `dest` determines where the generated CSS variable files will be written to (upon using `eds-apply-theme`). Once creating the config file, you can use the commands below.
 
 ### eds-init-theme
 
@@ -123,11 +126,13 @@ Using `eds-apply-theme` will read in the newly-created `app-theme.json` file, an
 Once run, you will have a set of theme files written to the configured `dest` path:
 
 - `app-theme.css` (CSS file containing custom CSS variables with the theme values for the application)
-- `app-tailwind-theme.config.json` (Configuration file for advanced tailwind configuration in the application)
+- `app-tailwind-theme.config.json` (Configuration file for configuring tailwind in the application)
 
 To use, add this file to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
 
 ### eds-import-from-figma
+
+**NOTE**: This script will be removed in the next version of EDS
 
 Command to run: `npx eds-import-from-figma`
 
@@ -135,15 +140,15 @@ Designers can define and tweak the values of a custom theme. For this reason, we
 
 To use this command, there are a few prerequisites:
 
-* In Figma, install the [Export/Import Variables Plugin][export-import-plugin].
+- In Figma, install the [Export/Import Variables Plugin][export-import-plugin].
 
 With the prerequisites set up, you can download a JSON file, containing the existing token definitions and values. Here's how:
 
-* Open the design(s) in Figma
-* Open the Resources Panel in the toolbar (or use <kbd>Shift + I</kbd>)
-* Activate the "Export/Import Variables" plugin by first clicking the "Plugins" tab, then the "Export/Import Variables" option.
-* Once it opens, click the "Export..." button for the Listed collections and save to your local machine
-* Finally, us the above command, by passing in the file path to each collection.
+- Open the design(s) in Figma
+- Open the Resources Panel in the toolbar (or use <kbd>Shift + I</kbd>)
+- Activate the "Export/Import Variables" plugin by first clicking the "Plugins" tab, then the "Export/Import Variables" option.
+- Once it opens, click the "Export..." button for the Listed collections and save to your local machine
+- Finally, us the above command, by passing in the file path to each collection.
 
 Example:
 
@@ -156,6 +161,21 @@ The script will run and apply new token values to the code in the appropriate pl
 **NOTE**: currently, we only handle color tokens, and will skip any tokens storing other types of token values (number, etc.).
 
 [export-import-plugin]: https://www.figma.com/community/plugin/1256972111705530093
+
+### eds-import-from-figma-api
+
+Command to run: `npx eds-import-from-figma-api`
+
+When using a [Figma Enterprise account][figma-enterprise], core design system files can be accessed to extract the token values, [using the API][figma-api-docs].
+
+Example:
+
+```
+npx eds-import-from-figma file <file_id> --token <personal_access_token>
+```
+
+[figma-enterprise]: https://www.figma.com/enterprise/
+[figma-api-docs]: https://www.figma.com/developers/api
 
 ## Custom Theming and Tailwind
 
