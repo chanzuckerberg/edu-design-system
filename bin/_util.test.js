@@ -610,6 +610,61 @@ describe('utils', function () {
         expect(variable.getResovledValue()).toEqual({ r: 1, g: 1, b: 1, a: 1 });
       });
 
+      it('allows deep retrieval of value refs from a variable, using delegate', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.valueRef).toEqual('{eds.color.neutral.white}');
+      });
+
+      it('allows retrieval of float value ref from a variable', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6370:10670',
+            name: 'Border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FLOAT',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6348:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.valueRef).toEqual('0');
+      });
+
       it('handles name/value accessor methods', () => {
         const variable = new utils.FigmaVariable(
           {
@@ -719,6 +774,63 @@ describe('utils', function () {
         expect(() => {
           variable.value;
         }).toThrow(TypeError);
+
+        expect(() => {
+          variable.getTokenPath();
+        }).toThrow(TypeError);
+      });
+
+      it('throws when trying to retrieve a value reference with unknown type', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6370:10670',
+            name: 'border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FAKE', // no type recognized
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          '6181:0',
+        );
+
+        expect(() => {
+          variable.valueRef;
+        }).toThrow(TypeError);
+      });
+
+      describe('static methods', () => {
+        it('can determine if a value is aliased', () => {
+          expect(
+            utils.FigmaVariable.isAliased(
+              {
+                id: 'VariableID:6370:10670',
+                name: 'border-radius/none',
+                remote: false,
+                key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+                variableCollectionId: 'VariableCollectionId:6181:1797',
+                resolvedType: 'FAKE', // no type recognized
+                description: '',
+                hiddenFromPublishing: true,
+                valuesByMode: {
+                  '6348:0': {
+                    type: 'VARIABLE_ALIAS',
+                    id: 'VariableID:6195:914',
+                  },
+                },
+                scopes: ['ALL_SCOPES'],
+                codeSyntax: {},
+              },
+              '6348:0',
+            ),
+          ).toBeTruthy();
+        });
       });
     });
   });

@@ -381,8 +381,11 @@ module.exports = {
           return this._tokenNameToPath(
             'eds.theme.' + this._figmaVariableData.name.replace('-> ', ''),
           );
+        default:
+          throw new TypeError(
+            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
+          );
       }
-      return this._figmaVariableData.name;
     }
 
     /**
@@ -396,7 +399,7 @@ module.exports = {
       isLookup = false,
     ) {
       // TODO: this should not fall thru when mode is missing
-      if (figmaVariable.valuesByMode[this._mode]?.type === 'VARIABLE_ALIAS') {
+      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
           figmaVariable.valuesByMode[this._mode].id,
@@ -490,7 +493,7 @@ module.exports = {
           // JSON only handles strings so convert here
           return String(figmaResolvedValue);
         default:
-          throw new TypeError('unknown resolved varType: ' + varType, {
+          throw new TypeError('unknown resolved type: ' + varType, {
             details: figmaResolvedValue,
           });
       }
@@ -547,8 +550,8 @@ module.exports = {
               )}}`
             : this.value;
         default:
-          throw new Error(
-            'unknown resolved varType: ' + this._figmaVariableData.resolvedType,
+          throw new TypeError(
+            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
           );
       }
     }
