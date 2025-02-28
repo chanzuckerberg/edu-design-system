@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.10.2...v15.11.0) (2025-02-28)
+
+
+### Features
+
+* **DataTable:** export sort direction enum with types ([#2133](https://github.com/chanzuckerberg/edu-design-system/issues/2133)) ([a0948d6](https://github.com/chanzuckerberg/edu-design-system/commit/a0948d6fbe10677cea9196d5784b4d3b790e3e0b))
+* **icon:** add thumb-up-and-down ([#2136](https://github.com/chanzuckerberg/edu-design-system/issues/2136)) ([2c2202a](https://github.com/chanzuckerberg/edu-design-system/commit/2c2202ae33cbb4f274900f93e191036ff34e786c))
+* **scripts:** add local mode ([#2135](https://github.com/chanzuckerberg/edu-design-system/issues/2135)) ([965a579](https://github.com/chanzuckerberg/edu-design-system/commit/965a579b75c9681bbaf9067236c80381ab1e2255))
+* **scripts:** allow import script to pull using Figma API ([#2132](https://github.com/chanzuckerberg/edu-design-system/issues/2132)) ([5919b30](https://github.com/chanzuckerberg/edu-design-system/commit/5919b30558028dfa690d85f2cdc87f50d14a1e66))
+
+
+### Bug Fixes
+
+* **Fieldset:** fix label typography ([#2137](https://github.com/chanzuckerberg/edu-design-system/issues/2137)) ([624b757](https://github.com/chanzuckerberg/edu-design-system/commit/624b75797b1a8068ccc205bba1260e468eceb796))
+
 ### [15.10.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.10.1...v15.10.2) (2025-02-15)
 
 

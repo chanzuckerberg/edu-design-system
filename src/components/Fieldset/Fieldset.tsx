@@ -168,6 +168,8 @@ const FieldsetLegend = ({
     className,
   );
 
+  const labelClassName = clsx(styles['fieldset__label']);
+
   assertEdsUsage(
     [typeof text !== 'undefined'],
     'text is deprecated and will removed from EDS in a future release. Use "title" instead.',
@@ -193,7 +195,11 @@ const FieldsetLegend = ({
       )}
       {title && (
         <div className={styles['fieldset-legend__overline']}>
-          {title && <FieldLabel disabled={isDisabled}>{title}</FieldLabel>}
+          {title && (
+            <FieldLabel className={labelClassName} disabled={isDisabled}>
+              {title}
+            </FieldLabel>
+          )}
           {required && showHint && (
             <Text
               aria-disabled={isDisabled ?? undefined}

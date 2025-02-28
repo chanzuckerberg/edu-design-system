@@ -1,3 +1,27 @@
+/* eslint-disable no-case-declarations */
+
+// TODO: Do not use directly. Extend this to support re-writing eds-import-from-figma for non-enterprise use cases
+class AbstractFigmaReader {
+  static TIER_1_MODE = '6181:0';
+  static EDS_COLLECTION_NAME = 'EDS tokens';
+
+  constructor(jsonData) {
+    this._jsonData = jsonData;
+  }
+
+  getModes(variableCollectionId) {
+    throw new Error('Cannot Use Abstract class directly');
+  }
+
+  getVariableCollections() {
+    throw new Error('Cannot Use Abstract class directly');
+  }
+
+  getVariablesByCollectionId(variableCollectionId) {
+    throw new Error('Cannot Use Abstract class directly');
+  }
+}
+
 module.exports = {
   /**
    * Fetch the EDS config from the project using the lilconfig hierarchy.
@@ -148,6 +172,8 @@ module.exports = {
    * the existing local theme. If there's a path in the local theme file, we can write there (using lodash/set
    * or similar).
    *
+   * TODO(next-major): remove this function
+   *
    * @param {object} localTheme JSON file loaded, representing the data for the local theme
    * @param {string} collectionName Name of the exported collection
    * @param {string} variableName current variable name from figma (e.g., color/text/neutral/default)
@@ -197,6 +223,8 @@ module.exports = {
    * Data Types:
    * - Type COLOR: https://www.figma.com/plugin-docs/api/RGB/
    *
+   * TODO(next-major): remove this function
+   *
    * @param {string} type Figma type for the token value (Set:)
    * @param {object} figmaResolvedValue
    * @returns {string} value using the type
@@ -232,6 +260,8 @@ module.exports = {
    * a prefix to the token name that corresponds to the prefix used for those
    * tokens.
    *
+   * TODO(next-major): remove this function
+   *
    * @param {string} collectionName The key to write to
    * @returns {string|null} a text prefix for where to write the token value or null when no prefix is found
    */
@@ -247,10 +277,283 @@ module.exports = {
   },
   /**
    * Conversion of the figma token name (e.g., some/path/to/token) to the equivalent path in a JSON object
+   *
+   * TODO(next-major): remove this function
+   *
    * @param {string} figmaTokenName The name from the figma variables panel (slash separated)
    * @returns {string} a lodash-compatible string representing the path to the token value in JSON
    */
   tokenNameToPath: function (figmaTokenName) {
     return figmaTokenName.replaceAll('/', '.').toLowerCase();
+  },
+
+  // https://www.figma.com/developers/api#get-published-variables-endpoint
+  FigmaAPIReader: class extends AbstractFigmaReader {
+    constructor(jsonData) {
+      super(jsonData.meta);
+    }
+
+    /**
+     * Get the modes associated with a specific figma collection
+     *
+     * @param {string} variableCollectionId
+     * @returns Mode[]
+     */
+    getModes(variableCollectionId) {
+      return this._jsonData.variableCollections[variableCollectionId].modes;
+    }
+
+    /**
+     * Retrieve the defined variable collections from the specific figma file data
+     * @see https://www.figma.com/plugin-docs/api/VariableCollection/
+     *
+     * @returns VariableCollection[]
+     */
+    getVariableCollections() {
+      return Object.values(this._jsonData.variableCollections).map(
+        (collection) => {
+          return {
+            id: collection.id,
+            name: collection.name,
+          };
+        },
+      );
+    }
+
+    /**
+     * Retrieve the set of variables associated with a given collection (by ID)
+     * @see https://www.figma.com/plugin-docs/api/Variable/
+     *
+     * @param {string} variableCollectionId
+     * @returns Variable[]
+     */
+    getVariablesByCollectionId(variableCollectionId) {
+      return Object.values(this._jsonData.variables).filter((variable) => {
+        return variable.variableCollectionId === variableCollectionId;
+      });
+    }
+
+    //
+    // Delegation methods: variable lookup
+    //
+
+    /**
+     * Look up a specific variable in the object, by its ID
+     * @see https://www.figma.com/plugin-docs/api/Variable/
+     *
+     * @returns Variable
+     */
+    retrieveVariable(variableId) {
+      return Object.values(this._jsonData.variables).find((variable) => {
+        return variable.id === variableId;
+      });
+    }
+  },
+
+  FigmaVariable: class {
+    static TIER_1_PREFIX = 'Render/';
+
+    constructor(json, mode, lookupDelegate) {
+      // TODO: throw if any private members are invalid
+      this._figmaVariableData = json;
+      this._mode = mode;
+      this._lookupDelegate = lookupDelegate;
+    }
+
+    /**
+     * Retrieve the normalized path for the token name. This will prefix the token based on the token type
+     * @returns string
+     */
+    getTokenPath() {
+      switch (this._figmaVariableData.resolvedType) {
+        case 'COLOR':
+          /**
+           * - when an arrow is seen, pay attention to the type of the token being read, and prefix appropriately (color, etc. => eds.theme.color, etc.)
+           */
+          return this._tokenNameToPath(
+            'eds.theme.color.' +
+              this._figmaVariableData.name.replace('-> ', ''),
+          );
+        case 'FLOAT':
+          /**
+           * - When an arrow is seen, remove it entirely for numeric values
+           */
+          return this._tokenNameToPath(
+            'eds.theme.' + this._figmaVariableData.name.replace('-> ', ''),
+          );
+        default:
+          throw new TypeError(
+            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
+          );
+      }
+    }
+
+    /**
+     * Recursively find the resolved value for a given token
+     * @param {Variable} figmaVariable
+     * @param {boolean} isLookup
+     * @returns ResolvedValue object or literal representation of the stored figma variable value
+     */
+    getResovledValue(
+      figmaVariable = this._figmaVariableData,
+      isLookup = false,
+    ) {
+      // TODO: this should not fall thru when mode is missing
+      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
+        // Look up value using delegate. Take whatever value is in there regardless of mode
+        const lookupValue = this._lookupDelegate.retrieveVariable(
+          figmaVariable.valuesByMode[this._mode].id,
+        );
+
+        return this.getResovledValue(lookupValue, true);
+      } else {
+        return isLookup
+          ? figmaVariable.valuesByMode[
+              module.exports.FigmaAPIReader.TIER_1_MODE
+            ]
+          : figmaVariable.valuesByMode[this._mode];
+      }
+    }
+
+    static isAliased(figmaVariable, mode) {
+      return figmaVariable.valuesByMode[mode]?.type === 'VARIABLE_ALIAS';
+    }
+
+    /**
+     * Recursively find the resolved name for a given token
+     * @param {Variable} figmaVariable
+     * @param {boolean} isLookup
+     * @returns
+     */
+    getResovledName(figmaVariable = this._figmaVariableData, isLookup = false) {
+      // TODO: this should not fall thru when mode is missing
+      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
+        // Look up value using delegate. Take whatever value is in there regardless of mode
+        const lookupValue = this._lookupDelegate.retrieveVariable(
+          figmaVariable.valuesByMode[this._mode].id,
+        );
+
+        return this.getResovledName(lookupValue, true);
+      } else {
+        return isLookup ? figmaVariable.name : undefined;
+      }
+    }
+
+    /**
+     * Conversion of the figma token name (e.g., some/path/to/token) to the equivalent path in a JSON object
+     * @param {string} figmaTokenName The name from the figma variables panel (slash separated)
+     * @returns {string} a lodash-compatible string representing the path to the token value in JSON
+     */
+    _tokenNameToPath(figmaTokenName) {
+      // TODO: include example formats and conversions (in test)
+      return (
+        figmaTokenName
+          // Figma separates out the token name parts using '/'. convert to dots for path naming
+          .replaceAll('/', '.')
+          // Tokens also use dashes to avoid complexity in the Figma variable UI. convert to dots for path naming
+          .replaceAll('-', '.')
+      );
+    }
+
+    /**
+     * Convert the figma variable value format into a CSS-/JSON-cross-compatible format (quoted string), based on the variable type
+     * @param {ResolvedValue} figmaResolvedValue
+     * @returns string
+     */
+    parseResolvedValue(figmaResolvedValue) {
+      const varType = this._figmaVariableData.resolvedType;
+
+      /**
+       * Data Types:
+       * - Type COLOR: https://www.figma.com/plugin-docs/api/RGB/
+       * - Type FLOAT
+       */
+      switch (varType) {
+        case 'COLOR':
+          const r = Math.floor(figmaResolvedValue.r * 255);
+          const g = Math.floor(figmaResolvedValue.g * 255);
+          const b = Math.floor(figmaResolvedValue.b * 255);
+          const a = figmaResolvedValue.a;
+
+          // if we have an alpha channel, use `rgba()`
+          if (figmaResolvedValue.a > 0 && figmaResolvedValue.a < 1) {
+            return `rgba(${r}, ${g}, ${b}, ${a})`;
+          } else {
+            // print hex instead when the value has no alpha channel
+            return (
+              '#' +
+              [r, g, b]
+                .map((x) => x.toString(16))
+                .map((x) => (x.length === 1 ? '0' + x : x))
+                .join('')
+                .toUpperCase()
+            );
+          }
+        case 'FLOAT':
+          // JSON only handles strings so convert here
+          return String(figmaResolvedValue);
+        default:
+          throw new TypeError('unknown resolved type: ' + varType, {
+            details: figmaResolvedValue,
+          });
+      }
+    }
+
+    get name() {
+      return this._figmaVariableData.name;
+    }
+
+    get value() {
+      return this.parseResolvedValue(this.getResovledValue());
+    }
+
+    get valueRef() {
+      switch (this._figmaVariableData.resolvedType) {
+        case 'COLOR':
+          // TODO: (in source) transparent exists as a tier 1 token but should not
+          if (this.getResovledName() === 'Render/Transparent') {
+            return 'transparent';
+          }
+          return module.exports.FigmaVariable.isAliased(
+            this._figmaVariableData,
+            this._mode,
+          )
+            ? `{${this._tokenNameToPath(
+                this.getResovledName()
+                  .replace(
+                    module.exports.FigmaVariable.TIER_1_PREFIX,
+                    'eds.color.',
+                  )
+                  // TODO: (in source) remove duplicate color from structures
+                  .replace('Neutral/Neutral', 'Neutral')
+                  .replace('Red/Red', 'Red')
+                  .replace('Orange/Orange', 'Orange')
+                  .replace('Yellow/Yellow', 'Yellow')
+                  .replace('Green/Green', 'Green')
+                  .replace('Blue/Blue', 'Blue')
+                  .replace('Purple/Purple', 'Purple')
+                  .replace('Pink/Pink', 'Pink')
+                  // TODO: (in source) lower case the names of the tier 1 color tokens
+                  .toLowerCase(),
+              )}}`
+            : this.value;
+        case 'FLOAT':
+          return module.exports.FigmaVariable.isAliased(
+            this._figmaVariableData,
+            this._mode,
+          )
+            ? `{${this._tokenNameToPath(
+                'eds.' +
+                  this.getResovledName()
+                    // TODO: (in source) lower case the names of the tier 1 color tokens
+                    .toLowerCase(),
+              )}}`
+            : this.value;
+        default:
+          throw new TypeError(
+            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
+          );
+      }
+    }
   },
 };

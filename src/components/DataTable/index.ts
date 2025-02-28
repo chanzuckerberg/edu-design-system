@@ -3,6 +3,7 @@ export type {
   DataTableProps,
   DataTableRowProps,
   DataTableWithStatus,
+  DataTableSortDirection,
 } from './DataTable';
 
 // Re-export Tanstack hooks and functions to consumers

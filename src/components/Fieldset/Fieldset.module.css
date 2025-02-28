@@ -5,10 +5,15 @@
   margin-top: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
+.fieldset__label {
+  /* HACK: Instead of applying the token directly in CSS, should use <Text /> */
+  font: var(--eds-theme-typography-form-label);
+}
+
 /**
  * The contents of the fieldset. Spaces them apart.
  */
- .fieldset-items > :not(:last-child) {
+.fieldset-items> :not(:last-child) {
   margin-bottom: calc(var(--eds-size-2) / 16 * 1rem);
 }
 

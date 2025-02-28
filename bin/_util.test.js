@@ -319,4 +319,519 @@ describe('utils', function () {
       expect(test).toThrow(TypeError);
     });
   });
+
+  describe('Reader Classes', () => {
+    const mockData = {
+      status: 200,
+      error: false,
+      meta: {
+        variableCollections: {
+          'VariableCollectionId:6181:1797': {
+            defaultModeId: '6181:0',
+            id: 'VariableCollectionId:6181:1797',
+            name: 'Collection 1',
+            remote: false,
+            modes: [
+              {
+                modeId: '6181:0',
+                name: 'Value',
+              },
+            ],
+            key: '5f66df751f45114c0d64b702b03e9ae820293768',
+            hiddenFromPublishing: false,
+            variableIds: [
+              'VariableID:6195:914',
+              'VariableID:6195:915',
+              'VariableID:6348:6248',
+            ],
+          },
+          'VariableCollectionId:6348:1793': {
+            defaultModeId: '6348:0',
+            id: 'VariableCollectionId:6348:1793',
+            name: 'Collection 2',
+            remote: false,
+            modes: [
+              {
+                modeId: '6348:0',
+                name: 'mode 1',
+              },
+              {
+                modeId: '7493:1',
+                name: 'mode 2',
+              },
+            ],
+          },
+        },
+        variables: {
+          'VariableID:6348:6248': {
+            id: 'VariableID:6348:6248',
+            name: 'Render/Neutral/Neutral-050',
+            remote: false,
+            key: '176ccd26264f7e048ae441ac585726a51fa6a819',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': {
+                r: 0.9764705896377563,
+                g: 0.9529411792755127,
+                b: 0.9450980424880981,
+                a: 1,
+              },
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          'VariableID:6195:915': {
+            id: 'VariableID:6195:915',
+            name: 'Render/Neutral/Neutral-025',
+            remote: false,
+            key: 'f03c13f2140f268dbedf27db0ad78660913af483',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': {
+                r: 0.9921568632125854,
+                g: 0.9764705896377563,
+                b: 0.9725490212440491,
+                a: 1,
+              },
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          'VariableID:6195:914': {
+            id: 'VariableID:6195:914',
+            name: 'Render/Neutral/White',
+            remote: false,
+            key: 'b2ed72ac00bfa71fbe0c0039404b125f7f5193e2',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': {
+                r: 1,
+                g: 1,
+                b: 1,
+                a: 1,
+              },
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          'VariableID:6359:7717': {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          'VariableID:6370:10670': {
+            id: 'VariableID:6370:10670',
+            name: 'Border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FLOAT',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+        },
+      },
+    };
+
+    describe('FigmaAPIReader', function () {
+      it('pulls defined modes from the retrieved JSON data', () => {
+        const reader = new utils.FigmaAPIReader(mockData);
+        const modes = reader.getModes('VariableCollectionId:6348:1793');
+        expect(modes[0].name).toEqual('mode 1');
+        expect(modes[1].name).toEqual('mode 2');
+      });
+
+      it('pulls collection data from the retrieved JSON data', () => {
+        const reader = new utils.FigmaAPIReader(mockData);
+        const testCollections = reader.getVariableCollections();
+        expect(testCollections[0].name).toEqual('Collection 1');
+        expect(testCollections[1].name).toEqual('Collection 2');
+      });
+
+      it('gets variables by a given collection ID', () => {
+        const reader = new utils.FigmaAPIReader(mockData);
+        expect(
+          reader.getVariablesByCollectionId(
+            'VariableCollectionId:6348:1793',
+          )[0],
+        ).toEqual({
+          id: 'VariableID:6359:7717',
+          name: '-> text/utility/inverse',
+          remote: false,
+          key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+          variableCollectionId: 'VariableCollectionId:6348:1793',
+          resolvedType: 'COLOR',
+          description: '',
+          hiddenFromPublishing: false,
+          valuesByMode: {
+            '6348:0': {
+              type: 'VARIABLE_ALIAS',
+              id: 'VariableID:6195:914',
+            },
+            '7493:1': {
+              type: 'VARIABLE_ALIAS',
+              id: 'VariableID:7493:9283',
+            },
+          },
+          scopes: ['TEXT_FILL'],
+          codeSyntax: {},
+        });
+
+        expect(
+          reader.getVariablesByCollectionId('VariableCollectionId:6348:1793'),
+        ).toHaveLength(1);
+      });
+
+      it('allows retrieval of arbitrary variables in the retrieved JSON data', () => {
+        const reader = new utils.FigmaAPIReader(mockData);
+
+        expect(reader.retrieveVariable('VariableID:6359:7717')).toEqual({
+          id: 'VariableID:6359:7717',
+          name: '-> text/utility/inverse',
+          remote: false,
+          key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+          variableCollectionId: 'VariableCollectionId:6348:1793',
+          resolvedType: 'COLOR',
+          description: '',
+          hiddenFromPublishing: false,
+          valuesByMode: {
+            '6348:0': {
+              type: 'VARIABLE_ALIAS',
+              id: 'VariableID:6195:914',
+            },
+            '7493:1': {
+              type: 'VARIABLE_ALIAS',
+              id: 'VariableID:7493:9283',
+            },
+          },
+          scopes: ['TEXT_FILL'],
+          codeSyntax: {},
+        });
+
+        expect(reader.retrieveVariable('VariableID:6359:7717_FAKE')).toEqual(
+          undefined,
+        );
+      });
+    });
+
+    describe('FigmaVariable', function () {
+      it('allows retrieval of token path from a variable', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6181:0',
+          () => {},
+        );
+
+        expect(variable.getTokenPath()).toEqual(
+          'eds.theme.color.text.utility.inverse',
+        );
+      });
+
+      it('allows deep retrieval of value from a variable, using delegate', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.getResovledValue()).toEqual({ r: 1, g: 1, b: 1, a: 1 });
+      });
+
+      it('allows deep retrieval of value refs from a variable, using delegate', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.valueRef).toEqual('{eds.color.neutral.white}');
+      });
+
+      it('allows retrieval of float value ref from a variable', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6370:10670',
+            name: 'Border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FLOAT',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6348:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.valueRef).toEqual('0');
+      });
+
+      it('handles name/value accessor methods', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.name).toEqual('-> text/utility/inverse');
+        expect(variable.value).toEqual('#FFFFFF');
+      });
+
+      it('handles name/value accessor methods with a alpha channel', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6181:0': {
+                r: 1,
+                g: 1,
+                b: 1,
+                a: 0.5,
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6181:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.name).toEqual('-> text/utility/inverse');
+        expect(variable.value).toEqual('rgba(255, 255, 255, 0.5)');
+      });
+
+      it('handles float values', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6370:10670',
+            name: 'border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FLOAT',
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          '6181:0',
+        );
+
+        expect(variable.value).toEqual('0');
+        expect(variable.getTokenPath()).toEqual('eds.theme.border.radius.none');
+      });
+
+      it('throws on unparseable variable types', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6370:10670',
+            name: 'border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FAKE', // no type recognized
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          '6181:0',
+        );
+
+        expect(() => {
+          variable.value;
+        }).toThrow(TypeError);
+
+        expect(() => {
+          variable.getTokenPath();
+        }).toThrow(TypeError);
+      });
+
+      it('throws when trying to retrieve a value reference with unknown type', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6370:10670',
+            name: 'border-radius/none',
+            remote: false,
+            key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+            variableCollectionId: 'VariableCollectionId:6181:1797',
+            resolvedType: 'FAKE', // no type recognized
+            description: '',
+            hiddenFromPublishing: true,
+            valuesByMode: {
+              '6181:0': 0,
+            },
+            scopes: ['ALL_SCOPES'],
+            codeSyntax: {},
+          },
+          '6181:0',
+        );
+
+        expect(() => {
+          variable.valueRef;
+        }).toThrow(TypeError);
+      });
+
+      describe('static methods', () => {
+        it('can determine if a value is aliased', () => {
+          expect(
+            utils.FigmaVariable.isAliased(
+              {
+                id: 'VariableID:6370:10670',
+                name: 'border-radius/none',
+                remote: false,
+                key: '9358566cd8a6bb06f32e7682d2e8326fccf18e05',
+                variableCollectionId: 'VariableCollectionId:6181:1797',
+                resolvedType: 'FAKE', // no type recognized
+                description: '',
+                hiddenFromPublishing: true,
+                valuesByMode: {
+                  '6348:0': {
+                    type: 'VARIABLE_ALIAS',
+                    id: 'VariableID:6195:914',
+                  },
+                },
+                scopes: ['ALL_SCOPES'],
+                codeSyntax: {},
+              },
+              '6348:0',
+            ),
+          ).toBeTruthy();
+        });
+      });
+    });
+  });
 });
