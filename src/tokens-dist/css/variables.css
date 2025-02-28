@@ -170,9 +170,9 @@
   --eds-color-red-150: #F6CDD1;
   --eds-color-red-100: #FAE2E5;
   --eds-color-neutral-black: #161B1F; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-color-neutral-white: #FFFFFF; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-neutral-050: #F9F3F1;
   --eds-color-neutral-025: #FDF9F8;
-  --eds-color-neutral-white: #FFFFFF; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-neutral-950: #0F0F0F;
   --eds-color-neutral-900: #1A1919;
   --eds-color-neutral-850: #272625;
