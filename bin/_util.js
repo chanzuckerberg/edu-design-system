@@ -351,6 +351,8 @@ module.exports = {
   },
 
   FigmaVariable: class {
+    static TIER_1_PREFIX = 'Render/';
+
     constructor(json, mode, lookupDelegate) {
       // TODO: throw if any private members are invalid
       this._figmaVariableData = json;
@@ -369,14 +371,21 @@ module.exports = {
            * - when an arrow is seen, pay attention to the type of the token being read, and prefix appropriately (color, etc. => eds.theme.color, etc.)
            */
           return this._tokenNameToPath(
-            this._figmaVariableData.name.replace('-> ', 'eds.theme.color.'),
+            'eds.theme.color.' +
+              this._figmaVariableData.name.replace('-> ', ''),
           );
         case 'FLOAT':
+          /**
+           * - When an arrow is seen, remove it entirely for numeric values
+           */
           return this._tokenNameToPath(
-            'eds.theme.' + this._figmaVariableData.name,
+            'eds.theme.' + this._figmaVariableData.name.replace('-> ', ''),
+          );
+        default:
+          throw new TypeError(
+            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
           );
       }
-      return this._figmaVariableData.name;
     }
 
     /**
@@ -390,7 +399,7 @@ module.exports = {
       isLookup = false,
     ) {
       // TODO: this should not fall thru when mode is missing
-      if (figmaVariable.valuesByMode[this._mode]?.type === 'VARIABLE_ALIAS') {
+      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
           figmaVariable.valuesByMode[this._mode].id,
@@ -403,6 +412,30 @@ module.exports = {
               module.exports.FigmaAPIReader.TIER_1_MODE
             ]
           : figmaVariable.valuesByMode[this._mode];
+      }
+    }
+
+    static isAliased(figmaVariable, mode) {
+      return figmaVariable.valuesByMode[mode]?.type === 'VARIABLE_ALIAS';
+    }
+
+    /**
+     * Recursively find the resolved name for a given token
+     * @param {Variable} figmaVariable
+     * @param {boolean} isLookup
+     * @returns
+     */
+    getResovledName(figmaVariable = this._figmaVariableData, isLookup = false) {
+      // TODO: this should not fall thru when mode is missing
+      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
+        // Look up value using delegate. Take whatever value is in there regardless of mode
+        const lookupValue = this._lookupDelegate.retrieveVariable(
+          figmaVariable.valuesByMode[this._mode].id,
+        );
+
+        return this.getResovledName(lookupValue, true);
+      } else {
+        return isLookup ? figmaVariable.name : undefined;
       }
     }
 
@@ -433,6 +466,7 @@ module.exports = {
       /**
        * Data Types:
        * - Type COLOR: https://www.figma.com/plugin-docs/api/RGB/
+       * - Type FLOAT
        */
       switch (varType) {
         case 'COLOR':
@@ -459,7 +493,7 @@ module.exports = {
           // JSON only handles strings so convert here
           return String(figmaResolvedValue);
         default:
-          throw new TypeError('unknown resolved varType: ' + varType, {
+          throw new TypeError('unknown resolved type: ' + varType, {
             details: figmaResolvedValue,
           });
       }
@@ -471,6 +505,55 @@ module.exports = {
 
     get value() {
       return this.parseResolvedValue(this.getResovledValue());
+    }
+
+    get valueRef() {
+      switch (this._figmaVariableData.resolvedType) {
+        case 'COLOR':
+          // TODO: (in source) transparent exists as a tier 1 token but should not
+          if (this.getResovledName() === 'Render/Transparent') {
+            return 'transparent';
+          }
+          return module.exports.FigmaVariable.isAliased(
+            this._figmaVariableData,
+            this._mode,
+          )
+            ? `{${this._tokenNameToPath(
+                this.getResovledName()
+                  .replace(
+                    module.exports.FigmaVariable.TIER_1_PREFIX,
+                    'eds.color.',
+                  )
+                  // TODO: (in source) remove duplicate color from structures
+                  .replace('Neutral/Neutral', 'Neutral')
+                  .replace('Red/Red', 'Red')
+                  .replace('Orange/Orange', 'Orange')
+                  .replace('Yellow/Yellow', 'Yellow')
+                  .replace('Green/Green', 'Green')
+                  .replace('Blue/Blue', 'Blue')
+                  .replace('Purple/Purple', 'Purple')
+                  .replace('Pink/Pink', 'Pink')
+                  // TODO: (in source) lower case the names of the tier 1 color tokens
+                  .toLowerCase(),
+              )}}`
+            : this.value;
+        case 'FLOAT':
+          return module.exports.FigmaVariable.isAliased(
+            this._figmaVariableData,
+            this._mode,
+          )
+            ? `{${this._tokenNameToPath(
+                'eds.' +
+                  this.getResovledName()
+                    // TODO: (in source) lower case the names of the tier 1 color tokens
+                    .toLowerCase(),
+              )}}`
+            : this.value;
+        default:
+          throw new TypeError(
+            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
+          );
+      }
     }
   },
 };
