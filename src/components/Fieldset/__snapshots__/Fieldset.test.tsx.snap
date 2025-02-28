@@ -10,7 +10,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--lg fieldset__label"
       >
         Legend
       </label>
@@ -35,7 +35,7 @@ exports[`<Fieldset /> FieldsetLegend story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg"
+      class="label label--lg fieldset__label"
     >
       Legend
     </label>
@@ -52,7 +52,7 @@ exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg"
+      class="label label--lg fieldset__label"
     >
       Legend
     </label>
@@ -74,7 +74,7 @@ exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg"
+      class="label label--lg fieldset__label"
     >
       Legend
     </label>
@@ -96,7 +96,7 @@ exports[`<Fieldset /> FieldsetLegendWithSubtitle story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg"
+      class="label label--lg fieldset__label"
     >
       Legend
     </label>
@@ -119,7 +119,7 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--lg fieldset__label"
       >
         Critical Fieldset
       </label>
@@ -187,7 +187,7 @@ exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--lg fieldset__label"
       >
         Critical Fieldset
       </label>
@@ -226,7 +226,7 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled"
+        class="label label--lg label--disabled fieldset__label"
       >
         Critical Fieldset
       </label>
@@ -301,7 +301,7 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled"
+        class="label label--lg label--disabled fieldset__label"
       >
         Critical Fieldset
       </label>
@@ -394,7 +394,7 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--lg fieldset__label"
       >
         Critical Fieldset
       </label>
@@ -462,7 +462,7 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--lg fieldset__label"
       >
         Critical Fieldset
       </label>
@@ -550,7 +550,7 @@ exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--lg fieldset__label"
       >
         Critical Fieldset
       </label>
