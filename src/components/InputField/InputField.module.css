@@ -4,7 +4,7 @@
 /**
  * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
  */
- 
+
 /**
  * Wraps the Label and the optional/required hint.
  * TODO: match/share the overline styles between Select and InputField
@@ -78,6 +78,7 @@
 
 .input-field__label {
   color: var(--eds-theme-color-text-utility-default-primary);
+  /* HACK: Instead of applying the token directly in CSS, should use <Text /> */
   font: var(--eds-theme-typography-form-label);
 }
 
@@ -105,4 +106,3 @@
 .input-field__required-text--disabled {
   color: var(--eds-theme-color-text-utility-disabled-primary);
 }
-
