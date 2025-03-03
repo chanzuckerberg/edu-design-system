@@ -344,14 +344,18 @@ module.exports = {
      * @returns Variable
      */
     retrieveVariable(variableId) {
-      return Object.values(this._jsonData.variables).find((variable) => {
-        return variable.id === variableId;
-      });
+      const retrieved = Object.values(this._jsonData.variables).find(
+        (variable) => {
+          return variable.id === variableId;
+        },
+      );
+      return retrieved;
     }
   },
 
   FigmaVariable: class {
-    static TIER_1_PREFIX = 'Render/';
+    static TIER_1_PREFIX = 'render/';
+    static VARIABLE_ALIAS = 'VARIABLE_ALIAS';
 
     constructor(json, mode, lookupDelegate) {
       // TODO: throw if any private members are invalid
@@ -415,8 +419,27 @@ module.exports = {
       }
     }
 
+    /**
+     * Determine whether a variable is marked as orphaned (e.g., deleted from the var.s but still used in a component)
+     * @returns {boolean}
+     */
+    isOrphaned() {
+      return !!this._figmaVariableData.deletedButReferenced;
+    }
+
+    /**
+     * @static
+     *
+     * Returns whether the value of a given figma variable and mode is a reference or not
+     * @param {FigmaVariable} figmaVariable API JSON data representing a figma variable instance
+     * @param {string} mode the collection that the variable has a value in
+     * @returns {boolean} whether the value for the variable is a literal or references another figma variable
+     */
     static isAliased(figmaVariable, mode) {
-      return figmaVariable.valuesByMode[mode]?.type === 'VARIABLE_ALIAS';
+      return (
+        figmaVariable.valuesByMode[mode]?.type ===
+        module.exports.FigmaVariable.VARIABLE_ALIAS
+      );
     }
 
     /**
@@ -499,55 +522,49 @@ module.exports = {
       }
     }
 
+    /**
+     * @property
+     * Unformatted (figma) name for the current figma variable
+     */
     get name() {
       return this._figmaVariableData.name;
     }
 
+    /**
+     * @property
+     * Resolved and parsed value for the given variable. Performs lookup if value is aliased, using delegate.
+     */
     get value() {
       return this.parseResolvedValue(this.getResovledValue());
     }
 
+    /**
+     * @property
+     * Resolved and parsed value reference (path) for the given variable. Performs lookup if value is aliased, using delegate.
+     */
     get valueRef() {
       switch (this._figmaVariableData.resolvedType) {
         case 'COLOR':
-          // TODO: (in source) transparent exists as a tier 1 token but should not
-          if (this.getResovledName() === 'Render/Transparent') {
-            return 'transparent';
-          }
+          // TODO-AH: BUG: we assume all lookups resolve to a tier 1 value
+          // the one that errors is b/c it doesn't eventually reference a tier 1 (icon/util/inverse-disabled)
+          // how to properly use .getTokenPath here?
           return module.exports.FigmaVariable.isAliased(
             this._figmaVariableData,
             this._mode,
           )
-            ? `{${this._tokenNameToPath(
-                this.getResovledName()
-                  .replace(
-                    module.exports.FigmaVariable.TIER_1_PREFIX,
-                    'eds.color.',
-                  )
-                  // TODO: (in source) remove duplicate color from structures
-                  .replace('Neutral/Neutral', 'Neutral')
-                  .replace('Red/Red', 'Red')
-                  .replace('Orange/Orange', 'Orange')
-                  .replace('Yellow/Yellow', 'Yellow')
-                  .replace('Green/Green', 'Green')
-                  .replace('Blue/Blue', 'Blue')
-                  .replace('Purple/Purple', 'Purple')
-                  .replace('Pink/Pink', 'Pink')
-                  // TODO: (in source) lower case the names of the tier 1 color tokens
-                  .toLowerCase(),
-              )}}`
+            ? `${this._tokenNameToPath(
+                this.getResovledName().replace(
+                  module.exports.FigmaVariable.TIER_1_PREFIX,
+                  'eds.color.',
+                ),
+              )}`
             : this.value;
         case 'FLOAT':
           return module.exports.FigmaVariable.isAliased(
             this._figmaVariableData,
             this._mode,
           )
-            ? `{${this._tokenNameToPath(
-                'eds.' +
-                  this.getResovledName()
-                    // TODO: (in source) lower case the names of the tier 1 color tokens
-                    .toLowerCase(),
-              )}}`
+            ? `${this._tokenNameToPath('eds.' + this.getResovledName())}`
             : this.value;
         default:
           throw new TypeError(

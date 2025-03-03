@@ -365,7 +365,7 @@ describe('utils', function () {
         variables: {
           'VariableID:6348:6248': {
             id: 'VariableID:6348:6248',
-            name: 'Render/Neutral/Neutral-050',
+            name: 'render/neutral-050',
             remote: false,
             key: '176ccd26264f7e048ae441ac585726a51fa6a819',
             variableCollectionId: 'VariableCollectionId:6181:1797',
@@ -405,7 +405,7 @@ describe('utils', function () {
           },
           'VariableID:6195:914': {
             id: 'VariableID:6195:914',
-            name: 'Render/Neutral/White',
+            name: 'render/neutral/white',
             remote: false,
             key: 'b2ed72ac00bfa71fbe0c0039404b125f7f5193e2',
             variableCollectionId: 'VariableCollectionId:6181:1797',
@@ -546,6 +546,9 @@ describe('utils', function () {
     });
 
     describe('FigmaVariable', function () {
+      // TODO-AH: add test for lookup when the matching token is not tier 1
+      // TODO-AH: add test for orphaned token
+
       it('allows retrieval of token path from a variable', () => {
         const variable = new utils.FigmaVariable(
           {
@@ -638,7 +641,7 @@ describe('utils', function () {
           new utils.FigmaAPIReader(mockData),
         );
 
-        expect(variable.valueRef).toEqual('{eds.color.neutral.white}');
+        expect(variable.valueRef).toEqual('eds.color.neutral.white');
       });
 
       it('allows retrieval of float value ref from a variable', () => {

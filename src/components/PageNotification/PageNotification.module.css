@@ -6,7 +6,7 @@
 /**
  * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
  */
- 
+
 /**
  * Message of information, success, caution, or warning to the user.
  */
@@ -21,7 +21,7 @@
 
   &.page-notification--status-informational {
     color: var(--eds-theme-color-text-utility-informational);
-    background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+    background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
   }
 
   &.page-notification--status-critical {
@@ -81,4 +81,3 @@
   /* Adjust the positioning to slip into the padding of the container */
   margin: -0.5rem;
 }
-
