@@ -16,7 +16,7 @@
   align-items: center;
 
   /* border color matches the background color, unless a color variant is applied */
-  border: calc(var(--eds-theme-border-width) * 1px) solid var(--tag-secondary-color) ;
+  border: calc(var(--eds-theme-border-width) * 1px) solid var(--tag-secondary-color);
   border-radius: calc(var(--eds-border-radius-md) * 1px);
 
   background-color: var(--tag-secondary-color);
@@ -27,7 +27,7 @@
  * Spacing between icon and label text, if icon present
  * TODO: perhaps use gap?
  */
-.tag > :not(:last-child) {
+.tag> :not(:last-child) {
   margin-right: calc(var(--eds-size-half) / 16 * 1rem);
 }
 
@@ -96,7 +96,7 @@
 
 :where(.tag--status-informational) {
   --tag-primary-color: var(--eds-theme-color-text-utility-informational);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
 }
 
 /**

@@ -880,112 +880,226 @@
       "1": {
         "value": "8",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "2": {
         "value": "16",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "3": {
         "value": "24",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "4": {
         "value": "32",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "5": {
         "value": "40",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "6": {
         "value": "48",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "7": {
         "value": "56",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "8": {
         "value": "64",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "9": {
         "value": "72",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "10": {
         "value": "80",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "11": {
         "value": "88",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "12": {
         "value": "96",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "20": {
         "value": "160",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "24": {
         "value": "192",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "32": {
         "value": "256",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "34": {
         "value": "272",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "40": {
         "value": "320",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "base-unit": {
         "value": "8",
         "group": "size",
-        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in the next major version of EDS."
       },
       "half": {
         "value": "4",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "quarter": {
         "value": "2",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "1-and-half": {
         "value": "12",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       },
       "2-and-half": {
         "value": "20",
         "group": "size",
-        "comment": "Relative EMs (rem)"
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
+      }
+    },
+    "spacing": {
+      "size": {
+        "1": {
+          "value": "8",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "2": {
+          "value": "16",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "3": {
+          "value": "24",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "4": {
+          "value": "32",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "5": {
+          "value": "40",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "6": {
+          "value": "48",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "7": {
+          "value": "56",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "8": {
+          "value": "64",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "9": {
+          "value": "72",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "10": {
+          "value": "80",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "11": {
+          "value": "88",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "12": {
+          "value": "96",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "20": {
+          "value": "160",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "24": {
+          "value": "192",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "32": {
+          "value": "256",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "34": {
+          "value": "272",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "40": {
+          "value": "320",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "base-unit": {
+          "value": "8",
+          "group": "size",
+          "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
+        "half": {
+          "value": "4",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "quarter": {
+          "value": "2",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "1-and-half": {
+          "value": "12",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        },
+        "2-and-half": {
+          "value": "20",
+          "group": "size",
+          "comment": "Relative EMs (rem)"
+        }
       }
     },
     "z-index": {
@@ -1046,7 +1160,15 @@
             }
           },
           "tabUnderline": {
-            "value": "{eds.border.radius.round}"
+            "@": {
+              "value": "{eds.border.radius.round}"
+            },
+            "default": {
+              "value": "{eds.border.radius.full}"
+            },
+            "sticky": {
+              "value": "{eds.border.radius.full}"
+            }
           }
         },
         "width": {
@@ -1446,9 +1568,36 @@
                 "active": {
                   "value": "{eds.color.yellow.150}"
                 }
+              },
+              "highEmphasis": {
+                "@": {
+                  "value": "{eds.color.yellow.050}"
+                },
+                "hover": {
+                  "value": "{eds.color.yellow.100}"
+                },
+                "active": {
+                  "value": "{eds.color.yellow.150}"
+                }
               }
             },
             "information": {
+              "lowEmphasis": {
+                "@": {
+                  "value": "{eds.color.blue.050}",
+                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+                },
+                "hover": {
+                  "value": "{eds.color.blue.100}",
+                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+                },
+                "active": {
+                  "value": "{eds.color.blue.150}",
+                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+                }
+              }
+            },
+            "informational": {
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.blue.050}"
@@ -2848,6 +2997,12 @@
                 "value": "{eds.theme.color.text.utility.inverse.disabled}",
                 "group": "color",
                 "comment": "Use with rgb()"
+              },
+              "interactive": {
+                "visited": {
+                  "value": "{eds.theme.color.text.utility.inverse.interactive.visited}",
+                  "group": "color"
+                }
               }
             },
             "placeholder": {

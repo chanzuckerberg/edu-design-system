@@ -304,7 +304,11 @@
             "sm": "2",
             "xs": "0"
           },
-          "tabUnderline": "50"
+          "tabUnderline": {
+            "@": "50",
+            "default": "9999",
+            "sticky": "9999"
+          }
         },
         "width": "1"
       },
@@ -493,9 +497,21 @@
                 "@": "#FDF3D3",
                 "hover": "#FBE8AB",
                 "active": "#F9DA78"
+              },
+              "highEmphasis": {
+                "@": "#FDF3D3",
+                "hover": "#FBE8AB",
+                "active": "#F9DA78"
               }
             },
             "information": {
+              "lowEmphasis": {
+                "@": "#EAF4FF",
+                "hover": "#CEE6FF",
+                "active": "#B5DAFF"
+              }
+            },
+            "informational": {
               "lowEmphasis": {
                 "@": "#EAF4FF",
                 "hover": "#CEE6FF",
@@ -1012,7 +1028,10 @@
             },
             "inverse": {
               "@": "rgb(var(--eds-color-white) / 1)",
-              "disabled": "rgb(var(--eds-color-white) / 0.5)"
+              "disabled": "rgb(var(--eds-color-white) / 0.5)",
+              "interactive": {
+                "visited": "rgb(var(--eds-color-white) / 1)"
+              }
             },
             "placeholder": "#6C6967",
             "success": {
@@ -1476,6 +1495,32 @@
       "quarter": "2",
       "1-and-half": "12",
       "2-and-half": "20"
+    },
+    "spacing": {
+      "size": {
+        "1": "8",
+        "2": "16",
+        "3": "24",
+        "4": "32",
+        "5": "40",
+        "6": "48",
+        "7": "56",
+        "8": "64",
+        "9": "72",
+        "10": "80",
+        "11": "88",
+        "12": "96",
+        "20": "160",
+        "24": "192",
+        "32": "256",
+        "34": "272",
+        "40": "320",
+        "base-unit": "8",
+        "half": "4",
+        "quarter": "2",
+        "1-and-half": "12",
+        "2-and-half": "20"
+      }
     },
     "z-index": {
       "0": "0",

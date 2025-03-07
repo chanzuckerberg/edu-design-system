@@ -22,7 +22,7 @@
   /* NOTE: by specifying no default color for borders, they inherit from color below */
   &.inline-notification--status-informational {
     color: var(--eds-theme-color-text-utility-informational);
-    background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+    background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
   }
 
   &.inline-notification--status-critical {

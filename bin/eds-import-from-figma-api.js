@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const { identity } = require('lodash');
+
 // Script shell
 (async function () {
   const jsonfile = require('jsonfile');
@@ -118,22 +120,34 @@
         response.modeId,
         figmaApiReader,
       );
-      let writePath = variable.getTokenPath();
+
+      // If we have a zombie entry in the variable list, skip it (flag for design)
+      if (variable.isOrphaned()) {
+        stats.skipped.push(variable);
+        spinner.warn(
+          chalk.bold(variable.name) +
+            ': Skipped with warning (orphaned): please remove usage in figma',
+        );
+
+        return;
+      }
 
       // mesh the token path to a matching path in the local theme file
-      const found = at(localTheme, writePath).filter(
+      let writePath = variable.getTokenPath();
+      const locationInLocal = at(localTheme, writePath).filter(
         (entries) => typeof entries !== 'undefined',
       );
 
-      if (found.length) {
+      // Update the write path to conform to the format used in style-dictionary
+      if (locationInLocal.length) {
         // handle case where we should look for @ in the file, then pluck the value object properly
-        if (found[0]['@']?.value) {
+        if (locationInLocal[0]['@']?.value) {
           // update the write path to mark the @ and value
           writePath = writePath + '.@.value';
         }
 
         // handle case where it's just value
-        if (found[0]?.value) {
+        if (locationInLocal[0]?.value) {
           // update the write path to mark the value
           writePath = writePath + '.value';
         }
@@ -143,17 +157,28 @@
         try {
           // error when path suffix is invalid (all should end with .value)
           if (!writePath.endsWith('value')) {
+            isVerbose && console.error(variable);
             throw new Error(
-              `Name format violation. Name missing in local theme: ${writePath} (${figmaVariable.resolvedType})`,
+              `Name format violation. JSON path missing in local theme: ${writePath} (${figmaVariable.resolvedType})`,
             );
           }
 
+          if (
+            FigmaVariable.isAliased(figmaVariable, response.modeId) &&
+            !at(localTheme, variable.valueRef).some(identity)
+          ) {
+            throw new Error(
+              `Value violation. Trying to write a reference value path not in local theme: ${writePath} => {${variable.valueRef}}`,
+            );
+          }
+
+          // Write the defined value to the specified location by json path
           canWrite &&
             args.local &&
-            set(localTheme, writePath, variable.valueRef);
+            set(localTheme, writePath, `{${variable.valueRef}}`);
           canWrite && !args.local && set(localTheme, writePath, variable.value);
 
-          // write the value using the calculated path and parsed value
+          // log if in a loggable mode (verbose / dry-run)
           if (isVerbose || !canWrite) {
             spinner.succeed(
               `Write: ${
@@ -166,7 +191,7 @@
           stats.updated.push(variable);
         } catch (e) {
           // We couldn't parse the resolved value, so skip and add to errors
-          spinner.fail(chalk.bold(variable.name) + ': Error (' + e + ')');
+          spinner.fail(chalk.bold(variable.name) + ': ' + e);
           stats.errored.push(variable);
         }
       } else {

@@ -97,10 +97,19 @@ export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisActive =
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FDF3D3';
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasisHover = '#FBE8AB';
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasisActive = '#F9DA78';
-export const EdsThemeColorBackgroundUtilityInformationLowEmphasis = '#EAF4FF';
+export const EdsThemeColorBackgroundUtilityWarningHighEmphasis = '#FDF3D3';
+export const EdsThemeColorBackgroundUtilityWarningHighEmphasisHover = '#FBE8AB';
+export const EdsThemeColorBackgroundUtilityWarningHighEmphasisActive =
+  '#F9DA78';
+export const EdsThemeColorBackgroundUtilityInformationLowEmphasis = '#EAF4FF'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundUtilityInformationLowEmphasisHover =
-  '#CEE6FF';
+  '#CEE6FF'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundUtilityInformationLowEmphasisActive =
+  '#B5DAFF'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
+export const EdsThemeColorBackgroundUtilityInformationalLowEmphasis = '#EAF4FF';
+export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisHover =
+  '#CEE6FF';
+export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisActive =
   '#B5DAFF';
 export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis = 'transparent';
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#EEE7E4';
@@ -386,6 +395,8 @@ export const EdsThemeColorIconUtilityInverse =
   'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorIconUtilityInverseDisabled =
   'rgb(var(--eds-color-white) / 0.5)'; // Use with rgb()
+export const EdsThemeColorIconUtilityInverseInteractiveVisited =
+  'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorIconUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorIconUtilitySuccess = '#00A56A'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorIconUtilitySuccessHover = '#008656'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.

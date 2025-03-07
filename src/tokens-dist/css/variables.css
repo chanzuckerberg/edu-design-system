@@ -7,28 +7,50 @@
   --eds-z-index-200: 200; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-z-index-100: 100; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-z-index-0: 0; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-size-2-and-half: 20; /* Relative EMs (rem) */
-  --eds-size-1-and-half: 12; /* Relative EMs (rem) */
-  --eds-size-quarter: 2; /* Relative EMs (rem) */
-  --eds-size-half: 4; /* Relative EMs (rem) */
-  --eds-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-size-40: 320; /* Relative EMs (rem) */
-  --eds-size-34: 272; /* Relative EMs (rem) */
-  --eds-size-32: 256; /* Relative EMs (rem) */
-  --eds-size-24: 192; /* Relative EMs (rem) */
-  --eds-size-20: 160; /* Relative EMs (rem) */
-  --eds-size-12: 96; /* Relative EMs (rem) */
-  --eds-size-11: 88; /* Relative EMs (rem) */
-  --eds-size-10: 80; /* Relative EMs (rem) */
-  --eds-size-9: 72; /* Relative EMs (rem) */
-  --eds-size-8: 64; /* Relative EMs (rem) */
-  --eds-size-7: 56; /* Relative EMs (rem) */
-  --eds-size-6: 48; /* Relative EMs (rem) */
-  --eds-size-5: 40; /* Relative EMs (rem) */
-  --eds-size-4: 32; /* Relative EMs (rem) */
-  --eds-size-3: 24; /* Relative EMs (rem) */
-  --eds-size-2: 16; /* Relative EMs (rem) */
-  --eds-size-1: 8; /* Relative EMs (rem) */
+  --eds-spacing-size-2-and-half: 20; /* Relative EMs (rem) */
+  --eds-spacing-size-1-and-half: 12; /* Relative EMs (rem) */
+  --eds-spacing-size-quarter: 2; /* Relative EMs (rem) */
+  --eds-spacing-size-half: 4; /* Relative EMs (rem) */
+  --eds-spacing-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-spacing-size-40: 320; /* Relative EMs (rem) */
+  --eds-spacing-size-34: 272; /* Relative EMs (rem) */
+  --eds-spacing-size-32: 256; /* Relative EMs (rem) */
+  --eds-spacing-size-24: 192; /* Relative EMs (rem) */
+  --eds-spacing-size-20: 160; /* Relative EMs (rem) */
+  --eds-spacing-size-12: 96; /* Relative EMs (rem) */
+  --eds-spacing-size-11: 88; /* Relative EMs (rem) */
+  --eds-spacing-size-10: 80; /* Relative EMs (rem) */
+  --eds-spacing-size-9: 72; /* Relative EMs (rem) */
+  --eds-spacing-size-8: 64; /* Relative EMs (rem) */
+  --eds-spacing-size-7: 56; /* Relative EMs (rem) */
+  --eds-spacing-size-6: 48; /* Relative EMs (rem) */
+  --eds-spacing-size-5: 40; /* Relative EMs (rem) */
+  --eds-spacing-size-4: 32; /* Relative EMs (rem) */
+  --eds-spacing-size-3: 24; /* Relative EMs (rem) */
+  --eds-spacing-size-2: 16; /* Relative EMs (rem) */
+  --eds-spacing-size-1: 8; /* Relative EMs (rem) */
+  --eds-size-2-and-half: 20; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-1-and-half: 12; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-quarter: 2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-half: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-base-unit: 8; /* Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in the next major version of EDS. */
+  --eds-size-40: 320; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-34: 272; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-32: 256; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-24: 192; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-20: 160; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-12: 96; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-11: 88; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-10: 80; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-9: 72; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-8: 64; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-7: 56; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-6: 48; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-5: 40; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-4: 32; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-3: 24; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-2: 16; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
+  --eds-size-1: 8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem) */
   --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
@@ -482,6 +504,7 @@
   --eds-theme-color-icon-utility-error: var(--eds-color-other-ruby-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-icon-utility-success-hover: var(--eds-color-other-mint-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-icon-utility-success: var(--eds-color-other-mint-500); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-icon-utility-inverse-interactive-visited: var(--eds-theme-color-text-utility-inverse-interactive-visited);
   --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
   --eds-theme-color-icon-utility-inverse: var(--eds-theme-color-text-utility-inverse);
   --eds-theme-color-icon-brand-primary-hover: var(--eds-color-brand-grape-600); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
@@ -712,9 +735,15 @@
   --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
   --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-information-low-emphasis-active: var(--eds-color-blue-150);
-  --eds-theme-color-background-utility-information-low-emphasis-hover: var(--eds-color-blue-100);
-  --eds-theme-color-background-utility-information-low-emphasis: var(--eds-color-blue-050);
+  --eds-theme-color-background-utility-informational-low-emphasis-active: var(--eds-color-blue-150);
+  --eds-theme-color-background-utility-informational-low-emphasis-hover: var(--eds-color-blue-100);
+  --eds-theme-color-background-utility-informational-low-emphasis: var(--eds-color-blue-050);
+  --eds-theme-color-background-utility-information-low-emphasis-active: var(--eds-color-blue-150); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-utility-information-low-emphasis-hover: var(--eds-color-blue-100); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-utility-information-low-emphasis: var(--eds-color-blue-050); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-utility-warning-high-emphasis-active: var(--eds-color-yellow-150);
+  --eds-theme-color-background-utility-warning-high-emphasis-hover: var(--eds-color-yellow-100);
+  --eds-theme-color-background-utility-warning-high-emphasis: var(--eds-color-yellow-050);
   --eds-theme-color-background-utility-warning-low-emphasis-active: var(--eds-color-yellow-150);
   --eds-theme-color-background-utility-warning-low-emphasis-hover: var(--eds-color-yellow-100);
   --eds-theme-color-background-utility-warning-low-emphasis: var(--eds-color-yellow-050);
@@ -790,6 +819,8 @@
   --eds-theme-box-focus-ring-outline-width: var(--eds-outline-width-sm);
   --eds-theme-box-button-border-radius: var(--eds-border-radius-md);
   --eds-theme-border-width: var(--eds-border-width-sm);
+  --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
+  --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline: var(--eds-border-radius-round);
   --eds-theme-border-radius-objects-xs: var(--eds-border-radius-none);
   --eds-theme-border-radius-objects-sm: var(--eds-border-radius-50);
