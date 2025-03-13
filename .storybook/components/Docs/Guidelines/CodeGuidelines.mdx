@@ -135,20 +135,6 @@ We use focus-visible for most focus states. This ensures that the focus state wi
 
 However, we currently support some browser versions that do not support the focus-visible CSS feature, so we also use a fallback block in conjunciton with focus-visible.
 
-```css
-.button--rank-primary {
-  &:focus-visible {
-    @mixin focus;
-  }
-
-  @supports not selector(:focus-visible) {
-    &:focus {
-      @mixin focus;
-    }
-  }
-}
-```
-
 #### States and pseudo-selectors
 
 ```css

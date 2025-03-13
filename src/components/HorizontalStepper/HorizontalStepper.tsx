@@ -60,6 +60,8 @@ export type StepProps = {
  * ```tsx
  * <HorizontalStepper activeIndex={0} steps={['Step 1', 'Step 2', 'Step 3']} />
  * ```
+ *
+ * @deprecated
  */
 export const HorizontalStepper = ({
   activeIndex,

@@ -103,6 +103,8 @@ const BadgeDot = () => <BadgeText />;
  *   <Badge.Icon icon="alarm"/>
  * </Badge>
  * ```
+ *
+ * @deprecated
  */
 export const Badge = ({ children, className, ...other }: BadgeProps) => {
   const componentClassName = clsx(styles['badge__wrapper'], className);
