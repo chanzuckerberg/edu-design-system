@@ -546,8 +546,6 @@ describe('utils', function () {
     });
 
     describe('FigmaVariable', function () {
-      // TODO-AH: add test for lookup when the matching token is not tier 1
-
       it('can identify an orphaned variable (deleted in figma but still in use somewhere)', () => {
         const variable = new utils.FigmaVariable(
           {
