@@ -63,7 +63,9 @@ const { identity } = require('lodash');
   );
 
   if (!figmaFileResponse.ok) {
-    throw new Error('cannot access figma file: ' + figmaFileResponse.status);
+    throw new Error(
+      `cannot access figma file with token ${args.token}: ${figmaFileResponse.status}`,
+    );
   }
 
   const fullData = await figmaFileResponse.json();

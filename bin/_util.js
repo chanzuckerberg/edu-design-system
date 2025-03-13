@@ -355,6 +355,7 @@ module.exports = {
 
   FigmaVariable: class {
     static TIER_1_PREFIX = 'render/';
+    static TIER_2_PREFIX = '-> ';
     static VARIABLE_ALIAS = 'VARIABLE_ALIAS';
 
     constructor(json, mode, lookupDelegate) {
@@ -403,6 +404,7 @@ module.exports = {
       isLookup = false,
     ) {
       // TODO: this should not fall thru when mode is missing
+      // TODO: should this fail if lookupDelegate is undefined?
       if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
@@ -545,18 +547,21 @@ module.exports = {
     get valueRef() {
       switch (this._figmaVariableData.resolvedType) {
         case 'COLOR':
-          // TODO-AH: BUG: we assume all lookups resolve to a tier 1 value
-          // the one that errors is b/c it doesn't eventually reference a tier 1 (icon/util/inverse-disabled)
-          // how to properly use .getTokenPath here?
           return module.exports.FigmaVariable.isAliased(
             this._figmaVariableData,
             this._mode,
           )
             ? `${this._tokenNameToPath(
-                this.getResovledName().replace(
-                  module.exports.FigmaVariable.TIER_1_PREFIX,
-                  'eds.color.',
-                ),
+                this.getResovledName()
+                  // replace token prefixes with the internal equivalents
+                  .replace(
+                    module.exports.FigmaVariable.TIER_1_PREFIX,
+                    'eds.color.',
+                  )
+                  .replace(
+                    module.exports.FigmaVariable.TIER_2_PREFIX,
+                    'eds.theme.color.',
+                  ),
               )}`
             : this.value;
         case 'FLOAT':
