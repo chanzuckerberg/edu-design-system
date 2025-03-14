@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.11.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.11.0...v15.11.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* apply token and script fixes to sync with design ([ae1988e](https://github.com/chanzuckerberg/edu-design-system/commit/ae1988ec9232f086f9698898f44f2a33ede73e26))
+* **Button:** use proper token for border-radius ([974f787](https://github.com/chanzuckerberg/edu-design-system/commit/974f7875467eba1776c7ab1a417ee56773d01134))
+* remove typo ([e6dcadf](https://github.com/chanzuckerberg/edu-design-system/commit/e6dcadfbf97de97487fea8ab7e8fe8556a6a6284))
+* **scripts:** address bug for internal tier 2 references w/ tests ([cf50066](https://github.com/chanzuckerberg/edu-design-system/commit/cf50066345cb086341608aec886ef957b65c1a01))
+
 ## [15.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.10.2...v15.11.0) (2025-02-28)
 
 
