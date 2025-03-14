@@ -25,6 +25,7 @@ type Props = {
    */
   className?: string;
   // Design API
+  // TODO(next-major): remove the below prop
   /**
    * Adds an outline for the tag.
    *
@@ -47,6 +48,7 @@ type Props = {
    * Status for the component state
    */
   status?: Status;
+  // TODO(next-major): remove the below prop
   /**
    * The text contents of the tag, nested inside the component, in addition to the icon.
    *
@@ -55,6 +57,7 @@ type Props = {
    * **This property is deprecated and will be removed in the next major version**
    */
   text?: React.ReactNode;
+  // TODO(next-major): remove the below prop
   /**
    * The color variant of the tag. It will update the content colors, background color, and border (when `hasOutline` is set to `true`).
    *

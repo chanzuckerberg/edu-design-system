@@ -86,6 +86,8 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
  * Please check out our examples for possible ideas.
  *
  * NOTE: This component requires `label` or `aria-label` prop
+ *
+ * @deprecated
  */
 export const Slider = ({
   className,

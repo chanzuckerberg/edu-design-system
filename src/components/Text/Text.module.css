@@ -132,7 +132,8 @@
   font: var(--eds-theme-typography-caption-sm-bold);
 }
 .text--overline {
-  /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS." */
+  /* @deprecated TODO(next-major): This should not be used in code or design. It will be removed in a future version of EDS." */
+    /* Remove the constant in the text component for this as well */
   font: var(--eds-theme-typography-overline);
   text-transform: uppercase;
 }

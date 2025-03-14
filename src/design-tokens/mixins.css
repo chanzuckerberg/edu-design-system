@@ -8,15 +8,18 @@
   outline-offset: calc(var(--eds-theme-box-focus-ring-outline-offset) * 1px);
 }
 
+/* TODO(next-major): remove b/c this is no longer in use */
 @define-mixin focusInverted {
   @mixin focus;
   outline-color: var(--eds-theme-color-focus-ring-inverted);
 }
 
+/* TODO(next-major): remove b/c this is no longer in use */
 @define-mixin placeholderStyles {
   color: var(--eds-theme-color-text-disabled);
 }
 
+/* TODO(next-major): remove this after the one usage is removed */
 @define-mixin visuallyHide {
   position: absolute !important;
   overflow: hidden !important;

@@ -95,6 +95,8 @@ const SearchButton = ({ className, disabled, ...other }: SearchButtonProps) => {
  * `import {SearchBar} from "@chanzuckerberg/eds";`
  *
  * Input field and button used for searching through various data fields.
+ *
+ * @deprecated
  */
 export const SearchBar = ({ children, className }: SearchBarProps) => {
   const componentClassName = clsx(styles['search-bar'], className);

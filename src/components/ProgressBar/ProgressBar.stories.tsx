@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { ProgressBar } from './ProgressBar';
@@ -13,7 +14,7 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-1.0'],
+    badges: ['api-1.3', 'theme-1.0', BADGE.DEPRECATED],
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },
