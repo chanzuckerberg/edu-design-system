@@ -9,7 +9,7 @@
 
 .button {
   position: relative;
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-actions) * 1px);
   border: calc(var(--eds-border-width-sm) * 1px) solid;
   overflow: hidden;
   display: flex;

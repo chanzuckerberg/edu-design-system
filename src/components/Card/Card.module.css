@@ -63,16 +63,16 @@
 }
 
 .card--container-color-call-out {
-  background-color: var(--eds-theme-color-background-utility-information-low-emphasis);
+  background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
   border-color: var(--eds-theme-color-border-utility-informational);
 
   &.card--is-interactive {
     &:hover {
-      background-color: var(--eds-theme-color-background-utility-information-low-emphasis-hover);
+      background-color: var(--eds-theme-color-background-utility-informational-low-emphasis-hover);
     }
 
     &:active {
-      background-color: var(--eds-theme-color-background-utility-information-low-emphasis-active);
+      background-color: var(--eds-theme-color-background-utility-informational-low-emphasis-active);
     }
   }
 }
@@ -87,7 +87,7 @@
   & .header__eyebrow {
     margin-bottom: calc(var(--eds-size-1) / 16 * 1rem);
   }
-  
+
   &.header--size-sm {
     gap: calc(var(--eds-size-1) / 16 * 1rem)
   }

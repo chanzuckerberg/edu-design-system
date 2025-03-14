@@ -93,6 +93,7 @@ EDS comes with some optional tooling to allow easy transfer of theme data from F
 
 - `eds-init-theme` - This command creates the initial file(s) for theming your application
 - `eds-apply-theme` - This command parses the local config file to generate the tokens used by EDS components and tools
+- `eds-import-from-figma-api` - This command reads from figma, and applies token values to the theme in the app
 
 Each of these tools reads config to figure out where to read/write files.
 
@@ -171,11 +172,14 @@ When using a [Figma Enterprise account][figma-enterprise], core design system fi
 Example:
 
 ```
-npx eds-import-from-figma file <file_id> --token <personal_access_token>
+npx eds-import-from-figma-api file <file_id> --token <personal_access_token>
 ```
+
+**NOTE**: when using this method, it requires both the figma file ID (e.g., `figma.com/design/<file_id>/`), and an API token. Instructions from Figma [are here][figma-access-token-docs].
 
 [figma-enterprise]: https://www.figma.com/enterprise/
 [figma-api-docs]: https://www.figma.com/developers/api
+[figma-access-token-docs]: https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens
 
 ## Custom Theming and Tailwind
 

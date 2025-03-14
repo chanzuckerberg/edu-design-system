@@ -53,6 +53,7 @@ export const Label = ({
 }: LabelProps) => {
   const componentClassName = clsx(
     styles['label'],
+    // TODO(next-major): remove this in favor of a local style (and not based on the mixin)
     hideLabel && styles['u-is-vishidden'],
     className,
   );

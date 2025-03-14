@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import debounce from 'lodash/debounce';
 import React, { createContext, useContext, type ReactNode } from 'react';
+// TODO(next-major): move flatten into this component since it's the only usage
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';

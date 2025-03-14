@@ -66,6 +66,7 @@ export const ToastNotification = ({
   );
 
   // if both are defined, temporarily prefer the original value of dissmissType to avoid accidental overrides
+  // TODO(next-major): clean up this workaround
   const tempDismissType = dissmissType ?? dismissType;
 
   assertEdsUsage(
@@ -81,7 +82,7 @@ export const ToastNotification = ({
   // TODO(next-major): remove this misspelled prop at next major release
   assertEdsUsage(
     [typeof dissmissType !== 'undefined'],
-    '`dissmissType` should not be used. Use `dismissType` instead',
+    '`dissmissType` is deprecated should not be used. Use `dismissType` instead',
     'error',
   );
 
@@ -119,7 +120,7 @@ export const ToastNotification = ({
           onClick={onDismiss}
           rank="tertiary"
           variant="neutral"
-        ></Button>
+        />
       )}
     </div>
   );

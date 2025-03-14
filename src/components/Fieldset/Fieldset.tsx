@@ -68,6 +68,7 @@ type FieldsetLegendProps = {
   // Design API
   /**
    * String to indicate required or optional state.
+   * TODO(next-major): remove this prop and the assertion below
    *
    * **This prop is deprecated**.
    */
@@ -88,6 +89,7 @@ type FieldsetLegendProps = {
   subtitle?: string;
   /**
    * Legend text string that names the fieldset.
+   * TODO(next-major): remove this prop and the assertion below
    *
    * **This prop is deprecated**.
    */
