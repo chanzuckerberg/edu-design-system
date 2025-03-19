@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent } from '@storybook/testing-library';
 import React, { useState } from 'react';
@@ -14,7 +15,7 @@ const meta: Meta<typeof Slider> = {
   component: Slider,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-1.0'],
+    badges: ['api-1.3', 'theme-1.0', BADGE.DEPRECATED],
   },
   args: {
     className: 'w-96',

@@ -35,6 +35,8 @@ export type Props = {
  * `import {ProgressBar} from "@chanzuckerberg/eds";`
  *
  * Show the progression of a system operation: downloading, uploading, processing, etc., in a visual way
+ *
+ * @deprecated
  */
 export const ProgressBar = ({
   caption,

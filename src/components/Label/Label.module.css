@@ -29,6 +29,7 @@
 
 /**
  * Visually hides the label element but is kept for screen reading accessibility.
+ * TODO(next-major): remove this usage of a once-used mixin
  */
 .u-is-vishidden {
   @mixin visuallyHide;

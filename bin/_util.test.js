@@ -365,7 +365,7 @@ describe('utils', function () {
         variables: {
           'VariableID:6348:6248': {
             id: 'VariableID:6348:6248',
-            name: 'Render/Neutral/Neutral-050',
+            name: 'render/neutral-050',
             remote: false,
             key: '176ccd26264f7e048ae441ac585726a51fa6a819',
             variableCollectionId: 'VariableCollectionId:6181:1797',
@@ -405,7 +405,7 @@ describe('utils', function () {
           },
           'VariableID:6195:914': {
             id: 'VariableID:6195:914',
-            name: 'Render/Neutral/White',
+            name: 'render/neutral/white',
             remote: false,
             key: 'b2ed72ac00bfa71fbe0c0039404b125f7f5193e2',
             variableCollectionId: 'VariableCollectionId:6181:1797',
@@ -546,6 +546,38 @@ describe('utils', function () {
     });
 
     describe('FigmaVariable', function () {
+      it('can identify an orphaned variable (deleted in figma but still in use somewhere)', () => {
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:6359:7717',
+            name: '-> text/utility/inverse',
+            remote: true,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: true,
+            deletedButReferenced: true,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:6195:914',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6181:0',
+          () => {},
+        );
+
+        expect(variable.isOrphaned()).toBeTruthy();
+      });
+
       it('allows retrieval of token path from a variable', () => {
         const variable = new utils.FigmaVariable(
           {
@@ -579,7 +611,7 @@ describe('utils', function () {
         );
       });
 
-      it('allows deep retrieval of value from a variable, using delegate', () => {
+      it('allows deep retrieval of value from a variable, using delegate (resolve tier 1)', () => {
         const variable = new utils.FigmaVariable(
           {
             id: 'VariableID:6359:7717',
@@ -610,6 +642,129 @@ describe('utils', function () {
         expect(variable.getResovledValue()).toEqual({ r: 1, g: 1, b: 1, a: 1 });
       });
 
+      it('allows deep retrieval of value from a variable, using delegate (resolve tier 2)', () => {
+        // This is a case where a tier 2+ token is referencing another tier 2 token (not a tier 1 and its subsequent value)
+        const mockData = {
+          status: 200,
+          error: false,
+          meta: {
+            variableCollections: {
+              'VariableCollectionId:6181:1797': {
+                defaultModeId: '6181:0',
+                id: 'VariableCollectionId:6181:1797',
+                name: 'Collection 1',
+                remote: false,
+                modes: [
+                  {
+                    modeId: '6181:0',
+                    name: 'Value',
+                  },
+                ],
+                key: '5f66df751f45114c0d64b702b03e9ae820293768',
+                hiddenFromPublishing: false,
+                variableIds: [],
+              },
+              'VariableCollectionId:6348:1793': {
+                defaultModeId: '6348:0',
+                id: 'VariableCollectionId:6348:1793',
+                name: 'Collection 2',
+                remote: false,
+                modes: [
+                  {
+                    modeId: '6348:0',
+                    name: 'mode 1',
+                  },
+                  {
+                    modeId: '7493:1',
+                    name: 'mode 2',
+                  },
+                ],
+              },
+            },
+            variables: {
+              'VariableID:7359:7717': {
+                id: 'VariableID:7359:7717',
+                name: '-> text/utility/inverse-disabled',
+                remote: false,
+                key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+                variableCollectionId: 'VariableCollectionId:6348:1793',
+                resolvedType: 'COLOR',
+                description: '',
+                hiddenFromPublishing: false,
+                valuesByMode: {
+                  '6348:0': {
+                    r: 1,
+                    g: 1,
+                    b: 1,
+                    a: 1,
+                  },
+                  '7493:1': {
+                    r: 1,
+                    g: 1,
+                    b: 1,
+                    a: 1,
+                  },
+                },
+                scopes: ['TEXT_FILL'],
+                codeSyntax: {},
+              },
+              'VariableID:8359:9717': {
+                id: 'VariableID:8359:9717',
+                name: '-> icon/utility/inverse-disabled',
+                remote: false,
+                key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+                variableCollectionId: 'VariableCollectionId:6348:1793',
+                resolvedType: 'COLOR',
+                description: '',
+                hiddenFromPublishing: false,
+                valuesByMode: {
+                  '6348:0': {
+                    type: 'VARIABLE_ALIAS',
+                    id: 'VariableID:7359:7717',
+                  },
+                  '7493:1': {
+                    type: 'VARIABLE_ALIAS',
+                    id: 'VariableID:7493:9283',
+                  },
+                },
+                scopes: ['TEXT_FILL'],
+                codeSyntax: {},
+              },
+            },
+          },
+        };
+        const variable = new utils.FigmaVariable(
+          {
+            id: 'VariableID:8359:9717',
+            name: '-> icon/utility/inverse-disabled',
+            remote: false,
+            key: '9f4864bc73c48fcc5a28e2320bd81e6205d4e6b5',
+            variableCollectionId: 'VariableCollectionId:6348:1793',
+            resolvedType: 'COLOR',
+            description: '',
+            hiddenFromPublishing: false,
+            valuesByMode: {
+              '6348:0': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7359:7717',
+              },
+              '7493:1': {
+                type: 'VARIABLE_ALIAS',
+                id: 'VariableID:7493:9283',
+              },
+            },
+            scopes: ['TEXT_FILL'],
+            codeSyntax: {},
+          },
+          '6348:0',
+          new utils.FigmaAPIReader(mockData),
+        );
+
+        expect(variable.valueRef).toEqual(
+          'eds.theme.color.text.utility.inverse.disabled',
+        );
+      });
+
       it('allows deep retrieval of value refs from a variable, using delegate', () => {
         const variable = new utils.FigmaVariable(
           {
@@ -638,7 +793,7 @@ describe('utils', function () {
           new utils.FigmaAPIReader(mockData),
         );
 
-        expect(variable.valueRef).toEqual('{eds.color.neutral.white}');
+        expect(variable.valueRef).toEqual('eds.color.neutral.white');
       });
 
       it('allows retrieval of float value ref from a variable', () => {
