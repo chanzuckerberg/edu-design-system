@@ -1,13 +1,48 @@
+import type { Options } from '@popperjs/core';
 import type { TippyProps } from '@tippyjs/react';
 import Tippy from '@tippyjs/react';
 import clsx from 'clsx';
 import * as React from 'react';
 import type { HTMLAttributes } from 'react';
 
-import { defaultPopoverModifiersV2 as defaults } from '../PopoverContainer';
 import { Text } from '../Text/Text';
 
 import styles from './Tooltip.module.css';
+
+export const defaultPopoverModifiers: Options['modifiers'] = [
+  {
+    name: 'offset',
+    options: {
+      offset: [0, 12], // spaces the popover from the trigger element
+    },
+  },
+  {
+    name: 'preventOverflow',
+    options: {
+      mainAxis: false, // prevents popover from offsetting to prevent overflow. Turned off due to resulting misalignment of popover arrow.
+    },
+  },
+  {
+    name: 'computeStyles',
+    options: {
+      roundOffsets: false, // This is to prevent off-by-one rendering glitches, but may add some sub-pixel fuzziness
+    },
+  },
+  {
+    name: 'minWidth',
+    enabled: true,
+    phase: 'beforeWrite',
+    requires: ['computeStyles'],
+    fn: ({ state }) => {
+      state.styles.popper.minWidth = `${state.rects.reference.width}px`;
+    },
+    effect: ({ state }) => {
+      state.elements.popper.style.minWidth = `${
+        state.elements.reference.getBoundingClientRect().width
+      }px`;
+    },
+  },
+];
 
 // Full list of Tippy props: https://atomiks.github.io/tippyjs/v6/all-props/
 type TooltipProps = {
@@ -103,8 +138,8 @@ type Plugin = Plugins[number];
  *
  * A floating information box, attached to other components on the page. Used to display option, additional information.
  *
- * - https://atomiks.github.io/tippyjs/
- * - https://github.com/atomiks/tippyjs-react
+ * @see https://atomiks.github.io/tippyjs/
+ * @see https://github.com/atomiks/tippyjs-react
  */
 export const Tooltip = ({
   childNotInteractive,
@@ -173,7 +208,7 @@ export const Tooltip = ({
       placement={placement}
       plugins={[hideOnEsc]}
       popperOptions={{
-        modifiers: defaults,
+        modifiers: defaultPopoverModifiers,
       }}
       {...rest}
     >

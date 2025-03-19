@@ -100,6 +100,7 @@ const ToastNotificationManager = (args: Args) => {
         {toasts.map((toast) => (
           <Transition
             appear
+            as="div"
             enter="transition-all duration-medium"
             enterFrom="opacity-0 transform-gpu scale-0"
             enterTo="opacity-100 transform-gpu scale-100"

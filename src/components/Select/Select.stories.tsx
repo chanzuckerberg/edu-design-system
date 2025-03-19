@@ -10,7 +10,7 @@ const meta: Meta<typeof Select> = {
   component: Select,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.0'],
   },
   argTypes: {
     multiple: {
@@ -23,6 +23,11 @@ const meta: Meta<typeof Select> = {
     },
     defaultValue: {
       description: 'The default value of the select field (when uncontrolled)',
+    },
+    __demoMode: {
+      table: {
+        disable: true,
+      },
     },
     onClick: {
       description:
@@ -877,8 +882,7 @@ export const DisabledRequired: StoryObj = {
 };
 
 /**
- * Options for each `Select` can be aligned on different sides of the target button. Options for `placement` defined by
- * PopperJS.
+ * Options for each `Select` can be aligned on different sides of the target button.
  *
  * More information: https://popper.js.org/docs/v2/constructors/#options
  */
@@ -895,7 +899,28 @@ export const OptionsRightAligned: StoryObj = {
     ...Default.args,
     className: 'w-60',
     optionsClassName: 'w-96',
-    placement: 'bottom-end',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open} shouldTruncate>
+              {value}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options anchor="bottom end">
+          {Array(30)
+            .fill('test')
+            .map((option, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <Select.Option key={`${option}-${index}`} value={option + index}>
+                {option}
+                {index}
+              </Select.Option>
+            ))}
+        </Select.Options>
+      </>
+    ),
   },
   play: openMenu,
   decorators: [(Story) => <div className="p-8">{Story()}</div>],

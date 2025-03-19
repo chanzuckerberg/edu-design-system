@@ -89,7 +89,7 @@
     "react-dom": ">= 17"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.19",
+    "@headlessui/react": "^2.2.0",
     "@popperjs/core": "^2.11.8",
     "@tanstack/react-table": "^8.21.2",
     "@tippyjs/react": "^4.2.6",
@@ -171,6 +171,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-stylelint": "^7.2.0",
+    "jsdom-testing-mocks": "^1.13.1",
     "lint-staged": "^15.4.3",
     "plop": "^4.0.1",
     "postcss": "^8.5.3",

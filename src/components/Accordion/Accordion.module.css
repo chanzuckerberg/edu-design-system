@@ -99,7 +99,7 @@
 }
 
 .accordion-button:focus-visible {
-  outline: calc(var(--eds-size-quarter) / 16 * 1rem)) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
 }
 
 .accordion-button__leading-icon {

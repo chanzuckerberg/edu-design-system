@@ -11,7 +11,7 @@ export default {
   component: Popover,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.0'],
     chromatic: {
       // These stories are very flaky, though we're not sure why.
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
@@ -95,65 +95,7 @@ export const Default: Story = {
   },
 };
 
-/**
- * The following stories demonstrate how a popover can be made to appear on different sides of the trigger.
- * Each story name denotes a value pased to `placement`.
- */
-export const Top: Story = {
-  args: {
-    placement: 'top',
-  },
-  ...Default,
-};
-
-export const Right: Story = {
-  args: {
-    placement: 'right',
-  },
-  ...Default,
-};
-
-export const Bottom: Story = {
-  args: {
-    placement: 'bottom',
-  },
-  ...Default,
-};
-
-export const Left: Story = {
-  args: {
-    placement: 'left',
-  },
-  ...Default,
-};
-
-export const TopStart: Story = {
-  args: {
-    placement: 'top-start',
-  },
-  ...Default,
-};
-
-export const TopEnd: Story = {
-  args: {
-    placement: 'top-end',
-  },
-  ...Default,
-};
-
-export const BottomStart: Story = {
-  args: {
-    placement: 'bottom-start',
-  },
-  ...Default,
-};
-
-export const BottomEnd: Story = {
-  args: {
-    placement: 'bottom-end',
-  },
-  ...Default,
-};
+// TODO-AH: add back anchor tests
 
 /**
  * The trigger for `Popover` can receive focus, by convention.
