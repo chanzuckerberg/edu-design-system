@@ -47,6 +47,7 @@ export default {
     './src/components/**/*.stories.{ts,tsx}',
     './src/components/**/*Example.tsx',
     './.storybook/**/*.{js,jsx,ts,tsx}',
+    './src/components/Table/StackedCardsToTable.tsx', //TODO: remove this once we deprecate Table
   ],
   theme: {
     colors: {

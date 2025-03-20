@@ -811,8 +811,6 @@
   --eds-theme-color-background-neutral-medium-hover: var(--eds-color-neutral-300);
   --eds-theme-color-background-neutral-default: var(--eds-color-neutral-white);
   --eds-theme-color-body-background-inverted: var(--eds-color-neutral-700);
-  --eds-theme-size-slider-thumb: var(--eds-size-3);
-  --eds-theme-size-slider-track-height: var(--eds-size-1);
   --eds-theme-form-border-radius: var(--eds-border-radius-md);
   --eds-theme-form-border-width: var(--eds-border-width-sm);
   --eds-theme-box-focus-ring-outline-offset: var(--eds-outline-width-md);
