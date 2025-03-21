@@ -1092,10 +1092,6 @@
             }
           }
         },
-        "progress-bar": {
-          "background": "#E7E8EA",
-          "border": "#E7E8EA"
-        },
         "radio": {
           "brand": {
             "background": {

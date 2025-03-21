@@ -438,8 +438,6 @@ export const EdsThemeColorLinkNeutralTextDecorationFocus =
 export const EdsThemeColorLinkNeutralBackgroundFocus =
   'var(--eds-theme-color-text-neutral-default)';
 export const EdsThemeColorModalBrandHeaderBackground = '#8984E8'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
-export const EdsThemeColorProgressBarBackground = '#E7E8EA';
-export const EdsThemeColorProgressBarBorder = '#E7E8EA';
 export const EdsThemeColorRadioBrandBackground = '#8984E8'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorTextNeutralDefault = '#383C43';
 export const EdsThemeColorTextNeutralDefaultInverse = '#FFFFFF';
