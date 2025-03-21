@@ -331,14 +331,6 @@
           "radius": "4"
         }
       },
-      "size": {
-        "slider": {
-          "track": {
-            "height": "8"
-          },
-          "thumb": "24"
-        }
-      },
       "color": {
         "body": {
           "background": {
