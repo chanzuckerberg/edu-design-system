@@ -95,7 +95,7 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
 
   await openMenu(playOptions);
 
-  // Target the body of the iframe since we now use PopperJS
+  // Target the body of the iframe since it is portal'd
   const popoverCanvas = within(document.body);
 
   const bestOption = await popoverCanvas.findByText('Cats');
@@ -884,46 +884,56 @@ export const DisabledRequired: StoryObj = {
 /**
  * Options for each `Select` can be aligned on different sides of the target button.
  *
- * More information: https://popper.js.org/docs/v2/constructors/#options
+ * More information: https://headlessui.com/react/popover
  */
 export const OptionsRightAligned: StoryObj = {
-  parameters: {
-    chromatic: {
-      delay: 300,
-    },
-    docs: {
-      ...Default.parameters?.docs,
-    },
-  },
   args: {
     ...Default.args,
-    className: 'w-60',
     optionsClassName: 'w-96',
     children: (
       <>
         <Select.Button>
           {({ value, open, disabled }) => (
-            <Select.ButtonWrapper isOpen={open} shouldTruncate>
-              {value}
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
             </Select.ButtonWrapper>
           )}
         </Select.Button>
-        <Select.Options anchor="bottom end">
-          {Array(30)
-            .fill('test')
-            .map((option, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Select.Option key={`${option}-${index}`} value={option + index}>
-                {option}
-                {index}
-              </Select.Option>
-            ))}
+        <Select.Options anchor={{ to: 'bottom end', gap: 12 }}>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
         </Select.Options>
       </>
     ),
   },
-  play: openMenu,
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
+  play: selectCat,
+  decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
 };
 
 /**

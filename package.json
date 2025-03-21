@@ -90,7 +90,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
-    "@popperjs/core": "^2.11.8",
     "@tanstack/react-table": "^8.21.2",
     "@tippyjs/react": "^4.2.6",
     "chalk": "^4.1.2",
@@ -104,7 +103,6 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.13.6",
-    "react-popper": "^2.3.0",
     "react-portal": "^4.3.0",
     "react-uid": "^2.4.0",
     "style-dictionary": "^3.9.2",
