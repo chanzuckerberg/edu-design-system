@@ -5,13 +5,11 @@ import './tokens-dist/css/variables.css';
  * 1.x component theme exports
  */
 export { default as Avatar } from './components/Avatar';
-export { default as Badge } from './components/Badge';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as Heading } from './components/Heading';
 export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Label } from './components/Label';
-export { default as SearchBar } from './components/SearchBar';
 export { default as Skeleton } from './components/Skeleton';
 export { default as Table } from './components/Table';
 export { default as Tag } from './components/Tag';
