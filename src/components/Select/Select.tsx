@@ -1,4 +1,11 @@
-import { Listbox, type ListboxProps } from '@headlessui/react';
+import {
+  Label,
+  Listbox,
+  type ListboxProps,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from '@headlessui/react';
 import clsx from 'clsx';
 
 import React, {
@@ -8,100 +15,93 @@ import React, {
   type MouseEventHandler,
   type ElementType,
 } from 'react';
-import { createPortal } from 'react-dom';
-import { usePopper } from 'react-popper';
 
 import type { ExtractProps } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
-import {
-  defaultPopoverModifiers,
-  default as PopoverContainer,
-} from '../PopoverContainer';
-import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
+
+import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 import Text from '../Text';
 
 import styles from './Select.module.css';
 
-// https://github.com/tailwindlabs/headlessui/blob/%40headlessui/react%40v1.7.19/packages/%40headlessui-react/src/components/listbox/listbox.tsx#L349
 type SelectProps = ListboxProps<
   ElementType,
   string | { [k: string]: unknown },
   { [k: string]: unknown }
-> &
-  PopoverOptions & {
-    // Component API
-    /**
-     * Screen-reader text for the select's label.
-     *
-     * When possible, use a visible label by passing a <Select.Label> into `children`.
-     * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
-     * If you pass in an `aria-label`, <Select.Label>.
-     */
-    'aria-label'?: string;
-    /**
-     * Optional className for additional styling.
-     */
-    className?: string;
-    /**
-     * Name of the form element, which triggers the generation of hidden key/value form fields (e.g. `name=$name[$key]`).
-     *
-     * See: https://headlessui.com/react/listbox#using-with-html-forms
-     */
-    name?: string;
-    /**
-     * Optional className for additional options menu styling.
-     *
-     * When not using the compact variant, if optionsClassName is provided please
-     * include the width property to define the options menu width.
-     */
-    optionsClassName?: string;
-    /**
-     * Indicates that field is required for form to be successfully submitted
-     */
-    required?: boolean;
-    // Design API
-    /**
-     * Text under the text input used to provide a description or error message to describe the input.
-     */
-    fieldNote?: ReactNode;
-    /**
-     * Visible text label for the component.
-     */
-    label?: string;
-    /**
-     * Whether the label is adjacent to the field (horizontal) or above the field (vertical)
-     *
-     * **Default is `"vertical"`**.
-     */
-    labelLayout?: 'vertical' | 'horizontal';
-    /**
-     * Whether it should show the field hint or not
-     *
-     * **Default is `"false"`**.
-     */
-    showHint?: boolean;
-    /**
-     * Status for the field state
-     *
-     * **Default is `"default"`**.
-     */
-    status?: 'default' | Extract<Status, 'warning' | 'critical'>;
-  };
+> & {
+  // Component API
+  /**
+   * Screen-reader text for the select's label.
+   *
+   * When possible, use a visible label by passing a <Select.Label> into `children`.
+   * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
+   * If you pass in an `aria-label`, <Select.Label>.
+   */
+  'aria-label'?: string;
+  /**
+   * Optional className for additional styling.
+   */
+  className?: string;
+  /**
+   * Name of the form element, which triggers the generation of hidden key/value form fields (e.g. `name=$name[$key]`).
+   *
+   * See: https://headlessui.com/react/listbox#using-with-html-forms
+   */
+  name?: string;
+  /**
+   * Optional className for additional options menu styling.
+   *
+   * When not using the compact variant, if optionsClassName is provided please
+   * include the width property to define the options menu width.
+   */
+  optionsClassName?: string;
+  /**
+   * Indicates that field is required for form to be successfully submitted
+   */
+  required?: boolean;
+  // Design API
+  /**
+   * Text under the text input used to provide a description or error message to describe the input.
+   */
+  fieldNote?: ReactNode;
+  /**
+   * Visible text label for the component.
+   */
+  label?: string;
+  /**
+   * Whether the label is adjacent to the field (horizontal) or above the field (vertical)
+   *
+   * **Default is `"vertical"`**.
+   */
+  labelLayout?: 'vertical' | 'horizontal';
+  /**
+   * Whether it should show the field hint or not
+   *
+   * **Default is `"false"`**.
+   */
+  showHint?: boolean;
+  /**
+   * Status for the field state
+   *
+   * **Default is `"default"`**.
+   */
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
+};
 
-type SelectLabelProps = ExtractProps<typeof Listbox.Label> & {
+type SelectLabelProps = ExtractProps<typeof Label> & {
   disabled?: boolean;
   required?: boolean;
   showHint?: boolean;
 };
-type SelectOptionsProps = ExtractProps<typeof Listbox.Options>;
-type SelectOptionProps = ExtractProps<typeof Listbox.Option> & {
+type SelectOptionsProps = ExtractProps<typeof ListboxOptions>;
+type SelectOptionProps = ExtractProps<typeof ListboxOption> & {
   optionClassName?: string;
 };
-type SelectButtonProps = ExtractProps<typeof Listbox.Button> & {
+type SelectButtonProps = ExtractProps<typeof ListboxButton> & {
   // Design API
   /**
    * Icon override for component. Default is 'chevron-down'
@@ -145,10 +145,10 @@ type SelectButtonWrapperProps = {
    *
    * **Default is `"default"`**.
    */
-  status?: 'default' & Extract<Status, 'warning' | 'critical'>;
+  status?: 'default' | Extract<Status, 'warning' | 'critical'>;
 };
 
-type SelectContextType = PopoverContext & {
+type SelectContextType = {
   optionsClassName?: string;
   status?: SelectButtonWrapperProps['status'];
 };
@@ -174,15 +174,11 @@ export function Select({
   id,
   label,
   labelLayout = 'vertical',
-  modifiers = defaultPopoverModifiers,
   name,
-  onFirstUpdate,
   optionsClassName,
-  placement = 'bottom-start',
   required,
   showHint,
   status,
-  strategy,
   onChange: theirOnChange,
   ...other
 }: SelectProps) {
@@ -195,14 +191,6 @@ export function Select({
       showNameWarning = false;
     }
   }
-
-  const [referenceElement, setReferenceElement] = useState(null);
-  const [popperElement, setPopperElement] = useState(null);
-  const { styles: popperStyles, attributes: popperAttributes } = usePopper(
-    referenceElement,
-    popperElement,
-    { placement, modifiers, strategy, onFirstUpdate },
-  );
 
   // Create a new value to track the internal state of Listbox. Added to work around
   // behavior inherited from HeadlessUI where it will fire onChange even if there is no change
@@ -228,19 +216,9 @@ export function Select({
     ...other,
   };
 
-  const contextValue = Object.assign(
-    {},
-    optionsClassName ? { optionsClassName } : null,
-    { setReferenceElement },
-    { setPopperElement },
-    { popperStyles: popperStyles.popper },
-    { popperAttributes: popperAttributes.popper },
-    { status },
-  );
-
   if (typeof children === 'function') {
     return (
-      <SelectContext.Provider value={contextValue}>
+      <SelectContext.Provider value={{ optionsClassName, status }}>
         <Listbox
           {...sharedProps}
           // We prefer to pass the aria-label in via an invisible SelectLabel, but we can't
@@ -255,7 +233,7 @@ export function Select({
   }
 
   return (
-    <SelectContext.Provider value={contextValue}>
+    <SelectContext.Provider value={{ optionsClassName, status }}>
       <Listbox
         {...sharedProps}
         onChange={(changedValue) => {
@@ -313,13 +291,9 @@ const SelectLabel = ({
 
   return (
     <div className={overlineClassName}>
-      <Listbox.Label
-        as={FieldLabel}
-        className={componentClassName}
-        disabled={disabled}
-      >
+      <Label as={FieldLabel} className={componentClassName} disabled={disabled}>
         {label}
-      </Listbox.Label>
+      </Label>
       {required && showHint && (
         <Text
           aria-disabled={disabled ?? undefined}
@@ -349,14 +323,13 @@ const SelectLabel = ({
  */
 const SelectButton = function (props: SelectButtonProps) {
   const { children, className, onClick: theirOnClick, ...other } = props;
-  const { setReferenceElement, status } = useContext(SelectContext);
+  const { status } = useContext(SelectContext);
   return (
-    <Listbox.Button
+    <ListboxButton
       // Render as a fragment instead of the default element. We're rendering our own element in
       // the render prop to control styling and positiong, and we don't want to end up with
       // duplicate buttons.
       as={React.Fragment}
-      ref={setReferenceElement}
       {...other}
     >
       {(renderProps) => {
@@ -375,7 +348,7 @@ const SelectButton = function (props: SelectButtonProps) {
           </SelectButtonWrapper>
         );
       }}
-    </Listbox.Button>
+    </ListboxButton>
   );
 };
 
@@ -383,9 +356,12 @@ const SelectButton = function (props: SelectButtonProps) {
  * The content container showing the available options when the trigger is activated
  */
 const SelectOptions = function (props: SelectOptionsProps) {
-  const { className, ...other } = props;
-  const { optionsClassName, setPopperElement, popperStyles, popperAttributes } =
-    useContext(SelectContext);
+  const {
+    anchor = { to: 'bottom start', gap: 12 },
+    className,
+    ...other
+  } = props;
+  const { optionsClassName } = useContext(SelectContext);
 
   const componentClassName = clsx(
     styles['select__options'],
@@ -393,20 +369,15 @@ const SelectOptions = function (props: SelectOptionsProps) {
     optionsClassName,
   );
 
-  const optionProps = {
-    as: PopoverContainer,
-    className: componentClassName,
-    ref: setPopperElement,
-    style: popperStyles,
-    ...popperAttributes,
-    ...other,
-  };
-  if (typeof document !== 'undefined') {
-    return (
-      <>{createPortal(<Listbox.Options {...optionProps} />, document.body)}</>
-    );
-  }
-  return null;
+  return (
+    <ListboxOptions
+      anchor={anchor}
+      as={PopoverContainer}
+      className={componentClassName}
+      modal={false}
+      {...other}
+    />
+  );
 };
 
 /**
@@ -418,7 +389,7 @@ const SelectOption = function (props: SelectOptionProps) {
   const optionItemClassName = clsx(optionClassName, styles['select__option']);
 
   return (
-    <Listbox.Option
+    <ListboxOption
       // Render as a fragment instead of the default <li>. We're rendering our own <li> in the
       // render prop to control active/selected styling, and we don't want to end up with duplicate
       // <li>'s.
@@ -427,13 +398,13 @@ const SelectOption = function (props: SelectOptionProps) {
     >
       {typeof children === 'function'
         ? children
-        : ({ active, disabled, selected }) => {
+        : ({ focus, disabled, selected }) => {
             return (
               <PopoverListItem
                 className={optionItemClassName}
                 icon={selected ? 'check' : undefined}
                 isDisabled={disabled}
-                isFocused={active}
+                isFocused={focus}
               >
                 <span className={styles['select__option-text']}>
                   {children}
@@ -441,7 +412,7 @@ const SelectOption = function (props: SelectOptionProps) {
               </PopoverListItem>
             );
           }}
-    </Listbox.Option>
+    </ListboxOption>
   );
 };
 

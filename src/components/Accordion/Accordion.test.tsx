@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Accordion } from './Accordion';
@@ -28,8 +28,13 @@ describe('<Accordion />', () => {
   it('should open and close Accordion panel with space and enter keys on the Accordion button', async () => {
     const user = userEvent.setup();
     render(<Default />);
+
     const accordionButton = screen.getByTestId('accordion-button');
-    accordionButton.focus();
+    expect(screen.queryByTestId('accordion-panel')).not.toBeInTheDocument();
+
+    act(() => {
+      accordionButton.focus();
+    });
 
     await user.keyboard(' ');
     expect(screen.getByTestId('accordion-panel')).toBeInTheDocument();

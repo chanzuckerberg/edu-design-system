@@ -2,9 +2,12 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
 import * as stories from './Popover.stories';
 import type { StoryFile } from '../../util/utility-types';
+
+mockResizeObserver();
 
 const { Default } = composeStories(stories);
 

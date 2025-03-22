@@ -39,9 +39,8 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r8:"
+            id="headlessui-menu-button-:rq:"
             type="button"
           >
             <svg
@@ -217,9 +216,8 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
               <button
                 aria-expanded="false"
                 aria-haspopup="menu"
-                class=""
                 data-headlessui-state=""
-                id="headlessui-menu-button-:ra:"
+                id="headlessui-menu-button-:r10:"
                 type="button"
               >
                 <svg
@@ -339,9 +337,8 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r6:"
+            id="headlessui-menu-button-:rk:"
             type="button"
           >
             <svg
@@ -528,9 +525,8 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r4:"
+            id="headlessui-menu-button-:re:"
             type="button"
           >
             <svg
@@ -846,9 +842,8 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r2:"
+            id="headlessui-menu-button-:r8:"
             type="button"
           >
             <svg
@@ -958,9 +953,8 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r0:"
+            id="headlessui-menu-button-:r2:"
             type="button"
           >
             <svg

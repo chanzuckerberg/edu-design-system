@@ -1,31 +1,13 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import {
+  mockResizeObserver,
+  mockIntersectionObserver,
+} from 'jsdom-testing-mocks';
 import * as stories from './DataTable.stories';
 import type { StoryFile } from '../../util/utility-types';
 
-// Stubbing out this class b/c it doesn't exist in non-browser contexts
-export class IntersectionObserver {
-  root = null;
-  rootMargin = '';
-  thresholds = [];
-
-  disconnect() {
-    return null;
-  }
-
-  observe() {
-    return null;
-  }
-
-  takeRecords() {
-    return [];
-  }
-
-  unobserve() {
-    return null;
-  }
-}
-window.IntersectionObserver = IntersectionObserver;
-global.IntersectionObserver = IntersectionObserver;
+mockIntersectionObserver();
+mockResizeObserver();
 
 describe('<DataTable />', () => {
   generateSnapshots(stories as StoryFile);
