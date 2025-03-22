@@ -5,7 +5,6 @@ import './tokens-dist/css/variables.css';
  * 1.x component theme exports
  */
 export { default as Avatar } from './components/Avatar';
-export { default as Badge } from './components/Badge';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as Heading } from './components/Heading';
 export { default as HorizontalStepper } from './components/HorizontalStepper';
