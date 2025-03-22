@@ -257,8 +257,6 @@
   --eds-theme-color-text-utility-inverse-interactive-visited: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
   --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-progress-bar-border: #E7E8EA;
-  --eds-theme-color-progress-bar-background: #E7E8EA;
   --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
   --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);

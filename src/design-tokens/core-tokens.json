@@ -3154,14 +3154,6 @@
             }
           }
         },
-        "progress-bar": {
-          "background": {
-            "value": "#E7E8EA"
-          },
-          "border": {
-            "value": "#E7E8EA"
-          }
-        },
         "radio": {
           "brand": {
             "background": {
