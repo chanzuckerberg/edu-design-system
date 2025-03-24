@@ -7,7 +7,6 @@ import './tokens-dist/css/variables.css';
 export { default as Avatar } from './components/Avatar';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as Heading } from './components/Heading';
-export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Label } from './components/Label';
 export { default as Skeleton } from './components/Skeleton';
