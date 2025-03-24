@@ -11,7 +11,7 @@ export default {
   component: Popover,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.0'],
     chromatic: {
       // These stories are very flaky, though we're not sure why.
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
@@ -96,63 +96,53 @@ export const Default: Story = {
 };
 
 /**
- * The following stories demonstrate how a popover can be made to appear on different sides of the trigger.
- * Each story name denotes a value pased to `placement`.
+ * You can control where the popover appears by `anchor` on `Popover.Content`. By default, `Popover` will use
+ * `{to: 'bottom end', gap: 12}`, but you can specify other combinations of `'top'` and `'start'`.
+ *
+ * More information about the options are available here: https://headlessui.com/react/popover
  */
 export const Top: Story = {
-  args: {
-    placement: 'top',
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Popover>
+  <Popover.Button as={Button} data-testid="popover-trigger-button">
+    Open Popover
+  </Popover.Button>
+  <Popover.Content anchor={{ to: 'top': gap: 12 }} data-testid="popover-content">
+    <div className="fpo m-2 p-6">Popover Content goes here</div>
+  </Popover.Content>
+</Popover>
+        `,
+      },
+    },
   },
-  ...Default,
-};
-
-export const Right: Story = {
-  args: {
-    placement: 'right',
+  render: (args) => {
+    return (
+      <Popover {...args}>
+        <Popover.Button as={Button} data-testid="popover-trigger-button">
+          Open Popover
+        </Popover.Button>
+        <Popover.Content
+          anchor={{ to: 'top', gap: 12 }}
+          data-testid="popover-content"
+          focus
+        >
+          <div className="fpo m-2 p-6">Popover Content goes here</div>
+        </Popover.Content>
+      </Popover>
+    );
   },
-  ...Default,
-};
-
-export const Bottom: Story = {
-  args: {
-    placement: 'bottom',
+  play: async ({ canvasElement }) => {
+    // We want to test visual regression for the Popover.Content as well as the button,
+    // but don't want the drawer open initally outside Chromatic.
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      const filtersTrigger = await canvas.findByRole('button');
+      await userEvent.click(filtersTrigger);
+    }
   },
-  ...Default,
-};
-
-export const Left: Story = {
-  args: {
-    placement: 'left',
-  },
-  ...Default,
-};
-
-export const TopStart: Story = {
-  args: {
-    placement: 'top-start',
-  },
-  ...Default,
-};
-
-export const TopEnd: Story = {
-  args: {
-    placement: 'top-end',
-  },
-  ...Default,
-};
-
-export const BottomStart: Story = {
-  args: {
-    placement: 'bottom-start',
-  },
-  ...Default,
-};
-
-export const BottomEnd: Story = {
-  args: {
-    placement: 'bottom-end',
-  },
-  ...Default,
 };
 
 /**

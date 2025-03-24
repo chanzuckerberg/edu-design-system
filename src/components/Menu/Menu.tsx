@@ -1,53 +1,32 @@
-import { Menu as HeadlessMenu } from '@headlessui/react';
+import {
+  Menu as HeadlessMenu,
+  MenuButton as HeadlessMenuButton,
+  MenuItem as HeadlessMenuItem,
+  MenuItems as HeadlessMenuItems,
+} from '@headlessui/react';
+import type { AnchorProps } from '@headlessui/react/dist/internal/floating';
+
 import clsx from 'clsx';
 import type { ReactNode, MouseEventHandler } from 'react';
-import React, { useContext, useState } from 'react';
-import { createPortal } from 'react-dom';
-
-import { usePopper } from 'react-popper';
+import React from 'react';
 
 import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
 import { type IconName } from '../Icon';
 
-import {
-  PopoverContainerV2 as PopoverContainer,
-  defaultPopoverModifiers,
-} from '../PopoverContainer';
-import type { PopoverContext, PopoverOptions } from '../PopoverContainer';
+import PopoverContainer from '../PopoverContainer';
 
 import PopoverListItem from '../PopoverListItem';
 import styles from './Menu.module.css';
 
 // Note: added className here to prevent private API collision within HeadlessUI
-export type MenuProps = ExtractProps<typeof HeadlessMenu> &
-  PopoverOptions & {
-    // TODO: document children?
-    /**
-     * Allow custom classes to be applied to the menu container.
-     */
-    className?: string;
-  };
-
-export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
-  // Component API
+export type MenuProps = ExtractProps<typeof HeadlessMenu> & {
+  // TODO: document children?
   /**
    * Allow custom classes to be applied to the menu container.
    */
   className?: string;
-  /**
-   * Target URL for the menu item action
-   */
-  href?: string;
-  /**
-   * Icons are able to appear next to each Option in the Options list if it is relevant; before using any icons, please refer to the appropriate icon usage guidelines
-   */
-  icon?: IconName;
-  /**
-   * Configurable action for the menu item upon click
-   */
-  onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
 export type MenuButtonProps = {
@@ -66,55 +45,44 @@ export type MenuButtonProps = {
   icon?: Extract<IconName, 'chevron-down'>;
 };
 
-export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
+export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenuButton>;
 
-export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
+export type MenuItemsProps = ExtractProps<typeof HeadlessMenuItems>;
 
-type MenuContextType = PopoverContext;
-
-const MenuContext = React.createContext<MenuContextType>({});
+export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
+  // Component API
+  anchor?: AnchorProps;
+  /**
+   * Allow custom classes to be applied to the menu container.
+   */
+  className?: string;
+  /**
+   * Target URL for the menu item action
+   */
+  href?: string;
+  /**
+   * Icons are able to appear next to each Option in the Options list if it is relevant; before using any icons, please refer to the appropriate icon usage guidelines
+   */
+  icon?: IconName;
+  /**
+   * Configurable action for the menu item upon click
+   */
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
+};
 
 /**
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
  * A dropdown that reveals or hides a list of actions.
  */
-export const Menu = ({
-  className,
-  placement = 'bottom-start',
-  modifiers = defaultPopoverModifiers,
-  strategy,
-  onFirstUpdate,
-  ...other
-}: MenuProps) => {
-  const [referenceElement, setReferenceElement] = useState(null);
-  const [popperElement, setPopperElement] = useState(null);
-  const { styles: popperStyles, attributes: popperAttributes } = usePopper(
-    referenceElement,
-    popperElement,
-    { placement, modifiers, strategy, onFirstUpdate },
-  );
+export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);
-  return (
-    <MenuContext.Provider
-      value={{
-        setReferenceElement: setReferenceElement as React.Dispatch<
-          React.SetStateAction<Element | null | undefined>
-        >,
-        setPopperElement: setPopperElement as React.Dispatch<
-          React.SetStateAction<HTMLElement | null | undefined>
-        >,
-        popperStyles: popperStyles.popper,
-        popperAttributes: popperAttributes.popper,
-      }}
-    >
-      <HeadlessMenu as="div" className={menuClassNames} {...other} />
-    </MenuContext.Provider>
-  );
+  return <HeadlessMenu as="div" className={menuClassNames} {...other} />;
 };
 
 /**
  * A styled button that when clicked, shows or hides the Options.
+ * @see https://headlessui.com/react/menu#menu-button
  */
 const MenuButton = ({
   children,
@@ -123,10 +91,8 @@ const MenuButton = ({
   ...other
 }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
-  const { setReferenceElement } = useContext(MenuContext);
-
   return (
-    <HeadlessMenu.Button as={React.Fragment} ref={setReferenceElement}>
+    <HeadlessMenuButton as={React.Fragment}>
       <Button
         className={buttonClassNames}
         icon={icon}
@@ -136,7 +102,7 @@ const MenuButton = ({
       >
         {children}
       </Button>
-    </HeadlessMenu.Button>
+    </HeadlessMenuButton>
   );
 };
 
@@ -144,46 +110,34 @@ const MenuButton = ({
  * A minimally styled button that when clicked, shows or hides the Options.
  */
 const MenuPlainButton = ({ className, ...other }: MenuPlainButtonProps) => {
-  const buttonClassNames = clsx(className);
-  const { setReferenceElement } = useContext(MenuContext);
-
-  return (
-    <HeadlessMenu.Button
-      className={buttonClassNames}
-      ref={setReferenceElement}
-      {...other}
-    />
-  );
+  return <HeadlessMenuButton className={className} {...other} />;
 };
 
 /**
  * A list of actions that are revealed in the menu
  *
  * @param props Props used on the set of menu items
+ *
  * @see https://headlessui.com/react/menu#menu-items
  */
-const MenuItems = (props: MenuItemsProps) => {
-  const { setPopperElement, popperStyles, popperAttributes } =
-    useContext(MenuContext);
-  const optionProps = {
-    as: PopoverContainer,
-    ref: setPopperElement,
-    style: popperStyles,
-    ...props,
-    ...popperAttributes,
-  };
-  if (typeof document !== 'undefined') {
-    return (
-      <>
-        {createPortal(<HeadlessMenu.Items {...optionProps} />, document.body)}
-      </>
-    );
-  }
-  return null;
+const MenuItems = ({
+  anchor = { to: 'bottom start', gap: 12 },
+  ...other
+}: MenuItemsProps) => {
+  return (
+    <HeadlessMenuItems
+      anchor={anchor}
+      as={PopoverContainer}
+      modal={false}
+      {...other}
+    />
+  );
 };
 
 /**
  * An individual option that represent an action in the menu
+ *
+ * @see https://headlessui.com/react/menu#menu-item
  */
 const MenuItem = ({
   children,
@@ -194,14 +148,14 @@ const MenuItem = ({
   ...other
 }: MenuItemProps) => {
   return (
-    <HeadlessMenu.Item {...other}>
-      {({ active, disabled }) => {
+    <HeadlessMenuItem {...other}>
+      {({ focus, disabled }) => {
         const listItemView = (
           <PopoverListItem
             className={className}
             icon={icon}
             isDisabled={disabled}
-            isFocused={active}
+            isFocused={focus}
           >
             {children as ReactNode}
           </PopoverListItem>
@@ -218,7 +172,7 @@ const MenuItem = ({
           </a>
         );
       }}
-    </HeadlessMenu.Item>
+    </HeadlessMenuItem>
   );
 };
 

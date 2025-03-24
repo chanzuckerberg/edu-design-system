@@ -2,10 +2,13 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/react';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
 import { Select } from './Select';
 import * as stories from './Select.stories';
 import type { StoryFile } from '../../util/utility-types';
+
+mockResizeObserver();
 
 const {
   OpenByDefault,

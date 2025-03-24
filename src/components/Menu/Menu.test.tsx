@@ -3,10 +3,13 @@ import { composeStories } from '@storybook/react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
 import { Menu } from './Menu';
 import * as stories from './Menu.stories';
 import type { StoryFile } from '../../util/utility-types';
+
+mockResizeObserver();
 
 const { Default } = composeStories(stories);
 
