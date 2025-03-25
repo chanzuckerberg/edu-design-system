@@ -2065,7 +2065,6 @@ __metadata:
     react-dom: ">= 17"
   bin:
     eds-apply-theme: bin/eds-apply-theme.js
-    eds-import-from-figma: bin/eds-import-from-figma.js
     eds-import-from-figma-api: bin/eds-import-from-figma-api.js
     eds-init-theme: bin/eds-init.js
     eds-migrate: bin/eds-migrate.js
