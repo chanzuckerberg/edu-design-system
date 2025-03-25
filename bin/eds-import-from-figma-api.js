@@ -167,10 +167,11 @@ const { identity } = require('lodash');
 
           if (
             FigmaVariable.isAliased(figmaVariable, response.modeId) &&
+            args.local &&
             !at(localTheme, variable.valueRef).some(identity)
           ) {
             throw new Error(
-              `Value violation. Trying to write a reference value path not in local theme: ${writePath} => {${variable.valueRef}}`,
+              `Value violation. Trying to write a local reference value path not in local theme: ${writePath} => {${variable.valueRef}}`,
             );
           }
 
