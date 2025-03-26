@@ -10,7 +10,7 @@ const {
 
 // Add a type to the tokens to avoid literals for keys
 const movements: { [x: string]: string } = edsTokens.anim.move;
-const spacings: { [x: string]: string } = edsTokens.spacing;
+const spacings: { [x: string]: string } = edsTokens.spacing.size;
 
 const movementTokens = {
   ...Object.keys(movements)
