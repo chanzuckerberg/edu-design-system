@@ -24,10 +24,6 @@
           "value": "0.4",
           "comment": "Seconds (s)"
         }
-      },
-      "ease": {
-        "value": "ease",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
       }
     },
     "border": {
@@ -83,22 +79,6 @@
           "value": "0",
           "comment": "pixels (px)"
         },
-        "md": {
-          "value": "4",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "lg": {
-          "value": "8",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "xl": {
-          "value": "20",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "round": {
-          "value": "50",
-          "comment": "Percentage (%) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
         "full": {
           "value": "9999",
           "comment": "pixels (px)"
@@ -113,50 +93,6 @@
       "black": {
         "value": "0 0 0",
         "comment": "Specified as a value to color-func rgb() so that it can be blended"
-      },
-      "brand": {
-        "grape": {
-          "100": {
-            "value": "#F0F0FC",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "200": {
-            "value": "#E0E0F9",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "300": {
-            "value": "#C4C1F3",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "400": {
-            "value": "#A6A3EE",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "500": {
-            "value": "#8984E8",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "600": {
-            "value": "#6B65E2",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "700": {
-            "value": "#5751D2",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "800": {
-            "value": "#3E42B1",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          }
-        }
       },
       "neutral": {
         "100": {
@@ -175,46 +111,21 @@
           "value": "#BEB8B6",
           "group": "color"
         },
-        "300": {
-          "value": "#C0C4C8",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
         "350": {
           "value": "#A09C9A",
           "group": "color"
-        },
-        "400": {
-          "value": "#999EA3",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "450": {
           "value": "#868281",
           "group": "color"
         },
-        "500": {
-          "value": "#878C90",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
         "550": {
           "value": "#6C6967",
           "group": "color"
         },
-        "600": {
-          "value": "#5D6369",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
         "650": {
           "value": "#565352",
           "group": "color"
-        },
-        "700": {
-          "value": "#383C43",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "750": {
           "value": "#3F3E3D",
@@ -243,16 +154,6 @@
         "050": {
           "value": "#F9F3F1",
           "group": "color"
-        },
-        "white": {
-          "value": "#FFFFFF",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "black": {
-          "value": "#161B1F",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       },
       "red": {
@@ -646,346 +547,6 @@
         "80": {
           "value": "0.80"
         }
-      },
-      "other": {
-        "mint": {
-          "100": {
-            "value": "#ECFFF5",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "200": {
-            "value": "#B7E9CE",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "300": {
-            "value": "#8FDCB3",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "400": {
-            "value": "#59C88C",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "500": {
-            "value": "#00A56A",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "600": {
-            "value": "#008656",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "700": {
-            "value": "#007249",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "800": {
-            "value": "#005939",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          }
-        },
-        "yellow": {
-          "100": {
-            "value": "#FDF1D0",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "200": {
-            "value": "#FFEBB3",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "300": {
-            "value": "#FFDD80",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "400": {
-            "value": "#F7BE2D",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "500": {
-            "value": "#D18400",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "600": {
-            "value": "#BF7300",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "700": {
-            "value": "#9E5B03",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "800": {
-            "value": "#854C03",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          }
-        },
-        "lemon": {
-          "value": "#F5FF8F",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "eraser": {
-          "value": "#F3DCE2",
-          "group": "color",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "orange": {
-          "100": {
-            "value": "#FFF1E9",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "200": {
-            "value": "#FFCBA5",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "300": {
-            "value": "#FFAF76",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "400": {
-            "value": "#F6924A",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "500": {
-            "value": "#E06B00",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "600": {
-            "value": "#C64600",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "700": {
-            "value": "#AC3400",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "800": {
-            "value": "#842800",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          }
-        },
-        "ruby": {
-          "100": {
-            "value": "#FFF0F4",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "200": {
-            "value": "#FFCBD7",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "300": {
-            "value": "#FB90B0",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "400": {
-            "value": "#F76C96",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "500": {
-            "value": "#F1497B",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "600": {
-            "value": "#D41E52",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "700": {
-            "value": "#BD0044",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "800": {
-            "value": "#8F0134",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          }
-        }
-      }
-    },
-    "l": {
-      "max-width": {
-        "value": "1140",
-        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "sidebar-width": {
-        "value": "216",
-        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "linelength-width": {
-        "value": "576",
-        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      }
-    },
-    "outline": {
-      "width": {
-        "sm": {
-          "value": "1",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "md": {
-          "value": "2",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
-        "lg": {
-          "value": "4",
-          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        }
-      }
-    },
-    "box-shadow": {
-      "sm": {
-        "value": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "md": {
-        "value": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "lg": {
-        "value": "0px 4px 12px rgba(0, 0, 0, 0.16)",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "xl": {
-        "value": "0px 6px 20px rgba(0, 0, 0, 0.2)",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      }
-    },
-    "size": {
-      "1": {
-        "value": "8",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "2": {
-        "value": "16",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "3": {
-        "value": "24",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "4": {
-        "value": "32",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "5": {
-        "value": "40",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "6": {
-        "value": "48",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "7": {
-        "value": "56",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "8": {
-        "value": "64",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "9": {
-        "value": "72",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "10": {
-        "value": "80",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "11": {
-        "value": "88",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "12": {
-        "value": "96",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "20": {
-        "value": "160",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "24": {
-        "value": "192",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "32": {
-        "value": "256",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "34": {
-        "value": "272",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "40": {
-        "value": "320",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "base-unit": {
-        "value": "8",
-        "group": "size",
-        "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in the next major version of EDS."
-      },
-      "half": {
-        "value": "4",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "quarter": {
-        "value": "2",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "1-and-half": {
-        "value": "12",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
-      },
-      "2-and-half": {
-        "value": "20",
-        "group": "size",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS (17). Relative EMs (rem)"
       }
     },
     "spacing": {
@@ -1075,11 +636,6 @@
           "group": "size",
           "comment": "Relative EMs (rem)"
         },
-        "base-unit": {
-          "value": "8",
-          "group": "size",
-          "comment": "Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-        },
         "half": {
           "value": "4",
           "group": "size",
@@ -1103,30 +659,6 @@
       }
     },
     "z-index": {
-      "0": {
-        "value": "0",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "100": {
-        "value": "100",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "200": {
-        "value": "200",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "300": {
-        "value": "300",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "400": {
-        "value": "400",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
-      "500": {
-        "value": "500",
-        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-      },
       "top": {
         "value": "99999"
       },
@@ -1160,9 +692,6 @@
             }
           },
           "tabUnderline": {
-            "@": {
-              "value": "{eds.border.radius.round}"
-            },
             "default": {
               "value": "{eds.border.radius.full}"
             },
@@ -1175,32 +704,10 @@
           "value": "{eds.border.width.sm}"
         }
       },
-      "box": {
-        "button": {
-          "border": {
-            "radius": {
-              "value": "{eds.border.radius.md}"
-            }
-          }
-        },
-        "focus-ring": {
-          "outline": {
-            "width": {
-              "value": "{eds.outline.width.sm}"
-            },
-            "offset": {
-              "value": "{eds.outline.width.md}"
-            }
-          }
-        }
-      },
       "form": {
         "border": {
           "width": {
             "value": "{eds.border.width.sm}"
-          },
-          "radius": {
-            "value": "{eds.border.radius.md}"
           }
         }
       },
@@ -1209,10 +716,6 @@
           "background": {
             "@": {
               "value": "#F4F6F8",
-              "group": "color"
-            },
-            "inverted": {
-              "value": "{eds.color.neutral.700}",
               "group": "color"
             }
           }
@@ -1223,21 +726,12 @@
           },
           "neutral": {
             "default": {
-              "@": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
               "hover": {
                 "value": "#F4F6F8",
                 "group": "color"
               }
             },
             "subtle": {
-              "@": {
-                "value": "#F4F6F8",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
               "hover": {
                 "value": "#E7E8EA",
                 "group": "color"
@@ -1247,38 +741,10 @@
               "@": {
                 "value": "#E7E8EA",
                 "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.300}",
-                "group": "color"
               }
             }
           },
           "brand": {
-            "primary": {
-              "default": {
-                "value": "{eds.color.brand.grape.100}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "subtle": {
-                "value": "{eds.color.brand.grape.100}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "strong": {
-                "@": {
-                  "value": "{eds.color.brand.grape.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              }
-            },
             "red": {
               "@": {
                 "value": "{eds.color.red.850}",
@@ -1569,22 +1035,6 @@
                 }
               }
             },
-            "information": {
-              "lowEmphasis": {
-                "@": {
-                  "value": "{eds.color.blue.050}",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.blue.100}",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.blue.150}",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              }
-            },
             "informational": {
               "lowEmphasis": {
                 "@": {
@@ -1635,59 +1085,7 @@
               "disabled": {
                 "value": "rgb(var(--eds-color-white) / 0.5)"
               }
-            },
-            "success": {
-              "value": "{eds.color.other.mint.100}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "error": {
-              "value": "{eds.color.other.ruby.100}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             }
-          },
-          "grade": {
-            "complete": {
-              "default": {
-                "value": "{eds.color.other.mint.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "subtle": {
-                "value": "{eds.color.other.mint.100}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-            "revise": {
-              "default": {
-                "value": "{eds.color.other.yellow.400}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "subtle": {
-                "value": "{eds.color.other.yellow.100}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-            "stop": {
-              "default": {
-                "value": "{eds.color.other.ruby.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "subtle": {
-                "value": "{eds.color.other.ruby.100}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            }
-          },
-          "disabled": {
-            "value": "{eds.color.neutral.300}",
-            "group": "color"
           }
         },
         "border": {
@@ -1696,56 +1094,10 @@
               "@": {
                 "value": "#E7E8EA",
                 "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.300}",
-                "group": "color"
-              }
-            },
-            "default": {
-              "@": {
-                "value": "{eds.color.neutral.300}",
-                "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.400}",
-                "group": "color"
-              }
-            },
-            "strong": {
-              "@": {
-                "value": "{eds.color.neutral.400}",
-                "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.500}",
-                "group": "color"
               }
             }
           },
           "brand": {
-            "primary": {
-              "subtle": {
-                "value": "{eds.color.brand.grape.200}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "default": {
-                "value": "var(--eds-theme-color-border-brand-primary)",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "@": {
-                "value": "{eds.color.brand.grape.300}",
-                "group": "color",
-                "comment": "@deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
-              },
-              "strong": {
-                "value": "{eds.color.brand.grape.400}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
             "red": {
               "value": "{eds.color.red.850}"
             },
@@ -1865,21 +1217,6 @@
               },
               "active": {
                 "value": "{eds.color.yellow.750}"
-              },
-              "subtle": {
-                "value": "{eds.color.other.orange.200}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "default": {
-                "value": "{eds.color.other.orange.300}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "strong": {
-                "value": "{eds.color.other.orange.400}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
             "informational": {
@@ -1906,934 +1243,57 @@
               "disabled": {
                 "value": "rgb(var(--eds-color-white) / 0.5)"
               }
-            },
-            "success": {
-              "subtle": {
-                "value": "{eds.color.other.mint.200}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "default": {
-                "value": "{eds.color.other.mint.300}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "strong": {
-                "value": "{eds.color.other.mint.400}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-
-            "error": {
-              "subtle": {
-                "value": "{eds.color.other.ruby.200}",
-                "group": "color"
-              },
-              "default": {
-                "value": "{eds.color.other.ruby.300}",
-                "group": "color"
-              },
-              "strong": {
-                "value": "{eds.color.other.ruby.400}",
-                "group": "color"
-              }
             }
-          },
-          "grade": {
-            "complete": {
-              "value": "{eds.color.other.mint.300}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "revise": {
-              "subtle": {
-                "value": "{eds.color.other.yellow.200}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "default": {
-                "value": "{eds.color.other.yellow.300}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "strong": {
-                "value": "{eds.color.other.yellow.400}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-            "stop": {
-              "value": "{eds.color.other.ruby.300}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            }
-          },
-          "disabled": {
-            "value": "{eds.color.neutral.300}",
-            "group": "color"
           }
         },
         "button": {
-          "primary": {
-            "brand": {
-              "background": {
-                "@": {
-                  "value": "{eds.color.brand.grape.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.brand.grape.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.brand.grape.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.brand.grape.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "error": {
-              "background": {
-                "@": {
-                  "value": "{eds.color.other.ruby.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.other.ruby.800}",
-                  "group": "color"
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.other.ruby.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.other.ruby.800}",
-                  "group": "color"
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            }
-          },
           "secondary": {
-            "brand": {
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.brand.grape.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.brand.grape.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.brand.grape.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              },
-              "icon": {
-                "@": {
-                  "value": "{eds.color.brand.grape.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
             "neutral": {
               "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
                 "hover": {
                   "value": "#E7E8EA",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.700}",
-                  "group": "color"
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.700}",
-                  "group": "color"
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              },
-              "icon": {
-                "@": {
-                  "value": "{eds.color.neutral.400}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.400}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "success": {
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.mint.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.other.mint.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.mint.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              },
-              "icon": {
-                "@": {
-                  "value": "{eds.color.other.mint.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "warning": {
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.orange.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.other.orange.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.orange.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              },
-              "icon": {
-                "@": {
-                  "value": "{eds.color.other.orange.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "error": {
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.ruby.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.color.other.ruby.600}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.ruby.800}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              },
-              "icon": {
-                "@": {
-                  "value": "{eds.color.other.ruby.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
                   "group": "color"
                 }
               }
             }
           },
           "icon": {
-            "brand": {
-              "@": {
-                "value": "{eds.color.brand.grape.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.brand.grape.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "active": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.200}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.200}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
             "neutral": {
-              "@": {
-                "value": "{eds.color.neutral.600}",
-                "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.600}",
-                "group": "color"
-              },
-              "active": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
               "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color"
-                },
                 "hover": {
                   "value": "#E7E8EA",
                   "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
                 }
               },
               "border": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
                 "hover": {
                   "value": "#E7E8EA",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                },
-                "hover": {
-                  "value": "{eds.color.neutral.600}",
-                  "group": "color"
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "success": {
-              "@": {
-                "value": "{eds.color.other.mint.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.mint.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "active": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.mint.200}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.mint.200}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.mint.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "warning": {
-              "@": {
-                "value": "{eds.color.other.orange.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.orange.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "active": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.orange.100}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.orange.100}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.orange.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
-                  "group": "color"
-                }
-              }
-            },
-            "error": {
-              "@": {
-                "value": "{eds.color.other.ruby.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.ruby.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "active": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
-              "background": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.200}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "border": {
-                "@": {
-                  "value": "{eds.theme.color.transparent.black.0}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.200}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              },
-              "text": {
-                "@": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "hover": {
-                  "value": "{eds.color.other.ruby.700}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                },
-                "active": {
-                  "value": "{eds.color.neutral.white}",
                   "group": "color"
                 }
               }
             }
-          }
-        },
-        "checkbox": {
-          "brand": {
-            "background": {
-              "@": {
-                "value": "{eds.color.brand.grape.500}",
-                "group": "colors",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            }
-          }
-        },
-        "data-bar": {
-          "background": {
-            "value": "#F4F6F8",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          },
-          "border": {
-            "value": "{eds.color.neutral.300}",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-          }
-        },
-        "focus-ring": {
-          "@": {
-            "value": "{eds.color.brand.grape.600}",
-            "group": "color"
-          },
-          "inverted": {
-            "value": "{eds.color.neutral.white}",
-            "group": "color"
           }
         },
         "form": {
           "border": {
-            "@": {
-              "value": "{eds.color.neutral.500}",
-              "group": "color"
-            },
             "hover": {
               "value": "{eds.color.neutral.800}",
               "group": "color"
             }
           },
           "background": {
-            "@": {
-              "value": "{eds.color.neutral.white}",
-              "group": "color"
-            },
             "hover": {
               "value": "#F4F6F8",
               "group": "color"
             }
-          },
-          "label": {
-            "value": "{eds.color.neutral.700}",
-            "group": "color"
           }
         },
         "icon": {
           "neutral": {
-            "default": {
-              "@": {
-                "value": "{eds.color.neutral.600}",
-                "group": "color"
-              },
-              "inverse": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.700}",
-                "group": "color"
-              }
-            },
             "strong": {
-              "@": {
-                "value": "{eds.color.neutral.700}",
-                "group": "color"
-              },
               "hover": {
                 "value": "{eds.color.neutral.800}",
                 "group": "color"
-              }
-            },
-            "subtle": {
-              "@": {
-                "value": "{eds.color.neutral.500}",
-                "group": "color"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.600}",
-                "group": "color"
-              }
-            }
-          },
-          "link": {
-            "default": {
-              "@": {
-                "value": "{eds.color.brand.grape.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.brand.grape.700}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            }
-          },
-          "brand": {
-            "primary": {
-              "@": {
-                "value": "{eds.color.brand.grape.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.brand.grape.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             }
           },
@@ -2903,11 +1363,6 @@
                   "value": "{eds.theme.color.text.utility.interactive.secondary.visited}",
                   "group": "color"
                 }
-              },
-              "visited": {
-                "value": "{eds.theme.color.text.utility.interactive.visited}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             },
             "critical": {
@@ -2995,94 +1450,11 @@
             },
             "placeholder": {
               "value": "{eds.theme.color.text.utility.placeholder}"
-            },
-            "success": {
-              "@": {
-                "value": "{eds.color.other.mint.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.mint.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-            "error": {
-              "@": {
-                "value": "{eds.color.other.ruby.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.ruby.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
             }
-          },
-          "grade": {
-            "complete": {
-              "@": {
-                "value": "{eds.color.other.mint.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.mint.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-            "revise": {
-              "@": {
-                "value": "{eds.color.neutral.800}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.neutral.black}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
-            "stop": {
-              "@": {
-                "value": "{eds.color.other.ruby.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "{eds.color.other.ruby.600}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            }
-          },
-          "disabled": {
-            "value": "{eds.color.neutral.300}",
-            "group": "color"
           }
         },
         "link": {
           "brand": {
-            "text": {
-              "@": {
-                "value": "var(--eds-theme-color-text-neutral-strong)",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "hover": {
-                "value": "var(--eds-theme-color-text-brand-default)",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              },
-              "focus": {
-                "value": "var(--eds-theme-color-text-neutral-default-inverse)",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-              }
-            },
             "text-decoration": {
               "@": {
                 "value": "var(--eds-theme-color-text-brand-default)",
@@ -3137,52 +1509,14 @@
               "focus": {
                 "value": "var(--eds-theme-color-text-neutral-default)",
                 "group": "color"
-              }
-            }
-          }
-        },
-        "modal": {
-          "brand": {
-            "header": {
-              "background": {
-                "@": {
-                  "value": "{eds.color.brand.grape.500}",
-                  "group": "color",
-                  "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-                }
-              }
-            }
-          }
-        },
-        "radio": {
-          "brand": {
-            "background": {
-              "@": {
-                "value": "{eds.color.brand.grape.500}",
-                "group": "color",
-                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               }
             }
           }
         },
         "text": {
           "neutral": {
-            "default": {
-              "@": {
-                "value": "{eds.color.neutral.700}",
-                "group": "color"
-              },
-              "inverse": {
-                "value": "{eds.color.neutral.white}",
-                "group": "color"
-              }
-            },
             "strong": {
               "value": "{eds.color.neutral.800}",
-              "group": "color"
-            },
-            "subtle": {
-              "value": "{eds.color.neutral.600}",
               "group": "color"
             }
           },
@@ -3239,10 +1573,6 @@
                 "visited": {
                   "value": "{eds.color.blue.550}"
                 }
-              },
-              "visited": {
-                "value": "{eds.color.purple.550}",
-                "comment": "@deprecated This token is deprecated. Please use eds-theme-color-border-brand-primary-default instead"
               }
             },
             "critical": {
@@ -3312,48 +1642,12 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}"
-            },
-            "success": {
-              "value": "{eds.color.other.mint.700}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "error": {
-              "value": "{eds.color.other.ruby.700}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
             }
-          },
-          "grade": {
-            "complete": {
-              "value": "{eds.color.other.mint.700}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "revise": {
-              "value": "{eds.color.neutral.800}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "stop": {
-              "value": "{eds.color.other.ruby.700}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            }
-          },
-          "disabled": {
-            "value": "{eds.color.neutral.300}",
-            "group": "color"
           },
           "brand": {
             "default": {
               "value": "var(--eds-theme-color-text-brand-primary)",
               "group": "color"
-            },
-            "primary": {
-              "value": "{eds.color.brand.grape.700}",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS. Please use eds-theme-color-text-brand-default instead."
             }
           }
         },
@@ -3361,11 +1655,6 @@
           "foreground": {
             "value": "{eds.color.neutral.800}",
             "group": "color"
-          },
-          "background": {
-            "value": "{eds.color.other.yellow.100}",
-            "group": "color",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "toggle": {
@@ -3400,27 +1689,6 @@
           "thumb": {
             "value": "var(--eds-theme-color-text-neutral-default-inverse)",
             "group": "color"
-          }
-        },
-        "transparent": {
-          "black": {
-            "0": {
-              "value": "rgba(0, 0, 0, 0)",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "30": {
-              "value": "rgba(0, 0, 0, .3)",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            }
-          },
-          "white": {
-            "0": {
-              "value": "rgba(255, 255, 255, 0)",
-              "group": "color",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            }
           }
         }
       }

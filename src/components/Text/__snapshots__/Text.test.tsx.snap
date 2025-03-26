@@ -96,18 +96,6 @@ exports[`<Text /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> Overline story renders snapshot 1`] = `
-<div
-  class="m-1"
->
-  <p
-    class="text text--overline"
-  >
-    Overline
-  </p>
-</div>
-`;
-
 exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 <div
   class="m-1"

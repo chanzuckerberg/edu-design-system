@@ -36,7 +36,7 @@ type Story = StoryObj<Args>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="flex gap-size-2">
+    <div className="gap-size-2 flex">
       <Tag {...args} status="informational" />
       <Tag {...args} status="favorable" />
       <Tag {...args} status="warning" />

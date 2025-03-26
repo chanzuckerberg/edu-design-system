@@ -69,13 +69,6 @@ export const Caption: Story = {
   },
 };
 
-export const Overline: Story = {
-  args: {
-    preset: 'overline',
-    children: 'Overline',
-  },
-};
-
 export const Callout: Story = {
   args: {
     preset: 'callout',

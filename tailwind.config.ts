@@ -9,26 +9,12 @@ const {
 } = edsTokens.theme.color;
 
 // Add a type to the tokens to avoid literals for keys
-const sizes: { [x: string]: string } = edsTokens.size;
 const movements: { [x: string]: string } = edsTokens.anim.move;
 
 const movementTokens = {
   ...Object.keys(movements)
     .map((movement) => {
       return { [movement]: `${movements[movement]}s` };
-    })
-    .reduce((accumulate, current) => {
-      const entry = Object.entries(current)[0];
-      accumulate[entry[0]] = entry[1];
-      return accumulate;
-    }, {}),
-};
-
-const sizeTokens = {
-  // We pull the spacing tokens and format them such that names are like 'size-${name} = ${value}px'
-  ...Object.keys(sizes)
-    .map((sizeKey) => {
-      return { [`size-${sizeKey}`]: `${sizes[sizeKey]}px` };
     })
     .reduce((accumulate, current) => {
       const entry = Object.entries(current)[0];
@@ -62,9 +48,6 @@ export default {
       },
       textColor: {
         ...textColorTokens,
-      },
-      spacing: {
-        ...sizeTokens,
       },
       transitionDuration: {
         ...movementTokens,

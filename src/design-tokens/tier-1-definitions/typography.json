@@ -42,10 +42,6 @@
           },
           "bold": {
             "value": "var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary)"
-          },
-          "mobile": {
-            "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "002": {
@@ -57,10 +53,6 @@
           },
           "bold": {
             "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
-          },
-          "mobile": {
-            "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "003": {
@@ -72,10 +64,6 @@
           },
           "bold": {
             "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)"
-          },
-          "mobile": {
-            "value": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
           }
         },
         "004": {

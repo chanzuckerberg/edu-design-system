@@ -26,16 +26,6 @@
   margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
 }
 
-/**
- * Label flag to mark whether or not a field is required
- * or optional. Currently a flag is only present for optional fields
- *
- * TODO: remove as deprecated with v16 of EDS
- */
-.fieldset-legend__flag {
-  font: var(--eds-theme-typography-body-sm);
-}
-
 .fieldset-legend__overline {
   display: flex;
   align-items: center;
