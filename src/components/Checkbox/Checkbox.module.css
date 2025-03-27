@@ -2,7 +2,7 @@
 
 .checkbox {
   display: flex;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 .checkbox__input {
@@ -18,7 +18,7 @@
   /* Magic value to center the checkbox on its label. */
   margin: 3px;
 
-  border: calc(var(--eds-size-quarter) / 16 * 1rem) solid currentColor;
+  border: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid currentColor;
 
   /* Place the ::before content smack in the middle of the input. */
   display: grid;
@@ -35,8 +35,8 @@
 
   /* Because the path does not have an explicit viewbox, this element's bounding box establishes
   one. In other words, the height/width here need to match the expected viewbox for the path. */
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  width: calc(var(--eds-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 
   /* use the platform's font face, which defines the checkbox glyph to use */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -52,8 +52,8 @@
   content: '–';
   text-align: center;
 
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  width: calc(var(--eds-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
   transform: translateY(-1px);
 }
 
@@ -146,11 +146,11 @@
 }
 
 .checkbox__input:focus-visible {
-  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
 }
 
 @supports not selector(:focus-visible) {
   .checkbox__input {
-    outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+    outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
   }
 }

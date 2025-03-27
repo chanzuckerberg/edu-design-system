@@ -9,8 +9,8 @@
  */
 .tag {
   width: max-content;
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
 
   display: inline-flex;
   align-items: center;
@@ -28,7 +28,7 @@
  * TODO: perhaps use gap?
  */
 .tag> :not(:last-child) {
-  margin-right: calc(var(--eds-size-half) / 16 * 1rem);
+  margin-right: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
 
 /**

@@ -10,11 +10,10 @@
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: calc(var(--eds-size-3) / 16 * 1rem) calc(var(--eds-size-6) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-6) / 16 * 1rem);
 
   text-align: start;
-  margin: 0 calc(var(--eds-size-3) / 16 * 1rem)
-    calc(var(--eds-size-4) / 16 * 1rem);
+  margin: 0 calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
 .data-table__caption-text {
@@ -40,25 +39,28 @@
   table-layout: fixed;
   width: 100%;
 
-  .data-table__caption + &,
-  .data-table__subcaption + & {
-    margin-top: calc(var(--eds-size-4) / 16 * 1rem);
+  .data-table__caption+&,
+  .data-table__subcaption+& {
+    margin-top: calc(var(--eds-spacing-size-4) / 16 * 1rem);
   }
 }
 
-.data-table__cell-container, .data-table__header-cell-container {
+.data-table__cell-container,
+.data-table__header-cell-container {
   padding: 0;
   vertical-align: top;
 
   &:last-child {
-    .data-table__cell, .data-table__header-cell {
+
+    .data-table__cell,
+    .data-table__header-cell {
       border-width: 0;
     }
   }
 }
 
 .data-table__search {
-  width: calc(var(--eds-size-34) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-34) / 16 * 1rem);
 }
 
 .data-table--tableStyle-border {
@@ -92,7 +94,7 @@
 
 .data-table__header-cell {
   display: flex;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   align-items: flex-start;
   font: var(--eds-theme-typography-title-md);
   height: 100%;
@@ -101,35 +103,31 @@
   border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
 
   &.data-table__cell--has-horizontal-divider {
-    border-right-color: var(
-      --eds-theme-color-border-utility-default-low-emphasis
-    );
+    border-right-color: var(--eds-theme-color-border-utility-default-low-emphasis);
   }
 
   .data-table--size-sm & {
     font: var(--eds-theme-typography-title-sm);
     /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
-    padding: calc(var(--eds-size-half) / 16 * 1rem)
-      calc(var(--eds-size-1) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-size-2) / 16 * 1rem)
-      calc(var(--eds-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
   }
 
   .data-cell__cell--icon {
-    margin-top: calc(var(--eds-size-1) / 16 * 1rem);
+    margin-top: calc(var(--eds-spacing-size-1) / 16 * 1rem);
     flex-shrink: 0;
 
     .data-table--size-sm & {
-      margin-top: calc(var(--eds-size-half) / 16 * 1rem);
+      margin-top: calc(var(--eds-spacing-size-half) / 16 * 1rem);
     }
   }
 }
 
 .data-table__status-cell {
-  height: 100%; 
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -145,7 +143,7 @@
 
 .data-table__cell {
   display: flex;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   align-items: flex-start;
   font: var(--eds-theme-typography-body-md);
   height: 100%;
@@ -154,24 +152,20 @@
   border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
 
   &.data-table__cell--has-horizontal-divider {
-    border-right-color: var(
-      --eds-theme-color-border-utility-default-low-emphasis
-    );
+    border-right-color: var(--eds-theme-color-border-utility-default-low-emphasis);
   }
 
   .data-table--size-sm & {
     font: var(--eds-theme-typography-body-sm);
-    padding: calc(var(--eds-size-half) / 16 * 1rem)
-      calc(var(--eds-size-1) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-size-2) / 16 * 1rem)
-      calc(var(--eds-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
   }
 
   .data-cell__cell--icon {
-    margin-top: calc(var(--eds-size-half) / 16 * 1rem);
+    margin-top: calc(var(--eds-spacing-size-half) / 16 * 1rem);
     flex-shrink: 0;
   }
 }
@@ -193,13 +187,11 @@
   pointer-events: none;
 
   .data-table--size-sm & {
-    padding: calc(var(--eds-size-half) / 16 * 1rem)
-      calc(var(--eds-size-1) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-size-2) / 16 * 1rem)
-      calc(var(--eds-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
   }
 }
 
@@ -209,7 +201,7 @@
 
 .data-table--column-is-pinned {
   /* When pinning columns, width and offset position are dynamic */
-  
+
   /* inherit the background color from the enclosing row */
   background-color: inherit;
   position: sticky;
@@ -308,6 +300,7 @@
   }
 
   .data-table__row--is-interactive {
+
     /**
      * TODO: Add in handling for when focused (i dont think you can do?)
     */

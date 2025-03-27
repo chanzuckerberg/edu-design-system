@@ -8,14 +8,14 @@
 .visual-page-indicator {
     display: flex;
     justify-content: center;
-    gap: calc(var(--eds-size-1-and-half) / 16 * 1rem);
+    gap: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
 }
 
 .visual-page-indicator__item {
     --visual-page-indicator-bg: var(--eds-theme-color-background-visual-page-indicator);
 
-    height: calc(var(--eds-size-1-and-half) / 16 * 1rem);
-    width: calc(var(--eds-size-1-and-half) / 16 * 1rem);
+    height: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+    width: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
     border-radius: calc(var(--eds-border-radius-full) * 1px);
 
     transition: background-color ease calc(var(--eds-anim-move-medium) * 1s);

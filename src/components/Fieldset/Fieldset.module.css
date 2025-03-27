@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  margin-top: calc(var(--eds-size-3) / 16 * 1rem);
+  margin-top: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .fieldset__label {
@@ -14,7 +14,7 @@
  * The contents of the fieldset. Spaces them apart.
  */
 .fieldset-items> :not(:last-child) {
-  margin-bottom: calc(var(--eds-size-2) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-2) / 16 * 1rem);
 }
 
 /**
@@ -23,11 +23,11 @@
  * but semantically/stylistically a bit different.
  */
 .fieldset-legend {
-  margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .fieldset-legend__overline {
   display: flex;
   align-items: center;
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }

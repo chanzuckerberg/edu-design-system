@@ -12,7 +12,7 @@
  */
 .textarea {
   @mixin inputStyles;
-  padding: calc(var(--eds-size-1) / 16 * 1rem) 0.75rem;
+  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) 0.75rem;
 
   &:read-only:not(:disabled) {
     border: 0;
@@ -25,8 +25,8 @@
  */
 .textarea-field__overline {
   display: flex;
-  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
 
 .textarea-field__overline--no-label {
