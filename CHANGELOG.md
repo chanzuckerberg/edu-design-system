@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [15.11.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.11.1...v15.11.2) (2025-03-31)
+
+
+### Bug Fixes
+
+* **scripts:** add locality check to value pre-validation ([#2154](https://github.com/chanzuckerberg/edu-design-system/issues/2154)) ([5f2ad71](https://github.com/chanzuckerberg/edu-design-system/commit/5f2ad710d1ba407db94e7a0ccf47a340d36ee449))
+
 ### [15.11.1](https://github.com/chanzuckerberg/edu-design-system/compare/v15.11.0...v15.11.1) (2025-03-14)
 
 
