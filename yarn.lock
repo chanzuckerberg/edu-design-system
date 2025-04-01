@@ -2016,7 +2016,7 @@ __metadata:
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-jest: "npm:^28.11.0"
     eslint-plugin-prettier: "npm:^5.2.3"
-    eslint-plugin-storybook: "npm:^0.11.0"
+    eslint-plugin-storybook: "npm:^0.12.0"
     eslint-plugin-testing-library: "npm:^7.1.1"
     graphemer: "npm:^1.4.0"
     husky: "npm:^9.1.7"
@@ -10023,16 +10023,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "eslint-plugin-storybook@npm:0.11.0"
+"eslint-plugin-storybook@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "eslint-plugin-storybook@npm:0.12.0"
   dependencies:
     "@storybook/csf": "npm:^0.1.11"
     "@typescript-eslint/utils": "npm:^8.8.1"
     ts-dedent: "npm:^2.2.0"
   peerDependencies:
-    eslint: ">=6"
-  checksum: 10/fb9b2a23add084d8184c20571ca4cfd099eda22ba465e3ecfc2c109317235209eabdd6b30a19cb5f352f70ddd8083e10cf82a38233dfe4d02b3b0f753f86a18b
+    eslint: ">=8"
+  checksum: 10/278ea59565e30b74ee1d57f0a8f704906eaf40973b13999ec2c44872bb90c7505dfb12777b264940e2b480e81ace85c0532af69666e76a783b8ffa898a1d49ad
   languageName: node
   linkType: hard
 
