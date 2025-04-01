@@ -68,7 +68,7 @@ export const WithLinkInSubtitle: Story = {
 
 export const LightColor: Story = {
   args: {
-    color: 'light',
+    variant: 'inverse',
     children: (
       <ButtonGroup buttonLayout="horizontal-align-left">
         <Button rank="secondary">Call To Action</Button>

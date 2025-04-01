@@ -2,7 +2,7 @@
 
 exports[`<AppNotification /> Default story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--color-dark"
+  class="app-notification app-notification--variant-default"
   role="status"
 >
   <div
@@ -29,7 +29,7 @@ exports[`<AppNotification /> Default story renders snapshot 1`] = `
 
 exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--color-light"
+  class="app-notification app-notification--variant-inverse"
   role="status"
 >
   <div
@@ -81,7 +81,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
 
 exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--color-light"
+  class="app-notification app-notification--variant-inverse"
   role="status"
 >
   <div
@@ -157,7 +157,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
 
 exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--color-dark"
+  class="app-notification app-notification--variant-default"
   role="status"
 >
   <div
@@ -209,7 +209,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
 
 exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--color-dark"
+  class="app-notification app-notification--variant-default"
   role="status"
 >
   <div
@@ -285,7 +285,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
 
 exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--color-dark"
+  class="app-notification app-notification--variant-default"
   role="status"
 >
   <div
