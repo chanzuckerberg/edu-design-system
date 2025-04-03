@@ -1,7 +1,9 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
+import { assertEdsUsage } from '../../util/logging';
 import Button from '../Button';
 import Text from '../Text';
+
 import styles from './AppNotification.module.css';
 
 // TODO(next-major): change export to type for consistency
@@ -17,8 +19,18 @@ export interface AppNotificationProps {
   subTitle: ReactNode;
   /**
    * Treatment for component (whether it is dark on light text, or light on dark text)
+   *
+   * ----
+   *
+   * @deprecated
+   * TODO(next-major): Do not use this prop. It is deprecated and will be removed in v17 of EDS. Use `variant` instead.
    */
-  color: 'dark' | 'light';
+  color?: 'dark' | 'light';
+
+  /**
+   * Treatment for component (whether it is dark on light text, or light on dark text)
+   */
+  variant: 'default' | 'inverse';
 
   // Component API
   /**
@@ -43,17 +55,37 @@ export interface AppNotificationProps {
 export const AppNotification = ({
   className,
   children,
-  color = 'dark',
+  color,
   onDismiss,
   subTitle,
   title,
+  variant = 'default',
   ...other
 }: AppNotificationProps) => {
   const componentClassName = clsx(
     styles['app-notification'],
     color && styles[`app-notification--color-${color}`],
+    variant && styles[`app-notification--variant-${variant}`],
     className,
   );
+
+  assertEdsUsage(
+    [typeof color !== 'undefined'],
+    '`color` is deprecated, and should not be used. Use `variant` instead.',
+  );
+
+  let variantValue = variant;
+
+  if (typeof color !== 'undefined') {
+    switch (color) {
+      case 'dark':
+        variantValue = 'default';
+        break;
+      case 'light':
+        variantValue = 'inverse';
+        break;
+    }
+  }
 
   return (
     <div className={componentClassName} role="status" {...other}>
@@ -84,7 +116,7 @@ export const AppNotification = ({
             iconLayout="icon-only"
             onClick={onDismiss}
             rank="tertiary"
-            variant={color === 'dark' ? 'inverse' : 'neutral'}
+            variant={variantValue === 'inverse' ? 'neutral' : 'inverse'}
           ></Button>
         )}
       </div>
