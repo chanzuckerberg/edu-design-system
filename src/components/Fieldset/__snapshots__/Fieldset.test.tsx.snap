@@ -5,7 +5,6 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
   <legend
     class="fieldset-legend"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -30,7 +29,6 @@ exports[`<Fieldset /> FieldsetLegend story renders snapshot 1`] = `
 <legend
   class="fieldset-legend"
 >
-   
   <div
     class="fieldset-legend__overline"
   >
@@ -47,7 +45,6 @@ exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
 <legend
   class="fieldset-legend"
 >
-   
   <div
     class="fieldset-legend__overline"
   >
@@ -69,7 +66,6 @@ exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
 <legend
   class="fieldset-legend"
 >
-   
   <div
     class="fieldset-legend__overline"
   >
@@ -91,7 +87,6 @@ exports[`<Fieldset /> FieldsetLegendWithSubtitle story renders snapshot 1`] = `
 <legend
   class="fieldset-legend"
 >
-   
   <div
     class="fieldset-legend__overline"
   >
@@ -114,7 +109,6 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
   <legend
     class="fieldset-legend"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -182,7 +176,6 @@ exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
   <legend
     class="fieldset-legend"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -220,7 +213,6 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
     aria-disabled="true"
     class="fieldset-legend fieldset-legend--disabled"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -295,7 +287,6 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
     aria-disabled="true"
     class="fieldset-legend fieldset-legend--disabled"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -389,7 +380,6 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
   <legend
     class="fieldset-legend"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -457,7 +447,6 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
   <legend
     class="fieldset-legend"
   >
-     
     <div
       class="fieldset-legend__overline"
     >
@@ -545,7 +534,6 @@ exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
   <legend
     class="fieldset-legend"
   >
-     
     <div
       class="fieldset-legend__overline"
     >

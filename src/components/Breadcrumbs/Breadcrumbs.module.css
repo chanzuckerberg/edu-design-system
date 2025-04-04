@@ -25,7 +25,7 @@
 /**
  * Breadcrumbs list item.
  */
- .breadcrumbs__item {
+.breadcrumbs__item {
   font: var(--eds-theme-typography-body-xs);
   max-width: 100%;
   /* Required for the Menu to absolutely position relative to this container. */
@@ -34,6 +34,7 @@
   /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */
   display: none;
   flex-shrink: 0;
+
   &:last-of-type {
     display: flex;
     /* Truncate last breadcrumb in smaller breakpoints */
@@ -47,6 +48,7 @@
   @media all and (min-width: $eds-bp-md) {
     /* Display breadcrumbs in larger breakpoints. */
     display: flex;
+
     &:last-of-type {
       /* Truncate last breadcrumb in smaller breakpoints */
       flex: 0 0 auto;
@@ -59,13 +61,15 @@
  */
 .breadcrumbs__item-back {
   display: flex;
-  margin-right: calc(var(--eds-size-1-and-half) / 16 * 1rem);
+  margin-right: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+
   @media all and (min-width: $eds-bp-md) {
     /* Hidden for larger breakpoints. */
     display: none;
   }
 }
-.breadcrumbs__item-back > .breadcrumbs__separator {
+
+.breadcrumbs__item-back>.breadcrumbs__separator {
   /* Hide the separator for the back variant. */
   display: none;
 }
@@ -81,6 +85,7 @@
   border-radius: unset;
   background-color: transparent;
 }
+
 .breadcrumbs__ellipsis:hover {
   background-color: transparent;
 }
@@ -109,6 +114,7 @@
   }
 
   @supports not selector(:focus-visible) {
+
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -125,8 +131,8 @@
  */
 .breadcrumbs__separator {
   color: var(--eds-theme-color-icon-neutral-subtle);
-  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
-  margin-right: calc(var(--eds-size-1) / 16 * 1rem);
+  margin-left: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  margin-right: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   cursor: default;
 }
 

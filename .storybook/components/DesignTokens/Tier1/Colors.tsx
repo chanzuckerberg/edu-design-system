@@ -14,29 +14,7 @@ export const Tier1Colors = () => {
     }));
 
   // filter down to the neutral tokens which were introduced or redefined in the new brand
-  const nonLegacyNeutralItems = getListItems(
-    'eds-color-neutral',
-    'neutral',
-  ).filter((item) => {
-    // TODO: remove this filter once the deprecated neutral tokens are deleted
-    return [
-      '025',
-      '050',
-      '100',
-      '150',
-      '200',
-      '250',
-      '350',
-      '450',
-      '550',
-      '650',
-      '750',
-      '800',
-      '850',
-      '900',
-      '950',
-    ].includes(item.figmaToken.split('/')[1]);
-  });
+  const nonLegacyNeutralItems = getListItems('eds-color-neutral', 'neutral');
   return (
     <div>
       <Section

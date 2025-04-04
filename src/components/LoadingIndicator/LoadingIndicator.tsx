@@ -29,10 +29,10 @@ export type LoadingIndicatorProps = {
 
 // Pixel sizes corresponding to EDS size units
 const loaderSize = {
-  xs: 16, // --eds-size-1
-  sm: 24, // --eds-size-2-and-half
-  md: 40, // --eds-size-5
-  lg: 56, // --eds-size-7
+  xs: 16, // --eds-spacing-size-1
+  sm: 24, // --eds-spacing-size-2-and-half
+  md: 40, // --eds-spacing-size-5
+  lg: 56, // --eds-spacing-size-7
 };
 
 // Given a loader size, the stroke widths can change

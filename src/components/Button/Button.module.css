@@ -17,7 +17,7 @@
 
 .button__text {
   display: flex;
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   align-items: center;
   justify-content: center;
 
@@ -30,12 +30,12 @@
   .button--sm & {
     /* Offset to better align text in small button */
     transform: translateY(-1px);
-    gap: calc(var(--eds-size-half) / 16 * 1rem);
+    gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   }
 
   .button--md &,
   .button--lg & {
-    gap: calc(var(--eds-size-1) / 16 * 1rem);
+    gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }
 
   & svg {
@@ -66,39 +66,39 @@
 .button--lg {
   align-items: center;
 
-  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) calc(var(--eds-spacing-size-2-and-half) / 16 * 1rem);
   font: var(--eds-theme-typography-button-lg);
 }
 
 .button--md {
   align-items: center;
 
-  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem);
   font: var(--eds-theme-typography-button-md);
 }
 
 .button--sm {
-  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1-and-half) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
   font: var(--eds-theme-typography-button-sm);
 }
 
 .button--size-lg {
-  min-width: calc(var(--eds-size-9) / 16 * 1rem);
-  max-width: calc(var(--eds-size-40) / 16 * 1rem);
-  max-height: calc(var(--eds-size-5) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-9) / 16 * 1rem);
+  max-width: calc(var(--eds-spacing-size-40) / 16 * 1rem);
+  max-height: calc(var(--eds-spacing-size-5) / 16 * 1rem);
 }
 
 .button--size-md {
   /* TODO: missing size token needs to be added to EDS */
   min-width: 3.75rem;
-  max-width: calc(var(--eds-size-32) / 16 * 1rem);
-  max-height: calc(var(--eds-size-4) / 16 * 1rem);
+  max-width: calc(var(--eds-spacing-size-32) / 16 * 1rem);
+  max-height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
 .button--size-sm {
-  min-width: calc(var(--eds-size-6) / 16 * 1rem);
-  max-width: calc(var(--eds-size-24) / 16 * 1rem);
-  max-height: calc(var(--eds-size-3) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-6) / 16 * 1rem);
+  max-width: calc(var(--eds-spacing-size-24) / 16 * 1rem);
+  max-height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .button--full-width {
@@ -114,40 +114,40 @@
 }
 
 .button--lg.button--layout-left {
-  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-left: calc(var(--eds-spacing-size-2) / 16 * 1rem);
 }
 
 .button--lg.button--layout-right {
-  padding-right: calc(var(--eds-size-2) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-2) / 16 * 1rem);
 }
 
 .button--lg.button--layout-icon-only {
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
-  width: calc(var(--eds-size-5) / 16 * 1rem);
-  min-width: calc(var(--eds-size-5) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-5) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-5) / 16 * 1rem);
 }
 
 .button--md.button--layout-icon-only {
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
-  width: calc(var(--eds-size-4) / 16 * 1rem);
-  min-width: calc(var(--eds-size-4) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
 .button--sm.button--layout-icon-only {
-  padding: calc(var(--eds-size-half) / 16 * 1rem);
-  width: calc(var(--eds-size-3) / 16 * 1rem);
-  min-width: calc(var(--eds-size-3) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-size-quarter) / 16 * 1rem) var(--eds-theme-color-background-utility-base-2), 0 0 0 calc(var(--eds-size-half) / 16 * 1rem) var(--eds-theme-color-border-utility-focus);
+  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) / 16 * 1rem) var(--eds-theme-color-background-utility-base-2), 0 0 0 calc(var(--eds-spacing-size-half) / 16 * 1rem) var(--eds-theme-color-border-utility-focus);
 }
 
 /* stylelint-disable-next-line eds/no-tier-1-color-variable */
 .button.button--variant-inverse:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-size-quarter) / 16 * 1rem) rgb(var(--eds-color-black) / 1), 0 0 0 calc(var(--eds-size-half) / 16 * 1rem) var(--eds-theme-color-background-utility-base-2);
+  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) / 16 * 1rem) rgb(var(--eds-color-black) / 1), 0 0 0 calc(var(--eds-spacing-size-half) / 16 * 1rem) var(--eds-theme-color-background-utility-base-2);
 }
 
 /**

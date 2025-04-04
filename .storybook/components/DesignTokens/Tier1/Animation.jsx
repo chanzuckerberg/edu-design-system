@@ -45,25 +45,6 @@ export class Tier1Animation extends Component {
             })}
           </Grid>
         </Section>
-
-        <Section title="Animation Timing Function">
-          <Grid>
-            {filterTokens(`eds-anim-ease`).map(function (listItem) {
-              return (
-                <Grid.Item key={listItem.name}>
-                  <TokenSpecimen
-                    inlineStyles={{
-                      transitionTimingFunction: `calc(var(${listItem.name}) * 1s)`,
-                    }}
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="animation-fade"
-                  />
-                </Grid.Item>
-              );
-            })}
-          </Grid>
-        </Section>
       </div>
     );
   }

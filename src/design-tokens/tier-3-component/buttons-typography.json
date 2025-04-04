@@ -11,16 +11,6 @@
           },
           "sm": {
             "value": "var(--eds-typography-preset-009)"
-          },
-          "label": {
-            "@": {
-              "value": "var(--eds-typography-preset-006)",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            },
-            "sm": {
-              "value": "var(--eds-typography-preset-008-bold)",
-              "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
-            }
           }
         }
       }

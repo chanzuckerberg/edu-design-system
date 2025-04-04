@@ -194,7 +194,7 @@ export const WithCustomizedHeader: Story = {
   args: {
     children: (
       <>
-        <Card.Header className="mb-size-2">
+        <Card.Header className="mb-spacing-size-2">
           Displaying <strong>some text</strong> with <em>mixed formatting</em>.
         </Card.Header>
         <Card.Body>

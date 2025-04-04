@@ -7,8 +7,8 @@
  * 
  */
 .hr {
-  margin-top: calc(var(--eds-size-4) / 16 * 1rem);
-  margin-bottom: calc(var(--eds-size-4) / 16 * 1rem);
+  margin-top: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-4) / 16 * 1rem);
   border-top: none;
   border-right: none;
   border-left: none;

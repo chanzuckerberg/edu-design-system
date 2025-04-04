@@ -2,7 +2,7 @@
 
 exports[`<Tag /> Default story renders snapshot 1`] = `
 <div
-  class="flex gap-size-2"
+  class="flex gap-spacing-size-2"
 >
   <span
     class="text text--tag tag tag--status-informational"
@@ -45,7 +45,7 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
 
 exports[`<Tag /> WithIcon story renders snapshot 1`] = `
 <div
-  class="flex gap-size-2"
+  class="flex gap-spacing-size-2"
 >
   <span
     class="text text--tag tag tag--status-informational"

@@ -19,8 +19,8 @@
  */
 .select__overline {
   display: flex;
-  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
 
 .select__overline--no-label {
@@ -44,7 +44,7 @@
   flex-direction: row;
   align-items: baseline;
 
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 /**
@@ -54,7 +54,7 @@
   font: var(--eds-theme-typography-form-input);
 
   width: 100%;
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 
   border: calc(var(--eds-border-width-sm) * 1px) solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
@@ -62,7 +62,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 
   cursor: pointer;
 
@@ -100,7 +100,7 @@
 }
 
 .select--has-fieldNote {
-  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
 
 

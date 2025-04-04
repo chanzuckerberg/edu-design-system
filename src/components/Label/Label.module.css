@@ -24,7 +24,7 @@
   display: inline-block;
   position: relative;
   top: 3px;
-  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
+  margin-left: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 /**
