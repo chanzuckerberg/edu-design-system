@@ -22,6 +22,10 @@
   --eds-spacing-size-3: 24; /* Relative EMs (rem) */
   --eds-spacing-size-2: 16; /* Relative EMs (rem) */
   --eds-spacing-size-1: 8; /* Relative EMs (rem) */
+  --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-opacity-80: 0.80;
   --eds-color-opacity-70: 0.60;
   --eds-color-opacity-60: 0.60;
@@ -118,6 +122,7 @@
   --eds-color-red-200: #F3B7BD;
   --eds-color-red-150: #F6CDD1;
   --eds-color-red-100: #FAE2E5;
+  --eds-color-neutral-white: #FFFFFF; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-neutral-050: #F9F3F1;
   --eds-color-neutral-025: #FDF9F8;
   --eds-color-neutral-950: #0F0F0F;
@@ -125,16 +130,20 @@
   --eds-color-neutral-850: #272625;
   --eds-color-neutral-800: #333231;
   --eds-color-neutral-750: #3F3E3D;
+  --eds-color-neutral-700: #383C43; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-neutral-650: #565352;
   --eds-color-neutral-550: #6C6967;
+  --eds-color-neutral-500: #878C90; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-neutral-450: #868281;
   --eds-color-neutral-350: #A09C9A;
+  --eds-color-neutral-300: #C0C4C8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-color-neutral-250: #BEB8B6;
   --eds-color-neutral-200: #CFC9C7;
   --eds-color-neutral-150: #DFD9D6;
   --eds-color-neutral-100: #EEE7E4;
   --eds-color-black: 0 0 0; /* Specified as a value to color-func rgb() so that it can be blended */
   --eds-color-white: 255 255 255; /* Specified as a value to color-func rgb() so that it can be blended */
+  --eds-color-brand-grape-400: #A6A3EE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-border-radius-full: 9999; /* pixels (px) */
   --eds-border-radius-none: 0; /* pixels (px) */
   --eds-border-radius-500: 20; /* pixels (px) */
@@ -190,6 +199,7 @@
   --eds-theme-color-background-utility-default-no-emphasis: transparent;
   --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-background-utility-base-1: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-brand-primary-default: var(--eds-theme-color-border-brand-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-neutral-medium: #E7E8EA;
   --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
   --eds-theme-color-background-neutral-default-hover: #F4F6F8;
@@ -325,6 +335,7 @@
   --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary);
   --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary);
   --eds-typography-preset-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary);
+  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-typography-preset-002-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
   --eds-typography-preset-002-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
   --eds-typography-preset-002: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
@@ -368,10 +379,15 @@
   --eds-theme-color-text-utility-default-primary-active: var(--eds-color-blue-950);
   --eds-theme-color-text-utility-default-primary-hover: var(--eds-color-blue-900);
   --eds-theme-color-text-utility-default-primary: var(--eds-color-blue-850);
+  --eds-theme-color-text-disabled: var(--eds-color-neutral-300);
   --eds-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
+  --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
+  --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
   --eds-theme-color-icon-utility-inverse-interactive-visited: var(--eds-theme-color-text-utility-inverse-interactive-visited);
   --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
   --eds-theme-color-icon-utility-inverse: var(--eds-theme-color-text-utility-inverse);
+  --eds-theme-color-icon-disabled: var(--eds-color-neutral-300);
+  --eds-theme-color-icon-neutral-subtle: var(--eds-color-neutral-500);
   --eds-theme-color-icon-neutral-strong-hover: var(--eds-color-neutral-800);
   --eds-theme-color-form-border-hover: var(--eds-color-neutral-800);
   --eds-theme-color-border-utility-focus: var(--eds-color-blue-550);
@@ -482,6 +498,7 @@
   --eds-theme-color-background-brand-orange: var(--eds-color-orange-250);
   --eds-theme-color-background-brand-red-low-emphasis: var(--eds-color-red-050);
   --eds-theme-color-background-brand-red: var(--eds-color-red-850);
+  --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-form-border-width: var(--eds-border-width-sm);
   --eds-theme-border-width: var(--eds-border-width-sm);
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);

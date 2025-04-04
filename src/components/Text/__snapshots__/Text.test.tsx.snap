@@ -123,25 +123,25 @@ exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
        utility class
     </p>
     <p
-      class="text text--body-lg text-utility-success"
+      class="text text--body-lg text-utility-favorable"
     >
       using 
       <code>
-        text-utility-success
+        text-utility-favorable
       </code>
        utility class
     </p>
     <p
-      class="text text--body-md text-utility-error"
+      class="text text--body-md text-utility-critical"
     >
       using 
       <code>
-        text-utility-error
+        text-utility-critical
       </code>
        utility class
     </p>
     <p
-      class="text text--body-sm text-[var(--eds-theme-color-text-utility-success)]"
+      class="text text--body-sm text-[var(--eds-theme-color-text-utility-favorable)]"
     >
       using inline color
     </p>

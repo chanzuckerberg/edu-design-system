@@ -86,6 +86,15 @@
       }
     },
     "color": {
+      "brand": {
+        "grape": {
+          "400": {
+            "value": "#A6A3EE",
+            "group": "color",
+            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+          }
+        }
+      },
       "white": {
         "value": "255 255 255",
         "comment": "Specified as a value to color-func rgb() so that it can be blended"
@@ -111,6 +120,11 @@
           "value": "#BEB8B6",
           "group": "color"
         },
+        "300": {
+          "value": "#C0C4C8",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
         "350": {
           "value": "#A09C9A",
           "group": "color"
@@ -119,6 +133,11 @@
           "value": "#868281",
           "group": "color"
         },
+        "500": {
+          "value": "#878C90",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+        },
         "550": {
           "value": "#6C6967",
           "group": "color"
@@ -126,6 +145,11 @@
         "650": {
           "value": "#565352",
           "group": "color"
+        },
+        "700": {
+          "value": "#383C43",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "750": {
           "value": "#3F3E3D",
@@ -154,6 +178,11 @@
         "050": {
           "value": "#F9F3F1",
           "group": "color"
+        },
+        "white": {
+          "value": "#FFFFFF",
+          "group": "color",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       },
       "red": {
@@ -549,6 +578,24 @@
         }
       }
     },
+    "box-shadow": {
+      "sm": {
+        "value": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+      },
+      "md": {
+        "value": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+      },
+      "lg": {
+        "value": "0px 4px 12px rgba(0, 0, 0, 0.16)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+      },
+      "xl": {
+        "value": "0px 6px 20px rgba(0, 0, 0, 0.2)",
+        "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+      }
+    },
     "spacing": {
       "size": {
         "1": {
@@ -745,6 +792,18 @@
             }
           },
           "brand": {
+            "primary": {
+              "default": {
+                "value": "var(--eds-theme-color-border-brand-primary)",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+              },
+              "strong": {
+                "value": "{eds.color.brand.grape.400}",
+                "group": "color",
+                "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+              }
+            },
             "red": {
               "@": {
                 "value": "{eds.color.red.850}",
@@ -1295,7 +1354,17 @@
                 "value": "{eds.color.neutral.800}",
                 "group": "color"
               }
+            },
+            "subtle": {
+              "@": {
+                "value": "{eds.color.neutral.500}",
+                "group": "color"
+              }
             }
+          },
+          "disabled": {
+            "value": "{eds.color.neutral.300}",
+            "group": "color"
           },
           "utility": {
             "default": {
@@ -1515,10 +1584,24 @@
         },
         "text": {
           "neutral": {
+            "default": {
+              "@": {
+                "value": "{eds.color.neutral.700}",
+                "group": "color"
+              },
+              "inverse": {
+                "value": "{eds.color.neutral.white}",
+                "group": "color"
+              }
+            },
             "strong": {
               "value": "{eds.color.neutral.800}",
               "group": "color"
             }
+          },
+          "disabled": {
+            "value": "{eds.color.neutral.300}",
+            "group": "color"
           },
           "utility": {
             "default": {

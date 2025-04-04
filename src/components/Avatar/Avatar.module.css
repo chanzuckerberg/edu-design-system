@@ -72,6 +72,13 @@
   width: calc(var(--eds-spacing-size-12) / 16 * 1rem);
 }
 
+.avatar--xxxl {
+  font: var(--eds-theme-typography-headline-lg-bold);
+
+  height: calc(calc(var(--eds-spacing-size-1) / 16 * 1rem) * 20);
+  width: calc(calc(var(--eds-spacing-size-1) / 16 * 1rem) * 20);
+}
+
 .avatar--circle {
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 }

@@ -29,7 +29,7 @@
 }
 
 .checkbox__input:checked::before {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
+  color: var(--eds-theme-color-text-utility-inverse);
   content: '✓';
   text-align: center;
 
@@ -48,7 +48,7 @@
 }
 
 .checkbox__input:indeterminate::before {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
+  color: var(--eds-theme-color-text-utility-inverse);
   content: '–';
   text-align: center;
 

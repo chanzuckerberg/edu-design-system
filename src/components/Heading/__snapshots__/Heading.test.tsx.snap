@@ -68,25 +68,25 @@ exports[`<Heading /> UsingColorTokens story renders snapshot 1`] = `
      utility class
   </h1>
   <h2
-    class="heading heading--title-md text-utility-success"
+    class="heading heading--title-md text-utility-favorable"
   >
     using 
     <code>
-      text-utility-success
+      text-utility-favorable
     </code>
      utility class and preset override
   </h2>
   <h1
-    class="heading heading--title-md text-utility-error"
+    class="heading heading--title-md text-utility-critical"
   >
     using 
     <code>
-      text-utility-error
+      text-utility-critical
     </code>
      utility class
   </h1>
   <h1
-    class="heading heading--title-md text-[var(--eds-theme-color-text-utility-success)]"
+    class="heading heading--title-md text-[var(--eds-theme-color-text-utility-favorable)]"
   >
     using color with token in utility class and preset override
   </h1>

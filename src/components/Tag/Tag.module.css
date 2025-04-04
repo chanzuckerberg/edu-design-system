@@ -53,13 +53,13 @@
 }
 
 :where(.tag--error) {
-  --tag-primary-color: var(--eds-theme-color-text-utility-error);
+  --tag-primary-color: var(--eds-theme-color-text-utility-critical);
   --tag-secondary-color: var(--eds-theme-color-background-utility-error);
   --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
 }
 
 :where(.tag--success) {
-  --tag-primary-color: var(--eds-theme-color-text-utility-success);
+  --tag-primary-color: var(--eds-theme-color-text-utility-favorable);
   --tag-secondary-color: var(--eds-theme-color-background-utility-success);
   --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
 }

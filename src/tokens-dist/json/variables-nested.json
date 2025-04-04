@@ -25,7 +25,8 @@
         "002": {
           "@": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)",
           "light": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)",
-          "bold": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
+          "bold": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)",
+          "mobile": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)"
         },
         "003": {
           "@": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary)",
@@ -328,6 +329,10 @@
             }
           },
           "brand": {
+            "primary": {
+              "default": "var(--eds-theme-color-border-brand-primary)",
+              "strong": "#A6A3EE"
+            },
             "red": {
               "@": "#4D0118",
               "lowEmphasis": "#FDF3F4"
@@ -594,8 +599,12 @@
           "neutral": {
             "strong": {
               "hover": "#333231"
+            },
+            "subtle": {
+              "@": "#878C90"
             }
           },
+          "disabled": "#C0C4C8",
           "utility": {
             "default": {
               "primary": {
@@ -686,8 +695,13 @@
         },
         "text": {
           "neutral": {
+            "default": {
+              "@": "#383C43",
+              "inverse": "#FFFFFF"
+            },
             "strong": "#333231"
           },
+          "disabled": "#C0C4C8",
           "utility": {
             "default": {
               "primary": {
@@ -802,6 +816,11 @@
       }
     },
     "color": {
+      "brand": {
+        "grape": {
+          "400": "#A6A3EE"
+        }
+      },
       "white": "255 255 255",
       "black": "0 0 0",
       "neutral": {
@@ -809,17 +828,21 @@
         "150": "#DFD9D6",
         "200": "#CFC9C7",
         "250": "#BEB8B6",
+        "300": "#C0C4C8",
         "350": "#A09C9A",
         "450": "#868281",
+        "500": "#878C90",
         "550": "#6C6967",
         "650": "#565352",
+        "700": "#383C43",
         "750": "#3F3E3D",
         "800": "#333231",
         "850": "#272625",
         "900": "#1A1919",
         "950": "#0F0F0F",
         "025": "#FDF9F8",
-        "050": "#F9F3F1"
+        "050": "#F9F3F1",
+        "white": "#FFFFFF"
       },
       "red": {
         "100": "#FAE2E5",
@@ -933,6 +956,12 @@
         "70": "0.60",
         "80": "0.80"
       }
+    },
+    "box-shadow": {
+      "sm": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
+      "md": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
+      "lg": "0px 4px 12px rgba(0, 0, 0, 0.16)",
+      "xl": "0px 6px 20px rgba(0, 0, 0, 0.2)"
     },
     "spacing": {
       "size": {
