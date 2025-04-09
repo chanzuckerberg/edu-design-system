@@ -794,7 +794,7 @@
           "brand": {
             "primary": {
               "default": {
-                "value": "var(--eds-theme-color-border-brand-primary)",
+                "value": "#C4C1F3",
                 "group": "color",
                 "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
               },

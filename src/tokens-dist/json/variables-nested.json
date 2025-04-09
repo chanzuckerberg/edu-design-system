@@ -330,7 +330,7 @@
           },
           "brand": {
             "primary": {
-              "default": "var(--eds-theme-color-border-brand-primary)",
+              "default": "#C4C1F3",
               "strong": "#A6A3EE"
             },
             "red": {

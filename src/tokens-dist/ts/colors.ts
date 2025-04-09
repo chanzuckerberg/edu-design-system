@@ -3,8 +3,7 @@ export const EdsThemeColorBackgroundInput = 'rgb(var(--eds-color-white) / 1)';
 export const EdsThemeColorBackgroundNeutralDefaultHover = '#F4F6F8';
 export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
-export const EdsThemeColorBackgroundBrandPrimaryDefault =
-  'var(--eds-theme-color-border-brand-primary)'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
+export const EdsThemeColorBackgroundBrandPrimaryDefault = '#C4C1F3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundBrandPrimaryStrong = '#A6A3EE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundBrandRed = '#4D0118';
 export const EdsThemeColorBackgroundBrandRedLowEmphasis = '#FDF3F4';
