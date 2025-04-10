@@ -10,7 +10,7 @@
  */
 .popover-list-item {
   display: flex;
-  padding: calc(var(--eds-size-half) / 16 * 1rem) 0.75rem;
+  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) 0.75rem;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -39,12 +39,12 @@
 }
 
 .popover-list-item__icon {
-  padding-right: calc(var(--eds-size-1) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 .popover-list-item__no-icon {
   /* right padding applies space for the icon itself and the padding for that icon container */
-  padding-right: calc(var(--eds-size-3) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .popover-list-item__sub-label {

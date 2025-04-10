@@ -94,7 +94,7 @@ const ToastNotificationManager = (args: Args) => {
         Trigger A Toast Notification
       </Button>
       <div
-        className="dur absolute bottom-0 left-0 flex flex-col gap-size-2"
+        className="absolute bottom-0 left-0 flex flex-col gap-spacing-size-2"
         id="toast-container"
       >
         {toasts.map((toast) => (

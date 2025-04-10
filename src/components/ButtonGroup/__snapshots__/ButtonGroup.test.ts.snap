@@ -80,7 +80,7 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default -ml-size-2"
+      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default -ml-spacing-size-2"
       type="button"
     >
       <span

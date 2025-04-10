@@ -61,7 +61,7 @@ export const HorizontalProgressiveTertiary: Story = {
     children: (
       <>
         <Button rank="primary">Primary Button</Button>
-        <Button className="-ml-size-2" rank="tertiary">
+        <Button className="-ml-spacing-size-2" rank="tertiary">
           Tertiary Button
         </Button>
       </>

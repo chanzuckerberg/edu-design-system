@@ -69,13 +69,6 @@ export const Caption: Story = {
   },
 };
 
-export const Overline: Story = {
-  args: {
-    preset: 'overline',
-    children: 'Overline',
-  },
-};
-
 export const Callout: Story = {
   args: {
     preset: 'callout',
@@ -102,14 +95,14 @@ export const UsingColorTokens: Story = {
       <Text {...args} className="text-utility-warning" preset="body-xl">
         using <code>text-utility-warning</code> utility class
       </Text>
-      <Text {...args} className="text-utility-success" preset="body-lg">
-        using <code>text-utility-success</code> utility class
+      <Text {...args} className="text-utility-favorable" preset="body-lg">
+        using <code>text-utility-favorable</code> utility class
       </Text>
-      <Text {...args} className="text-utility-error" preset="body-md">
-        using <code>text-utility-error</code> utility class
+      <Text {...args} className="text-utility-critical" preset="body-md">
+        using <code>text-utility-critical</code> utility class
       </Text>
       <Text
-        className="text-[var(--eds-theme-color-text-utility-success)]"
+        className="text-[var(--eds-theme-color-text-utility-favorable)]"
         preset="body-sm"
       >
         using inline color

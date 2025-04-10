@@ -7,7 +7,7 @@
  */
 .radio {
   display: flex;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 /**
@@ -20,8 +20,8 @@
   align-self: flex-start;
   flex-shrink: 0;
 
-  width: calc(var(--eds-size-3) / 16 * 1rem);
-  height: calc(var(--eds-size-3) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .radio__container,
@@ -34,7 +34,7 @@
 }
 
 .radio__container {
-  border: calc(var(--eds-size-quarter) / 16 * 1rem) solid currentColor;
+  border: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid currentColor;
   border-radius: 50%;
   content: '';
 
@@ -61,8 +61,8 @@
   /* Remove the radio from the page flow, positioning it on top of the SVG. */
   position: absolute;
   /* Set same dimensions as the RadioSvg element. */
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  width: calc(var(--eds-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 
   /**
    * Hide the input element visually.
@@ -94,127 +94,112 @@
 }
 
 .radio__input:not(:checked) {
-  & ~ .radio__container {
+  &~.radio__container {
     border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
   }
 }
 
 .radio__input:not(:checked):hover {
-  & ~ .radio__container {
-    border-color: var(
-      --eds-theme-color-border-utility-default-medium-emphasis-hover
-    );
+  &~.radio__container {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
   }
 }
 
 .radio__input:not(:checked):active {
-  & ~ .radio__container {
-    border-color: var(
-      --eds-theme-color-border-utility-default-medium-emphasis-active
-    );
+  &~.radio__container {
+    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
   }
 }
 
 .radio__input:not(:checked):disabled {
   pointer-events: none;
-  & ~ .radio__container {
+
+  &~.radio__container {
     border-color: var(--eds-theme-color-border-utility-disabled);
     background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
   }
 }
 
 .radio__input:checked {
-  & ~ .radio__container {
-    border-color: var(
-      --eds-theme-color-background-utility-interactive-high-emphasis
-    );
+  &~.radio__container {
+    border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
   }
 
-  & ~ .radio__selected {
-    background-color: var(
-      --eds-theme-color-background-utility-interactive-high-emphasis
-    );
+  &~.radio__selected {
+    background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
   }
 }
 
 .radio__input:checked:hover {
-  & ~ .radio__container {
-    border-color: var(
-      --eds-theme-color-background-utility-interactive-high-emphasis-hover
-    );
+  &~.radio__container {
+    border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
   }
 
-  & ~ .radio__selected {
-    background-color: var(
-      --eds-theme-color-background-utility-interactive-high-emphasis-hover
-    );
+  &~.radio__selected {
+    background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
   }
 }
 
 .radio__input:checked:active {
-  & ~ .radio__container {
-    border-color: var(
-      --eds-theme-color-background-utility-interactive-high-emphasis-active
-    );
+  &~.radio__container {
+    border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-active);
   }
 
-  & ~ .radio__selected {
-    background-color: var(
-      --eds-theme-color-background-utility-interactive-high-emphasis-active
-    );
+  &~.radio__selected {
+    background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-active);
   }
 }
 
 .radio__input:checked:disabled {
-  & ~ .radio__container {
+  &~.radio__container {
     border-color: var(--eds-theme-color-border-utility-disabled);
   }
 
-  & ~ .radio__selected {
+  &~.radio__selected {
     background-color: var(--eds-theme-color-border-utility-disabled);
   }
 }
 
 .radio__input.radio--error {
-  & ~ .radio__container {
+  &~.radio__container {
     border-color: var(--eds-theme-color-border-utility-critical);
   }
 
-  &:checked ~ .radio__selected {
+  &:checked~.radio__selected {
     background-color: var(--eds-theme-color-border-utility-critical);
   }
 }
 
 .radio__input.radio--error:hover {
-  & ~ .radio__container {
+  &~.radio__container {
     border-color: var(--eds-theme-color-border-utility-critical-hover);
   }
 
-  &:checked ~ .radio__selected {
+  &:checked~.radio__selected {
     background-color: var(--eds-theme-color-border-utility-critical-hover);
   }
 }
 
 .radio__input.radio--error:active {
-  & ~ .radio__container {
+  &~.radio__container {
     border-color: var(--eds-theme-color-border-utility-critical-active);
   }
 
-  &:checked ~ .radio__selected {
+  &:checked~.radio__selected {
     background-color: var(--eds-theme-color-border-utility-critical-active);
   }
 }
 
-.radio__input:focus-visible + .radio__container {
-  outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
-  outline-offset: calc(var(--eds-size-quarter) / 16 * 1rem);
+.radio__input:focus-visible+.radio__container {
+  outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-spacing-size-quarter) / 16 * 1rem);
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 @supports not selector(:focus-visible) {
-  .radio__input:focus + .radio__container {
-    outline: calc(var(--eds-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
-    outline-offset: calc(var(--eds-size-quarter) / 16 * 1rem);
+  .radio__input:focus+.radio__container {
+    outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: calc(var(--eds-spacing-size-quarter) / 16 * 1rem);
     border-radius: calc(var(--eds-border-radius-full) * 1px);
   }
 }

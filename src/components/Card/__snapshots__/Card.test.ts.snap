@@ -637,7 +637,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
     class="card card--container-style-low card--container-color-default w-96"
   >
     <header
-      class="card__header header--size-md mb-size-2"
+      class="card__header header--size-md mb-spacing-size-2"
     >
       <div
         class="header__custom"

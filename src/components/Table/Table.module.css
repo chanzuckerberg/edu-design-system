@@ -17,7 +17,7 @@
 :where(.table-cell) {
   font: var(--eds-theme-typography-body-sm);
 
-  padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 /**
@@ -26,7 +26,7 @@
  */
 :where(.table-header-cell) {
   font: var(--eds-theme-typography-label-sm);
-  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   text-align: left;
 }
 
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   /* Match height to a sort icon if one exists to create alignment */
-  min-height: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  min-height: calc(var(--eds-spacing-size-2-and-half) / 16 * 1rem);
 }
 
 /**
@@ -43,7 +43,7 @@
  * Adjusts the padding to match the table__cell padding for alignment.
  */
 .table-header-cell--body {
-  padding: calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
 /**
@@ -52,7 +52,7 @@
  * On table header cells that are sortable, the content is wrapped by a <Button>.
  */
 .table-header-cell__sort-button {
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   text-decoration: none;
   font-weight: var(--eds-font-weight-bold);
 }

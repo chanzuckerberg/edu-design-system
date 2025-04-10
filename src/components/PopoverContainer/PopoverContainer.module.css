@@ -18,7 +18,8 @@
   background-color: var(--eds-theme-color-background-utility-container);
 
   /* set the min width using the CSS variable attached by HeadlessUI (default to auto) */
-    min-width: var(--popover-container-width);
+  min-width: var(--popover-container-width);
+
   &:focus-visible {
     outline: none;
   }

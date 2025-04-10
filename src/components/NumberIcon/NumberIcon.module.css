@@ -29,15 +29,15 @@
  * Size Variants.
  */
 .number-icon--size-md {
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  width: calc(var(--eds-size-3) / 16 * 1rem);
-  min-width: calc(var(--eds-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .number-icon--size-lg {
-  height: calc(var(--eds-size-4) / 16 * 1rem);
-  width: calc(var(--eds-size-4) / 16 * 1rem);
-  min-width: calc(var(--eds-size-4) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
 /* Colors & Theme */

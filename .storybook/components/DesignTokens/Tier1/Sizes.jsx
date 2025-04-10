@@ -12,7 +12,7 @@ export class Tier1Sizes extends Component {
         title="Grid Sizes"
       >
         <Grid>
-          {filterTokens(`eds-size`)
+          {filterTokens(`eds-spacing-size`)
             .filter((listItem) => !listItem.name.endsWith('base-unit'))
             .map(function (listItem) {
               return (

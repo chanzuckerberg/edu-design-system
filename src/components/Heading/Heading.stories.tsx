@@ -96,17 +96,17 @@ export const UsingColorTokens: Story = {
       <Heading
         {...args}
         as="h2"
-        className="text-utility-success"
+        className="text-utility-favorable"
         preset="title-md"
       >
-        using <code>text-utility-success</code> utility class and preset
+        using <code>text-utility-favorable</code> utility class and preset
         override
       </Heading>
-      <Heading {...args} className="text-utility-error" preset="title-md">
-        using <code>text-utility-error</code> utility class
+      <Heading {...args} className="text-utility-critical" preset="title-md">
+        using <code>text-utility-critical</code> utility class
       </Heading>
       <Heading
-        className="text-[var(--eds-theme-color-text-utility-success)]"
+        className="text-[var(--eds-theme-color-text-utility-favorable)]"
         preset="title-md"
       >
         using color with token in utility class and preset override
