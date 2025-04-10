@@ -1,6 +1,5 @@
 export const EdsThemeColorBodyBackground = '#F4F6F8';
 export const EdsThemeColorBackgroundInput = 'rgb(var(--eds-color-white) / 1)';
-export const EdsThemeColorBackgroundNeutralDefaultHover = '#F4F6F8';
 export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
 export const EdsThemeColorBackgroundBrandPrimaryDefault = '#C4C1F3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.

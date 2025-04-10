@@ -37,6 +37,10 @@
   font: var(--eds-theme-typography-form-label);
 }
 
+.textarea-field__hint {
+  color: var(--eds-theme-color-text-utility-default-secondary)
+}
+
 .textarea-field__label--disabled {
   color: var(--eds-theme-color-text-utility-disabled-primary);
 }
@@ -56,6 +60,7 @@
 
 .textarea-field__character-counter {
   font: var(--eds-theme-typography-body-sm);
+  color: var(--eds-theme-color-text-utility-default-primary);
 
   flex: 1 0 50%;
   text-align: right;

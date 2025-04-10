@@ -44,7 +44,7 @@
 
 /**
  * Color variants.
- * TODO(next-major): remove these status colors
+ * TODO(next-major): remove these status colors and delete tokens
  */
 :where(.tag--neutral) {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);

@@ -178,15 +178,18 @@ const FieldsetLegend = ({
             <Text
               aria-disabled={isDisabled ?? undefined}
               as="span"
+              className={styles['fieldset-legend__hint']}
               preset="body-sm"
             >
               (Required)
             </Text>
           )}
           {!required && showHint && (
+            // TODO-AH: fix color here
             <Text
               aria-disabled={isDisabled ?? undefined}
               as="span"
+              className={styles['fieldset-legend__hint']}
               preset="body-sm"
             >
               (Optional)

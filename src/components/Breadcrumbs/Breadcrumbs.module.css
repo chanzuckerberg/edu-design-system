@@ -130,7 +130,7 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  color: var(--eds-theme-color-icon-neutral-subtle);
+  color: var(--eds-theme-color-text-utility-default-primary);
   margin-left: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   margin-right: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   cursor: default;
@@ -148,7 +148,7 @@
  * Breadcrumbs Back Icon.
  */
 .breadcrumbs__back-icon {
-  color: var(--eds-theme-color-icon-neutral-subtle);
+  color: var(--eds-theme-color-icon-utility-default-primary);
   /* Transform over height due to icon being placed inside <a>. */
   transform: scale(1.5);
   position: relative;

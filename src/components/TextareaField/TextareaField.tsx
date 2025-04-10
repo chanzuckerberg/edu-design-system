@@ -203,6 +203,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
     );
 
     const requiredTextClassName = clsx(
+      styles['textarea-field__hint'],
       disabled && styles['textarea-field__required-text--disabled'],
     );
     const fieldLengthCountClassName = clsx(

@@ -412,13 +412,21 @@ const ModalTitle = ({
   className,
   preset = 'headline-md',
   ...other
-}: ModalTitleProps) => (
-  <DialogTitle as={React.Fragment}>
-    <Heading as="h2" className={className} preset={preset} {...other}>
-      {children}
-    </Heading>
-  </DialogTitle>
-);
+}: ModalTitleProps) => {
+  const componentClassName = clsx(styles['modal-title'], className);
+  return (
+    <DialogTitle as={React.Fragment}>
+      <Heading
+        as="h2"
+        className={componentClassName}
+        preset={preset}
+        {...other}
+      >
+        {children}
+      </Heading>
+    </DialogTitle>
+  );
+};
 
 const ModalSubTitle = ({
   children,

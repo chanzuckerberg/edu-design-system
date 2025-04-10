@@ -84,6 +84,8 @@
 .card__header {
   display: flex;
 
+  color: var(--eds-theme-color-text-utility-default-primary);
+
   & .header__eyebrow {
     margin-bottom: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }

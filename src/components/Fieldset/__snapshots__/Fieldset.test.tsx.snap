@@ -54,7 +54,7 @@ exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
       Legend
     </label>
     <span
-      class="text text--body-sm"
+      class="text text--body-sm fieldset-legend__hint"
     >
       (Optional)
     </span>
@@ -75,7 +75,7 @@ exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
       Legend
     </label>
     <span
-      class="text text--body-sm"
+      class="text text--body-sm fieldset-legend__hint"
     >
       (Required)
     </span>

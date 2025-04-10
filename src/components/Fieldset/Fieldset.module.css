@@ -31,3 +31,7 @@
   align-items: center;
   gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
+
+.fieldset-legend__hint {
+  color: var(--eds-theme-color-text-utility-default-secondary)
+}
