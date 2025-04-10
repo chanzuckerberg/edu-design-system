@@ -5,8 +5,7 @@
 /**
  * Map the component preset names to the defined typography tokens
  *
- * TODO: This should always match the generated tokens so find a
- * way to generate this.
+ * NOTE: This should always match the generated preset tokens in utility-types.ts
  */
 .text--headline-lg {
   font: var(--eds-theme-typography-headline-lg);

@@ -24,7 +24,7 @@ export type InputChipProps = {
   /**
    * Leading glyph (icon) for the chip
    */
-  leadingComponent: IconName | React.ReactNode; // TODO: check that it only allows Avatar
+  leadingComponent: IconName | React.ReactNode;
   /**
    * click handler for the action button on the chip (ex: to dismiss or remove the chip from the screen)
    */

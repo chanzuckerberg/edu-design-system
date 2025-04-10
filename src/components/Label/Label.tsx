@@ -11,10 +11,6 @@ export type LabelProps = {
    */
   className?: string;
   /**
-   * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
-   */
-  hideLabel?: boolean;
-  /**
    * HTML `for` attribute, which maps the label to an associated input `id`
    */
   htmlFor?: string;
@@ -43,7 +39,6 @@ export type LabelProps = {
  */
 export const Label = ({
   className,
-  hideLabel,
   htmlFor,
   id,
   labelAfter,
@@ -51,12 +46,7 @@ export const Label = ({
   text,
   ...other
 }: LabelProps) => {
-  const componentClassName = clsx(
-    styles['label'],
-    // TODO(next-major): remove this in favor of a local style (and not based on the mixin)
-    hideLabel && styles['u-is-vishidden'],
-    className,
-  );
+  const componentClassName = clsx(styles['label'], className);
 
   return (
     <label className={componentClassName} htmlFor={htmlFor} id={id} {...other}>

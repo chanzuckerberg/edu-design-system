@@ -26,11 +26,3 @@
   top: 3px;
   margin-left: calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
-
-/**
- * Visually hides the label element but is kept for screen reading accessibility.
- * TODO(next-major): remove this usage of a once-used mixin
- */
-.u-is-vishidden {
-  @mixin visuallyHide;
-}

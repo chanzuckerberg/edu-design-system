@@ -53,7 +53,7 @@ export const Default: Story = {
 };
 
 /**
- * Fields, when containing text, have a theme matching the rest of the interface.
+ * Fields, when containing text, have a theme matching the rest of the UI.
  */
 export const WithText: Story = {
   args: {

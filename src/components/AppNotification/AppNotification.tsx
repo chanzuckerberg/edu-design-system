@@ -4,8 +4,7 @@ import Button from '../Button';
 import Text from '../Text';
 import styles from './AppNotification.module.css';
 
-// TODO(next-major): change export to type for consistency
-export interface AppNotificationProps {
+export type AppNotificationProps = {
   // Design API
   /**
    * The title/heading of the notification
@@ -33,7 +32,7 @@ export interface AppNotificationProps {
    * Callback when banner is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
-}
+};
 
 /**
  * `import {AppNotification} from "@chanzuckerberg/eds";`
