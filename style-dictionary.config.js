@@ -53,11 +53,6 @@ const EDSStyleDictionary = StyleDictionary.extend({
           format: 'json/value',
           // sets up the base theme for use in overrides
           destination: 'lib/tokens/json/theme-base.json',
-          filter: function (token) {
-            // don't allow theming on legacy tokens
-            // TODO: remove filter once all legacy tokens are removed
-            return token.attributes.category !== 'legacy';
-          },
         },
       ],
     },

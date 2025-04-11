@@ -4,7 +4,6 @@
 
 /* Visible table caption */
 
-/* TODO: make it so that we have the search bar and actions wrap together instead of separately */
 .data-table__caption-container {
   display: flex;
   align-items: flex-end;
@@ -300,10 +299,6 @@
   }
 
   .data-table__row--is-interactive {
-
-    /**
-     * TODO: Add in handling for when focused (i dont think you can do?)
-    */
     &:hover {
       box-shadow: var(--eds-box-shadow-sm);
       position: relative;

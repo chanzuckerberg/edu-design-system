@@ -31,14 +31,8 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 /**
  * Alignment variants, for horizontal components and sub-components
- * TODO(next-major): warn on using left/right
  */
-export type Align = 'leading' | 'trailing' | 'left' | 'center' | 'right';
-
-/**
- * Hints are form field directions on how to use the field and whether it requires a value.
- */
-export type Hint = 'none' | 'required' | 'optional';
+export type Align = 'leading' | 'trailing' | 'center';
 
 /**
  * Statuses tied to the state of information being displayed
@@ -52,7 +46,7 @@ export type Status = 'informational' | 'warning' | 'favorable' | 'critical';
  * By setting the array `as const`, we can treat each array value as
  * read-only and a unique type.
  *
- * TODO: generate this from the tokens statically, if possible
+ * NOTE: To reduce maintenance, generate this from the tokens statically
  */
 export const presets = [
   'headline-lg',

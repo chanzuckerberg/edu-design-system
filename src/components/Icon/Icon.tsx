@@ -6,9 +6,7 @@ import styles from './Icon.module.css';
 
 export type { IconName } from '../../icons/spritemap';
 
-// TODO: export union utility type of "Extract<IconName, T> | (renderProps) => ReactNode" when updating IconName usages
-// TODO(next-major): convert to types for consistency
-interface IconPropsBase {
+type IconPropsBase = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -50,10 +48,9 @@ interface IconPropsBase {
    * To match included icons, recommend view box of `"0 0 24 24"`
    */
   viewBox?: string;
-}
+};
 
-// TODO(next-major): convert to types for consistency
-interface InformativeIconProps extends IconPropsBase {
+type InformativeIconProps = IconPropsBase & {
   /**
    * The role of the icon.
    *
@@ -62,10 +59,9 @@ interface InformativeIconProps extends IconPropsBase {
    */
   purpose: 'informative';
   title: string;
-}
+};
 
-// TODO(next-major): convert to types for consistency
-interface DecorativeIconProps extends IconPropsBase {
+type DecorativeIconProps = IconPropsBase & {
   /**
    * The role of the icon.
    *
@@ -74,14 +70,13 @@ interface DecorativeIconProps extends IconPropsBase {
    * on the page.
    */
   purpose: 'decorative';
-}
+};
 
 export type IconProps = DecorativeIconProps | InformativeIconProps;
 
-// TODO(next-major): convert to types for consistency
-interface SvgStyle extends CSSProperties {
+type SvgStyle = CSSProperties & {
   '--icon-size'?: string;
-}
+};
 
 /**
  * `import {Icon} from "@chanzuckerberg/eds";`

@@ -11,11 +11,6 @@ export default {
     layout: 'centered',
     badges: ['api-2.0', 'theme-2.0'],
   },
-  // TODO: fix up the sub-component documentation for Fieldset.Legend
-  subcomponents: {
-    'Fieldset.Legend': Fieldset.Legend,
-    'Fieldset.Items': Fieldset.Items,
-  },
   argTypes: {
     children: {
       control: false,

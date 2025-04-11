@@ -3,14 +3,10 @@
 /*------------------------------------*\
     # LINK
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 .link {
   display: inline;
 
-  /* TODO: verify the way to sync type tokens and one-off treatments */
   font-weight: 500;
   text-decoration-line: underline;
 }

@@ -34,7 +34,7 @@ export const Default: Story = {
 };
 
 /**
- * Each button can come in a set of ranks, denoting the importance of the button to the surrounding user interface.
+ * Each button can come in a set of ranks, denoting the importance of the button to the surrounding UI.
  */
 export const DefaultRanks: Story = {
   args: {

@@ -291,10 +291,11 @@ export const TableRow = ({
  * `import {Table} from "@chanzuckerberg/eds";`
  *
  * HTML table component. Allows for the structure and layout of a standard HTML table, with styles to support theming.
+ *
+ * @deprecated Table is deprecated and will be removed from a future version of EDS. Instead, use `DataTable`.
  */
 export const Table = ({ children, className, ...other }: TableProps) => {
   const componentClassName = clsx(styles['table'], className);
-  // TODO(next-major): decide if we should warn when used
   return (
     <table className={componentClassName} {...other}>
       {children}

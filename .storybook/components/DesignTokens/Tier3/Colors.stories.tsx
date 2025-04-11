@@ -54,7 +54,6 @@ export const IconUtility: StoryObj = {
   ),
 };
 
-// TODO: handle name formatting for tableRow tokens in figma and tailwind
 export const BackgroundTable: StoryObj = {
   render: () => (
     <div>

@@ -6,6 +6,8 @@ import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoint
 
 /**
  * Demonstrates usage of stacked `<Card>` components for smaller breakpoints and `<Table>` component for larger breakpoints.
+ *
+ * TODO(next-major): remove once Table component is removed
  */
 export const StackedCardsToTable = () => {
   const [isTable, setIsTable] = useState(false);

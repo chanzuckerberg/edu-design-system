@@ -1,6 +1,6 @@
 /* eslint-disable no-case-declarations */
 
-// TODO: Do not use directly. Extend this to support re-writing eds-import-from-figma for non-enterprise use cases
+// NOTE: Do not use directly. Extend this to support re-writing eds-import-from-figma for non-enterprise use cases
 class AbstractFigmaReader {
   static TIER_1_MODE = '6181:0';
   static EDS_COLLECTION_NAME = 'EDS tokens';
@@ -40,25 +40,6 @@ module.exports = {
     if (!settings) {
       throw new ReferenceError(
         'Please add EDS config to your project before continuing (specify "src" and "dest" target paths)',
-      );
-    }
-
-    /**
-     * TODO: Remove the old names for the input/output keys in the config at a future major version
-     * json => src
-     * css => dest
-     */
-    if (settings.config.json) {
-      settings.config.src = settings.config.json;
-      console.warn(
-        'WARNING: You are using "json" in your config. Please replace with "src".',
-      );
-    }
-
-    if (settings.config.css) {
-      settings.config.dest = settings.config.css;
-      console.warn(
-        'WARNING: You are using "css" in your config. Please replace with "dest".',
       );
     }
 

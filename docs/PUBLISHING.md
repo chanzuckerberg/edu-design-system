@@ -77,7 +77,7 @@ For the commit message, use the new version's content in the [CHANGELOG.md](../C
 
 Merge the PR through a **merge commit**:
 
-![github user interface showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
+![GitHub UI showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
 
 Once merged, wait until the [builds complete on `main`](https://github.com/chanzuckerberg/edu-design-system/actions) before continuing.
 

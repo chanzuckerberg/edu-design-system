@@ -9,7 +9,6 @@ import NumberIcon from '../NumberIcon';
 export default {
   title: 'Components/Accordion',
   component: Accordion,
-  // TODO: add subcomponents
   parameters: {
     layout: 'centered',
     badges: ['api-2.0', 'theme-2.0'],

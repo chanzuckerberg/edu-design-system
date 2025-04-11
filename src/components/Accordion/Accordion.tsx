@@ -218,7 +218,6 @@ const AccordionButton = ({
                 preset={size === 'md' ? 'body-lg' : 'body-md'}
               >
                 {title}
-                {/* TODO: Add check preventing use of title, subtitle, AND children at the same time */}
                 {children}
               </Text>
             )}

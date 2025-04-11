@@ -161,38 +161,6 @@ describe('utils', function () {
         await expect(test()).rejects.toThrow(ReferenceError);
       });
     });
-
-    describe('with settings read', () => {
-      it('converts json key to src key', async () => {
-        lilconfig.lilconfig.mockImplementation(() => {
-          return {
-            search: function () {
-              // https://www.npmjs.com/package/cosmiconfig#result
-              return Promise.resolve({
-                config: {
-                  json: 'a/b/c',
-                  css: '1/2/3',
-                },
-              });
-            },
-          };
-        });
-        const test = async () => {
-          return await utils.getConfig();
-        };
-
-        // This ex expected to duplicate the keys currently.
-        // In the future, we will deprecate the preservation of the old keys
-        await expect(test()).resolves.toEqual({
-          css: '1/2/3',
-          src: 'a/b/c',
-          json: 'a/b/c',
-          dest: '1/2/3',
-        });
-
-        expect(console.warn).toHaveBeenCalledTimes(2);
-      });
-    });
   });
 
   describe('Reader Classes', () => {
