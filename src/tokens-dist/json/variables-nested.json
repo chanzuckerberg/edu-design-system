@@ -318,9 +318,6 @@
         "background": {
           "input": "rgb(var(--eds-color-white) / 1)",
           "neutral": {
-            "default": {
-              "hover": "#F4F6F8"
-            },
             "subtle": {
               "hover": "#E7E8EA"
             },

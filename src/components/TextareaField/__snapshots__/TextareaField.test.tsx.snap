@@ -238,7 +238,7 @@ exports[`<TextareaField /> WhenOptional story renders snapshot 1`] = `
         Textarea Field
       </label>
       <span
-        class="text text--body-sm"
+        class="text text--body-sm textarea-field__hint"
       >
         (Optional)
       </span>
@@ -330,7 +330,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
         Textarea Field
       </label>
       <span
-        class="text text--body-sm"
+        class="text text--body-sm textarea-field__hint"
       >
         (Required)
       </span>

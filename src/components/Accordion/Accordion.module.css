@@ -66,6 +66,7 @@
 .accordion-button__trailing-icon {
   flex: 0 0 content;
   transform: rotate(0);
+  color: var(--eds-theme-color-icon-utility-default-secondary);
 }
 
 /**

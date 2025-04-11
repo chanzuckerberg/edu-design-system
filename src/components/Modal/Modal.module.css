@@ -64,6 +64,9 @@
   padding: calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
+.modal-title {
+  color: var(--eds-theme-color-text-utility-default-primary)
+}
 /**
  * The body of the modal
  */

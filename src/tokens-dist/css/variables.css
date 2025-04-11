@@ -202,7 +202,6 @@
   --eds-theme-color-background-brand-primary-default: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-neutral-medium: #E7E8EA;
   --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
-  --eds-theme-color-background-neutral-default-hover: #F4F6F8;
   --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-body-background: #F4F6F8;
   --eds-theme-typography-tag: var(--eds-typography-preset-009);

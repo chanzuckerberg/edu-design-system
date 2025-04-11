@@ -772,12 +772,6 @@
             "value": "rgb(var(--eds-color-white) / 1)"
           },
           "neutral": {
-            "default": {
-              "hover": {
-                "value": "#F4F6F8",
-                "group": "color"
-              }
-            },
             "subtle": {
               "hover": {
                 "value": "#E7E8EA",
