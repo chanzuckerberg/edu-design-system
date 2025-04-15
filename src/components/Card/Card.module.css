@@ -1,9 +1,6 @@
 /*------------------------------------*\
     # CARD
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 /**
  * A card is a block that typically contains a title, image, text, and/or calls to action.

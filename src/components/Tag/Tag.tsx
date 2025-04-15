@@ -7,16 +7,6 @@ import Text from '../Text';
 
 import styles from './Tag.module.css';
 
-// TODO(next-major): remove these local variants and usages in code and stories
-export const VARIANTS = [
-  'neutral',
-  'error',
-  'success',
-  'warning',
-  'brand',
-] as const;
-export type Variant = (typeof VARIANTS)[number];
-
 type Props = {
   // Component API
   /**

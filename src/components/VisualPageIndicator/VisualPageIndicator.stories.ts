@@ -33,5 +33,3 @@ export const FivePages: StoryObj<Args> = {
     totalPageCount: 5,
   },
 };
-
-// TODO: add implementation example showing usage of state with a label for a11y handling

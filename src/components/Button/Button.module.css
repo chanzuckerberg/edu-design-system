@@ -3,9 +3,6 @@
 /*------------------------------------*\
     # BUTTON
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 .button {
   position: relative;
@@ -89,7 +86,6 @@
 }
 
 .button--size-md {
-  /* TODO: missing size token needs to be added to EDS */
   min-width: 3.75rem;
   max-width: calc(var(--eds-spacing-size-32) / 16 * 1rem);
   max-height: calc(var(--eds-spacing-size-4) / 16 * 1rem);

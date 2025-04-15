@@ -14,7 +14,6 @@ import { Icon } from '../Icon/Icon';
 export default {
   title: 'Components/Menu',
   component: Menu,
-  // TODO: Add sub-components section
   parameters: {
     badges: ['api-3.0', 'theme-2.0'],
     layout: 'centered',

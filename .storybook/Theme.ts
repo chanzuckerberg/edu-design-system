@@ -14,7 +14,7 @@ export default create({
   fontCode: '"Consolas", monospace',
 
   // Primary scale colors
-  // colorPrimary: '#254EAC', // TODO not sure where this applies : eds-color-blue-650
+  // colorPrimary: '#254EAC', // not sure where this applies : eds-color-blue-650
   colorSecondary: '#6C6967', // Selection and other colors : color-neutral-550
 
   // App Chrome

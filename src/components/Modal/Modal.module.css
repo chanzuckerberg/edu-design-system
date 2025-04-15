@@ -3,9 +3,6 @@
 /*------------------------------------*\
     # MODAL
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 /**
  * The modal wrapper and overlay which takes up the entire screen.

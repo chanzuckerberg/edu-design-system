@@ -137,7 +137,6 @@ export const SORT_DIRECTION = {
 
 export type DataTableSortDirection = keyof typeof SORT_DIRECTION;
 
-// TODO: support cellformat to apply padding and alignment value
 export type DataTableDataCellProps = DataTableHeaderCellProps & {
   children: React.ReactNode;
 };
@@ -197,7 +196,6 @@ export function DataTable<T>({
                   </div>
                 )}
                 {subcaption && (
-                  // TODO: Warn when only using subcaption
                   <div
                     aria-hidden="true"
                     className={styles['data-table__subcaption']}
@@ -555,7 +553,6 @@ export const DataTableTable = ({
     }
     triggerEffect();
 
-    // TODO: anything to de-allocate when using `observer`?
     return () => {
       if (el) {
         observer.unobserve(el);

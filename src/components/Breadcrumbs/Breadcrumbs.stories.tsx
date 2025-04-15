@@ -8,8 +8,6 @@ import { chromaticViewports } from '../../util/viewports';
 export default {
   title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
-  // TODO: update subcomponent documentation here
-  subcomponents: { 'Breadcrumbs.Item': Breadcrumbs.Item },
   args: {
     children: (
       <>

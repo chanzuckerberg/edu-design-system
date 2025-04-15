@@ -1,13 +1,26 @@
 import clsx from 'clsx';
 import debounce from 'lodash/debounce';
 import React, { createContext, useContext, type ReactNode } from 'react';
-// TODO(next-major): move flatten into this component since it's the only usage
-import { flattenReactChildren } from '../../util/flattenReactChildren';
 import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';
 import styles from './Breadcrumbs.module.css';
 
 type Separators = '|' | '>' | '/';
+
+type ReactChildArray = ReturnType<typeof React.Children.toArray>;
+
+export function flattenReactChildren(children: ReactNode): ReactChildArray {
+  const childrenArray = React.Children.toArray(children);
+  return childrenArray.reduce((flatChildren: ReactChildArray, child) => {
+    if ((child as React.ReactElement<any>).type === React.Fragment) {
+      return flatChildren.concat(
+        flattenReactChildren((child as React.ReactElement<any>).props.children),
+      );
+    }
+    flatChildren.push(child);
+    return flatChildren;
+  }, []);
+}
 
 type Props = {
   /**

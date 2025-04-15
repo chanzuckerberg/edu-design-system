@@ -21,8 +21,6 @@ export default {
   },
 };
 
-// TODO: Tokens to document: eds-color-opacity
-
 export const Colors = {
   render: () => <Tier1Colors />,
 };

@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { expect } from '@storybook/test';
-// TODO: Using @storybook/test below leads to superfluous act() warnings
+// Importing this here, since using @storybook/test below leads to superfluous act() warnings
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { Select } from './Select';

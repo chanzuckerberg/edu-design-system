@@ -322,31 +322,16 @@ export const InputField: InputFieldType = forwardRef(
             </div>
           )}
         </div>
-        {maxLengthShown ? (
+        {fieldNote && (
           <div className={styles['input-field__footer']}>
-            {fieldNote && (
-              <FieldNote
-                disabled={disabled}
-                id={ariaDescribedByVar}
-                status={shouldRenderError ? 'critical' : status}
-              >
-                {fieldNote}
-              </FieldNote>
-            )}
+            <FieldNote
+              disabled={disabled}
+              id={ariaDescribedByVar}
+              status={shouldRenderError ? 'critical' : status}
+            >
+              {fieldNote}
+            </FieldNote>
           </div>
-        ) : (
-          <>
-            {/* TODO: maintained for seamless upgrades; can be removed on next breaking change */}
-            {fieldNote && (
-              <FieldNote
-                disabled={disabled}
-                id={ariaDescribedByVar}
-                status={shouldRenderError ? 'critical' : status}
-              >
-                {fieldNote}
-              </FieldNote>
-            )}
-          </>
         )}
       </div>
     );

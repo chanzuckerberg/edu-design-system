@@ -74,7 +74,7 @@ const ToastNotificationManager = (args: Args) => {
     { id: number | string; text: string; show?: boolean }[]
   >([]);
 
-  // TODO: clean up `toasts` after .show is set to false (using useEffect? and .debounce)
+  // NOTE: clean up `toasts` after .show is set to false (using useEffect? and .debounce)
   // - In a production implementation, you can filter out any toasts where show=false
 
   return (

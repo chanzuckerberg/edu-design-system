@@ -22,7 +22,6 @@ import styles from './Menu.module.css';
 
 // Note: added className here to prevent private API collision within HeadlessUI
 export type MenuProps = ExtractProps<typeof HeadlessMenu> & {
-  // TODO: document children?
   /**
    * Allow custom classes to be applied to the menu container.
    */

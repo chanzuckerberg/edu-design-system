@@ -29,10 +29,14 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rn:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":rn:"
+      >
+        This is a fieldnote.
+      </div>
     </div>
   </div>
 </div>
@@ -67,10 +71,14 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":r1:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":r1:"
+      >
+        This is a fieldnote.
+      </div>
     </div>
   </div>
 </div>
@@ -108,11 +116,15 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
       />
     </div>
     <div
-      aria-disabled="true"
-      class="field-note field-note--disabled"
-      id=":rd:"
+      class="input-field__footer"
     >
-      This InputField is disabled
+      <div
+        aria-disabled="true"
+        class="field-note field-note--disabled"
+        id=":rd:"
+      >
+        This InputField is disabled
+      </div>
     </div>
   </div>
 </div>
@@ -147,27 +159,31 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note field-note--error"
-      id=":r7:"
+      class="input-field__footer"
     >
-      <svg
-        class="icon field-note__icon"
-        fill="currentColor"
-        height="1rem"
-        role="img"
-        style="--icon-size: 1rem;"
-        viewBox="0 0 24 24"
-        width="1rem"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="field-note field-note--error"
+        id=":r7:"
       >
-        <title>
-          error
-        </title>
-        <path
-          d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
-        />
-      </svg>
-      This is a fieldnote with an error.
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
+          />
+        </svg>
+        This is a fieldnote with an error.
+      </div>
     </div>
   </div>
 </div>
@@ -369,10 +385,14 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rl:"
+      class="input-field__footer"
     >
-      This input field has no visible label
+      <div
+        class="field-note"
+        id=":rl:"
+      >
+        This input field has no visible label
+      </div>
     </div>
   </div>
 </div>
@@ -409,10 +429,14 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rb:"
+      class="input-field__footer"
     >
-      This will show up like text, but not be interactive
+      <div
+        class="field-note"
+        id=":rb:"
+      >
+        This will show up like text, but not be interactive
+      </div>
     </div>
   </div>
 </div>
@@ -453,10 +477,14 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rh:"
+      class="input-field__footer"
     >
-      This is a fieldnote for a required input field.
+      <div
+        class="field-note"
+        id=":rh:"
+      >
+        This is a fieldnote for a required input field.
+      </div>
     </div>
   </div>
 </div>
@@ -500,11 +528,15 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
       />
     </div>
     <div
-      aria-disabled="true"
-      class="field-note field-note--disabled"
-      id=":rj:"
+      class="input-field__footer"
     >
-      This is a fieldnote for a required input field.
+      <div
+        aria-disabled="true"
+        class="field-note field-note--disabled"
+        id=":rj:"
+      >
+        This is a fieldnote for a required input field.
+      </div>
     </div>
   </div>
 </div>
@@ -647,10 +679,14 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rp:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":rp:"
+      >
+        This is a fieldnote.
+      </div>
     </div>
   </div>
 </div>
@@ -685,27 +721,31 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note field-note--warning"
-      id=":r9:"
+      class="input-field__footer"
     >
-      <svg
-        class="icon field-note__icon"
-        fill="currentColor"
-        height="1rem"
-        role="img"
-        style="--icon-size: 1rem;"
-        viewBox="0 0 24 24"
-        width="1rem"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="field-note field-note--warning"
+        id=":r9:"
       >
-        <title>
-          warning
-        </title>
-        <path
-          d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
-        />
-      </svg>
-      This uses the warning treatment and also applies to the field note
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            warning
+          </title>
+          <path
+            d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
+          />
+        </svg>
+        This uses the warning treatment and also applies to the field note
+      </div>
     </div>
   </div>
 </div>
@@ -753,9 +793,6 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         value="Some initial text"
       />
     </div>
-    <div
-      class="input-field__footer"
-    />
   </div>
 </div>
 `;
@@ -801,9 +838,6 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         value="Some initial text"
       />
     </div>
-    <div
-      class="input-field__footer"
-    />
   </div>
 </div>
 `;
@@ -912,10 +946,14 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":r3:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":r3:"
+      >
+        This is a fieldnote.
+      </div>
     </div>
   </div>
 </div>
