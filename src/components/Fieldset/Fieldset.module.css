@@ -5,11 +5,6 @@
   margin-top: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
-.fieldset__label {
-  /* HACK: Instead of applying the token directly in CSS, should use <Text /> */
-  font: var(--eds-theme-typography-form-label);
-}
-
 /**
  * The contents of the fieldset. Spaces them apart.
  */

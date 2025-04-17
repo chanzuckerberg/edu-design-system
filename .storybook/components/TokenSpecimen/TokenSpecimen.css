@@ -19,10 +19,6 @@
   }
 }
 
-.token-specimen__info {
-  font: var(--eds-theme-typography-body-sm);
-}
-
 .token-specimen__name {
   display: inline-block;
   background: rgb(242, 242, 242);

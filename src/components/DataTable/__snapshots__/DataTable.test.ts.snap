@@ -12,13 +12,13 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Additional Subcaption
       </div>
@@ -43,14 +43,14 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -62,14 +62,14 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -81,7 +81,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -95,7 +95,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -109,14 +109,14 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -1049,7 +1049,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Types of Wine
       </div>
@@ -1074,7 +1074,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -1088,7 +1088,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -1102,7 +1102,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -1119,7 +1119,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           class="data-table__group-row"
           colspan="3"
         >
-          Reds
+          <span
+            class="text text--label-sm"
+          >
+            Reds
+          </span>
         </td>
       </tr>
       <tr
@@ -1256,7 +1260,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           class="data-table__group-row"
           colspan="3"
         >
-          Whites
+          <span
+            class="text text--label-sm"
+          >
+            Whites
+          </span>
         </td>
       </tr>
       <tr
@@ -1350,7 +1358,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           class="data-table__group-row"
           colspan="3"
         >
-          Rosés
+          <span
+            class="text text--label-sm"
+          >
+            Rosés
+          </span>
         </td>
       </tr>
       <tr
@@ -1463,14 +1475,14 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           style="left: 0px;"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -1482,14 +1494,14 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -1501,7 +1513,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -1515,7 +1527,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -1529,14 +1541,14 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -3369,14 +3381,14 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -3388,14 +3400,14 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -3407,7 +3419,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -3421,7 +3433,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -3435,14 +3447,14 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -4357,13 +4369,13 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Additional Subcaption
       </div>
@@ -4389,7 +4401,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           style="width: 32px;"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -4415,7 +4427,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <svg
               aria-hidden="true"
@@ -4436,7 +4448,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -4448,14 +4460,14 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -4467,7 +4479,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -4481,7 +4493,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -4495,14 +4507,14 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -5885,13 +5897,13 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Additional Subcaption
       </div>
@@ -5927,7 +5939,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -5941,7 +5953,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -5955,7 +5967,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -5969,7 +5981,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -5983,7 +5995,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -6978,14 +6990,14 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -6997,14 +7009,14 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -7016,7 +7028,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -7030,7 +7042,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -7044,14 +7056,14 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -7972,14 +7984,14 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -7991,14 +8003,14 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -8010,7 +8022,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -8024,7 +8036,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -8038,14 +8050,14 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -8960,13 +8972,13 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Additional Subcaption
       </div>
@@ -8992,7 +9004,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           style="width: 32px;"
         >
           <div
-            class="data-table__header-cell"
+            class="text text--title-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -9018,7 +9030,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--has-horizontal-divider"
+            class="text text--title-md data-table__header-cell data-table__cell--has-horizontal-divider"
           >
             <svg
               aria-hidden="true"
@@ -9039,7 +9051,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             >
               First Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Given Name
               </span>
@@ -9051,14 +9063,14 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--has-horizontal-divider"
+            class="text text--title-md data-table__header-cell data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
             >
               Last Name
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 Surname
               </span>
@@ -9070,7 +9082,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
@@ -9084,7 +9096,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
@@ -9098,14 +9110,14 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
+            class="text text--title-md data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
             >
               Profile Progress
               <span
-                class="data-table__cell-sublabel"
+                class="text text--body-sm data-table__cell-sublabel"
               >
                 "Complete" is &gt; 80%
               </span>
@@ -10488,7 +10500,7 @@ exports[`<DataTable /> WithBasicCaption story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Fruits of the world
       </div>
@@ -10520,13 +10532,13 @@ exports[`<DataTable /> WithFullCaption story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Aren't they all so delicious?
       </div>
@@ -10558,13 +10570,13 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         This is a really long title that really should not be this long and it just keeps going and going and going
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Seriously, who let this happen?
       </div>
@@ -10622,7 +10634,7 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               <svg
                 aria-hidden="true"
@@ -10681,7 +10693,7 @@ exports[`<DataTable /> WithOnlyActions story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               <svg
                 aria-hidden="true"
@@ -10729,13 +10741,13 @@ exports[`<DataTable /> WithSearch story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Aren't they all so delicious?
       </div>
@@ -10804,13 +10816,13 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Aren't they all so delicious?
       </div>
@@ -10868,7 +10880,7 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               <svg
                 aria-hidden="true"
@@ -10916,13 +10928,13 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="data-table__caption"
+        class="text text--headline-xl data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="data-table__subcaption"
+        class="text text--headline-sm"
       >
         Aren't they all so delicious?
       </div>
@@ -10976,7 +10988,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             <svg
               aria-hidden="true"
@@ -10999,7 +11011,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             <svg
               aria-hidden="true"
@@ -11032,7 +11044,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               <svg
                 aria-hidden="true"

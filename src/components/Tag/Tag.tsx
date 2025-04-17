@@ -46,7 +46,7 @@ export const Tag = ({
   );
 
   return (
-    <Text as="span" className={componentClassName} preset="tag">
+    <Text as="span" className={componentClassName} preset="label-sm">
       {icon && <Icon name={icon} purpose="decorative" size="1rem" />}
       {label && <span className={styles['tag__body']}>{label}</span>}
     </Text>

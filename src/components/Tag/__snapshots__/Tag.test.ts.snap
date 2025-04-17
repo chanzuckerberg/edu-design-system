@@ -5,7 +5,7 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
   class="flex gap-spacing-size-2"
 >
   <span
-    class="text text--tag tag tag--status-informational"
+    class="text text--label-sm tag tag--status-informational"
   >
     <span
       class="tag__body"
@@ -14,7 +14,7 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="text text--tag tag tag--status-favorable"
+    class="text text--label-sm tag tag--status-favorable"
   >
     <span
       class="tag__body"
@@ -23,7 +23,7 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="text text--tag tag tag--status-warning"
+    class="text text--label-sm tag tag--status-warning"
   >
     <span
       class="tag__body"
@@ -32,7 +32,7 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="text text--tag tag tag--status-critical"
+    class="text text--label-sm tag tag--status-critical"
   >
     <span
       class="tag__body"
@@ -48,7 +48,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
   class="flex gap-spacing-size-2"
 >
   <span
-    class="text text--tag tag tag--status-informational"
+    class="text text--label-sm tag tag--status-informational"
   >
     <svg
       aria-hidden="true"
@@ -71,7 +71,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="text text--tag tag tag--status-favorable"
+    class="text text--label-sm tag tag--status-favorable"
   >
     <svg
       aria-hidden="true"
@@ -94,7 +94,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="text text--tag tag tag--status-warning"
+    class="text text--label-sm tag tag--status-warning"
   >
     <svg
       aria-hidden="true"
@@ -117,7 +117,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="text text--tag tag tag--status-critical"
+    class="text text--label-sm tag tag--status-critical"
   >
     <svg
       aria-hidden="true"

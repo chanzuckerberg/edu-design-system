@@ -64,7 +64,7 @@ export const NumberIcon = ({
     <Text
       as="span"
       className={componentClassName}
-      preset={size === 'md' ? 'label-md-subtle' : 'label-lg-subtle'}
+      preset={size === 'md' ? 'label-md' : 'label-lg'}
       role="img"
       tabIndex={isInteractive ? 0 : -1}
       {...other}

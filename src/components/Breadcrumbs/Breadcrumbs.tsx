@@ -3,6 +3,8 @@ import debounce from 'lodash/debounce';
 import React, { createContext, useContext, type ReactNode } from 'react';
 import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';
+import Text from '../Text';
+
 import styles from './Breadcrumbs.module.css';
 
 type Separators = '|' | '>' | '/';
@@ -298,10 +300,12 @@ export const BreadcrumbsItem = ({
 
   return (
     <li className={componentClassName} {...other}>
-      {getInteractionElement()}
-      <span aria-hidden className={styles['breadcrumbs__separator']}>
+      <Text as="span" preset="body-xs">
+        {getInteractionElement()}
+      </Text>
+      <Text aria-hidden as="span" className={styles['breadcrumbs__separator']}>
         {separator}
-      </span>
+      </Text>
     </li>
   );
 };

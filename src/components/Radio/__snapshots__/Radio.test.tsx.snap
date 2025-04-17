@@ -32,7 +32,11 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
         class="label label--lg"
         for=":r1:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
     </div>
   </div>
@@ -70,7 +74,11 @@ exports[`<Radio /> Default story renders snapshot 1`] = `
         class="label label--lg"
         for=":r0:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
     </div>
   </div>
@@ -110,7 +118,11 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
         class="label label--lg label--disabled"
         for=":r2:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
     </div>
   </div>
@@ -151,7 +163,11 @@ exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
         class="label label--lg label--disabled"
         for=":r3:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
     </div>
   </div>
@@ -189,7 +205,11 @@ exports[`<Radio /> Error story renders snapshot 1`] = `
         class="label label--lg"
         for=":r4:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
     </div>
   </div>
@@ -228,7 +248,11 @@ exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
         class="label label--lg"
         for=":r5:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
     </div>
   </div>
@@ -270,7 +294,11 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
           class="label label--lg"
           for=":r8:"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <span
+            class="text text--label-lg"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </span>
         </label>
       </div>
     </div>
@@ -309,7 +337,11 @@ exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
         class="label label--lg"
         for=":r6:"
       >
-        Option 1
+        <span
+          class="text text--label-lg"
+        >
+          Option 1
+        </span>
       </label>
       <span
         class="text text--body-sm radio__sub-label"
@@ -352,7 +384,11 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
       <label
         class="label label--lg"
         for=":r7:"
-      />
+      >
+        <span
+          class="text text--label-lg"
+        />
+      </label>
     </div>
   </div>
 </div>

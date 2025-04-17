@@ -60,11 +60,12 @@
   display: flex;
   gap: 0.5rem;
   border-bottom: calc(var(--eds-theme-border-width) * 1px) solid;
-  font: var(--eds-theme-typography-tab-lg);
-  line-height: 1.429;
+  /* preset: tab-lg */
+  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
 
   @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-theme-typography-tab-sm);
+    /* preset: tab-sm */
+    font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
   }
 
   &:not(.tabs--has-divider) {
@@ -99,7 +100,7 @@
   overflow: hidden;
 
   &.eds-is-active {
-    font-weight: 500;
+    font-weight: var(--eds-typography-font-weight-bold);
   }
 
   &.tabs--width-full {

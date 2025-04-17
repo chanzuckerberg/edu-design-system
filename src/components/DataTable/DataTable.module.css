@@ -26,11 +26,6 @@
 
 .data-table__caption {
   caption-side: top;
-  font: var(--eds-theme-typography-headline-md-bold);
-}
-
-.data-table__subcaption {
-  font: var(--eds-theme-typography-headline-sm);
 }
 
 .data-table__table {
@@ -88,14 +83,12 @@
 
 .data-table__cell-sublabel {
   display: block;
-  font: var(--eds-theme-typography-body-sm);
 }
 
 .data-table__header-cell {
   display: flex;
   gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   align-items: flex-start;
-  font: var(--eds-theme-typography-title-md);
   height: 100%;
   overflow: hidden;
 
@@ -106,7 +99,8 @@
   }
 
   .data-table--size-sm & {
-    font: var(--eds-theme-typography-title-sm);
+    /* preset: title-sm */
+    font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
     /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
     padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }
@@ -144,7 +138,6 @@
   display: flex;
   gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
   align-items: flex-start;
-  font: var(--eds-theme-typography-body-md);
   height: 100%;
   overflow: hidden;
 
@@ -155,7 +148,10 @@
   }
 
   .data-table--size-sm & {
-    font: var(--eds-theme-typography-body-sm);
+    /* preset: body-sm */
+    font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
+    letter-spacing: var(--eds-typography-letter-spacing-normal);
+    
     padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   }
 
@@ -179,7 +175,6 @@
 }
 
 .data-table__group-row {
-  font: var(--eds-theme-typography-label-sm);
   position: sticky;
   top: -1px;
 

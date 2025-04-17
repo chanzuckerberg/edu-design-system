@@ -136,7 +136,11 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:rt:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -186,7 +190,11 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:rv:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -236,7 +244,11 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:r11:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
   </div>
@@ -341,7 +353,7 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
         >
           <span
             aria-label="Numero uno"
-            class="text text--label-md-subtle number-icon number-icon--size-md number-icon--status-default"
+            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
             role="img"
             tabindex="-1"
           >
@@ -492,7 +504,11 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         data-testid="accordion-panel-1"
         id="headlessui-disclosure-panel-:rb:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -673,7 +689,11 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:r13:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -723,7 +743,11 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:r15:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -773,7 +797,11 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:r17:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -823,7 +851,11 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         data-open=""
         id="headlessui-disclosure-panel-:r19:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-sm"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
   </div>
@@ -880,13 +912,17 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel accordion-panel--sm"
+        class="accordion-panel"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-panel-1"
         id="headlessui-disclosure-panel-:rj:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-md"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -1062,12 +1098,16 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel accordion-panel--sm"
+        class="accordion-panel"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1b:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-md"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -1112,12 +1152,16 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel accordion-panel--sm"
+        class="accordion-panel"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1d:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-md"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -1162,12 +1206,16 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel accordion-panel--sm"
+        class="accordion-panel"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1f:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-md"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
     <div
@@ -1212,12 +1260,16 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel accordion-panel--sm"
+        class="accordion-panel"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1h:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        <span
+          class="text text--body-md"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </span>
       </div>
     </div>
   </div>

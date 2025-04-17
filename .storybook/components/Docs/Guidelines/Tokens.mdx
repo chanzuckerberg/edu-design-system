@@ -57,7 +57,6 @@ EDS's token architecture and nomenclature is as follows:
 
 - `anim-fade-` for fading between frames (e.g. button background color changes, banner messages fading out, etc). Typically default to "quick" and "long" as values.
 - `anim-move-` for defining movement durations (e.g. a modal floating up from the bottom of the screen, etc)
-- `anim-ease-` for animation easing properties (`ease-in`, `ease-out`, cubic bezier values)
 
 ### Borders <a name="tier-1-borders"></a>
 
@@ -80,13 +79,13 @@ Tier 1 colors define ranges of colors across various hues. Numbers indicate vari
 
 ### Size <a name="tier-1-size"></a>
 
-We use size tokens, based on an 8-pixel grid size. Variables are prefixed with `--eds-size` and have units corresponding to 8 pixels each. We also provide tokens for some partial sizes (e.g,. 1.5 grid units, or 12 pixels).
+We use size tokens, based on an 8-pixel grid size. Variables are prefixed with `--eds-spacing-size` and have units corresponding to 8 pixels each. We also provide tokens for some partial sizes (e.g,. 1.5 grid units, or 12 pixels).
 
 ### Typography <a name="tier-1-typography"></a>
 
-- `font-family-` for font family definitions. EDS defaults to "primary" and "secondary" for font-family definitions.
-- `font-weight-` for the different weights. EDS defaults to "light", "medium", and "bold".
-- `letter-spacing` for the spacing between text characters. This uses t-shirt sizes.
+- `typography-font-family-` for font family definitions. EDS defaults to a numeric list for font-family definitions.
+- `typography-font-weight-` for the different weights. EDS defaults to "light", "medium", and "bold".
+- `typography-letter-spacing` for the spacing between text characters. EDS defaults to "extended", "normal", and "condensed".
 
 Individual presets and typography tokens are defined as a set of values to apply to the [CSS Font property](https://developer.mozilla.org/en-US/docs/Web/CSS/font).
 See [Typography](/story/documentation-guidelines-typography--page) for more information.

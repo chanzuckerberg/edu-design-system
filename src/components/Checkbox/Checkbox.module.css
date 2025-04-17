@@ -25,7 +25,10 @@
   place-content: center;
 
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
-  font: var(--eds-theme-typography-body-md);
+
+  /* body-md */
+  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+  letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .checkbox__input:checked::before {

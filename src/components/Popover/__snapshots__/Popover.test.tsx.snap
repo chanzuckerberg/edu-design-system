@@ -18,7 +18,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Open Popover
     </span>
@@ -51,7 +51,7 @@ exports[`<Popover /> FocusClickableElement story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Open Popover
     </span>
@@ -84,7 +84,7 @@ exports[`<Popover /> Top story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Open Popover
     </span>

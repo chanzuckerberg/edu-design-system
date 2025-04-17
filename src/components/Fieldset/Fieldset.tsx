@@ -154,8 +154,6 @@ const FieldsetLegend = ({
     className,
   );
 
-  const labelClassName = clsx(styles['fieldset__label']);
-
   assertEdsUsage(
     [!title && !!subtitle],
     'When using "subtitle" you must also use "title',
@@ -169,11 +167,7 @@ const FieldsetLegend = ({
     >
       {title && (
         <div className={styles['fieldset-legend__overline']}>
-          {title && (
-            <FieldLabel className={labelClassName} disabled={isDisabled}>
-              {title}
-            </FieldLabel>
-          )}
+          {title && <FieldLabel disabled={isDisabled}>{title}</FieldLabel>}
           {required && showHint && (
             <Text
               aria-disabled={isDisabled ?? undefined}
@@ -185,7 +179,6 @@ const FieldsetLegend = ({
             </Text>
           )}
           {!required && showHint && (
-            // TODO-AH: fix color here
             <Text
               aria-disabled={isDisabled ?? undefined}
               as="span"

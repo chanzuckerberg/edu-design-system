@@ -8,7 +8,7 @@ export default {
   component: Text,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     children: {
@@ -69,13 +69,6 @@ export const Caption: Story = {
   },
 };
 
-export const Callout: Story = {
-  args: {
-    preset: 'callout',
-    children: 'Callout',
-  },
-};
-
 export const OverridingFontFamily: Story = {
   args: {
     preset: 'body-md',
@@ -100,12 +93,6 @@ export const UsingColorTokens: Story = {
       </Text>
       <Text {...args} className="text-utility-critical" preset="body-md">
         using <code>text-utility-critical</code> utility class
-      </Text>
-      <Text
-        className="text-[var(--eds-theme-color-text-utility-favorable)]"
-        preset="body-sm"
-      >
-        using inline color
       </Text>
     </div>
   ),

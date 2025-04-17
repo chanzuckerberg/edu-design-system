@@ -60,18 +60,6 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> Callout story renders snapshot 1`] = `
-<div
-  class="m-1"
->
-  <p
-    class="text text--callout"
-  >
-    Callout
-  </p>
-</div>
-`;
-
 exports[`<Text /> Caption story renders snapshot 1`] = `
 <div
   class="m-1"
@@ -139,11 +127,6 @@ exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
         text-utility-critical
       </code>
        utility class
-    </p>
-    <p
-      class="text text--body-sm text-[var(--eds-theme-color-text-utility-favorable)]"
-    >
-      using inline color
     </p>
   </div>
 </div>
