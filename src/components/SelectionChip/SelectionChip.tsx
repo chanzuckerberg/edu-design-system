@@ -76,7 +76,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
         <Text
           as="span"
           className={styles['selection-chip__label']}
-          preset="button-md"
+          preset="label-lg"
         >
           {label}
         </Text>

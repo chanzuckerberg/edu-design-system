@@ -31,50 +31,36 @@
 }
 
 .avatar--xs {
-  font: var(--eds-theme-typography-tag);
-
   height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
   width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 
 .avatar--sm {
-  font: var(--eds-theme-typography-title-sm-bold);
-
   height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
   width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
 .avatar--md {
-  font: var(--eds-theme-typography-title-md-bold);
-
   height: calc(var(--eds-spacing-size-5) / 16 * 1rem);
   width: calc(var(--eds-spacing-size-5) / 16 * 1rem);
 }
 
 .avatar--lg {
-  font: var(--eds-theme-typography-title-md-bold);
-
   height: calc(var(--eds-spacing-size-6) / 16 * 1rem);
   width: calc(var(--eds-spacing-size-6) / 16 * 1rem);
 }
 
 .avatar--xl {
-  font: var(--eds-theme-typography-headline-md-bold);
-
   height: calc(var(--eds-spacing-size-8) / 16 * 1rem);
   width: calc(var(--eds-spacing-size-8) / 16 * 1rem);
 }
 
 .avatar--xxl {
-  font: var(--eds-theme-typography-headline-lg-bold);
-
   height: calc(var(--eds-spacing-size-12) / 16 * 1rem);
   width: calc(var(--eds-spacing-size-12) / 16 * 1rem);
 }
 
 .avatar--xxxl {
-  font: var(--eds-theme-typography-headline-lg-bold);
-
   height: calc(calc(var(--eds-spacing-size-1) / 16 * 1rem) * 20);
   width: calc(calc(var(--eds-spacing-size-1) / 16 * 1rem) * 20);
 }

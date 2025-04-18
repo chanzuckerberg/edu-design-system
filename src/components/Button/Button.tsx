@@ -4,6 +4,7 @@ import { assertEdsUsage } from '../../util/logging';
 import type { Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 import LoadingIndicator from '../LoadingIndicator';
+import Text from '../Text';
 
 import styles from './Button.module.css';
 
@@ -155,7 +156,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         {...other}
       >
-        <span className={buttonContentClassName}>
+        <Text
+          as="span"
+          className={buttonContentClassName}
+          preset={`label-${size}`}
+        >
           {iconLayout === 'icon-only' && (
             <Icon
               name={icon}
@@ -178,7 +183,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               size={size === 'lg' ? '1.5rem' : '1rem'}
             />
           )}
-        </span>
+        </Text>
         {isLoading && (
           <LoadingIndicator className={styles['button__loader']} size="xs" />
         )}

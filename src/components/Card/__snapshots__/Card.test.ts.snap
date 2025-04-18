@@ -84,7 +84,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -143,7 +143,7 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-md button__text"
           >
             Confirm cancellation
           </span>
@@ -382,7 +382,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -570,7 +570,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -887,7 +887,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>

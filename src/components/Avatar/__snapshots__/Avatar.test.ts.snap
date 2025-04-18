@@ -6,7 +6,11 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
   class="avatar avatar--circle avatar--md avatar--initials"
   role="img"
 >
-  ??
+  <span
+    class="text text--title-md"
+  >
+    ??
+  </span>
 </div>
 `;
 
@@ -200,7 +204,11 @@ exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
   class="avatar avatar--circle avatar--lg avatar--initials"
   role="img"
 >
-  🧶👦🏽
+  <span
+    class="text text--title-md"
+  >
+    🧶👦🏽
+  </span>
 </div>
 `;
 
@@ -224,7 +232,11 @@ exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
   class="avatar avatar--circle avatar--md avatar--initials"
   role="img"
 >
-  JS
+  <span
+    class="text text--title-md"
+  >
+    JS
+  </span>
 </div>
 `;
 

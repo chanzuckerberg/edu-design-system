@@ -4,96 +4,253 @@
 
 /**
  * Map the component preset names to the defined typography tokens
- *
- * NOTE: This should always match the generated preset tokens in utility-types.ts
  */
+.heading {
+  /** 
+    * Here, we specify as much of the settings on the font: shorthand property as possible,
+    * using CSS variables scoped locally. We redefine the variables for each override for two
+    * reasons:
+    * - this will allow the rule declaration to appear in only one spot
+    * - this will allow external overrides to the properties if needed for themes (w/o a new stylesheet)
+    *   using `style`
+    */
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-family: var(--eds-typography-font-family-1);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  font: var(--heading-font-weight) var(--heading-size-line-height) var(--heading-font-family);
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+.heading--headline-xl {
+  --heading-size-line-height: var(--eds-typography-preset-800);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-1400);
+  }
+}
+
 .heading--headline-lg {
-  font: var(--eds-theme-typography-headline-lg);
+  --heading-size-line-height: var(--eds-typography-preset-800);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
-  @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-typography-preset-001-mobile);
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-1000);
   }
 }
-.heading--headline-lg-bold {
-  font: var(--eds-theme-typography-headline-lg-bold);
-}
-.heading--headline-lg-bold-mobile {
-  font: var(--eds-theme-typography-headline-lg-bold-mobile);
-}
-.heading--headline-lg-mobile {
-  font: var(--eds-theme-typography-headline-lg-mobile);
-}
+
 .heading--headline-md {
-  font: var(--eds-theme-typography-headline-md);
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
-  @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-typography-preset-002-mobile);
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-800);
   }
 }
-.heading--headline-md-bold {
-  font: var(--eds-theme-typography-headline-md-bold);
-}
-.heading--headline-md-bold-mobile {
-  font: var(--eds-theme-typography-headline-md-bold-mobile);
-}
-.heading--headline-md-mobile {
-  font: var(--eds-theme-typography-headline-md-mobile);
-}
+
 .heading--headline-sm {
-  font: var(--eds-theme-typography-headline-sm);
-  
-  @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-typography-preset-003-mobile);
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+/** TODO-AH: add in offsets */
+.heading--headline-decorative-inline-xl {
+  --heading-size-line-height: var(--eds-typography-preset-800);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-1400);
   }
 }
-.heading--headline-sm-bold {
-  font: var(--eds-theme-typography-headline-sm-bold);
+
+.heading--headline-decorative-inline-lg {
+  --heading-size-line-height: var(--eds-typography-preset-800);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-1000);
+  }
 }
-.heading--headline-sm-bold-mobile {
-  font: var(--eds-theme-typography-headline-sm-bold-mobile);
+
+.heading--headline-decorative-inline-md {
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-800);
+  }
 }
-.heading--headline-sm-mobile {
-  font: var(--eds-theme-typography-headline-sm-mobile);
-}
-.heading--headline-secondary-lg {
-  font: var(--eds-theme-typography-headline-secondary-lg);
-}
-.heading--headline-secondary-lg-bold {
-  font: var(--eds-theme-typography-headline-secondary-lg-bold);
-}
-.heading--headline-secondary-md {
-  font: var(--eds-theme-typography-headline-secondary-md);
-}
-.heading--headline-secondary-md-bold {
-  font: var(--eds-theme-typography-headline-secondary-md-bold);
-}
-.heading--headline-secondary-sm {
-  font: var(--eds-theme-typography-headline-secondary-sm);
-}
-.heading--headline-secondary-sm-bold {
-  font: var(--eds-theme-typography-headline-secondary-sm-bold);
-}
+
 .heading--title-lg {
-  font: var(--eds-theme-typography-title-lg);
+  --heading-size-line-height: var(--eds-typography-preset-400);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-lg-bold {
-  font: var(--eds-theme-typography-title-lg-bold);
-}
+
 .heading--title-md {
-  font: var(--eds-theme-typography-title-md);
+  --heading-size-line-height: var(--eds-typography-preset-300);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-md-bold {
-  font: var(--eds-theme-typography-title-md-bold);
-}
+
 .heading--title-sm {
-  font: var(--eds-theme-typography-title-sm);
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-sm-bold {
-  font: var(--eds-theme-typography-title-sm-bold);
-}
+
 .heading--title-xs {
-  font: var(--eds-theme-typography-title-xs);
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-xs-bold {
-  font: var(--eds-theme-typography-title-xs-bold);
+
+.heading--body-xl {
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-xl-bold {
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-lg {
+  --heading-size-line-height: var(--eds-typography-preset-400);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-lg-bold {
+  --heading-size-line-height: var(--eds-typography-preset-400);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-md {
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-md-bold {
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-sm {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-sm-bold {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-xs {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-xs-bold {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-lg {
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-md {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-sm {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--overline-lg {
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+}
+
+.heading--overline-md {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+}
+
+.heading--overline-sm {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+}
+
+.heading--caption-md {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--caption-sm {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--input {
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-lg-active {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-lg {
+  --heading-size-line-height: var(--eds-typography-preset-100);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-sm-active {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-sm {
+  --heading-size-line-height: var(--eds-typography-preset-075);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }

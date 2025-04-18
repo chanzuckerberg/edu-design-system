@@ -20,7 +20,11 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
         class="label label--lg"
         for=":r3:"
       >
-        Checkbox
+        <span
+          class="text text--label-lg"
+        >
+          Checkbox
+        </span>
       </label>
     </div>
   </div>
@@ -46,7 +50,11 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
         class="label label--lg"
         for=":r0:"
       >
-        Checkbox
+        <span
+          class="text text--label-lg"
+        >
+          Checkbox
+        </span>
       </label>
     </div>
   </div>
@@ -77,7 +85,11 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           class="label label--lg label--disabled"
           for=":r6:"
         >
-          Disabled
+          <span
+            class="text text--label-lg"
+          >
+            Disabled
+          </span>
         </label>
       </div>
     </div>
@@ -99,7 +111,11 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           class="label label--lg label--disabled"
           for=":r7:"
         >
-          Disabled
+          <span
+            class="text text--label-lg"
+          >
+            Disabled
+          </span>
         </label>
       </div>
     </div>
@@ -120,7 +136,11 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
           class="label label--lg label--disabled"
           for=":r8:"
         >
-          Disabled
+          <span
+            class="text text--label-lg"
+          >
+            Disabled
+          </span>
         </label>
       </div>
     </div>
@@ -146,7 +166,11 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
       class="label label--lg label--disabled"
       for=":rb:"
     >
-      Disabled
+      <span
+        class="text text--label-lg"
+      >
+        Disabled
+      </span>
     </label>
   </div>
 </div>
@@ -171,7 +195,11 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
         class="label label--lg"
         for=":r2:"
       >
-        In error state
+        <span
+          class="text text--label-lg"
+        >
+          In error state
+        </span>
       </label>
     </div>
   </div>
@@ -201,7 +229,11 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
           class="label label--lg"
           for=":r4:"
         >
-          Checkbox
+          <span
+            class="text text--label-lg"
+          >
+            Checkbox
+          </span>
         </label>
       </div>
     </div>
@@ -228,7 +260,11 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
         class="label label--lg"
         for=":r5:"
       >
-        Checkbox
+        <span
+          class="text text--label-lg"
+        >
+          Checkbox
+        </span>
       </label>
     </div>
   </div>
@@ -254,7 +290,11 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         class="label label--lg"
         for=":ra:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        <span
+          class="text text--label-lg"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </span>
       </label>
     </div>
   </div>
@@ -280,7 +320,11 @@ exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
         class="label label--lg"
         for=":r1:"
       >
-        Checkbox
+        <span
+          class="text text--label-lg"
+        >
+          Checkbox
+        </span>
       </label>
       <span
         class="text text--body-sm checkbox__sub-label"

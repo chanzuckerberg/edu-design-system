@@ -10,7 +10,7 @@ exports[`<AppNotification /> Default story renders snapshot 1`] = `
   >
     <section>
       <div
-        class="text text--headline-sm-bold app-notification__title"
+        class="text text--headline-sm app-notification__title"
       >
         This is an AppNotification title
       </div>
@@ -37,7 +37,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
   >
     <section>
       <div
-        class="text text--headline-sm-bold app-notification__title"
+        class="text text--headline-sm app-notification__title"
       >
         This is an AppNotification title
       </div>
@@ -57,7 +57,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Call To Action
             </span>
@@ -67,7 +67,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Other action
             </span>
@@ -89,7 +89,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
   >
     <section>
       <div
-        class="text text--headline-sm-bold app-notification__title"
+        class="text text--headline-sm app-notification__title"
       >
         This is an AppNotification title
       </div>
@@ -109,7 +109,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Call To Action
             </span>
@@ -119,7 +119,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Other action
             </span>
@@ -133,7 +133,7 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         <svg
           aria-hidden="true"
@@ -165,7 +165,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
   >
     <section>
       <div
-        class="text text--headline-sm-bold app-notification__title"
+        class="text text--headline-sm app-notification__title"
       >
         This is an AppNotification title
       </div>
@@ -185,7 +185,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Call To Action
             </span>
@@ -195,7 +195,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Other action
             </span>
@@ -217,7 +217,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
   >
     <section>
       <div
-        class="text text--headline-sm-bold app-notification__title"
+        class="text text--headline-sm app-notification__title"
       >
         This is an AppNotification title
       </div>
@@ -237,7 +237,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Call To Action
             </span>
@@ -247,7 +247,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Other action
             </span>
@@ -261,7 +261,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         <svg
           aria-hidden="true"
@@ -293,7 +293,7 @@ exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
   >
     <section>
       <div
-        class="text text--headline-sm-bold app-notification__title"
+        class="text text--headline-sm app-notification__title"
       >
         This is an AppNotification title
       </div>

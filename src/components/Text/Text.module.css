@@ -4,252 +4,259 @@
 
 /**
  * Map the component preset names to the defined typography tokens
- *
- * NOTE: This should always match the generated preset tokens in utility-types.ts
  */
+.text {
+  /** 
+    * Here, we specify as much of the settings on the font: shorthand property as possible,
+    * using CSS variables scoped locally. We redefine the variables for each override for two
+    * reasons:
+    * - this will allow the rule declaration to appear in only one spot
+    * - this will allow external overrides to the properties if needed for themes (w/o a new stylesheet)
+    *   using `style`
+    */
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-family: var(--eds-typography-font-family-1);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  font: var(--text-font-weight) var(--text-size-line-height) var(--text-font-family);
+  letter-spacing: var(--text-letter-spacing);
+}
+
+.text--headline-xl {
+  --text-size-line-height: var(--eds-typography-preset-800);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-size-line-height: var(--eds-typography-preset-1400);
+  }
+}
+
 .text--headline-lg {
-  font: var(--eds-theme-typography-headline-lg);
-}
+  --text-size-line-height: var(--eds-typography-preset-800);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
-.text--headline-lg-bold {
-  font: var(--eds-theme-typography-headline-lg-bold);
-}
-
-.text--headline-lg-bold-mobile {
-  font: var(--eds-theme-typography-headline-lg-bold-mobile);
-}
-
-.text--headline-lg-mobile {
-  font: var(--eds-theme-typography-headline-lg-mobile);
+  @media screen and (min-width: $eds-bp-md) {
+    --text-size-line-height: var(--eds-typography-preset-1000);
+  }
 }
 
 .text--headline-md {
-  font: var(--eds-theme-typography-headline-md);
-}
+  --text-size-line-height: var(--eds-typography-preset-600);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
-.text--headline-md-bold {
-  font: var(--eds-theme-typography-headline-md-bold);
-}
-
-.text--headline-md-bold-mobile {
-  font: var(--eds-theme-typography-headline-md-bold-mobile);
-}
-
-.text--headline-md-mobile {
-  font: var(--eds-theme-typography-headline-md-mobile);
+  @media screen and (min-width: $eds-bp-md) {
+    --text-size-line-height: var(--eds-typography-preset-800);
+  }
 }
 
 .text--headline-sm {
-  font: var(--eds-theme-typography-headline-sm);
+  --text-size-line-height: var(--eds-typography-preset-600);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--headline-sm-bold {
-  font: var(--eds-theme-typography-headline-sm-bold);
+/** TODO-AH: add in offsets */
+.text--headline-decorative-inline-xl {
+  --text-size-line-height: var(--eds-typography-preset-800);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-size-line-height: var(--eds-typography-preset-1400);
+  }
 }
 
-.text--headline-sm-bold-mobile {
-  font: var(--eds-theme-typography-headline-sm-bold-mobile);
+.text--headline-decorative-inline-lg {
+  --text-size-line-height: var(--eds-typography-preset-800);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-size-line-height: var(--eds-typography-preset-1000);
+  }
 }
 
-.text--headline-sm-mobile {
-  font: var(--eds-theme-typography-headline-sm-mobile);
+.text--headline-decorative-inline-md {
+  --text-size-line-height: var(--eds-typography-preset-600);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-size-line-height: var(--eds-typography-preset-800);
+  }
 }
 
-.text--headline-secondary-lg {
-  font: var(--eds-theme-typography-headline-secondary-lg);
-}
-
-.text--headline-secondary-lg-bold {
-  font: var(--eds-theme-typography-headline-secondary-lg-bold);
-}
-
-.text--headline-secondary-md {
-  font: var(--eds-theme-typography-headline-secondary-md);
-}
-
-.text--headline-secondary-md-bold {
-  font: var(--eds-theme-typography-headline-secondary-md-bold);
-}
-
-.text--headline-secondary-sm {
-  font: var(--eds-theme-typography-headline-secondary-sm);
-}
-
-.text--headline-secondary-sm-bold {
-  font: var(--eds-theme-typography-headline-secondary-sm-bold);
+.text--headline-decorative-inline-sm {
+  --text-size-line-height: var(--eds-typography-preset-600);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-lg {
-  font: var(--eds-theme-typography-title-lg);
-}
-
-.text--title-lg-bold {
-  font: var(--eds-theme-typography-title-lg-bold);
+  --text-size-line-height: var(--eds-typography-preset-400);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-md {
-  font: var(--eds-theme-typography-title-md);
-}
-
-.text--title-md-bold {
-  font: var(--eds-theme-typography-title-md-bold);
+  --text-size-line-height: var(--eds-typography-preset-300);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-sm {
-  font: var(--eds-theme-typography-title-sm);
-}
-
-.text--title-sm-bold {
-  font: var(--eds-theme-typography-title-sm-bold);
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-xs {
-  font: var(--eds-theme-typography-title-xs);
-}
-
-.text--title-xs-bold {
-  font: var(--eds-theme-typography-title-xs-bold);
-}
-
-.text--label-lg-subtle {
-  font: var(--eds-theme-typography-label-lg-subtle);
-}
-
-.text--label-md {
-  font: var(--eds-theme-typography-label-md);
-}
-
-.text--label-md-subtle {
-  font: var(--eds-theme-typography-label-md-subtle);
-}
-
-.text--label-sm {
-  font: var(--eds-theme-typography-label-sm);
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--body-xl {
-  font: var(--eds-theme-typography-body-xl);
+  --text-size-line-height: var(--eds-typography-preset-600);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.text--body-xl-bold {
+  --text-size-line-height: var(--eds-typography-preset-600);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--body-lg {
-  font: var(--eds-theme-typography-body-lg);
+  --text-size-line-height: var(--eds-typography-preset-400);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.text--body-lg-bold {
+  --text-size-line-height: var(--eds-typography-preset-400);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--body-md {
-  font: var(--eds-theme-typography-body-md);
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.text--body-md-bold {
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--body-sm {
-  font: var(--eds-theme-typography-body-sm);
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.text--body-sm-bold {
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--body-xs {
-  font: var(--eds-theme-typography-body-xs);
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--caption-lg {
-  font: var(--eds-theme-typography-caption-lg);
+.text--body-xs-bold {
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--caption-lg-bold {
-  font: var(--eds-theme-typography-caption-lg-bold);
+.text--label-lg {
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--caption-md {
-  font: var(--eds-theme-typography-caption-md);
+.text--label-md {
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--caption-md-bold {
-  font: var(--eds-theme-typography-caption-md-bold);
-}
-
-.text--caption-sm {
-  font: var(--eds-theme-typography-caption-sm);
-}
-
-.text--caption-sm-bold {
-  font: var(--eds-theme-typography-caption-sm-bold);
+.text--label-sm {
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--overline-lg {
-  font: var(--eds-theme-typography-overline-lg);
-  text-transform: uppercase;
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
 }
 
 .text--overline-md {
-  font: var(--eds-theme-typography-overline-md);
-  text-transform: uppercase;
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
 }
 
 .text--overline-sm {
-  font: var(--eds-theme-typography-overline-sm);
-  text-transform: uppercase;
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
 }
 
-.text--callout {
-  font: var(--eds-theme-typography-callout);
+.text--caption-md {
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--breadcrumb {
-  font: var(--eds-theme-typography-breadcrumb);
+.text--caption-sm {
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--button-lg {
-  font: var(--eds-theme-typography-button-lg);
-}
-
-.text--button-md {
-  font: var(--eds-theme-typography-button-md);
-}
-
-.text--button-label {
-  font: var(--eds-theme-typography-button-label);
-}
-
-.text--button-label-sm {
-  font: var(--eds-theme-typography-button-label-sm);
-}
-
-.text--form-label {
-  font: var(--eds-theme-typography-form-label);
-}
-
-.text--form-input {
-  font: var(--eds-theme-typography-form-input);
-}
-
-.text--link-lg {
-  font: var(--eds-theme-typography-link-lg);
-}
-
-.text--link-md {
-  font: var(--eds-theme-typography-link-md);
-}
-
-.text--link-sm {
-  font: var(--eds-theme-typography-link-sm);
-}
-
-.text--link-xs {
-  font: var(--eds-theme-typography-link-xs);
-}
-
-.text--tab-lg {
-  font: var(--eds-theme-typography-tab-lg);
+.text--input {
+  --text-size-line-height: var(--eds-typography-preset-200);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--tab-lg-active {
-  font: var(--eds-theme-typography-tab-lg-active);
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--tab-sm {
-  font: var(--eds-theme-typography-tab-sm);
+.text--tab-lg {
+  --text-size-line-height: var(--eds-typography-preset-100);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--tab-sm-active {
-  font: var(--eds-theme-typography-tab-sm-active);
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-.text--tag {
-  font: var(--eds-theme-typography-tag);
+.text--tab-sm {
+  --text-size-line-height: var(--eds-typography-preset-075);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }

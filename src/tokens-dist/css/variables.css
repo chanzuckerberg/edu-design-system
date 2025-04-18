@@ -1,4 +1,48 @@
 :root {
+  --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
+  --eds-theme-color-toggle-disabled-background: var(--eds-theme-color-icon-disabled);
+  --eds-theme-color-toggle-off-background: var(--eds-theme-color-icon-neutral-subtle);
+  --eds-theme-color-toggle-on-background: var(--eds-theme-color-background-brand-primary-strong);
+  --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
+  --eds-theme-color-text-utility-inverse-interactive-visited: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
+  --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-neutral-text-decoration: var(--eds-theme-color-text-neutral-default);
+  --eds-theme-color-link-neutral-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-neutral-text-hover: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-neutral-text: var(--eds-theme-color-text-neutral-strong);
+  --eds-theme-color-link-brand-background-focus: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-brand-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
+  --eds-theme-color-link-brand-text-decoration-hover: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-link-brand-text-decoration: var(--eds-theme-color-text-brand-default);
+  --eds-theme-color-form-background-hover: #F4F6F8;
+  --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
+  --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
+  --eds-theme-color-button-secondary-neutral-background-hover: #E7E8EA;
+  --eds-theme-color-border-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
+  --eds-theme-color-border-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-border-neutral-subtle: #E7E8EA;
+  --eds-theme-color-background-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
+  --eds-theme-color-background-utility-inverse-high-emphasis: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-utility-inverse-no-emphasis-active: rgb(var(--eds-color-white) / 0.3);
+  --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgb(var(--eds-color-white) / 0.2);
+  --eds-theme-color-background-utility-inverse-no-emphasis: transparent;
+  --eds-theme-color-background-utility-disabled-no-emphasis: transparent;
+  --eds-theme-color-background-utility-critical-no-emphasis: transparent;
+  --eds-theme-color-background-utility-interactive-no-emphasis: transparent;
+  --eds-theme-color-background-utility-default-no-emphasis: transparent;
+  --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-utility-base-1: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-brand-primary-default: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-neutral-medium: #E7E8EA;
+  --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
+  --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-body-background: #F4F6F8;
   --eds-z-index-bottom: -100;
   --eds-z-index-top: 99999;
   --eds-spacing-size-2-and-half: 20; /* Relative EMs (rem) */
@@ -160,192 +204,36 @@
   --eds-anim-move-quick: 0.15; /* Seconds (s) */
   --eds-anim-fade-long: 0.4; /* Seconds (s) */
   --eds-anim-fade-quick: 0.15; /* Seconds (s) */
-  --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
-  --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
-  --eds-theme-color-toggle-disabled-background: var(--eds-theme-color-icon-disabled);
-  --eds-theme-color-toggle-off-background: var(--eds-theme-color-icon-neutral-subtle);
-  --eds-theme-color-toggle-on-background: var(--eds-theme-color-background-brand-primary-strong);
-  --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
-  --eds-theme-color-text-utility-inverse-interactive-visited: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
-  --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-neutral-text-decoration: var(--eds-theme-color-text-neutral-default);
-  --eds-theme-color-link-neutral-text-focus: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-link-neutral-text-hover: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-neutral-text: var(--eds-theme-color-text-neutral-strong);
-  --eds-theme-color-link-brand-background-focus: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-brand-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
-  --eds-theme-color-link-brand-text-decoration-hover: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-link-brand-text-decoration: var(--eds-theme-color-text-brand-default);
-  --eds-theme-color-form-background-hover: #F4F6F8;
-  --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
-  --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
-  --eds-theme-color-button-secondary-neutral-background-hover: #E7E8EA;
-  --eds-theme-color-border-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-border-utility-inverse: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-border-neutral-subtle: #E7E8EA;
-  --eds-theme-color-background-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-background-utility-inverse-high-emphasis: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-utility-inverse-no-emphasis-active: rgb(var(--eds-color-white) / 0.3);
-  --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgb(var(--eds-color-white) / 0.2);
-  --eds-theme-color-background-utility-inverse-no-emphasis: transparent;
-  --eds-theme-color-background-utility-disabled-no-emphasis: transparent;
-  --eds-theme-color-background-utility-critical-no-emphasis: transparent;
-  --eds-theme-color-background-utility-interactive-no-emphasis: transparent;
-  --eds-theme-color-background-utility-default-no-emphasis: transparent;
-  --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-utility-base-1: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-brand-primary-default: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-theme-color-background-neutral-medium: #E7E8EA;
-  --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
-  --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-body-background: #F4F6F8;
-  --eds-theme-typography-tag: var(--eds-typography-preset-009);
-  --eds-theme-typography-tab-sm-active: var(--eds-typography-preset-009);
-  --eds-theme-typography-tab-sm: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-tab-lg-active: var(--eds-typography-preset-006);
-  --eds-theme-typography-tab-lg: var(--eds-typography-preset-006-light);
-  --eds-theme-typography-link-xs: var(--eds-typography-preset-009);
-  --eds-theme-typography-link-sm: var(--eds-typography-preset-007);
-  --eds-theme-typography-link-md: var(--eds-typography-preset-005);
-  --eds-theme-typography-link-lg: var(--eds-typography-preset-004);
-  --eds-theme-typography-form-input: var(--eds-typography-preset-005-light);
-  --eds-theme-typography-form-label: var(--eds-typography-preset-006);
-  --eds-theme-typography-button-sm: var(--eds-typography-preset-009);
-  --eds-theme-typography-button-md: var(--eds-typography-preset-005);
-  --eds-theme-typography-button-lg: var(--eds-typography-preset-005);
-  --eds-theme-typography-breadcrumb: var(--eds-typography-preset-009);
-  --eds-theme-typography-callout: var(--eds-typography-preset-002-light);
-  --eds-theme-typography-overline-sm: var(--eds-typography-preset-012);
-  --eds-theme-typography-overline-md: var(--eds-typography-preset-011);
-  --eds-theme-typography-overline-lg: var(--eds-typography-preset-005);
-  --eds-theme-typography-caption-sm-bold: var(--eds-typography-preset-010);
-  --eds-theme-typography-caption-sm: var(--eds-typography-preset-010-light);
-  --eds-theme-typography-caption-md-bold: var(--eds-typography-preset-008);
-  --eds-theme-typography-caption-md: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-caption-lg-bold: var(--eds-typography-preset-006);
-  --eds-theme-typography-caption-lg: var(--eds-typography-preset-006-light);
-  --eds-theme-typography-body-xs: var(--eds-typography-preset-008-light);
-  --eds-theme-typography-body-sm: var(--eds-typography-preset-006-light);
-  --eds-theme-typography-body-md: var(--eds-typography-preset-005-light);
-  --eds-theme-typography-body-lg: var(--eds-typography-preset-004-light);
-  --eds-theme-typography-body-xl: var(--eds-typography-preset-003-light);
-  --eds-theme-typography-label-sm: var(--eds-typography-preset-009-bold);
-  --eds-theme-typography-label-md-subtle: var(--eds-typography-preset-007);
-  --eds-theme-typography-label-md: var(--eds-typography-preset-007-bold);
-  --eds-theme-typography-label-lg-subtle: var(--eds-typography-preset-005);
-  --eds-theme-typography-title-xs-bold: var(--eds-typography-preset-007-bold);
-  --eds-theme-typography-title-xs: var(--eds-typography-preset-007);
-  --eds-theme-typography-title-sm-bold: var(--eds-typography-preset-005-bold);
-  --eds-theme-typography-title-sm: var(--eds-typography-preset-005);
-  --eds-theme-typography-title-md-bold: var(--eds-typography-preset-004-bold);
-  --eds-theme-typography-title-md: var(--eds-typography-preset-004);
-  --eds-theme-typography-title-lg-bold: var(--eds-typography-preset-004-bold);
-  --eds-theme-typography-title-lg: var(--eds-typography-preset-004);
-  --eds-theme-typography-headline-secondary-sm-mobile: var(--eds-typography-preset-secondary-mobile-003-light);
-  --eds-theme-typography-headline-secondary-sm-bold-mobile: var(--eds-typography-preset-secondary-mobile-003-bold);
-  --eds-theme-typography-headline-secondary-sm-bold: var(--eds-typography-preset-secondary-003);
-  --eds-theme-typography-headline-secondary-sm: var(--eds-typography-preset-secondary-003-light);
-  --eds-theme-typography-headline-secondary-md-mobile: var(--eds-typography-preset-mobile-002-light);
-  --eds-theme-typography-headline-secondary-md-bold-mobile: var(--eds-typography-secondary-mobile-002-bold);
-  --eds-theme-typography-headline-secondary-md-bold: var(--eds-typography-preset-secondary-002);
-  --eds-theme-typography-headline-secondary-md: var(--eds-typography-preset-secondary-002-light);
-  --eds-theme-typography-headline-secondary-lg-mobile: var(--eds-typography-preset-secondary-mobile-001-light);
-  --eds-theme-typography-headline-secondary-lg-bold-mobile: var(--eds-typography-preset-secondary-mobile-001-bold);
-  --eds-theme-typography-headline-secondary-lg-bold: var(--eds-typography-preset-secondary-001);
-  --eds-theme-typography-headline-secondary-lg: var(--eds-typography-preset-secondary-001-light);
-  --eds-theme-typography-headline-sm-mobile: var(--eds-typography-preset-mobile-003-light);
-  --eds-theme-typography-headline-sm-bold-mobile: var(--eds-typography-preset-mobile-003);
-  --eds-theme-typography-headline-sm-bold: var(--eds-typography-preset-003);
-  --eds-theme-typography-headline-sm: var(--eds-typography-preset-003-light);
-  --eds-theme-typography-headline-md-mobile: var(--eds-typography-preset-mobile-002-light);
-  --eds-theme-typography-headline-md-bold-mobile: var(--eds-typography-preset-mobile-002);
-  --eds-theme-typography-headline-md-bold: var(--eds-typography-preset-002);
-  --eds-theme-typography-headline-md: var(--eds-typography-preset-002-light);
-  --eds-theme-typography-headline-lg-mobile: var(--eds-typography-preset-mobile-001-light);
-  --eds-theme-typography-headline-lg-bold-mobile: var(--eds-typography-preset-mobile-001);
-  --eds-theme-typography-headline-lg-bold: var(--eds-typography-preset-001);
-  --eds-theme-typography-headline-lg: var(--eds-typography-preset-001-light);
-  --eds-typography-preset-mobile-003-bold: var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002-bold: var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-secondary-mobile-003: var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-003-light: var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-002-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-001: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-mobile-001-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-008-light: var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-008: var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-007-light: var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-007: var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-006-light: var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-006: var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-005-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-005: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-004-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-004: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-002-light: var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-002: var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-secondary);
-  --eds-typography-preset-secondary-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-secondary);
-  --eds-typography-preset-012-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-012-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-012: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary); /* For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-011: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary); /* For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values) */
-  --eds-typography-preset-010-bold: var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-010-light: var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-010: var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary);
-  --eds-typography-preset-009-bold: var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-009-light: var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-009: var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-008-bold: var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-008-light: var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-008: var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary);
-  --eds-typography-preset-007-bold: var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-007-light: var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-007: var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary);
-  --eds-typography-preset-006-bold: var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-006-light: var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-006: var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary);
-  --eds-typography-preset-005-bold: var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-005-light: var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-005: var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary);
-  --eds-typography-preset-004-bold: var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-004-light: var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-004: var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary);
-  --eds-typography-preset-003-bold: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-003-light: var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-003: var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary);
-  --eds-typography-preset-002-mobile: var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
-  --eds-typography-preset-002-bold: var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-002-light: var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-002: var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary);
-  --eds-typography-preset-001-bold: var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-typography-preset-001-light: var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-typography-preset-001: var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary);
-  --eds-letter-spacing-sm: 0.5; /* (pixels) Spacing token used between characters in a text */
+  --eds-typography-preset-075: 12px/16px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-1400: 64px/70px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-1300: 58px/64px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-1200: 52px/58px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-1100: 46px/56px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-1000: 40px/48px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-900: 36px/44px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-800: 32px/38px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-700: 28px/36px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-600: 24px/32px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-500: 22px/30px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-400: 20px/26px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-300: 18px/24px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-200: 16px/22px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-100: 14px/18px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-font-size-multiplier: 1.125;
+  --eds-typography-base-size: 14; /* pixels (px) used as the reset value in the html reset */
+  --eds-typography-letter-spacing-extended: 0.03rem; /* has units b/c letter spacing has values with and without units */
+  --eds-typography-letter-spacing-normal: normal; /* unitless normal value */
+  --eds-typography-letter-spacing-condensed: -0.02rem; /* has units b/c letter spacing has values with and without units */
+  --eds-typography-font-weight-bold: 500;
+  --eds-typography-font-weight-normal: 400;
+  --eds-typography-font-weight-light: 300;
+  --eds-typography-font-family-2: 'Argent CF Italic', Georgia, serif;
+  --eds-typography-font-family-1: 'Graphik', Arial, sans-serif;
+  --eds-letter-spacing-sm: 0.5; /* pixels (px) Spacing token used between characters in a text */
   --eds-font-weight-bold: 600;
   --eds-font-weight-medium: 500;
   --eds-font-weight-light: 400;
-  --eds-font-size-base: 16; /* (pixels) Base font size for design system in px */
+  --eds-font-size-base: 16; /* pixels (px) base font size for design system in px */
   --eds-font-family-secondary: 'Argent', serif;
   --eds-font-family-primary: 'Graphik', sans-serif;
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);

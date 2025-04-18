@@ -11,8 +11,6 @@
 .accordion-panel {
   padding: 0 calc(var(--eds-spacing-size-7) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem);
 
-  font: var(--eds-theme-typography-body-sm);
-
   &.accordion-panel--leading-icon {
     padding-left: calc(var(--eds-spacing-size-7) / 16 * 1rem);
   }
@@ -115,15 +113,6 @@
 
 .accordion-button__subtitle {
   color: var(--eds-theme-color-text-utility-default-secondary);
-}
-
-
-.accordion-panel--md {
-  font: var(--eds-theme-typography-body-md);
-}
-
-.accordion-panel--sm {
-  font: var(--eds-theme-typography-body-sm);
 }
 
 /**

@@ -5,9 +5,22 @@
 \*------------------------------------*/
 
 .link {
-  display: inline;
+   /** 
+    * Here, we specify as much of the settings on the font: shorthand property as possible,
+    * using CSS variables scoped locally. We redefine the variables for each override for two
+    * reasons:
+    * - this will allow the rule declaration to appear in only one spot
+    * - this will allow external overrides to the properties if needed for themes (w/o a new stylesheet)
+    *   using `style`
+    */
+    --link-size-line-height: var(--eds-typography-preset-200);
+    --link-font-weight: var(--eds-typography-font-weight-bold);
+    --link-font-family: var(--eds-typography-font-family-1);
+    --link-letter-spacing: var(--eds-typography-letter-spacing-normal);
+    font: var(--link-font-weight) var(--link-size-line-height) var(--link-font-family);
+    letter-spacing: var(--text-letter-spacing);
 
-  font-weight: 500;
+  display: inline;
   text-decoration-line: underline;
 }
 
@@ -54,28 +67,28 @@
    * Sizes - using the presets for type ramp matching body-*
    */
   &.link--size-xl {
-    font: var(--eds-theme-typography-body-xl);
-    font-weight: 500;
+    /* preset: body-xl */
+    --link-size-line-height: var(--eds-typography-preset-600);
   }
 
   &.link--size-lg {
-    font: var(--eds-theme-typography-body-lg);
-    font-weight: 500;
+    /* preset: body-lg */
+    --link-size-line-height: var(--eds-typography-preset-400);
   }
 
   &.link--size-md {
-    font: var(--eds-theme-typography-body-md);
-    font-weight: 500;
+    /* preset: body-md */
+    --link-size-line-height: var(--eds-typography-preset-200);
   }
 
   &.link--size-sm {
-    font: var(--eds-theme-typography-body-sm);
-    font-weight: 500;
+    /* preset: body-sm */
+    --link-size-line-height: var(--eds-typography-preset-100);
   }
 
   &.link--size-xs {
-    font: var(--eds-theme-typography-body-xs);
-    font-weight: 500;
+    /* preset: body-xs */
+    --link-size-line-height: var(--eds-typography-preset-075);
   }
 }
 

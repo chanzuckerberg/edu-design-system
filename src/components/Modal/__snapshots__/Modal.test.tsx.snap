@@ -12,7 +12,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -64,7 +64,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -74,7 +74,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -113,7 +113,7 @@ exports[`Modal Default story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           <svg
             aria-hidden="true"
@@ -168,7 +168,7 @@ exports[`Modal Default story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Primary
             </span>
@@ -178,7 +178,7 @@ exports[`Modal Default story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Secondary
             </span>
@@ -219,7 +219,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           <svg
             aria-hidden="true"
@@ -274,7 +274,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Primary
             </span>
@@ -284,7 +284,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Secondary
             </span>
@@ -308,7 +308,7 @@ exports[`Modal Large story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -360,7 +360,7 @@ exports[`Modal Large story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -370,7 +370,7 @@ exports[`Modal Large story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -392,7 +392,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -444,7 +444,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -454,7 +454,7 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -476,7 +476,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -528,7 +528,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -538,7 +538,7 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -560,7 +560,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -612,7 +612,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -622,7 +622,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -644,7 +644,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -696,7 +696,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -706,7 +706,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Tertiary
         </span>
@@ -728,7 +728,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -780,7 +780,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -790,7 +790,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -812,7 +812,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -864,7 +864,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -874,7 +874,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -896,7 +896,7 @@ exports[`Modal Small story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -948,7 +948,7 @@ exports[`Modal Small story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -958,7 +958,7 @@ exports[`Modal Small story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -980,7 +980,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -1032,7 +1032,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Primary
         </span>
@@ -1042,7 +1042,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Secondary
         </span>
@@ -1064,7 +1064,7 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -1116,7 +1116,7 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           Critical Action
         </span>
@@ -1155,7 +1155,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-lg button__text"
         >
           <svg
             aria-hidden="true"
@@ -1256,7 +1256,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Primary
             </span>
@@ -1266,7 +1266,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-lg button__text"
             >
               Secondary
             </span>

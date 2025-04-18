@@ -1,4 +1,4 @@
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, DisclosurePanel } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
@@ -259,16 +259,19 @@ const AccordionPanel = ({
 
   const componentClassName = clsx(
     styles['accordion-panel'],
-    size === 'sm' && styles['accordion-panel--sm'],
     !isExpandable && styles['accordion-panel--hidden'],
     hasLeadingIcon && styles['accordion-panel--leading-icon'],
     className,
   );
 
   return (
-    <Disclosure.Panel className={componentClassName} {...other}>
-      {isExpandable && children}
-    </Disclosure.Panel>
+    <DisclosurePanel className={componentClassName} {...other}>
+      {isExpandable && (
+        <Text as="span" preset={size === 'sm' ? 'body-md' : 'body-sm'}>
+          {children}
+        </Text>
+      )}
+    </DisclosurePanel>
   );
 };
 

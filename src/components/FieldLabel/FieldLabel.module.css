@@ -17,13 +17,3 @@
 .label--disabled {
   color: var(--eds-theme-color-text-utility-disabled-primary);
 }
-
-/**
- * Field label size variants.
- */
-.label--md {
-  font: var(--eds-theme-typography-body-sm);
-}
-.label--lg {
-  font: var(--eds-theme-typography-body-md);
-}

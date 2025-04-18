@@ -62,21 +62,16 @@
  */
 .button--lg {
   align-items: center;
-
   padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) calc(var(--eds-spacing-size-2-and-half) / 16 * 1rem);
-  font: var(--eds-theme-typography-button-lg);
 }
 
 .button--md {
   align-items: center;
-
   padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem);
-  font: var(--eds-theme-typography-button-md);
 }
 
 .button--sm {
   padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
-  font: var(--eds-theme-typography-button-sm);
 }
 
 .button--size-lg {

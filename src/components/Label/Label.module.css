@@ -10,7 +10,6 @@
  * Labels can sometimes be marked up as legends for field groups (i.e. radio field).
  */
 .label {
-  font: var(--eds-theme-typography-form-label);
   display: inline-block;
 }
 

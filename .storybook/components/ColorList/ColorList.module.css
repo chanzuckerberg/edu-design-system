@@ -3,7 +3,6 @@
   padding: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   border-radius: calc(var(--eds-theme-box-button-border-radius) * 1px);
 
-  font: var(--eds-theme-typography-label-md-subtle);
   color: rgb(235, 87, 87);
 
   background-color: var(--eds-theme-color-background-neutral-subtle);

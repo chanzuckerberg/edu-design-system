@@ -34,7 +34,7 @@ exports[`<Heading /> Heading3 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading4 story renders snapshot 1`] = `
 <h4
-  class="heading heading--title-md"
+  class="heading heading--title-lg"
 >
   Heading 4
 </h4>
@@ -42,7 +42,7 @@ exports[`<Heading /> Heading4 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading5 story renders snapshot 1`] = `
 <h5
-  class="heading heading--title-sm"
+  class="heading heading--title-md"
 >
   Heading 5
 </h5>
@@ -50,7 +50,7 @@ exports[`<Heading /> Heading5 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading6 story renders snapshot 1`] = `
 <h6
-  class="heading heading--title-xs"
+  class="heading heading--title-sm"
 >
   Heading 6
 </h6>
