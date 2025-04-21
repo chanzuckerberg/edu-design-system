@@ -12,13 +12,13 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Additional Subcaption
       </div>
@@ -1049,7 +1049,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Types of Wine
       </div>
@@ -4369,13 +4369,13 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Additional Subcaption
       </div>
@@ -5897,13 +5897,13 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Additional Subcaption
       </div>
@@ -8972,13 +8972,13 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Test table
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Additional Subcaption
       </div>
@@ -10500,7 +10500,7 @@ exports[`<DataTable /> WithBasicCaption story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Fruits of the world
       </div>
@@ -10532,13 +10532,13 @@ exports[`<DataTable /> WithFullCaption story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Aren't they all so delicious?
       </div>
@@ -10570,13 +10570,13 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         This is a really long title that really should not be this long and it just keeps going and going and going
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Seriously, who let this happen?
       </div>
@@ -10741,13 +10741,13 @@ exports[`<DataTable /> WithSearch story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Aren't they all so delicious?
       </div>
@@ -10816,13 +10816,13 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Aren't they all so delicious?
       </div>
@@ -10928,13 +10928,13 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="text text--headline-xl data-table__caption"
+        class="text text--headline-md data-table__caption"
       >
         Fruits of the world
       </div>
       <div
         aria-hidden="true"
-        class="text text--headline-sm"
+        class="text text--headline-sm data-table__subcaption"
       >
         Aren't they all so delicious?
       </div>

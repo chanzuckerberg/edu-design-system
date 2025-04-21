@@ -258,7 +258,6 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { size } = useContext(AccordionContext);
   const { isExpandable, hasLeadingIcon } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
@@ -271,7 +270,7 @@ const AccordionPanel = ({
   return (
     <DisclosurePanel className={componentClassName} {...other}>
       {isExpandable && (
-        <Text as="span" preset={size === 'sm' ? 'body-sm' : 'body-md'}>
+        <Text as="span" preset="body-md">
           {children}
         </Text>
       )}

@@ -32,11 +32,18 @@
   pointer-events: none;
 
   color: var(--eds-theme-color-text-utility-disabled-secondary, red);
-  background-color: var(--eds-theme-color-background-utility-disabled-no-emphasis, red)
+  background-color: var(--eds-theme-color-background-utility-disabled-no-emphasis, red);
 }
 
 .popover-list-item__icon {
+  display: flex;
+  align-items: center;
   padding-right: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+
+  /* if an icon container is adjacent to a container with a sub-label, don't use flex */
+  &:has(+ div > .popover-list-item__sub-label) {
+    display: revert;
+  }
 }
 
 .popover-list-item__no-icon {

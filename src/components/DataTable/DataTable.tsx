@@ -193,13 +193,18 @@ export function DataTable<T>({
                     aria-hidden="true"
                     as="div"
                     className={styles['data-table__caption']}
-                    preset="headline-xl"
+                    preset="headline-md"
                   >
                     {caption}
                   </Text>
                 )}
                 {subcaption && (
-                  <Text aria-hidden="true" as="div" preset="headline-sm">
+                  <Text
+                    aria-hidden="true"
+                    as="div"
+                    className={styles['data-table__subcaption']}
+                    preset="headline-sm"
+                  >
                     {subcaption}
                   </Text>
                 )}
