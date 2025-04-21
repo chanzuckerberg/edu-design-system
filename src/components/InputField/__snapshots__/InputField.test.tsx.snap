@@ -11,11 +11,11 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rm:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Default input field
         </span>
@@ -61,11 +61,11 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r0:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Default input field
         </span>
@@ -112,11 +112,11 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        class="label label--md label--disabled input-field__label input-field__label--disabled"
         for=":rc:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Disabled input field
         </span>
@@ -165,11 +165,11 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r6:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Error input field
         </span>
@@ -230,11 +230,11 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rs:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Input field with button inside
         </span>
@@ -318,11 +318,11 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":ru:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Input field with button inside
         </span>
@@ -381,11 +381,11 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r4:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Default input field
         </span>
@@ -457,11 +457,11 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":ra:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Read-only field
         </span>
@@ -509,11 +509,11 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rg:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Input field with fieldNote
         </span>
@@ -566,11 +566,11 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        class="label label--md label--disabled input-field__label input-field__label--disabled"
         for=":ri:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Input field with fieldNote
         </span>
@@ -625,11 +625,11 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rq:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Field with Optional Hint
         </span>
@@ -749,11 +749,11 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":ro:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Default input field
         </span>
@@ -799,11 +799,11 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r8:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Warning input field
         </span>
@@ -866,11 +866,11 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r10:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           test label
         </span>
@@ -916,11 +916,11 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r12:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Shortened Length Field
         </span>
@@ -965,11 +965,11 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r14:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           test label
         </span>
@@ -1047,11 +1047,11 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r2:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Default input field
         </span>

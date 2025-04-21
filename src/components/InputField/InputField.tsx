@@ -247,6 +247,7 @@ export const InputField: InputFieldType = forwardRef(
                 className={labelClassName}
                 disabled={disabled}
                 htmlFor={idVar}
+                size="md"
               >
                 {label}
               </FieldLabel>
