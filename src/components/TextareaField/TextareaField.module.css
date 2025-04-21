@@ -22,6 +22,7 @@
  */
 .textarea-field__overline {
   display: flex;
+  align-items: center;
   margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
