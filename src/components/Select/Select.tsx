@@ -291,7 +291,12 @@ const SelectLabel = ({
 
   return (
     <div className={overlineClassName}>
-      <Label as={FieldLabel} className={componentClassName} disabled={disabled}>
+      <Label
+        as={FieldLabel}
+        className={componentClassName}
+        disabled={disabled}
+        size="md"
+      >
         {label}
       </Label>
       {required && showHint && (
