@@ -167,7 +167,11 @@ const FieldsetLegend = ({
     >
       {title && (
         <div className={styles['fieldset-legend__overline']}>
-          {title && <FieldLabel disabled={isDisabled}>{title}</FieldLabel>}
+          {title && (
+            <FieldLabel disabled={isDisabled} size="md">
+              {title}
+            </FieldLabel>
+          )}
           {required && showHint && (
             <Text
               aria-disabled={isDisabled ?? undefined}

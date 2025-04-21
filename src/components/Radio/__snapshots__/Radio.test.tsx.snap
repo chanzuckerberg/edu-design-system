@@ -29,14 +29,15 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r1:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
     </div>
   </div>
@@ -71,14 +72,15 @@ exports[`<Radio /> Default story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r0:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
     </div>
   </div>
@@ -114,15 +116,15 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        aria-disabled="true"
-        class="label label--lg label--disabled"
+        class="label label--disabled"
         for=":r2:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
     </div>
   </div>
@@ -159,15 +161,15 @@ exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        aria-disabled="true"
-        class="label label--lg label--disabled"
+        class="label label--disabled"
         for=":r3:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
     </div>
   </div>
@@ -202,14 +204,15 @@ exports[`<Radio /> Error story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r4:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
     </div>
   </div>
@@ -245,14 +248,15 @@ exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r5:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
     </div>
   </div>
@@ -291,14 +295,15 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r8:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </span>
+           
         </label>
       </div>
     </div>
@@ -334,14 +339,15 @@ exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
       class="radio__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r6:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Option 1
         </span>
+         
       </label>
       <span
         class="text text--body-sm radio__sub-label"
@@ -380,16 +386,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
     </span>
     <div
       class="radio__labels"
-    >
-      <label
-        class="label label--lg"
-        for=":r7:"
-      >
-        <span
-          class="text text--label-lg"
-        />
-      </label>
-    </div>
+    />
   </div>
 </div>
 `;
