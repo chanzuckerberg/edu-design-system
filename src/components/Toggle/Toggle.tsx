@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
 import type { EitherInclusive, ExtractProps } from '../../util/utility-types';
-import Text from '../Text';
+import { default as EDSLabel } from '../Label';
 import styles from './Toggle.module.css';
 
 type ToggleLabelProps = {
@@ -55,14 +55,7 @@ type ToggleProps = ToggleButtonProps & {
 
 const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
   const componentClassName = clsx(styles['toggle__label'], className);
-  // TODO: Label and Text may overlap. Simplify
-  return (
-    <Label className={componentClassName}>
-      <Text as="span" preset="label-lg">
-        {children}
-      </Text>
-    </Label>
-  );
+  return <Label as={EDSLabel} className={componentClassName} text={children} />;
 };
 
 const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
