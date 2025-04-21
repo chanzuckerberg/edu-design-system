@@ -222,7 +222,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <FieldLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel className={labelClassName} htmlFor={idVar} size="md">
                 {label}
               </FieldLabel>
             )}

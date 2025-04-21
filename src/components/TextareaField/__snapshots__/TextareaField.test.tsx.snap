@@ -11,11 +11,11 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":r0:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -63,11 +63,11 @@ exports[`<TextareaField /> WhenDefaultStatus story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":ra:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -114,11 +114,11 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
       class="textarea-field__overline textarea-field__overline--disabled"
     >
       <label
-        class="label label--lg textarea-field__label--disabled"
+        class="label label--md textarea-field__label--disabled"
         for=":r6:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -168,11 +168,11 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":rc:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -236,11 +236,11 @@ exports[`<TextareaField /> WhenNoDefaultValue story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":r4:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -268,11 +268,11 @@ exports[`<TextareaField /> WhenOptional story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":ri:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -324,11 +324,11 @@ exports[`<TextareaField /> WhenReadOnly story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":r8:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -376,11 +376,11 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":rg:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -433,11 +433,11 @@ exports[`<TextareaField /> WhenUsingChildren story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":r2:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -484,11 +484,11 @@ exports[`<TextareaField /> WhenWarning story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":re:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -552,11 +552,11 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":rk:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -603,11 +603,11 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":rm:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -685,11 +685,11 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":ro:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
@@ -766,11 +766,11 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
       class="textarea-field__overline"
     >
       <label
-        class="label label--lg"
+        class="label label--md"
         for=":rq:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--label-md"
         >
           Textarea Field
         </span>
