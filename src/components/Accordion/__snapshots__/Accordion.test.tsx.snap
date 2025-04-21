@@ -137,7 +137,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:rt:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -191,7 +191,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:rv:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -245,7 +245,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r11:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -505,7 +505,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:rb:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -690,7 +690,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r13:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -744,7 +744,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r15:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -798,7 +798,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r17:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -852,7 +852,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r19:"
       >
         <span
-          class="text text--body-sm"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -919,7 +919,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:rj:"
       >
         <span
-          class="text text--body-md"
+          class="text text--body-sm"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -1104,7 +1104,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r1b:"
       >
         <span
-          class="text text--body-md"
+          class="text text--body-sm"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -1158,7 +1158,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r1d:"
       >
         <span
-          class="text text--body-md"
+          class="text text--body-sm"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -1212,7 +1212,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r1f:"
       >
         <span
-          class="text text--body-md"
+          class="text text--body-sm"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -1266,7 +1266,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         id="headlessui-disclosure-panel-:r1h:"
       >
         <span
-          class="text text--body-md"
+          class="text text--body-sm"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>

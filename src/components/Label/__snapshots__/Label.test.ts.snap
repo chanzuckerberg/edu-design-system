@@ -4,7 +4,11 @@ exports[`<Label /> Default story renders snapshot 1`] = `
 <label
   class="label"
 >
-  Label
+  <span
+    class="text text--body-md"
+  >
+    Label
+  </span>
    
 </label>
 `;
@@ -13,7 +17,11 @@ exports[`<Label /> LabelAfter story renders snapshot 1`] = `
 <label
   class="label"
 >
-  Label
+  <span
+    class="text text--body-md"
+  >
+    Label
+  </span>
    
   <span
     class="text text--body-sm"

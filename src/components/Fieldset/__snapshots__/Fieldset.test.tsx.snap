@@ -172,14 +172,15 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r0:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>
@@ -196,14 +197,15 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r1:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>
@@ -303,15 +305,15 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r2:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>
@@ -329,15 +331,15 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r3:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>
@@ -499,14 +501,15 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r4:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>
@@ -523,14 +526,15 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r5:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>

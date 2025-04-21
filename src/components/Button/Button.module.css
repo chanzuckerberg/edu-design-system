@@ -77,18 +77,21 @@
 .button--size-lg {
   min-width: calc(var(--eds-spacing-size-9) / 16 * 1rem);
   max-width: calc(var(--eds-spacing-size-40) / 16 * 1rem);
+  min-height: calc(var(--eds-spacing-size-5) / 16 * 1rem);
   max-height: calc(var(--eds-spacing-size-5) / 16 * 1rem);
 }
 
 .button--size-md {
   min-width: 3.75rem;
   max-width: calc(var(--eds-spacing-size-32) / 16 * 1rem);
+  min-height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
   max-height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
 }
 
 .button--size-sm {
   min-width: calc(var(--eds-spacing-size-6) / 16 * 1rem);
   max-width: calc(var(--eds-spacing-size-24) / 16 * 1rem);
+  min-height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
   max-height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
 }
 

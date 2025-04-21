@@ -14,6 +14,13 @@
 }
 
 /**
+ * Disabled variant of the field label.
+ */
+ .label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+}
+
+/**
  * Label after
  *
  * An empty slot for additional element to appear to the right of the label text.

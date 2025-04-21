@@ -1,4 +1,8 @@
-import { Disclosure, DisclosurePanel } from '@headlessui/react';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
@@ -177,7 +181,7 @@ const AccordionButton = ({
   );
 
   return (
-    <Disclosure.Button as={React.Fragment}>
+    <DisclosureButton as={React.Fragment}>
       {({ open }) => (
         <button
           className={componentClassName}
@@ -245,7 +249,7 @@ const AccordionButton = ({
           )}
         </button>
       )}
-    </Disclosure.Button>
+    </DisclosureButton>
   );
 };
 
@@ -267,7 +271,7 @@ const AccordionPanel = ({
   return (
     <DisclosurePanel className={componentClassName} {...other}>
       {isExpandable && (
-        <Text as="span" preset={size === 'sm' ? 'body-md' : 'body-sm'}>
+        <Text as="span" preset={size === 'sm' ? 'body-sm' : 'body-md'}>
           {children}
         </Text>
       )}

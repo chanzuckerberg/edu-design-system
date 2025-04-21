@@ -17,14 +17,15 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r3:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Checkbox
         </span>
+         
       </label>
     </div>
   </div>
@@ -47,14 +48,15 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r0:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Checkbox
         </span>
+         
       </label>
     </div>
   </div>
@@ -81,15 +83,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r6:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Disabled
           </span>
+           
         </label>
       </div>
     </div>
@@ -107,15 +109,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r7:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Disabled
           </span>
+           
         </label>
       </div>
     </div>
@@ -132,15 +134,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r8:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Disabled
           </span>
+           
         </label>
       </div>
     </div>
@@ -162,15 +164,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
     class="checkbox__labels"
   >
     <label
-      aria-disabled="true"
-      class="label label--lg label--disabled"
+      class="label label--disabled"
       for=":rb:"
     >
       <span
-        class="text text--label-lg"
+        class="text text--body-md"
       >
         Disabled
       </span>
+       
     </label>
   </div>
 </div>
@@ -192,14 +194,15 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r2:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           In error state
         </span>
+         
       </label>
     </div>
   </div>
@@ -226,14 +229,15 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r4:"
         >
           <span
-            class="text text--label-lg"
+            class="text text--body-md"
           >
             Checkbox
           </span>
+           
         </label>
       </div>
     </div>
@@ -257,14 +261,15 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r5:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Checkbox
         </span>
+         
       </label>
     </div>
   </div>
@@ -287,14 +292,15 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":ra:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </span>
+         
       </label>
     </div>
   </div>
@@ -317,14 +323,15 @@ exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r1:"
       >
         <span
-          class="text text--label-lg"
+          class="text text--body-md"
         >
           Checkbox
         </span>
+         
       </label>
       <span
         class="text text--body-sm checkbox__sub-label"
