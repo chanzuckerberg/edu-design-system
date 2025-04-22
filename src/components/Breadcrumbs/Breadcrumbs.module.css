@@ -93,6 +93,10 @@
  * Breadcrumbs link.
  */
 .breadcrumbs__link {
+  /* preset: body-xs */
+  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
+  letter-spacing: var(--eds-typography-letter-spacing-normal);
+
   color: var(--eds-theme-color-text-neutral-subtle);
   text-decoration: none;
 

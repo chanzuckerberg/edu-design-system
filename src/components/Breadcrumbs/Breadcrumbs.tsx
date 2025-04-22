@@ -300,9 +300,7 @@ export const BreadcrumbsItem = ({
 
   return (
     <li className={componentClassName} {...other}>
-      <Text as="span" preset="body-xs">
-        {getInteractionElement()}
-      </Text>
+      {getInteractionElement()}
       <Text aria-hidden as="span" className={styles['breadcrumbs__separator']}>
         {separator}
       </Text>

@@ -14,29 +14,25 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item breadcrumbs__item-back"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon breadcrumbs__back-icon"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>
-                Child
-              </title>
-              <path
-                d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
-              />
-            </svg>
-          </a>
-        </span>
+            <title>
+              Child
+            </title>
+            <path
+              d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
+            />
+          </svg>
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -47,16 +43,12 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Home
-          </a>
-        </span>
+          Home
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -67,16 +59,12 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Child
-          </a>
-        </span>
+          Child
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -87,16 +75,12 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Grandchild
-          </a>
-        </span>
+          Grandchild
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -123,29 +107,25 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item breadcrumbs__item-back"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon breadcrumbs__back-icon"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>
-                Breadcrumb 9
-              </title>
-              <path
-                d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
-              />
-            </svg>
-          </a>
-        </span>
+            <title>
+              Breadcrumb 9
+            </title>
+            <path
+              d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
+            />
+          </svg>
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -156,16 +136,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Parent
-          </a>
-        </span>
+          Parent
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -176,16 +152,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 1
-          </a>
-        </span>
+          Breadcrumb 1
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -196,16 +168,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 2
-          </a>
-        </span>
+          Breadcrumb 2
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -216,16 +184,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 3
-          </a>
-        </span>
+          Breadcrumb 3
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -236,16 +200,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 4
-          </a>
-        </span>
+          Breadcrumb 4
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -256,16 +216,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 5
-          </a>
-        </span>
+          Breadcrumb 5
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -276,16 +232,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 6
-          </a>
-        </span>
+          Breadcrumb 6
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -296,16 +248,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 7
-          </a>
-        </span>
+          Breadcrumb 7
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -316,16 +264,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 8
-          </a>
-        </span>
+          Breadcrumb 8
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -336,16 +280,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 9
-          </a>
-        </span>
+          Breadcrumb 9
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -356,16 +296,12 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 10
-          </a>
-        </span>
+          Breadcrumb 10
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -392,29 +328,25 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item breadcrumbs__item-back"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon breadcrumbs__back-icon"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>
-                Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
-              </title>
-              <path
-                d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
-              />
-            </svg>
-          </a>
-        </span>
+            <title>
+              Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+            </title>
+            <path
+              d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
+            />
+          </svg>
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -425,16 +357,12 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Home
-          </a>
-        </span>
+          Home
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -445,16 +373,12 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 1
-          </a>
-        </span>
+          Breadcrumb 1
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -465,16 +389,12 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
-          </a>
-        </span>
+          Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -485,16 +405,12 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
-          </a>
-        </span>
+          Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -521,29 +437,25 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item breadcrumbs__item-back"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon breadcrumbs__back-icon"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>
-                Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
-              </title>
-              <path
-                d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
-              />
-            </svg>
-          </a>
-        </span>
+            <title>
+              Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+            </title>
+            <path
+              d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
+            />
+          </svg>
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -554,16 +466,12 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Home
-          </a>
-        </span>
+          Home
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -574,16 +482,12 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 1
-          </a>
-        </span>
+          Breadcrumb 1
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -594,16 +498,12 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
-          </a>
-        </span>
+          Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -614,16 +514,12 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
-          </a>
-        </span>
+          Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -650,16 +546,12 @@ exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 1
-          </a>
-        </span>
+          Breadcrumb 1
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -686,29 +578,25 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item breadcrumbs__item-back"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon breadcrumbs__back-icon"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>
-                Breadcrumb 1
-              </title>
-              <path
-                d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
-              />
-            </svg>
-          </a>
-        </span>
+            <title>
+              Breadcrumb 1
+            </title>
+            <path
+              d="M13.7 21.1004L5.275 12.7004C5.175 12.6004 5.10417 12.4921 5.0625 12.3754C5.02083 12.2587 5 12.1337 5 12.0004C5 11.8671 5.02083 11.7421 5.0625 11.6254C5.10417 11.5087 5.175 11.4004 5.275 11.3004L13.7 2.87539C13.9333 2.64206 14.225 2.52539 14.575 2.52539C14.925 2.52539 15.225 2.65039 15.475 2.90039C15.725 3.15039 15.85 3.44206 15.85 3.77539C15.85 4.10872 15.725 4.40039 15.475 4.65039L8.125 12.0004L15.475 19.3504C15.7083 19.5837 15.825 19.8712 15.825 20.2129C15.825 20.5546 15.7 20.8504 15.45 21.1004C15.2 21.3504 14.9083 21.4754 14.575 21.4754C14.2417 21.4754 13.95 21.3504 13.7 21.1004Z"
+            />
+          </svg>
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -719,16 +607,12 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 1
-          </a>
-        </span>
+          Breadcrumb 1
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"
@@ -739,16 +623,12 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
       <li
         class="breadcrumbs__item"
       >
-        <span
-          class="text text--body-xs"
+        <a
+          class="breadcrumbs__link"
+          href="#"
         >
-          <a
-            class="breadcrumbs__link"
-            href="#"
-          >
-            Breadcrumb 2
-          </a>
-        </span>
+          Breadcrumb 2
+        </a>
         <span
           aria-hidden="true"
           class="text text--body-md breadcrumbs__separator"

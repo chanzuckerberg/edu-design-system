@@ -107,7 +107,7 @@
 
   .data-table--size-md & {
     /* preset: title-md */
-    font: var(--eds-typography-font-weight-bold) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+    font: var(--eds-typography-font-weight-bold) var(--eds-typography-preset-300) var(--eds-typography-font-family-1);
 
     padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
   }
