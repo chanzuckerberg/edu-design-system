@@ -188,7 +188,7 @@
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
   }
 }
 
