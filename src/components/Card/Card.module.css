@@ -88,11 +88,19 @@
   }
 
   &.header--size-sm {
-    gap: calc(var(--eds-spacing-size-1) / 16 * 1rem)
+    gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+
+    .header__icon {
+      margin-top: -3px;
+    }
   }
 
   &.header--size-md {
     gap: calc(var(--eds-spacing-size-2) / 16 * 1rem);
+
+    .header__icon {
+      padding-top: 4px;
+    }
   }
 }
 
