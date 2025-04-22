@@ -18,8 +18,10 @@
   --heading-font-weight: var(--eds-typography-font-weight-normal);
   --heading-font-family: var(--eds-typography-font-family-1);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --heading-text-transform: ;
 
   font: var(--heading-font-weight) var(--heading-size-line-height) var(--heading-font-family);
+  text-transform: var(--heading-text-transform, none);
   letter-spacing: var(--heading-letter-spacing);
 }
 
@@ -95,25 +97,25 @@
 
 .heading--title-lg {
   --heading-size-line-height: var(--eds-typography-preset-400);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .heading--title-md {
   --heading-size-line-height: var(--eds-typography-preset-300);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .heading--title-sm {
   --heading-size-line-height: var(--eds-typography-preset-200);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .heading--title-xs {
   --heading-size-line-height: var(--eds-typography-preset-100);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -199,18 +201,21 @@
   --heading-size-line-height: var(--eds-typography-preset-200);
   --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --heading-text-transform: uppercase;
 }
 
 .heading--overline-md {
   --heading-size-line-height: var(--eds-typography-preset-100);
   --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --heading-text-transform: uppercase;
 }
 
 .heading--overline-sm {
   --heading-size-line-height: var(--eds-typography-preset-075);
   --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --heading-text-transform: uppercase;
 }
 
 .heading--caption-md {

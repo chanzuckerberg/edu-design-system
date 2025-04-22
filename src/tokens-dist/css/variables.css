@@ -45,27 +45,27 @@
   --eds-theme-color-body-background: #F4F6F8;
   --eds-z-index-bottom: -100;
   --eds-z-index-top: 99999;
-  --eds-spacing-size-2-and-half: 20; /* Relative EMs (rem) */
-  --eds-spacing-size-1-and-half: 12; /* Relative EMs (rem) */
-  --eds-spacing-size-quarter: 2; /* Relative EMs (rem) */
-  --eds-spacing-size-half: 4; /* Relative EMs (rem) */
-  --eds-spacing-size-40: 320; /* Relative EMs (rem) */
-  --eds-spacing-size-34: 272; /* Relative EMs (rem) */
-  --eds-spacing-size-32: 256; /* Relative EMs (rem) */
-  --eds-spacing-size-24: 192; /* Relative EMs (rem) */
-  --eds-spacing-size-20: 160; /* Relative EMs (rem) */
-  --eds-spacing-size-12: 96; /* Relative EMs (rem) */
-  --eds-spacing-size-11: 88; /* Relative EMs (rem) */
-  --eds-spacing-size-10: 80; /* Relative EMs (rem) */
-  --eds-spacing-size-9: 72; /* Relative EMs (rem) */
-  --eds-spacing-size-8: 64; /* Relative EMs (rem) */
-  --eds-spacing-size-7: 56; /* Relative EMs (rem) */
-  --eds-spacing-size-6: 48; /* Relative EMs (rem) */
-  --eds-spacing-size-5: 40; /* Relative EMs (rem) */
-  --eds-spacing-size-4: 32; /* Relative EMs (rem) */
-  --eds-spacing-size-3: 24; /* Relative EMs (rem) */
-  --eds-spacing-size-2: 16; /* Relative EMs (rem) */
-  --eds-spacing-size-1: 8; /* Relative EMs (rem) */
+  --eds-spacing-size-2-and-half: 20; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-1-and-half: 12; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-quarter: 2; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-half: 4; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-40: 320; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-34: 272; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-32: 256; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-24: 192; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-20: 160; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-12: 96; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-11: 88; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-10: 80; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-9: 72; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-8: 64; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-7: 56; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-6: 48; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-5: 40; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-4: 32; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-3: 24; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-2: 16; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-1: 8; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */

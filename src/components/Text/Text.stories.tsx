@@ -17,7 +17,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div className="m-1">{Story()}</div>],
+  decorators: [(Story) => <div className="m-spacing-size-2">{Story()}</div>],
 } as Meta<typeof Text>;
 
 type Story = StoryObj<typeof Text>;
@@ -62,10 +62,10 @@ export const BodyXSmall: Story = {
   },
 };
 
-export const Caption: Story = {
+export const CaptionMedium: Story = {
   args: {
     preset: 'caption-md',
-    children: 'Caption',
+    children: 'Caption medium',
   },
 };
 

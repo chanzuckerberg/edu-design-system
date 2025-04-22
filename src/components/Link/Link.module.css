@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 .link {
-   /** 
+  /** 
     * Here, we specify as much of the settings on the font: shorthand property as possible,
     * using CSS variables scoped locally. We redefine the variables for each override for two
     * reasons:
@@ -13,12 +13,13 @@
     * - this will allow external overrides to the properties if needed for themes (w/o a new stylesheet)
     *   using `style`
     */
-    --link-size-line-height: var(--eds-typography-preset-200);
-    --link-font-weight: var(--eds-typography-font-weight-bold);
-    --link-font-family: var(--eds-typography-font-family-1);
-    --link-letter-spacing: var(--eds-typography-letter-spacing-normal);
-    font: var(--link-font-weight) var(--link-size-line-height) var(--link-font-family);
-    letter-spacing: var(--text-letter-spacing);
+  --link-size-line-height: var(--eds-typography-preset-200);
+  --link-font-weight: var(--eds-typography-font-weight-normal);
+  --link-font-family: var(--eds-typography-font-family-1);
+  --link-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  font: var(--link-font-weight) var(--link-size-line-height) var(--link-font-family);
+  letter-spacing: var(--link-letter-spacing);
 
   display: inline;
   text-decoration-line: underline;

@@ -18,7 +18,10 @@
   --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-font-family: var(--eds-typography-font-family-1);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-text-transform: ;
+  
   font: var(--text-font-weight) var(--text-size-line-height) var(--text-font-family);
+  text-transform: var(--text-text-transform, none);
   letter-spacing: var(--text-letter-spacing);
 }
 
@@ -101,25 +104,25 @@
 
 .text--title-lg {
   --text-size-line-height: var(--eds-typography-preset-400);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-md {
   --text-size-line-height: var(--eds-typography-preset-300);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-sm {
   --text-size-line-height: var(--eds-typography-preset-200);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-xs {
   --text-size-line-height: var(--eds-typography-preset-100);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -205,18 +208,21 @@
   --text-size-line-height: var(--eds-typography-preset-200);
   --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --text-text-transform: uppercase;
 }
 
 .text--overline-md {
   --text-size-line-height: var(--eds-typography-preset-100);
   --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --text-text-transform: uppercase;
 }
 
 .text--overline-sm {
   --text-size-line-height: var(--eds-typography-preset-075);
   --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --text-text-transform: uppercase;
 }
 
 .text--caption-md {

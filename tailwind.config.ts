@@ -69,6 +69,7 @@ export default {
         ...movementTokens,
       },
     },
+    // TODO-AH: re-map exports to the actual / new tokens
     fontWeight: {
       normal: edsTokens['font-weight'].light,
       medium: edsTokens['font-weight'].medium,
