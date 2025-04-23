@@ -21,7 +21,7 @@ export const FontFamily = {
       <Grid>
         {filterTokens(`eds-typography-font-family`)
           .filter(function (listItem) {
-            // do not include any of the offsets, if available
+            // do not include any of the offsets, if they exist
             return listItem.name.indexOf('offset') === -1;
           })
           .map(function (listItem) {

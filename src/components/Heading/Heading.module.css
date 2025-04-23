@@ -69,14 +69,14 @@
 
 /** TODO-AH: add in offsets */
 .heading--headline-decorative-inline-xl {
-  --heading-font-size: var(--eds-typography-preset-800-font-size);
+  --heading-font-size: calc(var(--eds-typography-preset-800-font-size));
   --heading-line-height: var(--eds-typography-preset-800-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --heading-font-size: var(--eds-typography-preset-1400-font-size);
+    --heading-font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset-2));
     --heading-line-height: var(--eds-typography-preset-1400-line-height);
   }
 }
@@ -89,7 +89,7 @@
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --heading-font-size: var(--eds-typography-preset-1000-font-size);
+    --heading-font-size: calc(var(--eds-typography-preset-1000-font-size) + var(--eds-typography-font-family-size-offset-2));
     --heading-line-height: var(--eds-typography-preset-1000-line-height);
   }
 }
@@ -102,8 +102,21 @@
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --heading-font-size: var(--eds-typography-preset-800-font-size);
+    --heading-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
     --heading-line-height: var(--eds-typography-preset-800-line-height);
+  }
+}
+
+.heading--headline-decorative-inline-sm {
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --heading-line-height: var(--eds-typography-preset-600-line-height);
   }
 }
 
