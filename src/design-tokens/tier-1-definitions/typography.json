@@ -1,36 +1,5 @@
 {
   "eds": {
-    "font-family": {
-      "primary": {
-        "value": "'Graphik', sans-serif"
-      },
-      "secondary": {
-        "value": "'Argent', serif"
-      }
-    },
-    "font-size": {
-      "base": {
-        "value": "16",
-        "comment": "pixels (px) base font size for design system in px"
-      }
-    },
-    "font-weight": {
-      "light": {
-        "value": "400"
-      },
-      "medium": {
-        "value": "500"
-      },
-      "bold": {
-        "value": "600"
-      }
-    },
-    "letter-spacing": {
-      "sm": {
-        "value": "0.5",
-        "comment": "pixels (px) Spacing token used between characters in a text"
-      }
-    },
     "typography": {
       "fontFamily": {
         "1": {
@@ -40,8 +9,10 @@
           "value": "'Argent CF Italic', Georgia, serif"
         },
         "sizeOffset": {
-          "2": "2",
-          "comment": "pixels (px) font-specific offset adjustment to align heights between the root font face"
+          "2": {
+            "value": "2",
+            "comment": "pixels (px) font-specific offset adjustment to align heights between the root font face"
+          }
         }
       },
       "fontWeight": {
@@ -78,64 +49,214 @@
       },
       "preset": {
         "075": {
-          "value": "12px/16px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "12",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "16",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "12px/16px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "100": {
-          "value": "14px/18px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "14",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "18",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "14px/18px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "200": {
-          "value": "16px/22px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "16",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "22",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "16px/22px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "300": {
-          "value": "18px/24px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "18",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "24",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "18px/24px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "400": {
-          "value": "20px/26px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "20",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "26",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "20px/26px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "500": {
-          "value": "22px/30px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "22",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "30",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "22px/30px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "600": {
-          "value": "24px/32px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "24",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "32",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "24px/32px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "700": {
-          "value": "28px/36px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "28",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "36",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "28px/36px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "800": {
-          "value": "32px/38px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "32",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "38",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "32px/38px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "900": {
-          "value": "36px/44px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "36",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "44",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "36px/44px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "1000": {
-          "value": "40px/48px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "40",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "48",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "40px/48px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "1100": {
-          "value": "46px/56px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "46",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "56",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "46px/56px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "1200": {
-          "value": "52px/58px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "52",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "58",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "52px/58px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "1300": {
-          "value": "58px/64px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "58",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "64",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "58px/64px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         },
         "1400": {
-          "value": "64px/70px",
-          "comment": "values to use with the font shorthand property in CSS"
+          "fontSize": {
+            "value": "64",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "70",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "64px/70px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
         }
       }
     }

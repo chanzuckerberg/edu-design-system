@@ -23,9 +23,11 @@ properties as needed.
   --heading-font-weight: var(--eds-typography-font-weight-normal);
   --heading-font-family: var(--eds-typography-font-family-1);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --heading-text-transform: ;
 
   font: var(--heading-font-weight) var(--heading-size-line-height) var(--heading-font-family);
   letter-spacing: var(--heading-letter-spacing);
+  text-transform: var(--heading-text-transform, none);
 }
 ```
 
@@ -62,4 +64,28 @@ an override for any of these custom properties:
 
 ```jsx
 <Heading preset="heading-md" style={{"--heading-font-weight": "var(--eds-typography-font-weight-bold)"}}>...</Heading>
+```
+
+## Using `Heading` and `Text`
+
+Whenever possible, define typography using the `Heading` or `Text` components. In cases where the typography should be
+dynamic based on DOM structure, you can apply a style for `font` property in the style sheet. For tracking purposes, add
+in a comment to describe which preset the value maps to.
+
+```css
+/* preset: body-md */
+font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+letter-spacing: var(--eds-typography-letter-spacing-normal);
+```
+
+In cases where you need to compose with an offset, you can use the piecemeal preset values (`-font-size` and `-line-height`)
+to declare a value for the `font` properties.
+
+```css
+/* preset: headline-decorative-inline-xl */
+font-family: var(--eds-typography-font-family-1);
+font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset) * 1px);
+line-height: var(--eds-typography-preset-1400-line-height);
+font-weight: var(--eds-typography-font-weight-light);
+letter-spacing: var(--eds-typography-letter-spacing-normal);
 ```

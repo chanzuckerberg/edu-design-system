@@ -26,7 +26,7 @@
 
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
-  /* body-md */
+  /* preset: body-md */
   font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
   letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
