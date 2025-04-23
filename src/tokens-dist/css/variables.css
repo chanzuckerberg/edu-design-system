@@ -849,7 +849,7 @@
   --eds-theme-box-focus-ring-outline-width: var(--eds-outline-width-sm);
   --eds-theme-box-button-border-radius: var(--eds-border-radius-md);
   --eds-theme-border-width: var(--eds-border-width-sm);
-  --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-round);
+  --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline: var(--eds-border-radius-round);
   --eds-theme-border-radius-objects-xs: var(--eds-border-radius-none);

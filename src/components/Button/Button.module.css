@@ -337,6 +337,13 @@
   border-color: var(--eds-theme-color-border-utility-interactive-hover);
 }
 
+.button--primary.button--variant-default:hover {
+  color: var(--eds-theme-color-text-utility-inverse);
+
+  border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
+  background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
+}
+
 .button--secondary.button--variant-default:hover,
 .button--tertiary.button--variant-default:hover {
   color: var(--eds-theme-color-text-utility-interactive-primary-hover);
