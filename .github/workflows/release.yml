@@ -47,8 +47,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Update Omlet 🍳
-        run: npx omlet analyze
+      - name: Update Omlet Analysis 🍳
+        run: npx @omlet/cli analyze
         env:
           OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
       
