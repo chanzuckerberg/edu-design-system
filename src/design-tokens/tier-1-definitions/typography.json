@@ -41,8 +41,8 @@
         }
       },
       "baseSize": {
-        "value": "14",
-        "comment": "pixels (px) used as the reset value in the html reset"
+        "value": "16",
+        "comment": "TODO-AH: adjust font calculations to use this value. pixels (px) used as the reset value in the html reset"
       },
       "fontSizeMultiplier": {
         "value": "1.125"

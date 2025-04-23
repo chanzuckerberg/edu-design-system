@@ -250,7 +250,7 @@
   --eds-typography-preset-100-line-height: 18; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-100-font-size: 14; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-font-size-multiplier: 1.125;
-  --eds-typography-base-size: 14; /* pixels (px) used as the reset value in the html reset */
+  --eds-typography-base-size: 16; /* TODO-AH: adjust font calculations to use this value. pixels (px) used as the reset value in the html reset */
   --eds-typography-letter-spacing-extended: 0.03rem; /* has units b/c letter spacing has values with and without units */
   --eds-typography-letter-spacing-normal: normal; /* unitless normal value */
   --eds-typography-letter-spacing-condensed: -0.02rem; /* has units b/c letter spacing has values with and without units */

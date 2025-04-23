@@ -27,6 +27,9 @@ const config = {
   ],
 
   // TODO: update config and package.json scripts to support staticDirs
+  // This will allow creation of preview-head.html to preload font assets
+  // See: https://storybook.js.org/docs/configure/integration/images-and-assets
+  // See: https://www.chromatic.com/docs/font-loading/#solution-a-preload-fonts
   // staticDirs: [...],
 
   framework: {
