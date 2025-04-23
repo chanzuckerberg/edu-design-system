@@ -19,20 +19,25 @@ export const FontFamily = {
   render: () => (
     <Section title="Font Families">
       <Grid>
-        {filterTokens(`eds-typography-font-family`).map(function (listItem) {
-          return (
-            <Grid.Item key={listItem.name}>
-              <TokenSpecimen
-                inlineStyles={{
-                  fontFamily: `var(${listItem.name})`,
-                }}
-                name={listItem.name}
-                value={listItem.value}
-                variant="typography-title"
-              />
-            </Grid.Item>
-          );
-        })}
+        {filterTokens(`eds-typography-font-family`)
+          .filter(function (listItem) {
+            // do not include any of the offsets, if available
+            return listItem.name.indexOf('offset') === -1;
+          })
+          .map(function (listItem) {
+            return (
+              <Grid.Item key={listItem.name}>
+                <TokenSpecimen
+                  inlineStyles={{
+                    fontFamily: `var(${listItem.name})`,
+                  }}
+                  name={listItem.name}
+                  value={listItem.value}
+                  variant="typography-title"
+                />
+              </Grid.Item>
+            );
+          })}
       </Grid>
     </Section>
   ),
