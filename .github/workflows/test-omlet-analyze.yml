@@ -1,4 +1,4 @@
-name: Release
+name: Test Omlet Analyze
 on:
   pull_request:
     branches:
@@ -49,7 +49,7 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Update Omlet Analysis 🍳
-        run: npx @omlet/cli analyze
+        run: npx @omlet/cli analyze -v
         env:
           OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
       
