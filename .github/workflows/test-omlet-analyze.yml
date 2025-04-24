@@ -8,7 +8,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      packages: write
+      # packages: write
       contents: read
     steps:
       - name: Checkout ⬇️
@@ -38,8 +38,8 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           CI: true
 
-      - name: Build EDS 🛠️
-        run: yarn build
+      # - name: Build EDS 🛠️
+      #   run: yarn build
 
       # # Publish the package on Github's package registry for internal CZI use. You should still
       # # publish to the npm registry separately from this job.
@@ -49,7 +49,7 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Update Omlet Analysis 🍳
-        run: npx @omlet/cli analyze -v
+        run: npx @omlet/cli analyze -v --log-level info
         env:
           OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
       
