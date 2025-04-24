@@ -1,0 +1,55 @@
+name: Release
+on:
+  pull_request:
+    branches:
+      # testing with changes going into `next` to make sure the job works
+      - next
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Checkout ⬇️
+        uses: actions/checkout@v3
+        with:
+          # Omlet uses git history for analysis; disable shallow clone
+          fetch-depth: 0
+
+      - name: Setup node 😻
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+          cache: 'yarn'
+          # Configure NPM to point to Github's package registry.
+          registry-url: https://npm.pkg.github.com/
+          scope: '@chanzuckerberg'
+
+      - name: Install Dependencies 🧶
+        run: yarn install --immutable
+
+      - name: Type check 📋
+        run: yarn run types
+
+      - name: Run CI Tests ✅
+        run: yarn run test:ci
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CI: true
+
+      - name: Build EDS 🛠️
+        run: yarn build
+
+      # # Publish the package on Github's package registry for internal CZI use. You should still
+      # # publish to the npm registry separately from this job.
+      # - name: Publish package to the Github registry
+      #   run: npm publish --access public
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update Omlet Analysis 🍳
+        run: npx @omlet/cli analyze --dry-run # add try run to avoid actually testing
+        env:
+          OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
+      
