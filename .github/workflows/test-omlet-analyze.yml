@@ -49,7 +49,7 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Update Omlet Analysis 🍳
-        run: npx @omlet/cli analyze --dry-run # add try run to avoid actually testing
+        run: npx @omlet/cli analyze
         env:
           OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
       
