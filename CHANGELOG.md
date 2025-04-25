@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.11.2...v15.12.0) (2025-04-25)
+
+
+### Features
+
+* **AppNotification:** add variant prop with assert ([#2162](https://github.com/chanzuckerberg/edu-design-system/issues/2162)) ([f3c4228](https://github.com/chanzuckerberg/edu-design-system/commit/f3c4228e22b0603bea6bb92cee655a7b8394e728))
+
+
+### Bug Fixes
+
+* **Button:** add token usage for primary default button on hover ([#2168](https://github.com/chanzuckerberg/edu-design-system/issues/2168)) ([8ab81da](https://github.com/chanzuckerberg/edu-design-system/commit/8ab81da0a5aabbde45c429bd07c9de3da3ed79dd))
+* **tokens:** update background, border, text tokens ([#2165](https://github.com/chanzuckerberg/edu-design-system/issues/2165)) ([2ea9658](https://github.com/chanzuckerberg/edu-design-system/commit/2ea965891b1518a8381953f7a3cc1b22c90164f9))
+
 ### [15.11.2](https://github.com/chanzuckerberg/edu-design-system/compare/v15.11.1...v15.11.2) (2025-03-31)
 
 
