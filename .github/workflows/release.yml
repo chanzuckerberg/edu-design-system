@@ -1,4 +1,4 @@
-name: Release
+name: Build and Release
 on:
   release:
     types:
@@ -40,15 +40,17 @@ jobs:
       - name: Build EDS 🛠️
         run: yarn build
 
-      # Publish the package on Github's package registry for internal CZI use. You should still
+      # Publish the package on Github's package registry for internal use. You should still
       # publish to the npm registry separately from this job.
       - name: Publish package to the Github registry
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Update Omlet Analysis 🍳
-        run: npx @omlet/cli analyze
-        env:
-          OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
+      # TODO(2025-04-25): Disabling until we valide why the current automation fails with bad request
+      # Once resolved, remove the manual analysis instructions from PUBLISHING.md
+      # - name: Update Omlet Analysis 🍳
+      #   run: npx @omlet/cli analyze
+      #   env:
+      #     OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
       
