@@ -22,16 +22,13 @@
  */
 .textarea-field__overline {
   display: flex;
+  align-items: center;
   margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
 
 .textarea-field__overline--no-label {
   justify-content: flex-start;
-}
-
-.textarea-field__label {
-  font: var(--eds-theme-typography-form-label);
 }
 
 .textarea-field__hint {
@@ -56,7 +53,6 @@
 }
 
 .textarea-field__character-counter {
-  font: var(--eds-theme-typography-body-sm);
   color: var(--eds-theme-color-text-utility-default-primary);
 
   flex: 1 0 50%;

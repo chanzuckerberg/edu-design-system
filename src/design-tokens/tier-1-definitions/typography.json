@@ -1,314 +1,261 @@
 {
   "eds": {
-    "font-family": {
-      "primary": {
-        "value": "'Graphik', sans-serif"
-      },
-      "secondary": {
-        "value": "'Argent', serif"
-      }
-    },
-    "font-size": {
-      "base": {
-        "value": "16",
-        "comment": "(pixels) Base font size for design system in px"
-      }
-    },
-    "font-weight": {
-      "light": {
-        "value": "400"
-      },
-      "medium": {
-        "value": "500"
-      },
-      "bold": {
-        "value": "600"
-      }
-    },
-    "letter-spacing": {
-      "sm": {
-        "value": "0.5",
-        "comment": "(pixels) Spacing token used between characters in a text"
-      }
-    },
     "typography": {
+      "fontFamily": {
+        "1": {
+          "value": "'Graphik', Arial, sans-serif"
+        },
+        "2": {
+          "value": "'Argent CF Italic', Georgia, serif"
+        },
+        "sizeOffset": {
+          "2": {
+            "value": "2",
+            "comment": "pixels (px) font-specific offset adjustment to align heights between the root font face"
+          }
+        }
+      },
+      "fontWeight": {
+        "light": {
+          "value": "300"
+        },
+        "normal": {
+          "value": "400"
+        },
+        "bold": {
+          "value": "500"
+        }
+      },
+      "letterSpacing": {
+        "condensed": {
+          "value": "-0.02rem",
+          "comment": "has units b/c letter spacing has values with and without units"
+        },
+        "normal": {
+          "value": "normal",
+          "comment": "unitless normal value"
+        },
+        "extended": {
+          "value": "0.03rem",
+          "comment": "has units b/c letter spacing has values with and without units"
+        }
+      },
+      "baseSize": {
+        "value": "16",
+        "comment": "TODO-AH: adjust font calculations to use this value. pixels (px) used as the reset value in the html reset"
+      },
+      "fontSizeMultiplier": {
+        "value": "1.125"
+      },
       "preset": {
-        "001": {
+        "075": {
+          "fontSize": {
+            "value": "12",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "16",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-primary)"
+            "value": "12px/16px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "002": {
+        "100": {
+          "fontSize": {
+            "value": "14",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "18",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
-          },
-          "mobile": {
-            "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)",
-            "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
+            "value": "14px/18px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "003": {
+        "200": {
+          "fontSize": {
+            "value": "16",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "22",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-primary)"
+            "value": "16px/22px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "004": {
+        "300": {
+          "fontSize": {
+            "value": "18",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "24",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 1.125rem/1.55555556 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 1.125rem/1.55555556 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 1.125rem/1.55555556 var(--eds-font-family-primary)"
+            "value": "18px/24px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "005": {
+        "400": {
+          "fontSize": {
+            "value": "20",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "26",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 1rem/1.5 var(--eds-font-family-primary)"
+            "value": "20px/26px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "006": {
+        "500": {
+          "fontSize": {
+            "value": "22",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "30",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.875rem/1.57142857 var(--eds-font-family-primary)"
+            "value": "22px/30px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "007": {
+        "600": {
+          "fontSize": {
+            "value": "24",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "32",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.875rem/1.28571429 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.875rem/1.28571429 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.875rem/1.28571429 var(--eds-font-family-primary)"
+            "value": "24px/32px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "008": {
+        "700": {
+          "fontSize": {
+            "value": "28",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "36",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.75rem/1.666666667 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.75rem/1.666666667 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.75rem/1.666666667 var(--eds-font-family-primary)"
+            "value": "28px/36px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "009": {
+        "800": {
+          "fontSize": {
+            "value": "32",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "38",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary)"
+            "value": "32px/38px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "010": {
+        "900": {
+          "fontSize": {
+            "value": "36",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "44",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary)"
+            "value": "36px/44px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "011": {
+        "1000": {
+          "fontSize": {
+            "value": "40",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "48",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.75rem/1.333333333 var(--eds-font-family-primary)",
-            "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.75rem/1.333333333 var(--eds-font-family-primary)",
-            "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.75rem/1.333333333 var(--eds-font-family-primary)",
-            "comment": "For 011, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+            "value": "40px/48px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "012": {
+        "1100": {
+          "fontSize": {
+            "value": "46",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "56",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
           "@": {
-            "value": "var(--eds-font-weight-medium) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
-            "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
-          },
-          "light": {
-            "value": "var(--eds-font-weight-light) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
-            "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
-          },
-          "bold": {
-            "value": "var(--eds-font-weight-bold) 0.6875rem/1.272727272 var(--eds-font-family-primary)",
-            "comment": "For 012, add a text-transform treatment for uppercase (font-variant is limited to CSS 2.1 values)"
+            "value": "46px/56px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "secondary": {
-          "001": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 2.5rem/1.2 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 2.5rem/1.2 var(--eds-font-family-secondary)"
-            },
-            "bold": {
-              "value": "var(--eds-font-weight-bold) 2.5rem/1.2 var(--eds-font-family-secondary)"
-            }
+        "1200": {
+          "fontSize": {
+            "value": "52",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
-          "002": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-secondary)"
-            }
+          "lineHeight": {
+            "value": "58",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
-          "003": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
-            },
-            "bold": {
-              "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
-            }
-          },
-          "004": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 1rem/1.5 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 1rem/1.5 var(--eds-font-family-secondary)"
-            }
-          },
-          "005": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 0.875rem/1.57142857 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 0.875rem/1.57142857 var(--eds-font-family-secondary)"
-            }
-          },
-          "006": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 0.875rem/1.42857143 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 0.875rem/1.42857143 var(--eds-font-family-secondary)"
-            }
-          },
-          "007": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 0.75rem/1.66666667 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 0.75rem/1.66666667 var(--eds-font-family-secondary)"
-            }
-          },
-          "008": {
-            "@": {
-              "value": "var(--eds-font-weight-medium) 0.75rem/1.33333333 var(--eds-font-family-secondary)"
-            },
-            "light": {
-              "value": "var(--eds-font-weight-light) 0.75rem/1.33333333 var(--eds-font-family-secondary)"
-            }
-          },
-          "mobile": {
-            "001": {
-              "light": {
-                "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-secondary)"
-              },
-              "@": {
-                "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-secondary)"
-              }
-            },
-            "002": {
-              "light": {
-                "value": "var(--eds-font-weight-light) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
-              },
-              "@": {
-                "value": "var(--eds-font-weight-medium) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
-              },
-              "bold": {
-                "value": "var(--eds-font-weight-bold) 1.5rem/1.333333333 var(--eds-font-family-secondary)"
-              }
-            },
-            "003": {
-              "light": {
-                "value": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-secondary)"
-              },
-              "@": {
-                "value": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-secondary)"
-              }
-            }
+          "@": {
+            "value": "52px/58px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         },
-        "mobile": {
-          "001": {
-            "light": {
-              "value": "var(--eds-font-weight-light) 2rem/1.25 var(--eds-font-family-primary)"
-            },
-            "@": {
-              "value": "var(--eds-font-weight-medium) 2rem/1.25 var(--eds-font-family-primary)"
-            },
-            "bold": {
-              "value": "var(--eds-font-weight-bold) 2rem/1.25 var(--eds-font-family-primary)"
-            }
+        "1300": {
+          "fontSize": {
+            "value": "58",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
-          "002": {
-            "light": {
-              "value": "var(--eds-font-weight-light) 1.75rem/1.28571429 var(--eds-font-family-primary)"
-            },
-            "@": {
-              "value": "var(--eds-font-weight-medium) 1.75rem/1.28571429 var(--eds-font-family-primary)"
-            },
-            "bold": {
-              "value": "var(--eds-font-weight-bold) 1.75rem/1.28571429 var(--eds-font-family-primary)"
-            }
+          "lineHeight": {
+            "value": "64",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
-          "003": {
-            "light": {
-              "value": "var(--eds-font-weight-light) 1.25rem/1.4 var(--eds-font-family-primary)"
-            },
-            "@": {
-              "value": "var(--eds-font-weight-medium) 1.25rem/1.4 var(--eds-font-family-primary)"
-            },
-            "bold": {
-              "value": "var(--eds-font-weight-bold) 1.25rem/1.4 var(--eds-font-family-primary)"
-            }
+          "@": {
+            "value": "58px/64px",
+            "comment": "values to use with the font shorthand property in CSS"
+          }
+        },
+        "1400": {
+          "fontSize": {
+            "value": "64",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "lineHeight": {
+            "value": "70",
+            "comment": "pixels (px) values to use with the font shorthand property in CSS"
+          },
+          "@": {
+            "value": "64px/70px",
+            "comment": "values to use with the font shorthand property in CSS"
           }
         }
       }

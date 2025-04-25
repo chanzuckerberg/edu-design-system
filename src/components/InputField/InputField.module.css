@@ -7,6 +7,7 @@
  */
 .input-field__overline {
   display: flex;
+  align-items: center;
   margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
   gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
 }
@@ -74,8 +75,6 @@
 
 .input-field__label {
   color: var(--eds-theme-color-text-utility-default-primary);
-  /* HACK: Instead of applying the token directly in CSS, should use <Text /> */
-  font: var(--eds-theme-typography-form-label);
 }
 
 .input-field__label--disabled {
@@ -84,11 +83,9 @@
 
 .input-field__required-text {
   color: var(--eds-theme-color-text-utility-default-secondary);
-  font: var(--eds-theme-typography-body-sm);
 }
 
 .input-field__character-counter {
-  font: var(--eds-theme-typography-body-sm);
   text-align: right;
   flex: 1 0 50%;
 

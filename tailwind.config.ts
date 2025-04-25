@@ -70,16 +70,14 @@ export default {
       },
     },
     fontWeight: {
-      normal: edsTokens['font-weight'].light,
-      medium: edsTokens['font-weight'].medium,
-      bold: edsTokens['font-weight'].bold,
+      ...edsTokens.typography.fontWeight,
     },
     fontFamily: {
       // provide values for the configured font family tokens
       // Useful when your app imports '@chanzuckerberg/eds/fonts.css' or
       // if you have custom token values for primary and secondary fonts
-      primary: edsTokens['font-family'].primary,
-      secondary: edsTokens['font-family'].secondary,
+      1: edsTokens.typography.fontFamily[1],
+      2: edsTokens.typography.fontFamily[2],
     },
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
     // Docs: https://tailwindcss.com/docs/responsive-design#customizing-your-theme

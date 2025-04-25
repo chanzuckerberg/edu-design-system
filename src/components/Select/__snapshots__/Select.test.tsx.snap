@@ -11,13 +11,17 @@ exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`]
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r35:"
       id="headlessui-label-:r34:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -34,7 +38,7 @@ exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`]
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -67,13 +71,17 @@ exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r3:"
       id="headlessui-label-:r2:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -90,7 +98,7 @@ exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -123,13 +131,17 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r43:"
       id="headlessui-label-:r42:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
     <span
       class="text text--body-sm select__required-text"
@@ -151,7 +163,7 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -184,13 +196,17 @@ exports[`<Select /> Generated Snapshots HorizontalLabel story renders snapshot 1
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:rd:"
       id="headlessui-label-:rc:"
     >
-      Animal?
+      <span
+        class="text text--label-md"
+      >
+        Animal?
+      </span>
     </label>
   </div>
   <button
@@ -207,7 +223,7 @@ exports[`<Select /> Generated Snapshots HorizontalLabel story renders snapshot 1
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -240,13 +256,17 @@ exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders sna
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r2r:"
       id="headlessui-label-:r2q:"
     >
-      Favorite Animal(s)
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal(s)
+      </span>
     </label>
   </div>
   <button
@@ -263,7 +283,7 @@ exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders sna
     type="button"
   >
     <span
-      class="select-button__text--truncated"
+      class="text text--input select-button__text--truncated"
     >
       1
        long selected description
@@ -306,7 +326,7 @@ exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -339,12 +359,16 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
     class="select__overline select__overline--no-label"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r50:"
       id="headlessui-label-:r4v:"
-    />
+    >
+      <span
+        class="text text--label-md"
+      />
+    </label>
   </div>
   <button
     aria-controls="headlessui-listbox-options-:r51:"
@@ -360,7 +384,7 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -393,13 +417,17 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r3p:"
       id="headlessui-label-:r3o:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
     <span
       class="text text--body-sm select__required-text"
@@ -421,7 +449,7 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -454,13 +482,17 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r3f:"
       id="headlessui-label-:r3e:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
     <span
       class="text text--body-sm select__required-text"
@@ -482,7 +514,7 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -524,7 +556,7 @@ exports[`<Select /> Generated Snapshots StyledUncontrolled story renders snapsho
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -581,13 +613,17 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r4d:"
       id="headlessui-label-:r4c:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
     <span
       class="text text--body-sm select__required-text"
@@ -609,7 +645,7 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -642,13 +678,17 @@ exports[`<Select /> Generated Snapshots WithFieldName story renders snapshot 1`]
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r1l:"
       id="headlessui-label-:r1k:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -665,7 +705,7 @@ exports[`<Select /> Generated Snapshots WithFieldName story renders snapshot 1`]
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -698,13 +738,17 @@ exports[`<Select /> Generated Snapshots WithFieldNote story renders snapshot 1`]
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r1v:"
       id="headlessui-label-:r1u:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -721,7 +765,7 @@ exports[`<Select /> Generated Snapshots WithFieldNote story renders snapshot 1`]
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Dogs
     </span>
@@ -754,13 +798,17 @@ exports[`<Select /> Generated Snapshots WithSelectedBy story renders snapshot 1`
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r1b:"
       id="headlessui-label-:r1a:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -777,7 +825,7 @@ exports[`<Select /> Generated Snapshots WithSelectedBy story renders snapshot 1`
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Cats
     </span>
@@ -810,13 +858,17 @@ exports[`<Select /> Generated Snapshots WithSelectedOption story renders snapsho
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:r11:"
       id="headlessui-label-:r10:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -833,7 +885,7 @@ exports[`<Select /> Generated Snapshots WithSelectedOption story renders snapsho
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       Cats
     </span>
@@ -866,13 +918,17 @@ exports[`<Select /> Generated Snapshots WithStandardButton story renders snapsho
     class="select__overline"
   >
     <label
-      class="label label--lg select__label"
+      class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
       for="headlessui-listbox-button-:rn:"
       id="headlessui-label-:rm:"
     >
-      Favorite Animal
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
     </label>
   </div>
   <button
@@ -889,7 +945,7 @@ exports[`<Select /> Generated Snapshots WithStandardButton story renders snapsho
     type="button"
   >
     <span
-      class=""
+      class="text text--input"
     >
       - Select Option -
     </span>

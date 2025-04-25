@@ -61,7 +61,7 @@ export const AppNotification = ({
           <Text
             as="div"
             className={styles['app-notification__title']}
-            preset="headline-sm-bold"
+            preset="headline-sm"
           >
             {title}
           </Text>

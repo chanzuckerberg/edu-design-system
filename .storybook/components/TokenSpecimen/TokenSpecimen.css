@@ -1,12 +1,12 @@
 .token-specimen {
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   box-shadow: 1px solid var(--eds-box-shadow-md);
-  background: white;
+  background: var(--eds-theme-color-background-input);
   padding: 1rem;
   display: grid;
   gap: 1rem;
 
-  font-family: var(--eds-font-family-primary);
+  font-family: var(--eds-typography-font-family-1);
 
   @media all and (min-width: 20rem) {
     grid-template-columns: 300px 1fr;
@@ -19,14 +19,10 @@
   }
 }
 
-.token-specimen__info {
-  font: var(--eds-theme-typography-body-sm);
-}
-
 .token-specimen__name {
   display: inline-block;
-  background: rgb(242, 242, 242);
-  color: rgb(235, 87, 87);
+  background: var(--eds-theme-color-background-brand-blue-low-emphasis);
+  color: var(--eds-theme-color-text-utility-critical);
   padding: 0.2rem;
   border-radius: 4px;
   font-size: 12px;
@@ -34,7 +30,7 @@
 
 .token-specimen__value {
   display: block;
-  background: white;
+  background: var(--eds-theme-color-background-input);
 }
 
 .token-specimen__comment {
@@ -49,13 +45,13 @@
   width: 100%;
 
   .token-specimen--inverted & {
-    background: black !important;
-    outline: 6px solid black;
+    background: var(--eds-theme-color-background-utility-default-high-emphasis) !important;
+    outline: 6px solid var(--eds-theme-color-background-utility-default-high-emphasis);
   }
 }
 
 .token-specimen__sample--box {
-  background: #000;
+  background: var(--eds-theme-color-background-utility-default-high-emphasis);
   min-height: 5rem;
   display: flex;
   align-items: center;

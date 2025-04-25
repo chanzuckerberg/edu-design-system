@@ -1,7 +1,8 @@
 @import '../../mixins.css';
 
 body {
-  font: var(--eds-theme-typography-body-md);
+  font: var(--eds-typography-preset-200) var(--eds-typography-font-weight-normal) var(--eds-typography-font-family-1);
+    letter-spacing: var(--eds-typography-letter-spacing-normal);
   display: flex;
   flex-direction: column;
   min-height: 100vh;

@@ -43,9 +43,9 @@ const headingPresetMap: Record<HeadingElement, Preset> = {
   h1: 'headline-lg',
   h2: 'headline-md',
   h3: 'headline-sm',
-  h4: 'title-md',
-  h5: 'title-sm',
-  h6: 'title-xs',
+  h4: 'title-lg',
+  h5: 'title-md',
+  h6: 'title-sm',
 };
 
 /**

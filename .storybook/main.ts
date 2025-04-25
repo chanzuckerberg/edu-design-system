@@ -1,14 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import type { Configuration } from 'webpack';
 
-/**
- * Although `--static-dir` is marked as deprecated. The The Chromatic CLI
- * currently pulls the staticDir from the build script, but does not support
- * the staticDirs configuration option.
- *
- * We should refrain from using the staticDirs option in this configuration until
- * https://github.com/chromaui/chromatic-cli/issues/462 is resolved.
- */
 const config = {
   stories: [
     './components/**/*.mdx',
@@ -33,6 +25,12 @@ const config = {
     '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
   ],
+
+  // TODO: update config and package.json scripts to support staticDirs
+  // This will allow creation of preview-head.html to preload font assets
+  // See: https://storybook.js.org/docs/configure/integration/images-and-assets
+  // See: https://www.chromatic.com/docs/font-loading/#solution-a-preload-fonts
+  // staticDirs: [...],
 
   framework: {
     name: '@storybook/react-webpack5',

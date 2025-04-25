@@ -247,6 +247,7 @@ export const InputField: InputFieldType = forwardRef(
                 className={labelClassName}
                 disabled={disabled}
                 htmlFor={idVar}
+                size="md"
               >
                 {label}
               </FieldLabel>
@@ -272,10 +273,14 @@ export const InputField: InputFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <div className={styles['input-field__character-counter']}>
+              <Text
+                as="div"
+                className={styles['input-field__character-counter']}
+                preset="body-sm"
+              >
                 <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
                 / {maxLengthShown}
-              </div>
+              </Text>
             )}
           </div>
         )}

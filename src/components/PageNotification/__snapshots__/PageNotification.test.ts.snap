@@ -43,7 +43,7 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -96,7 +96,7 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -149,7 +149,7 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -202,7 +202,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -215,7 +215,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -279,7 +279,7 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -332,7 +332,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -345,7 +345,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       <svg
         aria-hidden="true"
@@ -409,7 +409,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>
@@ -464,7 +464,7 @@ exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="button__text"
+          class="text text--label-sm button__text"
         >
           Call to Action
         </span>

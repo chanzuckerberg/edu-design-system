@@ -291,7 +291,12 @@ const SelectLabel = ({
 
   return (
     <div className={overlineClassName}>
-      <Label as={FieldLabel} className={componentClassName} disabled={disabled}>
+      <Label
+        as={FieldLabel}
+        className={componentClassName}
+        disabled={disabled}
+        size="md"
+      >
         {label}
       </Label>
       {required && showHint && (
@@ -464,7 +469,9 @@ export const SelectButtonWrapper = React.forwardRef<
       >
         {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-        <span className={textClassName}>{children}</span>
+        <Text as="span" className={textClassName} preset="input">
+          {children}
+        </Text>
         <Icon
           className={iconClassName}
           name={icon}

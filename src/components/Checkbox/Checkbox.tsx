@@ -6,7 +6,7 @@ import useForwardedRef from '../../util/useForwardedRef';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
-import FieldLabel from '../FieldLabel';
+import Label from '../Label';
 import Text from '../Text';
 
 import styles from './Checkbox.module.css';
@@ -131,9 +131,7 @@ export const Checkbox = Object.assign(
         />
         <div className={styles['checkbox__labels']}>
           {label && (
-            <FieldLabel disabled={disabled} htmlFor={checkboxId}>
-              {label}
-            </FieldLabel>
+            <Label disabled={disabled} htmlFor={checkboxId} text={label} />
           )}
           {subLabel && (
             <Text
@@ -150,7 +148,7 @@ export const Checkbox = Object.assign(
   }),
   {
     Input: CheckboxInput,
-    Label: FieldLabel,
+    Label: Label,
   },
 );
 

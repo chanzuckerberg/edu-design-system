@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
-import FieldLabel from '../FieldLabel';
+import Label from '../Label';
 import Text from '../Text';
 
 import styles from './Radio.module.css';
@@ -138,9 +138,7 @@ export const Radio = ({
         {...other}
       />
       <div className={styles['radio__labels']}>
-        <FieldLabel disabled={disabled} htmlFor={radioId}>
-          {label}
-        </FieldLabel>
+        {label && <Label disabled={disabled} htmlFor={radioId} text={label} />}
         {subLabel && (
           <Text
             as="span"
@@ -159,4 +157,4 @@ Radio.displayName = 'Radio';
 RadioInput.displayName = 'Radio.Input';
 
 Radio.Input = RadioInput;
-Radio.Label = FieldLabel;
+Radio.Label = Label;

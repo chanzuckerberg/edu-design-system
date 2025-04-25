@@ -11,6 +11,10 @@ export type LabelProps = {
    */
   className?: string;
   /**
+   * Indicates disabled state of the input.
+   */
+  disabled?: boolean;
+  /**
    * HTML `for` attribute, which maps the label to an associated input `id`
    */
   htmlFor?: string;
@@ -29,16 +33,17 @@ export type LabelProps = {
   /**
    * The label text string
    */
-  text: string;
+  text: ReactNode;
 };
 
 /**
  * `import {Label} from "@chanzuckerberg/eds";`
  *
- * Component Label used as legends for field groups (i.e. radio field).
+ * Label component used as legends for field groups (e.g., radio/checkbox fields).
  */
 export const Label = ({
   className,
+  disabled,
   htmlFor,
   id,
   labelAfter,
@@ -46,11 +51,17 @@ export const Label = ({
   text,
   ...other
 }: LabelProps) => {
-  const componentClassName = clsx(styles['label'], className);
+  const componentClassName = clsx(
+    styles['label'],
+    disabled && styles['label--disabled'],
+    className,
+  );
 
   return (
     <label className={componentClassName} htmlFor={htmlFor} id={id} {...other}>
-      {text}{' '}
+      <Text as="span" preset="body-md">
+        {text}
+      </Text>{' '}
       {labelAfter && (
         <Text as="span" preset="body-sm">
           {labelAfter}

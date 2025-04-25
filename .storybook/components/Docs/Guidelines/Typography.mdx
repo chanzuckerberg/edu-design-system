@@ -1,85 +1,91 @@
-import { Canvas, Meta } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 
 <Meta title="Documentation/Contributor Guidelines/Using Typography" />
 
 # Typography
 
-Typography in EDS follows [the same structure as design tokens](./?path=/story/documentation-guidelines-tokens--page), with the exception that typography operates as a _cluster_ of typography-specific style properties rather than a single style property.
+EDS defines named compositions for the tier 2 and 3 typography "tokens". Unlike other tokens, these are created
+piecemeal from tier 1 tokens, and need to be composed so that the values are applied to the right usages.
 
-## Basics: Typography values
+## Composing new presets
 
-These token values are _never to be used_ directly by components; these token values are assembled into typography presets.
+Tier 2/3 tokens are composed from the essential parts defined as tier 1 tokens, and defined under the `Heading`
+and `Text` components. The preset names used are exposed by these components, and map to the names used in Figma.
 
-Tokens include those prefixed by:
+Defined types are listed in `variant-types.ts` and map to classes defined in each component's CSS modules.
 
-- `eds-font-family-*`
-- `eds-font-weight-*`
-- `eds-letter-spacing-*`
-
-## Tier 1: Typography presets
-
-Just as with other Tier 1 tokens, typography presets shouldn't be used directly by components. Typography presets are mapped to specific semantic usage at the Tier 2 level.
-
-Note: `line-height` values are [unitless](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values) and are specific to each preset, which is why the decision was made to exclude line height values from tokens.
-
-All presets exist as inline [`font:`](https://developer.mozilla.org/en-US/docs/Web/CSS/font) values, and can be used in Tier 2 usages:
+For each preset, we define a main class which include custom properties for each component, then override the
+properties as needed.
 
 ```css
-font: var(--eds-typography-preset-001);
+.heading {
+  --heading-size-line-height: var(--eds-typography-preset-200);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-family: var(--eds-typography-font-family-1);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --heading-text-transform: ;
+
+  font: var(--heading-font-weight) var(--heading-size-line-height) var(--heading-font-family);
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: var(--heading-text-transform, none);
+}
 ```
 
-When defining a new usage, you can refer to the variable by name
+Here, we compose the values using the `font` shorthand property, and specify `letter-spacing`.
 
-```json
-{
-  "eds": {
-    "theme": {
-      "typography": {
-        "headline": {
-          "lg": {
-            "value": "{eds.typography.preset.001.bold}"
-          }
-        }
-      }
-    }
+Then, for each preset, we reset the custom property to map to the design values:
+
+```css
+.heading--headline-sm {
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+```
+
+For cases where we need to handle responsive behavior, we can nest media queries in each rule with relevant
+overrides (note the use of the PostCSS variable since custom properties cannot be used in media queries):
+
+```css
+.heading--headline-md {
+  --heading-size-line-height: var(--eds-typography-preset-600);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-size-line-height: var(--eds-typography-preset-800);
   }
 }
 ```
 
+In a future version of EDS, we will provide options to define per-theme values for each of these named presets.
+In the interim, such overrides are possible by using `style` prop on any `Header` or `Text` component to specify
+an override for any of these custom properties:
 
-## Tier 2: Typography usage
-
-Tier 2 typography values take the typography presets defined at the Tier 2 level and map them to a semantic usage value like so:
-
-Similar to the example above, you can use the token names in components and other code, make use of the presets using the `Heading` or `Text` components, or to define higher-tier tokens.
-
-These semantic values are then included in each component's style file:
-
-```css
-.breadcrumbs {
-  font: var(--eds-theme-typography-body-sm);
-}
+```jsx
+<Heading preset="heading-md" style={{"--heading-font-weight": "var(--eds-typography-font-weight-bold)"}}>...</Heading>
 ```
 
-And defining tier 3 tokens using lower token values:
+## Using `Heading` and `Text`
 
-```json
-{
-  "eds": {
-    "theme": {
-      "typography": {
-        "tab": {
-          "lg": {
-            "@": {
-              "value": "{eds.typography.preset.006.light}"
-            },
-            "active": {
-              "value": "{eds.typography.preset.006}"
-            }
-          },
-        }
-      }
-    }
-  }
-}
+Whenever possible, define typography using the `Heading` or `Text` components. In cases where the typography should be
+dynamic based on DOM structure, you can apply a style for `font` property in the style sheet. For tracking purposes, add
+in a comment to describe which preset the value maps to.
+
+```css
+/* preset: body-md */
+font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+letter-spacing: var(--eds-typography-letter-spacing-normal);
+```
+
+In cases where you need to compose with an offset, you can use the piecemeal preset values (`-font-size` and `-line-height`)
+to declare a value for the `font` properties.
+
+```css
+/* preset: headline-decorative-inline-xl */
+font-family: var(--eds-typography-font-family-1);
+font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset) * 1px);
+line-height: var(--eds-typography-preset-1400-line-height);
+font-weight: var(--eds-typography-font-weight-light);
+letter-spacing: var(--eds-typography-letter-spacing-normal);
 ```

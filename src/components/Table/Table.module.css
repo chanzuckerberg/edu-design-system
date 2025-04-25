@@ -15,8 +15,6 @@
  * The `:where` pseudo class function allows easy overriding via className.
  */
 :where(.table-cell) {
-  font: var(--eds-theme-typography-body-sm);
-
   padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
 }
 
@@ -25,7 +23,6 @@
  * The `:where` pseudo class function allows easy overriding via className.
  */
 :where(.table-header-cell) {
-  font: var(--eds-theme-typography-label-sm);
   padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
   text-align: left;
 }

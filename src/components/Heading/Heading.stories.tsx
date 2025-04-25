@@ -8,7 +8,7 @@ export default {
   component: Heading,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-1.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
 } as Meta<Args>;
 

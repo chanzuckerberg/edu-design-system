@@ -21,12 +21,17 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
     />
   </button>
   <label
-    class="toggle__label"
+    class="label toggle__label"
     data-headlessui-state=""
     for="headlessui-control-:r3:"
     id="headlessui-label-:r5:"
   >
-    Lorem ipsum
+    <span
+      class="text text--body-md"
+    >
+      Lorem ipsum
+    </span>
+     
   </label>
   <span
     hidden=""
@@ -41,12 +46,17 @@ exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
   data-headlessui-state=""
 >
   <label
-    class="toggle__label"
+    class="label toggle__label"
     data-headlessui-state=""
     for="headlessui-control-:ra:"
     id="headlessui-label-:rb:"
   >
-    Custom positioned label
+    <span
+      class="text text--body-md"
+    >
+      Custom positioned label
+    </span>
+     
   </label>
   <button
     aria-checked="false"
@@ -89,12 +99,17 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
     />
   </button>
   <label
-    class="toggle__label"
+    class="label toggle__label"
     data-headlessui-state=""
     for="headlessui-control-:r0:"
     id="headlessui-label-:r2:"
   >
-    Lorem ipsum
+    <span
+      class="text text--body-md"
+    >
+      Lorem ipsum
+    </span>
+     
   </label>
   <span
     hidden=""
@@ -125,12 +140,17 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
     />
   </button>
   <label
-    class="toggle__label"
+    class="label toggle__label"
     data-headlessui-state=""
     for="headlessui-control-:r6:"
     id="headlessui-label-:r8:"
   >
-    Lorem ipsum
+    <span
+      class="text text--body-md"
+    >
+      Lorem ipsum
+    </span>
+     
   </label>
   <span
     hidden=""

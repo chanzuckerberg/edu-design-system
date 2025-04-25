@@ -9,9 +9,13 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg fieldset__label"
+        class="label label--md"
       >
-        Legend
+        <span
+          class="text text--label-md"
+        >
+          Legend
+        </span>
       </label>
     </div>
   </legend>
@@ -33,9 +37,13 @@ exports[`<Fieldset /> FieldsetLegend story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg fieldset__label"
+      class="label label--md"
     >
-      Legend
+      <span
+        class="text text--label-md"
+      >
+        Legend
+      </span>
     </label>
   </div>
 </legend>
@@ -49,9 +57,13 @@ exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg fieldset__label"
+      class="label label--md"
     >
-      Legend
+      <span
+        class="text text--label-md"
+      >
+        Legend
+      </span>
     </label>
     <span
       class="text text--body-sm fieldset-legend__hint"
@@ -70,9 +82,13 @@ exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg fieldset__label"
+      class="label label--md"
     >
-      Legend
+      <span
+        class="text text--label-md"
+      >
+        Legend
+      </span>
     </label>
     <span
       class="text text--body-sm fieldset-legend__hint"
@@ -91,15 +107,23 @@ exports[`<Fieldset /> FieldsetLegendWithSubtitle story renders snapshot 1`] = `
     class="fieldset-legend__overline"
   >
     <label
-      class="label label--lg fieldset__label"
+      class="label label--md"
     >
-      Legend
+      <span
+        class="text text--label-md"
+      >
+        Legend
+      </span>
     </label>
   </div>
   <div
     class="field-note"
   >
-    With additional Subtitle
+    <span
+      class="text text--body-sm"
+    >
+      With additional Subtitle
+    </span>
   </div>
 </legend>
 `;
@@ -113,15 +137,23 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg fieldset__label"
+        class="label label--md"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       class="field-note"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -140,10 +172,15 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r0:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -160,10 +197,15 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r1:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -180,15 +222,23 @@ exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg fieldset__label"
+        class="label label--md"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       class="field-note"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -218,16 +268,24 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled fieldset__label"
+        class="label label--md label--disabled"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       aria-disabled="true"
       class="field-note field-note--disabled"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -247,11 +305,15 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r2:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -269,11 +331,15 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r3:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -292,16 +358,24 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled fieldset__label"
+        class="label label--md label--disabled"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       aria-disabled="true"
       class="field-note field-note--disabled"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -331,11 +405,15 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r8:"
         >
-          Radio Button
+          <span
+            class="text text--body-md"
+          >
+            Radio Button
+          </span>
+           
         </label>
       </div>
     </div>
@@ -363,11 +441,15 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r9:"
         >
-          Radio Button
+          <span
+            class="text text--body-md"
+          >
+            Radio Button
+          </span>
+           
         </label>
       </div>
     </div>
@@ -384,15 +466,23 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg fieldset__label"
+        class="label label--md"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       class="field-note"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -411,10 +501,15 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r4:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -431,10 +526,15 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r5:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -451,15 +551,23 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg fieldset__label"
+        class="label label--md"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       class="field-note"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -488,10 +596,15 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":ra:"
         >
-          Radio Button
+          <span
+            class="text text--body-md"
+          >
+            Radio Button
+          </span>
+           
         </label>
       </div>
     </div>
@@ -518,10 +631,15 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":rb:"
         >
-          Radio Button
+          <span
+            class="text text--body-md"
+          >
+            Radio Button
+          </span>
+           
         </label>
       </div>
     </div>
@@ -538,15 +656,23 @@ exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
       class="fieldset-legend__overline"
     >
       <label
-        class="label label--lg fieldset__label"
+        class="label label--md"
       >
-        Critical Fieldset
+        <span
+          class="text text--label-md"
+        >
+          Critical Fieldset
+        </span>
       </label>
     </div>
     <div
       class="field-note"
     >
-      Some extra descriptive text
+      <span
+        class="text text--body-sm"
+      >
+        Some extra descriptive text
+      </span>
     </div>
   </legend>
   <div
@@ -575,10 +701,15 @@ exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r6:"
         >
-          Radio Button
+          <span
+            class="text text--body-md"
+          >
+            Radio Button
+          </span>
+           
         </label>
       </div>
     </div>
@@ -605,10 +736,15 @@ exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
         class="radio__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r7:"
         >
-          Radio Button
+          <span
+            class="text text--body-md"
+          >
+            Radio Button
+          </span>
+           
         </label>
       </div>
     </div>

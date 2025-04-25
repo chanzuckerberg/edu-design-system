@@ -12,7 +12,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Name
         </div>
@@ -21,7 +21,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Status
         </div>
@@ -30,7 +30,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Chart
         </div>
@@ -39,7 +39,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Window
         </div>
@@ -48,7 +48,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Last Update
         </div>
@@ -62,56 +62,47 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 5
+        </p>
       </td>
     </tr>
     <tr
@@ -120,27 +111,47 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 5
+        </p>
       </td>
     </tr>
     <tr
@@ -149,27 +160,96 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 5
+        </p>
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 1
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 2
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 3
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 4
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 5
+        </p>
       </td>
     </tr>
   </tbody>
@@ -188,7 +268,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Sortable
           <button
@@ -197,7 +277,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
             type="button"
           >
             <span
-              class="button__text"
+              class="text text--label-sm button__text"
             >
               <svg
                 aria-hidden="true"
@@ -221,7 +301,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Not sortable
         </div>
@@ -235,26 +315,20 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Value 1
+        <p
+          class="text text--body-sm"
+        >
+          Value 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Value A
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Value 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Value B
+        <p
+          class="text text--body-sm"
+        >
+          Value A
+        </p>
       </td>
     </tr>
     <tr
@@ -263,12 +337,20 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Value 2
+        <p
+          class="text text--body-sm"
+        >
+          Value 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Value C
+        <p
+          class="text text--body-sm"
+        >
+          Value B
+        </p>
       </td>
     </tr>
     <tr
@@ -277,12 +359,42 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Value 4
+        <p
+          class="text text--body-sm"
+        >
+          Value 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Value D
+        <p
+          class="text text--body-sm"
+        >
+          Value C
+        </p>
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Value 4
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Value D
+        </p>
       </td>
     </tr>
   </tbody>
@@ -302,7 +414,7 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
           class="table-header-cell"
         >
           <div
-            class="table-header-cell__container"
+            class="text text--label-sm table-header-cell__container"
           >
             Students
           </div>
@@ -311,7 +423,7 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
           class="table-header-cell"
         >
           <div
-            class="table-header-cell__container"
+            class="text text--label-sm table-header-cell__container"
           >
             Status
           </div>
@@ -320,7 +432,7 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
           class="table-header-cell"
         >
           <div
-            class="table-header-cell__container"
+            class="text text--label-sm table-header-cell__container"
           >
             Cog skill
           </div>
@@ -329,7 +441,7 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
           class="table-header-cell"
         >
           <div
-            class="table-header-cell__container"
+            class="text text--label-sm table-header-cell__container"
           >
             Time submitted
           </div>
@@ -343,46 +455,38 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
         <td
           class="table-cell"
         >
-          Araya, Raquel
+          <p
+            class="text text--body-sm"
+          >
+            Araya, Raquel
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          Stop and Revise
+          <p
+            class="text text--body-sm"
+          >
+            Stop and Revise
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          3
+          <p
+            class="text text--body-sm"
+          >
+            3
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          2 hours ago
-        </td>
-      </tr>
-      <tr
-        class="table-row"
-      >
-        <td
-          class="table-cell"
-        >
-          Jesse Banet
-        </td>
-        <td
-          class="table-cell"
-        >
-          Stop and Revise
-        </td>
-        <td
-          class="table-cell"
-        >
-          1
-        </td>
-        <td
-          class="table-cell"
-        >
-          3 days ago
+          <p
+            class="text text--body-sm"
+          >
+            2 hours ago
+          </p>
         </td>
       </tr>
       <tr
@@ -391,46 +495,38 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
         <td
           class="table-cell"
         >
-          Julie Davis
+          <p
+            class="text text--body-sm"
+          >
+            Jesse Banet
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          Working
+          <p
+            class="text text--body-sm"
+          >
+            Stop and Revise
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          0
+          <p
+            class="text text--body-sm"
+          >
+            1
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          3 days ago
-        </td>
-      </tr>
-      <tr
-        class="table-row"
-      >
-        <td
-          class="table-cell"
-        >
-          Hussain, Adnan
-        </td>
-        <td
-          class="table-cell"
-        >
-          Review Feedback
-        </td>
-        <td
-          class="table-cell"
-        >
-          0
-        </td>
-        <td
-          class="table-cell"
-        >
-          3 days ago
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
         </td>
       </tr>
       <tr
@@ -439,46 +535,38 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
         <td
           class="table-cell"
         >
-          Ilango, Megha
+          <p
+            class="text text--body-sm"
+          >
+            Julie Davis
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          Needs Feedback
+          <p
+            class="text text--body-sm"
+          >
+            Working
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          3
+          <p
+            class="text text--body-sm"
+          >
+            0
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          3 days ago
-        </td>
-      </tr>
-      <tr
-        class="table-row"
-      >
-        <td
-          class="table-cell"
-        >
-          Jaffer, Arman
-        </td>
-        <td
-          class="table-cell"
-        >
-          Needs Feedback
-        </td>
-        <td
-          class="table-cell"
-        >
-          1
-        </td>
-        <td
-          class="table-cell"
-        >
-          3 days ago
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
         </td>
       </tr>
       <tr
@@ -487,46 +575,38 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
         <td
           class="table-cell"
         >
-          Kang, Michelle
+          <p
+            class="text text--body-sm"
+          >
+            Hussain, Adnan
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          Review Feedback
+          <p
+            class="text text--body-sm"
+          >
+            Review Feedback
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          1
+          <p
+            class="text text--body-sm"
+          >
+            0
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          3 days ago
-        </td>
-      </tr>
-      <tr
-        class="table-row"
-      >
-        <td
-          class="table-cell"
-        >
-          Lewine, Chris
-        </td>
-        <td
-          class="table-cell"
-        >
-          Continue Working
-        </td>
-        <td
-          class="table-cell"
-        >
-          2
-        </td>
-        <td
-          class="table-cell"
-        >
-          3 days ago
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
         </td>
       </tr>
       <tr
@@ -535,22 +615,198 @@ exports[`<Table /> StackedCardsExample story renders snapshot 1`] = `
         <td
           class="table-cell"
         >
-          Luo, Celia
+          <p
+            class="text text--body-sm"
+          >
+            Ilango, Megha
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          Review Feedback
+          <p
+            class="text text--body-sm"
+          >
+            Needs Feedback
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          1
+          <p
+            class="text text--body-sm"
+          >
+            3
+          </p>
         </td>
         <td
           class="table-cell"
         >
-          3 days ago
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Jaffer, Arman
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Needs Feedback
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            1
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Kang, Michelle
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Review Feedback
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            1
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Lewine, Chris
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Continue Working
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            2
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Luo, Celia
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            Review Feedback
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            1
+          </p>
+        </td>
+        <td
+          class="table-cell"
+        >
+          <p
+            class="text text--body-sm"
+          >
+            3 days ago
+          </p>
         </td>
       </tr>
     </tbody>
@@ -573,7 +829,7 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Name
         </div>
@@ -582,7 +838,7 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Status
         </div>
@@ -591,7 +847,7 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Chart
         </div>
@@ -600,7 +856,7 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Window
         </div>
@@ -609,7 +865,7 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           Last Update
         </div>
@@ -623,56 +879,47 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 5
+        </p>
       </td>
     </tr>
     <tr
@@ -681,27 +928,47 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 5
+        </p>
       </td>
     </tr>
     <tr
@@ -710,27 +977,96 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 5
+        </p>
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 1
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 2
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 3
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 4
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 5
+        </p>
       </td>
     </tr>
   </tbody>
@@ -752,7 +1088,7 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           <em>
             Name
@@ -763,7 +1099,7 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           <em>
             Status
@@ -774,7 +1110,7 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           <em>
             Chart
@@ -785,7 +1121,7 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           <em>
             Window
@@ -796,7 +1132,7 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
         class="table-header-cell"
       >
         <div
-          class="table-header-cell__container"
+          class="text text--label-sm table-header-cell__container"
         >
           <em>
             Last Update
@@ -812,56 +1148,47 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 1, Table Cell 5
+        </p>
       </td>
     </tr>
     <tr
@@ -870,27 +1197,47 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 3, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 2, Table Cell 5
+        </p>
       </td>
     </tr>
     <tr
@@ -899,27 +1246,96 @@ exports[`<Table /> TableWithStyledHeader story renders snapshot 1`] = `
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 1
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 1
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 2
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 2
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 3
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 3
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 4
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 4
+        </p>
       </td>
       <td
         class="table-cell"
       >
-        Table Row 4, Table Cell 5
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 3, Table Cell 5
+        </p>
+      </td>
+    </tr>
+    <tr
+      class="table-row"
+    >
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 1
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 2
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 3
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 4
+        </p>
+      </td>
+      <td
+        class="table-cell"
+      >
+        <p
+          class="text text--body-sm"
+        >
+          Table Row 4, Table Cell 5
+        </p>
       </td>
     </tr>
   </tbody>

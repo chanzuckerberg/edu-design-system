@@ -12,8 +12,9 @@
  * Component 2.0 Mixins
  */
 @define-mixin inputStyles {
-  font: var(--eds-theme-typography-form-input);
-  font-family: inherit;
+  /* preset: input */
+  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+  letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   appearance: none;
   -webkit-appearance: none;

@@ -19,7 +19,7 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Documentation Links
       <svg
@@ -63,7 +63,11 @@ exports[`<Menu /> MenuWithAvatarButton story renders snapshot 1`] = `
       class="avatar avatar--circle avatar--md avatar--initials"
       role="img"
     >
-      JS
+      <span
+        class="text text--title-md"
+      >
+        JS
+      </span>
     </div>
   </button>
 </div>
@@ -152,7 +156,7 @@ exports[`<Menu /> WithCustomSecondaryButton story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Secondary Button
     </span>
@@ -179,7 +183,7 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Long Trigger Button Text to Demonstrate Popover Matching
       <svg
@@ -220,7 +224,7 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     type="button"
   >
     <span
-      class="button__text"
+      class="text text--label-lg button__text"
     >
       Menu
       <svg

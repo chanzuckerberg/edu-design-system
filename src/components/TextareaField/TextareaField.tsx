@@ -198,7 +198,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
       disabled && styles['textarea-field__overline--disabled'],
     );
     const labelClassName = clsx(
-      styles['textarea-field__label'],
       disabled && styles['textarea-field__label--disabled'],
     );
 
@@ -223,7 +222,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
-              <FieldLabel className={labelClassName} htmlFor={idVar}>
+              <FieldLabel className={labelClassName} htmlFor={idVar} size="md">
                 {label}
               </FieldLabel>
             )}
@@ -246,10 +245,13 @@ export const TextareaField: TextareaFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <div className={styles['textarea-field__character-counter']}>
+              <Text
+                className={styles['textarea-field__character-counter']}
+                preset="body-sm"
+              >
                 <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
                 / {maxLengthShown}
-              </div>
+              </Text>
             )}
           </div>
         )}
