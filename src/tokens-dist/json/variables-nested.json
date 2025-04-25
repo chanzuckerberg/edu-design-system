@@ -307,7 +307,7 @@
           "tabUnderline": {
             "@": "50",
             "default": "9999",
-            "sticky": "50"
+            "sticky": "9999"
           }
         },
         "width": "1"
