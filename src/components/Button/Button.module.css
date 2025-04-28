@@ -14,7 +14,7 @@
 
 .button__text {
   display: flex;
-  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-half) * 1px);
   align-items: center;
   justify-content: center;
 
@@ -27,12 +27,12 @@
   .button--sm & {
     /* Offset to better align text in small button */
     transform: translateY(-1px);
-    gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+    gap: calc(var(--eds-spacing-size-half) * 1px);
   }
 
   .button--md &,
   .button--lg & {
-    gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+    gap: calc(var(--eds-spacing-size-1) * 1px);
   }
 
   & svg {
@@ -62,37 +62,37 @@
  */
 .button--lg {
   align-items: center;
-  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) calc(var(--eds-spacing-size-2-and-half) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2-and-half) * 1px);
 }
 
 .button--md {
   align-items: center;
-  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .button--sm {
-  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
 }
 
 .button--size-lg {
-  min-width: calc(var(--eds-spacing-size-9) / 16 * 1rem);
-  max-width: calc(var(--eds-spacing-size-40) / 16 * 1rem);
-  min-height: calc(var(--eds-spacing-size-5) / 16 * 1rem);
-  max-height: calc(var(--eds-spacing-size-5) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-9) * 1px);
+  max-width: calc(var(--eds-spacing-size-40) * 1px);
+  min-height: calc(var(--eds-spacing-size-5) * 1px);
+  max-height: calc(var(--eds-spacing-size-5) * 1px);
 }
 
 .button--size-md {
   min-width: 3.75rem;
-  max-width: calc(var(--eds-spacing-size-32) / 16 * 1rem);
-  min-height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
-  max-height: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  max-width: calc(var(--eds-spacing-size-32) * 1px);
+  min-height: calc(var(--eds-spacing-size-4) * 1px);
+  max-height: calc(var(--eds-spacing-size-4) * 1px);
 }
 
 .button--size-sm {
-  min-width: calc(var(--eds-spacing-size-6) / 16 * 1rem);
-  max-width: calc(var(--eds-spacing-size-24) / 16 * 1rem);
-  min-height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  max-height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  min-width: calc(var(--eds-spacing-size-6) * 1px);
+  max-width: calc(var(--eds-spacing-size-24) * 1px);
+  min-height: calc(var(--eds-spacing-size-3) * 1px);
+  max-height: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 .button--full-width {
@@ -108,40 +108,40 @@
 }
 
 .button--lg.button--layout-left {
-  padding-left: calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  padding-left: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .button--lg.button--layout-right {
-  padding-right: calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .button--lg.button--layout-icon-only {
-  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-5) / 16 * 1rem);
-  min-width: calc(var(--eds-spacing-size-5) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
+  width: calc(var(--eds-spacing-size-5) * 1px);
+  min-width: calc(var(--eds-spacing-size-5) * 1px);
 }
 
 .button--md.button--layout-icon-only {
-  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
-  min-width: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
+  width: calc(var(--eds-spacing-size-4) * 1px);
+  min-width: calc(var(--eds-spacing-size-4) * 1px);
 }
 
 .button--sm.button--layout-icon-only {
-  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  min-width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) * 1px);
+  width: calc(var(--eds-spacing-size-3) * 1px);
+  min-width: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 .button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) / 16 * 1rem) var(--eds-theme-color-background-utility-base-2), 0 0 0 calc(var(--eds-spacing-size-half) / 16 * 1rem) var(--eds-theme-color-border-utility-focus);
+  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-background-utility-base-2), 0 0 0 calc(var(--eds-spacing-size-half) * 1px) var(--eds-theme-color-border-utility-focus);
 }
 
 /* stylelint-disable-next-line eds/no-tier-1-color-variable */
 .button.button--variant-inverse:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) / 16 * 1rem) rgb(var(--eds-color-black) / 1), 0 0 0 calc(var(--eds-spacing-size-half) / 16 * 1rem) var(--eds-theme-color-background-utility-base-2);
+  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) rgb(var(--eds-color-black) / 1), 0 0 0 calc(var(--eds-spacing-size-half) * 1px) var(--eds-theme-color-background-utility-base-2);
 }
 
 /**

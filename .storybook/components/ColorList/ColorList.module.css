@@ -1,6 +1,6 @@
 .color-list__label {
   width: fit-content;
-  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) * 1px);
   border-radius: calc(var(--eds-theme-box-button-border-radius) * 1px);
 
   color: rgb(235, 87, 87);

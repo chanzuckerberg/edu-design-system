@@ -9,10 +9,10 @@
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-6) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-6) * 1px);
 
   text-align: start;
-  margin: 0 calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  margin: 0 calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 }
 
 .data-table__caption-text {
@@ -35,7 +35,7 @@
 
   .data-table__caption+&,
   .data-table__subcaption+& {
-    margin-top: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+    margin-top: calc(var(--eds-spacing-size-4) * 1px);
   }
 }
 
@@ -54,7 +54,7 @@
 }
 
 .data-table__search {
-  width: calc(var(--eds-spacing-size-34) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-34) * 1px);
 }
 
 .data-table--tableStyle-border {
@@ -87,7 +87,7 @@
 
 .data-table__header-cell {
   display: flex;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
   align-items: flex-start;
   height: 100%;
   overflow: hidden;
@@ -102,22 +102,22 @@
     /* preset: title-sm */
     font: var(--eds-typography-font-weight-bold) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
     /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
-    padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }
 
   .data-table--size-md & {
     /* preset: title-md */
     font: var(--eds-typography-font-weight-bold) var(--eds-typography-preset-300) var(--eds-typography-font-family-1);
 
-    padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px);
   }
 
   .data-cell__cell--icon {
-    margin-top: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+    margin-top: calc(var(--eds-spacing-size-1) * 1px);
     flex-shrink: 0;
 
     .data-table--size-sm & {
-      margin-top: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+      margin-top: calc(var(--eds-spacing-size-half) * 1px);
     }
   }
 }
@@ -139,7 +139,7 @@
 
 .data-table__cell {
   display: flex;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
   align-items: flex-start;
   height: 100%;
   overflow: hidden;
@@ -155,15 +155,15 @@
     font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
     letter-spacing: var(--eds-typography-letter-spacing-normal);
 
-    padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px);
   }
 
   .data-cell__cell--icon {
-    margin-top: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+    margin-top: calc(var(--eds-spacing-size-half) * 1px);
     flex-shrink: 0;
   }
 }
@@ -184,11 +184,11 @@
   pointer-events: none;
 
   .data-table--size-sm & {
-    padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) calc(var(--eds-spacing-size-1) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem) calc(var(--eds-spacing-size-3) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-3) * 1px);
   }
 }
 

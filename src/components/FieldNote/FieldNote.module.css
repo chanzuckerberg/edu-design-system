@@ -21,8 +21,8 @@
   position: relative;
   flex-shrink: 0;
   align-self: flex-start;
-  margin-top: calc(var(--eds-spacing-size-half) / 16 * 1rem);
-  margin-right: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  margin-top: calc(var(--eds-spacing-size-half) * 1px);
+  margin-right: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 /**

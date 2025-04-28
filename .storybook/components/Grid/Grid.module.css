@@ -13,15 +13,15 @@
   margin: 0 -1.5rem;
 
   >* {
-    padding: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-1-and-half) * 1px);
     width: 100%;
   }
 
   @supports (display: grid) {
     margin: 0;
     display: grid;
-    grid-row-gap: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-    grid-column-gap: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+    grid-row-gap: calc(var(--eds-spacing-size-3) * 1px);
+    grid-column-gap: calc(var(--eds-spacing-size-3) * 1px);
 
     >* {
       padding: 0;
@@ -31,7 +31,7 @@
 }
 
 .grid--gap-sm {
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 /**
@@ -96,7 +96,7 @@
   @media all and (min-width: $eds-bp-md) {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+    margin: 0 calc(var(--eds-spacing-size-1-and-half) * 1px);
   }
 
   @supports (display: grid) {
@@ -207,7 +207,7 @@
  */
 .grid__item {
   .grid & {
-    padding: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+    padding: calc(var(--eds-spacing-size-1-and-half) * 1px);
     width: 100%;
 
     @supports (display: grid) {

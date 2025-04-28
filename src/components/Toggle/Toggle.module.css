@@ -11,8 +11,8 @@
   position: relative;
   display: inline-flex;
 
-  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-7) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) * 1px);
+  width: calc(var(--eds-spacing-size-7) * 1px);
 
   flex-shrink: 0;
   align-items: center;
@@ -80,7 +80,7 @@
   display: flex;
   align-items: center;
 
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 /**
@@ -89,8 +89,8 @@
 .toggle__button-thumb {
   display: inline-block;
 
-  height: calc(var(--eds-spacing-size-2-and-half) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-2-and-half) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-2-and-half) * 1px);
+  width: calc(var(--eds-spacing-size-2-and-half) * 1px);
 
   /* The transparent border is used to support Windows high contrast mode and reduce potential jiggling with adding / removing borders */
   border: calc(var(--eds-theme-border-width) * 1px) solid transparent;

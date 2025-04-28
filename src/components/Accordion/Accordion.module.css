@@ -9,10 +9,10 @@
  * Reveals itself below the associated Accordion Button.
  */
 .accordion-panel {
-  padding: 0 calc(var(--eds-spacing-size-7) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  padding: 0 calc(var(--eds-spacing-size-7) * 1px) calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-2) * 1px);
 
   &.accordion-panel--leading-icon {
-    padding-left: calc(var(--eds-spacing-size-7) / 16 * 1rem);
+    padding-left: calc(var(--eds-spacing-size-7) * 1px);
   }
 
   color: var(--eds-theme-color-text-utility-default-primary);
@@ -24,7 +24,7 @@
 .accordion-button {
   display: flex;
   justify-content: flex-start;
-  gap: calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-2) * 1px);
   width: 100%;
 
   border: 0;
@@ -50,7 +50,7 @@
  */
 .accordion-button--sm,
 .accordion-button--md {
-  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
 }
 
 /**
@@ -95,7 +95,7 @@
 }
 
 .accordion-button:focus-visible {
-  outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
 }
 
 .accordion-button__leading-icon {

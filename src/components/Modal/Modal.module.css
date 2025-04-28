@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--eds-spacing-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-2) * 1px);
 
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
@@ -58,7 +58,7 @@
 .modal-header {
   width: 100%;
 
-  padding: calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 }
 
 .modal-title {
@@ -69,7 +69,7 @@
  */
 .modal-body {
   flex: 1;
-  padding: 0 calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  padding: 0 calc(var(--eds-spacing-size-4) * 1px);
 }
 
 /**
@@ -79,7 +79,7 @@
   width: 100%;
   z-index: 1000;
 
-  padding: calc(var(--eds-spacing-size-3) / 16 * 1rem) calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 
   background-color: var(--eds-theme-color-background-utility-container);
 }
@@ -134,7 +134,7 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-sm) {
@@ -162,54 +162,54 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: auto;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 50rem;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-width: 50rem;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-width: 60rem;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-width: 60rem;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
   }
 
   &.modal__content--height-max {
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
-      height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 50rem;
-      height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-width: 50rem;
-      height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-width: 60rem;
-      height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-width: 60rem;
-      height: calc(100vh - (var(--eds-spacing-size-12) / 16 * 1rem));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
   }
 }

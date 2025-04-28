@@ -17,8 +17,8 @@
 .select__overline {
   display: flex;
   align-items: center;
-  margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
-  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
+  gap: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 .select__overline--no-label {
@@ -42,7 +42,7 @@
   flex-direction: row;
   align-items: baseline;
 
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 /**
@@ -50,7 +50,7 @@
  */
 .select-button {
   width: 100%;
-  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
 
   border: calc(var(--eds-border-width-sm) * 1px) solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 
   cursor: pointer;
 
@@ -96,7 +96,7 @@
 }
 
 .select--has-fieldNote {
-  margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 

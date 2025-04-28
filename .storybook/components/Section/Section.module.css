@@ -8,8 +8,8 @@
  * A section is a discrete section of a web page.
  */
 .section {
-  padding-top: calc(var(--eds-spacing-size-4) / 16 * 1rem);
-  padding-bottom: calc(var(--eds-spacing-size-4) / 16 * 1rem);
+  padding-top: calc(var(--eds-spacing-size-4) * 1px);
+  padding-bottom: calc(var(--eds-spacing-size-4) * 1px);
 }
 
 /**
@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
-  margin-bottom: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+  margin-bottom: calc(var(--eds-spacing-size-3) * 1px);
 
   /**
    * Section header within centered section
@@ -45,7 +45,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 
   /*  To center the header, flex-grow must be disabled. */
   .section--center & {
@@ -103,7 +103,7 @@
 */
 .section__overline {
   margin-top: 0;
-  margin-bottom: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 /**
@@ -112,7 +112,7 @@
  * Optional string that appears beneath the section title.
  */
 .section__description {
-  margin-top: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  margin-top: calc(var(--eds-spacing-size-half) * 1px);
   margin-bottom: 0;
 }
 

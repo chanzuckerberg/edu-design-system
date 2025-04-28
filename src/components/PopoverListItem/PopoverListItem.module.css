@@ -7,7 +7,7 @@
  */
 .popover-list-item {
   display: flex;
-  padding: calc(var(--eds-spacing-size-half) / 16 * 1rem) 0.75rem;
+  padding: calc(var(--eds-spacing-size-half) * 1px) 0.75rem;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -38,7 +38,7 @@
 .popover-list-item__icon {
   display: flex;
   align-items: center;
-  padding-right: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-1) * 1px);
 
   /* if an icon container is adjacent to a container with a sub-label, don't use flex */
   &:has(+ div > .popover-list-item__sub-label) {
@@ -48,7 +48,7 @@
 
 .popover-list-item__no-icon {
   /* right padding applies space for the icon itself and the padding for that icon container */
-  padding-right: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 .popover-list-item__sub-label {
