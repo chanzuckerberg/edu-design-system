@@ -436,9 +436,9 @@
                 "active": "#DFD9D6"
               },
               "mediumEmphasis": {
-                "@": "#6C6967",
-                "hover": "#565352",
-                "active": "#3F3E3D"
+                "@": "#565352",
+                "hover": "#3F3E3D",
+                "active": "#272625"
               },
               "highEmphasis": {
                 "@": "#0F2163",
@@ -499,9 +499,9 @@
                 "active": "#F9DA78"
               },
               "highEmphasis": {
-                "@": "#FDF3D3",
-                "hover": "#FBE8AB",
-                "active": "#F9DA78"
+                "@": "#F1CA53",
+                "hover": "#E7B724",
+                "active": "#C4970C"
               }
             },
             "information": {
@@ -597,9 +597,9 @@
                 "active": "#A09C9A"
               },
               "mediumEmphasis": {
-                "@": "#6C6967",
-                "hover": "#565352",
-                "active": "#3F3E3D"
+                "@": "#565352",
+                "hover": "#3F3E3D",
+                "active": "#272625"
               },
               "highEmphasis": {
                 "@": "#0F2163",
@@ -982,9 +982,9 @@
                 "active": "#060E30"
               },
               "secondary": {
-                "@": "#6C6967",
-                "hover": "#565352",
-                "active": "#3F3E3D"
+                "@": "#565352",
+                "hover": "#3F3E3D",
+                "active": "#272625"
               }
             },
             "interactive": {
@@ -1020,7 +1020,7 @@
             "informational": {
               "@": "#3165D2",
               "hover": "#254EAC",
-              "active": "#1B3889"
+              "active": "#060E30"
             },
             "disabled": {
               "primary": "#A09C9A",
@@ -1128,9 +1128,9 @@
                 "active": "#060E30"
               },
               "secondary": {
-                "@": "#6C6967",
-                "hover": "#565352",
-                "active": "#3F3E3D"
+                "@": "#565352",
+                "hover": "#3F3E3D",
+                "active": "#272625"
               }
             },
             "interactive": {

@@ -6,7 +6,7 @@
  * AppNotification
  */
 .app-notification {
-    padding: 1.5rem;
+    padding: calc(var(--eds-spacing-size-3) * 1px);
 
     &.app-notification--color-dark {
         color: var(--eds-theme-color-text-utility-inverse);
@@ -14,6 +14,16 @@
     }
 
     &.app-notification--color-light {
+        color: var(--eds-theme-color-text-utility-default-primary-active);
+        background-color: var(--eds-theme-color-background-utility-container);
+    }
+
+    &.app-notification--variant-default {
+        color: var(--eds-theme-color-text-utility-inverse);
+        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+    }
+
+    &.app-notification--variant-inverse {
         color: var(--eds-theme-color-text-utility-default-primary-active);
         background-color: var(--eds-theme-color-background-utility-container);
     }
@@ -31,21 +41,18 @@
 }
 
 .app-notification__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(var(--eds-spacing-size-1) * 1px);
 }
 
-/* .app-notification__sub-title {
-} */
-
 .app-notification__actions {
-    margin-top: 1.5rem;
+    margin-top: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 .app-notification__content {
     /* TODO: should this magic number exist as some token? */
     max-width: 1320px;
     display: flex;
-    gap: 0.5rem;
+    gap: calc(var(--eds-spacing-size-1) * 1px);
 
     & > section {
         width: 100%;
@@ -54,6 +61,6 @@
 
 .app-notification__close-btn {
     flex-shrink: 0;
-    margin-top: -0.5rem;
-    margin-right: -0.5rem;
+    margin-top: calc(var(--eds-spacing-size-1) * -1px);
+    margin-right: calc(var(--eds-spacing-size-1) * -1px);
 }
