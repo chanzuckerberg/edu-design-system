@@ -93,7 +93,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       variant === 'inverse' && styles[`link--variant-${variant}`],
     );
 
-    const iconSize = size && (['xl', 'lg'].includes(size) ? '1.5rem' : '1rem');
+    const iconSize = size && (['xl', 'lg'].includes(size) ? '24px' : '16px');
 
     assertEdsUsage(
       [context === 'inline' && emphasis === 'low'],

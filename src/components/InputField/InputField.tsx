@@ -323,7 +323,7 @@ export const InputField: InputFieldType = forwardRef(
           )}
           {leadingIcon && (
             <div className={styles['input-field__leading-icon']}>
-              <Icon name={leadingIcon} purpose="decorative" size="1.5rem" />
+              <Icon name={leadingIcon} purpose="decorative" size="24px" />
             </div>
           )}
         </div>

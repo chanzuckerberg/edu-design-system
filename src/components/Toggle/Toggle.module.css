@@ -109,12 +109,12 @@
  * The unchecked state of the circle indicator.
  */
 .toggle__button--unchecked>.toggle__button-thumb {
-  transform: translateX(0.0625rem);
+  transform: translateX(1px);
 }
 
 /**
  * The checked state of the circle indicator.
  */
 .toggle__button--checked>.toggle__button-thumb {
-  transform: translateX(2.0625rem);
+  transform: translateX(33px);
 }

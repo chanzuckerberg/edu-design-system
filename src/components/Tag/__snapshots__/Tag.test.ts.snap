@@ -54,10 +54,10 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon"
       fill="currentColor"
-      height="1rem"
-      style="--icon-size: 1rem;"
+      height="16px"
+      style="--icon-size: 16px;"
       viewBox="0 0 24 24"
-      width="1rem"
+      width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -77,10 +77,10 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon"
       fill="currentColor"
-      height="1rem"
-      style="--icon-size: 1rem;"
+      height="16px"
+      style="--icon-size: 16px;"
       viewBox="0 0 24 24"
-      width="1rem"
+      width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -100,10 +100,10 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon"
       fill="currentColor"
-      height="1rem"
-      style="--icon-size: 1rem;"
+      height="16px"
+      style="--icon-size: 16px;"
       viewBox="0 0 24 24"
-      width="1rem"
+      width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -123,10 +123,10 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon"
       fill="currentColor"
-      height="1rem"
-      style="--icon-size: 1rem;"
+      height="16px"
+      style="--icon-size: 16px;"
       viewBox="0 0 24 24"
-      width="1rem"
+      width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

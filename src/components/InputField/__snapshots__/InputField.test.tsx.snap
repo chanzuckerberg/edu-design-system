@@ -196,11 +196,11 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -293,10 +293,10 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
+          height="24px"
+          style="--icon-size: 24px;"
           viewBox="0 0 24 24"
-          width="1.5rem"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -351,10 +351,10 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -830,11 +830,11 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -1011,11 +1011,11 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>

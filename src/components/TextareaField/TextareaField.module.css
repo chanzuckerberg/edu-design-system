@@ -9,7 +9,7 @@
  */
 .textarea {
   @mixin inputStyles;
-  padding: calc(var(--eds-spacing-size-1) * 1px) 0.75rem;
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
 
   &:read-only:not(:disabled) {
     border: 0;

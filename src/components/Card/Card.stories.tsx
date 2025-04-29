@@ -134,7 +134,7 @@ function CardMenu() {
         <Icon
           name="dots-horizontal"
           purpose="informative"
-          size="2rem"
+          size="32px"
           title="show more"
         />
       </Menu.PlainButton>

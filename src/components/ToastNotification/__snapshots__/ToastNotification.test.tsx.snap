@@ -8,10 +8,10 @@ exports[`<ToastNotification /> Critical story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -38,10 +38,10 @@ exports[`<ToastNotification /> Default story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -68,10 +68,10 @@ exports[`<ToastNotification /> Favorable story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -98,10 +98,10 @@ exports[`<ToastNotification /> NotDismissable story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

@@ -412,7 +412,7 @@ export const DataTableHeaderCell = ({
           className={styles['data-cell__cell--icon']}
           name={leadingIcon}
           purpose="decorative"
-          size="1rem"
+          size="16px"
         />
       )}
       {(children || sublabel) && (
@@ -463,7 +463,7 @@ export const DataTableDataCell = ({
           className={styles['data-cell__cell--icon']}
           name={leadingIcon}
           purpose="decorative"
-          size="1rem"
+          size="16px"
         />
       )}
       {(children || sublabel) && (
@@ -510,7 +510,7 @@ export const DataTableStatusCell = ({
         <Icon
           name={getIconNameFromStatus(status)}
           purpose="decorative"
-          size={size === 'sm' ? '1rem' : '1.5rem'}
+          size={size === 'sm' ? '16px' : '24px'}
         />
       )}
     </div>

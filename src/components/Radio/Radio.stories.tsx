@@ -90,9 +90,9 @@ export const LongLabels = {
       <div
         style={{
           display: 'grid',
-          width: '20rem',
+          width: '320px',
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-          gap: '1rem',
+          gap: '16px',
         }}
       >
         <Radio checked label={label} name="option-long-label" readOnly />

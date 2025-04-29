@@ -7,7 +7,7 @@
  */
 .popover-list-item {
   display: flex;
-  padding: calc(var(--eds-spacing-size-half) * 1px) 0.75rem;
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
   cursor: pointer;
   width: 100%;
   text-align: left;

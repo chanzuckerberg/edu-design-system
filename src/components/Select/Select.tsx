@@ -476,7 +476,7 @@ export const SelectButtonWrapper = React.forwardRef<
           className={iconClassName}
           name={icon}
           purpose="decorative"
-          size="1.5rem"
+          size="24px"
         />
       </button>
     );

@@ -4433,10 +4433,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -4562,10 +4562,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -4675,10 +4675,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -4788,10 +4788,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -4901,10 +4901,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5014,10 +5014,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5127,10 +5127,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5240,10 +5240,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5353,10 +5353,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5466,10 +5466,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5579,10 +5579,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5692,10 +5692,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -5805,10 +5805,10 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -6097,10 +6097,10 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -6265,10 +6265,10 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -6509,10 +6509,10 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9036,10 +9036,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9165,10 +9165,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9278,10 +9278,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9391,10 +9391,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9504,10 +9504,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9617,10 +9617,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9730,10 +9730,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9843,10 +9843,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -9956,10 +9956,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10069,10 +10069,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10182,10 +10182,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10295,10 +10295,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10408,10 +10408,10 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon data-cell__cell--icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10604,10 +10604,10 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1.5rem"
-              style="--icon-size: 1.5rem;"
+              height="24px"
+              style="--icon-size: 24px;"
               viewBox="0 0 24 24"
-              width="1.5rem"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10640,10 +10640,10 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
                 aria-hidden="true"
                 class="icon"
                 fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
+                height="24px"
+                style="--icon-size: 24px;"
                 viewBox="0 0 24 24"
-                width="1.5rem"
+                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -10699,10 +10699,10 @@ exports[`<DataTable /> WithOnlyActions story renders snapshot 1`] = `
                 aria-hidden="true"
                 class="icon"
                 fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
+                height="24px"
+                style="--icon-size: 24px;"
                 viewBox="0 0 24 24"
-                width="1.5rem"
+                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -10775,10 +10775,10 @@ exports[`<DataTable /> WithSearch story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1.5rem"
-              style="--icon-size: 1.5rem;"
+              height="24px"
+              style="--icon-size: 24px;"
               viewBox="0 0 24 24"
-              width="1.5rem"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10850,10 +10850,10 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1.5rem"
-              style="--icon-size: 1.5rem;"
+              height="24px"
+              style="--icon-size: 24px;"
               viewBox="0 0 24 24"
-              width="1.5rem"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10886,10 +10886,10 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
                 aria-hidden="true"
                 class="icon"
                 fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
+                height="24px"
+                style="--icon-size: 24px;"
                 viewBox="0 0 24 24"
-                width="1.5rem"
+                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -10962,10 +10962,10 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1.5rem"
-              style="--icon-size: 1.5rem;"
+              height="24px"
+              style="--icon-size: 24px;"
               viewBox="0 0 24 24"
-              width="1.5rem"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -10994,10 +10994,10 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1.5rem"
-              style="--icon-size: 1.5rem;"
+              height="24px"
+              style="--icon-size: 24px;"
               viewBox="0 0 24 24"
-              width="1.5rem"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -11017,10 +11017,10 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1.5rem"
-              style="--icon-size: 1.5rem;"
+              height="24px"
+              style="--icon-size: 24px;"
               viewBox="0 0 24 24"
-              width="1.5rem"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -11050,10 +11050,10 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
                 aria-hidden="true"
                 class="icon"
                 fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
+                height="24px"
+                style="--icon-size: 24px;"
                 viewBox="0 0 24 24"
-                width="1.5rem"
+                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path

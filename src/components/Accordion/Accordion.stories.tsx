@@ -76,7 +76,7 @@ export const HasLeadingIcon: Story = {
         <Accordion.Button
           data-testid="accordion-button"
           leadingIcon={
-            <Icon name="person-encircled" purpose="decorative" size="1.5rem" />
+            <Icon name="person-encircled" purpose="decorative" size="24px" />
           }
           subtitle="Quam lacus maecenas nibh malesuada."
           title="Massa quam egestas massa."

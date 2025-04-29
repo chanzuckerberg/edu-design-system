@@ -243,10 +243,10 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -268,10 +268,10 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -292,10 +292,10 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

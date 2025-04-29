@@ -26,7 +26,7 @@ export default {
       control: false,
     },
   },
-  decorators: [(Story) => <div style={{ margin: '0.5rem' }}>{Story()}</div>],
+  decorators: [(Story) => <div className="m-spacing-size-1">{Story()}</div>],
 } as Meta<typeof Breadcrumbs>;
 
 type Story = StoryObj<typeof Breadcrumbs>;

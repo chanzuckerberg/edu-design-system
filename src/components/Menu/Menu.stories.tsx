@@ -301,7 +301,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
           <Icon
             name={iconName}
             purpose="informative"
-            size="2rem"
+            size="32px"
             title="show more"
           />
         </Menu.PlainButton>

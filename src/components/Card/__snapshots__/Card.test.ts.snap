@@ -46,11 +46,11 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -223,11 +223,11 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
                 <svg
                   class="icon"
                   fill="currentColor"
-                  height="2rem"
+                  height="32px"
                   role="img"
-                  style="--icon-size: 2rem;"
+                  style="--icon-size: 32px;"
                   viewBox="0 0 24 24"
-                  width="2rem"
+                  width="32px"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
@@ -344,11 +344,11 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -532,11 +532,11 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -750,10 +750,10 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
+          height="24px"
+          style="--icon-size: 24px;"
           viewBox="0 0 24 24"
-          width="1.5rem"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -849,11 +849,11 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -918,10 +918,10 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1rem"
-          style="--icon-size: 1rem;"
+          height="16px"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -960,11 +960,11 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>

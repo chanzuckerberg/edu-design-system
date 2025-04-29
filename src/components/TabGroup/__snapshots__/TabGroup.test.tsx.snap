@@ -104,7 +104,7 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -224,7 +224,7 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -347,7 +347,7 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
           class="max-w-xl text-utility-inverse"
         >
           <h3
-            class="heading heading--headline-sm mb-6"
+            class="heading heading--headline-sm mb-spacing-size-3"
           >
             Tab 1
           </h3>
@@ -468,7 +468,7 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -512,10 +512,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon tab__icon"
             fill="currentColor"
-            height="1rem"
-            style="--icon-size: 1rem;"
+            height="16px"
+            style="--icon-size: 16px;"
             viewBox="0 0 24 24"
-            width="1rem"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -546,10 +546,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon tab__icon"
             fill="currentColor"
-            height="1rem"
-            style="--icon-size: 1rem;"
+            height="16px"
+            style="--icon-size: 16px;"
             viewBox="0 0 24 24"
-            width="1rem"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -580,10 +580,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon tab__icon"
             fill="currentColor"
-            height="1rem"
-            style="--icon-size: 1rem;"
+            height="16px"
+            style="--icon-size: 16px;"
             viewBox="0 0 24 24"
-            width="1rem"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -610,7 +610,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -731,7 +731,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
         class="max-w-xl"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>

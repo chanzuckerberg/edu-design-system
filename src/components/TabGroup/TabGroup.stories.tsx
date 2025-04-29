@@ -19,7 +19,7 @@ export default {
       <>
         <TabGroup.Tab title="Tab Title 1">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
             <Text>
@@ -33,7 +33,7 @@ export default {
 
         <TabGroup.Tab title="Tab Title 2">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
             <Text>
@@ -47,7 +47,7 @@ export default {
 
         <TabGroup.Tab title="Tab Title 3">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
             <Text>
@@ -61,7 +61,7 @@ export default {
 
         <TabGroup.Tab title="Tab Title 4">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 4
             </Heading>
             <Text>
@@ -106,7 +106,7 @@ export const InverseVariant: StoryObj<Args> = {
       <>
         <TabGroup.Tab title="Tab Title 1">
           <div className="max-w-xl text-utility-inverse">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
             <Text>
@@ -120,7 +120,7 @@ export const InverseVariant: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 2">
           <div className="max-w-xl text-utility-inverse">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
             <Text>
@@ -134,7 +134,7 @@ export const InverseVariant: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 3">
           <div className="max-w-xl text-utility-inverse">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
             <Text>
@@ -148,7 +148,7 @@ export const InverseVariant: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 4">
           <div className="max-w-xl text-utility-inverse">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 4
             </Heading>
             <Text>
@@ -205,7 +205,7 @@ export const WithTabIcons: StoryObj<Args> = {
       <>
         <TabGroup.Tab icon="person-encircled" title="Tab Title 1">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
             <Text>
@@ -219,7 +219,7 @@ export const WithTabIcons: StoryObj<Args> = {
 
         <TabGroup.Tab icon="alarm-add" title="Tab Title 2">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
             <Text>
@@ -233,7 +233,7 @@ export const WithTabIcons: StoryObj<Args> = {
 
         <TabGroup.Tab icon="alarm" title="Tab Title 3">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
             <Text>
@@ -265,7 +265,7 @@ export const WithTabIllustrations: StoryObj<Args> = {
       <>
         <TabGroup.Tab illustration={<TabIllustration />} title="Tab Title 1">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
             <Text>
@@ -279,7 +279,7 @@ export const WithTabIllustrations: StoryObj<Args> = {
 
         <TabGroup.Tab illustration={<TabIllustration />} title="Tab Title 2">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
             <Text>
@@ -293,7 +293,7 @@ export const WithTabIllustrations: StoryObj<Args> = {
 
         <TabGroup.Tab illustration={<TabIllustration />} title="Tab Title 3">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
             <Text>
@@ -318,7 +318,7 @@ export const ScrollMiddle: StoryObj<Args> = {
       <>
         <TabGroup.Tab title="Tab Title 1">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
             <Text>
@@ -332,7 +332,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 2">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
             <Text>
@@ -346,7 +346,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 3">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
             <Text>
@@ -360,7 +360,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 4">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 4
             </Heading>
             <Text>
@@ -374,7 +374,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 5">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 5
             </Heading>
             <Text>
@@ -388,7 +388,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 6">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 6
             </Heading>
             <Text>
@@ -402,7 +402,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 7">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 7
             </Heading>
             <Text>
@@ -416,7 +416,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 8">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 8
             </Heading>
             <Text>
@@ -430,7 +430,7 @@ export const ScrollMiddle: StoryObj<Args> = {
 
         <TabGroup.Tab title="Tab Title 9">
           <div className="max-w-xl">
-            <Heading as="h3" className="mb-6">
+            <Heading as="h3" className="mb-spacing-size-3">
               Tab 9
             </Heading>
             <Text>

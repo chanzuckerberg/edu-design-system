@@ -165,14 +165,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <Icon
               name={icon}
               purpose="decorative"
-              size={size === 'lg' ? '1.5rem' : '1rem'}
+              size={size === 'lg' ? '24px' : '16px'}
             />
           )}
           {iconLayout === 'left' && (
             <Icon
               name={icon}
               purpose="decorative"
-              size={size === 'lg' ? '1.5rem' : '1rem'}
+              size={size === 'lg' ? '24px' : '16px'}
             />
           )}
           {iconLayout !== 'icon-only' && children}
@@ -180,7 +180,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <Icon
               name={icon}
               purpose="decorative"
-              size={size === 'lg' ? '1.5rem' : '1rem'}
+              size={size === 'lg' ? '24px' : '16px'}
             />
           )}
         </Text>

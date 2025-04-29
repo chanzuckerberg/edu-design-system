@@ -24,7 +24,7 @@
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   outline: none;
-  padding: 0.5rem;
+  padding: calc(var(--eds-spacing-size-1) * 1px);
   margin: 0;
 
   transition: box-shadow calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),

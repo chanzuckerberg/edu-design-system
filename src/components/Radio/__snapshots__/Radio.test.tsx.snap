@@ -268,7 +268,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    style="display: grid; width: 20rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem;"
+    style="display: grid; width: 320px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;"
   >
     <div
       class="radio"
