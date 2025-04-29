@@ -18,7 +18,7 @@
         "normal": "normal",
         "extended": "0.03rem"
       },
-      "baseSize": "16",
+      "baseSize": "14",
       "fontSizeMultiplier": "1.125",
       "preset": {
         "100": {
