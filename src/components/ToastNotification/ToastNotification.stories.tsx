@@ -21,7 +21,7 @@ export default {
   },
   args: {
     title: "You've got a temporary notification!",
-    className: 'w-96',
+    className: 'w-[384px]',
   },
 } as Meta<Args>;
 

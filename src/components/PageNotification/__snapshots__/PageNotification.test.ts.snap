@@ -2,7 +2,7 @@
 
 exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-critical w-96"
+  class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -55,7 +55,7 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 
 exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-critical w-96"
+  class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -108,7 +108,7 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Default story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-informational w-96"
+  class="page-notification page-notification--status-informational w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -161,7 +161,7 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-informational page-notification--dismissable w-96"
+  class="page-notification page-notification--status-informational page-notification--dismissable w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -238,7 +238,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-favorable w-96"
+  class="page-notification page-notification--status-favorable w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -291,7 +291,7 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 
 exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-critical page-notification--dismissable w-96"
+  class="page-notification page-notification--status-critical page-notification--dismissable w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -368,7 +368,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
 
 exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-warning w-96"
+  class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -421,7 +421,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 
 exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-warning w-96"
+  class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg
     aria-hidden="true"

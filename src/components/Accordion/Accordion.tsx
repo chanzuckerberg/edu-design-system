@@ -243,7 +243,7 @@ const AccordionButton = ({
               )}
               name={trailingIcon}
               purpose="informative"
-              size="1.5rem"
+              size="24px"
               title={open ? 'hide content' : 'show content'}
             />
           )}

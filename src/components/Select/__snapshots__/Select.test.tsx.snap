@@ -122,7 +122,7 @@ exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
 
 exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
 <div
-  class="select select--has-fieldNote select--label-layout-vertical w-96"
+  class="select select--has-fieldNote select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -350,7 +350,7 @@ exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`
 
 exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-96"
+  class="select select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -408,7 +408,7 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
 
 exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-96"
+  class="select select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -473,7 +473,7 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
 
 exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-96"
+  class="select select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -604,7 +604,7 @@ exports[`<Select /> Generated Snapshots UncontrolledHeadless story renders snaps
 
 exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
 <div
-  class="select select--has-fieldNote select--label-layout-vertical w-96"
+  class="select select--has-fieldNote select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"

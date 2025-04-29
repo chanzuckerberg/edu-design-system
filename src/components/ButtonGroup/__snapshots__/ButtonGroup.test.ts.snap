@@ -2,7 +2,7 @@
 
 exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--horizontal"
@@ -33,7 +33,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--horizontal-progressive"
@@ -64,7 +64,7 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--horizontal-progressive"
@@ -95,7 +95,7 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
 
 exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--vertical"

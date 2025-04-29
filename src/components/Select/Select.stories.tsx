@@ -734,7 +734,11 @@ export const LongOptionList: StoryObj = {
       },
     },
   },
-  decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
+    ),
+  ],
 };
 
 /**
@@ -744,7 +748,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
   args: {
     ...Default.args,
     className: 'w-40',
-    optionsClassName: 'w-96',
+    optionsClassName: 'w-[384px]',
   },
   play: selectCat,
   parameters: {
@@ -756,7 +760,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
       ...Default.parameters?.docs,
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };
 
 /**
@@ -783,7 +787,7 @@ export const Required: StoryObj = {
     ...Default.args,
     required: true,
     showHint: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     ...Default.parameters,
@@ -798,7 +802,7 @@ export const Optional: StoryObj = {
     ...Default.args,
     required: false,
     showHint: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     ...Default.parameters,
@@ -856,7 +860,7 @@ export const NoVisibleLabelButRequired: StoryObj = {
     label: undefined,
     'aria-label': 'hidden label',
     required: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     ...Default.parameters,
@@ -872,7 +876,7 @@ export const DisabledRequired: StoryObj = {
     disabled: true,
     required: true,
     showHint: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     docs: {
@@ -889,7 +893,7 @@ export const DisabledRequired: StoryObj = {
 export const OptionsRightAligned: StoryObj = {
   args: {
     ...Default.args,
-    optionsClassName: 'w-96',
+    optionsClassName: 'w-[384px]',
     children: (
       <>
         <Select.Button>
@@ -933,7 +937,11 @@ export const OptionsRightAligned: StoryObj = {
     },
   },
   play: selectCat,
-  decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
+    ),
+  ],
 };
 
 /**

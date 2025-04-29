@@ -10,7 +10,7 @@ export default {
     layout: 'centered',
     badges: ['api-2.0', 'theme-2.0'],
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Radio>;

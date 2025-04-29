@@ -30,7 +30,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="p-8">
+      <div className="p-spacing-size-4">
         <Story />
       </div>
     ),

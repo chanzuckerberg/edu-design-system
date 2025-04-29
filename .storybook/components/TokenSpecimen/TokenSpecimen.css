@@ -2,9 +2,9 @@
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   box-shadow: 1px solid var(--eds-box-shadow-md);
   background: var(--eds-theme-color-background-input);
-  padding: 1rem;
+  padding: calc(var(--eds-spacing-size-2) * 1px);
   display: grid;
-  gap: 1rem;
+  gap: calc(var(--eds-spacing-size-2) * 1px);
 
   font-family: var(--eds-typography-font-family-1);
 
@@ -23,7 +23,7 @@
   display: inline-block;
   background: var(--eds-theme-color-background-brand-blue-low-emphasis);
   color: var(--eds-theme-color-text-utility-critical);
-  padding: 0.2rem;
+  padding: calc(var(--eds-spacing-size-half) * 1px);
   border-radius: 4px;
   font-size: 12px;
 }
@@ -52,7 +52,7 @@
 
 .token-specimen__sample--box {
   background: var(--eds-theme-color-background-utility-default-high-emphasis);
-  min-height: 5rem;
+  min-height: calc(var(--eds-spacing-size-10) * 1px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,6 @@
 
   &:hover,
   &:focus {
-    transform: translateX(-3rem);
+    transform: translateX(calc(var(--eds-spacing-size-6) * -1px));
   }
 }

@@ -7,7 +7,7 @@ const meta: Meta<typeof TextareaField> = {
   title: 'Components/TextareaField',
   component: TextareaField,
   args: {
-    className: 'w-96',
+    className: 'w-[384px]',
     placeholder: 'Enter long-form text here',
     defaultValue: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
 dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
@@ -21,7 +21,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
     layout: 'centered',
     badges: ['api-2.0', 'theme-2.0'],
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };
 
 export default meta;

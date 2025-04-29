@@ -2,10 +2,10 @@
 
 exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-call-out w-96"
+    class="card card--container-style-low card--container-color-call-out w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -100,10 +100,10 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
 
 exports[`<Card /> CancelMembership story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-sm"
@@ -159,10 +159,10 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
 
 exports[`<Card /> ChildCards story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-high card--container-color-call-out w-96"
+    class="card card--container-style-high card--container-color-call-out w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -255,10 +255,10 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
 
 exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-custom-brand border-brand-red bg-brand-red w-96"
+    class="card card--container-style-low card--container-color-custom-brand border-brand-red bg-brand-red w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -300,10 +300,10 @@ exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
 
 exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -398,10 +398,10 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
 
 exports[`<Card /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -443,10 +443,10 @@ exports[`<Card /> Default story renders snapshot 1`] = `
 
 exports[`<Card /> IsInteractive story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default card--is-interactive w-96"
+    class="card card--container-style-low card--container-color-default card--is-interactive w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -488,10 +488,10 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
 
 exports[`<Card /> TopStripe story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -586,10 +586,10 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
 
 exports[`<Card /> WhileDragging story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default card--is-dragging-true w-96"
+    class="card card--container-style-low card--container-color-default card--is-dragging-true w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -631,10 +631,10 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
 
 exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md mb-spacing-size-2"
@@ -680,10 +680,10 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
 
 exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -735,10 +735,10 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
 
 exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -805,10 +805,10 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
 
 exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -903,10 +903,10 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
 
 exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-sm"

@@ -2,10 +2,10 @@
 
 exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -52,10 +52,10 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 
 exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -102,10 +102,10 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
 
 exports[`<InputField /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -156,10 +156,10 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 
 exports[`<InputField /> Error story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -223,7 +223,7 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
 
 exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div>
     <div
@@ -270,10 +270,10 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__body"
@@ -311,7 +311,7 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 
 exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div>
     <div
@@ -372,10 +372,10 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -407,10 +407,10 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 
 exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline input-field__overline--no-label"
@@ -448,10 +448,10 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 
 exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -500,10 +500,10 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 
 exports[`<InputField /> Required story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -556,10 +556,10 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
 
 exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -616,10 +616,10 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 
 exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -656,7 +656,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 
 exports[`<InputField /> TabularInput story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <table
     class="table"
@@ -740,10 +740,10 @@ exports[`<InputField /> TabularInput story renders snapshot 1`] = `
 
 exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -790,10 +790,10 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 
 exports[`<InputField /> Warning story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -857,10 +857,10 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
 
 exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -907,10 +907,10 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
 
 exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -956,10 +956,10 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 
 exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -1038,10 +1038,10 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
 
 exports[`<InputField /> WithText story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"

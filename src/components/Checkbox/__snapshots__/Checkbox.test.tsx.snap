@@ -2,7 +2,7 @@
 
 exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -34,7 +34,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -65,7 +65,7 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="p-0"
@@ -180,7 +180,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 
 exports[`<Checkbox /> Error story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox checkbox--error"
@@ -211,7 +211,7 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
 
 exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     style="font-size: 10px;"
@@ -247,7 +247,7 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -278,7 +278,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 
 exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -309,7 +309,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 
 exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -345,7 +345,7 @@ exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
 
 exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"

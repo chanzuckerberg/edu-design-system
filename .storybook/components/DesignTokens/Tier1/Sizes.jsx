@@ -27,9 +27,7 @@ export class Tier1Sizes extends Component {
                       minHeight: '0',
                     }}
                     name={listItem.name}
-                    value={
-                      listItem.value + 'px' + ` (${listItem.value / 16}rem)`
-                    }
+                    value={listItem.value + 'px'}
                   />
                 </Grid.Item>
               );

@@ -62,7 +62,11 @@ export default {
       control: false,
     },
   },
-  decorators: [(Story) => <div className="m-10 p-8">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="m-spacing-size-5 p-spacing-size-4">{Story()}</div>
+    ),
+  ],
 } as Meta<PopoverProps>;
 
 type Story = StoryObj<PopoverProps>;

@@ -87,7 +87,7 @@ exports[`<Link /> InverseVariant story renders snapshot 1`] = `
   class="text-utility-default-primary"
 >
   <div
-    class="w-96 p-1 text-center text-utility-inverse"
+    class="w-[384px] p-spacing-size-half text-center text-utility-inverse"
   >
     <a
       class="link link--emphasis-default link--size-lg link--variant-inverse"

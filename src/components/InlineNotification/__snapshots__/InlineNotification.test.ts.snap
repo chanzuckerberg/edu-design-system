@@ -2,7 +2,7 @@
 
 exports[`<InlineNotification /> Critical story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-critical w-96"
+  class="inline-notification inline-notification--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -37,7 +37,7 @@ exports[`<InlineNotification /> Critical story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> Default story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-96"
+  class="inline-notification inline-notification--status-informational w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -67,7 +67,7 @@ exports[`<InlineNotification /> Default story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> Favorable story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-favorable w-96"
+  class="inline-notification inline-notification--status-favorable w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -102,7 +102,7 @@ exports[`<InlineNotification /> Favorable story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-96"
+  class="inline-notification inline-notification--status-informational w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -132,7 +132,7 @@ exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> Warning story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-warning w-96"
+  class="inline-notification inline-notification--status-warning w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`<InlineNotification /> Warning story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> WithFormattedSubTitle story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-96"
+  class="inline-notification inline-notification--status-informational w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -207,7 +207,7 @@ exports[`<InlineNotification /> WithFormattedSubTitle story renders snapshot 1`]
 
 exports[`<InlineNotification /> WithSubTitle story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-96"
+  class="inline-notification inline-notification--status-informational w-[384px]"
 >
   <svg
     aria-hidden="true"

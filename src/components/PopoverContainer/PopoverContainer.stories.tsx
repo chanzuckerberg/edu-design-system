@@ -16,7 +16,7 @@ export default {
       control: false,
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<typeof PopoverContainer>;
 
 export const Default: StoryObj<typeof PopoverContainer> = {

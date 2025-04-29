@@ -16,7 +16,7 @@ export default {
   },
   args: {
     headingAs: 'h2',
-    className: 'w-96',
+    className: 'w-[384px]',
     children: (
       <Accordion.Row>
         <Accordion.Button
@@ -40,7 +40,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<typeof Accordion>;
 
 type Story = StoryObj<typeof Accordion>;
