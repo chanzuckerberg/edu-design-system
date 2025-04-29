@@ -693,6 +693,11 @@
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
         },
+        "48": {
+          "value": "384",
+          "group": "size",
+          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+        },
         "half": {
           "value": "4",
           "group": "size",
