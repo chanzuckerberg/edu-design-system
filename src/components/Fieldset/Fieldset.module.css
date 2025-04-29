@@ -23,7 +23,7 @@
 
 .fieldset-legend__overline {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: calc(var(--eds-spacing-size-half) * 1px);
 }
 

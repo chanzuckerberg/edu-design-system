@@ -16,7 +16,7 @@
   appearance: none;
 
   /* Magic value to center the checkbox on its label. */
-  margin: 3px;
+  margin: calc(var(--eds-spacing-size-quarter) * 1px);
 
   border: calc(var(--eds-spacing-size-quarter) * 1px) solid currentColor;
 

@@ -16,7 +16,7 @@
  */
 .select__overline {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
   gap: calc(var(--eds-spacing-size-half) * 1px);
 }

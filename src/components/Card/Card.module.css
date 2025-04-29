@@ -89,10 +89,6 @@
 
   &.header--size-sm {
     gap: calc(var(--eds-spacing-size-1) * 1px);
-
-    .header__icon {
-      margin-top: -3px;
-    }
   }
 
   &.header--size-md {
