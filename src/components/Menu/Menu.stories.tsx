@@ -225,6 +225,8 @@ export const WithCustomSecondaryButton: Story = {
 
 /**
  * Use an `Avatar` component within `.PlainButton` to achieve a clickable avatar with menu attached.
+ *
+ * *NOTE*: `Avatar` will be re-introduced in a future version of EDS.
  */
 export const MenuWithAvatarButton: Story = {
   parameters: {
