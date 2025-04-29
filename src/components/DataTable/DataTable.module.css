@@ -163,7 +163,7 @@
   }
 
   .data-cell__cell--icon {
-    margin-top: calc(var(--eds-spacing-size-half) * 1px);
+    margin-top: calc(var(--eds-spacing-size-quarter) * 1px);
     flex-shrink: 0;
   }
 }
