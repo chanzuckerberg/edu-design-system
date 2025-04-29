@@ -242,7 +242,7 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
 
 exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
 <div
-  class="p-1"
+  class="p-spacing-size-half"
 >
   <div
     class="tabs"

@@ -162,7 +162,7 @@ export const InverseVariant: StoryObj<Args> = {
       </>
     ),
   },
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-half">{Story()}</div>],
   parameters: {
     ...Default.parameters,
     backgrounds: { default: 'background-utility-default-high-emphasis' },

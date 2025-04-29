@@ -7,7 +7,7 @@
   border-width: calc(var(--eds-border-width-sm) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
-  max-width: 14rem;
+  max-width: 224px;
 
   @media (prefers-reduced-motion) {
     transition: none;

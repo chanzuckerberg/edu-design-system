@@ -138,23 +138,23 @@
     }
 
     @media all and (min-width: $eds-bp-sm) {
-      max-height: 40rem;
-      max-width: 50rem;
+      max-height: 640px;
+      max-width: 800px;
     }
 
     @media all and (min-width: $eds-bp-md) {
-      max-height: 40rem;
-      max-width: 50rem;
+      max-height: 640px;
+      max-width: 800px;
     }
 
     @media all and (min-width: $eds-bp-lg) {
-      max-height: 40rem;
-      max-width: 60rem;
+      max-height: 640px;
+      max-width: 960px;
     }
 
     @media all and (min-width: $eds-bp-xl) {
-      max-height: 40rem;
-      max-width: 60rem;
+      max-height: 640px;
+      max-width: 960px;
     }
   }
 
@@ -166,22 +166,22 @@
     }
 
     @media all and (min-width: $eds-bp-sm) {
-      max-width: 50rem;
+      max-width: 800px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-md) {
-      max-width: 50rem;
+      max-width: 800px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-lg) {
-      max-width: 60rem;
+      max-width: 960px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-xl) {
-      max-width: 60rem;
+      max-width: 960px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
   }
@@ -193,22 +193,22 @@
     }
 
     @media all and (min-width: $eds-bp-sm) {
-      max-width: 50rem;
+      max-width: 800px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-md) {
-      max-width: 50rem;
+      max-width: 800px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-lg) {
-      max-width: 60rem;
+      max-width: 960px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-xl) {
-      max-width: 60rem;
+      max-width: 960px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
   }
@@ -219,23 +219,23 @@
  */
 .modal__content--sm {
   @media all and (min-width: $eds-bp-xs) {
-    max-height: 30rem;
-    max-width: 35rem;
+    max-height: 480px;
+    max-width: 560px;
   }
 
   @media all and (min-width: $eds-bp-sm) {
-    max-height: 30rem;
-    max-width: 25rem;
+    max-height: 480px;
+    max-width: 400px;
   }
 
   @media all and (min-width: $eds-bp-md) {
-    max-height: 30rem;
-    max-width: 25rem;
+    max-height: 480px;
+    max-width: 400px;
   }
 
   @media all and (min-width: $eds-bp-xl) {
-    max-height: 30rem;
-    max-width: 35rem;
+    max-height: 480px;
+    max-width: 560px;
   }
 }
 
