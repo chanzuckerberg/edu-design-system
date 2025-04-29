@@ -8,6 +8,7 @@
 .radio {
   display: flex;
   gap: calc(var(--eds-spacing-size-1) * 1px);
+  align-items: center;
 }
 
 /**

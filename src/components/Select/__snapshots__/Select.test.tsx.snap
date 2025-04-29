@@ -2,7 +2,7 @@
 
 exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-60"
+  class="select select--label-layout-vertical w-[240px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -247,7 +247,7 @@ exports[`<Select /> Generated Snapshots HorizontalLabel story renders snapshot 1
 
 exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-60"
+  class="select select--label-layout-vertical w-[240px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"

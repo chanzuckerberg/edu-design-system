@@ -548,7 +548,7 @@ export const Multiple: StoryObj = {
     multiple: true,
     'data-testid': 'select-field',
     defaultValue: [exampleOptions[0]],
-    className: 'w-60',
+    className: 'w-[240px]',
     name: 'standard-button',
     children: (
       <>
@@ -605,7 +605,7 @@ export const MultipleWithTruncation: StoryObj = {
     multiple: true,
     'data-testid': 'dropdown',
     defaultValue: [exampleOptions[0]],
-    className: 'w-60',
+    className: 'w-[240px]',
     name: 'standard-button',
     children: (
       <>
@@ -659,7 +659,7 @@ export const MultipleWithTruncation: StoryObj = {
 export const AdjustedWidth: StoryObj = {
   args: {
     ...Default.args,
-    className: 'w-60',
+    className: 'w-[240px]',
   },
 };
 
@@ -671,7 +671,7 @@ export const LongOptionList: StoryObj = {
   args: {
     ...Default.args,
     defaultValue: 'test3',
-    className: 'w-60',
+    className: 'w-[240px]',
     children: (
       <>
         <Select.Button>
@@ -747,7 +747,7 @@ export const LongOptionList: StoryObj = {
 export const SeparateButtonAndMenuWidth: StoryObj = {
   args: {
     ...Default.args,
-    className: 'w-40',
+    className: 'w-[160px]',
     optionsClassName: 'w-[384px]',
   },
   play: selectCat,

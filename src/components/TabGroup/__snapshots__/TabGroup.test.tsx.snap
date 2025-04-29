@@ -101,7 +101,7 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
           class="heading heading--headline-sm mb-spacing-size-3"
@@ -221,7 +221,7 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
           class="heading heading--headline-sm mb-spacing-size-3"
@@ -344,7 +344,7 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
         role="tabpanel"
       >
         <div
-          class="max-w-xl text-utility-inverse"
+          class="max-w-[576px] text-utility-inverse"
         >
           <h3
             class="heading heading--headline-sm mb-spacing-size-3"
@@ -465,7 +465,7 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
           class="heading heading--headline-sm mb-spacing-size-3"
@@ -607,7 +607,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
           class="heading heading--headline-sm mb-spacing-size-3"
@@ -654,7 +654,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
             class="tab__illustration"
           >
             <div
-              class="h-12 w-12 bg-utility-warning-lowEmphasis"
+              class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
             />
           </div>
           Tab Title 1
@@ -681,7 +681,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
             class="tab__illustration"
           >
             <div
-              class="h-12 w-12 bg-utility-warning-lowEmphasis"
+              class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
             />
           </div>
           Tab Title 2
@@ -708,7 +708,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
             class="tab__illustration"
           >
             <div
-              class="h-12 w-12 bg-utility-warning-lowEmphasis"
+              class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
             />
           </div>
           Tab Title 3
@@ -728,7 +728,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
           class="heading heading--headline-sm mb-spacing-size-3"
