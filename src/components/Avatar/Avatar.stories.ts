@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { Avatar } from './Avatar';
 
 export default {
-  title: 'Components/Avatar',
+  title: 'Upcoming/Components/Avatar',
   component: Avatar,
   parameters: {
     badges: ['api-1.3', 'theme-1.0'],
