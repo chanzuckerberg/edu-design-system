@@ -18,10 +18,10 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -119,10 +119,10 @@ exports[`Modal Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon"
             fill="currentColor"
-            height="1.5rem"
-            style="--icon-size: 1.5rem;"
+            height="24px"
+            style="--icon-size: 24px;"
             viewBox="0 0 24 24"
-            width="1.5rem"
+            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -225,10 +225,10 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon"
             fill="currentColor"
-            height="1.5rem"
-            style="--icon-size: 1.5rem;"
+            height="24px"
+            style="--icon-size: 24px;"
             viewBox="0 0 24 24"
-            width="1.5rem"
+            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -314,10 +314,10 @@ exports[`Modal Large story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -398,10 +398,10 @@ exports[`Modal LargeAuto story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -482,10 +482,10 @@ exports[`Modal LargeMax story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -566,10 +566,10 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -650,10 +650,10 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -734,10 +734,10 @@ exports[`Modal Mobile story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -818,10 +818,10 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -902,10 +902,10 @@ exports[`Modal Small story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -986,10 +986,10 @@ exports[`Modal Tablet story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -1070,10 +1070,10 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -1161,10 +1161,10 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon"
             fill="currentColor"
-            height="1.5rem"
-            style="--icon-size: 1.5rem;"
+            height="24px"
+            style="--icon-size: 24px;"
             viewBox="0 0 24 24"
-            width="1.5rem"
+            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

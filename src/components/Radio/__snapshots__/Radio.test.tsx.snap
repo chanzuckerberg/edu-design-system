@@ -2,7 +2,7 @@
 
 exports[`<Radio /> Checked story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio"
@@ -46,7 +46,7 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
 
 exports[`<Radio /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio"
@@ -89,7 +89,7 @@ exports[`<Radio /> Default story renders snapshot 1`] = `
 
 exports[`<Radio /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio"
@@ -133,7 +133,7 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
 
 exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio"
@@ -178,7 +178,7 @@ exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
 
 exports[`<Radio /> Error story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio radio--error"
@@ -221,7 +221,7 @@ exports[`<Radio /> Error story renders snapshot 1`] = `
 
 exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio radio--error"
@@ -265,10 +265,10 @@ exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
 
 exports[`<Radio /> LongLabels story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    style="display: grid; width: 20rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem;"
+    style="display: grid; width: 320px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;"
   >
     <div
       class="radio"
@@ -313,7 +313,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
 
 exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio"
@@ -361,7 +361,7 @@ exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
 
 exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="radio"

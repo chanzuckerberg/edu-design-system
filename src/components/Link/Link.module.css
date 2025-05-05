@@ -29,18 +29,18 @@
  * Sub-components (only should apply to standalone links
  */
 .link__icon {
-  padding-left: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  padding-left: calc(var(--eds-spacing-size-half) * 1px);
 
   /* Sub-component spacing */
   &.link--size-xl,
   &.link--size-lg {
-    padding-left: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+    padding-left: calc(var(--eds-spacing-size-1) * 1px);
   }
 
   &.link--size-md,
   &.link--size-sm,
   &.link--size-xs {
-    padding-left: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+    padding-left: calc(var(--eds-spacing-size-half) * 1px);
   }
 }
 
@@ -132,6 +132,6 @@
 }
 
 .link:focus-visible {
-  outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
-  outline-offset: calc(var(--eds-spacing-size-quarter) / 16 * 1rem);
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
 }

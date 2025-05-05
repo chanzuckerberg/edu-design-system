@@ -30,7 +30,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="p-8">
+      <div className="p-spacing-size-4">
         <Story />
       </div>
     ),
@@ -303,7 +303,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
           <Icon
             name={iconName}
             purpose="informative"
-            size="2rem"
+            size="32px"
             title="show more"
           />
         </Menu.PlainButton>

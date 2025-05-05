@@ -18,7 +18,7 @@
         "normal": "normal",
         "extended": "0.03rem"
       },
-      "baseSize": "16",
+      "baseSize": "14",
       "fontSizeMultiplier": "1.125",
       "preset": {
         "100": {
@@ -293,6 +293,9 @@
         "32": "256",
         "34": "272",
         "40": "320",
+        "48": "384",
+        "4-and-half": "36",
+        "7-and-half": "60",
         "half": "4",
         "quarter": "2",
         "1-and-half": "12",

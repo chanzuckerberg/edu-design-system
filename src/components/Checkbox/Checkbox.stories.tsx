@@ -14,7 +14,7 @@ const meta: Meta<typeof Checkbox> = {
     badges: ['api-2.0', 'theme-2.0'],
   },
 
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };
 
 export default meta;

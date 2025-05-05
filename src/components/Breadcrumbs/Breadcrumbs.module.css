@@ -60,7 +60,7 @@
  */
 .breadcrumbs__item-back {
   display: flex;
-  margin-right: calc(var(--eds-spacing-size-1-and-half) / 16 * 1rem);
+  margin-right: calc(var(--eds-spacing-size-1-and-half) * 1px);
 
   @media all and (min-width: $eds-bp-md) {
     /* Hidden for larger breakpoints. */
@@ -134,8 +134,8 @@
  */
 .breadcrumbs__separator {
   color: var(--eds-theme-color-text-utility-default-primary);
-  margin-left: calc(var(--eds-spacing-size-1) / 16 * 1rem);
-  margin-right: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  margin-left: calc(var(--eds-spacing-size-1) * 1px);
+  margin-right: calc(var(--eds-spacing-size-1) * 1px);
   cursor: default;
 }
 
@@ -155,5 +155,5 @@
   /* Transform over height due to icon being placed inside <a>. */
   transform: scale(1.5);
   position: relative;
-  bottom: 0.125rem;
+  bottom: 1px;
 }

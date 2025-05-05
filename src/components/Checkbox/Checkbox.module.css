@@ -2,12 +2,12 @@
 
 .checkbox {
   display: flex;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 .checkbox__input {
-  height: 1.125rem;
-  width: 1.125rem;
+  height: 18px;
+  width: 18px;
 
   /* The parent Checkbox component is a flex container. Make sure the input doesn't shrink. */
   flex-shrink: 0;
@@ -16,9 +16,9 @@
   appearance: none;
 
   /* Magic value to center the checkbox on its label. */
-  margin: 3px;
+  margin: calc(var(--eds-spacing-size-quarter) * 1px);
 
-  border: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid currentColor;
+  border: calc(var(--eds-spacing-size-quarter) * 1px) solid currentColor;
 
   /* Place the ::before content smack in the middle of the input. */
   display: grid;
@@ -38,8 +38,8 @@
 
   /* Because the path does not have an explicit viewbox, this element's bounding box establishes
   one. In other words, the height/width here need to match the expected viewbox for the path. */
-  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) * 1px);
+  width: calc(var(--eds-spacing-size-3) * 1px);
 
   /* use the platform's font face, which defines the checkbox glyph to use */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -55,8 +55,8 @@
   content: '–';
   text-align: center;
 
-  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) * 1px);
+  width: calc(var(--eds-spacing-size-3) * 1px);
   transform: translateY(-1px);
 }
 
@@ -149,11 +149,11 @@
 }
 
 .checkbox__input:focus-visible {
-  outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
 }
 
 @supports not selector(:focus-visible) {
   .checkbox__input {
-    outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
   }
 }

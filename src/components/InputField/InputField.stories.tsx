@@ -16,7 +16,7 @@ const meta: Meta<typeof InputField> = {
     },
   },
   args: {
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   argTypes: {
     type: {
@@ -37,7 +37,7 @@ const meta: Meta<typeof InputField> = {
       ],
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };
 
 export default meta;

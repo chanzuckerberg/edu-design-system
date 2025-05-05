@@ -12,7 +12,7 @@ export default {
   },
   args: {
     title: 'Inline notifications lorem ipsum text',
-    className: 'w-96',
+    className: 'w-[384px]',
   },
 } as Meta<Args>;
 

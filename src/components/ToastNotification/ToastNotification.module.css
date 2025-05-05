@@ -6,14 +6,14 @@
 
 .toast {
   width: 100%;
-  max-width: 24rem;
+  max-width: calc(var(--eds-spacing-size-48) * 1px);
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  gap: calc(var(--eds-spacing-size-2) * 1px);
+  padding: calc(var(--eds-spacing-size-2) * 1px);
   align-items: top;
 
-  border: 0.125rem solid;
-  border-left: 1rem solid;
+  border: calc(var(--eds-spacing-size-quarter) * 1px) solid;
+  border-left: calc(var(--eds-spacing-size-2) * 1px) solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
 
@@ -38,6 +38,6 @@
 
 .toast__dismiss-button {
   flex-shrink: 0;
-  margin-top: -0.5rem;
-  margin-right: -0.5rem;
+  margin-top: calc(var(--eds-spacing-size-1) * -1px);
+  margin-right: calc(var(--eds-spacing-size-1) * -1px);
 }

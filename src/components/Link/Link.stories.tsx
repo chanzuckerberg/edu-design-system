@@ -113,7 +113,9 @@ export const InverseVariant: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="w-96 p-1 text-center text-utility-inverse">{Story()}</div>
+      <div className="w-[384px] p-spacing-size-half text-center text-utility-inverse">
+        {Story()}
+      </div>
     ),
   ],
 };

@@ -618,6 +618,11 @@
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
         },
+        "4-and-half": {
+          "value": "36",
+          "group": "size",
+          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+        },
         "5": {
           "value": "40",
           "group": "size",
@@ -630,6 +635,11 @@
         },
         "7": {
           "value": "56",
+          "group": "size",
+          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+        },
+        "7-and-half": {
+          "value": "60",
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
         },
@@ -680,6 +690,11 @@
         },
         "40": {
           "value": "320",
+          "group": "size",
+          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+        },
+        "48": {
+          "value": "384",
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
         },

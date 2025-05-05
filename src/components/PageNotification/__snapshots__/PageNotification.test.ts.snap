@@ -2,16 +2,16 @@
 
 exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-critical w-96"
+  class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -55,16 +55,16 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 
 exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-critical w-96"
+  class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -108,16 +108,16 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Default story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-informational w-96"
+  class="page-notification page-notification--status-informational w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -161,16 +161,16 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-informational page-notification--dismissable w-96"
+  class="page-notification page-notification--status-informational page-notification--dismissable w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -221,10 +221,10 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -238,16 +238,16 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-favorable w-96"
+  class="page-notification page-notification--status-favorable w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -291,16 +291,16 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 
 exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-critical page-notification--dismissable w-96"
+  class="page-notification page-notification--status-critical page-notification--dismissable w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -351,10 +351,10 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
         aria-hidden="true"
         class="icon"
         fill="currentColor"
-        height="1.5rem"
-        style="--icon-size: 1.5rem;"
+        height="24px"
+        style="--icon-size: 24px;"
         viewBox="0 0 24 24"
-        width="1.5rem"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -368,16 +368,16 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
 
 exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-warning w-96"
+  class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -421,16 +421,16 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 
 exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
 <aside
-  class="page-notification page-notification--status-warning w-96"
+  class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon page-notification__icon"
     fill="currentColor"
-    height="1.5rem"
-    style="--icon-size: 1.5rem;"
+    height="24px"
+    style="--icon-size: 24px;"
     viewBox="0 0 24 24"
-    width="1.5rem"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

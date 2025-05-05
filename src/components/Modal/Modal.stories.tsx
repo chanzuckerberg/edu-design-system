@@ -18,7 +18,7 @@ export default {
     badges: ['api-3.0', 'theme-2.0'],
   },
   tags: ['autodocs'],
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;

@@ -7,7 +7,8 @@
  */
 .radio {
   display: flex;
-  gap: calc(var(--eds-spacing-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+  align-items: center;
 }
 
 /**
@@ -20,8 +21,8 @@
   align-self: flex-start;
   flex-shrink: 0;
 
-  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-3) * 1px);
+  height: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 .radio__container,
@@ -34,17 +35,17 @@
 }
 
 .radio__container {
-  border: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid currentColor;
+  border: calc(var(--eds-spacing-size-quarter) * 1px) solid currentColor;
   border-radius: 50%;
   content: '';
 
-  width: 1.25rem;
-  height: 1.25rem;
+  width: calc(var(--eds-spacing-size-2-and-half) * 1px);
+  height: calc(var(--eds-spacing-size-2-and-half) * 1px);
 }
 
 .radio__selected {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: calc(var(--eds-spacing-size-1-and-half) * 1px);
+  height: calc(var(--eds-spacing-size-1-and-half) * 1px);
   border-radius: 50%;
   background-color: transparent;
 
@@ -61,8 +62,8 @@
   /* Remove the radio from the page flow, positioning it on top of the SVG. */
   position: absolute;
   /* Set same dimensions as the RadioSvg element. */
-  height: calc(var(--eds-spacing-size-3) / 16 * 1rem);
-  width: calc(var(--eds-spacing-size-3) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) * 1px);
+  width: calc(var(--eds-spacing-size-3) * 1px);
 
   /**
    * Hide the input element visually.
@@ -191,15 +192,15 @@
 }
 
 .radio__input:focus-visible+.radio__container {
-  outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
-  outline-offset: calc(var(--eds-spacing-size-quarter) / 16 * 1rem);
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 @supports not selector(:focus-visible) {
   .radio__input:focus+.radio__container {
-    outline: calc(var(--eds-spacing-size-quarter) / 16 * 1rem) solid var(--eds-theme-color-border-utility-focus);
-    outline-offset: calc(var(--eds-spacing-size-quarter) / 16 * 1rem);
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
     border-radius: calc(var(--eds-border-radius-full) * 1px);
   }
 }

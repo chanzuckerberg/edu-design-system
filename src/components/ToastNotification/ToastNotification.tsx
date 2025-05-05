@@ -85,7 +85,7 @@ export const ToastNotification = ({
         className={styles['toast__icon']}
         name={getIconNameFromStatus(status)}
         purpose="decorative"
-        size="1.875rem"
+        size="30px"
       />
       <div className={styles['toast__body']}>
         <Text as="span" className={styles['toast__text']} preset="title-md">

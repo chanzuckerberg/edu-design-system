@@ -9,11 +9,11 @@
  */
 .page-notification {
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  gap: calc(var(--eds-spacing-size-2) * 1px);
+  padding: calc(var(--eds-spacing-size-2) * 1px);
 
-  border: 0.125rem solid;
-  border-left: 1rem solid;
+  border: calc(var(--eds-spacing-size-quarter) * 1px) solid;
+  border-left: calc(var(--eds-spacing-size-2) * 1px) solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   &.page-notification--status-informational {
@@ -39,7 +39,7 @@
 
 .page-notification__icon {
   flex-shrink: 0;
-  transform: translateY(0.25rem);
+  transform: translateY(calc(var(--eds-spacing-size-half) * 1px));
 }
 
 .page-notification__body {
@@ -57,11 +57,11 @@
 
 .page-notification__call-to-action {
   .page-notification--has-vertical-cta & {
-    margin-top: 1rem;
+    margin-top: calc(var(--eds-spacing-size-2) * 1px);
   }
 
   .page-notificatino-has-horizontal-cta & {
-    margin-left: 1rem;
+    margin-left: calc(var(--eds-spacing-size-2) * 1px);
   }
 }
 
@@ -76,5 +76,5 @@
  */
 .page-notification__close-button {
   /* Adjust the positioning to slip into the padding of the container */
-  margin: -0.5rem;
+  margin: calc(var(--eds-spacing-size-1) * -1px);
 }

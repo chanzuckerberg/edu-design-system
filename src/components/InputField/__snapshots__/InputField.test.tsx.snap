@@ -2,10 +2,10 @@
 
 exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -52,10 +52,10 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 
 exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -102,10 +102,10 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
 
 exports[`<InputField /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -156,10 +156,10 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 
 exports[`<InputField /> Error story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -196,11 +196,11 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -223,7 +223,7 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
 
 exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div>
     <div
@@ -270,10 +270,10 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__body"
@@ -293,10 +293,10 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
+          height="24px"
+          style="--icon-size: 24px;"
           viewBox="0 0 24 24"
-          width="1.5rem"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -311,7 +311,7 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 
 exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div>
     <div
@@ -351,10 +351,10 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -372,10 +372,10 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -407,10 +407,10 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 
 exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline input-field__overline--no-label"
@@ -448,10 +448,10 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 
 exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -500,10 +500,10 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 
 exports[`<InputField /> Required story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -556,10 +556,10 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
 
 exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -616,10 +616,10 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 
 exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -656,10 +656,10 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 
 exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -706,10 +706,10 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 
 exports[`<InputField /> Warning story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -746,11 +746,11 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -773,10 +773,10 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
 
 exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -823,10 +823,10 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
 
 exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -872,10 +872,10 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 
 exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
@@ -927,11 +927,11 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -954,10 +954,10 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
 
 exports[`<InputField /> WithText story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"

@@ -17,9 +17,11 @@ export const ColorList = (props: Props) => (
   <Table>
     <Table.Header>
       <Table.Row variant="header">
-        <Table.HeaderCell className="w-72">CSS Variable</Table.HeaderCell>
-        <Table.HeaderCell className="w-40">Figma Token Name</Table.HeaderCell>
-        <Table.HeaderCell className="w-72">
+        <Table.HeaderCell className="w-[288px]">CSS Variable</Table.HeaderCell>
+        <Table.HeaderCell className="w-[160px]">
+          Figma Token Name
+        </Table.HeaderCell>
+        <Table.HeaderCell className="w-[288px]">
           Tailwind Class Name(s)
         </Table.HeaderCell>
         <Table.HeaderCell className="w-40">Raw Value</Table.HeaderCell>

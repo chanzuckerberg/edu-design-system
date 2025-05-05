@@ -49,7 +49,7 @@ export default {
       diffIncludeAntiAliasing: false,
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;

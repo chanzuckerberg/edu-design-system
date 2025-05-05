@@ -2,7 +2,7 @@
 
 exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-60"
+  class="select select--label-layout-vertical w-[240px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -46,10 +46,10 @@ exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`]
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -106,10 +106,10 @@ exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -122,7 +122,7 @@ exports[`<Select /> Generated Snapshots Default story renders snapshot 1`] = `
 
 exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
 <div
-  class="select select--has-fieldNote select--label-layout-vertical w-96"
+  class="select select--has-fieldNote select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -171,10 +171,10 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -231,10 +231,10 @@ exports[`<Select /> Generated Snapshots HorizontalLabel story renders snapshot 1
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -247,7 +247,7 @@ exports[`<Select /> Generated Snapshots HorizontalLabel story renders snapshot 1
 
 exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-60"
+  class="select select--label-layout-vertical w-[240px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -292,10 +292,10 @@ exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders sna
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -334,10 +334,10 @@ exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -350,7 +350,7 @@ exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`
 
 exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-96"
+  class="select select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -392,10 +392,10 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -408,7 +408,7 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
 
 exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-96"
+  class="select select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -457,10 +457,10 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -473,7 +473,7 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
 
 exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
 <div
-  class="select select--label-layout-vertical w-96"
+  class="select select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -522,10 +522,10 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -564,10 +564,10 @@ exports[`<Select /> Generated Snapshots StyledUncontrolled story renders snapsho
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -604,7 +604,7 @@ exports[`<Select /> Generated Snapshots UncontrolledHeadless story renders snaps
 
 exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
 <div
-  class="select select--has-fieldNote select--label-layout-vertical w-96"
+  class="select select--has-fieldNote select--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="dropdown"
@@ -653,10 +653,10 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -713,10 +713,10 @@ exports[`<Select /> Generated Snapshots WithFieldName story renders snapshot 1`]
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -773,10 +773,10 @@ exports[`<Select /> Generated Snapshots WithFieldNote story renders snapshot 1`]
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -833,10 +833,10 @@ exports[`<Select /> Generated Snapshots WithSelectedBy story renders snapshot 1`
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -893,10 +893,10 @@ exports[`<Select /> Generated Snapshots WithSelectedOption story renders snapsho
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -953,10 +953,10 @@ exports[`<Select /> Generated Snapshots WithStandardButton story renders snapsho
       aria-hidden="true"
       class="icon select-button__icon select-button__icon--reversed"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

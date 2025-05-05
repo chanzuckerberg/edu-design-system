@@ -16,9 +16,9 @@ export default {
     layout: 'centered',
     badges: ['api-2.0', 'theme-2.0'],
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
   args: {
-    className: 'w-96',
+    className: 'w-[384px]',
     children: (
       <>
         <Card.Header>
@@ -134,7 +134,7 @@ function CardMenu() {
         <Icon
           name="dots-horizontal"
           purpose="informative"
-          size="2rem"
+          size="32px"
           title="show more"
         />
       </Menu.PlainButton>
@@ -238,7 +238,7 @@ export const WithHorizontalPrimaryButton: Story = {
 export const CustomBrandCard: Story = {
   args: {
     containerColor: 'custom-brand',
-    className: 'border-brand-red bg-brand-red w-96',
+    className: 'border-brand-red bg-brand-red w-[384px]',
   },
 };
 

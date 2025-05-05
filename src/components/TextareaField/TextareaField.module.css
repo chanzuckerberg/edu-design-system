@@ -9,7 +9,7 @@
  */
 .textarea {
   @mixin inputStyles;
-  padding: calc(var(--eds-spacing-size-1) / 16 * 1rem) 0.75rem;
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
 
   &:read-only:not(:disabled) {
     border: 0;
@@ -22,9 +22,9 @@
  */
 .textarea-field__overline {
   display: flex;
-  align-items: center;
-  margin-bottom: calc(var(--eds-spacing-size-half) / 16 * 1rem);
-  gap: calc(var(--eds-spacing-size-half) / 16 * 1rem);
+  align-items: baseline;
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
+  gap: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 .textarea-field__overline--no-label {
