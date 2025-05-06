@@ -2,19 +2,14 @@
   display: flex;
   justify-content: space-between;
 
-  margin-top: calc(var(--eds-size-3) / 16 * 1rem);
-}
-
-.fieldset__label {
-  /* HACK: Instead of applying the token directly in CSS, should use <Text /> */
-  font: var(--eds-theme-typography-form-label);
+  margin-top: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 /**
  * The contents of the fieldset. Spaces them apart.
  */
 .fieldset-items> :not(:last-child) {
-  margin-bottom: calc(var(--eds-size-2) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 /**
@@ -23,21 +18,15 @@
  * but semantically/stylistically a bit different.
  */
 .fieldset-legend {
-  margin-bottom: calc(var(--eds-size-3) / 16 * 1rem);
-}
-
-/**
- * Label flag to mark whether or not a field is required
- * or optional. Currently a flag is only present for optional fields
- *
- * TODO: remove as deprecated with v16 of EDS
- */
-.fieldset-legend__flag {
-  font: var(--eds-theme-typography-body-sm);
+  margin-bottom: calc(var(--eds-spacing-size-3) * 1px);
 }
 
 .fieldset-legend__overline {
   display: flex;
-  align-items: center;
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  align-items: baseline;
+  gap: calc(var(--eds-spacing-size-half) * 1px);
+}
+
+.fieldset-legend__hint {
+  color: var(--eds-theme-color-text-utility-default-secondary)
 }

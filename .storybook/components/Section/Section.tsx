@@ -42,7 +42,7 @@ export type SectionProps = {
    */
   title?: string;
   /**
-   * Slot for node to appear to the right of the section title. Typically used to include a Badge, Button, Tooltip, or other component
+   * Slot for node to appear to the right of the section title. Typically used to include a Button, Tooltip, or other component
    */
   titleAfter?: ReactNode;
   /**

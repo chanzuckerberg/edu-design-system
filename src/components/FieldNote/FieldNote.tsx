@@ -4,6 +4,7 @@ import React from 'react';
 import type { Status } from '../../util/variant-types';
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
+import Text from '../Text';
 import styles from './FieldNote.module.css';
 
 export type FieldNoteProps = {
@@ -83,11 +84,13 @@ export const FieldNote = ({
           className={styles['field-note__icon']}
           name={iconToUse}
           purpose="informative"
-          size="1rem"
+          size="16px"
           title={title}
         />
       )}
-      {children}
+      <Text as="span" preset="body-sm">
+        {children}
+      </Text>
     </div>
   );
 };

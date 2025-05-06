@@ -3,9 +3,6 @@
 /*------------------------------------*\
     # SELECT
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 /**
  * Select field used to select one option from a list of options.
@@ -19,8 +16,9 @@
  */
 .select__overline {
   display: flex;
-  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
-  gap: calc(var(--eds-size-half) / 16 * 1rem);
+  align-items: baseline;
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
+  gap: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 .select__overline--no-label {
@@ -44,17 +42,15 @@
   flex-direction: row;
   align-items: baseline;
 
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 /**
  * The button to trigger the display of the select field.
  */
 .select-button {
-  font: var(--eds-theme-typography-form-input);
-
   width: 100%;
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
 
   border: calc(var(--eds-border-width-sm) * 1px) solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
@@ -62,12 +58,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
 
   cursor: pointer;
 
   color: var(--eds-theme-color-text-utility-default-primary);
-  background-color: var(--eds-theme-color-form-background);
+  background-color: var(--eds-theme-color-background-input);
 }
 
 /**
@@ -100,7 +96,7 @@
 }
 
 .select--has-fieldNote {
-  margin-bottom: calc(var(--eds-size-half) / 16 * 1rem);
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 
@@ -108,7 +104,6 @@
  * Label on top of the select trigger button to label the select field.
  */
 .select__label {
-  font: var(--eds-theme-typography-form-label);
   color: var(--eds-theme-color-text-utility-default-primary);
 }
 

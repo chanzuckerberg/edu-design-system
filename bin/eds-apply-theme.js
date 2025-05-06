@@ -66,7 +66,7 @@
   try {
     EDSStyleDictionary.buildAllPlatforms();
   } catch (error) {
-    // TODO: if theme has things not in base, error showing where the conflict
+    // NOTE: if theme has things not in base, error showing where the conflict
     console.error('EDS theming error:', error.message);
     return;
   }

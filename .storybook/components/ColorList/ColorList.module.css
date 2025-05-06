@@ -1,9 +1,8 @@
 .color-list__label {
   width: fit-content;
-  padding: calc(var(--eds-size-half) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-half) * 1px);
   border-radius: calc(var(--eds-theme-box-button-border-radius) * 1px);
 
-  font: var(--eds-theme-typography-label-md-subtle);
   color: rgb(235, 87, 87);
 
   background-color: var(--eds-theme-color-background-neutral-subtle);
@@ -11,16 +10,15 @@
 
 .color-list__input {
   width: 100%;
-  height: 5rem;
-  border: var(--eds-theme-color-border-neutral-subtle) solid
-    calc(var(--eds-border-width-sm) * 1px);
-  outline: var(--eds-theme-color-border-neutral-strong) solid
-    calc(var(--eds-border-width-sm) * 1px);
+  height: calc(var(--eds-spacing-size-10) * 1px);
+  border: var(--eds-theme-color-border-neutral-subtle) solid calc(var(--eds-border-width-sm) * 1px);
+  outline: var(--eds-theme-color-border-neutral-strong) solid calc(var(--eds-border-width-sm) * 1px);
 }
 
 .color-list__input::-webkit-color-swatch {
   border-color: transparent;
 }
+
 .color-list__input::-webkit-color-swatch-wrapper {
   padding: 0;
 }

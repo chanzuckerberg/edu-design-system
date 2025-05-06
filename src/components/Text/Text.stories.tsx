@@ -8,7 +8,7 @@ export default {
   component: Text,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-2.0'],
+    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     children: {
@@ -17,7 +17,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div className="m-1">{Story()}</div>],
+  decorators: [(Story) => <div className="m-spacing-size-2">{Story()}</div>],
 } as Meta<typeof Text>;
 
 type Story = StoryObj<typeof Text>;
@@ -62,24 +62,10 @@ export const BodyXSmall: Story = {
   },
 };
 
-export const Caption: Story = {
+export const CaptionMedium: Story = {
   args: {
     preset: 'caption-md',
-    children: 'Caption',
-  },
-};
-
-export const Overline: Story = {
-  args: {
-    preset: 'overline',
-    children: 'Overline',
-  },
-};
-
-export const Callout: Story = {
-  args: {
-    preset: 'callout',
-    children: 'Callout',
+    children: 'Caption medium',
   },
 };
 
@@ -88,7 +74,7 @@ export const OverridingFontFamily: Story = {
     preset: 'body-md',
     children:
       'You can use utility classes to override the font family used for a given size',
-    className: '!font-secondary',
+    className: '!font-2',
   },
 };
 
@@ -102,17 +88,11 @@ export const UsingColorTokens: Story = {
       <Text {...args} className="text-utility-warning" preset="body-xl">
         using <code>text-utility-warning</code> utility class
       </Text>
-      <Text {...args} className="text-utility-success" preset="body-lg">
-        using <code>text-utility-success</code> utility class
+      <Text {...args} className="text-utility-favorable" preset="body-lg">
+        using <code>text-utility-favorable</code> utility class
       </Text>
-      <Text {...args} className="text-utility-error" preset="body-md">
-        using <code>text-utility-error</code> utility class
-      </Text>
-      <Text
-        className="text-[var(--eds-theme-color-text-utility-success)]"
-        preset="body-sm"
-      >
-        using inline color
+      <Text {...args} className="text-utility-critical" preset="body-md">
+        using <code>text-utility-critical</code> utility class
       </Text>
     </div>
   ),

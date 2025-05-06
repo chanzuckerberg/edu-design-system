@@ -10,7 +10,7 @@ export default {
     badges: ['api-1.3', 'theme-1.0'],
   },
   args: {
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   argTypes: {
     size: {

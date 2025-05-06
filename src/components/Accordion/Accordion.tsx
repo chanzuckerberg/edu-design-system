@@ -1,4 +1,8 @@
-import { Disclosure } from '@headlessui/react';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
@@ -177,7 +181,7 @@ const AccordionButton = ({
   );
 
   return (
-    <Disclosure.Button as={React.Fragment}>
+    <DisclosureButton as={React.Fragment}>
       {({ open }) => (
         <button
           className={componentClassName}
@@ -218,7 +222,6 @@ const AccordionButton = ({
                 preset={size === 'md' ? 'body-lg' : 'body-md'}
               >
                 {title}
-                {/* TODO: Add check preventing use of title, subtitle, AND children at the same time */}
                 {children}
               </Text>
             )}
@@ -240,13 +243,13 @@ const AccordionButton = ({
               )}
               name={trailingIcon}
               purpose="informative"
-              size="1.5rem"
+              size="24px"
               title={open ? 'hide content' : 'show content'}
             />
           )}
         </button>
       )}
-    </Disclosure.Button>
+    </DisclosureButton>
   );
 };
 
@@ -255,21 +258,23 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { size } = useContext(AccordionContext);
   const { isExpandable, hasLeadingIcon } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
-    size === 'sm' && styles['accordion-panel--sm'],
     !isExpandable && styles['accordion-panel--hidden'],
     hasLeadingIcon && styles['accordion-panel--leading-icon'],
     className,
   );
 
   return (
-    <Disclosure.Panel className={componentClassName} {...other}>
-      {isExpandable && children}
-    </Disclosure.Panel>
+    <DisclosurePanel className={componentClassName} {...other}>
+      {isExpandable && (
+        <Text as="span" preset="body-md">
+          {children}
+        </Text>
+      )}
+    </DisclosurePanel>
   );
 };
 

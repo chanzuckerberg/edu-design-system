@@ -2,7 +2,7 @@
 
 exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -17,10 +17,15 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r3:"
       >
-        Checkbox
+        <span
+          class="text text--body-md"
+        >
+          Checkbox
+        </span>
+         
       </label>
     </div>
   </div>
@@ -29,7 +34,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -43,10 +48,15 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r0:"
       >
-        Checkbox
+        <span
+          class="text text--body-md"
+        >
+          Checkbox
+        </span>
+         
       </label>
     </div>
   </div>
@@ -55,7 +65,7 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="p-0"
@@ -73,11 +83,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r6:"
         >
-          Disabled
+          <span
+            class="text text--body-md"
+          >
+            Disabled
+          </span>
+           
         </label>
       </div>
     </div>
@@ -95,11 +109,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r7:"
         >
-          Disabled
+          <span
+            class="text text--body-md"
+          >
+            Disabled
+          </span>
+           
         </label>
       </div>
     </div>
@@ -116,11 +134,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          aria-disabled="true"
-          class="label label--lg label--disabled"
+          class="label label--disabled"
           for=":r8:"
         >
-          Disabled
+          <span
+            class="text text--body-md"
+          >
+            Disabled
+          </span>
+           
         </label>
       </div>
     </div>
@@ -142,11 +164,15 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
     class="checkbox__labels"
   >
     <label
-      aria-disabled="true"
-      class="label label--lg label--disabled"
+      class="label label--disabled"
       for=":rb:"
     >
-      Disabled
+      <span
+        class="text text--body-md"
+      >
+        Disabled
+      </span>
+       
     </label>
   </div>
 </div>
@@ -154,7 +180,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 
 exports[`<Checkbox /> Error story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox checkbox--error"
@@ -168,10 +194,15 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r2:"
       >
-        In error state
+        <span
+          class="text text--body-md"
+        >
+          In error state
+        </span>
+         
       </label>
     </div>
   </div>
@@ -180,7 +211,7 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
 
 exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     style="font-size: 10px;"
@@ -198,10 +229,15 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
         class="checkbox__labels"
       >
         <label
-          class="label label--lg"
+          class="label"
           for=":r4:"
         >
-          Checkbox
+          <span
+            class="text text--body-md"
+          >
+            Checkbox
+          </span>
+           
         </label>
       </div>
     </div>
@@ -211,7 +247,7 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -225,10 +261,15 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r5:"
       >
-        Checkbox
+        <span
+          class="text text--body-md"
+        >
+          Checkbox
+        </span>
+         
       </label>
     </div>
   </div>
@@ -237,7 +278,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 
 exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -251,10 +292,15 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":ra:"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        <span
+          class="text text--body-md"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </span>
+         
       </label>
     </div>
   </div>
@@ -263,7 +309,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 
 exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"
@@ -277,10 +323,15 @@ exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
       class="checkbox__labels"
     >
       <label
-        class="label label--lg"
+        class="label"
         for=":r1:"
       >
-        Checkbox
+        <span
+          class="text text--body-md"
+        >
+          Checkbox
+        </span>
+         
       </label>
       <span
         class="text text--body-sm checkbox__sub-label"
@@ -294,7 +345,7 @@ exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
 
 exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="checkbox"

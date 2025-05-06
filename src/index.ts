@@ -4,25 +4,19 @@ import './tokens-dist/css/variables.css';
 /**
  * 1.x component theme exports
  */
-export { default as Avatar } from './components/Avatar';
-export { default as Badge } from './components/Badge';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as Heading } from './components/Heading';
-export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Label } from './components/Label';
-export { default as ProgressBar } from './components/ProgressBar';
-export { default as SearchBar } from './components/SearchBar';
 export { default as Skeleton } from './components/Skeleton';
-export { default as Slider } from './components/Slider';
 export { default as Table } from './components/Table';
-export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
 export { default as Toggle } from './components/Toggle';
 
 /**
  * 2.x component theme exports
  */
+// export { default as Avatar } from './components/Avatar'; // Disabling export until 2.0 version is implemented
 export { default as Accordion } from './components/Accordion';
 export { default as AppNotification } from './components/AppNotification';
 export { default as Button } from './components/Button';
@@ -51,6 +45,7 @@ export { default as Radio } from './components/Radio';
 export { default as Select } from './components/Select';
 export { default as SelectionChip } from './components/SelectionChip';
 export { default as TabGroup } from './components/TabGroup';
+export { default as Tag } from './components/Tag';
 export { default as TextareaField } from './components/TextareaField';
 export { default as ToastNotification } from './components/ToastNotification';
 export { default as Tooltip } from './components/Tooltip';
@@ -70,10 +65,6 @@ export type {
   DataTableWithStatus,
   DataTableSortDirection,
 } from './components/DataTable';
-
-// TODO(next-major): Remove the below types at the next major release
-export type { PageNotificationProps as PageNotificationV2Props } from './components/PageNotification';
-export type { AppNotificationProps as AppNotificationV2Props } from './components/AppNotification';
 
 /**
  * Utilities re-exported from dependent libraries

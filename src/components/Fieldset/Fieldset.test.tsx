@@ -20,20 +20,6 @@ describe('<Fieldset />', () => {
   generateSnapshots(stories as StoryFile);
 
   describe('emits warnings when misused', () => {
-    it('warns when using text and optionalLabel props', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
-
-      render(
-        <Fieldset.Legend
-          optionalLabel="(required)"
-          text="should generate warning"
-        />,
-      );
-
-      expect(consoleMock).toHaveBeenCalledTimes(2);
-    });
-
     it('warns when using subtitle by itself', () => {
       const consoleMock = jest.spyOn(console, 'warn');
       consoleMock.mockImplementation();

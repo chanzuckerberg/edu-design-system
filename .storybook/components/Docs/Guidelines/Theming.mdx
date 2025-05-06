@@ -131,38 +131,6 @@ Once run, you will have a set of theme files written to the configured `dest` pa
 
 To use, add this file to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
 
-### eds-import-from-figma
-
-**NOTE**: This script will be removed in the next version of EDS
-
-Command to run: `npx eds-import-from-figma`
-
-Designers can define and tweak the values of a custom theme. For this reason, we want to automate the application of those changes to the project's existing theme file.
-
-To use this command, there are a few prerequisites:
-
-- In Figma, install the [Export/Import Variables Plugin][export-import-plugin].
-
-With the prerequisites set up, you can download a JSON file, containing the existing token definitions and values. Here's how:
-
-- Open the design(s) in Figma
-- Open the Resources Panel in the toolbar (or use <kbd>Shift + I</kbd>)
-- Activate the "Export/Import Variables" plugin by first clicking the "Plugins" tab, then the "Export/Import Variables" option.
-- Once it opens, click the "Export..." button for the Listed collections and save to your local machine
-- Finally, us the above command, by passing in the file path to each collection.
-
-Example:
-
-`$ npx eds-import-from-figma path/to/export-file.json`
-
-When using the script, it will read in the available Figma Modes in the file. Select the value you want (e.g., New Theme), then hit <kbd>Enter</kbd>
-
-The script will run and apply new token values to the code in the appropriate places.
-
-**NOTE**: currently, we only handle color tokens, and will skip any tokens storing other types of token values (number, etc.).
-
-[export-import-plugin]: https://www.figma.com/community/plugin/1256972111705530093
-
 ### eds-import-from-figma-api
 
 Command to run: `npx eds-import-from-figma-api`

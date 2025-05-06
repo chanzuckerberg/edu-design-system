@@ -12,9 +12,9 @@
 
 .input-chip__label {
   display: inline-flex;
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
   padding-right: 0;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
   align-items: center;
   justify-content: center;
 
@@ -31,7 +31,7 @@
 .input-chip .input-chip__action-button {
   display: flex;
   align-items: center;
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
 
   border: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
   border-left: none;

@@ -2,8 +2,9 @@ import clsx from 'clsx';
 import Graphemer from 'graphemer';
 
 import React from 'react';
-import type { Size } from '../../util/variant-types';
+import type { Preset, Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
+import Text from '../Text';
 import styles from './Avatar.module.css';
 
 export type UserData = {
@@ -132,6 +133,16 @@ export const Avatar = ({
     avatarDisplayName = user.displayName;
   }
 
+  const presetMap: Record<Size, Preset> = {
+    xs: 'title-xs',
+    sm: 'title-sm',
+    md: 'title-md',
+    lg: 'title-md',
+    xl: 'headline-md',
+    xxl: 'headline-lg',
+    xxxl: 'headline-lg',
+  };
+
   return (
     <div
       aria-label={descriptiveLabel}
@@ -139,7 +150,11 @@ export const Avatar = ({
       role="img"
       {...other}
     >
-      {variant === 'initials' && avatarDisplayName}
+      {variant === 'initials' && (
+        <Text as="span" preset={presetMap[size]}>
+          {avatarDisplayName}
+        </Text>
+      )}
       {variant === 'icon' && (
         <Icon name={icon} purpose="decorative" size="80%" />
       )}

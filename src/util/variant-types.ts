@@ -31,14 +31,8 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 /**
  * Alignment variants, for horizontal components and sub-components
- * TODO(next-major): warn on using left/right
  */
-export type Align = 'leading' | 'trailing' | 'left' | 'center' | 'right';
-
-/**
- * Hints are form field directions on how to use the field and whether it requires a value.
- */
-export type Hint = 'none' | 'required' | 'optional';
+export type Align = 'leading' | 'trailing' | 'center';
 
 /**
  * Statuses tied to the state of information being displayed
@@ -52,71 +46,44 @@ export type Status = 'informational' | 'warning' | 'favorable' | 'critical';
  * By setting the array `as const`, we can treat each array value as
  * read-only and a unique type.
  *
- * TODO: generate this from the tokens statically, if possible
+ * NOTE: To reduce maintenance, generate this from the tokens statically
  */
 export const presets = [
+  'headline-xl',
   'headline-lg',
-  'headline-lg-bold',
-  'headline-lg-bold-mobile',
-  'headline-lg-mobile',
   'headline-md',
-  'headline-md-bold',
-  'headline-md-bold-mobile',
-  'headline-md-mobile',
   'headline-sm',
-  'headline-sm-bold',
-  'headline-sm-bold-mobile',
-  'headline-sm-mobile',
-  'headline-secondary-lg',
-  'headline-secondary-lg-bold',
-  'headline-secondary-md',
-  'headline-secondary-md-bold',
-  'headline-secondary-sm',
-  'headline-secondary-sm-bold',
+  'headline-decorative-inline-xl',
+  'headline-decorative-inline-lg',
+  'headline-decorative-inline-md',
+  'headline-decorative-inline-sm',
   'title-lg',
-  'title-lg-bold',
   'title-md',
-  'title-md-bold',
   'title-sm',
-  'title-sm-bold',
   'title-xs',
-  'title-xs-bold',
-  'label-lg-subtle',
-  'label-md',
-  'label-md-subtle',
-  'label-sm',
   'body-xl',
+  'body-xl-bold',
   'body-lg',
+  'body-lg-bold',
   'body-md',
+  'body-md-bold',
   'body-sm',
+  'body-sm-bold',
   'body-xs',
-  'caption-lg',
-  'caption-lg-bold',
-  'caption-md',
-  'caption-md-bold',
-  'caption-sm',
-  'caption-sm-bold',
-  'overline', // @deprecated TODO(next-major): This should not be used in code or design. It will be removed in a future version of EDS."
+  'body-xs-bold',
+  'label-lg',
+  'label-md',
+  'label-sm',
   'overline-lg',
   'overline-md',
   'overline-sm',
-  'callout',
-  'breadcrumb',
-  'button-lg',
-  'button-md',
-  'button-label',
-  'button-label-sm',
-  'form-label',
-  'form-input',
-  'link-lg',
-  'link-md',
-  'link-sm',
-  'link-xs',
-  'tab-lg',
+  'caption-md',
+  'caption-sm',
+  'input',
   'tab-lg-active',
-  'tab-sm',
+  'tab-lg',
   'tab-sm-active',
-  'tag',
+  'tab-sm',
 ] as const;
 
 /**

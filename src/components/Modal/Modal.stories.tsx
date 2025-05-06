@@ -15,10 +15,10 @@ export default {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.0'],
   },
   tags: ['autodocs'],
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -206,7 +206,9 @@ export const ContentDefault: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2">Modal Title</Heading>
+          <Heading as="h2" className="text-utility-default-primary">
+            Modal Title
+          </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
         </Modal.Header>
         <Modal.Body>
@@ -292,7 +294,9 @@ export const LayoutVertical: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2">Modal Title</Heading>
+          <Heading as="h2" className="text-utility-default-primary">
+            Modal Title
+          </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
         </Modal.Header>
         <Modal.Body>
@@ -335,7 +339,9 @@ export const LayoutVerticalWithTertiary: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2">Modal Title</Heading>
+          <Heading as="h2" className="text-utility-default-primary">
+            Modal Title
+          </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
         </Modal.Header>
         <Modal.Body>
@@ -377,7 +383,9 @@ export const WithCriticalButton: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2">Modal Title</Heading>
+          <Heading as="h2" className="text-utility-default-primary">
+            Modal Title
+          </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
         </Modal.Header>
         <Modal.Body>

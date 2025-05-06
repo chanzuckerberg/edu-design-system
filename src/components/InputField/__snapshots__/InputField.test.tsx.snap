@@ -2,19 +2,23 @@
 
 exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rm:"
       >
-        Default input field
+        <span
+          class="text text--label-md"
+        >
+          Default input field
+        </span>
       </label>
     </div>
     <div
@@ -29,10 +33,18 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rn:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":rn:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote.
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -40,19 +52,23 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 
 exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r0:"
       >
-        Default input field
+        <span
+          class="text text--label-md"
+        >
+          Default input field
+        </span>
       </label>
     </div>
     <div
@@ -67,10 +83,18 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":r1:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":r1:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote.
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -78,20 +102,24 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
 
 exports[`<InputField /> Disabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        class="label label--md label--disabled input-field__label input-field__label--disabled"
         for=":rc:"
       >
-        Disabled input field
+        <span
+          class="text text--label-md"
+        >
+          Disabled input field
+        </span>
       </label>
     </div>
     <div
@@ -108,11 +136,19 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
       />
     </div>
     <div
-      aria-disabled="true"
-      class="field-note field-note--disabled"
-      id=":rd:"
+      class="input-field__footer"
     >
-      This InputField is disabled
+      <div
+        aria-disabled="true"
+        class="field-note field-note--disabled"
+        id=":rd:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This InputField is disabled
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -120,19 +156,23 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 
 exports[`<InputField /> Error story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r6:"
       >
-        Error input field
+        <span
+          class="text text--label-md"
+        >
+          Error input field
+        </span>
       </label>
     </div>
     <div
@@ -147,27 +187,35 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note field-note--error"
-      id=":r7:"
+      class="input-field__footer"
     >
-      <svg
-        class="icon field-note__icon"
-        fill="currentColor"
-        height="1rem"
-        role="img"
-        style="--icon-size: 1rem;"
-        viewBox="0 0 24 24"
-        width="1rem"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="field-note field-note--error"
+        id=":r7:"
       >
-        <title>
-          error
-        </title>
-        <path
-          d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
-        />
-      </svg>
-      This is a fieldnote with an error.
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="16px"
+          role="img"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            error
+          </title>
+          <path
+            d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
+          />
+        </svg>
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote with an error.
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -175,17 +223,21 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
 
 exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div>
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rs:"
       >
-        Input field with button inside
+        <span
+          class="text text--label-md"
+        >
+          Input field with button inside
+        </span>
       </label>
     </div>
     <div
@@ -205,7 +257,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-sm button__text"
           >
             Button
           </span>
@@ -218,10 +270,10 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__body"
@@ -241,10 +293,10 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
+          height="24px"
+          style="--icon-size: 24px;"
           viewBox="0 0 24 24"
-          width="1.5rem"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -259,17 +311,21 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 
 exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div>
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":ru:"
       >
-        Input field with button inside
+        <span
+          class="text text--label-md"
+        >
+          Input field with button inside
+        </span>
       </label>
     </div>
     <div
@@ -289,16 +345,16 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-sm button__text"
           >
             <svg
               aria-hidden="true"
               class="icon"
               fill="currentColor"
-              height="1rem"
-              style="--icon-size: 1rem;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="1rem"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -316,19 +372,23 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 
 exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r4:"
       >
-        Default input field
+        <span
+          class="text text--label-md"
+        >
+          Default input field
+        </span>
       </label>
     </div>
     <div
@@ -347,10 +407,10 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 
 exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline input-field__overline--no-label"
@@ -369,10 +429,18 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rl:"
+      class="input-field__footer"
     >
-      This input field has no visible label
+      <div
+        class="field-note"
+        id=":rl:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This input field has no visible label
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -380,19 +448,23 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 
 exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":ra:"
       >
-        Read-only field
+        <span
+          class="text text--label-md"
+        >
+          Read-only field
+        </span>
       </label>
     </div>
     <div
@@ -409,10 +481,18 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rb:"
+      class="input-field__footer"
     >
-      This will show up like text, but not be interactive
+      <div
+        class="field-note"
+        id=":rb:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This will show up like text, but not be interactive
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -420,19 +500,23 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 
 exports[`<InputField /> Required story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rg:"
       >
-        Input field with fieldNote
+        <span
+          class="text text--label-md"
+        >
+          Input field with fieldNote
+        </span>
       </label>
       <span
         class="text text--body-sm input-field__required-text"
@@ -453,10 +537,18 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rh:"
+      class="input-field__footer"
     >
-      This is a fieldnote for a required input field.
+      <div
+        class="field-note"
+        id=":rh:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote for a required input field.
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -464,20 +556,24 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
 
 exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
         aria-disabled="true"
-        class="label label--lg label--disabled input-field__label input-field__label--disabled"
+        class="label label--md label--disabled input-field__label input-field__label--disabled"
         for=":ri:"
       >
-        Input field with fieldNote
+        <span
+          class="text text--label-md"
+        >
+          Input field with fieldNote
+        </span>
       </label>
       <span
         aria-disabled="true"
@@ -500,11 +596,19 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
       />
     </div>
     <div
-      aria-disabled="true"
-      class="field-note field-note--disabled"
-      id=":rj:"
+      class="input-field__footer"
     >
-      This is a fieldnote for a required input field.
+      <div
+        aria-disabled="true"
+        class="field-note field-note--disabled"
+        id=":rj:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote for a required input field.
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -512,19 +616,23 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 
 exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":rq:"
       >
-        Field with Optional Hint
+        <span
+          class="text text--label-md"
+        >
+          Field with Optional Hint
+        </span>
       </label>
       <span
         class="text text--body-sm input-field__required-text"
@@ -546,93 +654,25 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> TabularInput story renders snapshot 1`] = `
-<div
-  class="p-8"
->
-  <table
-    class="table"
-  >
-    <thead>
-      <tr
-        class="table-row"
-      >
-        <th
-          class="table-header-cell"
-        >
-          <div
-            class="table-header-cell__container"
-          >
-            Label
-          </div>
-        </th>
-        <th
-          class="table-header-cell"
-        >
-          <div
-            class="table-header-cell__container"
-          >
-            Field
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        class="table-row"
-      >
-        <td
-          class="table-cell flex items-center"
-        >
-          <label
-            class="label flex items-center"
-            for="field-1"
-            id="input-1"
-          >
-            Input One
-             
-          </label>
-        </td>
-        <td
-          class="table-cell"
-        >
-          <div>
-            <div
-              class="input-field__body"
-            >
-              <input
-                aria-invalid="false"
-                aria-label="redundant"
-                aria-labelledby="input-1"
-                class="input"
-                id="field-1"
-                placeholder="click the label to highlight field"
-                type="text"
-              />
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-`;
-
 exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":ro:"
       >
-        Default input field
+        <span
+          class="text text--label-md"
+        >
+          Default input field
+        </span>
       </label>
     </div>
     <div
@@ -647,10 +687,18 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":rp:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":rp:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote.
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -658,19 +706,23 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 
 exports[`<InputField /> Warning story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r8:"
       >
-        Warning input field
+        <span
+          class="text text--label-md"
+        >
+          Warning input field
+        </span>
       </label>
     </div>
     <div
@@ -685,27 +737,35 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note field-note--warning"
-      id=":r9:"
+      class="input-field__footer"
     >
-      <svg
-        class="icon field-note__icon"
-        fill="currentColor"
-        height="1rem"
-        role="img"
-        style="--icon-size: 1rem;"
-        viewBox="0 0 24 24"
-        width="1rem"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="field-note field-note--warning"
+        id=":r9:"
       >
-        <title>
-          warning
-        </title>
-        <path
-          d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
-        />
-      </svg>
-      This uses the warning treatment and also applies to the field note
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="16px"
+          role="img"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            warning
+          </title>
+          <path
+            d="M2.72503 20C2.5417 20 2.37503 19.9542 2.22503 19.8625C2.07503 19.7708 1.95837 19.65 1.87503 19.5C1.7917 19.35 1.74587 19.1875 1.73753 19.0125C1.7292 18.8375 1.77503 18.6667 1.87503 18.5L11.125 2.5C11.225 2.33333 11.3542 2.20833 11.5125 2.125C11.6709 2.04167 11.8334 2 12 2C12.1667 2 12.3292 2.04167 12.4875 2.125C12.6459 2.20833 12.775 2.33333 12.875 2.5L22.125 18.5C22.225 18.6667 22.2709 18.8375 22.2625 19.0125C22.2542 19.1875 22.2084 19.35 22.125 19.5C22.0417 19.65 21.925 19.7708 21.775 19.8625C21.625 19.9542 21.4584 20 21.275 20H2.72503ZM12 17C12.2834 17 12.5209 16.9042 12.7125 16.7125C12.9042 16.5208 13 16.2833 13 16C13 15.7167 12.9042 15.4792 12.7125 15.2875C12.5209 15.0958 12.2834 15 12 15C11.7167 15 11.4792 15.0958 11.2875 15.2875C11.0959 15.4792 11 15.7167 11 16C11 16.2833 11.0959 16.5208 11.2875 16.7125C11.4792 16.9042 11.7167 17 12 17ZM12 14C12.2834 14 12.5209 13.9042 12.7125 13.7125C12.9042 13.5208 13 13.2833 13 13V10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5209 9.09583 12.2834 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0959 9.47917 11 9.71667 11 10V13C11 13.2833 11.0959 13.5208 11.2875 13.7125C11.4792 13.9042 11.7167 14 12 14Z"
+          />
+        </svg>
+        <span
+          class="text text--body-sm"
+        >
+          This uses the warning treatment and also applies to the field note
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -713,22 +773,26 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
 
 exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r10:"
       >
-        test label
+        <span
+          class="text text--label-md"
+        >
+          test label
+        </span>
       </label>
       <div
-        class="input-field__character-counter"
+        class="text text--body-sm input-field__character-counter"
       >
         <span
           class="input-field--invalid-length"
@@ -753,31 +817,32 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         value="Some initial text"
       />
     </div>
-    <div
-      class="input-field__footer"
-    />
   </div>
 </div>
 `;
 
 exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r12:"
       >
-        Shortened Length Field
+        <span
+          class="text text--label-md"
+        >
+          Shortened Length Field
+        </span>
       </label>
       <div
-        class="input-field__character-counter"
+        class="text text--body-sm input-field__character-counter"
       >
         <span
           class="input-field--invalid-length"
@@ -801,31 +866,32 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         value="Some initial text"
       />
     </div>
-    <div
-      class="input-field__footer"
-    />
   </div>
 </div>
 `;
 
 exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r14:"
       >
-        test label
+        <span
+          class="text text--label-md"
+        >
+          test label
+        </span>
       </label>
       <div
-        class="input-field__character-counter"
+        class="text text--body-sm input-field__character-counter"
       >
         <span
           class="input-field--invalid-length"
@@ -861,11 +927,11 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         <svg
           class="icon field-note__icon"
           fill="currentColor"
-          height="1rem"
+          height="16px"
           role="img"
-          style="--icon-size: 1rem;"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -875,7 +941,11 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
             d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
           />
         </svg>
-        Longer Field Description
+        <span
+          class="text text--body-sm"
+        >
+          Longer Field Description
+        </span>
       </div>
     </div>
   </div>
@@ -884,19 +954,23 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
 
 exports[`<InputField /> WithText story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
-    class="w-96"
+    class="w-[384px]"
   >
     <div
       class="input-field__overline"
     >
       <label
-        class="label label--lg input-field__label"
+        class="label label--md input-field__label"
         for=":r2:"
       >
-        Default input field
+        <span
+          class="text text--label-md"
+        >
+          Default input field
+        </span>
       </label>
     </div>
     <div
@@ -912,10 +986,18 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="field-note"
-      id=":r3:"
+      class="input-field__footer"
     >
-      This is a fieldnote.
+      <div
+        class="field-note"
+        id=":r3:"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          This is a fieldnote.
+        </span>
+      </div>
     </div>
   </div>
 </div>

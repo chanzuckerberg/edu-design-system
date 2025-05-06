@@ -1,14 +1,15 @@
 @import '../../mixins.css';
 
 body {
-  font: var(--eds-theme-typography-body-md);
+  font: var(--eds-typography-preset-200) var(--eds-typography-font-weight-normal) var(--eds-typography-font-family-1);
+    letter-spacing: var(--eds-typography-letter-spacing-normal);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  color: var(--eds-theme-color-text-neutral-default);
-  background: var(--eds-theme-color-background-neutral-default);
+  background-color: var(--eds-theme-color-background-utility-base-1);
+    color: var(--eds-theme-color-text-utility-default-primary);
 }
 
 /* Body disabled variant */
@@ -21,6 +22,6 @@ body {
 /* Body with light background on small screens */
 .body--alternate {
   @media all and (max-width: $eds-bp-lg) {
-    background: var(--eds-theme-color-background-neutral-default);
+    background: var(--eds-theme-color-background-utility-base-1);
   }
 }

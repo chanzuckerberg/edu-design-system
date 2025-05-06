@@ -7,7 +7,7 @@
   border-width: calc(var(--eds-border-width-sm) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
-  max-width: 14rem;
+  max-width: 224px;
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -22,10 +22,10 @@
 }
 
 .tooltip :global(.tippy-content) {
-  padding-left: calc(var(--eds-size-2) / 16 * 1rem);
-  padding-right: calc(var(--eds-size-2) / 16 * 1rem);
-  padding-bottom: calc(var(--eds-size-1) / 16 * 1rem);
-  padding-top: calc(var(--eds-size-1) / 16 * 1rem);
+  padding-left: calc(var(--eds-spacing-size-2) * 1px);
+  padding-right: calc(var(--eds-spacing-size-2) * 1px);
+  padding-bottom: calc(var(--eds-spacing-size-1) * 1px);
+  padding-top: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 /**
@@ -34,8 +34,8 @@
 .tooltip :global(.tippy-arrow) {
   position: absolute;
 
-  width: calc(var(--eds-size-2) / 16 * 1rem);
-  height: calc(var(--eds-size-2) / 16 * 1rem);
+  width: calc(var(--eds-spacing-size-2) * 1px);
+  height: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .tooltip :global(.tippy-arrow::before) {
@@ -43,7 +43,7 @@
 
   border-style: solid;
   border-color: transparent;
-  border-width: calc(var(--eds-size-1) / 16 * 1rem);
+  border-width: calc(var(--eds-spacing-size-1) * 1px);
 
   content: '';
 }

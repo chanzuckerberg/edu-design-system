@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { expect } from '@storybook/test';
-// TODO: Using @storybook/test below leads to superfluous act() warnings
+// Importing this here, since using @storybook/test below leads to superfluous act() warnings
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { Select } from './Select';
@@ -10,7 +10,7 @@ const meta: Meta<typeof Select> = {
   component: Select,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.0'],
   },
   argTypes: {
     multiple: {
@@ -23,6 +23,11 @@ const meta: Meta<typeof Select> = {
     },
     defaultValue: {
       description: 'The default value of the select field (when uncontrolled)',
+    },
+    __demoMode: {
+      table: {
+        disable: true,
+      },
     },
     onClick: {
       description:
@@ -90,7 +95,7 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
 
   await openMenu(playOptions);
 
-  // Target the body of the iframe since we now use PopperJS
+  // Target the body of the iframe since it is portal'd
   const popoverCanvas = within(document.body);
 
   const bestOption = await popoverCanvas.findByText('Cats');
@@ -543,7 +548,7 @@ export const Multiple: StoryObj = {
     multiple: true,
     'data-testid': 'select-field',
     defaultValue: [exampleOptions[0]],
-    className: 'w-60',
+    className: 'w-[240px]',
     name: 'standard-button',
     children: (
       <>
@@ -600,7 +605,7 @@ export const MultipleWithTruncation: StoryObj = {
     multiple: true,
     'data-testid': 'dropdown',
     defaultValue: [exampleOptions[0]],
-    className: 'w-60',
+    className: 'w-[240px]',
     name: 'standard-button',
     children: (
       <>
@@ -654,7 +659,7 @@ export const MultipleWithTruncation: StoryObj = {
 export const AdjustedWidth: StoryObj = {
   args: {
     ...Default.args,
-    className: 'w-60',
+    className: 'w-[240px]',
   },
 };
 
@@ -666,7 +671,7 @@ export const LongOptionList: StoryObj = {
   args: {
     ...Default.args,
     defaultValue: 'test3',
-    className: 'w-60',
+    className: 'w-[240px]',
     children: (
       <>
         <Select.Button>
@@ -729,7 +734,11 @@ export const LongOptionList: StoryObj = {
       },
     },
   },
-  decorators: [(Story) => <div className="p-8 pb-16">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
+    ),
+  ],
 };
 
 /**
@@ -738,8 +747,8 @@ export const LongOptionList: StoryObj = {
 export const SeparateButtonAndMenuWidth: StoryObj = {
   args: {
     ...Default.args,
-    className: 'w-40',
-    optionsClassName: 'w-96',
+    className: 'w-[160px]',
+    optionsClassName: 'w-[384px]',
   },
   play: selectCat,
   parameters: {
@@ -751,7 +760,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
       ...Default.parameters?.docs,
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };
 
 /**
@@ -778,7 +787,7 @@ export const Required: StoryObj = {
     ...Default.args,
     required: true,
     showHint: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     ...Default.parameters,
@@ -793,7 +802,7 @@ export const Optional: StoryObj = {
     ...Default.args,
     required: false,
     showHint: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     ...Default.parameters,
@@ -851,7 +860,7 @@ export const NoVisibleLabelButRequired: StoryObj = {
     label: undefined,
     'aria-label': 'hidden label',
     required: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     ...Default.parameters,
@@ -867,7 +876,7 @@ export const DisabledRequired: StoryObj = {
     disabled: true,
     required: true,
     showHint: true,
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   parameters: {
     docs: {
@@ -877,28 +886,62 @@ export const DisabledRequired: StoryObj = {
 };
 
 /**
- * Options for each `Select` can be aligned on different sides of the target button. Options for `placement` defined by
- * PopperJS.
+ * Options for each `Select` can be aligned on different sides of the target button.
  *
- * More information: https://popper.js.org/docs/v2/constructors/#options
+ * More information: https://headlessui.com/react/popover
  */
 export const OptionsRightAligned: StoryObj = {
-  parameters: {
-    chromatic: {
-      delay: 300,
-    },
-    docs: {
-      ...Default.parameters?.docs,
-    },
-  },
   args: {
     ...Default.args,
-    className: 'w-60',
-    optionsClassName: 'w-96',
-    placement: 'bottom-end',
+    optionsClassName: 'w-[384px]',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options anchor={{ to: 'bottom end', gap: 12 }}>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
   },
-  play: openMenu,
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Select onChange={...}>
+  <Select.Button>
+    {({ value, open, disabled }) => (
+      <Select.ButtonWrapper isOpen={open}>
+        {value.label}
+      </Select.ButtonWrapper>
+    )}
+  </Select.Button>
+  <Select.Options>
+  {exampleOptions.map((option) => (
+    <Select.Option key={option.key} value={option}>
+      {option.label}
+    </Select.Option>
+  ))}
+  </Select.Options>
+</Select>`,
+      },
+    },
+  },
+  play: selectCat,
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
+    ),
+  ],
 };
 
 /**

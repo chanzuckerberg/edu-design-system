@@ -2,6 +2,7 @@ import { generateSnapshots, wait } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { mockAnimationsApi } from 'jsdom-testing-mocks';
 import React from 'react';
 import { Modal } from './Modal';
 import * as stories from './Modal.stories';
@@ -10,11 +11,8 @@ import type { StoryFile } from '../../util/utility-types';
 
 const { Default } = composeStories(stories);
 
-window.ResizeObserver = class FakeResizeObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-};
+// Headless UI 2.x has polyfilled `Element.prototype.getAnimations` for tests.
+mockAnimationsApi();
 
 describe('Modal', () => {
   generateSnapshots(stories as StoryFile, {

@@ -2,7 +2,7 @@
 
 exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--body-lg"
@@ -14,7 +14,7 @@ exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 
 exports[`<Text /> BodyMedium story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--body-md"
@@ -26,7 +26,7 @@ exports[`<Text /> BodyMedium story renders snapshot 1`] = `
 
 exports[`<Text /> BodySmall story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--body-sm"
@@ -38,7 +38,7 @@ exports[`<Text /> BodySmall story renders snapshot 1`] = `
 
 exports[`<Text /> BodyXLarge story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--body-xl"
@@ -50,7 +50,7 @@ exports[`<Text /> BodyXLarge story renders snapshot 1`] = `
 
 exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--body-xs"
@@ -60,33 +60,21 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> Callout story renders snapshot 1`] = `
+exports[`<Text /> CaptionMedium story renders snapshot 1`] = `
 <div
-  class="m-1"
->
-  <p
-    class="text text--callout"
-  >
-    Callout
-  </p>
-</div>
-`;
-
-exports[`<Text /> Caption story renders snapshot 1`] = `
-<div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--caption-md"
   >
-    Caption
+    Caption medium
   </p>
 </div>
 `;
 
 exports[`<Text /> Default story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
     class="text text--body-md"
@@ -96,24 +84,12 @@ exports[`<Text /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> Overline story renders snapshot 1`] = `
-<div
-  class="m-1"
->
-  <p
-    class="text text--overline"
-  >
-    Overline
-  </p>
-</div>
-`;
-
 exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <p
-    class="text text--body-md !font-secondary"
+    class="text text--body-md !font-2"
   >
     You can use utility classes to override the font family used for a given size
   </p>
@@ -122,7 +98,7 @@ exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 
 exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
 <div
-  class="m-1"
+  class="m-spacing-size-2"
 >
   <div>
     <p
@@ -135,27 +111,22 @@ exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
        utility class
     </p>
     <p
-      class="text text--body-lg text-utility-success"
+      class="text text--body-lg text-utility-favorable"
     >
       using 
       <code>
-        text-utility-success
+        text-utility-favorable
       </code>
        utility class
     </p>
     <p
-      class="text text--body-md text-utility-error"
+      class="text text--body-md text-utility-critical"
     >
       using 
       <code>
-        text-utility-error
+        text-utility-critical
       </code>
        utility class
-    </p>
-    <p
-      class="text text--body-sm text-[var(--eds-theme-color-text-utility-success)]"
-    >
-      using inline color
     </p>
   </div>
 </div>

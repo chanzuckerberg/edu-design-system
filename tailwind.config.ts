@@ -9,8 +9,8 @@ const {
 } = edsTokens.theme.color;
 
 // Add a type to the tokens to avoid literals for keys
-const sizes: { [x: string]: string } = edsTokens.size;
 const movements: { [x: string]: string } = edsTokens.anim.move;
+const spacings: { [x: string]: string } = edsTokens.spacing.size;
 
 const movementTokens = {
   ...Object.keys(movements)
@@ -24,11 +24,10 @@ const movementTokens = {
     }, {}),
 };
 
-const sizeTokens = {
-  // We pull the spacing tokens and format them such that names are like 'size-${name} = ${value}px'
-  ...Object.keys(sizes)
-    .map((sizeKey) => {
-      return { [`size-${sizeKey}`]: `${sizes[sizeKey]}px` };
+const spacingTokens = {
+  ...Object.keys(spacings)
+    .map((spacing) => {
+      return { [`spacing-size-${spacing}`]: `${spacings[spacing]}px` };
     })
     .reduce((accumulate, current) => {
       const entry = Object.entries(current)[0];
@@ -47,6 +46,7 @@ export default {
     './src/components/**/*.stories.{ts,tsx}',
     './src/components/**/*Example.tsx',
     './.storybook/**/*.{js,jsx,ts,tsx}',
+    './src/components/Table/StackedCardsToTable.tsx',
   ],
   theme: {
     colors: {
@@ -63,23 +63,21 @@ export default {
         ...textColorTokens,
       },
       spacing: {
-        ...sizeTokens,
+        ...spacingTokens,
       },
       transitionDuration: {
         ...movementTokens,
       },
     },
     fontWeight: {
-      normal: edsTokens['font-weight'].light,
-      medium: edsTokens['font-weight'].medium,
-      bold: edsTokens['font-weight'].bold,
+      ...edsTokens.typography.fontWeight,
     },
     fontFamily: {
       // provide values for the configured font family tokens
       // Useful when your app imports '@chanzuckerberg/eds/fonts.css' or
       // if you have custom token values for primary and secondary fonts
-      primary: edsTokens['font-family'].primary,
-      secondary: edsTokens['font-family'].secondary,
+      1: edsTokens.typography.fontFamily[1],
+      2: edsTokens.typography.fontFamily[2],
     },
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
     // Docs: https://tailwindcss.com/docs/responsive-design#customizing-your-theme

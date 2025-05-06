@@ -4,8 +4,6 @@ import React from 'react';
 
 import { InputField } from './InputField';
 import Button from '../Button';
-import { Label } from '../Label/Label';
-import { Table } from '../Table/Table';
 
 const meta: Meta<typeof InputField> = {
   title: 'Components/InputField',
@@ -18,7 +16,7 @@ const meta: Meta<typeof InputField> = {
     },
   },
   args: {
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   argTypes: {
     type: {
@@ -39,7 +37,7 @@ const meta: Meta<typeof InputField> = {
       ],
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };
 
 export default meta;
@@ -53,7 +51,7 @@ export const Default: Story = {
 };
 
 /**
- * Fields, when containing text, have a theme matching the rest of the interface.
+ * Fields, when containing text, have a theme matching the rest of the UI.
  */
 export const WithText: Story = {
   args: {
@@ -337,44 +335,4 @@ export const WithBothMaxAndRecommendedLength: Story = {
     required: true,
   },
   render: (args) => <InputField {...args} />,
-};
-
-/**
- * This **implementation example** shows how to attach labels to fields and labels
- * when the label is in a different column.
- */
-export const TabularInput: Story = {
-  parameters: {
-    badges: ['api-2.0', 'implementationExample'],
-  },
-  render: (args) => (
-    <Table>
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell>Label</Table.HeaderCell>
-          <Table.HeaderCell>Field</Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        <Table.Row>
-          <Table.Cell className="flex items-center">
-            <Label
-              className="flex items-center"
-              htmlFor="field-1"
-              id="input-1"
-              text="Input One"
-            />
-          </Table.Cell>
-          <Table.Cell>
-            <InputField
-              aria-label="redundant"
-              aria-labelledby="input-1"
-              id="field-1"
-              placeholder="click the label to highlight field"
-            />
-          </Table.Cell>
-        </Table.Row>
-      </Table.Body>
-    </Table>
-  ),
 };

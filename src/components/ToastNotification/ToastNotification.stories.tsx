@@ -21,7 +21,7 @@ export default {
   },
   args: {
     title: "You've got a temporary notification!",
-    className: 'w-96',
+    className: 'w-[384px]',
   },
 } as Meta<Args>;
 
@@ -74,7 +74,7 @@ const ToastNotificationManager = (args: Args) => {
     { id: number | string; text: string; show?: boolean }[]
   >([]);
 
-  // TODO: clean up `toasts` after .show is set to false (using useEffect? and .debounce)
+  // NOTE: clean up `toasts` after .show is set to false (using useEffect? and .debounce)
   // - In a production implementation, you can filter out any toasts where show=false
 
   return (
@@ -94,12 +94,13 @@ const ToastNotificationManager = (args: Args) => {
         Trigger A Toast Notification
       </Button>
       <div
-        className="dur absolute bottom-0 left-0 flex flex-col gap-size-2"
+        className="absolute bottom-0 left-0 flex flex-col gap-spacing-size-2"
         id="toast-container"
       >
         {toasts.map((toast) => (
           <Transition
             appear
+            as="div"
             enter="transition-all duration-medium"
             enterFrom="opacity-0 transform-gpu scale-0"
             enterTo="opacity-100 transform-gpu scale-100"

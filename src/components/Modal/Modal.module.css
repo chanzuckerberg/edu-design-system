@@ -3,9 +3,6 @@
 /*------------------------------------*\
     # MODAL
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 /**
  * The modal wrapper and overlay which takes up the entire screen.
@@ -26,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--eds-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-2) * 1px);
 
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
@@ -47,8 +44,7 @@
   * background colors but makes borders 100% opacity black. Without this, the
   * modal would have no clear boundary. 
   */
-  border: var(--eds-theme-form-border-width) transparent
-    var(--eds-theme-color-background-utility-container);
+  border: var(--eds-theme-form-border-width) transparent var(--eds-theme-color-background-utility-container);
 
   display: flex;
   flex-direction: column;
@@ -62,16 +58,18 @@
 .modal-header {
   width: 100%;
 
-  padding: calc(var(--eds-size-3) / 16 * 1rem)
-    calc(var(--eds-size-4) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 }
 
+.modal-title {
+  color: var(--eds-theme-color-text-utility-default-primary)
+}
 /**
  * The body of the modal
  */
 .modal-body {
   flex: 1;
-  padding: 0 calc(var(--eds-size-4) / 16 * 1rem);
+  padding: 0 calc(var(--eds-spacing-size-4) * 1px);
 }
 
 /**
@@ -81,8 +79,7 @@
   width: 100%;
   z-index: 1000;
 
-  padding: calc(var(--eds-size-3) / 16 * 1rem)
-    calc(var(--eds-size-4) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 
   background-color: var(--eds-theme-color-background-utility-container);
 }
@@ -99,6 +96,7 @@
  */
 .modal__transition--enter {
   transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
+
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -114,6 +112,7 @@
 
 .modal__transition--leave {
   transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
+
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -135,27 +134,27 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
-      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-sm) {
-      max-height: 40rem;
-      max-width: 50rem;
+      max-height: 640px;
+      max-width: 800px;
     }
 
     @media all and (min-width: $eds-bp-md) {
-      max-height: 40rem;
-      max-width: 50rem;
+      max-height: 640px;
+      max-width: 800px;
     }
 
     @media all and (min-width: $eds-bp-lg) {
-      max-height: 40rem;
-      max-width: 60rem;
+      max-height: 640px;
+      max-width: 960px;
     }
 
     @media all and (min-width: $eds-bp-xl) {
-      max-height: 40rem;
-      max-width: 60rem;
+      max-height: 640px;
+      max-width: 960px;
     }
   }
 
@@ -163,54 +162,54 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: auto;
-      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-sm) {
-      max-width: 50rem;
-      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 800px;
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-md) {
-      max-width: 50rem;
-      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 800px;
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-lg) {
-      max-width: 60rem;
-      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 960px;
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-xl) {
-      max-width: 60rem;
-      max-height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 960px;
+      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
   }
 
   &.modal__content--height-max {
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
-      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-sm) {
-      max-width: 50rem;
-      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 800px;
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-md) {
-      max-width: 50rem;
-      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 800px;
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-lg) {
-      max-width: 60rem;
-      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 960px;
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
 
     @media all and (min-width: $eds-bp-xl) {
-      max-width: 60rem;
-      height: calc(100vh - (var(--eds-size-12) / 16 * 1rem));
+      max-width: 960px;
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     }
   }
 }
@@ -220,23 +219,23 @@
  */
 .modal__content--sm {
   @media all and (min-width: $eds-bp-xs) {
-    max-height: 30rem;
-    max-width: 35rem;
+    max-height: 480px;
+    max-width: 560px;
   }
 
   @media all and (min-width: $eds-bp-sm) {
-    max-height: 30rem;
-    max-width: 25rem;
+    max-height: 480px;
+    max-width: 400px;
   }
 
   @media all and (min-width: $eds-bp-md) {
-    max-height: 30rem;
-    max-width: 25rem;
+    max-height: 480px;
+    max-width: 400px;
   }
 
   @media all and (min-width: $eds-bp-xl) {
-    max-height: 30rem;
-    max-width: 35rem;
+    max-height: 480px;
+    max-width: 560px;
   }
 }
 
@@ -267,16 +266,10 @@
  */
 .modal__overlay {
   &.modal__overlay--emphasis-high {
-    background-color: rgb(
-      from var(--eds-theme-color-background-utility-overlay-high-emphasis) r g b /
-        0.8
-    );
+    background-color: rgb(from var(--eds-theme-color-background-utility-overlay-high-emphasis) r g b / 0.8);
   }
 
   &.modal__overlay--emphasis-low {
-    background-color: rgb(
-      from var(--eds-theme-color-background-utility-overlay-low-emphasis) r g b /
-        0.5
-    );
+    background-color: rgb(from var(--eds-theme-color-background-utility-overlay-low-emphasis) r g b / 0.5);
   }
 }

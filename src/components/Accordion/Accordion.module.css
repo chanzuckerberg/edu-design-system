@@ -3,21 +3,16 @@
 /*------------------------------------*\
     # ACCORDION
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
- 
+
 /**
  * Accordion Panel that expands and collapses.
  * Reveals itself below the associated Accordion Button.
  */
- .accordion-panel {
-  padding: 0 calc(var(--eds-size-7) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem);
-
-  font: var(--eds-theme-typography-body-sm);
+.accordion-panel {
+  padding: 0 calc(var(--eds-spacing-size-7) * 1px) calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-2) * 1px);
 
   &.accordion-panel--leading-icon {
-    padding-left: calc(var(--eds-size-7) / 16 * 1rem);
+    padding-left: calc(var(--eds-spacing-size-7) * 1px);
   }
 
   color: var(--eds-theme-color-text-utility-default-primary);
@@ -29,7 +24,7 @@
 .accordion-button {
   display: flex;
   justify-content: flex-start;
-  gap: calc(var(--eds-size-2) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-2) * 1px);
   width: 100%;
 
   border: 0;
@@ -55,7 +50,7 @@
  */
 .accordion-button--sm,
 .accordion-button--md {
-  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
 }
 
 /**
@@ -63,22 +58,23 @@
  *
  * This non-rotated icon points down and represents closed status.
  */
- .accordion-button__trailing-icon {
+.accordion-button__trailing-icon {
   flex: 0 0 content;
   transform: rotate(0);
+  color: var(--eds-theme-color-icon-utility-default-secondary);
 }
 
 /**
  * This rotated icon points up and represents open status.
  */
- .accordion-button__trailing-icon--open {
+.accordion-button__trailing-icon--open {
   transform: rotate(-180deg);
 }
 
 /**
  * Animates the icon rotation when opening and closing.
  */
- .accordion-button > .accordion-button__trailing-icon {
+.accordion-button>.accordion-button__trailing-icon {
   transition: transform calc(var(--eds-anim-move-medium) * 1s) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
@@ -93,13 +89,13 @@
 .accordion-button__heading {
   flex-grow: 2;
 
-  & > * + * {
+  &>*+* {
     display: block;
   }
 }
 
 .accordion-button:focus-visible {
-  outline: calc(var(--eds-size-quarter) / 16 * 1rem)) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
 }
 
 .accordion-button__leading-icon {
@@ -119,19 +115,9 @@
   color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
-
-.accordion-panel--md {
-  font: var(--eds-theme-typography-body-md);
-}
-
-.accordion-panel--sm {
-  font: var(--eds-theme-typography-body-sm);
-}
-
 /**
  * Accordion Row houses one Accordion Button subcomponent and its relevant Accordion Panel subcomponent.
  */
 .accordion-row {
-  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid
-    var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-low-emphasis);
 }

@@ -73,7 +73,7 @@ export const PageNotification = ({
         className={styles['page-notification__icon']}
         name={getIconNameFromStatus(status)}
         purpose="decorative"
-        size="1.5rem"
+        size="24px"
       />
 
       <div

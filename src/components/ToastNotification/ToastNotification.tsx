@@ -40,8 +40,6 @@ export type ToastNotificationProps = {
    * The title/heading of the notification
    */
   title: string;
-  /** @deprecated Please use `dismissType` instead */
-  dissmissType?: 'manual' | 'auto'; // TODO(next-major): remove this misspelled prop at next major release
 };
 
 /**
@@ -52,7 +50,6 @@ export type ToastNotificationProps = {
 export const ToastNotification = ({
   className,
   dismissType = 'manual',
-  dissmissType,
   onDismiss,
   status = 'favorable',
   timeout = 8000,
@@ -65,37 +62,22 @@ export const ToastNotification = ({
     className,
   );
 
-  // if both are defined, temporarily prefer the original value of dissmissType to avoid accidental overrides
-  // TODO(next-major): clean up this workaround
-  const tempDismissType = dissmissType ?? dismissType;
-
   assertEdsUsage(
-    [
-      !!timeout &&
-        typeof onDismiss === 'undefined' &&
-        tempDismissType === 'auto',
-    ],
+    [!!timeout && typeof onDismiss === 'undefined' && dismissType === 'auto'],
     'When using dismissType=auto, an onDismiss method must be defined',
-    'error',
-  );
-
-  // TODO(next-major): remove this misspelled prop at next major release
-  assertEdsUsage(
-    [typeof dissmissType !== 'undefined'],
-    '`dissmissType` is deprecated should not be used. Use `dismissType` instead',
     'error',
   );
 
   useEffect(() => {
     const expireId =
-      tempDismissType === 'auto'
+      dismissType === 'auto'
         ? setTimeout(() => {
             onDismiss && onDismiss();
           }, timeout)
         : undefined;
 
     return () => clearTimeout(expireId);
-  }, [onDismiss, tempDismissType, timeout]);
+  }, [onDismiss, dismissType, timeout]);
 
   return (
     <div className={componentClassName} {...other}>
@@ -103,7 +85,7 @@ export const ToastNotification = ({
         className={styles['toast__icon']}
         name={getIconNameFromStatus(status)}
         purpose="decorative"
-        size="1.875rem"
+        size="30px"
       />
       <div className={styles['toast__body']}>
         <Text as="span" className={styles['toast__text']} preset="title-md">

@@ -54,7 +54,7 @@ export const InlineNotification = ({
         className={styles['inline-notification__icon']}
         name={getIconNameFromStatus(status)}
         purpose="decorative"
-        size="1rem"
+        size="16px"
       />
       <div className={styles['inline-notication__body']}>
         <Text

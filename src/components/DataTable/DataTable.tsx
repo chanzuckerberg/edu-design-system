@@ -9,6 +9,7 @@ import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { Icon, type IconName } from '../Icon/Icon';
 import InputField from '../InputField';
+import Text from '../Text';
 
 import styles from './DataTable.module.css';
 
@@ -137,7 +138,6 @@ export const SORT_DIRECTION = {
 
 export type DataTableSortDirection = keyof typeof SORT_DIRECTION;
 
-// TODO: support cellformat to apply padding and alignment value
 export type DataTableDataCellProps = DataTableHeaderCellProps & {
   children: React.ReactNode;
 };
@@ -189,21 +189,24 @@ export function DataTable<T>({
             {(caption || subcaption) && (
               <div className={styles['data-table__caption-text']}>
                 {caption && (
-                  <div
+                  <Text
                     aria-hidden="true"
+                    as="div"
                     className={styles['data-table__caption']}
+                    preset="headline-md"
                   >
                     {caption}
-                  </div>
+                  </Text>
                 )}
                 {subcaption && (
-                  // TODO: Warn when only using subcaption
-                  <div
+                  <Text
                     aria-hidden="true"
+                    as="div"
                     className={styles['data-table__subcaption']}
+                    preset="headline-sm"
                   >
                     {subcaption}
-                  </div>
+                  </Text>
                 )}
               </div>
             )}
@@ -403,22 +406,26 @@ export const DataTableHeaderCell = ({
     hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
   );
   return (
-    <div className={headerCellClassName} {...rest}>
+    <Text as="div" className={headerCellClassName} {...rest} preset="title-md">
       {leadingIcon && (
         <Icon
           className={styles['data-cell__cell--icon']}
           name={leadingIcon}
           purpose="decorative"
-          size="1rem"
+          size="16px"
         />
       )}
       {(children || sublabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
           {sublabel && (
-            <span className={styles['data-table__cell-sublabel']}>
+            <Text
+              as="span"
+              className={styles['data-table__cell-sublabel']}
+              preset="body-sm"
+            >
               {sublabel}
-            </span>
+            </Text>
           )}
         </div>
       )}
@@ -431,7 +438,7 @@ export const DataTableHeaderCell = ({
           {...sortAttrs(sortDirection)}
         />
       )}
-    </div>
+    </Text>
   );
 };
 
@@ -456,7 +463,7 @@ export const DataTableDataCell = ({
           className={styles['data-cell__cell--icon']}
           name={leadingIcon}
           purpose="decorative"
-          size="1rem"
+          size="16px"
         />
       )}
       {(children || sublabel) && (
@@ -503,7 +510,7 @@ export const DataTableStatusCell = ({
         <Icon
           name={getIconNameFromStatus(status)}
           purpose="decorative"
-          size={size === 'sm' ? '1rem' : '1.5rem'}
+          size={size === 'sm' ? '16px' : '24px'}
         />
       )}
     </div>
@@ -555,7 +562,6 @@ export const DataTableTable = ({
     }
     triggerEffect();
 
-    // TODO: anything to de-allocate when using `observer`?
     return () => {
       if (el) {
         observer.unobserve(el);
@@ -620,7 +626,9 @@ export const DataTableGroupRow = ({
   return (
     <tr>
       <td className={styles['data-table__group-row']} colSpan={colSpan}>
-        {title}
+        <Text as="span" preset="label-sm">
+          {title}
+        </Text>
       </td>
     </tr>
   );

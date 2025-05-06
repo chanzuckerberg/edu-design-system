@@ -101,10 +101,10 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -221,10 +221,10 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -242,7 +242,7 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
 
 exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
 <div
-  class="p-1"
+  class="p-spacing-size-half"
 >
   <div
     class="tabs"
@@ -344,10 +344,10 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
         role="tabpanel"
       >
         <div
-          class="max-w-xl text-utility-inverse"
+          class="max-w-[576px] text-utility-inverse"
         >
           <h3
-            class="heading heading--headline-sm mb-6"
+            class="heading heading--headline-sm mb-spacing-size-3"
           >
             Tab 1
           </h3>
@@ -465,10 +465,10 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -512,10 +512,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon tab__icon"
             fill="currentColor"
-            height="1rem"
-            style="--icon-size: 1rem;"
+            height="16px"
+            style="--icon-size: 16px;"
             viewBox="0 0 24 24"
-            width="1rem"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -546,10 +546,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon tab__icon"
             fill="currentColor"
-            height="1rem"
-            style="--icon-size: 1rem;"
+            height="16px"
+            style="--icon-size: 16px;"
             viewBox="0 0 24 24"
-            width="1rem"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -580,10 +580,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon tab__icon"
             fill="currentColor"
-            height="1rem"
-            style="--icon-size: 1rem;"
+            height="16px"
+            style="--icon-size: 16px;"
             viewBox="0 0 24 24"
-            width="1rem"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -607,10 +607,10 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>
@@ -654,7 +654,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
             class="tab__illustration"
           >
             <div
-              class="h-12 w-12 bg-utility-warning-lowEmphasis"
+              class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
             />
           </div>
           Tab Title 1
@@ -681,7 +681,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
             class="tab__illustration"
           >
             <div
-              class="h-12 w-12 bg-utility-warning-lowEmphasis"
+              class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
             />
           </div>
           Tab Title 2
@@ -708,7 +708,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
             class="tab__illustration"
           >
             <div
-              class="h-12 w-12 bg-utility-warning-lowEmphasis"
+              class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
             />
           </div>
           Tab Title 3
@@ -728,10 +728,10 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
       role="tabpanel"
     >
       <div
-        class="max-w-xl"
+        class="max-w-[576px]"
       >
         <h3
-          class="heading heading--headline-sm mb-6"
+          class="heading heading--headline-sm mb-spacing-size-3"
         >
           Tab 1
         </h3>

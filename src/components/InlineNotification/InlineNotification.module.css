@@ -3,21 +3,18 @@
 /*------------------------------------*\
     # INLINE NOTIFICATION
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 /**
  * A messaging element that is used inline.
  */
 .inline-notification {
   display: flex;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
-  padding: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+  padding: calc(var(--eds-spacing-size-1) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
-  border: calc(var(--eds-size-quarter) / 16 * 1rem) solid;
-  border-left: calc(var(--eds-size-1) / 16 * 1rem) solid;
+  border: calc(var(--eds-spacing-size-quarter) * 1px) solid;
+  border-left: calc(var(--eds-spacing-size-1) * 1px) solid;
 
   /* NOTE: by specifying no default color for borders, they inherit from color below */
   &.inline-notification--status-informational {

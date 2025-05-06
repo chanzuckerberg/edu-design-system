@@ -336,7 +336,7 @@ export const TabGroup = ({
                       className={styles['tab__icon']}
                       name={tab.props.icon}
                       purpose="decorative"
-                      size="1rem"
+                      size="16px"
                     />
                   )}
                   {typeof tabButton?.props.children === 'function'

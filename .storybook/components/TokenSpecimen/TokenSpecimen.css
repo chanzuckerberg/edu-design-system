@@ -1,40 +1,36 @@
 .token-specimen {
-  border: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  border: 1px solid var(--eds-theme-color-body-background);
   box-shadow: 1px solid var(--eds-box-shadow-md);
-  background: white;
-  padding: 1rem;
+  background: var(--eds-theme-color-background-input);
+  padding: calc(var(--eds-spacing-size-2) * 1px);
   display: grid;
-  gap: 1rem;
+  gap: calc(var(--eds-spacing-size-2) * 1px);
 
-  font-family: var(--eds-font-family-primary);
+  font-family: var(--eds-typography-font-family-1);
 
-  @media all and (min-width: 20rem) {
+  @media all and (min-width: 320px) {
     grid-template-columns: 300px 1fr;
   }
 }
 
 .token-specimen--stacked {
-  @media all and (min-width: 20rem) {
+  @media all and (min-width: 320px) {
     grid-template-columns: 1fr;
   }
 }
 
-.token-specimen__info {
-  font: var(--eds-theme-typography-body-sm);
-}
-
 .token-specimen__name {
   display: inline-block;
-  background: rgb(242, 242, 242);
-  color: rgb(235, 87, 87);
-  padding: 0.2rem;
+  background: var(--eds-theme-color-background-brand-blue-low-emphasis);
+  color: var(--eds-theme-color-text-utility-critical);
+  padding: calc(var(--eds-spacing-size-half) * 1px);
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .token-specimen__value {
   display: block;
-  background: white;
+  background: var(--eds-theme-color-background-input);
 }
 
 .token-specimen__comment {
@@ -49,14 +45,14 @@
   width: 100%;
 
   .token-specimen--inverted & {
-    background: black !important;
-    outline: 6px solid black;
+    background: var(--eds-theme-color-background-utility-default-high-emphasis) !important;
+    outline: 6px solid var(--eds-theme-color-background-utility-default-high-emphasis);
   }
 }
 
 .token-specimen__sample--box {
-  background: #000;
-  min-height: 5rem;
+  background: var(--eds-theme-color-background-utility-default-high-emphasis);
+  min-height: calc(var(--eds-spacing-size-10) * 1px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,6 +80,6 @@
 
   &:hover,
   &:focus {
-    transform: translateX(-3rem);
+    transform: translateX(calc(var(--eds-spacing-size-6) * -1px));
   }
 }

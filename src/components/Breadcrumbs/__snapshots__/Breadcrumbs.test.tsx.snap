@@ -2,7 +2,7 @@
 
 exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
 <div
-  style="margin: 0.5rem;"
+  class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
@@ -35,7 +35,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -51,7 +51,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -67,7 +67,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -83,7 +83,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -95,7 +95,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
 
 exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
 <div
-  style="margin: 0.5rem;"
+  class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
@@ -128,7 +128,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -144,7 +144,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -160,7 +160,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -176,7 +176,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -192,7 +192,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -208,7 +208,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -224,7 +224,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -240,7 +240,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -256,7 +256,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -272,7 +272,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -288,7 +288,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -304,7 +304,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -316,7 +316,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
 
 exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
 <div
-  style="margin: 0.5rem;"
+  class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
@@ -349,7 +349,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -365,7 +365,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -381,7 +381,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -397,7 +397,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -413,7 +413,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -425,7 +425,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
 
 exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
 <div
-  style="margin: 0.5rem;"
+  class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
@@ -458,7 +458,7 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           &gt;
         </span>
@@ -474,7 +474,7 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           &gt;
         </span>
@@ -490,7 +490,7 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           &gt;
         </span>
@@ -506,7 +506,7 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           &gt;
         </span>
@@ -522,7 +522,7 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           &gt;
         </span>
@@ -534,7 +534,7 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
 
 exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
 <div
-  style="margin: 0.5rem;"
+  class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
@@ -554,7 +554,7 @@ exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -566,7 +566,7 @@ exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
 
 exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
 <div
-  style="margin: 0.5rem;"
+  class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
@@ -599,7 +599,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -615,7 +615,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
@@ -631,7 +631,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__separator"
+          class="text text--body-md breadcrumbs__separator"
         >
           /
         </span>
