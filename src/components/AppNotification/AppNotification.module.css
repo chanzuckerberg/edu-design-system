@@ -18,6 +18,16 @@
         background-color: var(--eds-theme-color-background-utility-container);
     }
 
+    &.app-notification--variant-default {
+        color: var(--eds-theme-color-text-utility-inverse);
+        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+    }
+
+    &.app-notification--variant-inverse {
+        color: var(--eds-theme-color-text-utility-default-primary-active);
+        background-color: var(--eds-theme-color-background-utility-container);
+    }
+
     @media (min-width: $eds-bp-sm) {
         padding-left: calc(var(--eds-spacing-size-6) * 1px);
         padding-right: calc(var(--eds-spacing-size-6) * 1px);

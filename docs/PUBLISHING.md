@@ -96,6 +96,12 @@ To prepare the message:
 
 The latter will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**.
 
+We also want to update the component analytics.
+
+- `npx @omlet/cli analyze`
+
+This requires a [local login to omlet](https://docs.omlet.dev/cli-and-dashboard/learn-omlet-cli/commands/login).
+
 #### Finishing the release
 
 11. Lastly, run the following to "back merge" release changes to `next`:
