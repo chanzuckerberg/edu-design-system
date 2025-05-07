@@ -25,7 +25,7 @@
  *
  * The color "white" is arbitrary and any non transparent color can be used here.
  */
- /* TODO: use spacing units instead of rems */
+/* TODO: use spacing units instead of rems */
 .tabs--scrollable-left {
   -webkit-mask-image: -webkit-linear-gradient(left,
       transparent,
@@ -61,6 +61,7 @@
   display: flex;
   gap: calc(var(--eds-spacing-size-1) * 1px);
   border-bottom: calc(var(--eds-theme-border-width) * 1px) solid;
+
   /* preset: tab-lg */
   font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
 
@@ -133,9 +134,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  transition: color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-    box-shadow calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-    background-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
+  transition: color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+    box-shadow calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+    background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
 
   &:focus-visible {
     box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-focus);
@@ -159,9 +160,9 @@
 }
 
 .tab__highlight {
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
-  transition: bottom calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-    width calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease), background-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
+  border-radius: calc(var(--eds-theme-border-radius-tab-underline-default) * 1px);
+  transition: bottom calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+    width calc(var(--eds-anim-fade-quick) * 1s) ease-in-out, background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
 
   .tabs__item & {
     position: absolute;
@@ -176,12 +177,11 @@
     bottom: calc(var(--eds-spacing-size-half) * 1px);
     width: calc(100% - calc(var(--eds-spacing-size-1) * 1px));
 
-    border-radius: calc(var(--eds-border-radius-full) * 1px);
+    border-radius: calc(var(--eds-theme-border-radius-tab-underline-default) * 1px);
   }
 
   .tabs--has-divider & {
-    border-top-left-radius: calc(var(--eds-spacing-size-half) * 1px);
-    border-top-right-radius: calc(var(--eds-spacing-size-half) * 1px);
+    /* Remove the bottom edges of the border radii so that it has a half-pill shape */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
