@@ -153,45 +153,24 @@ npx eds-import-from-figma-api file <file_id> --token <personal_access_token>
 
 When you have your own custom theme, you can use the tokens provided in `app-tailwind-theme.config.json` to do advanced tailwind configuration. This file contains all the tokens in JSON format, mapped to the literal values in your local theme.
 
-You can use similar import values to what is in `@chanzuckerberg/eds/tailwind.config.ts` in your local tailwind configuration file:
+EDS provides a utility method to pull in the theme config and generate the proper tailwind 3.x config object.
+
+**NOTE**: Tailwind 4.x support to come in a future release of EDS.
 
 ```ts
 // in your tailwind.config.ts file
 import type { Config } from 'tailwindcss';
-import baseConfig from '@chanzuckerberg/eds/tailwind.config';
+import {applyTailwindConfig} from '@chanzuckerberg/eds/tailwind.config';
 import {eds as customTokens} from "./<edsrc.json:dest>/app-tailwind-theme.config.json"; // where <edsrc.json:dest> is the path configured in .edsrc.json
-
-const {
-  background: backgroundColorTokens,
-  border: borderColorTokens,
-  text: textColorTokens,
-  ...colorTokens
-} = customTokens.theme.color;
 
 // export the following
 export default {
-  ... // your local content export
+  // your project's `content` array
+  content: ['./app/**/*.{ts,tsx,jsx,js}'],
   theme: {
-    colors: {
-      ...colorTokens,
-    },
-    extend: {
-      ...baseConfig.theme.extend,
-      backgroundColor: {
-        ...backgroundColorTokens,
-      },
-      borderColor: {
-        ...borderColorTokens,
-      },
-      textColor: {
-        ...textColorTokens,
-      },
-    },
-    screens: {
-      ...baseConfig.theme.screens, // you can mix in any base config values into the local theme
-    }
-    ... // any local theme settings
-  }
+    ...applyTailwindConfig(customTokens)
+    // ...any local theme overrides and additions...
+  },
 } satisfies Config
 
 ```
