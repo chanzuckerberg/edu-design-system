@@ -14,6 +14,7 @@
   display: inline-flex;
   padding: calc(var(--eds-spacing-size-1) * 1px);
   padding-right: 0;
+  padding-left: calc(var(--eds-spacing-size-1-and-half) * 1px);
   gap: calc(var(--eds-spacing-size-1) * 1px);
   align-items: center;
   justify-content: center;
