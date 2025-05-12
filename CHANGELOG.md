@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.12.0...v16.0.0) (2025-05-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Avatar:** remove 1.x component export
+* **typography:** introduce 2.0 tokens and component updates (#2167)
+* apply changes from next-major comments in code (#2164)
+* remove items marked as deprecated [EDS-1543] (#2156)
+* **deps:** update dependency ts-morph to v25 (#2158)
+* remove horizontalstepper component [EDS-1539] (#2153)
+* update HeadlessUI to 2.x (#2148)
+* remove progressbar component [EDS-1538] (#2152)
+* remove searchbar component [EDS-1537] (#2151)
+* remove Badge component [EDS-1536] (#2150)
+* remove Slider component [EDS-1534] (#2149)
+
+### Features
+
+* apply changes from next-major comments in code ([#2164](https://github.com/chanzuckerberg/edu-design-system/issues/2164)) ([55b8351](https://github.com/chanzuckerberg/edu-design-system/commit/55b83512bd03fa7eee983a28d62eba580456f8e5))
+* **Avatar:** remove 1.x component export ([9e9919e](https://github.com/chanzuckerberg/edu-design-system/commit/9e9919e71e9141790c8d64fd973325219a2469a7))
+* remove Badge component [EDS-1536] ([#2150](https://github.com/chanzuckerberg/edu-design-system/issues/2150)) ([13eb4e2](https://github.com/chanzuckerberg/edu-design-system/commit/13eb4e2b1376ff26aa07c8d52d492bdb2803cb00))
+* remove horizontalstepper component [EDS-1539] ([#2153](https://github.com/chanzuckerberg/edu-design-system/issues/2153)) ([75ba3f0](https://github.com/chanzuckerberg/edu-design-system/commit/75ba3f029e22f45bd7f7c82df5673d56fcd8be24))
+* remove items marked as deprecated [EDS-1543] ([#2156](https://github.com/chanzuckerberg/edu-design-system/issues/2156)) ([cd03452](https://github.com/chanzuckerberg/edu-design-system/commit/cd03452533f7f5fb26f774d677f70cdd5acc41e4))
+* remove progressbar component [EDS-1538] ([#2152](https://github.com/chanzuckerberg/edu-design-system/issues/2152)) ([0af4e55](https://github.com/chanzuckerberg/edu-design-system/commit/0af4e5505f247e2d87be08fdca9eec50d502814d))
+* remove searchbar component [EDS-1537] ([#2151](https://github.com/chanzuckerberg/edu-design-system/issues/2151)) ([af943be](https://github.com/chanzuckerberg/edu-design-system/commit/af943bed8182ff631d706b648d0a1c2763405358))
+* remove Slider component [EDS-1534] ([#2149](https://github.com/chanzuckerberg/edu-design-system/issues/2149)) ([c4e7617](https://github.com/chanzuckerberg/edu-design-system/commit/c4e7617ccb271a83af7542e670cfb9bff480a7d5))
+* **Typography:** add in full set of Graphik fonts and weights ([#2181](https://github.com/chanzuckerberg/edu-design-system/issues/2181)) ([c83e3ff](https://github.com/chanzuckerberg/edu-design-system/commit/c83e3ffe366fa6ee55ab822bbde0a19d7ddaaf84))
+* **typography:** introduce 2.0 tokens and component updates ([#2167](https://github.com/chanzuckerberg/edu-design-system/issues/2167)) ([71f05e6](https://github.com/chanzuckerberg/edu-design-system/commit/71f05e6dbb501e72297d427d00847a50cecc8254))
+* update HeadlessUI to 2.x ([#2148](https://github.com/chanzuckerberg/edu-design-system/issues/2148)) ([f01a838](https://github.com/chanzuckerberg/edu-design-system/commit/f01a838c5bed840c5e4b1a4b6a0aa575bc370900))
+
+
+### Bug Fixes
+
+* **deps:** update dependency ts-morph to v25 ([#2158](https://github.com/chanzuckerberg/edu-design-system/issues/2158)) ([c4aac68](https://github.com/chanzuckerberg/edu-design-system/commit/c4aac68d817c8f6117f077d7a2c4889e9d709b9c))
+* **InputChip:** add padding to inside left edge to match design ([#2182](https://github.com/chanzuckerberg/edu-design-system/issues/2182)) ([f29c5dc](https://github.com/chanzuckerberg/edu-design-system/commit/f29c5dc038c1b1cc186cbdfeb694a4cd3c85f0e7))
+* set background token for text selection in reset file ([b722237](https://github.com/chanzuckerberg/edu-design-system/commit/b7222372ee9e2608426ae8da18a67a598f509a69))
+* **storybook:** set default foreground/background colors for story pages ([#2163](https://github.com/chanzuckerberg/edu-design-system/issues/2163)) ([bdf1c48](https://github.com/chanzuckerberg/edu-design-system/commit/bdf1c4882130e2a4aaa28b1c20ca8166187ae5ed))
+* **TabGroup:** use proper tier 2+ tokens with component ([#2180](https://github.com/chanzuckerberg/edu-design-system/issues/2180)) ([a35515d](https://github.com/chanzuckerberg/edu-design-system/commit/a35515deb2e4710a392b3badb5e8b15e2a77d21c))
+
 ## [15.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.11.2...v15.12.0) (2025-04-25)
 
 
