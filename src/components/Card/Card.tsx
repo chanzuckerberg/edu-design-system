@@ -218,7 +218,7 @@ const CardHeader = ({
           <Icon
             name={icon}
             purpose="decorative"
-            size={size === 'sm' ? '1rem' : '1.5rem'}
+            size={size === 'sm' ? '16px' : '24px'}
           />
         </div>
       )}

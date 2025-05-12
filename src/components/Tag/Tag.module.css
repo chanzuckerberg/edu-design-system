@@ -9,8 +9,8 @@
  */
 .tag {
   width: max-content;
-  height: calc(var(--eds-size-3) / 16 * 1rem);
-  padding: calc(var(--eds-size-half) / 16 * 1rem) calc(var(--eds-size-1) / 16 * 1rem);
+  height: calc(var(--eds-spacing-size-3) * 1px);
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
 
   display: inline-flex;
   align-items: center;
@@ -25,10 +25,9 @@
 
 /**
  * Spacing between icon and label text, if icon present
- * TODO: perhaps use gap?
  */
 .tag> :not(:last-child) {
-  margin-right: calc(var(--eds-size-half) / 16 * 1rem);
+  margin-right: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 /**
@@ -40,40 +39,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-/**
- * Color variants.
- * TODO(next-major): remove these status colors
- */
-:where(.tag--neutral) {
-  --tag-primary-color: var(--eds-theme-color-text-neutral-default);
-  --tag-secondary-color: var(--eds-theme-color-background-neutral-subtle);
-  --tag-outline-color: var(--eds-theme-color-border-neutral-default);
-}
-
-:where(.tag--error) {
-  --tag-primary-color: var(--eds-theme-color-text-utility-error);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-error);
-  --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
-}
-
-:where(.tag--success) {
-  --tag-primary-color: var(--eds-theme-color-text-utility-success);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-success);
-  --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
-}
-
-:where(.tag--warning) {
-  --tag-primary-color: var(--eds-theme-color-text-utility-warning);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
-  --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
-}
-
-:where(.tag--brand) {
-  --tag-primary-color: var(--eds-theme-color-text-brand-default);
-  --tag-secondary-color: var(--eds-theme-color-background-brand-primary-default);
-  --tag-outline-color: var(--eds-theme-color-border-brand-primary-default);
 }
 
 /**
@@ -97,12 +62,4 @@
 :where(.tag--status-informational) {
   --tag-primary-color: var(--eds-theme-color-text-utility-informational);
   --tag-secondary-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
-}
-
-/**
- * Adds outline to the tag.
- * TODO(next-major): remove handling for outline in 2.0 component
- */
-.tag--outline {
-  border-color: var(--tag-outline-color);
 }

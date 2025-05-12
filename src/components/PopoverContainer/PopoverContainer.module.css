@@ -8,20 +8,24 @@
  * Popover container
  */
 .popover-container {
+  --popover-container-width: var(--button-width, auto);
   border-radius: var(--eds-theme-border-radius-objects-md);
   overflow: auto;
-  padding: calc(var(--eds-size-half) / 16 * 1rem) 0;
+  padding: calc(var(--eds-size-half) * 1px) 0;
   z-index: 1150;
 
   box-shadow: var(--eds-box-shadow-md);
   background-color: var(--eds-theme-color-background-utility-container);
+
+  /* set the min width using the CSS variable attached by HeadlessUI (default to auto) */
+  min-width: var(--popover-container-width);
 
   &:focus-visible {
     outline: none;
   }
 }
 
-.popover-container > *[role=none] + *[role=none] {
+.popover-container>*[role=none]+*[role=none] {
   /* create dividers by looking for groups under the component that wrap using the "none" role */
   border-top: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
 }

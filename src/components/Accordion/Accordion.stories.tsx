@@ -9,7 +9,6 @@ import NumberIcon from '../NumberIcon';
 export default {
   title: 'Components/Accordion',
   component: Accordion,
-  // TODO: add subcomponents like Badge has
   parameters: {
     layout: 'centered',
     badges: ['api-2.0', 'theme-2.0'],
@@ -17,7 +16,7 @@ export default {
   },
   args: {
     headingAs: 'h2',
-    className: 'w-96',
+    className: 'w-[384px]',
     children: (
       <Accordion.Row>
         <Accordion.Button
@@ -41,7 +40,7 @@ export default {
       control: { type: 'radio' },
     },
   },
-  decorators: [(Story) => <div className="p-8">{Story()}</div>],
+  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<typeof Accordion>;
 
 type Story = StoryObj<typeof Accordion>;
@@ -77,7 +76,7 @@ export const HasLeadingIcon: Story = {
         <Accordion.Button
           data-testid="accordion-button"
           leadingIcon={
-            <Icon name="person-encircled" purpose="decorative" size="1.5rem" />
+            <Icon name="person-encircled" purpose="decorative" size="24px" />
           }
           subtitle="Quam lacus maecenas nibh malesuada."
           title="Massa quam egestas massa."

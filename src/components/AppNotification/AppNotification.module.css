@@ -10,7 +10,7 @@
 
     &.app-notification--color-dark {
         color: var(--eds-theme-color-text-utility-inverse);
-        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);    
+        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
     }
 
     &.app-notification--color-light {
@@ -29,8 +29,8 @@
     }
 
     @media (min-width: $eds-bp-sm) {
-        padding-left: calc(var(--eds-size-6) * 1px);
-        padding-right: calc(var(--eds-size-6) * 1px);
+        padding-left: calc(var(--eds-spacing-size-6) * 1px);
+        padding-right: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media (min-width: $eds-bp-xl) {
@@ -49,18 +49,18 @@
 }
 
 .app-notification__content {
-    /* TODO: should this magic number exist as some token? */
     max-width: 1320px;
     display: flex;
     gap: calc(var(--eds-spacing-size-1) * 1px);
 
-    & > section {
+    &>section {
         width: 100%;
     }
 }
 
 .app-notification__close-btn {
     flex-shrink: 0;
+    
     margin-top: calc(var(--eds-spacing-size-1) * -1px);
     margin-right: calc(var(--eds-spacing-size-1) * -1px);
 }

@@ -6,6 +6,8 @@ import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoint
 
 /**
  * Demonstrates usage of stacked `<Card>` components for smaller breakpoints and `<Table>` component for larger breakpoints.
+ *
+ * TODO(next-major): remove once Table component is removed
  */
 export const StackedCardsToTable = () => {
   const [isTable, setIsTable] = useState(false);
@@ -118,32 +120,32 @@ export const StackedCardsToTable = () => {
         checkpointProgresses.map((progress) => (
           <Card className="mb-4 py-8" key={`progress-${progress.student}`}>
             <Card.Header className="mb-4">
-              <Text as="p" preset="title-md-bold">
+              <Text as="p" preset="title-md">
                 {progress.student}
               </Text>
             </Card.Header>
             <Card.Body>
               <div className="flex justify-between">
-                <Text as="p" preset="title-xs-bold">
+                <Text as="p" preset="title-xs">
                   Status
                 </Text>
-                <Text as="p" preset="title-xs-bold">
+                <Text as="p" preset="title-xs">
                   {progress.status}
                 </Text>
               </div>
               <div className="flex justify-between">
-                <Text as="p" preset="title-xs-bold">
+                <Text as="p" preset="title-xs">
                   Cog skill
                 </Text>
-                <Text as="p" preset="title-xs-bold">
+                <Text as="p" preset="title-xs">
                   {progress.cogSkill}
                 </Text>
               </div>
               <div className="flex justify-between">
-                <Text as="p" preset="title-xs-bold">
+                <Text as="p" preset="title-xs">
                   Time submitted
                 </Text>
-                <Text as="p" preset="title-xs-bold">
+                <Text as="p" preset="title-xs">
                   {progress.timeSubmitted}
                 </Text>
               </div>

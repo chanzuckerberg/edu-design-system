@@ -3,6 +3,7 @@ import type { MouseEventHandler, ReactNode } from 'react';
 import React from 'react';
 import Button from '../Button';
 import { type IconName } from '../Icon';
+import Text from '../Text';
 import styles from './Table.module.css';
 
 type TableBodyProps = {
@@ -168,7 +169,7 @@ const TableCell = ({ children, className, ...other }: TableCellProps) => {
 
   return (
     <td className={componentClassName} {...other}>
-      {children}
+      <Text preset="body-sm">{children}</Text>
     </td>
   );
 };
@@ -242,7 +243,11 @@ const TableHeaderCell = ({
       className={componentClassName}
       {...other}
     >
-      <div className={styles['table-header-cell__container']}>
+      <Text
+        as="div"
+        className={styles['table-header-cell__container']}
+        preset="label-sm"
+      >
         {sortDirection ? (
           <>
             {children}
@@ -258,7 +263,7 @@ const TableHeaderCell = ({
         ) : (
           children
         )}
-      </div>
+      </Text>
     </th>
   );
 };
@@ -291,10 +296,11 @@ export const TableRow = ({
  * `import {Table} from "@chanzuckerberg/eds";`
  *
  * HTML table component. Allows for the structure and layout of a standard HTML table, with styles to support theming.
+ *
+ * @deprecated Table is deprecated and will be removed from a future version of EDS. Instead, use `DataTable`.
  */
 export const Table = ({ children, className, ...other }: TableProps) => {
   const componentClassName = clsx(styles['table'], className);
-  // TODO(next-major): decide if we should warn when used
   return (
     <table className={componentClassName} {...other}>
       {children}

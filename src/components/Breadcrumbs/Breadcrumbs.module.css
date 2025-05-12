@@ -25,8 +25,7 @@
 /**
  * Breadcrumbs list item.
  */
- .breadcrumbs__item {
-  font: var(--eds-theme-typography-body-xs);
+.breadcrumbs__item {
   max-width: 100%;
   /* Required for the Menu to absolutely position relative to this container. */
   position: relative;
@@ -34,6 +33,7 @@
   /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */
   display: none;
   flex-shrink: 0;
+
   &:last-of-type {
     display: flex;
     /* Truncate last breadcrumb in smaller breakpoints */
@@ -47,6 +47,7 @@
   @media all and (min-width: $eds-bp-md) {
     /* Display breadcrumbs in larger breakpoints. */
     display: flex;
+
     &:last-of-type {
       /* Truncate last breadcrumb in smaller breakpoints */
       flex: 0 0 auto;
@@ -59,13 +60,15 @@
  */
 .breadcrumbs__item-back {
   display: flex;
-  margin-right: calc(var(--eds-size-1-and-half) / 16 * 1rem);
+  margin-right: calc(var(--eds-spacing-size-1-and-half) * 1px);
+
   @media all and (min-width: $eds-bp-md) {
     /* Hidden for larger breakpoints. */
     display: none;
   }
 }
-.breadcrumbs__item-back > .breadcrumbs__separator {
+
+.breadcrumbs__item-back>.breadcrumbs__separator {
   /* Hide the separator for the back variant. */
   display: none;
 }
@@ -81,6 +84,7 @@
   border-radius: unset;
   background-color: transparent;
 }
+
 .breadcrumbs__ellipsis:hover {
   background-color: transparent;
 }
@@ -89,6 +93,10 @@
  * Breadcrumbs link.
  */
 .breadcrumbs__link {
+  /* preset: body-xs */
+  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
+  letter-spacing: var(--eds-typography-letter-spacing-normal);
+
   color: var(--eds-theme-color-text-neutral-subtle);
   text-decoration: none;
 
@@ -109,6 +117,7 @@
   }
 
   @supports not selector(:focus-visible) {
+
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -124,9 +133,9 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  color: var(--eds-theme-color-icon-neutral-subtle);
-  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
-  margin-right: calc(var(--eds-size-1) / 16 * 1rem);
+  color: var(--eds-theme-color-text-utility-default-primary);
+  margin-left: calc(var(--eds-spacing-size-1) * 1px);
+  margin-right: calc(var(--eds-spacing-size-1) * 1px);
   cursor: default;
 }
 
@@ -142,9 +151,9 @@
  * Breadcrumbs Back Icon.
  */
 .breadcrumbs__back-icon {
-  color: var(--eds-theme-color-icon-neutral-subtle);
+  color: var(--eds-theme-color-icon-utility-default-primary);
   /* Transform over height due to icon being placed inside <a>. */
   transform: scale(1.5);
   position: relative;
-  bottom: 0.125rem;
+  bottom: 1px;
 }

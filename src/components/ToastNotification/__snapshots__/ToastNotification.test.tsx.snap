@@ -2,16 +2,16 @@
 
 exports[`<ToastNotification /> Critical story renders snapshot 1`] = `
 <div
-  class="toast toast--status-critical w-96"
+  class="toast toast--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -32,16 +32,16 @@ exports[`<ToastNotification /> Critical story renders snapshot 1`] = `
 
 exports[`<ToastNotification /> Default story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable w-96"
+  class="toast toast--status-favorable w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -62,16 +62,16 @@ exports[`<ToastNotification /> Default story renders snapshot 1`] = `
 
 exports[`<ToastNotification /> Favorable story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable w-96"
+  class="toast toast--status-favorable w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -92,16 +92,16 @@ exports[`<ToastNotification /> Favorable story renders snapshot 1`] = `
 
 exports[`<ToastNotification /> NotDismissable story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable w-96"
+  class="toast toast--status-favorable w-[384px]"
 >
   <svg
     aria-hidden="true"
     class="icon toast__icon"
     fill="currentColor"
-    height="1.875rem"
-    style="--icon-size: 1.875rem;"
+    height="30px"
+    style="--icon-size: 30px;"
     viewBox="0 0 24 24"
-    width="1.875rem"
+    width="30px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

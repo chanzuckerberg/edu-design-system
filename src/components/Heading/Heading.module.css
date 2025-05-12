@@ -4,97 +4,310 @@
 
 /**
  * Map the component preset names to the defined typography tokens
- *
- * TODO: This should always match the generated tokens so find a
- * way to generate this.
  */
+.heading {
+  /** 
+    */
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-family: var(--eds-typography-font-family-1);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --heading-text-transform: ;
+
+  font: unset;
+  font-family: var(--heading-font-family);
+  font-size: calc(var(--heading-font-size) * 1px);
+  line-height: calc(var(--heading-line-height) * 1px);
+  font-weight: var(--heading-font-weight);
+  text-transform: var(--heading-text-transform, none);
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+.heading--headline-xl {
+  --heading-font-size: var(--eds-typography-preset-800-font-size);
+  --heading-line-height: var(--eds-typography-preset-800-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: var(--eds-typography-preset-1400-font-size);
+    --heading-line-height: var(--eds-typography-preset-1400-line-height);
+  }
+}
+
 .heading--headline-lg {
-  font: var(--eds-theme-typography-headline-lg);
+  --heading-font-size: var(--eds-typography-preset-800-font-size);
+  --heading-line-height: var(--eds-typography-preset-800-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
-  @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-typography-preset-001-mobile);
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: var(--eds-typography-preset-1000-font-size);
+    --heading-line-height: var(--eds-typography-preset-1000-line-height);
   }
 }
-.heading--headline-lg-bold {
-  font: var(--eds-theme-typography-headline-lg-bold);
-}
-.heading--headline-lg-bold-mobile {
-  font: var(--eds-theme-typography-headline-lg-bold-mobile);
-}
-.heading--headline-lg-mobile {
-  font: var(--eds-theme-typography-headline-lg-mobile);
-}
+
 .heading--headline-md {
-  font: var(--eds-theme-typography-headline-md);
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
-  @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-typography-preset-002-mobile);
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: var(--eds-typography-preset-800-font-size);
+    --heading-line-height: var(--eds-typography-preset-800-line-height);
   }
 }
-.heading--headline-md-bold {
-  font: var(--eds-theme-typography-headline-md-bold);
-}
-.heading--headline-md-bold-mobile {
-  font: var(--eds-theme-typography-headline-md-bold-mobile);
-}
-.heading--headline-md-mobile {
-  font: var(--eds-theme-typography-headline-md-mobile);
-}
+
 .heading--headline-sm {
-  font: var(--eds-theme-typography-headline-sm);
-  
-  @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-typography-preset-003-mobile);
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+/** TODO-AH: add in offsets */
+.heading--headline-decorative-inline-xl {
+  --heading-font-size: calc(var(--eds-typography-preset-800-font-size));
+  --heading-line-height: var(--eds-typography-preset-800-line-height);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --heading-line-height: var(--eds-typography-preset-1400-line-height);
   }
 }
-.heading--headline-sm-bold {
-  font: var(--eds-theme-typography-headline-sm-bold);
+
+.heading--headline-decorative-inline-lg {
+  --heading-font-size: var(--eds-typography-preset-800-font-size);
+  --heading-line-height: var(--eds-typography-preset-800-line-height);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: calc(var(--eds-typography-preset-1000-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --heading-line-height: var(--eds-typography-preset-1000-line-height);
+  }
 }
-.heading--headline-sm-bold-mobile {
-  font: var(--eds-theme-typography-headline-sm-bold-mobile);
+
+.heading--headline-decorative-inline-md {
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --heading-line-height: var(--eds-typography-preset-800-line-height);
+  }
 }
-.heading--headline-sm-mobile {
-  font: var(--eds-theme-typography-headline-sm-mobile);
+
+.heading--headline-decorative-inline-sm {
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-family: var(--eds-typography-font-family-2);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --heading-line-height: var(--eds-typography-preset-600-line-height);
+  }
 }
-.heading--headline-secondary-lg {
-  font: var(--eds-theme-typography-headline-secondary-lg);
-}
-.heading--headline-secondary-lg-bold {
-  font: var(--eds-theme-typography-headline-secondary-lg-bold);
-}
-.heading--headline-secondary-md {
-  font: var(--eds-theme-typography-headline-secondary-md);
-}
-.heading--headline-secondary-md-bold {
-  font: var(--eds-theme-typography-headline-secondary-md-bold);
-}
-.heading--headline-secondary-sm {
-  font: var(--eds-theme-typography-headline-secondary-sm);
-}
-.heading--headline-secondary-sm-bold {
-  font: var(--eds-theme-typography-headline-secondary-sm-bold);
-}
+
 .heading--title-lg {
-  font: var(--eds-theme-typography-title-lg);
+  --heading-font-size: var(--eds-typography-preset-400-font-size);
+  --heading-line-height: var(--eds-typography-preset-400-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-lg-bold {
-  font: var(--eds-theme-typography-title-lg-bold);
-}
+
 .heading--title-md {
-  font: var(--eds-theme-typography-title-md);
+  --heading-font-size: var(--eds-typography-preset-300-font-size);
+  --heading-line-height: var(--eds-typography-preset-300-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-md-bold {
-  font: var(--eds-theme-typography-title-md-bold);
-}
+
 .heading--title-sm {
-  font: var(--eds-theme-typography-title-sm);
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-sm-bold {
-  font: var(--eds-theme-typography-title-sm-bold);
-}
+
 .heading--title-xs {
-  font: var(--eds-theme-typography-title-xs);
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
-.heading--title-xs-bold {
-  font: var(--eds-theme-typography-title-xs-bold);
+
+.heading--body-xl {
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-xl-bold {
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-lg {
+  --heading-font-size: var(--eds-typography-preset-400-font-size);
+  --heading-line-height: var(--eds-typography-preset-400-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-lg-bold {
+  --heading-font-size: var(--eds-typography-preset-400-font-size);
+  --heading-line-height: var(--eds-typography-preset-400-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-md {
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-md-bold {
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-sm {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-sm-bold {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-xs {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--body-xs-bold {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-lg {
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-md {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-sm {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--overline-lg {
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --heading-text-transform: uppercase;
+}
+
+.heading--overline-md {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --heading-text-transform: uppercase;
+}
+
+.heading--overline-sm {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --heading-text-transform: uppercase;
+}
+
+.heading--caption-md {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--caption-sm {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--input {
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-lg-active {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-lg {
+  --heading-font-size: var(--eds-typography-preset-100-font-size);
+  --heading-line-height: var(--eds-typography-preset-100-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-sm-active {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--tab-sm {
+  --heading-font-size: var(--eds-typography-preset-075-font-size);
+  --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }

@@ -17,7 +17,7 @@ exports[`<SelectionChip /> ControlledChecked story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--button-md selection-chip__label"
+    class="text text--label-lg selection-chip__label"
   >
     Label
   </span>
@@ -36,7 +36,7 @@ exports[`<SelectionChip /> Default story renders snapshot 1`] = `
   for=":r0:"
 >
   <span
-    class="text text--button-md selection-chip__label"
+    class="text text--label-lg selection-chip__label"
   >
     Label
   </span>
@@ -54,7 +54,7 @@ exports[`<SelectionChip /> Disabled story renders snapshot 1`] = `
   for=":r1:"
 >
   <span
-    class="text text--button-md selection-chip__label"
+    class="text text--label-lg selection-chip__label"
   >
     Label
   </span>
@@ -84,7 +84,7 @@ exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--button-md selection-chip__label"
+    class="text text--label-lg selection-chip__label"
   >
     Label
   </span>
@@ -114,7 +114,7 @@ exports[`<SelectionChip /> WithIcon story renders snapshot 1`] = `
     />
   </svg>
   <span
-    class="text text--button-md selection-chip__label"
+    class="text text--label-lg selection-chip__label"
   >
     Label
   </span>

@@ -7,10 +7,10 @@
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--eds-theme-color-text-highlight-foreground);
-  background: var(--eds-theme-color-text-highlight-background);
+  background: var(--eds-theme-color-background-utility-default-low-emphasis);
 }
 
 ::selection {
   color: var(--eds-theme-color-text-highlight-foreground);
-  background: var(--eds-theme-color-text-highlight-background);
+  background: var(--eds-theme-color-background-utility-default-low-emphasis);
 }

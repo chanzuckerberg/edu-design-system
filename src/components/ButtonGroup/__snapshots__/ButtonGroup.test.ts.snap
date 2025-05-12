@@ -2,7 +2,7 @@
 
 exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--horizontal"
@@ -12,7 +12,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Button 1
       </span>
@@ -22,7 +22,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Button 2
       </span>
@@ -33,7 +33,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--horizontal-progressive"
@@ -43,7 +43,7 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Button 1
       </span>
@@ -53,7 +53,7 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Button 2
       </span>
@@ -64,7 +64,7 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--horizontal-progressive"
@@ -74,17 +74,17 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Primary Button
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default -ml-size-2"
+      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default -ml-spacing-size-2"
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Tertiary Button
       </span>
@@ -95,7 +95,7 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
 
 exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <div
     class="button-group button-group--vertical"
@@ -105,7 +105,7 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Button 1
       </span>
@@ -115,7 +115,7 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
       type="button"
     >
       <span
-        class="button__text"
+        class="text text--label-lg button__text"
       >
         Button 2
       </span>

@@ -3,9 +3,6 @@
 /*------------------------------------*\
     #TABGROUP
 \*------------------------------------*/
-/**
- * TODO: Icon inherits color from the surrounding text, but should use the matching -icon- tokens from below
- */
 
 /**
  * List of of links where each link toggles open associated information
@@ -20,7 +17,7 @@
   /* Tab overflow behavior */
   overflow-x: auto;
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 /**
@@ -28,10 +25,11 @@
  *
  * The color "white" is arbitrary and any non transparent color can be used here.
  */
+/* TODO: use spacing units instead of rems */
 .tabs--scrollable-left {
   -webkit-mask-image: -webkit-linear-gradient(left,
       transparent,
-      white 4rem);
+      white 64px);
 }
 
 .tabs--scrollable-left .tabs__list--align-center,
@@ -42,14 +40,14 @@
 .tabs--scrollable-right {
   -webkit-mask-image: -webkit-linear-gradient(right,
       transparent,
-      white 4rem);
+      white 64px);
 }
 
 .tabs--scrollable-left.tabs--scrollable-right {
   -webkit-mask-image: -webkit-linear-gradient(left,
       transparent,
-      white 4rem,
-      white calc(100% - 4rem),
+      white 64px,
+      white calc(100% - 64px),
       transparent 100%);
 }
 
@@ -61,13 +59,15 @@
 .tabs__list {
   list-style: none;
   display: flex;
-  gap: 0.5rem;
+  gap: calc(var(--eds-spacing-size-1) * 1px);
   border-bottom: calc(var(--eds-theme-border-width) * 1px) solid;
-  font: var(--eds-theme-typography-tab-lg);
-  line-height: 1.429;
+
+  /* preset: tab-lg */
+  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
 
   @media all and (max-width: $eds-bp-md) {
-    font: var(--eds-theme-typography-tab-sm);
+    /* preset: tab-sm */
+    font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
   }
 
   &:not(.tabs--has-divider) {
@@ -102,7 +102,7 @@
   overflow: hidden;
 
   &.eds-is-active {
-    font-weight: 500;
+    font-weight: var(--eds-typography-font-weight-bold);
   }
 
   &.tabs--width-full {
@@ -124,7 +124,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0.75rem 0.5rem;
+  padding: calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   text-align: center;
 
   text-decoration: none;
@@ -134,12 +134,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  transition: color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-    box-shadow calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-    background-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
+  transition: color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+    box-shadow calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+    background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
 
   &:focus-visible {
-    box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-focus);
+    box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-focus);
   }
 
   @media screen and (prefers-reduced-motion) {
@@ -148,7 +148,7 @@
 }
 
 .tab__icon {
-  margin-right: 0.25rem;
+  margin-right: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 .tab__illustration {
@@ -156,33 +156,32 @@
   display: flex;
   justify-content: center;
 
-  margin: 0.5rem;
+  margin: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 .tab__highlight {
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
-  transition: bottom calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-    width calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease), background-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
+  border-radius: calc(var(--eds-theme-border-radius-tab-underline-default) * 1px);
+  transition: bottom calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+    width calc(var(--eds-anim-fade-quick) * 1s) ease-in-out, background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
 
   .tabs__item & {
     position: absolute;
     bottom: 0;
-    height: 0.25rem;
+    height: calc(var(--eds-spacing-size-half) * 1px);
     width: 100%;
 
     background-color: transparent;
   }
 
   .tabs__item .tabs__link:focus-visible & {
-    bottom: 0.25rem;
-    width: calc(100% - 0.5rem);
+    bottom: calc(var(--eds-spacing-size-half) * 1px);
+    width: calc(100% - calc(var(--eds-spacing-size-1) * 1px));
 
-    border-radius: calc(var(--eds-border-radius-full) * 1px);
+    border-radius: calc(var(--eds-theme-border-radius-tab-underline-default) * 1px);
   }
 
   .tabs--has-divider & {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    /* Remove the bottom edges of the border radii so that it has a half-pill shape */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -195,7 +194,7 @@
     color: var(--eds-theme-color-text-utility-interactive-primary);
 
     &:focus-visible {
-      box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-focus);
+      box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-focus);
     }
   }
 
@@ -216,7 +215,7 @@
     color: var(--eds-theme-color-text-utility-inverse);
 
     &:focus-visible {
-      box-shadow: inset 0 0 0 0.125rem var(--eds-theme-color-border-utility-inverse);
+      box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-inverse);
     }
   }
 

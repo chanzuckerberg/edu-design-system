@@ -67,13 +67,6 @@ type FieldsetLegendProps = {
   className?: string;
   // Design API
   /**
-   * String to indicate required or optional state.
-   * TODO(next-major): remove this prop and the assertion below
-   *
-   * **This prop is deprecated**.
-   */
-  optionalLabel?: '(required)' | '(optional)';
-  /**
    * Indicates that field is required for form to be successfully submitted
    */
   required?: boolean;
@@ -87,13 +80,6 @@ type FieldsetLegendProps = {
    * Secondary text used to describe the content in more detail
    */
   subtitle?: string;
-  /**
-   * Legend text string that names the fieldset.
-   * TODO(next-major): remove this prop and the assertion below
-   *
-   * **This prop is deprecated**.
-   */
-  text?: string;
   /**
    * The title/heading of the component
    */
@@ -154,11 +140,9 @@ export const FieldsetItems = ({
 const FieldsetLegend = ({
   className,
   isDisabled: _,
-  optionalLabel,
   required,
   showHint,
   subtitle,
-  text,
   title,
   ...other
 }: FieldsetLegendProps) => {
@@ -170,16 +154,6 @@ const FieldsetLegend = ({
     className,
   );
 
-  const labelClassName = clsx(styles['fieldset__label']);
-
-  assertEdsUsage(
-    [typeof text !== 'undefined'],
-    'text is deprecated and will removed from EDS in a future release. Use "title" instead.',
-  );
-  assertEdsUsage(
-    [typeof optionalLabel !== 'undefined'],
-    'optionalLabel is deprecated and will be removed from EDS in a future release. Use "showHint" and "required" instead.',
-  );
   assertEdsUsage(
     [!title && !!subtitle],
     'When using "subtitle" you must also use "title',
@@ -191,14 +165,10 @@ const FieldsetLegend = ({
       className={componentClassName}
       {...other}
     >
-      {text}{' '}
-      {optionalLabel && (
-        <span className={styles['fieldset-legend__flag']}>{optionalLabel}</span>
-      )}
       {title && (
         <div className={styles['fieldset-legend__overline']}>
           {title && (
-            <FieldLabel className={labelClassName} disabled={isDisabled}>
+            <FieldLabel disabled={isDisabled} size="md">
               {title}
             </FieldLabel>
           )}
@@ -206,6 +176,7 @@ const FieldsetLegend = ({
             <Text
               aria-disabled={isDisabled ?? undefined}
               as="span"
+              className={styles['fieldset-legend__hint']}
               preset="body-sm"
             >
               (Required)
@@ -215,6 +186,7 @@ const FieldsetLegend = ({
             <Text
               aria-disabled={isDisabled ?? undefined}
               as="span"
+              className={styles['fieldset-legend__hint']}
               preset="body-sm"
             >
               (Optional)

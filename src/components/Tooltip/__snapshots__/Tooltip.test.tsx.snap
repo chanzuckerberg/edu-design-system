@@ -4,7 +4,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <div
         aria-describedby="tippy-3"
@@ -57,7 +57,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <button
         class="fpo p-1"
@@ -73,7 +73,7 @@ exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <span
         data-testid="disabled-child-tooltip-wrapper"
@@ -94,7 +94,7 @@ exports[`<Tooltip /> InverseVariant story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <div
         aria-describedby="tippy-6"
@@ -147,7 +147,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <div
         aria-describedby="tippy-1"
@@ -200,7 +200,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <div
         aria-describedby="tippy-4"
@@ -253,7 +253,7 @@ exports[`<Tooltip /> LongTriggerText story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <div
         aria-describedby="tippy-5"
@@ -306,7 +306,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <div
-      class="p-8"
+      class="p-spacing-size-4"
     >
       <div
         aria-describedby="tippy-2"

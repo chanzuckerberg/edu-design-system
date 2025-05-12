@@ -11,9 +11,9 @@ export type LabelProps = {
    */
   className?: string;
   /**
-   * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
+   * Indicates disabled state of the input.
    */
-  hideLabel?: boolean;
+  disabled?: boolean;
   /**
    * HTML `for` attribute, which maps the label to an associated input `id`
    */
@@ -33,17 +33,17 @@ export type LabelProps = {
   /**
    * The label text string
    */
-  text: string;
+  text: ReactNode;
 };
 
 /**
  * `import {Label} from "@chanzuckerberg/eds";`
  *
- * Component Label used as legends for field groups (i.e. radio field).
+ * Label component used as legends for field groups (e.g., radio/checkbox fields).
  */
 export const Label = ({
   className,
-  hideLabel,
+  disabled,
   htmlFor,
   id,
   labelAfter,
@@ -53,14 +53,15 @@ export const Label = ({
 }: LabelProps) => {
   const componentClassName = clsx(
     styles['label'],
-    // TODO(next-major): remove this in favor of a local style (and not based on the mixin)
-    hideLabel && styles['u-is-vishidden'],
+    disabled && styles['label--disabled'],
     className,
   );
 
   return (
     <label className={componentClassName} htmlFor={htmlFor} id={id} {...other}>
-      {text}{' '}
+      <Text as="span" preset="body-md">
+        {text}
+      </Text>{' '}
       {labelAfter && (
         <Text as="span" preset="body-sm">
           {labelAfter}

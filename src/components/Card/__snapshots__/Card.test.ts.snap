@@ -2,10 +2,10 @@
 
 exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-call-out w-96"
+    class="card card--container-style-low card--container-color-call-out w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -39,19 +39,18 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r8:"
+            id="headlessui-menu-button-:rq:"
             type="button"
           >
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -85,7 +84,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -101,10 +100,10 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
 
 exports[`<Card /> CancelMembership story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-sm"
@@ -144,7 +143,7 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-md button__text"
           >
             Confirm cancellation
           </span>
@@ -160,10 +159,10 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
 
 exports[`<Card /> ChildCards story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-high card--container-color-call-out w-96"
+    class="card card--container-style-high card--container-color-call-out w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -217,19 +216,18 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
               <button
                 aria-expanded="false"
                 aria-haspopup="menu"
-                class=""
                 data-headlessui-state=""
-                id="headlessui-menu-button-:ra:"
+                id="headlessui-menu-button-:r10:"
                 type="button"
               >
                 <svg
                   class="icon"
                   fill="currentColor"
-                  height="2rem"
+                  height="32px"
                   role="img"
-                  style="--icon-size: 2rem;"
+                  style="--icon-size: 32px;"
                   viewBox="0 0 24 24"
-                  width="2rem"
+                  width="32px"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
@@ -257,10 +255,10 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
 
 exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-custom-brand border-brand-red bg-brand-red w-96"
+    class="card card--container-style-low card--container-color-custom-brand border-brand-red bg-brand-red w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -302,10 +300,10 @@ exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
 
 exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -339,19 +337,18 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r6:"
+            id="headlessui-menu-button-:rk:"
             type="button"
           >
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -385,7 +382,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -401,10 +398,10 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
 
 exports[`<Card /> Default story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -446,10 +443,10 @@ exports[`<Card /> Default story renders snapshot 1`] = `
 
 exports[`<Card /> IsInteractive story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default card--is-interactive w-96"
+    class="card card--container-style-low card--container-color-default card--is-interactive w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -491,10 +488,10 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
 
 exports[`<Card /> TopStripe story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -528,19 +525,18 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r4:"
+            id="headlessui-menu-button-:re:"
             type="button"
           >
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -574,7 +570,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -590,10 +586,10 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
 
 exports[`<Card /> WhileDragging story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default card--is-dragging-true w-96"
+    class="card card--container-style-low card--container-color-default card--is-dragging-true w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -635,13 +631,13 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
 
 exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
-      class="card__header header--size-md mb-size-2"
+      class="card__header header--size-md mb-spacing-size-2"
     >
       <div
         class="header__custom"
@@ -684,10 +680,10 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
 
 exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -739,10 +735,10 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
 
 exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -754,10 +750,10 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
+          height="24px"
+          style="--icon-size: 24px;"
           viewBox="0 0 24 24"
-          width="1.5rem"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -809,10 +805,10 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
 
 exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-md"
@@ -846,19 +842,18 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r2:"
+            id="headlessui-menu-button-:r8:"
             type="button"
           >
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -892,7 +887,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           type="button"
         >
           <span
-            class="button__text"
+            class="text text--label-lg button__text"
           >
             Primary
           </span>
@@ -908,10 +903,10 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
 
 exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
 <div
-  class="p-8"
+  class="p-spacing-size-4"
 >
   <article
-    class="card card--container-style-low card--container-color-default w-96"
+    class="card card--container-style-low card--container-color-default w-[384px]"
   >
     <header
       class="card__header header--size-sm"
@@ -923,10 +918,10 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
           aria-hidden="true"
           class="icon"
           fill="currentColor"
-          height="1rem"
-          style="--icon-size: 1rem;"
+          height="16px"
+          style="--icon-size: 16px;"
           viewBox="0 0 24 24"
-          width="1rem"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -958,19 +953,18 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class=""
             data-headlessui-state=""
-            id="headlessui-menu-button-:r0:"
+            id="headlessui-menu-button-:r2:"
             type="button"
           >
             <svg
               class="icon"
               fill="currentColor"
-              height="2rem"
+              height="32px"
               role="img"
-              style="--icon-size: 2rem;"
+              style="--icon-size: 32px;"
               viewBox="0 0 24 24"
-              width="2rem"
+              width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>

@@ -87,7 +87,7 @@ exports[`<Link /> InverseVariant story renders snapshot 1`] = `
   class="text-utility-default-primary"
 >
   <div
-    class="w-96 p-1 text-center text-utility-inverse"
+    class="w-[384px] p-spacing-size-half text-center text-utility-inverse"
   >
     <a
       class="link link--emphasis-default link--size-lg link--variant-inverse"
@@ -148,10 +148,10 @@ exports[`<Link /> LinkWithChevron story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon link__icon"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -177,10 +177,10 @@ exports[`<Link /> LinkWithFormattedChildren story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon link__icon"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -204,10 +204,10 @@ exports[`<Link /> LinkWithOpenIcon story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon link__icon"
       fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
+      height="24px"
+      style="--icon-size: 24px;"
       viewBox="0 0 24 24"
-      width="1.5rem"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

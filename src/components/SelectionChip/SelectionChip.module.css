@@ -9,10 +9,10 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: calc(var(--eds-size-1) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-1) * 1px);
   overflow: hidden;
 
-  padding: calc(var(--eds-size-1) / 16 * 1rem) calc(var(--eds-size-2) / 16 * 1rem);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   color: var(--eds-theme-color-text-utility-interactive-primary);
@@ -36,7 +36,7 @@
 }
 
 .selection-chip--has-icon {
-  padding-right: calc(var(--eds-size-2-and-half) / 16 * 1rem);
+  padding-right: calc(var(--eds-spacing-size-2-and-half) * 1px);
 }
 
 .selection-chip:has(.selection-chip__input:focus-visible) {

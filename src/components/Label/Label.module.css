@@ -10,8 +10,14 @@
  * Labels can sometimes be marked up as legends for field groups (i.e. radio field).
  */
 .label {
-  font: var(--eds-theme-typography-form-label);
   display: inline-block;
+}
+
+/**
+ * Disabled variant of the field label.
+ */
+ .label--disabled {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
 }
 
 /**
@@ -24,13 +30,5 @@
   display: inline-block;
   position: relative;
   top: 3px;
-  margin-left: calc(var(--eds-size-1) / 16 * 1rem);
-}
-
-/**
- * Visually hides the label element but is kept for screen reading accessibility.
- * TODO(next-major): remove this usage of a once-used mixin
- */
-.u-is-vishidden {
-  @mixin visuallyHide;
+  margin-left: calc(var(--eds-spacing-size-1) * 1px);
 }

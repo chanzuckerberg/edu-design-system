@@ -6,6 +6,7 @@ import '../src/design-tokens/css/base/media.css';
 
 // Import theme tokens
 import '../src/tokens-dist/css/variables.css';
+// TODO: change how this works so that local fonts can be imported and preloaded locally
 import '../src/design-tokens/tier-1-definitions/fonts.css';
 
 // Import storybook-specific CSS
@@ -79,7 +80,10 @@ export const parameters: Preview['parameters'] = {
     ],
   },
   badgesConfig: {
+    ...createComponentVersion('3.0'),
+    ...createComponentVersion('2.1'),
     ...createComponentVersion('2.0'),
+    ...createComponentVersion('1.4'),
     ...createComponentVersion('1.3'),
     ...createComponentVersion('1.2'),
     ...createComponentVersion('1.1'),

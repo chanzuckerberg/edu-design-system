@@ -14,19 +14,23 @@ import { Icon } from '../Icon/Icon';
 export default {
   title: 'Components/Menu',
   component: Menu,
-  // TODO: Add sub-components section
   parameters: {
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.0'],
     layout: 'centered',
   },
   argTypes: {
     children: {
       control: false,
     },
+    __demoMode: {
+      table: {
+        disable: true,
+      },
+    },
   },
   decorators: [
     (Story) => (
-      <div className="p-8">
+      <div className="p-spacing-size-4">
         <Story />
       </div>
     ),
@@ -37,7 +41,7 @@ type Story = StoryObj<MenuProps>;
 
 /**
  * The Default `Menu` allows for clickable menu items, and provides a default trigger
- * button that applies `Button` with `rank` `"primary"`, `iconLayout` `"right", `icon`
+ * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`, `icon`
  * either missing, or set to `"chevron-down"`, and a configurable text label.
  */
 export const Default: Story = {
@@ -221,6 +225,8 @@ export const WithCustomSecondaryButton: Story = {
 
 /**
  * Use an `Avatar` component within `.PlainButton` to achieve a clickable avatar with menu attached.
+ *
+ * *NOTE*: `Avatar` will be re-introduced in a future version of EDS.
  */
 export const MenuWithAvatarButton: Story = {
   parameters: {
@@ -297,7 +303,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
           <Icon
             name={iconName}
             purpose="informative"
-            size="2rem"
+            size="32px"
             title="show more"
           />
         </Menu.PlainButton>

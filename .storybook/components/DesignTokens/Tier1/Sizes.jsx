@@ -12,7 +12,7 @@ export class Tier1Sizes extends Component {
         title="Grid Sizes"
       >
         <Grid>
-          {filterTokens(`eds-size`)
+          {filterTokens(`eds-spacing-size`)
             .filter((listItem) => !listItem.name.endsWith('base-unit'))
             .map(function (listItem) {
               return (
@@ -22,14 +22,12 @@ export class Tier1Sizes extends Component {
                       listItem.name.split('--eds-')[1]
                     }`}
                     inlineStyles={{
-                      width: `calc(var(${listItem.name}) / 16 * 1rem)`,
-                      height: `calc(var(${listItem.name}) / 16 * 1rem)`,
+                      width: `calc(var(${listItem.name}) * 1px)`,
+                      height: `calc(var(${listItem.name}) * 1px)`,
                       minHeight: '0',
                     }}
                     name={listItem.name}
-                    value={
-                      listItem.value + 'px' + ` (${listItem.value / 16}rem)`
-                    }
+                    value={listItem.value + 'px'}
                   />
                 </Grid.Item>
               );

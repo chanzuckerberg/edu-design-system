@@ -19,7 +19,7 @@ export default {
         Call to Action
       </Button>
     ),
-    className: 'w-96',
+    className: 'w-[384px]',
   },
   argTypes: {
     subTitle: {

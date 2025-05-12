@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  gap: calc(var(--eds-size-2) / 16 * 1rem);
+  gap: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .button-group--horizontal {

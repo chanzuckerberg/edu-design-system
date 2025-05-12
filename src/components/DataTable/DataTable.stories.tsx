@@ -5,11 +5,6 @@ import React from 'react';
 
 import {
   DataTable,
-  DataTableTable,
-  DataTableDataCell,
-  DataTableHeaderCell,
-  DataTableRow,
-  DataTableHeader,
   type DataTableProps,
   type DataTableWithStatus,
 } from './DataTable';
@@ -22,15 +17,6 @@ import { chromaticViewports } from '../../util/viewports';
 export default {
   title: 'Components/DataTable',
   component: DataTable,
-  // TODO(bug): generate documentation argTypes for sub-components
-  // @see https://storybook.js.org/docs/writing-stories/stories-for-multiple-components
-  subcomponents: {
-    'DataTable.Table': DataTableTable,
-    'DataTable.Row': DataTableRow,
-    'DataTable.Header': DataTableHeader,
-    'DataTable.HeaderCell': DataTableHeaderCell,
-    'DataTable.DataCell': DataTableDataCell,
-  },
   parameters: {
     badges: [BADGE.BETA, 'api-1.0', 'theme-2.0'],
     chromatic: {
@@ -449,7 +435,7 @@ export const VerticalDivider: StoryObj<Args> = {
   },
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [rowSelection, setRowSelection] = React.useState({}); // TODO: demonstrate one is selected
+    const [rowSelection, setRowSelection] = React.useState({});
 
     // TODO(docs): Why must `any` be passed as second type param to avoid `unknown`?
     // eslint-disable-next-line react-hooks/rules-of-hooks

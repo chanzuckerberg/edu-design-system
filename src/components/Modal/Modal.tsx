@@ -1,4 +1,9 @@
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Transition,
+} from '@headlessui/react';
 import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
@@ -329,15 +334,16 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <Dialog.Overlay
+        <div
           className={clsx(
             styles['modal__overlay'],
             overlayEmphasis &&
               styles[`modal__overlay--emphasis-${overlayEmphasis}`],
           )}
         />
-
-        <ModalContent onClose={onClose} {...rest} />
+        <DialogPanel>
+          <ModalContent onClose={onClose} {...rest} />
+        </DialogPanel>
       </Dialog>
     </Transition>
   );
@@ -406,13 +412,21 @@ const ModalTitle = ({
   className,
   preset = 'headline-md',
   ...other
-}: ModalTitleProps) => (
-  <Dialog.Title as={React.Fragment}>
-    <Heading as="h2" className={className} preset={preset} {...other}>
-      {children}
-    </Heading>
-  </Dialog.Title>
-);
+}: ModalTitleProps) => {
+  const componentClassName = clsx(styles['modal-title'], className);
+  return (
+    <DialogTitle as={React.Fragment}>
+      <Heading
+        as="h2"
+        className={componentClassName}
+        preset={preset}
+        {...other}
+      >
+        {children}
+      </Heading>
+    </DialogTitle>
+  );
+};
 
 const ModalSubTitle = ({
   children,

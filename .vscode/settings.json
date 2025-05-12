@@ -11,9 +11,10 @@
   "stylelint.enable": true,
   "typescript.validate.enable": true,
   "javascript.validate.enable": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
-  }
+  },
+  "editor.formatOnSaveMode": "modifications"
 }

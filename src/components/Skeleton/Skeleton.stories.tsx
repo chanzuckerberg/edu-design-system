@@ -46,7 +46,7 @@ export const Circle: StoryObj<typeof Skeleton.Circle> = {
 export const Text: StoryObj<typeof Skeleton.Text> = {
   args: {
     width: '30ch',
-    height: '1.5rem',
+    height: '24px',
   },
   render: (args) => {
     return <Skeleton.Text {...args} />;

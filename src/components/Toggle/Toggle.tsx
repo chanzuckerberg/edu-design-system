@@ -1,9 +1,9 @@
-import { Switch } from '@headlessui/react';
+import { Switch, Label, Field } from '@headlessui/react';
 import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
 import type { EitherInclusive, ExtractProps } from '../../util/utility-types';
-
+import { default as EDSLabel } from '../Label';
 import styles from './Toggle.module.css';
 
 type ToggleLabelProps = {
@@ -55,7 +55,7 @@ type ToggleProps = ToggleButtonProps & {
 
 const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
   const componentClassName = clsx(styles['toggle__label'], className);
-  return <Switch.Label className={componentClassName}>{children}</Switch.Label>;
+  return <Label as={EDSLabel} className={componentClassName} text={children} />;
 };
 
 const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
@@ -81,8 +81,8 @@ const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
  *
  * Instead of direct assignment to ToggleWrapper, wrapping into a custom component prevents TypeScript erroring of using private Headless Switch Group.
  */
-const ToggleWrapper = (props: ExtractProps<typeof Switch.Group>) => (
-  <Switch.Group {...props} />
+const ToggleWrapper = (props: ExtractProps<typeof Field>) => (
+  <Field {...props} />
 );
 
 /**

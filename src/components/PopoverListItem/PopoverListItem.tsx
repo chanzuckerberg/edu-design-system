@@ -88,7 +88,7 @@ export const PopoverListItem = React.forwardRef<
       >
         {icon ? (
           <div className={styles['popover-list-item__icon']}>
-            <Icon name={icon} purpose="decorative" size="1rem" />
+            <Icon name={icon} purpose="decorative" size="16px" />
           </div>
         ) : (
           <div className={styles['popover-list-item__no-icon']}></div>

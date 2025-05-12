@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 import type { Size } from '../../util/variant-types';
+import Text from '../Text';
+
 import styles from './FieldLabel.module.css';
 
 export type FieldLabelProps = {
@@ -52,7 +54,9 @@ export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
         ref={ref}
         {...other}
       >
-        {children}
+        <Text as="span" preset={size === 'lg' ? 'label-lg' : 'label-md'}>
+          {children}
+        </Text>
       </label>
     );
   },

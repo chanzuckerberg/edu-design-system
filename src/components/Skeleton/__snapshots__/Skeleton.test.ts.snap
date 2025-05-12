@@ -20,6 +20,6 @@ exports[`<Skeleton /> Text story renders snapshot 1`] = `
 <div
   aria-hidden="true"
   class="skeleton skeleton--is-animating"
-  style="width: 30ch; height: 1.5rem;"
+  style="width: 30ch; height: 24px;"
 />
 `;
