@@ -48,7 +48,7 @@ const { identity } = require('lodash');
 
   // read in the config from config file, package json "eds", etc.
   const config = !args.local && (await getConfig());
-  const isVerbose = args.v;
+  const isVerbose = args.verbose;
   const canWrite = !args.dryRun;
 
   // Get the local variables from the defined file b/c published ones won't contain the modes
@@ -130,36 +130,44 @@ const { identity } = require('lodash');
           chalk.bold(variable.name) +
             ': Skipped with warning (orphaned): please remove usage in figma',
         );
+        isVerbose && console.warn('Variable details:', variable);
 
         return;
       }
 
       // mesh the token path to a matching path in the local theme file
-      let writePath = variable.getTokenPath();
-      const locationInLocal = at(localTheme, writePath).filter(
-        (entries) => typeof entries !== 'undefined',
-      );
+      // TODO-AH: this blows up when hitting STRING values
+      let writePath;
+      try {
+        writePath = variable.getTokenPath();
+        const locationInLocal = at(localTheme, writePath).filter(
+          (entries) => typeof entries !== 'undefined',
+        );
 
-      // Update the write path to conform to the format used in style-dictionary
-      if (locationInLocal.length) {
-        // handle case where we should look for @ in the file, then pluck the value object properly
-        if (locationInLocal[0]['@']?.value) {
-          // update the write path to mark the @ and value
-          writePath = writePath + '.@.value';
-        }
+        // Update the write path to conform to the format used in style-dictionary
+        if (locationInLocal.length) {
+          // handle case where we should look for @ in the file, then pluck the value object properly
+          if (locationInLocal[0]['@']?.value) {
+            // update the write path to mark the @ and value
+            writePath = writePath + '.@.value';
+          }
 
-        // handle case where it's just value
-        if (locationInLocal[0]?.value) {
-          // update the write path to mark the value
-          writePath = writePath + '.value';
+          // handle case where it's just value
+          if (locationInLocal[0]?.value) {
+            // update the write path to mark the value
+            writePath = writePath + '.value';
+          }
         }
+      } catch (e) {
+        // We couldn't parse the write path
+        isVerbose && spinner.fail(chalk.bold(variable.name) + ': ' + e);
+        isVerbose && console.error('Variable details:', variable);
       }
 
       if (writePath) {
         try {
           // error when path suffix is invalid (all should end with .value)
           if (!writePath.endsWith('value')) {
-            isVerbose && console.error(variable);
             throw new Error(
               `Name format violation. JSON path missing in local theme: ${writePath} (${figmaVariable.resolvedType})`,
             );
@@ -195,6 +203,7 @@ const { identity } = require('lodash');
         } catch (e) {
           // We couldn't parse the resolved value, so skip and add to errors
           spinner.fail(chalk.bold(variable.name) + ': ' + e);
+          isVerbose && console.error('Variable details:', variable);
           stats.errored.push(variable);
         }
       } else {
@@ -206,6 +215,7 @@ const { identity } = require('lodash');
               ': Skipped with warning (no write path)',
           );
         }
+        isVerbose && console.warn('Variable details:', variable);
         stats.skipped.push(variable);
       }
     });
