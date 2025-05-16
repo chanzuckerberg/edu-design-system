@@ -257,7 +257,10 @@ module.exports = {
           );
         default:
           throw new TypeError(
-            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
+            'unknown resolved type for ' +
+              this._figmaVariableData.name +
+              ': ' +
+              this._figmaVariableData.resolvedType,
           );
       }
     }
@@ -442,7 +445,10 @@ module.exports = {
             : this.value;
         default:
           throw new TypeError(
-            'unknown resolved type: ' + this._figmaVariableData.resolvedType,
+            'unknown resolved type for ' +
+              this._figmaVariableData.name +
+              ': ' +
+              this._figmaVariableData.resolvedType,
           );
       }
     }

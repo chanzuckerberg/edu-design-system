@@ -8,6 +8,13 @@ The Education Design System (EDS) is a repository of building blocks, implementi
 - [Presentational](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components implementing the common controls provided by the EDS toolkit
 - Guidelines for creating recipes using EDS, composing the above components
 
+## Prerequisites
+
+Currently, EDS supports the following:
+
+* React 18.x
+* Tailwind 3.x
+
 ## Installation
 
 First, install the package.
