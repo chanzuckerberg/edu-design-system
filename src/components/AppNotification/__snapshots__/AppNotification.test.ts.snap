@@ -27,7 +27,7 @@ exports[`<AppNotification /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
+exports[`<AppNotification /> InverseVariant story renders snapshot 1`] = `
 <div
   class="app-notification app-notification--variant-inverse"
   role="status"
@@ -49,8 +49,9 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
       <div
         class="app-notification__actions"
       >
+         
         <div
-          class="button-group button-group--horizontal-align-left"
+          class="button-group button-group--horizontal !flex-row"
         >
           <button
             class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
@@ -79,7 +80,7 @@ exports[`<AppNotification /> LightColor story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 1`] = `
+exports[`<AppNotification /> InverseWithDismissAndControls story renders snapshot 1`] = `
 <div
   class="app-notification app-notification--variant-inverse"
   role="status"
@@ -101,8 +102,9 @@ exports[`<AppNotification /> LightWithDismissAndControls story renders snapshot 
       <div
         class="app-notification__actions"
       >
+         
         <div
-          class="button-group button-group--horizontal-align-left"
+          class="button-group button-group--horizontal !flex-row"
         >
           <button
             class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
@@ -177,6 +179,7 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
       <div
         class="app-notification__actions"
       >
+         
         <div
           class="button-group button-group--horizontal !flex-row"
         >
@@ -229,6 +232,7 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
       <div
         class="app-notification__actions"
       >
+         
         <div
           class="button-group button-group--horizontal !flex-row"
         >

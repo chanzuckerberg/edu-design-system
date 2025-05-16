@@ -25,6 +25,11 @@ export default {
     children: {
       control: false,
     },
+    color: {
+      table: {
+        disable: true,
+      },
+    },
     subTitle: {
       control: 'text',
     },
@@ -38,18 +43,25 @@ export const Default: Story = {
 };
 
 export const WithControls: Story = {
-  args: {
-    children: (
+  render: (args) => (
+    <AppNotification {...args}>
+      {' '}
       <ButtonGroup buttonLayout="horizontal" className="!flex-row">
-        <Button rank="secondary" variant="inverse">
+        <Button
+          rank="secondary"
+          variant={args.variant === 'inverse' ? undefined : 'inverse'}
+        >
           Call To Action
         </Button>
-        <Button rank="tertiary" variant="inverse">
+        <Button
+          rank="tertiary"
+          variant={args.variant === 'inverse' ? undefined : 'inverse'}
+        >
           Other action
         </Button>
       </ButtonGroup>
-    ),
-  },
+    </AppNotification>
+  ),
 };
 
 export const WithLinkInSubtitle: Story = {
@@ -66,16 +78,29 @@ export const WithLinkInSubtitle: Story = {
   },
 };
 
-export const LightColor: Story = {
+export const InverseVariant: Story = {
   args: {
     variant: 'inverse',
-    children: (
-      <ButtonGroup buttonLayout="horizontal-align-left">
-        <Button rank="secondary">Call To Action</Button>
-        <Button rank="tertiary">Other action</Button>
-      </ButtonGroup>
-    ),
   },
+  render: (args) => (
+    <AppNotification {...args}>
+      {' '}
+      <ButtonGroup buttonLayout="horizontal" className="!flex-row">
+        <Button
+          rank="secondary"
+          variant={args.variant === 'inverse' ? undefined : 'inverse'}
+        >
+          Call To Action
+        </Button>
+        <Button
+          rank="tertiary"
+          variant={args.variant === 'inverse' ? undefined : 'inverse'}
+        >
+          Other action
+        </Button>
+      </ButtonGroup>
+    </AppNotification>
+  ),
 };
 
 export const WithDismissAndControls: Story = {
@@ -86,13 +111,15 @@ export const WithDismissAndControls: Story = {
       console.log('dismissing!');
     },
   },
+  render: WithControls.render,
 };
 
-export const LightWithDismissAndControls: Story = {
+export const InverseWithDismissAndControls: Story = {
   args: {
-    ...LightColor.args,
+    ...InverseVariant.args,
     onDismiss: () => {
       console.log('dismissing!');
     },
   },
+  render: InverseVariant.render,
 };
