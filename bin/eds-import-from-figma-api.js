@@ -136,7 +136,6 @@ const { identity } = require('lodash');
       }
 
       // mesh the token path to a matching path in the local theme file
-      // TODO-AH: this blows up when hitting STRING values
       let writePath;
       try {
         writePath = variable.getTokenPath();
