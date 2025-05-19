@@ -641,7 +641,7 @@
         "7-and-half": {
           "value": "60",
           "group": "size",
-          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+          "comment": "Pixels (px) - can convert to Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "8": {
           "value": "64",

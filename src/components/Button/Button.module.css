@@ -82,7 +82,7 @@
 }
 
 .button--size-md {
-  min-width: calc(var(--eds-spacing-size-7-and-half) * 1px);
+  min-width: calc(var(--eds-spacing-size-8) * 1px);
   max-width: calc(var(--eds-spacing-size-32) * 1px);
   min-height: calc(var(--eds-spacing-size-4) * 1px);
   max-height: calc(var(--eds-spacing-size-4) * 1px);
