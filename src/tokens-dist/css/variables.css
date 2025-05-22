@@ -49,7 +49,7 @@
   --eds-spacing-size-1-and-half: 12; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-quarter: 2; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-half: 4; /* Pixels (px) - can convert to Relative EMs (rem) */
-  --eds-spacing-size-7-and-half: 60; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-7-and-half: 60; /* Pixels (px) - can convert to Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-spacing-size-4-and-half: 36; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-48: 384; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-40: 320; /* Pixels (px) - can convert to Relative EMs (rem) */
