@@ -185,7 +185,13 @@ const { identity } = require('lodash');
           // Write the defined value to the specified location by json path
           canWrite &&
             args.local &&
-            set(localTheme, writePath, `{${variable.valueRef}}`);
+            set(
+              localTheme,
+              writePath,
+              variable.isAliased()
+                ? `{${variable.valueRef}}`
+                : variable.valueRef,
+            );
           canWrite && !args.local && set(localTheme, writePath, variable.value);
 
           // log if in a loggable mode (verbose / dry-run)

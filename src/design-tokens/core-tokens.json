@@ -96,12 +96,10 @@
         }
       },
       "white": {
-        "value": "255 255 255",
-        "comment": "Specified as a value to color-func rgb() so that it can be blended"
+        "value": "#FFFFFF"
       },
       "black": {
-        "value": "0 0 0",
-        "comment": "Specified as a value to color-func rgb() so that it can be blended"
+        "value": "#000000"
       },
       "neutral": {
         "100": {
@@ -618,11 +616,6 @@
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
         },
-        "4-and-half": {
-          "value": "36",
-          "group": "size",
-          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
-        },
         "5": {
           "value": "40",
           "group": "size",
@@ -637,11 +630,6 @@
           "value": "56",
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
-        },
-        "7-and-half": {
-          "value": "60",
-          "group": "size",
-          "comment": "Pixels (px) - can convert to Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "8": {
           "value": "64",
@@ -697,6 +685,16 @@
           "value": "384",
           "group": "size",
           "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+        },
+        "4-and-half": {
+          "value": "36",
+          "group": "size",
+          "comment": "Pixels (px) - can convert to Relative EMs (rem)"
+        },
+        "7-and-half": {
+          "value": "60",
+          "group": "size",
+          "comment": "Pixels (px) - can convert to Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "half": {
           "value": "4",
@@ -784,7 +782,7 @@
         },
         "background": {
           "input": {
-            "value": "rgb(var(--eds-color-white) / 1)"
+            "value": "{eds.color.white}"
           },
           "neutral": {
             "subtle": {
@@ -892,7 +890,7 @@
                 "group": "color"
               },
               "2": {
-                "value": "{eds.theme.color.background.utility.base.1}"
+                "value": "{eds.color.white}"
               }
             },
             "selected": {
@@ -911,7 +909,7 @@
           "utility": {
             "base": {
               "1": {
-                "value": "rgb(var(--eds-color-white) / 1)"
+                "value": "{eds.color.white}"
               },
               "2": {
                 "value": "{eds.color.neutral.025}"
@@ -919,7 +917,7 @@
             },
             "container": {
               "@": {
-                "value": "rgb(var(--eds-color-white) / 1)"
+                "value": "{eds.color.white}"
               },
               "hover": {
                 "value": "{eds.color.neutral.050}"
@@ -930,18 +928,16 @@
             },
             "overlay": {
               "lowEmphasis": {
-                "value": "{eds.color.neutral.850}",
-                "comment": "NOTE: use with opacity: 50%"
+                "value": "rgba(39, 38, 37, 0.50)"
               },
               "highEmphasis": {
-                "value": "{eds.color.neutral.850}",
-                "comment": "NOTE: use with opacity: 80%"
+                "value": "rgba(39, 38, 37, 0.80)"
               }
             },
             "default": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent"
+                  "value": "rgba(255, 255, 255, 0.00)"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.050}"
@@ -987,7 +983,7 @@
             "interactive": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent"
+                  "value": "rgba(255, 255, 255, 0.00)"
                 },
                 "hover": {
                   "value": "{eds.color.blue.050}"
@@ -1022,7 +1018,7 @@
             "critical": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent"
+                  "value": "rgba(255, 255, 255, 0.00)"
                 },
                 "hover": {
                   "value": "{eds.color.red.050}"
@@ -1117,7 +1113,7 @@
             },
             "disabled": {
               "noEmphasis": {
-                "value": "transparent"
+                "value": "rgba(255, 255, 255, 0.00)"
               },
               "lowEmphasis": {
                 "value": "{eds.color.neutral.100}"
@@ -1129,18 +1125,18 @@
             "inverse": {
               "noEmphasis": {
                 "@": {
-                  "value": "transparent"
+                  "value": "rgba(255, 255, 255, 0.00)"
                 },
                 "hover": {
-                  "value": "rgb(var(--eds-color-white) / 0.2)"
+                  "value": "rgba(255, 255, 255, 0.10)"
                 },
                 "active": {
-                  "value": "rgb(var(--eds-color-white) / 0.3)"
+                  "value": "rgba(255, 255, 255, 0.20)"
                 }
               },
               "highEmphasis": {
                 "@": {
-                  "value": "rgb(var(--eds-color-white) / 1)"
+                  "value": "{eds.color.white}"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.050}"
@@ -1150,7 +1146,7 @@
                 }
               },
               "disabled": {
-                "value": "rgb(var(--eds-color-white) / 0.5)"
+                "value": "rgba(255, 255, 255, 0.50)"
               }
             }
           }
@@ -1305,10 +1301,10 @@
             },
             "inverse": {
               "@": {
-                "value": "rgb(var(--eds-color-white) / 1)"
+                "value": "{eds.color.white}"
               },
               "disabled": {
-                "value": "rgb(var(--eds-color-white) / 0.5)"
+                "value": "rgba(255, 255, 255, 0.50)"
               }
             }
           }
@@ -1510,7 +1506,7 @@
             },
             "inverse": {
               "@": {
-                "value": "{eds.theme.color.text.utility.inverse.@}",
+                "value": "{eds.color.white}",
                 "group": "color"
               },
               "disabled": {
@@ -1520,13 +1516,14 @@
               },
               "interactive": {
                 "visited": {
-                  "value": "{eds.theme.color.text.utility.inverse.interactive.visited}",
+                  "value": "{eds.color.white}",
                   "group": "color"
                 }
               }
             },
             "placeholder": {
-              "value": "{eds.theme.color.text.utility.placeholder}"
+              "value": "{eds.color.neutral.550}",
+              "group": "color"
             }
           }
         },
@@ -1723,14 +1720,14 @@
             },
             "inverse": {
               "@": {
-                "value": "rgb(var(--eds-color-white) / 1)"
+                "value": "{eds.color.white}"
               },
               "disabled": {
-                "value": "rgb(var(--eds-color-white) / 0.5)"
+                "value": "rgba(255, 255, 255, 0.50)"
               },
               "interactive": {
                 "visited": {
-                  "value": "rgb(var(--eds-color-white) / 1)"
+                  "value": "{eds.color.white}"
                 }
               }
             },

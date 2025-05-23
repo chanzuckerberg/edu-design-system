@@ -1,6 +1,6 @@
 export const EdsColorBrandGrape400 = '#A6A3EE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
-export const EdsColorWhite = '255 255 255'; // Specified as a value to color-func rgb() so that it can be blended
-export const EdsColorBlack = '0 0 0'; // Specified as a value to color-func rgb() so that it can be blended
+export const EdsColorWhite = '#FFFFFF';
+export const EdsColorBlack = '#000000';
 export const EdsColorNeutral100 = '#EEE7E4';
 export const EdsColorNeutral150 = '#DFD9D6';
 export const EdsColorNeutral200 = '#CFC9C7';
@@ -117,7 +117,7 @@ export const EdsColorOpacity60 = '0.60';
 export const EdsColorOpacity70 = '0.70';
 export const EdsColorOpacity80 = '0.80';
 export const EdsThemeColorBodyBackground = '#F4F6F8';
-export const EdsThemeColorBackgroundInput = 'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundInput = '#FFFFFF';
 export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
 export const EdsThemeColorBackgroundBrandPrimaryDefault = '#C4C1F3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
@@ -138,21 +138,21 @@ export const EdsThemeColorBackgroundBrandPurple = '#C580E7';
 export const EdsThemeColorBackgroundBrandPurpleLowEmphasis = '#FBF5FD';
 export const EdsThemeColorBackgroundBrandPink = '#DB458D';
 export const EdsThemeColorBackgroundTableRowStripe1 = '#F5FAFF';
-export const EdsThemeColorBackgroundTableRowStripe2 =
-  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundTableRowStripe2 = '#FFFFFF';
 export const EdsThemeColorBackgroundTableRowSelected = '#CEE6FF';
 export const EdsThemeColorBackgroundVisualPageIndicator = '#CFC9C7';
 export const EdsThemeColorBackgroundVisualPageIndicatorCurrent = '#DB458D';
-export const EdsThemeColorBackgroundUtilityBase1 =
-  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundUtilityBase1 = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityBase2 = '#FDF9F8';
-export const EdsThemeColorBackgroundUtilityContainer =
-  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBackgroundUtilityContainer = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityContainerHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityContainerActive = '#EEE7E4';
-export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis = '#272625'; // NOTE: use with opacity: 50%
-export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis = '#272625'; // NOTE: use with opacity: 80%
-export const EdsThemeColorBackgroundUtilityDefaultNoEmphasis = 'transparent';
+export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
+  'rgba(39, 38, 37, 0.50)';
+export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis =
+  'rgba(39, 38, 37, 0.80)';
+export const EdsThemeColorBackgroundUtilityDefaultNoEmphasis =
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasisHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasisActive = '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityDefaultLowEmphasis = '#F9F3F1';
@@ -168,7 +168,7 @@ export const EdsThemeColorBackgroundUtilityDefaultHighEmphasisHover = '#0A164C';
 export const EdsThemeColorBackgroundUtilityDefaultHighEmphasisActive =
   '#060E30';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasis =
-  'transparent';
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasisHover =
   '#EAF4FF';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasisActive =
@@ -183,7 +183,8 @@ export const EdsThemeColorBackgroundUtilityInteractiveHighEmphasisHover =
   '#0A164C';
 export const EdsThemeColorBackgroundUtilityInteractiveHighEmphasisActive =
   '#060E30';
-export const EdsThemeColorBackgroundUtilityCriticalNoEmphasis = 'transparent';
+export const EdsThemeColorBackgroundUtilityCriticalNoEmphasis =
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisHover = '#FDF3F4';
 export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisActive = '#FAE2E5';
 export const EdsThemeColorBackgroundUtilityCriticalLowEmphasis = '#FDF3F4';
@@ -217,21 +218,22 @@ export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisHover =
   '#CEE6FF';
 export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisActive =
   '#B5DAFF';
-export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis = 'transparent';
+export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis =
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#CFC9C7';
-export const EdsThemeColorBackgroundUtilityInverseNoEmphasis = 'transparent';
+export const EdsThemeColorBackgroundUtilityInverseNoEmphasis =
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisHover =
-  'rgb(var(--eds-color-white) / 0.2)';
+  'rgba(255, 255, 255, 0.10)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisActive =
-  'rgb(var(--eds-color-white) / 0.3)';
-export const EdsThemeColorBackgroundUtilityInverseHighEmphasis =
-  'rgb(var(--eds-color-white) / 1)';
+  'rgba(255, 255, 255, 0.20)';
+export const EdsThemeColorBackgroundUtilityInverseHighEmphasis = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityInverseHighEmphasisHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityInverseHighEmphasisActive =
   '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityInverseDisabled =
-  'rgb(var(--eds-color-white) / 0.5)';
+  'rgba(255, 255, 255, 0.50)';
 export const EdsThemeColorBorderNeutralSubtle = '#E7E8EA';
 export const EdsThemeColorBorderBrandRed = '#4D0118';
 export const EdsThemeColorBorderBrandOrange = '#FFA070';
@@ -271,10 +273,9 @@ export const EdsThemeColorBorderUtilityInformationalHover = '#254EAC';
 export const EdsThemeColorBorderUtilityInformationalActive = '#1B3889';
 export const EdsThemeColorBorderUtilityDisabled = '#A09C9A';
 export const EdsThemeColorBorderUtilityFocus = '#3165D2';
-export const EdsThemeColorBorderUtilityInverse =
-  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorBorderUtilityInverse = '#FFFFFF';
 export const EdsThemeColorBorderUtilityInverseDisabled =
-  'rgb(var(--eds-color-white) / 0.5)';
+  'rgba(255, 255, 255, 0.50)';
 export const EdsThemeColorButtonSecondaryNeutralBackgroundHover = '#E7E8EA';
 export const EdsThemeColorButtonIconNeutralBackgroundHover = '#E7E8EA';
 export const EdsThemeColorButtonIconNeutralBorderHover = '#E7E8EA';
@@ -311,12 +312,10 @@ export const EdsThemeColorIconUtilityInformationalHover = '#254EAC';
 export const EdsThemeColorIconUtilityInformationalActive = '#060E30';
 export const EdsThemeColorIconUtilityDisabledPrimary = '#A09C9A';
 export const EdsThemeColorIconUtilityDisabledSecondary = '#CFC9C7';
-export const EdsThemeColorIconUtilityInverse =
-  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorIconUtilityInverse = '#FFFFFF';
 export const EdsThemeColorIconUtilityInverseDisabled =
-  'rgb(var(--eds-color-white) / 0.5)'; // Use with rgb()
-export const EdsThemeColorIconUtilityInverseInteractiveVisited =
-  'rgb(var(--eds-color-white) / 1)';
+  'rgba(255, 255, 255, 0.50)'; // Use with rgb()
+export const EdsThemeColorIconUtilityInverseInteractiveVisited = '#FFFFFF';
 export const EdsThemeColorIconUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorLinkBrandTextDecoration =
   'var(--eds-theme-color-text-brand-default)';
@@ -372,12 +371,10 @@ export const EdsThemeColorTextUtilityInformationalHover = '#254EAC';
 export const EdsThemeColorTextUtilityInformationalActive = '#1B3889';
 export const EdsThemeColorTextUtilityDisabledPrimary = '#A09C9A';
 export const EdsThemeColorTextUtilityDisabledSecondary = '#CFC9C7';
-export const EdsThemeColorTextUtilityInverse =
-  'rgb(var(--eds-color-white) / 1)';
+export const EdsThemeColorTextUtilityInverse = '#FFFFFF';
 export const EdsThemeColorTextUtilityInverseDisabled =
-  'rgb(var(--eds-color-white) / 0.5)';
-export const EdsThemeColorTextUtilityInverseInteractiveVisited =
-  'rgb(var(--eds-color-white) / 1)';
+  'rgba(255, 255, 255, 0.50)';
+export const EdsThemeColorTextUtilityInverseInteractiveVisited = '#FFFFFF';
 export const EdsThemeColorTextUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorTextBrandDefault =
   'var(--eds-theme-color-text-brand-primary)';

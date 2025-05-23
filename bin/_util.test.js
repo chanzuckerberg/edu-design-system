@@ -722,7 +722,7 @@ describe('utils', function () {
         );
 
         expect(variable.name).toEqual('-> text/utility/inverse');
-        expect(variable.value).toEqual('rgba(255, 255, 255, 0.5)');
+        expect(variable.value).toEqual('rgba(255, 255, 255, 0.50)');
       });
 
       it('handles float values', () => {
