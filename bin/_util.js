@@ -387,7 +387,6 @@ module.exports = {
 
           // if we have an alpha channel, use `rgba()`
           if (a > 0 && a < 1) {
-            // TODO-AH: make sure `a` is only 3 significant figures, e.g. 0.02, 1.00, 0.20
             return `rgba(${r}, ${g}, ${b}, ${a.toFixed(2)})`;
           } else {
             // print hex instead when the value has no alpha channel
