@@ -317,6 +317,19 @@ module.exports = {
     }
 
     /**
+     * Returns whether the value of a given figma variable and mode is a reference or not
+     * @param {FigmaVariable} figmaVariable API JSON data representing a figma variable instance
+     * @param {string} mode the collection that the variable has a value in
+     * @returns {boolean} whether the value for the variable is a literal or references another figma variable
+     */
+    isAliased() {
+      return module.exports.FigmaVariable.isAliased(
+        this._figmaVariableData,
+        this._mode,
+      );
+    }
+
+    /**
      * Recursively find the resolved name for a given token
      * @param {Variable} figmaVariable
      * @param {boolean} isLookup
@@ -367,14 +380,17 @@ module.exports = {
        */
       switch (varType) {
         case 'COLOR':
+          // convert each part of the resolved value value to an equivalent number:
+          // - for r,g,b, convert the fractional number to a value 0-255
+          // - for a, make sure it's treated as a number
           const r = Math.floor(figmaResolvedValue.r * 255);
           const g = Math.floor(figmaResolvedValue.g * 255);
           const b = Math.floor(figmaResolvedValue.b * 255);
-          const a = figmaResolvedValue.a;
+          const a = Number(figmaResolvedValue.a);
 
           // if we have an alpha channel, use `rgba()`
-          if (figmaResolvedValue.a > 0 && figmaResolvedValue.a < 1) {
-            return `rgba(${r}, ${g}, ${b}, ${a})`;
+          if (a > 0 && a < 1) {
+            return `rgba(${r}, ${g}, ${b}, ${a.toFixed(2)})`;
           } else {
             // print hex instead when the value has no alpha channel
             return (
