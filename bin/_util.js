@@ -380,10 +380,13 @@ module.exports = {
        */
       switch (varType) {
         case 'COLOR':
+          // convert each part of the resolved value value to an equivalent number:
+          // - for r,g,b, convert the fractional number to a value 0-255
+          // - for a, make sure it's treated as a number
           const r = Math.floor(figmaResolvedValue.r * 255);
           const g = Math.floor(figmaResolvedValue.g * 255);
           const b = Math.floor(figmaResolvedValue.b * 255);
-          const a = figmaResolvedValue.a * 1;
+          const a = Number(figmaResolvedValue.a);
 
           // if we have an alpha channel, use `rgba()`
           if (a > 0 && a < 1) {
