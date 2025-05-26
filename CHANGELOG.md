@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.0.0...v16.0.1) (2025-05-26)
+
+
+### Bug Fixes
+
+* **Button:** update minimum width for medium button ([#2188](https://github.com/chanzuckerberg/edu-design-system/issues/2188)) ([86395a2](https://github.com/chanzuckerberg/edu-design-system/commit/86395a262b70fc08a724d5438e1c4bb10133747b))
+* **scripts:** add in checks for unknown types ([#2186](https://github.com/chanzuckerberg/edu-design-system/issues/2186)) ([0ce0c28](https://github.com/chanzuckerberg/edu-design-system/commit/0ce0c28f08c17a828dba8cff475dd3a2453e3f9c))
+* **scripts:** address handling of color types ([#2190](https://github.com/chanzuckerberg/edu-design-system/issues/2190)) ([b81e0dc](https://github.com/chanzuckerberg/edu-design-system/commit/b81e0dcb72bf419dd3de357325fec00a96cced6c))
+* **tailwind:** adjust config creation to avoid TypeScript issues ([#2189](https://github.com/chanzuckerberg/edu-design-system/issues/2189)) ([14f4225](https://github.com/chanzuckerberg/edu-design-system/commit/14f4225cf977c45cbabc85c01ac80c3bb7f227ea))
+
 ## [16.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v15.12.0...v16.0.0) (2025-05-12)
 
 
