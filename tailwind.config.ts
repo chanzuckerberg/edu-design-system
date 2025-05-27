@@ -2,19 +2,6 @@ import type { Config } from 'tailwindcss';
 import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json';
 
 /**
- * Convert a series of objects with one key-value pair into a combined object
- *
- * @param accumulate object each key/value pair is being written to
- * @param current current entry that is being put into the object
- * @returns object-ized version of the sequence of key value pairs
- */
-function objArrayToObject(accumulate, current) {
-  const entry = Object.entries(current)[0];
-  accumulate[entry[0]] = entry[1];
-  return accumulate;
-}
-
-/**
  * Convert the token config values into a tailwind 3.x compatible format
  *
  * @param tokenConfig EDS-compatible JSON config, mapping the structure of the known tokens
@@ -49,7 +36,9 @@ export function applyTailwindConfig(
       .map((movement) => {
         return { [movement]: `${movements[movement]}s` };
       })
-      .reduce(objArrayToObject, {}),
+      .reduce((acc, cur) => {
+        return Object.assign(acc, cur);
+      }, {}),
   };
 
   const spacingTokens = {
@@ -57,7 +46,9 @@ export function applyTailwindConfig(
       .map((spacing) => {
         return { [`spacing-size-${spacing}`]: `${spacings[spacing]}px` };
       })
-      .reduce(objArrayToObject, {}),
+      .reduce((acc, cur) => {
+        return Object.assign(acc, cur);
+      }, {}),
   };
 
   return {

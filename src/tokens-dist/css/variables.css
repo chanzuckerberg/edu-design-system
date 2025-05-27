@@ -6,9 +6,7 @@
   --eds-theme-color-toggle-off-background: var(--eds-theme-color-icon-neutral-subtle);
   --eds-theme-color-toggle-on-background: var(--eds-theme-color-background-brand-primary-strong);
   --eds-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
-  --eds-theme-color-text-utility-inverse-interactive-visited: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-text-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-text-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-text-utility-inverse-disabled: rgba(255, 255, 255, 0.50);
   --eds-theme-color-link-neutral-background-focus: var(--eds-theme-color-text-neutral-default);
   --eds-theme-color-link-neutral-text-decoration-focus: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-link-neutral-text-decoration-hover: var(--eds-theme-color-text-brand-default);
@@ -24,24 +22,21 @@
   --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
   --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
   --eds-theme-color-button-secondary-neutral-background-hover: #E7E8EA;
-  --eds-theme-color-border-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-border-utility-inverse: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-border-utility-inverse-disabled: rgba(255, 255, 255, 0.50);
   --eds-theme-color-border-neutral-subtle: #E7E8EA;
-  --eds-theme-color-background-utility-inverse-disabled: rgb(var(--eds-color-white) / 0.5);
-  --eds-theme-color-background-utility-inverse-high-emphasis: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-utility-inverse-no-emphasis-active: rgb(var(--eds-color-white) / 0.3);
-  --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgb(var(--eds-color-white) / 0.2);
-  --eds-theme-color-background-utility-inverse-no-emphasis: transparent;
-  --eds-theme-color-background-utility-disabled-no-emphasis: transparent;
-  --eds-theme-color-background-utility-critical-no-emphasis: transparent;
-  --eds-theme-color-background-utility-interactive-no-emphasis: transparent;
-  --eds-theme-color-background-utility-default-no-emphasis: transparent;
-  --eds-theme-color-background-utility-container: rgb(var(--eds-color-white) / 1);
-  --eds-theme-color-background-utility-base-1: rgb(var(--eds-color-white) / 1);
+  --eds-theme-color-background-utility-inverse-disabled: rgba(255, 255, 255, 0.50);
+  --eds-theme-color-background-utility-inverse-no-emphasis-active: rgba(255, 255, 255, 0.20);
+  --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgba(255, 255, 255, 0.10);
+  --eds-theme-color-background-utility-inverse-no-emphasis: rgba(255, 255, 255, 0.00);
+  --eds-theme-color-background-utility-disabled-no-emphasis: rgba(255, 255, 255, 0.00);
+  --eds-theme-color-background-utility-critical-no-emphasis: rgba(255, 255, 255, 0.00);
+  --eds-theme-color-background-utility-interactive-no-emphasis: rgba(255, 255, 255, 0.00);
+  --eds-theme-color-background-utility-default-no-emphasis: rgba(255, 255, 255, 0.00);
+  --eds-theme-color-background-utility-overlay-high-emphasis: rgba(39, 38, 37, 0.80);
+  --eds-theme-color-background-utility-overlay-low-emphasis: rgba(39, 38, 37, 0.50);
   --eds-theme-color-background-brand-primary-default: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-neutral-medium: #E7E8EA;
   --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
-  --eds-theme-color-background-input: rgb(var(--eds-color-white) / 1);
   --eds-theme-color-body-background: #F4F6F8;
   --eds-z-index-bottom: -100;
   --eds-z-index-top: 99999;
@@ -49,7 +44,7 @@
   --eds-spacing-size-1-and-half: 12; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-quarter: 2; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-half: 4; /* Pixels (px) - can convert to Relative EMs (rem) */
-  --eds-spacing-size-7-and-half: 60; /* Pixels (px) - can convert to Relative EMs (rem) */
+  --eds-spacing-size-7-and-half: 60; /* Pixels (px) - can convert to Relative EMs (rem) @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-spacing-size-4-and-half: 36; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-48: 384; /* Pixels (px) - can convert to Relative EMs (rem) */
   --eds-spacing-size-40: 320; /* Pixels (px) - can convert to Relative EMs (rem) */
@@ -188,8 +183,8 @@
   --eds-color-neutral-200: #CFC9C7;
   --eds-color-neutral-150: #DFD9D6;
   --eds-color-neutral-100: #EEE7E4;
-  --eds-color-black: 0 0 0; /* Specified as a value to color-func rgb() so that it can be blended */
-  --eds-color-white: 255 255 255; /* Specified as a value to color-func rgb() so that it can be blended */
+  --eds-color-black: #000000;
+  --eds-color-white: #FFFFFF;
   --eds-color-brand-grape-400: #A6A3EE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-border-radius-full: 9999; /* pixels (px) */
   --eds-border-radius-none: 0; /* pixels (px) */
@@ -265,6 +260,8 @@
   --eds-typography-font-family-1: 'Graphik', Arial, sans-serif;
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
   --eds-theme-color-text-utility-placeholder: var(--eds-color-neutral-550);
+  --eds-theme-color-text-utility-inverse-interactive-visited: var(--eds-color-white);
+  --eds-theme-color-text-utility-inverse: var(--eds-color-white);
   --eds-theme-color-text-utility-disabled-secondary: var(--eds-color-neutral-200);
   --eds-theme-color-text-utility-disabled-primary: var(--eds-color-neutral-350);
   --eds-theme-color-text-utility-informational-active: var(--eds-color-blue-750);
@@ -297,9 +294,10 @@
   --eds-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
   --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
-  --eds-theme-color-icon-utility-inverse-interactive-visited: var(--eds-theme-color-text-utility-inverse-interactive-visited);
+  --eds-theme-color-icon-utility-placeholder: var(--eds-color-neutral-550);
+  --eds-theme-color-icon-utility-inverse-interactive-visited: var(--eds-color-white);
   --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
-  --eds-theme-color-icon-utility-inverse: var(--eds-theme-color-text-utility-inverse);
+  --eds-theme-color-icon-utility-inverse: var(--eds-color-white);
   --eds-theme-color-icon-utility-disabled-secondary: var(--eds-color-neutral-200);
   --eds-theme-color-icon-utility-disabled-primary: var(--eds-color-neutral-350);
   --eds-theme-color-icon-utility-informational-active: var(--eds-color-blue-950);
@@ -332,6 +330,7 @@
   --eds-theme-color-icon-neutral-subtle: var(--eds-color-neutral-500);
   --eds-theme-color-icon-neutral-strong-hover: var(--eds-color-neutral-800);
   --eds-theme-color-form-border-hover: var(--eds-color-neutral-800);
+  --eds-theme-color-border-utility-inverse: var(--eds-color-white);
   --eds-theme-color-border-utility-focus: var(--eds-color-blue-550);
   --eds-theme-color-border-utility-disabled: var(--eds-color-neutral-350);
   --eds-theme-color-border-utility-informational-active: var(--eds-color-blue-750);
@@ -372,6 +371,7 @@
   --eds-theme-color-border-brand-red: var(--eds-color-red-850);
   --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-white);
   --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
   --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-informational-low-emphasis-active: var(--eds-color-blue-150);
@@ -416,15 +416,15 @@
   --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-overlay-high-emphasis: var(--eds-color-neutral-850); /* NOTE: use with opacity: 80% */
-  --eds-theme-color-background-utility-overlay-low-emphasis: var(--eds-color-neutral-850); /* NOTE: use with opacity: 50% */
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-container: var(--eds-color-white);
   --eds-theme-color-background-utility-base-2: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-theme-color-background-visual-page-indicator-current: var(--eds-color-pink-450);
   --eds-theme-color-background-visual-page-indicator: var(--eds-color-neutral-200);
   --eds-theme-color-background-table-row-selected: var(--eds-color-blue-100);
-  --eds-theme-color-background-table-row-stripe-2: var(--eds-theme-color-background-utility-base-1);
+  --eds-theme-color-background-table-row-stripe-2: var(--eds-color-white);
   --eds-theme-color-background-table-row-stripe-1: var(--eds-color-blue-025);
   --eds-theme-color-background-brand-pink: var(--eds-color-pink-450);
   --eds-theme-color-background-brand-purple-low-emphasis: var(--eds-color-purple-050);
@@ -442,6 +442,7 @@
   --eds-theme-color-background-brand-red-low-emphasis: var(--eds-color-red-050);
   --eds-theme-color-background-brand-red: var(--eds-color-red-850);
   --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-input: var(--eds-color-white);
   --eds-theme-form-border-width: var(--eds-border-width-sm);
   --eds-theme-border-width: var(--eds-border-width-sm);
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
@@ -452,5 +453,4 @@
   --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-150);
   --eds-theme-border-radius-surfaces-lg: var(--eds-border-radius-none);
   --eds-theme-border-radius-actions: var(--eds-border-radius-full);
-  --eds-theme-color-icon-utility-placeholder: var(--eds-theme-color-text-utility-placeholder);
 }

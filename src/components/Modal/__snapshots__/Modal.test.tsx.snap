@@ -86,7 +86,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
 
 exports[`Modal Default story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-:r8:"
+  aria-labelledby="headlessui-dialog-title-:r7:"
   aria-modal="true"
   class="modal"
   data-headlessui-state="open"
@@ -102,7 +102,7 @@ exports[`Modal Default story renders snapshot 1`] = `
   <div
     data-headlessui-state="open"
     data-open=""
-    id="headlessui-dialog-panel-:r7:"
+    id="headlessui-dialog-panel-:r6:"
   >
     <div
       class="modal__content modal__content--height-fixed modal__content--lg"
@@ -138,7 +138,7 @@ exports[`Modal Default story renders snapshot 1`] = `
           class="heading heading--headline-md modal-title"
           data-headlessui-state="open"
           data-open=""
-          id="headlessui-dialog-title-:r8:"
+          id="headlessui-dialog-title-:r7:"
         >
           Modal Title
         </h2>
@@ -192,12 +192,12 @@ exports[`Modal Default story renders snapshot 1`] = `
 
 exports[`Modal HighEmphasis story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-:rh:"
+  aria-labelledby="headlessui-dialog-title-:rf:"
   aria-modal="true"
   class="modal"
   data-headlessui-state="open"
   data-open=""
-  id="headlessui-dialog-:r9:"
+  id="headlessui-dialog-:r8:"
   role="dialog"
   style=""
   tabindex="-1"
@@ -208,7 +208,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
   <div
     data-headlessui-state="open"
     data-open=""
-    id="headlessui-dialog-panel-:rg:"
+    id="headlessui-dialog-panel-:re:"
   >
     <div
       class="modal__content modal__content--height-fixed modal__content--lg"
@@ -244,7 +244,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
           class="heading heading--headline-md modal-title"
           data-headlessui-state="open"
           data-open=""
-          id="headlessui-dialog-title-:rh:"
+          id="headlessui-dialog-title-:rf:"
         >
           Modal Title
         </h2>
@@ -1128,12 +1128,12 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
 
 exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-:rq:"
+  aria-labelledby="headlessui-dialog-title-:rn:"
   aria-modal="true"
   class="modal"
   data-headlessui-state="open"
   data-open=""
-  id="headlessui-dialog-:ri:"
+  id="headlessui-dialog-:rg:"
   role="dialog"
   style=""
   tabindex="-1"
@@ -1144,7 +1144,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
   <div
     data-headlessui-state="open"
     data-open=""
-    id="headlessui-dialog-panel-:rp:"
+    id="headlessui-dialog-panel-:rm:"
   >
     <div
       class="modal__content modal__content--height-fixed modal__content--scrollable modal__content--lg"
@@ -1180,7 +1180,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
           class="heading heading--headline-md modal-title"
           data-headlessui-state="open"
           data-open=""
-          id="headlessui-dialog-title-:rq:"
+          id="headlessui-dialog-title-:rn:"
         >
           Modal Title
         </h2>
