@@ -1,0 +1,80 @@
+/*------------------------------------*\
+    # LIST
+\*------------------------------------*/
+
+@counter-style eds-bullets {
+  system: cyclic;
+  symbols: var(--list-style-type);
+  suffix: " ";
+}
+
+.list {
+  list-style-position: outside;
+}
+
+.list--size-xs {
+  margin-left: calc(var(--eds-spacing-size-2) * 1px);
+}
+
+.list--size-sm {
+  margin-left: calc(var(--eds-spacing-size-2) * 1px);
+}
+
+.list--size-md {
+  margin-left: calc(var(--eds-spacing-size-2-and-half) * 1px);
+}
+
+.list--markerType-none {
+  list-style-type: none;
+}
+
+ul.list--markerType-default {
+  list-style-type: disc;
+
+  ul.list--markerType-default {
+    list-style-type: circle;
+  }
+}
+
+ol.list--markerType-default {
+  list-style-type: decimal;
+
+  .list-item::marker {
+    content: counter(list-item, decimal) ".";
+  }
+
+  ol.list--markerType-default {
+    list-style-type: lower-alpha;
+
+    .list-item::marker {
+      content: counter(list-item, lower-alpha) ".";
+    }
+  }
+}
+
+.list-item--size-xs {
+  padding-left: calc(var(--eds-spacing-size-1) * 1px);
+  margin-bottom: calc(var(--eds-spacing-size-1) * 1px);
+
+  &>.list {
+    margin-top: calc(var(--eds-spacing-size-1) * 1px);
+  }
+}
+
+.list-item--size-sm {
+  padding-left: calc(var(--eds-spacing-size-1) * 1px);
+  margin-bottom: calc(var(--eds-spacing-size-1-and-half) * 1px);
+
+  &>.list {
+    margin-top: calc(var(--eds-spacing-size-1) * 1px);
+  }
+}
+
+.list-item--size-md {
+  padding-left: calc(var(--eds-spacing-size-1-and-half) * 1px);
+  margin-bottom: calc(var(--eds-spacing-size-2) * 1px);
+
+  &>.list {
+    margin-top: calc(var(--eds-spacing-size-2) * 1px);
+  }
+}

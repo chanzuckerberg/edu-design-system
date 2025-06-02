@@ -37,6 +37,7 @@ export { default as LoadingIndicator } from './components/LoadingIndicator';
 export { default as Menu } from './components/Menu';
 export { default as Modal } from './components/Modal';
 export { default as NumberIcon } from './components/NumberIcon';
+export { OrderedList } from './components/List';
 export { default as PageNotification } from './components/PageNotification';
 export { default as Popover } from './components/Popover';
 export { default as PopoverContainer } from './components/PopoverContainer';
@@ -49,6 +50,7 @@ export { default as Tag } from './components/Tag';
 export { default as TextareaField } from './components/TextareaField';
 export { default as ToastNotification } from './components/ToastNotification';
 export { default as Tooltip } from './components/Tooltip';
+export { UnorderedList } from './components/List';
 export { default as VisualPageIndicator } from './components/VisualPageIndicator';
 
 /**
