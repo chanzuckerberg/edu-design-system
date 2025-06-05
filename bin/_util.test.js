@@ -415,6 +415,7 @@ describe('utils', function () {
             codeSyntax: {},
           },
           '6181:0',
+          '6181:0',
           () => {},
         );
 
@@ -445,6 +446,7 @@ describe('utils', function () {
             scopes: ['TEXT_FILL'],
             codeSyntax: {},
           },
+          '6181:0',
           '6181:0',
           () => {},
         );
@@ -478,6 +480,7 @@ describe('utils', function () {
             scopes: ['TEXT_FILL'],
             codeSyntax: {},
           },
+          '6181:0',
           '6348:0',
           new utils.FigmaAPIReader(mockData),
         );
@@ -599,6 +602,7 @@ describe('utils', function () {
             scopes: ['TEXT_FILL'],
             codeSyntax: {},
           },
+          '6181:0',
           '6348:0',
           new utils.FigmaAPIReader(mockData),
         );
@@ -632,6 +636,7 @@ describe('utils', function () {
             scopes: ['TEXT_FILL'],
             codeSyntax: {},
           },
+          '6181:0',
           '6348:0',
           new utils.FigmaAPIReader(mockData),
         );
@@ -656,6 +661,7 @@ describe('utils', function () {
             scopes: ['ALL_SCOPES'],
             codeSyntax: {},
           },
+          '6181:0',
           '6348:0',
           new utils.FigmaAPIReader(mockData),
         );
@@ -687,6 +693,7 @@ describe('utils', function () {
             scopes: ['TEXT_FILL'],
             codeSyntax: {},
           },
+          '6181:0',
           '6348:0',
           new utils.FigmaAPIReader(mockData),
         );
@@ -718,6 +725,7 @@ describe('utils', function () {
             codeSyntax: {},
           },
           '6181:0',
+          '6181:0',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -743,6 +751,7 @@ describe('utils', function () {
             codeSyntax: {},
           },
           '6181:0',
+          '6181:0',
         );
 
         expect(variable.value).toEqual('0');
@@ -766,6 +775,7 @@ describe('utils', function () {
             scopes: ['ALL_SCOPES'],
             codeSyntax: {},
           },
+          '6181:0',
           '6181:0',
         );
 
@@ -795,6 +805,7 @@ describe('utils', function () {
             scopes: ['ALL_SCOPES'],
             codeSyntax: {},
           },
+          '6181:0',
           '6181:0',
         );
 
