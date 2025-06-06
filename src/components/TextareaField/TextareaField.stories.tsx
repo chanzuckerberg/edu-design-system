@@ -13,13 +13,14 @@ const meta: Meta<typeof TextareaField> = {
 dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.`,
     label: 'Textarea Field',
+    sublabel: 'Additional descriptive text for the field',
     rows: 5,
-    fieldNote: 'Longer Field description',
+    fieldNote: 'Validation information or error details about the input',
     spellCheck: false,
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-2.1', 'theme-2.0'],
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 };

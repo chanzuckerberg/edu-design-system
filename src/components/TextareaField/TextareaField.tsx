@@ -30,7 +30,7 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    */
   disabled?: boolean;
   /**
-   * Text under the textarea used to provide a description or error message to describe the input.
+   * Text under the textarea used to provide validation hints or error message to describe the input error.
    */
   fieldNote?: ReactNode;
   /**
@@ -55,6 +55,10 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * **Default is `"default"`**.
    */
   status?: 'default' | Extract<Status, 'warning' | 'critical'>;
+  /**
+   * Add additional descriptive text for the field name.
+   */
+  sublabel?: string;
 } & EitherInclusive<
     {
       /**
@@ -163,6 +167,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       required,
       showHint,
       status = 'default',
+      sublabel,
       ...other
     },
     ref,
@@ -197,7 +202,13 @@ export const TextareaField: TextareaFieldType = forwardRef(
       !label && styles['textarea-field__overline--no-label'],
       disabled && styles['textarea-field__overline--disabled'],
     );
+
     const labelClassName = clsx(
+      disabled && styles['textarea-field__label--disabled'],
+    );
+
+    const subLabelClassName = clsx(
+      styles['textarea-field__sublabel'],
       disabled && styles['textarea-field__label--disabled'],
     );
 
@@ -252,6 +263,13 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
                 / {maxLengthShown}
               </Text>
+            )}
+            {label && sublabel && (
+              <div className={subLabelClassName}>
+                <Text as="span" preset="body-sm">
+                  {sublabel}
+                </Text>
+              </div>
             )}
           </div>
         )}
