@@ -92,7 +92,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   value?: string | number;
   // Design API
   /**
-   * Text under the text input used to provide a description or error message to describe the input.
+   * Text under the textarea used to provide validation hints or error message to describe the input error.
    */
   fieldNote?: ReactNode;
   /**
@@ -124,6 +124,10 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    * **Default is `"default"`**.
    */
   status?: 'default' | Extract<Status, 'warning' | 'critical'>;
+  /**
+   * Add additional descriptive text for the field name.
+   */
+  sublabel?: string;
 } & EitherInclusive<
     {
       /**
@@ -172,6 +176,7 @@ export const InputField: InputFieldType = forwardRef(
       required,
       showHint,
       status = 'default',
+      sublabel,
       type = 'text',
       ...other
     },
@@ -191,6 +196,11 @@ export const InputField: InputFieldType = forwardRef(
 
     const labelClassName = clsx(
       styles['input-field__label'],
+      disabled && styles['input-field__label--disabled'],
+    );
+
+    const subLabelClassName = clsx(
+      styles['input-field__sublabel'],
       disabled && styles['input-field__label--disabled'],
     );
 
@@ -281,6 +291,13 @@ export const InputField: InputFieldType = forwardRef(
                 <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
                 / {maxLengthShown}
               </Text>
+            )}
+            {label && sublabel && (
+              <div className={subLabelClassName}>
+                <Text as="span" preset="body-sm">
+                  {sublabel}
+                </Text>
+              </div>
             )}
           </div>
         )}

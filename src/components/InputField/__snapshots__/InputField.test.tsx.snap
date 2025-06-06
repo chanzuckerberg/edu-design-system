@@ -20,6 +20,15 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
           Default input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -70,6 +79,15 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
           Default input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -121,6 +139,15 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
           Disabled input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel input-field__label--disabled"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -174,6 +201,15 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
           Error input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -390,6 +426,15 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
           Default input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body"
@@ -466,6 +511,15 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
           Read-only field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -523,6 +577,15 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       >
         (Required)
       </span>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -581,6 +644,15 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
       >
         (Required)
       </span>
+      <div
+        class="input-field__sublabel input-field__label--disabled"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -639,6 +711,15 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
       >
         (Optional)
       </span>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body"
@@ -674,6 +755,15 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
           Default input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -724,6 +814,15 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
           Warning input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
@@ -803,6 +902,15 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         / 
         15
       </div>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body"
@@ -853,6 +961,15 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         / 
         15
       </div>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body"
@@ -901,6 +1018,15 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
          
         / 
         15
+      </div>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
       </div>
     </div>
     <div
@@ -972,6 +1098,15 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
           Default input field
         </span>
       </label>
+      <div
+        class="input-field__sublabel"
+      >
+        <span
+          class="text text--body-sm"
+        >
+          Additional descriptive text for the field
+        </span>
+      </div>
     </div>
     <div
       class="input-field__body input-field--has-fieldNote"
