@@ -775,6 +775,10 @@ export const Disabled: StoryObj = {
     disabled: true,
   },
   parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
     docs: {
       ...Default.parameters?.docs,
     },

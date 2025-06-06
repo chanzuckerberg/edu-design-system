@@ -116,6 +116,12 @@ export const Disabled: Story = {
     fieldNote: 'This InputField is disabled',
     defaultValue: 'Text in disabled field',
   },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
 };
 
 /**
@@ -151,6 +157,12 @@ export const RequiredDisabled: Story = {
     required: true,
     disabled: true,
     fieldNote: 'This is a fieldnote for a required input field.',
+  },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 
