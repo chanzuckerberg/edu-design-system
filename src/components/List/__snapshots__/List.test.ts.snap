@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderedList /> Default story renders snapshot 1`] = `
+<ol
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+  </li>
+</ol>
+`;
+
+exports[`<OrderedList /> Medium story renders snapshot 1`] = `
+<ol
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+  </li>
+</ol>
+`;
+
+exports[`<OrderedList /> Nested story renders snapshot 1`] = `
+<ol
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+    <ol
+      class="list list--size-md list--markerType-default"
+    >
+      <li
+        class="list-item list-item--size-md"
+      >
+        test 1
+      </li>
+      <li
+        class="list-item list-item--size-md"
+      >
+        test 2
+      </li>
+    </ol>
+  </li>
+</ol>
+`;
+
+exports[`<OrderedList /> None story renders snapshot 1`] = `
+<ol
+  class="list list--size-md list--markerType-none"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+  </li>
+</ol>
+`;
+
+exports[`<OrderedList /> Small story renders snapshot 1`] = `
+<ol
+  class="list list--size-sm list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-sm"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-sm"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-sm"
+  >
+    test 3
+  </li>
+</ol>
+`;
+
+exports[`<OrderedList /> XSmall story renders snapshot 1`] = `
+<ol
+  class="list list--size-xs list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-xs"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-xs"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-xs"
+  >
+    test 3
+  </li>
+</ol>
+`;
+
+exports[`<UnorderedList /> CustomMarker story renders snapshot 1`] = `
+<ul
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md list-['+']"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md list-['–']"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md list-['*']"
+  >
+    test 3
+  </li>
+</ul>
+`;
+
+exports[`<UnorderedList /> Default story renders snapshot 1`] = `
+<ul
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+  </li>
+</ul>
+`;
+
+exports[`<UnorderedList /> Medium story renders snapshot 1`] = `
+<ul
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+  </li>
+</ul>
+`;
+
+exports[`<UnorderedList /> Nested story renders snapshot 1`] = `
+<ul
+  class="list list--size-md list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+    <ul
+      class="list list--size-md list--markerType-default"
+    >
+      <li
+        class="list-item list-item--size-md"
+      >
+        test 1
+      </li>
+      <li
+        class="list-item list-item--size-md"
+      >
+        test 2
+      </li>
+    </ul>
+  </li>
+</ul>
+`;
+
+exports[`<UnorderedList /> None story renders snapshot 1`] = `
+<ul
+  class="list list--size-md list--markerType-none"
+>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-md"
+  >
+    test 3
+  </li>
+</ul>
+`;
+
+exports[`<UnorderedList /> Small story renders snapshot 1`] = `
+<ul
+  class="list list--size-sm list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-sm"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-sm"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-sm"
+  >
+    test 3
+  </li>
+</ul>
+`;
+
+exports[`<UnorderedList /> XSmall story renders snapshot 1`] = `
+<ul
+  class="list list--size-xs list--markerType-default"
+>
+  <li
+    class="list-item list-item--size-xs"
+  >
+    test 1
+  </li>
+  <li
+    class="list-item list-item--size-xs"
+  >
+    test 2
+  </li>
+  <li
+    class="list-item list-item--size-xs"
+  >
+    test 3
+  </li>
+</ul>
+`;
