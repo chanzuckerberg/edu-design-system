@@ -10,7 +10,7 @@ const meta: Meta<typeof Select> = {
   component: Select,
   parameters: {
     layout: 'centered',
-    badges: ['api-3.0', 'theme-2.0'],
+    badges: ['api-3.1', 'theme-2.0'],
   },
   argTypes: {
     multiple: {
@@ -337,6 +337,7 @@ export const WithSelectedBy: StoryObj<typeof Select> = {
 export const WithFieldName: StoryObj = {
   args: {
     ...Default.args,
+    sublabel: 'Additional descriptive text',
     children: (
       <>
         <Select.Button>
@@ -770,6 +771,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
 export const Disabled: StoryObj = {
   args: {
     ...Default.args,
+    sublabel: 'Some descriptive text',
     disabled: true,
   },
   parameters: {
@@ -788,6 +790,7 @@ export const Required: StoryObj = {
     required: true,
     showHint: true,
     className: 'w-[384px]',
+    sublabel: 'Some descriptive text',
   },
   parameters: {
     ...Default.parameters,
@@ -802,6 +805,7 @@ export const Optional: StoryObj = {
     ...Default.args,
     required: false,
     showHint: true,
+    sublabel: 'Some descriptive text',
     className: 'w-[384px]',
   },
   parameters: {
@@ -950,7 +954,7 @@ export const OptionsRightAligned: StoryObj = {
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-2.1', 'theme-2.0'],
     layout: 'centered',
     chromatic: { delay: 300, disableSnapshot: true },
     docs: {

@@ -65,7 +65,7 @@ type SelectProps = ListboxProps<
   required?: boolean;
   // Design API
   /**
-   * Text under the text input used to provide a description or error message to describe the input.
+   * Text under the textarea used to provide validation hints or error message to describe the input error.
    */
   fieldNote?: ReactNode;
   /**
@@ -90,12 +90,20 @@ type SelectProps = ListboxProps<
    * **Default is `"default"`**.
    */
   status?: 'default' | Extract<Status, 'warning' | 'critical'>;
+  /**
+   * Add additional descriptive text for the field name
+   */
+  sublabel?: string;
 };
 
 type SelectLabelProps = ExtractProps<typeof Label> & {
   disabled?: boolean;
   required?: boolean;
   showHint?: boolean;
+  /**
+   * Add additional descriptive text for the field name
+   */
+  sublabel?: string;
 };
 type SelectOptionsProps = ExtractProps<typeof ListboxOptions>;
 type SelectOptionProps = ExtractProps<typeof ListboxOption> & {
@@ -180,6 +188,7 @@ export function Select({
   showHint,
   status,
   onChange: theirOnChange,
+  sublabel,
   ...other
 }: SelectProps) {
   if (process.env.NODE_ENV !== 'production') {
@@ -249,6 +258,7 @@ export function Select({
             disabled={disabled}
             required={required}
             showHint={showHint}
+            sublabel={sublabel}
           >
             {label}
           </Select.Label>
@@ -272,6 +282,7 @@ const SelectLabel = ({
   className,
   disabled,
   showHint,
+  sublabel,
 }: SelectLabelProps) => {
   const componentClassName = clsx(
     styles['select__label'],
@@ -287,6 +298,11 @@ const SelectLabel = ({
   const overlineClassName = clsx(
     styles['select__overline'],
     !label && styles['select__overline--no-label'],
+  );
+
+  const subLabelClassName = clsx(
+    styles['select__sublabel'],
+    disabled && styles['select__label--disabled'],
   );
 
   return (
@@ -318,6 +334,13 @@ const SelectLabel = ({
         >
           (Optional)
         </Text>
+      )}
+      {label && sublabel && (
+        <div className={subLabelClassName}>
+          <Text as="span" preset="body-sm">
+            {sublabel}
+          </Text>
+        </div>
       )}
     </div>
   );

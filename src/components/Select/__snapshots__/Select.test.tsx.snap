@@ -146,6 +146,15 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
     >
       (Required)
     </span>
+    <div
+      class="select__sublabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Some descriptive text
+      </span>
+    </div>
   </div>
   <button
     aria-controls="headlessui-listbox-options-:r44:"
@@ -427,6 +436,15 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
     >
       (Optional)
     </span>
+    <div
+      class="select__sublabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Some descriptive text
+      </span>
+    </div>
   </div>
   <button
     aria-controls="headlessui-listbox-options-:r3q:"
@@ -491,6 +509,15 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
     >
       (Required)
     </span>
+    <div
+      class="select__sublabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Some descriptive text
+      </span>
+    </div>
   </div>
   <button
     aria-controls="headlessui-listbox-options-:r3g:"
@@ -619,6 +646,15 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
     >
       (Optional)
     </span>
+    <div
+      class="select__sublabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Some descriptive text
+      </span>
+    </div>
   </div>
   <button
     aria-controls="headlessui-listbox-options-:r4e:"
@@ -678,6 +714,15 @@ exports[`<Select /> Generated Snapshots WithFieldName story renders snapshot 1`]
         Favorite Animal
       </span>
     </label>
+    <div
+      class="select__sublabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Additional descriptive text
+      </span>
+    </div>
   </div>
   <button
     aria-controls="headlessui-listbox-options-:r1m:"
