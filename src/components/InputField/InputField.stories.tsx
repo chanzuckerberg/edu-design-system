@@ -17,7 +17,7 @@ const meta: Meta<typeof InputField> = {
   },
   args: {
     className: 'w-[384px]',
-    sublabel: 'Additional descriptive text for the field',
+    sublabel: 'Additional descriptive text for the field.',
   },
   argTypes: {
     type: {
@@ -47,7 +47,18 @@ type Story = StoryObj<typeof InputField>;
 export const Default: Story = {
   args: {
     label: 'Default input field',
-    fieldNote: 'This is a fieldnote.',
+    sublabel: '',
+  },
+};
+
+/**
+ * An input field can have both a footnote (describing how the field is validated), and a sublabel
+ * (a longer description to elaborate on the label)
+ */
+export const WithFullDescription: Story = {
+  args: {
+    label: 'Default input field',
+    fieldNote: 'Field validation description.',
   },
 };
 

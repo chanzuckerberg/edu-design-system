@@ -10589,11 +10589,12 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
           class="input-field__body"
         >
           <input
+            aria-describedby=""
             aria-invalid="false"
             aria-label="search"
             class="input input-field__input--leading-icon"
             disabled=""
-            id=":r16:"
+            id=":r19:"
             placeholder="Search..."
             type="search"
           />
@@ -10760,6 +10761,7 @@ exports[`<DataTable /> WithSearch story renders snapshot 1`] = `
           class="input-field__body"
         >
           <input
+            aria-describedby=""
             aria-invalid="false"
             aria-label="search"
             class="input input-field__input--leading-icon"
@@ -10835,11 +10837,12 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
           class="input-field__body"
         >
           <input
+            aria-describedby=""
             aria-invalid="false"
             aria-label="search"
             class="input input-field__input--leading-icon"
             disabled=""
-            id=":rs:"
+            id=":rt:"
             placeholder="Search..."
             type="search"
           />
@@ -10947,11 +10950,12 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
           class="input-field__body"
         >
           <input
+            aria-describedby=""
             aria-invalid="false"
             aria-label="search"
             class="input input-field__input--leading-icon"
             disabled=""
-            id=":ru:"
+            id=":r10:"
             placeholder="Search..."
             type="search"
           />
@@ -11040,7 +11044,7 @@ exports[`<DataTable /> WithSearchAndCustomActions story renders snapshot 1`] = `
             aria-label="show more actions"
             class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r12:"
+            id="headlessui-menu-button-:r15:"
             type="button"
           >
             <span

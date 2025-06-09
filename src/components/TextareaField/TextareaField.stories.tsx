@@ -13,9 +13,9 @@ const meta: Meta<typeof TextareaField> = {
 dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.`,
     label: 'Textarea Field',
-    sublabel: 'Additional descriptive text for the field',
+    sublabel: 'Additional descriptive text for the field.',
     rows: 5,
-    fieldNote: 'Validation information or error details about the input',
+    fieldNote: 'Validation information or error details about the input.',
     spellCheck: false,
   },
   parameters: {
@@ -29,9 +29,10 @@ export default meta;
 type Story = StoryObj<typeof TextareaField>;
 
 export const Default: Story = {
-  render: (args) => (
-    <TextareaField aria-label="Text Label" {...args}></TextareaField>
-  ),
+  args: {
+    sublabel: '',
+    fieldNote: '',
+  },
 };
 
 /**

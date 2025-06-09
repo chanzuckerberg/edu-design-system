@@ -337,6 +337,7 @@ const SelectLabel = ({
       )}
       {label && sublabel && (
         <div className={subLabelClassName}>
+          {/* TODO: is there a way to coerce HeadlessUI into using aria-describedby like InputField/TextareaField */}
           <Text as="span" preset="body-sm">
             {sublabel}
           </Text>

@@ -189,6 +189,7 @@ export const InputField: InputFieldType = forwardRef(
     const revealShowHideButton = type === 'password';
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
+    // set up base and conditional styles
     const overlineClassName = clsx(
       styles['input-field__overline'],
       !label && styles['input-field__overline--no-label'],
@@ -214,6 +215,13 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote && styles['input-field--has-fieldNote'],
     );
 
+    // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
+    const inputOverlayClassName = clsx(
+      leadingIcon && styles['input-field__input--leading-icon'],
+      inputWithin && styles['input-field__input--input-within'],
+    );
+
+    // When field length is specified, handle calculations for current and total size (with styles)
     const fieldLength = fieldText?.toString().length ?? 0;
 
     const textExceedsMaxLength =
@@ -227,26 +235,28 @@ export const InputField: InputFieldType = forwardRef(
     const shouldRenderError =
       textExceedsMaxLength || textExceedsRecommendedLength;
 
-    const generatedIdVar = useId();
-    const idVar = id || generatedIdVar;
-
-    const generatedAriaDescribedById = useId();
-    const ariaDescribedByVar = fieldNote
-      ? ariaDescribedBy || generatedAriaDescribedById
-      : undefined;
-
     const fieldLengthCountClassName = clsx(
       (textExceedsMaxLength || textExceedsRecommendedLength) &&
         styles['input-field--invalid-length'],
     );
 
-    // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
-    const inputOverlayClassName = clsx(
-      leadingIcon && styles['input-field__input--leading-icon'],
-      inputWithin && styles['input-field__input--input-within'],
-    );
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
+
+    const generatedIdVar = useId();
+    const idVar = id || generatedIdVar;
+
+    // Accessibility: attach the IDs of fieldnote and/or sublabel to the input
+    const generatedFieldNoteId = useId();
+    const generatedSubLabelId = useId();
+
+    // set up the aria-describedby based on the following rules:
+    // - describedby is blank if sublabel and fieldnote are not defined
+    // - for each sublabel/fieldnote, append the space-separated, generated IDs to aria-describedby
+    // - if the user has given a aria-describedby prop, override the calculation
+    const completeDescribedByVar = ariaDescribedBy
+      ? ariaDescribedBy
+      : `${sublabel ? generatedSubLabelId : ''}${fieldNote ? ' ' + generatedFieldNoteId : ''}`;
 
     return (
       <div className={className}>
@@ -294,7 +304,7 @@ export const InputField: InputFieldType = forwardRef(
             )}
             {label && sublabel && (
               <div className={subLabelClassName}>
-                <Text as="span" preset="body-sm">
+                <Text as="span" id={generatedSubLabelId} preset="body-sm">
                   {sublabel}
                 </Text>
               </div>
@@ -304,7 +314,7 @@ export const InputField: InputFieldType = forwardRef(
 
         <div className={inputBodyClassName}>
           <Input
-            aria-describedby={ariaDescribedByVar}
+            aria-describedby={completeDescribedByVar ?? undefined}
             aria-invalid={!!(status === 'critical')}
             className={inputOverlayClassName}
             disabled={disabled}
@@ -348,7 +358,7 @@ export const InputField: InputFieldType = forwardRef(
           <div className={styles['input-field__footer']}>
             <FieldNote
               disabled={disabled}
-              id={ariaDescribedByVar}
+              id={generatedFieldNoteId}
               status={shouldRenderError ? 'critical' : status}
             >
               {fieldNote}
