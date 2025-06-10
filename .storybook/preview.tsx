@@ -80,6 +80,7 @@ export const parameters: Preview['parameters'] = {
     ],
   },
   badgesConfig: {
+    ...createComponentVersion('3.1'),
     ...createComponentVersion('3.0'),
     ...createComponentVersion('2.1'),
     ...createComponentVersion('2.0'),

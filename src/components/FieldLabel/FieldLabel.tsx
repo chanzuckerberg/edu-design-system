@@ -41,8 +41,7 @@ export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
   ({ children, className, htmlFor, size = 'lg', disabled, ...other }, ref) => {
     const componentClassName = clsx(
       styles['label'],
-      size === 'md' && styles['label--md'],
-      size === 'lg' && styles['label--lg'],
+      size && styles[`label--${size}`],
       disabled && styles['label--disabled'],
       className,
     );

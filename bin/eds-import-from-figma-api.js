@@ -9,6 +9,7 @@ const { identity } = require('lodash');
   const { prompt } = require('enquirer');
   const set = require('lodash/set');
   const at = require('lodash/at');
+  const uniqBy = require('lodash/uniqBy');
   const ora = require('ora');
 
   // eslint-disable-next-line import/extensions
@@ -46,6 +47,9 @@ const { identity } = require('lodash');
       type: 'boolean',
     }).argv;
 
+  // Handle script initialization
+  const initSpinner = ora('Loading Figma Data').start();
+
   // read in the config from config file, package json "eds", etc.
   const config = !args.local && (await getConfig());
   const isVerbose = args.verbose;
@@ -70,10 +74,60 @@ const { identity } = require('lodash');
 
   const fullData = await figmaFileResponse.json();
   const figmaApiReader = new FigmaAPIReader(fullData);
+
+  initSpinner.stop();
+
+  // enquire about the collection to use where we keep the tier 2 tokens. Hint at the name,
+  // noting that it should be something like "Tier 2" but could be anything
+  // This is used to set up the mode to pull token values from later in the script
+  // Make sure each entry is named uniquely, b/c the API can return multiple entries with matching names,
+  // but overlapping IDs
+  let collectionNameResponses;
+  try {
+    collectionNameResponses = await prompt([
+      {
+        name: 'tier1Collection',
+        message:
+          'Which collection contains the tier 1 tokens (e.g., "Tier 1")?',
+        type: 'select',
+        choices: uniqBy(
+          figmaApiReader.getVariableCollections(),
+          (i) => i.name,
+        ).map((collection) => {
+          return {
+            name: collection.id,
+            message: `Use the "${collection.name}" collection`,
+            value: collection.name,
+          };
+        }),
+      },
+      {
+        name: 'tier2Collection',
+        message:
+          'Which collection contains the tier 2 tokens (e.g., "EDS tokens", "Tier 2")?',
+        type: 'select',
+        choices: uniqBy(
+          figmaApiReader.getVariableCollections(),
+          (i) => i.name,
+        ).map((collection) => {
+          return {
+            name: collection.id,
+            message: `Use the "${collection.name}" collection`,
+            value: collection.name,
+          };
+        }),
+      },
+    ]);
+  } catch (e) {
+    // e.g., someone hits ESC
+    console.error(chalk.red('Aborted.'), e);
+    process.exit(-1);
+  }
+
   const edsCollection = figmaApiReader
     .getVariableCollections()
     .find(
-      (collection) => collection.name === FigmaAPIReader.EDS_COLLECTION_NAME,
+      (collection) => collection.id === collectionNameResponses.tier2Collection,
     );
 
   // Determine which of the modes in the file should be used
@@ -81,12 +135,12 @@ const { identity } = require('lodash');
   try {
     response = await prompt({
       name: 'modeId',
-      message: 'Please select the Figma mode for token import',
+      message: 'Please select the figma theme to use you wish to import:',
       type: 'select',
       choices: figmaApiReader.getModes(edsCollection.id).map((mode) => {
         return {
           name: mode.modeId,
-          message: `Use the ${mode.name} figma mode`,
+          message: `Use the ${mode.name} theme`,
           value: mode.name,
         };
       }),
@@ -119,6 +173,7 @@ const { identity } = require('lodash');
       stats.total.push(figmaVariable.id);
       const variable = new FigmaVariable(
         figmaVariable,
+        collectionNameResponses.tier1Collection,
         response.modeId,
         figmaApiReader,
       );

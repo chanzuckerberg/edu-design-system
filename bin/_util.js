@@ -2,9 +2,6 @@
 
 // NOTE: Do not use directly. Extend this to support re-writing eds-import-from-figma for non-enterprise use cases
 class AbstractFigmaReader {
-  static TIER_1_MODE = '6181:0';
-  static EDS_COLLECTION_NAME = 'EDS tokens';
-
   constructor(jsonData) {
     this._jsonData = jsonData;
   }
@@ -179,6 +176,7 @@ module.exports = {
      * @returns VariableCollection[]
      */
     getVariableCollections() {
+      // TODO-AH: remove the redundant rows in here by making this a unique set
       return Object.values(this._jsonData.variableCollections).map(
         (collection) => {
           return {
@@ -227,10 +225,11 @@ module.exports = {
     static TIER_2_PREFIX = '-> ';
     static VARIABLE_ALIAS = 'VARIABLE_ALIAS';
 
-    constructor(json, mode, lookupDelegate) {
+    constructor(json, tier1Mode, tier2Mode, lookupDelegate) {
       // TODO: throw if any private members are invalid
       this._figmaVariableData = json;
-      this._mode = mode;
+      this._tier1Mode = tier1Mode;
+      this._tier2Mode = tier2Mode;
       this._lookupDelegate = lookupDelegate;
     }
 
@@ -242,18 +241,25 @@ module.exports = {
       switch (this._figmaVariableData.resolvedType) {
         case 'COLOR':
           /**
-           * - when an arrow is seen, pay attention to the type of the token being read, and prefix appropriately (color, etc. => eds.theme.color, etc.)
+           * - when an tier 2 prefix is seen, pay attention to the type of the token being read, and prefix appropriately (color, etc. => eds.theme.color, etc.)
            */
           return this._tokenNameToPath(
             'eds.theme.color.' +
-              this._figmaVariableData.name.replace('-> ', ''),
+              this._figmaVariableData.name.replace(
+                module.exports.FigmaVariable.TIER_2_PREFIX,
+                '',
+              ),
           );
         case 'FLOAT':
           /**
-           * - When an arrow is seen, remove it entirely for numeric values
+           * - When a prefix is seen, remove it entirely for numeric values
            */
           return this._tokenNameToPath(
-            'eds.theme.' + this._figmaVariableData.name.replace('-> ', ''),
+            'eds.theme.' +
+              this._figmaVariableData.name.replace(
+                module.exports.FigmaVariable.TIER_2_PREFIX,
+                '',
+              ),
           );
         default:
           throw new TypeError(
@@ -266,7 +272,9 @@ module.exports = {
     }
 
     /**
-     * Recursively find the resolved value for a given token
+     * Recursively find the resolved value for a given token. When looking up values, reference
+     * tier 1 (default) variable values, or use the theme token when not recursing (themed variables).
+     *
      * @param {Variable} figmaVariable
      * @param {boolean} isLookup
      * @returns ResolvedValue object or literal representation of the stored figma variable value
@@ -277,19 +285,20 @@ module.exports = {
     ) {
       // TODO: this should not fall thru when mode is missing
       // TODO: should this fail if lookupDelegate is undefined?
-      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
+      if (
+        module.exports.FigmaVariable.isAliased(figmaVariable, this._tier2Mode)
+      ) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
-          figmaVariable.valuesByMode[this._mode].id,
+          figmaVariable.valuesByMode[this._tier2Mode].id,
         );
 
+        // on recurse, lookup to reference the tier 1 values instead
         return this.getResovledValue(lookupValue, true);
       } else {
         return isLookup
-          ? figmaVariable.valuesByMode[
-              module.exports.FigmaAPIReader.TIER_1_MODE
-            ]
-          : figmaVariable.valuesByMode[this._mode];
+          ? figmaVariable.valuesByMode[this._tier1Mode]
+          : figmaVariable.valuesByMode[this._tier2Mode];
       }
     }
 
@@ -325,7 +334,7 @@ module.exports = {
     isAliased() {
       return module.exports.FigmaVariable.isAliased(
         this._figmaVariableData,
-        this._mode,
+        this._tier2Mode,
       );
     }
 
@@ -337,10 +346,12 @@ module.exports = {
      */
     getResovledName(figmaVariable = this._figmaVariableData, isLookup = false) {
       // TODO: this should not fall thru when mode is missing
-      if (module.exports.FigmaVariable.isAliased(figmaVariable, this._mode)) {
+      if (
+        module.exports.FigmaVariable.isAliased(figmaVariable, this._tier2Mode)
+      ) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
-          figmaVariable.valuesByMode[this._mode].id,
+          figmaVariable.valuesByMode[this._tier2Mode].id,
         );
 
         return this.getResovledName(lookupValue, true);
@@ -437,7 +448,7 @@ module.exports = {
         case 'COLOR':
           return module.exports.FigmaVariable.isAliased(
             this._figmaVariableData,
-            this._mode,
+            this._tier2Mode,
           )
             ? `${this._tokenNameToPath(
                 this.getResovledName()
@@ -455,7 +466,7 @@ module.exports = {
         case 'FLOAT':
           return module.exports.FigmaVariable.isAliased(
             this._figmaVariableData,
-            this._mode,
+            this._tier2Mode,
           )
             ? `${this._tokenNameToPath('eds.' + this.getResovledName())}`
             : this.value;
