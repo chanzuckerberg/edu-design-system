@@ -7,6 +7,7 @@
  */
 .input-field__overline {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
   gap: calc(var(--eds-spacing-size-half) * 1px);
@@ -14,6 +15,11 @@
 
 .input-field__overline--no-label {
   justify-content: flex-start;
+}
+
+.input-field__sublabel {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+  flex: 1 0 100%;
 }
 
 /**

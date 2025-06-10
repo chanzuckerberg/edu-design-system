@@ -10,13 +10,14 @@ const meta: Meta<typeof InputField> = {
   component: InputField,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
+    badges: ['api-2.1', 'theme-2.0'],
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },
   },
   args: {
     className: 'w-[384px]',
+    sublabel: 'Additional descriptive text for the field.',
   },
   argTypes: {
     type: {
@@ -46,7 +47,18 @@ type Story = StoryObj<typeof InputField>;
 export const Default: Story = {
   args: {
     label: 'Default input field',
-    fieldNote: 'This is a fieldnote.',
+    sublabel: '',
+  },
+};
+
+/**
+ * An input field can have both a footnote (describing how the field is validated), and a sublabel
+ * (a longer description to elaborate on the label)
+ */
+export const WithFullDescription: Story = {
+  args: {
+    label: 'Default input field',
+    fieldNote: 'Field validation description.',
   },
 };
 
@@ -115,6 +127,12 @@ export const Disabled: Story = {
     fieldNote: 'This InputField is disabled',
     defaultValue: 'Text in disabled field',
   },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
 };
 
 /**
@@ -150,6 +168,12 @@ export const RequiredDisabled: Story = {
     required: true,
     disabled: true,
     fieldNote: 'This is a fieldnote for a required input field.',
+  },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 

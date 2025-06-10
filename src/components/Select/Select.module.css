@@ -16,6 +16,7 @@
  */
 .select__overline {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
   gap: calc(var(--eds-spacing-size-half) * 1px);
@@ -105,6 +106,11 @@
  */
 .select__label {
   color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.select__sublabel {
+  color: var(--eds-theme-color-text-utility-default-secondary);
+  flex: 1 0 100%;
 }
 
 .select__label--disabled {

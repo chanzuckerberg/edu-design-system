@@ -30,7 +30,7 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    */
   disabled?: boolean;
   /**
-   * Text under the textarea used to provide a description or error message to describe the input.
+   * Text under the textarea used to provide validation hints or error message to describe the input error.
    */
   fieldNote?: ReactNode;
   /**
@@ -55,6 +55,10 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
    * **Default is `"default"`**.
    */
   status?: 'default' | Extract<Status, 'warning' | 'critical'>;
+  /**
+   * Add additional descriptive text for the field name.
+   */
+  sublabel?: string;
 } & EitherInclusive<
     {
       /**
@@ -163,15 +167,13 @@ export const TextareaField: TextareaFieldType = forwardRef(
       required,
       showHint,
       status = 'default',
+      sublabel,
       ...other
     },
     ref,
   ) => {
     const [fieldText, setFieldText] = useState(defaultValue);
-    const generatedIdVar = useId();
-    const generatedAriaDescribedById = useId();
 
-    const idVar = id || generatedIdVar;
     const shouldRenderOverline = !!(label || required);
     const fieldLength = fieldText?.toString().length ?? 0;
     const textExceedsMaxLength =
@@ -187,17 +189,19 @@ export const TextareaField: TextareaFieldType = forwardRef(
       textExceedsMaxLength ||
       textExceedsRecommendedLength;
 
-    const ariaDescribedByVar = fieldNote
-      ? ariaDescribedBy || generatedAriaDescribedById
-      : undefined;
-
     const componentClassName = clsx(styles['textarea-field'], className);
     const overlineClassName = clsx(
       styles['textarea-field__overline'],
       !label && styles['textarea-field__overline--no-label'],
       disabled && styles['textarea-field__overline--disabled'],
     );
+
     const labelClassName = clsx(
+      disabled && styles['textarea-field__label--disabled'],
+    );
+
+    const sublabelClassName = clsx(
+      styles['textarea-field__sublabel'],
       disabled && styles['textarea-field__label--disabled'],
     );
 
@@ -213,6 +217,20 @@ export const TextareaField: TextareaFieldType = forwardRef(
     const textareaClassName = clsx(
       readOnly && styles['textarea-field__textarea--read-only'],
     );
+
+    // Accessibility: attach the IDs of fieldnote and/or sublabel to the input
+    const generatedIdVar = useId();
+    const idVar = id || generatedIdVar;
+    const generatedFieldNoteId = useId();
+    const generatedSubLabelId = useId();
+
+    // set up the aria-describedby based on the following rules:
+    // - describedby is blank if sublabel and fieldnote are not defined
+    // - for each sublabel/fieldnote, append the space-separated, generated IDs to aria-describedby
+    // - if the user has given a aria-describedby prop, override the calculation
+    const completeDescribedByVar = ariaDescribedBy
+      ? ariaDescribedBy
+      : `${sublabel ? generatedSubLabelId : ''}${fieldNote ? ' ' + generatedFieldNoteId : ''}`;
 
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
@@ -253,10 +271,17 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 / {maxLengthShown}
               </Text>
             )}
+            {label && sublabel && (
+              <div className={sublabelClassName}>
+                <Text as="span" id={generatedSubLabelId} preset="body-sm">
+                  {sublabel}
+                </Text>
+              </div>
+            )}
           </div>
         )}
         <TextArea
-          aria-describedby={ariaDescribedByVar}
+          aria-describedby={completeDescribedByVar ?? undefined}
           aria-disabled={disabled}
           className={textareaClassName}
           defaultValue={defaultValue}
@@ -281,7 +306,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
               <FieldNote
                 className={styles['textarea-field__field-note']}
                 disabled={disabled}
-                id={ariaDescribedByVar}
+                id={generatedFieldNoteId}
                 status={shouldRenderError ? 'critical' : status}
               >
                 {fieldNote}
