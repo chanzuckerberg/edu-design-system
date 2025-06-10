@@ -300,7 +300,7 @@ const SelectLabel = ({
     !label && styles['select__overline--no-label'],
   );
 
-  const subLabelClassName = clsx(
+  const sublabelClassName = clsx(
     styles['select__sublabel'],
     disabled && styles['select__label--disabled'],
   );
@@ -336,7 +336,7 @@ const SelectLabel = ({
         </Text>
       )}
       {label && sublabel && (
-        <div className={subLabelClassName}>
+        <div className={sublabelClassName}>
           {/* TODO: is there a way to coerce HeadlessUI into using aria-describedby like InputField/TextareaField */}
           <Text as="span" preset="body-sm">
             {sublabel}

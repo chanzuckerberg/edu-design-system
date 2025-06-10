@@ -200,7 +200,7 @@ export const InputField: InputFieldType = forwardRef(
       disabled && styles['input-field__label--disabled'],
     );
 
-    const subLabelClassName = clsx(
+    const sublabelClassName = clsx(
       styles['input-field__sublabel'],
       disabled && styles['input-field__label--disabled'],
     );
@@ -303,7 +303,7 @@ export const InputField: InputFieldType = forwardRef(
               </Text>
             )}
             {label && sublabel && (
-              <div className={subLabelClassName}>
+              <div className={sublabelClassName}>
                 <Text as="span" id={generatedSubLabelId} preset="body-sm">
                   {sublabel}
                 </Text>

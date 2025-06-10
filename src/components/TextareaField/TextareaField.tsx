@@ -200,7 +200,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       disabled && styles['textarea-field__label--disabled'],
     );
 
-    const subLabelClassName = clsx(
+    const sublabelClassName = clsx(
       styles['textarea-field__sublabel'],
       disabled && styles['textarea-field__label--disabled'],
     );
@@ -272,7 +272,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
               </Text>
             )}
             {label && sublabel && (
-              <div className={subLabelClassName}>
+              <div className={sublabelClassName}>
                 <Text as="span" id={generatedSubLabelId} preset="body-sm">
                   {sublabel}
                 </Text>
