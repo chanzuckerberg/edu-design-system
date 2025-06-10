@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.0.1...v16.1.0) (2025-06-10)
+
+
+### Features
+
+* **InputField:** add support for sublabel ([bc8efbf](https://github.com/chanzuckerberg/edu-design-system/commit/bc8efbf141bd96cdad06c5965440fec10500a5a1))
+* **script:** add interactive options for selecting token tier information ([#2195](https://github.com/chanzuckerberg/edu-design-system/issues/2195)) ([f31ce26](https://github.com/chanzuckerberg/edu-design-system/commit/f31ce26b11484cff6fb802a532961ffd2895179d))
+* **Select:** add support for sublabel ([88ceaaf](https://github.com/chanzuckerberg/edu-design-system/commit/88ceaaf3c47f3602485c677241fb9781105e0575))
+* **TextareaField:** add support for sublabel ([1c9bc42](https://github.com/chanzuckerberg/edu-design-system/commit/1c9bc42e88777e131ff19b10bc1090600f55df0c))
+* **UnorderedList,OrderedList:** add in list components 1.0 ([#2194](https://github.com/chanzuckerberg/edu-design-system/issues/2194)) ([33ac1ce](https://github.com/chanzuckerberg/edu-design-system/commit/33ac1ce3bb25a23cc104d4315c2d25af39a28b6f))
+
+
+### Bug Fixes
+
+* **accessibility:** handle aria descriptions properly ([bf8df4a](https://github.com/chanzuckerberg/edu-design-system/commit/bf8df4a56de234a4fd23002cd9ebea59981d5ac8))
+* **deps:** update all non-major dependencies ([#2192](https://github.com/chanzuckerberg/edu-design-system/issues/2192)) ([b032094](https://github.com/chanzuckerberg/edu-design-system/commit/b0320940375dd969c020bbd2f63ca7f462394f2d))
+* **storybook:** add support for additional component versions ([9bcc1a1](https://github.com/chanzuckerberg/edu-design-system/commit/9bcc1a17a46a455714144541d0409bf2a5abb5e1))
+
 ### [16.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.0.0...v16.0.1) (2025-05-26)
 
 
