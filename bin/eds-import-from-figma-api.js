@@ -150,7 +150,7 @@ const { identity } = require('lodash');
         choices: figmaApiReader.getModes(tier1Collection.id).map((mode) => {
           return {
             name: mode.modeId,
-            message: `Use the ${mode.name} theme`,
+            message: `Use the ${mode.name} value set`,
             value: mode.name,
           };
         }),
