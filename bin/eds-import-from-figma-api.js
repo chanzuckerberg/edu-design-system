@@ -174,6 +174,12 @@ const { identity } = require('lodash');
     process.exit(-1);
   }
 
+  // TODO: refactor the below to be a callable function, so that it is easier to test in isolation
+  // It should:
+  // - take in all the relevant setup parameters
+  // - return the writable content, or throw
+  // - consider factoring to handle integration with ora
+
   // Setup: initialize counter, resources, and display
   const stats = {
     skipped: [],
