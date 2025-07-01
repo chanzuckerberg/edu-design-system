@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.1.0...v16.1.1) (2025-07-01)
+
+
+### Bug Fixes
+
+* **scripts:** update script wrapper to use proper tier 1 mode ([#2201](https://github.com/chanzuckerberg/edu-design-system/issues/2201)) ([d945c8a](https://github.com/chanzuckerberg/edu-design-system/commit/d945c8ae83c8c657b1e719c9448820580b7a21a1))
+
 ## [16.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.0.1...v16.1.0) (2025-06-10)
 
 
