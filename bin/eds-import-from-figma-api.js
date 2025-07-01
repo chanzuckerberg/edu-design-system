@@ -9,7 +9,6 @@ const { identity } = require('lodash');
   const { prompt } = require('enquirer');
   const set = require('lodash/set');
   const at = require('lodash/at');
-  const uniqBy = require('lodash/uniqBy');
   const ora = require('ora');
 
   // eslint-disable-next-line import/extensions
@@ -90,30 +89,81 @@ const { identity } = require('lodash');
         message:
           'Which collection contains the tier 1 tokens (e.g., "Tier 1")?',
         type: 'select',
-        choices: uniqBy(
-          figmaApiReader.getVariableCollections(),
-          (i) => i.name,
-        ).map((collection) => {
-          return {
-            name: collection.id,
-            message: `Use the "${collection.name}" collection`,
-            value: collection.name,
-          };
-        }),
+        choices: figmaApiReader
+          .getVariableCollections()
+          .filter((collection) => !collection.hiddenFromPublishing)
+          .map((collection) => {
+            return {
+              name: collection.id,
+              message: `Use the "${collection.name}" collection`,
+              value: collection.name,
+            };
+          }),
       },
       {
         name: 'tier2Collection',
         message:
           'Which collection contains the tier 2 tokens (e.g., "EDS tokens", "Tier 2")?',
         type: 'select',
-        choices: uniqBy(
-          figmaApiReader.getVariableCollections(),
-          (i) => i.name,
-        ).map((collection) => {
+        choices: figmaApiReader
+          .getVariableCollections()
+          .filter((collection) => !collection.hiddenFromPublishing)
+          .map((collection) => {
+            return {
+              name: collection.id,
+              message: `Use the "${collection.name}" collection`,
+              value: collection.name,
+            };
+          }),
+      },
+    ]);
+  } catch (e) {
+    // e.g., someone hits ESC
+    console.error(chalk.red('Aborted.'), e);
+    process.exit(-1);
+  }
+
+  // get the data for the full collection from the API reader
+  const tier1Collection = figmaApiReader
+    .getVariableCollections()
+    .filter((collection) => !collection.hiddenFromPublishing)
+    .find(
+      (collection) => collection.id === collectionNameResponses.tier1Collection,
+    );
+
+  const tier2Collection = figmaApiReader
+    .getVariableCollections()
+    .filter((collection) => !collection.hiddenFromPublishing)
+    .find(
+      (collection) => collection.id === collectionNameResponses.tier2Collection,
+    );
+
+  // Determine which of the modes in the file should be used
+  let modeResponses;
+  try {
+    modeResponses = await prompt([
+      {
+        name: 'tier1ModeId',
+        message:
+          'Please select the mode containing the tier 1 values you wish to import:',
+        type: 'select',
+        choices: figmaApiReader.getModes(tier1Collection.id).map((mode) => {
           return {
-            name: collection.id,
-            message: `Use the "${collection.name}" collection`,
-            value: collection.name,
+            name: mode.modeId,
+            message: `Use the ${mode.name} value set`,
+            value: mode.name,
+          };
+        }),
+      },
+      {
+        name: 'tier2ModeId',
+        message: 'Please select the theme to use you wish to import:',
+        type: 'select',
+        choices: figmaApiReader.getModes(tier2Collection.id).map((mode) => {
+          return {
+            name: mode.modeId,
+            message: `Use the ${mode.name} theme`,
+            value: mode.name,
           };
         }),
       },
@@ -124,33 +174,13 @@ const { identity } = require('lodash');
     process.exit(-1);
   }
 
-  const edsCollection = figmaApiReader
-    .getVariableCollections()
-    .find(
-      (collection) => collection.id === collectionNameResponses.tier2Collection,
-    );
+  // TODO: refactor the below to be a callable function, so that it is easier to test in isolation
+  // It should:
+  // - take in all the relevant setup parameters
+  // - return the writable content, or throw
+  // - consider factoring to handle integration with ora
 
-  // Determine which of the modes in the file should be used
-  let response;
-  try {
-    response = await prompt({
-      name: 'modeId',
-      message: 'Please select the figma theme to use you wish to import:',
-      type: 'select',
-      choices: figmaApiReader.getModes(edsCollection.id).map((mode) => {
-        return {
-          name: mode.modeId,
-          message: `Use the ${mode.name} theme`,
-          value: mode.name,
-        };
-      }),
-    });
-  } catch (e) {
-    // e.g., someone hits ESC
-    console.error(chalk.red('Aborted.'), e);
-    process.exit(-1);
-  }
-
+  // Setup: initialize counter, resources, and display
   const stats = {
     skipped: [],
     updated: [],
@@ -167,14 +197,15 @@ const { identity } = require('lodash');
   // now, load in the local theme file. We want to look up keys in there
   const localTheme = jsonfile.readFileSync(filePath);
 
+  // Main loop: work thru each detected variable, and convert
   figmaApiReader
-    .getVariablesByCollectionId(edsCollection.id)
+    .getVariablesByCollectionId(tier2Collection.id)
     .forEach((figmaVariable) => {
       stats.total.push(figmaVariable.id);
       const variable = new FigmaVariable(
         figmaVariable,
-        collectionNameResponses.tier1Collection,
-        response.modeId,
+        modeResponses.tier1ModeId,
+        modeResponses.tier2ModeId,
         figmaApiReader,
       );
 
@@ -228,7 +259,7 @@ const { identity } = require('lodash');
           }
 
           if (
-            FigmaVariable.isAliased(figmaVariable, response.modeId) &&
+            FigmaVariable.isAliased(figmaVariable, modeResponses.tier2ModeId) &&
             args.local &&
             !at(localTheme, variable.valueRef).some(identity)
           ) {
