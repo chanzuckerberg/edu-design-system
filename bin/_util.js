@@ -171,25 +171,17 @@ module.exports = {
 
     /**
      * Retrieve the defined variable collections from the specific figma file data
-     * @see https://www.figma.com/plugin-docs/api/VariableCollection/
+     * @see https://www.figma.com/developers/api#variables
      *
      * @returns VariableCollection[]
      */
     getVariableCollections() {
-      // TODO-AH: remove the redundant rows in here by making this a unique set
-      return Object.values(this._jsonData.variableCollections).map(
-        (collection) => {
-          return {
-            id: collection.id,
-            name: collection.name,
-          };
-        },
-      );
+      return Object.values(this._jsonData.variableCollections);
     }
 
     /**
      * Retrieve the set of variables associated with a given collection (by ID)
-     * @see https://www.figma.com/plugin-docs/api/Variable/
+     * @see https://www.figma.com/developers/api#variables
      *
      * @param {string} variableCollectionId
      * @returns Variable[]
@@ -206,7 +198,7 @@ module.exports = {
 
     /**
      * Look up a specific variable in the object, by its ID
-     * @see https://www.figma.com/plugin-docs/api/Variable/
+     * @see https://www.figma.com/developers/api#variables
      *
      * @returns Variable
      */
@@ -290,7 +282,7 @@ module.exports = {
       ) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
-          figmaVariable.valuesByMode[this._tier2Mode].id,
+          figmaVariable.valuesByMode[this._tier2Mode]?.id,
         );
 
         // on recurse, lookup to reference the tier 1 values instead
@@ -351,7 +343,7 @@ module.exports = {
       ) {
         // Look up value using delegate. Take whatever value is in there regardless of mode
         const lookupValue = this._lookupDelegate.retrieveVariable(
-          figmaVariable.valuesByMode[this._tier2Mode].id,
+          figmaVariable.valuesByMode[this._tier2Mode]?.id,
         );
 
         return this.getResovledName(lookupValue, true);

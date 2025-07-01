@@ -11,7 +11,6 @@ describe('<Checkbox />', () => {
 
   test('Disabled story renders snapshot', () => {
     const { container } = render(<Checkbox disabled label="Disabled" />);
-    // eslint-disable-next-line testing-library/no-node-access
     expect(container.firstChild).toMatchSnapshot();
   });
 

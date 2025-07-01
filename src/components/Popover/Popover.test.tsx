@@ -18,7 +18,7 @@ describe('<Popover />', () => {
       const triggerButton = await screen.findByRole('button');
 
       await user.click(triggerButton);
-      return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
+      return triggerButton.parentElement;
     },
   });
 
