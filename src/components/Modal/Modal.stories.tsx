@@ -15,7 +15,7 @@ export default {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
-    badges: ['api-3.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.1'],
   },
   tags: ['autodocs'],
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
