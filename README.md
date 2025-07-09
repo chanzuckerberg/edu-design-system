@@ -40,7 +40,7 @@ Also, include this in your base / reset styles to allow configuation of the pixe
 
 ```css
 html {
-  font-size: calc(var(--eds-typography-font-size-base) * 1px); /* Sets the default pixel-to-rem ratio */
+  font-size: calc(var(--eds-typography-base-size) * 1px); /* Sets the default pixel-to-rem ratio */
 }
 ```
 
