@@ -142,91 +142,104 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
-      
-      /* TODO-AH: no spacing 100% */
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-height: 640px;
       max-width: 800px;
 
-      /* TODO-AH: use padding of spacing-size-3 */
+      margin: calc(var(--eds-spacing-size-3) * 1px);
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-height: 640px;
       max-width: 800px;
 
-      /* TODO-AH: preserve at least spacing-size-6 on each side */
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-height: 640px;
       max-width: 960px;
       
-      /* TODO-AH: preserve at least spacing-size-6 on each side */
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-height: 640px;
       max-width: 960px;
 
-      /* TODO-AH: preserve at least spacing-size-6 on each side */
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
   }
 
   &.modal__content--height-auto {
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
-      height: auto;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      height: 100%;
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 800px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-3) * 1px);
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-width: 800px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-width: 960px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-width: 960px;
       max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
   }
 
   &.modal__content--height-max {
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
-      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      height: 100%;
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 800px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-3) * 1px);
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-width: 800px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-width: 960px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-width: 960px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+      margin: calc(var(--eds-spacing-size-6) * 1px);
     }
   }
 }
@@ -239,7 +252,7 @@
     max-height: 480px;
     max-width: 560px;
 
-    /* TODO-AH: preserve padding of spacing-size-3 around the edges */
+    margin: calc(var(--eds-spacing-size-3) * 1px);
   }
 
   @media all and (min-width: $eds-bp-sm) {
