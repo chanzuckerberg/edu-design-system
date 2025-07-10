@@ -142,27 +142,36 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
-      /* max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px)); */
+      
+      /* TODO-AH: no spacing 100% */
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-height: 640px;
       max-width: 800px;
+
+      /* TODO-AH: use padding of spacing-size-3 */
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-height: 640px;
       max-width: 800px;
+
+      /* TODO-AH: preserve at least spacing-size-6 on each side */
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-height: 640px;
       max-width: 960px;
+      
+      /* TODO-AH: preserve at least spacing-size-6 on each side */
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-height: 640px;
       max-width: 960px;
+
+      /* TODO-AH: preserve at least spacing-size-6 on each side */
     }
   }
 
@@ -229,6 +238,8 @@
   @media all and (min-width: $eds-bp-xs) {
     max-height: 480px;
     max-width: 560px;
+
+    /* TODO-AH: preserve padding of spacing-size-3 around the edges */
   }
 
   @media all and (min-width: $eds-bp-sm) {
@@ -239,6 +250,11 @@
   @media all and (min-width: $eds-bp-md) {
     max-height: 400px;
     max-width: 480px;
+  }
+
+  @media all and (min-width: $eds-bp-lg) {
+    max-height: 480px;
+    max-width: 560px;
   }
 
   @media all and (min-width: $eds-bp-xl) {

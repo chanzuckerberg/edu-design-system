@@ -54,8 +54,8 @@ export const Default: Story = {
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
-        <Modal.Title>Modal Title</Modal.Title>
-        <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
+        <Modal.Title>Modal title</Modal.Title>
+        <Modal.SubTitle>Modal title</Modal.SubTitle>
       </Modal.Header>
       <Modal.Body>
         <div className="fpo h-full w-full">Modal Content</div>
