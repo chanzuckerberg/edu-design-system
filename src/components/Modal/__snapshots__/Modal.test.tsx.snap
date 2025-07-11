@@ -100,6 +100,7 @@ exports[`Modal Default story renders snapshot 1`] = `
     class="modal__overlay modal__overlay--emphasis-low"
   />
   <div
+    class="modal__panel"
     data-headlessui-state="open"
     data-open=""
     id="headlessui-dialog-panel-:r6:"
@@ -140,12 +141,12 @@ exports[`Modal Default story renders snapshot 1`] = `
           data-open=""
           id="headlessui-dialog-title-:r7:"
         >
-          Modal Title
+          Modal title
         </h2>
         <div
           class="text text--headline-sm modal-sub-title"
         >
-          Modal Sub-title
+          Modal title
         </div>
       </div>
       <div
@@ -206,6 +207,7 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
     class="modal__overlay modal__overlay--emphasis-high"
   />
   <div
+    class="modal__panel"
     data-headlessui-state="open"
     data-open=""
     id="headlessui-dialog-panel-:re:"
@@ -246,12 +248,12 @@ exports[`Modal HighEmphasis story renders snapshot 1`] = `
           data-open=""
           id="headlessui-dialog-title-:rf:"
         >
-          Modal Title
+          Modal title
         </h2>
         <div
           class="text text--headline-sm modal-sub-title"
         >
-          Modal Sub-title
+          Modal title
         </div>
       </div>
       <div
@@ -1142,6 +1144,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
     class="modal__overlay modal__overlay--emphasis-low"
   />
   <div
+    class="modal__panel"
     data-headlessui-state="open"
     data-open=""
     id="headlessui-dialog-panel-:rm:"

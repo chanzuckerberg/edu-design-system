@@ -341,7 +341,7 @@ export const Modal = (props: ModalProps) => {
               styles[`modal__overlay--emphasis-${overlayEmphasis}`],
           )}
         />
-        <DialogPanel>
+        <DialogPanel className={styles['modal__panel']}>
           <ModalContent onClose={onClose} {...rest} />
         </DialogPanel>
       </Dialog>
