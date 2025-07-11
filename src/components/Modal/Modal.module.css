@@ -23,7 +23,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: calc(var(--eds-spacing-size-2) * 1px); */
 
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
