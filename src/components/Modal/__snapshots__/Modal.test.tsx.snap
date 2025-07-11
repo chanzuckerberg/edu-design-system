@@ -88,11 +88,9 @@ exports[`Modal Default story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-:r7:"
   aria-modal="true"
-  class="modal modal__transition--enter modal__transition--enterTo"
-  data-enter=""
+  class="modal"
   data-headlessui-state="open"
   data-open=""
-  data-transition=""
   id="headlessui-dialog-:r0:"
   role="dialog"
   style=""
