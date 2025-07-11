@@ -3,9 +3,8 @@
  * TODO(next-major): remove mixin once not in use (after 1.x components have been migrated)
  */
 @define-mixin focus {
-  outline: calc(var(--eds-theme-box-focus-ring-outline-width) * 1px) solid
-    var(--eds-theme-color-focus-ring);
-  outline-offset: calc(var(--eds-theme-box-focus-ring-outline-offset) * 1px);
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
 }
 
 /**

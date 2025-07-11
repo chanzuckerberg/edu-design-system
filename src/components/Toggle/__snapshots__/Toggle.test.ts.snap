@@ -1,84 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
-<div
-  class="toggle__wrapper"
-  data-headlessui-state=""
->
-  <button
-    aria-checked="true"
-    aria-labelledby="headlessui-label-:r5:"
-    class="toggle__button toggle__button--checked"
-    data-checked=""
-    data-headlessui-state="checked"
-    id="headlessui-control-:r3:"
-    role="switch"
-    tabindex="0"
-    type="button"
-  >
-    <span
-      class="toggle__button-thumb"
-    />
-  </button>
-  <label
-    class="label toggle__label"
-    data-headlessui-state=""
-    for="headlessui-control-:r3:"
-    id="headlessui-label-:r5:"
-  >
-    <span
-      class="text text--body-md"
-    >
-      Lorem ipsum
-    </span>
-     
-  </label>
-  <span
-    hidden=""
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
-  />
-</div>
-`;
-
-exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
-<div
-  class="flex flex-col items-center"
-  data-headlessui-state=""
->
-  <label
-    class="label toggle__label"
-    data-headlessui-state=""
-    for="headlessui-control-:ra:"
-    id="headlessui-label-:rb:"
-  >
-    <span
-      class="text text--body-md"
-    >
-      Custom positioned label
-    </span>
-     
-  </label>
-  <button
-    aria-checked="false"
-    aria-labelledby="headlessui-label-:rb:"
-    class="toggle__button toggle__button--unchecked"
-    data-headlessui-state=""
-    id="headlessui-control-:ra:"
-    role="switch"
-    tabindex="0"
-    type="button"
-  >
-    <span
-      class="toggle__button-thumb"
-    />
-  </button>
-  <span
-    hidden=""
-    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
-  />
-</div>
-`;
-
 exports[`<Toggle /> Default story renders snapshot 1`] = `
 <div
   class="toggle__wrapper"
@@ -107,7 +28,7 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
     <span
       class="text text--body-md"
     >
-      Lorem ipsum
+      Toggle Label
     </span>
      
   </label>
@@ -125,11 +46,91 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
 >
   <button
     aria-checked="false"
-    aria-labelledby="headlessui-label-:r8:"
+    aria-labelledby="headlessui-label-:rc:"
     class="toggle__button toggle__button--unchecked"
     data-disabled=""
     data-headlessui-state="disabled"
     disabled=""
+    id="headlessui-control-:ra:"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-thumb"
+    />
+  </button>
+  <label
+    class="label toggle__label"
+    data-headlessui-state=""
+    for="headlessui-control-:ra:"
+    id="headlessui-label-:rc:"
+  >
+    <span
+      class="text text--body-md"
+    >
+      Toggle Label
+    </span>
+     
+  </label>
+  <span
+    hidden=""
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+  />
+</div>
+`;
+
+exports[`<Toggle /> WhenChecked story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+  data-headlessui-state=""
+>
+  <button
+    aria-checked="true"
+    aria-labelledby="headlessui-label-:r5:"
+    class="toggle__button toggle__button--checked"
+    data-checked=""
+    data-headlessui-state="checked"
+    id="headlessui-control-:r3:"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-thumb"
+    />
+  </button>
+  <label
+    class="label toggle__label"
+    data-headlessui-state=""
+    for="headlessui-control-:r3:"
+    id="headlessui-label-:r5:"
+  >
+    <span
+      class="text text--body-md"
+    >
+      Toggle Label
+    </span>
+     
+  </label>
+  <span
+    hidden=""
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+  />
+</div>
+`;
+
+exports[`<Toggle /> WithSubLabel story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper toggle--has-sublabel"
+  data-headlessui-state=""
+>
+  <button
+    aria-checked="false"
+    aria-describedby="headlessui-description-:r9:"
+    aria-labelledby="headlessui-label-:r8:"
+    class="toggle__button toggle__button--unchecked"
+    data-headlessui-state=""
     id="headlessui-control-:r6:"
     role="switch"
     tabindex="0"
@@ -148,7 +149,14 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
     <span
       class="text text--body-md"
     >
-      Lorem ipsum
+      Toggle Label
+      <span
+        class="toggle__sublabel"
+        data-headlessui-state=""
+        id="headlessui-description-:r9:"
+      >
+        sublabel text description here
+      </span>
     </span>
      
   </label>
@@ -165,7 +173,7 @@ exports[`<Toggle /> WithoutLabel story renders snapshot 1`] = `
   aria-label="Lorem ipsum"
   class="toggle__button toggle__button--unchecked"
   data-headlessui-state=""
-  id="headlessui-switch-:r9:"
+  id="headlessui-switch-:rd:"
   role="switch"
   tabindex="0"
   type="button"

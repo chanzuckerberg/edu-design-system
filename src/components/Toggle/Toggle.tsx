@@ -1,4 +1,4 @@
-import { Switch, Label, Field } from '@headlessui/react';
+import { Switch, Label, Field, Description } from '@headlessui/react';
 import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
@@ -38,6 +38,7 @@ type ToggleButtonProps = {
 
 type ToggleProps = ToggleButtonProps & {
   children?: ReactNode;
+  sublabel?: string;
 } & EitherInclusive<
     {
       /**
@@ -56,6 +57,15 @@ type ToggleProps = ToggleButtonProps & {
 const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
   const componentClassName = clsx(styles['toggle__label'], className);
   return <Label as={EDSLabel} className={componentClassName} text={children} />;
+};
+
+const ToggleSubLabel = ({ children, className }: ToggleLabelProps) => {
+  const componentClassName = clsx(styles['toggle__sublabel'], className);
+  return (
+    <Description as="span" className={componentClassName}>
+      {children}
+    </Description>
+  );
 };
 
 const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
@@ -86,30 +96,26 @@ const ToggleWrapper = (props: ExtractProps<typeof Field>) => (
 );
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {Toggle} from "@chanzuckerberg/eds";`
  *
  * Toggle wrapping the Headless UI Switch component https://headlessui.dev/react/switch, generally used as an input for controlling between two states.
  *
- * Example Usage:
- *
- * ```tsx
- * <Toggle checked={checked} label="Lorem Ipsum" onChange={onChange} />
- *
- * <Toggle.Wrapper as="div" className={styles.customWrapperStyles}>
- *   <Toggle.Label> Some label </Toggle.Label>
- *   <Toggle.Button onChange={onChange} checked={checked} className={customCssModulesClassname} />
- * </Toggle.Wrapper>
- * ```
- *
- * NOTE: This component requires `label` or `aria-label` prop
+ * **NOTE**: This component requires `label` or `aria-label` prop
  */
-export const Toggle = ({ label, ...other }: ToggleProps) => {
+export const Toggle = ({ label, sublabel, ...other }: ToggleProps) => {
+  const wrapperClassName = clsx(
+    styles['toggle__wrapper'],
+    sublabel && styles['toggle--has-sublabel'],
+  );
   return label ? (
-    <ToggleWrapper as="div" className={styles['toggle__wrapper']}>
+    <ToggleWrapper as="div" className={wrapperClassName}>
       <ToggleButton {...other} />
-      <ToggleLabel>{label}</ToggleLabel>
+      <ToggleLabel>
+        <>
+          {label}
+          {sublabel && <ToggleSubLabel>{sublabel}</ToggleSubLabel>}
+        </>
+      </ToggleLabel>
     </ToggleWrapper>
   ) : (
     <ToggleButton {...other} />
@@ -120,7 +126,9 @@ Toggle.displayName = 'Toggle';
 ToggleLabel.displayName = 'Toggle.Label';
 ToggleButton.displayName = 'Toggle.Button';
 ToggleWrapper.displayName = 'Toggle.Wrapper';
+ToggleSubLabel.displayName = 'Toggle.SubLabel';
 
 Toggle.Label = ToggleLabel;
 Toggle.Button = ToggleButton;
 Toggle.Wrapper = ToggleWrapper;
+Toggle.SubLabel = ToggleSubLabel;
