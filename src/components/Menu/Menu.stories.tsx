@@ -225,6 +225,8 @@ export const WithCustomSecondaryButton: Story = {
 
 /**
  * Use an interactive `Avatar` component within `.PlainButton` to achieve a clickable avatar with menu attached.
+ *
+ * This will dynamically add the focus ring to the wrapper component since it is needed to make the `Avatar`-based trigger accessible
  */
 export const MenuWithAvatarButton: Story = {
   parameters: {
