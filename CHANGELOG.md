@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.1.1...v16.2.0) (2025-07-15)
+
+
+### Features
+
+* **Avatar:** add in 2.0 component ([1473cd2](https://github.com/chanzuckerberg/edu-design-system/commit/1473cd26e8b24bcd747cc024a5fc5ecffc6a81cf))
+* **Toggle:** update toggle component to match render design ([#2207](https://github.com/chanzuckerberg/edu-design-system/issues/2207)) ([5ccee24](https://github.com/chanzuckerberg/edu-design-system/commit/5ccee246d01b67f43c59d74c7fcf9b71701994f2))
+
+
+### Bug Fixes
+
+* **AppNotification:** add in dynamic updates to children based on variant ([#2208](https://github.com/chanzuckerberg/edu-design-system/issues/2208)) ([7ca7cae](https://github.com/chanzuckerberg/edu-design-system/commit/7ca7cae12c5cea832840bc1fb16a11552fbd093d))
+* **Link:** update font size handling to only use standalone context ([#2206](https://github.com/chanzuckerberg/edu-design-system/issues/2206)) ([26f322d](https://github.com/chanzuckerberg/edu-design-system/commit/26f322d2a1aa3c3376a0fe49274c74016069a42b))
+* **Modal:** adjust handling of borders for modal content ([#2211](https://github.com/chanzuckerberg/edu-design-system/issues/2211)) ([1a794da](https://github.com/chanzuckerberg/edu-design-system/commit/1a794daf6a97c9f3c225e6a5ee98093b85f5b57c))
+* **Modal:** handle heights and widths for size:large modals ([#2205](https://github.com/chanzuckerberg/edu-design-system/issues/2205)) ([71b0edc](https://github.com/chanzuckerberg/edu-design-system/commit/71b0edc3108d1e65448ec5e22649f7941ac704b0))
+
 ### [16.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.1.0...v16.1.1) (2025-07-01)
 
 
