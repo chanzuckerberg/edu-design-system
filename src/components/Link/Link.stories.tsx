@@ -198,11 +198,13 @@ function ExtendedLink(args: ExtendArgs) {
  *
  * * import `LinkProps`
  * * use the type param. to augment the types for `Link` with the library's type
- * * Now export a new function component that uses the new prop type and returns a composed function
+ * * Now export a new function component that uses the new prop type and returns a composed component
  *
  * When using this pattern, you likely want to also specify the library's Link component using `as`
  *
  * ```tsx
+ * // At the top of the file, we import `CustomLink` as a component
+ *
  * type CustomLinkProps = React.ComponentProps<typeof CustomLink>;
  * type ExtendedProps = LinkProps<CustomLinkProps>;
  *

@@ -12,7 +12,7 @@
   display: inline-flex;
 
   height: calc(var(--eds-spacing-size-3) * 1px);
-  width: calc(var(--eds-spacing-size-7) * 1px);
+  width: calc(var(--eds-spacing-size-6) * 1px);
 
   flex-shrink: 0;
   align-items: center;
@@ -21,7 +21,7 @@
 
   cursor: pointer;
 
-  transition: background-color calc(var(--eds-anim-move-quick) * 1s) var(--eds-anim-ease);
+  transition: background-color calc(var(--eds-anim-move-quick) * 1s) ease-in-out;
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
@@ -31,56 +31,79 @@
 /**
  * Focus state of the toggle button.
  */
-.toggle__button:focus {
-  @mixin focus;
+.toggle__button:focus-visible {
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
+}
+
+@supports not selector(:focus-visible) {
+  .toggle__button:focus {
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
+  }
 }
 
 /**
  * Unchecked state of the toggle button.
  */
 .toggle__button--unchecked {
-  background-color: var(--eds-theme-color-toggle-off-background);
+  background-color: var(--eds-theme-color-background-utility-default-medium-emphasis);
 }
 
 /**
  * Checked state of the toggle button.
  */
 .toggle__button--checked {
-  background-color: var(--eds-theme-color-toggle-on-background);
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
 }
 
 /**
  * Disabled state of the toggle button.
  */
 .toggle__button:disabled {
-  background-color: var(--eds-theme-color-toggle-disabled-background);
+  background-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
   cursor: not-allowed;
 }
 
 /**
  * Disabled state of the associated label text to the toggle.
  */
-.toggle__button:disabled~.toggle__label {
-  color: var(--eds-theme-color-toggle-disabled-text);
+.toggle__button:disabled ~ .toggle__label {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+  cursor: not-allowed;
 }
 
 /**
- * The label text to name the toggle.
+ * The (sub-)label text to name the toggle.
  */
 .toggle__label {
   margin-bottom: 0;
 
-  color: var(--eds-theme-color-toggle-primary-text);
+  color: var(--eds-theme-color-text-utility-default-primary);
+}
+
+.toggle__sublabel {
+  display: block;
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.toggle__button:disabled ~ .toggle__sublabel {
+  color: var(--eds-theme-color-text-utility-disabled-primary);
+  cursor: not-allowed;
 }
 
 /**
- * Wraps the toggle button and the label text.
+ * Wraps the toggle button and the (sub-)label text.
  */
 .toggle__wrapper {
   display: flex;
   align-items: center;
 
   gap: calc(var(--eds-spacing-size-1) * 1px);
+}
+
+.toggle--has-sublabel {
+  align-items: flex-start;
 }
 
 /**
@@ -96,9 +119,9 @@
   border: calc(var(--eds-theme-border-width) * 1px) solid transparent;
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
-  background-color: var(--eds-theme-color-toggle-thumb);
+  background-color: var(--eds-theme-color-background-utility-base-1);
 
-  transition: transform calc(var(--eds-anim-move-quick) * 1s) var(--eds-anim-ease);
+  transition: transform calc(var(--eds-anim-move-quick) * 1s) ease-in-out;
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
@@ -108,13 +131,13 @@
 /**
  * The unchecked state of the circle indicator.
  */
-.toggle__button--unchecked>.toggle__button-thumb {
-  transform: translateX(1px);
+.toggle__button--unchecked > .toggle__button-thumb {
+  transform: translateX(calc(0% + var(--eds-theme-border-width) * 1px));
 }
 
 /**
  * The checked state of the circle indicator.
  */
-.toggle__button--checked>.toggle__button-thumb {
-  transform: translateX(33px);
+.toggle__button--checked > .toggle__button-thumb {
+  transform: translateX(calc((var(--eds-theme-border-width) * 1px) + (var(--eds-spacing-size-3) * 1px)));
 }

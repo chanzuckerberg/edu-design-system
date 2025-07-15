@@ -15,7 +15,7 @@ export default {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
-    badges: ['api-3.0', 'theme-2.0'],
+    badges: ['api-3.0', 'theme-2.1'],
   },
   tags: ['autodocs'],
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
@@ -54,8 +54,8 @@ export const Default: Story = {
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
-        <Modal.Title>Modal Title</Modal.Title>
-        <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
+        <Modal.Title>Modal title</Modal.Title>
+        <Modal.SubTitle>Modal title</Modal.SubTitle>
       </Modal.Header>
       <Modal.Body>
         <div className="fpo h-full w-full">Modal Content</div>

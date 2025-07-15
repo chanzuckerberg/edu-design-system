@@ -1,11 +1,15 @@
 import type { StoryObj, Meta } from '@storybook/react';
+
+import React from 'react';
+
 import { Avatar } from './Avatar';
+import Tooltip from '../Tooltip';
 
 export default {
-  title: 'Upcoming/Components/Avatar',
+  title: 'Components/Avatar',
   component: Avatar,
   parameters: {
-    badges: ['api-1.3', 'theme-1.0'],
+    badges: ['api-2.0', 'theme-2.0'],
     layout: 'centered',
   },
 } as Meta<typeof Avatar>;
@@ -14,18 +18,9 @@ type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {};
 
-export const ExtraSmall: Story = {
-  args: {
-    size: 'xs',
-    shape: 'circle',
-    variant: 'icon',
-  },
-};
-
 export const Small: Story = {
   args: {
     size: 'sm',
-    shape: 'circle',
     variant: 'icon',
   },
 };
@@ -33,7 +28,6 @@ export const Small: Story = {
 export const Medium: Story = {
   args: {
     size: 'md',
-    shape: 'circle',
     variant: 'icon',
   },
 };
@@ -41,7 +35,6 @@ export const Medium: Story = {
 export const Large: Story = {
   args: {
     size: 'lg',
-    shape: 'circle',
     variant: 'icon',
   },
 };
@@ -49,31 +42,6 @@ export const Large: Story = {
 export const ExtraLarge: Story = {
   args: {
     size: 'xl',
-    shape: 'circle',
-    variant: 'icon',
-  },
-};
-
-export const ExtraExtraLarge: Story = {
-  args: {
-    size: 'xxl',
-    shape: 'circle',
-    variant: 'icon',
-  },
-};
-
-export const ExtraExtraExtraLarge: Story = {
-  args: {
-    size: 'xxxl',
-    shape: 'circle',
-    variant: 'icon',
-  },
-};
-
-export const Square: Story = {
-  args: {
-    shape: 'square',
-    size: 'md',
     variant: 'icon',
   },
 };
@@ -87,7 +55,6 @@ export const UsingImage: Story = {
     variant: 'image',
     src: `data:image/svg+xml,%3csvg width='38' height='37' viewBox='0 0 38 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 17.9417C16.4333 17.9417 14.3333 17.125 12.7 15.4917C11.0667 13.8583 10.25 11.7583 10.25 9.19168C10.25 6.62502 11.0667 4.52501 12.7 2.89168C14.3333 1.25835 16.4333 0.441681 19 0.441681C21.5667 0.441681 23.6667 1.25835 25.3 2.89168C26.9333 4.52501 27.75 6.62502 27.75 9.19168C27.75 11.7583 26.9333 13.8583 25.3 15.4917C23.6667 17.125 21.5667 17.9417 19 17.9417ZM0.333344 36.6667V31.1833C0.333344 29.7056 0.702788 28.4417 1.44168 27.3917C2.18057 26.3417 3.13334 25.5445 4.30001 25C6.90557 23.8333 9.40418 22.9583 11.7958 22.375C14.1875 21.7917 16.5889 21.5 19 21.5C21.4111 21.5 23.8028 21.8014 26.175 22.4042C28.5472 23.007 31.0361 23.8722 33.6417 25C34.8472 25.5445 35.8195 26.3417 36.5583 27.3917C37.2972 28.4417 37.6667 29.7056 37.6667 31.1833V36.6667H0.333344Z' fill='%235D6369'/%3e%3c/svg%3e`,
     size: 'md',
-    shape: 'circle',
   },
 };
 
@@ -98,7 +65,6 @@ export const WithCustomIcon: Story = {
   args: {
     ariaLabel: 'Custom label for avatar',
     size: 'md',
-    shape: 'circle',
     variant: 'icon',
     icon: 'person-add',
   },
@@ -111,8 +77,7 @@ export const WithCustomIcon: Story = {
 export const UsingInitials: Story = {
   args: {
     size: 'md',
-    shape: 'circle',
-    variant: 'initials',
+    variant: 'text',
     user: {
       fullName: 'John Smith',
       id: '12345',
@@ -127,8 +92,7 @@ export const UsingInitials: Story = {
  */
 export const UsingEmoji: Story = {
   args: {
-    shape: 'circle',
-    variant: 'initials',
+    variant: 'text',
     user: {
       fullName: 'Young Yarn Lad',
       displayName: '🧶👦🏽',
@@ -145,7 +109,6 @@ export const UsingEmoji: Story = {
  */
 export const WhenImageVariantMissingSource: Story = {
   args: {
-    shape: 'circle',
     variant: 'image',
     user: {
       fullName: 'Young Yarn Lad',
@@ -158,11 +121,10 @@ export const WhenImageVariantMissingSource: Story = {
 };
 
 /**
- * `Avatar supports unicode so names with multi-byte characters, or multiple sequences (emoji) are also supported.
+ * `Avatar` supports unicode so names with multi-byte characters, or multiple sequences (emoji) are also supported.
  */
 export const UsingMultibyteUnicode: Story = {
   args: {
-    shape: 'circle',
     variant: 'image',
     user: {
       fullName: '你好世界',
@@ -172,4 +134,25 @@ export const UsingMultibyteUnicode: Story = {
     },
     size: 'lg',
   },
+};
+
+// TODO: move to Tooltip stories?
+/**
+ * You can use an `Avatar` as a trigger for a `Tooltip` (note that it is wrapped in a `span`)
+ */
+export const UsingWithTooltip: Story = {
+  args: {
+    isInteractive: true,
+  },
+  parameters: {
+    badges: ['api-2.0', 'theme-2.0', 'implementationExample'],
+    layout: 'centered',
+  },
+  render: (args) => (
+    <Tooltip text="Show additional user information">
+      <span>
+        <Avatar {...args} />
+      </span>
+    </Tooltip>
+  ),
 };

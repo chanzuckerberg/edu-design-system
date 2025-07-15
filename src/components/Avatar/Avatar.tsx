@@ -27,6 +27,7 @@ export type UserData = {
 };
 
 type AvatarProps = {
+  // Component API
   /**
    * Label for the given avatar. Defaults to a string using user data.
    */
@@ -35,18 +36,6 @@ type AvatarProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Icon to use when an "icon" variant of the avatar. Default is "person"
-   */
-  icon?: IconName;
-  /**
-   * The shape of the avatar
-   */
-  shape?: 'circle' | 'square';
-  /**
-   * The size of the component
-   */
-  size?: Size;
   /**
    * The URL to an image resource (loaded lazily)
    */
@@ -64,10 +53,23 @@ type AvatarProps = {
    * ```
    */
   user?: UserData;
+  // Design API
+  /**
+   * Icon to use when an "icon" variant of the avatar. Default is "person"
+   */
+  icon?: IconName;
+  /**
+   * Marking whether the Avatar is intended to be interactive (have focus/hover states)
+   */
+  isInteractive?: boolean;
+  /**
+   * The size of the avatar
+   */
+  size?: Extract<Size, 'sm' | 'md' | 'lg' | 'xl'>;
   /**
    * Variants of how the avatar will be portrayed
    */
-  variant?: 'icon' | 'initials' | 'image';
+  variant?: 'icon' | 'text' | 'image';
 };
 
 /**
@@ -103,65 +105,83 @@ export function getInitials(fromName: string): string {
  *
  * Representation of a single, unique user, keyed by the user name
  */
-export const Avatar = ({
-  ariaLabel,
-  className,
-  icon = 'person',
-  shape = 'circle',
-  size = 'md',
-  user,
-  variant = 'initials',
-  src,
-  ...other
-}: AvatarProps) => {
-  const componentClassName = clsx(
-    styles['avatar'],
-    shape && styles[`avatar--${shape}`],
-    size && styles[`avatar--${size}`],
-    variant && styles[`avatar--${variant}`],
-    className,
-  );
+export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
+  (
+    {
+      ariaLabel,
+      className,
+      icon = 'person',
+      isInteractive,
+      size = 'md',
+      user,
+      variant = 'text',
+      src,
+      ...other
+    }: AvatarProps,
+    ref,
+  ) => {
+    const componentClassName = clsx(
+      styles['avatar'],
+      styles[`avatar--circle`],
+      isInteractive && styles['avatar--is-interactive'],
+      size && styles[`avatar--${size}`],
+      variant && styles[`avatar--${variant}`],
+      className,
+    );
 
-  const descriptiveLabel =
-    ariaLabel ??
-    `Avatar for ${user ? '' : 'unknown '}user ${user?.fullName || ''}`;
+    const descriptiveLabel =
+      ariaLabel ??
+      `Avatar for ${user ? '' : 'unknown '}user ${user?.fullName || ''}`;
 
-  // use the display name if prop is provided. Otherwise, try to calculate initials
-  let avatarDisplayName = user ? getInitials(user.fullName) : '??';
+    // use the display name if prop is provided. Otherwise, try to calculate initials
+    let avatarDisplayName = user ? getInitials(user.fullName) : '??';
 
-  if (user?.displayName) {
-    avatarDisplayName = user.displayName;
-  }
+    if (user?.displayName) {
+      avatarDisplayName = user.displayName;
+    }
 
-  const presetMap: Record<Size, Preset> = {
-    xs: 'title-xs',
-    sm: 'title-sm',
-    md: 'title-md',
-    lg: 'title-md',
-    xl: 'headline-md',
-    xxl: 'headline-lg',
-    xxxl: 'headline-lg',
-  };
+    const presetMap: Record<NonNullable<AvatarProps['size']>, Preset> = {
+      sm: 'title-sm',
+      md: 'title-md',
+      lg: 'title-md',
+      xl: 'headline-md',
+    };
 
-  return (
-    <div
-      aria-label={descriptiveLabel}
-      className={componentClassName}
-      role="img"
-      {...other}
-    >
-      {variant === 'initials' && (
-        <Text as="span" preset={presetMap[size]}>
-          {avatarDisplayName}
-        </Text>
-      )}
-      {variant === 'icon' && (
-        <Icon name={icon} purpose="decorative" size="80%" />
-      )}
-      {variant === 'image' && src && (
-        <img alt="user" className={styles['avatar__image']} src={src} />
-      )}
-      {variant === 'image' && !src && avatarDisplayName}
-    </div>
-  );
-};
+    const iconSizeMap: Record<NonNullable<AvatarProps['size']>, number> = {
+      sm: 16,
+      md: 24,
+      lg: 32,
+      xl: 40,
+    };
+
+    return (
+      <div
+        aria-label={descriptiveLabel}
+        className={componentClassName}
+        role="img"
+        {...other}
+      >
+        {variant === 'text' && (
+          <Text as="span" preset={presetMap[size]}>
+            {avatarDisplayName}
+          </Text>
+        )}
+        {variant === 'icon' && (
+          <Icon
+            name={icon}
+            purpose="decorative"
+            size={`${iconSizeMap[size]}px`}
+          />
+        )}
+        {variant === 'image' && src && (
+          <img alt="user" className={styles['avatar__image']} src={src} />
+        )}
+        {variant === 'image' && !src && (
+          <Text as="span" preset={presetMap[size]}>
+            {avatarDisplayName}
+          </Text>
+        )}
+      </div>
+    );
+  },
+);
