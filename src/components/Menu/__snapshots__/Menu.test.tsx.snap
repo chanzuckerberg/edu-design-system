@@ -58,7 +58,7 @@ exports[`<Menu /> MenuWithAvatarButton story renders snapshot 1`] = `
   >
     <div
       aria-label="Avatar for user Josie Sandberg"
-      class="avatar avatar--circle avatar--md avatar--initials"
+      class="avatar avatar--circle avatar--is-interactive avatar--md avatar--text"
       role="img"
     >
       <span

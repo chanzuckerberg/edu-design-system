@@ -16,7 +16,7 @@ export { default as Toggle } from './components/Toggle';
 /**
  * 2.x component theme exports
  */
-// export { default as Avatar } from './components/Avatar'; // Disabling export until 2.0 version is implemented
+export { default as Avatar } from './components/Avatar';
 export { default as Accordion } from './components/Accordion';
 export { default as AppNotification } from './components/AppNotification';
 export { default as Button } from './components/Button';

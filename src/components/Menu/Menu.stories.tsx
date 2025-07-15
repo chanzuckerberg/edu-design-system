@@ -224,9 +224,9 @@ export const WithCustomSecondaryButton: Story = {
 };
 
 /**
- * Use an `Avatar` component within `.PlainButton` to achieve a clickable avatar with menu attached.
+ * Use an interactive `Avatar` component within `.PlainButton` to achieve a clickable avatar with menu attached.
  *
- * *NOTE*: `Avatar` will be re-introduced in a future version of EDS.
+ * This will dynamically add the focus ring to the wrapper component since it is needed to make the `Avatar`-based trigger accessible
  */
 export const MenuWithAvatarButton: Story = {
   parameters: {
@@ -236,7 +236,7 @@ export const MenuWithAvatarButton: Story = {
     children: (
       <>
         <Menu.PlainButton>
-          <Avatar user={{ fullName: 'Josie Sandberg' }} />
+          <Avatar isInteractive user={{ fullName: 'Josie Sandberg' }} />
         </Menu.PlainButton>
         <Menu.Items data-testid="menu-content">
           <Menu.Item
