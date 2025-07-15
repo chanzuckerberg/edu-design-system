@@ -51,7 +51,8 @@
   * background colors but makes borders 100% opacity black. Without this, the
   * modal would have no clear boundary. 
   */
-  border: var(--eds-theme-form-border-width) transparent var(--eds-theme-color-background-utility-container);
+  border: calc(var(--eds-theme-form-border-width) * 1px) transparent var(--eds-theme-color-background-utility-container);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
   display: flex;
   flex-direction: column;
