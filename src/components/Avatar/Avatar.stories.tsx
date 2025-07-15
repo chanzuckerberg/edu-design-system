@@ -121,7 +121,7 @@ export const WhenImageVariantMissingSource: Story = {
 };
 
 /**
- * `Avatar supports unicode so names with multi-byte characters, or multiple sequences (emoji) are also supported.
+ * `Avatar` supports unicode so names with multi-byte characters, or multiple sequences (emoji) are also supported.
  */
 export const UsingMultibyteUnicode: Story = {
   args: {
@@ -136,7 +136,10 @@ export const UsingMultibyteUnicode: Story = {
   },
 };
 
-// TODO: why does this need to be wrapped
+// TODO: move to Tooltip stories?
+/**
+ * You can use an `Avatar` as a trigger for a `Tooltip` (note that it is wrapped in a `span`)
+ */
 export const UsingWithTooltip: Story = {
   args: {
     isInteractive: true,
