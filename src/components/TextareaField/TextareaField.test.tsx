@@ -15,9 +15,11 @@ describe('<TextareaField />', () => {
     const onChangeFn = jest.fn();
     const user = userEvent.setup();
     render(
-      <TextareaField aria-label="test" onChange={() => onChangeFn()}>
-        some content
-      </TextareaField>,
+      <TextareaField
+        aria-label="test"
+        defaultValue="some content"
+        onChange={() => onChangeFn()}
+      />,
     );
 
     const field = screen.getByRole('textbox');

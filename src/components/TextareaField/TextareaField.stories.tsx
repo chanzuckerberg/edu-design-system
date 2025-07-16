@@ -36,19 +36,6 @@ export const Default: Story = {
 };
 
 /**
- * You can specify the content of `TextareaField` by using children. Convenient for cases where
- * specifying `value` or `defaultValue` is inconvenient.
- */
-export const WhenUsingChildren: Story = {
-  args: {
-    children: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
-    dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
-    praesentium, commodi eligendi asperiores quis dolorum porro.`,
-    defaultValue: '',
-  },
-};
-
-/**
  * `TextareaField` does not require any initial content.
  */
 export const WhenNoDefaultValue: Story = {
