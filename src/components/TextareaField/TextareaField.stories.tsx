@@ -36,11 +36,26 @@ export const Default: Story = {
 };
 
 /**
- * `TextareaField` does not require any initial content.
+ * `TextareaField` does not require any initial content. It will display the placeholder text if specified via `placeholder`.
  */
 export const WhenNoDefaultValue: Story = {
   args: {
     defaultValue: undefined,
+    fieldNote: undefined,
+  },
+};
+
+/**
+ * `TextareaField` can use `defaultValue` or `value` for the field contents.
+ *
+ * See https://react.dev/reference/react-dom/components/textarea#providing-an-initial-value-for-a-text-area for more information.
+ */
+export const WhenUsingValue: Story = {
+  args: {
+    defaultValue: undefined,
+    value: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo
+dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
+praesentium, commodi eligendi asperiores quis dolorum porro.`,
     fieldNote: undefined,
   },
 };
