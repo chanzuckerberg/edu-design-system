@@ -27,7 +27,7 @@
 
 :where(.child-card) {
   margin-top: calc(var(--eds-spacing-size-2) * 1px);
-  border-radius: calc(var(--eds-border-radius-md) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
 }
 
 /**
