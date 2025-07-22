@@ -103,7 +103,7 @@
  * Modal transition animations.
  */
 .modal__transition--enter {
-  transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
+  transition: opacity calc(var(--eds-anim-fade-long) * 1s) ease-in-out;
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -119,7 +119,7 @@
 }
 
 .modal__transition--leave {
-  transition: opacity calc(var(--eds-anim-fade-long) * 1s) var(--eds-anim-ease);
+  transition: opacity calc(var(--eds-anim-fade-long) * 1s) ease-in-out;
 
   @media (prefers-reduced-motion) {
     transition: none;
