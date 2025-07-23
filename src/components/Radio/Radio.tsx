@@ -53,7 +53,7 @@ type RadioProps = RadioInputProps & {
   /**
    * Additional descriptive text below the primary label, adding additional detail
    */
-  subLabel?: string;
+  subLabel?: ReactNode;
 } & EitherInclusive<
     {
       /**

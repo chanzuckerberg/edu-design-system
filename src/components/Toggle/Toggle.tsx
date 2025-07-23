@@ -38,7 +38,7 @@ type ToggleButtonProps = {
 
 type ToggleProps = ToggleButtonProps & {
   children?: ReactNode;
-  sublabel?: string;
+  sublabel?: ReactNode;
 } & EitherInclusive<
     {
       /**

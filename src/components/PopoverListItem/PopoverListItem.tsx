@@ -34,7 +34,7 @@ export type PopoverListItemProps = {
   /**
    * Text below the main menu item call-to-action, briefly describing the menu item's function
    */
-  subLabel?: string;
+  subLabel?: ReactNode;
 };
 
 /**

@@ -93,7 +93,7 @@ type SelectProps = ListboxProps<
   /**
    * Add additional descriptive text for the field name
    */
-  sublabel?: string;
+  sublabel?: ReactNode;
 };
 
 type SelectLabelProps = ExtractProps<typeof Label> & {
@@ -103,7 +103,7 @@ type SelectLabelProps = ExtractProps<typeof Label> & {
   /**
    * Add additional descriptive text for the field name
    */
-  sublabel?: string;
+  sublabel?: ReactNode;
 };
 type SelectOptionsProps = ExtractProps<typeof ListboxOptions>;
 type SelectOptionProps = ExtractProps<typeof ListboxOption> & {

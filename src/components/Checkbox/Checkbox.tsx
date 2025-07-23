@@ -43,7 +43,7 @@ type CheckboxInputProps = CheckboxHTMLElementProps & {
   /**
    * Additional descriptive text below the primary label, adding additional detail
    */
-  subLabel?: string;
+  subLabel?: ReactNode;
 };
 
 // id is required in CheckboxInputProps but optional in CheckboxProps, so we

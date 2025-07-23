@@ -1,6 +1,11 @@
 import { flexRender, type Table } from '@tanstack/react-table';
 import clsx from 'clsx';
-import React, { useEffect, createContext, useContext } from 'react';
+import React, {
+  useEffect,
+  createContext,
+  useContext,
+  type ReactNode,
+} from 'react';
 
 import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
@@ -116,7 +121,7 @@ export type DataTableHeaderCellProps = EDSBase & {
    *
    * **Note**: Will warn when used in the wrong context
    */
-  sublabel?: string;
+  sublabel?: ReactNode;
   /**
    * The direction to apply to the icon (for visual treatment)
    *
