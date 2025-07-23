@@ -16,6 +16,7 @@ type CheckboxHTMLElementProps = Omit<
   'checked' | 'id' | 'size'
 >;
 
+// TODO(next-major): rename sub-label props to be camelCase
 type CheckboxInputProps = CheckboxHTMLElementProps & {
   // Component API
   /**

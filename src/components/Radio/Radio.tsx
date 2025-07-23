@@ -34,6 +34,7 @@ type RadioInputProps = RadioHTMLElementProps & {
   isError?: boolean;
 };
 
+// TODO(next-major): rename sub-label props to be camelCase
 type RadioProps = RadioInputProps & {
   // Component API
   /**
