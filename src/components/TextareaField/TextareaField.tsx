@@ -58,7 +58,7 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   /**
    * Add additional descriptive text for the field name.
    */
-  sublabel?: string;
+  sublabel?: ReactNode;
 } & EitherInclusive<
     {
       /**
@@ -107,18 +107,7 @@ type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
  * Base component, applying styles to a <textarea> tag
  */
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  (
-    {
-      className,
-      children,
-      disabled,
-      defaultValue = '',
-      readOnly,
-      status = 'default',
-      ...other
-    },
-    ref,
-  ) => {
+  ({ className, disabled, status = 'default', ...other }, ref) => {
     const componentClassName = clsx(
       styles['textarea'],
       status === 'critical' && styles['error'],
@@ -130,12 +119,10 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <textarea
         className={componentClassName}
-        defaultValue={children || defaultValue}
         disabled={disabled}
-        readOnly={readOnly}
         ref={ref}
         {...other}
-      ></textarea>
+      />
     );
   },
 );
@@ -155,7 +142,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       'aria-describedby': ariaDescribedBy,
       children,
       className,
-      defaultValue = '',
+      defaultValue,
       disabled,
       fieldNote,
       id,
@@ -168,6 +155,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       showHint,
       status = 'default',
       sublabel,
+      value,
       ...other
     },
     ref,
@@ -296,6 +284,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
           ref={ref}
           required={required}
           status={shouldRenderError ? 'critical' : status}
+          value={value}
           {...other}
         >
           {children}

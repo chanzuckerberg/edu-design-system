@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.2.0...v16.2.1) (2025-07-24)
+
+
+### Bug Fixes
+
+* apply the border radius tier 2 tokens ([#2215](https://github.com/chanzuckerberg/edu-design-system/issues/2215)) ([160bcc1](https://github.com/chanzuckerberg/edu-design-system/commit/160bcc17cb3775edf3c42f25f02831dfac87f161))
+* **FieldNote:** align field note icon with text ([#2225](https://github.com/chanzuckerberg/edu-design-system/issues/2225)) ([43846fb](https://github.com/chanzuckerberg/edu-design-system/commit/43846fbcc87a52c7a2ed3fa213c8ae64705970c1))
+* remove lingering usages of depecated animation token ([#2223](https://github.com/chanzuckerberg/edu-design-system/issues/2223)) ([64049e3](https://github.com/chanzuckerberg/edu-design-system/commit/64049e3b4d24c65725fccf733b995c5ccab4149b))
+* sync type declarations for sublabel and fieldNote ([#2224](https://github.com/chanzuckerberg/edu-design-system/issues/2224)) ([86edff9](https://github.com/chanzuckerberg/edu-design-system/commit/86edff98789c0156e58abf9a2f31af0a980b22a0))
+* **tailwind:** add in settings to use EDS border radii tokens with tailwind ([#2222](https://github.com/chanzuckerberg/edu-design-system/issues/2222)) ([4fb9766](https://github.com/chanzuckerberg/edu-design-system/commit/4fb9766bd3fe5f585a789d56e8a6ae6ddbb61006))
+* **TextareaField:** allow for value/defaultValue to be used properly ([#2214](https://github.com/chanzuckerberg/edu-design-system/issues/2214)) ([5966523](https://github.com/chanzuckerberg/edu-design-system/commit/596652366d8aba6204bd0fa29a79288775acea09))
+
 ## [16.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.1.1...v16.2.0) (2025-07-15)
 
 

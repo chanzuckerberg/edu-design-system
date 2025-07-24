@@ -1,6 +1,26 @@
 import type { Config } from 'tailwindcss';
 import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json';
 
+//
+// Util functions
+//
+
+/**
+ * Reduce a set of key/value pairs into a collection object of such pairs.
+ *
+ * e.g., [{x: 1}, {y: 2}, {z: 3}] => { x: 1, y: 2, z: 3 }
+ *
+ * @param tokenCollection already-collected set of key/value pairs
+ * @param token new key/value pair to add to the set
+ * @returns object containing tokens to use in the tailwind config
+ */
+function combineTokens(
+  tokenCollection: { [x: string]: string },
+  token: { [x: string]: string },
+) {
+  return Object.assign(tokenCollection, token);
+}
+
 /**
  * Convert the token config values into a tailwind 3.x compatible format
  *
@@ -10,6 +30,7 @@ import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json
 export function applyTailwindConfig(
   tokenConfig: typeof edsTokens,
 ): Config['theme'] {
+  // Select the theme (tier 2) color tokens and map them to be added to the tailwind config
   const {
     background: backgroundColorTokens,
     border: borderColorTokens,
@@ -17,6 +38,7 @@ export function applyTailwindConfig(
     ...colorTokens
   } = tokenConfig.theme.color;
 
+  const borderRadii: { [x: string]: string } = tokenConfig.border.radius;
   const movements: { [x: string]: string } = tokenConfig.anim.move;
   const spacings: { [x: string]: string } = tokenConfig.spacing.size;
 
@@ -31,14 +53,20 @@ export function applyTailwindConfig(
    *
    * Tailwind needs units on these so that the right CSS gets applied.
    */
+  const borderRadiusTokens = {
+    ...Object.keys(borderRadii)
+      .map((borderRadius) => {
+        return { [borderRadius]: `${borderRadii[borderRadius]}px` };
+      })
+      .reduce(combineTokens, {}),
+  };
+
   const movementTokens = {
     ...Object.keys(movements)
       .map((movement) => {
         return { [movement]: `${movements[movement]}s` };
       })
-      .reduce((acc, cur) => {
-        return Object.assign(acc, cur);
-      }, {}),
+      .reduce(combineTokens, {}),
   };
 
   const spacingTokens = {
@@ -46,9 +74,7 @@ export function applyTailwindConfig(
       .map((spacing) => {
         return { [`spacing-size-${spacing}`]: `${spacings[spacing]}px` };
       })
-      .reduce((acc, cur) => {
-        return Object.assign(acc, cur);
-      }, {}),
+      .reduce(combineTokens, {}),
   };
 
   return {
@@ -57,23 +83,26 @@ export function applyTailwindConfig(
     },
     extend: {
       backgroundColor: {
-        ...backgroundColorTokens,
+        ...backgroundColorTokens, // Tier 2 background color tokens
       },
       borderColor: {
-        ...borderColorTokens,
+        ...borderColorTokens, // Tier 2 border color tokens
       },
       textColor: {
-        ...textColorTokens,
+        ...textColorTokens, // Tier 2 text color tokens
+      },
+      borderRadius: {
+        ...borderRadiusTokens, // Tier 1 border radius tokens
       },
       spacing: {
-        ...spacingTokens,
+        ...spacingTokens, // Tier 1 spacing tokens
       },
       transitionDuration: {
-        ...movementTokens,
+        ...movementTokens, // Tier 1 movement tokens
       },
     },
     fontWeight: {
-      ...edsTokens.typography.fontWeight,
+      ...edsTokens.typography.fontWeight, // Tier 1 font weight tokens
     },
     fontFamily: {
       // provide values for the configured font family tokens

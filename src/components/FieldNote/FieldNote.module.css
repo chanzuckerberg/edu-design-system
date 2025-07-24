@@ -12,6 +12,7 @@
   align-items: center;
 
   color: var(--eds-theme-color-text-utility-default-secondary);
+  gap: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 /**
@@ -21,8 +22,9 @@
   position: relative;
   flex-shrink: 0;
   align-self: flex-start;
-  margin-top: calc(var(--eds-spacing-size-half) * 1px);
-  margin-right: calc(var(--eds-spacing-size-half) * 1px);
+
+  /* Adjust the icon's position such that it keeps its natural layout */
+  transform: translateY(calc(var(--eds-spacing-size-quarter) * 1px));
 }
 
 /**

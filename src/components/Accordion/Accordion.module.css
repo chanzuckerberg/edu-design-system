@@ -75,7 +75,7 @@
  * Animates the icon rotation when opening and closing.
  */
 .accordion-button>.accordion-button__trailing-icon {
-  transition: transform calc(var(--eds-anim-move-medium) * 1s) var(--eds-anim-ease);
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-in-out;
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
