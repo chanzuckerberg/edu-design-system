@@ -67,29 +67,28 @@
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-/** TODO-AH: add in offsets */
 .text--headline-decorative-inline-xl {
-  --text-font-size: var(--eds-typography-preset-800-font-size);
+  --text-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --text-font-size: var(--eds-typography-preset-1400-font-size);
+    --text-font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset-2));
     --text-line-height: var(--eds-typography-preset-1400-line-height);
   }
 }
 
 .text--headline-decorative-inline-lg {
-  --text-font-size: var(--eds-typography-preset-800-font-size);
+  --text-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --text-font-size: var(--eds-typography-preset-1000-font-size);
+    --text-font-size: calc(var(--eds-typography-preset-1000-font-size) + var(--eds-typography-font-family-size-offset-2));
     --text-line-height: var(--eds-typography-preset-1000-line-height);
   }
 }
@@ -102,7 +101,7 @@
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --text-font-size: var(--eds-typography-preset-800-font-size);
+    --text-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
     --text-line-height: var(--eds-typography-preset-800-line-height);
   }
 }
