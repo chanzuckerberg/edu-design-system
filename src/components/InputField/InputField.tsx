@@ -127,7 +127,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Add additional descriptive text for the field name.
    */
-  sublabel?: string;
+  sublabel?: ReactNode;
 } & EitherInclusive<
     {
       /**

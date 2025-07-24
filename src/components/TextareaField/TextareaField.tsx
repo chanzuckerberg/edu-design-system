@@ -58,7 +58,7 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   /**
    * Add additional descriptive text for the field name.
    */
-  sublabel?: string;
+  sublabel?: ReactNode;
 } & EitherInclusive<
     {
       /**

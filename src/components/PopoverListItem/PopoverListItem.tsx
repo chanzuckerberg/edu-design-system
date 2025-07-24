@@ -5,6 +5,7 @@ import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
+// TODO(next-major): rename sub-label props to be camelCase
 export type PopoverListItemProps = {
   /**
    * Child node(s) that can be nested inside component
@@ -34,7 +35,7 @@ export type PopoverListItemProps = {
   /**
    * Text below the main menu item call-to-action, briefly describing the menu item's function
    */
-  subLabel?: string;
+  subLabel?: ReactNode;
 };
 
 /**

@@ -16,6 +16,7 @@ type CheckboxHTMLElementProps = Omit<
   'checked' | 'id' | 'size'
 >;
 
+// TODO(next-major): rename sub-label props to be camelCase
 type CheckboxInputProps = CheckboxHTMLElementProps & {
   // Component API
   /**
@@ -43,7 +44,7 @@ type CheckboxInputProps = CheckboxHTMLElementProps & {
   /**
    * Additional descriptive text below the primary label, adding additional detail
    */
-  subLabel?: string;
+  subLabel?: ReactNode;
 };
 
 // id is required in CheckboxInputProps but optional in CheckboxProps, so we

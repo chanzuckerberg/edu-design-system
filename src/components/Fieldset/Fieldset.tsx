@@ -41,7 +41,7 @@ type FieldsetProps = {
   /**
    * Text under the component used to provide a description or error message to describe the state.
    */
-  fieldNote?: string;
+  fieldNote?: ReactNode;
 } & FieldsetSharedProps &
   React.HTMLAttributes<HTMLFieldSetElement>;
 

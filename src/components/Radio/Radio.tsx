@@ -34,6 +34,7 @@ type RadioInputProps = RadioHTMLElementProps & {
   isError?: boolean;
 };
 
+// TODO(next-major): rename sub-label props to be camelCase
 type RadioProps = RadioInputProps & {
   // Component API
   /**
@@ -53,7 +54,7 @@ type RadioProps = RadioInputProps & {
   /**
    * Additional descriptive text below the primary label, adding additional detail
    */
-  subLabel?: string;
+  subLabel?: ReactNode;
 } & EitherInclusive<
     {
       /**
