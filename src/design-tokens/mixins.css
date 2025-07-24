@@ -26,8 +26,8 @@
   padding: calc(var(--eds-spacing-size-1) * 1px);
   margin: 0;
 
-  transition: box-shadow calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease),
-  border-color calc(var(--eds-anim-fade-quick) * 1s) var(--eds-anim-ease);
+  transition: box-shadow calc(var(--eds-anim-fade-quick) * 1s) ease-in-out,
+  border-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
   
   @media screen and (prefers-reduced-motion) {
     transition: none;
