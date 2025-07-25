@@ -8,6 +8,9 @@
         "2": {
           "value": "'Argent CF Italic', Georgia, serif"
         },
+        "3": {
+          "value": "inherit"
+        },
         "sizeOffset": {
           "2": {
             "value": "2",

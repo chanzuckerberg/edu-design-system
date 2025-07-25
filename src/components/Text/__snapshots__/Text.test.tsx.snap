@@ -72,6 +72,54 @@ exports[`<Text /> CaptionMedium story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> DecorativePresetCombination story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <div>
+    <span
+      class="text text--headline-lg"
+    >
+      Product
+    </span>
+    <span
+      class="text text--headline-decorative-inline-lg"
+    >
+      Name
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Text /> DecorativePresets story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <div>
+    <p
+      class="text text--headline-decorative-inline-xl"
+    >
+      Headline Decorative Inline XLarge
+    </p>
+    <p
+      class="text text--headline-decorative-inline-lg"
+    >
+      Headline Decorative Inline Large
+    </p>
+    <p
+      class="text text--headline-decorative-inline-md"
+    >
+      Headline Decorative Inline Medium
+    </p>
+    <p
+      class="text text--headline-decorative-inline-sm"
+    >
+      Headline Decorative Inline Small
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<Text /> Default story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
