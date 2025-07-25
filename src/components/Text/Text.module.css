@@ -94,7 +94,7 @@
 }
 
 .text--headline-decorative-inline-md {
-  --text-font-size: var(--eds-typography-preset-600-font-size);
+  --text-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
@@ -107,7 +107,7 @@
 }
 
 .text--headline-decorative-inline-sm {
-  --text-font-size: var(--eds-typography-preset-600-font-size);
+  --text-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
