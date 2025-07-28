@@ -256,6 +256,7 @@
   --eds-typography-font-weight-normal: 400;
   --eds-typography-font-weight-light: 300;
   --eds-typography-font-family-size-offset-2: 2; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
+  --eds-typography-font-family-3: inherit;
   --eds-typography-font-family-2: 'Argent CF Italic', Georgia, serif;
   --eds-typography-font-family-1: 'Graphik', Arial, sans-serif;
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
