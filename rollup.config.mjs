@@ -36,7 +36,7 @@ export default {
       enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
       bundleName: '@chanzuckerberg/eds',
       uploadToken: process.env.CODECOV_TOKEN,
-      gitService: 'github',
+      telemetry: false,
     }),
   ],
 };
