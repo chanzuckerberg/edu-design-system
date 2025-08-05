@@ -2104,7 +2104,6 @@ __metadata:
     "@omlet/cli": "npm:^2.0.0"
     "@rollup/plugin-node-resolve": "npm:^15.3.1"
     "@rollup/plugin-typescript": "npm:^12.1.4"
-    "@size-limit/file": "npm:^8.2.6"
     "@storybook/addon-a11y": "npm:^8.6.14"
     "@storybook/addon-essentials": "npm:^8.6.14"
     "@storybook/addon-interactions": "npm:^8.6.14"
@@ -2177,7 +2176,6 @@ __metadata:
     react-uid: "npm:^2.4.0"
     rollup: "npm:^4.45.1"
     rollup-plugin-postcss: "npm:^4.0.2"
-    size-limit: "npm:^8.2.6"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^8.6.14"
     style-dictionary: "npm:^3.9.2"
@@ -3862,17 +3860,6 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^3.0.0"
   checksum: 10/78155c7bd866a85df85e22028e046b8d46cf3e840f72260954f5e3ed5bd97d66c595524305a6841ffb3f681a08f6e5cef572a2cce5442a8a232dc29fb409b83e
-  languageName: node
-  linkType: hard
-
-"@size-limit/file@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "@size-limit/file@npm:8.2.6"
-  dependencies:
-    semver: "npm:7.5.3"
-  peerDependencies:
-    size-limit: 8.2.6
-  checksum: 10/bfff3d28e21752eabb64b94bb1d5741fe0293a1a639e6c027051a1e839b4cb67a14fa9d3d4c01ffee69eeb7fdfafbf94f8f08647363e9c2370fdfed785e2b099
   languageName: node
   linkType: hard
 
@@ -6534,13 +6521,6 @@ __metadata:
     base64-js: "npm:^1.3.1"
     ieee754: "npm:^1.2.1"
   checksum: 10/b6bc68237ebf29bdacae48ce60e5e28fc53ae886301f2ad9496618efac49427ed79096750033e7eab1897a4f26ae374ace49106a5758f38fb70c78c9fda2c3b1
-  languageName: node
-  linkType: hard
-
-"bytes-iec@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "bytes-iec@npm:3.1.1"
-  checksum: 10/2f89d1dbb058b1bc8a9284658b6c779ffe16127f93f3647b749723660c989a38ac87bad065cc874d380f05b566c95153348f416e6a08985625812512d01e689f
   languageName: node
   linkType: hard
 
@@ -12458,7 +12438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:^2.0.3, lilconfig@npm:^2.0.5, lilconfig@npm:^2.1.0":
+"lilconfig@npm:^2.0.3, lilconfig@npm:^2.0.5":
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
   checksum: 10/b1314a2e55319013d5e7d7d08be39015829d2764a1eaee130129545d40388499d81b1c31b0f9b3417d4db12775a88008b72ec33dd06e0184cf7503b32ca7cc0b
@@ -13861,15 +13841,6 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10/ac1eb60f615b272bccb0e2b9cd933720dad30bf9708424f691b8113826bb91aca7e9d14ef5d9415a6ba15c266b37817256f58d8ce980c82b0ba3185352565679
-  languageName: node
-  linkType: hard
-
-"nanospinner@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "nanospinner@npm:1.1.0"
-  dependencies:
-    picocolors: "npm:^1.0.0"
-  checksum: 10/a775e8266df12e6d78e992f4c47c14b50d647f0b636ffaafc32d4005e13b9182327f7cbecca8236134bba592ad46d8b4081686821351f4b3885ff6f48084a40c
   languageName: node
   linkType: hard
 
@@ -16867,17 +16838,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.5.3":
-  version: 7.5.3
-  resolution: "semver@npm:7.5.3"
-  dependencies:
-    lru-cache: "npm:^6.0.0"
-  bin:
-    semver: bin/semver.js
-  checksum: 10/80b4b3784abff33bacf200727e012dc66768ed5835441e0a802ba9f3f5dd6b10ee366294711f5e7e13d73b82a6127ea55f11f9884d35e76a6a618dc11bc16ccf
-  languageName: node
-  linkType: hard
-
 "semver@npm:^6.0.0, semver@npm:^6.3.0, semver@npm:^6.3.1":
   version: 6.3.1
   resolution: "semver@npm:6.3.1"
@@ -17029,22 +16989,6 @@ __metadata:
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
   checksum: 10/aba6438f46d2bfcef94cf112c835ab395172c75f67453fe05c340c770d3c402363018ae1ab4172a1026a90c47eaccf3af7b6ff6fa749a680c2929bd7fa2b37a4
-  languageName: node
-  linkType: hard
-
-"size-limit@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "size-limit@npm:8.2.6"
-  dependencies:
-    bytes-iec: "npm:^3.1.1"
-    chokidar: "npm:^3.5.3"
-    globby: "npm:^11.1.0"
-    lilconfig: "npm:^2.1.0"
-    nanospinner: "npm:^1.1.0"
-    picocolors: "npm:^1.0.0"
-  bin:
-    size-limit: bin.js
-  checksum: 10/59c86f1ca7d07b734b76f838ba04b42239d9499a28a2a6e1d11760674f57178e94d1ef99f528b16a5b37d99124dbbdb32fa1e9bbafec77e706823f98e20659c3
   languageName: node
   linkType: hard
 
