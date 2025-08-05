@@ -9,3 +9,7 @@ coverage:
       default:
         informational: true
     patch: off
+# Post comment if there are changes in bundle size exceeding 1Kb
+comment:
+     require_bundle_changes: True
+     bundle_change_threshold: "1Kb"
