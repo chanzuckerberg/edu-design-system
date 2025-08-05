@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Checkbox } from './Checkbox';
 import * as stories from './Checkbox.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Checkbox />', () => {
   generateSnapshots(stories as StoryFile);

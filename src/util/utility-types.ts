@@ -1,5 +1,3 @@
-import { type ReactRenderer } from '@storybook/react';
-import type { Store_CSFExports } from '@storybook/types';
 import type { ReactNode } from 'react';
 
 /**
@@ -52,5 +50,3 @@ export type ForwardedRefComponent<T, P> = React.ForwardRefExoticComponent<
 export type RenderProps<RenderPropArgs> = {
   children: ReactNode | ((args: RenderPropArgs) => React.ReactElement);
 };
-
-export type StoryFile = Store_CSFExports<ReactRenderer>;

@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { TextareaField } from './TextareaField';
 import * as stories from './TextareaField.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<TextareaField />', () => {
   generateSnapshots(stories as StoryFile);

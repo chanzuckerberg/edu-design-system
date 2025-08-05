@@ -7,7 +7,7 @@ import React from 'react';
 import { Modal } from './Modal';
 import * as stories from './Modal.stories';
 import '../../../jest/helpers/removeModalTransitionStylesJestSerializer';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { Default } = composeStories(stories);
 

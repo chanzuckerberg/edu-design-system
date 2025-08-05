@@ -7,7 +7,7 @@ import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
 import { Menu } from './Menu';
 import * as stories from './Menu.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 mockResizeObserver();
 
