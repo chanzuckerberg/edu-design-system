@@ -3,8 +3,9 @@ import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
 import type { Size } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
 
+import Heading from '../Heading';
+import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 
 import styles from './Card.module.css';
@@ -132,7 +133,7 @@ export const Card = ({
     className,
   );
   return (
-    <article className={componentClassName} {...other}>
+    <div className={componentClassName} {...other}>
       {children}
       {topStripe && (
         <div
@@ -143,7 +144,7 @@ export const Card = ({
           )}
         ></div>
       )}
-    </article>
+    </div>
   );
 };
 
@@ -169,9 +170,9 @@ const CardFooter = ({
 }: CardSubComponentProps) => {
   const componentClassName = clsx(styles['card__footer'], className);
   return (
-    <footer className={componentClassName} {...other}>
+    <div className={componentClassName} {...other}>
       {children}
-    </footer>
+    </div>
   );
 };
 
@@ -208,11 +209,11 @@ const CardHeader = ({
   );
 
   return children ? (
-    <header className={componentClassName} {...other}>
+    <div className={componentClassName} {...other}>
       <div className={styles['header__custom']}>{children}</div>
-    </header>
+    </div>
   ) : (
-    <header className={componentClassName} {...other}>
+    <div className={componentClassName} {...other}>
       {icon && (
         <div className={styles['header__icon']}>
           <Icon
@@ -233,13 +234,13 @@ const CardHeader = ({
           </Text>
         )}
         {title && (
-          <Text
-            as="div"
+          <Heading
+            as="h3"
             className={headerTitleClassName}
             preset={size === 'sm' ? 'title-sm' : 'headline-sm'}
           >
             {title}
-          </Text>
+          </Heading>
         )}
         {subTitle && (
           <Text
@@ -252,7 +253,7 @@ const CardHeader = ({
         )}
       </div>
       {action && <div className={styles['header__action']}>{action}</div>}
-    </header>
+    </div>
   );
 };
 

@@ -4,10 +4,10 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-call-out w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -18,11 +18,11 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
         >
           Recommended for you
         </div>
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
@@ -63,7 +63,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           </button>
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -73,7 +73,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -90,11 +90,11 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
           </span>
         </button>
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -102,27 +102,27 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-sm"
     >
       <div
         class="header__text"
       >
-        <div
-          class="text text--title-sm header__title header--size-sm"
+        <h3
+          class="heading heading--title-sm header__title header--size-sm"
         >
           Cancel membership?
-        </div>
+        </h3>
         <div
           class="text text--body-sm header__sub-title header--size-sm"
         >
           We're sad to see you go
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -132,7 +132,7 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu
       </p>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -149,11 +149,11 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
           </span>
         </button>
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -161,30 +161,30 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-high card--container-color-call-out w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
         class="header__text"
       >
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Card Group
-        </div>
+        </h3>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
-      <article
+      <div
         class="card card--container-style-high card--container-color-default card--is-interactive child-card"
         draggable="true"
       >
-        <header
+        <div
           class="card__header header--size-md"
         >
           <div
@@ -195,11 +195,11 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
             >
               Eyebrow Text
             </div>
-            <div
-              class="text text--headline-sm header__title header--size-md"
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
             >
               Title text
-            </div>
+            </h3>
             <div
               class="text text--body-lg header__sub-title header--size-md"
             >
@@ -240,16 +240,16 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
               </button>
             </div>
           </div>
-        </header>
+        </div>
         <div
           class="card__top-stripe top-stripe--none"
         />
-      </article>
+      </div>
     </div>
     <div
       class="card__top-stripe top-stripe--high"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -257,10 +257,10 @@ exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-custom-brand border-brand-red bg-brand-red w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -272,7 +272,7 @@ exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
           Card Header
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -282,7 +282,7 @@ exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -290,11 +290,11 @@ exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -302,10 +302,10 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -316,11 +316,11 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
         >
           Recommended for you
         </div>
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
@@ -361,7 +361,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           </button>
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -371,7 +371,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -388,11 +388,11 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
           </span>
         </button>
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--high bg-brand-purple-lowEmphasis"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -400,10 +400,10 @@ exports[`<Card /> Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -415,7 +415,7 @@ exports[`<Card /> Default story renders snapshot 1`] = `
           Card Header
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -425,7 +425,7 @@ exports[`<Card /> Default story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -433,11 +433,11 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -445,10 +445,10 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default card--is-interactive w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -460,7 +460,7 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
           Card Header
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -470,7 +470,7 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -478,11 +478,11 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -490,10 +490,10 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -504,11 +504,11 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
         >
           Recommended for you
         </div>
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
@@ -549,7 +549,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           </button>
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -559,7 +559,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -576,11 +576,11 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
           </span>
         </button>
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--medium"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -588,10 +588,10 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default card--is-dragging-true w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -603,7 +603,7 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
           Card Header
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -613,7 +613,7 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -621,11 +621,11 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -633,10 +633,10 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md mb-spacing-size-2"
     >
       <div
@@ -652,7 +652,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
         </em>
         .
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -662,7 +662,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -670,11 +670,11 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -682,10 +682,10 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -696,18 +696,18 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
         >
           Recommended for you
         </div>
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
           Get to know your colleagues
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -717,7 +717,7 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -725,11 +725,11 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -737,10 +737,10 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -764,11 +764,11 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
       <div
         class="header__text"
       >
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
@@ -777,7 +777,7 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
           </span>
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -787,7 +787,7 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -795,11 +795,11 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -807,10 +807,10 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-md"
     >
       <div
@@ -821,11 +821,11 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
         >
           Recommended for you
         </div>
-        <div
-          class="text text--headline-sm header__title header--size-md"
+        <h3
+          class="heading heading--headline-sm header__title header--size-md"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-lg header__sub-title header--size-md"
         >
@@ -866,7 +866,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           </button>
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -876,7 +876,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -893,11 +893,11 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
           </span>
         </button>
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
 
@@ -905,10 +905,10 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <article
+  <div
     class="card card--container-style-low card--container-color-default w-[384px]"
   >
-    <header
+    <div
       class="card__header header--size-sm"
     >
       <div
@@ -932,11 +932,11 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       <div
         class="header__text"
       >
-        <div
-          class="text text--title-sm header__title header--size-sm"
+        <h3
+          class="heading heading--title-sm header__title header--size-sm"
         >
           Question of the day
-        </div>
+        </h3>
         <div
           class="text text--body-sm header__sub-title header--size-sm"
         >
@@ -977,7 +977,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
           </button>
         </div>
       </div>
-    </header>
+    </div>
     <div
       class="card__body"
     >
@@ -987,7 +987,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <footer
+    <div
       class="card__footer"
     >
       <div
@@ -995,10 +995,10 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       >
         Card Footer
       </div>
-    </footer>
+    </div>
     <div
       class="card__top-stripe top-stripe--none"
     />
-  </article>
+  </div>
 </div>
 `;
