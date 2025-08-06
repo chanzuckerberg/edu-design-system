@@ -624,6 +624,12 @@
               "@": "#878C90"
             }
           },
+          "brand": {
+            "red": "#4D0118",
+            "yellow": "#876701",
+            "green": "#367759",
+            "blue": "#3165D2"
+          },
           "disabled": "#C0C4C8",
           "utility": {
             "default": {
@@ -783,7 +789,11 @@
             "placeholder": "#6C6967"
           },
           "brand": {
-            "default": "var(--eds-theme-color-text-brand-primary)"
+            "default": "var(--eds-theme-color-text-brand-primary)",
+            "red": "#4D0118",
+            "yellow": "#876701",
+            "green": "#367759",
+            "blue": "#3165D2"
           }
         },
         "text-highlight": {
