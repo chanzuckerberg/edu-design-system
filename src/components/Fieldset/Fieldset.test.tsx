@@ -5,7 +5,7 @@ import React from 'react';
 
 import { Fieldset } from './Fieldset';
 import * as stories from './Fieldset.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Fieldset />', () => {
   beforeEach(() => {

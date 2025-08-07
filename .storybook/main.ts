@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
-import type { Configuration } from 'webpack';
 
 const config = {
   stories: [
@@ -10,16 +9,43 @@ const config = {
     './**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    '@storybook/addon-essentials', // See: https://storybook.js.org/docs/essentials
+    // See: https://storybook.js.org/docs/essentials
+    '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-interactions',
     '@geometricpanda/storybook-addon-badges',
     {
-      name: '@storybook/addon-styling',
+      name: '@storybook/addon-styling-webpack',
       options: {
-        postCss: true,
-        cssModules: true,
+        rules: [
+          {
+            test: /\.css$/,
+            // See: https://webpack.js.org/guides/tree-shaking/
+            sideEffects: true, // This must be true so that the emitted changes load in storybook
+            use: [
+              'style-loader',
+              {
+                // Configuration for handling CSS Modules
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                  modules: {
+                    auto: true,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  },
+                },
+              },
+              {
+                // Tailwind requires PostCSS to work
+                loader: 'postcss-loader',
+                options: {
+                  implementation: require.resolve('postcss'),
+                },
+              },
+            ],
+          },
+        ],
       },
     },
     '@storybook/addon-webpack5-compiler-babel',
@@ -34,7 +60,11 @@ const config = {
 
   framework: {
     name: '@storybook/react-webpack5',
-    options: {},
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
   },
 
   build: {
@@ -68,13 +98,6 @@ const config = {
     };
   },
 
-  webpackFinal(config, { configType }) {
-    if (configType === 'DEVELOPMENT') {
-      updateCSSLoaderPlugin(config);
-    }
-    return config;
-  },
-
   /**
    * This config enables deep parsing of TypeScript types in the table UI, which can interpret
    * the values of unions, and TypeScript utils like `Extract`, `Pick`, etc.
@@ -83,40 +106,5 @@ const config = {
     reactDocgen: 'react-docgen-typescript',
   },
 } satisfies StorybookConfig;
-
-/**
- * Updates the `css-loader` webpack plugin to make class names human readable.
- *
- * NOTE: This should only be used for local development.
- */
-function updateCSSLoaderPlugin(config: Configuration): Configuration {
-  config.module?.rules?.forEach((rule) => {
-    if (rule && typeof rule === 'object' && Array.isArray(rule.use)) {
-      const isRuleForCSS = rule.test?.toString() === '/\\.css$/';
-      if (isRuleForCSS) {
-        rule.use.forEach((ruleSetRule) => {
-          if (
-            typeof ruleSetRule === 'object' &&
-            ruleSetRule?.loader?.includes('node_modules/css-loader')
-          ) {
-            ruleSetRule.options = {
-              // @ts-expect-error css-loader doesn't accept "string" options
-              // and will either be an object or undefined
-              ...ruleSetRule.options,
-              modules: {
-                // @ts-expect-error css-loader doesn't accept "string" options
-                // and will either be an object or undefined
-                ...ruleSetRule.options?.modules,
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-              },
-            };
-          }
-        });
-      }
-    }
-  });
-
-  return config;
-}
 
 export default config;

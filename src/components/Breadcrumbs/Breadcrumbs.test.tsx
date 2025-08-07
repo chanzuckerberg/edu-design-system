@@ -4,7 +4,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
 import * as stories from './Breadcrumbs.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { LongList } = composeStories(stories);
 

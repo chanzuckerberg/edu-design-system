@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Text } from './Text';
 import * as stories from './Text.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Text />', () => {
   generateSnapshots(stories as StoryFile);
