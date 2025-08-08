@@ -1816,6 +1816,17 @@
             "group": "color"
           }
         }
+      },
+      "typography": {
+        "fontStyle": {
+          "headline": {
+            "decorative": {
+              "inline": {
+                "value": "light italic"
+              }
+            }
+          }
+        }
       }
     }
   }
