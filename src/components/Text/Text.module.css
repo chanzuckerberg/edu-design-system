@@ -13,11 +13,11 @@
   --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-font-family: var(--eds-typography-font-family-1);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
-  --text-text-transform: ;
 
   font: unset;
   font-family: var(--text-font-family);
   font-size: calc(var(--text-font-size) * 1px);
+  font-style: var(--text-font-style, initial);
   line-height: calc(var(--text-line-height) * 1px);
   font-weight: var(--text-font-weight);
   text-transform: var(--text-text-transform, none);
@@ -72,6 +72,7 @@
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -85,6 +86,7 @@
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -98,6 +100,7 @@
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -111,6 +114,7 @@
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
   --text-font-weight: var(--eds-typography-font-weight-light);
+  --text-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
