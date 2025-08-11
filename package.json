@@ -102,7 +102,7 @@
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-    "@chanzuckerberg/axe-storybook-testing": "^8.2.3",
+    "@chanzuckerberg/axe-storybook-testing": "^9.0.0",
     "@chanzuckerberg/eslint-config-edu-js": "^1.1.0",
     "@chanzuckerberg/eslint-config-edu-ts": "^1.0.9",
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.9",
