@@ -321,6 +321,8 @@ const { identity } = require('lodash');
     });
   }
 
-  spinner.text = `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}, total: ${stats.total.length}`;
-  spinner.succeed(`Use --verbose for more information`);
+  spinner.succeed(
+    `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}, total: ${stats.total.length}`,
+  );
+  !isVerbose && spinner.info(`Use --verbose for more information`);
 })();
