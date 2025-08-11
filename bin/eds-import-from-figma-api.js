@@ -212,11 +212,14 @@ const { identity } = require('lodash');
       // If we have a zombie entry in the variable list, skip it (flag for design)
       if (variable.isOrphaned()) {
         stats.skipped.push(variable);
-        spinner.warn(
-          chalk.bold(variable.name) +
-            ': Skipped with warning (orphaned): please remove usage in figma',
-        );
-        isVerbose && console.warn('Variable details:', variable);
+
+        if (isVerbose) {
+          spinner.warn(
+            chalk.bold(variable.name) +
+              ': Skipped with warning (orphaned): please remove usage in figma',
+          );
+          console.warn('Variable details:', variable);
+        }
 
         return;
       }
@@ -321,4 +324,5 @@ const { identity } = require('lodash');
   spinner.succeed(
     `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}, total: ${stats.total.length}`,
   );
+  !isVerbose && spinner.info(`Use --verbose for more information`);
 })();
