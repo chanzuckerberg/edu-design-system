@@ -283,6 +283,10 @@ export const EdsThemeColorFormBorderHover = '#333231';
 export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
 export const EdsThemeColorIconNeutralStrongHover = '#333231';
 export const EdsThemeColorIconNeutralSubtle = '#878C90';
+export const EdsThemeColorIconBrandRed = '#4D0118';
+export const EdsThemeColorIconBrandYellow = '#876701';
+export const EdsThemeColorIconBrandGreen = '#367759';
+export const EdsThemeColorIconBrandBlue = '#3165D2';
 export const EdsThemeColorIconDisabled = '#C0C4C8';
 export const EdsThemeColorIconUtilityDefaultPrimary = '#0F2163';
 export const EdsThemeColorIconUtilityDefaultPrimaryHover = '#0A164C';
@@ -378,6 +382,10 @@ export const EdsThemeColorTextUtilityInverseInteractiveVisited = '#FFFFFF';
 export const EdsThemeColorTextUtilityPlaceholder = '#6C6967';
 export const EdsThemeColorTextBrandDefault =
   'var(--eds-theme-color-text-brand-primary)';
+export const EdsThemeColorTextBrandRed = '#4D0118';
+export const EdsThemeColorTextBrandYellow = '#876701';
+export const EdsThemeColorTextBrandGreen = '#367759';
+export const EdsThemeColorTextBrandBlue = '#3165D2';
 export const EdsThemeColorTextHighlightForeground = '#333231';
 export const EdsThemeColorToggleOnBackground =
   'var(--eds-theme-color-background-brand-primary-strong)';

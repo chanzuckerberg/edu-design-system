@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './TabGroup.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 import TabGroup from '../TabGroup';
 
 const { Default } = composeStories(stories);

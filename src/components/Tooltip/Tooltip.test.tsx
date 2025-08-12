@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import * as TooltipStoryFile from './Tooltip.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { Interactive, InteractiveDisabled } = composeStories(TooltipStoryFile);
 

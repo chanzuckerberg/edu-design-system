@@ -1366,6 +1366,24 @@
               }
             }
           },
+          "brand": {
+            "red": {
+              "value": "{eds.color.red.850}",
+              "group": "color"
+            },
+            "yellow": {
+              "value": "{eds.color.yellow.550}",
+              "group": "color"
+            },
+            "green": {
+              "value": "{eds.color.green.550}",
+              "group": "color"
+            },
+            "blue": {
+              "value": "{eds.color.blue.550}",
+              "group": "color"
+            }
+          },
           "disabled": {
             "value": "{eds.color.neutral.300}",
             "group": "color"
@@ -1739,6 +1757,22 @@
             "default": {
               "value": "var(--eds-theme-color-text-brand-primary)",
               "group": "color"
+            },
+            "red": {
+              "value": "{eds.color.red.850}",
+              "group": "color"
+            },
+            "yellow": {
+              "value": "{eds.color.yellow.550}",
+              "group": "color"
+            },
+            "green": {
+              "value": "{eds.color.green.550}",
+              "group": "color"
+            },
+            "blue": {
+              "value": "{eds.color.blue.550}",
+              "group": "color"
             }
           }
         },
@@ -1780,6 +1814,17 @@
           "thumb": {
             "value": "var(--eds-theme-color-text-neutral-default-inverse)",
             "group": "color"
+          }
+        }
+      },
+      "typography": {
+        "fontStyle": {
+          "headline": {
+            "decorative": {
+              "inline": {
+                "value": "light italic"
+              }
+            }
           }
         }
       }

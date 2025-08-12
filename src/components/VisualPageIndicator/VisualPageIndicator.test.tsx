@@ -5,7 +5,7 @@ import React from 'react';
 import { VisualPageIndicator } from './VisualPageIndicator';
 
 import * as stories from './VisualPageIndicator.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<VisualPageIndicator />', () => {
   beforeEach(() => {

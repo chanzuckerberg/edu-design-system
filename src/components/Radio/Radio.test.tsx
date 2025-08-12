@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Radio } from './Radio';
 import * as stories from './Radio.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Radio />', () => {
   generateSnapshots(stories as StoryFile);

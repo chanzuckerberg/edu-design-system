@@ -33,7 +33,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
       - name: Setup node 😻
         uses: actions/setup-node@v3
         with:
@@ -45,6 +49,9 @@ jobs:
 
       - name: Build Dist 🔧
         run: yarn run build
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CI: true
 
       # Rollup's TS plugin can include an implicit dependency on tslib that we don't want. It shouldn't be
       # included in builds if our tsconfig.json configures "target" properly, which this check ensures.

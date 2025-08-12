@@ -1,4 +1,5 @@
 :root {
+  --eds-theme-typography-font-style-headline-decorative-inline: light italic;
   --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
   --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
@@ -256,9 +257,14 @@
   --eds-typography-font-weight-normal: 400;
   --eds-typography-font-weight-light: 300;
   --eds-typography-font-family-size-offset-2: 2; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
+  --eds-typography-font-family-3: inherit;
   --eds-typography-font-family-2: 'Argent CF Italic', Georgia, serif;
   --eds-typography-font-family-1: 'Graphik', Arial, sans-serif;
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
+  --eds-theme-color-text-brand-blue: var(--eds-color-blue-550);
+  --eds-theme-color-text-brand-green: var(--eds-color-green-550);
+  --eds-theme-color-text-brand-yellow: var(--eds-color-yellow-550);
+  --eds-theme-color-text-brand-red: var(--eds-color-red-850);
   --eds-theme-color-text-utility-placeholder: var(--eds-color-neutral-550);
   --eds-theme-color-text-utility-inverse-interactive-visited: var(--eds-color-white);
   --eds-theme-color-text-utility-inverse: var(--eds-color-white);
@@ -327,6 +333,10 @@
   --eds-theme-color-icon-utility-default-primary-hover: var(--eds-color-blue-900);
   --eds-theme-color-icon-utility-default-primary: var(--eds-color-blue-850);
   --eds-theme-color-icon-disabled: var(--eds-color-neutral-300);
+  --eds-theme-color-icon-brand-blue: var(--eds-color-blue-550);
+  --eds-theme-color-icon-brand-green: var(--eds-color-green-550);
+  --eds-theme-color-icon-brand-yellow: var(--eds-color-yellow-550);
+  --eds-theme-color-icon-brand-red: var(--eds-color-red-850);
   --eds-theme-color-icon-neutral-subtle: var(--eds-color-neutral-500);
   --eds-theme-color-icon-neutral-strong-hover: var(--eds-color-neutral-800);
   --eds-theme-color-form-border-hover: var(--eds-color-neutral-800);

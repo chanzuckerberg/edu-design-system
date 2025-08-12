@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.2.1...v16.3.0) (2025-08-11)
+
+
+### Features
+
+* **tokens:** add brand tokens for text/icon ([#2233](https://github.com/chanzuckerberg/edu-design-system/issues/2233)) ([8a26eb9](https://github.com/chanzuckerberg/edu-design-system/commit/8a26eb9c31d4afd667ad6ec344813a5ecce4a497))
+
+
+### Bug Fixes
+
+* **Card:** use a11y-compliant HTML tags for component ([#2232](https://github.com/chanzuckerberg/edu-design-system/issues/2232)) ([baffddd](https://github.com/chanzuckerberg/edu-design-system/commit/baffddd6dff9d7aba3f5a479d435cff1d3dddd5f))
+* **deps:** update all non-major dependencies ([#2239](https://github.com/chanzuckerberg/edu-design-system/issues/2239)) ([71a0a9b](https://github.com/chanzuckerberg/edu-design-system/commit/71a0a9b0fbfd763476bfbbcef4d8e0eb9211444e))
+* fix typography token and usages ([#2234](https://github.com/chanzuckerberg/edu-design-system/issues/2234)) ([b817635](https://github.com/chanzuckerberg/edu-design-system/commit/b8176355bcbb86ab9a8d6302815886375f7cce15))
+* **typography:** add in offsets for font family 2 ([c6f0ef6](https://github.com/chanzuckerberg/edu-design-system/commit/c6f0ef62372b973c853f2f2fa77a33dfb567071d))
+* **typography:** add remaining offset sizes ([9917763](https://github.com/chanzuckerberg/edu-design-system/commit/99177632bec004e77903ab83e235dc157b46f245))
+
 ### [16.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.2.0...v16.2.1) (2025-07-24)
 
 

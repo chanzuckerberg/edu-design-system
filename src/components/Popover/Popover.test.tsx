@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
 import * as stories from './Popover.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 mockResizeObserver();
 

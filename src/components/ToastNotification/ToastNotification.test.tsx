@@ -5,7 +5,7 @@ import { render, waitFor } from '@testing-library/react';
 import React from 'react';
 import { ToastNotification } from './ToastNotification';
 import * as stories from './ToastNotification.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { AutoDismiss } = composeStories(stories);
 

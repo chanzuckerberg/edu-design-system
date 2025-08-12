@@ -4,6 +4,7 @@
       "fontFamily": {
         "1": "'Graphik', Arial, sans-serif",
         "2": "'Argent CF Italic', Georgia, serif",
+        "3": "inherit",
         "sizeOffset": {
           "2": "2"
         }
@@ -623,6 +624,12 @@
               "@": "#878C90"
             }
           },
+          "brand": {
+            "red": "#4D0118",
+            "yellow": "#876701",
+            "green": "#367759",
+            "blue": "#3165D2"
+          },
           "disabled": "#C0C4C8",
           "utility": {
             "default": {
@@ -782,7 +789,11 @@
             "placeholder": "#6C6967"
           },
           "brand": {
-            "default": "var(--eds-theme-color-text-brand-primary)"
+            "default": "var(--eds-theme-color-text-brand-primary)",
+            "red": "#4D0118",
+            "yellow": "#876701",
+            "green": "#367759",
+            "blue": "#3165D2"
           }
         },
         "text-highlight": {
@@ -803,6 +814,15 @@
             "text": "var(--eds-theme-color-text-neutral-default)"
           },
           "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
+        }
+      },
+      "typography": {
+        "fontStyle": {
+          "headline": {
+            "decorative": {
+              "inline": "light italic"
+            }
+          }
         }
       }
     }

@@ -13,11 +13,11 @@
   --heading-font-weight: var(--eds-typography-font-weight-normal);
   --heading-font-family: var(--eds-typography-font-family-1);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
-  --heading-text-transform: ;
 
   font: unset;
   font-family: var(--heading-font-family);
   font-size: calc(var(--heading-font-size) * 1px);
+  font-style: var(--heading-font-style, initial);
   line-height: calc(var(--heading-line-height) * 1px);
   font-weight: var(--heading-font-weight);
   text-transform: var(--heading-text-transform, none);
@@ -67,12 +67,12 @@
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
-/** TODO-AH: add in offsets */
 .heading--headline-decorative-inline-xl {
-  --heading-font-size: calc(var(--eds-typography-preset-800-font-size));
+  --heading-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
   --heading-line-height: var(--eds-typography-preset-800-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -82,10 +82,11 @@
 }
 
 .heading--headline-decorative-inline-lg {
-  --heading-font-size: var(--eds-typography-preset-800-font-size);
+  --heading-font-size: calc(var(--eds-typography-preset-800-font-size) + var(--eds-typography-font-family-size-offset-2));
   --heading-line-height: var(--eds-typography-preset-800-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -95,10 +96,11 @@
 }
 
 .heading--headline-decorative-inline-md {
-  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
   --heading-line-height: var(--eds-typography-preset-600-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -108,10 +110,11 @@
 }
 
 .heading--headline-decorative-inline-sm {
-  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
   --heading-line-height: var(--eds-typography-preset-600-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-light);
+  --heading-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {

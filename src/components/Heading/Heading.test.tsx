@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Heading } from './Heading';
 import * as stories from './Heading.stories';
-import type { StoryFile } from '../../util/utility-types';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Heading />', () => {
   generateSnapshots(stories as StoryFile);

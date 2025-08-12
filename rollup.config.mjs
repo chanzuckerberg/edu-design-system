@@ -1,3 +1,4 @@
+import { codecovRollupPlugin } from '@codecov/rollup-plugin';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
@@ -29,6 +30,13 @@ export default {
     }),
     typescript({
       tsconfig: 'tsconfig.build.json',
+    }),
+    // Put the Codecov Rollup plugin after all other plugins
+    codecovRollupPlugin({
+      enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
+      bundleName: '@chanzuckerberg/eds',
+      uploadToken: process.env.CODECOV_TOKEN,
+      telemetry: false,
     }),
   ],
 };
