@@ -436,6 +436,8 @@
   --eds-theme-color-background-table-row-selected: var(--eds-color-blue-100);
   --eds-theme-color-background-table-row-stripe-2: var(--eds-color-white);
   --eds-theme-color-background-table-row-stripe-1: var(--eds-color-blue-025);
+  --eds-theme-color-background-skeleton-stripe: var(--eds-color-neutral-050);
+  --eds-theme-color-background-skeleton: var(--eds-color-neutral-100);
   --eds-theme-color-background-brand-pink: var(--eds-color-pink-450);
   --eds-theme-color-background-brand-purple-low-emphasis: var(--eds-color-purple-050);
   --eds-theme-color-background-brand-purple: var(--eds-color-purple-350);

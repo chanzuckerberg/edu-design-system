@@ -883,11 +883,20 @@
               "value": "{eds.color.pink.450}"
             }
           },
+          "skeleton": {
+            "@": {
+              "value": "{eds.color.neutral.100}",
+              "group": "color"
+            },
+            "stripe": {
+              "value": "{eds.color.neutral.050}",
+              "group": "color"
+            }
+          },
           "tableRow": {
             "stripe": {
               "1": {
-                "value": "{eds.color.blue.025}",
-                "group": "color"
+                "value": "{eds.color.blue.025}"
               },
               "2": {
                 "value": "{eds.color.white}"

@@ -4,10 +4,10 @@
 
 @keyframes bg-wipe {
   0% {
-    background-position: 0% 0%;
+    background-position: right 0%;
   }
   100% {
-    background-position: 100% 0%;
+    background-position: left 0%;
   }
 }
 
@@ -15,13 +15,13 @@
  * Skeleton
  */
 .skeleton {
-  border-radius: calc(var(--eds-border-radius-lg) * 1px);
-  background-color: var(--eds-theme-color-background-neutral-medium);
+  border-radius: calc(var(--eds-border-radius-150) * 1px);
+  background-color: var(--eds-theme-color-background-skeleton);
   background-image: linear-gradient(
-    to right,
-    var(--eds-theme-color-background-neutral-medium) 50%,
-    var(--eds-theme-color-background-neutral-subtle) 65%,
-    var(--eds-theme-color-background-neutral-medium) 80%);
+    to left,
+    var(--eds-theme-color-background-skeleton) 50%,
+    var(--eds-theme-color-background-skeleton-stripe) 65%,
+    var(--eds-theme-color-background-skeleton) 80%);
   background-size: 500% 100%;
 }
 
