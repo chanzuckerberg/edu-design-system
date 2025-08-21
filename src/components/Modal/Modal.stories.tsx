@@ -75,6 +75,37 @@ export const Default: Story = {
 };
 
 /**
+ * `Modal` provides `size`, which allows control over the natural width of the modal. This does not affect the contents
+ * of the modal except to wrap text.
+ */
+export const Full: Story = {
+  args: {
+    size: 'full',
+  },
+  render: (args) => (
+    <InteractiveExample {...args}>
+      <Modal.Header>
+        <Modal.Title>Modal title</Modal.Title>
+        <Modal.SubTitle>Modal title</Modal.SubTitle>
+      </Modal.Header>
+      <Modal.Body>
+        <div className="fpo h-full w-full">Modal Content</div>
+      </Modal.Body>
+      <Modal.Footer>
+        <ButtonGroup>
+          <Button onClick={() => {}} rank="primary">
+            Primary
+          </Button>
+          <Button onClick={() => {}} rank="secondary">
+            Secondary
+          </Button>
+        </ButtonGroup>
+      </Modal.Footer>
+    </InteractiveExample>
+  ),
+};
+
+/**
  * Modals can also have a more emphasized backdrop overlay
  */
 export const HighEmphasis: Story = {
