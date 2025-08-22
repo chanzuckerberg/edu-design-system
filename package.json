@@ -67,7 +67,7 @@
     "storybook:axe": "yarn run build:storybook --test && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "plop": "plop component",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
     "types": "tsc --noEmit && npm run build:bin -- --noEmit"
   },
