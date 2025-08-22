@@ -1,10 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent } from '@storybook/testing-library';
 
-// the @storybook packages do not actually export act according to the IDE
-// eslint-disable-next-line storybook/use-storybook-testing-library
-import { act } from '@testing-library/react';
-
 import React from 'react';
 import { useState } from 'react';
 
@@ -81,12 +77,7 @@ export const Default: Story = {
   ),
   play: async () => {
     await userEvent.tab();
-
-    // TODO: apparently this act() is very much necessary
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      await userEvent.keyboard(' ', { delay: 100 });
-    });
+    await userEvent.keyboard(' ', { delay: 100 });
   },
 };
 
