@@ -76,8 +76,15 @@ export const Default: Story = {
     </InteractiveExample>
   ),
   play: async () => {
+    // Adding a mock to hide the warnings coming from Headless's Transition component
+    // it says that act() is required, but in fact it isn't, and importing and using it breaks chromatic
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
+
     await userEvent.tab();
     await userEvent.keyboard(' ', { delay: 100 });
+
+    consoleErrorMock.mockRestore();
   },
 };
 
