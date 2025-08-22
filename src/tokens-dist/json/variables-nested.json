@@ -381,6 +381,10 @@
             },
             "pink": "#DB458D"
           },
+          "skeleton": {
+            "@": "#EEE7E4",
+            "stripe": "#F9F3F1"
+          },
           "tableRow": {
             "stripe": {
               "1": "#F5FAFF",
