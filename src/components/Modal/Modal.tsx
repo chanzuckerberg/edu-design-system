@@ -102,7 +102,7 @@ type ModalContentProps = {
    *
    * **Default is `"lg"`**.
    */
-  size?: Extract<Size, 'sm' | 'lg'>;
+  size?: Extract<Size, 'sm' | 'lg'> | 'full';
 };
 
 type ModalProps = ModalContentProps & {
