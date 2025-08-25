@@ -11,6 +11,7 @@ export { default as Table } from './components/Table';
 /**
  * 2.x component theme exports
  */
+export { default as AppHeader } from './components/AppHeader';
 export { default as Avatar } from './components/Avatar';
 export { default as Accordion } from './components/Accordion';
 export { default as AppNotification } from './components/AppNotification';

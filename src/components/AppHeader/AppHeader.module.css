@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    # APP HEADER
+\*------------------------------------*/
+
+/**
+ * AppHeader
+ */
+.app-header {
+  display: flex;
+  background-color: rebeccapurple;
+}
+
+.app-header--orientation-horizontal {
+  flex-direction: column;
+}
+
+.app-header--orientation-vertical {
+  flex-direction: row;
+}

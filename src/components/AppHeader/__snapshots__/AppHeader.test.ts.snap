@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppHeader /> Default story renders snapshot 1`] = `
+<div
+  class="app-header app-header--orientation-horizontal"
+  title="[{"label":"group-1","navItems":[{"label":"test","type":"link","href":"https://example.org"},{"label":"test 2","type":"link","href":"https://example.org"}]}]"
+>
+  <div
+    class="app-header__titles"
+  >
+    <header
+      class="app-header-title"
+    >
+      <div
+        class="app-header-title__title"
+      >
+        Title
+      </div>
+      <div
+        class="app-header-title__sub-title"
+      >
+        Sub-title
+      </div>
+    </header>
+  </div>
+  <div
+    class="app-header__nav-groups"
+  >
+    <nav
+      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+    >
+      <a
+        class="app-header__link"
+        href="https://example.org"
+        type="link"
+      >
+        test
+      </a>
+      <a
+        class="app-header__link"
+        href="https://example.org"
+        type="link"
+      >
+        test 2
+      </a>
+    </nav>
+  </div>
+</div>
+`;
