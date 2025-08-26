@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
+
 import React from 'react';
 import { useState } from 'react';
 
@@ -12,13 +14,11 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
-    // The modal is initially closed for most of these stories,
-    // which renders testing it for visual regressions unhelpful.
-    chromatic: { disableSnapshot: true },
+    chromatic: { delay: 300, prefersReducedMmotion: 'reduce' },
     badges: ['api-3.0', 'theme-2.1'],
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -51,11 +51,14 @@ function InteractiveExample(args: InteractiveArgs) {
  * "docs" sub-page.
  */
 export const Default: Story = {
+  parameters: {
+    layout: 'centered',
+  },
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
         <Modal.Title>Modal title</Modal.Title>
-        <Modal.SubTitle>Modal title</Modal.SubTitle>
+        <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
       </Modal.Header>
       <Modal.Body>
         <div className="fpo h-full w-full">Modal Content</div>
@@ -72,6 +75,17 @@ export const Default: Story = {
       </Modal.Footer>
     </InteractiveExample>
   ),
+  play: async () => {
+    // Adding a mock to hide the warnings coming from Headless's Transition component
+    // it says that act() is required, but in fact it isn't, and importing and using it breaks chromatic
+    const originalError = console.error;
+    console.error = () => {};
+
+    await userEvent.tab();
+    await userEvent.keyboard(' ', { delay: 100 });
+
+    console.error = originalError;
+  },
 };
 
 /**
@@ -112,16 +126,71 @@ export const HighEmphasis: Story = {
   args: {
     overlayEmphasis: 'high',
   },
+  parameters: Default.parameters,
   render: Default.render,
+  play: Default.play,
+};
+
+/**
+ * Large modals allow for control of the on screen height. When set to max, they will occupy the maxiumum space allowed to start. Padding is considered.
+ */
+export const LargeMax: Story = {
+  args: {
+    size: 'lg',
+    height: 'max',
+  },
+  parameters: Default.parameters,
+  render: Default.render,
+  play: Default.play,
+};
+
+/**
+ * Large modals allow for control of the on screen height. When set to auto, the height will grow based on the amount of content in the modal body.
+ */
+export const LargeAuto: Story = {
+  args: {
+    size: 'lg',
+    height: 'auto',
+  },
+  parameters: Default.parameters,
+  render: Default.render,
+  play: Default.play,
+};
+
+/**
+ * Large modals allow for control of the on screen height. When set to fixed, the modal's size will match a fixed maxiumum height based on the viewport.
+ */
+export const LargeFixed: Story = {
+  args: {
+    size: 'lg',
+    height: 'fixed',
+  },
+  parameters: Default.parameters,
+  render: Default.render,
+  play: Default.play,
+};
+
+/**
+ * Small will always try to take up the least amount of space, and ignore the height property.
+ */
+export const Small: Story = {
+  args: {
+    size: 'sm',
+  },
+  parameters: Default.parameters,
+  render: Default.render,
+  play: Default.play,
 };
 
 /**
  * Modals can contain long, scrollable text. This is not recommended, however.
  */
-export const WithLongTextScrollable: StoryObj<InteractiveArgs> = {
+export const WithLongTextScrollable: Story = {
   args: {
     isScrollable: true,
   },
+  parameters: Default.parameters,
+  play: Default.play,
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
@@ -224,8 +293,8 @@ export const WithLongTextScrollable: StoryObj<InteractiveArgs> = {
  */
 export const ContentDefault: Story = {
   render: (args) => (
-    <div className="flex items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+    <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
+      <div className="absolute h-[100vh] w-full bg-utility-overlay-lowEmphasis opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -270,7 +339,7 @@ export const ContentDefault: Story = {
  * `Modal` provides `size`, which allows control over the natural width of the modal. This does not affect the contents
  * of the modal except to wrap text.
  */
-export const Large: Story = {
+export const ContentLarge: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
@@ -283,10 +352,10 @@ export const Large: Story = {
  *
  * This can be as large as the viewport allows, or as short as the content specifies.
  */
-export const LargeAuto: Story = {
-  ...Large,
+export const ContentLargeAuto: Story = {
+  ...ContentLarge,
   args: {
-    ...Large.args,
+    ...ContentLarge.args,
     height: 'auto',
   },
 };
@@ -294,10 +363,10 @@ export const LargeAuto: Story = {
 /**
  * Large modals can have height set to max, which will take up the maxiumum vertical height allowed in the viewport.
  */
-export const LargeMax: Story = {
-  ...Large,
+export const ContentLargeMax: Story = {
+  ...ContentLarge,
   args: {
-    ...Large.args,
+    ...ContentLarge.args,
     height: 'max',
   },
 };
@@ -305,7 +374,7 @@ export const LargeMax: Story = {
 /**
  * `Modal` also allows for `small`.
  */
-export const Small: Story = {
+export const ContentSmall: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
@@ -347,7 +416,7 @@ export const LayoutVertical: Story = {
     ),
   },
   render: (args) => (
-    <div className="flex items-center justify-center">
+    <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
       <Modal.Content
         {...args}
@@ -392,7 +461,7 @@ export const LayoutVerticalWithTertiary: Story = {
     ),
   },
   render: (args) => (
-    <div className="flex items-center justify-center">
+    <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
       <Modal.Content
         {...args}
@@ -433,7 +502,7 @@ export const WithCriticalButton: Story = {
     ),
   },
   render: (args) => (
-    <div className="flex items-center justify-center">
+    <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
       <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
       <Modal.Content
         {...args}
