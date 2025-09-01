@@ -108,7 +108,7 @@
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.9",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.14",
     "@chanzuckerberg/story-utils": "^4.0.8",
-    "@chromatic-com/storybook": "^3",
+    "@chromatic-com/storybook": "^4",
     "@codecov/rollup-plugin": "^1.9.1",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
