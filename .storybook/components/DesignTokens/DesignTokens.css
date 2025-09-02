@@ -1,14 +1,14 @@
 .sg-colors {
   display: grid;
-  grid-gap: calc(var(--eds-spacing-size-2) * 1px);
+  gap: calc(var(--eds-spacing-size-2) * 1px);
   
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .sg-colors li {
-  -webkit-box-flex: 1;
   flex: auto;
+  flex-grow: 1;
   padding: calc(var(--eds-spacing-size-1) * 1px);
   margin: 0 calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1) * 1px) 0;
   min-width: calc(var(--eds-spacing-size-10) * 1px);

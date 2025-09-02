@@ -134,7 +134,7 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
-  text-indent: 9999;
+  text-indent: 9999px;
 }
 
 .data-table__cell {
