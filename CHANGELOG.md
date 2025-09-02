@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.3.0...v16.4.0) (2025-09-02)
+
+
+### Features
+
+* **Modal:** add in full size modal ([#2242](https://github.com/chanzuckerberg/edu-design-system/issues/2242)) ([529a44a](https://github.com/chanzuckerberg/edu-design-system/commit/529a44a285db9a34b7fbf3c68528084d6f07eaa9))
+* **Skeleton:** add in new tokens and usages ([#2241](https://github.com/chanzuckerberg/edu-design-system/issues/2241)) ([312a413](https://github.com/chanzuckerberg/edu-design-system/commit/312a413d822af13ffd661f7132567057ac1a42fc))
+
+
+### Bug Fixes
+
+* **deps:** update dependency ts-morph to v26 ([#2249](https://github.com/chanzuckerberg/edu-design-system/issues/2249)) ([b1b02f6](https://github.com/chanzuckerberg/edu-design-system/commit/b1b02f69988dde6daeb6c058b06f1bd8e1a95949))
+* **Modal:** fix handling for auto height large modals ([#2243](https://github.com/chanzuckerberg/edu-design-system/issues/2243)) ([8b290e8](https://github.com/chanzuckerberg/edu-design-system/commit/8b290e835680ad3c7218cf4a3320f89ba0f509ad))
+
 ## [16.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.2.1...v16.3.0) (2025-08-11)
 
 
