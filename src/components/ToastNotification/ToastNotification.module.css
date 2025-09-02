@@ -10,7 +10,7 @@
   display: flex;
   gap: calc(var(--eds-spacing-size-2) * 1px);
   padding: calc(var(--eds-spacing-size-2) * 1px);
-  align-items: top;
+  align-items: start;
 
   border: calc(var(--eds-spacing-size-quarter) * 1px) solid;
   border-left: calc(var(--eds-spacing-size-2) * 1px) solid;
