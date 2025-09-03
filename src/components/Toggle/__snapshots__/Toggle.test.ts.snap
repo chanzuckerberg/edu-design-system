@@ -122,7 +122,7 @@ exports[`<Toggle /> WhenChecked story renders snapshot 1`] = `
 
 exports[`<Toggle /> WithSubLabel story renders snapshot 1`] = `
 <div
-  class="toggle__wrapper toggle--has-sublabel"
+  class="toggle__wrapper toggle--has-subLabel"
   data-headlessui-state=""
 >
   <button
@@ -151,11 +151,11 @@ exports[`<Toggle /> WithSubLabel story renders snapshot 1`] = `
     >
       Toggle Label
       <span
-        class="toggle__sublabel"
+        class="toggle__subLabel"
         data-headlessui-state=""
         id="headlessui-description-:r9:"
       >
-        sublabel text description here
+        subLabel text description here
       </span>
     </span>
      

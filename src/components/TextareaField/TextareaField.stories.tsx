@@ -13,7 +13,7 @@ const meta: Meta<typeof TextareaField> = {
 dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.`,
     label: 'Textarea Field',
-    sublabel: 'Additional descriptive text for the field.',
+    subLabel: 'Additional descriptive text for the field.',
     rows: 5,
     fieldNote: 'Validation information or error details about the input.',
     spellCheck: false,
@@ -30,7 +30,7 @@ type Story = StoryObj<typeof TextareaField>;
 
 export const Default: Story = {
   args: {
-    sublabel: '',
+    subLabel: '',
     fieldNote: '',
   },
 };

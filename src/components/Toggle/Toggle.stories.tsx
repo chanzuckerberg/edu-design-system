@@ -48,7 +48,7 @@ export const WhenChecked: Story = {
 
 export const WithSubLabel: Story = {
   args: {
-    sublabel: 'sublabel text description here',
+    subLabel: 'subLabel text description here',
   },
 };
 

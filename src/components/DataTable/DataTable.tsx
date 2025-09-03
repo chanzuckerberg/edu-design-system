@@ -426,7 +426,7 @@ export const DataTableHeaderCell = ({
           {subLabel && (
             <Text
               as="span"
-              className={styles['data-table__cell-sublabel']}
+              className={styles['data-table__cell-subLabel']}
               preset="body-sm"
             >
               {subLabel}
@@ -475,7 +475,7 @@ export const DataTableDataCell = ({
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
           {subLabel && (
-            <span className={styles['data-table__cell-sublabel']}>
+            <span className={styles['data-table__cell-subLabel']}>
               {subLabel}
             </span>
           )}

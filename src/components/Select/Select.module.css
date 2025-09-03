@@ -108,7 +108,7 @@
   color: var(--eds-theme-color-text-utility-default-primary);
 }
 
-.select__sublabel {
+.select__subLabel {
   color: var(--eds-theme-color-text-utility-default-secondary);
   flex: 1 0 100%;
 }

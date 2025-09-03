@@ -94,7 +94,7 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel input-field__label--disabled"
+        class="input-field__subLabel input-field__label--disabled"
       >
         <span
           class="text text--body-sm"
@@ -157,7 +157,7 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -386,7 +386,7 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -473,7 +473,7 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -540,7 +540,7 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
         (Required)
       </span>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -608,7 +608,7 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
         (Required)
       </span>
       <div
-        class="input-field__sublabel input-field__label--disabled"
+        class="input-field__subLabel input-field__label--disabled"
       >
         <span
           class="text text--body-sm"
@@ -676,7 +676,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
         (Optional)
       </span>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -758,7 +758,7 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -847,7 +847,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         15
       </div>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -908,7 +908,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         15
       </div>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -968,7 +968,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         15
       </div>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -1048,7 +1048,7 @@ exports[`<InputField /> WithFullDescription story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -1108,7 +1108,7 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="input-field__sublabel"
+        class="input-field__subLabel"
       >
         <span
           class="text text--body-sm"
