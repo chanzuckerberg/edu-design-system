@@ -79,13 +79,14 @@ jobs:
       - name: Publish to Chromatic 🦄
         run: |
           yarn run chromatic \
-            --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} \
             --storybook-build-dir storybook-static \
             --exit-zero-on-changes \
             --exit-once-uploaded \
             --auto-accept-changes '{main,next}' \
             --only-changed \
             --skip 'dependabot/**'
+        env:
+            CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       - name: Build and Run Accessibility Tests 💛
         run: yarn run storybook:axe
 
