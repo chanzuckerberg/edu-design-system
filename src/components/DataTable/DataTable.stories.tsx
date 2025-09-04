@@ -147,7 +147,7 @@ const columnHelper = DataTableUtils.createColumnHelper<Person>();
 const columns = [
   columnHelper.accessor('firstName', {
     header: () => (
-      <DataTable.HeaderCell sortDirection="ascending" sublabel="Given Name">
+      <DataTable.HeaderCell sortDirection="ascending" subLabel="Given Name">
         First Name
       </DataTable.HeaderCell>
     ),
@@ -156,7 +156,7 @@ const columns = [
   columnHelper.accessor((row) => row.lastName, {
     id: 'lastName',
     header: () => (
-      <DataTable.HeaderCell sublabel="Surname">Last Name</DataTable.HeaderCell>
+      <DataTable.HeaderCell subLabel="Surname">Last Name</DataTable.HeaderCell>
     ),
     cell: (info) => <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>,
   }),
@@ -182,14 +182,14 @@ const columns = [
   }),
   columnHelper.accessor('progress', {
     header: () => (
-      <DataTable.HeaderCell alignment="trailing" sublabel='"Complete" is > 80%'>
+      <DataTable.HeaderCell alignment="trailing" subLabel='"Complete" is > 80%'>
         Profile Progress
       </DataTable.HeaderCell>
     ),
     cell: (info) => (
       <DataTable.DataCell
         alignment="trailing"
-        sublabel={Number(info.renderValue()) >= 80 ? 'Complete' : 'Incomplete'}
+        subLabel={Number(info.renderValue()) >= 80 ? 'Complete' : 'Incomplete'}
       >
         {info.renderValue()}
       </DataTable.DataCell>
@@ -241,7 +241,7 @@ export const TableStyleBorder: StoryObj<Args> = {
 /**
  * When using table size small, we have less padding on the cells and header
  *
- * **Note**: using `sublabel`s when `size` = `'sm'` is not allowed.
+ * **Note**: using `subLabel`s when `size` = `'sm'` is not allowed.
  */
 export const TableSizeSm: StoryObj<Args> = {
   args: {
@@ -335,7 +335,7 @@ export const Selectable: StoryObj<Args> = {
             <DataTable.HeaderCell
               leadingIcon="person-add"
               sortDirection="ascending"
-              sublabel="Given Name"
+              subLabel="Given Name"
             >
               First Name
             </DataTable.HeaderCell>
@@ -349,7 +349,7 @@ export const Selectable: StoryObj<Args> = {
         columnHelper.accessor((row) => row.lastName, {
           id: 'lastName',
           header: () => (
-            <DataTable.HeaderCell sublabel="Surname">
+            <DataTable.HeaderCell subLabel="Surname">
               Last Name
             </DataTable.HeaderCell>
           ),
@@ -385,7 +385,7 @@ export const Selectable: StoryObj<Args> = {
           header: () => (
             <DataTable.HeaderCell
               alignment="trailing"
-              sublabel='"Complete" is > 80%'
+              subLabel='"Complete" is > 80%'
             >
               Profile Progress
             </DataTable.HeaderCell>
@@ -393,7 +393,7 @@ export const Selectable: StoryObj<Args> = {
           cell: (info) => (
             <DataTable.DataCell
               alignment="trailing"
-              sublabel={
+              subLabel={
                 Number(info.renderValue()) >= 80 ? 'Complete' : 'Incomplete'
               }
             >
@@ -481,7 +481,7 @@ export const VerticalDivider: StoryObj<Args> = {
               hasHorizontalDivider
               leadingIcon="person-add"
               sortDirection="ascending"
-              sublabel="Given Name"
+              subLabel="Given Name"
             >
               First Name
             </DataTable.HeaderCell>
@@ -495,7 +495,7 @@ export const VerticalDivider: StoryObj<Args> = {
         columnHelper.accessor((row) => row.lastName, {
           id: 'lastName',
           header: () => (
-            <DataTable.HeaderCell hasHorizontalDivider sublabel="Surname">
+            <DataTable.HeaderCell hasHorizontalDivider subLabel="Surname">
               Last Name
             </DataTable.HeaderCell>
           ),
@@ -534,7 +534,7 @@ export const VerticalDivider: StoryObj<Args> = {
             <DataTable.HeaderCell
               alignment="trailing"
               hasHorizontalDivider
-              sublabel='"Complete" is > 80%'
+              subLabel='"Complete" is > 80%'
             >
               Profile Progress
             </DataTable.HeaderCell>
@@ -543,7 +543,7 @@ export const VerticalDivider: StoryObj<Args> = {
             <DataTable.DataCell
               alignment="trailing"
               hasHorizontalDivider
-              sublabel={
+              subLabel={
                 Number(info.renderValue()) >= 80 ? 'Complete' : 'Incomplete'
               }
             >

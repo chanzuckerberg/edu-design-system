@@ -58,7 +58,7 @@ exports[`<TextareaField /> WhenDefaultStatus story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -119,7 +119,7 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel textarea-field__label--disabled"
+        class="textarea-field__subLabel textarea-field__label--disabled"
       >
         <span
           class="text text--body-sm"
@@ -183,7 +183,7 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -261,7 +261,7 @@ exports[`<TextareaField /> WhenNoDefaultValue story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -309,7 +309,7 @@ exports[`<TextareaField /> WhenOptional story renders snapshot 1`] = `
         (Optional)
       </span>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -370,7 +370,7 @@ exports[`<TextareaField /> WhenReadOnly story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -437,7 +437,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
         (Required)
       </span>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -499,7 +499,7 @@ exports[`<TextareaField /> WhenUsingValue story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -546,7 +546,7 @@ exports[`<TextareaField /> WhenWarning story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -624,7 +624,7 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -697,7 +697,7 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
         144
       </p>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -789,7 +789,7 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
         144
       </p>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
@@ -880,7 +880,7 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
         144
       </p>
       <div
-        class="textarea-field__sublabel"
+        class="textarea-field__subLabel"
       >
         <span
           class="text text--body-sm"
