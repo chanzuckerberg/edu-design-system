@@ -1,19 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Hr /> Brand story renders snapshot 1`] = `
-<hr
-  class="hr hr--brand w-[384px]"
-/>
-`;
-
 exports[`<Hr /> Default story renders snapshot 1`] = `
 <hr
   class="hr w-[384px]"
-/>
-`;
-
-exports[`<Hr /> Large story renders snapshot 1`] = `
-<hr
-  class="hr hr--lg w-[384px]"
 />
 `;
