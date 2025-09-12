@@ -31,9 +31,10 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
   >
     <nav
       aria-label="group-1"
-      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul>
+      <ul
+        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+      >
         <li>
           <button
             class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
@@ -73,9 +74,10 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
     </nav>
     <nav
       aria-label="group-2"
-      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul>
+      <ul
+        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+      >
         <li>
           <a
             class="app-header__nav-item app-header__nav-item--link app-header__nav-item--icon-layout-left"
@@ -167,9 +169,10 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
   >
     <nav
       aria-label="group-1"
-      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul>
+      <ul
+        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+      >
         <li>
           <a
             class="app-header__nav-item app-header__nav-item--link app-header__nav-item--icon-layout-none"
@@ -210,9 +213,10 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
     </nav>
     <nav
       aria-label="group-2"
-      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul>
+      <ul
+        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+      >
         <li>
           <a
             class="app-header__nav-item app-header__nav-item--link app-header__nav-item--icon-layout-left"
@@ -304,9 +308,10 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
   >
     <nav
       aria-label="group-1"
-      class="drawer-content__nav-group"
     >
-      <ul>
+      <ul
+        class="drawer-content__nav-group"
+      >
         <li
           class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
         >
@@ -360,9 +365,10 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
     </nav>
     <nav
       aria-label="group-2"
-      class="drawer-content__nav-group"
     >
-      <ul>
+      <ul
+        class="drawer-content__nav-group"
+      >
         <li
           class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
         >
