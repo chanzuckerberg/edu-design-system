@@ -1,5 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
+
+import { assertEdsUsage } from '../../util/logging';
+
 import styles from './Hr.module.css';
 
 export type HrProps = {
@@ -7,14 +10,14 @@ export type HrProps = {
    * Stylistic variations for the horizontal rule
    *
    * **Default is `"brand"`**.
-   *
+   * @deprecated
    */
   variant?: 'brand';
   /**
    * Size variations for the horizontal rule.
    *
    * **Default is `"lg"`**.
-   *
+   * @deprecated
    */
   size?: 'lg';
   /**
@@ -34,6 +37,11 @@ export const Hr = ({ className, size, variant, ...other }: HrProps) => {
     size === 'lg' && styles[`hr--${size}`],
     variant === 'brand' && styles[`hr--${variant}`],
     className,
+  );
+
+  assertEdsUsage(
+    [!!(size || variant)],
+    'size/variant props have been deprecated and will be removed from the next major version of EDS',
   );
 
   return <hr className={componentClassName} {...other} />;

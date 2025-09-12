@@ -14,10 +14,14 @@ export default {
   },
   argTypes: {
     size: {
-      control: false,
+      table: {
+        disable: true,
+      },
     },
     variant: {
-      control: false,
+      table: {
+        disable: true,
+      },
     },
   },
 } as Meta<typeof Hr>;
