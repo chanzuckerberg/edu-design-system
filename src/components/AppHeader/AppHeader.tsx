@@ -329,20 +329,22 @@ const AppHeaderNavGroup = ({
     orientation && styles[`app-header-nav-group--orientation-${orientation}`],
   );
   return (
-    <nav className={componentClassName} {...other}>
-      {navItems.map((navItem) => {
-        return (
-          <li key={navItem.name}>
-            {navItem.type === 'button' && (
-              <AppHeaderButton {...navItem} onClick={onButtonClick} />
-            )}
-            {navItem.type === 'link' && (
-              <AppHeaderLink key={navItem.name} {...navItem} />
-            )}
-            {/* In horizontal layouts, we never render the horizontal rule */}
-          </li>
-        );
-      })}
+    <nav aria-label={name} className={componentClassName} {...other}>
+      <ul>
+        {navItems.map((navItem) => {
+          return (
+            <li key={navItem.name}>
+              {navItem.type === 'button' && (
+                <AppHeaderButton {...navItem} onClick={onButtonClick} />
+              )}
+              {navItem.type === 'link' && (
+                <AppHeaderLink key={navItem.name} {...navItem} />
+              )}
+              {/* In horizontal layouts, we never render the horizontal rule */}
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 };
@@ -426,31 +428,37 @@ const AppHeaderButton = ({
 const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
   <div className={styles['drawer-content']}>
     {navGroups?.map((navGroup) => (
-      <nav className={styles['drawer-content__nav-group']} key={navGroup.name}>
-        {navGroup.navItems.map((navItem) => {
-          return (
-            <li
-              className={clsx(
-                styles['drawer-content__nav-group-item'],
-                navItem.type &&
-                  styles[
-                    `drawer-content__nav-group-item--type-${navItem.type}`
-                  ],
-              )}
-              key={navItem.name}
-            >
-              {navItem.type === 'button' && (
-                <AppHeaderButton key={navItem.name} {...navItem} />
-              )}
-              {navItem.type === 'link' && (
-                <AppHeaderLink key={navItem.name} {...navItem} />
-              )}
-              {navItem.type === 'separator' && (
-                <Hr key={navItem.name} {...navItem} />
-              )}
-            </li>
-          );
-        })}
+      <nav
+        aria-label={navGroup.name}
+        className={styles['drawer-content__nav-group']}
+        key={navGroup.name}
+      >
+        <ul>
+          {navGroup.navItems.map((navItem) => {
+            return (
+              <li
+                className={clsx(
+                  styles['drawer-content__nav-group-item'],
+                  navItem.type &&
+                    styles[
+                      `drawer-content__nav-group-item--type-${navItem.type}`
+                    ],
+                )}
+                key={navItem.name}
+              >
+                {navItem.type === 'button' && (
+                  <AppHeaderButton key={navItem.name} {...navItem} />
+                )}
+                {navItem.type === 'link' && (
+                  <AppHeaderLink key={navItem.name} {...navItem} />
+                )}
+                {navItem.type === 'separator' && (
+                  <Hr key={navItem.name} {...navItem} />
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </nav>
     ))}
   </div>
