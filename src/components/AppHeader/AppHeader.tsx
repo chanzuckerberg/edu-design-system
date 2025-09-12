@@ -224,7 +224,7 @@ export const AppHeader = ({
       <header className={componentClassName} {...other}>
         <div className={styles['app-header__titles']}>
           {href ? (
-            <a href={href}>
+            <a aria-label="homepage" href={href}>
               <AppHeaderTitle subTitle={subTitle} title={title} />
             </a>
           ) : (

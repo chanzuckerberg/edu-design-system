@@ -11,6 +11,7 @@
   gap: calc(var(--eds-spacing-size-3) * 1px);
   align-items: center;
   overflow: hidden;
+  box-shadow: var(--eds-box-shadow-md);
 
   background-color: var(--eds-theme-color-background-utility-base-1);
 }
@@ -20,7 +21,6 @@
     calc(var(--eds-spacing-size-6) * 1px);
   min-height: calc(var(--eds-spacing-size-12) * 1px);
   flex-direction: row;
-  box-shadow: var(--eds-box-shadow-md);
   width: 100%;
 
   /* Mobile first: hide nav groups unless at least minimum width */
@@ -54,6 +54,10 @@
 
   .drawer-content {
     width: 232px;
+  }
+
+  .app-header__nav-item {
+    width: 100%;
   }
 }
 
@@ -103,6 +107,7 @@
     overflow: hidden;
     right: 0;
     margin: 0;
+    box-shadow: var(--eds-box-shadow-md);
 
     /* Mobile-first: hide this at bigger viewports */
     padding-top: calc(var(--eds-spacing-size-3) * 1px);
@@ -149,6 +154,8 @@
       --eds-theme-color-background-utility-interactive-no-emphasis-active
     );
   }
+
+  color: var(--eds-theme-color-icon-utility-interactive-primary);
 }
 
 .app-header__nav-item--icon-layout-left {
