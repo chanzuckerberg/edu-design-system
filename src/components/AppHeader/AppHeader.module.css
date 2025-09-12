@@ -163,11 +163,14 @@
  * AppHeader NavGroup
  */
 .app-header-nav-group {
-  display: flex;
-  gap: calc(var(--eds-spacing-size-1) * 1px);
   margin: 0;
   padding: 0;
   list-style: none;
+
+  ul {
+    display: flex;
+    gap: calc(var(--eds-spacing-size-1) * 1px);
+  }
 }
 
 .drawer-content {

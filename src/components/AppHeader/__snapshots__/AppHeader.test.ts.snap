@@ -13,7 +13,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
       <span
         class="text text--headline-md"
       >
-        Evaluators
+        Title
       </span>
     </div>
     <div
@@ -22,7 +22,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
       <span
         class="text text--body-lg"
       >
-        Playground
+        Sub-title
       </span>
     </div>
   </div>
@@ -31,10 +31,9 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
   >
     <nav
       aria-label="group-1"
+      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
-      >
+      <ul>
         <li>
           <button
             class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
@@ -42,7 +41,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              English Language Arts
+              Link Item One
             </span>
           </button>
         </li>
@@ -53,7 +52,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              Science
+              Link Item Two
             </span>
           </button>
         </li>
@@ -66,7 +65,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              Whole child
+              Link Item Three
             </span>
           </a>
         </li>
@@ -74,10 +73,9 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
     </nav>
     <nav
       aria-label="group-2"
+      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
-      >
+      <ul>
         <li>
           <a
             class="app-header__nav-item app-header__nav-item--link app-header__nav-item--icon-layout-left"
@@ -151,7 +149,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
       <span
         class="text text--headline-md"
       >
-        Evaluators
+        Title
       </span>
     </div>
     <div
@@ -160,7 +158,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
       <span
         class="text text--body-lg"
       >
-        Playground
+        Sub-title
       </span>
     </div>
   </div>
@@ -169,10 +167,9 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
   >
     <nav
       aria-label="group-1"
+      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
-      >
+      <ul>
         <li>
           <a
             class="app-header__nav-item app-header__nav-item--link app-header__nav-item--icon-layout-none"
@@ -181,7 +178,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              English Language Arts
+              Link Item One
             </span>
           </a>
         </li>
@@ -193,7 +190,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              Science
+              Link Item Two
             </span>
           </a>
         </li>
@@ -205,7 +202,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              Whole child
+              Link Item Three
             </span>
           </a>
         </li>
@@ -213,10 +210,9 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
     </nav>
     <nav
       aria-label="group-2"
+      class="app-header-nav-group app-header-nav-group--orientation-horizontal"
     >
-      <ul
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
-      >
+      <ul>
         <li>
           <a
             class="app-header__nav-item app-header__nav-item--link app-header__nav-item--icon-layout-left"
@@ -290,7 +286,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
       <span
         class="text text--headline-md"
       >
-        Evaluators
+        Title
       </span>
     </div>
     <div
@@ -299,7 +295,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
       <span
         class="text text--body-lg"
       >
-        Playground
+        Sub-title
       </span>
     </div>
   </div>
@@ -308,10 +304,9 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
   >
     <nav
       aria-label="group-1"
+      class="drawer-content__nav-group"
     >
-      <ul
-        class="drawer-content__nav-group"
-      >
+      <ul>
         <li
           class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
         >
@@ -321,7 +316,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              English Language Arts
+              Link Item One
             </span>
           </button>
         </li>
@@ -334,7 +329,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              Science
+              Link Item Two
             </span>
           </button>
         </li>
@@ -357,7 +352,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
             <span
               class="text text--label-lg"
             >
-              Whole child
+              Link Item Three
             </span>
           </a>
         </li>
@@ -365,10 +360,9 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
     </nav>
     <nav
       aria-label="group-2"
+      class="drawer-content__nav-group"
     >
-      <ul
-        class="drawer-content__nav-group"
-      >
+      <ul>
         <li
           class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
         >

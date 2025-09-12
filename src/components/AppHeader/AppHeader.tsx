@@ -329,8 +329,8 @@ const AppHeaderNavGroup = ({
     orientation && styles[`app-header-nav-group--orientation-${orientation}`],
   );
   return (
-    <nav aria-label={name} {...other}>
-      <ul className={componentClassName}>
+    <nav aria-label={name} className={componentClassName} {...other}>
+      <ul>
         {navItems.map((navItem) => {
           return (
             <li key={navItem.name}>
@@ -428,8 +428,12 @@ const AppHeaderButton = ({
 const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
   <div className={styles['drawer-content']}>
     {navGroups?.map((navGroup) => (
-      <nav aria-label={navGroup.name} key={navGroup.name}>
-        <ul className={styles['drawer-content__nav-group']}>
+      <nav
+        aria-label={navGroup.name}
+        className={styles['drawer-content__nav-group']}
+        key={navGroup.name}
+      >
+        <ul>
           {navGroup.navItems.map((navItem) => {
             return (
               <li

@@ -14,24 +14,24 @@ type Story = StoryObj<typeof AppHeader>;
 
 export const Default: Story = {
   args: {
-    title: 'Evaluators',
-    subTitle: 'Playground',
+    title: 'Title',
+    subTitle: 'Sub-title',
     navGroups: [
       {
         name: 'group-1',
         navItems: [
           {
-            name: 'English Language Arts',
+            name: 'Link Item One',
             type: 'link',
             href: 'https://example.org',
           },
           {
-            name: 'Science',
+            name: 'Link Item Two',
             type: 'link',
             href: 'https://example.org',
           },
           {
-            name: 'Whole child',
+            name: 'Link Item Three',
             type: 'link',
             href: 'https://example.org',
           },
@@ -55,18 +55,18 @@ export const Default: Story = {
 
 export const Buttons: Story = {
   args: {
-    title: 'Evaluators',
-    subTitle: 'Playground',
+    title: 'Title',
+    subTitle: 'Sub-title',
     navGroups: [
       {
         name: 'group-1',
         navItems: [
           {
-            name: 'English Language Arts',
+            name: 'Link Item One',
             type: 'button',
           },
           {
-            name: 'Science',
+            name: 'Link Item Two',
             type: 'button',
           },
           {
@@ -74,7 +74,7 @@ export const Buttons: Story = {
             type: 'separator',
           },
           {
-            name: 'Whole child',
+            name: 'Link Item Three',
             type: 'link',
             href: 'https://example.org',
           },
