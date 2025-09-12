@@ -367,23 +367,30 @@ const AppHeaderLink = ({
   const componentClassName = clsx(
     styles['app-header__nav-item'],
     styles[`app-header__nav-item--link`],
-    iconLayout && styles[`app-header__nav-item--icon-layout-${iconLayout}`],
     isCurrent && styles['app-header__nav-item--is-current'],
   );
   return (
     <a className={componentClassName} {...other}>
-      {!(iconLayout === 'icon-only') && (
-        <Text as="span" preset="label-lg">
-          {name}
-        </Text>
-      )}
-      {icon && iconLayout && (
-        <Icon
-          name={icon}
-          purpose="decorative"
-          size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
-        />
-      )}
+      <span
+        className={clsx(
+          styles['app-header__nav-item--link'],
+          iconLayout &&
+            styles[`app-header__nav-item--icon-layout-${iconLayout}`],
+        )}
+      >
+        {!(iconLayout === 'icon-only') && (
+          <Text as="span" preset="label-lg">
+            {name}
+          </Text>
+        )}
+        {icon && iconLayout && (
+          <Icon
+            name={icon}
+            purpose="decorative"
+            size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
+          />
+        )}
+      </span>
     </a>
   );
 };
@@ -409,18 +416,26 @@ const AppHeaderButton = ({
   );
   return (
     <button className={componentClassName} {...other}>
-      {!(iconLayout === 'icon-only') && (
-        <Text as="span" preset="label-lg">
-          {name}
-        </Text>
-      )}
-      {icon && iconLayout && (
-        <Icon
-          name={icon}
-          purpose="decorative"
-          size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
-        />
-      )}
+      <span
+        className={clsx(
+          styles['app-header__nav-item--button'],
+          iconLayout &&
+            styles[`app-header__nav-item--icon-layout-${iconLayout}`],
+        )}
+      >
+        {!(iconLayout === 'icon-only') && (
+          <Text as="span" preset="label-lg">
+            {name}
+          </Text>
+        )}
+        {icon && iconLayout && (
+          <Icon
+            name={icon}
+            purpose="decorative"
+            size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
+          />
+        )}
+      </span>
     </button>
   );
 };

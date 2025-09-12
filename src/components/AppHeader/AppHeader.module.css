@@ -158,6 +158,12 @@
   color: var(--eds-theme-color-icon-utility-interactive-primary);
 }
 
+.app-header__nav-item--link, .app-header__nav-item--button {
+  display: flex;
+  gap: calc(var(--eds-spacing-size-half) * 1px);
+  align-items: center;
+}
+
 .app-header__nav-item--icon-layout-left {
   flex-direction: row-reverse;
 }

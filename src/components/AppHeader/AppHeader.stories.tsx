@@ -97,7 +97,7 @@ export const Buttons: Story = {
             type: 'link',
             href: 'https://example.org',
             icon: 'logout',
-            iconLayout: 'left',
+            iconLayout: 'right',
           },
         ],
       },
