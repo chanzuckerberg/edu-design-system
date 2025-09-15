@@ -101,7 +101,7 @@
   /* TODO: handle popover not closing when switching responsive sizes? */
   &:popover-open {
     height: 100%;
-    position: absolute;
+    position: fixed;
     padding: 0;
     inset: unset;
     overflow: hidden;
