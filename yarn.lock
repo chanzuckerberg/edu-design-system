@@ -2301,7 +2301,7 @@ __metadata:
     tailwindcss: "npm:^3.4.17"
     ts-dedent: "npm:^2.2.0"
     ts-jest: "npm:^29.4.1"
-    ts-morph: "npm:^26.0.0"
+    ts-morph: "npm:^27.0.0"
     typescript: "npm:^5.9.2"
     yargs: "npm:^17.7.2"
   peerDependencies:
@@ -4883,14 +4883,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ts-morph/common@npm:~0.27.0":
-  version: 0.27.0
-  resolution: "@ts-morph/common@npm:0.27.0"
+"@ts-morph/common@npm:~0.28.0":
+  version: 0.28.0
+  resolution: "@ts-morph/common@npm:0.28.0"
   dependencies:
-    fast-glob: "npm:^3.3.3"
     minimatch: "npm:^10.0.1"
     path-browserify: "npm:^1.0.1"
-  checksum: 10/842d8973cb34fa6d7535092e17e6d22c2642af1d9020aa06936cd1e9d6970830a888f9abf8907f60408c0a684b476b3b74316938d1edbad215881f9743f3940a
+    tinyglobby: "npm:^0.2.14"
+  checksum: 10/1927609acab6979df5b57ce82fb90f16711cf6ed9a2c9e830d62f82dfca86ebcf82f539f45ab95b76c450f865e12741fdffdb31566f65545be04dfe60ba12dd1
   languageName: node
   linkType: hard
 
@@ -19055,13 +19055,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-morph@npm:^26.0.0":
-  version: 26.0.0
-  resolution: "ts-morph@npm:26.0.0"
+"ts-morph@npm:^27.0.0":
+  version: 27.0.0
+  resolution: "ts-morph@npm:27.0.0"
   dependencies:
-    "@ts-morph/common": "npm:~0.27.0"
+    "@ts-morph/common": "npm:~0.28.0"
     code-block-writer: "npm:^13.0.3"
-  checksum: 10/0b76beec9f9641bf3304de8f41327db4e563729b4e13b37b546a4231a4310cb760cad0c88fe8d11235bbe6f9de0471dda0992b8c35535a4e4c34033304f22d14
+  checksum: 10/69da50b6aa2c548a52d74b2b2a80796babd22146ad883a152625faeb778f61e0f9711b889cdfe37eb87b9fd14ec19e43bc1f101d7239e56c97704ba7a749c4df
   languageName: node
   linkType: hard
 
