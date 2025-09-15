@@ -244,15 +244,15 @@ export const AppHeader = ({
               ))}
             </div>
             <div className={styles['app-header__menu']}>
-              {/* TODO-AH: don't use tertiary button here */}
-              <Button
+              <AppHeaderButton
                 aria-label="Show Menu"
                 icon="menu"
                 iconLayout="icon-only"
+                name="hamburger-menu"
                 onClick={() => {
                   document.getElementById('popover')?.showPopover();
                 }}
-                rank="tertiary"
+                type="button"
               />
             </div>
           </>

@@ -126,11 +126,10 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
   >
     <button
       aria-label="Show Menu"
-      class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-default"
-      type="button"
+      class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
     >
       <span
-        class="text text--label-lg button__text"
+        class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
       >
         <svg
           aria-hidden="true"
@@ -279,11 +278,10 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
   >
     <button
       aria-label="Show Menu"
-      class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-default"
-      type="button"
+      class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
     >
       <span
-        class="text text--label-lg button__text"
+        class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
       >
         <svg
           aria-hidden="true"
@@ -447,11 +445,10 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
   >
     <button
       aria-label="Show Menu"
-      class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-default"
-      type="button"
+      class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
     >
       <span
-        class="text text--label-lg button__text"
+        class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
       >
         <svg
           aria-hidden="true"
