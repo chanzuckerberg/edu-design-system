@@ -221,44 +221,46 @@ export const AppHeader = ({
   return (
     <AppHeaderContext.Provider value={{ href, orientation }}>
       <header className={componentClassName} {...other}>
-        <div className={styles['app-header__titles']}>
-          {href ? (
-            <a aria-label="homepage" href={href}>
+        <div>
+          <div className={styles['app-header__titles']}>
+            {href ? (
+              <a aria-label="homepage" href={href}>
+                <AppHeaderTitle subTitle={subTitle} title={title} />
+              </a>
+            ) : (
               <AppHeaderTitle subTitle={subTitle} title={title} />
-            </a>
-          ) : (
-            <AppHeaderTitle subTitle={subTitle} title={title} />
+            )}
+          </div>
+          {orientation === 'horizontal' && (
+            <>
+              <div className={styles['app-header__nav-groups']}>
+                {navGroups?.map((navGroup) => (
+                  <AppHeaderNavGroup
+                    key={`navGroup-${navGroup.name}`}
+                    name={navGroup.name}
+                    navItems={navGroup.navItems}
+                    onButtonClick={onButtonClick}
+                  />
+                ))}
+              </div>
+              <div className={styles['app-header__menu']}>
+                <AppHeaderButton
+                  aria-label="Show Menu"
+                  icon="menu"
+                  iconLayout="icon-only"
+                  name="hamburger-menu"
+                  onClick={() => {
+                    document.getElementById('popover')?.showPopover();
+                  }}
+                  type="button"
+                />
+              </div>
+            </>
+          )}
+          {orientation === 'vertical' && (
+            <AppHeaderDrawerContent navGroups={navGroups} />
           )}
         </div>
-        {orientation === 'horizontal' && (
-          <>
-            <div className={styles['app-header__nav-groups']}>
-              {navGroups?.map((navGroup) => (
-                <AppHeaderNavGroup
-                  key={`navGroup-${navGroup.name}`}
-                  name={navGroup.name}
-                  navItems={navGroup.navItems}
-                  onButtonClick={onButtonClick}
-                />
-              ))}
-            </div>
-            <div className={styles['app-header__menu']}>
-              <AppHeaderButton
-                aria-label="Show Menu"
-                icon="menu"
-                iconLayout="icon-only"
-                name="hamburger-menu"
-                onClick={() => {
-                  document.getElementById('popover')?.showPopover();
-                }}
-                type="button"
-              />
-            </div>
-          </>
-        )}
-        {orientation === 'vertical' && (
-          <AppHeaderDrawerContent navGroups={navGroups} />
-        )}
       </header>
       {orientation === 'horizontal'
         ? createPortal(
