@@ -37,9 +37,9 @@
   /* TODO(EDS-1691): add named container and rename any adjacents after adding menu */
   & > div {
     flex-direction: row;
+    max-width: 1320px;
 
     @media (min-width: $eds-bp-xl) {
-      width: 1320px;
       margin: 0 auto;
     }
   }
