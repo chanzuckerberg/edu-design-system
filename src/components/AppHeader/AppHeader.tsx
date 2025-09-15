@@ -198,8 +198,7 @@ const AppHeaderContext = createContext<
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
- * Standardized application header that can handle links, buttons, and other navigation aids. Handles responsive behavior, and both
- * vertical and horizontal orientations.
+ * Provides app-level navigation and serves as the <header> for accessibility landmarks
  */
 export const AppHeader = ({
   className,
