@@ -83,6 +83,14 @@
 .app-header__titles {
   flex: 1 0 auto;
 
+  .app-header-title__title {
+    max-height: calc(var(--eds-spacing-size-5) * 1px);
+
+    & > * {
+      max-height: inherit;
+    }
+  }
+
   .app-header-title__sub-title {
     margin-top: calc(var(--eds-spacing-size-half) * 1px);
   }

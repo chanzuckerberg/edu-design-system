@@ -118,7 +118,7 @@ export const ImageLogo: Story = {
     title: (
       <svg
         fill="none"
-        height="46px"
+        height="100%"
         viewBox="0 0 158 46"
         width="158px"
         xmlns="http://www.w3.org/2000/svg"

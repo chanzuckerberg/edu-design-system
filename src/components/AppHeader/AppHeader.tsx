@@ -299,9 +299,13 @@ export const AppHeader = ({
 const AppHeaderTitle = ({ title, subTitle }: AppHeaderTitleProps) => (
   <>
     <div className={styles['app-header-title__title']}>
-      <Text as="span" preset="headline-md">
-        {title}
-      </Text>
+      {typeof title === 'string' ? (
+        <Text as="span" preset="headline-md">
+          {title}
+        </Text>
+      ) : (
+        <>{title}</>
+      )}
     </div>
     {subTitle && (
       <div className={styles['app-header-title__sub-title']}>
