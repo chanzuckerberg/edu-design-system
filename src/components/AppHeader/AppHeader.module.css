@@ -83,10 +83,10 @@
 .app-header__titles {
   flex: 1 0 auto;
 
-  .app-header-title__title {
+  .app-header-title--has-logo {
     max-height: calc(var(--eds-spacing-size-5) * 1px);
 
-    & > * {
+    & > img, & > svg {
       max-height: inherit;
     }
   }

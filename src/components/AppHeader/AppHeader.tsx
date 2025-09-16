@@ -296,26 +296,32 @@ export const AppHeader = ({
  * @param props Properties for use with the AppHeaderTitleProps
  * @returns ReactNode
  */
-const AppHeaderTitle = ({ title, subTitle }: AppHeaderTitleProps) => (
-  <>
-    <div className={styles['app-header-title__title']}>
-      {typeof title === 'string' ? (
-        <Text as="span" preset="headline-md">
-          {title}
-        </Text>
-      ) : (
-        <>{title}</>
-      )}
-    </div>
-    {subTitle && (
-      <div className={styles['app-header-title__sub-title']}>
-        <Text as="span" preset="body-lg">
-          {subTitle}
-        </Text>
+const AppHeaderTitle = ({ title, subTitle }: AppHeaderTitleProps) => {
+  const componentClassName = clsx(
+    styles['app-header-title__title'],
+    typeof title === 'object' && styles['app-header-title--has-logo'],
+  );
+  return (
+    <>
+      <div className={componentClassName}>
+        {typeof title === 'string' ? (
+          <Text as="span" preset="headline-md">
+            {title}
+          </Text>
+        ) : (
+          <>{title}</>
+        )}
       </div>
-    )}
-  </>
-);
+      {subTitle && (
+        <div className={styles['app-header-title__sub-title']}>
+          <Text as="span" preset="body-lg">
+            {subTitle}
+          </Text>
+        </div>
+      )}
+    </>
+  );
+};
 
 /**
  * Sub-component for the individual navigation groups within the app header.

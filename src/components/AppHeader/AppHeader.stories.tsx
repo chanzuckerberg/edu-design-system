@@ -23,24 +23,24 @@ type Story = StoryObj<typeof AppHeader>;
 
 export const Default: Story = {
   args: {
-    title: 'Title',
-    subTitle: 'Sub-title',
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
     navGroups: [
       {
         name: 'group-1',
         navItems: [
           {
-            name: 'Link Item One',
+            name: 'Lakes',
             type: 'link',
             href: 'https://example.org',
           },
           {
-            name: 'Link Item Two',
+            name: 'Oceans',
             type: 'link',
             href: 'https://example.org',
           },
           {
-            name: 'Link Item Three',
+            name: 'Rivers',
             type: 'link',
             href: 'https://example.org',
           },
@@ -50,10 +50,10 @@ export const Default: Story = {
         name: 'group-2',
         navItems: [
           {
-            name: 'Sign out',
+            name: 'Profile',
             type: 'link',
             href: 'https://example.org',
-            icon: 'logout',
+            icon: 'person-encircled',
             iconLayout: 'left',
           },
         ],
@@ -64,18 +64,18 @@ export const Default: Story = {
 
 export const Buttons: Story = {
   args: {
-    title: 'Title',
-    subTitle: 'Sub-title',
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
     navGroups: [
       {
         name: 'group-1',
         navItems: [
           {
-            name: 'Button Item One',
+            name: 'Lakes',
             type: 'button',
           },
           {
-            name: 'Button Item Two',
+            name: 'Oceans',
             type: 'button',
           },
           {
@@ -83,7 +83,7 @@ export const Buttons: Story = {
             type: 'separator',
           },
           {
-            name: 'Button Item Three',
+            name: 'Rivers',
             type: 'link',
             href: 'https://example.org',
           },
@@ -93,10 +93,10 @@ export const Buttons: Story = {
         name: 'group-2',
         navItems: [
           {
-            name: 'Sign out',
+            name: 'Profile',
             type: 'link',
             href: 'https://example.org',
-            icon: 'logout',
+            icon: 'person-encircled',
             iconLayout: 'right',
           },
         ],
@@ -139,5 +139,12 @@ export const ImageLogo: Story = {
     ),
     href: 'https://example.org',
     subTitle: undefined,
+  },
+};
+
+export const VerticalImageLogo: Story = {
+  args: {
+    ...ImageLogo.args,
+    orientation: 'vertical',
   },
 };
