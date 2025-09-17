@@ -37,7 +37,7 @@
 
 .avatar--is-interactive:hover,
 .avatar--is-interactive:active {
-  /* TODO-AH: use color token (Check with Design) */
+  /* TODO: use color token (Check with Design) */
   box-shadow: inset 0 0 2px 0 rgb(from var(--eds-theme-color-background-utility-base-1) r g b / 0.20),
               0 0 4px rgb(from #000000 r g b / 0.08);
 }
