@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.4.0...v16.5.0) (2025-09-17)
+
+
+### Features
+
+* **AppHeader:** add 1.0 component ([#2269](https://github.com/chanzuckerberg/edu-design-system/issues/2269)) ([7bd8677](https://github.com/chanzuckerberg/edu-design-system/commit/7bd86773140d6e901f594893055f5af78ae14913))
+* **Hr:** move to theme version 2.0 ([#2268](https://github.com/chanzuckerberg/edu-design-system/issues/2268)) ([f075455](https://github.com/chanzuckerberg/edu-design-system/commit/f07545544b3abbf40a6d0ef42bd2688ce7ad2d44))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2270](https://github.com/chanzuckerberg/edu-design-system/issues/2270)) ([3b2b516](https://github.com/chanzuckerberg/edu-design-system/commit/3b2b5165966b56fb464b65416b8bf04fff0e1e3c))
+* **deps:** update dependency ts-morph to v27 ([#2267](https://github.com/chanzuckerberg/edu-design-system/issues/2267)) ([c134e8b](https://github.com/chanzuckerberg/edu-design-system/commit/c134e8bcbfd5ab4139397e1402863c55c26761b7))
+
 ## [16.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.3.0...v16.4.0) (2025-09-02)
 
 
