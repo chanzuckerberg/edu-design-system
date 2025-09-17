@@ -34,7 +34,8 @@
     }
   }
 
-  /* TODO(EDS-1691): add named container and rename any adjacents after adding menu */
+  /* TODO-AH: add named container and rename any adjacents after adding menu */
+  /* TODO-AH: add in a bit of left/right padding to prevent outline from being cut off */
   & > div {
     flex-direction: row;
     max-width: 1320px;
@@ -123,6 +124,7 @@
   }
 
   /* TODO: handle popover not closing when switching responsive sizes? */
+  /* TODO: handle popover transition so that the positioning offset is not too obvious */
   &:popover-open {
     height: 100%;
     position: fixed;

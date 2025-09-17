@@ -148,3 +148,55 @@ export const VerticalImageLogo: Story = {
     orientation: 'vertical',
   },
 };
+
+export const NavMenus: Story = {
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    navGroups: [
+      {
+        name: 'group-1',
+        navItems: [
+          {
+            name: 'Lakes',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Oceans',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Rivers',
+            type: 'link',
+            href: 'https://example.org',
+          },
+        ],
+      },
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Profile',
+            type: 'menu',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            navItems: [
+              {
+                type: 'link',
+                name: 'Settings',
+                href: 'https://example.org/#account-page',
+              },
+              {
+                type: 'link',
+                name: 'Sign Out',
+                href: 'https://example.org/#logout',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};

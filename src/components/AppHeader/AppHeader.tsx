@@ -1,5 +1,10 @@
 import clsx from 'clsx';
-import React, { createContext, useContext, type ReactNode } from 'react';
+import React, {
+  createContext,
+  forwardRef,
+  useContext,
+  type ReactNode,
+} from 'react';
 
 import { createPortal } from 'react-dom';
 
@@ -7,13 +12,10 @@ import Button from '../Button';
 import Hr from '../Hr';
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
+import Menu from '../Menu';
 import Text from '../Text';
 
 import styles from './AppHeader.module.css';
-
-/**
- * Data Types for the navigation items
- */
 
 /**
  * A nav group is a set of navigation items of the types listed below
@@ -26,7 +28,7 @@ type NavGroup = {
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
-  navItems: (NavLink | NavButton | NavSeparator)[];
+  navItems: (NavLink | NavButton | NavSeparator | NavMenu)[];
 };
 
 /**
@@ -88,7 +90,16 @@ type NavSeparator = NavItem & {
   type: 'separator';
 };
 
-// TODO(EDS-1691): add nav menu as a type
+/**
+ * Nav menus are a set of nested navigation items (of the same type as a NavGroup's navItems)
+ */
+type NavMenu = NavItem & {
+  type: 'menu';
+  /**
+   * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
+   */
+  navItems: (NavLink | NavButton | NavSeparator)[];
+};
 
 export type AppHeaderProps = {
   // Component API
@@ -351,6 +362,40 @@ const AppHeaderNavGroup = ({
               {navItem.type === 'link' && (
                 <AppHeaderLink key={navItem.name} {...navItem} />
               )}
+              {navItem.type === 'menu' && (
+                <Menu>
+                  <Menu.PlainButton as={React.Fragment}>
+                    <AppHeaderButton
+                      aria-label="show menu"
+                      icon={navItem.icon}
+                      iconLayout={navItem.iconLayout}
+                      name={navItem.name}
+                      type="button"
+                    >
+                      {navItem.name}
+                    </AppHeaderButton>
+                  </Menu.PlainButton>
+                  <Menu.Items
+                    anchor={{ to: 'bottom end', gap: 12 }}
+                    // TODO-AH: add a style for this in the stylesheet
+                    style={{ minWidth: '160px' }}
+                  >
+                    {navItem.navItems?.map((navItem) => {
+                      switch (navItem.type) {
+                        case 'link':
+                          return (
+                            <Menu.Item href={navItem.href} key={navItem.name}>
+                              {navItem.name}
+                            </Menu.Item>
+                          );
+                        // TODO-AH: add in handling for buttons
+                        default:
+                          return <Menu.Item>N/A</Menu.Item>;
+                      }
+                    })}
+                  </Menu.Items>
+                </Menu>
+              )}
               {/* In horizontal layouts, we never render the horizontal rule */}
             </li>
           );
@@ -366,6 +411,7 @@ const AppHeaderNavGroup = ({
  * @param props Properties for the links within the App Header
  * @returns ReactNode
  */
+// TODO-AH: make a forwarded ref component
 const AppHeaderLink = ({
   className,
   icon,
@@ -412,44 +458,39 @@ const AppHeaderLink = ({
  * @param props Properties for the button within the App Header
  * @returns ReactNode
  */
-const AppHeaderButton = ({
-  className,
-  icon,
-  iconLayout = 'none',
-  name,
-  type,
-  ...other
-}: AppHeaderButtonProps) => {
-  const componentClassName = clsx(
-    styles['app-header__nav-item'],
-    styles[`app-header__nav-item--button`],
-    iconLayout && styles[`app-header__nav-item--icon-layout-${iconLayout}`],
-  );
-  return (
-    <button className={componentClassName} {...other}>
-      <span
-        className={clsx(
-          styles['app-header__nav-item--button'],
-          iconLayout &&
-            styles[`app-header__nav-item--icon-layout-${iconLayout}`],
-        )}
-      >
-        {!(iconLayout === 'icon-only') && (
-          <Text as="span" preset="label-lg">
-            {name}
-          </Text>
-        )}
-        {icon && iconLayout && (
-          <Icon
-            name={icon}
-            purpose="decorative"
-            size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
-          />
-        )}
-      </span>
-    </button>
-  );
-};
+const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
+  ({ className, icon, iconLayout = 'none', name, type, ...other }, ref) => {
+    const componentClassName = clsx(
+      styles['app-header__nav-item'],
+      styles[`app-header__nav-item--button`],
+      iconLayout && styles[`app-header__nav-item--icon-layout-${iconLayout}`],
+    );
+    return (
+      <button className={componentClassName} ref={ref} {...other}>
+        <span
+          className={clsx(
+            styles['app-header__nav-item--button'],
+            iconLayout &&
+              styles[`app-header__nav-item--icon-layout-${iconLayout}`],
+          )}
+        >
+          {!(iconLayout === 'icon-only') && (
+            <Text as="span" preset="label-lg">
+              {name}
+            </Text>
+          )}
+          {icon && iconLayout && (
+            <Icon
+              name={icon}
+              purpose="decorative"
+              size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
+            />
+          )}
+        </span>
+      </button>
+    );
+  },
+);
 
 const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
   <div className={styles['drawer-content']}>
@@ -492,5 +533,4 @@ const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
 
 AppHeader.displayName = 'AppHeader';
 
-// TODO(EDS-1691): create vertical and horizontal wrappers that use orientation to render
-// TODO(EDS-1691): add sub-components as key/value pairs to `AppHeader`
+// TODO-AH: create vertical and horizontal wrappers that use orientation to render
