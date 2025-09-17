@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.4.0...v16.5.0) (2025-09-17)
+
+
+### Features
+
+* **AppHeader:** add 1.0 component ([#2269](https://github.com/chanzuckerberg/edu-design-system/issues/2269)) ([7bd8677](https://github.com/chanzuckerberg/edu-design-system/commit/7bd86773140d6e901f594893055f5af78ae14913))
+* **Hr:** move to theme version 2.0 ([#2268](https://github.com/chanzuckerberg/edu-design-system/issues/2268)) ([f075455](https://github.com/chanzuckerberg/edu-design-system/commit/f07545544b3abbf40a6d0ef42bd2688ce7ad2d44))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2270](https://github.com/chanzuckerberg/edu-design-system/issues/2270)) ([3b2b516](https://github.com/chanzuckerberg/edu-design-system/commit/3b2b5165966b56fb464b65416b8bf04fff0e1e3c))
+* **deps:** update dependency ts-morph to v27 ([#2267](https://github.com/chanzuckerberg/edu-design-system/issues/2267)) ([c134e8b](https://github.com/chanzuckerberg/edu-design-system/commit/c134e8bcbfd5ab4139397e1402863c55c26761b7))
+
 ## [16.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.3.0...v16.4.0) (2025-09-02)
 
 
@@ -40,7 +54,7 @@ All notable changes to this project will be documented in this file. See [standa
 * apply the border radius tier 2 tokens ([#2215](https://github.com/chanzuckerberg/edu-design-system/issues/2215)) ([160bcc1](https://github.com/chanzuckerberg/edu-design-system/commit/160bcc17cb3775edf3c42f25f02831dfac87f161))
 * **FieldNote:** align field note icon with text ([#2225](https://github.com/chanzuckerberg/edu-design-system/issues/2225)) ([43846fb](https://github.com/chanzuckerberg/edu-design-system/commit/43846fbcc87a52c7a2ed3fa213c8ae64705970c1))
 * remove lingering usages of depecated animation token ([#2223](https://github.com/chanzuckerberg/edu-design-system/issues/2223)) ([64049e3](https://github.com/chanzuckerberg/edu-design-system/commit/64049e3b4d24c65725fccf733b995c5ccab4149b))
-* sync type declarations for sublabel and fieldNote ([#2224](https://github.com/chanzuckerberg/edu-design-system/issues/2224)) ([86edff9](https://github.com/chanzuckerberg/edu-design-system/commit/86edff98789c0156e58abf9a2f31af0a980b22a0))
+* sync type declarations for subLabel and fieldNote ([#2224](https://github.com/chanzuckerberg/edu-design-system/issues/2224)) ([86edff9](https://github.com/chanzuckerberg/edu-design-system/commit/86edff98789c0156e58abf9a2f31af0a980b22a0))
 * **tailwind:** add in settings to use EDS border radii tokens with tailwind ([#2222](https://github.com/chanzuckerberg/edu-design-system/issues/2222)) ([4fb9766](https://github.com/chanzuckerberg/edu-design-system/commit/4fb9766bd3fe5f585a789d56e8a6ae6ddbb61006))
 * **TextareaField:** allow for value/defaultValue to be used properly ([#2214](https://github.com/chanzuckerberg/edu-design-system/issues/2214)) ([5966523](https://github.com/chanzuckerberg/edu-design-system/commit/596652366d8aba6204bd0fa29a79288775acea09))
 
@@ -72,10 +86,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **InputField:** add support for sublabel ([bc8efbf](https://github.com/chanzuckerberg/edu-design-system/commit/bc8efbf141bd96cdad06c5965440fec10500a5a1))
+* **InputField:** add support for subLabel ([bc8efbf](https://github.com/chanzuckerberg/edu-design-system/commit/bc8efbf141bd96cdad06c5965440fec10500a5a1))
 * **script:** add interactive options for selecting token tier information ([#2195](https://github.com/chanzuckerberg/edu-design-system/issues/2195)) ([f31ce26](https://github.com/chanzuckerberg/edu-design-system/commit/f31ce26b11484cff6fb802a532961ffd2895179d))
-* **Select:** add support for sublabel ([88ceaaf](https://github.com/chanzuckerberg/edu-design-system/commit/88ceaaf3c47f3602485c677241fb9781105e0575))
-* **TextareaField:** add support for sublabel ([1c9bc42](https://github.com/chanzuckerberg/edu-design-system/commit/1c9bc42e88777e131ff19b10bc1090600f55df0c))
+* **Select:** add support for subLabel ([88ceaaf](https://github.com/chanzuckerberg/edu-design-system/commit/88ceaaf3c47f3602485c677241fb9781105e0575))
+* **TextareaField:** add support for subLabel ([1c9bc42](https://github.com/chanzuckerberg/edu-design-system/commit/1c9bc42e88777e131ff19b10bc1090600f55df0c))
 * **UnorderedList,OrderedList:** add in list components 1.0 ([#2194](https://github.com/chanzuckerberg/edu-design-system/issues/2194)) ([33ac1ce](https://github.com/chanzuckerberg/edu-design-system/commit/33ac1ce3bb25a23cc104d4315c2d25af39a28b6f))
 
 

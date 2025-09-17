@@ -115,13 +115,13 @@ export type DataTableHeaderCellProps = EDSBase & {
    */
   leadingIcon?: IconName;
   /**
-   * Sublabel to use next to table cell text content
+   * SubLabel to use next to table cell text content
    *
    * ----
    *
    * **Note**: Will warn when used in the wrong context
    */
-  sublabel?: ReactNode;
+  subLabel?: ReactNode;
   /**
    * The direction to apply to the icon (for visual treatment)
    *
@@ -402,7 +402,7 @@ export const DataTableHeaderCell = ({
   leadingIcon,
   sortDirection = 'default',
   onSortClick,
-  sublabel,
+  subLabel,
   ...rest
 }: DataTableHeaderCellProps) => {
   const headerCellClassName = clsx(
@@ -420,16 +420,16 @@ export const DataTableHeaderCell = ({
           size="16px"
         />
       )}
-      {(children || sublabel) && (
+      {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
-          {sublabel && (
+          {subLabel && (
             <Text
               as="span"
-              className={styles['data-table__cell-sublabel']}
+              className={styles['data-table__cell-subLabel']}
               preset="body-sm"
             >
-              {sublabel}
+              {subLabel}
             </Text>
           )}
         </div>
@@ -453,7 +453,7 @@ export const DataTableDataCell = ({
   className,
   hasHorizontalDivider,
   leadingIcon,
-  sublabel,
+  subLabel,
   ...rest
 }: DataTableDataCellProps) => {
   const dataCellClassName = clsx(
@@ -471,12 +471,12 @@ export const DataTableDataCell = ({
           size="16px"
         />
       )}
-      {(children || sublabel) && (
+      {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
-          {sublabel && (
-            <span className={styles['data-table__cell-sublabel']}>
-              {sublabel}
+          {subLabel && (
+            <span className={styles['data-table__cell-subLabel']}>
+              {subLabel}
             </span>
           )}
         </div>

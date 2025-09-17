@@ -127,7 +127,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Add additional descriptive text for the field name.
    */
-  sublabel?: ReactNode;
+  subLabel?: ReactNode;
 } & EitherInclusive<
     {
       /**
@@ -176,7 +176,7 @@ export const InputField: InputFieldType = forwardRef(
       required,
       showHint,
       status = 'default',
-      sublabel,
+      subLabel,
       type = 'text',
       ...other
     },
@@ -200,8 +200,8 @@ export const InputField: InputFieldType = forwardRef(
       disabled && styles['input-field__label--disabled'],
     );
 
-    const sublabelClassName = clsx(
-      styles['input-field__sublabel'],
+    const subLabelClassName = clsx(
+      styles['input-field__subLabel'],
       disabled && styles['input-field__label--disabled'],
     );
 
@@ -246,17 +246,17 @@ export const InputField: InputFieldType = forwardRef(
     const generatedIdVar = useId();
     const idVar = id || generatedIdVar;
 
-    // Accessibility: attach the IDs of fieldnote and/or sublabel to the input
+    // Accessibility: attach the IDs of fieldnote and/or subLabel to the input
     const generatedFieldNoteId = useId();
     const generatedSubLabelId = useId();
 
     // set up the aria-describedby based on the following rules:
-    // - describedby is blank if sublabel and fieldnote are not defined
-    // - for each sublabel/fieldnote, append the space-separated, generated IDs to aria-describedby
+    // - describedby is blank if subLabel and fieldnote are not defined
+    // - for each subLabel/fieldnote, append the space-separated, generated IDs to aria-describedby
     // - if the user has given a aria-describedby prop, override the calculation
     const completeDescribedByVar = ariaDescribedBy
       ? ariaDescribedBy
-      : `${sublabel ? generatedSubLabelId : ''}${fieldNote ? ' ' + generatedFieldNoteId : ''}`;
+      : `${subLabel ? generatedSubLabelId : ''}${fieldNote ? ' ' + generatedFieldNoteId : ''}`;
 
     return (
       <div className={className}>
@@ -302,10 +302,10 @@ export const InputField: InputFieldType = forwardRef(
                 / {maxLengthShown}
               </Text>
             )}
-            {label && sublabel && (
-              <div className={sublabelClassName}>
+            {label && subLabel && (
+              <div className={subLabelClassName}>
                 <Text as="span" id={generatedSubLabelId} preset="body-sm">
-                  {sublabel}
+                  {subLabel}
                 </Text>
               </div>
             )}

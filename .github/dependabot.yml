@@ -6,6 +6,7 @@ updates:
       interval: daily
     # dependabot does not work with yarn v2, disabling for now
     open-pull-requests-limit: 0
+    target-branch: "next"
     commit-message:
       prefix: chore
       include: scope

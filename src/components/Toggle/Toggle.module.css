@@ -82,12 +82,12 @@
   color: var(--eds-theme-color-text-utility-default-primary);
 }
 
-.toggle__sublabel {
+.toggle__subLabel {
   display: block;
   color: var(--eds-theme-color-text-utility-default-secondary);
 }
 
-.toggle__button:disabled ~ .toggle__sublabel {
+.toggle__button:disabled ~ .toggle__subLabel {
   color: var(--eds-theme-color-text-utility-disabled-primary);
   cursor: not-allowed;
 }
@@ -102,7 +102,7 @@
   gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
-.toggle--has-sublabel {
+.toggle--has-subLabel {
   align-items: flex-start;
 }
 

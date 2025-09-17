@@ -7,17 +7,21 @@ export default {
   component: Hr,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-1.0'],
+    badges: ['api-1.3', 'theme-2.0'],
   },
   args: {
     className: 'w-[384px]',
   },
   argTypes: {
     size: {
-      control: 'radio',
+      table: {
+        disable: true,
+      },
     },
     variant: {
-      control: 'radio',
+      table: {
+        disable: true,
+      },
     },
   },
 } as Meta<typeof Hr>;
@@ -25,15 +29,3 @@ export default {
 type Story = StoryObj<typeof Hr>;
 
 export const Default: Story = {};
-
-export const Large: Story = {
-  args: {
-    size: 'lg',
-  },
-};
-
-export const Brand: Story = {
-  args: {
-    variant: 'brand',
-  },
-};

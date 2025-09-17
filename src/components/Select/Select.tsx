@@ -93,7 +93,7 @@ type SelectProps = ListboxProps<
   /**
    * Add additional descriptive text for the field name
    */
-  sublabel?: ReactNode;
+  subLabel?: ReactNode;
 };
 
 type SelectLabelProps = ExtractProps<typeof Label> & {
@@ -103,7 +103,7 @@ type SelectLabelProps = ExtractProps<typeof Label> & {
   /**
    * Add additional descriptive text for the field name
    */
-  sublabel?: ReactNode;
+  subLabel?: ReactNode;
 };
 type SelectOptionsProps = ExtractProps<typeof ListboxOptions>;
 type SelectOptionProps = ExtractProps<typeof ListboxOption> & {
@@ -188,7 +188,7 @@ export function Select({
   showHint,
   status,
   onChange: theirOnChange,
-  sublabel,
+  subLabel,
   ...other
 }: SelectProps) {
   if (process.env.NODE_ENV !== 'production') {
@@ -258,7 +258,7 @@ export function Select({
             disabled={disabled}
             required={required}
             showHint={showHint}
-            sublabel={sublabel}
+            subLabel={subLabel}
           >
             {label}
           </Select.Label>
@@ -282,7 +282,7 @@ const SelectLabel = ({
   className,
   disabled,
   showHint,
-  sublabel,
+  subLabel,
 }: SelectLabelProps) => {
   const componentClassName = clsx(
     styles['select__label'],
@@ -300,8 +300,8 @@ const SelectLabel = ({
     !label && styles['select__overline--no-label'],
   );
 
-  const sublabelClassName = clsx(
-    styles['select__sublabel'],
+  const subLabelClassName = clsx(
+    styles['select__subLabel'],
     disabled && styles['select__label--disabled'],
   );
 
@@ -335,11 +335,11 @@ const SelectLabel = ({
           (Optional)
         </Text>
       )}
-      {label && sublabel && (
-        <div className={sublabelClassName}>
+      {label && subLabel && (
+        <div className={subLabelClassName}>
           {/* TODO: is there a way to coerce HeadlessUI into using aria-describedby like InputField/TextareaField */}
           <Text as="span" preset="body-sm">
-            {sublabel}
+            {subLabel}
           </Text>
         </div>
       )}

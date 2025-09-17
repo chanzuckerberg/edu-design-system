@@ -81,7 +81,7 @@
   justify-content: flex-end;
 }
 
-.data-table__cell-sublabel {
+.data-table__cell-subLabel {
   display: block;
 }
 
@@ -291,8 +291,8 @@
     color: var(--eds-theme-color-border-utility-default-low-emphasis);
   }
 
-  .data-table__cell-sublabel,
-  .data-table__header-cell-sublabel {
+  .data-table__cell-subLabel,
+  .data-table__header-cell-subLabel {
     color: var(--eds-theme-color-text-utility-default-secondary);
   }
 

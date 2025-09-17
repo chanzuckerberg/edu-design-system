@@ -147,7 +147,7 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
       (Required)
     </span>
     <div
-      class="select__sublabel"
+      class="select__subLabel"
     >
       <span
         class="text text--body-sm"
@@ -437,7 +437,7 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
       (Optional)
     </span>
     <div
-      class="select__sublabel"
+      class="select__subLabel"
     >
       <span
         class="text text--body-sm"
@@ -510,7 +510,7 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
       (Required)
     </span>
     <div
-      class="select__sublabel"
+      class="select__subLabel"
     >
       <span
         class="text text--body-sm"
@@ -647,7 +647,7 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
       (Optional)
     </span>
     <div
-      class="select__sublabel"
+      class="select__subLabel"
     >
       <span
         class="text text--body-sm"
@@ -715,7 +715,7 @@ exports[`<Select /> Generated Snapshots WithFieldName story renders snapshot 1`]
       </span>
     </label>
     <div
-      class="select__sublabel"
+      class="select__subLabel"
     >
       <span
         class="text text--body-sm"

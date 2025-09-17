@@ -337,7 +337,7 @@ export const WithSelectedBy: StoryObj<typeof Select> = {
 export const WithFieldName: StoryObj = {
   args: {
     ...Default.args,
-    sublabel: 'Additional descriptive text',
+    subLabel: 'Additional descriptive text',
     children: (
       <>
         <Select.Button>
@@ -771,7 +771,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
 export const Disabled: StoryObj = {
   args: {
     ...Default.args,
-    sublabel: 'Some descriptive text',
+    subLabel: 'Some descriptive text',
     disabled: true,
   },
   parameters: {
@@ -794,7 +794,7 @@ export const Required: StoryObj = {
     required: true,
     showHint: true,
     className: 'w-[384px]',
-    sublabel: 'Some descriptive text',
+    subLabel: 'Some descriptive text',
   },
   parameters: {
     ...Default.parameters,
@@ -809,7 +809,7 @@ export const Optional: StoryObj = {
     ...Default.args,
     required: false,
     showHint: true,
-    sublabel: 'Some descriptive text',
+    subLabel: 'Some descriptive text',
     className: 'w-[384px]',
   },
   parameters: {

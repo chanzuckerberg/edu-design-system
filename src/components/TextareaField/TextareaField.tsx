@@ -58,7 +58,7 @@ type TextareaFieldProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   /**
    * Add additional descriptive text for the field name.
    */
-  sublabel?: ReactNode;
+  subLabel?: ReactNode;
 } & EitherInclusive<
     {
       /**
@@ -154,7 +154,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
       required,
       showHint,
       status = 'default',
-      sublabel,
+      subLabel,
       value,
       ...other
     },
@@ -188,8 +188,8 @@ export const TextareaField: TextareaFieldType = forwardRef(
       disabled && styles['textarea-field__label--disabled'],
     );
 
-    const sublabelClassName = clsx(
-      styles['textarea-field__sublabel'],
+    const subLabelClassName = clsx(
+      styles['textarea-field__subLabel'],
       disabled && styles['textarea-field__label--disabled'],
     );
 
@@ -206,19 +206,19 @@ export const TextareaField: TextareaFieldType = forwardRef(
       readOnly && styles['textarea-field__textarea--read-only'],
     );
 
-    // Accessibility: attach the IDs of fieldnote and/or sublabel to the input
+    // Accessibility: attach the IDs of fieldnote and/or subLabel to the input
     const generatedIdVar = useId();
     const idVar = id || generatedIdVar;
     const generatedFieldNoteId = useId();
     const generatedSubLabelId = useId();
 
     // set up the aria-describedby based on the following rules:
-    // - describedby is blank if sublabel and fieldnote are not defined
-    // - for each sublabel/fieldnote, append the space-separated, generated IDs to aria-describedby
+    // - describedby is blank if subLabel and fieldnote are not defined
+    // - for each subLabel/fieldnote, append the space-separated, generated IDs to aria-describedby
     // - if the user has given a aria-describedby prop, override the calculation
     const completeDescribedByVar = ariaDescribedBy
       ? ariaDescribedBy
-      : `${sublabel ? generatedSubLabelId : ''}${fieldNote ? ' ' + generatedFieldNoteId : ''}`;
+      : `${subLabel ? generatedSubLabelId : ''}${fieldNote ? ' ' + generatedFieldNoteId : ''}`;
 
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
@@ -259,10 +259,10 @@ export const TextareaField: TextareaFieldType = forwardRef(
                 / {maxLengthShown}
               </Text>
             )}
-            {label && sublabel && (
-              <div className={sublabelClassName}>
+            {label && subLabel && (
+              <div className={subLabelClassName}>
                 <Text as="span" id={generatedSubLabelId} preset="body-sm">
-                  {sublabel}
+                  {subLabel}
                 </Text>
               </div>
             )}

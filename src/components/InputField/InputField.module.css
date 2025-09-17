@@ -17,7 +17,7 @@
   justify-content: flex-start;
 }
 
-.input-field__sublabel {
+.input-field__subLabel {
   color: var(--eds-theme-color-text-utility-default-secondary);
   flex: 1 0 100%;
 }

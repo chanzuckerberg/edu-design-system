@@ -7,26 +7,11 @@
  * 
  */
 .hr {
-  margin-top: calc(var(--eds-spacing-size-4) * 1px);
-  margin-bottom: calc(var(--eds-spacing-size-4) * 1px);
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom-width: calc(var(--eds-border-width-sm) * 1px);
   border-bottom-style: solid;
-  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+  border-bottom-color: var(--eds-theme-color-border-utility-default-low-emphasis);
 }
 
-/**
- * Horizontal rule with a thick border.
- */
-.hr--lg {
-  border-width: calc(var(--eds-border-width-lg) * 1px);
-}
-
-/**
- * Branded horizontal rule.
- */
-.hr--brand {
-  border-color: var(--eds-theme-color-border-brand-primary-strong);
-}

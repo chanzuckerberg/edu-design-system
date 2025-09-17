@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as stories from './Hr.stories';
+import * as stories from './AppHeader.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
-describe('<Hr />', () => {
+describe('<AppHeader />', () => {
   generateSnapshots(stories as StoryFile);
 });

@@ -38,7 +38,7 @@ type ToggleButtonProps = {
 
 type ToggleProps = ToggleButtonProps & {
   children?: ReactNode;
-  sublabel?: ReactNode;
+  subLabel?: ReactNode;
 } & EitherInclusive<
     {
       /**
@@ -60,7 +60,7 @@ const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
 };
 
 const ToggleSubLabel = ({ children, className }: ToggleLabelProps) => {
-  const componentClassName = clsx(styles['toggle__sublabel'], className);
+  const componentClassName = clsx(styles['toggle__subLabel'], className);
   return (
     <Description as="span" className={componentClassName}>
       {children}
@@ -102,10 +102,10 @@ const ToggleWrapper = (props: ExtractProps<typeof Field>) => (
  *
  * **NOTE**: This component requires `label` or `aria-label` prop
  */
-export const Toggle = ({ label, sublabel, ...other }: ToggleProps) => {
+export const Toggle = ({ label, subLabel, ...other }: ToggleProps) => {
   const wrapperClassName = clsx(
     styles['toggle__wrapper'],
-    sublabel && styles['toggle--has-sublabel'],
+    subLabel && styles['toggle--has-subLabel'],
   );
   return label ? (
     <ToggleWrapper as="div" className={wrapperClassName}>
@@ -113,7 +113,7 @@ export const Toggle = ({ label, sublabel, ...other }: ToggleProps) => {
       <ToggleLabel>
         <>
           {label}
-          {sublabel && <ToggleSubLabel>{sublabel}</ToggleSubLabel>}
+          {subLabel && <ToggleSubLabel>{subLabel}</ToggleSubLabel>}
         </>
       </ToggleLabel>
     </ToggleWrapper>
