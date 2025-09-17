@@ -62,6 +62,9 @@ export const Default: Story = {
   },
 };
 
+/**
+ * `AppHeader` nav items can also be buttons
+ */
 export const Buttons: Story = {
   args: {
     title: 'Bodies of water',
@@ -105,6 +108,9 @@ export const Buttons: Story = {
   },
 };
 
+/**
+ * Menus can exist in a vertical orientation as well, affixed to the left-hand side of the screen
+ */
 export const VerticalOrientation: Story = {
   args: {
     ...Buttons.args,
@@ -112,6 +118,10 @@ export const VerticalOrientation: Story = {
   },
 };
 
+/**
+ * Logos can also be an image (using either <img> or <svg> for format). When using logo, the maximum height
+ * allowed is fixed, and the logo takes up the total possible vertical height.
+ */
 export const ImageLogo: Story = {
   args: {
     ...Default.args,
@@ -142,6 +152,9 @@ export const ImageLogo: Story = {
   },
 };
 
+/**
+ * Logos are positioned properly when the orientation is vertical
+ */
 export const VerticalImageLogo: Story = {
   args: {
     ...ImageLogo.args,
@@ -149,6 +162,10 @@ export const VerticalImageLogo: Story = {
   },
 };
 
+/**
+ * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
+ * render as a `Menu` with sub items that match the same types as can exist at the top level.
+ */
 export const NavMenus: Story = {
   args: {
     title: 'Bodies of water',
@@ -200,3 +217,6 @@ export const NavMenus: Story = {
     ],
   },
 };
+
+// TODO-AH: add play tests that open the menu when full size
+// TODO-AH: add play tests that open the menu when collapsed
