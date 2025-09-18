@@ -411,46 +411,50 @@ const AppHeaderNavGroup = ({
  * @param props Properties for the links within the App Header
  * @returns ReactNode
  */
-// TODO-AH: make a forwarded ref component
-const AppHeaderLink = ({
-  className,
-  icon,
-  iconLayout = 'none',
-  isCurrent = false,
-  name,
-  type,
-  ...other
-}: AppHeaderLinkProps) => {
-  const componentClassName = clsx(
-    styles['app-header__nav-item'],
-    styles[`app-header__nav-item--link`],
-    isCurrent && styles['app-header__nav-item--is-current'],
-  );
-  return (
-    <a className={componentClassName} {...other}>
-      <span
-        className={clsx(
-          styles['app-header__nav-item--link'],
-          iconLayout &&
-            styles[`app-header__nav-item--icon-layout-${iconLayout}`],
-        )}
-      >
-        {!(iconLayout === 'icon-only') && (
-          <Text as="span" preset="label-lg">
-            {name}
-          </Text>
-        )}
-        {icon && iconLayout && (
-          <Icon
-            name={icon}
-            purpose="decorative"
-            size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
-          />
-        )}
-      </span>
-    </a>
-  );
-};
+const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
+  (
+    {
+      className,
+      icon,
+      iconLayout = 'none',
+      isCurrent = false,
+      name,
+      type,
+      ...other
+    },
+    ref,
+  ) => {
+    const componentClassName = clsx(
+      styles['app-header__nav-item'],
+      styles[`app-header__nav-item--link`],
+      isCurrent && styles['app-header__nav-item--is-current'],
+    );
+    return (
+      <a className={componentClassName} ref={ref} {...other}>
+        <span
+          className={clsx(
+            styles['app-header__nav-item--link'],
+            iconLayout &&
+              styles[`app-header__nav-item--icon-layout-${iconLayout}`],
+          )}
+        >
+          {!(iconLayout === 'icon-only') && (
+            <Text as="span" preset="label-lg">
+              {name}
+            </Text>
+          )}
+          {icon && iconLayout && (
+            <Icon
+              name={icon}
+              purpose="decorative"
+              size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
+            />
+          )}
+        </span>
+      </a>
+    );
+  },
+);
 
 /**
  * Sub-component for the individual app header buttons.
@@ -521,6 +525,51 @@ const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
                 )}
                 {navItem.type === 'separator' && (
                   <Hr key={navItem.name} {...navItem} />
+                )}
+                {navItem.type === 'menu' && (
+                  <menu>
+                    <div className={styles['drawer-content__header-container']}>
+                      <div>
+                        <span
+                          className={clsx(
+                            styles['app-header__nav-item--button'],
+                            navItem.iconLayout &&
+                              styles[
+                                `app-header__nav-item--icon-layout-${navItem.iconLayout}`
+                              ],
+                          )}
+                        >
+                          {!(navItem.iconLayout === 'icon-only') && (
+                            <Text as="span" preset="label-md">
+                              {navItem.name}
+                            </Text>
+                          )}
+                          {navItem.icon && navItem.iconLayout && (
+                            <Icon
+                              name={navItem.icon}
+                              purpose="decorative"
+                              size={`${navItem.iconLayout === 'icon-only' ? 24 : 16}px`}
+                            />
+                          )}
+                        </span>
+                      </div>
+                    </div>
+                    <ul>
+                      {navItem.navItems.map((navItem) => (
+                        <li key={navItem.name}>
+                          {navItem.type === 'button' && (
+                            <AppHeaderButton key={navItem.name} {...navItem} />
+                          )}
+                          {navItem.type === 'link' && (
+                            <AppHeaderLink key={navItem.name} {...navItem} />
+                          )}
+                          {navItem.type === 'separator' && (
+                            <Hr key={navItem.name} {...navItem} />
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </menu>
                 )}
               </li>
             );

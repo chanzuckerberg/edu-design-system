@@ -218,5 +218,15 @@ export const NavMenus: Story = {
   },
 };
 
+/**
+ * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
+ * render as a `Menu` with sub items that match the same types as can exist at the top level.
+ */
+export const VerticalNavMenus: Story = {
+  args: {
+    ...NavMenus.args,
+    orientation: 'vertical',
+  },
+};
 // TODO-AH: add play tests that open the menu when full size
 // TODO-AH: add play tests that open the menu when collapsed
