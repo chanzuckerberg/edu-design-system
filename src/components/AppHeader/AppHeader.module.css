@@ -94,6 +94,7 @@
     padding: 0;
     inset: unset;
     overflow: hidden;
+    top: 0;
     right: 0;
     margin: 0;
     box-shadow: var(--eds-box-shadow-md);

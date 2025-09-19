@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
 
 import React from 'react';
 
@@ -260,7 +261,9 @@ export const CanExpandFullSizeMenu: Story = {
     await userEvent.tab();
     await userEvent.tab();
 
-    await userEvent.keyboard(' ', { delay: 300 });
+    if (isChromatic()) {
+      await userEvent.keyboard(' ', { delay: 300 });
+    }
   },
 };
 
@@ -279,6 +282,8 @@ export const CanExpandHamburgerMenu: Story = {
   play: async () => {
     await userEvent.tab();
 
-    await userEvent.keyboard(' ', { delay: 400 });
+    if (isChromatic()) {
+      await userEvent.keyboard(' ', { delay: 400 });
+    }
   },
 };

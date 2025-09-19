@@ -246,18 +246,15 @@ exports[`<AppHeader /> CanExpandFullSizeMenu story renders snapshot 1`] = `
           <li>
             <div
               class="menu"
-              data-headlessui-state="open"
-              data-open=""
+              data-headlessui-state=""
             >
               <button
-                aria-controls="headlessui-menu-items-:r9:"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-haspopup="menu"
                 aria-label="show menu"
                 class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-left"
-                data-active=""
-                data-headlessui-state="open active"
-                data-open=""
+                data-focus=""
+                data-headlessui-state="focus"
                 id="headlessui-menu-button-:r8:"
               >
                 <span
@@ -421,7 +418,7 @@ exports[`<AppHeader /> CanExpandHamburgerMenu story renders snapshot 1`] = `
                 aria-label="show menu"
                 class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 data-headlessui-state=""
-                id="headlessui-menu-button-:rg:"
+                id="headlessui-menu-button-:re:"
               >
                 <span
                   class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
