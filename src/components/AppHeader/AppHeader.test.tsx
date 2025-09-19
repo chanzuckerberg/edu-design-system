@@ -59,8 +59,12 @@ describe('<AppHeader />', () => {
       />,
     );
 
-    await user.click(screen.getAllByRole('button')[0]);
+    await user.click(screen.getAllByRole('button')[1]);
     expect(onClickMock).toHaveBeenCalled();
+    expect(onClickMock.mock.calls[0][1]).toEqual({
+      name: 'Oceans',
+      type: 'button',
+    });
   });
 
   it('handles button clicks on button types (vertical)', async () => {
@@ -114,5 +118,9 @@ describe('<AppHeader />', () => {
 
     await user.click(screen.getAllByRole('button')[0]);
     expect(onClickMock).toHaveBeenCalled();
+    expect(onClickMock.mock.calls[0][1]).toEqual({
+      name: 'Lakes',
+      type: 'button',
+    });
   });
 });
