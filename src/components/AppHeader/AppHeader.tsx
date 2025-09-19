@@ -206,6 +206,7 @@ const AppHeaderContext = createContext<
 });
 
 // TODO-AH: handle menu spacing when there is no icon context
+// TODO-AH: make sure to provide navItem data to each button click
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
