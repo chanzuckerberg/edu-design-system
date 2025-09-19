@@ -6,7 +6,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <div
         class="app-header-title__title"
@@ -32,7 +32,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
     >
       <nav
         aria-label="group-1"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -86,7 +86,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
       </nav>
       <nav
         aria-label="group-2"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -159,7 +159,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <div
         class="app-header-title__title"
@@ -185,7 +185,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
     >
       <nav
         aria-label="group-1"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -240,7 +240,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
       </nav>
       <nav
         aria-label="group-2"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -313,7 +313,7 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <a
         aria-label="homepage"
@@ -350,7 +350,7 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
     >
       <nav
         aria-label="group-1"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -405,7 +405,7 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
       </nav>
       <nav
         aria-label="group-2"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -478,7 +478,7 @@ exports[`<AppHeader /> NavMenus story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <div
         class="app-header-title__title"
@@ -504,7 +504,7 @@ exports[`<AppHeader /> NavMenus story renders snapshot 1`] = `
     >
       <nav
         aria-label="group-1"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -559,7 +559,7 @@ exports[`<AppHeader /> NavMenus story renders snapshot 1`] = `
       </nav>
       <nav
         aria-label="group-2"
-        class="app-header-nav-group app-header-nav-group--orientation-horizontal"
+        class="app-header__nav-group"
       >
         <ul>
           <li>
@@ -641,7 +641,7 @@ exports[`<AppHeader /> VerticalImageLogo story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <a
         aria-label="homepage"
@@ -787,7 +787,7 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <div
         class="app-header-title__title"
@@ -912,12 +912,11 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
               </div>
               <ul>
                 <li>
-                  <a
-                    class="app-header__nav-item app-header__nav-item--link"
-                    href="https://example.org/#account-page"
+                  <button
+                    class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
                   >
                     <span
-                      class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
+                      class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
                     >
                       <span
                         class="text text--label-lg"
@@ -925,7 +924,7 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
                         Settings
                       </span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li>
                   <a
@@ -959,7 +958,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
 >
   <div>
     <div
-      class="app-header__titles"
+      class="app-header-title"
     >
       <div
         class="app-header-title__title"

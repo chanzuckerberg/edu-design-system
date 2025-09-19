@@ -1,10 +1,5 @@
 import clsx from 'clsx';
-import React, {
-  createContext,
-  forwardRef,
-  useContext,
-  type ReactNode,
-} from 'react';
+import React, { createContext, forwardRef, type ReactNode } from 'react';
 
 import { createPortal } from 'react-dom';
 
@@ -193,6 +188,10 @@ type AppHeaderButtonProps = NavButton &
 
 type AppHeaderDrawerProps = {
   /**
+   * Handle the click event for any given button in the header
+   */
+  onButtonClick?: React.ReactEventHandler;
+  /**
    * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
   navGroups?: NavGroup[];
@@ -206,6 +205,7 @@ const AppHeaderContext = createContext<
   href: '#',
 });
 
+// TODO-AH: handle menu spacing when there is no icon context
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
@@ -233,7 +233,7 @@ export const AppHeader = ({
     <AppHeaderContext.Provider value={{ href, orientation }}>
       <header className={componentClassName} {...other}>
         <div>
-          <div className={styles['app-header__titles']}>
+          <div className={styles['app-header-title']}>
             {href ? (
               <a aria-label="homepage" href={href}>
                 <AppHeaderTitle subTitle={subTitle} title={title} />
@@ -269,7 +269,10 @@ export const AppHeader = ({
             </>
           )}
           {orientation === 'vertical' && (
-            <AppHeaderDrawerContent navGroups={navGroups} />
+            <AppHeaderDrawerContent
+              navGroups={navGroups}
+              onButtonClick={onButtonClick}
+            />
           )}
         </div>
       </header>
@@ -293,7 +296,10 @@ export const AppHeader = ({
                   size="lg"
                 />
               </div>
-              <AppHeaderDrawerContent navGroups={navGroups} />
+              <AppHeaderDrawerContent
+                navGroups={navGroups}
+                onButtonClick={onButtonClick}
+              />
             </div>,
             document.body,
           )
@@ -345,11 +351,7 @@ const AppHeaderNavGroup = ({
   onButtonClick,
   ...other
 }: AppHeaderNavGroupProps) => {
-  const { orientation } = useContext(AppHeaderContext);
-  const componentClassName = clsx(
-    styles['app-header-nav-group'],
-    orientation && styles[`app-header-nav-group--orientation-${orientation}`],
-  );
+  const componentClassName = clsx(styles['app-header__nav-group']);
   return (
     <nav aria-label={name} className={componentClassName} {...other}>
       <ul>
@@ -387,7 +389,15 @@ const AppHeaderNavGroup = ({
                               {navItem.name}
                             </Menu.Item>
                           );
-                        // TODO-AH: add in handling for buttons
+                        case 'button':
+                          return (
+                            <Menu.Item
+                              key={navItem.name}
+                              onClick={onButtonClick}
+                            >
+                              {navItem.name}
+                            </Menu.Item>
+                          );
                         default:
                           return <Menu.Item>N/A</Menu.Item>;
                       }
@@ -495,7 +505,10 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
   },
 );
 
-const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
+const AppHeaderDrawerContent = ({
+  navGroups,
+  onButtonClick,
+}: AppHeaderDrawerProps) => (
   <div className={styles['drawer-content']}>
     {navGroups?.map((navGroup) => (
       <nav
@@ -517,7 +530,11 @@ const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
                 key={navItem.name}
               >
                 {navItem.type === 'button' && (
-                  <AppHeaderButton key={navItem.name} {...navItem} />
+                  <AppHeaderButton
+                    key={navItem.name}
+                    {...navItem}
+                    onClick={onButtonClick}
+                  />
                 )}
                 {navItem.type === 'link' && (
                   <AppHeaderLink key={navItem.name} {...navItem} />
@@ -557,7 +574,11 @@ const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
                       {navItem.navItems.map((navItem) => (
                         <li key={navItem.name}>
                           {navItem.type === 'button' && (
-                            <AppHeaderButton key={navItem.name} {...navItem} />
+                            <AppHeaderButton
+                              key={navItem.name}
+                              {...navItem}
+                              onClick={onButtonClick}
+                            />
                           )}
                           {navItem.type === 'link' && (
                             <AppHeaderLink key={navItem.name} {...navItem} />

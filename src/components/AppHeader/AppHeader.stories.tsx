@@ -170,6 +170,9 @@ export const NavMenus: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
+    onButtonClick: (ev) => {
+      console.log('clicked', ev);
+    },
     navGroups: [
       {
         name: 'group-1',
@@ -201,9 +204,8 @@ export const NavMenus: Story = {
             iconLayout: 'left',
             navItems: [
               {
-                type: 'link',
+                type: 'button',
                 name: 'Settings',
-                href: 'https://example.org/#account-page',
               },
               {
                 type: 'link',

@@ -7,7 +7,6 @@
  */
 .app-header {
   box-shadow: var(--eds-box-shadow-md);
-
   background-color: var(--eds-theme-color-background-utility-base-1);
 
   & > div {
@@ -58,49 +57,12 @@
     width: 516px;
   }
 
-  .app-header__titles {
-    width: 220px;
-    flex-grow: 0;
-    margin-bottom: calc(var(--eds-spacing-size-5) * 1px);
-  }
-
-  .drawer-content {
-    width: 220px;
-  }
-
-  .app-header__nav-item {
-    width: 100%;
-  }
 
   & > div {
     align-items: flex-end;
     flex-direction: column;
     height: 100%;
   }
-}
-
-/**
- * AppHeader direct sub-components
- */
-.app-header__titles {
-  flex: 1 0 auto;
-
-  .app-header-title--has-logo {
-    max-height: calc(var(--eds-spacing-size-5) * 1px);
-
-    & > img, & > svg {
-      max-height: inherit;
-    }
-  }
-
-  .app-header-title__sub-title {
-    margin-top: calc(var(--eds-spacing-size-half) * 1px);
-  }
-}
-
-.app-header__nav-groups {
-  flex: 0 0 auto;
-  gap: calc(var(--eds-spacing-size-7) * 1px);
 }
 
 .app-header__menu {
@@ -182,6 +144,10 @@
     );
   }
 
+  .app-header--orientation-vertical & {
+    width: 100%;
+  }
+
   color: var(--eds-theme-color-icon-utility-interactive-primary);
 }
 
@@ -204,10 +170,12 @@
   flex-direction: row;
 }
 
-/**
- * AppHeader NavGroup
- */
-.app-header-nav-group {
+.app-header__nav-groups {
+  flex: 0 0 auto;
+  gap: calc(var(--eds-spacing-size-7) * 1px);
+}
+
+.app-header__nav-group {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -218,11 +186,44 @@
   }
 }
 
+/**
+ * AppHeader title component and its sub-components
+ */
+.app-header-title {
+  flex: 1 0 auto;
+
+  .app-header--orientation-vertical & {
+    width: 220px;
+    flex-grow: 0;
+    margin-bottom: calc(var(--eds-spacing-size-5) * 1px);
+  }
+
+  .app-header-title--has-logo {
+    max-height: calc(var(--eds-spacing-size-5) * 1px);
+
+    /* make sure all logo images take their max heights from the container */
+    & > img, & > svg {
+      max-height: inherit;
+    }
+  }
+
+  .app-header-title__sub-title {
+    margin-top: calc(var(--eds-spacing-size-half) * 1px);
+  }
+}
+
+/**
+ * Styles for the drawer component and its sub-components
+ */
 .drawer-content {
   display: flex;
   flex-direction: column;
 
   height: 100%;
+
+  .app-header--orientation-vertical & {
+    width: 220px;
+  }
 }
 
 .drawer-content__nav-group {
@@ -246,11 +247,10 @@
 .drawer-content__header-container {
   margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
   display: flex;
-  
 }
 
 /**
- * Colors
+ * Component Theme Colors
  */
 .app-header-title__title {
   color: var(--eds-theme-color-text-utility-default-primary);
