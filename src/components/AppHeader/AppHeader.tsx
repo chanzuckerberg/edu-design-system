@@ -96,6 +96,11 @@ type NavMenu = NavItem & {
   navItems: (NavLink | NavButton | NavSeparator)[];
 };
 
+type AppHeaderEventHandler = (
+  event: React.SyntheticEvent,
+  navItem: NavItem,
+) => void;
+
 export type AppHeaderProps = {
   // Component API
   /**
@@ -105,7 +110,7 @@ export type AppHeaderProps = {
   /**
    * Handle the click event for any given button in the header
    */
-  onButtonClick?: React.ReactEventHandler;
+  onButtonClick?: AppHeaderEventHandler;
   // Design API
   /**
    * Web location for the home page. Use this to direct where the main page of the application lives.
@@ -157,7 +162,7 @@ type AppHeaderNavGroupProps = NavGroup & {
   /**
    * Handle the click event for any given button in the header
    */
-  onButtonClick?: React.ReactEventHandler;
+  onButtonClick?: AppHeaderEventHandler;
   // Design API
 };
 
@@ -182,7 +187,7 @@ type AppHeaderButtonProps = NavButton &
     /**
      * Handle the click event for any given button in the header
      */
-    onButtonClick?: React.ReactEventHandler;
+    onButtonClick?: AppHeaderEventHandler;
     // Design API
   };
 
@@ -190,7 +195,7 @@ type AppHeaderDrawerProps = {
   /**
    * Handle the click event for any given button in the header
    */
-  onButtonClick?: React.ReactEventHandler;
+  onButtonClick?: AppHeaderEventHandler;
   /**
    * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
@@ -205,8 +210,6 @@ const AppHeaderContext = createContext<
   href: '#',
 });
 
-// TODO-AH: handle menu spacing when there is no icon context
-// TODO-AH: make sure to provide navItem data to each button click
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
@@ -360,7 +363,12 @@ const AppHeaderNavGroup = ({
           return (
             <li key={navItem.name}>
               {navItem.type === 'button' && (
-                <AppHeaderButton {...navItem} onClick={onButtonClick} />
+                <AppHeaderButton
+                  {...navItem}
+                  onClick={(ev) => {
+                    onButtonClick && onButtonClick(ev, navItem);
+                  }}
+                />
               )}
               {navItem.type === 'link' && (
                 <AppHeaderLink key={navItem.name} {...navItem} />
@@ -394,7 +402,9 @@ const AppHeaderNavGroup = ({
                           return (
                             <Menu.Item
                               key={navItem.name}
-                              onClick={onButtonClick}
+                              onClick={(ev) => {
+                                onButtonClick && onButtonClick(ev, navItem);
+                              }}
                             >
                               {navItem.name}
                             </Menu.Item>
@@ -534,7 +544,9 @@ const AppHeaderDrawerContent = ({
                   <AppHeaderButton
                     key={navItem.name}
                     {...navItem}
-                    onClick={onButtonClick}
+                    onClick={(ev) => {
+                      onButtonClick && onButtonClick(ev, navItem);
+                    }}
                   />
                 )}
                 {navItem.type === 'link' && (
@@ -578,7 +590,9 @@ const AppHeaderDrawerContent = ({
                             <AppHeaderButton
                               key={navItem.name}
                               {...navItem}
-                              onClick={onButtonClick}
+                              onClick={(ev) => {
+                                onButtonClick && onButtonClick(ev, navItem);
+                              }}
                             />
                           )}
                           {navItem.type === 'link' && (

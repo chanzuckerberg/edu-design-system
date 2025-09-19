@@ -1,4 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
+
+//Adding a skip here b/c neither recommended import location has `act`
+
+// eslint-disable-next-line storybook/use-storybook-testing-library
+import { act } from '@testing-library/react';
 import React from 'react';
 
 import { AppHeader } from './AppHeader';
@@ -8,6 +14,7 @@ export default {
   title: 'Components/AppHeader',
   component: AppHeader,
   parameters: {
+    viewport: { defaultViewport: 'macbookPro' },
     badges: ['api-1.0', 'theme-2.0'],
     chromatic: {
       viewports: [
@@ -22,6 +29,11 @@ export default {
 type Story = StoryObj<typeof AppHeader>;
 
 export const Default: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: '',
+    },
+  },
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
@@ -63,12 +75,15 @@ export const Default: Story = {
 };
 
 /**
- * `AppHeader` nav items can also be buttons
+ * `AppHeader` nav items can also be buttons. Button events are handled via the top-level `onButtonClick` which defines the event and the data for the clicked `navItem`
  */
 export const Buttons: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      console.log('clicked', ev, navItem);
+    },
     navGroups: [
       {
         name: 'group-1',
@@ -170,8 +185,8 @@ export const NavMenus: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
-    onButtonClick: (ev) => {
-      console.log('clicked', ev);
+    onButtonClick: (ev, navItem) => {
+      console.log('clicked', ev, navItem);
     },
     navGroups: [
       {
@@ -230,5 +245,51 @@ export const VerticalNavMenus: Story = {
     orientation: 'vertical',
   },
 };
-// TODO-AH: add play tests that open the menu when full size
-// TODO-AH: add play tests that open the menu when collapsed
+
+export const CanExpandFullSizeMenu: Story = {
+  args: {
+    ...NavMenus.args,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'macbookPro',
+    },
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300, viewports: [chromaticViewports.chromebook] },
+  },
+  // Select the menu then expand it with the keyboard. set up for snapshotting
+  play: async () => {
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      await userEvent.tab();
+      await userEvent.tab();
+      await userEvent.tab();
+      await userEvent.tab();
+
+      await userEvent.keyboard(' ', { delay: 300 });
+    });
+  },
+};
+
+export const CanExpandHamburgerMenu: Story = {
+  args: {
+    ...NavMenus.args,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'googlePixel2',
+    },
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300, viewports: [chromaticViewports.googlePixel2] },
+  },
+  // Select the menu then expand it with the keyboard. set up for snapshotting
+  play: async () => {
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      await userEvent.tab();
+      await userEvent.tab();
+
+      await userEvent.keyboard(' ', { delay: 300 });
+    });
+  },
+};
