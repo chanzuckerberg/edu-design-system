@@ -1,10 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { userEvent } from '@storybook/testing-library';
 
-//Adding a skip here b/c neither recommended import location has `act`
-
-// eslint-disable-next-line storybook/use-storybook-testing-library
-import { act } from '@testing-library/react';
 import React from 'react';
 
 import { AppHeader } from './AppHeader';
@@ -259,15 +255,12 @@ export const CanExpandFullSizeMenu: Story = {
   },
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      await userEvent.tab();
-      await userEvent.tab();
-      await userEvent.tab();
-      await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
 
-      await userEvent.keyboard(' ', { delay: 300 });
-    });
+    await userEvent.keyboard(' ', { delay: 300 });
   },
 };
 
@@ -284,12 +277,9 @@ export const CanExpandHamburgerMenu: Story = {
   },
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      await userEvent.tab();
-      await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
 
-      await userEvent.keyboard(' ', { delay: 300 });
-    });
+    await userEvent.keyboard(' ', { delay: 300 });
   },
 };
