@@ -5,7 +5,6 @@ import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
-// TODO-AH: handle menu spacing when there is no icon context
 export type PopoverListItemProps = {
   /**
    * Child node(s) that can be nested inside component

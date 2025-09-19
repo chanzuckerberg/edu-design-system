@@ -166,7 +166,6 @@ type AppHeaderNavGroupProps = NavGroup & {
   // Design API
 };
 
-// TODO: support handling router links like with the link component
 type AppHeaderLinkProps = NavLink &
   React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     // Component API

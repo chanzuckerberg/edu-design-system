@@ -33,7 +33,6 @@
     }
   }
 
-  /* TODO: add named container and rename any adjacents after adding menu */
   & > div {
     flex-direction: row;
     max-width: 1320px;
@@ -86,8 +85,8 @@
     pointer-events: none;
   }
 
-  /* TODO: handle popover not closing when switching responsive sizes? */
-  /* TODO: handle popover transition so that the positioning offset is not too obvious */
+  /* TODO: should this handle popover not closing when switching responsive sizes? */
+  /* TODO: should this handle popover transition so that the positioning offset is not too obvious? */
   &:popover-open {
     height: 100%;
     position: fixed;
