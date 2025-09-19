@@ -192,6 +192,10 @@
   align-items: center;
 }
 
+.app-header__nav-items {
+  min-width: calc(var(--eds-spacing-size-20) * 1px);
+}
+
 .app-header__nav-item--icon-layout-left {
   flex-direction: row-reverse;
 }

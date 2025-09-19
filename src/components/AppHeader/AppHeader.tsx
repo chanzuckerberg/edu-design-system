@@ -377,8 +377,7 @@ const AppHeaderNavGroup = ({
                   </Menu.PlainButton>
                   <Menu.Items
                     anchor={{ to: 'bottom end', gap: 12 }}
-                    // TODO-AH: add a style for this in the stylesheet
-                    style={{ minWidth: '160px' }}
+                    className={styles['app-header__nav-items']}
                   >
                     {navItem.navItems?.map((navItem) => {
                       switch (navItem.type) {
@@ -581,5 +580,3 @@ const AppHeaderDrawerContent = ({ navGroups }: AppHeaderDrawerProps) => (
 );
 
 AppHeader.displayName = 'AppHeader';
-
-// TODO-AH: create vertical and horizontal wrappers that use orientation to render
