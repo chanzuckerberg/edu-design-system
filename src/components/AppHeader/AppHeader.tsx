@@ -290,7 +290,7 @@ export const AppHeader = ({
             >
               <div className={styles['app-header__drawer-button']}>
                 <Button
-                  aria-label="Show Menu"
+                  aria-label="Close popover menu"
                   icon="close"
                   iconLayout="icon-only"
                   onClick={() => {

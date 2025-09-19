@@ -273,13 +273,12 @@ export const CanExpandHamburgerMenu: Story = {
       defaultViewport: 'googlePixel2',
     },
     // Sets the delay (in milliseconds) for a specific story.
-    chromatic: { delay: 300, viewports: [chromaticViewports.googlePixel2] },
+    chromatic: { delay: 500, viewports: [chromaticViewports.googlePixel2] },
   },
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {
     await userEvent.tab();
-    await userEvent.tab();
 
-    await userEvent.keyboard(' ', { delay: 300 });
+    await userEvent.keyboard(' ', { delay: 400 });
   },
 };
