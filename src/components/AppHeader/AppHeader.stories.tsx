@@ -1,4 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
+
 import React from 'react';
 
 import { AppHeader } from './AppHeader';
@@ -8,6 +11,7 @@ export default {
   title: 'Components/AppHeader',
   component: AppHeader,
   parameters: {
+    viewport: { defaultViewport: 'macbookPro' },
     badges: ['api-1.0', 'theme-2.0'],
     chromatic: {
       viewports: [
@@ -22,6 +26,11 @@ export default {
 type Story = StoryObj<typeof AppHeader>;
 
 export const Default: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: '',
+    },
+  },
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
@@ -62,10 +71,16 @@ export const Default: Story = {
   },
 };
 
+/**
+ * `AppHeader` nav items can also be buttons. Button events are handled via the top-level `onButtonClick` which defines the event and the data for the clicked `navItem`
+ */
 export const Buttons: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      console.log('clicked', ev, navItem);
+    },
     navGroups: [
       {
         name: 'group-1',
@@ -105,6 +120,9 @@ export const Buttons: Story = {
   },
 };
 
+/**
+ * Menus can exist in a vertical orientation as well, affixed to the left-hand side of the screen
+ */
 export const VerticalOrientation: Story = {
   args: {
     ...Buttons.args,
@@ -112,6 +130,10 @@ export const VerticalOrientation: Story = {
   },
 };
 
+/**
+ * Logos can also be an image (using either <img> or <svg> for format). When using logo, the maximum height
+ * allowed is fixed, and the logo takes up the total possible vertical height.
+ */
 export const ImageLogo: Story = {
   args: {
     ...Default.args,
@@ -142,9 +164,126 @@ export const ImageLogo: Story = {
   },
 };
 
+/**
+ * Logos are positioned properly when the orientation is vertical
+ */
 export const VerticalImageLogo: Story = {
   args: {
     ...ImageLogo.args,
     orientation: 'vertical',
+  },
+};
+
+/**
+ * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
+ * render as a `Menu` with sub items that match the same types as can exist at the top level.
+ */
+export const NavMenus: Story = {
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      console.log('clicked', ev, navItem);
+    },
+    navGroups: [
+      {
+        name: 'group-1',
+        navItems: [
+          {
+            name: 'Lakes',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Oceans',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Rivers',
+            type: 'link',
+            href: 'https://example.org',
+          },
+        ],
+      },
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Profile',
+            type: 'menu',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            navItems: [
+              {
+                type: 'button',
+                name: 'Settings',
+              },
+              {
+                type: 'link',
+                name: 'Sign Out',
+                href: 'https://example.org/#logout',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};
+
+/**
+ * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
+ * render as a `Menu` with sub items that match the same types as can exist at the top level.
+ */
+export const VerticalNavMenus: Story = {
+  args: {
+    ...NavMenus.args,
+    orientation: 'vertical',
+  },
+};
+
+export const CanExpandFullSizeMenu: Story = {
+  args: {
+    ...NavMenus.args,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'macbookPro',
+    },
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300, viewports: [chromaticViewports.chromebook] },
+  },
+  // Select the menu then expand it with the keyboard. set up for snapshotting
+  play: async () => {
+    await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
+
+    if (isChromatic()) {
+      await userEvent.keyboard(' ', { delay: 300 });
+    }
+  },
+};
+
+export const CanExpandHamburgerMenu: Story = {
+  args: {
+    ...NavMenus.args,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'googlePixel2',
+    },
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 500, viewports: [chromaticViewports.googlePixel2] },
+  },
+  // Select the menu then expand it with the keyboard. set up for snapshotting
+  play: async () => {
+    await userEvent.tab();
+
+    if (isChromatic()) {
+      await userEvent.keyboard(' ', { delay: 400 });
+    }
   },
 };

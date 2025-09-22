@@ -7,7 +7,6 @@
  */
 .app-header {
   box-shadow: var(--eds-box-shadow-md);
-
   background-color: var(--eds-theme-color-background-utility-base-1);
 
   & > div {
@@ -34,11 +33,12 @@
     }
   }
 
-  /* TODO(EDS-1691): add named container and rename any adjacents after adding menu */
   & > div {
     flex-direction: row;
     max-width: 1320px;
-
+    /* add in a bit of left/right padding to prevent outline from being cut off */
+    padding: 0 2px;
+    
     @media (min-width: $eds-bp-xl) {
       margin: 0 auto;
     }
@@ -56,49 +56,12 @@
     width: 516px;
   }
 
-  .app-header__titles {
-    width: 220px;
-    flex-grow: 0;
-    margin-bottom: calc(var(--eds-spacing-size-5) * 1px);
-  }
-
-  .drawer-content {
-    width: 220px;
-  }
-
-  .app-header__nav-item {
-    width: 100%;
-  }
 
   & > div {
     align-items: flex-end;
     flex-direction: column;
     height: 100%;
   }
-}
-
-/**
- * AppHeader direct sub-components
- */
-.app-header__titles {
-  flex: 1 0 auto;
-
-  .app-header-title--has-logo {
-    max-height: calc(var(--eds-spacing-size-5) * 1px);
-
-    & > img, & > svg {
-      max-height: inherit;
-    }
-  }
-
-  .app-header-title__sub-title {
-    margin-top: calc(var(--eds-spacing-size-half) * 1px);
-  }
-}
-
-.app-header__nav-groups {
-  flex: 0 0 auto;
-  gap: calc(var(--eds-spacing-size-7) * 1px);
 }
 
 .app-header__menu {
@@ -122,13 +85,15 @@
     pointer-events: none;
   }
 
-  /* TODO: handle popover not closing when switching responsive sizes? */
+  /* TODO: should this handle popover not closing when switching responsive sizes? */
+  /* TODO: should this handle popover transition so that the positioning offset is not too obvious? */
   &:popover-open {
     height: 100%;
     position: fixed;
     padding: 0;
     inset: unset;
     overflow: hidden;
+    top: 0;
     right: 0;
     margin: 0;
     box-shadow: var(--eds-box-shadow-md);
@@ -179,6 +144,10 @@
     );
   }
 
+  .app-header--orientation-vertical & {
+    width: 100%;
+  }
+
   color: var(--eds-theme-color-icon-utility-interactive-primary);
 }
 
@@ -189,6 +158,10 @@
   align-items: center;
 }
 
+.app-header__nav-items {
+  min-width: calc(var(--eds-spacing-size-20) * 1px);
+}
+
 .app-header__nav-item--icon-layout-left {
   flex-direction: row-reverse;
 }
@@ -197,10 +170,12 @@
   flex-direction: row;
 }
 
-/**
- * AppHeader NavGroup
- */
-.app-header-nav-group {
+.app-header__nav-groups {
+  flex: 0 0 auto;
+  gap: calc(var(--eds-spacing-size-7) * 1px);
+}
+
+.app-header__nav-group {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -211,11 +186,44 @@
   }
 }
 
+/**
+ * AppHeader title component and its sub-components
+ */
+.app-header-title {
+  flex: 1 0 auto;
+
+  .app-header--orientation-vertical & {
+    width: 220px;
+    flex-grow: 0;
+    margin-bottom: calc(var(--eds-spacing-size-5) * 1px);
+  }
+
+  .app-header-title--has-logo {
+    max-height: calc(var(--eds-spacing-size-5) * 1px);
+
+    /* make sure all logo images take their max heights from the container */
+    & > img, & > svg {
+      max-height: inherit;
+    }
+  }
+
+  .app-header-title__sub-title {
+    margin-top: calc(var(--eds-spacing-size-half) * 1px);
+  }
+}
+
+/**
+ * Styles for the drawer component and its sub-components
+ */
 .drawer-content {
   display: flex;
   flex-direction: column;
 
   height: 100%;
+
+  .app-header--orientation-vertical & {
+    width: 220px;
+  }
 }
 
 .drawer-content__nav-group {
@@ -236,8 +244,13 @@
   pointer-events: none;
 }
 
+.drawer-content__header-container {
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
+  display: flex;
+}
+
 /**
- * Colors
+ * Component Theme Colors
  */
 .app-header-title__title {
   color: var(--eds-theme-color-text-utility-default-primary);
@@ -256,4 +269,8 @@
 .app-header__nav-item:focus-visible {
   outline: calc(var(--eds-border-width-md) * 1px) solid
     var(--eds-theme-color-border-utility-focus);
+}
+
+.drawer-content__nav-group-item--type-menu {
+  color: var(--eds-theme-color-text-utility-default-secondary);
 }
