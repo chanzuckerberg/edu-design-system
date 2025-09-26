@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.5.0...v16.6.0) (2025-09-26)
+
+
+### Features
+
+* **AppHeader:** add in handling for menu nav items ([#2273](https://github.com/chanzuckerberg/edu-design-system/issues/2273)) ([25bf168](https://github.com/chanzuckerberg/edu-design-system/commit/25bf168a7696299461ebfb057811d6cea7c32a81))
+
 ## [16.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.4.0...v16.5.0) (2025-09-17)
 
 
