@@ -5,7 +5,6 @@ import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
-// TODO(next-major): rename sub-label props to be camelCase
 export type PopoverListItemProps = {
   /**
    * Child node(s) that can be nested inside component
