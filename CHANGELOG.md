@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.6.0...v16.6.1) (2025-09-30)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2278](https://github.com/chanzuckerberg/edu-design-system/issues/2278)) ([9d4c7ea](https://github.com/chanzuckerberg/edu-design-system/commit/9d4c7eac2a43f209d9841a2ae7c7859415537579))
+
 ## [16.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.5.0...v16.6.0) (2025-09-26)
 
 
