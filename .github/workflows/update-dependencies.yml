@@ -4,11 +4,14 @@ on:
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
     # string has to be quoted.
-    - cron: '0 13 * * MON' # Monday, 6am (PST)
+    - cron: '0 13 * * TUE,FRI' # Tuesdays and Fridays, 6am (PST)
 
 jobs:
   renovate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3

@@ -1,4 +1,4 @@
-name: Deploy Docs to GH Pages
+name: Deploy Documentation to GitHub Pages
 
 on:
   push:
@@ -8,7 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+      pages: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
