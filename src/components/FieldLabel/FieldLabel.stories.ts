@@ -10,8 +10,8 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof FieldLabel>;
 
 type Story = StoryObj<typeof FieldLabel>;

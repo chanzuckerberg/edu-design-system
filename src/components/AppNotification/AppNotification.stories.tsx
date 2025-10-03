@@ -14,7 +14,6 @@ export default {
   component: AppNotification,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     title: 'This is an AppNotification title',
@@ -34,6 +33,7 @@ export default {
       control: 'text',
     },
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof AppNotification>;
 
 type Story = StoryObj<typeof AppNotification>;

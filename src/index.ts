@@ -4,8 +4,6 @@ import './tokens-dist/css/variables.css';
 /**
  * 1.x component theme exports
  */
-export { default as Breadcrumbs } from './components/Breadcrumbs';
-export { default as Hr } from './components/Hr';
 export { default as Table } from './components/Table';
 
 /**
@@ -15,6 +13,7 @@ export { default as AppHeader } from './components/AppHeader';
 export { default as Avatar } from './components/Avatar';
 export { default as Accordion } from './components/Accordion';
 export { default as AppNotification } from './components/AppNotification';
+export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as Button } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card } from './components/Card';
@@ -25,6 +24,7 @@ export { default as FieldLabel } from './components/FieldLabel';
 export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
 export { default as Heading } from './components/Heading';
+export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
 export { default as InlineNotification } from './components/InlineNotification';
 export { default as InputChip } from './components/InputChip';

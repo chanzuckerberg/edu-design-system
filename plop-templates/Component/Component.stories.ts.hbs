@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import type React from 'react';
 
@@ -7,9 +6,7 @@ import { {{pascalCase name}} } from './{{pascalCase name}}';
 export default {
   title: 'Components/{{pascalCase name}}',
   component: {{pascalCase name}},
-  parameters: {
-    badges: [BADGE.BETA],
-  },
+  tags: ['beta'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof {{pascalCase name}}>;

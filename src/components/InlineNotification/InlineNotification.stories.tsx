@@ -8,12 +8,12 @@ export default {
   component: InlineNotification,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     title: 'Inline notifications lorem ipsum text',
     className: 'w-[384px]',
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof InlineNotification>;
