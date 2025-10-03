@@ -4,6 +4,8 @@ import filterTokens from '../../../util/filterTokens';
 import { ColorList } from '../../ColorList/ColorList';
 import Section from '../../Section';
 
+// TODO: remove the generation of tokens.json entirely (only used for these internal pages)?
+
 export default {
   title: 'Design Tokens/Tier 2: Usage/Colors',
   parameters: {
@@ -17,6 +19,25 @@ export default {
 const camelCaseWarning =
   'NOTE: emphasis tokens have a camelCase suffix for the emphasis (e.g., lowEmphasis)';
 
+/**
+ * Generate data for each list item row based on the contents of the tokens.json file.
+ * 
+ * Given:
+ * - row in tokens.json like "eds-theme-color-background-utility-overlay-low-emphasis": "rgba(39, 38, 37, 0.50)",
+ * - param like {
+            filterTerm: 'eds-theme-color-background-utility',
+            figmaTokenHeader: 'background',
+            tailwindClassHeader: 'bg-utility',
+          }
+ * - generate content like {
+            name: "eds-theme-color-background-utility-overlay-low-emphasis",
+            value: "rgba(39, 38, 37, 0.50)",
+            figmaToken: 'background/overlay-low-emphasis',
+            tailwindClass: "bg-utility-overlay-low-emphasis"
+          } 
+ * @param object describing the: filter to apply to tokens.json, and prefixes for figma/tailwind
+ * @returns object with information for displaying the various token formats and value
+ */
 const getListItems = ({
   filterTerm,
   figmaTokenHeader,
@@ -27,12 +48,17 @@ const getListItems = ({
   tailwindClassHeader: string;
 }) =>
   filterTokens(filterTerm).map(({ name, value }) => {
+    // trim the filter term from the full token name, along with the hyphen separator
     const specifier = name.slice(
       name.indexOf(filterTerm) + filterTerm.length + 1,
     );
+
+    // TODO-AH: tokens.json hyphen-separates camel case token name parts. make sure we "*-emphasis" => "*Emphasis"
+    // TODO-AH: this is not a problem in the emitted tailwind config since it doesn't use tokens.json
     return {
       name,
       value,
+      // apply the passed in format prefix, and the separator
       figmaToken: figmaTokenHeader + '/' + specifier,
       tailwindClass: tailwindClassHeader + '-' + specifier,
     };
@@ -82,9 +108,6 @@ export const BackgroundBrand: StoryObj = {
             filterTerm: 'eds-theme-color-background-brand',
             figmaTokenHeader: 'background',
             tailwindClassHeader: 'bg-brand',
-          }).filter((item) => {
-            // remove legacy primary tokens
-            return item.name.indexOf('primary') === -1;
           })}
         />
       </Section>
@@ -117,9 +140,6 @@ export const BorderBrand: StoryObj = {
             filterTerm: 'eds-theme-color-border-brand',
             figmaTokenHeader: 'border',
             tailwindClassHeader: 'border-brand',
-          }).filter((item) => {
-            // remove legacy primary tokens
-            return item.name.indexOf('primary') === -1;
           })}
         />
       </Section>
