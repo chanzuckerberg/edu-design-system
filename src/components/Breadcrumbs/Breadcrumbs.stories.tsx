@@ -19,7 +19,6 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-1.0'],
   },
   argTypes: {
     children: {
@@ -27,6 +26,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="m-spacing-size-1">{Story()}</div>],
+  tags: ['autodocs', 'version:1.3'],
 } as Meta<typeof Breadcrumbs>;
 
 type Story = StoryObj<typeof Breadcrumbs>;

@@ -26,8 +26,8 @@ const meta: Meta<typeof Toggle> = {
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-1.4', 'theme-2.0'],
   },
+  tags: ['autodocs', 'version:1.4'],
   render: (args) => <InteractiveToggle {...args} />,
 };
 

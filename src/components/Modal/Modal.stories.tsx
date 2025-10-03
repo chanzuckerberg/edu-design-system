@@ -15,10 +15,9 @@ export default {
   component: Modal,
   parameters: {
     chromatic: { delay: 300, prefersReducedMmotion: 'reduce' },
-    badges: ['api-3.0', 'theme-2.1'],
     layout: 'fullscreen',
   },
-  tags: ['autodocs'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;

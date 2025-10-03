@@ -9,7 +9,6 @@ export default {
   component: PageNotification,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     title: 'Alert title which communicates info to the user',
@@ -31,6 +30,7 @@ export default {
       control: false,
     },
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageNotification>;

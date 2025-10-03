@@ -7,12 +7,12 @@ export default {
   title: 'Components/Skeleton',
   component: Skeleton,
   parameters: {
-    badges: ['api-1.4', 'theme-2.0'],
     layout: 'centered',
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },
   },
+  tags: ['autodocs', 'version:1.4'],
 } as Meta<typeof Skeleton>;
 
 type Story = StoryObj<typeof Skeleton>;

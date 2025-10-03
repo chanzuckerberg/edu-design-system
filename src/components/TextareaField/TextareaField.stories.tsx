@@ -20,9 +20,9 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-2.1', 'theme-2.0'],
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  tags: ['autodocs', 'version:2.1'],
 };
 
 export default meta;

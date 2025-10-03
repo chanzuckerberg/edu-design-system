@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 
 import React from 'react';
@@ -18,7 +17,6 @@ export default {
   title: 'Components/DataTable',
   component: DataTable,
   parameters: {
-    badges: [BADGE.BETA, 'api-1.0', 'theme-2.0'],
     chromatic: {
       viewports: [
         chromaticViewports.ipadMini,
@@ -35,6 +33,7 @@ export default {
       control: false,
     },
   },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<Args>;
 
 type Args = DataTableProps;

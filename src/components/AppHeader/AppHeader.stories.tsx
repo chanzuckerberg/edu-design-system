@@ -12,7 +12,6 @@ export default {
   component: AppHeader,
   parameters: {
     viewport: { defaultViewport: 'macbookPro' },
-    badges: ['api-1.0', 'theme-2.0'],
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,
@@ -21,6 +20,7 @@ export default {
       ],
     },
   },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;

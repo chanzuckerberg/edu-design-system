@@ -2215,7 +2215,6 @@ __metadata:
     "@codecov/rollup-plugin": "npm:^1.9.1"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@geometricpanda/storybook-addon-badges": "npm:^2.0.5"
     "@headlessui/react": "npm:^2.2.9"
     "@omlet/cli": "npm:^2.0.0"
     "@rollup/plugin-node-resolve": "npm:^16.0.1"
@@ -2294,6 +2293,7 @@ __metadata:
     rollup-plugin-postcss: "npm:^4.0.2"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^8.6.14"
+    storybook-addon-tag-badges: "npm:1.4.0"
     style-dictionary: "npm:^3.9.2"
     stylelint: "npm:^16.24.0"
     stylelint-config-recommended: "npm:^17.0.0"
@@ -2947,28 +2947,6 @@ __metadata:
   version: 0.2.9
   resolution: "@floating-ui/utils@npm:0.2.9"
   checksum: 10/0ca786347db3dd8d9034b86d1449fabb96642788e5900cc5f2aee433cd7b243efbcd7a165bead50b004ee3f20a90ddebb6a35296fc41d43cfd361b6f01b69ffb
-  languageName: node
-  linkType: hard
-
-"@geometricpanda/storybook-addon-badges@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "@geometricpanda/storybook-addon-badges@npm:2.0.5"
-  peerDependencies:
-    "@storybook/blocks": ^8.3.0
-    "@storybook/components": ^8.3.0
-    "@storybook/core-events": ^8.3.0
-    "@storybook/manager-api": ^8.3.0
-    "@storybook/preview-api": ^8.3.0
-    "@storybook/theming": ^8.3.0
-    "@storybook/types": ^8.3.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  peerDependenciesMeta:
-    react:
-      optional: true
-    react-dom:
-      optional: true
-  checksum: 10/5f908a0a47fc12a928e3a931a039d8314568321eff6711d031b177d8f893d1a3044b87a867dd6d283e8f3ca0a1bea9ba87a4bd4eec82d0a57bcb9f94f7941fa1
   languageName: node
   linkType: hard
 
@@ -4517,6 +4495,16 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 10/5df56f0856764ed7e4bb24ef7a08a8a9c93f8eedcb16dac062f1dfd3bd1fe6cb4a0aa5a0794083d95e31c04960d126a4d2028cfb4c53681bf05513bb38eae9d2
+  languageName: node
+  linkType: hard
+
+"@storybook/icons@npm:^1.3.0":
+  version: 1.6.0
+  resolution: "@storybook/icons@npm:1.6.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+  checksum: 10/f9036ca3b0d2904778eb4e202305f2780b549434380f9760f0bc704fe3ee19d7332f9560a66435ebb2156346cee9a863e40fa5e4b27790bf993b0c1180a3146d
   languageName: node
   linkType: hard
 
@@ -17524,6 +17512,17 @@ __metadata:
   dependencies:
     internal-slot: "npm:^1.0.4"
   checksum: 10/2a23a36f4f6bfa63f46ae2d53a3f80fe8276110b95a55345d8ed3d92125413494033bc8697eb774e8f7aeb5725f70e3d69753caa2ecacdac6258c16fa8aa8b0f
+  languageName: node
+  linkType: hard
+
+"storybook-addon-tag-badges@npm:1.4.0":
+  version: 1.4.0
+  resolution: "storybook-addon-tag-badges@npm:1.4.0"
+  dependencies:
+    "@storybook/icons": "npm:^1.3.0"
+  peerDependencies:
+    storybook: ^8.4.0
+  checksum: 10/a254aa113ad3b51715f4935f66829c01b848e6929eec5419e7f61f2324a3dedc4336491357d7fa2a397dbb9c8ad6e7e2339fd65dca07c6dff06cb284196fc5fb
   languageName: node
   linkType: hard
 

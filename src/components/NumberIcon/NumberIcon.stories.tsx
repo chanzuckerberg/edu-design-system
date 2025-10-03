@@ -8,13 +8,13 @@ export default {
   component: NumberIcon,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     'aria-label': 'number icon example',
     number: 1,
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof NumberIcon>;
@@ -110,9 +110,7 @@ export const DifferentNumbers: Story = {
  * - incomplete rows are aligned with each number icon to show progress
  */
 export const NumberIconList: Story = {
-  parameters: {
-    badges: ['api-1.0', 'theme-2.0', 'implementationExample'],
-  },
+  tags: ['code-only'],
   render: () => (
     <div className="flex flex-wrap gap-1">
       <NumberIcon aria-label="Item 1" number={1} size="md" />

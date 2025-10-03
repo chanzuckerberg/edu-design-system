@@ -9,13 +9,13 @@ export default {
   component: Fieldset,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     children: {
       control: false,
     },
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Fieldset>;
@@ -117,7 +117,7 @@ export const FieldsetLegendWithSubtitle: StoryObj<LegendArgs> = {
  * ```
  */
 export const WithCheckboxes: StoryObj<Args> = {
-  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
+  tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
     children: (
@@ -152,7 +152,7 @@ export const WithCheckboxes: StoryObj<Args> = {
 };
 
 export const WithDisabledCheckboxes: StoryObj<Args> = {
-  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
+  tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
     isDisabled: true,
@@ -161,7 +161,7 @@ export const WithDisabledCheckboxes: StoryObj<Args> = {
 };
 
 export const WithErrorCheckboxes: StoryObj<Args> = {
-  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
+  tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
     status: 'critical',
@@ -170,7 +170,7 @@ export const WithErrorCheckboxes: StoryObj<Args> = {
 };
 
 export const WithRadioButton: StoryObj<Args> = {
-  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
+  tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
     children: (
@@ -205,7 +205,7 @@ export const WithRadioButton: StoryObj<Args> = {
 };
 
 export const WithDisabledRadioButton: StoryObj<Args> = {
-  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
+  tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
     isDisabled: true,
@@ -214,7 +214,7 @@ export const WithDisabledRadioButton: StoryObj<Args> = {
 };
 
 export const WithErrorRadioButton: StoryObj<Args> = {
-  parameters: { badges: ['api-1.3', 'theme-2.0', 'implementationExample'] },
+  tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
     status: 'critical',

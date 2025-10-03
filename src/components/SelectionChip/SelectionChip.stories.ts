@@ -6,9 +6,7 @@ import { SelectionChip } from './SelectionChip';
 export default {
   title: 'Components/SelectionChip',
   component: SelectionChip,
-  parameters: {
-    badges: ['api-1.0', 'theme-2.0'],
-  },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SelectionChip>;

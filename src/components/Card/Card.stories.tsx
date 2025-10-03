@@ -14,7 +14,6 @@ export default {
   component: Card,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
   args: {
@@ -58,6 +57,7 @@ export default {
       control: 'boolean',
     },
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
@@ -377,9 +377,7 @@ export const WhileDragging: Story = {
  * Implementation Example: Cancelling a card membership
  */
 export const CancelMembership: Story = {
-  parameters: {
-    badges: ['api-1.0', 'theme-2.0', 'implementationExample'],
-  },
+  tags: ['code-only'],
   args: {
     children: (
       <>

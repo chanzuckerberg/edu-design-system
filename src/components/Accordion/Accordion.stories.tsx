@@ -11,7 +11,6 @@ export default {
   component: Accordion,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
     controls: { sort: 'requiredFirst' },
   },
   args: {
@@ -41,6 +40,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof Accordion>;
 
 type Story = StoryObj<typeof Accordion>;

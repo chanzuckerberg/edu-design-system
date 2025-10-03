@@ -8,8 +8,8 @@ export default {
   component: Heading,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Heading>;

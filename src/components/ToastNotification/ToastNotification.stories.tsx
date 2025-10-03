@@ -13,7 +13,6 @@ export default {
   component: ToastNotification,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     onDismiss: { action: 'trigger dismiss' },
@@ -23,6 +22,7 @@ export default {
     title: "You've got a temporary notification!",
     className: 'w-[384px]',
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;

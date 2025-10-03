@@ -8,7 +8,6 @@ export default {
   component: Text,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     children: {
@@ -18,6 +17,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="m-spacing-size-2">{Story()}</div>],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof Text>;
 
 type Story = StoryObj<typeof Text>;

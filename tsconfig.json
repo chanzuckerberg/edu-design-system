@@ -10,11 +10,11 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["es5", "es6", "dom"],
-    "moduleResolution": "node",
+    "moduleResolution": "node10",
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2018"
+    "target": "es2018",
   }
 }

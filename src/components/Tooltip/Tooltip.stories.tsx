@@ -42,7 +42,6 @@ export default {
   },
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
     chromatic: {
       delay: 750,
       diffThreshold,
@@ -50,6 +49,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;

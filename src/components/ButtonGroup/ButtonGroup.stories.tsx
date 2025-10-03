@@ -23,10 +23,8 @@ export default {
       control: false,
     },
   },
-  parameters: {
-    badges: ['api-2.0', 'theme-2.0'],
-  },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof ButtonGroup>;
 
 type Story = StoryObj<typeof ButtonGroup>;

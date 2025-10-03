@@ -26,40 +26,6 @@ export const decorators = [
   ),
 ];
 
-function createComponentVersion(usingLabel: string) {
-  return {
-    [`api-${usingLabel}`]: {
-      styles: {
-        backgroundColor: '#ffffff',
-        borderColor: '#000000',
-        color: '#000000',
-      },
-      title: `Component API Version: ${usingLabel}`,
-      tooltip: {
-        title: `Code / API v${usingLabel}`,
-        desc: `This component's API version is at ${usingLabel}`,
-      },
-    },
-  };
-}
-
-function createThemeVersion(usingLabel: string) {
-  return {
-    [`theme-${usingLabel}`]: {
-      styles: {
-        backgroundColor: '#ffffff',
-        borderColor: '#000000',
-        color: '#000000',
-      },
-      title: `Theme Version: ${usingLabel}`,
-      tooltip: {
-        title: `Current Theme version v${usingLabel}`,
-        desc: `This component's theme corresponds to Edu Design System Version is at ${usingLabel}`,
-      },
-    },
-  };
-}
-
 export const parameters: Preview['parameters'] = {
   viewport: {
     viewports: storybookViewports,
@@ -79,32 +45,6 @@ export const parameters: Preview['parameters'] = {
       },
     ],
   },
-  badgesConfig: {
-    ...createComponentVersion('3.1'),
-    ...createComponentVersion('3.0'),
-    ...createComponentVersion('2.1'),
-    ...createComponentVersion('2.0'),
-    ...createComponentVersion('1.4'),
-    ...createComponentVersion('1.3'),
-    ...createComponentVersion('1.2'),
-    ...createComponentVersion('1.1'),
-    ...createComponentVersion('1.0'),
-    ...createThemeVersion('1.0'),
-    ...createThemeVersion('2.0'),
-    ...createThemeVersion('2.0.1'),
-    ...createThemeVersion('2.1'),
-    implementationExample: {
-      styles: {
-        backgroundColor: '#ffffff',
-        borderColor: '#000000',
-        color: '#000000',
-      },
-      title: 'Implementation Example',
-      tooltip: {
-        title: `About Implementation Examples`,
-        desc: 'Implementation examples show how you might compose existing EDS components',
-      },
-    },
-  },
 };
+
 export const tags = ['autodocs'];

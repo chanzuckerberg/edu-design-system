@@ -11,7 +11,6 @@ export default {
   component: Popover,
   parameters: {
     layout: 'centered',
-    badges: ['api-3.0', 'theme-2.0'],
     chromatic: {
       // These stories are very flaky, though we're not sure why.
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
@@ -67,6 +66,7 @@ export default {
       <div className="m-spacing-size-5 p-spacing-size-4">{Story()}</div>
     ),
   ],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<PopoverProps>;
 
 type Story = StoryObj<PopoverProps>;
