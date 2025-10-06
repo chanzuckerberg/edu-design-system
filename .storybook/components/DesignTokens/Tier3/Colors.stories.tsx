@@ -38,7 +38,9 @@ const getListItems = ({
       name,
       value,
       figmaToken: figmaTokenHeader + '/' + specifier,
-      tailwindClass: tailwindClassHeader + updatedSpecifier,
+      tailwindClass:
+        tailwindClassHeader +
+        (updatedSpecifier === specifier ? '-' + specifier : updatedSpecifier),
     };
   });
 
