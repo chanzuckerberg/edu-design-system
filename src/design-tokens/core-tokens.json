@@ -1157,6 +1157,10 @@
               "disabled": {
                 "value": "rgba(255, 255, 255, 0.50)"
               }
+            },
+            "selected": {
+              "value": "{eds.color.blue.050}",
+              "group": "color"
             }
           }
         },

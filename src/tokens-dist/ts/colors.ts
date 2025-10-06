@@ -236,6 +236,7 @@ export const EdsThemeColorBackgroundUtilityInverseHighEmphasisActive =
   '#EEE7E4';
 export const EdsThemeColorBackgroundUtilityInverseDisabled =
   'rgba(255, 255, 255, 0.50)';
+export const EdsThemeColorBackgroundUtilitySelected = '#EAF4FF';
 export const EdsThemeColorBorderNeutralSubtle = '#E7E8EA';
 export const EdsThemeColorBorderBrandRed = '#4D0118';
 export const EdsThemeColorBorderBrandOrange = '#FFA070';

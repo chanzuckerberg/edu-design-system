@@ -364,6 +364,89 @@ export const ChildCards: Story = {
 };
 
 /**
+ * Interactive cards can behave as radios, for use in a form context, where we want to select one of several options. Such cards would have a `name`, and by default are uncontrolled.
+ * Every card in a radio set should have the same `name`.
+ */
+export const RadioCards: Story = {
+  args: {
+    ...Default.args,
+    isInteractive: true,
+    behavior: 'radio',
+  },
+  render: (args) => (
+    <div className="flex gap-spacing-size-1">
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+    </div>
+  ),
+};
+
+/**
+ * Interactive cards can also have checkbox behavior, allowing selection of 1-many in a given set. The `name` values for each should be unique.
+ */
+export const CheckboxCards: Story = {
+  args: {
+    ...Default.args,
+    isInteractive: true,
+    behavior: 'checkbox',
+  },
+  render: (args) => (
+    <div className="flex gap-spacing-size-1">
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+    </div>
+  ),
+};
+
+/**
  * Cards can be marked as currently being dragged. This can be used in combination with the `draggable` attribute from HTML,
  * or to work with a drag-n-drop library.
  */

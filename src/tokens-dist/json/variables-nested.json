@@ -514,7 +514,8 @@
                 "active": "#EEE7E4"
               },
               "disabled": "rgba(255, 255, 255, 0.50)"
-            }
+            },
+            "selected": "#EAF4FF"
           }
         },
         "border": {
