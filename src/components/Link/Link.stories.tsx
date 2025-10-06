@@ -7,7 +7,6 @@ export default {
   component: Link,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   args: {
     children: 'Link',
@@ -19,6 +18,7 @@ export default {
   decorators: [
     (Story) => <div className="text-utility-default-primary">{Story()}</div>,
   ],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof Link>;
 
 type Story = StoryObj<typeof Link>;

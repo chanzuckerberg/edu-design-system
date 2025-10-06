@@ -11,7 +11,6 @@ export default {
   component: Table,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-1.0'],
   },
   argTypes: {
     children: {
@@ -23,6 +22,7 @@ export default {
   backgrounds: {
     default: 'eds-color-neutral-white',
   },
+  tags: ['autodocs', 'version:1.3', 'deprecated'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Table>;
@@ -296,7 +296,7 @@ export const SortableInteractive: Story = {
 export const StackedCardsExample: Story = {
   parameters: {
     layout: 'padded',
-    badges: ['api-1.3', 'implementationExample'],
+    tags: ['code-only'],
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,

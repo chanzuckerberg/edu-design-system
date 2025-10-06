@@ -10,7 +10,6 @@ const meta: Meta<typeof Select> = {
   component: Select,
   parameters: {
     layout: 'centered',
-    badges: ['api-3.1', 'theme-2.0'],
   },
   argTypes: {
     multiple: {
@@ -49,6 +48,7 @@ const meta: Meta<typeof Select> = {
         'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
+  tags: ['autodocs', 'version:3.1'],
 };
 
 export default meta;
@@ -706,7 +706,6 @@ export const LongOptionList: StoryObj = {
     await expect(selectButton.getAttribute('aria-expanded')).toEqual('true');
   },
   parameters: {
-    badges: ['api-2.0', 'theme-2.0'],
     layout: 'centered',
     chromatic: { delay: 450 },
     docs: {
@@ -958,7 +957,6 @@ export const OptionsRightAligned: StoryObj = {
 export const OpenByDefault: StoryObj = {
   ...Default,
   parameters: {
-    badges: ['api-2.1', 'theme-2.0'],
     layout: 'centered',
     chromatic: { delay: 300, disableSnapshot: true },
     docs: {

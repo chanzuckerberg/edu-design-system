@@ -15,7 +15,6 @@ export default {
   title: 'Components/Menu',
   component: Menu,
   parameters: {
-    badges: ['api-3.0', 'theme-2.0'],
     layout: 'centered',
   },
   argTypes: {
@@ -35,6 +34,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<MenuProps>;
 
 type Story = StoryObj<MenuProps>;
@@ -229,9 +229,7 @@ export const WithCustomSecondaryButton: Story = {
  * This will dynamically add the focus ring to the wrapper component since it is needed to make the `Avatar`-based trigger accessible
  */
 export const MenuWithAvatarButton: Story = {
-  parameters: {
-    badges: ['api-2.0', 'implementationExample'],
-  },
+  tags: ['code-only'],
   args: {
     children: (
       <>
@@ -294,9 +292,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
     args: {
       iconName: 'dots-vertical',
     },
-    parameters: {
-      badges: ['api-2.0', 'implementationExample'],
-    },
+    tags: ['code-only'],
     render: ({ iconName }) => (
       <Menu>
         <Menu.PlainButton>

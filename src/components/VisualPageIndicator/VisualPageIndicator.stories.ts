@@ -6,9 +6,7 @@ import { VisualPageIndicator } from './VisualPageIndicator';
 export default {
   title: 'Components/VisualPageIndicator',
   component: VisualPageIndicator,
-  parameters: {
-    badges: ['api-1.0', 'theme-2.0'],
-  },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof VisualPageIndicator>;

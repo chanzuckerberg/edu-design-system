@@ -9,9 +9,9 @@ export default {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
-    badges: ['api-2.0', 'theme-2.0'],
     layout: 'centered',
   },
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof Avatar>;
 
 type Story = StoryObj<typeof Avatar>;
@@ -145,9 +145,9 @@ export const UsingWithTooltip: Story = {
     isInteractive: true,
   },
   parameters: {
-    badges: ['api-2.0', 'theme-2.0', 'implementationExample'],
     layout: 'centered',
   },
+  tags: ['code-only'],
   render: (args) => (
     <Tooltip text="Show additional user information">
       <span>

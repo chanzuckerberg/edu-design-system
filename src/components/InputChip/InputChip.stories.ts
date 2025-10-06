@@ -6,9 +6,6 @@ import { InputChip } from './InputChip';
 export default {
   title: 'Components/InputChip',
   component: InputChip,
-  parameters: {
-    badges: ['api-1.0', 'theme-2.0'],
-  },
   argTypes: {
     onClick: {
       control: false,
@@ -17,6 +14,7 @@ export default {
       control: false,
     },
   },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof InputChip>;
