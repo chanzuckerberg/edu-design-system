@@ -16,9 +16,6 @@ export default {
   },
 };
 
-const camelCaseWarning =
-  'NOTE: emphasis tokens have a camelCase suffix for the emphasis (e.g., lowEmphasis)';
-
 /**
  * Generate data for each list item row based on the contents of the tokens.json file.
  * 
@@ -53,14 +50,22 @@ const getListItems = ({
       name.indexOf(filterTerm) + filterTerm.length + 1,
     );
 
-    // TODO-AH: tokens.json hyphen-separates camel case token name parts. make sure we "*-emphasis" => "*Emphasis"
-    // TODO-AH: this is not a problem in the emitted tailwind config since it doesn't use tokens.json
+    // tokens.json hyphen-separates camel case token name parts using the built-in "json/flat".
+    // Fxamples:
+    // - "*-emphasis" => "*Emphasis"
+    // Note that this is not a problem in the emitted tailwind config since it doesn't use tokens.json
+    const convertEmphasesToCamelCase = /([a-z]+)-emphasis*/g;
+    const updatedSpecifier = specifier.replace(
+      convertEmphasesToCamelCase,
+      '$1Emphasis',
+    );
+
     return {
       name,
       value,
       // apply the passed in format prefix, and the separator
-      figmaToken: figmaTokenHeader + '/' + specifier,
-      tailwindClass: tailwindClassHeader + '-' + specifier,
+      figmaToken: figmaTokenHeader + '/' + updatedSpecifier,
+      tailwindClass: tailwindClassHeader + '-' + updatedSpecifier,
     };
   });
 
@@ -83,10 +88,7 @@ export const TextUtility: StoryObj = {
 export const BackgroundUtility: StoryObj = {
   render: () => (
     <div>
-      <Section
-        description={camelCaseWarning}
-        title="Background Colors (utility)"
-      >
+      <Section title="Background Colors (utility)">
         <ColorList
           listItems={getListItems({
             filterTerm: 'eds-theme-color-background-utility',
@@ -102,7 +104,7 @@ export const BackgroundUtility: StoryObj = {
 export const BackgroundBrand: StoryObj = {
   render: () => (
     <div>
-      <Section description={camelCaseWarning} title="Background Colors (brand)">
+      <Section title="Background Colors (brand)">
         <ColorList
           listItems={getListItems({
             filterTerm: 'eds-theme-color-background-brand',
@@ -118,7 +120,7 @@ export const BackgroundBrand: StoryObj = {
 export const BorderUtility: StoryObj = {
   render: () => (
     <div>
-      <Section description={camelCaseWarning} title="Border Colors (utility)">
+      <Section title="Border Colors (utility)">
         <ColorList
           listItems={getListItems({
             filterTerm: 'eds-theme-color-border-utility',
@@ -134,7 +136,7 @@ export const BorderUtility: StoryObj = {
 export const BorderBrand: StoryObj = {
   render: () => (
     <div>
-      <Section description={camelCaseWarning} title="Border Colors (brand)">
+      <Section title="Border Colors (brand)">
         <ColorList
           listItems={getListItems({
             filterTerm: 'eds-theme-color-border-brand',

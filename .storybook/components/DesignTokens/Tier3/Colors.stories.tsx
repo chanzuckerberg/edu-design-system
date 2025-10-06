@@ -14,9 +14,6 @@ export default {
   },
 };
 
-const camelCaseWarning =
-  'NOTE: table tokens have a camelCase suffix for the emphasis (e.g., tableRow)';
-
 const getListItems = ({
   filterTerm,
   figmaTokenHeader,
@@ -30,11 +27,18 @@ const getListItems = ({
     const specifier = name.slice(
       name.indexOf(filterTerm) + filterTerm.length + 1,
     );
+
+    // tokens.json hyphen-separates camel case token name parts using the built-in "json/flat".
+    // Examples:
+    // - "table-row" => "tableRow"
+    // Note that this is not a problem in the emitted tailwind config since it doesn't use tokens.json
+    const updatedSpecifier = specifier.replace('row-', 'Row-');
+
     return {
       name,
       value,
       figmaToken: figmaTokenHeader + '/' + specifier,
-      tailwindClass: tailwindClassHeader + '-' + specifier,
+      tailwindClass: tailwindClassHeader + updatedSpecifier,
     };
   });
 
@@ -57,7 +61,7 @@ export const IconUtility: StoryObj = {
 export const BackgroundTable: StoryObj = {
   render: () => (
     <div>
-      <Section description={camelCaseWarning} title="Background Colors (Table)">
+      <Section title="Background Colors (Table)">
         <ColorList
           listItems={getListItems({
             filterTerm: 'eds-theme-color-background-table',
