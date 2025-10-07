@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScrollWrapper /> Contain story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    style="height: 200px;"
+  >
+    <div
+      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+    >
+      <div
+        class="scroll-wrapper__inner"
+      >
+        <div
+          style="height: 300px;"
+        >
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime accusamus dolorum nostrum itaque ullam tempora quam dolore adipisci atque velit, excepturi veniam? Nesciunt non facilis, quos odit aliquam alias unde hic quidem exercitationem perspiciatis!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet sapiente ipsam, ipsum similique ea nemo doloremque. Corporis excepturi eos impedit dicta quidem soluta culpa at delectus est, provident vitae sed commodi inventore quaerat non labore consequatur nisi quisquam obcaecati, reprehenderit quas dolore ipsa. Totam dolorem suscipit amet optio.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta cupiditate officiis temporibus explicabo!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta cupiditate officiis temporibus explicabo!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScrollWrapper /> Default story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    style="height: 200px;"
+  >
+    <div
+      class="scroll-wrapper scroll-wrapper--shadow-type-cover"
+    >
+      <div
+        class="scroll-wrapper__inner"
+      >
+        <div
+          style="height: 300px;"
+        >
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime accusamus dolorum nostrum itaque ullam tempora quam dolore adipisci atque velit, excepturi veniam? Nesciunt non facilis, quos odit aliquam alias unde hic quidem exercitationem perspiciatis!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet sapiente ipsam, ipsum similique ea nemo doloremque. Corporis excepturi eos impedit dicta quidem soluta culpa at delectus est, provident vitae sed commodi inventore quaerat non labore consequatur nisi quisquam obcaecati, reprehenderit quas dolore ipsa. Totam dolorem suscipit amet optio.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta cupiditate officiis temporibus explicabo!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta cupiditate officiis temporibus explicabo!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

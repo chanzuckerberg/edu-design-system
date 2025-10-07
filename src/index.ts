@@ -74,3 +74,4 @@ export type {
  */
 // https://headlessui.com/v1/react/transition
 export { Transition } from '@headlessui/react';
+export { default as ScrollWrapper } from './components/ScrollWrapper';
