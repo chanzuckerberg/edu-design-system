@@ -94,7 +94,12 @@ export const ScrollWrapper = ({
 
   return (
     <div className={outterClassName} {...other}>
-      <div className={clsx(styles['scroll-wrapper__inner'])} ref={scrollRef}>
+      <div
+        className={clsx(styles['scroll-wrapper__inner'])}
+        ref={scrollRef}
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+        tabIndex={0}
+      >
         {children}
       </div>
     </div>
