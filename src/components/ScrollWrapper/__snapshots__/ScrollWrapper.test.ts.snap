@@ -15,6 +15,7 @@ exports[`<ScrollWrapper /> Contain story renders snapshot 1`] = `
         tabindex="0"
       >
         <div
+          data-testid="scrollContent"
           style="height: 300px;"
         >
           <p>
@@ -51,6 +52,7 @@ exports[`<ScrollWrapper /> Default story renders snapshot 1`] = `
         tabindex="0"
       >
         <div
+          data-testid="scrollContent"
           style="height: 300px;"
         >
           <p>

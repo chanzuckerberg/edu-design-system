@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
+
 import React from 'react';
 
 import { ScrollWrapper } from './ScrollWrapper';
@@ -22,7 +24,7 @@ export const Default: StoryObj<Args> = {
   render: (args) => (
     <div style={{ height: '200px' }}>
       <ScrollWrapper {...args}>
-        <div style={{ height: '300px' }}>
+        <div data-testid="scrollContent" style={{ height: '300px' }}>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
             accusamus dolorum nostrum itaque ullam tempora quam dolore adipisci
@@ -51,6 +53,22 @@ export const Default: StoryObj<Args> = {
   ),
 };
 
+export const DefaultScrolled: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+  },
+  render: Default.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    const canvas = within(canvasElement);
+    const scrollable = canvas.getByTestId('scrollContent').parentElement;
+
+    scrollable?.scrollBy({ top: 50, left: 0 });
+
+    await userEvent.tab();
+  },
+};
+
 /**
  * Shadows can be kept within the edge of the container, taking on a concave appearance
  */
@@ -61,7 +79,7 @@ export const Contain: StoryObj<Args> = {
   render: (args) => (
     <div style={{ height: '200px' }}>
       <ScrollWrapper {...args}>
-        <div style={{ height: '300px' }}>
+        <div data-testid="scrollContent" style={{ height: '300px' }}>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
             accusamus dolorum nostrum itaque ullam tempora quam dolore adipisci
@@ -88,4 +106,20 @@ export const Contain: StoryObj<Args> = {
       </ScrollWrapper>
     </div>
   ),
+};
+
+export const ContainScrolled: StoryObj<Args> = {
+  args: {
+    ...Contain.args,
+  },
+  render: Contain.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    const canvas = within(canvasElement);
+    const scrollable = canvas.getByTestId('scrollContent').parentElement;
+
+    scrollable?.scrollBy({ top: 50, left: 0 });
+
+    await userEvent.tab();
+  },
 };
