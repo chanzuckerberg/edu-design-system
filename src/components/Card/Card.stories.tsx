@@ -370,8 +370,9 @@ export const ChildCards: Story = {
 export const RadioCards: Story = {
   args: {
     ...Default.args,
-    isInteractive: true,
     behavior: 'radio',
+    isInteractive: true,
+    name: 'test',
   },
   render: (args) => (
     <div className="flex gap-spacing-size-1">
