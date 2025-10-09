@@ -404,7 +404,8 @@
             "container": {
               "@": "#FFFFFF",
               "hover": "#F9F3F1",
-              "active": "#EEE7E4"
+              "active": "#EEE7E4",
+              "selected": "#EAF4FF"
             },
             "overlay": {
               "lowEmphasis": "rgba(39, 38, 37, 0.50)",

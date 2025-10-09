@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
+
 import React from 'react';
 
 import { Card } from './Card';
@@ -360,6 +362,114 @@ export const ChildCards: Story = {
         </Card.Body>
       </>
     ),
+  },
+};
+
+/**
+ * Interactive cards can behave as radios, for use in a form context, where we want to select one of several options. Such cards would have a `name`, and by default are uncontrolled.
+ * Every card in a radio set should have the same `name`.
+ */
+export const RadioCards: Story = {
+  args: {
+    ...Default.args,
+    behavior: 'radio',
+    isInteractive: true,
+    name: 'test',
+  },
+  render: (args) => (
+    <div className="flex gap-spacing-size-1">
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+    </div>
+  ),
+};
+
+export const RadioCardsSelected: Story = {
+  args: {
+    ...RadioCards.args,
+  },
+  render: RadioCards.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    await userEvent.keyboard(' ');
+    await userEvent.tab();
+  },
+};
+
+/**
+ * Interactive cards can also have checkbox behavior, allowing selection of 1-many in a given set. The `name` values for each should be unique.
+ */
+export const CheckboxCards: Story = {
+  args: {
+    ...Default.args,
+    isInteractive: true,
+    behavior: 'checkbox',
+  },
+  render: (args) => (
+    <div className="flex gap-spacing-size-1">
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+      <Card {...args}>
+        <Card.Header
+          eyebrow="Recommended for you"
+          subTitle="Get to know your colleagues"
+          title="Question of the day"
+        />
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </Card>
+    </div>
+  ),
+};
+
+export const CheckboxCardsSelected: Story = {
+  args: {
+    ...CheckboxCards.args,
+  },
+  render: CheckboxCards.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    await userEvent.keyboard(' ');
+    await userEvent.tab();
   },
 };
 

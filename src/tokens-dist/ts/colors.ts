@@ -149,6 +149,7 @@ export const EdsThemeColorBackgroundUtilityBase2 = '#FDF9F8';
 export const EdsThemeColorBackgroundUtilityContainer = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityContainerHover = '#F9F3F1';
 export const EdsThemeColorBackgroundUtilityContainerActive = '#EEE7E4';
+export const EdsThemeColorBackgroundUtilityContainerSelected = '#EAF4FF';
 export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
   'rgba(39, 38, 37, 0.50)';
 export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis =

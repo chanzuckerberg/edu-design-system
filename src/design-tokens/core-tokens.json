@@ -933,6 +933,10 @@
               },
               "active": {
                 "value": "{eds.color.neutral.100}"
+              },
+              "selected": {
+                "value": "{eds.color.blue.050}",
+                "group": "color"
               }
             },
             "overlay": {
