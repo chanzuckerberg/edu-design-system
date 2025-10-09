@@ -674,6 +674,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
         <input
           class="card__behavior-input"
           id=":r1h:"
+          name="test"
           type="radio"
         />
       </div>
@@ -732,6 +733,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
         <input
           class="card__behavior-input"
           id=":r1i:"
+          name="test"
           type="radio"
         />
       </div>
