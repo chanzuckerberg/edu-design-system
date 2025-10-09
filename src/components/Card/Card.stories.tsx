@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
+
 import React from 'react';
 
 import { Card } from './Card';
@@ -406,6 +408,18 @@ export const RadioCards: Story = {
   ),
 };
 
+export const RadioCardsSelected: Story = {
+  args: {
+    ...RadioCards.args,
+  },
+  render: RadioCards.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    await userEvent.keyboard(' ');
+    await userEvent.tab();
+  },
+};
+
 /**
  * Interactive cards can also have checkbox behavior, allowing selection of 1-many in a given set. The `name` values for each should be unique.
  */
@@ -445,6 +459,18 @@ export const CheckboxCards: Story = {
       </Card>
     </div>
   ),
+};
+
+export const CheckboxCardsSelected: Story = {
+  args: {
+    ...CheckboxCards.args,
+  },
+  render: CheckboxCards.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    await userEvent.keyboard(' ');
+    await userEvent.tab();
+  },
 };
 
 /**

@@ -166,7 +166,7 @@
 */
 .card:has(.card__behavior-input:checked) {
   /* TODO-AH: confirm color value with design */
-  background: var(--eds-theme-color-background-utility-selected);
+  background: var(--eds-theme-color-background-utility-container-selected);
 
   /* use an outline on top of the border to get the correct width without changing the layout */
   outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-high-emphasis);

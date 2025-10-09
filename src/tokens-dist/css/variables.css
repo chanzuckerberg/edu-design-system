@@ -379,7 +379,6 @@
   --eds-theme-color-border-brand-yellow: var(--eds-color-yellow-150);
   --eds-theme-color-border-brand-orange: var(--eds-color-orange-250);
   --eds-theme-color-border-brand-red: var(--eds-color-red-850);
-  --eds-theme-color-background-utility-selected: var(--eds-color-blue-050);
   --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-white);
@@ -427,6 +426,7 @@
   --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-container-selected: var(--eds-color-blue-050);
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container: var(--eds-color-white);
