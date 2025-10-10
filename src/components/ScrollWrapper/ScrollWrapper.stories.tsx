@@ -57,6 +57,11 @@ export const DefaultScrolled: StoryObj<Args> = {
   args: {
     ...Default.args,
   },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
   render: Default.render,
   play: async ({ canvasElement }) => {
     await userEvent.tab();
@@ -111,6 +116,11 @@ export const Contain: StoryObj<Args> = {
 export const ContainScrolled: StoryObj<Args> = {
   args: {
     ...Contain.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
   },
   render: Contain.render,
   play: async ({ canvasElement }) => {

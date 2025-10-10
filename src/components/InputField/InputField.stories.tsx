@@ -198,6 +198,11 @@ export const Password: Story = {
     type: 'password',
     defaultValue: 'secret123',
   },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
@@ -207,6 +212,9 @@ export const Password: Story = {
 export const PasswordWithShownText: Story = {
   args: {
     ...Password.args,
+  },
+  parameters: {
+    ...Password.parameters,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

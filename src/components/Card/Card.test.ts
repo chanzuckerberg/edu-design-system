@@ -5,9 +5,6 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 
 mockResizeObserver();
 
-// Pull out the stories that mutate state, to avoid act() warnings
-const { RadioCardsSelected, CheckboxCardsSelected, ...rest } = stories;
-
 describe('<Card />', () => {
-  generateSnapshots(rest as StoryFile);
+  generateSnapshots(stories as StoryFile);
 });

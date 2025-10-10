@@ -52,6 +52,9 @@ function InteractiveExample(args: InteractiveArgs) {
 export const Default: Story = {
   parameters: {
     layout: 'centered',
+    snapshot: {
+      skip: true,
+    },
   },
   render: (args) => (
     <InteractiveExample {...args}>
@@ -75,15 +78,8 @@ export const Default: Story = {
     </InteractiveExample>
   ),
   play: async () => {
-    // Adding a mock to hide the warnings coming from Headless's Transition component
-    // it says that act() is required, but in fact it isn't, and importing and using it breaks chromatic
-    const originalError = console.error;
-    console.error = () => {};
-
     await userEvent.tab();
     await userEvent.keyboard(' ', { delay: 100 });
-
-    console.error = originalError;
   },
 };
 

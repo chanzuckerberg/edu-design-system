@@ -412,6 +412,11 @@ export const RadioCardsSelected: Story = {
   args: {
     ...RadioCards.args,
   },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
   render: RadioCards.render,
   play: async ({ canvasElement }) => {
     await userEvent.tab();
@@ -464,6 +469,11 @@ export const CheckboxCards: Story = {
 export const CheckboxCardsSelected: Story = {
   args: {
     ...CheckboxCards.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
   },
   render: CheckboxCards.render,
   play: async ({ canvasElement }) => {
