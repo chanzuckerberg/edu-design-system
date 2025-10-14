@@ -55,6 +55,8 @@ export const ScrollWrapper = ({
     className,
   );
 
+  // TODO-AH: handle reset on resize event?
+
   // This handler fires upon every scoll event. changes are "debounced" by the set state calls
   const handler = (ev: Event) => {
     const showShadows = { top: false, bottom: false };
