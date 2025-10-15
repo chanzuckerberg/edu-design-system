@@ -260,14 +260,9 @@
        * - 100% of the viewport height, minus
        * - the height of the footer (if present)
        * - the height of the header (if present)
-       * - an offset of the maximum padding when in full mode
+       * - an offset of the maximum padding (when present)
        */
-    /* TODO-AH: is it possible to use container queries to figure out the height of the body section of the modal? from its parent? */
     --modal__height: calc(100vh - 88px - 118px);
-
-    .modal-body {
-      flex: unset;
-    }
 
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
@@ -276,29 +271,30 @@
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 800px;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
       margin: calc(var(--eds-spacing-size-3) * 1px);
+      /* include the handling for the padding as well */
       --modal__height: calc(100vh - 88px - 118px - 96px);
     }
 
     @media all and (min-width: $eds-bp-md) {
       max-width: 800px;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
       margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-lg) {
       max-width: 960px;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
       margin: calc(var(--eds-spacing-size-6) * 1px);
     }
 
     @media all and (min-width: $eds-bp-xl) {
       max-width: 960px;
-      max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
       margin: calc(var(--eds-spacing-size-6) * 1px);
     }
