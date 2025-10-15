@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import debounce from 'lodash/debounce';
+
 import React, {
   type ReactNode,
   type HTMLAttributes,
@@ -55,9 +57,7 @@ export const ScrollWrapper = ({
     className,
   );
 
-  // TODO-AH: handle reset on resize event?
-
-  // This handler fires upon every scoll event. changes are "debounced" by the set state calls
+  // This handler fires upon every scroll event. changes are "debounced" by the set state calls
   const handler = (ev: Event) => {
     const showShadows = { top: false, bottom: false };
     if (ev.target) {
@@ -80,19 +80,26 @@ export const ScrollWrapper = ({
     }
   };
 
-  // Hook up the event handlers, and remove them upon unmount
+  // remove the shadows when resizing occurs, so they aren't in the previous state
+  const debouncedHandler = debounce(() => {
+    setShadowState({ top: false, bottom: false });
+  }, 250);
+
+  // Hook up the event handlers, monitoring resizes (reset the shadows) and scroll (add based on position)
   useEffect(() => {
     const currentElement = scrollRef.current;
     if (currentElement) {
       currentElement.addEventListener('scroll', handler);
+      window.addEventListener('resize', debouncedHandler);
     }
 
     return () => {
       if (currentElement) {
         currentElement.removeEventListener('scroll', handler);
+        window.removeEventListener('resize', debouncedHandler);
       }
     };
-  }, []);
+  }, [debouncedHandler]);
 
   return (
     <div className={outterClassName} {...other}>

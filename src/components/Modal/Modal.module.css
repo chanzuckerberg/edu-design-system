@@ -80,9 +80,6 @@
 .modal-body {
   flex: 1;
   padding: 0 calc(var(--eds-spacing-size-4) * 1px);
-
-  /* create var for modal height, and fall back to auto (default). */
-  height: var(--modal__height, auto);
 }
 
 /**
@@ -255,14 +252,10 @@
   }
 
   &.modal__content--height-dynamic {
-    /**
-       * Heights of the body element are determined by...
-       * - 100% of the viewport height, minus
-       * - the height of the footer (if present)
-       * - the height of the header (if present)
-       * - an offset of the maximum padding (when present)
-       */
-    --modal__height: calc(100vh - 88px - 118px);
+    .modal-body {
+      /* by setting the height to 1, and letting flex-grow increase it, we get the exact right height for the container */
+      height: 1px;
+    }
 
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
@@ -274,8 +267,6 @@
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
       margin: calc(var(--eds-spacing-size-3) * 1px);
-      /* include the handling for the padding as well */
-      --modal__height: calc(100vh - 88px - 118px - 96px);
     }
 
     @media all and (min-width: $eds-bp-md) {
