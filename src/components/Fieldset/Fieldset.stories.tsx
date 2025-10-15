@@ -44,7 +44,7 @@ export const WithCriticalFootNote: StoryObj<Args> = {
           subtitle="Some extra descriptive text"
           title="Critical Fieldset"
         />
-        <Fieldset.Items className="fpo">
+        <Fieldset.Items className="fpo flex-col">
           <div>Fieldset Content (Radio Button or Checkbox)</div>
           <div>Fieldset Content (Radio Button or Checkbox)</div>
           <div>Fieldset Content (Radio Button or Checkbox)</div>
