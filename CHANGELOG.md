@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.6.1...v16.7.0) (2025-10-17)
+
+
+### Features
+
+* **Card:** add behavior prop for checkbox and radio behavior ([#2287](https://github.com/chanzuckerberg/edu-design-system/issues/2287)) ([555ac73](https://github.com/chanzuckerberg/edu-design-system/commit/555ac730c09caa1cb31393bf4744f3776efa79fc))
+* **Modal:** add dynamic value for height prop ([#2293](https://github.com/chanzuckerberg/edu-design-system/issues/2293)) ([746ccb1](https://github.com/chanzuckerberg/edu-design-system/commit/746ccb1e2772e849bfec5c31c35f74da98a11e67))
+* **ScrollWrapper:** add 1.0 scrollWrapper component ([#2288](https://github.com/chanzuckerberg/edu-design-system/issues/2288)) ([7e11e1f](https://github.com/chanzuckerberg/edu-design-system/commit/7e11e1f2f8e5e70a4af28139c0a51e69bca27c6e))
+
 ### [16.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.6.0...v16.6.1) (2025-09-30)
 
 
