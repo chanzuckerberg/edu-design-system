@@ -2,7 +2,7 @@
 
 exports[`Modal ContentDefault story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -48,18 +48,9 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -95,7 +86,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
 
 exports[`Modal ContentLarge story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -141,18 +132,9 @@ exports[`Modal ContentLarge story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -234,18 +216,9 @@ exports[`Modal ContentLargeAuto story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -327,18 +300,9 @@ exports[`Modal ContentLargeMax story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -374,7 +338,7 @@ exports[`Modal ContentLargeMax story renders snapshot 1`] = `
 
 exports[`Modal ContentSmall story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--sm"
+  class="modal__content modal__content--height-fixed modal__content--sm"
   data-testid="non-interactive"
   open=""
 >
@@ -420,18 +384,9 @@ exports[`Modal ContentSmall story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -487,7 +442,7 @@ exports[`Modal Full story renders snapshot 1`] = `
     id="headlessui-dialog-panel-:r6:"
   >
     <div
-      class="modal__content modal__content--height-dynamic modal__content--full"
+      class="modal__content modal__content--height-fixed modal__content--full"
     >
       <button
         aria-label="close"
@@ -534,18 +489,9 @@ exports[`Modal Full story renders snapshot 1`] = `
         class="modal-body"
       >
         <div
-          class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+          class="fpo h-full w-full"
         >
-          <div
-            class="scroll-wrapper__inner"
-            tabindex="0"
-          >
-            <div
-              class="fpo h-full w-full"
-            >
-              Modal Content
-            </div>
-          </div>
+          Modal Content
         </div>
       </div>
       <div
@@ -583,7 +529,7 @@ exports[`Modal Full story renders snapshot 1`] = `
 
 exports[`Modal LayoutVertical story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -629,18 +575,9 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -676,7 +613,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
 
 exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -722,18 +659,9 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -769,7 +697,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
 
 exports[`Modal Mobile story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -815,18 +743,9 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -862,7 +781,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
 
 exports[`Modal MobileLandscape story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -908,18 +827,9 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -955,7 +865,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
 
 exports[`Modal Tablet story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -1001,18 +911,9 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div
@@ -1048,7 +949,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
 
 exports[`Modal WithCriticalButton story renders snapshot 1`] = `
 <div
-  class="modal__content modal__content--height-dynamic modal__content--lg"
+  class="modal__content modal__content--height-fixed modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -1094,18 +995,9 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
     class="modal-body"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--shadow-type-contain"
+      class="fpo h-full w-full"
     >
-      <div
-        class="scroll-wrapper__inner"
-        tabindex="0"
-      >
-        <div
-          class="fpo h-full w-full"
-        >
-          Modal Content
-        </div>
-      </div>
+      Modal Content
     </div>
   </div>
   <div

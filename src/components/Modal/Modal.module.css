@@ -24,6 +24,9 @@
   align-items: center;
   justify-content: center;
 
+  container-type: size;
+  container-name: modal;
+
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
    * z-indeces across the system
@@ -252,11 +255,6 @@
   }
 
   &.modal__content--height-dynamic {
-    .modal-body {
-      /* by setting the height to 1, and letting flex-grow increase it, we get the exact right height for the container */
-      height: 1px;
-    }
-
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
@@ -288,6 +286,27 @@
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
       margin: calc(var(--eds-spacing-size-6) * 1px);
+    }
+  }
+}
+
+.modal__content--height-dynamic {
+  /* use --eds-spacing-size-40 in the container queries */
+  @container modal (height < 320px) {
+    overflow: scroll;
+  }
+
+  .modal-body {
+    /* by setting the height to 1, and letting flex-grow increase it, we get the exact right height for the container */
+    height: 1px;
+    @container modal (height < 320px) {
+      height: unset;
+    }
+  }
+
+  .modal__close-button {
+    @container modal (height < 320px) {
+      position: absolute;
     }
   }
 }

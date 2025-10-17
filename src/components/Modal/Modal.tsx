@@ -64,9 +64,11 @@ type ModalContentProps = {
    * Tabindex for keyboard scroll is on the body, however, due to focus outline
    * not having high contrast on the brand header and being overlapped by the footer.
    *
-   * @deprecated
    *
    * **Default is `false`**.
+   *
+   * @deprecated
+   * This will be removed in the next version of EDS. Please use `size="dynamic"` for scrollable behavior.
    */
   isScrollable?: boolean;
   /**
@@ -89,9 +91,12 @@ type ModalContentProps = {
   // Design API
   /**
    * Determine how the height of the modal container is calculated when `size` is `"lg"`:
+   * - `"fixed"` applies the fixed dimensions, which will not adjust
+   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
+   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
    * - `"dynamic"` manages the height for you, with intelligent presets and scroll truncation as needed
    *
-   * **Default is `"dynamic"`**.
+   * **Default is `"fixed"`**.
    */
   height?: 'fixed' | 'auto' | 'max' | 'dynamic';
   /**
@@ -173,6 +178,16 @@ type ModalBodyProps = {
    * Defaults to false since modal default is not scrollable.
    */
   isFocusable?: boolean;
+  /**
+   * Determine how the height of the modal container is calculated when `size` is `"lg"`:
+   * - `"fixed"` applies the fixed dimensions, which will not adjust
+   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
+   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
+   * - `"dynamic"` manages the height for you, with intelligent presets and scroll truncation as needed
+   *
+   * **Default is `"fixed"`**.
+   */
+  height?: ModalContentProps['height'];
 };
 
 type ModalHeaderProps = {
@@ -210,6 +225,7 @@ type ModalFooterProps = {
 
 type Context = {
   isScrollable?: boolean;
+  height?: ModalContentProps['height'];
 };
 
 const ModalContext = React.createContext<Context>({});
@@ -242,7 +258,7 @@ const ModalContent = (props: ModalContentProps) => {
   const {
     children,
     className,
-    height = 'dynamic',
+    height = 'fixed',
     hideCloseButton = false,
     isScrollable,
     onClose,
@@ -259,7 +275,7 @@ const ModalContent = (props: ModalContentProps) => {
   );
 
   return (
-    <ModalContext.Provider value={{ isScrollable }}>
+    <ModalContext.Provider value={{ isScrollable, height }}>
       <div className={componentClassName} {...other}>
         {!hideCloseButton && (
           <Button
@@ -366,11 +382,11 @@ export const Modal = (props: ModalProps) => {
 
 /**
  * Component defines the body of the modal.
- * TODO: should the inclusion of `ScrollWrapper` be conditional?
  */
 const ModalBody = ({
   children,
   className,
+  height,
   isFocusable,
   ...other
 }: ModalBodyProps) => (
@@ -381,7 +397,11 @@ const ModalBody = ({
     tabIndex={isFocusable ? 0 : undefined}
     {...other}
   >
-    <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
+    {height === 'dynamic' ? (
+      <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
+    ) : (
+      children
+    )}
   </div>
 );
 
@@ -466,12 +486,13 @@ const VariantModalHeader = (props: ModalHeaderProps) => {
   return <ModalHeader {...props} />;
 };
 
-// TODO(next-major): remove sticky footer handling
+// TODO(next-major): remove focusable footer handling
 const FocusableModalBody = (props: ModalBodyProps) => {
-  const { isScrollable } = React.useContext(ModalContext);
-  return <ModalBody isFocusable={isScrollable} {...props} />;
+  const { isScrollable, height } = React.useContext(ModalContext);
+  return <ModalBody height={height} isFocusable={isScrollable} {...props} />;
 };
 
+// TODO(next-major): remove sticky footer handling
 const StickyModalFooter = (props: ModalFooterProps) => {
   const { isScrollable } = React.useContext(ModalContext);
   return <ModalFooter isSticky={isScrollable} {...props} />;
