@@ -67,8 +67,7 @@ type ModalContentProps = {
    *
    * **Default is `false`**.
    *
-   * @deprecated
-   * This will be removed in the next version of EDS. Please use `size="dynamic"` for scrollable behavior.
+   * @deprecated This will be removed in the next major version of EDS. Please use `height="dynamic"` for scrollable behavior.
    */
   isScrollable?: boolean;
   /**
@@ -219,6 +218,8 @@ type ModalFooterProps = {
    * Toggles sticky variant of the footer. If modal is scrollable, footer is sticky.
    * Also adds border and shadow to indicate sticky status.
    * Defaults to false since modal default is not scrollable.
+   *
+   * @deprecated This will be removed in the next major version of EDS. Please use `height="dynamic"` for sticky footer behavior.
    */
   isSticky?: boolean;
 };
