@@ -24,8 +24,10 @@
   align-items: center;
   justify-content: center;
 
-  container-type: size;
-  container-name: modal;
+  @supports (container-type: size) {
+    container-type: size;
+    container-name: modal;
+  }
 
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
