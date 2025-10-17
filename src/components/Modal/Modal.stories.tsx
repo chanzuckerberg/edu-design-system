@@ -14,7 +14,7 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
-    chromatic: { delay: 300, prefersReducedMmotion: 'reduce' },
+    chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
     layout: 'fullscreen',
   },
   tags: ['autodocs', 'version:2.2'],
@@ -79,7 +79,7 @@ export const Default: Story = {
   ),
   play: async () => {
     await userEvent.tab();
-    await userEvent.keyboard(' ', { delay: 100 });
+    await userEvent.keyboard(' ', { delay: 150 });
   },
 };
 
@@ -91,6 +91,7 @@ export const Full: Story = {
   args: {
     size: 'full',
   },
+  parameters: Default.parameters,
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
