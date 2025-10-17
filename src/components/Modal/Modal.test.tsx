@@ -132,7 +132,7 @@ describe('Modal', () => {
 
   it('prints a warning when height is used with size="sm"', () => {
     const modalWithoutTitleOrAriaLabel = (
-      <Modal height="auto" onClose={() => {}} open size="sm">
+      <Modal height="dynamic" onClose={() => {}} open size="sm">
         <Modal.Header>
           <Modal.Title>Modal Title</Modal.Title>
         </Modal.Header>
