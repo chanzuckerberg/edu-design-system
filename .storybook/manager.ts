@@ -1,5 +1,10 @@
 import { addons } from '@storybook/manager-api';
-import yourTheme from './Theme';
+// TODO: to support custom badges, we need to update module resolution for
+// typescript (node16)
+// https://github.com/Sidnioulz/storybook-addon-tag-badges
+// https://www.typescriptlang.org/tsconfig/#moduleResolution
+
+import yourTheme from './Theme.js';
 
 addons.setConfig({
   theme: yourTheme,

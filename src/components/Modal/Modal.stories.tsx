@@ -14,11 +14,10 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
-    chromatic: { delay: 300, prefersReducedMmotion: 'reduce' },
-    badges: ['api-3.0', 'theme-2.1'],
+    chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs'],
+  tags: ['autodocs', 'version:2.2'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -53,6 +52,9 @@ function InteractiveExample(args: InteractiveArgs) {
 export const Default: Story = {
   parameters: {
     layout: 'centered',
+    snapshot: {
+      skip: true,
+    },
   },
   render: (args) => (
     <InteractiveExample {...args}>
@@ -76,15 +78,8 @@ export const Default: Story = {
     </InteractiveExample>
   ),
   play: async () => {
-    // Adding a mock to hide the warnings coming from Headless's Transition component
-    // it says that act() is required, but in fact it isn't, and importing and using it breaks chromatic
-    const originalError = console.error;
-    console.error = () => {};
-
     await userEvent.tab();
-    await userEvent.keyboard(' ', { delay: 100 });
-
-    console.error = originalError;
+    await userEvent.keyboard(' ', { delay: 150 });
   },
 };
 
@@ -96,6 +91,7 @@ export const Full: Story = {
   args: {
     size: 'full',
   },
+  parameters: Default.parameters,
   render: (args) => (
     <InteractiveExample {...args}>
       <Modal.Header>
@@ -133,6 +129,8 @@ export const HighEmphasis: Story = {
 
 /**
  * Large modals allow for control of the on screen height. When set to max, they will occupy the maxiumum space allowed to start. Padding is considered.
+ *
+ * **This will be removed in a future version of EDS**
  */
 export const LargeMax: Story = {
   args: {
@@ -146,6 +144,8 @@ export const LargeMax: Story = {
 
 /**
  * Large modals allow for control of the on screen height. When set to auto, the height will grow based on the amount of content in the modal body.
+ *
+ * **This will be removed in a future version of EDS**
  */
 export const LargeAuto: Story = {
   args: {
@@ -159,6 +159,8 @@ export const LargeAuto: Story = {
 
 /**
  * Large modals allow for control of the on screen height. When set to fixed, the modal's size will match a fixed maxiumum height based on the viewport.
+ *
+ * **This will be removed in a future version of EDS**
  */
 export const LargeFixed: Story = {
   args: {
@@ -167,6 +169,59 @@ export const LargeFixed: Story = {
   },
   parameters: Default.parameters,
   render: Default.render,
+  play: Default.play,
+};
+
+/**
+ * The dynzmic setting for height is the new default, which handles scrollable content areas in the `Modal` body content.
+ * - When the content height is small, `Modal` is centered on the screen.
+ * - When the content is taller and requires scroll, `Modal` will keep the header and footer on screen, but allow the content to scroll
+ *
+ * This will supercede the other height calculations and become the new default. As such, use of other height values (`auto`, `mqx`, etc. are discouraged)
+ */
+export const LargeDynamic: Story = {
+  args: {
+    size: 'lg',
+    height: 'dynamic',
+  },
+  parameters: Default.parameters,
+  render: (args) => (
+    <InteractiveExample {...args}>
+      <Modal.Header>
+        <Modal.Title>Modal title</Modal.Title>
+        <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
+      </Modal.Header>
+      <Modal.Body>
+        <div className="h-[500px] w-full">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+          Suscipit dui, nunc sit dui tellus massa laoreet tellus. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Nulla amet, massa
+          ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et
+          ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc
+          sit dui tellus massa laoreet tellus. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam
+          lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus
+          amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa
+          laoreet tellus. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh
+          malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet
+          tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </div>
+      </Modal.Body>
+      <Modal.Footer>
+        <ButtonGroup>
+          <Button onClick={() => {}} rank="primary">
+            Primary
+          </Button>
+          <Button onClick={() => {}} rank="secondary">
+            Secondary
+          </Button>
+        </ButtonGroup>
+      </Modal.Footer>
+    </InteractiveExample>
+  ),
   play: Default.play,
 };
 

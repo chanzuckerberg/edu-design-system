@@ -242,7 +242,7 @@ exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
     </div>
   </legend>
   <div
-    class="fieldset-items fpo"
+    class="fieldset-items fpo flex-col"
   >
     <div>
       Fieldset Content (Radio Button or Checkbox)

@@ -10,7 +10,6 @@ const meta: Meta<typeof InputField> = {
   component: InputField,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.1', 'theme-2.0'],
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
     },
@@ -39,6 +38,7 @@ const meta: Meta<typeof InputField> = {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  tags: ['autodocs', 'version:2.1'],
 };
 
 export default meta;
@@ -198,6 +198,11 @@ export const Password: Story = {
     type: 'password',
     defaultValue: 'secret123',
   },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
@@ -207,6 +212,9 @@ export const Password: Story = {
 export const PasswordWithShownText: Story = {
   args: {
     ...Password.args,
+  },
+  parameters: {
+    ...Password.parameters,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

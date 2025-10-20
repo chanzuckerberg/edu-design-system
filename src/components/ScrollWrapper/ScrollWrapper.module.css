@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    # SCROLL WRAPPER
+\*------------------------------------*/
+
+/**
+* ScrollWrapper
+*/
+.scroll-wrapper {
+  --scroll-wrapper__height: 30;
+
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  box-shadow: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+.scroll-wrapper__inner {
+  overflow-y: auto;
+  flex-grow: 1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: calc(var(--scroll-wrapper__height) * 1px);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity calc(var(--eds-anim-move-quick) * 1s) ease-in-out;
+    content: '';
+    z-index: 20;
+  }
+
+  &::before {
+    top: calc(var(--scroll-wrapper__height) * -1px);
+    box-shadow: 0 2px 8px 0 rgb(from var(--eds-theme-color-background-utility-default-medium-emphasis) r g b / 20%);
+  }
+
+  &::after {
+    bottom: calc(var(--scroll-wrapper__height) * -1px);
+    box-shadow: 0 2px 8px 0 rgb(from var(--eds-theme-color-background-utility-default-medium-emphasis) r g b / 20%);
+  }
+}
+
+.scroll-wrapper--has-top-shadow .scroll-wrapper__inner::before {
+  opacity: 1;
+}
+
+.scroll-wrapper--has-bottom-shadow .scroll-wrapper__inner::after {
+  opacity: 1;
+}
+
+.scroll-wrapper--shadow-type-cover {
+    .scroll-wrapper__inner::before,
+    .scroll-wrapper__inner::after {
+        border-radius: 0;
+    }
+}
+
+.scroll-wrapper--shadow-type-contain {
+    .scroll-wrapper__inner::before,
+    .scroll-wrapper__inner::after {
+        border-radius: 50%;
+    }
+}

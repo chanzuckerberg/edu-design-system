@@ -40,7 +40,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rq:"
+            id="headlessui-menu-button-:r15:"
             type="button"
           >
             <svg
@@ -157,6 +157,133 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="flex gap-spacing-size-1"
+  >
+    <label
+      class="card__behavior-label"
+      for=":r1j:"
+    >
+      <div
+        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+      >
+        <div
+          class="card__header header--size-md"
+        >
+          <div
+            class="header__text"
+          >
+            <div
+              class="text text--overline-md header__eyebrow header--size-md"
+            >
+              Recommended for you
+            </div>
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
+            >
+              Question of the day
+            </h3>
+            <div
+              class="text text--body-lg header__sub-title header--size-md"
+            >
+              Get to know your colleagues
+            </div>
+          </div>
+        </div>
+        <div
+          class="card__body"
+        >
+          <div
+            class="fpo"
+          >
+            Card Body
+          </div>
+        </div>
+        <div
+          class="card__footer"
+        >
+          <div
+            class="fpo"
+          >
+            Card Footer
+          </div>
+        </div>
+        <div
+          class="card__top-stripe top-stripe--none"
+        />
+        <input
+          class="card__behavior-input"
+          id=":r1j:"
+          type="checkbox"
+        />
+      </div>
+    </label>
+    <label
+      class="card__behavior-label"
+      for=":r1k:"
+    >
+      <div
+        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+      >
+        <div
+          class="card__header header--size-md"
+        >
+          <div
+            class="header__text"
+          >
+            <div
+              class="text text--overline-md header__eyebrow header--size-md"
+            >
+              Recommended for you
+            </div>
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
+            >
+              Question of the day
+            </h3>
+            <div
+              class="text text--body-lg header__sub-title header--size-md"
+            >
+              Get to know your colleagues
+            </div>
+          </div>
+        </div>
+        <div
+          class="card__body"
+        >
+          <div
+            class="fpo"
+          >
+            Card Body
+          </div>
+        </div>
+        <div
+          class="card__footer"
+        >
+          <div
+            class="fpo"
+          >
+            Card Footer
+          </div>
+        </div>
+        <div
+          class="card__top-stripe top-stripe--none"
+        />
+        <input
+          class="card__behavior-input"
+          id=":r1k:"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`<Card /> ChildCards story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
@@ -217,7 +344,7 @@ exports[`<Card /> ChildCards story renders snapshot 1`] = `
                 aria-expanded="false"
                 aria-haspopup="menu"
                 data-headlessui-state=""
-                id="headlessui-menu-button-:r10:"
+                id="headlessui-menu-button-:r1d:"
                 type="button"
               >
                 <svg
@@ -338,7 +465,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rk:"
+            id="headlessui-menu-button-:ru:"
             type="button"
           >
             <svg
@@ -486,6 +613,135 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Card /> RadioCards story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="flex gap-spacing-size-1"
+  >
+    <label
+      class="card__behavior-label"
+      for=":r1h:"
+    >
+      <div
+        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+      >
+        <div
+          class="card__header header--size-md"
+        >
+          <div
+            class="header__text"
+          >
+            <div
+              class="text text--overline-md header__eyebrow header--size-md"
+            >
+              Recommended for you
+            </div>
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
+            >
+              Question of the day
+            </h3>
+            <div
+              class="text text--body-lg header__sub-title header--size-md"
+            >
+              Get to know your colleagues
+            </div>
+          </div>
+        </div>
+        <div
+          class="card__body"
+        >
+          <div
+            class="fpo"
+          >
+            Card Body
+          </div>
+        </div>
+        <div
+          class="card__footer"
+        >
+          <div
+            class="fpo"
+          >
+            Card Footer
+          </div>
+        </div>
+        <div
+          class="card__top-stripe top-stripe--none"
+        />
+        <input
+          class="card__behavior-input"
+          id=":r1h:"
+          name="test"
+          type="radio"
+        />
+      </div>
+    </label>
+    <label
+      class="card__behavior-label"
+      for=":r1i:"
+    >
+      <div
+        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+      >
+        <div
+          class="card__header header--size-md"
+        >
+          <div
+            class="header__text"
+          >
+            <div
+              class="text text--overline-md header__eyebrow header--size-md"
+            >
+              Recommended for you
+            </div>
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
+            >
+              Question of the day
+            </h3>
+            <div
+              class="text text--body-lg header__sub-title header--size-md"
+            >
+              Get to know your colleagues
+            </div>
+          </div>
+        </div>
+        <div
+          class="card__body"
+        >
+          <div
+            class="fpo"
+          >
+            Card Body
+          </div>
+        </div>
+        <div
+          class="card__footer"
+        >
+          <div
+            class="fpo"
+          >
+            Card Footer
+          </div>
+        </div>
+        <div
+          class="card__top-stripe top-stripe--none"
+        />
+        <input
+          class="card__behavior-input"
+          id=":r1i:"
+          name="test"
+          type="radio"
+        />
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`<Card /> TopStripe story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
@@ -526,7 +782,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:re:"
+            id="headlessui-menu-button-:rn:"
             type="button"
           >
             <svg
@@ -843,7 +1099,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r8:"
+            id="headlessui-menu-button-:rf:"
             type="button"
           >
             <svg
@@ -954,7 +1210,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r2:"
+            id="headlessui-menu-button-:r7:"
             type="button"
           >
             <svg

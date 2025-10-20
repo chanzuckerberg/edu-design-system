@@ -8,7 +8,6 @@ export default {
   component: UnorderedList,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.0', 'theme-2.0'],
   },
   args: {
     markerType: 'default',
@@ -27,6 +26,7 @@ export default {
         'Content of the list (essentially the series of `.ListItem`s within the list)',
     },
   },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<typeof UnorderedList>;
 
 type Story = StoryObj<typeof UnorderedList>;

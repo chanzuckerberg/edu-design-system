@@ -13,7 +13,6 @@ const meta: Meta<typeof Icon> = {
   component: Icon,
   parameters: {
     layout: 'centered',
-    badges: ['api-2.0', 'theme-2.0'],
   },
   argTypes: {
     name: {
@@ -35,6 +34,7 @@ const meta: Meta<typeof Icon> = {
       ],
     },
   },
+  tags: ['autodocs', 'version:2.0'],
 };
 
 export default meta;

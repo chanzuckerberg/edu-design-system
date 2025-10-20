@@ -7,7 +7,6 @@ export default {
   component: Hr,
   parameters: {
     layout: 'centered',
-    badges: ['api-1.3', 'theme-2.0'],
   },
   args: {
     className: 'w-[384px]',
@@ -24,6 +23,7 @@ export default {
       },
     },
   },
+  tags: ['autodocs', 'version:1.3'],
 } as Meta<typeof Hr>;
 
 type Story = StoryObj<typeof Hr>;

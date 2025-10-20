@@ -17,7 +17,8 @@
 
   &:focus-visible {
     outline-offset: 1px;
-    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid
+      var(--eds-theme-color-border-utility-focus);
   }
 
   &.card--is-interactive {
@@ -50,26 +51,36 @@
 
   &.card--is-interactive {
     &:hover {
-      background-color: var(--eds-theme-color-background-utility-container-hover);
+      background-color: var(
+        --eds-theme-color-background-utility-container-hover
+      );
     }
 
     &:active {
-      background-color: var(--eds-theme-color-background-utility-container-active);
+      background-color: var(
+        --eds-theme-color-background-utility-container-active
+      );
     }
   }
 }
 
 .card--container-color-call-out {
-  background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
+  background-color: var(
+    --eds-theme-color-background-utility-informational-low-emphasis
+  );
   border-color: var(--eds-theme-color-border-utility-informational);
 
   &.card--is-interactive {
     &:hover {
-      background-color: var(--eds-theme-color-background-utility-informational-low-emphasis-hover);
+      background-color: var(
+        --eds-theme-color-background-utility-informational-low-emphasis-hover
+      );
     }
 
     &:active {
-      background-color: var(--eds-theme-color-background-utility-informational-low-emphasis-active);
+      background-color: var(
+        --eds-theme-color-background-utility-informational-low-emphasis-active
+      );
     }
   }
 }
@@ -109,8 +120,28 @@
 }
 
 :where(.card__top-stripe) {
-  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  background-color: var(
+    --eds-theme-color-background-utility-default-high-emphasis
+  );
 }
+
+.card__behavior-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+  /* remove focus ring and instead enable on the label */
+  &:focus {
+    outline: none;
+  }
+}
+
+.card__behavior-label:has(.card__behavior-input:focus-visible) {
+  outline: calc(var(--eds-border-width-md) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: 2px;
+}
+
 
 .top-stripe--medium {
   height: calc(var(--eds-spacing-size-1) * 1px);
@@ -128,6 +159,17 @@
 .header__text,
 .header__custom {
   flex-grow: 2;
+}
+
+/**
+* Card colors
+*/
+.card:has(.card__behavior-input:checked) {
+  background: var(--eds-theme-color-background-utility-container-selected);
+
+  /* use an outline on top of the border to get the correct width without changing the layout */
+  outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-high-emphasis);
+  border-color: var(--eds-theme-color-border-utility-default-high-emphasis);
 }
 
 .card__body {

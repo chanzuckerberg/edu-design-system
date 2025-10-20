@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
+import { useId } from '../../util/useId';
 import type { Size } from '../../util/variant-types';
 
 import Heading from '../Heading';
@@ -20,7 +21,15 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * When `isInteractive` and has a behavior set, this is used as the name of the hidden form field.
+   */
+  name?: string;
   // Design API
+  /**
+   * When `isInteractive`, describes the behavior of the card when selected. Single (radio) or multiple (checkbox) selection.
+   */
+  behavior?: 'checkbox' | 'radio';
   /**
    * Treatment for the card's container element. When using `"custom-brand"`, set the
    * container background and border color using the brand border/bg utility classes.
@@ -106,6 +115,7 @@ export type CardHeaderProps = {
   title?: string;
 };
 
+// TODO: needs useRef for input field (allow react to control things)?
 /**
  * `import {Card} from "@chanzuckerberg/eds";`
  *
@@ -114,11 +124,13 @@ export type CardHeaderProps = {
  */
 export const Card = ({
   containerColor = 'default',
+  behavior,
   className,
   children,
   containerStyle = 'low',
   isDragging,
   isInteractive = false,
+  name,
   topStripe = 'none',
   topStripeColor = '',
   ...other
@@ -130,9 +142,12 @@ export const Card = ({
     typeof isDragging !== 'undefined' &&
       styles[`card--is-dragging-${isDragging}`],
     isInteractive && styles['card--is-interactive'],
+    behavior && styles['card--has-behavior'],
     className,
   );
-  return (
+
+  const behaviorId = useId();
+  const cardComponent = (
     <div className={componentClassName} {...other}>
       {children}
       {topStripe && (
@@ -144,7 +159,27 @@ export const Card = ({
           )}
         ></div>
       )}
+      {behavior && isInteractive && (
+        <input
+          className={styles['card__behavior-input']}
+          id={behaviorId}
+          name={name}
+          type={behavior}
+        />
+      )}
     </div>
+  );
+
+  return (
+    <>
+      {behavior && isInteractive ? (
+        <label className={styles['card__behavior-label']} htmlFor={behaviorId}>
+          {cardComponent}
+        </label>
+      ) : (
+        cardComponent
+      )}
+    </>
   );
 };
 

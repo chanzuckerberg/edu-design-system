@@ -8,11 +8,8 @@ import { InputField } from './InputField';
 import * as stories from './InputField.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
-// rest-ing out password stories to avoid incorrect act() warnings after storybook 8 upgrade
-const { Password, PasswordWithShownText, ...otherStories } = stories;
-
 describe('<InputField />', () => {
-  generateSnapshots(otherStories as StoryFile);
+  generateSnapshots(stories as StoryFile);
 
   it('handles changes to the text within the component', async () => {
     const user = userEvent.setup();

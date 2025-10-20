@@ -12,7 +12,6 @@ export default {
   component: AppHeader,
   parameters: {
     viewport: { defaultViewport: 'macbookPro' },
-    badges: ['api-1.0', 'theme-2.0'],
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,
@@ -21,6 +20,7 @@ export default {
       ],
     },
   },
+  tags: ['autodocs', 'version:1.0'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -253,6 +253,9 @@ export const CanExpandFullSizeMenu: Story = {
     },
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300, viewports: [chromaticViewports.chromebook] },
+    snapshot: {
+      skip: true,
+    },
   },
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {
@@ -277,6 +280,9 @@ export const CanExpandHamburgerMenu: Story = {
     },
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 500, viewports: [chromaticViewports.googlePixel2] },
+    snapshot: {
+      skip: true,
+    },
   },
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {

@@ -426,6 +426,7 @@
   --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-container-selected: var(--eds-color-blue-050);
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container: var(--eds-color-white);
