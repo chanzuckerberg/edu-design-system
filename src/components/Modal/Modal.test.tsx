@@ -1,5 +1,5 @@
 import { generateSnapshots, wait } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react';
+import { composeStories } from '@storybook/react-webpack5';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mockAnimationsApi } from 'jsdom-testing-mocks';
