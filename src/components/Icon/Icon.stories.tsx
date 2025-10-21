@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';

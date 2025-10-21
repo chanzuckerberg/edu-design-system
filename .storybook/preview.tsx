@@ -12,7 +12,7 @@ import '../src/design-tokens/tier-1-definitions/fonts.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-import type { Preview, StoryFn } from '@storybook/react';
+import type { Preview, StoryFn } from '@storybook/react-webpack5';
 import React from 'react';
 
 import Theme from './Theme';
@@ -28,22 +28,23 @@ export const decorators = [
 
 export const parameters: Preview['parameters'] = {
   viewport: {
-    viewports: storybookViewports,
+    options: storybookViewports,
   },
   docs: {
     theme: Theme,
   },
   backgrounds: {
-    values: [
-      {
+    options: {
+      'background-utility-default-high-emphasis': {
         name: 'background-utility-default-high-emphasis',
         value: '#0F2163',
       },
-      {
+
+      'background-utility-inverse-high-emphasis': {
         name: 'background-utility-inverse-high-emphasis',
         value: '#FFFFFF',
       },
-    ],
+    },
   },
 };
 

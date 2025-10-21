@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import React from 'react';
 
 import { Tooltip } from './Tooltip';
@@ -104,8 +104,10 @@ export const InverseVariant: Story = {
     ...LeftPlacement.args,
     variant: 'inverse',
   },
-  parameters: {
-    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  globals: {
+    backgrounds: {
+      value: 'background-utility-default-high-emphasis',
+    },
   },
 };
 

@@ -9,11 +9,8 @@ const config = {
     './**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    // See: https://storybook.js.org/docs/essentials
-    '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
-    '@storybook/addon-interactions',
     'storybook-addon-tag-badges',
     {
       name: '@storybook/addon-styling-webpack',
@@ -50,6 +47,7 @@ const config = {
     },
     '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
+    '@storybook/addon-docs',
   ],
 
   // TODO: update config and package.json scripts to support staticDirs

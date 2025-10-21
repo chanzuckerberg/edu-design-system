@@ -1,6 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/test';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import React from 'react';
+import { within } from 'storybook/test';
 
 import { TabGroup } from './TabGroup';
 import { chromaticViewports } from '../../util/viewports';
@@ -162,10 +162,17 @@ export const InverseVariant: StoryObj<Args> = {
       </>
     ),
   },
+
   decorators: [(Story) => <div className="p-spacing-size-half">{Story()}</div>],
+
   parameters: {
     ...Default.parameters,
-    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  },
+
+  globals: {
+    backgrounds: {
+      value: 'background-utility-default-high-emphasis',
+    },
   },
 };
 
@@ -446,19 +453,26 @@ export const ScrollMiddle: StoryObj<Args> = {
       </>
     ),
   },
+
   parameters: {
-    viewport: {
-      defaultViewport: 'googlePixel2',
-    },
     // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
+
     chromatic: { viewports: [chromaticViewports.googlePixel2] },
     layout: 'padded',
   },
+
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const tablist = await canvas.findByRole('tablist');
 
     tablist?.parentElement?.scroll(50, 0);
+  },
+
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
   },
 };
