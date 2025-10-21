@@ -78,10 +78,17 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Install Playwright
+        run: npx playwright install --with-deps
       - name: Build design tokens
         run: yarn build:tokens
       - name: Build Storybook 📚
         run: yarn build:storybook --webpack-stats-json
+      - name: Serve storybook and run tests
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+          "npx http-server storybook-static --port 6006 --silent" \
+          "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook"
       - name: Publish to Chromatic 🦄
         run: |
           yarn run chromatic \
@@ -93,8 +100,6 @@ jobs:
             --skip 'dependabot/**'
         env:
             CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-      - name: Build and Run Accessibility Tests 💛
-        run: yarn run storybook:axe
 
   lint:
     runs-on: ubuntu-latest

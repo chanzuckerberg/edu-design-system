@@ -7,9 +7,9 @@ import Section from '../../Section';
 export default {
   title: 'Design Tokens/Tier 3: Component/Colors',
   parameters: {
-    axe: {
+    a11y: {
       // For documentation purposes only
-      skip: true,
+      test: 'off',
     },
   },
 };

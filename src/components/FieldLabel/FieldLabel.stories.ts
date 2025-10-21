@@ -29,8 +29,15 @@ export const LargeDisabled: Story = {
     disabled: true,
   },
   parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 };
@@ -41,8 +48,15 @@ export const MediumDisabled: Story = {
     size: 'md',
   },
   parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 };

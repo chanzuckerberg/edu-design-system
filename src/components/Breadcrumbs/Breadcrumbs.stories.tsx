@@ -1,5 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import { userEvent, within } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
+
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
@@ -126,8 +128,8 @@ export const LongTextMenu: Story = {
       diffThreshold: 0.75,
     },
 
-    axe: {
-      skip: true,
+    a11y: {
+      test: 'off',
     },
 
     snapshot: {
@@ -139,8 +141,10 @@ export const LongTextMenu: Story = {
 
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const dropdownMenuTrigger = await canvas.findByRole('button');
-    await userEvent.click(dropdownMenuTrigger);
+    if (isChromatic()) {
+      const dropdownMenuTrigger = await canvas.findByRole('button');
+      await userEvent.click(dropdownMenuTrigger, { delay: 100 });
+    }
   },
 
   globals: {

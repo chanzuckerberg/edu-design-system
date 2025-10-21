@@ -8,9 +8,9 @@ import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 export default {
   title: 'Design Tokens/Tier 1: Definitions/Typography',
   parameters: {
-    axe: {
+    a11y: {
       // For documentation purposes only
-      skip: true,
+      test: 'off',
     },
   },
 };

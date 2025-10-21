@@ -66,9 +66,16 @@ export const WhenDisabled: Story = {
     rows: 2,
   },
   parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
+    a11y: {
+      config: {
+        rules: [
+          // Disabled input does not need to meet color contrast
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 };
@@ -79,9 +86,16 @@ export const WhenReadOnly: Story = {
     rows: 2,
   },
   parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
+    a11y: {
+      config: {
+        rules: [
+          // Disabled input does not need to meet color contrast
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 };

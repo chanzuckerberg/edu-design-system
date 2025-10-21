@@ -27,6 +27,9 @@ export const decorators = [
 ];
 
 export const parameters: Preview['parameters'] = {
+  a11y: {
+    test: 'error',
+  },
   viewport: {
     options: storybookViewports,
   },
