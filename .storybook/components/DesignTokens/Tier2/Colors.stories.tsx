@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react-webpack5';
 import React from 'react';
 import filterTokens from '../../../util/filterTokens';
 import { ColorList } from '../../ColorList/ColorList';
@@ -9,9 +9,9 @@ import Section from '../../Section';
 export default {
   title: 'Design Tokens/Tier 2: Usage/Colors',
   parameters: {
-    axe: {
+    a11y: {
       // For documentation purposes only
-      skip: true,
+      test: 'off',
     },
   },
 };

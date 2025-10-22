@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import React from 'react';
 import { Link, type LinkProps } from './Link';
 
@@ -96,8 +96,10 @@ export const StandaloneInverseVariant: Story = {
     context: 'standalone',
     variant: 'inverse',
   },
-  parameters: {
-    backgrounds: { default: 'background-utility-default-high-emphasis' },
+  globals: {
+    backgrounds: {
+      value: 'background-utility-default-high-emphasis',
+    },
   },
 };
 
@@ -108,9 +110,6 @@ export const InverseVariant: Story = {
   args: {
     variant: 'inverse',
   },
-  parameters: {
-    backgrounds: { default: 'background-utility-default-high-emphasis' },
-  },
   decorators: [
     (Story) => (
       <div className="w-[384px] p-spacing-size-half text-center text-utility-inverse">
@@ -118,6 +117,11 @@ export const InverseVariant: Story = {
       </div>
     ),
   ],
+  globals: {
+    backgrounds: {
+      value: 'background-utility-default-high-emphasis',
+    },
+  },
 };
 
 export const LinkInParagraphContext: StoryObj<ExtendArgs> = {

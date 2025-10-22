@@ -1,5 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import { userEvent, within } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
+
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
@@ -117,26 +119,38 @@ export const LongTextMenu: Story = {
   args: {
     ...LongText.args,
   },
+
   decorators: [(Story) => <div className="pb-28">{Story()}</div>],
+
   parameters: {
-    viewport: {
-      defaultViewport: 'ipadMini',
-    },
     chromatic: {
       viewports: [chromaticViewports.ipadMini],
       diffThreshold: 0.75,
     },
-    axe: {
-      skip: true,
+
+    a11y: {
+      test: 'off',
     },
+
     snapshot: {
       skip: true,
     },
+
     layout: 'padded',
   },
+
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const dropdownMenuTrigger = await canvas.findByRole('button');
-    await userEvent.click(dropdownMenuTrigger);
+    if (isChromatic()) {
+      const dropdownMenuTrigger = await canvas.findByRole('button');
+      await userEvent.click(dropdownMenuTrigger);
+    }
+  },
+
+  globals: {
+    viewport: {
+      value: 'ipadMini',
+      isRotated: false,
+    },
   },
 };

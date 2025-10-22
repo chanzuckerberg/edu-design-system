@@ -1,4 +1,4 @@
-import { addons } from '@storybook/manager-api';
+import { addons } from 'storybook/manager-api';
 // TODO: to support custom badges, we need to update module resolution for
 // typescript (node16)
 // https://github.com/Sidnioulz/storybook-addon-tag-badges

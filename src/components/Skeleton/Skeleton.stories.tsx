@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import React from 'react';
 
 import { Skeleton } from './Skeleton';
@@ -6,13 +6,18 @@ import { Skeleton } from './Skeleton';
 export default {
   title: 'Components/Skeleton',
   component: Skeleton,
+
   parameters: {
     layout: 'centered',
+  },
+
+  tags: ['autodocs', 'version:1.4'],
+
+  globals: {
     backgrounds: {
-      default: 'background-utility-inverse-high-emphasis',
+      value: 'background-utility-inverse-high-emphasis',
     },
   },
-  tags: ['autodocs', 'version:1.4'],
 } as Meta<typeof Skeleton>;
 
 type Story = StoryObj<typeof Skeleton>;
