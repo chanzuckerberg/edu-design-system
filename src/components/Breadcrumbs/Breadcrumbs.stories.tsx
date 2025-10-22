@@ -143,7 +143,7 @@ export const LongTextMenu: Story = {
     const canvas = within(canvasElement);
     if (isChromatic()) {
       const dropdownMenuTrigger = await canvas.findByRole('button');
-      await userEvent.click(dropdownMenuTrigger, { delay: 100 });
+      await userEvent.click(dropdownMenuTrigger);
     }
   },
 
