@@ -1,7 +1,16 @@
 import clsx from 'clsx';
-import React, { createContext, forwardRef, type ReactNode } from 'react';
+import debounce from 'lodash/debounce';
+
+import React, {
+  createContext,
+  forwardRef,
+  useState,
+  useEffect,
+  type ReactNode,
+} from 'react';
 
 import { createPortal } from 'react-dom';
+import breakpoints from '../../design-tokens/tier-1-definitions/breakpoints';
 
 import Button from '../Button';
 import Hr from '../Hr';
@@ -212,18 +221,20 @@ const AppHeaderContext = createContext<
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
- * Provides app-level navigation and serves as the <header> for accessibility landmarks
+ * Provides app-level navigation and serves as the `<header>` element for accessibility landmarks
  */
 export const AppHeader = ({
   className,
   href,
   navGroups,
   onButtonClick,
-  orientation = 'horizontal',
   subTitle,
   title,
   ...other
 }: AppHeaderProps) => {
+  const [orientation, setOrientation] = useState(
+    other.orientation || 'horizontal',
+  );
   const componentClassName = clsx(
     styles['app-header'],
     orientation && styles[`app-header--orientation-${orientation}`],
@@ -231,6 +242,26 @@ export const AppHeader = ({
   );
 
   const drawerComponentClassName = clsx(styles['app-header__drawer']);
+
+  useEffect(() => {
+    // Setup debounce to trigger on the (default) trailing edge of the calls
+    const debouncedHandleOnResize = debounce(function handleOnResize() {
+      // compare the screen width to the smallest breakpoint. if it's wider...
+      if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
+        // ...change to original user value (with default specified)
+        setOrientation(other.orientation || 'horizontal');
+      } else {
+        // ...change 'vertical' to 'horizontal' if the original value was vertical
+        setOrientation('horizontal');
+      }
+    }, 16); // ~1/60 fps
+
+    window.addEventListener('resize', debouncedHandleOnResize);
+
+    return () => {
+      window.removeEventListener('resize', debouncedHandleOnResize);
+    };
+  }, [other.orientation]);
 
   return (
     <AppHeaderContext.Provider value={{ href, orientation }}>
@@ -313,6 +344,7 @@ export const AppHeader = ({
 
 /**
  * Sub-component for handling the title elements of the AppHeader
+ *
  * @param props Properties for use with the AppHeaderTitleProps
  * @returns ReactNode
  */
@@ -345,6 +377,7 @@ const AppHeaderTitle = ({ title, subTitle }: AppHeaderTitleProps) => {
 
 /**
  * Sub-component for the individual navigation groups within the app header.
+ *
  * @param props properties for AppHeaderNavGroupProps
  * @returns ReactNode
  */
@@ -515,6 +548,12 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
   },
 );
 
+/**
+ * Sub-component for the AppHeader Drawer, which is reused for the vertical orientation of `AppHeader`
+ *
+ * @param props App drawer props for rendering the navigation group and wrapper
+ * @returns ReactNote
+ */
 const AppHeaderDrawerContent = ({
   navGroups,
   onButtonClick,

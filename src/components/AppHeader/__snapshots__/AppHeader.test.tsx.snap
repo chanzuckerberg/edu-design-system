@@ -638,6 +638,7 @@ exports[`<AppHeader /> NavMenus story renders snapshot 1`] = `
 exports[`<AppHeader /> VerticalImageLogo story renders snapshot 1`] = `
 <header
   class="app-header app-header--orientation-vertical"
+  orientation="vertical"
 >
   <div>
     <div
@@ -784,6 +785,7 @@ exports[`<AppHeader /> VerticalImageLogo story renders snapshot 1`] = `
 exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
 <header
   class="app-header app-header--orientation-vertical"
+  orientation="vertical"
 >
   <div>
     <div
@@ -955,6 +957,7 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
 exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
 <header
   class="app-header app-header--orientation-vertical"
+  orientation="vertical"
 >
   <div>
     <div
