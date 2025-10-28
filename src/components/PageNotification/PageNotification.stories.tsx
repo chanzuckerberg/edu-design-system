@@ -30,7 +30,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageNotification>;
@@ -97,4 +97,21 @@ export const HorizontalDismissable: StoryObj<Args> = {
     ...Dismissable.args,
     ...CriticalHorizontal.args,
   },
+};
+
+export const MultipleNotifications: StoryObj<Args> = {
+  render: (args) => (
+    <>
+      <PageNotification
+        status="critical"
+        subTitle="Test SubTitle"
+        title="Test Critical Title"
+      />
+      <PageNotification
+        status="favorable"
+        subTitle="Test SubTitle"
+        title="Test Favorable Title"
+      />
+    </>
+  ),
 };
