@@ -374,8 +374,8 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
 
 exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] = `
 <aside
-  aria-label="Test Critical Title"
-  class="page-notification page-notification--status-critical"
+  aria-label="Alert title which communicates info to the user"
+  class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
     aria-hidden="true"
@@ -400,13 +400,27 @@ exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] =
       <h3
         class="heading heading--title-md"
       >
-        Test Critical Title
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
       >
-        Test SubTitle
+         Subtitle which provides additional detail
       </p>
+    </div>
+    <div
+      class="page-notification__call-to-action"
+    >
+      <button
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        type="button"
+      >
+        <span
+          class="text text--label-sm button__text"
+        >
+          Call to Action
+        </span>
+      </button>
     </div>
   </div>
 </aside>

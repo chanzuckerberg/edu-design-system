@@ -106,11 +106,13 @@ export const MultipleNotifications: StoryObj<Args> = {
         status="critical"
         subTitle="Test SubTitle"
         title="Test Critical Title"
+        {...args}
       />
       <PageNotification
         status="favorable"
         subTitle="Test SubTitle"
         title="Test Favorable Title"
+        {...args}
       />
     </>
   ),
