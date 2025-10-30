@@ -241,7 +241,7 @@ export const TableStyleBorder: StoryObj<Args> = {
 };
 
 /**
- * Note that `DataTable` can be nested within another scrollable container. in such cases, we want to make sure the [content box] of the direct ancestor has no padding. If it does, this can lead to misplacement of a sticky header.
+ * Note that `DataTable` can be nested within another scrollable container. in such cases, we want to make sure the [content box](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block) of the direct ancestor has no padding. If it does, this can lead to misplacement of a sticky header.
  *
  * Instead of using padding in the ancestor, use margins or a spacer element like an `<hr />` or `<div>`.
  */
