@@ -44,6 +44,7 @@ export const Default: StoryObj<Args> = {};
 export const Warning: StoryObj<Args> = {
   args: {
     status: 'warning',
+    title: 'Warning title which communicates info to the user',
   },
 };
 
@@ -51,6 +52,7 @@ export const WarningWithSubtitle: StoryObj<Args> = {
   args: {
     status: 'warning',
     subTitle: <span>Subtitle text</span>,
+    title: 'Warning title and subtitle which communicates info to the user',
   },
 };
 
@@ -59,36 +61,40 @@ export const WarningWithSubtitle: StoryObj<Args> = {
  */
 export const Critical: StoryObj<Args> = {
   args: {
-    status: 'critical',
     callToAction: (
       <Button rank="secondary" size="sm" variant="neutral">
         Call to Action
       </Button>
     ),
+    status: 'critical',
+    title: 'Critical title which communicates info to the user',
   },
 };
 
 export const CriticalHorizontal: StoryObj<Args> = {
   args: {
-    status: 'critical',
     buttonLayout: 'horizontal',
     callToAction: (
       <Button rank="secondary" size="sm" variant="neutral">
         Call to Action
       </Button>
     ),
+    status: 'critical',
+    title: 'Critical title with horizontal buttons',
   },
 };
 
 export const Favorable: StoryObj<Args> = {
   args: {
     status: 'favorable',
+    title: 'Favorable title which communicates info to the user',
   },
 };
 
 export const Dismissable: StoryObj<Args> = {
   args: {
     onDismiss: dismissMethod,
+    title: 'Dismissable title which communicates info to the user',
   },
 };
 
@@ -96,6 +102,7 @@ export const HorizontalDismissable: StoryObj<Args> = {
   args: {
     ...Dismissable.args,
     ...CriticalHorizontal.args,
+    title: 'Dismissable Horizontal Critical title',
   },
 };
 
