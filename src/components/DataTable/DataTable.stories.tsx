@@ -218,6 +218,9 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+/**
+ * `DataTable` can also have a different border style between cells.
+ */
 export const TableStyleBorder: StoryObj<Args> = {
   args: {
     tableStyle: 'border',
@@ -234,6 +237,31 @@ export const TableStyleBorder: StoryObj<Args> = {
     });
 
     return <DataTable {...args} table={table} />;
+  },
+};
+
+/**
+ * Note that `DataTable` can be nested within another scrollable container. in such cases, we want to make sure the [content box] of the direct ancestor has no padding. If it does, this can lead to misplacement of a sticky header.
+ *
+ * Instead of using padding in the ancestor, use margins or a spacer element like an `<hr />` or `<div>`.
+ */
+export const DataTableInFullContentBox: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+  },
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: defaultData,
+      columns,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
+    });
+
+    return (
+      <div className="mt-spacing-size-8 h-[75vh] overflow-scroll">
+        <DataTable {...args} table={table} />
+      </div>
+    );
   },
 };
 
