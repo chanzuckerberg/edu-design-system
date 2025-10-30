@@ -257,8 +257,10 @@ export const DataTableInFullContentBox: StoryObj<Args> = {
       getCoreRowModel: DataTableUtils.getCoreRowModel(),
     });
 
+    // make the content area of the DIV scrollable for this test
     return (
-      <div className="mt-spacing-size-8 h-[75vh] overflow-scroll">
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      <div className="mt-spacing-size-8 h-[75vh] overflow-scroll" tabIndex={0}>
         <DataTable {...args} table={table} />
       </div>
     );

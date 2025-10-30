@@ -3,6 +3,7 @@
 exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
 <div
   class="mt-spacing-size-8 h-[75vh] overflow-scroll"
+  tabindex="0"
 >
   <div
     class="data-table"
