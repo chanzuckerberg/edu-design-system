@@ -39,7 +39,11 @@ const dismissMethod = () => {
   console.log('dismissing~');
 };
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  args: {
+    title: 'Default alert title',
+  },
+};
 
 export const Warning: StoryObj<Args> = {
   args: {
@@ -110,16 +114,16 @@ export const MultipleNotifications: StoryObj<Args> = {
   render: (args) => (
     <>
       <PageNotification
+        {...args}
         status="critical"
         subTitle="Test SubTitle"
         title="Test Critical Title"
-        {...args}
       />
       <PageNotification
+        {...args}
         status="favorable"
         subTitle="Test SubTitle"
         title="Test Favorable Title"
-        {...args}
       />
     </>
   ),
