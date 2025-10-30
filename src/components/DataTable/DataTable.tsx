@@ -537,7 +537,6 @@ export const DataTableTable = ({
     size && styles[`data-table--size-${size}`],
   );
 
-  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     /**
      * Here, we set up a selector on the header of a table, and look for it to start
@@ -572,7 +571,7 @@ export const DataTableTable = ({
         observer.unobserve(el);
       }
     };
-  });
+  }, []);
 
   return <table className={tableClassNames}>{children}</table>;
 };
