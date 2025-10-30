@@ -1,14 +1,14 @@
 import { Canvas, Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Documentation/Theming" />
+<Meta title="Documentation/Theming/Using EDS Theming" />
 
-# Theming
+# Using EDS Theming
 
 Below are instructions on how to use the tooling, configs, and tokens to define custom theme values for a project.
 
 ## Using Tailwind with the Default Theme
 
-Out of the box, EDS provides a basic tailwind configuration to use in any project. The provided EDS tailwind config hooks up EDS tokens to useful utility classes and some screen sizes. To import the tailwind config into the app's tailwind config, supply the [theme](https://tailwindcss.com/docs/theme) property for use:
+Out of the box, EDS provides a basic [tailwind 3.x][tailwind-docs] configuration to use in any project. The provided EDS tailwind config hooks up EDS tokens to useful utility classes and some screen sizes. To import the tailwind config into the app's tailwind config, supply the [theme](https://tailwindcss.com/docs/theme) property for use:
 
 ```ts
 // in your tailwind.config.ts
@@ -82,6 +82,7 @@ Cons (same as above, plus):
 
 - fully detached from EDS, and harder to control or maintain.
 
+[tailwind-docs]: https://v3.tailwindcss.com/
 [tailwind-theme]: https://tailwindcss.com/docs/theme
 [eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.ts
 
@@ -130,6 +131,8 @@ Once run, you will have a set of theme files written to the configured `dest` pa
 - `app-tailwind-theme.config.json` (Configuration file for configuring tailwind in the application)
 
 To use, add this file to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
+
+For setting up Storybook, refer to [storybook documentation](?path=/docs/documentation-theming-using-eds-theming-with-storybook--docs).
 
 ### eds-import-from-figma-api
 
