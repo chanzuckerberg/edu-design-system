@@ -2,6 +2,7 @@
 
 exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 <aside
+  aria-label="Critical title which communicates info to the user"
   class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
@@ -55,6 +56,7 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 
 exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 <aside
+  aria-label="Critical title with horizontal buttons"
   class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
@@ -108,6 +110,7 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Default story renders snapshot 1`] = `
 <aside
+  aria-label="Default alert title"
   class="page-notification page-notification--status-informational w-[384px]"
 >
   <svg
@@ -161,6 +164,7 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 <aside
+  aria-label="Dismissable title which communicates info to the user"
   class="page-notification page-notification--status-informational page-notification--dismissable w-[384px]"
 >
   <svg
@@ -238,6 +242,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 
 exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 <aside
+  aria-label="Favorable title which communicates info to the user"
   class="page-notification page-notification--status-favorable w-[384px]"
 >
   <svg
@@ -291,6 +296,7 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 
 exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] = `
 <aside
+  aria-label="Dismissable Horizontal Critical title"
   class="page-notification page-notification--status-critical page-notification--dismissable w-[384px]"
 >
   <svg
@@ -366,8 +372,63 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
 </aside>
 `;
 
+exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] = `
+<aside
+  aria-label="Notification 1 of 2"
+  class="page-notification page-notification--status-critical w-[384px]"
+>
+  <svg
+    aria-hidden="true"
+    class="icon page-notification__icon"
+    fill="currentColor"
+    height="24px"
+    style="--icon-size: 24px;"
+    viewBox="0 0 24 24"
+    width="24px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.9,3H9.1C8.57,3,8.06,3.21,7.68,3.59l-4.1,4.1C3.21,8.06,3,8.57,3,9.1v5.8c0,0.53,0.21,1.04,0.59,1.41l4.1,4.1 C8.06,20.79,8.57,21,9.1,21h5.8c0.53,0,1.04-0.21,1.41-0.59l4.1-4.1C20.79,15.94,21,15.43,21,14.9V9.1c0-0.53-0.21-1.04-0.59-1.41 l-4.1-4.1C15.94,3.21,15.43,3,14.9,3z M15.54,15.54L15.54,15.54c-0.39,0.39-1.02,0.39-1.41,0L12,13.41l-2.12,2.12 c-0.39,0.39-1.02,0.39-1.41,0l0,0c-0.39-0.39-0.39-1.02,0-1.41L10.59,12L8.46,9.88c-0.39-0.39-0.39-1.02,0-1.41l0,0 c0.39-0.39,1.02-0.39,1.41,0L12,10.59l2.12-2.12c0.39-0.39,1.02-0.39,1.41,0l0,0c0.39,0.39,0.39,1.02,0,1.41L13.41,12l2.12,2.12 C15.93,14.51,15.93,15.15,15.54,15.54z"
+    />
+  </svg>
+  <div
+    class="page-notification__body page-notification--has-vertical-cta"
+  >
+    <div
+      class="page-notification__text"
+    >
+      <h3
+        class="heading heading--title-md"
+      >
+        Test Critical Title
+      </h3>
+      <p
+        class="text text--body-sm page-notification__sub-title"
+      >
+        Test SubTitle
+      </p>
+    </div>
+    <div
+      class="page-notification__call-to-action"
+    >
+      <button
+        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        type="button"
+      >
+        <span
+          class="text text--label-sm button__text"
+        >
+          Call to Action
+        </span>
+      </button>
+    </div>
+  </div>
+</aside>
+`;
+
 exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 <aside
+  aria-label="Warning title which communicates info to the user"
   class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg
@@ -421,6 +482,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 
 exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
 <aside
+  aria-label="Warning title and subtitle which communicates info to the user"
   class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg

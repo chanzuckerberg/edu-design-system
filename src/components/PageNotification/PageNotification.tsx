@@ -11,7 +11,7 @@ import Text from '../Text';
 
 import styles from './PageNotification.module.css';
 
-export type PageNotificationProps = {
+export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -57,6 +57,7 @@ export const PageNotification = ({
   onDismiss,
   status = 'informational',
   title,
+  ...other
 }: PageNotificationProps) => {
   const componentClassName = clsx(
     // Base styles
@@ -68,7 +69,7 @@ export const PageNotification = ({
   );
 
   return (
-    <aside className={componentClassName}>
+    <aside className={componentClassName} {...other}>
       <Icon
         className={styles['page-notification__icon']}
         name={getIconNameFromStatus(status)}
