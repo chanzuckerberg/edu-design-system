@@ -28,7 +28,7 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Critical title which communicates info to the user
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -82,7 +82,7 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Critical title with horizontal buttons
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -136,7 +136,7 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Default alert title
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -190,7 +190,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Dismissable title which communicates info to the user
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -268,7 +268,7 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Favorable title which communicates info to the user
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -322,7 +322,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
       <h3
         class="heading heading--title-md"
       >
-        Dismissable Horizontal Critical title
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -374,7 +374,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
 
 exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] = `
 <aside
-  aria-label="Test Critical Title"
+  aria-label="Notification 1 of 2"
   class="page-notification page-notification--status-critical w-[384px]"
 >
   <svg
@@ -454,7 +454,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Warning title which communicates info to the user
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"
@@ -508,7 +508,7 @@ exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
       <h3
         class="heading heading--title-md"
       >
-        Warning title and subtitle which communicates info to the user
+        Alert title which communicates info to the user
       </h3>
       <p
         class="text text--body-sm page-notification__sub-title"

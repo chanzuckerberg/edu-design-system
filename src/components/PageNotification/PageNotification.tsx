@@ -69,7 +69,7 @@ export const PageNotification = ({
   );
 
   return (
-    <aside aria-label={title} className={componentClassName} {...other}>
+    <aside className={componentClassName} {...other}>
       <Icon
         className={styles['page-notification__icon']}
         name={getIconNameFromStatus(status)}

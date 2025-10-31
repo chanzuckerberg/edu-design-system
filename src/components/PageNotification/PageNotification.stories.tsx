@@ -41,14 +41,14 @@ const dismissMethod = () => {
 
 export const Default: StoryObj<Args> = {
   args: {
-    title: 'Default alert title',
+    'aria-label': 'Default alert title',
   },
 };
 
 export const Warning: StoryObj<Args> = {
   args: {
     status: 'warning',
-    title: 'Warning title which communicates info to the user',
+    'aria-label': 'Warning title which communicates info to the user',
   },
 };
 
@@ -56,7 +56,8 @@ export const WarningWithSubtitle: StoryObj<Args> = {
   args: {
     status: 'warning',
     subTitle: <span>Subtitle text</span>,
-    title: 'Warning title and subtitle which communicates info to the user',
+    'aria-label':
+      'Warning title and subtitle which communicates info to the user',
   },
 };
 
@@ -71,7 +72,7 @@ export const Critical: StoryObj<Args> = {
       </Button>
     ),
     status: 'critical',
-    title: 'Critical title which communicates info to the user',
+    'aria-label': 'Critical title which communicates info to the user',
   },
 };
 
@@ -84,21 +85,21 @@ export const CriticalHorizontal: StoryObj<Args> = {
       </Button>
     ),
     status: 'critical',
-    title: 'Critical title with horizontal buttons',
+    'aria-label': 'Critical title with horizontal buttons',
   },
 };
 
 export const Favorable: StoryObj<Args> = {
   args: {
     status: 'favorable',
-    title: 'Favorable title which communicates info to the user',
+    'aria-label': 'Favorable title which communicates info to the user',
   },
 };
 
 export const Dismissable: StoryObj<Args> = {
   args: {
     onDismiss: dismissMethod,
-    title: 'Dismissable title which communicates info to the user',
+    'aria-label': 'Dismissable title which communicates info to the user',
   },
 };
 
@@ -106,21 +107,26 @@ export const HorizontalDismissable: StoryObj<Args> = {
   args: {
     ...Dismissable.args,
     ...CriticalHorizontal.args,
-    title: 'Dismissable Horizontal Critical title',
+    'aria-label': 'Dismissable Horizontal Critical title',
   },
 };
 
+/**
+ * When having multiple notifications on screen at once, make sure they are labeled uniquely, so that assisstive technologies can tell them apart.
+ */
 export const MultipleNotifications: StoryObj<Args> = {
   render: (args) => (
     <>
       <PageNotification
         {...args}
+        aria-label="Notification 1 of 2"
         status="critical"
         subTitle="Test SubTitle"
         title="Test Critical Title"
       />
       <PageNotification
         {...args}
+        aria-label="Notification 2 of 2"
         status="favorable"
         subTitle="Test SubTitle"
         title="Test Favorable Title"
