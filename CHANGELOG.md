@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [16.7.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.7.0...v16.7.1) (2025-10-31)
+
+
+### Bug Fixes
+
+* **AppHeader:** check for breakpoint when calculating orientation ([#2301](https://github.com/chanzuckerberg/edu-design-system/issues/2301)) ([9b0c5e6](https://github.com/chanzuckerberg/edu-design-system/commit/9b0c5e6e0fe9b1927fe9705d3e802612f4e1eb8d))
+* **PageNotification:** handle default aria-label on <aside> ([#2303](https://github.com/chanzuckerberg/edu-design-system/issues/2303)) ([811b201](https://github.com/chanzuckerberg/edu-design-system/commit/811b201ce60555818e5f8fcdfa31c2c562250b4b))
+
 ## [16.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.6.1...v16.7.0) (2025-10-17)
 
 
