@@ -1,0 +1,64 @@
+import { Canvas, Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Theming/Using EDS Theming with Storybook" />
+
+# Using EDS Theming with Storybook
+
+When using a custom EDS theme, your application will reflect the theme chosen, but you still must configure [Storybook][storybook-docs] to use the theme as well.
+
+## Telling storybook about the theme file(s)
+
+Storybook allows for customizations that affect how stories are rendered. One of the most important things to do when using EDS is to tell storybook about the same setup
+used when constructing an application.
+
+### Updating preview.(ts|js)
+
+- Make sure to add in the relevant base CSS files, placing them after any app CSS files
+
+```ts
+import type {Preview} from '@storybook/react-vite';
+
+// Style import order matters. See app/root.tsx for reference.
+import '~/app.css';
+// Load the Tailwind base first so that EDS styles take precedence.
+import '~/tailwind-base.css';
+import '@chanzuckerberg/eds/index.css';
+import '@chanzuckerberg/eds/fonts.css';
+```
+
+- When using theming, reference the initialized theme files AFTER any utility CSS files
+
+```ts
+// Load the Tailwind utility classes last so they can be used to override EDS styles.
+import '~/tailwind.css';
+import '~/components/app-theme.css';
+```
+
+### Updating preview-head.html
+
+- Load any custom font files / links here, so that they get added to the HTML template
+
+```html
+<!-- Performance optimization -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+<!-- Load fonts -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=..."
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=..."
+/>
+```
+
+**NOTE**: This should use the exact link HREF specified by Google Fonts, Adobe fonts, etc.
+
+## Using Storybook Modes
+
+Storybook supports [modes][storybook-modes]. Details on how to use this and EDS in your storybook documentation to come soon.
+
+[storybook-docs]: https://storybook.js.org/docs
+[storybook-modes]: https://www.chromatic.com/docs/modes/

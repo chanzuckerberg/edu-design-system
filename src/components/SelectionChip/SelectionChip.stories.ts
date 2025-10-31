@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import type React from 'react';
 
 import { SelectionChip } from './SelectionChip';

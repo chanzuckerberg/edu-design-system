@@ -14,9 +14,9 @@ export default {
         story: 'Individual story description, may contain `markdown` markup',
       },
     },
-    axe: {
+    a11y: {
       // For documentation purposes only
-      skip: true,
+      test: 'off',
     },
   },
 };

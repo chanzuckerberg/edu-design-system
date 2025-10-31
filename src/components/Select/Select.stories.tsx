@@ -1,8 +1,8 @@
-import type { StoryObj, Meta } from '@storybook/react';
-import { expect } from '@storybook/test';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 // Importing this here, since using @storybook/test below leads to superfluous act() warnings
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
+import { expect } from 'storybook/test';
 import { Select } from './Select';
 
 const meta: Meta<typeof Select> = {
@@ -774,9 +774,16 @@ export const Disabled: StoryObj = {
     disabled: true,
   },
   parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
+    a11y: {
+      config: {
+        rules: [
+          // Disabled input does not need to meet color contrast
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
     docs: {
       ...Default.parameters?.docs,

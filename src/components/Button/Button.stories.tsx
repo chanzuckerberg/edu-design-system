@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import React from 'react';
 import { Button, type ButtonProps } from './Button';
 
@@ -120,11 +120,13 @@ export const InverseRanks: Story = {
     ...DefaultRanks.args,
     variant: 'inverse',
   },
-  parameters: {
-    backgrounds: { default: 'background-utility-default-high-emphasis' },
-  },
   render: DefaultRanks.render,
   decorators: [(Story) => <div className="p-1">{Story()}</div>],
+  globals: {
+    backgrounds: {
+      value: 'background-utility-default-high-emphasis',
+    },
+  },
 };
 
 /**
@@ -136,11 +138,13 @@ export const InverseDisabledRanks: Story = {
     variant: 'inverse',
     isDisabled: true,
   },
-  parameters: {
-    backgrounds: { default: 'background-utility-default-high-emphasis' },
-  },
   render: DefaultRanks.render,
   decorators: [(Story) => <div className="p-1">{Story()}</div>],
+  globals: {
+    backgrounds: {
+      value: 'background-utility-default-high-emphasis',
+    },
+  },
 };
 
 /**

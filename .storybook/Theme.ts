@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming';
+import { create } from 'storybook/theming';
 
 // Docs: https://storybook.js.org/docs/7.6/configure/theming
 // Keys from https://github.com/storybookjs/storybook/blob/next/code/lib/theming/src/themes/light.ts

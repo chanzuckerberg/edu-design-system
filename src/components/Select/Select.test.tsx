@@ -1,5 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStory } from '@storybook/react';
+import { composeStory } from '@storybook/react-webpack5';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mockResizeObserver } from 'jsdom-testing-mocks';

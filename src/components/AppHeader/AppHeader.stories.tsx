@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import { userEvent } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 
@@ -10,8 +10,8 @@ import { chromaticViewports } from '../../util/viewports';
 export default {
   title: 'Components/AppHeader',
   component: AppHeader,
+
   parameters: {
-    viewport: { defaultViewport: 'macbookPro' },
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,
@@ -20,17 +20,20 @@ export default {
       ],
     },
   },
-  tags: ['autodocs', 'version:1.0'],
+
+  tags: ['autodocs', 'version:1.0.1'],
+
+  globals: {
+    viewport: {
+      value: 'macbookPro',
+      isRotated: false,
+    },
+  },
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
 
 export const Default: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: '',
-    },
-  },
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
@@ -68,6 +71,12 @@ export const Default: Story = {
         ],
       },
     ],
+  },
+  globals: {
+    viewport: {
+      value: '',
+      isRotated: false,
+    },
   },
 };
 
@@ -247,16 +256,16 @@ export const CanExpandFullSizeMenu: Story = {
   args: {
     ...NavMenus.args,
   },
+
   parameters: {
-    viewport: {
-      defaultViewport: 'macbookPro',
-    },
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300, viewports: [chromaticViewports.chromebook] },
+
     snapshot: {
       skip: true,
     },
   },
+
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {
     await userEvent.tab();
@@ -268,22 +277,29 @@ export const CanExpandFullSizeMenu: Story = {
       await userEvent.keyboard(' ', { delay: 300 });
     }
   },
+
+  globals: {
+    viewport: {
+      value: 'macbookPro',
+      isRotated: false,
+    },
+  },
 };
 
 export const CanExpandHamburgerMenu: Story = {
   args: {
     ...NavMenus.args,
   },
+
   parameters: {
-    viewport: {
-      defaultViewport: 'googlePixel2',
-    },
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 500, viewports: [chromaticViewports.googlePixel2] },
+
     snapshot: {
       skip: true,
     },
   },
+
   // Select the menu then expand it with the keyboard. set up for snapshotting
   play: async () => {
     await userEvent.tab();
@@ -291,5 +307,12 @@ export const CanExpandHamburgerMenu: Story = {
     if (isChromatic()) {
       await userEvent.keyboard(' ', { delay: 400 });
     }
+  },
+
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
   },
 };
