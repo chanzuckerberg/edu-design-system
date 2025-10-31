@@ -2415,12 +2415,12 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:^28.0.9"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-typescript": "npm:^12.3.0"
-    "@storybook/addon-a11y": "npm:^9.1.15"
-    "@storybook/addon-docs": "npm:^9.1.15"
-    "@storybook/addon-links": "npm:^9.1.15"
+    "@storybook/addon-a11y": "npm:^9.1.16"
+    "@storybook/addon-docs": "npm:^9.1.16"
+    "@storybook/addon-links": "npm:^9.1.16"
     "@storybook/addon-styling-webpack": "npm:^2.0.0"
     "@storybook/addon-webpack5-compiler-babel": "npm:^3.0.6"
-    "@storybook/react-webpack5": "npm:^9.1.15"
+    "@storybook/react-webpack5": "npm:^9.1.16"
     "@storybook/test-runner": "npm:^0.23.0"
     "@storybook/testing-library": "npm:^0.2.2"
     "@tanstack/react-table": "npm:^8.21.3"
@@ -2450,7 +2450,7 @@ __metadata:
     eslint-config-prettier: "npm:^9.1.2"
     eslint-plugin-jest: "npm:^28.14.0"
     eslint-plugin-prettier: "npm:^5.5.4"
-    eslint-plugin-storybook: "npm:^9.1.15"
+    eslint-plugin-storybook: "npm:^9.1.16"
     eslint-plugin-testing-library: "npm:^7.13.3"
     graphemer: "npm:^1.4.0"
     husky: "npm:^9.1.7"
@@ -2484,7 +2484,7 @@ __metadata:
     rollup: "npm:^4.52.5"
     rollup-plugin-postcss: "npm:^4.0.2"
     standard-version: "npm:^9.5.0"
-    storybook: "npm:^9.1.15"
+    storybook: "npm:^9.1.16"
     storybook-addon-tag-badges: "npm:^2.0.4"
     style-dictionary: "npm:^3.9.2"
     stylelint: "npm:^16.25.0"
@@ -4467,7 +4467,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-a11y@npm:^9.1.15":
+"@storybook/addon-a11y@npm:^9.1.16":
   version: 9.1.16
   resolution: "@storybook/addon-a11y@npm:9.1.16"
   dependencies:
@@ -4479,7 +4479,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:^9.1.15":
+"@storybook/addon-docs@npm:^9.1.16":
   version: 9.1.16
   resolution: "@storybook/addon-docs@npm:9.1.16"
   dependencies:
@@ -4496,7 +4496,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^9.1.15":
+"@storybook/addon-links@npm:^9.1.16":
   version: 9.1.16
   resolution: "@storybook/addon-links@npm:9.1.16"
   dependencies:
@@ -4652,7 +4652,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-webpack5@npm:^9.1.15":
+"@storybook/react-webpack5@npm:^9.1.16":
   version: 9.1.16
   resolution: "@storybook/react-webpack5@npm:9.1.16"
   dependencies:
@@ -9544,7 +9544,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:^9.1.15":
+"eslint-plugin-storybook@npm:^9.1.16":
   version: 9.1.16
   resolution: "eslint-plugin-storybook@npm:9.1.16"
   dependencies:
@@ -17388,7 +17388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^9.1.15":
+"storybook@npm:^9.1.16":
   version: 9.1.16
   resolution: "storybook@npm:9.1.16"
   dependencies:
