@@ -2481,7 +2481,7 @@ __metadata:
     react-focus-lock: "npm:^2.13.6"
     react-portal: "npm:^4.3.0"
     react-uid: "npm:^2.4.0"
-    rollup: "npm:^4.53.1"
+    rollup: "npm:^4.53.2"
     rollup-plugin-postcss: "npm:^4.0.2"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^9.1.16"
@@ -16695,7 +16695,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.53.1":
+"rollup@npm:^4.53.2":
   version: 4.53.2
   resolution: "rollup@npm:4.53.2"
   dependencies:
