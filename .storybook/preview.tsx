@@ -16,6 +16,7 @@ import type { Preview, StoryFn } from '@storybook/react-webpack5';
 import React from 'react';
 
 import Theme from './Theme';
+import * as tokens from '../src/tokens-dist/ts/colors';
 import { storybookViewports } from '../src/util/viewports';
 
 export const decorators = [
@@ -40,12 +41,12 @@ export const parameters: Preview['parameters'] = {
     options: {
       'background-utility-default-high-emphasis': {
         name: 'background-utility-default-high-emphasis',
-        value: '#0F2163',
+        value: tokens.EdsThemeColorBackgroundUtilityDefaultHighEmphasis,
       },
 
       'background-utility-inverse-high-emphasis': {
         name: 'background-utility-inverse-high-emphasis',
-        value: '#FFFFFF',
+        value: tokens.EdsThemeColorBackgroundUtilityInverseHighEmphasis,
       },
     },
   },
