@@ -156,6 +156,19 @@ const { identity } = require('lodash');
         }),
       },
       {
+        name: 'tier1CollectionName',
+        message:
+          'Please select the name containing the tier 1 values you wish to import:',
+        type: 'select',
+        choices: ['render', 'common'].map((tier1Name) => {
+          return {
+            name: tier1Name,
+            message: `Use the ${tier1Name} value set`,
+            value: tier1Name,
+          };
+        }),
+      },
+      {
         name: 'tier2ModeId',
         message: 'Please select the theme to use you wish to import:',
         type: 'select',
@@ -206,6 +219,7 @@ const { identity } = require('lodash');
         figmaVariable,
         modeResponses.tier1ModeId,
         modeResponses.tier2ModeId,
+        modeResponses.tier1CollectionName,
         figmaApiReader,
       );
 
@@ -213,11 +227,12 @@ const { identity } = require('lodash');
       if (variable.isOrphaned()) {
         stats.skipped.push(variable);
 
+        spinner.warn(
+          chalk.bold(variable.name) +
+            ': Skipped with warning (orphaned): please remove usage in figma',
+        );
+
         if (isVerbose) {
-          spinner.warn(
-            chalk.bold(variable.name) +
-              ': Skipped with warning (orphaned): please remove usage in figma',
-          );
           console.warn('Variable details:', variable);
         }
 
@@ -306,7 +321,7 @@ const { identity } = require('lodash');
         if (!writePath) {
           spinner.warn(
             chalk.bold(variable.name) +
-              ': Skipped with warning (no write path)',
+              `: Skipped with warning (no write path "${writePath}")`,
           );
         }
         isVerbose && console.warn('Variable details:', variable);

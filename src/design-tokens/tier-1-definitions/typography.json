@@ -3,13 +3,13 @@
     "typography": {
       "fontFamily": {
         "1": {
-          "value": "'Graphik', Arial, sans-serif"
+          "value": "'Parabolica', Arial, sans-serif"
         },
         "2": {
-          "value": "'Argent CF Italic', Georgia, serif"
+          "value": "'Kazimir Text', Georgia, serif"
         },
         "3": {
-          "value": "inherit"
+          "value": "'Jet Brains Mono', Consolas, monospace"
         },
         "sizeOffset": {
           "2": {

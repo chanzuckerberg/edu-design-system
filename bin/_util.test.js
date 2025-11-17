@@ -416,6 +416,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6181:0',
+          'common',
           () => {},
         );
 
@@ -448,6 +449,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6181:0',
+          'common',
           () => {},
         );
 
@@ -482,6 +484,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6348:0',
+          'common',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -604,6 +607,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6348:0',
+          'common',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -638,6 +642,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6348:0',
+          'render',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -663,6 +668,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6348:0',
+          'common',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -695,6 +701,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6348:0',
+          'common',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -726,6 +733,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6181:0',
+          'common',
           new utils.FigmaAPIReader(mockData),
         );
 
@@ -752,6 +760,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6181:0',
+          'common',
         );
 
         expect(variable.value).toEqual('0');
@@ -777,6 +786,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6181:0',
+          'common',
         );
 
         expect(() => {
@@ -807,6 +817,7 @@ describe('utils', function () {
           },
           '6181:0',
           '6181:0',
+          'common',
         );
 
         expect(() => {
