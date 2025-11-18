@@ -9,6 +9,7 @@ const { identity } = require('lodash');
   const { prompt } = require('enquirer');
   const set = require('lodash/set');
   const at = require('lodash/at');
+  const uniq = require('lodash/uniq');
   const ora = require('ora');
 
   // eslint-disable-next-line import/extensions
@@ -103,7 +104,7 @@ const { identity } = require('lodash');
       {
         name: 'tier2Collection',
         message:
-          'Which collection contains the tier 2 tokens (e.g., "EDS tokens", "Tier 2")?',
+          'Which collection contains the tier 2 tokens (e.g., "Tier 2")?',
         type: 'select',
         choices: figmaApiReader
           .getVariableCollections()
@@ -158,9 +159,15 @@ const { identity } = require('lodash');
       {
         name: 'tier1CollectionName',
         message:
-          'Please select the name containing the tier 1 values you wish to import:',
+          'Please select the tier 1 collection name containing the tier 1 values you wish to import:',
         type: 'select',
-        choices: ['render', 'common'].map((tier1Name) => {
+        // Use the top-level tier 1 values as the basis for the tier 1 naming selection. Trim the name to just the prefix
+        // TODO: filter out non-color top level values
+        choices: uniq(
+          figmaApiReader
+            .getVariablesByCollectionId(tier1Collection.id)
+            .map((variable) => variable.name.replace(/\/[a-zA-Z0-9-]*/g, '')),
+        ).map((tier1Name) => {
           return {
             name: tier1Name,
             message: `Use the ${tier1Name} value set`,
