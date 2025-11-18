@@ -2433,12 +2433,12 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/jsonfile": "npm:^6"
     "@types/lodash": "npm:^4.17.20"
-    "@types/node": "npm:^20.19.24"
+    "@types/node": "npm:^20.19.25"
     "@types/react": "npm:^18.3.26"
     "@types/react-beautiful-dnd": "npm:^13.1.8"
     "@types/react-dom": "npm:^18.3.7"
     "@types/react-portal": "npm:^4.0.7"
-    "@types/yargs": "npm:^17.0.34"
+    "@types/yargs": "npm:^17.0.35"
     axe-core: "npm:4.11.0"
     chalk: "npm:^4.1.2"
     chromatic: "npm:^13.3.3"
@@ -2451,7 +2451,7 @@ __metadata:
     eslint-plugin-jest: "npm:^28.14.0"
     eslint-plugin-prettier: "npm:^5.5.4"
     eslint-plugin-storybook: "npm:^9.1.16"
-    eslint-plugin-testing-library: "npm:^7.13.3"
+    eslint-plugin-testing-library: "npm:^7.13.4"
     graphemer: "npm:^1.4.0"
     husky: "npm:^9.1.7"
     identity-obj-proxy: "npm:^3.0.0"
@@ -5330,12 +5330,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.19.24":
-  version: 20.19.24
-  resolution: "@types/node@npm:20.19.24"
+"@types/node@npm:^20.19.25":
+  version: 20.19.25
+  resolution: "@types/node@npm:20.19.25"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/d3e2f47b1417d5dc8d8f425d2efecaa1fd8fe201b4e8de3e6fa8a54841487e48d81d9f24caaf329d316248b3eff8852f82faf16c177ba3606b09442e5094fc7e
+  checksum: 10/f0ed863599da289df5838380e211f9e010414dc7df8127b79f6a7eeca80a8d6e3daf3e58ddad1884f8dfafd17c16b02f56cee1689b7ebdf5df6d0e5770165ac1
   languageName: node
   linkType: hard
 
@@ -5510,12 +5510,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^17.0.34":
-  version: 17.0.34
-  resolution: "@types/yargs@npm:17.0.34"
+"@types/yargs@npm:^17.0.35":
+  version: 17.0.35
+  resolution: "@types/yargs@npm:17.0.35"
   dependencies:
     "@types/yargs-parser": "npm:*"
-  checksum: 10/8e7907479e649e9115dcca94cb059dfe2322992ac5d29120f759564c078abfc13673a31f7ad86a3a5c9de7f241a4e3d70042ba38b794fd1601e44f9a1bc5cefd
+  checksum: 10/47bcd4476a4194ea11617ea71cba8a1eddf5505fc39c44336c1a08d452a0de4486aedbc13f47a017c8efbcb5a8aa358d976880663732ebcbc6dbcbbecadb0581
   languageName: node
   linkType: hard
 
@@ -9556,15 +9556,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^7.13.3":
-  version: 7.13.3
-  resolution: "eslint-plugin-testing-library@npm:7.13.3"
+"eslint-plugin-testing-library@npm:^7.13.4":
+  version: 7.13.4
+  resolution: "eslint-plugin-testing-library@npm:7.13.4"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.15.0"
     "@typescript-eslint/utils": "npm:^8.15.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10/7511565b27d8c8fef976b79a18b68048b476b8fdeb52bd37b5289bcdafca0ba10dfa6bea8dee32c0b8fb4f34f5e51e2f75e4444a1a2aad7a94f53c96fcd91f9f
+  checksum: 10/550f5c204faf2a809e45865c9a03ff4bca0709977b2185a4f2f323f7bf6cac0eab9623feb293980da47516a4cabf67eb35ebe719f5e0a347b83c55d2e981cd28
   languageName: node
   linkType: hard
 
