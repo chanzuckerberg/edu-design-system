@@ -1,7 +1,7 @@
 .token-specimen {
-  border: 1px solid var(--eds-theme-color-body-background);
+  border: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
   box-shadow: 1px solid var(--eds-box-shadow-md);
-  background: var(--eds-theme-color-background-input);
+  background-color: var(--eds-theme-color-background-input);
   padding: calc(var(--eds-spacing-size-2) * 1px);
   display: grid;
   gap: calc(var(--eds-spacing-size-2) * 1px);
@@ -21,7 +21,6 @@
 
 .token-specimen__name {
   display: inline-block;
-  background: var(--eds-theme-color-background-brand-blue-low-emphasis);
   color: var(--eds-theme-color-text-utility-critical);
   padding: calc(var(--eds-spacing-size-half) * 1px);
   border-radius: 4px;
@@ -45,13 +44,13 @@
   width: 100%;
 
   .token-specimen--inverted & {
-    background: var(--eds-theme-color-background-utility-default-high-emphasis) !important;
+    background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
     outline: 6px solid var(--eds-theme-color-background-utility-default-high-emphasis);
   }
 }
 
 .token-specimen__sample--box {
-  background: var(--eds-theme-color-background-utility-default-high-emphasis);
+  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
   min-height: calc(var(--eds-spacing-size-10) * 1px);
   display: flex;
   align-items: center;

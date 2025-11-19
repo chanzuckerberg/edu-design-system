@@ -24,7 +24,7 @@
   display: grid;
   place-content: center;
 
-  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  border-radius: calc(var(--eds-spacing-size-quarter) * 1px); /* using sized radius to have an outer rounded rect and inner square */
 
   /* preset: body-md */
   font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
