@@ -44,7 +44,7 @@
   width: 100%;
 
   .token-specimen--inverted & {
-    background-color: var(--eds-theme-color-background-utility-default-high-emphasis) !important;
+    background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
     outline: 6px solid var(--eds-theme-color-background-utility-default-high-emphasis);
   }
 }

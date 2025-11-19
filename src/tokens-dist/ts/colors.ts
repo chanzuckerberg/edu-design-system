@@ -117,7 +117,7 @@ export const EdsColorOpacity60 = '0.60';
 export const EdsColorOpacity70 = '0.70';
 export const EdsColorOpacity80 = '0.80';
 export const EdsThemeColorBodyBackground = '#F4F6F8';
-export const EdsThemeColorBackgroundInput = 'rgba(255, 255, 255, 0.00)';
+export const EdsThemeColorBackgroundInput = '#FFFFFF';
 export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
 export const EdsThemeColorBackgroundBrandPrimaryDefault = '#C4C1F3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
@@ -144,11 +144,11 @@ export const EdsThemeColorBackgroundTableRowStripe2 = '#F4F1EF';
 export const EdsThemeColorBackgroundTableRowSelected = '#E0F5EC';
 export const EdsThemeColorBackgroundVisualPageIndicator = '#BCB9B6';
 export const EdsThemeColorBackgroundVisualPageIndicatorCurrent = '#19955D';
-export const EdsThemeColorBackgroundUtilityBase1 = '#FAF9F8';
-export const EdsThemeColorBackgroundUtilityBase2 = '#FFFFFF';
+export const EdsThemeColorBackgroundUtilityBase1 = '#FFFFFF';
+export const EdsThemeColorBackgroundUtilityBase2 = 'rgba(255, 255, 255, 0.60)';
 export const EdsThemeColorBackgroundUtilityContainer = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityContainerHover = '#FAF9F8';
-export const EdsThemeColorBackgroundUtilityContainerActive = '#FAF9F8';
+export const EdsThemeColorBackgroundUtilityContainerActive = '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityContainerSelected = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityCard = 'rgba(255, 255, 255, 0.60)';
 export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
@@ -217,11 +217,11 @@ export const EdsThemeColorBackgroundUtilityWarningHighEmphasis = '#FFFC83';
 export const EdsThemeColorBackgroundUtilityWarningHighEmphasisHover = '#F6EE65';
 export const EdsThemeColorBackgroundUtilityWarningHighEmphasisActive =
   '#EDDE45';
-export const EdsThemeColorBackgroundUtilityInformationalLowEmphasis = '#C2ECD9';
+export const EdsThemeColorBackgroundUtilityInformationalLowEmphasis = '#E0F5EC';
 export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisHover =
-  '#A1E1C4';
+  '#C2ECD9';
 export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisActive =
-  '#A1E1C4';
+  '#C2ECD9';
 export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis =
   'rgba(250, 249, 248, 0.00)';
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#E6E2DE';

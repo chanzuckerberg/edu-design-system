@@ -213,7 +213,6 @@ module.exports = {
   },
 
   FigmaVariable: class {
-    // static TIER_1_PREFIX = 'render/';
     static TIER_2_PREFIX = '-> ';
     static VARIABLE_ALIAS = 'VARIABLE_ALIAS';
 

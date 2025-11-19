@@ -42,6 +42,7 @@
   --eds-theme-color-background-utility-overlay-high-emphasis: rgba(36, 36, 35, 0.80);
   --eds-theme-color-background-utility-overlay-low-emphasis: rgba(36, 36, 35, 0.50);
   --eds-theme-color-background-utility-card: rgba(255, 255, 255, 0.60);
+  --eds-theme-color-background-utility-base-2: rgba(255, 255, 255, 0.60);
   --eds-theme-color-background-brand-pink: #00FF00;
   --eds-theme-color-background-brand-purple-low-emphasis: #00FF00;
   --eds-theme-color-background-brand-purple: #00FF00;
@@ -51,7 +52,6 @@
   --eds-theme-color-background-brand-primary-default: #C4C1F3; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-neutral-medium: #E7E8EA;
   --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
-  --eds-theme-color-background-input: rgba(255, 255, 255, 0.00);
   --eds-theme-color-body-background: #F4F6F8;
   --eds-z-index-bottom: -100;
   --eds-z-index-top: 99999;
@@ -398,9 +398,9 @@
   --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
   --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-informational-low-emphasis-active: var(--eds-color-green-150);
-  --eds-theme-color-background-utility-informational-low-emphasis-hover: var(--eds-color-green-150);
-  --eds-theme-color-background-utility-informational-low-emphasis: var(--eds-color-green-100);
+  --eds-theme-color-background-utility-informational-low-emphasis-active: var(--eds-color-green-100);
+  --eds-theme-color-background-utility-informational-low-emphasis-hover: var(--eds-color-green-100);
+  --eds-theme-color-background-utility-informational-low-emphasis: var(--eds-color-green-050);
   --eds-theme-color-background-utility-warning-high-emphasis-active: var(--eds-color-yellow-150);
   --eds-theme-color-background-utility-warning-high-emphasis-hover: var(--eds-color-yellow-100);
   --eds-theme-color-background-utility-warning-high-emphasis: var(--eds-color-yellow-050);
@@ -441,11 +441,10 @@
   --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container-selected: var(--eds-color-white);
-  --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-container: var(--eds-color-white);
-  --eds-theme-color-background-utility-base-2: var(--eds-color-white);
-  --eds-theme-color-background-utility-base-1: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-theme-color-background-visual-page-indicator: var(--eds-color-neutral-250);
   --eds-theme-color-background-table-row-selected: var(--eds-color-green-050);
@@ -463,6 +462,7 @@
   --eds-theme-color-background-brand-red-low-emphasis: var(--eds-color-red-050);
   --eds-theme-color-background-brand-red: var(--eds-color-red-350);
   --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-theme-color-background-input: var(--eds-color-white);
   --eds-theme-form-border-width: var(--eds-border-width-sm);
   --eds-theme-border-width: var(--eds-border-width-sm);
   --eds-theme-border-radius-notification: var(--eds-border-radius-full);
@@ -473,5 +473,5 @@
   --eds-theme-border-radius-objects-md: var(--eds-border-radius-300);
   --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-400);
   --eds-theme-border-radius-surfaces-lg: var(--eds-border-radius-400);
-  --eds-theme-border-radius-actions: var(--eds-border-radius-full);
+  --eds-theme-border-radius-actions: var(--eds-border-radius-200);
 }

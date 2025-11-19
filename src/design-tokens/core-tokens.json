@@ -777,7 +777,7 @@
       "border": {
         "radius": {
           "actions": {
-            "value": "{eds.border.radius.full}"
+            "value": "{eds.border.radius.200}"
           },
           "surfaces": {
             "lg": {
@@ -832,7 +832,7 @@
         },
         "background": {
           "input": {
-            "value": "rgba(255, 255, 255, 0.00)"
+            "value": "{eds.color.white}"
           },
           "neutral": {
             "subtle": {
@@ -968,10 +968,10 @@
           "utility": {
             "base": {
               "1": {
-                "value": "{eds.color.neutral.025}"
+                "value": "{eds.color.white}"
               },
               "2": {
-                "value": "{eds.color.white}"
+                "value": "rgba(255, 255, 255, 0.60)"
               }
             },
             "container": {
@@ -982,7 +982,7 @@
                 "value": "{eds.color.neutral.025}"
               },
               "active": {
-                "value": "{eds.color.neutral.025}"
+                "value": "{eds.color.neutral.050}"
               },
               "selected": {
                 "value": "{eds.color.white}",
@@ -1167,13 +1167,13 @@
             "informational": {
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.green.100}"
+                  "value": "{eds.color.green.050}"
                 },
                 "hover": {
-                  "value": "{eds.color.green.150}"
+                  "value": "{eds.color.green.100}"
                 },
                 "active": {
-                  "value": "{eds.color.green.150}"
+                  "value": "{eds.color.green.100}"
                 }
               }
             },

@@ -313,7 +313,7 @@
     "theme": {
       "border": {
         "radius": {
-          "actions": "99999",
+          "actions": "8",
           "surfaces": {
             "lg": "16",
             "md": "16"
@@ -343,7 +343,7 @@
           }
         },
         "background": {
-          "input": "rgba(255, 255, 255, 0.00)",
+          "input": "#FFFFFF",
           "neutral": {
             "subtle": {
               "hover": "#E7E8EA"
@@ -402,13 +402,13 @@
           },
           "utility": {
             "base": {
-              "1": "#FAF9F8",
-              "2": "#FFFFFF"
+              "1": "#FFFFFF",
+              "2": "rgba(255, 255, 255, 0.60)"
             },
             "container": {
               "@": "#FFFFFF",
               "hover": "#FAF9F8",
-              "active": "#FAF9F8",
+              "active": "#F4F1EF",
               "selected": "#FFFFFF"
             },
             "card": "rgba(255, 255, 255, 0.60)",
@@ -498,9 +498,9 @@
             },
             "informational": {
               "lowEmphasis": {
-                "@": "#C2ECD9",
-                "hover": "#A1E1C4",
-                "active": "#A1E1C4"
+                "@": "#E0F5EC",
+                "hover": "#C2ECD9",
+                "active": "#C2ECD9"
               }
             },
             "disabled": {
