@@ -1890,11 +1890,11 @@
         "fontFamily": {
           "decorative": {
             "inline": {
-              "value": "Parabolica"
+              "value": "parabolica"
             }
           },
           "tab": {
-            "value": "Jet Brains Mono"
+            "value": "JetBrains Mono"
           }
         },
         "fontStyle": {

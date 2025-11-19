@@ -33,7 +33,6 @@ Import the EDS stylesheets somewhere in your app root, e.g. an `init.ts` or `app
 
 ```js
 import '@chanzuckerberg/eds/index.css'; // Includes relevant styles and tokens for EDS
-import '@chanzuckerberg/eds/fonts.css'; // Includes font files if using the built in theme fonts
 ```
 
 Also, include this in your base / reset styles to allow configuation of the pixel-to-rem ratio:

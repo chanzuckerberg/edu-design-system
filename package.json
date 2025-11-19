@@ -9,13 +9,11 @@
   "exports": {
     ".": "./lib/index.js",
     "./index.css": "./lib/index.css",
-    "./fonts.css": "./lib/tokens/fonts.css",
     "./tailwind.config": "./tailwind.config.ts"
   },
   "types": "lib/index.d.ts",
   "sideEffects": [
-    "lib/index.css",
-    "lib/tokens/fonts.css"
+    "lib/index.css"
   ],
   "publishConfig": {
     "access": "public"
@@ -39,7 +37,7 @@
     "eds-migrate": "bin/eds-migrate.js"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:bin && yarn copy-fonts-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:bin",
     "build:bin": "tsc -p src/bin/tsconfig.json",
     "build:clean": "rm -rf lib/",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist",
@@ -47,7 +45,6 @@
     "build:storybook": "storybook build -o storybook-static",
     "build:styles": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
     "chromatic": "chromatic",
-    "copy-fonts-to-lib": "copyfiles -u 3 src/design-tokens/tier-1-definitions/fonts.css src/design-tokens/tier-1-definitions/fonts/**/* lib/tokens",
     "create-component": "plop",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
@@ -141,7 +138,6 @@
     "axe-core": "4.11.0",
     "chromatic": "^13.3.3",
     "codecov": "^3.8.3",
-    "copyfiles": "^2.4.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.2",
     "eslint-plugin-jest": "^28.14.0",

@@ -2,9 +2,9 @@
   "eds": {
     "typography": {
       "fontFamily": {
-        "1": "'Parabolica', Arial, sans-serif",
-        "2": "'Kazimir Text', Georgia, serif",
-        "3": "'Jet Brains Mono', Consolas, monospace",
+        "1": "'parabolica', Arial, sans-serif",
+        "2": "'kazimirtext', Georgia, serif",
+        "3": "'JetBrains Mono', Consolas, monospace",
         "sizeOffset": {
           "2": "2"
         }
@@ -830,9 +830,9 @@
       "typography": {
         "fontFamily": {
           "decorative": {
-            "inline": "Parabolica"
+            "inline": "parabolica"
           },
-          "tab": "Jet Brains Mono"
+          "tab": "JetBrains Mono"
         },
         "fontStyle": {
           "headline": {

@@ -105,11 +105,10 @@ export function applyTailwindConfig(
       ...edsTokens.typography.fontWeight, // Tier 1 font weight tokens
     },
     fontFamily: {
-      // provide values for the configured font family tokens
-      // Useful when your app imports '@chanzuckerberg/eds/fonts.css' or
-      // if you have custom token values for primary and secondary fonts
+      // TODO-AH: link to instructions for setting up the font files locally
       1: edsTokens.typography.fontFamily[1],
       2: edsTokens.typography.fontFamily[2],
+      3: edsTokens.typography.fontFamily[3],
     },
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
     // Docs: https://tailwindcss.com/docs/responsive-design#customizing-your-theme
