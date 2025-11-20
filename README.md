@@ -40,8 +40,28 @@ Also, include this in your base / reset styles to allow configuation of the pixe
 ```css
 html {
   font-size: calc(var(--eds-typography-base-size) * 1px); /* Sets the default pixel-to-rem ratio */
+  /* also set a default html/body font family, if desired by using --eds-typography-font-family-1, etc. */
 }
 ```
+
+Lastly, add `<link>` or other files to load fonts into your project. EDS provides fallbacks for the three font families, and can support fonts from [Adobe][adobe-fonts], [Google][google-fonts], or other hosting / local sources:
+
+```html
+<!-- Handling for font-family-1 : local file --> 
+<link rel="stylesheet" href="https://local-domain.org/fonts.css">
+
+<!-- Handling for font-family-2 : adobe font -->
+<link rel="stylesheet" href="https://use.typekit.net/<example>.css">
+
+<!-- Handling for font-family-3 : google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=<test-font-family...>" rel="stylesheet">
+
+```
+
+[adobe-fonts]: https://helpx.adobe.com/fonts/using/add-fonts-website.html
+[google-fonts]: https://fonts.google.com/knowledge/using_type/using_web_fonts
 
 ### Theming Setup
 

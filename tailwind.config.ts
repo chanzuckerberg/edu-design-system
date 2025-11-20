@@ -105,7 +105,7 @@ export function applyTailwindConfig(
       ...edsTokens.typography.fontWeight, // Tier 1 font weight tokens
     },
     fontFamily: {
-      // TODO-AH: link to instructions for setting up the font files locally
+      // See README.md for info on how to set up local / vendor font with EDS
       1: edsTokens.typography.fontFamily[1],
       2: edsTokens.typography.fontFamily[2],
       3: edsTokens.typography.fontFamily[3],
