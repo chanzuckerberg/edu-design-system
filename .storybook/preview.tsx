@@ -6,8 +6,6 @@ import '../src/design-tokens/css/base/media.css';
 
 // Import theme tokens
 import '../src/tokens-dist/css/variables.css';
-// TODO: change how this works so that local fonts can be imported and preloaded locally
-import '../src/design-tokens/tier-1-definitions/fonts.css';
 
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
