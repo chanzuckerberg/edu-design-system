@@ -807,7 +807,7 @@
             }
           },
           "notification": {
-            "value": "{eds.border.radius.full}"
+            "value": "{eds.border.radius.300}"
           }
         },
         "width": {

@@ -327,7 +327,7 @@
             "default": "99999",
             "sticky": "99999"
           },
-          "notification": "99999"
+          "notification": "12"
         },
         "width": "1"
       },

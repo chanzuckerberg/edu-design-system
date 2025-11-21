@@ -465,7 +465,7 @@
   --eds-theme-color-background-input: var(--eds-color-white);
   --eds-theme-form-border-width: var(--eds-border-width-sm);
   --eds-theme-border-width: var(--eds-border-width-sm);
-  --eds-theme-border-radius-notification: var(--eds-border-radius-full);
+  --eds-theme-border-radius-notification: var(--eds-border-radius-300);
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
   --eds-theme-border-radius-objects-xs: var(--eds-border-radius-150);
