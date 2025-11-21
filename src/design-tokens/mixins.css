@@ -38,7 +38,7 @@
   }
   
   color: var(--eds-theme-color-text-utility-default-primary);
-  border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
   background-color: var(--eds-theme-color-background-input);
   
   &:hover {
