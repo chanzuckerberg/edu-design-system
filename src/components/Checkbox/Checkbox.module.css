@@ -47,7 +47,7 @@
 
 .checkbox__input:checked {
   background-color: currentColor;
-  border: currentColor;
+  border-color: currentColor;
 }
 
 .checkbox__input:indeterminate::before {
@@ -62,7 +62,7 @@
 
 .checkbox__input:indeterminate {
   background-color: currentColor;
-  border: currentColor;
+  border-color: currentColor;
 }
 
 .checkbox__labels {
@@ -77,14 +77,17 @@
 
 .checkbox__input:not(:checked):not(:indeterminate) {
   color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
 
   &:not(:disabled):hover {
     color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis-hover);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
   }
 
   &:not(:disabled):active {
     color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis-active);
     background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
   }
 
@@ -107,11 +110,11 @@
 .checkbox__input:indeterminate {
   color: var(--eds-theme-color-border-utility-default-high-emphasis);
 
-  &:hover {
+  &:not(:disabled):hover {
     color: var(--eds-theme-color-border-utility-default-high-emphasis-hover);
   }
 
-  &:active {
+  &:not(:disabled):active {
     color: var(--eds-theme-color-border-utility-default-high-emphasis-active);
   }
 
@@ -130,6 +133,7 @@
 
 .checkbox__input:disabled {
   color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+
   cursor: not-allowed;
 
   &:not(:checked) {
