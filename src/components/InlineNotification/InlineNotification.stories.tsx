@@ -13,7 +13,7 @@ export default {
     title: 'Inline notifications lorem ipsum text',
     className: 'w-[384px]',
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof InlineNotification>;

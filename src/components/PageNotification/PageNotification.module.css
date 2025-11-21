@@ -12,9 +12,7 @@
   gap: calc(var(--eds-spacing-size-2) * 1px);
   padding: calc(var(--eds-spacing-size-2) * 1px);
 
-  border: calc(var(--eds-spacing-size-quarter) * 1px) solid;
-  border-left: calc(var(--eds-spacing-size-2) * 1px) solid;
-  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-notification) * 1px);
 
   &.page-notification--status-informational {
     color: var(--eds-theme-color-text-utility-informational);
