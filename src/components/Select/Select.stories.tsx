@@ -48,7 +48,7 @@ const meta: Meta<typeof Select> = {
         'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
-  tags: ['autodocs', 'version:3.1'],
+  tags: ['autodocs', 'version:3.1.1'],
 };
 
 export default meta;
