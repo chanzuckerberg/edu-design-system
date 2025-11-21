@@ -273,8 +273,8 @@
   &.button--primary.button--variant-critical,
   &.button--primary.button--variant-neutral {
     color: var(--eds-theme-color-text-utility-disabled-primary);
-    border-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
-    background-color: var(--eds-theme-color-background-utility-disabled-medium-emphasis);
+    border-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+    background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
   }
 
   &.button--primary.button--variant-inverse {
