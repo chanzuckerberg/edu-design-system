@@ -93,14 +93,17 @@
 
   .checkbox--error & {
     color: var(--eds-theme-color-text-utility-critical);
+    border-color: var(--eds-theme-color-border-utility-critical);
 
     &:hover {
       color: var(--eds-theme-color-border-utility-critical-hover);
+      border-color: var(--eds-theme-color-border-utility-critical-hover);
       background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
     }
 
     &:active {
       color: var(--eds-theme-color-border-utility-critical-active);
+      border-color: var(--eds-theme-color-border-utility-critical-active);
       background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
     }
   }
