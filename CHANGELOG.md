@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.7.1...v17.0.0) (2025-11-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* move to reference-based font declarations (#2312)
+
+### Features
+
+* move to reference-based font declarations ([#2312](https://github.com/chanzuckerberg/edu-design-system/issues/2312)) ([9554808](https://github.com/chanzuckerberg/edu-design-system/commit/9554808ece09b838c474784f6398b0f3664be95d))
+* update base theme to use common theme (light) ([#2310](https://github.com/chanzuckerberg/edu-design-system/issues/2310)) ([0722431](https://github.com/chanzuckerberg/edu-design-system/commit/072243177a9332de1048e940ce968537814bdbe3))
+
+
+### Bug Fixes
+
+* **Button:** update token usages to match design ([#2316](https://github.com/chanzuckerberg/edu-design-system/issues/2316)) ([0523295](https://github.com/chanzuckerberg/edu-design-system/commit/0523295f8bf0816103a009e480b9963192ba64c8))
+* **Checkbox:** update token usages to match design ([#2315](https://github.com/chanzuckerberg/edu-design-system/issues/2315)) ([6ac87de](https://github.com/chanzuckerberg/edu-design-system/commit/6ac87dee808d8e212b7dbc1d078a0cd4cb2a439f))
+* **Radio:** update token usages to match design ([c954381](https://github.com/chanzuckerberg/edu-design-system/commit/c954381050b540f8cf7e6f72fe056bc4414303e8))
+* update input field styles to match design ([#2318](https://github.com/chanzuckerberg/edu-design-system/issues/2318)) ([cde73b0](https://github.com/chanzuckerberg/edu-design-system/commit/cde73b08b67150f71eabd194f38c711f99f32cce))
+* update notification components to match designs ([#2317](https://github.com/chanzuckerberg/edu-design-system/issues/2317)) ([d505b71](https://github.com/chanzuckerberg/edu-design-system/commit/d505b71c0b46b728bc93df697a5b746b8760d8e5))
+
 ### [16.7.1](https://github.com/chanzuckerberg/edu-design-system/compare/v16.7.0...v16.7.1) (2025-10-31)
 
 

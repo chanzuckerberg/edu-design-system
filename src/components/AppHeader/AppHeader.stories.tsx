@@ -140,7 +140,7 @@ export const VerticalOrientation: Story = {
 };
 
 /**
- * Logos can also be an image (using either <img> or <svg> for format). When using logo, the maximum height
+ * Logos can also be an image (using either `<img>` or `<svg>` for format). When using logo, the maximum height
  * allowed is fixed, and the logo takes up the total possible vertical height.
  */
 export const ImageLogo: Story = {

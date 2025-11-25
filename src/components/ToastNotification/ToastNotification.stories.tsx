@@ -22,7 +22,7 @@ export default {
     title: "You've got a temporary notification!",
     className: 'w-[384px]',
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;

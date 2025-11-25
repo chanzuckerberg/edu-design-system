@@ -213,15 +213,21 @@ module.exports = {
   },
 
   FigmaVariable: class {
-    static TIER_1_PREFIX = 'render/';
     static TIER_2_PREFIX = '-> ';
     static VARIABLE_ALIAS = 'VARIABLE_ALIAS';
 
-    constructor(json, tier1Mode, tier2Mode, lookupDelegate) {
+    constructor(
+      json,
+      tier1Mode,
+      tier2Mode,
+      tier1CollectionName,
+      lookupDelegate,
+    ) {
       // TODO: throw if any private members are invalid
       this._figmaVariableData = json;
       this._tier1Mode = tier1Mode;
       this._tier2Mode = tier2Mode;
+      this._tier1CollectionName = tier1CollectionName;
       this._lookupDelegate = lookupDelegate;
     }
 
@@ -245,6 +251,17 @@ module.exports = {
         case 'FLOAT':
           /**
            * - When a prefix is seen, remove it entirely for numeric values
+           */
+          return this._tokenNameToPath(
+            'eds.theme.' +
+              this._figmaVariableData.name.replace(
+                module.exports.FigmaVariable.TIER_2_PREFIX,
+                '',
+              ),
+          );
+        case 'STRING':
+          /**
+           * - When the type is STRING, we don't use a specific prefix
            */
           return this._tokenNameToPath(
             'eds.theme.' +
@@ -408,6 +425,8 @@ module.exports = {
         case 'FLOAT':
           // JSON only handles strings so convert here
           return String(figmaResolvedValue);
+        case 'STRING':
+          return String(figmaResolvedValue);
         default:
           throw new TypeError('unknown resolved type: ' + varType, {
             details: figmaResolvedValue,
@@ -445,10 +464,7 @@ module.exports = {
             ? `${this._tokenNameToPath(
                 this.getResovledName()
                   // replace token prefixes with the internal equivalents
-                  .replace(
-                    module.exports.FigmaVariable.TIER_1_PREFIX,
-                    'eds.color.',
-                  )
+                  .replace(this._tier1CollectionName + '/', 'eds.color.')
                   .replace(
                     module.exports.FigmaVariable.TIER_2_PREFIX,
                     'eds.theme.color.',
@@ -456,6 +472,13 @@ module.exports = {
               )}`
             : this.value;
         case 'FLOAT':
+          return module.exports.FigmaVariable.isAliased(
+            this._figmaVariableData,
+            this._tier2Mode,
+          )
+            ? `${this._tokenNameToPath('eds.' + this.getResovledName())}`
+            : this.value;
+        case 'STRING':
           return module.exports.FigmaVariable.isAliased(
             this._figmaVariableData,
             this._tier2Mode,

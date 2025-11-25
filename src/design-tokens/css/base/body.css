@@ -8,8 +8,6 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: var(--eds-theme-color-background-utility-base-1);
-    color: var(--eds-theme-color-text-utility-default-primary);
 }
 
 /* Body disabled variant */
@@ -17,11 +15,4 @@ body {
   overflow: hidden;
   width: 100%;
   min-height: 100%;
-}
-
-/* Body with light background on small screens */
-.body--alternate {
-  @media all and (max-width: $eds-bp-lg) {
-    background: var(--eds-theme-color-background-utility-base-1);
-  }
 }
