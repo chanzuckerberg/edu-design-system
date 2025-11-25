@@ -116,7 +116,7 @@
     "@storybook/addon-webpack5-compiler-babel": "^3.0.6",
     "@storybook/react": "^9.1.16",
     "@storybook/react-webpack5": "^9.1.16",
-    "@storybook/test-runner": "^0.23.0",
+    "@storybook/test-runner": "^0.24.0",
     "@storybook/testing-library": "^0.2.2",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
