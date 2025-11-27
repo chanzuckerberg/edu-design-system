@@ -2,7 +2,10 @@ const StyleDictionary = require('style-dictionary');
 const { minifyDictionaryUsingFormat, formatEdsTokens } = require('./bin/_util');
 
 const EDSStyleDictionary = StyleDictionary.extend({
-  source: ['src/design-tokens/**/*.json'],
+  source: [
+    'src/design-tokens/tier-1-definitions/*.json',
+    'src/design-tokens/core-tokens.json',
+  ],
   platforms: {
     storybook: {
       transformGroup: 'css',
@@ -31,6 +34,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
       transformGroup: 'js',
       buildPath: 'src/tokens-dist/',
       files: [
+        // TODO-AH: add exporting for spacing tokens
         {
           format: 'javascript/es6',
           destination: 'ts/colors.ts',

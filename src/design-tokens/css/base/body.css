@@ -1,13 +1,14 @@
 @import '../../mixins.css';
 
+/* TODO-AH: apply background/foreground tokens here that allow for proper color settings */
 body {
   font: var(--eds-typography-preset-200) var(--eds-typography-font-weight-normal) var(--eds-typography-font-family-1);
     letter-spacing: var(--eds-typography-letter-spacing-normal);
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
   padding: 0;
   margin: 0;
+  background-color: light-dark(var(--eds-theme-color-background-utility-base-1), var(--eds-dark-theme-color-background-utility-base-1));
 }
 
 /* Body disabled variant */
@@ -15,4 +16,16 @@ body {
   overflow: hidden;
   width: 100%;
   min-height: 100%;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
 }

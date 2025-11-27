@@ -41,6 +41,7 @@ Also, include this in your base / reset styles to allow configuation of the pixe
 html {
   font-size: calc(var(--eds-typography-base-size) * 1px); /* Sets the default pixel-to-rem ratio */
   /* also set a default html/body font family, if desired by using --eds-typography-font-family-1, etc. */
+  /* TODO-AH: add handling for light-dark theme as needed here */
 }
 ```
 

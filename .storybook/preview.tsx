@@ -6,17 +6,24 @@ import '../src/design-tokens/css/base/media.css';
 
 // Import theme tokens
 import '../src/tokens-dist/css/variables.css';
+import '../src/tokens-dist/css/variables-dark.css';
 
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-import type { Preview, StoryFn } from '@storybook/react-webpack5';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import type {
+  Preview,
+  StoryFn,
+  ReactRenderer,
+} from '@storybook/react-webpack5';
 import React from 'react';
 
 import Theme from './Theme';
 import * as tokens from '../src/tokens-dist/ts/colors';
 import { storybookViewports } from '../src/util/viewports';
 
+// TODO: where is this imported?
 export const decorators = [
   (Story: StoryFn) => (
     <div dir="ltr">
@@ -25,6 +32,7 @@ export const decorators = [
   ),
 ];
 
+// TODO: where is this imported?
 export const parameters: Preview['parameters'] = {
   a11y: {
     test: 'error',
@@ -35,6 +43,7 @@ export const parameters: Preview['parameters'] = {
   docs: {
     theme: Theme,
   },
+  // TODO-AH: remove this in favor of using a mode-compliant token for all backgrounds
   backgrounds: {
     options: {
       'background-utility-default-high-emphasis': {
@@ -50,4 +59,28 @@ export const parameters: Preview['parameters'] = {
   },
 };
 
+// TODO: where is this imported?
 export const tags = ['autodocs'];
+
+const preview: Preview = {
+  decorators: [
+    (Story: StoryFn) => (
+      <div dir="ltr">
+        <Story />
+      </div>
+    ),
+    withThemeByDataAttribute<ReactRenderer>({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: '',
+      attributeName: 'data-theme',
+    }),
+  ],
+  parameters,
+  tags,
+};
+
+// eslint-disable-next-line @chanzuckerberg/stories/no-components-without-story
+export default preview;

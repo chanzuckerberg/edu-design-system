@@ -6,6 +6,6 @@ import { addons } from 'storybook/manager-api';
 
 import yourTheme from './Theme.js';
 
-addons.setConfig({
-  theme: yourTheme,
-});
+// addons.setConfig({
+//   theme: yourTheme,
+// });
