@@ -48,6 +48,7 @@ const config = {
     '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
+    '@storybook/addon-themes',
   ],
 
   // TODO: update config and package.json scripts to support staticDirs
