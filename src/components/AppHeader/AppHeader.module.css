@@ -7,7 +7,6 @@
  */
 .app-header {
   box-shadow: var(--eds-box-shadow-md);
-  /* TODO-AH: use mixin to convert the suffix into a light-dark() call? */
   background-color: light-dark(var(--eds-theme-color-background-utility-base-1), var(--eds-dark-theme-color-background-utility-base-1));
 
   & > div {
@@ -80,9 +79,7 @@
   background-color: light-dark(var(--eds-theme-color-background-utility-base-1), var(--eds-dark-theme-color-background-utility-base-1));
 
   &::backdrop {
-    background-color: var(
-      --eds-theme-color-background-utility-overlay-low-emphasis
-    );
+    background-color: light-dark(var(--eds-theme-color-background-utility-overlay-low-emphasis), var(--eds-dark-theme-color-background-utility-overlay-low-emphasis));
     pointer-events: none;
   }
 
@@ -134,22 +131,18 @@
   border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
 
   &:hover {
-    background-color: var(
-      --eds-theme-color-background-utility-interactive-no-emphasis-hover
-    );
+    background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-hover));
   }
 
   &:active {
-    background-color: var(
-      --eds-theme-color-background-utility-interactive-no-emphasis-active
-    );
+    background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-active));
   }
 
   .app-header--orientation-vertical & {
     width: 100%;
   }
 
-  color: var(--eds-theme-color-icon-utility-interactive-primary);
+  color: light-dark(var(--eds-theme-color-icon-utility-interactive-primary), var(--eds-dark-theme-color-icon-utility-interactive-primary));
 }
 
 .app-header__nav-item--link,
@@ -254,24 +247,22 @@
  * Component Theme Colors
  */
 .app-header-title__title {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 .app-header-title__sub-title {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .app-header__nav-item--is-current {
-  background-color: var(
-    --eds-theme-color-background-utility-interactive-no-emphasis-active
-  );
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-active));
 }
 
 .app-header__nav-item:focus-visible {
   outline: calc(var(--eds-border-width-md) * 1px) solid
-    var(--eds-theme-color-border-utility-focus);
+    light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
 .drawer-content__nav-group-item--type-menu {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }

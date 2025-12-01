@@ -97,7 +97,7 @@
   font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
   letter-spacing: var(--eds-typography-letter-spacing-normal);
 
-  color: var(--eds-theme-color-text-neutral-subtle);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   text-decoration: none;
 
   &:last-of-type {
@@ -133,7 +133,7 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   margin-left: calc(var(--eds-spacing-size-1) * 1px);
   margin-right: calc(var(--eds-spacing-size-1) * 1px);
   cursor: default;
@@ -151,7 +151,7 @@
  * Breadcrumbs Back Icon.
  */
 .breadcrumbs__back-icon {
-  color: var(--eds-theme-color-icon-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-icon-utility-default-primary), var(--eds-dark-theme-color-icon-utility-default-primary));
   /* Transform over height due to icon being placed inside <a>. */
   transform: scale(1.5);
   position: relative;

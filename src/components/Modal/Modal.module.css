@@ -56,13 +56,13 @@
   * background colors but makes borders 100% opacity black. Without this, the
   * modal would have no clear boundary. 
   */
-  border: calc(var(--eds-theme-form-border-width) * 1px) transparent var(--eds-theme-color-background-utility-container);
+  border: calc(var(--eds-theme-form-border-width) * 1px) transparent light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
   display: flex;
   flex-direction: column;
 
-  background-color: var(--eds-theme-color-background-utility-container);
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 }
 
 /**
@@ -75,7 +75,7 @@
 }
 
 .modal-title {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 /**
  * The body of the modal
@@ -94,7 +94,7 @@
 
   padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 
-  background-color: var(--eds-theme-color-background-utility-container);
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 }
 
 .modal-footer--sticky {
@@ -361,7 +361,7 @@
 }
 
 .modal-sub-title {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 /**
@@ -369,11 +369,11 @@
  */
 .modal__overlay {
   &.modal__overlay--emphasis-high {
-    background-color: rgb(from var(--eds-theme-color-background-utility-overlay-high-emphasis) r g b / 0.8
+    background-color: rgb(from light-dark(var(--eds-theme-color-background-utility-overlay-high-emphasis), var(--eds-dark-theme-color-background-utility-overlay-high-emphasis)) r g b / 0.8
     );
   }
 
   &.modal__overlay--emphasis-low {
-    background-color: rgb(from var(--eds-theme-color-background-utility-overlay-low-emphasis) r g b / 0.5);
+    background-color: rgb(from light-dark(var(--eds-theme-color-background-utility-overlay-low-emphasis), var(--eds-dark-theme-color-background-utility-overlay-low-emphasis)) r g b / 0.5);
   }
 }

@@ -7,7 +7,6 @@ import React from 'react';
 import { AppHeader } from './AppHeader';
 import { chromaticViewports } from '../../util/viewports';
 
-// TODO-AH: handle modes for light/dark theme https://www.chromatic.com/docs/modes/
 export default {
   title: 'Components/AppHeader',
   component: AppHeader,

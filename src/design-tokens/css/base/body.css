@@ -1,6 +1,5 @@
 @import '../../mixins.css';
 
-/* TODO-AH: apply background/foreground tokens here that allow for proper color settings */
 body {
   font: var(--eds-typography-preset-200) var(--eds-typography-font-weight-normal) var(--eds-typography-font-family-1);
     letter-spacing: var(--eds-typography-letter-spacing-normal);
@@ -8,6 +7,7 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   background-color: light-dark(var(--eds-theme-color-background-utility-base-1), var(--eds-dark-theme-color-background-utility-base-1));
 }
 

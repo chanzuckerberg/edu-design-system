@@ -34,7 +34,6 @@ const EDSStyleDictionary = StyleDictionary.extend({
       transformGroup: 'js',
       buildPath: 'src/tokens-dist/',
       files: [
-        // TODO-AH: add exporting for spacing tokens
         {
           format: 'javascript/es6',
           destination: 'ts/colors.ts',

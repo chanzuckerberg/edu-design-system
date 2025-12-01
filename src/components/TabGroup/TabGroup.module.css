@@ -139,7 +139,7 @@
     background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
 
   &:focus-visible {
-    box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-focus);
+    box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   }
 
   @media screen and (prefers-reduced-motion) {
@@ -188,43 +188,43 @@
 }
 
 .tabs__list--variant-default {
-  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 
   .tabs__link {
-    color: var(--eds-theme-color-text-utility-interactive-primary);
+    color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
 
     &:focus-visible {
-      box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-focus);
+      box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
     }
   }
 
   /* add in handling of showing highlight on hover */
   .tabs__item:hover .tab__highlight {
-    background-color: var(--eds-theme-color-text-utility-interactive-primary);
+    background-color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
   }
 
   .tabs__item.eds-is-active .tab__highlight {
-    background-color: var(--eds-theme-color-text-utility-interactive-primary);
+    background-color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
   }
 }
 
 .tabs__list--variant-inverse {
-  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 
   .tabs__link {
-    color: var(--eds-theme-color-text-utility-inverse);
+    color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
 
     &:focus-visible {
-      box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-border-utility-inverse);
+      box-shadow: inset 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) light-dark(var(--eds-theme-color-border-utility-inverse), var(--eds-dark-theme-color-border-utility-inverse));
     }
   }
 
   /* add in handling of showing highlight on hover */
   .tabs__item:hover .tab__highlight {
-    background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+    background-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
   }
 
   .tabs__item.eds-is-active .tab__highlight {
-    background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+    background-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
   }
 }

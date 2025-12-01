@@ -3,7 +3,7 @@ import * as tokens from '../src/tokens-dist/ts/colors';
 
 // Docs: https://storybook.js.org/docs/configure/user-interface/theming
 export default create({
-  base: 'light',
+  base: 'light', // TODO: is there a way to not set base, so that the built-in theme can toggle between light/dark?
   brandTitle: 'Education Design System',
   brandUrl: 'https://github.com/chanzuckerberg/edu-design-system',
   brandTarget: '_blank',

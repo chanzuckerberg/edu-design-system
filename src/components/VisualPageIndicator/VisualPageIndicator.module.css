@@ -12,7 +12,7 @@
 }
 
 .visual-page-indicator__item {
-    --visual-page-indicator-bg: var(--eds-theme-color-background-visual-page-indicator);
+    --visual-page-indicator-bg: light-dark(var(--eds-theme-color-background-visual-page-indicator), var(--eds-dark-theme-color-background-visual-page-indicator));
 
     height: calc(var(--eds-spacing-size-1-and-half) * 1px);
     width: calc(var(--eds-spacing-size-1-and-half) * 1px);

@@ -43,7 +43,6 @@ export const parameters: Preview['parameters'] = {
   docs: {
     theme: Theme,
   },
-  // TODO-AH: remove this in favor of using a mode-compliant token for all backgrounds
   backgrounds: {
     options: {
       'background-utility-default-high-emphasis': {

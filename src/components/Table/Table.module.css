@@ -61,7 +61,7 @@
   vertical-align: top;
   border-bottom-width: calc(var(--eds-theme-border-width) * 1px);
   border-bottom-style: solid;
-  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+  border-bottom-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
 
 /**
@@ -69,5 +69,5 @@
  * Has darker bottom border color for distinguishment.
  */
 .table-row--header {
-  border-bottom-color: var(--eds-theme-color-border-neutral-default);
+  border-bottom-color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
 }

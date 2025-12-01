@@ -63,8 +63,8 @@
 
   cursor: pointer;
 
-  color: var(--eds-theme-color-text-utility-default-primary);
-  background-color: var(--eds-theme-color-background-input);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  background-color: light-dark(var(--eds-theme-color-background-input), var(--eds-dark-theme-color-background-input));
 }
 
 /**
@@ -105,69 +105,69 @@
  * Label on top of the select trigger button to label the select field.
  */
 .select__label {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 .select__subLabel {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   flex: 1 0 100%;
 }
 
 .select__label--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }
 
 .select__option {
-  color: var(--eds-theme-color-text-utility-interactive-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-secondary), var(--eds-dark-theme-color-text-utility-interactive-secondary));
 }
 
 .select__option-text {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 .select__required-text {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .select-button:disabled {
   cursor: not-allowed;
 
-  color: var(--eds-theme-color-text-utility-disabled-primary);
-  border-color: var(--eds-theme-color-border-utility-disabled);
-  background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+  border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
+  background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
 }
 
 .select-button:focus-visible {
-  border-color: var(--eds-theme-color-border-utility-focus);
-  outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  border-color: light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  outline: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
 .select-button--error {
-  border-color: var(--eds-theme-color-border-utility-critical);
+  border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
 
   &:hover {
-    border-color: var(--eds-theme-color-border-utility-critical-hover);
+    border-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
   }
 
   &:focus-visible {
-    border-color: var(--eds-theme-color-border-utility-critical);
-    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-critical);
+    border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
+    outline: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
   }
 }
 
 .select-button--warning {
-  border-color: var(--eds-theme-color-border-utility-warning);
+  border-color: light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
 
   &:hover {
     border-color: var(--eds-theme-color-border-utility-warning-hover);
   }
 
   &:focus-visible {
-    border-color: var(--eds-theme-color-border-utility-warning);
-    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-warning);
+    border-color: light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
+    outline: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
   }
 }
 
 .select__required-text--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }

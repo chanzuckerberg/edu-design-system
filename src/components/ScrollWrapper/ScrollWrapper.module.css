@@ -35,12 +35,12 @@
 
   &::before {
     top: calc(var(--scroll-wrapper__height) * -1px);
-    box-shadow: 0 2px 8px 0 rgb(from var(--eds-theme-color-background-utility-default-medium-emphasis) r g b / 20%);
+    box-shadow: 0 2px 8px 0 rgb(from light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis), var(--eds-dark-theme-color-background-utility-default-medium-emphasis)) r g b / 20%);
   }
 
   &::after {
     bottom: calc(var(--scroll-wrapper__height) * -1px);
-    box-shadow: 0 2px 8px 0 rgb(from var(--eds-theme-color-background-utility-default-medium-emphasis) r g b / 20%);
+    box-shadow: 0 2px 8px 0 rgb(from light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis), var(--eds-dark-theme-color-background-utility-default-medium-emphasis)) r g b / 20%);
   }
 }
 

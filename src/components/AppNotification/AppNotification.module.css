@@ -9,23 +9,23 @@
     padding: calc(var(--eds-spacing-size-3) * 1px);
 
     &.app-notification--color-dark {
-        color: var(--eds-theme-color-text-utility-inverse);
-        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+        color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+        background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
     }
 
     &.app-notification--color-light {
-        color: var(--eds-theme-color-text-utility-default-primary-active);
-        background-color: var(--eds-theme-color-background-utility-container);
+        color: light-dark(var(--eds-theme-color-text-utility-default-primary-active), var(--eds-dark-theme-color-text-utility-default-primary-active));
+        background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
     }
 
     &.app-notification--variant-default {
-        color: var(--eds-theme-color-text-utility-inverse);
-        background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+        color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+        background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
     }
 
     &.app-notification--variant-inverse {
-        color: var(--eds-theme-color-text-utility-default-primary-active);
-        background-color: var(--eds-theme-color-background-utility-container);
+        color: light-dark(var(--eds-theme-color-text-utility-default-primary-active), var(--eds-dark-theme-color-text-utility-default-primary-active));
+        background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
     }
 
     @media (min-width: $eds-bp-sm) {

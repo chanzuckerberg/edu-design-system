@@ -13,7 +13,7 @@
 
   &:read-only:not(:disabled) {
     border: 0;
-    border-bottom: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
+    border-bottom: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
   }
 }
 
@@ -33,11 +33,11 @@
 }
 
 .textarea-field__hint {
-  color: var(--eds-theme-color-text-utility-default-secondary)
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary))
 }
 
 .textarea-field--invalid-length {
-  color: var(--eds-theme-color-text-utility-critical);
+  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
 }
 
 .textarea-field__footer {
@@ -50,17 +50,17 @@
 }
 
 .textarea-field__character-counter {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 
   flex: 1 0 50%;
   text-align: right;
 }
 
 .textarea-field__subLabel {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   flex: 1 0 100%;
 }
 
 .textarea-field__label--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }

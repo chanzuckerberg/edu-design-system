@@ -18,7 +18,7 @@
   &:focus-visible {
     outline-offset: 1px;
     outline: calc(var(--eds-spacing-size-quarter) * 1px) solid
-      var(--eds-theme-color-border-utility-focus);
+      light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   }
 
   &.card--is-interactive {
@@ -35,11 +35,11 @@
  * Container styles are reduced to be overridden by any containerColor settings
  */
 :where(.card--container-style-low) {
-  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
 
 :where(.card--container-style-high) {
-  border-color: var(--eds-theme-color-border-utility-default-high-emphasis);
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
 }
 
 :where(.card--container-style-none) {
@@ -47,19 +47,15 @@
 }
 
 .card--container-color-default {
-  background-color: var(--eds-theme-color-background-utility-container);
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 
   &.card--is-interactive {
     &:hover {
-      background-color: var(
-        --eds-theme-color-background-utility-container-hover
-      );
+      background-color: light-dark(var(--eds-theme-color-background-utility-container-hover), var(--eds-dark-theme-color-background-utility-container-hover));
     }
 
     &:active {
-      background-color: var(
-        --eds-theme-color-background-utility-container-active
-      );
+      background-color: light-dark(var(--eds-theme-color-background-utility-container-active), var(--eds-dark-theme-color-background-utility-container-active));
     }
   }
 }
@@ -68,19 +64,15 @@
   background-color: var(
     --eds-theme-color-background-utility-informational-low-emphasis
   );
-  border-color: var(--eds-theme-color-border-utility-informational);
+  border-color: light-dark(var(--eds-theme-color-border-utility-informational), var(--eds-dark-theme-color-border-utility-informational));
 
   &.card--is-interactive {
     &:hover {
-      background-color: var(
-        --eds-theme-color-background-utility-informational-low-emphasis-hover
-      );
+      background-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis-hover), var(--eds-dark-theme-color-background-utility-informational-low-emphasis-hover));
     }
 
     &:active {
-      background-color: var(
-        --eds-theme-color-background-utility-informational-low-emphasis-active
-      );
+      background-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis-active), var(--eds-dark-theme-color-background-utility-informational-low-emphasis-active));
     }
   }
 }
@@ -92,7 +84,7 @@
 .card__header {
   display: flex;
 
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 
   & .header__eyebrow {
     margin-bottom: calc(var(--eds-spacing-size-1) * 1px);
@@ -120,9 +112,7 @@
 }
 
 :where(.card__top-stripe) {
-  background-color: var(
-    --eds-theme-color-background-utility-default-high-emphasis
-  );
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
 }
 
 .card__behavior-input {
@@ -138,7 +128,7 @@
 }
 
 .card__behavior-label:has(.card__behavior-input:focus-visible) {
-  outline: calc(var(--eds-border-width-md) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline: calc(var(--eds-border-width-md) * 1px) solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   outline-offset: 2px;
 }
 
@@ -165,27 +155,27 @@
 * Card colors
 */
 .card:has(.card__behavior-input:checked) {
-  background: var(--eds-theme-color-background-utility-container-selected);
+  background: light-dark(var(--eds-theme-color-background-utility-container-selected), var(--eds-dark-theme-color-background-utility-container-selected));
 
   /* use an outline on top of the border to get the correct width without changing the layout */
-  outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-high-emphasis);
-  border-color: var(--eds-theme-color-border-utility-default-high-emphasis);
+  outline: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
 }
 
 .card__body {
   flex-grow: 1;
 
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 .header__eyebrow {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .header__title {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 .header__sub-title {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
