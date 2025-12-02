@@ -444,7 +444,7 @@
   --eds-dark-theme-color-background-utility-container-active: var(--eds-color-neutral-050);
   --eds-dark-theme-color-background-utility-container-hover: var(--eds-color-neutral-025);
   --eds-dark-theme-color-background-utility-container: var(--eds-color-white);
-  --eds-dark-theme-color-background-utility-base-1: var(--eds-color-black);
+  --eds-dark-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-dark-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-dark-theme-color-background-visual-page-indicator: var(--eds-color-neutral-250);
   --eds-dark-theme-color-background-table-row-selected: var(--eds-color-green-050);

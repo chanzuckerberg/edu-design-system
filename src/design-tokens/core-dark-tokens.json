@@ -969,7 +969,7 @@
             "utility": {
               "base": {
                 "1": {
-                  "value": "{eds.color.black}"
+                  "value": "{eds.color.white}"
                 },
                 "2": {
                   "value": "rgba(255, 255, 255, 0.60)"
