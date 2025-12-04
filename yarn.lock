@@ -2463,6 +2463,7 @@ __metadata:
     "@storybook/addon-docs": "npm:^9.1.16"
     "@storybook/addon-links": "npm:^9.1.16"
     "@storybook/addon-styling-webpack": "npm:^2.0.0"
+    "@storybook/addon-themes": "npm:^9.1.16"
     "@storybook/addon-webpack5-compiler-babel": "npm:^3.0.6"
     "@storybook/react": "npm:^9.1.16"
     "@storybook/react-webpack5": "npm:^9.1.16"
@@ -4881,6 +4882,17 @@ __metadata:
     storybook: ^9.0.0
     webpack: ^5.0.0
   checksum: 10/ce72b1ac76b969dabea45838ad197bc03912c3d21c99baa9178a403df2c6df4d72b67301e25c8a6d69fc9fe21a40364a3eb3747c7dd6539eff63c9508a6130dc
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-themes@npm:^9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/addon-themes@npm:9.1.16"
+  dependencies:
+    ts-dedent: "npm:^2.0.0"
+  peerDependencies:
+    storybook: ^9.1.16
+  checksum: 10/c596f386a6aad3638febcc2df4d53e5e185c8c7b7e1bef17dd12b83a9ad6102769b2244869065912fd5c563915baf52b631a872fff239c80539ac49e5daad85e
   languageName: node
   linkType: hard
 

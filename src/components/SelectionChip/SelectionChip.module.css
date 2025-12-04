@@ -15,9 +15,9 @@
   padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
-  color: var(--eds-theme-color-text-utility-interactive-primary);
-  border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-low-emphasis);
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
+  border: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
 }
 
 .selection-chip__label {
@@ -41,13 +41,13 @@
 
 .selection-chip:has(.selection-chip__input:focus-visible) {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+  box-shadow: 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
 @supports not selector(:focus-visible) {
   .selection-chip:has(.selection-chip__input:focus) {
     outline: none;
-    box-shadow: 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+    box-shadow: 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   }
 }
 
@@ -56,37 +56,37 @@
  */
 
 .selection-chip:hover {
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
 }
 
 .selection-chip:active {
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
 }
 
 .selection-chip:has(.selection-chip__input:checked) {
-  border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-interactive);
-  box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) var(--eds-theme-color-border-utility-interactive);
-  background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis);
+  border: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
+  box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-low-emphasis), var(--eds-dark-theme-color-background-utility-interactive-low-emphasis));
 }
 
 .selection-chip:has(.selection-chip__input:checked):hover {
-  border-color: var(--eds-theme-color-border-utility-interactive-hover);
-  background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis-hover);
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-low-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-low-emphasis-hover));
 }
 
 .selection-chip:has(.selection-chip__input:checked):active {
-  border-color: var(--eds-theme-color-border-utility-interactive-active);
-  background-color: var(--eds-theme-color-background-utility-interactive-low-emphasis-active);
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-low-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-low-emphasis-active));
 }
 
 .selection-chip:has(.selection-chip__input:focus-visible:checked) {
   outline: none;
-  box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) var(--eds-theme-color-border-utility-interactive), 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+  box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive)), 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
 @supports not selector(:focus-visible) {
   .selection-chip:has(.selection-chip__input:focus:checked) {
     outline: none;
-    box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) var(--eds-theme-color-border-utility-interactive), 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) var(--eds-theme-color-border-utility-focus);
+    box-shadow: inset 0 0 0 calc(var(--eds-border-width-sm) * 1px) light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive)), 0 0 0 calc(var(--eds-border-width-md) * 1px) white, 0 0 0 calc(var(--eds-border-width-lg) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   }
 }

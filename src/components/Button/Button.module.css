@@ -135,109 +135,109 @@
 
 .button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) var(--eds-theme-color-background-utility-base-2), 0 0 0 calc(var(--eds-spacing-size-half) * 1px) var(--eds-theme-color-border-utility-focus);
+  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) light-dark(var(--eds-theme-color-background-utility-base-2), var(--eds-dark-theme-color-background-utility-base-2)), 0 0 0 calc(var(--eds-spacing-size-half) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
 /* stylelint-disable-next-line eds/no-tier-1-color-variable */
 .button.button--variant-inverse:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) rgb(var(--eds-color-black) / 1), 0 0 0 calc(var(--eds-spacing-size-half) * 1px) var(--eds-theme-color-background-utility-base-2);
+  box-shadow: 0 0 0 calc(var(--eds-spacing-size-quarter) * 1px) rgb(var(--eds-color-black) / 1), 0 0 0 calc(var(--eds-spacing-size-half) * 1px) light-dark(var(--eds-theme-color-background-utility-base-2), var(--eds-dark-theme-color-background-utility-base-2));
 }
 
 /**
  * Rank & Emphasis
  */
 .button--primary.button--variant-default {
-  color: var(--eds-theme-color-text-utility-inverse);
-  background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
-  border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
+  border-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
 }
 
 .button--secondary.button--variant-default {
-  color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
+  color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
   border-color: currentColor;
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
 }
 
 .button--tertiary.button--variant-default {
-  color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
-  border-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
+  color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
+  border-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
 }
 
 .button--tertiary.button--context-standalone {
-  color: var(--eds-theme-color-text-utility-interactive-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-secondary), var(--eds-dark-theme-color-text-utility-interactive-secondary));
 }
 
 /**
  * Button status variants
  */
 .button--primary.button--variant-critical {
-  color: var(--eds-theme-color-text-utility-inverse);
-  border-color: var(--eds-theme-color-background-utility-critical-high-emphasis);
-  background-color: var(--eds-theme-color-background-utility-critical-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  border-color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis), var(--eds-dark-theme-color-background-utility-critical-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis), var(--eds-dark-theme-color-background-utility-critical-high-emphasis));
 }
 
 .button--secondary.button--variant-critical {
-  color: var(--eds-theme-color-background-utility-critical-high-emphasis);
+  color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis), var(--eds-dark-theme-color-background-utility-critical-high-emphasis));
   border-color: currentColor;
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis)
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis))
 }
 
 .button--tertiary.button--variant-critical {
-  color: var(--eds-theme-color-background-utility-critical-high-emphasis);
-  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis), var(--eds-dark-theme-color-background-utility-critical-high-emphasis));
+  border-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
 }
 
 .button--primary.button--variant-neutral {
-  color: var(--eds-theme-color-text-utility-inverse);
-  border-color: var(--eds-theme-color-background-utility-default-medium-emphasis);
-  background-color: var(--eds-theme-color-background-utility-default-medium-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  border-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis), var(--eds-dark-theme-color-background-utility-default-medium-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis), var(--eds-dark-theme-color-background-utility-default-medium-emphasis));
 
   &:hover {
-    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-hover);
-    background-color: var(--eds-theme-color-background-utility-default-medium-emphasis-hover);
+    border-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-hover));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-hover));
   }
 
   &:active {
-    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-active);
-    background-color: var(--eds-theme-color-background-utility-default-medium-emphasis-active);
+    border-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-active), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-active));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-active), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-active));
   }
 }
 
 .button--secondary.button--variant-neutral {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   border-color: currentColor;
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 
   &:hover {
     color: var(--eds-theme-color-text-utility-default-secondary-hover);
-    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+    border-color: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis-hover), var(--eds-dark-theme-color-border-utility-default-medium-emphasis-hover));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
   }
 
   &:active {
-    color: var(--eds-theme-color-text-utility-default-secondary-active);
-    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-active);
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+    color: light-dark(var(--eds-theme-color-text-utility-default-secondary-active), var(--eds-dark-theme-color-text-utility-default-secondary-active));
+    border-color: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis-active), var(--eds-dark-theme-color-border-utility-default-medium-emphasis-active));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
   }
 }
 
 .button--tertiary.button--variant-neutral {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   border-color: transparent;
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 
   &:hover {
     color: var(--eds-theme-color-text-utility-default-secondary-hover);
-    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-hover);
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+    border-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-hover));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
   }
 
   &:active {
-    color: var(--eds-theme-color-text-utility-default-secondary-active);
-    border-color: var(--eds-theme-color-background-utility-default-medium-emphasis-active);
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+    color: light-dark(var(--eds-theme-color-text-utility-default-secondary-active), var(--eds-dark-theme-color-text-utility-default-secondary-active));
+    border-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-active), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-active));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
   }
 }
 
@@ -246,21 +246,21 @@
  */
 
 .button--primary.button--variant-inverse {
-  color: var(--eds-theme-color-text-utility-default-primary);
-  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
-  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  border-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
 }
 
 .button--secondary.button--variant-inverse {
-  color: var(--eds-theme-color-text-utility-inverse);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
   border-color: currentColor;
-  background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
 }
 
 .button--tertiary.button--variant-inverse {
-  color: var(--eds-theme-color-text-utility-inverse);
-  border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
-  background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  border-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
 }
 
 /**
@@ -272,13 +272,13 @@
   &.button--primary.button--variant-default,
   &.button--primary.button--variant-critical,
   &.button--primary.button--variant-neutral {
-    color: var(--eds-theme-color-text-utility-disabled-primary);
-    border-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
-    background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+    border-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
+    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
   }
 
   &.button--primary.button--variant-inverse {
-    color: var(--eds-theme-color-text-utility-inverse-disabled);
+    color: light-dark(var(--eds-theme-color-text-utility-inverse-disabled), var(--eds-dark-theme-color-text-utility-inverse-disabled));
     /* Using transparent for border color to avoid blending opacity of border and background */
     border-color: transparent;
     background-color: var(--eds-theme-color-background-utility-inverse-disabled);
@@ -287,25 +287,25 @@
   &.button--secondary.button--variant-default,
   &.button--secondary.button--variant-critical,
   &.button--secondary.button--variant-neutral {
-    color: var(--eds-theme-color-text-utility-disabled-primary);
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+    border-color: light-dark(var(--eds-theme-color-border-disabled), var(--eds-dark-theme-color-border-disabled));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
   }
 
   &.button--secondary.button--variant-inverse {
-    color: var(--eds-theme-color-text-utility-inverse-disabled);
-    border-color: var(--eds-theme-color-border-utility-inverse-disabled);
+    color: light-dark(var(--eds-theme-color-text-utility-inverse-disabled), var(--eds-dark-theme-color-text-utility-inverse-disabled));
+    border-color: light-dark(var(--eds-theme-color-border-utility-inverse-disabled), var(--eds-dark-theme-color-border-utility-inverse-disabled));
   }
 
   &.button--tertiary.button--variant-default,
   &.button--tertiary.button--variant-critical,
   &.button--tertiary.button--variant-neutral {
-    color: var(--eds-theme-color-text-utility-disabled-primary);
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
   }
 
   &.button--tertiary.button--variant-inverse {
-    color: var(--eds-theme-color-text-utility-disabled-primary);
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
     border-color: transparent;
   }
 }
@@ -318,7 +318,7 @@
  * Flag usages of just :disabled as erroneous
  */
 .button:disabled:not(.button--disabled) {
-  outline: 2px dashed var(--eds-theme-color-border-utility-critical);
+  outline: 2px dashed light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
 }
 
 /**
@@ -327,99 +327,99 @@
 
 /* Hover */
 .button--variant-default:hover {
-  background-color: var(--eds-theme-color-border-utility-interactive-hover);
-  border-color: var(--eds-theme-color-border-utility-interactive-hover);
+  background-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
 }
 
 .button--primary.button--variant-default:hover {
-  color: var(--eds-theme-color-text-utility-inverse);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
 
-  border-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
-  background-color: var(--eds-theme-color-background-utility-interactive-high-emphasis-hover);
+  border-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis-hover));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis-hover));
 }
 
 .button--secondary.button--variant-default:hover,
 .button--tertiary.button--variant-default:hover {
-  color: var(--eds-theme-color-text-utility-interactive-primary-hover);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-primary-hover), var(--eds-dark-theme-color-text-utility-interactive-primary-hover));
 
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
-  border-color: var(--eds-theme-color-border-utility-interactive-hover);
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-hover));
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
 }
 
 .button--tertiary.button--variant-default:hover {
-  border-color: var(--eds-theme-color-border-utility-interactive-hover);
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
 }
 
 .button--variant-critical:hover {
-  background-color: var(--eds-theme-color-background-utility-critical-high-emphasis-hover);
-  border-color: var(--eds-theme-color-background-utility-critical-high-emphasis-hover);
+  background-color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-critical-high-emphasis-hover));
+  border-color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-critical-high-emphasis-hover));
 }
 
 .button--secondary.button--variant-critical:hover,
 .button--tertiary.button--variant-critical:hover {
-  color: var(--eds-theme-color-text-utility-critical-hover);
+  color: light-dark(var(--eds-theme-color-text-utility-critical-hover), var(--eds-dark-theme-color-text-utility-critical-hover));
 
-  background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
-  border-color: var(--eds-theme-color-border-utility-critical-hover);
+  background-color: light-dark(var(--eds-theme-color-background-utility-critical-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-critical-no-emphasis-hover));
+  border-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
 }
 
 .button--tertiary.button--variant-critical:hover {
-  border-color: var(--eds-theme-color-border-utility-critical-hover);
+  border-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
 }
 
 .button--primary.button--variant-inverse:hover {
-  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis-hover)
+  background-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis-hover));
 }
 
 .button--secondary.button--variant-inverse:hover,
 .button--tertiary.button--variant-inverse:hover {
-  background-color: var(--eds-theme-color-background-utility-inverse-no-emphasis-hover);
+  background-color: light-dark(var(--eds-theme-color-background-utility-inverse-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-inverse-no-emphasis-hover));
 }
 
 .button--tertiary.button--variant-inverse:hover {
-  border-color: var(--eds-theme-color-border-utility-inverse);
+  border-color: light-dark(var(--eds-theme-color-border-utility-inverse), var(--eds-dark-theme-color-border-utility-inverse));
 }
 
 .button--tertiary.button--context-standalone:hover {
-  color: var(--eds-theme-color-text-utility-interactive-secondary-hover);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-secondary-hover), var(--eds-dark-theme-color-text-utility-interactive-secondary-hover));
 }
 
 /* Active */
 .button--variant-default:active {
-  background-color: var(--eds-theme-color-border-utility-interactive-active);
-  border-color: var(--eds-theme-color-border-utility-interactive-active);
+  background-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
 }
 
 .button--secondary.button--variant-default:active,
 .button--tertiary.button--variant-default:active {
-  color: var(--eds-theme-color-text-utility-default-primary-active);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary-active), var(--eds-dark-theme-color-text-utility-default-primary-active));
 
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
-  border-color: var(--eds-theme-color-border-utility-interactive-active);
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-active));
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
 }
 
 .button--tertiary.button--variant-default:active {
-  border-color: var(--eds-theme-color-border-utility-interactive-active);
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
 }
 
 .button--variant-critical:active {
-  background-color: var(--eds-theme-color-background-utility-critical-high-emphasis-active);
-  border-color: var(--eds-theme-color-background-utility-critical-high-emphasis-active);
+  background-color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis-active), var(--eds-dark-theme-color-background-utility-critical-high-emphasis-active));
+  border-color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis-active), var(--eds-dark-theme-color-background-utility-critical-high-emphasis-active));
 }
 
 .button--secondary.button--variant-critical:active,
 .button--tertiary.button--variant-critical:active {
-  color: var(--eds-theme-color-text-utility-critical-active);
+  color: light-dark(var(--eds-theme-color-text-utility-critical-active), var(--eds-dark-theme-color-text-utility-critical-active));
 
-  background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
-  border-color: var(--eds-theme-color-border-utility-critical-active);
+  background-color: light-dark(var(--eds-theme-color-background-utility-critical-no-emphasis-active), var(--eds-dark-theme-color-background-utility-critical-no-emphasis-active));
+  border-color: light-dark(var(--eds-theme-color-border-utility-critical-active), var(--eds-dark-theme-color-border-utility-critical-active));
 }
 
 .button--secondary.button--variant-inverse:active,
 .button--tertiary.button--variant-inverse:active {
-  background-color: var(--eds-theme-color-background-utility-inverse-no-emphasis-active);
+  background-color: light-dark(var(--eds-theme-color-background-utility-inverse-no-emphasis-active), var(--eds-dark-theme-color-background-utility-inverse-no-emphasis-active));
 }
 
 .button--tertiary.button--context-standalone:active {
-  color: var(--eds-theme-color-text-utility-interactive-secondary-active);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-secondary-active), var(--eds-dark-theme-color-text-utility-interactive-secondary-active));
 }

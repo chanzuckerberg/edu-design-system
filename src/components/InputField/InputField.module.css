@@ -18,7 +18,7 @@
 }
 
 .input-field__subLabel {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   flex: 1 0 100%;
 }
 
@@ -56,7 +56,7 @@
   align-items: center;
   justify-content: center;
 
-  color: var(--eds-theme-color-icon-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-icon-utility-default-secondary), var(--eds-dark-theme-color-icon-utility-default-secondary));
 }
 
 /**
@@ -80,28 +80,28 @@
 }
 
 .input-field__label {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 .input-field__label--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }
 
 .input-field__required-text {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .input-field__character-counter {
   text-align: right;
   flex: 1 0 50%;
 
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .input-field--invalid-length {
-  color: var(--eds-theme-color-text-utility-critical);
+  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
 }
 
 .input-field__required-text--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }

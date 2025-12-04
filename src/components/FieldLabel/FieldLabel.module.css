@@ -8,12 +8,12 @@
  * Text labeling the field component.
  */
 .label {
-  color: var(--eds-theme-color-text-utility-default-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
 /**
  * Disabled variant of the field label.
  */
 .label--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }

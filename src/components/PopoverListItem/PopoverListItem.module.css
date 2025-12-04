@@ -12,27 +12,27 @@
   width: 100%;
   text-align: left;
 
-  color: var(--eds-theme-color-text-utility-default-primary);
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 
   &:hover {
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
   }
 
   &:active {
-    background-color: var(--eds-theme-color-background-utility-default-no-emphasis-active);
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
   }
 }
 
 .popover-list-item--focused {
-  background-color: var(--eds-theme-color-background-utility-default-no-emphasis-hover);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
 }
 
 .popover-list-item--disabled {
   pointer-events: none;
 
-  color: var(--eds-theme-color-text-utility-disabled-secondary, red);
-  background-color: var(--eds-theme-color-background-utility-disabled-no-emphasis, red);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-secondary), var(--eds-dark-theme-color-text-utility-disabled-secondary));
+  background-color: light-dark(var(--eds-theme-color-background-utility-disabled-no-emphasis), var(--eds-dark-theme-color-background-utility-disabled-no-emphasis));
 }
 
 .popover-list-item__icon {
@@ -52,19 +52,19 @@
 }
 
 .popover-list-item__sub-label {
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .popover-list-item--destructive-action {
-  color: var(--eds-theme-color-text-utility-critical);
+  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
 
   &:hover {
-    color: var(--eds-theme-color-text-utility-critical-hover);
-    background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-hover);
+    color: light-dark(var(--eds-theme-color-text-utility-critical-hover), var(--eds-dark-theme-color-text-utility-critical-hover));
+    background-color: light-dark(var(--eds-theme-color-background-utility-critical-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-critical-no-emphasis-hover));
   }
 
   &:active {
-    color: var(--eds-theme-color-text-utility-critical-active);
-    background-color: var(--eds-theme-color-background-utility-critical-no-emphasis-active);
+    color: light-dark(var(--eds-theme-color-text-utility-critical-active), var(--eds-dark-theme-color-text-utility-critical-active));
+    background-color: light-dark(var(--eds-theme-color-background-utility-critical-no-emphasis-active), var(--eds-dark-theme-color-background-utility-critical-no-emphasis-active));
   }
 }

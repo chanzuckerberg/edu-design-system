@@ -45,21 +45,21 @@
  * Status color treatments
  */
 :where(.tag--status-critical) {
-  --tag-primary-color: var(--eds-theme-color-icon-utility-critical);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+  --tag-primary-color: light-dark(var(--eds-theme-color-icon-utility-critical), var(--eds-dark-theme-color-icon-utility-critical));
+  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
 }
 
 :where(.tag--status-favorable) {
-  --tag-primary-color: var(--eds-theme-color-icon-utility-favorable);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+  --tag-primary-color: light-dark(var(--eds-theme-color-icon-utility-favorable), var(--eds-dark-theme-color-icon-utility-favorable));
+  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
 }
 
 :where(.tag--status-warning) {
-  --tag-primary-color: var(--eds-theme-color-icon-utility-warning);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
+  --tag-primary-color: light-dark(var(--eds-theme-color-icon-utility-warning), var(--eds-dark-theme-color-icon-utility-warning));
+  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
 }
 
 :where(.tag--status-informational) {
-  --tag-primary-color: var(--eds-theme-color-text-utility-informational);
-  --tag-secondary-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
+  --tag-primary-color: light-dark(var(--eds-theme-color-text-utility-informational), var(--eds-dark-theme-color-text-utility-informational));
+  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
 }

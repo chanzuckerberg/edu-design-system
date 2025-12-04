@@ -28,5 +28,5 @@
 }
 
 .fieldset-legend__hint {
-  color: var(--eds-theme-color-text-utility-default-secondary)
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary))
 }
