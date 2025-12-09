@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.0.0...v17.1.0) (2025-12-09)
+
+
+### Features
+
+* add component-level and storybook support for dark mode ([#2324](https://github.com/chanzuckerberg/edu-design-system/issues/2324)) ([87cd94f](https://github.com/chanzuckerberg/edu-design-system/commit/87cd94f6203102b6ac9139ceae862725ac95473e))
+
 ## [17.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v16.7.1...v17.0.0) (2025-11-25)
 
 
