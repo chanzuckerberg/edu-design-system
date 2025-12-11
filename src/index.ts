@@ -1,5 +1,6 @@
 // This brings the style tokens that are css custom variables into the built stylesheet so only one stylesheet for EDS has to be imported.
 import './tokens-dist/css/variables.css';
+import './tokens-dist/css/variables-dark.css';
 
 /**
  * 1.x component theme exports

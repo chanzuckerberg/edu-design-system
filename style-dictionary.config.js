@@ -2,7 +2,10 @@ const StyleDictionary = require('style-dictionary');
 const { minifyDictionaryUsingFormat, formatEdsTokens } = require('./bin/_util');
 
 const EDSStyleDictionary = StyleDictionary.extend({
-  source: ['src/design-tokens/**/*.json'],
+  source: [
+    'src/design-tokens/tier-1-definitions/*.json',
+    'src/design-tokens/core-tokens.json',
+  ],
   platforms: {
     storybook: {
       transformGroup: 'css',

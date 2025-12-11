@@ -12,6 +12,6 @@
   border-left: none;
   border-bottom-width: calc(var(--eds-border-width-sm) * 1px);
   border-bottom-style: solid;
-  border-bottom-color: var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-bottom-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
 

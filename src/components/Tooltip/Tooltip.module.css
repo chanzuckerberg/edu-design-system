@@ -103,15 +103,15 @@
 }
 
 .tooltip--variant-default {
-  color: var(--eds-theme-color-text-utility-inverse);
-  border-color: var(--eds-theme-color-background-utility-default-high-emphasis);
-  --arrow-color: var(--eds-theme-color-background-utility-default-high-emphasis);
-  background-color: var(--eds-theme-color-background-utility-default-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  border-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
+  --arrow-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
 }
 
 .tooltip--variant-inverse {
-  color: var(--eds-theme-color-text-utility-default-primary);
-  border-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
-  --arrow-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
-  background-color: var(--eds-theme-color-background-utility-inverse-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  border-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
+  --arrow-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-inverse-high-emphasis), var(--eds-dark-theme-color-background-utility-inverse-high-emphasis));
 }

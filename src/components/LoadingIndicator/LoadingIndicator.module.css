@@ -17,12 +17,12 @@
 
 /* override for `color` */
 .loading-indicator > svg path {
-  stroke: var(--eds-theme-color-border-utility-informational);
+  stroke: light-dark(var(--eds-theme-color-border-utility-informational), var(--eds-dark-theme-color-border-utility-informational));
 }
 
 /* override for `secondaryColor` */
 .loading-indicator > svg circle {
-  stroke: var(--eds-theme-color-border-utility-default-low-emphasis);
+  stroke: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
   stroke-opacity: 1;
 }
 

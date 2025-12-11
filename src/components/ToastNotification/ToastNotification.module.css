@@ -15,13 +15,13 @@
   border-radius: calc(var(--eds-theme-border-radius-notification) * 1px);
 
   &.toast--status-critical {
-    color: var(--eds-theme-color-text-utility-critical);
-    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
+    background-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
   }
 
   &.toast--status-favorable {
-    color: var(--eds-theme-color-text-utility-favorable);
-    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-favorable), var(--eds-dark-theme-color-text-utility-favorable));
+    background-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
   }
 }
 

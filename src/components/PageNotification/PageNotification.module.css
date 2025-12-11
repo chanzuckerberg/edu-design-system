@@ -15,23 +15,23 @@
   border-radius: calc(var(--eds-theme-border-radius-notification) * 1px);
 
   &.page-notification--status-informational {
-    color: var(--eds-theme-color-text-utility-informational);
-    background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-informational), var(--eds-dark-theme-color-text-utility-informational));
+    background-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
   }
 
   &.page-notification--status-critical {
-    color: var(--eds-theme-color-text-utility-critical);
-    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
+    background-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
   }
 
   &.page-notification--status-favorable {
-    color: var(--eds-theme-color-text-utility-favorable);
-    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-favorable), var(--eds-dark-theme-color-text-utility-favorable));
+    background-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
   }
 
   &.page-notification--status-warning {
-    color: var(--eds-theme-color-text-utility-warning);
-    background-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-warning), var(--eds-dark-theme-color-text-utility-warning));
+    background-color: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
   }
 }
 

@@ -38,16 +38,3 @@
   display: block;
   font-size: 0.75rem;
 }
-
-.icon-grid__deprecation {
-  font-size: 0.75rem;
-  color: #606060;
-  margin-top: calc(var(--eds-spacing-size-1) * 1px);
-}
-
-.icon-grid__deprecation-icon {
-  display: inline;
-  position: relative;
-  bottom: 1px;
-  margin-right: calc(var(--eds-spacing-size-half) * 1px);
-}

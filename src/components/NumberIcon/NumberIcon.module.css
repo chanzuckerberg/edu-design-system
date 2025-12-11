@@ -46,44 +46,44 @@
  * Interactive States
  */
 .number-icon--status-default {
-  color: var(--eds-theme-color-text-utility-interactive-primary);
-  border-color: var(--eds-theme-color-border-utility-interactive);
-  background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
+  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
 
   &.number-icon--is-interactive {
     &:hover {
-      border-color: var(--eds-theme-color-border-utility-interactive-hover);
-      background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-hover);
+      border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
+      background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-hover));
     }
 
     &:active {
-      border-color: var(--eds-theme-color-border-utility-interactive-active);
-      background-color: var(--eds-theme-color-background-utility-interactive-no-emphasis-active);
+      border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
+      background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-active));
     }
   }
 }
 
 .number-icon--status-completed {
-  color: var(--eds-theme-color-text-utility-inverse);
-  border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis);
-  background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  border-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis));
 
   &.number-icon--is-interactive {
     &:hover {
-      border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
-      background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-hover);
+      border-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-hover));
+      background-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-hover));
     }
 
     &:active {
-      border-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
-      background-color: var(--eds-theme-color-background-utility-favorable-high-emphasis-active);
+      border-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-active), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-active));
+      background-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-active), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-active));
     }
   }
 }
 
 .number-icon--status-incomplete {
-  color: var(--eds-theme-color-text-utility-default-secondary);
-  border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis), var(--eds-dark-theme-color-border-utility-default-medium-emphasis));
 
   border-style: dashed;
   pointer-events: none;

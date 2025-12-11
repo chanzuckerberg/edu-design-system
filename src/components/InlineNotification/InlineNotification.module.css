@@ -15,23 +15,23 @@
 
   /* NOTE: by specifying no default color for borders, they inherit from color below */
   &.inline-notification--status-informational {
-    color: var(--eds-theme-color-text-utility-informational);
-    background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-informational), var(--eds-dark-theme-color-text-utility-informational));
+    background-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
   }
 
   &.inline-notification--status-critical {
-    color: var(--eds-theme-color-text-utility-critical);
-    background-color: var(--eds-theme-color-background-utility-critical-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
+    background-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
   }
 
   &.inline-notification--status-favorable {
-    color: var(--eds-theme-color-text-utility-favorable);
-    background-color: var(--eds-theme-color-background-utility-favorable-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-favorable), var(--eds-dark-theme-color-text-utility-favorable));
+    background-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
   }
 
   &.inline-notification--status-warning {
-    color: var(--eds-theme-color-text-utility-warning);
-    background-color: var(--eds-theme-color-background-utility-warning-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-warning), var(--eds-dark-theme-color-text-utility-warning));
+    background-color: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
   }
 }
 

@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
 
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   gap: calc(var(--eds-spacing-size-half) * 1px);
 }
 
@@ -31,25 +31,25 @@
  * Disabled variant
  */
 .field-note--disabled {
-  color: var(--eds-theme-color-text-utility-disabled-primary);
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }
 
 /**
  * Error variant
  */
 .field-note--error {
-  color: var(--eds-theme-color-text-utility-critical);
+  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
 
   &>.field-note__icon {
-    color: var(--eds-theme-color-text-utility-critical);
+    color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
   }
 }
 
 
 .field-note--warning {
-  color: var(--eds-theme-color-text-utility-warning);
+  color: light-dark(var(--eds-theme-color-text-utility-warning), var(--eds-dark-theme-color-text-utility-warning));
 
   &>.field-note__icon {
-    color: var(--eds-theme-color-icon-utility-warning);
+    color: light-dark(var(--eds-theme-color-icon-utility-warning), var(--eds-dark-theme-color-icon-utility-warning));
   }
 }

@@ -16,12 +16,12 @@
  */
 .skeleton {
   border-radius: calc(var(--eds-border-radius-150) * 1px);
-  background-color: var(--eds-theme-color-background-skeleton);
+  background-color: light-dark(var(--eds-theme-color-background-skeleton), var(--eds-dark-theme-color-background-skeleton));
   background-image: linear-gradient(
     to left,
-    var(--eds-theme-color-background-skeleton) 50%,
-    var(--eds-theme-color-background-skeleton-stripe) 65%,
-    var(--eds-theme-color-background-skeleton) 80%);
+    light-dark(var(--eds-theme-color-background-skeleton), var(--eds-dark-theme-color-background-skeleton)) 50%,
+    light-dark(var(--eds-theme-color-background-skeleton-stripe), var(--eds-dark-theme-color-background-skeleton-stripe)) 65%,
+    light-dark(var(--eds-theme-color-background-skeleton), var(--eds-dark-theme-color-background-skeleton)) 80%);
   background-size: 500% 100%;
 }
 

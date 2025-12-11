@@ -15,9 +15,9 @@
   overflow: hidden;
   white-space: nowrap;
 
-  color: var(--eds-theme-color-text-utility-default-secondary);
-  background-color: var(--eds-theme-color-background-utility-default-low-emphasis);
-  border: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis), var(--eds-dark-theme-color-background-utility-default-low-emphasis));
+  border: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
 
 /* use :has selector to put the focus ring on the container & apply the avatar's shape */
@@ -38,7 +38,7 @@
 .avatar--is-interactive:hover,
 .avatar--is-interactive:active {
   /* TODO: use color token (Check with Design) */
-  box-shadow: inset 0 0 2px 0 rgb(from var(--eds-theme-color-background-utility-base-1) r g b / 0.20),
+  box-shadow: inset 0 0 2px 0 rgb(from light-dark(var(--eds-theme-color-background-utility-base-1), var(--eds-dark-theme-color-background-utility-base-1)) r g b / 0.20),
               0 0 4px rgb(from #000000 r g b / 0.08);
 }
 

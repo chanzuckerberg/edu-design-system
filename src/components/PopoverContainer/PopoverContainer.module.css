@@ -15,7 +15,7 @@
   z-index: 1150;
 
   box-shadow: var(--eds-box-shadow-md);
-  background-color: var(--eds-theme-color-background-utility-container);
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 
   /* set the min width using the CSS variable attached by HeadlessUI (default to auto) */
   min-width: var(--popover-container-width);
@@ -27,5 +27,5 @@
 
 .popover-container>*[role=none]+*[role=none] {
   /* create dividers by looking for groups under the component that wrap using the "none" role */
-  border-top: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-top: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
