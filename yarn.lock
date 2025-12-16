@@ -2494,7 +2494,7 @@ __metadata:
     eslint-plugin-jest: "npm:^28.14.0"
     eslint-plugin-prettier: "npm:^5.5.4"
     eslint-plugin-storybook: "npm:^9.1.16"
-    eslint-plugin-testing-library: "npm:^7.13.5"
+    eslint-plugin-testing-library: "npm:^7.13.6"
     graphemer: "npm:^1.4.0"
     husky: "npm:^9.1.7"
     identity-obj-proxy: "npm:^3.0.0"
@@ -2529,7 +2529,7 @@ __metadata:
     style-dictionary: "npm:^3.9.2"
     stylelint: "npm:^16.26.1"
     stylelint-config-recommended: "npm:^17.0.0"
-    tailwindcss: "npm:^3.4.18"
+    tailwindcss: "npm:^3.4.19"
     ts-dedent: "npm:^2.2.0"
     ts-jest: "npm:^29.4.6"
     ts-morph: "npm:^27.0.2"
@@ -10091,15 +10091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^7.13.5":
-  version: 7.13.5
-  resolution: "eslint-plugin-testing-library@npm:7.13.5"
+"eslint-plugin-testing-library@npm:^7.13.6":
+  version: 7.14.0
+  resolution: "eslint-plugin-testing-library@npm:7.14.0"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.15.0"
     "@typescript-eslint/utils": "npm:^8.15.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10/4fe92a8859eaf05ea8525d0dea9eddbafd330b6d50d14ae4f3971944350364f43d330375fb859ffac0957103a90ea8000dee562cc16f39f141fc25f8fbd4f401
+  checksum: 10/22ffe016762552680146dabd3590206ea255358b083749d6b3291fbdd37499ee9262677ee223a9265171e387b3e397a93a265f4acb327594cdeb26d9b7c897fe
   languageName: node
   linkType: hard
 
@@ -18812,9 +18812,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.4.18":
-  version: 3.4.18
-  resolution: "tailwindcss@npm:3.4.18"
+"tailwindcss@npm:^3.4.19":
+  version: 3.4.19
+  resolution: "tailwindcss@npm:3.4.19"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
     arg: "npm:^5.0.2"
@@ -18841,7 +18841,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 10/c05e2652860559f9855286830442a78d383ec9387849bb792eb42ba5102d21b1e32c42ec3183a3238689df4e1138a96e00374116d6fd1b244103b2d9adec359d
+  checksum: 10/f4e5e3dc3e1d96c453520f6787d0f36a9b9ae20bfa443102181fb772ba236e796eaf0888181becd5f00ffa6e99c17605224db216ff660a4ed7e7bb2d94b0b071
   languageName: node
   linkType: hard
 
