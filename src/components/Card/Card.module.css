@@ -28,7 +28,7 @@
 
 :where(.child-card) {
   margin-top: calc(var(--eds-spacing-size-2) * 1px);
-  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 }
 
 /**
@@ -39,7 +39,7 @@
 }
 
 :where(.card--container-style-high) {
-  border-color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis), var(--eds-dark-theme-color-border-utility-default-medium-emphasis));
 }
 
 :where(.card--container-style-none) {
@@ -64,7 +64,7 @@
   background-color: var(
     --eds-theme-color-background-utility-informational-low-emphasis
   );
-  border-color: light-dark(var(--eds-theme-color-border-utility-informational), var(--eds-dark-theme-color-border-utility-informational));
+  border-color: transparent;
 
   &.card--is-interactive {
     &:hover {
@@ -159,7 +159,7 @@
 
   /* use an outline on top of the border to get the correct width without changing the layout */
   outline: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
-  border-color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-secondary), var(--eds-dark-theme-color-border-utility-interactive-secondary));
 }
 
 .card__body {
