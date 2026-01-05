@@ -12,7 +12,7 @@ The Education Design System (EDS) is a repository of building blocks, implementi
 
 Currently, EDS supports the following:
 
-* React 18.x
+* React 17 or above (tested with React 18.x)
 * Tailwind 3.x
 
 ## Installation
