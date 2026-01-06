@@ -28,6 +28,20 @@ export const Default: Story = {
   },
 };
 
+export const TitleXLarge: Story = {
+  args: {
+    preset: 'title-xl',
+    children: 'Title extra-large',
+  },
+};
+
+export const LabelXLarge: Story = {
+  args: {
+    preset: 'label-xl',
+    children: 'Label extra-large',
+  },
+};
+
 export const BodyXLarge: Story = {
   args: {
     preset: 'body-xl',
