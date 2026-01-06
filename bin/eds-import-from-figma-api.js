@@ -230,6 +230,11 @@ const { identity } = require('lodash');
         figmaApiReader,
       );
 
+      // bypass all typography tokens, as those should be handled manually at this time
+      if (variable.name.includes('typography')) {
+        return;
+      }
+
       // If we have a zombie entry in the variable list, skip it (flag for design)
       if (variable.isOrphaned()) {
         stats.skipped.push(variable);
@@ -346,5 +351,6 @@ const { identity } = require('lodash');
   spinner.succeed(
     `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}, total: ${stats.total.length}`,
   );
+  spinner.info('Any typography tokens must be imported manually from Figma');
   !isVerbose && spinner.info(`Use --verbose for more information`);
 })();
