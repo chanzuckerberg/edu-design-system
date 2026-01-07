@@ -7,6 +7,9 @@ export default {
   title: 'Components/VisualPageIndicator',
   component: VisualPageIndicator,
   tags: ['autodocs', 'version:1.0'],
+  parameters: {
+    layout: 'centered',
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof VisualPageIndicator>;

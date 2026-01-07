@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+// import { eds as edsDarkTokens } from './lib/tokens/json/tailwind-dark-utility-config.json';
 import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json';
 
 //
@@ -29,6 +30,7 @@ function combineTokens(
  */
 export function applyTailwindConfig(
   tokenConfig: typeof edsTokens,
+  // darkTokenConfig: typeof edsDarkTokens | undefined, // TODO: enable once dark mode is fully implemented
 ): Config['theme'] {
   // Select the theme (tier 2) color tokens and map them to be added to the tailwind config
   const {
@@ -37,6 +39,19 @@ export function applyTailwindConfig(
     text: textColorTokens,
     ...colorTokens
   } = tokenConfig.theme.color;
+
+  // and also the dark tokens
+  // TODO-AH: right now, the token names COMPLETELY OVERRIDE the non-dark ones (`dark.` is sliced out)
+  // instead, this should update the naming of the nested tokens such that we can do something like
+  // `text-utility-default-primary dark:text-utility-default-primary-dark`
+  // Test on Card.stories.tsx or
+  // Test on Text.stories.tsx for text-utility-* usages
+  // const {
+  //   background: darkBackgroundColorTokens,
+  //   border: darkBorderColorTokens,
+  //   text: darkTextColorTokens,
+  //   ...darkColorTokens
+  // } = edsDarkTokens.dark.theme.color;
 
   const borderRadii: { [x: string]: string } = tokenConfig.border.radius;
   const movements: { [x: string]: string } = tokenConfig.anim.move;
@@ -79,17 +94,22 @@ export function applyTailwindConfig(
 
   return {
     colors: {
+      // these add any generic / tier-3 and other tokens and also replaces the base tailwind colors
       ...colorTokens,
+      // ...darkColorTokens,
     },
     extend: {
       backgroundColor: {
         ...backgroundColorTokens, // Tier 2 background color tokens
+        // ...darkBackgroundColorTokens,
       },
       borderColor: {
         ...borderColorTokens, // Tier 2 border color tokens
+        // ...darkBorderColorTokens,
       },
       textColor: {
         ...textColorTokens, // Tier 2 text color tokens
+        // ...darkTextColorTokens,
       },
       borderRadius: {
         ...borderRadiusTokens, // Tier 1 border radius tokens
@@ -128,11 +148,13 @@ export default {
    * We avoid using them in component styles to reduce chance of conflict with other libraries.
    * Please configure downstream Tailwind config purge to include app files if necessary.
    */
+  // TODO-AH: add in default config to generate darkmode handling, and darkMode: ['selector', '[data-theme="dark"]'], in apps (from preview.tsx)
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: [
     './src/components/**/*.stories.{ts,tsx}',
     './src/components/**/*Example.tsx',
     './.storybook/**/*.{js,jsx,ts,tsx}',
     './src/components/Table/StackedCardsToTable.tsx',
   ],
-  theme: { ...applyTailwindConfig(edsTokens) },
+  theme: { ...applyTailwindConfig(edsTokens) }, // The signature for now only handles the light mode
 } satisfies Config;
