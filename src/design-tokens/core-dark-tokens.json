@@ -1891,11 +1891,11 @@
           "fontFamily": {
             "decorative": {
               "inline": {
-                "value": "parabolica"
+                "value": "{eds.typography.fontFamily.1}"
               }
             },
             "tab": {
-              "value": "JetBrains Mono"
+              "value": "{eds.typography.fontFamily.3}"
             }
           },
           "fontStyle": {

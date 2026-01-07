@@ -132,6 +132,18 @@ exports[`<Text /> Default story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> LabelXLarge story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <p
+    class="text text--label-xl"
+  >
+    Label extra-large
+  </p>
+</div>
+`;
+
 exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -140,6 +152,18 @@ exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
     class="text text--body-md !font-2"
   >
     You can use utility classes to override the font family used for a given size
+  </p>
+</div>
+`;
+
+exports[`<Text /> TitleXLarge story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <p
+    class="text text--title-xl"
+  >
+    Title extra-large
   </p>
 </div>
 `;

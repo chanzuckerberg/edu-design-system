@@ -118,6 +118,14 @@
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
+.text--title-xl {
+  --text-font-size: var(--eds-typography-preset-500-font-size);
+  --text-line-height: var(--eds-typography-preset-500-line-height);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+
 .text--title-lg {
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
@@ -212,6 +220,13 @@
 .text--body-xs-bold {
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
+  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.text--label-xl {
+  --text-font-size: var(--eds-typography-preset-200-font-size);
+  --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }

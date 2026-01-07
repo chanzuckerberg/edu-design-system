@@ -6,11 +6,11 @@
         "2": "'kazimirtext', Georgia, serif",
         "3": "'JetBrains Mono', Consolas, monospace",
         "sizeOffset": {
-          "2": "2"
+          "2": "0"
         }
       },
       "fontWeight": {
-        "light": "300",
+        "light": "200",
         "normal": "400",
         "bold": "500"
       },
@@ -830,9 +830,9 @@
       "typography": {
         "fontFamily": {
           "decorative": {
-            "inline": "parabolica"
+            "inline": "'parabolica', Arial, sans-serif"
           },
-          "tab": "JetBrains Mono"
+          "tab": "'JetBrains Mono', Consolas, monospace"
         },
         "fontStyle": {
           "headline": {

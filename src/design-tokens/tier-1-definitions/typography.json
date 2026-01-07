@@ -13,14 +13,14 @@
         },
         "sizeOffset": {
           "2": {
-            "value": "2",
+            "value": "0",
             "comment": "pixels (px) font-specific offset adjustment to align heights between the root font face"
           }
         }
       },
       "fontWeight": {
         "light": {
-          "value": "300"
+          "value": "200"
         },
         "normal": {
           "value": "400"

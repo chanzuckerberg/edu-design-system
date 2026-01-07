@@ -123,6 +123,13 @@
   }
 }
 
+.heading--title-xl {
+  --heading-font-size: var(--eds-typography-preset-500-font-size);
+  --heading-line-height: var(--eds-typography-preset-500-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
 .heading--title-lg {
   --heading-font-size: var(--eds-typography-preset-400-font-size);
   --heading-line-height: var(--eds-typography-preset-400-line-height);
@@ -217,6 +224,13 @@
 .heading--body-xs-bold {
   --heading-font-size: var(--eds-typography-preset-075-font-size);
   --heading-line-height: var(--eds-typography-preset-075-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-bold);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--label-xl {
+  --heading-font-size: var(--eds-typography-preset-200-font-size);
+  --heading-line-height: var(--eds-typography-preset-200-line-height);
   --heading-font-weight: var(--eds-typography-font-weight-bold);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
