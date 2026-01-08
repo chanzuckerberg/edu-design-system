@@ -32,7 +32,7 @@ type NavGroup = {
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
-  navItems: (NavLink | NavButton | NavSeparator | NavMenu)[];
+  navItems: (NavLink | NavButton | NavSeparator | NavMenu | NavTree)[];
 };
 
 /**
@@ -71,6 +71,10 @@ type NavLink = NavItem & {
    */
   isCurrent?: boolean;
   /**
+   * Link: marks when an item will navigate to an external resource.
+   */
+  isExternal?: boolean;
+  /**
    * Link: the target URL for the navigation item
    */
   href: string;
@@ -105,6 +109,17 @@ type NavMenu = NavItem & {
   navItems: (NavLink | NavButton | NavSeparator)[];
 };
 
+/**
+ * Nav trees are just like menus but appear as expanded when in a vertical orientation
+ */
+type NavTree = NavItem & {
+  type: 'tree';
+  /**
+   * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
+   */
+  navItems: (NavLink | NavButton | NavSeparator)[];
+};
+
 type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
   navItem: NavItem,
@@ -117,7 +132,8 @@ export type AppHeaderProps = {
    */
   className?: string;
   /**
-   * Handle the click event for any given button in the header
+   * Handle the click event for any given clickable nav item in the header. Includes the data from the associated/clicked `NavItem` for reference
+   * (e.g., attaching events, tracking, etc.)
    */
   onButtonClick?: AppHeaderEventHandler;
   // Design API
@@ -138,6 +154,13 @@ export type AppHeaderProps = {
    * **Default is `"horizontal"`**.
    */
   orientation?: 'vertical' | 'horizontal';
+  /**
+   * Determines how the appheader attaches to the window.
+   *
+   * * `floating` describes an overlay appearance where `AppHeader` is not flush with the edge of the window
+   * * `docked' describes an appearance where `AppHeader` is flush with the edge of the window
+   */
+  style?: 'floating' | 'docked';
   /**
    * Text used to describe the contents of the page with more detail.
    */
@@ -182,7 +205,15 @@ type AppHeaderLinkProps = NavLink &
      * CSS class names that can be appended to the component.
      */
     className?: string;
+    /**
+     * Whether it is appearing in a vertical orientation (like in a drawer)
+     */
+    isVertical?: boolean;
     // Design API
+    /**
+     * Marks whether the link will direct to an external resource or not
+     */
+    isExternal?: boolean;
   };
 
 type AppHeaderButtonProps = NavButton &
@@ -196,6 +227,10 @@ type AppHeaderButtonProps = NavButton &
      * Handle the click event for any given button in the header
      */
     onButtonClick?: AppHeaderEventHandler;
+    /**
+     * Whether it is appearing in a vertical orientation (like in a drawer)
+     */
+    isVertical?: boolean;
     // Design API
   };
 
@@ -228,20 +263,27 @@ export const AppHeader = ({
   href,
   navGroups,
   onButtonClick,
+  orientation,
+  style = 'docked',
   subTitle,
   title,
   ...other
 }: AppHeaderProps) => {
-  const [orientation, setOrientation] = useState(
-    other.orientation || 'horizontal',
+  // TODO: handle scenario where the prop changes but state is already using a value
+  const [headerOrientation, setHeaderOrientation] = useState(
+    orientation || 'horizontal',
   );
   const componentClassName = clsx(
     styles['app-header'],
-    orientation && styles[`app-header--orientation-${orientation}`],
+    headerOrientation && styles[`app-header--orientation-${headerOrientation}`],
+    style && styles[`app-header--style-${style}`],
     className,
   );
 
-  const drawerComponentClassName = clsx(styles['app-header__drawer']);
+  const drawerComponentClassName = clsx(
+    style && styles[`app-header--style-${style}`],
+    styles['app-header__drawer'],
+  );
 
   useEffect(() => {
     // Setup debounce to trigger on the (default) trailing edge of the calls
@@ -249,10 +291,10 @@ export const AppHeader = ({
       // compare the screen width to the smallest breakpoint. if it's wider...
       if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
         // ...change to original user value (with default specified)
-        setOrientation(other.orientation || 'horizontal');
+        setHeaderOrientation(orientation || 'horizontal');
       } else {
         // ...change 'vertical' to 'horizontal' if the original value was vertical
-        setOrientation('horizontal');
+        setHeaderOrientation('horizontal');
       }
     }, 16); // ~1/60 fps
 
@@ -261,56 +303,58 @@ export const AppHeader = ({
     return () => {
       window.removeEventListener('resize', debouncedHandleOnResize);
     };
-  }, [other.orientation]);
+  }, [orientation]);
 
   return (
-    <AppHeaderContext.Provider value={{ href, orientation }}>
+    <AppHeaderContext.Provider value={{ href, orientation: headerOrientation }}>
       <header className={componentClassName} {...other}>
         <div>
-          <div className={styles['app-header-title']}>
-            {href ? (
-              <a aria-label="homepage" href={href}>
+          <div className={styles['app-header__content']}>
+            <div className={styles['app-header-title']}>
+              {href ? (
+                <a aria-label="homepage" href={href}>
+                  <AppHeaderTitle subTitle={subTitle} title={title} />
+                </a>
+              ) : (
                 <AppHeaderTitle subTitle={subTitle} title={title} />
-              </a>
-            ) : (
-              <AppHeaderTitle subTitle={subTitle} title={title} />
+              )}
+            </div>
+            {headerOrientation === 'horizontal' && (
+              <>
+                <div className={styles['app-header__nav-groups']}>
+                  {navGroups?.map((navGroup) => (
+                    <AppHeaderNavGroup
+                      key={`navGroup-${navGroup.name}`}
+                      name={navGroup.name}
+                      navItems={navGroup.navItems}
+                      onButtonClick={onButtonClick}
+                    />
+                  ))}
+                </div>
+                <div className={styles['app-header__menu']}>
+                  <AppHeaderButton
+                    aria-label="Show Menu"
+                    icon="menu"
+                    iconLayout="icon-only"
+                    name="hamburger-menu"
+                    onClick={() => {
+                      document.getElementById('popover')?.showPopover();
+                    }}
+                    type="button"
+                  />
+                </div>
+              </>
+            )}
+            {headerOrientation === 'vertical' && (
+              <AppHeaderDrawerContent
+                navGroups={navGroups}
+                onButtonClick={onButtonClick}
+              />
             )}
           </div>
-          {orientation === 'horizontal' && (
-            <>
-              <div className={styles['app-header__nav-groups']}>
-                {navGroups?.map((navGroup) => (
-                  <AppHeaderNavGroup
-                    key={`navGroup-${navGroup.name}`}
-                    name={navGroup.name}
-                    navItems={navGroup.navItems}
-                    onButtonClick={onButtonClick}
-                  />
-                ))}
-              </div>
-              <div className={styles['app-header__menu']}>
-                <AppHeaderButton
-                  aria-label="Show Menu"
-                  icon="menu"
-                  iconLayout="icon-only"
-                  name="hamburger-menu"
-                  onClick={() => {
-                    document.getElementById('popover')?.showPopover();
-                  }}
-                  type="button"
-                />
-              </div>
-            </>
-          )}
-          {orientation === 'vertical' && (
-            <AppHeaderDrawerContent
-              navGroups={navGroups}
-              onButtonClick={onButtonClick}
-            />
-          )}
         </div>
       </header>
-      {orientation === 'horizontal'
+      {headerOrientation === 'horizontal'
         ? createPortal(
             <div
               className={drawerComponentClassName}
@@ -321,6 +365,7 @@ export const AppHeader = ({
               <div className={styles['app-header__drawer-button']}>
                 <Button
                   aria-label="Close popover menu"
+                  className={styles['app-header__drawer-button-instance']}
                   icon="close"
                   iconLayout="icon-only"
                   onClick={() => {
@@ -357,7 +402,7 @@ const AppHeaderTitle = ({ title, subTitle }: AppHeaderTitleProps) => {
     <>
       <div className={componentClassName}>
         {typeof title === 'string' ? (
-          <Text as="span" preset="headline-md">
+          <Text as="span" preset="headline-sm">
             {title}
           </Text>
         ) : (
@@ -366,7 +411,7 @@ const AppHeaderTitle = ({ title, subTitle }: AppHeaderTitleProps) => {
       </div>
       {subTitle && (
         <div className={styles['app-header-title__sub-title']}>
-          <Text as="span" preset="body-lg">
+          <Text as="span" preset="body-md">
             {subTitle}
           </Text>
         </div>
@@ -405,11 +450,10 @@ const AppHeaderNavGroup = ({
               {navItem.type === 'link' && (
                 <AppHeaderLink key={navItem.name} {...navItem} />
               )}
-              {navItem.type === 'menu' && (
+              {(navItem.type === 'menu' || navItem.type === 'tree') && (
                 <Menu>
                   <Menu.PlainButton as={React.Fragment}>
                     <AppHeaderButton
-                      aria-label="show menu"
                       icon={navItem.icon}
                       iconLayout={navItem.iconLayout}
                       name={navItem.name}
@@ -470,6 +514,8 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       icon,
       iconLayout = 'none',
       isCurrent = false,
+      isExternal = false,
+      isVertical,
       name,
       type,
       ...other
@@ -480,9 +526,15 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       styles['app-header__nav-item'],
       styles[`app-header__nav-item--link`],
       isCurrent && styles['app-header__nav-item--is-current'],
+      isExternal && styles['app-header__nav-item--is-external'],
     );
     return (
-      <a className={componentClassName} ref={ref} {...other}>
+      <a
+        className={componentClassName}
+        ref={ref}
+        {...other}
+        target={isExternal ? '_blank' : undefined}
+      >
         <span
           className={clsx(
             styles['app-header__nav-item--link'],
@@ -491,18 +543,17 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="label-lg">
+            <Text as="span" preset="label-md">
               {name}
             </Text>
           )}
           {icon && iconLayout && (
-            <Icon
-              name={icon}
-              purpose="decorative"
-              size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
-            />
+            <Icon name={icon} purpose="decorative" size="24px" />
           )}
         </span>
+        {isExternal && isVertical && (
+          <Icon name="open-in-new" purpose="decorative" size="24px" />
+        )}
       </a>
     );
   },
@@ -515,7 +566,10 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
  * @returns ReactNode
  */
 const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
-  ({ className, icon, iconLayout = 'none', name, type, ...other }, ref) => {
+  (
+    { className, icon, iconLayout = 'none', isVertical, name, type, ...other },
+    ref,
+  ) => {
     const componentClassName = clsx(
       styles['app-header__nav-item'],
       styles[`app-header__nav-item--button`],
@@ -523,6 +577,9 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
     );
     return (
       <button className={componentClassName} ref={ref} {...other}>
+        {isVertical && (
+          <Icon name={'chevron-down'} purpose="decorative" size="24px" />
+        )}
         <span
           className={clsx(
             styles['app-header__nav-item--button'],
@@ -531,16 +588,12 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="label-lg">
+            <Text as="span" preset="label-md">
               {name}
             </Text>
           )}
           {icon && iconLayout && (
-            <Icon
-              name={icon}
-              purpose="decorative"
-              size={`${iconLayout === 'icon-only' ? 24 : 16}px`}
-            />
+            <Icon name={icon} purpose="decorative" size="24px" />
           )}
         </span>
       </button>
@@ -588,18 +641,23 @@ const AppHeaderDrawerContent = ({
                   />
                 )}
                 {navItem.type === 'link' && (
-                  <AppHeaderLink key={navItem.name} {...navItem} />
+                  <AppHeaderLink isVertical key={navItem.name} {...navItem} />
                 )}
                 {navItem.type === 'separator' && (
-                  <Hr key={navItem.name} {...navItem} />
+                  <Hr
+                    className={styles['app-header__nav-item--separator']}
+                    key={navItem.name}
+                    {...navItem}
+                  />
                 )}
-                {navItem.type === 'menu' && (
+                {navItem.type === 'tree' && (
                   <menu>
                     <div className={styles['drawer-content__header-container']}>
                       <div>
                         <span
                           className={clsx(
                             styles['app-header__nav-item--button'],
+                            styles['app-header_nav-item-label'],
                             navItem.iconLayout &&
                               styles[
                                 `app-header__nav-item--icon-layout-${navItem.iconLayout}`
@@ -607,7 +665,7 @@ const AppHeaderDrawerContent = ({
                           )}
                         >
                           {!(navItem.iconLayout === 'icon-only') && (
-                            <Text as="span" preset="label-md">
+                            <Text as="span" preset="overline-sm">
                               {navItem.name}
                             </Text>
                           )}
@@ -615,7 +673,7 @@ const AppHeaderDrawerContent = ({
                             <Icon
                               name={navItem.icon}
                               purpose="decorative"
-                              size={`${navItem.iconLayout === 'icon-only' ? 24 : 16}px`}
+                              size="24px"
                             />
                           )}
                         </span>
@@ -643,6 +701,49 @@ const AppHeaderDrawerContent = ({
                       ))}
                     </ul>
                   </menu>
+                )}
+                {navItem.type === 'menu' && (
+                  <Menu>
+                    <Menu.PlainButton as={React.Fragment}>
+                      <AppHeaderButton
+                        icon={navItem.icon}
+                        iconLayout={navItem.iconLayout}
+                        isVertical
+                        name={navItem.name}
+                        type="button"
+                      >
+                        {navItem.name}
+                      </AppHeaderButton>
+                    </Menu.PlainButton>
+                    <Menu.Items
+                      anchor={{ to: 'bottom end', gap: 12 }}
+                      className={styles['app-header__nav-items']}
+                    >
+                      {navItem.navItems?.map((navItem) => {
+                        switch (navItem.type) {
+                          case 'link':
+                            return (
+                              <Menu.Item href={navItem.href} key={navItem.name}>
+                                {navItem.name}
+                              </Menu.Item>
+                            );
+                          case 'button':
+                            return (
+                              <Menu.Item
+                                key={navItem.name}
+                                onClick={(ev) => {
+                                  onButtonClick && onButtonClick(ev, navItem);
+                                }}
+                              >
+                                {navItem.name}
+                              </Menu.Item>
+                            );
+                          default:
+                            return <Menu.Item>N/A</Menu.Item>;
+                        }
+                      })}
+                    </Menu.Items>
+                  </Menu>
                 )}
               </li>
             );

@@ -56,11 +56,11 @@
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "lineHeight": {
-            "value": "16",
+            "value": "18",
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "@": {
-            "value": "12px/16px",
+            "value": "12px/18px",
             "comment": "values to use with the font shorthand property in CSS"
           }
         },
@@ -70,11 +70,11 @@
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "lineHeight": {
-            "value": "18",
+            "value": "22",
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "@": {
-            "value": "14px/18px",
+            "value": "14px/22px",
             "comment": "values to use with the font shorthand property in CSS"
           }
         },
@@ -84,11 +84,11 @@
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "lineHeight": {
-            "value": "22",
+            "value": "24",
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "@": {
-            "value": "16px/22px",
+            "value": "16px/24px",
             "comment": "values to use with the font shorthand property in CSS"
           }
         },

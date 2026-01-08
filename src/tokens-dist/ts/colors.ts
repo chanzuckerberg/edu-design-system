@@ -117,6 +117,9 @@ export const EdsColorOpacity60 = '0.60';
 export const EdsColorOpacity70 = '0.70';
 export const EdsColorOpacity80 = '0.80';
 export const EdsThemeColorBodyBackground = '#F4F6F8';
+export const EdsThemeColorBackgroundAppHeader = '#242423';
+export const EdsThemeColorBackgroundAppHeaderHover = '#30302E';
+export const EdsThemeColorBackgroundAppHeaderActive = '#3A3A37';
 export const EdsThemeColorBackgroundInput = '#FFFFFF';
 export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
@@ -248,6 +251,7 @@ export const EdsThemeColorBorderBrandBlue2 = '#5C76F3';
 export const EdsThemeColorBorderBrandBlue3 = '#00FF00';
 export const EdsThemeColorBorderBrandPurple = '#00FF00';
 export const EdsThemeColorBorderBrandPink = '#00FF00';
+export const EdsThemeColorBorderAppHeaderSeparator = '#55554E';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasis = '#CCC9C6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasisHover = '#BCB9B6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasisActive = '#9B9997';
@@ -325,6 +329,8 @@ export const EdsThemeColorIconUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)'; // Use with rgb()
 export const EdsThemeColorIconUtilityInverseInteractiveVisited = '#FAF9F8';
 export const EdsThemeColorIconUtilityPlaceholder = '#6B6A64';
+export const EdsThemeColorIconAppHeaderPrimary = '#FFFFFF';
+export const EdsThemeColorIconAppHeaderSecondary = '#BCB9B6';
 export const EdsThemeColorLinkBrandTextDecoration =
   'var(--eds-theme-color-text-brand-default)';
 export const EdsThemeColorLinkBrandTextDecorationHover =
@@ -391,6 +397,8 @@ export const EdsThemeColorTextBrandRed = '#9D1F18';
 export const EdsThemeColorTextBrandYellow = '#7E6701';
 export const EdsThemeColorTextBrandGreen = '#125B3A';
 export const EdsThemeColorTextBrandBlue = '#3C4D9D';
+export const EdsThemeColorTextAppHeaderPrimary = '#FFFFFF';
+export const EdsThemeColorTextAppHeaderSecondary = '#BCB9B6';
 export const EdsThemeColorTextHighlightForeground = '#30302E';
 export const EdsThemeColorToggleOnBackground =
   'var(--eds-theme-color-background-brand-primary-strong)';

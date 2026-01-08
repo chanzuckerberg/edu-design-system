@@ -14,4 +14,5 @@ module.exports = {
   'eds-bp-md': '768px',
   'eds-bp-lg': '1040px',
   'eds-bp-xl': '1440px',
+  'eds-bp-xxl': '1920px',
 };
