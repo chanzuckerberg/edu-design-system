@@ -38,12 +38,7 @@ function InteractiveExample(args: InteractiveArgs) {
         Open the modal
       </Button>
 
-      <Modal
-        {...args}
-        className="w-[400px]"
-        onClose={() => setOpen(false)}
-        open={open}
-      />
+      <Modal {...args} onClose={() => setOpen(false)} open={open} />
     </>
   );
 }
