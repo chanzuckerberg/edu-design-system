@@ -72,6 +72,35 @@ exports[`<Text /> CaptionMedium story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> CodePresets story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <div>
+    <p
+      class="text text--code-lg"
+    >
+      Code Large
+    </p>
+    <p
+      class="text text--code-md"
+    >
+      Code Medium
+    </p>
+    <p
+      class="text text--code-sm"
+    >
+      Code Small
+    </p>
+    <p
+      class="text text--code-xs"
+    >
+      Code Extra Small
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<Text /> DecorativePresetCombination story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"

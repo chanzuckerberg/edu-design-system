@@ -83,6 +83,25 @@ export const CaptionMedium: Story = {
   },
 };
 
+export const CodePresets: Story = {
+  render: (args) => (
+    <div>
+      <Text {...args} preset="code-lg">
+        Code Large
+      </Text>
+      <Text {...args} preset="code-md">
+        Code Medium
+      </Text>
+      <Text {...args} preset="code-sm">
+        Code Small
+      </Text>
+      <Text {...args} preset="code-xs">
+        Code Extra Small
+      </Text>
+    </div>
+  ),
+};
+
 /**
  * If a design calls for a different font family to apply to a given preset, you can use a utility class or style to override the font family value.
  */
