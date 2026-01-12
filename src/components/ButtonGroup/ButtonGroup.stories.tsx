@@ -63,6 +63,28 @@ export const HorizontalProgressive: Story = {
 };
 
 /**
+ * Buttons can also be disabled in `ButtonGroup`.
+ */
+export const HorizontalProgressiveDisabled: Story = {
+  args: {
+    buttonLayout: 'horizontal-progressive',
+  },
+  parameters: {
+    layout: 'centered',
+  },
+  render: (args) => (
+    <ButtonGroup {...args} className="flex w-[400px]">
+      <Button className="flex-1" isDisabled rank="primary">
+        Confirm
+      </Button>
+      <Button className="flex-1" isDisabled rank="secondary">
+        Cancel
+      </Button>
+    </ButtonGroup>
+  ),
+};
+
+/**
  * When using a tertiary button, you may adjust the layout to nudge the button's alignment to better flow
  * with adjacent content. Use `-ml-X` to set a negative margin within the `ButtonGroup`.
  */
