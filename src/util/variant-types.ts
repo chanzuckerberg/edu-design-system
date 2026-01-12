@@ -86,6 +86,11 @@ export const presets = [
   'tab-lg',
   'tab-sm-active',
   'tab-sm',
+  'code-xl',
+  'code-lg',
+  'code-md',
+  'code-sm',
+  'code-xs',
 ] as const;
 
 /**
