@@ -6,7 +6,7 @@
   --eds-dark-theme-color-toggle-disabled-background: var(--eds-dark-theme-color-icon-disabled);
   --eds-dark-theme-color-toggle-off-background: var(--eds-dark-theme-color-icon-neutral-subtle);
   --eds-dark-theme-color-toggle-on-background: var(--eds-dark-theme-color-background-brand-primary-strong);
-  --eds-dark-theme-color-text-brand-default: var(--eds-dark-theme-color-text-brand-primary);
+  --eds-dark-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
   --eds-dark-theme-color-text-utility-inverse-disabled: rgba(250, 249, 248, 0.50);
   --eds-dark-theme-color-link-neutral-background-focus: var(--eds-dark-theme-color-text-neutral-default);
   --eds-dark-theme-color-link-neutral-text-decoration-focus: var(--eds-dark-theme-color-text-neutral-default-inverse);
@@ -218,8 +218,8 @@
   --eds-anim-move-quick: 0.15; /* Seconds (s) */
   --eds-anim-fade-long: 0.4; /* Seconds (s) */
   --eds-anim-fade-quick: 0.15; /* Seconds (s) */
-  --eds-typography-preset-075: 12px/16px; /* values to use with the font shorthand property in CSS */
-  --eds-typography-preset-075-line-height: 16; /* pixels (px) values to use with the font shorthand property in CSS */
+  --eds-typography-preset-075: 12px/18px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-075-line-height: 18; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-075-font-size: 12; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-1400: 64px/70px; /* values to use with the font shorthand property in CSS */
   --eds-typography-preset-1400-line-height: 70; /* pixels (px) values to use with the font shorthand property in CSS */
@@ -257,11 +257,11 @@
   --eds-typography-preset-300: 18px/24px; /* values to use with the font shorthand property in CSS */
   --eds-typography-preset-300-line-height: 24; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-300-font-size: 18; /* pixels (px) values to use with the font shorthand property in CSS */
-  --eds-typography-preset-200: 16px/22px; /* values to use with the font shorthand property in CSS */
-  --eds-typography-preset-200-line-height: 22; /* pixels (px) values to use with the font shorthand property in CSS */
+  --eds-typography-preset-200: 16px/24px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-200-line-height: 24; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-200-font-size: 16; /* pixels (px) values to use with the font shorthand property in CSS */
-  --eds-typography-preset-100: 14px/18px; /* values to use with the font shorthand property in CSS */
-  --eds-typography-preset-100-line-height: 18; /* pixels (px) values to use with the font shorthand property in CSS */
+  --eds-typography-preset-100: 14px/22px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-100-line-height: 22; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-100-font-size: 14; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-font-size-multiplier: 1.125;
   --eds-typography-base-size: 14;
@@ -278,6 +278,8 @@
   --eds-dark-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
   --eds-dark-theme-typography-font-family-decorative-inline: var(--eds-typography-font-family-1);
   --eds-dark-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
+  --eds-dark-theme-color-text-app-header-secondary: var(--eds-color-neutral-250);
+  --eds-dark-theme-color-text-app-header-primary: var(--eds-color-white);
   --eds-dark-theme-color-text-brand-blue: var(--eds-color-blue-650);
   --eds-dark-theme-color-text-brand-green: var(--eds-color-green-650);
   --eds-dark-theme-color-text-brand-yellow: var(--eds-color-yellow-550);
@@ -318,6 +320,8 @@
   --eds-dark-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
   --eds-dark-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-dark-theme-color-text-neutral-default: var(--eds-color-neutral-700);
+  --eds-dark-theme-color-app-header-secondary: var(--eds-color-neutral-250);
+  --eds-dark-theme-color-app-header-primary: var(--eds-color-white);
   --eds-dark-theme-color-icon-utility-placeholder: var(--eds-color-neutral-550);
   --eds-dark-theme-color-icon-utility-inverse-interactive-visited: var(--eds-color-neutral-025);
   --eds-dark-theme-color-icon-utility-inverse-disabled: var(--eds-dark-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
@@ -388,6 +392,7 @@
   --eds-dark-theme-color-border-utility-default-low-emphasis-active: var(--eds-color-neutral-350);
   --eds-dark-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
   --eds-dark-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
+  --eds-dark-theme-color-border-app-header-separator: var(--eds-color-neutral-650);
   --eds-dark-theme-color-border-brand-blue-2: var(--eds-color-blue-450);
   --eds-dark-theme-color-border-brand-blue-1: var(--eds-color-blue-200);
   --eds-dark-theme-color-border-brand-green: var(--eds-color-green-450);
@@ -463,6 +468,9 @@
   --eds-dark-theme-color-background-brand-red: var(--eds-color-red-350);
   --eds-dark-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-dark-theme-color-background-input: var(--eds-color-white);
+  --eds-dark-theme-color-background-app-header-active: var(--eds-color-neutral-750);
+  --eds-dark-theme-color-background-app-header-hover: var(--eds-color-neutral-800);
+  --eds-dark-theme-color-background-app-header: var(--eds-color-neutral-850);
   --eds-dark-theme-form-border-width: var(--eds-border-width-sm);
   --eds-dark-theme-border-width: var(--eds-border-width-sm);
   --eds-dark-theme-border-radius-notification: var(--eds-border-radius-300);
