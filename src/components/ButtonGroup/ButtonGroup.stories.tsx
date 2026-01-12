@@ -41,12 +41,25 @@ export const Vertical: Story = {
 };
 
 /**
- * Primary and secondary buttons can be put along the edges of the tertiary `Button`.
+ * Primary and secondary buttons can be put along the edges of the tertiary `Button` no matter the width.
  */
 export const HorizontalProgressive: Story = {
   args: {
     buttonLayout: 'horizontal-progressive',
   },
+  parameters: {
+    layout: 'centered',
+  },
+  render: (args) => (
+    <ButtonGroup {...args} className="flex w-[400px]">
+      <Button className="flex-1" rank="primary">
+        Confirm
+      </Button>
+      <Button className="flex-1" rank="secondary">
+        Cancel
+      </Button>
+    </ButtonGroup>
+  ),
 };
 
 /**

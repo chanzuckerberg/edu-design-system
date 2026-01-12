@@ -22,7 +22,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.0.2'],
 } as Meta<ButtonProps>;
 
 type Story = StoryObj<ButtonProps>;

@@ -36,26 +36,26 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="button-group button-group--horizontal-progressive"
+    class="button-group button-group--horizontal-progressive flex w-[400px]"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default flex-1"
       type="button"
     >
       <span
         class="text text--label-lg button__text"
       >
-        Button 1
+        Confirm
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default flex-1"
       type="button"
     >
       <span
         class="text text--label-lg button__text"
       >
-        Button 2
+        Cancel
       </span>
     </button>
   </div>
