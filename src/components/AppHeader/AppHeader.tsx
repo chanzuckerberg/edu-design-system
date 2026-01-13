@@ -312,7 +312,17 @@ export const AppHeader = ({
           <div className={styles['app-header__content']}>
             <div className={styles['app-header-title']}>
               {href ? (
-                <a aria-label="homepage" href={href}>
+                <a
+                  aria-label="homepage"
+                  href={href}
+                  onClick={(ev) => {
+                    onButtonClick &&
+                      onButtonClick(ev, {
+                        type: 'link',
+                        href: href,
+                      } as NavLink);
+                  }}
+                >
                   <AppHeaderTitle subTitle={subTitle} title={title} />
                 </a>
               ) : (

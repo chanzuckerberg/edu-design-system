@@ -968,24 +968,29 @@ exports[`<AppHeader /> NavTree story renders snapshot 1`] = `
       <div
         class="app-header-title"
       >
-        <div
-          class="app-header-title__title"
+        <a
+          aria-label="homepage"
+          href="#"
         >
-          <span
-            class="text text--headline-sm"
+          <div
+            class="app-header-title__title"
           >
-            Bodies of water
-          </span>
-        </div>
-        <div
-          class="app-header-title__sub-title"
-        >
-          <span
-            class="text text--body-md"
+            <span
+              class="text text--headline-sm"
+            >
+              Bodies of water
+            </span>
+          </div>
+          <div
+            class="app-header-title__sub-title"
           >
-            They're cool!
-          </span>
-        </div>
+            <span
+              class="text text--body-md"
+            >
+              They're cool!
+            </span>
+          </div>
+        </a>
       </div>
       <div
         class="drawer-content"
