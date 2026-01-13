@@ -156,7 +156,7 @@
 .text--body-xl {
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -170,7 +170,7 @@
 .text--body-lg {
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -184,7 +184,7 @@
 .text--body-md {
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -198,7 +198,7 @@
 .text--body-sm {
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -212,7 +212,7 @@
 .text--body-xs {
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -324,6 +324,14 @@
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: var(--eds-typography-font-weight-normal);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.text--code-xl {
+  --text-font-family: var(--eds-typography-font-family-3);
+  --text-font-size: var(--eds-typography-preset-600-font-size);
+  --text-line-height: var(--eds-typography-preset-600-line-height);
+  --text-font-weight: var(--eds-typography-font-weight-light);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 

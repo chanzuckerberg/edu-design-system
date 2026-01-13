@@ -86,6 +86,9 @@ export const CaptionMedium: Story = {
 export const CodePresets: Story = {
   render: (args) => (
     <div>
+      <Text {...args} preset="code-xl">
+        Code Extra Large
+      </Text>
       <Text {...args} preset="code-lg">
         Code Large
       </Text>
