@@ -271,6 +271,7 @@ export const NavMenus: Story = {
  */
 export const NavTree: Story = {
   args: {
+    href: '#',
     title: 'Bodies of water',
     subTitle: "They're cool!",
     onButtonClick: (ev, navItem) => {
