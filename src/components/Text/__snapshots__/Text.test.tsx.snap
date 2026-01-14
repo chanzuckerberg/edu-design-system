@@ -78,6 +78,11 @@ exports[`<Text /> CodePresets story renders snapshot 1`] = `
 >
   <div>
     <p
+      class="text text--code-xl"
+    >
+      Code Extra Large
+    </p>
+    <p
       class="text text--code-lg"
     >
       Code Large

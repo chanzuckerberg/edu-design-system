@@ -161,7 +161,7 @@
 .heading--body-xl {
   --heading-font-size: var(--eds-typography-preset-600-font-size);
   --heading-line-height: var(--eds-typography-preset-600-line-height);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -175,7 +175,7 @@
 .heading--body-lg {
   --heading-font-size: var(--eds-typography-preset-400-font-size);
   --heading-line-height: var(--eds-typography-preset-400-line-height);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -189,7 +189,7 @@
 .heading--body-md {
   --heading-font-size: var(--eds-typography-preset-200-font-size);
   --heading-line-height: var(--eds-typography-preset-200-line-height);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -203,7 +203,7 @@
 .heading--body-sm {
   --heading-font-size: var(--eds-typography-preset-100-font-size);
   --heading-line-height: var(--eds-typography-preset-100-line-height);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -217,7 +217,7 @@
 .heading--body-xs {
   --heading-font-size: var(--eds-typography-preset-075-font-size);
   --heading-line-height: var(--eds-typography-preset-075-line-height);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -329,6 +329,14 @@
   --heading-font-size: var(--eds-typography-preset-075-font-size);
   --heading-line-height: var(--eds-typography-preset-075-line-height);
   --heading-font-weight: var(--eds-typography-font-weight-normal);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+}
+
+.heading--code-xl {
+  --heading-font-family: var(--eds-typography-font-family-3);
+  --heading-font-size: var(--eds-typography-preset-600-font-size);
+  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
