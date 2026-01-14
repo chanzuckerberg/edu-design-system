@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.1.0...v17.2.0) (2026-01-14)
+
+
+### Features
+
+* **AppHeader:** add event handler for navigation on (sub-)title ([#2345](https://github.com/chanzuckerberg/edu-design-system/issues/2345)) ([ca36620](https://github.com/chanzuckerberg/edu-design-system/commit/ca36620a2bca0644ec8d0b5927c49ae4195515cf))
+* **AppHeader:** update to version 1.1 ([#2341](https://github.com/chanzuckerberg/edu-design-system/issues/2341)) ([3342daf](https://github.com/chanzuckerberg/edu-design-system/commit/3342daf82e29239c8ed2dcdbba31489bbfc958a8))
+* **icons:** add in 4 new icons ([#2346](https://github.com/chanzuckerberg/edu-design-system/issues/2346)) ([4a630eb](https://github.com/chanzuckerberg/edu-design-system/commit/4a630eb65d92ff75eb486bb45d800963df63a92b))
+* **Typography:** add in code presets for Heading / Text ([#2342](https://github.com/chanzuckerberg/edu-design-system/issues/2342)) ([c52ed3a](https://github.com/chanzuckerberg/edu-design-system/commit/c52ed3a05d06be4d331564d09e505f6de5aec7a3))
+
+
+### Bug Fixes
+
+* **Button:** remove the SPAN wrapper when disabled ([c861a7b](https://github.com/chanzuckerberg/edu-design-system/commit/c861a7b0748833ea2a7c0da05ed3b86f67d38ded))
+* **Card:** update colors for callout, container style and behaviors ([#2338](https://github.com/chanzuckerberg/edu-design-system/issues/2338)) ([5acfbc9](https://github.com/chanzuckerberg/edu-design-system/commit/5acfbc9d15731bfdc0c7b88e980230bdd06c5b1e))
+* **typography:** sync values with token taxonomy db ([#2339](https://github.com/chanzuckerberg/edu-design-system/issues/2339)) ([dfd32cf](https://github.com/chanzuckerberg/edu-design-system/commit/dfd32cfd1fa101104d8e3e123d6fd60c0c3dc4b7))
+
 ## [17.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.0.0...v17.1.0) (2025-12-09)
 
 
