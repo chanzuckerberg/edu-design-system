@@ -11649,35 +11649,31 @@ exports[`<DataTable /> WithLongCaption story renders snapshot 1`] = `
       <div
         class="button-group button-group--horizontal"
       >
-        <span
-          class="button--layout-icon-only button--size-lg button__disabled"
+        <button
+          aria-label="Add a row"
+          class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
+          disabled=""
+          type="button"
         >
-          <button
-            aria-label="Add a row"
-            class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
-            disabled=""
-            type="button"
+          <span
+            class="text text--label-lg button__text"
           >
-            <span
-              class="text text--label-lg button__text"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="24px"
-                style="--icon-size: 24px;"
-                viewBox="0 0 24 24"
-                width="24px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
-            </span>
-          </button>
-        </span>
+              <path
+                d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -11708,35 +11704,31 @@ exports[`<DataTable /> WithOnlyActions story renders snapshot 1`] = `
       <div
         class="button-group button-group--horizontal"
       >
-        <span
-          class="button--layout-icon-only button--size-lg button__disabled"
+        <button
+          aria-label="Add a row"
+          class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
+          disabled=""
+          type="button"
         >
-          <button
-            aria-label="Add a row"
-            class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
-            disabled=""
-            type="button"
+          <span
+            class="text text--label-lg button__text"
           >
-            <span
-              class="text text--label-lg button__text"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="24px"
-                style="--icon-size: 24px;"
-                viewBox="0 0 24 24"
-                width="24px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
-            </span>
-          </button>
-        </span>
+              <path
+                d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -11897,35 +11889,31 @@ exports[`<DataTable /> WithSearchAndActions story renders snapshot 1`] = `
       <div
         class="button-group button-group--horizontal"
       >
-        <span
-          class="button--layout-icon-only button--size-lg button__disabled"
+        <button
+          aria-label="Add a row"
+          class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
+          disabled=""
+          type="button"
         >
-          <button
-            aria-label="Add a row"
-            class="button button--layout-icon-only button--disabled button--secondary button--lg button--size-lg button--variant-default"
-            disabled=""
-            type="button"
+          <span
+            class="text text--label-lg button__text"
           >
-            <span
-              class="text text--label-lg button__text"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="24px"
-                style="--icon-size: 24px;"
-                viewBox="0 0 24 24"
-                width="24px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
-            </span>
-          </button>
-        </span>
+              <path
+                d="M12 7c-.55 0-1 .45-1 1v3H8c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1h-3V8c0-.55-.45-1-1-1zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>
