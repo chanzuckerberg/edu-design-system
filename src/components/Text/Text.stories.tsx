@@ -28,6 +28,20 @@ export const Default: Story = {
   },
 };
 
+export const TitleXLarge: Story = {
+  args: {
+    preset: 'title-xl',
+    children: 'Title extra-large',
+  },
+};
+
+export const LabelXLarge: Story = {
+  args: {
+    preset: 'label-xl',
+    children: 'Label extra-large',
+  },
+};
+
 export const BodyXLarge: Story = {
   args: {
     preset: 'body-xl',
@@ -67,6 +81,28 @@ export const CaptionMedium: Story = {
     preset: 'caption-md',
     children: 'Caption medium',
   },
+};
+
+export const CodePresets: Story = {
+  render: (args) => (
+    <div>
+      <Text {...args} preset="code-xl">
+        Code Extra Large
+      </Text>
+      <Text {...args} preset="code-lg">
+        Code Large
+      </Text>
+      <Text {...args} preset="code-md">
+        Code Medium
+      </Text>
+      <Text {...args} preset="code-sm">
+        Code Small
+      </Text>
+      <Text {...args} preset="code-xs">
+        Code Extra Small
+      </Text>
+    </div>
+  ),
 };
 
 /**

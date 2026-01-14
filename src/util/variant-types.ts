@@ -57,6 +57,7 @@ export const presets = [
   'headline-decorative-inline-lg',
   'headline-decorative-inline-md',
   'headline-decorative-inline-sm',
+  'title-xl',
   'title-lg',
   'title-md',
   'title-sm',
@@ -71,6 +72,7 @@ export const presets = [
   'body-sm-bold',
   'body-xs',
   'body-xs-bold',
+  'label-xl',
   'label-lg',
   'label-md',
   'label-sm',
@@ -84,6 +86,11 @@ export const presets = [
   'tab-lg',
   'tab-sm-active',
   'tab-sm',
+  'code-xl',
+  'code-lg',
+  'code-md',
+  'code-sm',
+  'code-xs',
 ] as const;
 
 /**

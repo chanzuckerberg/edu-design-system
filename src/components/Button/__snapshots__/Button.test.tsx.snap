@@ -91,51 +91,39 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
 <div
   class="flex gap-1"
 >
-  <span
-    class="btn-primary button--layout-none button--size-lg button__disabled"
+  <button
+    class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-default btn-primary"
+    disabled=""
+    type="button"
   >
-    <button
-      class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-default"
-      disabled=""
-      type="button"
+    <span
+      class="text text--label-lg button__text"
     >
-      <span
-        class="text text--label-lg button__text"
-      >
-        Primary
-      </span>
-    </button>
-  </span>
-  <span
-    class="btn-secondary button--layout-none button--size-lg button__disabled"
+      Primary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-default btn-secondary"
+    disabled=""
+    type="button"
   >
-    <button
-      class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-default"
-      disabled=""
-      type="button"
+    <span
+      class="text text--label-lg button__text"
     >
-      <span
-        class="text text--label-lg button__text"
-      >
-        Secondary
-      </span>
-    </button>
-  </span>
-  <span
-    class="btn-tertiary button--layout-none button--size-lg button__disabled"
+      Secondary
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-default btn-tertiary"
+    disabled=""
+    type="button"
   >
-    <button
-      class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-default"
-      disabled=""
-      type="button"
+    <span
+      class="text text--label-lg button__text"
     >
-      <span
-        class="text text--label-lg button__text"
-      >
-        Tertiary
-      </span>
-    </button>
-  </span>
+      Tertiary
+    </span>
+  </button>
 </div>
 `;
 
@@ -143,51 +131,39 @@ exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
 <div
   class="flex items-center gap-1"
 >
-  <span
-    class="button--layout-none button--full-width button--size-lg button__disabled"
+  <button
+    class="button button--layout-none button--disabled button--full-width button--primary button--lg button--size-lg button--variant-default"
+    disabled=""
+    type="button"
   >
-    <button
-      class="button button--layout-none button--disabled button--full-width button--primary button--lg button--size-lg button--variant-default"
-      disabled=""
-      type="button"
+    <span
+      class="text text--label-lg button__text"
     >
-      <span
-        class="text text--label-lg button__text"
-      >
-        Large
-      </span>
-    </button>
-  </span>
-  <span
-    class="button--layout-none button--full-width button--size-md button__disabled"
+      Large
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--disabled button--full-width button--primary button--md button--size-md button--variant-default"
+    disabled=""
+    type="button"
   >
-    <button
-      class="button button--layout-none button--disabled button--full-width button--primary button--md button--size-md button--variant-default"
-      disabled=""
-      type="button"
+    <span
+      class="text text--label-md button__text"
     >
-      <span
-        class="text text--label-md button__text"
-      >
-        Medium
-      </span>
-    </button>
-  </span>
-  <span
-    class="button--layout-none button--full-width button--size-sm button__disabled"
+      Medium
+    </span>
+  </button>
+  <button
+    class="button button--layout-none button--disabled button--full-width button--primary button--sm button--size-sm button--variant-default"
+    disabled=""
+    type="button"
   >
-    <button
-      class="button button--layout-none button--disabled button--full-width button--primary button--sm button--size-sm button--variant-default"
-      disabled=""
-      type="button"
+    <span
+      class="text text--label-sm button__text"
     >
-      <span
-        class="text text--label-sm button__text"
-      >
-        Small
-      </span>
-    </button>
-  </span>
+      Small
+    </span>
+  </button>
 </div>
 `;
 
@@ -314,51 +290,39 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
   <div
     class="flex gap-1"
   >
-    <span
-      class="btn-primary button--layout-none button--size-lg button__disabled"
+    <button
+      class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-inverse btn-primary"
+      disabled=""
+      type="button"
     >
-      <button
-        class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-inverse"
-        disabled=""
-        type="button"
+      <span
+        class="text text--label-lg button__text"
       >
-        <span
-          class="text text--label-lg button__text"
-        >
-          Primary
-        </span>
-      </button>
-    </span>
-    <span
-      class="btn-secondary button--layout-none button--size-lg button__disabled"
+        Primary
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-inverse btn-secondary"
+      disabled=""
+      type="button"
     >
-      <button
-        class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-inverse"
-        disabled=""
-        type="button"
+      <span
+        class="text text--label-lg button__text"
       >
-        <span
-          class="text text--label-lg button__text"
-        >
-          Secondary
-        </span>
-      </button>
-    </span>
-    <span
-      class="btn-tertiary button--layout-none button--size-lg button__disabled"
+        Secondary
+      </span>
+    </button>
+    <button
+      class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-inverse btn-tertiary"
+      disabled=""
+      type="button"
     >
-      <button
-        class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-inverse"
-        disabled=""
-        type="button"
+      <span
+        class="text text--label-lg button__text"
       >
-        <span
-          class="text text--label-lg button__text"
-        >
-          Tertiary
-        </span>
-      </button>
-    </span>
+        Tertiary
+      </span>
+    </button>
   </div>
 </div>
 `;

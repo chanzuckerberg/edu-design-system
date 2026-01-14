@@ -72,6 +72,40 @@ exports[`<Text /> CaptionMedium story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> CodePresets story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <div>
+    <p
+      class="text text--code-xl"
+    >
+      Code Extra Large
+    </p>
+    <p
+      class="text text--code-lg"
+    >
+      Code Large
+    </p>
+    <p
+      class="text text--code-md"
+    >
+      Code Medium
+    </p>
+    <p
+      class="text text--code-sm"
+    >
+      Code Small
+    </p>
+    <p
+      class="text text--code-xs"
+    >
+      Code Extra Small
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<Text /> DecorativePresetCombination story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -132,6 +166,18 @@ exports[`<Text /> Default story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> LabelXLarge story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <p
+    class="text text--label-xl"
+  >
+    Label extra-large
+  </p>
+</div>
+`;
+
 exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -140,6 +186,18 @@ exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
     class="text text--body-md !font-2"
   >
     You can use utility classes to override the font family used for a given size
+  </p>
+</div>
+`;
+
+exports[`<Text /> TitleXLarge story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <p
+    class="text text--title-xl"
+  >
+    Title extra-large
   </p>
 </div>
 `;

@@ -1,7 +1,5 @@
 :root {
   --eds-theme-typography-font-style-headline-decorative-inline: light;
-  --eds-theme-typography-font-family-tab: JetBrains Mono;
-  --eds-theme-typography-font-family-decorative-inline: parabolica;
   --eds-theme-color-toggle-thumb: var(--eds-theme-color-text-neutral-default-inverse);
   --eds-theme-color-toggle-primary-text: var(--eds-theme-color-text-neutral-default);
   --eds-theme-color-toggle-disabled-text: var(--eds-theme-color-text-disabled);
@@ -220,8 +218,8 @@
   --eds-anim-move-quick: 0.15; /* Seconds (s) */
   --eds-anim-fade-long: 0.4; /* Seconds (s) */
   --eds-anim-fade-quick: 0.15; /* Seconds (s) */
-  --eds-typography-preset-075: 12px/16px; /* values to use with the font shorthand property in CSS */
-  --eds-typography-preset-075-line-height: 16; /* pixels (px) values to use with the font shorthand property in CSS */
+  --eds-typography-preset-075: 12px/18px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-075-line-height: 18; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-075-font-size: 12; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-1400: 64px/70px; /* values to use with the font shorthand property in CSS */
   --eds-typography-preset-1400-line-height: 70; /* pixels (px) values to use with the font shorthand property in CSS */
@@ -259,11 +257,11 @@
   --eds-typography-preset-300: 18px/24px; /* values to use with the font shorthand property in CSS */
   --eds-typography-preset-300-line-height: 24; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-300-font-size: 18; /* pixels (px) values to use with the font shorthand property in CSS */
-  --eds-typography-preset-200: 16px/22px; /* values to use with the font shorthand property in CSS */
-  --eds-typography-preset-200-line-height: 22; /* pixels (px) values to use with the font shorthand property in CSS */
+  --eds-typography-preset-200: 16px/24px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-200-line-height: 24; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-200-font-size: 16; /* pixels (px) values to use with the font shorthand property in CSS */
-  --eds-typography-preset-100: 14px/18px; /* values to use with the font shorthand property in CSS */
-  --eds-typography-preset-100-line-height: 18; /* pixels (px) values to use with the font shorthand property in CSS */
+  --eds-typography-preset-100: 14px/22px; /* values to use with the font shorthand property in CSS */
+  --eds-typography-preset-100-line-height: 22; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-preset-100-font-size: 14; /* pixels (px) values to use with the font shorthand property in CSS */
   --eds-typography-font-size-multiplier: 1.125;
   --eds-typography-base-size: 14;
@@ -272,12 +270,16 @@
   --eds-typography-letter-spacing-condensed: -0.02rem; /* has units b/c letter spacing has values with and without units */
   --eds-typography-font-weight-bold: 500;
   --eds-typography-font-weight-normal: 400;
-  --eds-typography-font-weight-light: 300;
-  --eds-typography-font-family-size-offset-2: 2; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
+  --eds-typography-font-weight-light: 200;
+  --eds-typography-font-family-size-offset-2: 0; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
   --eds-typography-font-family-3: 'JetBrains Mono', Consolas, monospace;
   --eds-typography-font-family-2: 'kazimirtext', Georgia, serif;
   --eds-typography-font-family-1: 'parabolica', Arial, sans-serif;
+  --eds-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
+  --eds-theme-typography-font-family-decorative-inline: var(--eds-typography-font-family-1);
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
+  --eds-theme-color-text-app-header-secondary: var(--eds-color-neutral-250);
+  --eds-theme-color-text-app-header-primary: var(--eds-color-white);
   --eds-theme-color-text-brand-blue: var(--eds-color-blue-650);
   --eds-theme-color-text-brand-green: var(--eds-color-green-650);
   --eds-theme-color-text-brand-yellow: var(--eds-color-yellow-550);
@@ -318,6 +320,8 @@
   --eds-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
   --eds-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-theme-color-text-neutral-default: var(--eds-color-neutral-700);
+  --eds-theme-color-icon-app-header-secondary: var(--eds-color-neutral-250);
+  --eds-theme-color-icon-app-header-primary: var(--eds-color-white);
   --eds-theme-color-icon-utility-placeholder: var(--eds-color-neutral-550);
   --eds-theme-color-icon-utility-inverse-interactive-visited: var(--eds-color-neutral-025);
   --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
@@ -388,6 +392,7 @@
   --eds-theme-color-border-utility-default-low-emphasis-active: var(--eds-color-neutral-350);
   --eds-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
   --eds-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
+  --eds-theme-color-border-app-header-separator: var(--eds-color-neutral-650);
   --eds-theme-color-border-brand-blue-2: var(--eds-color-blue-450);
   --eds-theme-color-border-brand-blue-1: var(--eds-color-blue-200);
   --eds-theme-color-border-brand-green: var(--eds-color-green-450);
@@ -463,6 +468,9 @@
   --eds-theme-color-background-brand-red: var(--eds-color-red-350);
   --eds-theme-color-background-brand-primary-strong: var(--eds-color-brand-grape-400); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-color-background-input: var(--eds-color-white);
+  --eds-theme-color-background-app-header-active: var(--eds-color-neutral-750);
+  --eds-theme-color-background-app-header-hover: var(--eds-color-neutral-800);
+  --eds-theme-color-background-app-header: var(--eds-color-neutral-850);
   --eds-theme-form-border-width: var(--eds-border-width-sm);
   --eds-theme-border-width: var(--eds-border-width-sm);
   --eds-theme-border-radius-notification: var(--eds-border-radius-300);

@@ -126,7 +126,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size && styles[`button--${size}`],
       size && styles[`button--size-${size}`],
       variant && styles[`button--variant-${variant}`],
-      !isDisabled && className,
+      className,
     );
 
     const buttonContentClassName = clsx(
@@ -148,7 +148,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'Specifying content for "children" when using icon-only layout is not required and can be removed.',
     );
 
-    const coreButton = (
+    return (
       <Component
         className={componentClassName}
         disabled={isDisabled}
@@ -188,23 +188,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <LoadingIndicator className={styles['button__loader']} size="xs" />
         )}
       </Component>
-    );
-
-    // Wrap the button in a simple SPAN to allow for adding the not-allowed cursor
-    return isDisabled ? (
-      <span
-        className={clsx(
-          className,
-          iconLayout && styles[`button--layout-${iconLayout}`],
-          isFullWidth && styles['button--full-width'],
-          size && styles[`button--size-${size}`],
-          styles['button__disabled'],
-        )}
-      >
-        {coreButton}
-      </span>
-    ) : (
-      coreButton
     );
   },
 );

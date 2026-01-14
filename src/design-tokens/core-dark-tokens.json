@@ -832,6 +832,20 @@
             }
           },
           "background": {
+            "appHeader": {
+              "@": {
+                "value": "{eds.color.neutral.850}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.800}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.neutral.750}",
+                "group": "color"
+              }
+            },
             "input": {
               "value": "{eds.color.white}"
             },
@@ -1258,6 +1272,10 @@
                 "value": "#00FF00"
               }
             },
+            "appHeaderSeparator": {
+              "value": "{eds.color.neutral.650}",
+              "group": "color"
+            },
             "utility": {
               "default": {
                 "lowEmphasis": {
@@ -1612,6 +1630,16 @@
               }
             }
           },
+          "appHeader": {
+            "primary": {
+              "value": "{eds.color.white}",
+              "group": "color"
+            },
+            "secondary": {
+              "value": "{eds.color.neutral.250}",
+              "group": "color"
+            }
+          },
           "link": {
             "brand": {
               "text-decoration": {
@@ -1825,7 +1853,7 @@
             },
             "brand": {
               "default": {
-                "value": "var(--eds-dark-theme-color-text-brand-primary)",
+                "value": "var(--eds-theme-color-text-brand-primary)",
                 "group": "color"
               },
               "red": {
@@ -1842,6 +1870,16 @@
               },
               "blue": {
                 "value": "{eds.color.blue.650}",
+                "group": "color"
+              }
+            },
+            "appHeader": {
+              "primary": {
+                "value": "{eds.color.white}",
+                "group": "color"
+              },
+              "secondary": {
+                "value": "{eds.color.neutral.250}",
                 "group": "color"
               }
             }
@@ -1891,11 +1929,11 @@
           "fontFamily": {
             "decorative": {
               "inline": {
-                "value": "parabolica"
+                "value": "{eds.typography.fontFamily.1}"
               }
             },
             "tab": {
-              "value": "JetBrains Mono"
+              "value": "{eds.typography.fontFamily.3}"
             }
           },
           "fontStyle": {

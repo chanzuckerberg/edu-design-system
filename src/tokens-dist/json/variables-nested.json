@@ -6,11 +6,11 @@
         "2": "'kazimirtext', Georgia, serif",
         "3": "'JetBrains Mono', Consolas, monospace",
         "sizeOffset": {
-          "2": "2"
+          "2": "0"
         }
       },
       "fontWeight": {
-        "light": "300",
+        "light": "200",
         "normal": "400",
         "bold": "500"
       },
@@ -24,13 +24,13 @@
       "preset": {
         "100": {
           "fontSize": "14",
-          "lineHeight": "18",
-          "@": "14px/18px"
+          "lineHeight": "22",
+          "@": "14px/22px"
         },
         "200": {
           "fontSize": "16",
-          "lineHeight": "22",
-          "@": "16px/22px"
+          "lineHeight": "24",
+          "@": "16px/24px"
         },
         "300": {
           "fontSize": "18",
@@ -94,8 +94,8 @@
         },
         "075": {
           "fontSize": "12",
-          "lineHeight": "16",
-          "@": "12px/16px"
+          "lineHeight": "18",
+          "@": "12px/18px"
         }
       }
     },
@@ -343,6 +343,11 @@
           }
         },
         "background": {
+          "appHeader": {
+            "@": "#242423",
+            "hover": "#30302E",
+            "active": "#3A3A37"
+          },
           "input": "#FFFFFF",
           "neutral": {
             "subtle": {
@@ -542,6 +547,7 @@
             "purple": "#00FF00",
             "pink": "#00FF00"
           },
+          "appHeaderSeparator": "#55554E",
           "utility": {
             "default": {
               "lowEmphasis": {
@@ -700,6 +706,10 @@
               }
             },
             "placeholder": "#6B6A64"
+          },
+          "appHeader": {
+            "primary": "#FFFFFF",
+            "secondary": "#BCB9B6"
           }
         },
         "link": {
@@ -805,6 +815,10 @@
             "yellow": "#7E6701",
             "green": "#125B3A",
             "blue": "#3C4D9D"
+          },
+          "appHeader": {
+            "primary": "#FFFFFF",
+            "secondary": "#BCB9B6"
           }
         },
         "text-highlight": {
@@ -830,9 +844,9 @@
       "typography": {
         "fontFamily": {
           "decorative": {
-            "inline": "parabolica"
+            "inline": "'parabolica', Arial, sans-serif"
           },
-          "tab": "JetBrains Mono"
+          "tab": "'JetBrains Mono', Consolas, monospace"
         },
         "fontStyle": {
           "headline": {
