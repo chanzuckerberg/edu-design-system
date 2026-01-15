@@ -27,7 +27,8 @@
 .text--headline-xl {
   --text-font-size: var(--eds-typography-preset-800-font-size);
   --text-line-height: var(--eds-typography-preset-800-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -39,7 +40,8 @@
 .text--headline-lg {
   --text-font-size: var(--eds-typography-preset-800-font-size);
   --text-line-height: var(--eds-typography-preset-800-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -51,7 +53,8 @@
 .text--headline-md {
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-condensed);
 
   @media screen and (min-width: $eds-bp-md) {
@@ -63,7 +66,8 @@
 .text--headline-sm {
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -116,40 +120,45 @@
   --text-font-weight: var(--eds-typography-font-weight-light);
   --text-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --text-line-height: var(--eds-typography-preset-600-line-height);
+  }
 }
 
 .text--title-xl {
-  --text-font-size: var(--eds-typography-preset-500-font-size);
-  --text-line-height: var(--eds-typography-preset-500-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-size: var(--eds-typography-preset-800-font-size);
+  --text-line-height: var(--eds-typography-preset-800-line-height);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-lg {
-  --text-font-size: var(--eds-typography-preset-400-font-size);
-  --text-line-height: var(--eds-typography-preset-400-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-size: var(--eds-typography-preset-500-font-size);
+  --text-line-height: var(--eds-typography-preset-500-line-height);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-md {
   --text-font-size: var(--eds-typography-preset-300-font-size);
   --text-line-height: var(--eds-typography-preset-300-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-sm {
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
 .text--title-xs {
-  --text-font-size: var(--eds-typography-preset-100-font-size);
-  --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
+  --text-font-size: var(--eds-typography-preset-200-font-size);
+  --text-line-height: var(--eds-typography-preset-200-line-height);
+  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
 
@@ -245,8 +254,8 @@
 }
 
 .text--label-sm {
-  --text-font-size: var(--eds-typography-preset-075-font-size);
-  --text-line-height: var(--eds-typography-preset-075-line-height);
+  --text-font-size: var(--eds-typography-preset-100-font-size);
+  --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
   --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 }
@@ -256,7 +265,7 @@
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
   --text-text-transform: uppercase;
 }
 
@@ -265,7 +274,7 @@
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
   --text-text-transform: uppercase;
 }
 
@@ -274,7 +283,7 @@
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-extended);
+  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
   --text-text-transform: uppercase;
 }
 
@@ -300,6 +309,7 @@
 }
 
 .text--tab-lg-active {
+  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
@@ -307,6 +317,7 @@
 }
 
 .text--tab-lg {
+  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: var(--eds-typography-font-weight-normal);
@@ -314,6 +325,7 @@
 }
 
 .text--tab-sm-active {
+  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: var(--eds-typography-font-weight-bold);
@@ -321,6 +333,7 @@
 }
 
 .text--tab-sm {
+  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: var(--eds-typography-font-weight-normal);
