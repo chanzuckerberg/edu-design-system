@@ -25,11 +25,11 @@ export const Default: StoryObj<typeof PopoverContainer> = {
       <>
         <div role="none">
           <PopoverListItem icon="arrow-down">test 1</PopoverListItem>
-          <PopoverListItem icon="arrow-left-narrow">test 2</PopoverListItem>
+          <PopoverListItem icon="arrow-left">test 2</PopoverListItem>
           <PopoverListItem icon="arrow-up">test 3</PopoverListItem>
         </div>
         <div role="none">
-          <PopoverListItem icon="arrow-right-narrow" isDestructiveAction>
+          <PopoverListItem icon="arrow-right" isDestructiveAction>
             test 4
           </PopoverListItem>
         </div>
