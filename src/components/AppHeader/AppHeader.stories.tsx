@@ -335,6 +335,71 @@ export const NavTree: Story = {
 };
 
 /**
+ * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
+ * render as a list of links with an overline header.
+ */
+export const NavTreeWithFooterSeparator: Story = {
+  args: {
+    href: '#',
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      console.log('button clicked', ev, navItem);
+    },
+    orientation: 'vertical',
+    navGroups: [
+      {
+        name: 'group-1',
+        navItems: [
+          {
+            name: 'Lakes',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Oceans',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Rivers',
+            type: 'link',
+            href: 'https://example.org',
+            isExternal: true,
+          },
+        ],
+      },
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Profile',
+            type: 'tree',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            navItems: [
+              {
+                type: 'button',
+                name: 'Settings',
+              },
+              {
+                type: 'separator',
+                name: 'sep',
+              },
+              {
+                type: 'link',
+                name: 'Sign Out',
+                href: 'https://example.org/#logout',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};
+
+/**
  * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
  * render as a `Menu` with sub items that match the same types as can exist at the top level.
  */
