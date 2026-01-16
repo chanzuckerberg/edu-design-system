@@ -132,10 +132,15 @@ export type AppHeaderProps = {
    */
   className?: string;
   /**
-   * Handle the click event for any given clickable nav item in the header. Includes the data from the associated/clicked `NavItem` for reference
+   * Handle the click event for a given clickable button nav item in the header. Includes the data from the associated/clicked `NavItem` for reference
    * (e.g., attaching events, tracking, etc.)
    */
   onButtonClick?: AppHeaderEventHandler;
+  /**
+   * Handle the click event for a given clickable link nav item in the header. Includes the data from the associated/clicked `NavItem` for reference
+   * (e.g., attaching events, tracking, etc.)
+   */
+  onLinkClick?: AppHeaderEventHandler;
   // Design API
   /**
    * Web location for the home page. Use this to direct where the main page of the application lives.
@@ -195,6 +200,10 @@ type AppHeaderNavGroupProps = NavGroup & {
    * Handle the click event for any given button in the header
    */
   onButtonClick?: AppHeaderEventHandler;
+  /**
+   * Handle the click event for any given link in the header
+   */
+  onLinkClick?: AppHeaderEventHandler;
   // Design API
 };
 
@@ -240,6 +249,10 @@ type AppHeaderDrawerProps = {
    */
   onButtonClick?: AppHeaderEventHandler;
   /**
+   * Handle the click event for any given link in the header
+   */
+  onLinkClick?: AppHeaderEventHandler;
+  /**
    * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
   navGroups?: NavGroup[];
@@ -263,6 +276,7 @@ export const AppHeader = ({
   href,
   navGroups,
   onButtonClick,
+  onLinkClick,
   orientation,
   style = 'docked',
   subTitle,
@@ -316,8 +330,9 @@ export const AppHeader = ({
                   aria-label="homepage"
                   href={href}
                   onClick={(ev) => {
-                    onButtonClick &&
-                      onButtonClick(ev, {
+                    onLinkClick &&
+                      onLinkClick(ev, {
+                        name: 'EDS-header-logo',
                         type: 'link',
                         href: href,
                       } as NavLink);
@@ -338,6 +353,7 @@ export const AppHeader = ({
                       name={navGroup.name}
                       navItems={navGroup.navItems}
                       onButtonClick={onButtonClick}
+                      onLinkClick={onLinkClick}
                     />
                   ))}
                 </div>
@@ -359,6 +375,7 @@ export const AppHeader = ({
               <AppHeaderDrawerContent
                 navGroups={navGroups}
                 onButtonClick={onButtonClick}
+                onLinkClick={onLinkClick}
               />
             )}
           </div>
@@ -388,6 +405,7 @@ export const AppHeader = ({
               <AppHeaderDrawerContent
                 navGroups={navGroups}
                 onButtonClick={onButtonClick}
+                onLinkClick={onLinkClick}
               />
             </div>,
             document.body,
@@ -440,6 +458,7 @@ const AppHeaderNavGroup = ({
   name,
   navItems,
   onButtonClick,
+  onLinkClick,
   ...other
 }: AppHeaderNavGroupProps) => {
   const componentClassName = clsx(styles['app-header__nav-group']);
@@ -458,7 +477,13 @@ const AppHeaderNavGroup = ({
                 />
               )}
               {navItem.type === 'link' && (
-                <AppHeaderLink key={navItem.name} {...navItem} />
+                <AppHeaderLink
+                  key={navItem.name}
+                  {...navItem}
+                  onClick={(ev) => {
+                    onLinkClick && onLinkClick(ev, navItem);
+                  }}
+                />
               )}
               {(navItem.type === 'menu' || navItem.type === 'tree') && (
                 <Menu>
@@ -480,7 +505,13 @@ const AppHeaderNavGroup = ({
                       switch (navItem.type) {
                         case 'link':
                           return (
-                            <Menu.Item href={navItem.href} key={navItem.name}>
+                            <Menu.Item
+                              href={navItem.href}
+                              key={navItem.name}
+                              onClick={(ev) => {
+                                onLinkClick && onLinkClick(ev, navItem);
+                              }}
+                            >
                               {navItem.name}
                             </Menu.Item>
                           );
@@ -620,6 +651,7 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
 const AppHeaderDrawerContent = ({
   navGroups,
   onButtonClick,
+  onLinkClick,
 }: AppHeaderDrawerProps) => (
   <div className={styles['drawer-content']}>
     {navGroups?.map((navGroup) => (
@@ -651,7 +683,14 @@ const AppHeaderDrawerContent = ({
                   />
                 )}
                 {navItem.type === 'link' && (
-                  <AppHeaderLink isVertical key={navItem.name} {...navItem} />
+                  <AppHeaderLink
+                    isVertical
+                    key={navItem.name}
+                    {...navItem}
+                    onClick={(ev) => {
+                      onLinkClick && onLinkClick(ev, navItem);
+                    }}
+                  />
                 )}
                 {navItem.type === 'separator' && (
                   <Hr
@@ -702,7 +741,13 @@ const AppHeaderDrawerContent = ({
                             />
                           )}
                           {navItem.type === 'link' && (
-                            <AppHeaderLink key={navItem.name} {...navItem} />
+                            <AppHeaderLink
+                              key={navItem.name}
+                              {...navItem}
+                              onClick={(ev) => {
+                                onLinkClick && onLinkClick(ev, navItem);
+                              }}
+                            />
                           )}
                           {navItem.type === 'separator' && (
                             <Hr key={navItem.name} {...navItem} />

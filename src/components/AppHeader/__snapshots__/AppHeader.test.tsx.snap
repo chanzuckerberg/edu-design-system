@@ -278,12 +278,11 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
         >
           <ul>
             <li>
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-left"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
@@ -305,7 +304,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
                     />
                   </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -436,12 +435,11 @@ exports[`<AppHeader /> Floating story renders snapshot 1`] = `
         >
           <ul>
             <li>
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-left"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
@@ -463,7 +461,7 @@ exports[`<AppHeader /> Floating story renders snapshot 1`] = `
                     />
                   </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -780,12 +778,11 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
         >
           <ul>
             <li>
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-left"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
@@ -807,7 +804,7 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
                     />
                   </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -1319,14 +1316,13 @@ exports[`<AppHeader /> VerticalImageLogo story renders snapshot 1`] = `
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-left"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
@@ -1348,7 +1344,7 @@ exports[`<AppHeader /> VerticalImageLogo story renders snapshot 1`] = `
                     />
                   </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

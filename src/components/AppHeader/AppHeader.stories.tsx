@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.1'],
+  tags: ['autodocs', 'version:1.2'],
 
   globals: {
     viewport: {
@@ -38,8 +38,10 @@ export const Default: Story = {
     title: 'Bodies of water',
     subTitle: "They're cool!",
     onButtonClick: (ev, navItem) => {
-      ev.preventDefault();
-      console.log('clicked', ev, navItem);
+      console.log('button clicked', ev, navItem);
+    },
+    onLinkClick: (ev, navItem) => {
+      console.log('link clicked', ev, navItem);
     },
     navGroups: [
       {
@@ -67,8 +69,7 @@ export const Default: Story = {
         navItems: [
           {
             name: 'Profile',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'button',
             icon: 'person-encircled',
             iconLayout: 'left',
           },
@@ -102,7 +103,7 @@ export const Buttons: Story = {
     title: 'Bodies of water',
     subTitle: "They're cool!",
     onButtonClick: (ev, navItem) => {
-      console.log('clicked', ev, navItem);
+      console.log('button clicked', ev, navItem);
     },
     navGroups: [
       {
@@ -222,7 +223,7 @@ export const NavMenus: Story = {
     title: 'Bodies of water',
     subTitle: "They're cool!",
     onButtonClick: (ev, navItem) => {
-      console.log('clicked', ev, navItem);
+      console.log('button clicked', ev, navItem);
     },
     navGroups: [
       {
@@ -282,7 +283,7 @@ export const NavTree: Story = {
     title: 'Bodies of water',
     subTitle: "They're cool!",
     onButtonClick: (ev, navItem) => {
-      console.log('clicked', ev, navItem);
+      console.log('button clicked', ev, navItem);
     },
     orientation: 'vertical',
     navGroups: [
