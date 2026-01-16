@@ -581,9 +581,9 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
     ref,
   ) => {
     const componentClassName = clsx(
+      className,
       styles['app-header__nav-item'],
       styles[`app-header__nav-item--button`],
-      iconLayout && styles[`app-header__nav-item--icon-layout-${iconLayout}`],
     );
     return (
       <button className={componentClassName} ref={ref} {...other}>
@@ -716,6 +716,7 @@ const AppHeaderDrawerContent = ({
                   <Menu>
                     <Menu.PlainButton as={React.Fragment}>
                       <AppHeaderButton
+                        className={styles['app-header__menu-trigger']}
                         icon={navItem.icon}
                         iconLayout={navItem.iconLayout}
                         isVertical
