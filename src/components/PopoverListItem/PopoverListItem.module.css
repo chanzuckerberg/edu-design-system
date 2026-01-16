@@ -35,6 +35,10 @@
   background-color: light-dark(var(--eds-theme-color-background-utility-disabled-no-emphasis), var(--eds-dark-theme-color-background-utility-disabled-no-emphasis));
 }
 
+.popover-list-item--label {
+  pointer-events: none;
+}
+
 .popover-list-item__icon {
   display: flex;
   align-items: center;

@@ -8,6 +8,13 @@ export default {
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0'],
+  argTypes: {
+    __type: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PopoverListItem>;
