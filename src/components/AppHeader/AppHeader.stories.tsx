@@ -37,6 +37,10 @@ export const Default: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      ev.preventDefault();
+      console.log('clicked', ev, navItem);
+    },
     navGroups: [
       {
         name: 'group-1',
@@ -111,6 +115,8 @@ export const Buttons: Story = {
           {
             name: 'Oceans',
             type: 'button',
+            iconLayout: 'left',
+            icon: 'lotus',
           },
           {
             name: 'sep1',
@@ -118,8 +124,9 @@ export const Buttons: Story = {
           },
           {
             name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'button',
+            iconLayout: 'right',
+            icon: 'lotus',
           },
         ],
       },

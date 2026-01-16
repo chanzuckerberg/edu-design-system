@@ -40,7 +40,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
           <ul>
             <li>
               <button
-                class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
                   class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
@@ -55,35 +55,62 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
             </li>
             <li>
               <button
-                class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
                   >
                     Oceans
                   </span>
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.2 19.8748C8.03333 19.6581 6.9 19.2831 5.8 18.7498C4.7 18.2165 3.72083 17.4748 2.8625 16.5248C2.00417 15.5748 1.3125 14.3998 0.7875 12.9998C0.2625 11.5998 0 9.93314 0 7.9998V7.7998C0 7.56647 0.075 7.3748 0.225 7.2248C0.375 7.0748 0.566667 6.9998 0.8 6.9998H1C1.85 6.9998 2.725 7.10814 3.625 7.3248C4.525 7.54147 5.36667 7.86647 6.15 8.2998C6.33333 7.06647 6.7 5.7998 7.25 4.4998C7.8 3.1998 8.45833 2.0248 9.225 0.974805C9.425 0.691471 9.68333 0.549805 10 0.549805C10.3167 0.549805 10.575 0.691471 10.775 0.974805C11.5417 2.0248 12.2 3.1998 12.75 4.4998C13.3 5.7998 13.6667 7.06647 13.85 8.2998C14.6333 7.86647 15.475 7.54147 16.375 7.3248C17.275 7.10814 18.15 6.9998 19 6.9998H19.1C19.35 6.9998 19.5625 7.0873 19.7375 7.2623C19.9125 7.4373 20 7.6498 20 7.8998V7.9998C20 9.93314 19.7375 11.5998 19.2125 12.9998C18.6875 14.3998 17.9958 15.5748 17.1375 16.5248C16.2792 17.4748 15.3 18.2165 14.2 18.7498C13.1 19.2831 11.9667 19.6581 10.8 19.8748C10.5833 19.9081 10.3167 19.9248 10 19.9248C9.68333 19.9248 9.41667 19.9081 9.2 19.8748ZM9.95 17.9498C9.76667 15.1998 8.9375 13.1123 7.4625 11.6873C5.9875 10.2623 4.18333 9.38314 2.05 9.0498C2.01667 9.0498 2.01667 9.0498 2.05 9.0498C2.23333 11.8665 3.0875 13.9831 4.6125 15.3998C6.1375 16.8165 7.91667 17.6665 9.95 17.9498C9.98333 17.9665 9.98333 17.9706 9.95 17.9623C9.91667 17.954 9.91667 17.9498 9.95 17.9498ZM8.05 9.44981C8.38333 9.73314 8.73333 10.0706 9.1 10.4623C9.46667 10.854 9.76667 11.2331 10 11.5998C10.25 11.2331 10.5542 10.854 10.9125 10.4623C11.2708 10.0706 11.6167 9.73314 11.95 9.44981C11.9167 8.4998 11.7292 7.50814 11.3875 6.4748C11.0458 5.44147 10.5833 4.43314 10 3.4498C9.41667 4.43314 8.95417 5.44147 8.6125 6.4748C8.27083 7.50814 8.08333 8.4998 8.05 9.44981ZM11.1 13.6998C11.3 14.2331 11.4708 14.8165 11.6125 15.4498C11.7542 16.0831 11.8667 16.7665 11.95 17.4998C12.55 17.2998 13.1833 16.9998 13.85 16.5998C14.5167 16.1998 15.1333 15.6665 15.7 14.9998C16.2667 14.3331 16.7583 13.5123 17.175 12.5373C17.5917 11.5623 17.85 10.3998 17.95 9.0498C17.95 9.01647 17.95 9.01647 17.95 9.0498C16.3833 9.28314 15.0083 9.80397 13.825 10.6123C12.6417 11.4206 11.7333 12.4498 11.1 13.6998Z"
+                    />
+                  </svg>
                 </span>
               </button>
             </li>
             <li />
             <li>
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-right"
                 >
                   <span
                     class="text text--label-md"
                   >
                     Rivers
                   </span>
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.2 19.8748C8.03333 19.6581 6.9 19.2831 5.8 18.7498C4.7 18.2165 3.72083 17.4748 2.8625 16.5248C2.00417 15.5748 1.3125 14.3998 0.7875 12.9998C0.2625 11.5998 0 9.93314 0 7.9998V7.7998C0 7.56647 0.075 7.3748 0.225 7.2248C0.375 7.0748 0.566667 6.9998 0.8 6.9998H1C1.85 6.9998 2.725 7.10814 3.625 7.3248C4.525 7.54147 5.36667 7.86647 6.15 8.2998C6.33333 7.06647 6.7 5.7998 7.25 4.4998C7.8 3.1998 8.45833 2.0248 9.225 0.974805C9.425 0.691471 9.68333 0.549805 10 0.549805C10.3167 0.549805 10.575 0.691471 10.775 0.974805C11.5417 2.0248 12.2 3.1998 12.75 4.4998C13.3 5.7998 13.6667 7.06647 13.85 8.2998C14.6333 7.86647 15.475 7.54147 16.375 7.3248C17.275 7.10814 18.15 6.9998 19 6.9998H19.1C19.35 6.9998 19.5625 7.0873 19.7375 7.2623C19.9125 7.4373 20 7.6498 20 7.8998V7.9998C20 9.93314 19.7375 11.5998 19.2125 12.9998C18.6875 14.3998 17.9958 15.5748 17.1375 16.5248C16.2792 17.4748 15.3 18.2165 14.2 18.7498C13.1 19.2831 11.9667 19.6581 10.8 19.8748C10.5833 19.9081 10.3167 19.9248 10 19.9248C9.68333 19.9248 9.41667 19.9081 9.2 19.8748ZM9.95 17.9498C9.76667 15.1998 8.9375 13.1123 7.4625 11.6873C5.9875 10.2623 4.18333 9.38314 2.05 9.0498C2.01667 9.0498 2.01667 9.0498 2.05 9.0498C2.23333 11.8665 3.0875 13.9831 4.6125 15.3998C6.1375 16.8165 7.91667 17.6665 9.95 17.9498C9.98333 17.9665 9.98333 17.9706 9.95 17.9623C9.91667 17.954 9.91667 17.9498 9.95 17.9498ZM8.05 9.44981C8.38333 9.73314 8.73333 10.0706 9.1 10.4623C9.46667 10.854 9.76667 11.2331 10 11.5998C10.25 11.2331 10.5542 10.854 10.9125 10.4623C11.2708 10.0706 11.6167 9.73314 11.95 9.44981C11.9167 8.4998 11.7292 7.50814 11.3875 6.4748C11.0458 5.44147 10.5833 4.43314 10 3.4498C9.41667 4.43314 8.95417 5.44147 8.6125 6.4748C8.27083 7.50814 8.08333 8.4998 8.05 9.44981ZM11.1 13.6998C11.3 14.2331 11.4708 14.8165 11.6125 15.4498C11.7542 16.0831 11.8667 16.7665 11.95 17.4998C12.55 17.2998 13.1833 16.9998 13.85 16.5998C14.5167 16.1998 15.1333 15.6665 15.7 14.9998C16.2667 14.3331 16.7583 13.5123 17.175 12.5373C17.5917 11.5623 17.85 10.3998 17.95 9.0498C17.95 9.01647 17.95 9.01647 17.95 9.0498C16.3833 9.28314 15.0083 9.80397 13.825 10.6123C12.6417 11.4206 11.7333 12.4498 11.1 13.6998Z"
+                    />
+                  </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -130,7 +157,7 @@ exports[`<AppHeader /> Buttons story renders snapshot 1`] = `
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+          class="app-header__nav-item app-header__nav-item--button"
         >
           <span
             class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
@@ -288,7 +315,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+          class="app-header__nav-item app-header__nav-item--button"
         >
           <span
             class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
@@ -446,7 +473,7 @@ exports[`<AppHeader /> Floating story renders snapshot 1`] = `
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+          class="app-header__nav-item app-header__nav-item--button"
         >
           <span
             class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
@@ -515,7 +542,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
               <button
-                class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
                   class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
@@ -532,16 +559,30 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
               <button
-                class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
                   >
                     Oceans
                   </span>
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.2 19.8748C8.03333 19.6581 6.9 19.2831 5.8 18.7498C4.7 18.2165 3.72083 17.4748 2.8625 16.5248C2.00417 15.5748 1.3125 14.3998 0.7875 12.9998C0.2625 11.5998 0 9.93314 0 7.9998V7.7998C0 7.56647 0.075 7.3748 0.225 7.2248C0.375 7.0748 0.566667 6.9998 0.8 6.9998H1C1.85 6.9998 2.725 7.10814 3.625 7.3248C4.525 7.54147 5.36667 7.86647 6.15 8.2998C6.33333 7.06647 6.7 5.7998 7.25 4.4998C7.8 3.1998 8.45833 2.0248 9.225 0.974805C9.425 0.691471 9.68333 0.549805 10 0.549805C10.3167 0.549805 10.575 0.691471 10.775 0.974805C11.5417 2.0248 12.2 3.1998 12.75 4.4998C13.3 5.7998 13.6667 7.06647 13.85 8.2998C14.6333 7.86647 15.475 7.54147 16.375 7.3248C17.275 7.10814 18.15 6.9998 19 6.9998H19.1C19.35 6.9998 19.5625 7.0873 19.7375 7.2623C19.9125 7.4373 20 7.6498 20 7.8998V7.9998C20 9.93314 19.7375 11.5998 19.2125 12.9998C18.6875 14.3998 17.9958 15.5748 17.1375 16.5248C16.2792 17.4748 15.3 18.2165 14.2 18.7498C13.1 19.2831 11.9667 19.6581 10.8 19.8748C10.5833 19.9081 10.3167 19.9248 10 19.9248C9.68333 19.9248 9.41667 19.9081 9.2 19.8748ZM9.95 17.9498C9.76667 15.1998 8.9375 13.1123 7.4625 11.6873C5.9875 10.2623 4.18333 9.38314 2.05 9.0498C2.01667 9.0498 2.01667 9.0498 2.05 9.0498C2.23333 11.8665 3.0875 13.9831 4.6125 15.3998C6.1375 16.8165 7.91667 17.6665 9.95 17.9498C9.98333 17.9665 9.98333 17.9706 9.95 17.9623C9.91667 17.954 9.91667 17.9498 9.95 17.9498ZM8.05 9.44981C8.38333 9.73314 8.73333 10.0706 9.1 10.4623C9.46667 10.854 9.76667 11.2331 10 11.5998C10.25 11.2331 10.5542 10.854 10.9125 10.4623C11.2708 10.0706 11.6167 9.73314 11.95 9.44981C11.9167 8.4998 11.7292 7.50814 11.3875 6.4748C11.0458 5.44147 10.5833 4.43314 10 3.4498C9.41667 4.43314 8.95417 5.44147 8.6125 6.4748C8.27083 7.50814 8.08333 8.4998 8.05 9.44981ZM11.1 13.6998C11.3 14.2331 11.4708 14.8165 11.6125 15.4498C11.7542 16.0831 11.8667 16.7665 11.95 17.4998C12.55 17.2998 13.1833 16.9998 13.85 16.5998C14.5167 16.1998 15.1333 15.6665 15.7 14.9998C16.2667 14.3331 16.7583 13.5123 17.175 12.5373C17.5917 11.5623 17.85 10.3998 17.95 9.0498C17.95 9.01647 17.95 9.01647 17.95 9.0498C16.3833 9.28314 15.0083 9.80397 13.825 10.6123C12.6417 11.4206 11.7333 12.4498 11.1 13.6998Z"
+                    />
+                  </svg>
                 </span>
               </button>
             </li>
@@ -555,22 +596,35 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               />
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-right"
                 >
                   <span
                     class="text text--label-md"
                   >
                     Rivers
                   </span>
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.2 19.8748C8.03333 19.6581 6.9 19.2831 5.8 18.7498C4.7 18.2165 3.72083 17.4748 2.8625 16.5248C2.00417 15.5748 1.3125 14.3998 0.7875 12.9998C0.2625 11.5998 0 9.93314 0 7.9998V7.7998C0 7.56647 0.075 7.3748 0.225 7.2248C0.375 7.0748 0.566667 6.9998 0.8 6.9998H1C1.85 6.9998 2.725 7.10814 3.625 7.3248C4.525 7.54147 5.36667 7.86647 6.15 8.2998C6.33333 7.06647 6.7 5.7998 7.25 4.4998C7.8 3.1998 8.45833 2.0248 9.225 0.974805C9.425 0.691471 9.68333 0.549805 10 0.549805C10.3167 0.549805 10.575 0.691471 10.775 0.974805C11.5417 2.0248 12.2 3.1998 12.75 4.4998C13.3 5.7998 13.6667 7.06647 13.85 8.2998C14.6333 7.86647 15.475 7.54147 16.375 7.3248C17.275 7.10814 18.15 6.9998 19 6.9998H19.1C19.35 6.9998 19.5625 7.0873 19.7375 7.2623C19.9125 7.4373 20 7.6498 20 7.8998V7.9998C20 9.93314 19.7375 11.5998 19.2125 12.9998C18.6875 14.3998 17.9958 15.5748 17.1375 16.5248C16.2792 17.4748 15.3 18.2165 14.2 18.7498C13.1 19.2831 11.9667 19.6581 10.8 19.8748C10.5833 19.9081 10.3167 19.9248 10 19.9248C9.68333 19.9248 9.41667 19.9081 9.2 19.8748ZM9.95 17.9498C9.76667 15.1998 8.9375 13.1123 7.4625 11.6873C5.9875 10.2623 4.18333 9.38314 2.05 9.0498C2.01667 9.0498 2.01667 9.0498 2.05 9.0498C2.23333 11.8665 3.0875 13.9831 4.6125 15.3998C6.1375 16.8165 7.91667 17.6665 9.95 17.9498C9.98333 17.9665 9.98333 17.9706 9.95 17.9623C9.91667 17.954 9.91667 17.9498 9.95 17.9498ZM8.05 9.44981C8.38333 9.73314 8.73333 10.0706 9.1 10.4623C9.46667 10.854 9.76667 11.2331 10 11.5998C10.25 11.2331 10.5542 10.854 10.9125 10.4623C11.2708 10.0706 11.6167 9.73314 11.95 9.44981C11.9167 8.4998 11.7292 7.50814 11.3875 6.4748C11.0458 5.44147 10.5833 4.43314 10 3.4498C9.41667 4.43314 8.95417 5.44147 8.6125 6.4748C8.27083 7.50814 8.08333 8.4998 8.05 9.44981ZM11.1 13.6998C11.3 14.2331 11.4708 14.8165 11.6125 15.4498C11.7542 16.0831 11.8667 16.7665 11.95 17.4998C12.55 17.2998 13.1833 16.9998 13.85 16.5998C14.5167 16.1998 15.1333 15.6665 15.7 14.9998C16.2667 14.3331 16.7583 13.5123 17.175 12.5373C17.5917 11.5623 17.85 10.3998 17.95 9.0498C17.95 9.01647 17.95 9.01647 17.95 9.0498C16.3833 9.28314 15.0083 9.80397 13.825 10.6123C12.6417 11.4206 11.7333 12.4498 11.1 13.6998Z"
+                    />
+                  </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -763,7 +817,7 @@ exports[`<AppHeader /> ImageLogo story renders snapshot 1`] = `
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+          class="app-header__nav-item app-header__nav-item--button"
         >
           <span
             class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
@@ -892,7 +946,7 @@ exports[`<AppHeader /> NavMenus story renders snapshot 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                  class="app-header__nav-item app-header__nav-item--button"
                   data-headlessui-state=""
                   id="headlessui-menu-button-:r2:"
                 >
@@ -930,7 +984,7 @@ exports[`<AppHeader /> NavMenus story renders snapshot 1`] = `
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+          class="app-header__nav-item app-header__nav-item--button"
         >
           <span
             class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
@@ -1112,7 +1166,7 @@ exports[`<AppHeader /> NavTree story renders snapshot 1`] = `
                 <ul>
                   <li>
                     <button
-                      class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                      class="app-header__nav-item app-header__nav-item--button"
                     >
                       <span
                         class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
@@ -1428,7 +1482,7 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                  class="app-header__menu-trigger app-header__nav-item app-header__nav-item--button"
                   data-headlessui-state=""
                   id="headlessui-menu-button-:re:"
                 >
@@ -1522,7 +1576,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
               <button
-                class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
                   class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
@@ -1539,16 +1593,30 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
               <button
-                class="app-header__nav-item app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
                 >
                   <span
                     class="text text--label-md"
                   >
                     Oceans
                   </span>
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.2 19.8748C8.03333 19.6581 6.9 19.2831 5.8 18.7498C4.7 18.2165 3.72083 17.4748 2.8625 16.5248C2.00417 15.5748 1.3125 14.3998 0.7875 12.9998C0.2625 11.5998 0 9.93314 0 7.9998V7.7998C0 7.56647 0.075 7.3748 0.225 7.2248C0.375 7.0748 0.566667 6.9998 0.8 6.9998H1C1.85 6.9998 2.725 7.10814 3.625 7.3248C4.525 7.54147 5.36667 7.86647 6.15 8.2998C6.33333 7.06647 6.7 5.7998 7.25 4.4998C7.8 3.1998 8.45833 2.0248 9.225 0.974805C9.425 0.691471 9.68333 0.549805 10 0.549805C10.3167 0.549805 10.575 0.691471 10.775 0.974805C11.5417 2.0248 12.2 3.1998 12.75 4.4998C13.3 5.7998 13.6667 7.06647 13.85 8.2998C14.6333 7.86647 15.475 7.54147 16.375 7.3248C17.275 7.10814 18.15 6.9998 19 6.9998H19.1C19.35 6.9998 19.5625 7.0873 19.7375 7.2623C19.9125 7.4373 20 7.6498 20 7.8998V7.9998C20 9.93314 19.7375 11.5998 19.2125 12.9998C18.6875 14.3998 17.9958 15.5748 17.1375 16.5248C16.2792 17.4748 15.3 18.2165 14.2 18.7498C13.1 19.2831 11.9667 19.6581 10.8 19.8748C10.5833 19.9081 10.3167 19.9248 10 19.9248C9.68333 19.9248 9.41667 19.9081 9.2 19.8748ZM9.95 17.9498C9.76667 15.1998 8.9375 13.1123 7.4625 11.6873C5.9875 10.2623 4.18333 9.38314 2.05 9.0498C2.01667 9.0498 2.01667 9.0498 2.05 9.0498C2.23333 11.8665 3.0875 13.9831 4.6125 15.3998C6.1375 16.8165 7.91667 17.6665 9.95 17.9498C9.98333 17.9665 9.98333 17.9706 9.95 17.9623C9.91667 17.954 9.91667 17.9498 9.95 17.9498ZM8.05 9.44981C8.38333 9.73314 8.73333 10.0706 9.1 10.4623C9.46667 10.854 9.76667 11.2331 10 11.5998C10.25 11.2331 10.5542 10.854 10.9125 10.4623C11.2708 10.0706 11.6167 9.73314 11.95 9.44981C11.9167 8.4998 11.7292 7.50814 11.3875 6.4748C11.0458 5.44147 10.5833 4.43314 10 3.4498C9.41667 4.43314 8.95417 5.44147 8.6125 6.4748C8.27083 7.50814 8.08333 8.4998 8.05 9.44981ZM11.1 13.6998C11.3 14.2331 11.4708 14.8165 11.6125 15.4498C11.7542 16.0831 11.8667 16.7665 11.95 17.4998C12.55 17.2998 13.1833 16.9998 13.85 16.5998C14.5167 16.1998 15.1333 15.6665 15.7 14.9998C16.2667 14.3331 16.7583 13.5123 17.175 12.5373C17.5917 11.5623 17.85 10.3998 17.95 9.0498C17.95 9.01647 17.95 9.01647 17.95 9.0498C16.3833 9.28314 15.0083 9.80397 13.825 10.6123C12.6417 11.4206 11.7333 12.4498 11.1 13.6998Z"
+                    />
+                  </svg>
                 </span>
               </button>
             </li>
@@ -1562,22 +1630,35 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               />
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-button"
             >
-              <a
-                class="app-header__nav-item app-header__nav-item--link"
-                href="https://example.org"
+              <button
+                class="app-header__nav-item app-header__nav-item--button"
               >
                 <span
-                  class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
+                  class="app-header__nav-item--button app-header__nav-item--icon-layout-right"
                 >
                   <span
                     class="text text--label-md"
                   >
                     Rivers
                   </span>
+                  <svg
+                    aria-hidden="true"
+                    class="icon"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.2 19.8748C8.03333 19.6581 6.9 19.2831 5.8 18.7498C4.7 18.2165 3.72083 17.4748 2.8625 16.5248C2.00417 15.5748 1.3125 14.3998 0.7875 12.9998C0.2625 11.5998 0 9.93314 0 7.9998V7.7998C0 7.56647 0.075 7.3748 0.225 7.2248C0.375 7.0748 0.566667 6.9998 0.8 6.9998H1C1.85 6.9998 2.725 7.10814 3.625 7.3248C4.525 7.54147 5.36667 7.86647 6.15 8.2998C6.33333 7.06647 6.7 5.7998 7.25 4.4998C7.8 3.1998 8.45833 2.0248 9.225 0.974805C9.425 0.691471 9.68333 0.549805 10 0.549805C10.3167 0.549805 10.575 0.691471 10.775 0.974805C11.5417 2.0248 12.2 3.1998 12.75 4.4998C13.3 5.7998 13.6667 7.06647 13.85 8.2998C14.6333 7.86647 15.475 7.54147 16.375 7.3248C17.275 7.10814 18.15 6.9998 19 6.9998H19.1C19.35 6.9998 19.5625 7.0873 19.7375 7.2623C19.9125 7.4373 20 7.6498 20 7.8998V7.9998C20 9.93314 19.7375 11.5998 19.2125 12.9998C18.6875 14.3998 17.9958 15.5748 17.1375 16.5248C16.2792 17.4748 15.3 18.2165 14.2 18.7498C13.1 19.2831 11.9667 19.6581 10.8 19.8748C10.5833 19.9081 10.3167 19.9248 10 19.9248C9.68333 19.9248 9.41667 19.9081 9.2 19.8748ZM9.95 17.9498C9.76667 15.1998 8.9375 13.1123 7.4625 11.6873C5.9875 10.2623 4.18333 9.38314 2.05 9.0498C2.01667 9.0498 2.01667 9.0498 2.05 9.0498C2.23333 11.8665 3.0875 13.9831 4.6125 15.3998C6.1375 16.8165 7.91667 17.6665 9.95 17.9498C9.98333 17.9665 9.98333 17.9706 9.95 17.9623C9.91667 17.954 9.91667 17.9498 9.95 17.9498ZM8.05 9.44981C8.38333 9.73314 8.73333 10.0706 9.1 10.4623C9.46667 10.854 9.76667 11.2331 10 11.5998C10.25 11.2331 10.5542 10.854 10.9125 10.4623C11.2708 10.0706 11.6167 9.73314 11.95 9.44981C11.9167 8.4998 11.7292 7.50814 11.3875 6.4748C11.0458 5.44147 10.5833 4.43314 10 3.4498C9.41667 4.43314 8.95417 5.44147 8.6125 6.4748C8.27083 7.50814 8.08333 8.4998 8.05 9.44981ZM11.1 13.6998C11.3 14.2331 11.4708 14.8165 11.6125 15.4498C11.7542 16.0831 11.8667 16.7665 11.95 17.4998C12.55 17.2998 13.1833 16.9998 13.85 16.5998C14.5167 16.1998 15.1333 15.6665 15.7 14.9998C16.2667 14.3331 16.7583 13.5123 17.175 12.5373C17.5917 11.5623 17.85 10.3998 17.95 9.0498C17.95 9.01647 17.95 9.01647 17.95 9.0498C16.3833 9.28314 15.0083 9.80397 13.825 10.6123C12.6417 11.4206 11.7333 12.4498 11.1 13.6998Z"
+                    />
+                  </svg>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

@@ -209,6 +209,10 @@
   }
 }
 
+.app-header__menu-trigger {
+  flex-direction: row-reverse;
+}
+
 /**
  * AppHeader title component and its sub-components
  */
