@@ -11,9 +11,10 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 describe('<AppHeader />', () => {
   generateSnapshots(stories as StoryFile);
 
-  it('handles button clicks on button types (horizontal)', async () => {
+  it('handles clicks on nav items types (horizontal)', async () => {
     const user = userEvent.setup();
     const onClickMock = jest.fn();
+    const onLinkClickMock = jest.fn();
 
     render(
       <AppHeader
@@ -46,7 +47,7 @@ describe('<AppHeader />', () => {
               {
                 name: 'Profile',
                 type: 'link',
-                href: 'https://example.org',
+                href: '#',
                 icon: 'person-encircled',
                 iconLayout: 'right',
               },
@@ -54,6 +55,7 @@ describe('<AppHeader />', () => {
           },
         ]}
         onButtonClick={onClickMock}
+        onLinkClick={onLinkClickMock}
         subTitle="They're cool!"
         title="Bodies of water"
       />,
@@ -65,11 +67,22 @@ describe('<AppHeader />', () => {
       name: 'Oceans',
       type: 'button',
     });
+
+    await user.click(screen.getAllByRole('link')[1]);
+    expect(onLinkClickMock).toHaveBeenCalled();
+    expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+      name: 'Profile',
+      type: 'link',
+      href: '#',
+      icon: 'person-encircled',
+      iconLayout: 'right',
+    });
   });
 
-  it('handles button clicks on button types (vertical)', async () => {
+  it('handles clicks on nav item types (vertical)', async () => {
     const user = userEvent.setup();
     const onClickMock = jest.fn();
+    const onLinkClickMock = jest.fn();
 
     render(
       <AppHeader
@@ -102,7 +115,7 @@ describe('<AppHeader />', () => {
               {
                 name: 'Profile',
                 type: 'link',
-                href: 'https://example.org',
+                href: '#',
                 icon: 'person-encircled',
                 iconLayout: 'right',
               },
@@ -110,6 +123,7 @@ describe('<AppHeader />', () => {
           },
         ]}
         onButtonClick={onClickMock}
+        onLinkClick={onLinkClickMock}
         orientation="vertical"
         subTitle="They're cool!"
         title="Bodies of water"
@@ -121,6 +135,16 @@ describe('<AppHeader />', () => {
     expect(onClickMock.mock.calls[0][1]).toEqual({
       name: 'Lakes',
       type: 'button',
+    });
+
+    await user.click(screen.getAllByRole('link')[1]);
+    expect(onLinkClickMock).toHaveBeenCalled();
+    expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+      name: 'Profile',
+      type: 'link',
+      href: '#',
+      icon: 'person-encircled',
+      iconLayout: 'right',
     });
   });
 });
