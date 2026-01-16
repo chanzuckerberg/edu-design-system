@@ -261,6 +261,12 @@ export const NavMenus: Story = {
                 name: 'Settings',
               },
               {
+                name: 'About Us',
+                type: 'link',
+                href: 'http://example.org',
+                isExternal: true,
+              },
+              {
                 type: 'link',
                 name: 'Sign Out',
                 href: 'https://example.org/#logout',

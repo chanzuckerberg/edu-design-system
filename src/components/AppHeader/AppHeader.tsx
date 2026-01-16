@@ -518,6 +518,7 @@ const AppHeaderNavGroup = ({
                               onClick={(ev) => {
                                 onLinkClick && onLinkClick(ev, navItem);
                               }}
+                              target={navItem.isExternal ? '_blank' : undefined}
                             >
                               {navItem.name}
                             </Menu.Item>
@@ -798,7 +799,13 @@ const AppHeaderDrawerContent = ({
                         switch (navItem.type) {
                           case 'link':
                             return (
-                              <Menu.Item href={navItem.href} key={navItem.name}>
+                              <Menu.Item
+                                href={navItem.href}
+                                key={navItem.name}
+                                target={
+                                  navItem.isExternal ? '_blank' : undefined
+                                }
+                              >
                                 {navItem.name}
                               </Menu.Item>
                             );
