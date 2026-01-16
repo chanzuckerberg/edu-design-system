@@ -26,6 +26,11 @@ export default {
         disable: true,
       },
     },
+    __type: {
+      table: {
+        disable: true,
+      },
+    },
   },
   decorators: [
     (Story) => (

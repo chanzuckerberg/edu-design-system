@@ -264,6 +264,10 @@ export const NavMenus: Story = {
                 name: 'Sign Out',
                 href: 'https://example.org/#logout',
               },
+              {
+                type: 'label',
+                name: '© 2025 Your Company Name. All rights reserved.',
+              },
             ],
           },
         ],

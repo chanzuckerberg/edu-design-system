@@ -67,6 +67,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
    * Configurable action for the menu item upon click
    */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
+  __type?: 'listitem' | 'label';
 };
 
 /**
@@ -144,6 +145,7 @@ const MenuItem = ({
   href,
   icon,
   onClick,
+  __type,
   ...other
 }: MenuItemProps) => {
   return (
@@ -151,6 +153,7 @@ const MenuItem = ({
       {({ focus, disabled }) => {
         const listItemView = (
           <PopoverListItem
+            __type={__type}
             className={className}
             icon={icon}
             isDisabled={disabled}
@@ -159,7 +162,7 @@ const MenuItem = ({
             {children as ReactNode}
           </PopoverListItem>
         );
-        return disabled ? (
+        return disabled || __type === 'label' ? (
           listItemView
         ) : (
           <a

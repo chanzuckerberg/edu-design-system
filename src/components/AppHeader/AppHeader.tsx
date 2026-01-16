@@ -106,7 +106,7 @@ type NavMenu = NavItem & {
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
-  navItems: (NavLink | NavButton | NavSeparator)[];
+  navItems: (NavLink | NavButton | NavMenuLabel)[];
 };
 
 /**
@@ -118,6 +118,13 @@ type NavTree = NavItem & {
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
   navItems: (NavLink | NavButton | NavSeparator)[];
+};
+
+/**
+ * Menus can have non-interactive labels
+ */
+type NavMenuLabel = NavItem & {
+  type: 'label';
 };
 
 type AppHeaderEventHandler = (
@@ -495,6 +502,18 @@ const AppHeaderNavGroup = ({
                               {navItem.name}
                             </Menu.Item>
                           );
+                        case 'label':
+                          return (
+                            <Menu.Item
+                              __type="label"
+                              key={navItem.name}
+                              onClick={(ev) => {
+                                onButtonClick && onButtonClick(ev, navItem);
+                              }}
+                            >
+                              {navItem.name}
+                            </Menu.Item>
+                          );
                         default:
                           return <Menu.Item>N/A</Menu.Item>;
                       }
@@ -741,6 +760,18 @@ const AppHeaderDrawerContent = ({
                           case 'button':
                             return (
                               <Menu.Item
+                                key={navItem.name}
+                                onClick={(ev) => {
+                                  onButtonClick && onButtonClick(ev, navItem);
+                                }}
+                              >
+                                {navItem.name}
+                              </Menu.Item>
+                            );
+                          case 'label':
+                            return (
+                              <Menu.Item
+                                __type="label"
                                 key={navItem.name}
                                 onClick={(ev) => {
                                   onButtonClick && onButtonClick(ev, navItem);
