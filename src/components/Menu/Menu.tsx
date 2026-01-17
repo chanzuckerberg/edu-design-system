@@ -7,7 +7,11 @@ import {
 import type { AnchorProps } from '@headlessui/react/dist/internal/floating';
 
 import clsx from 'clsx';
-import type { ReactNode, MouseEventHandler } from 'react';
+import type {
+  ReactNode,
+  MouseEventHandler,
+  HTMLAttributeAnchorTarget,
+} from 'react';
 import React from 'react';
 
 import type { ExtractProps } from '../../util/utility-types';
@@ -68,6 +72,10 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
    */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
   __type?: 'listitem' | 'label';
+  /**
+   * Specify the target of the link if present
+   */
+  target?: HTMLAttributeAnchorTarget;
 };
 
 /**
@@ -145,6 +153,7 @@ const MenuItem = ({
   href,
   icon,
   onClick,
+  target,
   __type,
   ...other
 }: MenuItemProps) => {
@@ -169,6 +178,7 @@ const MenuItem = ({
             className={clsx(styles['menu__item'])}
             href={href}
             onClick={onClick}
+            target={target}
           >
             {listItemView}
           </a>
