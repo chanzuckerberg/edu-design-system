@@ -2618,7 +2618,7 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/jsonfile": "npm:^6"
     "@types/lodash": "npm:^4.17.23"
-    "@types/node": "npm:^20.19.28"
+    "@types/node": "npm:^20.19.30"
     "@types/react": "npm:^18.3.27"
     "@types/react-dom": "npm:^18.3.7"
     "@types/yargs": "npm:^17.0.35"
@@ -5878,12 +5878,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.19.28":
-  version: 20.19.29
-  resolution: "@types/node@npm:20.19.29"
+"@types/node@npm:^20.19.30":
+  version: 20.19.30
+  resolution: "@types/node@npm:20.19.30"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/c0d6f3ad09f5cde74544afca26652de346d84f0922d67951d473566b0bc571913b1d8b49fb796f5fee36b404c8aaa933513e79a074fd54cf49c76f026825a399
+  checksum: 10/4a25e5cbcdfc61b9bf45ebbbd199a6ce26efed34bd67c45c3472654a1cf988f7b58ec7c1574ffb5b83c6a772e7eaf1ca9de94fdafc3a36ae6efb852c1f0b6fb0
   languageName: node
   linkType: hard
 

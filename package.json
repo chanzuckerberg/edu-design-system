@@ -127,7 +127,7 @@
     "@types/jest": "^29.5.14",
     "@types/jsonfile": "^6",
     "@types/lodash": "^4.17.23",
-    "@types/node": "^20.19.28",
+    "@types/node": "^20.19.30",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
     "@types/yargs": "^17.0.35",
