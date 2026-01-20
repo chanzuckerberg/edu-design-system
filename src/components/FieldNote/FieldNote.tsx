@@ -29,9 +29,12 @@ export type FieldNoteProps = {
   /**
    * Icon to use when an "icon" variant of the avatar.
    *
-   * **Default is `"dangerous"`**.
+   * **Default is `"critical"`**.
    */
-  icon?: Extract<IconName, 'dangerous' | 'warning-filled'>;
+  icon?: Extract<
+    IconName,
+    'critical-encircled-filled' | 'dangerous' | 'warning-filled'
+  >;
   /**
    * Status for the field state
    *
@@ -65,7 +68,7 @@ export const FieldNote = ({
   let iconToUse = icon;
   let title = 'fieldnote status icon';
   if (status === 'critical') {
-    iconToUse = 'dangerous';
+    iconToUse = 'critical-encircled-filled';
     title = 'error';
   } else if (status === 'warning') {
     iconToUse = 'warning-filled';

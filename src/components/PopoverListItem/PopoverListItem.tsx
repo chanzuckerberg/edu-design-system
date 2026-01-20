@@ -14,6 +14,7 @@ export type PopoverListItemProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  __type?: 'listitem' | 'label';
   // Design API
   /**
    * Icon from the set of defined EDS icon set
@@ -61,6 +62,7 @@ export const PopoverListItem = React.forwardRef<
       children,
       icon,
       subLabel,
+      __type,
       ...other
     },
     ref,
@@ -70,6 +72,7 @@ export const PopoverListItem = React.forwardRef<
       isDisabled && styles['popover-list-item--disabled'],
       isDestructiveAction && styles['popover-list-item--destructive-action'],
       isFocused && styles['popover-list-item--focused'],
+      __type === 'label' && styles['popover-list-item--label'],
       className,
     );
 
@@ -94,7 +97,7 @@ export const PopoverListItem = React.forwardRef<
           <div className={styles['popover-list-item__no-icon']}></div>
         )}
         <div className={styles['popover-list-item__menu-labels']}>
-          <Text as="div" preset="body-md">
+          <Text as="div" preset={__type === 'label' ? 'body-xs' : 'body-md'}>
             {children}
           </Text>
           {subLabel && (

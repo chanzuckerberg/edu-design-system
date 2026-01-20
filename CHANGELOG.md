@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.2.0...v17.3.0) (2026-01-17)
+
+
+### Features
+
+* **AppHeader:** add support for event handlers on links ([#2353](https://github.com/chanzuckerberg/edu-design-system/issues/2353)) ([39d4c49](https://github.com/chanzuckerberg/edu-design-system/commit/39d4c495a0d0272a0e471d4ffe4f38080c9ee9bd))
+* **AppHeeader:** add private API for menu labels ([#2354](https://github.com/chanzuckerberg/edu-design-system/issues/2354)) ([32f144e](https://github.com/chanzuckerberg/edu-design-system/commit/32f144ee2aca891101fd4b95f3701256591436bf))
+* **icons:** update icons from design ([#2348](https://github.com/chanzuckerberg/edu-design-system/issues/2348)) ([ab01290](https://github.com/chanzuckerberg/edu-design-system/commit/ab01290f5a111b8b0e24d9ba49f201944bbc6fd8))
+* **Menu:** allow specifying of target in Menu Item links ([#2355](https://github.com/chanzuckerberg/edu-design-system/issues/2355)) ([7908142](https://github.com/chanzuckerberg/edu-design-system/commit/7908142dc768af94f6e1d6433b92d030f9935cf8))
+
+
+### Bug Fixes
+
+* **AppHeader:** adjust alignment of vertical button contents ([#2352](https://github.com/chanzuckerberg/edu-design-system/issues/2352)) ([2233dcb](https://github.com/chanzuckerberg/edu-design-system/commit/2233dcbaa3b520987a4b54271f9cf0231f16fc93))
+* **Menu:** add units to border radius property ([#2356](https://github.com/chanzuckerberg/edu-design-system/issues/2356)) ([1d12236](https://github.com/chanzuckerberg/edu-design-system/commit/1d122362fd2025c4e39971c8a0ace5dc6af202f8))
+* **typography:** sync all typography with design ([#2350](https://github.com/chanzuckerberg/edu-design-system/issues/2350)) ([39825b6](https://github.com/chanzuckerberg/edu-design-system/commit/39825b6de85c0bcf10dcd97da1b4e2b1deeddf2c))
+
 ## [17.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.1.0...v17.2.0) (2026-01-14)
 
 

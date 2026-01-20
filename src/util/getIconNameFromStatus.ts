@@ -10,7 +10,7 @@ import type { IconName } from '../icons/spritemap';
 export default function getIconNameFromStatus(status: Status): IconName {
   const map: Record<Status, IconName> = {
     informational: 'info-encircled-filled',
-    critical: 'dangerous',
+    critical: 'critical-encircled-filled',
     warning: 'warning-filled',
     favorable: 'checkmark-encircled-filled',
   };

@@ -7,7 +7,11 @@ import {
 import type { AnchorProps } from '@headlessui/react/dist/internal/floating';
 
 import clsx from 'clsx';
-import type { ReactNode, MouseEventHandler } from 'react';
+import type {
+  ReactNode,
+  MouseEventHandler,
+  HTMLAttributeAnchorTarget,
+} from 'react';
 import React from 'react';
 
 import type { ExtractProps } from '../../util/utility-types';
@@ -67,6 +71,11 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
    * Configurable action for the menu item upon click
    */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
+  __type?: 'listitem' | 'label';
+  /**
+   * Specify the target of the link if present
+   */
+  target?: HTMLAttributeAnchorTarget;
 };
 
 /**
@@ -144,6 +153,8 @@ const MenuItem = ({
   href,
   icon,
   onClick,
+  target,
+  __type,
   ...other
 }: MenuItemProps) => {
   return (
@@ -151,6 +162,7 @@ const MenuItem = ({
       {({ focus, disabled }) => {
         const listItemView = (
           <PopoverListItem
+            __type={__type}
             className={className}
             icon={icon}
             isDisabled={disabled}
@@ -159,13 +171,14 @@ const MenuItem = ({
             {children as ReactNode}
           </PopoverListItem>
         );
-        return disabled ? (
+        return disabled || __type === 'label' ? (
           listItemView
         ) : (
           <a
             className={clsx(styles['menu__item'])}
             href={href}
             onClick={onClick}
+            target={target}
           >
             {listItemView}
           </a>
