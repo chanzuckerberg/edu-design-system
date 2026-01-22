@@ -76,7 +76,7 @@ type ModalContentProps = {
    *
    * This is required even if you don't have a close button so the ESC key can close the modal.
    *
-   * Closing is cancellable by passing in a a function that returns `void` or by not altering the state.
+   * Closing is cancellable by passing in a function that returns `void` or by not altering the state.
    *
    * ```
    * const [isOpen, setIsOpen] = useState(true);
