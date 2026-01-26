@@ -169,6 +169,22 @@ export const FloatingVerticalOrientation: Story = {
 };
 
 /**
+ * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer
+ */
+export const MobileFloatingVerticalOrientation: Story = {
+  args: {
+    ...FloatingVerticalOrientation.args,
+    orientation: 'vertical',
+  },
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
  * Logos can also be an image (using either `<img>` or `<svg>` for format). When using logo, the maximum height
  * allowed is fixed, and the logo takes up the total possible vertical height.
  */
