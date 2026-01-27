@@ -335,6 +335,7 @@ export const AppHeader = ({
               {href ? (
                 <a
                   aria-label="homepage"
+                  className={styles['app-header__home-link']}
                   href={href}
                   onClick={(ev) => {
                     onLinkClick &&

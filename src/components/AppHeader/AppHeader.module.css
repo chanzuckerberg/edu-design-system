@@ -95,6 +95,14 @@
   }
 }
 
+.app-header__home-link:focus-visible {
+  outline: none;
+
+  .app-header-title__title {
+    box-shadow: inset 0 0 0 2px light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  }
+}
+
 .app-header__content {
   display: flex;
   
@@ -218,7 +226,7 @@
  */
 .app-header-title {
   flex: 1 0 auto;
-  
+
   .app-header--orientation-vertical & {
     flex-grow: 0;
     padding-bottom: calc(var(--eds-spacing-size-2) * 1px);
