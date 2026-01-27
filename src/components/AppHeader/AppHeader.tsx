@@ -24,7 +24,7 @@ import styles from './AppHeader.module.css';
 /**
  * A nav group is a set of navigation items of the types listed below
  */
-type NavGroup = {
+export type NavGroup = {
   /**
    * Identifier for the nav group (used to distinguish it from other navigation groups)
    */
@@ -61,7 +61,7 @@ type NavItem = {
  * Nav links are a type of nav item, that can be used for directing users to different locations.
  * They should not be used for modifying or acting on the contents of a given page.
  */
-type NavLink = NavItem & {
+export type NavLink = NavItem & {
   /**
    * Defines the type of nav item as a link, with the appropriate / related properties.
    */
@@ -84,7 +84,7 @@ type NavLink = NavItem & {
  * Nav buttons are a type of nav item, that can be wired to trigger an interaction. They should not
  * be used for navigation.
  */
-type NavButton = NavItem & {
+export type NavButton = NavItem & {
   /**
    * Defines the type of nav item as a button, with the appropriate / related properties.
    */
@@ -94,14 +94,14 @@ type NavButton = NavItem & {
 /**
  * Separators exist as a separate and distinct Nav item, for maximum customizability
  */
-type NavSeparator = NavItem & {
+export type NavSeparator = NavItem & {
   type: 'separator';
 };
 
 /**
  * Nav menus are a set of nested navigation items (of the same type as a NavGroup's navItems)
  */
-type NavMenu = NavItem & {
+export type NavMenu = NavItem & {
   type: 'menu';
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
@@ -112,7 +112,7 @@ type NavMenu = NavItem & {
 /**
  * Nav trees are just like menus but appear as expanded when in a vertical orientation
  */
-type NavTree = NavItem & {
+export type NavTree = NavItem & {
   type: 'tree';
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
@@ -123,11 +123,11 @@ type NavTree = NavItem & {
 /**
  * Menus can have non-interactive labels
  */
-type NavMenuLabel = NavItem & {
+export type NavMenuLabel = NavItem & {
   type: 'label';
 };
 
-type AppHeaderEventHandler = (
+export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
   navItem: NavItem,
 ) => void;

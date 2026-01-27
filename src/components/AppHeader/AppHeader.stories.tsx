@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.2'],
+  tags: ['autodocs', 'version:1.3'],
 
   globals: {
     viewport: {
