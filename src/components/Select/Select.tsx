@@ -430,6 +430,7 @@ const SelectOption = function (props: SelectOptionProps) {
         : ({ focus, disabled, selected }) => {
             return (
               <PopoverListItem
+                __type="selectitem"
                 className={optionItemClassName}
                 icon={selected ? 'check' : undefined}
                 isDisabled={disabled}

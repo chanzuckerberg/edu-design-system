@@ -11,10 +11,10 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 
 mockResizeObserver();
 
-const { Default } = composeStories(stories);
+const { Default, WithLongButtonText } = composeStories(stories);
 
 // Remove the tests with `play` in, b/c it causes the test runner to be unhappy
-const { Opened, ...staticStories } = stories;
+const { Opened, IconlessOpened, ...staticStories } = stories;
 
 describe('<Menu />', () => {
   afterEach(() => {
@@ -51,7 +51,7 @@ describe('<Menu />', () => {
     // create a spy on the `log` method, and avoid calling it by setting the mock implementation to nothing
     const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
     const user = userEvent.setup();
-    render(<Default />);
+    render(<WithLongButtonText />);
     const triggerButton = await screen.findByRole('button');
 
     await user.click(triggerButton);
