@@ -38,7 +38,6 @@ export function applyTailwindConfig(
     ...colorTokens
   } = tokenConfig.theme.color;
 
-  const borderRadii: { [x: string]: string } = tokenConfig.border.radius;
   const movements: { [x: string]: string } = tokenConfig.anim.move;
   const spacings: { [x: string]: string } = tokenConfig.spacing.size;
 
@@ -53,12 +52,42 @@ export function applyTailwindConfig(
    *
    * Tailwind needs units on these so that the right CSS gets applied.
    */
+  const borderRadii: { [x: string]: string } = tokenConfig.border.radius;
   const borderRadiusTokens = {
     ...Object.keys(borderRadii)
       .map((borderRadius) => {
         return { [borderRadius]: `${borderRadii[borderRadius]}px` };
       })
       .reduce(combineTokens, {}),
+  };
+
+  const borderSurfacesRadii: { [x: string]: string } =
+    tokenConfig.theme.border.radius.surfaces;
+  const borderSurfaceRadiusTokens = {
+    ...Object.keys(borderSurfacesRadii)
+      .map((borderRadius) => {
+        return {
+          [`surfaces-${borderRadius}`]: `${borderSurfacesRadii[borderRadius]}px`,
+        };
+      })
+      .reduce(combineTokens, {}),
+  };
+
+  const borderObjectsRadii: { [x: string]: string } =
+    tokenConfig.theme.border.radius.objects;
+  const borderObjectRadiusTokens = {
+    ...Object.keys(borderObjectsRadii)
+      .map((borderRadius) => {
+        return {
+          [`objects-${borderRadius}`]: `${borderObjectsRadii[borderRadius]}px`,
+        };
+      })
+      .reduce(combineTokens, {}),
+  };
+
+  // special case where there's only one action, and not a t-shirt sized map
+  const borderActionsRadii: { [x: string]: string } = {
+    actions: `${tokenConfig.theme.border.radius.actions}px`,
   };
 
   const movementTokens = {
@@ -93,6 +122,9 @@ export function applyTailwindConfig(
       },
       borderRadius: {
         ...borderRadiusTokens, // Tier 1 border radius tokens
+        ...borderSurfaceRadiusTokens, // Tier 2 border radius tokens (surfaces, ohjects, actions)
+        ...borderObjectRadiusTokens,
+        ...borderActionsRadii,
       },
       spacing: {
         ...spacingTokens, // Tier 1 spacing tokens
