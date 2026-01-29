@@ -32,10 +32,14 @@ export const WithAnIcon: StoryObj<Args> = {
   },
 };
 
+/**
+ * Note: using `__type` list item b/c there is no icon to display
+ */
 export const Disabled: StoryObj<Args> = {
   args: {
     children: 'Disabled',
     isDisabled: true,
+    __type: 'listitem',
   },
 };
 
@@ -47,11 +51,15 @@ export const Descructive: StoryObj<Args> = {
   },
 };
 
+/**
+ * Note: using `__type` list item b/c there is no icon to display
+ */
 export const WithSublabel: StoryObj<Args> = {
   args: {
     ...Default.args,
     children: 'Add comment',
     subLabel: 'Everyone can see comments',
+    __type: 'listitem',
   },
 };
 
