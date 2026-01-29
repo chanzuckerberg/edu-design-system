@@ -54,6 +54,10 @@ type NavItem = {
    * - When `"icon-only"`, `aria-label` must be given a value.
    */
   iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
+  /**
+   * Support for metadata in nav item entries
+   */
+  meta?: { [key: string]: string | number | boolean };
 };
 
 /**

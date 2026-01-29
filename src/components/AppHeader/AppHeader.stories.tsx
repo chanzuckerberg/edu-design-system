@@ -96,6 +96,72 @@ export const Floating: Story = {
 };
 
 /**
+ * Interactive items can have metadata added to allow for additional data when handling events.
+ *
+ * use the `meta:` object in the nav item object to pass in additional information.
+ */
+export const WithMetadata: Story = {
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      console.log('button clicked', ev, navItem);
+    },
+    onLinkClick: (ev, navItem) => {
+      console.log('link clicked', ev, navItem);
+    },
+    navGroups: [
+      {
+        name: 'group-1',
+        navItems: [
+          {
+            name: 'Lakes',
+            type: 'link',
+            href: 'https://example.org',
+            meta: {
+              name: 'track-value',
+              value: 3,
+            },
+          },
+          {
+            name: 'Oceans',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Rivers',
+            type: 'link',
+            href: 'https://example.org',
+          },
+        ],
+      },
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Profile',
+            type: 'button',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            meta: {
+              name: 'track-value',
+              value: 4,
+              mutate: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  globals: {
+    viewport: {
+      value: '',
+      isRotated: false,
+    },
+  },
+};
+
+/**
  * `AppHeader` nav items can also be buttons. Button events are handled via the top-level `onButtonClick` which defines the event and the data for the clicked `navItem`
  */
 export const Buttons: Story = {
