@@ -39,6 +39,12 @@
   pointer-events: none;
 }
 
+.popover-list-item--type-separator {
+  pointer-events: none;
+  padding: 0;
+  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-low-emphasis);
+}
+
 .popover-list-item__icon {
   display: flex;
   align-items: center;
@@ -59,6 +65,10 @@
   }
 
   .popover-list-item--type-label & {
+    padding-right: 0;
+  }
+
+  .popover-list-item--type-separator & {
     padding-right: 0;
   }
 }

@@ -6,6 +6,7 @@ import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
 export type PopoverListItemProps = {
+  // Component API
   /**
    * Child node(s) that can be nested inside component
    */
@@ -14,7 +15,7 @@ export type PopoverListItemProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  __type?: 'selectitem' | 'listitem' | 'label';
+  __type?: 'selectitem' | 'listitem' | 'label' | 'separator';
   // Design API
   /**
    * Icon from the set of defined EDS icon set
