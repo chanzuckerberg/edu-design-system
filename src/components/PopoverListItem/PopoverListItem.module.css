@@ -35,7 +35,7 @@
   background-color: light-dark(var(--eds-theme-color-background-utility-disabled-no-emphasis), var(--eds-dark-theme-color-background-utility-disabled-no-emphasis));
 }
 
-.popover-list-item--label {
+.popover-list-item--type-label {
   pointer-events: none;
 }
 
@@ -53,6 +53,14 @@
 .popover-list-item__no-icon {
   /* right padding applies space for the icon itself and the padding for that icon container */
   padding-right: calc(var(--eds-spacing-size-3) * 1px);
+
+  .popover-list-item--type-listitem & {
+    padding-right: 0;
+  }
+
+  .popover-list-item--type-label & {
+    padding-right: 0;
+  }
 }
 
 .popover-list-item__sub-label {

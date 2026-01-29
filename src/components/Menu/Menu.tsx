@@ -71,7 +71,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
    * Configurable action for the menu item upon click
    */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
-  __type?: 'listitem' | 'label';
+  __type?: 'selectitem' | 'listitem' | 'label';
   /**
    * Specify the target of the link if present
    */
@@ -81,7 +81,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
 /**
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
- * A dropdown that reveals or hides a list of actions.
+ * A dropdown that reveals or hides a list of actions. Menu items can contain icons (all should contain one, or none should), labels, and sublabels.
  */
 export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);
@@ -143,7 +143,9 @@ const MenuItems = ({
 };
 
 /**
- * An individual option that represent an action in the menu
+ * An individual option that represent an action in the menu. Can contain an icon, label, sublabel, and action (onClick).
+ *
+ * NOTE: for menus, all menu items should have an icon, or no icon; mixing icon state is discouraged.
  *
  * @see https://headlessui.com/react/menu#menu-item
  */
@@ -154,7 +156,7 @@ const MenuItem = ({
   icon,
   onClick,
   target,
-  __type,
+  __type = 'listitem',
   ...other
 }: MenuItemProps) => {
   return (

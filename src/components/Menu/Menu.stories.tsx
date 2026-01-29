@@ -67,9 +67,6 @@ export const Default: Story = {
           >
             MDN: Menu
           </Menu.Item>
-          <Menu.Item href="#index" onClick={() => console.log('Item clicked')}>
-            Trigger Action
-          </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
@@ -90,23 +87,17 @@ export const WithLongButtonText: Story = {
           Long Trigger Button Text to Demonstrate Popover Matching
         </Menu.Button>
         <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
+          <Menu.Item href="https://headlessui.com/react/menu#menu-button">
             Headless UI Docs
           </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
+          <Menu.Item href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu">
             MDN: Menu
           </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
+          {}
+          <Menu.Item onClick={() => console.log('item clicked')}>
             Trigger Action
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
+          <Menu.Item disabled href="https://example.org/">
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -135,10 +126,6 @@ export const WithShortButtonText: Story = {
             icon="link"
           >
             MDN: Menu
-          </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
-            Trigger Action
           </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
@@ -176,10 +163,6 @@ export const WithCustomButton: Story = {
           >
             MDN: Menu
           </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
-            Trigger Action
-          </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
@@ -214,10 +197,6 @@ export const WithCustomSecondaryButton: Story = {
             icon="link"
           >
             MDN: Menu
-          </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
-            Trigger Action
           </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
@@ -254,10 +233,6 @@ export const MenuWithAvatarButton: Story = {
           >
             MDN: Menu
           </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
-            Trigger Action
-          </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
           </Menu.Item>
@@ -274,6 +249,22 @@ export const Opened: Story = {
   ...Default,
   parameters: {
     ...Default.parameters,
+    // Sets the delay (in milliseconds) for a specific story.
+    chromatic: { delay: 300 },
+  },
+  play: async () => {
+    await userEvent.tab();
+    await userEvent.keyboard(' ', { delay: 300 });
+  },
+};
+
+/**
+ * For testing purposes: This triggers an open menu that has no icons.
+ */
+export const IconlessOpened: Story = {
+  ...WithLongButtonText,
+  parameters: {
+    ...WithLongButtonText.parameters,
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300 },
   },
@@ -320,10 +311,6 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
             icon="link"
           >
             MDN: Menu
-          </Menu.Item>
-          {/* eslint-disable-next-line no-alert */}
-          <Menu.Item onClick={() => alert('Item clicked')}>
-            Trigger Action
           </Menu.Item>
           <Menu.Item disabled href="https://example.org/" icon="warning-filled">
             Not Possible (disabled)
