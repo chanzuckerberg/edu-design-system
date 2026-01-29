@@ -806,7 +806,7 @@ const AppHeaderDrawerContent = ({
                       </AppHeaderButton>
                     </Menu.PlainButton>
                     <Menu.Items
-                      anchor={{ to: 'right end', gap: 16 }}
+                      anchor={{ to: 'right end', gap: 24 }}
                       className={styles['app-header__nav-items']}
                     >
                       {navItem.navItems?.map((navItem) => {

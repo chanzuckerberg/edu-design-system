@@ -11,7 +11,7 @@
   --popover-container-width: var(--button-width, auto);
   border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
   overflow: auto;
-  padding: calc(var(--eds-size-half) * 1px) 0;
+  padding: calc(var(--eds-spacing-size-half) * 1px) 0;
   z-index: 1150;
 
   box-shadow: var(--eds-box-shadow-md);
