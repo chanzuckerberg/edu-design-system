@@ -231,6 +231,18 @@ export const VerticalImageLogo: Story = {
 };
 
 /**
+ * Provided links are accessible
+ */
+export const VerticalImageLogoFocus: Story = {
+  args: {
+    ...VerticalImageLogo.args,
+  },
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
+/**
  * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
  * render as a `Menu` with sub items that match the same types as can exist at the top level.
  */
