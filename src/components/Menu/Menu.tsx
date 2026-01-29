@@ -162,7 +162,9 @@ const MenuItem = ({
   __type = 'listitem',
   ...other
 }: MenuItemProps) => {
-  return (
+  return __type === 'separator' ? (
+    <PopoverListItem __type={__type}> </PopoverListItem>
+  ) : (
     <HeadlessMenuItem {...other}>
       {({ focus, disabled }) => {
         const listItemView = (
@@ -176,7 +178,7 @@ const MenuItem = ({
             {children as ReactNode}
           </PopoverListItem>
         );
-        return disabled || __type === 'label' || __type === 'separator' ? (
+        return disabled || __type === 'label' ? (
           listItemView
         ) : (
           <a
