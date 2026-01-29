@@ -106,7 +106,7 @@ type NavMenu = NavItem & {
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
-  navItems: (NavLink | NavButton | NavMenuLabel)[];
+  navItems: (NavLink | NavButton | NavMenuLabel | NavSeparator)[];
 };
 
 /**
@@ -546,6 +546,13 @@ const AppHeaderNavGroup = ({
                               {navItem.name}
                             </Menu.Item>
                           );
+                        case 'separator':
+                          return (
+                            <Menu.Item
+                              __type="separator"
+                              key={navItem.name}
+                            ></Menu.Item>
+                          );
                         default:
                           return <Menu.Item>N/A</Menu.Item>;
                       }
@@ -831,6 +838,13 @@ const AppHeaderDrawerContent = ({
                               >
                                 {navItem.name}
                               </Menu.Item>
+                            );
+                          case 'separator':
+                            return (
+                              <Menu.Item
+                                __type="separator"
+                                key={navItem.name}
+                              ></Menu.Item>
                             );
                           default:
                             return <Menu.Item>N/A</Menu.Item>;

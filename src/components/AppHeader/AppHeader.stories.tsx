@@ -272,6 +272,10 @@ export const NavMenus: Story = {
                 href: 'https://example.org/#logout',
               },
               {
+                name: 'line',
+                type: 'separator',
+              },
+              {
                 type: 'label',
                 name: '© 2025 Your Company Name. All rights reserved.',
               },
