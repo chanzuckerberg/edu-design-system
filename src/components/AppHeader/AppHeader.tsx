@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import debounce from 'lodash/debounce';
 
 import React, {
   createContext,
@@ -290,10 +289,10 @@ export const AppHeader = ({
   title,
   ...other
 }: AppHeaderProps) => {
-  // TODO: handle scenario where the prop changes but state is already using a value
   const [headerOrientation, setHeaderOrientation] = useState(
     orientation || 'horizontal',
   );
+
   const componentClassName = clsx(
     styles['app-header'],
     headerOrientation && styles[`app-header--orientation-${headerOrientation}`],
@@ -306,23 +305,30 @@ export const AppHeader = ({
     styles['app-header__drawer'],
   );
 
+  const handleOrientationCalculation = function (
+    orientation: AppHeaderProps['orientation'],
+  ) {
+    // compare the screen width to the smallest breakpoint. if it's wider...
+    if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
+      // ...change to original user value (with default specified)
+      setHeaderOrientation(orientation || 'horizontal');
+    } else {
+      // ...change 'vertical' to 'horizontal' if the original value was vertical
+      setHeaderOrientation('horizontal');
+    }
+  };
+
   useEffect(() => {
-    // Setup debounce to trigger on the (default) trailing edge of the calls
-    const debouncedHandleOnResize = debounce(function handleOnResize() {
-      // compare the screen width to the smallest breakpoint. if it's wider...
-      if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
-        // ...change to original user value (with default specified)
-        setHeaderOrientation(orientation || 'horizontal');
-      } else {
-        // ...change 'vertical' to 'horizontal' if the original value was vertical
-        setHeaderOrientation('horizontal');
-      }
-    }, 16); // ~1/60 fps
+    const handler = () => {
+      handleOrientationCalculation(orientation);
+    };
 
-    window.addEventListener('resize', debouncedHandleOnResize);
+    // Call it manually when this effect is triggered
+    handleOrientationCalculation(orientation);
 
+    window.addEventListener('resize', handler);
     return () => {
-      window.removeEventListener('resize', debouncedHandleOnResize);
+      window.removeEventListener('resize', handler);
     };
   }, [orientation]);
 
