@@ -22,6 +22,7 @@ import { type IconName } from '../Icon';
 import PopoverContainer from '../PopoverContainer';
 
 import PopoverListItem from '../PopoverListItem';
+import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
 import styles from './Menu.module.css';
 
 // Note: added className here to prevent private API collision within HeadlessUI
@@ -71,17 +72,19 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
    * Configurable action for the menu item upon click
    */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
-  __type?: 'listitem' | 'label';
+  __type?: PopoverListItemProps['__type'];
   /**
    * Specify the target of the link if present
    */
   target?: HTMLAttributeAnchorTarget;
 };
 
+// TODO: how to handle type for separator w/o using private API `__type`
+
 /**
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
- * A dropdown that reveals or hides a list of actions.
+ * A dropdown that reveals or hides a list of actions. Menu items can contain icons (all should contain one, or none should), labels, and sublabels.
  */
 export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);
@@ -143,7 +146,9 @@ const MenuItems = ({
 };
 
 /**
- * An individual option that represent an action in the menu
+ * An individual option that represent an action in the menu. Can contain an icon, label, sublabel, and action (onClick).
+ *
+ * NOTE: for menus, all menu items should have an icon, or no icon; mixing icon state is discouraged.
  *
  * @see https://headlessui.com/react/menu#menu-item
  */
@@ -154,10 +159,12 @@ const MenuItem = ({
   icon,
   onClick,
   target,
-  __type,
+  __type = 'listitem',
   ...other
 }: MenuItemProps) => {
-  return (
+  return __type === 'separator' ? (
+    <PopoverListItem __type={__type}> </PopoverListItem>
+  ) : (
     <HeadlessMenuItem {...other}>
       {({ focus, disabled }) => {
         const listItemView = (

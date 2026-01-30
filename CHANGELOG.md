@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.3.0...v17.4.0) (2026-01-30)
+
+
+### Features
+
+* **AppHeader:** allow metadata for nav item entries ([#2370](https://github.com/chanzuckerberg/edu-design-system/issues/2370)) ([302a345](https://github.com/chanzuckerberg/edu-design-system/commit/302a345c59f852ef0b371a3c14c4390bc1cb5535))
+* **AppHeader:** export nav item types ([#2367](https://github.com/chanzuckerberg/edu-design-system/issues/2367)) ([a2d4ca9](https://github.com/chanzuckerberg/edu-design-system/commit/a2d4ca9c2905eb8f482f9d5a973cf4e1ca66c386))
+* **AppHeader:** use built-in support for menu separators ([6dfeec6](https://github.com/chanzuckerberg/edu-design-system/commit/6dfeec604ac9c10db3f6291b538a682f0d33c628))
+* **tailwind:** add config for tier 2 border radius tokens ([#2363](https://github.com/chanzuckerberg/edu-design-system/issues/2363)) ([a5851b1](https://github.com/chanzuckerberg/edu-design-system/commit/a5851b184343d05248332f0f0a80de284c903b67))
+
+
+### Bug Fixes
+
+* **AppHeader:** add styled focus ring to homepage link ([#2366](https://github.com/chanzuckerberg/edu-design-system/issues/2366)) ([f723c36](https://github.com/chanzuckerberg/edu-design-system/commit/f723c3661c74885d94cee8f52c98714f45e0509e))
+* **AppHeader:** properly handle responsive vertical orientation ([#2364](https://github.com/chanzuckerberg/edu-design-system/issues/2364)) ([d83545c](https://github.com/chanzuckerberg/edu-design-system/commit/d83545ce311a6f25542395489fa2f05d3627ecb0))
+* **deps:** update dependency lodash to v4.17.23 [security] ([#2362](https://github.com/chanzuckerberg/edu-design-system/issues/2362)) ([ff669b0](https://github.com/chanzuckerberg/edu-design-system/commit/ff669b0b305115adc6b10d72ffe25876bbf88bfe))
+* **Menu:** add support for menu separators ([6ed5aff](https://github.com/chanzuckerberg/edu-design-system/commit/6ed5aff1f842ed95fd77ac16196438c628b90c1e))
+* **Menu:** make sure separators follow a11y rules ([e173a9a](https://github.com/chanzuckerberg/edu-design-system/commit/e173a9a11e5eb5e85f68864b515981a5c7e14534))
+* **Menu:** sync spacing with design ([#2371](https://github.com/chanzuckerberg/edu-design-system/issues/2371)) ([b25c79d](https://github.com/chanzuckerberg/edu-design-system/commit/b25c79df96dbb9ba8c4df26dc282b6891ae96e6f))
+* **Menu:** update handling for icon spacing ([#2368](https://github.com/chanzuckerberg/edu-design-system/issues/2368)) ([2527633](https://github.com/chanzuckerberg/edu-design-system/commit/2527633b6a6fab45a8d22cdc23c326a92dab5d50))
+* **typography:** set letter spacing to normal for all presets ([#2360](https://github.com/chanzuckerberg/edu-design-system/issues/2360)) ([bcea5ee](https://github.com/chanzuckerberg/edu-design-system/commit/bcea5ee566c440dee5beae796c8249868a90727c))
+
 ## [17.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.2.0...v17.3.0) (2026-01-17)
 
 

@@ -29,7 +29,7 @@
   --heading-line-height: var(--eds-typography-preset-800-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-normal);
-  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
     --heading-font-size: var(--eds-typography-preset-1400-font-size);
@@ -42,7 +42,7 @@
   --heading-line-height: var(--eds-typography-preset-800-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-normal);
-  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
     --heading-font-size: var(--eds-typography-preset-1000-font-size);
@@ -55,7 +55,7 @@
   --heading-line-height: var(--eds-typography-preset-600-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-normal);
-  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
     --heading-font-size: var(--eds-typography-preset-800-font-size);

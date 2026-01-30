@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import debounce from 'lodash/debounce';
 
 import React, {
   createContext,
@@ -24,7 +23,7 @@ import styles from './AppHeader.module.css';
 /**
  * A nav group is a set of navigation items of the types listed below
  */
-type NavGroup = {
+export type NavGroup = {
   /**
    * Identifier for the nav group (used to distinguish it from other navigation groups)
    */
@@ -55,13 +54,17 @@ type NavItem = {
    * - When `"icon-only"`, `aria-label` must be given a value.
    */
   iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
+  /**
+   * Support for metadata in nav item entries
+   */
+  meta?: { [key: string]: string | number | boolean };
 };
 
 /**
  * Nav links are a type of nav item, that can be used for directing users to different locations.
  * They should not be used for modifying or acting on the contents of a given page.
  */
-type NavLink = NavItem & {
+export type NavLink = NavItem & {
   /**
    * Defines the type of nav item as a link, with the appropriate / related properties.
    */
@@ -84,7 +87,7 @@ type NavLink = NavItem & {
  * Nav buttons are a type of nav item, that can be wired to trigger an interaction. They should not
  * be used for navigation.
  */
-type NavButton = NavItem & {
+export type NavButton = NavItem & {
   /**
    * Defines the type of nav item as a button, with the appropriate / related properties.
    */
@@ -94,25 +97,25 @@ type NavButton = NavItem & {
 /**
  * Separators exist as a separate and distinct Nav item, for maximum customizability
  */
-type NavSeparator = NavItem & {
+export type NavSeparator = NavItem & {
   type: 'separator';
 };
 
 /**
  * Nav menus are a set of nested navigation items (of the same type as a NavGroup's navItems)
  */
-type NavMenu = NavItem & {
+export type NavMenu = NavItem & {
   type: 'menu';
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
-  navItems: (NavLink | NavButton | NavMenuLabel)[];
+  navItems: (NavLink | NavButton | NavMenuLabel | NavSeparator)[];
 };
 
 /**
  * Nav trees are just like menus but appear as expanded when in a vertical orientation
  */
-type NavTree = NavItem & {
+export type NavTree = NavItem & {
   type: 'tree';
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
@@ -123,11 +126,11 @@ type NavTree = NavItem & {
 /**
  * Menus can have non-interactive labels
  */
-type NavMenuLabel = NavItem & {
+export type NavMenuLabel = NavItem & {
   type: 'label';
 };
 
-type AppHeaderEventHandler = (
+export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
   navItem: NavItem,
 ) => void;
@@ -290,10 +293,10 @@ export const AppHeader = ({
   title,
   ...other
 }: AppHeaderProps) => {
-  // TODO: handle scenario where the prop changes but state is already using a value
   const [headerOrientation, setHeaderOrientation] = useState(
     orientation || 'horizontal',
   );
+
   const componentClassName = clsx(
     styles['app-header'],
     headerOrientation && styles[`app-header--orientation-${headerOrientation}`],
@@ -306,23 +309,30 @@ export const AppHeader = ({
     styles['app-header__drawer'],
   );
 
+  const handleOrientationCalculation = function (
+    orientation: AppHeaderProps['orientation'],
+  ) {
+    // compare the screen width to the smallest breakpoint. if it's wider...
+    if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
+      // ...change to original user value (with default specified)
+      setHeaderOrientation(orientation || 'horizontal');
+    } else {
+      // ...change 'vertical' to 'horizontal' if the original value was vertical
+      setHeaderOrientation('horizontal');
+    }
+  };
+
   useEffect(() => {
-    // Setup debounce to trigger on the (default) trailing edge of the calls
-    const debouncedHandleOnResize = debounce(function handleOnResize() {
-      // compare the screen width to the smallest breakpoint. if it's wider...
-      if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
-        // ...change to original user value (with default specified)
-        setHeaderOrientation(orientation || 'horizontal');
-      } else {
-        // ...change 'vertical' to 'horizontal' if the original value was vertical
-        setHeaderOrientation('horizontal');
-      }
-    }, 16); // ~1/60 fps
+    const handler = () => {
+      handleOrientationCalculation(orientation);
+    };
 
-    window.addEventListener('resize', debouncedHandleOnResize);
+    // Call it manually when this effect is triggered
+    handleOrientationCalculation(orientation);
 
+    window.addEventListener('resize', handler);
     return () => {
-      window.removeEventListener('resize', debouncedHandleOnResize);
+      window.removeEventListener('resize', handler);
     };
   }, [orientation]);
 
@@ -335,6 +345,7 @@ export const AppHeader = ({
               {href ? (
                 <a
                   aria-label="homepage"
+                  className={styles['app-header__home-link']}
                   href={href}
                   onClick={(ev) => {
                     onLinkClick &&
@@ -545,6 +556,13 @@ const AppHeaderNavGroup = ({
                             >
                               {navItem.name}
                             </Menu.Item>
+                          );
+                        case 'separator':
+                          return (
+                            <Menu.Item
+                              __type="separator"
+                              key={navItem.name}
+                            ></Menu.Item>
                           );
                         default:
                           return <Menu.Item>N/A</Menu.Item>;
@@ -792,7 +810,7 @@ const AppHeaderDrawerContent = ({
                       </AppHeaderButton>
                     </Menu.PlainButton>
                     <Menu.Items
-                      anchor={{ to: 'right end', gap: 16 }}
+                      anchor={{ to: 'right end', gap: 24 }}
                       className={styles['app-header__nav-items']}
                     >
                       {navItem.navItems?.map((navItem) => {
@@ -831,6 +849,13 @@ const AppHeaderDrawerContent = ({
                               >
                                 {navItem.name}
                               </Menu.Item>
+                            );
+                          case 'separator':
+                            return (
+                              <Menu.Item
+                                __type="separator"
+                                key={navItem.name}
+                              ></Menu.Item>
                             );
                           default:
                             return <Menu.Item>N/A</Menu.Item>;

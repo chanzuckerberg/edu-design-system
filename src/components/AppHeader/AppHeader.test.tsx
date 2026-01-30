@@ -13,7 +13,7 @@ describe('<AppHeader />', () => {
 
   it('handles clicks on nav items types (horizontal)', async () => {
     const user = userEvent.setup();
-    const onClickMock = jest.fn();
+    const onButtonClickMock = jest.fn();
     const onLinkClickMock = jest.fn();
 
     render(
@@ -25,6 +25,10 @@ describe('<AppHeader />', () => {
               {
                 name: 'Lakes',
                 type: 'button',
+                meta: {
+                  name: 'track-value',
+                  value: 3,
+                },
               },
               {
                 name: 'Oceans',
@@ -50,23 +54,39 @@ describe('<AppHeader />', () => {
                 href: '#',
                 icon: 'person-encircled',
                 iconLayout: 'right',
+                meta: {
+                  name: 'track-value',
+                  value: 4,
+                  mutate: true,
+                },
               },
             ],
           },
         ]}
-        onButtonClick={onClickMock}
+        onButtonClick={onButtonClickMock}
         onLinkClick={onLinkClickMock}
         subTitle="They're cool!"
         title="Bodies of water"
       />,
     );
 
+    await user.click(screen.getAllByRole('button')[0]);
+    expect(onButtonClickMock.mock.calls[0][1]).toEqual({
+      name: 'Lakes',
+      type: 'button',
+      meta: {
+        name: 'track-value',
+        value: 3,
+      },
+    });
+
     await user.click(screen.getAllByRole('button')[1]);
-    expect(onClickMock).toHaveBeenCalled();
-    expect(onClickMock.mock.calls[0][1]).toEqual({
+    expect(onButtonClickMock.mock.calls[1][1]).toEqual({
       name: 'Oceans',
       type: 'button',
     });
+
+    expect(onButtonClickMock).toHaveBeenCalledTimes(2);
 
     await user.click(screen.getAllByRole('link')[1]);
     expect(onLinkClickMock).toHaveBeenCalled();
@@ -76,12 +96,17 @@ describe('<AppHeader />', () => {
       href: '#',
       icon: 'person-encircled',
       iconLayout: 'right',
+      meta: {
+        name: 'track-value',
+        value: 4,
+        mutate: true,
+      },
     });
   });
 
   it('handles clicks on nav item types (vertical)', async () => {
     const user = userEvent.setup();
-    const onClickMock = jest.fn();
+    const onButtonClickMock = jest.fn();
     const onLinkClickMock = jest.fn();
 
     render(
@@ -122,7 +147,7 @@ describe('<AppHeader />', () => {
             ],
           },
         ]}
-        onButtonClick={onClickMock}
+        onButtonClick={onButtonClickMock}
         onLinkClick={onLinkClickMock}
         orientation="vertical"
         subTitle="They're cool!"
@@ -131,8 +156,8 @@ describe('<AppHeader />', () => {
     );
 
     await user.click(screen.getAllByRole('button')[0]);
-    expect(onClickMock).toHaveBeenCalled();
-    expect(onClickMock.mock.calls[0][1]).toEqual({
+    expect(onButtonClickMock).toHaveBeenCalled();
+    expect(onButtonClickMock.mock.calls[0][1]).toEqual({
       name: 'Lakes',
       type: 'button',
     });

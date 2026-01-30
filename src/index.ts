@@ -42,6 +42,7 @@ export { default as Popover } from './components/Popover';
 export { default as PopoverContainer } from './components/PopoverContainer';
 export { default as PopoverListItem } from './components/PopoverListItem';
 export { default as Radio } from './components/Radio';
+export { default as ScrollWrapper } from './components/ScrollWrapper';
 export { default as Select } from './components/Select';
 export { default as SelectionChip } from './components/SelectionChip';
 export { default as Skeleton } from './components/Skeleton';
@@ -58,21 +59,29 @@ export { default as VisualPageIndicator } from './components/VisualPageIndicator
 /**
  * 2.x prop type exports
  */
-export type { IconName } from './components/Icon';
-export type { ButtonProps } from './components/Button';
-export type { LinkProps } from './components/Link';
-export type { PageNotificationProps } from './components/PageNotification';
+export type {
+  NavGroup,
+  NavButton,
+  NavLink,
+  NavMenu,
+  NavMenuLabel,
+  NavSeparator,
+  NavTree,
+} from './components/AppHeader';
 export type { AppNotificationProps } from './components/AppNotification';
+export type { ButtonProps } from './components/Button';
 export type {
   DataTableProps,
   DataTableRowProps,
   DataTableWithStatus,
   DataTableSortDirection,
 } from './components/DataTable';
+export type { IconName } from './components/Icon';
+export type { LinkProps } from './components/Link';
+export type { PageNotificationProps } from './components/PageNotification';
 
 /**
  * Utilities re-exported from dependent libraries
  */
 // https://headlessui.com/v1/react/transition
 export { Transition } from '@headlessui/react';
-export { default as ScrollWrapper } from './components/ScrollWrapper';

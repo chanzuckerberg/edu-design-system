@@ -47,13 +47,13 @@ exports[`<Menu /> MenuWithAvatarButton story renders snapshot 1`] = `
   data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r1l:"
+    aria-controls="headlessui-menu-items-:r1h:"
     aria-expanded="true"
     aria-haspopup="menu"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-menu-button-:r1k:"
+    id="headlessui-menu-button-:r1g:"
     type="button"
   >
     <div
@@ -78,13 +78,13 @@ exports[`<Menu /> MenuWithIconButton story renders snapshot 1`] = `
   data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r1v:"
+    aria-controls="headlessui-menu-items-:r1q:"
     aria-expanded="true"
     aria-haspopup="menu"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-menu-button-:r1u:"
+    id="headlessui-menu-button-:r1p:"
     type="button"
   >
     <svg
@@ -115,13 +115,13 @@ exports[`<Menu /> WithCustomButton story renders snapshot 1`] = `
   data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r11:"
+    aria-controls="headlessui-menu-items-:rv:"
     aria-expanded="true"
     aria-haspopup="menu"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-menu-button-:r10:"
+    id="headlessui-menu-button-:ru:"
     type="button"
   >
     <div
@@ -140,14 +140,14 @@ exports[`<Menu /> WithCustomSecondaryButton story renders snapshot 1`] = `
   data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:r1b:"
+    aria-controls="headlessui-menu-items-:r18:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-menu-button-:r1a:"
+    id="headlessui-menu-button-:r17:"
     type="button"
   >
     <span
@@ -166,14 +166,14 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
   data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:rd:"
+    aria-controls="headlessui-menu-items-:rc:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-right button--primary button--lg button--size-lg button--variant-default menu__button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-menu-button-:rc:"
+    id="headlessui-menu-button-:rb:"
     type="button"
   >
     <span
@@ -206,14 +206,14 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
   data-open=""
 >
   <button
-    aria-controls="headlessui-menu-items-:rn:"
+    aria-controls="headlessui-menu-items-:rm:"
     aria-expanded="true"
     aria-haspopup="menu"
     class="button button--layout-right button--primary button--lg button--size-lg button--variant-default menu__button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-menu-button-:rm:"
+    id="headlessui-menu-button-:rl:"
     type="button"
   >
     <span

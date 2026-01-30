@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.2'],
+  tags: ['autodocs', 'version:1.3'],
 
   globals: {
     viewport: {
@@ -92,6 +92,72 @@ export const Floating: Story = {
   args: {
     ...Default.args,
     style: 'floating',
+  },
+};
+
+/**
+ * Interactive items can have metadata added to allow for additional data when handling events.
+ *
+ * use the `meta:` object in the nav item object to pass in additional information.
+ */
+export const WithMetadata: Story = {
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    onButtonClick: (ev, navItem) => {
+      console.log('button clicked', ev, navItem);
+    },
+    onLinkClick: (ev, navItem) => {
+      console.log('link clicked', ev, navItem);
+    },
+    navGroups: [
+      {
+        name: 'group-1',
+        navItems: [
+          {
+            name: 'Lakes',
+            type: 'link',
+            href: 'https://example.org',
+            meta: {
+              name: 'track-value',
+              value: 3,
+            },
+          },
+          {
+            name: 'Oceans',
+            type: 'link',
+            href: 'https://example.org',
+          },
+          {
+            name: 'Rivers',
+            type: 'link',
+            href: 'https://example.org',
+          },
+        ],
+      },
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Profile',
+            type: 'button',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            meta: {
+              name: 'track-value',
+              value: 4,
+              mutate: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  globals: {
+    viewport: {
+      value: '',
+      isRotated: false,
+    },
   },
 };
 
@@ -169,6 +235,22 @@ export const FloatingVerticalOrientation: Story = {
 };
 
 /**
+ * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer
+ */
+export const MobileFloatingVerticalOrientation: Story = {
+  args: {
+    ...FloatingVerticalOrientation.args,
+    orientation: 'vertical',
+  },
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
  * Logos can also be an image (using either `<img>` or `<svg>` for format). When using logo, the maximum height
  * allowed is fixed, and the logo takes up the total possible vertical height.
  */
@@ -211,6 +293,18 @@ export const VerticalImageLogo: Story = {
   args: {
     ...ImageLogo.args,
     orientation: 'vertical',
+  },
+};
+
+/**
+ * Provided links are accessible
+ */
+export const VerticalImageLogoFocus: Story = {
+  args: {
+    ...VerticalImageLogo.args,
+  },
+  play: async () => {
+    await userEvent.tab();
   },
 };
 
@@ -270,6 +364,10 @@ export const NavMenus: Story = {
                 type: 'link',
                 name: 'Sign Out',
                 href: 'https://example.org/#logout',
+              },
+              {
+                name: 'line',
+                type: 'separator',
               },
               {
                 type: 'label',

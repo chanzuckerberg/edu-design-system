@@ -73,9 +73,10 @@ type ModalContentProps = {
   /**
    * Method called when the close button is clicked. Use this to hide the modal.
    * This should be used to also reset the `open` state.
-   * @see https://headlessui.com/react/dialog
    *
    * This is required even if you don't have a close button so the ESC key can close the modal.
+   *
+   * Closing is cancellable by passing in a function that returns `void` or by not altering the state.
    *
    * ```
    * const [isOpen, setIsOpen] = useState(true);
