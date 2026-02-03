@@ -781,21 +781,21 @@
           },
           "surfaces": {
             "lg": {
-              "value": "{eds.border.radius.400}"
+              "value": "{eds.border.radius.200}"
             },
             "md": {
-              "value": "{eds.border.radius.400}"
+              "value": "{eds.border.radius.150}"
             }
           },
           "objects": {
             "md": {
-              "value": "{eds.border.radius.300}"
+              "value": "{eds.border.radius.150}"
             },
             "sm": {
-              "value": "{eds.border.radius.300}"
+              "value": "{eds.border.radius.100}"
             },
             "xs": {
-              "value": "{eds.border.radius.150}"
+              "value": "{eds.border.radius.100}"
             }
           },
           "tabUnderline": {
@@ -963,7 +963,7 @@
                 "value": "{eds.color.neutral.025}"
               },
               "2": {
-                "value": "{eds.color.neutral.050}"
+                "value": "{eds.color.neutral.025}"
               }
             },
             "selected": {
@@ -1077,10 +1077,10 @@
                   "value": "{eds.color.neutral.100}"
                 },
                 "hover": {
-                  "value": "{eds.color.green.100}"
+                  "value": "{eds.color.neutral.150}"
                 },
                 "active": {
-                  "value": "{eds.color.green.150}"
+                  "value": "{eds.color.neutral.050}"
                 }
               },
               "highEmphasis": {
@@ -1109,13 +1109,13 @@
               },
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.red.100}"
+                  "value": "{eds.color.red.150}"
                 },
                 "hover": {
                   "value": "{eds.color.red.150}"
                 },
                 "active": {
-                  "value": "{eds.color.red.150}"
+                  "value": "{eds.color.red.200}"
                 }
               },
               "highEmphasis": {
@@ -1313,13 +1313,13 @@
             },
             "interactive": {
               "@": {
-                "value": "{eds.color.neutral.200}"
-              },
-              "hover": {
                 "value": "{eds.color.neutral.250}"
               },
-              "active": {
+              "hover": {
                 "value": "{eds.color.neutral.350}"
+              },
+              "active": {
+                "value": "{eds.color.neutral.450}"
               },
               "secondary": {
                 "@": {
