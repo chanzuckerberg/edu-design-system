@@ -319,6 +319,13 @@ export const NavMenus: Story = {
     onButtonClick: (ev, navItem) => {
       console.log('button clicked', ev, navItem);
     },
+    onLinkClick: (ev, navItem) => {
+      console.log('link clicked', ev, navItem);
+
+      if (navItem.name === 'About Us') {
+        ev.preventDefault();
+      }
+    },
     navGroups: [
       {
         name: 'group-1',
@@ -366,8 +373,8 @@ export const NavMenus: Story = {
                 href: 'https://example.org/#logout',
               },
               {
-                name: 'line',
                 type: 'separator',
+                name: 'line',
               },
               {
                 type: 'label',

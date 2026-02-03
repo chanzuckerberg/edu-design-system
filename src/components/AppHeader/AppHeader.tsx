@@ -820,6 +820,9 @@ const AppHeaderDrawerContent = ({
                               <Menu.Item
                                 href={navItem.href}
                                 key={navItem.name}
+                                onClick={(ev) => {
+                                  onLinkClick && onLinkClick(ev, navItem);
+                                }}
                                 target={
                                   navItem.isExternal ? '_blank' : undefined
                                 }
