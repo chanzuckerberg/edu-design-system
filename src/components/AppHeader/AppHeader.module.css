@@ -178,6 +178,8 @@
     width: 100%;
   }
 
+  transition: box-shadow ease-in-out calc(var(--eds-anim-fade-quick) * 1s);
+
   color: light-dark(var(--eds-theme-color-text-app-header-primary), var(--eds-dark-theme-color-text-app-header-primary));
 }
 
@@ -309,8 +311,8 @@
 }
 
 .app-header__nav-item:focus-visible {
-  outline: calc(var(--eds-border-width-md) * 1px) solid
-    light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  box-shadow: inset 0 0 0 calc(var(--eds-border-width-md) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  outline: none;
 }
 
 .drawer-content__nav-group-item--type-menu {
