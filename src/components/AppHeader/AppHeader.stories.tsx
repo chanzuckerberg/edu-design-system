@@ -525,6 +525,9 @@ export const VerticalNavMenus: Story = {
   },
 };
 
+/**
+ * Chromatic Test: show the full size menu on snapshot
+ */
 export const CanExpandFullSizeMenu: Story = {
   args: {
     ...NavMenus.args,
@@ -559,6 +562,9 @@ export const CanExpandFullSizeMenu: Story = {
   },
 };
 
+/**
+ * Chromatic Test: Verify opening of hamburger menu
+ */
 export const CanExpandHamburgerMenu: Story = {
   args: {
     ...NavMenus.args,
@@ -580,6 +586,34 @@ export const CanExpandHamburgerMenu: Story = {
     if (isChromatic()) {
       await userEvent.keyboard(' ', { delay: 400 });
     }
+  },
+
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
+ * Chromatic Test: Verify focus ring on nav items (EDS-1820)
+ */
+export const CanFocusMenuItem: Story = {
+  args: {
+    ...VerticalNavMenus.args,
+  },
+
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+
+  // Select the menu then expand it with the keyboard. set up for snapshotting
+  play: async () => {
+    await userEvent.tab();
+    await userEvent.tab();
   },
 
   globals: {
