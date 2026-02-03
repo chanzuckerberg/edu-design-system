@@ -2660,7 +2660,7 @@ __metadata:
     react-children-by-type: "npm:^1.1.0"
     react-dom: "npm:^18.2.0"
     react-uid: "npm:^2.4.0"
-    rollup: "npm:^4.57.0"
+    rollup: "npm:^4.57.1"
     rollup-plugin-postcss: "npm:^4.0.2"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^9.1.17"
@@ -17834,7 +17834,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.57.0":
+"rollup@npm:^4.57.1":
   version: 4.57.1
   resolution: "rollup@npm:4.57.1"
   dependencies:
