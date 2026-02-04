@@ -965,7 +965,7 @@
             "tableRow": {
               "stripe": {
                 "1": {
-                  "value": "{eds.color.neutral.025}"
+                  "value": "{eds.color.transparent}"
                 },
                 "2": {
                   "value": "{eds.color.neutral.025}"

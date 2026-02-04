@@ -455,7 +455,7 @@
   --eds-dark-theme-color-background-visual-page-indicator: var(--eds-color-neutral-250);
   --eds-dark-theme-color-background-table-row-selected: var(--eds-color-green-050);
   --eds-dark-theme-color-background-table-row-stripe-2: var(--eds-color-neutral-025);
-  --eds-dark-theme-color-background-table-row-stripe-1: var(--eds-color-neutral-025);
+  --eds-dark-theme-color-background-table-row-stripe-1: var(--eds-color-transparent);
   --eds-dark-theme-color-background-skeleton-stripe: var(--eds-color-neutral-050);
   --eds-dark-theme-color-background-skeleton: var(--eds-color-neutral-100);
   --eds-dark-theme-color-background-brand-blue-low-emphasis: var(--eds-color-blue-050);

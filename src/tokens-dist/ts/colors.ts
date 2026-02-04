@@ -143,7 +143,8 @@ export const EdsThemeColorBackgroundBrandPurpleLowEmphasis = '#00FF00';
 export const EdsThemeColorBackgroundBrandPink = '#00FF00';
 export const EdsThemeColorBackgroundSkeleton = '#E6E2DE';
 export const EdsThemeColorBackgroundSkeletonStripe = '#F4F1EF';
-export const EdsThemeColorBackgroundTableRowStripe1 = '#FAF9F8';
+export const EdsThemeColorBackgroundTableRowStripe1 =
+  'rgba(255, 255, 255, 0.01)';
 export const EdsThemeColorBackgroundTableRowStripe2 = '#FAF9F8';
 export const EdsThemeColorBackgroundTableRowSelected = '#E0F5EC';
 export const EdsThemeColorBackgroundVisualPageIndicator = '#BCB9B6';
