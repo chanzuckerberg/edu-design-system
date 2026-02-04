@@ -196,6 +196,7 @@
   --eds-color-neutral-200: #CCC9C6;
   --eds-color-neutral-150: #D8D4D1;
   --eds-color-neutral-100: #E6E2DE;
+  --eds-color-transparent: rgba(255, 255, 255, 0.01);
   --eds-color-black: #000000;
   --eds-color-white: #FFFFFF;
   --eds-color-brand-grape-400: #A6A3EE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */

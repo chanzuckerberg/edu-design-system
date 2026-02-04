@@ -138,6 +138,7 @@
       },
       "white": "#FFFFFF",
       "black": "#000000",
+      "transparent": "rgba(255, 255, 255, 0.01)",
       "neutral": {
         "100": "#E6E2DE",
         "150": "#D8D4D1",

@@ -111,10 +111,16 @@
         }
       },
       "white": {
-        "value": "#FFFFFF"
+        "value": "#FFFFFF",
+        "group": "color"
       },
       "black": {
-        "value": "#000000"
+        "value": "#000000",
+        "group": "color"
+      },
+      "transparent": {
+        "value": "rgba(255, 255, 255, 0.01)",
+        "group": "color"
       },
       "neutral": {
         "100": {

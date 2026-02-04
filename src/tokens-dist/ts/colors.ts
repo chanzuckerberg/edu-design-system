@@ -1,6 +1,7 @@
 export const EdsColorBrandGrape400 = '#A6A3EE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorWhite = '#FFFFFF';
 export const EdsColorBlack = '#000000';
+export const EdsColorTransparent = 'rgba(255, 255, 255, 0.01)';
 export const EdsColorNeutral100 = '#E6E2DE';
 export const EdsColorNeutral150 = '#D8D4D1';
 export const EdsColorNeutral200 = '#CCC9C6';

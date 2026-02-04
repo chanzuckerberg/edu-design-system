@@ -116,6 +116,10 @@
       "black": {
         "value": "#000000"
       },
+      "transparent": {
+        "value": "rgba(255, 255, 255, 0.01)",
+        "group": "color"
+      },
       "neutral": {
         "100": {
           "value": "#E6E2DE",

@@ -232,7 +232,7 @@
   .app-header--orientation-vertical & {
     flex-grow: 0;
     padding-bottom: calc(var(--eds-spacing-size-2) * 1px);
-    border-bottom: 1px solid var(--eds-theme-color-border-app-header-separator);
+    border-bottom: 1px solid light-dark(var(--eds-theme-color-border-app-header-separator), var(--eds-dark-theme-color-border-app-header-separator));
     width: 100%;
   }
 
@@ -303,7 +303,7 @@
 }
 
 .app-header_nav-item-label {
-  color: light-dark(var(--eds-theme-color-icon-app-header-secondary), var(--eds-dark-theme-color-app-header-secondary));
+  color: light-dark(var(--eds-theme-color-text-app-header-secondary), var(--eds-dark-theme-color-text-app-header-secondary));
 }
 
 .app-header__nav-item--is-current {
