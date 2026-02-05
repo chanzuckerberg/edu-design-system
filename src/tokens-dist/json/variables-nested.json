@@ -320,8 +320,8 @@
             "md": "6"
           },
           "objects": {
-            "md": "6",
-            "sm": "4",
+            "md": "8",
+            "sm": "6",
             "xs": "4"
           },
           "tabUnderline": {
@@ -453,7 +453,7 @@
               "lowEmphasis": {
                 "@": "#E6E2DE",
                 "hover": "#D8D4D1",
-                "active": "#F4F1EF"
+                "active": "#D8D4D1"
               },
               "highEmphasis": {
                 "@": "#242423",

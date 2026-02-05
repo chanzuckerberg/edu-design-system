@@ -795,10 +795,10 @@
           },
           "objects": {
             "md": {
-              "value": "{eds.border.radius.150}"
+              "value": "{eds.border.radius.200}"
             },
             "sm": {
-              "value": "{eds.border.radius.100}"
+              "value": "{eds.border.radius.150}"
             },
             "xs": {
               "value": "{eds.border.radius.100}"
@@ -1086,7 +1086,7 @@
                   "value": "{eds.color.neutral.150}"
                 },
                 "active": {
-                  "value": "{eds.color.neutral.050}"
+                  "value": "{eds.color.neutral.150}"
                 }
               },
               "highEmphasis": {

@@ -430,7 +430,7 @@
   --eds-theme-color-background-utility-interactive-high-emphasis-active: var(--eds-color-neutral-650);
   --eds-theme-color-background-utility-interactive-high-emphasis-hover: var(--eds-color-neutral-750);
   --eds-theme-color-background-utility-interactive-high-emphasis: var(--eds-color-neutral-850);
-  --eds-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-neutral-150);
   --eds-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-neutral-150);
   --eds-theme-color-background-utility-interactive-low-emphasis: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-interactive-no-emphasis-active: var(--eds-color-neutral-100);
@@ -478,8 +478,8 @@
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
   --eds-theme-border-radius-objects-xs: var(--eds-border-radius-100);
-  --eds-theme-border-radius-objects-sm: var(--eds-border-radius-100);
-  --eds-theme-border-radius-objects-md: var(--eds-border-radius-150);
+  --eds-theme-border-radius-objects-sm: var(--eds-border-radius-150);
+  --eds-theme-border-radius-objects-md: var(--eds-border-radius-200);
   --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-150);
   --eds-theme-border-radius-surfaces-lg: var(--eds-border-radius-200);
   --eds-theme-border-radius-actions: var(--eds-border-radius-200);

@@ -186,7 +186,7 @@ export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasis = '#E6E2DE';
 export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasisHover =
   '#D8D4D1';
 export const EdsThemeColorBackgroundUtilityInteractiveLowEmphasisActive =
-  '#F4F1EF';
+  '#D8D4D1';
 export const EdsThemeColorBackgroundUtilityInteractiveHighEmphasis = '#242423';
 export const EdsThemeColorBackgroundUtilityInteractiveHighEmphasisHover =
   '#3A3A37';
