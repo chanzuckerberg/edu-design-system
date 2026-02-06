@@ -59,7 +59,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.0.2'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
