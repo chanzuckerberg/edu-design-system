@@ -92,8 +92,8 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.6",
-    "@babel/preset-env": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
     "@chanzuckerberg/eslint-config-edu-js": "^1.1.0",
@@ -127,8 +127,8 @@
     "@types/jest": "^29.5.14",
     "@types/jsonfile": "^6",
     "@types/lodash": "^4.17.23",
-    "@types/node": "^20.19.30",
-    "@types/react": "^18.3.27",
+    "@types/node": "^20.19.32",
+    "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "@types/yargs": "^17.0.35",
     "axe-core": "4.11.1",
