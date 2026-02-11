@@ -1,4 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import clsx from 'clsx';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';
@@ -125,9 +126,16 @@ const IconsInGrid = (args: IconProps) => (
     <ul className={styles['icon-grid']}>
       {(Object.keys(icons) as IconName[]).map((name) => {
         return (
-          <li className={styles['icon-grid__item']} key={name}>
+          <li
+            className={clsx(
+              styles['icon-grid__item'],
+              icons[name].isDeprecated &&
+                styles['icon-grid__item--is-deprecated'],
+            )}
+            key={name}
+          >
             <Icon className={styles['icon-grid__icon']} name={name} {...args} />
-            <span className={styles['icon-grid__text']}>{name}</span>
+            <Text preset="body-xs">{name}</Text>
           </li>
         );
       })}
@@ -136,9 +144,10 @@ const IconsInGrid = (args: IconProps) => (
 );
 
 /**
- * Grid of all the available icons. Use the controls to change color, or other attributes
+ * The icon grid is not exported and is meant solely to display
+ * a grid of icons within the system.
  *
- * **NOTE**: some icons marked as deprecated will be removed in future releases.
+ * **NOTE**: Deprecated icons are dimmed, and will be removed in the next major release.
  */
 export const IconGrid: Story = {
   render: (args) => <IconsInGrid {...args} />,
