@@ -25,6 +25,7 @@ export default {
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0.3'],
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 } as Meta<ButtonProps>;
 
 type Story = StoryObj<ButtonProps>;
@@ -94,7 +95,6 @@ export const JustDisabledProp: Story = {
     disabled: true,
   },
   render: DefaultRanks.render,
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 };
 
 /**
@@ -138,7 +138,6 @@ export const InverseRanks: Story = {
     variant: 'inverse',
   },
   render: DefaultRanks.render,
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
   globals: {
     backgrounds: {
       value: 'background-utility-default-high-emphasis',
@@ -156,7 +155,6 @@ export const InverseDisabledRanks: Story = {
     isDisabled: true,
   },
   render: DefaultRanks.render,
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
   globals: {
     backgrounds: {
       value: 'background-utility-default-high-emphasis',
@@ -186,6 +184,42 @@ export const Sizes: Story = {
       </div>
     );
   },
+};
+
+/**
+ * Each si can have icons on the left ...
+ */
+export const LeftIconSizes: Story = {
+  args: {
+    ...Sizes.args,
+    icon: 'menu',
+    iconLayout: 'left',
+  },
+  render: Sizes.render,
+};
+
+/**
+ * ... or right ...
+ */
+export const RightIconSizes: Story = {
+  args: {
+    ...Sizes.args,
+    icon: 'menu',
+    iconLayout: 'right',
+  },
+  render: Sizes.render,
+};
+
+/**
+ * ... or an icon all by itself.
+ */
+export const IconOnlySizes: Story = {
+  args: {
+    ...Sizes.args,
+    icon: 'menu',
+    iconLayout: 'icon-only',
+  },
+  render: Sizes.render,
 };
 
 /**
