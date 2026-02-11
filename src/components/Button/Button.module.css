@@ -71,7 +71,7 @@
 }
 
 .button--sm {
-  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
 }
 
 .button--size-lg {

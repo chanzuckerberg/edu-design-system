@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import { userEvent } from '@storybook/testing-library';
+
 import React from 'react';
 import { Button, type ButtonProps } from './Button';
 
@@ -22,7 +24,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0.2'],
+  tags: ['autodocs', 'version:2.0.3'],
 } as Meta<ButtonProps>;
 
 type Story = StoryObj<ButtonProps>;
@@ -54,6 +56,21 @@ export const DefaultRanks: Story = {
         </Button>
       </div>
     );
+  },
+};
+
+/**
+ * Tertiary buttons have no border, but will on hover/focus
+ */
+export const Tertiary: Story = {
+  args: {
+    icon: 'menu',
+    iconLayout: 'left',
+    rank: 'tertiary',
+    size: 'sm',
+  },
+  play: async () => {
+    await userEvent.tab();
   },
 };
 
