@@ -151,6 +151,7 @@ exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-none button--disabled button--full-width button--primary button--lg button--size-lg button--variant-default"
       disabled=""
       type="button"
@@ -162,6 +163,7 @@ exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-none button--disabled button--full-width button--primary button--md button--size-md button--variant-default"
       disabled=""
       type="button"
@@ -173,6 +175,7 @@ exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-none button--disabled button--full-width button--primary button--sm button--size-sm button--variant-default"
       disabled=""
       type="button"
@@ -195,6 +198,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-none button--full-width button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
@@ -205,6 +209,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-none button--full-width button--primary button--md button--size-md button--variant-default"
       type="button"
     >
@@ -215,6 +220,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-none button--full-width button--primary button--sm button--size-sm button--variant-default"
       type="button"
     >
@@ -319,6 +325,7 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-icon-only button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
@@ -342,6 +349,7 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-icon-only button--primary button--md button--size-md button--variant-default"
       type="button"
     >
@@ -365,6 +373,7 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-icon-only button--primary button--sm button--size-sm button--variant-default"
       type="button"
     >
@@ -528,6 +537,7 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-left button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
@@ -552,6 +562,7 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-left button--primary button--md button--size-md button--variant-default"
       type="button"
     >
@@ -576,6 +587,7 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-left button--primary button--sm button--size-sm button--variant-default"
       type="button"
     >
@@ -611,6 +623,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-none button--loading button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
@@ -669,6 +682,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
       </div>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-none button--loading button--primary button--md button--size-md button--variant-default"
       type="button"
     >
@@ -727,6 +741,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
       </div>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-none button--loading button--primary button--sm button--size-sm button--variant-default"
       type="button"
     >
@@ -837,6 +852,7 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-right button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
@@ -861,6 +877,7 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-right button--primary button--md button--size-md button--variant-default"
       type="button"
     >
@@ -885,6 +902,7 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-right button--primary button--sm button--size-sm button--variant-default"
       type="button"
     >
@@ -920,6 +938,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
+      aria-label="Large button"
       class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
       type="button"
     >
@@ -930,6 +949,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Medium button"
       class="button button--layout-none button--primary button--md button--size-md button--variant-default"
       type="button"
     >
@@ -940,6 +960,7 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
       </span>
     </button>
     <button
+      aria-label="Small button"
       class="button button--layout-none button--primary button--sm button--size-sm button--variant-default"
       type="button"
     >

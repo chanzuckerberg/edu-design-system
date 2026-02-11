@@ -172,13 +172,13 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <div className="flex items-center gap-1">
-        <Button {...args} size="lg">
+        <Button {...args} aria-label="Large button" size="lg">
           Large
         </Button>
-        <Button {...args} size="md">
+        <Button {...args} aria-label="Medium button" size="md">
           Medium
         </Button>
-        <Button {...args} size="sm">
+        <Button {...args} aria-label="Small button" size="sm">
           Small
         </Button>
       </div>
