@@ -2,13 +2,13 @@ import React from 'react';
 
 export type IconName = keyof typeof icons;
 
-export type Icon = {
+export type IconBody = {
   viewBox: string;
   content: React.JSX.Element;
   isDeprecated?: boolean;
 };
 
-const icons: Record<string, Icon> = {
+const icons = {
   add: {
     viewBox: '0 0 24 24',
     content: (

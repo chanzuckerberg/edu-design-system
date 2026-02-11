@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';
-import icons, { type IconName } from '../../icons/spritemap';
+import icons, { type IconName, type IconBody } from '../../icons/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
 import Text from '../Text';
 
@@ -129,7 +129,7 @@ const IconsInGrid = (args: IconProps) => (
           <li
             className={clsx(
               styles['icon-grid__item'],
-              icons[name].isDeprecated &&
+              (icons[name] as IconBody).isDeprecated &&
                 styles['icon-grid__item--is-deprecated'],
             )}
             key={name}
