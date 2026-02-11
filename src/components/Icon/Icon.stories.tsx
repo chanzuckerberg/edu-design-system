@@ -147,7 +147,7 @@ const IconsInGrid = (args: IconProps) => (
  * The icon grid is not exported and is meant solely to display
  * a grid of icons within the system.
  *
- * **NOTE**: Deprecated icons are dimmed, and will be removed in the next major release.
+ * **NOTE**: Deprecated icons are dimmed, and will be removed in the next major release
  */
 export const IconGrid: Story = {
   render: (args) => <IconsInGrid {...args} />,
