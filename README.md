@@ -1,6 +1,8 @@
 # Education Design System
 
-![Test CI](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/test.yml/badge.svg) [![Release](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/release.yml/badge.svg)](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/release.yml) [![codecov](https://codecov.io/gh/chanzuckerberg/edu-design-system/branch/main/graph/badge.svg)](https://codecov.io/gh/chanzuckerberg/edu-design-system)
+![Test CI](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/test.yml/badge.svg) [![Release](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/release.yml/badge.svg)](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/release.yml) [![codecov](https://codecov.io/gh/chanzuckerberg/edu-design-system/branch/main/graph/badge.svg)](https://codecov.io/gh/chanzuckerberg/edu-design-system) ![Release](https://img.shields.io/github/v/release/chanzuckerberg/edu-design-system) ![GitHub commits since latest release (branch)](https://img.shields.io/github/commits-since/chanzuckerberg/edu-design-system/latest/next)
+
+
 
 The Education Design System (EDS) is a repository of building blocks, implementing the [Chan Zuckerberg Initiative Education](https://chanzuckerberg.com/education/) Design System. It contains:
 - Design Tokens defining the color, sizes, and other details used in the system
