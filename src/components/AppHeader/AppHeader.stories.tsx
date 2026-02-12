@@ -1,8 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import { userEvent } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 
 import React from 'react';
+import { userEvent } from 'storybook/test';
 
 import { AppHeader } from './AppHeader';
 import { chromaticViewports } from '../../util/viewports';
@@ -385,6 +385,63 @@ export const NavMenus: Story = {
         ],
       },
     ],
+  },
+};
+
+/**
+ * When rendering the content of `AppHeader` dynamically, it can be given invalid sub-menu types. This is handled via
+ * non-interactive fallbacks showing "N/A".
+ */
+export const FallbackNavMenus: Story = {
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    navGroups: [
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Show Profile',
+            type: 'menu',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            navItems: [
+              {
+                // @ts-expect-error using invalid type on purpose
+                type: 'custom',
+                name: 'Settings',
+              },
+              {
+                name: 'About Us',
+                type: 'link',
+                href: 'http://example.org',
+                isExternal: true,
+              },
+              {
+                type: 'link',
+                name: 'Sign Out',
+                href: 'https://example.org/#logout',
+              },
+              {
+                type: 'separator',
+                name: 'line',
+              },
+              {
+                type: 'label',
+                name: '© 2025 Your Company Name. All rights reserved.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  play: async () => {
+    if (isChromatic()) {
+      await userEvent.tab();
+      await userEvent.keyboard(' ', { delay: 300 });
+    }
   },
 };
 

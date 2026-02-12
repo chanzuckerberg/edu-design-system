@@ -341,6 +341,117 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
 </header>
 `;
 
+exports[`<AppHeader /> FallbackNavMenus story renders snapshot 1`] = `
+<header
+  class="app-header app-header--orientation-horizontal app-header--style-docked"
+>
+  <div>
+    <div
+      class="app-header__content"
+    >
+      <div
+        class="app-header-title"
+      >
+        <div
+          class="app-header-title__title"
+        >
+          <span
+            class="text text--headline-sm"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="app-header-title__sub-title"
+        >
+          <span
+            class="text text--body-md"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="app-header__nav-groups"
+      >
+        <nav
+          aria-label="group-2"
+          class="app-header__nav-group"
+        >
+          <ul>
+            <li>
+              <div
+                class="menu"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="app-header__nav-item app-header__nav-item--button"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-:re:"
+                >
+                  <span
+                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                  >
+                    <span
+                      class="text text--label-md"
+                    >
+                      Show Profile
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="icon"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.19625 17.4845C7.04625 16.873 7.94817 16.3894 8.902 16.0337C9.85583 15.6779 10.8885 15.5 12 15.5C13.1115 15.5 14.1442 15.6779 15.098 16.0337C16.0518 16.3894 16.9538 16.873 17.8038 17.4845C18.4641 16.8012 18.9952 15.9942 19.397 15.0635C19.799 14.1327 20 13.1115 20 12C20 9.78333 19.2208 7.89583 17.6625 6.3375C16.1042 4.77917 14.2167 4 12 4C9.78333 4 7.89583 4.77917 6.3375 6.3375C4.77917 7.89583 4 9.78333 4 12C4 13.1115 4.201 14.1327 4.603 15.0635C5.00483 15.9942 5.53592 16.8012 6.19625 17.4845ZM12.0005 12.5C11.1578 12.5 10.4471 12.2108 9.86825 11.6323C9.28942 11.0538 9 10.3432 9 9.5005C9 8.65783 9.28925 7.94708 9.86775 7.36825C10.4462 6.78942 11.1568 6.5 11.9995 6.5C12.8422 6.5 13.5529 6.78925 14.1318 7.36775C14.7106 7.94625 15 8.65683 15 9.4995C15 10.3422 14.7107 11.0529 14.1322 11.6317C13.5537 12.2106 12.8432 12.5 12.0005 12.5ZM12 21C10.7448 21 9.56983 20.7663 8.475 20.299C7.38017 19.8317 6.42758 19.1929 5.61725 18.3828C4.80708 17.5724 4.16833 16.6198 3.701 15.525C3.23367 14.4302 3 13.2552 3 12C3 10.7448 3.23367 9.56983 3.701 8.475C4.16833 7.38017 4.80708 6.42758 5.61725 5.61725C6.42758 4.80708 7.38017 4.16833 8.475 3.701C9.56983 3.23367 10.7448 3 12 3C13.2552 3 14.4302 3.23367 15.525 3.701C16.6198 4.16833 17.5724 4.80708 18.3828 5.61725C19.1929 6.42758 19.8317 7.38017 20.299 8.475C20.7663 9.56983 21 10.7448 21 12C21 13.2552 20.7663 14.4302 20.299 15.525C19.8317 16.6198 19.1929 17.5724 18.3828 18.3828C17.5724 19.1929 16.6198 19.8317 15.525 20.299C14.4302 20.7663 13.2552 21 12 21ZM12 20C12.9218 20 13.8289 19.8388 14.7212 19.5163C15.6134 19.1939 16.3845 18.7526 17.0345 18.1923C16.3845 17.6704 15.6326 17.2579 14.7788 16.9548C13.9249 16.6516 12.9987 16.5 12 16.5C11.0013 16.5 10.0718 16.6484 9.2115 16.9453C8.35133 17.2421 7.60267 17.6578 6.9655 18.1923C7.6155 18.7526 8.38658 19.1939 9.27875 19.5163C10.1711 19.8388 11.0782 20 12 20ZM12 11.5C12.5615 11.5 13.0352 11.3071 13.4212 10.9212C13.8071 10.5352 14 10.0615 14 9.5C14 8.9385 13.8071 8.46475 13.4212 8.07875C13.0352 7.69292 12.5615 7.5 12 7.5C11.4385 7.5 10.9647 7.69292 10.5787 8.07875C10.1929 8.46475 10 8.9385 10 9.5C10 10.0615 10.1929 10.5352 10.5787 10.9212C10.9647 11.3071 11.4385 11.5 12 11.5Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="app-header__menu"
+      >
+        <button
+          aria-label="Show Menu"
+          class="app-header__nav-item app-header__nav-item--button"
+        >
+          <span
+            class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
 exports[`<AppHeader /> Floating story renders snapshot 1`] = `
 <header
   class="app-header app-header--orientation-horizontal app-header--style-floating"
@@ -2011,7 +2122,7 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="app-header__menu-trigger app-header__nav-item app-header__nav-item--button"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:re:"
+                  id="headlessui-menu-button-:rq:"
                 >
                   <svg
                     aria-hidden="true"
