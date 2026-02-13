@@ -546,6 +546,7 @@ const AppHeaderNavGroup = ({
                             </Menu.Item>
                           );
                         case 'label':
+                          // TODO(next-major): Remove event handling from non-interactive labels
                           return (
                             <Menu.Item
                               __type="label"
@@ -559,13 +560,17 @@ const AppHeaderNavGroup = ({
                           );
                         case 'separator':
                           return (
-                            <Menu.Item
-                              __type="separator"
-                              key={navItem.name}
-                            ></Menu.Item>
+                            <Menu.Item __type="separator" key={navItem.name} />
                           );
                         default:
-                          return <Menu.Item>N/A</Menu.Item>;
+                          // This should not be reachable as types guard against it
+                          // however, in cases where data sent in is dynamic, this
+                          // protects the UI.
+                          return (
+                            <Menu.Item key="error-unknown-nav-item-type">
+                              N/A
+                            </Menu.Item>
+                          );
                       }
                     })}
                   </Menu.Items>
@@ -842,6 +847,7 @@ const AppHeaderDrawerContent = ({
                               </Menu.Item>
                             );
                           case 'label':
+                            // TODO(next-major): Remove event handling from non-interactive labels
                             return (
                               <Menu.Item
                                 __type="label"
@@ -858,10 +864,17 @@ const AppHeaderDrawerContent = ({
                               <Menu.Item
                                 __type="separator"
                                 key={navItem.name}
-                              ></Menu.Item>
+                              />
                             );
                           default:
-                            return <Menu.Item>N/A</Menu.Item>;
+                            // This should not be reachable as types guard against it
+                            // however, in cases where data sent in is dynamic, this
+                            // protects the UI.
+                            return (
+                              <Menu.Item key="error-unknown-nav-item-type">
+                                N/A
+                              </Menu.Item>
+                            );
                         }
                       })}
                     </Menu.Items>

@@ -49,6 +49,7 @@ const config = {
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
     '@storybook/addon-themes',
+    'storybook-addon-test-codegen',
   ],
 
   // TODO: update config and package.json scripts to support staticDirs

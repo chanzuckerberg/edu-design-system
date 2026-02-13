@@ -2725,6 +2725,7 @@ __metadata:
     standard-version: "npm:^9.5.0"
     storybook: "npm:^9.1.17"
     storybook-addon-tag-badges: "npm:^2.0.4"
+    storybook-addon-test-codegen: "npm:^2.0.1"
     style-dictionary: "npm:^3.9.2"
     stylelint: "npm:^16.26.1"
     stylelint-config-recommended: "npm:^17.0.0"
@@ -18622,6 +18623,15 @@ __metadata:
   peerDependencies:
     storybook: ^9.0.0
   checksum: 10/f101177d50bd2b748119c5b9fce9646aa6190f4851aaeb85dfe3351033722fffa7a39e1c929d8465d916c8c40a73fde2aa49349ba09f71b473a8f55baa154516
+  languageName: node
+  linkType: hard
+
+"storybook-addon-test-codegen@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "storybook-addon-test-codegen@npm:2.0.1"
+  peerDependencies:
+    storybook: ^9.0.0 || ^9.0.0-rc.4 || ^0.0.0-0
+  checksum: 10/67c20aadaebac7103d5b9801a0430a532cbfe61b60dd4eeefa436c216a7b9c42526b8e922c3a54efce175b386d4976574b1209cb1428e240c56eae55ec494872
   languageName: node
   linkType: hard
 
