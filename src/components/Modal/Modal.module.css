@@ -57,7 +57,6 @@
   * modal would have no clear boundary. 
   */
   border: calc(var(--eds-theme-form-border-width) * 1px) transparent light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
-  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
   display: flex;
   flex-direction: column;
@@ -142,6 +141,8 @@
 .modal__content--full {
   width: 100%;
   height: 100%;
+
+  border-radius: 0;
 }
 
 /**
@@ -152,12 +153,15 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
+
+      border-radius: 0;
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-height: 640px;
       max-width: 800px;
 
+      border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
       margin: calc(var(--eds-spacing-size-3) * 1px);
     }
 
@@ -187,6 +191,7 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: auto;
+      border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
     }
 
     @media all and (min-width: $eds-bp-sm) {
@@ -222,11 +227,14 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
+
+      border-radius: 0;
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 800px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
       margin: calc(var(--eds-spacing-size-3) * 1px);
     }
@@ -257,11 +265,14 @@
     @media all and (min-width: $eds-bp-xs) {
       width: 100%;
       height: 100%;
+
+      border-radius: 0;
     }
 
     @media all and (min-width: $eds-bp-sm) {
       max-width: 800px;
       height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+      border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
       margin: calc(var(--eds-spacing-size-3) * 1px);
     }
@@ -317,6 +328,7 @@
   @media all and (min-width: $eds-bp-xs) {
     max-height: 480px;
     max-width: 560px;
+    border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
     margin: calc(var(--eds-spacing-size-3) * 1px);
   }

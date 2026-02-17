@@ -14,6 +14,7 @@
   padding: calc(var(--eds-spacing-size-3) * 1px);
   height: 100%;
   border: calc(var(--eds-theme-border-width) * 1px) solid;
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
   &:focus-visible {
     outline-offset: 1px;
@@ -26,9 +27,11 @@
   }
 }
 
-:where(.child-card) {
+.card.child-card {
   margin-top: calc(var(--eds-spacing-size-2) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
+
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 }
 
 /**
@@ -47,7 +50,7 @@
 }
 
 .card--container-color-default {
-  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 
   &.card--is-interactive {
     &:hover {
@@ -108,6 +111,8 @@
   top: 0;
   left: 0;
 
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px) calc(var(--eds-theme-border-radius-surfaces-lg) * 1px) 0 0;
+
   width: 100%;
 }
 
@@ -120,16 +125,18 @@
   top: 0;
   left: 0;
   z-index: -1;
+  transform: scale(0);
   
   /* remove focus ring and instead enable on the label */
-  &:focus {
+  &:focus, &:focus-visible {
     outline: none;
   }
 }
 
 .card__behavior-label:has(.card__behavior-input:focus-visible) {
   outline: calc(var(--eds-border-width-md) * 1px) solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
-  outline-offset: 2px;
+  outline-offset: 4px;
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 }
 
 

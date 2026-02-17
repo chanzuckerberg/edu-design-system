@@ -6,7 +6,7 @@
   --eds-dark-theme-color-toggle-disabled-background: var(--eds-dark-theme-color-icon-disabled);
   --eds-dark-theme-color-toggle-off-background: var(--eds-dark-theme-color-icon-neutral-subtle);
   --eds-dark-theme-color-toggle-on-background: var(--eds-dark-theme-color-background-brand-primary-strong);
-  --eds-dark-theme-color-text-brand-default: var(--eds-theme-color-text-brand-primary);
+  --eds-dark-theme-color-text-brand-default: var(--eds-dark-theme-color-text-brand-primary);
   --eds-dark-theme-color-text-utility-inverse-disabled: rgba(250, 249, 248, 0.50);
   --eds-dark-theme-color-link-neutral-background-focus: var(--eds-dark-theme-color-text-neutral-default);
   --eds-dark-theme-color-link-neutral-text-decoration-focus: var(--eds-dark-theme-color-text-neutral-default-inverse);
@@ -196,6 +196,7 @@
   --eds-color-neutral-200: #CCC9C6;
   --eds-color-neutral-150: #D8D4D1;
   --eds-color-neutral-100: #E6E2DE;
+  --eds-color-transparent: rgba(255, 255, 255, 0.01);
   --eds-color-black: #000000;
   --eds-color-white: #FFFFFF;
   --eds-color-brand-grape-400: #A6A3EE; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
@@ -320,8 +321,8 @@
   --eds-dark-theme-color-text-neutral-strong: var(--eds-color-neutral-800);
   --eds-dark-theme-color-text-neutral-default-inverse: var(--eds-color-neutral-white);
   --eds-dark-theme-color-text-neutral-default: var(--eds-color-neutral-700);
-  --eds-dark-theme-color-app-header-secondary: var(--eds-color-neutral-250);
-  --eds-dark-theme-color-app-header-primary: var(--eds-color-white);
+  --eds-dark-theme-color-icon-app-header-secondary: var(--eds-color-neutral-250);
+  --eds-dark-theme-color-icon-app-header-primary: var(--eds-color-white);
   --eds-dark-theme-color-icon-utility-placeholder: var(--eds-color-neutral-550);
   --eds-dark-theme-color-icon-utility-inverse-interactive-visited: var(--eds-color-neutral-025);
   --eds-dark-theme-color-icon-utility-inverse-disabled: var(--eds-dark-theme-color-text-utility-inverse-disabled); /* Use with rgb() */
@@ -380,9 +381,9 @@
   --eds-dark-theme-color-border-utility-interactive-secondary-active: var(--eds-color-green-850);
   --eds-dark-theme-color-border-utility-interactive-secondary-hover: var(--eds-color-green-750);
   --eds-dark-theme-color-border-utility-interactive-secondary: var(--eds-color-green-650);
-  --eds-dark-theme-color-border-utility-interactive-active: var(--eds-color-neutral-350);
-  --eds-dark-theme-color-border-utility-interactive-hover: var(--eds-color-neutral-250);
-  --eds-dark-theme-color-border-utility-interactive: var(--eds-color-neutral-200);
+  --eds-dark-theme-color-border-utility-interactive-active: var(--eds-color-neutral-450);
+  --eds-dark-theme-color-border-utility-interactive-hover: var(--eds-color-neutral-350);
+  --eds-dark-theme-color-border-utility-interactive: var(--eds-color-neutral-250);
   --eds-dark-theme-color-border-utility-default-high-emphasis-active: var(--eds-color-neutral-650);
   --eds-dark-theme-color-border-utility-default-high-emphasis-hover: var(--eds-color-neutral-750);
   --eds-dark-theme-color-border-utility-default-high-emphasis: var(--eds-color-neutral-850);
@@ -421,16 +422,16 @@
   --eds-dark-theme-color-background-utility-critical-high-emphasis-active: var(--eds-color-red-750);
   --eds-dark-theme-color-background-utility-critical-high-emphasis-hover: var(--eds-color-red-650);
   --eds-dark-theme-color-background-utility-critical-high-emphasis: var(--eds-color-red-550);
-  --eds-dark-theme-color-background-utility-critical-low-emphasis-active: var(--eds-color-red-150);
+  --eds-dark-theme-color-background-utility-critical-low-emphasis-active: var(--eds-color-red-200);
   --eds-dark-theme-color-background-utility-critical-low-emphasis-hover: var(--eds-color-red-150);
-  --eds-dark-theme-color-background-utility-critical-low-emphasis: var(--eds-color-red-100);
+  --eds-dark-theme-color-background-utility-critical-low-emphasis: var(--eds-color-red-150);
   --eds-dark-theme-color-background-utility-critical-no-emphasis-active: var(--eds-color-red-100);
   --eds-dark-theme-color-background-utility-critical-no-emphasis-hover: var(--eds-color-red-050);
   --eds-dark-theme-color-background-utility-interactive-high-emphasis-active: var(--eds-color-neutral-650);
   --eds-dark-theme-color-background-utility-interactive-high-emphasis-hover: var(--eds-color-neutral-750);
   --eds-dark-theme-color-background-utility-interactive-high-emphasis: var(--eds-color-neutral-850);
-  --eds-dark-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-green-150);
-  --eds-dark-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-green-100);
+  --eds-dark-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-neutral-050);
+  --eds-dark-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-neutral-150);
   --eds-dark-theme-color-background-utility-interactive-low-emphasis: var(--eds-color-neutral-100);
   --eds-dark-theme-color-background-utility-interactive-no-emphasis-active: var(--eds-color-neutral-100);
   --eds-dark-theme-color-background-utility-interactive-no-emphasis-hover: var(--eds-color-neutral-050);
@@ -453,8 +454,8 @@
   --eds-dark-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-dark-theme-color-background-visual-page-indicator: var(--eds-color-neutral-250);
   --eds-dark-theme-color-background-table-row-selected: var(--eds-color-green-050);
-  --eds-dark-theme-color-background-table-row-stripe-2: var(--eds-color-neutral-050);
-  --eds-dark-theme-color-background-table-row-stripe-1: var(--eds-color-neutral-025);
+  --eds-dark-theme-color-background-table-row-stripe-2: var(--eds-color-neutral-025);
+  --eds-dark-theme-color-background-table-row-stripe-1: var(--eds-color-transparent);
   --eds-dark-theme-color-background-skeleton-stripe: var(--eds-color-neutral-050);
   --eds-dark-theme-color-background-skeleton: var(--eds-color-neutral-100);
   --eds-dark-theme-color-background-brand-blue-low-emphasis: var(--eds-color-blue-050);
@@ -476,10 +477,10 @@
   --eds-dark-theme-border-radius-notification: var(--eds-border-radius-300);
   --eds-dark-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
   --eds-dark-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
-  --eds-dark-theme-border-radius-objects-xs: var(--eds-border-radius-150);
-  --eds-dark-theme-border-radius-objects-sm: var(--eds-border-radius-300);
-  --eds-dark-theme-border-radius-objects-md: var(--eds-border-radius-300);
-  --eds-dark-theme-border-radius-surfaces-md: var(--eds-border-radius-400);
-  --eds-dark-theme-border-radius-surfaces-lg: var(--eds-border-radius-400);
+  --eds-dark-theme-border-radius-objects-xs: var(--eds-border-radius-100);
+  --eds-dark-theme-border-radius-objects-sm: var(--eds-border-radius-100);
+  --eds-dark-theme-border-radius-objects-md: var(--eds-border-radius-150);
+  --eds-dark-theme-border-radius-surfaces-md: var(--eds-border-radius-150);
+  --eds-dark-theme-border-radius-surfaces-lg: var(--eds-border-radius-200);
   --eds-dark-theme-border-radius-actions: var(--eds-border-radius-200);
 }

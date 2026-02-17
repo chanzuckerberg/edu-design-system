@@ -13,7 +13,7 @@
   overflow: hidden;
 
   padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
   border: calc(var(--eds-border-width-sm) * 1px) solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));

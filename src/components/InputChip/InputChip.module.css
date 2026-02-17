@@ -22,7 +22,7 @@
   border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
   border-right: none;
 
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 
@@ -36,7 +36,7 @@
 
   border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
   border-left: none;
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   outline: none;

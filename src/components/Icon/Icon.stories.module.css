@@ -2,19 +2,15 @@
     # ICON GRID
 \*------------------------------------*/
 
-/**
- * The icon grid is not for production and is meant solely to display
- * a grid of icons within the pattern library. THerefore, it does not
- * follow coding conventions
- */
-
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: calc(var(--eds-spacing-size-2) * 1px);
+  padding: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .icon-grid__item {
+  position: relative;
   text-align: center;
   display: -webkit-box;
   display: flex;
@@ -22,8 +18,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  border: 1px solid #cccccc;
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
+  border: 1px solid var(--eds-theme-color-border-utility-default-medium-emphasis);
   padding: 8px;
   min-height: calc(var(--eds-spacing-size-10) * 1px);
 }
@@ -34,7 +30,19 @@
   margin: 0 auto calc(var(--eds-spacing-size-2) * 1px) auto;
 }
 
-.icon-grid__text {
-  display: block;
-  font-size: 0.75rem;
+.icon-grid__item--is-deprecated {
+  background-color: var(--eds-theme-color-background-utility-default-low-emphasis);
+  color: var(--eds-theme-color-text-disabled);
+}
+
+.icon-grid__item--is-deprecated::before {
+  content: '•';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(var(--eds-spacing-size-3) * 1px);
+  height: calc(var(--eds-spacing-size-3) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px) 0 calc(var(--eds-theme-border-radius-surfaces-md) * 1px) 0;
+
+  background-color: var(--eds-theme-color-background-utility-default-medium-emphasis);
 }

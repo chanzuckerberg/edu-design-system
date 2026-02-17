@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v17.4.0...v17.4.1) (2026-02-17)
+
+
+### Bug Fixes
+
+* **AppHeader:** add onLinkClick support for nested nav menu items ([#2375](https://github.com/chanzuckerberg/edu-design-system/issues/2375)) ([5d7e37c](https://github.com/chanzuckerberg/edu-design-system/commit/5d7e37cf73bd9c99db597e7bc5a5370469e8a5e8))
+* **AppHeader:** fix focus ring on nav items ([#2378](https://github.com/chanzuckerberg/edu-design-system/issues/2378)) ([da9ea4a](https://github.com/chanzuckerberg/edu-design-system/commit/da9ea4a0e666f6ed7568a9352fab18e77035c9dc))
+* **Button:** adjust left/right padding to match design ([#2388](https://github.com/chanzuckerberg/edu-design-system/issues/2388)) ([ad58fba](https://github.com/chanzuckerberg/edu-design-system/commit/ad58fba3f87d35d4f35c94843da2beb571672b5c))
+* **Card:** set default background to use no-emphasis ([#2381](https://github.com/chanzuckerberg/edu-design-system/issues/2381)) ([856cd1a](https://github.com/chanzuckerberg/edu-design-system/commit/856cd1aef11a85e0e2cbbb90080a73e7a79fd673))
+* map selection and input chip border radii to design radii ([#2387](https://github.com/chanzuckerberg/edu-design-system/issues/2387)) ([37ef20d](https://github.com/chanzuckerberg/edu-design-system/commit/37ef20d2604338b87829b52b8b301821f27cd517))
+
 ## [17.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.3.0...v17.4.0) (2026-01-30)
 
 

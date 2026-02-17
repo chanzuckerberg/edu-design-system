@@ -1,8 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import { userEvent } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 
 import React from 'react';
+import { userEvent } from 'storybook/test';
 
 import { AppHeader } from './AppHeader';
 import { chromaticViewports } from '../../util/viewports';
@@ -319,6 +319,13 @@ export const NavMenus: Story = {
     onButtonClick: (ev, navItem) => {
       console.log('button clicked', ev, navItem);
     },
+    onLinkClick: (ev, navItem) => {
+      console.log('link clicked', ev, navItem);
+
+      if (navItem.name === 'About Us') {
+        ev.preventDefault();
+      }
+    },
     navGroups: [
       {
         name: 'group-1',
@@ -366,8 +373,8 @@ export const NavMenus: Story = {
                 href: 'https://example.org/#logout',
               },
               {
-                name: 'line',
                 type: 'separator',
+                name: 'line',
               },
               {
                 type: 'label',
@@ -378,6 +385,63 @@ export const NavMenus: Story = {
         ],
       },
     ],
+  },
+};
+
+/**
+ * When rendering the content of `AppHeader` dynamically, it can be given invalid sub-menu types. This is handled via
+ * non-interactive fallbacks showing "N/A".
+ */
+export const FallbackNavMenus: Story = {
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    navGroups: [
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Show Profile',
+            type: 'menu',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            navItems: [
+              {
+                // @ts-expect-error using invalid type on purpose
+                type: 'custom',
+                name: 'Settings',
+              },
+              {
+                name: 'About Us',
+                type: 'link',
+                href: 'http://example.org',
+                isExternal: true,
+              },
+              {
+                type: 'link',
+                name: 'Sign Out',
+                href: 'https://example.org/#logout',
+              },
+              {
+                type: 'separator',
+                name: 'line',
+              },
+              {
+                type: 'label',
+                name: '© 2025 Your Company Name. All rights reserved.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  play: async () => {
+    if (isChromatic()) {
+      await userEvent.tab();
+      await userEvent.keyboard(' ', { delay: 300 });
+    }
   },
 };
 
@@ -518,6 +582,9 @@ export const VerticalNavMenus: Story = {
   },
 };
 
+/**
+ * Chromatic Test: show the full size menu on snapshot
+ */
 export const CanExpandFullSizeMenu: Story = {
   args: {
     ...NavMenus.args,
@@ -552,6 +619,9 @@ export const CanExpandFullSizeMenu: Story = {
   },
 };
 
+/**
+ * Chromatic Test: Verify opening of hamburger menu
+ */
 export const CanExpandHamburgerMenu: Story = {
   args: {
     ...NavMenus.args,
@@ -573,6 +643,34 @@ export const CanExpandHamburgerMenu: Story = {
     if (isChromatic()) {
       await userEvent.keyboard(' ', { delay: 400 });
     }
+  },
+
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
+ * Chromatic Test: Verify focus ring on nav items (EDS-1820)
+ */
+export const CanFocusMenuItem: Story = {
+  args: {
+    ...VerticalNavMenus.args,
+  },
+
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+
+  // Select the menu then expand it with the keyboard. set up for snapshotting
+  play: async () => {
+    await userEvent.tab();
+    await userEvent.tab();
   },
 
   globals: {

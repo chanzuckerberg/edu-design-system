@@ -1,4 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import { userEvent } from '@storybook/testing-library';
+
 import React from 'react';
 import { Button, type ButtonProps } from './Button';
 
@@ -22,7 +24,8 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0.2'],
+  tags: ['autodocs', 'version:2.0.3'],
+  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 } as Meta<ButtonProps>;
 
 type Story = StoryObj<ButtonProps>;
@@ -58,6 +61,21 @@ export const DefaultRanks: Story = {
 };
 
 /**
+ * Tertiary buttons have no border, but will on hover/focus
+ */
+export const Tertiary: Story = {
+  args: {
+    icon: 'menu',
+    iconLayout: 'left',
+    rank: 'tertiary',
+    size: 'sm',
+  },
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
+/**
  * Buttons can be disabled for each rank using `isDisabled`
  */
 export const Disabled: Story = {
@@ -77,7 +95,6 @@ export const JustDisabledProp: Story = {
     disabled: true,
   },
   render: DefaultRanks.render,
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
 };
 
 /**
@@ -121,7 +138,6 @@ export const InverseRanks: Story = {
     variant: 'inverse',
   },
   render: DefaultRanks.render,
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
   globals: {
     backgrounds: {
       value: 'background-utility-default-high-emphasis',
@@ -139,7 +155,6 @@ export const InverseDisabledRanks: Story = {
     isDisabled: true,
   },
   render: DefaultRanks.render,
-  decorators: [(Story) => <div className="p-1">{Story()}</div>],
   globals: {
     backgrounds: {
       value: 'background-utility-default-high-emphasis',
@@ -157,18 +172,54 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <div className="flex items-center gap-1">
-        <Button {...args} size="lg">
+        <Button {...args} aria-label="Large button" size="lg">
           Large
         </Button>
-        <Button {...args} size="md">
+        <Button {...args} aria-label="Medium button" size="md">
           Medium
         </Button>
-        <Button {...args} size="sm">
+        <Button {...args} aria-label="Small button" size="sm">
           Small
         </Button>
       </div>
     );
   },
+};
+
+/**
+ * Each si can have icons on the left ...
+ */
+export const LeftIconSizes: Story = {
+  args: {
+    ...Sizes.args,
+    icon: 'menu',
+    iconLayout: 'left',
+  },
+  render: Sizes.render,
+};
+
+/**
+ * ... or right ...
+ */
+export const RightIconSizes: Story = {
+  args: {
+    ...Sizes.args,
+    icon: 'menu',
+    iconLayout: 'right',
+  },
+  render: Sizes.render,
+};
+
+/**
+ * ... or an icon all by itself.
+ */
+export const IconOnlySizes: Story = {
+  args: {
+    ...Sizes.args,
+    icon: 'menu',
+    iconLayout: 'icon-only',
+  },
+  render: Sizes.render,
 };
 
 /**

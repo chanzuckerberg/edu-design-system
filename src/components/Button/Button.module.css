@@ -107,6 +107,7 @@
   min-width: unset;
 }
 
+/* There's less padding on the side of the icon at different button sizes */
 .button--lg.button--layout-left {
   padding-left: calc(var(--eds-spacing-size-2) * 1px);
 }
@@ -121,10 +122,26 @@
   min-width: calc(var(--eds-spacing-size-5) * 1px);
 }
 
+.button--md.button--layout-right {
+  padding-right: calc(var(--eds-spacing-size-1-and-half) * 1px);
+}
+
+.button--md.button--layout-left {
+  padding-left: calc(var(--eds-spacing-size-1-and-half) * 1px);
+}
+
 .button--md.button--layout-icon-only {
   padding: calc(var(--eds-spacing-size-1) * 1px);
   width: calc(var(--eds-spacing-size-4) * 1px);
   min-width: calc(var(--eds-spacing-size-4) * 1px);
+}
+
+.button--sm.button--layout-right {
+  padding-right: calc(var(--eds-spacing-size-1) * 1px);
+}
+
+.button--sm.button--layout-left {
+  padding-left: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 .button--sm.button--layout-icon-only {

@@ -1,12 +1,15 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { mockResizeObserver } from 'jsdom-testing-mocks';
 
 import React from 'react';
-import { AppHeader } from './AppHeader';
+import { AppHeader, type NavGroup } from './AppHeader';
 
 import * as stories from './AppHeader.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
+
+mockResizeObserver();
 
 describe('<AppHeader />', () => {
   generateSnapshots(stories as StoryFile);
@@ -101,6 +104,291 @@ describe('<AppHeader />', () => {
         value: 4,
         mutate: true,
       },
+    });
+  });
+
+  it('handles onLinkClick handler on nested menus (EDS-1829)', async () => {
+    // const user = userEvent.setup();
+    const onButtonClickMock = jest.fn();
+    const onLinkClickMock = jest.fn();
+
+    render(
+      <AppHeader
+        navGroups={[
+          {
+            name: 'group-1',
+            navItems: [
+              {
+                name: 'Lakes',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Oceans',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Rivers',
+                type: 'link',
+                href: 'https://example.org',
+                isExternal: true,
+              },
+            ],
+          },
+          {
+            name: 'group-2',
+            navItems: [
+              {
+                name: 'Profile',
+                type: 'menu',
+                icon: 'person-encircled',
+                iconLayout: 'left',
+                navItems: [
+                  {
+                    type: 'button',
+                    name: 'Settings',
+                  },
+                  {
+                    name: 'About Us',
+                    type: 'link',
+                    href: 'http://example.org',
+                    isExternal: true,
+                  },
+                  {
+                    type: 'link',
+                    name: 'Sign Out',
+                    href: 'https://example.org/#logout',
+                  },
+                  {
+                    type: 'separator',
+                    name: 'line',
+                  },
+                  {
+                    type: 'label',
+                    name: '© 2025 Your Company Name. All rights reserved.',
+                  },
+                ],
+              },
+            ],
+          },
+        ]}
+        onButtonClick={onButtonClickMock}
+        onLinkClick={onLinkClickMock}
+        orientation="vertical"
+        subTitle="They're cool!"
+        title="Bodies of water"
+      />,
+    );
+
+    await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
+    await userEvent.tab();
+
+    await userEvent.keyboard(' ', { delay: 400 });
+    await userEvent.keyboard('[ArrowDown][Enter]');
+
+    expect(onLinkClickMock).toHaveBeenCalled();
+    expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+      name: 'About Us',
+      type: 'link',
+      href: 'http://example.org',
+      isExternal: true,
+    });
+  });
+
+  it('handles clicks on the app header (EDS-1839)', async () => {
+    const user = userEvent.setup();
+    const onLinkClickMock = jest.fn();
+
+    render(
+      <AppHeader
+        href="#"
+        onLinkClick={onLinkClickMock}
+        subTitle="SubTest"
+        title="Test"
+      />,
+    );
+
+    await user.click(await screen.findByRole('link', { name: 'homepage' }));
+
+    expect(onLinkClickMock).toHaveBeenCalled();
+    expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+      name: 'EDS-header-logo',
+      type: 'link',
+      href: '#',
+    });
+  });
+
+  const clickLinkEventNavGroup: NavGroup[] = [
+    {
+      name: 'group-2',
+      navItems: [
+        {
+          name: 'Profile',
+          type: 'menu',
+          icon: 'person-encircled',
+          iconLayout: 'left',
+          navItems: [
+            {
+              type: 'button',
+              name: 'Skip This One',
+            },
+            {
+              name: 'Also this one',
+              type: 'link',
+              href: '#',
+              isExternal: true,
+            },
+            {
+              type: 'link',
+              name: 'Click this one',
+              href: '#',
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+  const clickButtonEventNavGroup: NavGroup[] = [
+    {
+      name: 'group-2',
+      navItems: [
+        {
+          name: 'Profile',
+          type: 'menu',
+          icon: 'person-encircled',
+          iconLayout: 'left',
+          navItems: [
+            {
+              type: 'button',
+              name: 'Skip This One',
+            },
+            {
+              name: 'Also this one',
+              type: 'link',
+              href: '#',
+              isExternal: true,
+            },
+            {
+              type: 'button',
+              name: 'Click this one',
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+  it('handles clicks nested nav menu links (EDS-1839)', async () => {
+    const user = userEvent.setup();
+    const onLinkClickMock = jest.fn();
+
+    render(
+      <AppHeader
+        href="#"
+        navGroups={clickLinkEventNavGroup}
+        onLinkClick={onLinkClickMock}
+        subTitle="SubTest"
+        title="Test"
+      />,
+    );
+
+    await user.tab();
+    await user.tab();
+    await user.keyboard(' {arrowdown}{arrowdown}{enter}');
+
+    expect(onLinkClickMock).toHaveBeenCalled();
+    expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+      name: 'Click this one',
+      type: 'link',
+      href: '#',
+    });
+  });
+
+  it('handles clicks nested nav menu links in orientation=vertical (EDS-1839)', async () => {
+    const user = userEvent.setup();
+    const onLinkClickMock = jest.fn();
+
+    render(
+      <AppHeader
+        href="#"
+        navGroups={clickLinkEventNavGroup}
+        onLinkClick={onLinkClickMock}
+        orientation="vertical"
+        subTitle="SubTest"
+        title="Test"
+      />,
+    );
+
+    await user.tab();
+    await user.tab();
+    await user.keyboard(' {arrowdown}{arrowdown}{enter}');
+
+    expect(onLinkClickMock).toHaveBeenCalled();
+    expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+      name: 'Click this one',
+      type: 'link',
+      href: '#',
+    });
+  });
+
+  it('handles clicks nested nav menu buttons (EDS-1839)', async () => {
+    const user = userEvent.setup();
+    const onLinkClickMock = jest.fn();
+    const onButtonClickMock = jest.fn();
+
+    render(
+      <AppHeader
+        href="#"
+        navGroups={clickButtonEventNavGroup}
+        onButtonClick={onButtonClickMock}
+        onLinkClick={onLinkClickMock}
+        subTitle="SubTest"
+        title="Test"
+      />,
+    );
+
+    await user.tab();
+    await user.tab();
+    await user.keyboard(' {arrowdown}{arrowdown}{enter}');
+
+    expect(onLinkClickMock).not.toHaveBeenCalled();
+    expect(onButtonClickMock).toHaveBeenCalled();
+    expect(onButtonClickMock.mock.calls[0][1]).toEqual({
+      name: 'Click this one',
+      type: 'button',
+    });
+  });
+
+  it('handles clicks nested nav menu buttons with orientation=vertical (EDS-1839)', async () => {
+    const user = userEvent.setup();
+    const onLinkClickMock = jest.fn();
+    const onButtonClickMock = jest.fn();
+
+    render(
+      <AppHeader
+        href="#"
+        navGroups={clickButtonEventNavGroup}
+        onButtonClick={onButtonClickMock}
+        onLinkClick={onLinkClickMock}
+        orientation="vertical"
+        subTitle="SubTest"
+        title="Test"
+      />,
+    );
+
+    await user.tab();
+    await user.tab();
+    await user.keyboard(' {arrowdown}{arrowdown}{enter}');
+
+    expect(onLinkClickMock).not.toHaveBeenCalled();
+    expect(onButtonClickMock).toHaveBeenCalled();
+    expect(onButtonClickMock.mock.calls[0][1]).toEqual({
+      name: 'Click this one',
+      type: 'button',
     });
   });
 
