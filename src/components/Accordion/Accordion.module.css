@@ -30,8 +30,6 @@
   border: 0;
   text-align: left;
 
-  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
-
   &:hover {
     background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
   }
