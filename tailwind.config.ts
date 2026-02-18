@@ -143,7 +143,7 @@ export function applyTailwindConfig(
       3: edsTokens.typography.fontFamily[3],
     },
     // sync with src/design-tokens/tier-1-definitions/breakpoints.js
-    // Docs: https://tailwindcss.com/docs/responsive-design#customizing-your-theme
+    // Docs: https://v3.tailwindcss.com/docs/responsive-design#customizing-your-theme
     screens: {
       xs: '0px',
       sm: '600px',

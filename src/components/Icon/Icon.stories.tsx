@@ -72,7 +72,7 @@ export const Large: Story = {
  *
  * If `currentColor` for the whole container isn't sufficient,
  * use a CSS variable in `color` with the token you need, or
- * style `fill` with Tailwind: https://tailwindcss.com/docs/fill
+ * style `fill` with Tailwind: https://v3.tailwindcss.com/docs/fill
  */
 export const CustomColor: Story = {
   ...Default,

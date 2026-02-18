@@ -1,4 +1,4 @@
-import { Canvas, Meta } from '@storybook/addon-docs/blocks';
+import { Canvas, Meta, Markdown} from '@storybook/addon-docs/blocks';
 
 <Meta title="Documentation/Defining Layout" />
 
@@ -9,19 +9,44 @@ configururation to use with tailwind, if desired. At the core, EDS also provides
 
 For more information on what Tailwind supplies, check out the following links:
 
-* [Tailwind Columns](https://tailwindcss.com/docs/columns)
-* [Tailwind Container](https://tailwindcss.com/docs/container)
-* [Tailwind Display](https://tailwindcss.com/docs/display)
+* [Tailwind Columns](https://v3.tailwindcss.com/docs/columns)
+* [Tailwind Container](https://v3.tailwindcss.com/docs/container)
+* [Tailwind Display](https://v3.tailwindcss.com/docs/display)
+  * [Grid](https://v3.tailwindcss.com/docs/display#grid)
+
+## Breakpoints, Columns, and Gutters
+
+Applications should use the following grid values for layout and follow a mobile-first approach. Note the definition of the breakpoints below:
+
+<Markdown>
+{`
+| Breakpoint | Min / Max Width | Number of Columns | Gutter Spacing | Outer Margins  | Column Width |
+|------------|-----------------|-------------------|----------------|----------------|--------------|
+| xs         | 0-599           | 4                 | spacing-size-2 | spacing-size-3 | Fluid        | 
+| sm         | 600-767         | 8                 | spacing-size-2 | spacing-size-3 | Fluid        | 
+| md         | 768-1039        | 8                 | spacing-size-3 | spacing-size-3 | Fluid        | 
+| lg         | 1040-1439       | 12                | spacing-size-3 | spacing-size-3 | Fluid        | 
+| xl         | 1440-1919       | 12                | spacing-size-3 | spacing-size-3 | Fluid        | 
+| xxl        | >1920           | 12                | spacing-size-3 | N/A            | Fixed[^1]    | 
+
+[^1]: Page wrapper maximum width = 1824px
+`}
+</Markdown>
+
+EDS offers configuration exposing the breakpoint minimums via the [defined prefixes](https://v3.tailwindcss.com/docs/responsive-design#using-custom-breakpoints).
+If using [CSS Grids](https://css-tricks.com/complete-guide-css-grid-layout/), note the tokens to use for the gutters and the constants for columns.
 
 ## Spacing and alignment
 
-EDS components do not include external margin properties as spacing between components should be handled primarily with
+EDS components do not include external margin properties, as spacing between components should be handled primarily with
 utility classes or similar custom classes.
 
 However, it's important to be able to control spacing between components, so EDS works well with tailwind utility 
-classes like [margin](https://tailwindcss.com/docs/margin).
+classes like [margin](https://v3.tailwindcss.com/docs/margin).
 
 * [EDS Size Token Documentation](?path=/story/design-tokens-tier-1-definitions--sizes)
+
+### Example
 
 Below, we use one of the size units to demonstrate how to use EDS sizing utility classes (with tokens).
 
@@ -29,5 +54,5 @@ Below, we use one of the size units to demonstrate how to use EDS sizing utility
 <InlineNotification title="lorem ipsum dolor sit amet" className="mx-spacing-size-5" />
 ```
 
-Just like with [standard tailwind spacing values](https://tailwindcss.com/docs/customizing-spacing), the `spacing-size-X` will correspond to those used in design, AND
+Just like with [standard tailwind spacing values](https://v3.tailwindcss.com/docs/customizing-spacing), the `spacing-size-X` will correspond to those used in design, AND
 be available across all the documented spacing utilities. For now, we provide these along side the built-in utilities, for compatibility.
