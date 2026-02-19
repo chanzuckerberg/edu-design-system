@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.3'],
+  tags: ['autodocs', 'version:1.3.1'],
 
   globals: {
     viewport: {
@@ -183,7 +183,7 @@ export const Buttons: Story = {
             name: 'Oceans',
             type: 'button',
             iconLayout: 'left',
-            icon: 'lotus',
+            icon: 'person-encircled',
           },
           {
             name: 'sep1',
@@ -193,7 +193,7 @@ export const Buttons: Story = {
             name: 'Rivers',
             type: 'button',
             iconLayout: 'right',
-            icon: 'lotus',
+            icon: 'person-encircled',
           },
         ],
       },
