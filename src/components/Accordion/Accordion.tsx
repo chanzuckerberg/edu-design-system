@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
+import { assertEdsUsage } from '../../util/logging';
 import type { Size } from '../../util/variant-types';
 
 import Heading, { type HeadingElement } from '../Heading';
@@ -178,6 +179,14 @@ const AccordionButton = ({
     size && styles[`accordion-button--${size}`],
     !isExpandable && styles['accordion-button--empty'],
     className,
+  );
+
+  assertEdsUsage(
+    [
+      typeof children !== 'undefined' &&
+        (typeof title !== 'undefined' || typeof subtitle !== 'undefined'),
+    ],
+    'Cannot use `children` with `title`/`subtitle',
   );
 
   return (
