@@ -33,7 +33,7 @@ export type GridItemProps = {
 /**
  * The Grid component is deprecated and will be removed in an upcoming release.
  * Instead, please make use of utility libraries, like Tailwind CSS:
- * * https://tailwindcss.com/docs/display#grid
+ * * https://v3.tailwindcss.com/docs/display#grid
  *
  * `import {Grid} from "@chanzuckerberg/eds";`
  *
