@@ -150,6 +150,7 @@ export function applyTailwindConfig(
       md: '768px',
       lg: '1040px',
       xl: '1440px',
+      xxl: '1920px',
     },
   };
 }
