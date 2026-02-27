@@ -24,7 +24,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0.3'],
+  tags: ['autodocs', 'version:2.0.4'],
   decorators: [(Story) => <div className="p-1">{Story()}</div>],
 } as Meta<ButtonProps>;
 
