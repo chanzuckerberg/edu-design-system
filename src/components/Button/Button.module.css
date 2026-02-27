@@ -172,7 +172,7 @@
 
 .button--secondary.button--variant-default {
   color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
-  border-color: var(--eds-theme-color-border-utility-interactive);
+  border-color: light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
   background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
 }
 
@@ -197,7 +197,7 @@
 
 .button--secondary.button--variant-critical {
   color: light-dark(var(--eds-theme-color-background-utility-critical-high-emphasis), var(--eds-dark-theme-color-background-utility-critical-high-emphasis));
-  border-color: var(--eds-theme-color-border-utility-critical);
+  border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
   background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis))
 }
 
@@ -224,7 +224,7 @@
 
 .button--secondary.button--variant-neutral {
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
-  border-color: var(--eds-theme-color-border-utility-default-medium-emphasis);
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis), var(--eds-dark-theme-color-border-utility-default-medium-emphasis));
   background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 
   &:hover {
@@ -270,7 +270,7 @@
 
 .button--secondary.button--variant-inverse {
   color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
-  border-color: var(--eds-theme-color-border-utility-inverse);
+  border-color: light-dark(var(--eds-theme-color-border-utility-inverse), var(--eds-dark-theme-color-border-utility-inverse));
   background-color: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
 }
 
