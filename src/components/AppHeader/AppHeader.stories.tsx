@@ -22,13 +22,6 @@ export default {
   },
 
   tags: ['autodocs', 'version:1.3.2'],
-
-  // globals: {
-  //   viewport: {
-  //     value: 'macbookPro',
-  //     isRotated: false,
-  //   },
-  // },
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
