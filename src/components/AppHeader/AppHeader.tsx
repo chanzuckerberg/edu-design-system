@@ -1,3 +1,4 @@
+import { MenuItems as HeadlessMenuItems } from '@headlessui/react';
 import clsx from 'clsx';
 
 import React, {
@@ -16,6 +17,7 @@ import Hr from '../Hr';
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
 import Menu from '../Menu';
+import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
 
 import styles from './AppHeader.module.css';
@@ -255,6 +257,14 @@ type AppHeaderButtonProps = NavButton &
 
 type AppHeaderDrawerProps = {
   /**
+   * Determines the mode of the opening behavior of nav menus/trees
+   */
+  mode?: 'drawer' | 'default';
+  /**
+   * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
+   */
+  navGroups?: NavGroup[];
+  /**
    * Handle the click event for any given button in the header
    */
   onButtonClick?: AppHeaderEventHandler;
@@ -262,10 +272,6 @@ type AppHeaderDrawerProps = {
    * Handle the click event for any given link in the header
    */
   onLinkClick?: AppHeaderEventHandler;
-  /**
-   * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
-   */
-  navGroups?: NavGroup[];
 };
 
 // Handling for any properties that should be used in sub-components
@@ -421,6 +427,7 @@ export const AppHeader = ({
                 />
               </div>
               <AppHeaderDrawerContent
+                mode="drawer"
                 navGroups={navGroups}
                 onButtonClick={onButtonClick}
                 onLinkClick={onLinkClick}
@@ -692,6 +699,7 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
  * @returns ReactNote
  */
 const AppHeaderDrawerContent = ({
+  mode = 'default',
   navGroups,
   onButtonClick,
   onLinkClick,
@@ -814,9 +822,19 @@ const AppHeaderDrawerContent = ({
                         {navItem.name}
                       </AppHeaderButton>
                     </Menu.PlainButton>
-                    <Menu.Items
-                      anchor={{ to: 'right end', gap: 24 }}
-                      className={styles['app-header__nav-items']}
+                    <HeadlessMenuItems
+                      anchor={
+                        mode === 'default'
+                          ? { to: 'right end', gap: 24 }
+                          : undefined
+                      }
+                      as={PopoverContainer}
+                      className={clsx(
+                        styles['app-header__nav-items'],
+                        mode === 'drawer' &&
+                          styles['app-header__nav-items--absolute'],
+                      )}
+                      modal={false}
                     >
                       {navItem.navItems?.map((navItem) => {
                         switch (navItem.type) {
@@ -877,7 +895,7 @@ const AppHeaderDrawerContent = ({
                             );
                         }
                       })}
-                    </Menu.Items>
+                    </HeadlessMenuItems>
                   </Menu>
                 )}
               </li>
