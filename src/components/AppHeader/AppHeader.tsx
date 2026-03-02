@@ -11,6 +11,7 @@ import React, {
 
 import { createPortal } from 'react-dom';
 import breakpoints from '../../design-tokens/tier-1-definitions/breakpoints';
+import { assertEdsUsage } from '../../util/logging';
 
 import Button from '../Button';
 import Hr from '../Hr';
@@ -573,6 +574,11 @@ const AppHeaderNavGroup = ({
                           // This should not be reachable as types guard against it
                           // however, in cases where data sent in is dynamic, this
                           // protects the UI.
+                          assertEdsUsage(
+                            [typeof navItem === 'undefined'],
+                            `Problem with navItem data: ${navItem}`,
+                            'error',
+                          );
                           return (
                             <Menu.Item key="error-unknown-nav-item-type">
                               N/A
