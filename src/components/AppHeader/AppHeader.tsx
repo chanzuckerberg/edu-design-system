@@ -257,7 +257,7 @@ type AppHeaderButtonProps = NavButton &
 
 type AppHeaderDrawerProps = {
   /**
-   * Determines the mode of the opening behavior of nav menus/trees
+   * Determines the mode of the opening behavior of nav menus
    */
   mode?: 'drawer' | 'default';
   /**
@@ -607,6 +607,7 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       isCurrent = false,
       isExternal = false,
       isVertical,
+      meta, // pulling out `meta` not to be spread on to other components
       name,
       type,
       ...other
@@ -658,7 +659,16 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
  */
 const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
   (
-    { className, icon, iconLayout = 'none', isVertical, name, type, ...other },
+    {
+      className,
+      icon,
+      iconLayout = 'none',
+      isVertical,
+      name,
+      type,
+      meta, // pulling out `meta` not to be spread on to other components
+      ...other
+    },
     ref,
   ) => {
     const componentClassName = clsx(

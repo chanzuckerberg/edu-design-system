@@ -81,6 +81,10 @@ export const Default: Story = {
             type: 'button',
             icon: 'person-encircled',
             iconLayout: 'left',
+            meta: {
+              name: 'track-signout',
+              value: 1,
+            },
           },
         ],
       },

@@ -153,7 +153,6 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
               <a
                 class="app-header__nav-item app-header__nav-item--link"
                 href="https://example.org"
-                meta="[object Object]"
               >
                 <span
                   class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
@@ -528,7 +527,6 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
               <a
                 class="app-header__nav-item app-header__nav-item--link"
                 href="https://example.org"
-                meta="[object Object]"
               >
                 <span
                   class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
@@ -1755,7 +1753,6 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
               <a
                 class="app-header__nav-item app-header__nav-item--link"
                 href="https://example.org"
-                meta="[object Object]"
               >
                 <span
                   class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
@@ -1929,7 +1926,6 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
               <a
                 class="app-header__nav-item app-header__nav-item--link"
                 href="https://example.org"
-                meta="[object Object]"
               >
                 <span
                   class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
@@ -2082,7 +2078,6 @@ exports[`<AppHeader /> VerticalImageLogoFocus story renders snapshot 1`] = `
               <a
                 class="app-header__nav-item app-header__nav-item--link"
                 href="https://example.org"
-                meta="[object Object]"
               >
                 <span
                   class="app-header__nav-item--link app-header__nav-item--icon-layout-none"
