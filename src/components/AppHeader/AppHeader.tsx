@@ -745,6 +745,8 @@ const AppHeaderDrawerContent = ({
                     key={navItem.name}
                     {...navItem}
                     onClick={(ev) => {
+                      mode === 'drawer' &&
+                        document.getElementById('popover')?.hidePopover();
                       onButtonClick && onButtonClick(ev, navItem);
                     }}
                   />
@@ -755,6 +757,8 @@ const AppHeaderDrawerContent = ({
                     key={navItem.name}
                     {...navItem}
                     onClick={(ev) => {
+                      mode === 'drawer' &&
+                        document.getElementById('popover')?.hidePopover();
                       onLinkClick && onLinkClick(ev, navItem);
                     }}
                   />
@@ -803,6 +807,10 @@ const AppHeaderDrawerContent = ({
                               key={navItem.name}
                               {...navItem}
                               onClick={(ev) => {
+                                mode === 'drawer' &&
+                                  document
+                                    .getElementById('popover')
+                                    ?.hidePopover();
                                 onButtonClick && onButtonClick(ev, navItem);
                               }}
                             />
@@ -812,6 +820,10 @@ const AppHeaderDrawerContent = ({
                               key={navItem.name}
                               {...navItem}
                               onClick={(ev) => {
+                                mode === 'drawer' &&
+                                  document
+                                    .getElementById('popover')
+                                    ?.hidePopover();
                                 onLinkClick && onLinkClick(ev, navItem);
                               }}
                             />
@@ -860,6 +872,10 @@ const AppHeaderDrawerContent = ({
                                 href={navItem.href}
                                 key={navItem.name}
                                 onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                   onLinkClick && onLinkClick(ev, navItem);
                                 }}
                                 target={
@@ -874,6 +890,10 @@ const AppHeaderDrawerContent = ({
                               <Menu.Item
                                 key={navItem.name}
                                 onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                   onButtonClick && onButtonClick(ev, navItem);
                                 }}
                               >
@@ -887,6 +907,10 @@ const AppHeaderDrawerContent = ({
                                 __type="label"
                                 key={navItem.name}
                                 onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                   onButtonClick && onButtonClick(ev, navItem);
                                 }}
                               >
