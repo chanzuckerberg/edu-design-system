@@ -1,6 +1,7 @@
 name: Update NPM Dependencies
 
 on:
+  workflow_dispatch: # https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
     # string has to be quoted.

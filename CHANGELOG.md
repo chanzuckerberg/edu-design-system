@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [17.4.2](https://github.com/chanzuckerberg/edu-design-system/compare/v17.4.1...v17.4.2) (2026-03-04)
+
+
+### Bug Fixes
+
+* **Accordion:** handle button radii and assert bad states ([#2397](https://github.com/chanzuckerberg/edu-design-system/issues/2397)) ([bca3aa0](https://github.com/chanzuckerberg/edu-design-system/commit/bca3aa02c0b19125cf24d508759ab2dcf70ffabd))
+* **AppHeader:** adjust layout of mobile drawer position/behavior ([#2404](https://github.com/chanzuckerberg/edu-design-system/issues/2404)) ([7859104](https://github.com/chanzuckerberg/edu-design-system/commit/7859104e07a6673f8a930decb273fc14a5f3af05))
+* **AppHeader:** apply spacing adjustments to component layout ([#2398](https://github.com/chanzuckerberg/edu-design-system/issues/2398)) ([4b0cc76](https://github.com/chanzuckerberg/edu-design-system/commit/4b0cc766f103170a971817eac2878a80dd0a2f3c))
+* **Button:** use token colors for button ranks/variants ([#2402](https://github.com/chanzuckerberg/edu-design-system/issues/2402)) ([69119bc](https://github.com/chanzuckerberg/edu-design-system/commit/69119bc92daccd51fd8b53839abc9a57fc5cbbae))
+* **deps:** update all non-major dependencies ([#2392](https://github.com/chanzuckerberg/edu-design-system/issues/2392)) ([484027f](https://github.com/chanzuckerberg/edu-design-system/commit/484027f3f0b1a99c933c72f0576feb6b2dffa75f))
+
 ### [17.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v17.4.0...v17.4.1) (2026-02-17)
 
 

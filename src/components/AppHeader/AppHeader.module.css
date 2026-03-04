@@ -27,7 +27,6 @@
 .app-header--style-floating {
   & > div {
     box-shadow: var(--app-header-shadow);
-    margin: calc(var(--eds-spacing-size-3) * 1px);
     border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
   }
 }
@@ -37,11 +36,12 @@
   width: 100%;
   
   & > div {    
-    padding: calc(var(--eds-spacing-size-3) * 1px)
-      calc(var(--eds-spacing-size-6) * 1px);
+    padding: calc(var(--eds-spacing-size-2) * 1px)
+      calc(var(--eds-spacing-size-3) * 1px);
   }
 
   &.app-header--style-floating > div {
+    margin: calc(var(--eds-spacing-size-3) * 1px);
     margin-bottom: 0;
   }
   
@@ -82,6 +82,7 @@
   }
 
   &.app-header--style-floating > div {
+    margin: calc(var(--eds-spacing-size-2) * 1px);
     margin-right: 0;
     padding: calc(var(--eds-spacing-size-3) * 1px)
       calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px)
@@ -106,7 +107,7 @@
 .app-header__content {
   display: flex;
   
-  gap: calc(var(--eds-spacing-size-3) * 1px);
+  gap: calc(var(--eds-spacing-size-5) * 1px);
   align-items: center;
   overflow: hidden;
 }
@@ -141,11 +142,7 @@
     padding-right: calc(var(--eds-spacing-size-3) * 1px);
     padding-bottom: calc(var(--eds-spacing-size-6) * 1px);
     padding-left: calc(var(--eds-spacing-size-3) * 1px);
-    width: 306px;
-
-    @media (min-width: $eds-bp-sm) {
-      width: 356px;
-    }
+    width: 100%;
 
     @media (min-width: $eds-bp-md) {
       width: 460px;
@@ -193,6 +190,12 @@
 
 .app-header__nav-items {
   min-width: calc(var(--eds-spacing-size-20) * 1px);
+}
+
+.app-header__nav-items--absolute {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .app-header__nav-item--icon-layout-left {

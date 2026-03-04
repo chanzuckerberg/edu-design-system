@@ -117,4 +117,128 @@ describe('<Accordion />', () => {
     expect(onOpen).not.toHaveBeenCalled();
     expect(onClose).not.toHaveBeenCalled();
   });
+
+  describe('emits warnings when misused', () => {
+    it('warns when title and children are used together', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Accordion headingAs="h2">
+          <Accordion.Row>
+            <Accordion.Button
+              data-testid="accordion-button"
+              title="Massa quam egestas massa."
+            >
+              test
+            </Accordion.Button>
+            <Accordion.Panel data-testid="accordion-panel">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada.
+              At tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+              Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+            </Accordion.Panel>
+          </Accordion.Row>
+        </Accordion>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('warns when subtitle and children are used together', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Accordion headingAs="h2">
+          <Accordion.Row>
+            <Accordion.Button
+              data-testid="accordion-button"
+              subtitle="Massa quam egestas massa."
+            >
+              test
+            </Accordion.Button>
+            <Accordion.Panel data-testid="accordion-panel">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada.
+              At tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+              Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+            </Accordion.Panel>
+          </Accordion.Row>
+        </Accordion>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('warns when title, subtitle and children are used together', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Accordion headingAs="h2">
+          <Accordion.Row>
+            <Accordion.Button
+              data-testid="accordion-button"
+              subtitle="Massa quam egestas massa."
+              title="Massa quam egestas massa."
+            >
+              test
+            </Accordion.Button>
+            <Accordion.Panel data-testid="accordion-panel">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada.
+              At tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+              Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+            </Accordion.Panel>
+          </Accordion.Row>
+        </Accordion>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not warn when title & subtitle are used together', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Accordion headingAs="h2">
+          <Accordion.Row>
+            <Accordion.Button
+              data-testid="accordion-button"
+              subtitle="Massa quam egestas massa."
+              title="Massa quam egestas massa."
+            ></Accordion.Button>
+            <Accordion.Panel data-testid="accordion-panel">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada.
+              At tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+              Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+            </Accordion.Panel>
+          </Accordion.Row>
+        </Accordion>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(0);
+    });
+
+    it('does not warn when just children is used', () => {
+      const consoleMock = jest.spyOn(console, 'warn');
+      consoleMock.mockImplementation();
+      render(
+        <Accordion headingAs="h2">
+          <Accordion.Row>
+            <Accordion.Button data-testid="accordion-button">
+              test
+            </Accordion.Button>
+            <Accordion.Panel data-testid="accordion-panel">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada.
+              At tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+              Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+            </Accordion.Panel>
+          </Accordion.Row>
+        </Accordion>,
+      );
+
+      expect(consoleMock).toHaveBeenCalledTimes(0);
+    });
+  });
 });

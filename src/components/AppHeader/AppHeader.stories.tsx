@@ -21,86 +21,17 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.3'],
-
-  globals: {
-    viewport: {
-      value: 'macbookPro',
-      isRotated: false,
-    },
-  },
+  tags: ['autodocs', 'version:1.3.2'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
 
-export const Default: Story = {
-  args: {
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
-    onButtonClick: (ev, navItem) => {
-      console.log('button clicked', ev, navItem);
-    },
-    onLinkClick: (ev, navItem) => {
-      console.log('link clicked', ev, navItem);
-    },
-    navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
-          },
-        ],
-      },
-      {
-        name: 'group-2',
-        navItems: [
-          {
-            name: 'Profile',
-            type: 'button',
-            icon: 'person-encircled',
-            iconLayout: 'left',
-          },
-        ],
-      },
-    ],
-  },
-  globals: {
-    viewport: {
-      value: '',
-      isRotated: false,
-    },
-  },
-};
-
 /**
- * `AppHeader` can take on a floating position, which adds some space between the edges of the screen.
- */
-export const Floating: Story = {
-  args: {
-    ...Default.args,
-    style: 'floating',
-  },
-};
-
-/**
- * Interactive items can have metadata added to allow for additional data when handling events.
+ * `AppHeader` comes with some sensible defaults. Interactive items can have metadata added to allow for additional data when handling events.
  *
- * use the `meta:` object in the nav item object to pass in additional information.
+ * Use the `meta:` object in the nav item object to pass in additional information.
  */
-export const WithMetadata: Story = {
+export const Default: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
@@ -144,9 +75,8 @@ export const WithMetadata: Story = {
             icon: 'person-encircled',
             iconLayout: 'left',
             meta: {
-              name: 'track-value',
-              value: 4,
-              mutate: true,
+              name: 'track-signout',
+              value: 1,
             },
           },
         ],
@@ -164,7 +94,7 @@ export const WithMetadata: Story = {
 /**
  * `AppHeader` nav items can also be buttons. Button events are handled via the top-level `onButtonClick` which defines the event and the data for the clicked `navItem`
  */
-export const Buttons: Story = {
+export const DefaultWithNavItemButtons: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
@@ -183,7 +113,7 @@ export const Buttons: Story = {
             name: 'Oceans',
             type: 'button',
             iconLayout: 'left',
-            icon: 'lotus',
+            icon: 'person-encircled',
           },
           {
             name: 'sep1',
@@ -193,7 +123,7 @@ export const Buttons: Story = {
             name: 'Rivers',
             type: 'button',
             iconLayout: 'right',
-            icon: 'lotus',
+            icon: 'person-encircled',
           },
         ],
       },
@@ -214,47 +144,10 @@ export const Buttons: Story = {
 };
 
 /**
- * Menus can exist in a vertical orientation as well, affixed to the left-hand side of the screen
- */
-export const VerticalOrientation: Story = {
-  args: {
-    ...Buttons.args,
-    orientation: 'vertical',
-  },
-};
-
-/**
- * Vertical `AppHeader`s can also sit with a floating style.
- */
-export const FloatingVerticalOrientation: Story = {
-  args: {
-    ...Buttons.args,
-    orientation: 'vertical',
-    style: 'floating',
-  },
-};
-
-/**
- * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer
- */
-export const MobileFloatingVerticalOrientation: Story = {
-  args: {
-    ...FloatingVerticalOrientation.args,
-    orientation: 'vertical',
-  },
-  globals: {
-    viewport: {
-      value: 'googlePixel2',
-      isRotated: false,
-    },
-  },
-};
-
-/**
  * Logos can also be an image (using either `<img>` or `<svg>` for format). When using logo, the maximum height
  * allowed is fixed, and the logo takes up the total possible vertical height.
  */
-export const ImageLogo: Story = {
+export const DefaultWithImageLogo: Story = {
   args: {
     ...Default.args,
     title: (
@@ -287,32 +180,10 @@ export const ImageLogo: Story = {
 };
 
 /**
- * Logos are positioned properly when the orientation is vertical
- */
-export const VerticalImageLogo: Story = {
-  args: {
-    ...ImageLogo.args,
-    orientation: 'vertical',
-  },
-};
-
-/**
- * Provided links are accessible
- */
-export const VerticalImageLogoFocus: Story = {
-  args: {
-    ...VerticalImageLogo.args,
-  },
-  play: async () => {
-    await userEvent.tab();
-  },
-};
-
-/**
  * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
  * render as a `Menu` with sub items that match the same types as can exist at the top level.
  */
-export const NavMenus: Story = {
+export const DefaultWithNavMenus: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
@@ -389,67 +260,10 @@ export const NavMenus: Story = {
 };
 
 /**
- * When rendering the content of `AppHeader` dynamically, it can be given invalid sub-menu types. This is handled via
- * non-interactive fallbacks showing "N/A".
- */
-export const FallbackNavMenus: Story = {
-  args: {
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
-    navGroups: [
-      {
-        name: 'group-2',
-        navItems: [
-          {
-            name: 'Show Profile',
-            type: 'menu',
-            icon: 'person-encircled',
-            iconLayout: 'left',
-            navItems: [
-              {
-                // @ts-expect-error using invalid type on purpose
-                type: 'custom',
-                name: 'Settings',
-              },
-              {
-                name: 'About Us',
-                type: 'link',
-                href: 'http://example.org',
-                isExternal: true,
-              },
-              {
-                type: 'link',
-                name: 'Sign Out',
-                href: 'https://example.org/#logout',
-              },
-              {
-                type: 'separator',
-                name: 'line',
-              },
-              {
-                type: 'label',
-                name: '© 2025 Your Company Name. All rights reserved.',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-
-  play: async () => {
-    if (isChromatic()) {
-      await userEvent.tab();
-      await userEvent.keyboard(' ', { delay: 300 });
-    }
-  },
-};
-
-/**
  * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
  * render as a list of links with an overline header.
  */
-export const NavTree: Story = {
+export const DefaultWithNavTree: Story = {
   args: {
     href: '#',
     title: 'Bodies of water',
@@ -510,7 +324,7 @@ export const NavTree: Story = {
  * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
  * render as a list of links with an overline header.
  */
-export const NavTreeWithFooterSeparator: Story = {
+export const DefaultNavTreeWithFooterSeparator: Story = {
   args: {
     href: '#',
     title: 'Bodies of water',
@@ -572,13 +386,99 @@ export const NavTreeWithFooterSeparator: Story = {
 };
 
 /**
+ * `AppHeader` can take on a floating position, which adds some space between the edges of the screen.
+ */
+export const StyleFloating: Story = {
+  args: {
+    ...Default.args,
+    style: 'floating',
+  },
+};
+
+/**
+ * Menus can exist in a vertical orientation as well, affixed to the left-hand side of the screen
+ */
+export const VerticalOrientation: Story = {
+  args: {
+    ...DefaultWithNavItemButtons.args,
+    orientation: 'vertical',
+  },
+};
+
+/**
+ * Vertical `AppHeader`s can also sit with a floating style.
+ */
+export const FloatingVerticalOrientation: Story = {
+  args: {
+    ...DefaultWithNavItemButtons.args,
+    orientation: 'vertical',
+    style: 'floating',
+  },
+};
+
+/**
+ * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer. The drawer at this size will open to take
+ * up the full width of the screen at `xs` and `sm` breakpoints.
+ */
+export const MobileFloatingVerticalOrientation: Story = {
+  args: {
+    ...FloatingVerticalOrientation.args,
+    orientation: 'vertical',
+  },
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
  * `AppHeader` allows for one level of nesting in the nav items. This means that a navigation item will
  * render as a `Menu` with sub items that match the same types as can exist at the top level.
  */
 export const VerticalNavMenus: Story = {
   args: {
-    ...NavMenus.args,
+    ...DefaultWithNavMenus.args,
     orientation: 'vertical',
+  },
+};
+
+/**
+ * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer
+ */
+export const MobileFloatingVerticalOrientationNavMenus: Story = {
+  args: {
+    ...VerticalNavMenus.args,
+    orientation: 'vertical',
+  },
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
+ * Logos are positioned properly when the orientation is vertical
+ */
+export const VerticalDefaultWithImageLogo: Story = {
+  args: {
+    ...DefaultWithImageLogo.args,
+    orientation: 'vertical',
+  },
+};
+
+/**
+ * Provided links are accessible
+ */
+export const VerticalImageLogoFocus: Story = {
+  args: {
+    ...VerticalDefaultWithImageLogo.args,
+  },
+  play: async () => {
+    await userEvent.tab();
   },
 };
 
@@ -586,8 +486,10 @@ export const VerticalNavMenus: Story = {
  * Chromatic Test: show the full size menu on snapshot
  */
 export const CanExpandFullSizeMenu: Story = {
+  tags: ['code-only'],
+
   args: {
-    ...NavMenus.args,
+    ...DefaultWithNavMenus.args,
   },
 
   parameters: {
@@ -623,8 +525,10 @@ export const CanExpandFullSizeMenu: Story = {
  * Chromatic Test: Verify opening of hamburger menu
  */
 export const CanExpandHamburgerMenu: Story = {
+  tags: ['code-only'],
+
   args: {
-    ...NavMenus.args,
+    ...DefaultWithNavMenus.args,
   },
 
   parameters: {
@@ -657,6 +561,8 @@ export const CanExpandHamburgerMenu: Story = {
  * Chromatic Test: Verify focus ring on nav items (EDS-1820)
  */
 export const CanFocusMenuItem: Story = {
+  tags: ['code-only'],
+
   args: {
     ...VerticalNavMenus.args,
   },
@@ -678,5 +584,64 @@ export const CanFocusMenuItem: Story = {
       value: 'googlePixel2',
       isRotated: false,
     },
+  },
+};
+
+/**
+ * When rendering the content of `AppHeader` dynamically, it can be given invalid sub-menu types. This is handled via
+ * non-interactive fallbacks showing "N/A".
+ */
+export const CanHandleFallbackNavMenus: Story = {
+  tags: ['code-only'],
+
+  args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+    navGroups: [
+      {
+        name: 'group-2',
+        navItems: [
+          {
+            name: 'Show Profile',
+            type: 'menu',
+            icon: 'person-encircled',
+            iconLayout: 'left',
+            navItems: [
+              {
+                // @ts-expect-error using invalid type on purpose
+                type: 'custom',
+                name: 'Settings',
+              },
+              {
+                name: 'About Us',
+                type: 'link',
+                href: 'http://example.org',
+                isExternal: true,
+              },
+              {
+                type: 'link',
+                name: 'Sign Out',
+                href: 'https://example.org/#logout',
+              },
+              {
+                type: 'separator',
+                name: 'line',
+              },
+              {
+                type: 'label',
+                name: '© 2025 Your Company Name. All rights reserved.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  play: async () => {
+    if (isChromatic()) {
+      await userEvent.tab();
+      await userEvent.keyboard(' ', { delay: 300 });
+    }
   },
 };

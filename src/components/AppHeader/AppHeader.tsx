@@ -1,3 +1,4 @@
+import { MenuItems as HeadlessMenuItems } from '@headlessui/react';
 import clsx from 'clsx';
 
 import React, {
@@ -10,12 +11,14 @@ import React, {
 
 import { createPortal } from 'react-dom';
 import breakpoints from '../../design-tokens/tier-1-definitions/breakpoints';
+import { assertEdsUsage } from '../../util/logging';
 
 import Button from '../Button';
 import Hr from '../Hr';
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
 import Menu from '../Menu';
+import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
 
 import styles from './AppHeader.module.css';
@@ -255,6 +258,14 @@ type AppHeaderButtonProps = NavButton &
 
 type AppHeaderDrawerProps = {
   /**
+   * Determines the mode of the opening behavior of nav menus
+   */
+  mode?: 'drawer' | 'default';
+  /**
+   * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
+   */
+  navGroups?: NavGroup[];
+  /**
    * Handle the click event for any given button in the header
    */
   onButtonClick?: AppHeaderEventHandler;
@@ -262,10 +273,6 @@ type AppHeaderDrawerProps = {
    * Handle the click event for any given link in the header
    */
   onLinkClick?: AppHeaderEventHandler;
-  /**
-   * Sets of navigation groups in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
-   */
-  navGroups?: NavGroup[];
 };
 
 // Handling for any properties that should be used in sub-components
@@ -421,6 +428,7 @@ export const AppHeader = ({
                 />
               </div>
               <AppHeaderDrawerContent
+                mode="drawer"
                 navGroups={navGroups}
                 onButtonClick={onButtonClick}
                 onLinkClick={onLinkClick}
@@ -566,6 +574,11 @@ const AppHeaderNavGroup = ({
                           // This should not be reachable as types guard against it
                           // however, in cases where data sent in is dynamic, this
                           // protects the UI.
+                          assertEdsUsage(
+                            [typeof navItem === 'undefined'],
+                            `Problem with navItem data: ${navItem}`,
+                            'error',
+                          );
                           return (
                             <Menu.Item key="error-unknown-nav-item-type">
                               N/A
@@ -600,6 +613,7 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       isCurrent = false,
       isExternal = false,
       isVertical,
+      meta, // pulling out `meta` not to be spread on to other components
       name,
       type,
       ...other
@@ -651,7 +665,16 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
  */
 const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
   (
-    { className, icon, iconLayout = 'none', isVertical, name, type, ...other },
+    {
+      className,
+      icon,
+      iconLayout = 'none',
+      isVertical,
+      name,
+      type,
+      meta, // pulling out `meta` not to be spread on to other components
+      ...other
+    },
     ref,
   ) => {
     const componentClassName = clsx(
@@ -692,6 +715,7 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
  * @returns ReactNote
  */
 const AppHeaderDrawerContent = ({
+  mode = 'default',
   navGroups,
   onButtonClick,
   onLinkClick,
@@ -721,6 +745,8 @@ const AppHeaderDrawerContent = ({
                     key={navItem.name}
                     {...navItem}
                     onClick={(ev) => {
+                      mode === 'drawer' &&
+                        document.getElementById('popover')?.hidePopover();
                       onButtonClick && onButtonClick(ev, navItem);
                     }}
                   />
@@ -731,6 +757,8 @@ const AppHeaderDrawerContent = ({
                     key={navItem.name}
                     {...navItem}
                     onClick={(ev) => {
+                      mode === 'drawer' &&
+                        document.getElementById('popover')?.hidePopover();
                       onLinkClick && onLinkClick(ev, navItem);
                     }}
                   />
@@ -779,6 +807,10 @@ const AppHeaderDrawerContent = ({
                               key={navItem.name}
                               {...navItem}
                               onClick={(ev) => {
+                                mode === 'drawer' &&
+                                  document
+                                    .getElementById('popover')
+                                    ?.hidePopover();
                                 onButtonClick && onButtonClick(ev, navItem);
                               }}
                             />
@@ -788,6 +820,10 @@ const AppHeaderDrawerContent = ({
                               key={navItem.name}
                               {...navItem}
                               onClick={(ev) => {
+                                mode === 'drawer' &&
+                                  document
+                                    .getElementById('popover')
+                                    ?.hidePopover();
                                 onLinkClick && onLinkClick(ev, navItem);
                               }}
                             />
@@ -814,9 +850,19 @@ const AppHeaderDrawerContent = ({
                         {navItem.name}
                       </AppHeaderButton>
                     </Menu.PlainButton>
-                    <Menu.Items
-                      anchor={{ to: 'right end', gap: 24 }}
-                      className={styles['app-header__nav-items']}
+                    <HeadlessMenuItems
+                      anchor={
+                        mode === 'default'
+                          ? { to: 'right end', gap: 24 }
+                          : undefined
+                      }
+                      as={PopoverContainer}
+                      className={clsx(
+                        styles['app-header__nav-items'],
+                        mode === 'drawer' &&
+                          styles['app-header__nav-items--absolute'],
+                      )}
+                      modal={false}
                     >
                       {navItem.navItems?.map((navItem) => {
                         switch (navItem.type) {
@@ -826,6 +872,10 @@ const AppHeaderDrawerContent = ({
                                 href={navItem.href}
                                 key={navItem.name}
                                 onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                   onLinkClick && onLinkClick(ev, navItem);
                                 }}
                                 target={
@@ -840,6 +890,10 @@ const AppHeaderDrawerContent = ({
                               <Menu.Item
                                 key={navItem.name}
                                 onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                   onButtonClick && onButtonClick(ev, navItem);
                                 }}
                               >
@@ -853,6 +907,10 @@ const AppHeaderDrawerContent = ({
                                 __type="label"
                                 key={navItem.name}
                                 onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                   onButtonClick && onButtonClick(ev, navItem);
                                 }}
                               >
@@ -877,7 +935,7 @@ const AppHeaderDrawerContent = ({
                             );
                         }
                       })}
-                    </Menu.Items>
+                    </HeadlessMenuItems>
                   </Menu>
                 )}
               </li>
