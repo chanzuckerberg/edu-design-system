@@ -417,7 +417,8 @@ export const FloatingVerticalOrientation: Story = {
 };
 
 /**
- * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer
+ * When Mobile, Vertical always changes to a horizontal with disclosure menu in a drawer. The drawer at this size will open to take
+ * up the full width of the screen at `xs` and `sm` breakpoints.
  */
 export const MobileFloatingVerticalOrientation: Story = {
   args: {
