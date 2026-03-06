@@ -54,7 +54,7 @@ export const DefaultVerticalScrolled: StoryObj<Args> = {
   },
 };
 
-export const DefaultHozirontalScrolled: StoryObj<Args> = {
+export const DefaultHorizontalScrolled: StoryObj<Args> = {
   args: {
     ...Default.args,
     orientation: 'horizontal',

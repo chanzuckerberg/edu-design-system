@@ -36,7 +36,7 @@ export type ScrollWrapperProps = HTMLAttributes<HTMLDivElement> & {
 /**
  * `import {ScrollWrapper} from "@chanzuckerberg/eds";`
  *
- * This is a basic wrapper component that handles functionality to show/hide shadows along the vertical edges.
+ * This is a basic wrapper component that handles functionality to show/hide shadows along either the vertical or horizontal edges.
  * This kicks in once the container's size is smaller than the overall height of the content within. For this to work,
  * the element above the scroll wrapper must have a fixed height. The effect kicks in once the children of the scroll
  * wrapper expand height above that fixed height.
@@ -56,7 +56,7 @@ export const ScrollWrapper = ({
     end: false,
   });
 
-  const outterClassName = clsx(
+  const outerClassName = clsx(
     styles['scroll-wrapper'],
     orientation && styles[`scroll-wrapper--orientation-${orientation}`],
     shadowState.top && styles['scroll-wrapper--has-top-shadow'],
@@ -132,7 +132,7 @@ export const ScrollWrapper = ({
   }, [debouncedHandler]);
 
   return (
-    <div className={outterClassName} {...other}>
+    <div className={outerClassName} {...other}>
       <div
         className={clsx(styles['scroll-wrapper__inner'])}
         ref={scrollRef}

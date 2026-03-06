@@ -63,7 +63,7 @@
 
 .scroll-wrapper--orientation-horizontal {
   .scroll-wrapper__inner {
-    overflow-y: auto;
+    overflow-x: auto;
     flex-grow: 1;
 
     &::before,
