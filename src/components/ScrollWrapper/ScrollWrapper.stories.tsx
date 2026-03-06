@@ -9,7 +9,7 @@ export default {
   title: 'Components/ScrollWrapper',
   component: ScrollWrapper,
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['version:1.0', 'beta'],
+  tags: ['version:1.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ScrollWrapper>;
@@ -22,38 +22,18 @@ type Args = React.ComponentProps<typeof ScrollWrapper>;
 export const Default: StoryObj<Args> = {
   args: {},
   render: (args) => (
-    <div style={{ height: '200px' }}>
+    <div className="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover">
       <ScrollWrapper {...args}>
-        <div data-testid="scrollContent" style={{ height: '300px' }}>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            accusamus dolorum nostrum itaque ullam tempora quam dolore adipisci
-            atque velit, excepturi veniam? Nesciunt non facilis, quos odit
-            aliquam alias unde hic quidem exercitationem perspiciatis!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            sapiente ipsam, ipsum similique ea nemo doloremque. Corporis
-            excepturi eos impedit dicta quidem soluta culpa at delectus est,
-            provident vitae sed commodi inventore quaerat non labore consequatur
-            nisi quisquam obcaecati, reprehenderit quas dolore ipsa. Totam
-            dolorem suscipit amet optio.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
-            cupiditate officiis temporibus explicabo!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
-            cupiditate officiis temporibus explicabo!
-          </p>
-        </div>
+        <div
+          className="h-[300px] w-[300px] p-spacing-size-3"
+          data-testid="scrollContent"
+        ></div>
       </ScrollWrapper>
     </div>
   ),
 };
 
-export const DefaultScrolled: StoryObj<Args> = {
+export const DefaultVerticalScrolled: StoryObj<Args> = {
   args: {
     ...Default.args,
   },
@@ -74,61 +54,82 @@ export const DefaultScrolled: StoryObj<Args> = {
   },
 };
 
-/**
- * Shadows can be kept within the edge of the container, taking on a concave appearance
- */
-export const Contain: StoryObj<Args> = {
+export const DefaultHorizontalScrolled: StoryObj<Args> = {
   args: {
-    shadowType: 'contain',
-  },
-  render: (args) => (
-    <div style={{ height: '200px' }}>
-      <ScrollWrapper {...args}>
-        <div data-testid="scrollContent" style={{ height: '300px' }}>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            accusamus dolorum nostrum itaque ullam tempora quam dolore adipisci
-            atque velit, excepturi veniam? Nesciunt non facilis, quos odit
-            aliquam alias unde hic quidem exercitationem perspiciatis!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            sapiente ipsam, ipsum similique ea nemo doloremque. Corporis
-            excepturi eos impedit dicta quidem soluta culpa at delectus est,
-            provident vitae sed commodi inventore quaerat non labore consequatur
-            nisi quisquam obcaecati, reprehenderit quas dolore ipsa. Totam
-            dolorem suscipit amet optio.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
-            cupiditate officiis temporibus explicabo!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta
-            cupiditate officiis temporibus explicabo!
-          </p>
-        </div>
-      </ScrollWrapper>
-    </div>
-  ),
-};
-
-export const ContainScrolled: StoryObj<Args> = {
-  args: {
-    ...Contain.args,
+    ...Default.args,
+    orientation: 'horizontal',
   },
   parameters: {
     snapshot: {
       skip: true,
     },
   },
-  render: Contain.render,
+  render: Default.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    const canvas = within(canvasElement);
+    const scrollable = canvas.getByTestId('scrollContent').parentElement;
+
+    scrollable?.scrollBy({ top: 0, left: 50 });
+
+    await userEvent.tab();
+  },
+};
+
+/**
+ * Shadows can be kept within the edge of the container, taking on a concave appearance
+ */
+export const ContainVertical: StoryObj<Args> = {
+  args: {
+    shadowType: 'contain',
+  },
+  render: (args) => (
+    <div className="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover">
+      <ScrollWrapper {...args}>
+        <div className="h-[300px] w-[300px]" data-testid="scrollContent"></div>
+      </ScrollWrapper>
+    </div>
+  ),
+};
+
+export const ContainVerticalScrolled: StoryObj<Args> = {
+  args: {
+    ...ContainVertical.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+  render: ContainVertical.render,
   play: async ({ canvasElement }) => {
     await userEvent.tab();
     const canvas = within(canvasElement);
     const scrollable = canvas.getByTestId('scrollContent').parentElement;
 
     scrollable?.scrollBy({ top: 50, left: 0 });
+
+    await userEvent.tab();
+  },
+};
+
+export const ContainHorizontalScrolled: StoryObj<Args> = {
+  args: {
+    ...ContainVertical.args,
+    orientation: 'horizontal',
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+  render: ContainVertical.render,
+  play: async ({ canvasElement }) => {
+    await userEvent.tab();
+    const canvas = within(canvasElement);
+    const scrollable = canvas.getByTestId('scrollContent').parentElement;
+
+    scrollable?.scrollBy({ top: 0, left: 50 });
 
     await userEvent.tab();
   },

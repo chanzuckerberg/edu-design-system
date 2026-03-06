@@ -20,6 +20,10 @@ export type ScrollWrapperProps = HTMLAttributes<HTMLDivElement> & {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Determines the direction that the shadows apply
+   */
+  orientation?: 'horizontal' | 'vertical';
   // Design API
   /**
    * Type of shadow treatment for the wrapper:
@@ -29,10 +33,57 @@ export type ScrollWrapperProps = HTMLAttributes<HTMLDivElement> & {
   shadowType?: 'cover' | 'contain';
 };
 
+type ShadowStates = {
+  top: boolean;
+  bottom: boolean;
+  start: boolean;
+  end: boolean;
+};
+
+export const setShadowStates = (targetData: HTMLDivElement): ShadowStates => {
+  const {
+    scrollTop,
+    scrollLeft,
+    scrollHeight,
+    clientHeight,
+    scrollWidth,
+    clientWidth,
+  } = targetData;
+  const showShadows = { top: false, bottom: false, start: false, end: false };
+
+  // handle verticals
+  if (scrollTop === 0) {
+    showShadows.top = false;
+  } else {
+    showShadows.top = true;
+  }
+
+  if (scrollTop < scrollHeight - clientHeight) {
+    showShadows.bottom = true;
+  } else {
+    showShadows.bottom = false;
+  }
+
+  // handle horizontals
+  if (scrollLeft === 0) {
+    showShadows.start = false;
+  } else {
+    showShadows.start = true;
+  }
+
+  if (scrollLeft < scrollWidth - clientWidth) {
+    showShadows.end = true;
+  } else {
+    showShadows.end = false;
+  }
+
+  return showShadows;
+};
+
 /**
  * `import {ScrollWrapper} from "@chanzuckerberg/eds";`
  *
- * This is a basic wrapper component that handles functionality to show/hide shadows along the vertical edges.
+ * This is a basic wrapper component that handles functionality to show/hide shadows along either the vertical or horizontal edges.
  * This kicks in once the container's size is smaller than the overall height of the content within. For this to work,
  * the element above the scroll wrapper must have a fixed height. The effect kicks in once the children of the scroll
  * wrapper expand height above that fixed height.
@@ -40,49 +91,39 @@ export type ScrollWrapperProps = HTMLAttributes<HTMLDivElement> & {
 export const ScrollWrapper = ({
   children,
   className,
+  orientation = 'vertical',
   shadowType = 'cover',
   ...other
 }: ScrollWrapperProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [shadowState, setShadowState] = useState({
+  const [shadowState, setShadowState] = useState<ShadowStates>({
     top: false,
     bottom: false,
+    start: false,
+    end: false,
   });
 
-  const outterClassName = clsx(
+  const outerClassName = clsx(
     styles['scroll-wrapper'],
+    orientation && styles[`scroll-wrapper--orientation-${orientation}`],
     shadowState.top && styles['scroll-wrapper--has-top-shadow'],
     shadowState.bottom && styles['scroll-wrapper--has-bottom-shadow'],
+    shadowState.start && styles['scroll-wrapper--has-start-shadow'],
+    shadowState.end && styles['scroll-wrapper--has-end-shadow'],
     shadowType && styles[`scroll-wrapper--shadow-type-${shadowType}`],
     className,
   );
 
   // This handler fires upon every scroll event. changes are "debounced" by the set state calls
   const handler = (ev: Event) => {
-    const showShadows = { top: false, bottom: false };
     if (ev.target) {
-      const { scrollTop, scrollHeight, clientHeight } =
-        ev.target as HTMLDivElement;
-
-      if (scrollTop === 0) {
-        showShadows.top = false;
-      } else {
-        showShadows.top = true;
-      }
-
-      if (scrollTop < scrollHeight - clientHeight) {
-        showShadows.bottom = true;
-      } else {
-        showShadows.bottom = false;
-      }
-
-      setShadowState(showShadows);
+      setShadowState(setShadowStates(ev.target as HTMLDivElement));
     }
   };
 
   // remove the shadows when resizing occurs, so they aren't in the previous state
   const debouncedHandler = debounce(() => {
-    setShadowState({ top: false, bottom: false });
+    setShadowState({ top: false, bottom: false, start: false, end: false });
   }, 250);
 
   // Hook up the event handlers, monitoring resizes (reset the shadows) and scroll (add based on position)
@@ -102,7 +143,7 @@ export const ScrollWrapper = ({
   }, [debouncedHandler]);
 
   return (
-    <div className={outterClassName} {...other}>
+    <div className={outerClassName} {...other}>
       <div
         className={clsx(styles['scroll-wrapper__inner'])}
         ref={scrollRef}
