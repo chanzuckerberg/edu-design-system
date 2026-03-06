@@ -33,6 +33,53 @@ export type ScrollWrapperProps = HTMLAttributes<HTMLDivElement> & {
   shadowType?: 'cover' | 'contain';
 };
 
+type ShadowStates = {
+  top: boolean;
+  bottom: boolean;
+  start: boolean;
+  end: boolean;
+};
+
+export const setShadowStates = (targetData: HTMLDivElement): ShadowStates => {
+  const {
+    scrollTop,
+    scrollLeft,
+    scrollHeight,
+    clientHeight,
+    scrollWidth,
+    clientWidth,
+  } = targetData;
+  const showShadows = { top: false, bottom: false, start: false, end: false };
+
+  // handle verticals
+  if (scrollTop === 0) {
+    showShadows.top = false;
+  } else {
+    showShadows.top = true;
+  }
+
+  if (scrollTop < scrollHeight - clientHeight) {
+    showShadows.bottom = true;
+  } else {
+    showShadows.bottom = false;
+  }
+
+  // handle horizontals
+  if (scrollLeft === 0) {
+    showShadows.start = false;
+  } else {
+    showShadows.start = true;
+  }
+
+  if (scrollLeft < scrollWidth - clientWidth) {
+    showShadows.end = true;
+  } else {
+    showShadows.end = false;
+  }
+
+  return showShadows;
+};
+
 /**
  * `import {ScrollWrapper} from "@chanzuckerberg/eds";`
  *
@@ -49,7 +96,7 @@ export const ScrollWrapper = ({
   ...other
 }: ScrollWrapperProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [shadowState, setShadowState] = useState({
+  const [shadowState, setShadowState] = useState<ShadowStates>({
     top: false,
     bottom: false,
     start: false,
@@ -69,44 +116,8 @@ export const ScrollWrapper = ({
 
   // This handler fires upon every scroll event. changes are "debounced" by the set state calls
   const handler = (ev: Event) => {
-    const showShadows = { top: false, bottom: false, start: false, end: false };
     if (ev.target) {
-      const {
-        scrollTop,
-        scrollLeft,
-        scrollHeight,
-        clientHeight,
-        scrollWidth,
-        clientWidth,
-      } = ev.target as HTMLDivElement;
-
-      // handle verticals
-      if (scrollTop === 0) {
-        showShadows.top = false;
-      } else {
-        showShadows.top = true;
-      }
-
-      if (scrollTop < scrollHeight - clientHeight) {
-        showShadows.bottom = true;
-      } else {
-        showShadows.bottom = false;
-      }
-
-      // handle horizontals
-      if (scrollLeft === 0) {
-        showShadows.start = false;
-      } else {
-        showShadows.start = true;
-      }
-
-      if (scrollLeft < scrollWidth - clientWidth) {
-        showShadows.end = true;
-      } else {
-        showShadows.end = false;
-      }
-
-      setShadowState(showShadows);
+      setShadowState(setShadowStates(ev.target as HTMLDivElement));
     }
   };
 
