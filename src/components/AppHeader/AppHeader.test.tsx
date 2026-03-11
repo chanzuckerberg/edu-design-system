@@ -4,10 +4,11 @@ import userEvent from '@testing-library/user-event';
 import { mockResizeObserver } from 'jsdom-testing-mocks';
 
 import React from 'react';
-import { AppHeader, type NavGroup } from './AppHeader';
+import { AppHeader } from './AppHeader';
 
 import * as stories from './AppHeader.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
+import type { NavGroup } from '../../util/utility-types';
 
 mockResizeObserver();
 

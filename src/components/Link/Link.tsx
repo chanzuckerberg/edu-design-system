@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
-import type { Size } from '../../util/variant-types';
+import type { Emphasis, Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 
 import styles from './Link.module.css';
@@ -40,7 +40,7 @@ export type LinkProps<ExtendedElement = unknown> =
     /**
      * Extra or lowered colors added to a link
      */
-    emphasis?: 'default' | 'high' | 'low';
+    emphasis?: Emphasis | 'default';
     /**
      * The size of the link (when its context is `"standalone"`).
      *
