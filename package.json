@@ -8,6 +8,7 @@
   "type": "commonjs",
   "exports": {
     ".": "./lib/index.js",
+    "./tokens": "./lib/tokens.js",
     "./index.css": "./lib/index.css",
     "./tailwind.config": "./tailwind.config.ts"
   },
