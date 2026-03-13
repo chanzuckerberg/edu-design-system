@@ -450,3 +450,137 @@ exports[`<AppFooter /> WithFooterLink story renders snapshot 1`] = `
   </div>
 </footer>
 `;
+
+exports[`<AppFooter /> WithTextLogo story renders snapshot 1`] = `
+<footer
+  class="app-footer app-footer--emphasis-high"
+>
+  <div
+    class="app-footer__wrapper"
+  >
+    <div
+      class="app-footer__colophon"
+    >
+      <div
+        class="app-footer__title"
+      >
+        Logo Ipsum, Inc.
+      </div>
+    </div>
+    <menu
+      class="app-footer__nav-items"
+    >
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#support"
+        >
+          Support
+        </a>
+      </li>
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#tos"
+        >
+          Terms of Use
+        </a>
+      </li>
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#privacy"
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#guidelines"
+        >
+          Community Guidelines
+        </a>
+      </li>
+    </menu>
+  </div>
+</footer>
+`;
+
+exports[`<AppFooter /> WithTextLogoAndCopyright story renders snapshot 1`] = `
+<footer
+  class="app-footer app-footer--emphasis-high"
+>
+  <div
+    class="app-footer__wrapper"
+  >
+    <div
+      class="app-footer__colophon"
+    >
+      <a
+        class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+        href="http://example.org/"
+      >
+        Logo Ipsum, Inc.
+      </a>
+      <div
+        class="text text--body-xs app-footer__copyright"
+      >
+        Copyright © 2026
+      </div>
+    </div>
+    <menu
+      class="app-footer__nav-items"
+    >
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#support"
+        >
+          Support
+        </a>
+      </li>
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#tos"
+        >
+          Terms of Use
+        </a>
+      </li>
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#privacy"
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li
+        class="app-footer__nav-item"
+      >
+        <a
+          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          href="#guidelines"
+        >
+          Community Guidelines
+        </a>
+      </li>
+    </menu>
+  </div>
+</footer>
+`;

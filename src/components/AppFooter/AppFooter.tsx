@@ -10,7 +10,10 @@ import Text from '../Text';
 
 import styles from './AppFooter.module.css';
 
-export type AppFooterProps = {
+export type AppFooterProps = Omit<
+  React.HTMLAttributes<HTMLElement>,
+  'title'
+> & {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -74,26 +77,51 @@ export const AppFooter = ({
     className,
   );
 
+  // if title is not a string, and href does not exist, render directly
+  // if title is not a string, and href exists, wrap with unstyled anchor
+  // if title is a string, and href does not exist, render directly
+  // if title is a string and href exists, use a link component
+
   return (
     <footer className={componentClassName} {...other}>
       <div className={styles['app-footer__wrapper']}>
         <div className={styles['app-footer__colophon']}>
           {href ? (
-            <a
-              aria-label="homepage"
-              className={styles['app-footer__home-link']}
-              href={href}
-              onClick={(ev) => {
-                onLinkClick &&
-                  onLinkClick(ev, {
-                    name: 'EDS-footer-logo',
-                    type: 'link',
-                    href: href,
-                  } as NavLink);
-              }}
-            >
-              <div className={styles['app-footer__title']}>{title}</div>
-            </a>
+            typeof title === 'string' ? (
+              <Link
+                context="standalone"
+                emphasis="low"
+                href={href}
+                onClick={(ev) => {
+                  onLinkClick &&
+                    onLinkClick(ev, {
+                      name: 'EDS-footer-logo',
+                      type: 'link',
+                      href: href,
+                    } as NavLink);
+                }}
+                size="xs"
+                variant={emphasis === 'low' ? undefined : 'inverse'}
+              >
+                {title}
+              </Link>
+            ) : (
+              <a
+                aria-label="homepage"
+                className={styles['app-footer__home-link']}
+                href={href}
+                onClick={(ev) => {
+                  onLinkClick &&
+                    onLinkClick(ev, {
+                      name: 'EDS-footer-logo',
+                      type: 'link',
+                      href: href,
+                    } as NavLink);
+                }}
+              >
+                <div className={styles['app-footer__title']}>{title}</div>
+              </a>
+            )
           ) : (
             <div className={styles['app-footer__title']}>{title}</div>
           )}

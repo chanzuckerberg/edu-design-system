@@ -20,13 +20,27 @@
   --app-footer__bg-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
 }
 
-.app-footer__home-link:focus-visible {
-  outline: none;
+.app-footer__home-link {
+  color: inherit;
+  text-decoration: none;
 
-  .app-footer__title {
-    box-shadow: inset 0 0 0 2px light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: light-dark(var(--eds-theme-color-text-utility-inverse-interactive-visited), var(--eds-dark-theme-color-text-utility-inverse-interactive-visited))
+  }
+
+  &:focus-visible {
+    outline: none;
+  
+    .app-footer__title {
+      box-shadow: inset 0 0 0 2px light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+    }
   }
 }
+
 
 .app-footer__wrapper {
   display: flex;

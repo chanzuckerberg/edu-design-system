@@ -78,6 +78,12 @@ export const Default: Story = {
   args: {},
 };
 
+export const WithTextLogo: Story = {
+  args: {
+    title: 'Logo Ipsum, Inc.',
+  },
+};
+
 export const WithCopyright: Story = {
   args: {
     copyright: 'Copyright © 2026',
@@ -88,6 +94,13 @@ export const WithFooterLink: Story = {
   args: {
     ...WithCopyright.args,
     href: 'http://example.org/',
+  },
+};
+
+export const WithTextLogoAndCopyright: Story = {
+  args: {
+    ...WithTextLogo.args,
+    ...WithFooterLink.args,
   },
 };
 
