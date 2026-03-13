@@ -58,6 +58,10 @@
   &.link--emphasis-low {
     color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.link--variant-inverse {
