@@ -10,6 +10,7 @@ export { default as Table } from './components/Table';
 /**
  * 2.x component theme exports
  */
+export { default as AppFooter } from './components/AppFooter';
 export { default as AppHeader } from './components/AppHeader';
 export { default as Avatar } from './components/Avatar';
 export { default as Accordion } from './components/Accordion';
@@ -67,7 +68,7 @@ export type {
   NavMenuLabel,
   NavSeparator,
   NavTree,
-} from './components/AppHeader';
+} from './util/utility-types';
 export type { AppNotificationProps } from './components/AppNotification';
 export type { ButtonProps } from './components/Button';
 export type {

@@ -12,126 +12,21 @@ import React, {
 import { createPortal } from 'react-dom';
 import breakpoints from '../../design-tokens/tier-1-definitions/breakpoints';
 import { assertEdsUsage } from '../../util/logging';
+import type {
+  NavButton,
+  NavGroup,
+  NavItem,
+  NavLink,
+} from '../../util/utility-types';
 
 import Button from '../Button';
 import Hr from '../Hr';
 import Icon from '../Icon';
-import type { IconName } from '../Icon';
 import Menu from '../Menu';
 import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
 
 import styles from './AppHeader.module.css';
-
-/**
- * A nav group is a set of navigation items of the types listed below
- */
-export type NavGroup = {
-  /**
-   * Identifier for the nav group (used to distinguish it from other navigation groups)
-   */
-  name: string;
-  /**
-   * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
-   */
-  navItems: (NavLink | NavButton | NavSeparator | NavMenu | NavTree)[];
-};
-
-/**
- * Abstract type for every possible navigation bar item in an `AppHeader`. This should not be used directly.
- */
-type NavItem = {
-  /**
-   * Identifier for the nav item (used to distinguish it from other navigation items)
-   */
-  name: string;
-  /**
-   * Icon from the set of defined EDS icon set, when `iconLayout` is used.
-   */
-  icon?: IconName;
-
-  /**
-   * Allows configuation of the icon's positioning within `AppHeader`.
-   *
-   * - When set to a value besides `"none"`, an icon must be specified.
-   * - When `"icon-only"`, `aria-label` must be given a value.
-   */
-  iconLayout?: 'none' | 'left' | 'right' | 'icon-only';
-  /**
-   * Support for metadata in nav item entries
-   */
-  meta?: { [key: string]: string | number | boolean };
-};
-
-/**
- * Nav links are a type of nav item, that can be used for directing users to different locations.
- * They should not be used for modifying or acting on the contents of a given page.
- */
-export type NavLink = NavItem & {
-  /**
-   * Defines the type of nav item as a link, with the appropriate / related properties.
-   */
-  type: 'link';
-  /**
-   * Link: whether the associated nav item is marking the current page / location
-   */
-  isCurrent?: boolean;
-  /**
-   * Link: marks when an item will navigate to an external resource.
-   */
-  isExternal?: boolean;
-  /**
-   * Link: the target URL for the navigation item
-   */
-  href: string;
-};
-
-/**
- * Nav buttons are a type of nav item, that can be wired to trigger an interaction. They should not
- * be used for navigation.
- */
-export type NavButton = NavItem & {
-  /**
-   * Defines the type of nav item as a button, with the appropriate / related properties.
-   */
-  type: 'button';
-};
-
-/**
- * Separators exist as a separate and distinct Nav item, for maximum customizability
- */
-export type NavSeparator = NavItem & {
-  type: 'separator';
-};
-
-/**
- * Nav menus are a set of nested navigation items (of the same type as a NavGroup's navItems)
- */
-export type NavMenu = NavItem & {
-  type: 'menu';
-  /**
-   * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
-   */
-  navItems: (NavLink | NavButton | NavMenuLabel | NavSeparator)[];
-};
-
-/**
- * Nav trees are just like menus but appear as expanded when in a vertical orientation
- */
-export type NavTree = NavItem & {
-  type: 'tree';
-  /**
-   * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
-   */
-  navItems: (NavLink | NavButton | NavSeparator)[];
-};
-
-/**
- * Menus can have non-interactive labels
- */
-export type NavMenuLabel = NavItem & {
-  type: 'label';
-};
 
 export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
