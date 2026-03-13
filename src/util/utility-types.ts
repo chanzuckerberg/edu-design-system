@@ -83,7 +83,7 @@ export type NavItem = {
   icon?: IconName;
 
   /**
-   * Allows configuation of the icon's positioning within `AppHeader`.
+   * Allows configuration of the icon's positioning within `AppHeader`.
    *
    * - When set to a value besides `"none"`, an icon must be specified.
    * - When `"icon-only"`, `aria-label` must be given a value.

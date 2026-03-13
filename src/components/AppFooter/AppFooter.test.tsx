@@ -128,10 +128,17 @@ describe('<AppFooter />', () => {
   });
 
   describe('emits warnings when misused', () => {
-    it('warns when a menu item has invalid type', () => {
-      const consoleMock = jest.spyOn(console, 'error');
+    let consoleMock: jest.SpyInstance;
+    beforeEach(() => {
+      consoleMock = jest.spyOn(console, 'error');
       consoleMock.mockImplementation();
+    });
 
+    afterEach(() => {
+      consoleMock.mockRestore();
+    });
+
+    it('warns when a menu item has invalid type', () => {
       render(
         <AppFooter
           navItems={[

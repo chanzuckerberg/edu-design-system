@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
 import { assertEdsUsage } from '../../util/logging';
-import type { NavGroup, NavItem, NavLink } from '../../util/utility-types';
+import type { NavItem, NavLink } from '../../util/utility-types';
 import type { Emphasis } from '../../util/variant-types';
 
 import Link from '../Link';
@@ -23,12 +23,12 @@ export type AppFooterProps = {
   /**
    * Sets of navigation targets in the footer. Consider using four at maximum.
    */
-  navItems: NavGroup['navItems'];
+  navItems: NavLink[];
   /**
    * Handle the click event for a given clickable link nav item in the footer. Includes the data from the associated/clicked `NavItem` for reference
    * (e.g., attaching events, tracking, etc.)
    */
-  onLinkClick?: AppHeaderEventHandler;
+  onLinkClick?: AppFooterEventHandler;
   // Design API
   /**
    * Text slot for specifying the copyright information (e.g., "Copyright © ${YEAR}")
@@ -46,9 +46,9 @@ export type AppFooterProps = {
   title: ReactNode;
 };
 
-export type AppHeaderEventHandler = (
+export type AppFooterEventHandler = (
   event: React.SyntheticEvent,
-  navItem: NavItem,
+  navItem: NavItem, // Using abstract type to handle future cases
 ) => void;
 
 /**
@@ -56,7 +56,7 @@ export type AppHeaderEventHandler = (
  *
  * `import {AppFooter} from "@chanzuckerberg/eds";`
  *
- * A footer is an navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.
+ * A footer is a navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.
  */
 export const AppFooter = ({
   className,
@@ -135,13 +135,13 @@ export const AppFooter = ({
                 // data types
                 assertEdsUsage(
                   [true],
-                  `Problem with navItem data in footer: ${navItem}`,
+                  `Problem with navItem data in footer: ${JSON.stringify(navItem)}`,
                   'error',
                 );
                 return (
                   <li
                     className={styles['app-footer__nav-item']}
-                    key="error-unknown-nav-item-type"
+                    key={`error-unknown-nav-item-type-${navItem.name}`}
                   >
                     <Text as="span" preset="body-xs">
                       N/A
