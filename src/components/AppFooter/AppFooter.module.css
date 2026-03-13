@@ -58,7 +58,7 @@
     align-items: center;
   }
 
-  @media (min-width: $eds-bp-md) {
+  @media (min-width: $eds-bp-lg) {
     flex-direction: row;
   }
 
@@ -84,7 +84,7 @@
     justify-content: center;
   }
 
-  @media (min-width: $eds-bp-md) {
+  @media (min-width: $eds-bp-lg) {
     align-items: center;
     gap: calc(var(--eds-spacing-size-3) * 1px);
     justify-content: start;

@@ -90,6 +90,9 @@ export const WithCopyright: Story = {
   },
 };
 
+/**
+ * Footers using the `href` prop get a link on the logo/text.
+ */
 export const WithFooterLink: Story = {
   args: {
     ...WithCopyright.args,
@@ -104,9 +107,13 @@ export const WithTextLogoAndCopyright: Story = {
   },
 };
 
+/**
+ * When using the low emphasis footer, make sure not to include any logo or copyright elements.
+ */
 export const LowEmphasis: Story = {
   args: {
-    ...WithCopyright.args,
+    ...Default.args,
+    title: undefined,
     emphasis: 'low',
   },
 };
@@ -117,6 +124,3 @@ export const HighEmphasis: Story = {
     emphasis: 'high',
   },
 };
-
-// TODO-AH: add stories to test click handler
-// TODO-AH: add stories for improper nav items in footer
