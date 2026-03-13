@@ -67,6 +67,38 @@ describe('<AppFooter />', () => {
       });
     });
 
+    it('handles clicks on footer fallback text logo', async () => {
+      const user = userEvent.setup();
+      const onLinkClickMock = jest.fn();
+
+      render(
+        <AppFooter
+          href="#homepage"
+          navItems={[
+            {
+              type: 'link',
+              name: 'Support',
+              href: '#support',
+              meta: {
+                name: 'track-value',
+                value: 4,
+                mutate: true,
+              },
+            },
+          ]}
+          onLinkClick={onLinkClickMock}
+          title="text"
+        />,
+      );
+
+      await user.click(screen.getAllByRole('link')[0]);
+      expect(onLinkClickMock.mock.calls[0][1]).toEqual({
+        href: '#homepage',
+        name: 'EDS-footer-logo',
+        type: 'link',
+      });
+    });
+
     it('handles clicks on any nav items', async () => {
       const user = userEvent.setup();
       const onLinkClickMock = jest.fn();
