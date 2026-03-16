@@ -182,13 +182,6 @@ exports[`<AppFooter /> LowEmphasis story renders snapshot 1`] = `
   <div
     class="app-footer__wrapper"
   >
-    <div
-      class="app-footer__colophon"
-    >
-      <div
-        class="app-footer__title"
-      />
-    </div>
     <menu
       class="app-footer__nav-items"
     >
