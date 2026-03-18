@@ -1,5 +1,4 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
-// import isChromatic from 'chromatic/isChromatic';
 
 import React from 'react';
 
