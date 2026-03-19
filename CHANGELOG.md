@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.4.2...v17.5.0) (2026-03-18)
+
+
+### Features
+
+* **AppFooter:** add 1.0 component with tests and stories ([#2413](https://github.com/chanzuckerberg/edu-design-system/issues/2413)) ([4ddab3d](https://github.com/chanzuckerberg/edu-design-system/commit/4ddab3de5a0492b5f937981ea5052202044b5228))
+* **ScrollWrapper:** add support for orientations ([#2409](https://github.com/chanzuckerberg/edu-design-system/issues/2409)) ([2e10fec](https://github.com/chanzuckerberg/edu-design-system/commit/2e10fecf6de5dc710d3e3c4872f0ddf6c91b1cb7))
+* **tokens:** export token variables for use in apps ([#2412](https://github.com/chanzuckerberg/edu-design-system/issues/2412)) ([a87704a](https://github.com/chanzuckerberg/edu-design-system/commit/a87704af27bd14ce8c9c77cdc352e698b728578c))
+
+
+### Bug Fixes
+
+* **Link:** support underline on hover for low emphasis ([#2416](https://github.com/chanzuckerberg/edu-design-system/issues/2416)) ([5dc9001](https://github.com/chanzuckerberg/edu-design-system/commit/5dc9001d14eb2efb40703b0e65af3beda9667b2b))
+* **SelectionChip:** make leadingIcon optional ([#2410](https://github.com/chanzuckerberg/edu-design-system/issues/2410)) ([f6b074e](https://github.com/chanzuckerberg/edu-design-system/commit/f6b074e7a75289ea74b3453ee5302fde7e1a7b7e))
+
 ### [17.4.2](https://github.com/chanzuckerberg/edu-design-system/compare/v17.4.1...v17.4.2) (2026-03-04)
 
 

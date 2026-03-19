@@ -1,10 +1,11 @@
 export { AppHeader as default } from './AppHeader';
-export type {
+export {
   NavGroup,
-  NavButton,
+  NavItem,
   NavLink,
-  NavMenu,
-  NavMenuLabel,
+  NavButton,
   NavSeparator,
+  NavMenu,
   NavTree,
-} from './AppHeader';
+  NavMenuLabel,
+} from '../../util/utility-types';

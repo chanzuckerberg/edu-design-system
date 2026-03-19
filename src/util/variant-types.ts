@@ -35,6 +35,11 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 export type Align = 'leading' | 'trailing' | 'center';
 
 /**
+ * Emphasis variants, for use when determining how much an element should stand out
+ */
+export type Emphasis = 'low' | 'high';
+
+/**
  * Statuses tied to the state of information being displayed
  */
 export type Status = 'informational' | 'warning' | 'favorable' | 'critical';

@@ -8,7 +8,7 @@ import postcss from 'rollup-plugin-postcss';
  * @type {import('rollup').RollupOptions}
  */
 export default {
-  input: 'src/index.ts',
+  input: ['src/index.ts', 'src/tokens.ts'],
   output: {
     dir: 'lib',
     format: 'cjs',

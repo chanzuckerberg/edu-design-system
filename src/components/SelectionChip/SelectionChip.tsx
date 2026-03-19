@@ -23,7 +23,7 @@ export type SelectionChipProps = {
   /**
    * Leading icon for the chip
    */
-  leadingIcon: IconName;
+  leadingIcon?: IconName;
   /**
    * Chip types (correspond to the equivalent input types)
    */
@@ -41,7 +41,7 @@ type SelectionChipRefProps = ForwardedRefComponent<
 /**
  * `import {SelectionChip} from "@chanzuckerberg/eds";`
  *
- * Compact, interactive UI elements used to make selections.
+ * Compact, interactive UI elements used to make selections. Can have optional icon.
  */
 export const SelectionChip: SelectionChipRefProps = forwardRef(
   (
