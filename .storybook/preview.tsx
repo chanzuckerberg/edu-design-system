@@ -42,6 +42,7 @@ export const parameters: Preview['parameters'] = {
   },
   docs: {
     theme: Theme,
+    toc: true,
   },
   backgrounds: {
     options: {
