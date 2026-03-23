@@ -23,7 +23,7 @@
   -webkit-appearance: none;
   width: 100%;
 
-  border: calc(var(--eds-border-width-sm) * 1px) solid;
+  border: 1px solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   outline: none;
@@ -47,7 +47,7 @@
 
   &:focus {
     border-color: var(--eds-theme-color-border-utility-focus);
-    outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-focus);
+    outline: 1px solid var(--eds-theme-color-border-utility-focus);
   }
 
   &:read-only:not(:disabled) {
@@ -68,7 +68,7 @@
 
     &:focus {
       border-color: var(--eds-theme-color-border-utility-critical);
-      outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-critical);
+      outline: 1px solid var(--eds-theme-color-border-utility-critical);
     }
   }
 
@@ -81,7 +81,7 @@
 
     &:focus {
       border-color: var(--eds-theme-color-border-utility-warning);
-      outline: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-warning);
+      outline: 1px solid var(--eds-theme-color-border-utility-warning);
     }
   }
 
