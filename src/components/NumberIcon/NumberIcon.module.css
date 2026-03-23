@@ -9,9 +9,9 @@
  * Centers the number text in the circle.
  */
 .number-icon {
-  --number-icon__fg:;
-  --number-icon__bg:;
-  --number-icon__border:;
+  --number-icon__fg: initial;
+  --number-icon__bg: initial;
+  --number-icon__border: initial;
 
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
@@ -27,9 +27,9 @@
     cursor: pointer;
   }
 
-  color: var(--number-icon__fg, inherit);
-  background-color: var(--number-icon__bg, inherit);
-  border-color: var(--number-icon__border, inherit);
+  color: var(--number-icon__fg);
+  background-color: var(--number-icon__bg);
+  border-color: var(--number-icon__border);
 }
 
 /**
