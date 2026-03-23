@@ -179,15 +179,3 @@ export const BorderRadii: Story = {
     ),
   },
 };
-
-// TODO: not currently exported; not available in tailwind
-export const FormBorderWidths: Story = {
-  args: {
-    caption: 'Form Border Tokens',
-    listItems: getTokenListItems(
-      'eds-theme-border-width',
-      'size',
-      (name, column, filterTerm) => '',
-    ),
-  },
-};

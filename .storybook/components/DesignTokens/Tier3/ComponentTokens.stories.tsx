@@ -5,6 +5,7 @@ import {
   Stories,
 } from '@storybook/addon-docs/blocks';
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import upperFirst from 'lodash/upperFirst';
 import React from 'react';
 
 import {
@@ -68,7 +69,9 @@ export const BackgroundTable: Story = {
       'color',
       (name, column, filterTerm) => {
         if (column === 'figma') {
-          return '→ background/' + getSpecifier(name, filterTerm);
+          return (
+            '→ background/table' + upperFirst(getSpecifier(name, filterTerm))
+          );
         } else {
           return 'bg-table-' + getSpecifier(name, filterTerm);
         }

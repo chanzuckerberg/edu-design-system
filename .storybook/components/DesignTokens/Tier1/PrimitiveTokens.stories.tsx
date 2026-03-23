@@ -249,7 +249,7 @@ export const Sizes: Story = {
         return 'spacing/size-' + name.slice(name.lastIndexOf('-') + 1);
       } else {
         // tailwind or some other value(s) as fallback
-        return '*-spacing-size' + name.slice(name.lastIndexOf('-') + 1);
+        return '*-spacing-size-' + name.slice(name.lastIndexOf('-') + 1);
       }
     }),
   },
