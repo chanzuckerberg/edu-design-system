@@ -100,6 +100,8 @@ export const BackgroundUtility: Story = {
 export const BackgroundBrand: Story = {
   args: {
     caption: 'Background Brand Tokens',
+    subcaption:
+      'Note: any colors defined as lime green (#OOFFOO) do not exist in the current theme.',
     listItems: getTokenListItems(
       'eds-theme-color-background-brand',
       'color',
@@ -142,6 +144,8 @@ export const BorderUtility: Story = {
 export const BorderBrand: Story = {
   args: {
     caption: 'Border Brand Tokens',
+    subcaption:
+      'Note: any colors defined as lime green (#OOFFOO) do not exist in the current theme.',
     listItems: getTokenListItems(
       'eds-theme-color-border-brand',
       'color',
