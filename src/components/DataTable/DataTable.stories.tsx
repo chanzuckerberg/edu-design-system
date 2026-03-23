@@ -33,7 +33,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:1.0'],
+  tags: ['autodocs', 'version:1.0.1'],
 } as Meta<Args>;
 
 type Args = DataTableProps;
