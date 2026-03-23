@@ -200,6 +200,20 @@ export const Neutrals: Story = {
   },
 };
 
+/**
+ * Opacity Brand Colors
+ */
+export const Opacities: Story = {
+  args: {
+    caption: 'Opacities',
+    listItems: getTokenListItems(
+      'eds-color-opacity',
+      'size',
+      (name, column) => '',
+    ),
+  },
+};
+
 export const FadeAnimations: Story = {
   args: {
     caption: 'Fade Animations',
@@ -218,15 +232,6 @@ export const MovementAnimations: Story = {
   },
 };
 
-// TODO: border width tokens do not exist in figma/token db
-export const BorderWidths: Story = {
-  args: {
-    caption: 'Border Widths',
-    listItems: getTokenListItems('eds-border-width', 'size'),
-  },
-};
-
-// TODO: re-align primitive and semantic border radii tokens between figma and code (numbered primitives with named semantics)
 export const BorderRadii: Story = {
   args: {
     caption: 'Border Radii',

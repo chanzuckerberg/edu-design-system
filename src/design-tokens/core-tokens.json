@@ -31,22 +31,22 @@
         "sm": {
           "value": "1",
           "group": "size",
-          "comment": "pixels (px)"
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "md": {
           "value": "2",
           "group": "size",
-          "comment": "pixels (px)"
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "lg": {
           "value": "4",
           "group": "size",
-          "comment": "pixels (px)"
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         },
         "xl": {
           "value": "8",
           "group": "size",
-          "comment": "pixels (px)"
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       },
       "radius": {
@@ -817,7 +817,8 @@
           }
         },
         "width": {
-          "value": "{eds.border.width.sm}"
+          "value": "{eds.border.width.sm}",
+          "comment": "@deprecated This should not be used in code or design. It will be removed in a future version of EDS."
         }
       },
       "form": {
