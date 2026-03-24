@@ -106,11 +106,13 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
 };
 
 /**
- * The simplest and default case, using the options, button, and button wrapper.
+ * The simplest and default case, using the options, button, and button wrapper in the render prop.
  * This shows how to reflect the value in the button upon selection, and how to generate
  * a set of options from a list.
  *
  * **NOTE**: for select value data types, `{label: string}` is required, but any other key/value pairs are allowed.
+ *
+ * For detailed code examples, refer to the [stories code in GitHub](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Select/Select.stories.tsx).
  */
 export const Default: StoryObj = {
   args: {
@@ -137,31 +139,6 @@ export const Default: StoryObj = {
         </Select.Options>
       </>
     ),
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper
-        isOpen={open}
-      >
-        {value.label}
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-    {exampleOptions.map((option) => (
-      <Select.Option key={option.key} value={option}>
-        {option.label}
-      </Select.Option>
-    ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
   },
 };
 
@@ -236,32 +213,6 @@ export const EventHandlingOnRenderProp: StoryObj = {
         </Select.Options>
       </>
     ),
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select onChange={...}>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper
-        isOpen={open}
-        onClick={...}
-        >
-        {value.label}
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-    {exampleOptions.map((option) => (
-      <Select.Option key={option.key} value={option}>
-        {option.label}
-      </Select.Option>
-    ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
   },
 };
 
@@ -446,35 +397,6 @@ export const UncontrolledHeadless: StoryObj = {
       </>
     ),
   },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select onChange={...}>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <button className="fpo">
-      {
-        {
-          Birds: '🐦🦆🦜',
-          Dogs: '🐶🐕🐩',
-          Cats: '🐈🐱🐈‍⬛',
-        }[value.label as string]
-      }
-      </button>
-    )}
-  </Select.Button>
-  <Select.Options>
-  {exampleOptions.map((option) => (
-    <Select.Option key={option.key} value={option}>
-      {option.label}
-    </Select.Option>
-  ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
-  },
 };
 
 /**
@@ -504,29 +426,6 @@ export const StyledUncontrolled: StoryObj = {
         </Select.Options>
       </>
     ),
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select onChange={...}>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper isOpen={open}>
-        {value.label}
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-  {exampleOptions.map((option) => (
-    <Select.Option key={option.key} value={option}>
-      {option.label}
-    </Select.Option>
-  ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
   },
 };
 
@@ -570,29 +469,6 @@ export const Multiple: StoryObj = {
       </>
     ),
   },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select multiple>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper isOpen={open}>
-        {value.length > 0 ? value.length : 'none'} selected
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-  {exampleOptions.map((option) => (
-    <Select.Option key={option.key} value={option}>
-      {option.label}
-    </Select.Option>
-  ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
-  },
 };
 
 /**
@@ -627,30 +503,6 @@ export const MultipleWithTruncation: StoryObj = {
         </Select.Options>
       </>
     ),
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select multiple>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper isOpen={open} shouldTruncate>
-        {value.length > 0 ? value.length : 'none'} long selected
-        description
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-  {exampleOptions.map((option) => (
-    <Select.Option key={option.key} value={option}>
-      {option.label}
-    </Select.Option>
-  ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
   },
 };
 
@@ -708,31 +560,6 @@ export const LongOptionList: StoryObj = {
   parameters: {
     layout: 'centered',
     chromatic: { delay: 450 },
-    docs: {
-      source: {
-        code: `
-<Select onChange={...}>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper isOpen={open} shouldTruncate>
-        {value}
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-  {Array(30)
-    .fill('test')
-    .map((option, index) => (
-      // eslint-disable-next-line react/no-array-index-key
-      <Select.Option key={\`$\{option}-$\{index}\`} value={option + index}>
-        {option}
-        {index}
-      </Select.Option>
-    ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
   },
   decorators: [
     (Story) => (
@@ -926,29 +753,6 @@ export const OptionsRightAligned: StoryObj = {
         </Select.Options>
       </>
     ),
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Select onChange={...}>
-  <Select.Button>
-    {({ value, open, disabled }) => (
-      <Select.ButtonWrapper isOpen={open}>
-        {value.label}
-      </Select.ButtonWrapper>
-    )}
-  </Select.Button>
-  <Select.Options>
-  {exampleOptions.map((option) => (
-    <Select.Option key={option.key} value={option}>
-      {option.label}
-    </Select.Option>
-  ))}
-  </Select.Options>
-</Select>`,
-      },
-    },
   },
   play: selectCat,
   decorators: [
