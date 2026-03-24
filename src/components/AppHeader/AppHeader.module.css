@@ -314,7 +314,7 @@
 }
 
 .app-header__nav-item:focus-visible {
-  box-shadow: inset 0 0 0 calc(var(--eds-border-width-md) * 1px) light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  box-shadow: inset 0 0 0 2px light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   outline: none;
 }
 

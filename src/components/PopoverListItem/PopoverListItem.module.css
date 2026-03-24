@@ -42,7 +42,7 @@
 .popover-list-item--type-separator {
   pointer-events: none;
   padding: 0;
-  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  border-bottom: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
 }
 
 .popover-list-item__icon {
