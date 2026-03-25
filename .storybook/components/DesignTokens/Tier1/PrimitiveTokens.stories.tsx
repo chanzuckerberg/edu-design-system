@@ -56,6 +56,18 @@ type Story = StoryObj<typeof TokenDataTable>;
 
 export default meta;
 
+type ListItem = {
+  name: string;
+  value: string;
+  figmaToken: string;
+  tailwindClass: string;
+  type: 'size' | 'color';
+};
+
+function sortVarNames(a: ListItem, b: ListItem) {
+  return a.name < b.name ? -1 : 1;
+}
+
 /**
  * Red Brand Colors
  */
@@ -68,7 +80,7 @@ export const Reds: Story = {
       } else {
         return '';
       }
-    }),
+    }).sort(sortVarNames),
   },
 };
 
@@ -88,7 +100,7 @@ export const Oranges: Story = {
           return '';
         }
       },
-    ),
+    ).sort(sortVarNames),
   },
 };
 
@@ -108,7 +120,7 @@ export const Yellows: Story = {
           return '';
         }
       },
-    ),
+    ).sort(sortVarNames),
   },
 };
 
@@ -124,7 +136,7 @@ export const Greens: Story = {
       } else {
         return '';
       }
-    }),
+    }).sort(sortVarNames),
   },
 };
 
@@ -140,7 +152,7 @@ export const Blues: Story = {
       } else {
         return '';
       }
-    }),
+    }).sort(sortVarNames),
   },
 };
 
@@ -160,7 +172,7 @@ export const Purples: Story = {
           return '';
         }
       },
-    ),
+    ).sort(sortVarNames),
   },
 };
 
@@ -176,7 +188,7 @@ export const Pinks: Story = {
       } else {
         return '';
       }
-    }),
+    }).sort(sortVarNames),
   },
 };
 
@@ -196,7 +208,7 @@ export const Neutrals: Story = {
           return '';
         }
       },
-    ),
+    ).sort(sortVarNames),
   },
 };
 

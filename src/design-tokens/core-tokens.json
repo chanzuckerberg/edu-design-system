@@ -123,6 +123,14 @@
         "group": "color"
       },
       "neutral": {
+        "025": {
+          "value": "#FAF9F8",
+          "group": "color"
+        },
+        "050": {
+          "value": "#F4F1EF",
+          "group": "color"
+        },
         "100": {
           "value": "#E6E2DE",
           "group": "color"
@@ -190,14 +198,6 @@
           "value": "#0E0E0E",
           "group": "color"
         },
-        "025": {
-          "value": "#FAF9F8",
-          "group": "color"
-        },
-        "050": {
-          "value": "#F4F1EF",
-          "group": "color"
-        },
         "white": {
           "value": "#FFFFFF",
           "group": "color",
@@ -205,6 +205,10 @@
         }
       },
       "red": {
+        "050": {
+          "value": "#FCF0F0",
+          "group": "color"
+        },
         "100": {
           "value": "#F9DFDF",
           "group": "color"
@@ -256,13 +260,14 @@
         "950": {
           "value": "#230301",
           "group": "color"
-        },
-        "050": {
-          "value": "#FCF0F0",
-          "group": "color"
         }
       },
       "orange": {
+        "050": {
+          "value": "#FFEEE5",
+          "group": "color",
+          "comment": "not used in base theme"
+        },
         "100": {
           "value": "#FFDCCA",
           "group": "color",
@@ -327,14 +332,13 @@
           "value": "#1B0A02",
           "group": "color",
           "comment": "not used in base theme"
-        },
-        "050": {
-          "value": "#FFEEE5",
-          "group": "color",
-          "comment": "not used in base theme"
         }
       },
       "yellow": {
+        "050": {
+          "value": "#FFFC83",
+          "group": "color"
+        },
         "100": {
           "value": "#F6EE65",
           "group": "color"
@@ -386,13 +390,13 @@
         "950": {
           "value": "#100D01",
           "group": "color"
-        },
-        "050": {
-          "value": "#FFFC83",
-          "group": "color"
         }
       },
       "green": {
+        "050": {
+          "value": "#E0F5EC",
+          "group": "color"
+        },
         "100": {
           "value": "#C2ECD9",
           "group": "color"
@@ -444,13 +448,18 @@
         "950": {
           "value": "#04110B",
           "group": "color"
-        },
-        "050": {
-          "value": "#E0F5EC",
-          "group": "color"
         }
       },
       "blue": {
+        "025": {
+          "value": "#F5FAFF",
+          "group": "color",
+          "comment": "not used in base theme"
+        },
+        "050": {
+          "value": "#EEF7FF",
+          "group": "color"
+        },
         "100": {
           "value": "#D3EAFF",
           "group": "color"
@@ -502,15 +511,6 @@
         "950": {
           "value": "#0B0D1B",
           "group": "color"
-        },
-        "025": {
-          "value": "#F5FAFF",
-          "group": "color",
-          "comment": "not used in base theme"
-        },
-        "050": {
-          "value": "#EEF7FF",
-          "group": "color"
         }
       },
       "pink": {
@@ -531,6 +531,11 @@
         }
       },
       "purple": {
+        "050": {
+          "value": "#FBF5FD",
+          "group": "color",
+          "comment": "not used in base theme"
+        },
         "100": {
           "value": "#F3E5FA",
           "group": "color",
@@ -593,11 +598,6 @@
         },
         "950": {
           "value": "#190D1E",
-          "group": "color",
-          "comment": "not used in base theme"
-        },
-        "050": {
-          "value": "#FBF5FD",
           "group": "color",
           "comment": "not used in base theme"
         }
@@ -1009,9 +1009,6 @@
                 "value": "{eds.color.white}",
                 "group": "color"
               }
-            },
-            "card": {
-              "value": "rgba(255, 255, 255, 0.60)"
             },
             "overlay": {
               "lowEmphasis": {

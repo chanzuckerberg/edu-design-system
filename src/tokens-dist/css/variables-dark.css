@@ -39,7 +39,6 @@
   --eds-dark-theme-color-background-utility-default-no-emphasis: rgba(255, 255, 255, 0.00);
   --eds-dark-theme-color-background-utility-overlay-high-emphasis: rgba(36, 36, 35, 0.80);
   --eds-dark-theme-color-background-utility-overlay-low-emphasis: rgba(36, 36, 35, 0.50);
-  --eds-dark-theme-color-background-utility-card: rgba(255, 255, 255, 0.60);
   --eds-dark-theme-color-background-utility-base-2: rgba(255, 255, 255, 0.60);
   --eds-dark-theme-color-background-brand-pink: #00FF00;
   --eds-dark-theme-color-background-brand-purple-low-emphasis: #00FF00;
@@ -274,8 +273,8 @@
   --eds-typography-font-weight-light: 200;
   --eds-typography-font-family-size-offset-2: 0; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
   --eds-typography-font-family-3: 'JetBrains Mono', Consolas, monospace;
-  --eds-typography-font-family-2: 'kazimirtext', Georgia, serif;
-  --eds-typography-font-family-1: 'parabolica', Arial, sans-serif;
+  --eds-typography-font-family-2: 'kazimirtext', Lora, Georgia, serif;
+  --eds-typography-font-family-1: 'parabolica', Inter, Arial, sans-serif;
   --eds-dark-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
   --eds-dark-theme-typography-font-family-decorative-inline: var(--eds-typography-font-family-1);
   --eds-dark-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
