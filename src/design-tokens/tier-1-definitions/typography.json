@@ -3,10 +3,10 @@
     "typography": {
       "fontFamily": {
         "1": {
-          "value": "'parabolica', Arial, sans-serif"
+          "value": "'parabolica', Inter, Arial, sans-serif"
         },
         "2": {
-          "value": "'kazimirtext', Georgia, serif"
+          "value": "'kazimirtext', Lora, Georgia, serif"
         },
         "3": {
           "value": "'JetBrains Mono', Consolas, monospace"

@@ -39,7 +39,6 @@
   --eds-theme-color-background-utility-default-no-emphasis: rgba(255, 255, 255, 0.00);
   --eds-theme-color-background-utility-overlay-high-emphasis: rgba(36, 36, 35, 0.80);
   --eds-theme-color-background-utility-overlay-low-emphasis: rgba(36, 36, 35, 0.50);
-  --eds-theme-color-background-utility-card: rgba(255, 255, 255, 0.60);
   --eds-theme-color-background-utility-base-2: rgba(255, 255, 255, 0.60);
   --eds-theme-color-background-brand-pink: #00FF00;
   --eds-theme-color-background-brand-purple-low-emphasis: #00FF00;
@@ -210,10 +209,10 @@
   --eds-border-radius-150: 6; /* pixels (px) */
   --eds-border-radius-100: 4; /* pixels (px) */
   --eds-border-radius-50: 2; /* pixels (px) */
-  --eds-border-width-xl: 8; /* pixels (px) */
-  --eds-border-width-lg: 4; /* pixels (px) */
-  --eds-border-width-md: 2; /* pixels (px) */
-  --eds-border-width-sm: 1; /* pixels (px) */
+  --eds-border-width-xl: 8; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-lg: 4; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-md: 2; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
+  --eds-border-width-sm: 1; /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-anim-move-long: 0.4; /* Seconds (s) */
   --eds-anim-move-medium: 0.3; /* Seconds (s) */
   --eds-anim-move-quick: 0.15; /* Seconds (s) */
@@ -274,8 +273,8 @@
   --eds-typography-font-weight-light: 200;
   --eds-typography-font-family-size-offset-2: 0; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
   --eds-typography-font-family-3: 'JetBrains Mono', Consolas, monospace;
-  --eds-typography-font-family-2: 'kazimirtext', Georgia, serif;
-  --eds-typography-font-family-1: 'parabolica', Arial, sans-serif;
+  --eds-typography-font-family-2: 'kazimirtext', Lora, Georgia, serif;
+  --eds-typography-font-family-1: 'parabolica', Inter, Arial, sans-serif;
   --eds-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
   --eds-theme-typography-font-family-decorative-inline: var(--eds-typography-font-family-1);
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
@@ -473,7 +472,7 @@
   --eds-theme-color-background-app-header-hover: var(--eds-color-neutral-800);
   --eds-theme-color-background-app-header: var(--eds-color-neutral-850);
   --eds-theme-form-border-width: var(--eds-border-width-sm);
-  --eds-theme-border-width: var(--eds-border-width-sm);
+  --eds-theme-border-width: var(--eds-border-width-sm); /* @deprecated This should not be used in code or design. It will be removed in a future version of EDS. */
   --eds-theme-border-radius-notification: var(--eds-border-radius-300);
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);

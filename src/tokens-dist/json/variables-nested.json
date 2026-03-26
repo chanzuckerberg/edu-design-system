@@ -2,8 +2,8 @@
   "eds": {
     "typography": {
       "fontFamily": {
-        "1": "'parabolica', Arial, sans-serif",
-        "2": "'kazimirtext', Georgia, serif",
+        "1": "'parabolica', Inter, Arial, sans-serif",
+        "2": "'kazimirtext', Lora, Georgia, serif",
         "3": "'JetBrains Mono', Consolas, monospace",
         "sizeOffset": {
           "2": "0"
@@ -417,7 +417,6 @@
               "active": "#F4F1EF",
               "selected": "#FFFFFF"
             },
-            "card": "rgba(255, 255, 255, 0.60)",
             "overlay": {
               "lowEmphasis": "rgba(36, 36, 35, 0.50)",
               "highEmphasis": "rgba(36, 36, 35, 0.80)"
@@ -845,7 +844,7 @@
       "typography": {
         "fontFamily": {
           "decorative": {
-            "inline": "'parabolica', Arial, sans-serif"
+            "inline": "'parabolica', Inter, Arial, sans-serif"
           },
           "tab": "'JetBrains Mono', Consolas, monospace"
         },
