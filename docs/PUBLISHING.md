@@ -41,11 +41,34 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 
 #### Cutting a release branch
 
-0. Before beginning, run `git fetch origin` to ensure you have the latest remote changes.
+> [!Note]
+> The following instructions assume you are developing on macOS, which has `pbpaste` and other utility commands.
+
+0. Before beginning, ensure you have the latest remote changes
+
+```
+git fetch origin
+```
+
 1. Confirm that all checks are green on CI.
-2. Run `git checkout next && git pull origin next && yarn install` to update your local copy of `next`.
-3. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
-4. Run `git checkout -b release-v<version>`
+2. Update your local copy of `next`
+
+```
+git checkout next && git pull origin next && yarn install
+```
+
+3. Determine the next version that will be released
+
+```
+yarn release --dry-run # COPY THE VERSION AT THE TOP OF THE OUTPUT (e.g., 18.x.y)
+```
+
+4. Create a release branch
+
+```
+git checkout -b release-v$(pbpaste)
+```
+
 5. Run `yarn release` if the recommended version is correct. If it isn't, use `yarn release:` followed by the proper version type (patch, minor, major)
 
 <details><summary>If working on a hotfix for the latest version</summary>
@@ -64,12 +87,12 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 6. Push the branch up, including tags:
 
 ```
-git push --follow-tags origin <branch> # this will also push tags
+git push --follow-tags origin $(git rev-parse --abbrev-ref HEAD)
 ```
 
 #### Merging a branch
 
-7. Open a pull request for the branch, merging into **`main`**.
+7. Open a [pull request](https://github.com/chanzuckerberg/edu-design-system) for the branch, to merge into **`main`**.
 
 For the commit message, use the new version's content in the [CHANGELOG.md](../CHANGELOG.md) (e.g., all the changes for version 1.2.3). Review the content in the changelog to make sure the notes, and the from-version and to-version are correct. Note the link to the storybook on this PR CI/CD. You will add this link to the GitHub release notes later.
 
@@ -83,8 +106,21 @@ Once merged, wait until the [builds complete on `main`](https://github.com/chanz
 
 #### Publishing the package
 
-8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn install && yarn build`
-9. Publish the package: `npm publish`
+8. Pull down the most up-to-date version of main:
+
+```
+git checkout main && git pull && yarn install && yarn build
+```
+
+9. Publish the package: 
+
+> [!Note]
+> Make sure you have an unexpired auth token in your ~/.npmrc file, otherwise you will get a 404
+
+```
+npm publish 
+```
+
 10. Create a [new release](https://github.com/chanzuckerberg/edu-design-system/releases) based on the newly-created tag.
 
 To prepare the message:
@@ -96,9 +132,11 @@ To prepare the message:
 
 The latter will automatically post to [relevant slack channels](https://slack.github.com/). **When doing a major version release, don't forget to include notes on each breaking change**.
 
-We also want to update the component analytics.
+Finally, we also want to update the component analytics:
 
-- `npx @omlet/cli analyze`
+```
+npx @omlet/cli analyze
+```
 
 This requires a [local login to omlet](https://docs.omlet.dev/cli-and-dashboard/learn-omlet-cli/commands/login).
 
@@ -106,9 +144,9 @@ This requires a [local login to omlet](https://docs.omlet.dev/cli-and-dashboard/
 
 11. Lastly, run the following to "back merge" release changes to `next`:
 
-`git checkout main && git pull origin main && git checkout next && git pull && git merge main && yarn install && git push`
-
-**NOTE**: We run `yarn install` here to ensure any package updates saved to `next` get applied.
+```
+git checkout main && git pull origin main && git checkout next && git pull && git merge main && yarn install && git push
+```
 
 #### Alpha release
 
