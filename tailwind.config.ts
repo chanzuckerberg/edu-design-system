@@ -107,6 +107,9 @@ export function applyTailwindConfig(
   };
 
   return {
+    boxShadow: {
+      ...tokenConfig['box-shadow'],
+    },
     colors: {
       ...colorTokens,
     },
