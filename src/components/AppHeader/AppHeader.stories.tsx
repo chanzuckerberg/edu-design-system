@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.3.2'],
+  tags: ['autodocs', 'version:1.4.0'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -317,6 +317,13 @@ export const DefaultWithNavTree: Story = {
         ],
       },
     ],
+  },
+};
+
+export const FloatingWithNavTree: Story = {
+  args: {
+    ...DefaultWithNavTree.args,
+    style: 'floating',
   },
 };
 
