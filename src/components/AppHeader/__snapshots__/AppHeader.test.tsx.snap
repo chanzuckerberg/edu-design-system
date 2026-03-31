@@ -13,7 +13,22 @@ exports[`<AppHeader /> CanHandleFallbackNavMenus story renders snapshot 1`] = `
       >
         <div
           class="app-header-title__title"
-        />
+        >
+          <span
+            class="text text--headline-sm"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="app-header-title__sub-title"
+        >
+          <span
+            class="text text--body-md"
+          >
+            They're cool!
+          </span>
+        </div>
       </div>
       <div
         class="app-header__nav-groups"

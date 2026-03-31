@@ -517,6 +517,9 @@ export const CanHandleFallbackNavMenus: Story = {
   tags: ['code-only'],
 
   args: {
+    title: 'Bodies of water',
+    subTitle: "They're cool!",
+
     navGroups: [
       {
         name: 'group-2',
