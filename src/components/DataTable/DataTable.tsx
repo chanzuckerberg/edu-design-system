@@ -67,7 +67,7 @@ export type DataTableProps<T = unknown> = EDSBase & {
    *
    * **Default is `"md"`**.
    */
-  size: Extract<Size, 'sm' | 'md'>;
+  size?: Extract<Size, 'sm' | 'md'>;
   /**
    * Sub-caption text to use for the table. This text should be used with `caption` and is not
    * meant to be standalone.

@@ -9,6 +9,10 @@
  * Centers the number text in the circle.
  */
 .number-icon {
+  --number-icon__fg: initial;
+  --number-icon__bg: initial;
+  --number-icon__border: initial;
+
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   display: flex;
@@ -16,13 +20,16 @@
   align-items: center;
 
   /* The circle part of the icon, made with borders. */
-  border: calc(var(--eds-border-width-sm) * 1px) solid;
-  border-color: inherit;
+  border: 1px solid;
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   &.number-icon--is-interactive {
     cursor: pointer;
   }
+
+  color: var(--number-icon__fg);
+  background-color: var(--number-icon__bg);
+  border-color: var(--number-icon__border);
 }
 
 /**
@@ -46,44 +53,44 @@
  * Interactive States
  */
 .number-icon--status-default {
-  color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
-  border-color: light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
-  background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis));
+  --number-icon__fg: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
+  --number-icon__border: light-dark(var(--eds-theme-color-border-utility-informational), var(--eds-dark-theme-color-border-utility-informational));
+  --number-icon__bg: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
 
   &.number-icon--is-interactive {
     &:hover {
-      border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
-      background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-hover));
+      --number-icon__border: light-dark(var(--eds-theme-color-border-utility-informational-hover), var(--eds-dark-theme-color-border-utility-informational-hover));
+      --number-icon__bg: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis-hover), var(--eds-dark-theme-color-background-utility-informational-low-emphasis-hover));
     }
 
     &:active {
-      border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-active));
-      background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-active));
+      --number-icon__border: light-dark(var(--eds-theme-color-border-utility-informational-active), var(--eds-dark-theme-color-border-utility-informational-active));
+      --number-icon__bg: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis-active), var(--eds-dark-theme-color-background-utility-informational-low-emphasis-active));
     }
   }
 }
 
 .number-icon--status-completed {
-  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
-  border-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis));
-  background-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis));
+  --number-icon__fg: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  --number-icon__border: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis));
+  --number-icon__bg: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis));
 
   &.number-icon--is-interactive {
     &:hover {
-      border-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-hover));
-      background-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-hover));
+      --number-icon__border: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-hover));
+      --number-icon__bg: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-hover), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-hover));
     }
 
     &:active {
-      border-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-active), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-active));
-      background-color: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-active), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-active));
+      --number-icon__border: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-active), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-active));
+      --number-icon__bg: light-dark(var(--eds-theme-color-background-utility-favorable-high-emphasis-active), var(--eds-dark-theme-color-background-utility-favorable-high-emphasis-active));
     }
   }
 }
 
 .number-icon--status-incomplete {
-  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
-  border-color: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis), var(--eds-dark-theme-color-border-utility-default-medium-emphasis));
+  --number-icon__fg: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+  --number-icon__border: light-dark(var(--eds-theme-color-border-utility-default-medium-emphasis), var(--eds-dark-theme-color-border-utility-default-medium-emphasis));
 
   border-style: dashed;
   pointer-events: none;

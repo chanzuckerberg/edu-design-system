@@ -387,6 +387,7 @@ const AppHeaderNavGroup = ({
     <nav aria-label={name} className={componentClassName} {...other}>
       <ul>
         {navItems.map((navItem) => {
+          if (navItem.type === 'separator') return null;
           return (
             <li key={navItem.name}>
               {navItem.type === 'button' && (
@@ -724,7 +725,13 @@ const AppHeaderDrawerContent = ({
                             />
                           )}
                           {navItem.type === 'separator' && (
-                            <Hr key={navItem.name} {...navItem} />
+                            <Hr
+                              className={
+                                styles['app-header__nav-item--separator']
+                              }
+                              key={navItem.name}
+                              {...navItem}
+                            />
                           )}
                         </li>
                       ))}

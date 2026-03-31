@@ -58,7 +58,7 @@
 }
 
 .data-table--tableStyle-border {
-  border: calc(var(--eds-border-width-sm) * 1px) solid;
+  border: 1px solid;
 }
 
 .data-table__cell-text {
@@ -92,7 +92,7 @@
   height: 100%;
   overflow: hidden;
 
-  border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
+  border-right: 1px solid transparent;
 
   &.data-table__cell--has-horizontal-divider {
     border-right-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
@@ -144,7 +144,7 @@
   height: 100%;
   overflow: hidden;
 
-  border-right: calc(var(--eds-border-width-sm) * 1px) solid transparent;
+  border-right: 1px solid transparent;
 
   &.data-table__cell--has-horizontal-divider {
     border-right-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
@@ -169,7 +169,7 @@
 }
 
 .data-table__header-row {
-  border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
+  border-bottom: 1px solid;
   position: sticky;
   top: -1px;
 
@@ -230,7 +230,7 @@
   }
 
   .data-table--rowStyle-lined & {
-    border-bottom: calc(var(--eds-border-width-sm) * 1px) solid;
+    border-bottom: 1px solid;
 
     &.data-table__row--is-selected {
       background-color: light-dark(var(--eds-theme-color-background-table-row-selected), var(--eds-dark-theme-color-background-table-row-selected));

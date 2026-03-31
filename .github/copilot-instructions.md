@@ -10,3 +10,7 @@
 ## Package contents and structure
 
 - When performing a code review on new components (e.g., a new directory added to src/), make sure that there is an export of that component in src/index.ts. Component exports should grouped and alphabetized together, and TypeScript `type` exports should be grouped and alphabetized together.
+
+## Component Version Consistency
+
+- When there are any changes to component code (src/**/*.tsx), make sure that the version string specified in the "tags" block of the associated story is also update, following semver rules. For instance, if the commit message is "fix(Accordion): some change", the in the accordion's storybook file (for example Accordion.stories.tsx) should increment the patch version.
