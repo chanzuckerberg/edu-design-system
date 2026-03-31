@@ -76,7 +76,7 @@
   }
 
   & > div {
-    padding: calc(var(--eds-spacing-size-1) * 1px);
+    padding: calc(var(--eds-spacing-size-4) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }
 
   &.app-header--style-floating > div {

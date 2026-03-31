@@ -724,7 +724,13 @@ const AppHeaderDrawerContent = ({
                             />
                           )}
                           {navItem.type === 'separator' && (
-                            <Hr key={navItem.name} {...navItem} />
+                            <Hr
+                              className={
+                                styles['app-header__nav-item--separator']
+                              }
+                              key={navItem.name}
+                              {...navItem}
+                            />
                           )}
                         </li>
                       ))}

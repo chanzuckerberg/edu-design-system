@@ -43,26 +43,82 @@ export const Default: Story = {
     },
     navGroups: [
       {
-        name: 'group-1',
+        name: 'lakes',
         navItems: [
           {
             name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'tree',
             meta: {
               name: 'track-value',
               value: 3,
             },
+            navItems: [
+              {
+                name: 'Lake Superior',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Lake Tahoe',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Crater Lake',
+                type: 'link',
+                href: 'https://example.org',
+              },
+            ],
+          },
+          {
+            name: 'sep-1',
+            type: 'separator',
           },
           {
             name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'tree',
+            navItems: [
+              {
+                name: 'Pacific Ocean',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Atlantic Ocean',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Arctic Ocean',
+                type: 'link',
+                href: 'https://example.org',
+              },
+            ],
+          },
+          {
+            name: 'sep-2',
+            type: 'separator',
           },
           {
             name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'tree',
+            navItems: [
+              {
+                name: 'Nile River',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Amazon River',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Danube River',
+                type: 'link',
+                href: 'https://example.org',
+              },
+            ],
           },
         ],
       },
@@ -611,7 +667,7 @@ export const CanHandleFallbackNavMenus: Story = {
           {
             name: 'Show Profile',
             type: 'menu',
-            icon: 'person-encircled',
+            icon: 'chevron-down',
             iconLayout: 'left',
             navItems: [
               {
