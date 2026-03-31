@@ -86,3 +86,8 @@ export type { PageNotificationProps } from './components/PageNotification';
  */
 // https://headlessui.com/v1/react/transition
 export { Transition } from '@headlessui/react';
+
+/**
+ * Export utility variant types for use in custom components
+ */
+export type { Align, Emphasis, Size, Status } from './util/variant-types';
