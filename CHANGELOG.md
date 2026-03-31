@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.5.0...v17.6.0) (2026-03-31)
+
+
+### Features
+
+* **AppHeader:** update app layout based on feedback ([#2436](https://github.com/chanzuckerberg/edu-design-system/issues/2436)) ([b43fa0a](https://github.com/chanzuckerberg/edu-design-system/commit/b43fa0a0b3d8b6fb549693f270098c61b0e52b21))
+* export variant types in package ([#2432](https://github.com/chanzuckerberg/edu-design-system/issues/2432)) ([54483ce](https://github.com/chanzuckerberg/edu-design-system/commit/54483ce497e4a96dd0e6e31522677ad7aab0aeeb))
+* **icons:** add center-focus icon to set ([#2420](https://github.com/chanzuckerberg/edu-design-system/issues/2420)) ([3d6cfc6](https://github.com/chanzuckerberg/edu-design-system/commit/3d6cfc6f92d43b28c208e474cd2e99c234001f73))
+* **NumberIcon:** update default colors for statuses ([#2425](https://github.com/chanzuckerberg/edu-design-system/issues/2425)) ([8d7b633](https://github.com/chanzuckerberg/edu-design-system/commit/8d7b633ceb6856fc58edc982135e425e98a8f1a8))
+* **tailwind:** emit EDS shadow tokens in default configuration ([#2430](https://github.com/chanzuckerberg/edu-design-system/issues/2430)) ([1e361a7](https://github.com/chanzuckerberg/edu-design-system/commit/1e361a7266d522aa76c9352bccaac0d6fca986b7))
+
+
+### Bug Fixes
+
+* **DataTable:** make size prop optional (with default 'md') ([#2424](https://github.com/chanzuckerberg/edu-design-system/issues/2424)) ([a022860](https://github.com/chanzuckerberg/edu-design-system/commit/a02286077c48125a739327ef19dcd058057e85a2))
+* remove usages of deprecated border width tokens ([#2426](https://github.com/chanzuckerberg/edu-design-system/issues/2426)) ([3263306](https://github.com/chanzuckerberg/edu-design-system/commit/3263306eef196b560e30498c8ad37c25653f8237))
+
 ## [17.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.4.2...v17.5.0) (2026-03-18)
 
 
