@@ -144,7 +144,6 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
                 </button>
               </div>
             </li>
-            <li />
             <li>
               <div
                 class="menu"
@@ -169,7 +168,6 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
                 </button>
               </div>
             </li>
-            <li />
             <li>
               <div
                 class="menu"
@@ -468,7 +466,6 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
                 </button>
               </div>
             </li>
-            <li />
             <li>
               <div
                 class="menu"
@@ -493,7 +490,6 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
                 </button>
               </div>
             </li>
-            <li />
             <li>
               <div
                 class="menu"
@@ -1624,7 +1620,6 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
                 </button>
               </div>
             </li>
-            <li />
             <li>
               <div
                 class="menu"
@@ -1649,7 +1644,6 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
                 </button>
               </div>
             </li>
-            <li />
             <li>
               <div
                 class="menu"
