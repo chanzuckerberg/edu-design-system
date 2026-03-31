@@ -20,7 +20,8 @@
   align-items: center;
 
   /* The circle part of the icon, made with borders. */
-  border: calc(var(--eds-border-width-sm) * 1px) solid;
+  border: 1px solid;
+  border-color: inherit;
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
   &.number-icon--is-interactive {

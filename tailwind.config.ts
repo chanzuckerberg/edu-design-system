@@ -107,6 +107,9 @@ export function applyTailwindConfig(
   };
 
   return {
+    boxShadow: {
+      ...tokenConfig['box-shadow'],
+    },
     colors: {
       ...colorTokens,
     },
@@ -121,20 +124,20 @@ export function applyTailwindConfig(
         ...textColorTokens, // Tier 2 text color tokens
       },
       borderRadius: {
-        ...borderRadiusTokens, // Tier 1 border radius tokens
-        ...borderSurfaceRadiusTokens, // Tier 2 border radius tokens (surfaces, ohjects, actions)
+        ...borderRadiusTokens, // Primitive border radius tokens
+        ...borderSurfaceRadiusTokens, // Semantic border radius tokens (surfaces, ohjects, actions)
         ...borderObjectRadiusTokens,
         ...borderActionsRadii,
       },
       spacing: {
-        ...spacingTokens, // Tier 1 spacing tokens
+        ...spacingTokens, // Primitive spacing tokens
       },
       transitionDuration: {
-        ...movementTokens, // Tier 1 movement tokens
+        ...movementTokens, // Primitive movement tokens
       },
     },
     fontWeight: {
-      ...edsTokens.typography.fontWeight, // Tier 1 font weight tokens
+      ...edsTokens.typography.fontWeight, // Primitive font weight tokens
     },
     fontFamily: {
       // See README.md for info on how to set up local / vendor font with EDS

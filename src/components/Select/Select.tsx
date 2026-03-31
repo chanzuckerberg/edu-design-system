@@ -168,9 +168,11 @@ const SelectContext = React.createContext<SelectContextType>({});
 /**
  * `import {Select} from "@chanzuckerberg/eds";`
  *
- * A popover that reveals or hides a list of options from which to select
+ * A popover component that reveals or hides a list of options from which to select.
  *
  * Supports controlled and uncontrolled behavior, using a render prop in the latter case.
+ *
+ * See more at <https://headlessui.com/react/menu>
  *
  */
 export function Select({

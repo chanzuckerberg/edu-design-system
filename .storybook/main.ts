@@ -1,6 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 
-const config = {
+const config: StorybookConfig = {
   stories: [
     './components/**/*.mdx',
     './components/**/*.stories.@(js|jsx|ts|tsx)',
@@ -52,6 +52,10 @@ const config = {
     'storybook-addon-test-codegen',
   ],
 
+  docs: {
+    defaultName: 'Summary Docs',
+  },
+
   // TODO: update config and package.json scripts to support staticDirs
   // This will allow creation of preview-head.html to preload font assets
   // See: https://storybook.js.org/docs/configure/integration/images-and-assets
@@ -99,6 +103,6 @@ const config = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-} satisfies StorybookConfig;
+};
 
 export default config;

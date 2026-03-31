@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.3.2'],
+  tags: ['autodocs', 'version:1.4.0'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -43,26 +43,82 @@ export const Default: Story = {
     },
     navGroups: [
       {
-        name: 'group-1',
+        name: 'lakes',
         navItems: [
           {
             name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'tree',
             meta: {
               name: 'track-value',
               value: 3,
             },
+            navItems: [
+              {
+                name: 'Lake Superior',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Lake Tahoe',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Crater Lake',
+                type: 'link',
+                href: 'https://example.org',
+              },
+            ],
+          },
+          {
+            name: 'sep-1',
+            type: 'separator',
           },
           {
             name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'tree',
+            navItems: [
+              {
+                name: 'Pacific Ocean',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Atlantic Ocean',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Arctic Ocean',
+                type: 'link',
+                href: 'https://example.org',
+              },
+            ],
+          },
+          {
+            name: 'sep-2',
+            type: 'separator',
           },
           {
             name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
+            type: 'tree',
+            navItems: [
+              {
+                name: 'Nile River',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Amazon River',
+                type: 'link',
+                href: 'https://example.org',
+              },
+              {
+                name: 'Danube River',
+                type: 'link',
+                href: 'https://example.org',
+              },
+            ],
           },
         ],
       },
@@ -88,58 +144,6 @@ export const Default: Story = {
       value: '',
       isRotated: false,
     },
-  },
-};
-
-/**
- * `AppHeader` nav items can also be buttons. Button events are handled via the top-level `onButtonClick` which defines the event and the data for the clicked `navItem`
- */
-export const DefaultWithNavItemButtons: Story = {
-  args: {
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
-    onButtonClick: (ev, navItem) => {
-      console.log('button clicked', ev, navItem);
-    },
-    navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'button',
-          },
-          {
-            name: 'Oceans',
-            type: 'button',
-            iconLayout: 'left',
-            icon: 'person-encircled',
-          },
-          {
-            name: 'sep1',
-            type: 'separator',
-          },
-          {
-            name: 'Rivers',
-            type: 'button',
-            iconLayout: 'right',
-            icon: 'person-encircled',
-          },
-        ],
-      },
-      {
-        name: 'group-2',
-        navItems: [
-          {
-            name: 'Profile',
-            type: 'link',
-            href: 'https://example.org',
-            icon: 'person-encircled',
-            iconLayout: 'right',
-          },
-        ],
-      },
-    ],
   },
 };
 
@@ -263,67 +267,6 @@ export const DefaultWithNavMenus: Story = {
  * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
  * render as a list of links with an overline header.
  */
-export const DefaultWithNavTree: Story = {
-  args: {
-    href: '#',
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
-    onButtonClick: (ev, navItem) => {
-      console.log('button clicked', ev, navItem);
-    },
-    orientation: 'vertical',
-    navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
-            isExternal: true,
-          },
-        ],
-      },
-      {
-        name: 'group-2',
-        navItems: [
-          {
-            name: 'Profile',
-            type: 'tree',
-            icon: 'person-encircled',
-            iconLayout: 'left',
-            navItems: [
-              {
-                type: 'button',
-                name: 'Settings',
-              },
-              {
-                type: 'link',
-                name: 'Sign Out',
-                href: 'https://example.org/#logout',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-};
-
-/**
- * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
- * render as a list of links with an overline header.
- */
 export const DefaultNavTreeWithFooterSeparator: Story = {
   args: {
     href: '#',
@@ -334,27 +277,6 @@ export const DefaultNavTreeWithFooterSeparator: Story = {
     },
     orientation: 'vertical',
     navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
-            isExternal: true,
-          },
-        ],
-      },
       {
         name: 'group-2',
         navItems: [
@@ -400,7 +322,7 @@ export const StyleFloating: Story = {
  */
 export const VerticalOrientation: Story = {
   args: {
-    ...DefaultWithNavItemButtons.args,
+    ...Default.args,
     orientation: 'vertical',
   },
 };
@@ -410,7 +332,7 @@ export const VerticalOrientation: Story = {
  */
 export const FloatingVerticalOrientation: Story = {
   args: {
-    ...DefaultWithNavItemButtons.args,
+    ...Default.args,
     orientation: 'vertical',
     style: 'floating',
   },
@@ -597,6 +519,7 @@ export const CanHandleFallbackNavMenus: Story = {
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",
+
     navGroups: [
       {
         name: 'group-2',
@@ -604,32 +527,11 @@ export const CanHandleFallbackNavMenus: Story = {
           {
             name: 'Show Profile',
             type: 'menu',
-            icon: 'person-encircled',
-            iconLayout: 'left',
             navItems: [
               {
                 // @ts-expect-error using invalid type on purpose
                 type: 'custom',
                 name: 'Settings',
-              },
-              {
-                name: 'About Us',
-                type: 'link',
-                href: 'http://example.org',
-                isExternal: true,
-              },
-              {
-                type: 'link',
-                name: 'Sign Out',
-                href: 'https://example.org/#logout',
-              },
-              {
-                type: 'separator',
-                name: 'line',
-              },
-              {
-                type: 'label',
-                name: '© 2025 Your Company Name. All rights reserved.',
               },
             ],
           },

@@ -155,7 +155,6 @@ export const EdsThemeColorBackgroundUtilityContainer = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityContainerHover = '#FAF9F8';
 export const EdsThemeColorBackgroundUtilityContainerActive = '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityContainerSelected = '#FFFFFF';
-export const EdsThemeColorBackgroundUtilityCard = 'rgba(255, 255, 255, 0.60)';
 export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
   'rgba(36, 36, 35, 0.50)';
 export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis =

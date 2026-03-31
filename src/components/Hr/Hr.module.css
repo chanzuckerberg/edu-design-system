@@ -10,7 +10,7 @@
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom-width: calc(var(--eds-border-width-sm) * 1px);
+  border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
