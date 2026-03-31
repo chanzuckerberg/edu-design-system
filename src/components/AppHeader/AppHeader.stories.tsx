@@ -148,58 +148,6 @@ export const Default: Story = {
 };
 
 /**
- * `AppHeader` nav items can also be buttons. Button events are handled via the top-level `onButtonClick` which defines the event and the data for the clicked `navItem`
- */
-export const DefaultWithNavItemButtons: Story = {
-  args: {
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
-    onButtonClick: (ev, navItem) => {
-      console.log('button clicked', ev, navItem);
-    },
-    navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'button',
-          },
-          {
-            name: 'Oceans',
-            type: 'button',
-            iconLayout: 'left',
-            icon: 'person-encircled',
-          },
-          {
-            name: 'sep1',
-            type: 'separator',
-          },
-          {
-            name: 'Rivers',
-            type: 'button',
-            iconLayout: 'right',
-            icon: 'person-encircled',
-          },
-        ],
-      },
-      {
-        name: 'group-2',
-        navItems: [
-          {
-            name: 'Profile',
-            type: 'link',
-            href: 'https://example.org',
-            icon: 'person-encircled',
-            iconLayout: 'right',
-          },
-        ],
-      },
-    ],
-  },
-};
-
-/**
  * Logos can also be an image (using either `<img>` or `<svg>` for format). When using logo, the maximum height
  * allowed is fixed, and the logo takes up the total possible vertical height.
  */
@@ -319,74 +267,6 @@ export const DefaultWithNavMenus: Story = {
  * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
  * render as a list of links with an overline header.
  */
-export const DefaultWithNavTree: Story = {
-  args: {
-    href: '#',
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
-    onButtonClick: (ev, navItem) => {
-      console.log('button clicked', ev, navItem);
-    },
-    orientation: 'vertical',
-    navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
-            isExternal: true,
-          },
-        ],
-      },
-      {
-        name: 'group-2',
-        navItems: [
-          {
-            name: 'Profile',
-            type: 'tree',
-            icon: 'person-encircled',
-            iconLayout: 'left',
-            navItems: [
-              {
-                type: 'button',
-                name: 'Settings',
-              },
-              {
-                type: 'link',
-                name: 'Sign Out',
-                href: 'https://example.org/#logout',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-};
-
-export const FloatingWithNavTree: Story = {
-  args: {
-    ...DefaultWithNavTree.args,
-    style: 'floating',
-  },
-};
-
-/**
- * `AppHeader` allows for one level of nesting in the nav items and view as a tree. This means that a navigation item will
- * render as a list of links with an overline header.
- */
 export const DefaultNavTreeWithFooterSeparator: Story = {
   args: {
     href: '#',
@@ -397,27 +277,6 @@ export const DefaultNavTreeWithFooterSeparator: Story = {
     },
     orientation: 'vertical',
     navGroups: [
-      {
-        name: 'group-1',
-        navItems: [
-          {
-            name: 'Lakes',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Oceans',
-            type: 'link',
-            href: 'https://example.org',
-          },
-          {
-            name: 'Rivers',
-            type: 'link',
-            href: 'https://example.org',
-            isExternal: true,
-          },
-        ],
-      },
       {
         name: 'group-2',
         navItems: [
@@ -463,7 +322,7 @@ export const StyleFloating: Story = {
  */
 export const VerticalOrientation: Story = {
   args: {
-    ...DefaultWithNavItemButtons.args,
+    ...Default.args,
     orientation: 'vertical',
   },
 };
@@ -473,7 +332,7 @@ export const VerticalOrientation: Story = {
  */
 export const FloatingVerticalOrientation: Story = {
   args: {
-    ...DefaultWithNavItemButtons.args,
+    ...Default.args,
     orientation: 'vertical',
     style: 'floating',
   },
@@ -658,8 +517,6 @@ export const CanHandleFallbackNavMenus: Story = {
   tags: ['code-only'],
 
   args: {
-    title: 'Bodies of water',
-    subTitle: "They're cool!",
     navGroups: [
       {
         name: 'group-2',
@@ -667,32 +524,11 @@ export const CanHandleFallbackNavMenus: Story = {
           {
             name: 'Show Profile',
             type: 'menu',
-            icon: 'chevron-down',
-            iconLayout: 'left',
             navItems: [
               {
                 // @ts-expect-error using invalid type on purpose
                 type: 'custom',
                 name: 'Settings',
-              },
-              {
-                name: 'About Us',
-                type: 'link',
-                href: 'http://example.org',
-                isExternal: true,
-              },
-              {
-                type: 'link',
-                name: 'Sign Out',
-                href: 'https://example.org/#logout',
-              },
-              {
-                type: 'separator',
-                name: 'line',
-              },
-              {
-                type: 'label',
-                name: '© 2025 Your Company Name. All rights reserved.',
               },
             ],
           },
