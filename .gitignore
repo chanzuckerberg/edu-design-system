@@ -17,8 +17,6 @@ storybook-static
 storybook
 storybook-components
 
-# Component CSS
-
 # misc
 .DS_Store
 .env.local
