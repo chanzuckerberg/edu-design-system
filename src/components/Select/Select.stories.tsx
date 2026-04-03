@@ -48,7 +48,7 @@ const meta: Meta<typeof Select> = {
         'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
-  tags: ['autodocs', 'version:3.1.1'],
+  tags: ['autodocs', 'version:3.2.0'],
 };
 
 export default meta;
@@ -56,20 +56,24 @@ export default meta;
 type SelectOption = {
   key: string;
   label: string;
+  subLabel?: string;
 };
 
 const exampleOptions: SelectOption[] = [
   {
     key: '1',
     label: 'Dogs',
+    subLabel: "Who's a good boy?",
   },
   {
     key: '2',
     label: 'Cats',
+    subLabel: 'Super independent.',
   },
   {
     key: '3',
     label: 'Birds',
+    subLabel: 'Living relics',
   },
 ];
 
@@ -349,6 +353,41 @@ export const WithFieldNote: StoryObj = {
         <Select.Options>
           {exampleOptions.map((option) => (
             <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  parameters: {
+    ...Default.parameters,
+  },
+};
+
+/**
+ * This demonstrates how select items can also have an optional subLabel attached to give more details about the option.
+ */
+export const WithSubLabels: StoryObj = {
+  args: {
+    ...Default.args,
+    fieldNote: 'Choose your beast',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option
+              key={option.key}
+              subLabel={option.subLabel}
+              value={option}
+            >
               {option.label}
             </Select.Option>
           ))}
