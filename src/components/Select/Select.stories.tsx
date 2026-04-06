@@ -73,7 +73,7 @@ const exampleOptions: SelectOption[] = [
   {
     key: '3',
     label: 'Birds',
-    subLabel: 'Living relics',
+    subLabel: 'Living relics!',
   },
 ];
 
