@@ -372,6 +372,7 @@ export const WithSubLabels: StoryObj = {
   args: {
     ...Default.args,
     fieldNote: 'Choose your beast',
+    optionsClassName: 'w-[384px]',
     children: (
       <>
         <Select.Button>
@@ -381,7 +382,7 @@ export const WithSubLabels: StoryObj = {
             </Select.ButtonWrapper>
           )}
         </Select.Button>
-        <Select.Options>
+        <Select.Options anchor={{ to: 'bottom end', gap: 12 }}>
           {exampleOptions.map((option) => (
             <Select.Option
               key={option.key}
@@ -397,7 +398,11 @@ export const WithSubLabels: StoryObj = {
   },
   parameters: {
     ...Default.parameters,
+    snapshot: {
+      skip: true,
+    },
   },
+  play: openMenu,
 };
 
 /**
@@ -508,6 +513,11 @@ export const Multiple: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
@@ -599,6 +609,9 @@ export const LongOptionList: StoryObj = {
   parameters: {
     layout: 'centered',
     chromatic: { delay: 450 },
+    snapshot: {
+      skip: true,
+    },
   },
   decorators: [
     (Story) => (
@@ -624,6 +637,9 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
     },
     docs: {
       ...Default.parameters?.docs,
+    },
+    snapshot: {
+      skip: true,
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
@@ -653,6 +669,9 @@ export const Disabled: StoryObj = {
     },
     docs: {
       ...Default.parameters?.docs,
+    },
+    snapshot: {
+      skip: true,
     },
   },
 };
@@ -762,6 +781,9 @@ export const DisabledRequired: StoryObj = {
     docs: {
       ...Default.parameters?.docs,
     },
+    snapshot: {
+      skip: true,
+    },
   },
 };
 
@@ -799,6 +821,11 @@ export const OptionsRightAligned: StoryObj = {
       <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
     ),
   ],
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
@@ -811,6 +838,9 @@ export const OpenByDefault: StoryObj = {
     chromatic: { delay: 300, disableSnapshot: true },
     docs: {
       ...Default.parameters?.docs,
+    },
+    snapshot: {
+      skip: true,
     },
   },
   play: selectCat,

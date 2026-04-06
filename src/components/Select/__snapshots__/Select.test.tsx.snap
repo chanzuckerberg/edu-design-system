@@ -14,8 +14,8 @@ exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`]
       class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-listbox-button-:r3f:"
-      id="headlessui-label-:r3e:"
+      for="headlessui-listbox-button-:r35:"
+      id="headlessui-label-:r34:"
     >
       <span
         class="text text--label-md"
@@ -25,15 +25,15 @@ exports[`<Select /> Generated Snapshots AdjustedWidth story renders snapshot 1`]
     </label>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r3g:"
+    aria-controls="headlessui-listbox-options-:r36:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r3e: headlessui-listbox-button-:r3f:"
+    aria-labelledby="headlessui-label-:r34: headlessui-listbox-button-:r35:"
     class="select-button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r3f:"
+    id="headlessui-listbox-button-:r35:"
     type="button"
   >
     <span
@@ -132,8 +132,8 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
       class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-listbox-button-:r4d:"
-      id="headlessui-label-:r4c:"
+      for="headlessui-listbox-button-:r43:"
+      id="headlessui-label-:r42:"
     >
       <span
         class="text text--label-md"
@@ -157,15 +157,15 @@ exports[`<Select /> Generated Snapshots Error story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r4e:"
+    aria-controls="headlessui-listbox-options-:r44:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r4c: headlessui-listbox-button-:r4d:"
+    aria-labelledby="headlessui-label-:r42: headlessui-listbox-button-:r43:"
     class="select-button select-button--error"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r4d:"
+    id="headlessui-listbox-button-:r43:"
     type="button"
   >
     <span
@@ -264,8 +264,8 @@ exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders sna
       class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-listbox-button-:r35:"
-      id="headlessui-label-:r34:"
+      for="headlessui-listbox-button-:r2r:"
+      id="headlessui-label-:r2q:"
     >
       <span
         class="text text--label-md"
@@ -275,15 +275,15 @@ exports[`<Select /> Generated Snapshots MultipleWithTruncation story renders sna
     </label>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r36:"
+    aria-controls="headlessui-listbox-options-:r2s:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r34: headlessui-listbox-button-:r35:"
+    aria-labelledby="headlessui-label-:r2q: headlessui-listbox-button-:r2r:"
     class="select-button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r35:"
+    id="headlessui-listbox-button-:r2r:"
     type="button"
   >
     <span
@@ -318,14 +318,14 @@ exports[`<Select /> Generated Snapshots NoVisibleLabel story renders snapshot 1`
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r51:"
+    aria-controls="headlessui-listbox-options-:r4n:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="select-button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r50:"
+    id="headlessui-listbox-button-:r4m:"
     type="button"
   >
     <span
@@ -365,8 +365,8 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
       class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-listbox-button-:r5a:"
-      id="headlessui-label-:r59:"
+      for="headlessui-listbox-button-:r50:"
+      id="headlessui-label-:r4v:"
     >
       <span
         class="text text--label-md"
@@ -374,15 +374,15 @@ exports[`<Select /> Generated Snapshots NoVisibleLabelButRequired story renders 
     </label>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r5b:"
+    aria-controls="headlessui-listbox-options-:r51:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r59: headlessui-listbox-button-:r5a:"
+    aria-labelledby="headlessui-label-:r4v: headlessui-listbox-button-:r50:"
     class="select-button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r5a:"
+    id="headlessui-listbox-button-:r50:"
     type="button"
   >
     <span
@@ -422,79 +422,6 @@ exports[`<Select /> Generated Snapshots Optional story renders snapshot 1`] = `
       class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-listbox-button-:r43:"
-      id="headlessui-label-:r42:"
-    >
-      <span
-        class="text text--label-md"
-      >
-        Favorite Animal
-      </span>
-    </label>
-    <span
-      class="text text--body-sm select__required-text"
-    >
-      (Optional)
-    </span>
-    <div
-      class="select__subLabel"
-    >
-      <span
-        class="text text--body-sm"
-      >
-        Some descriptive text
-      </span>
-    </div>
-  </div>
-  <button
-    aria-controls="headlessui-listbox-options-:r44:"
-    aria-expanded="true"
-    aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r42: headlessui-listbox-button-:r43:"
-    class="select-button"
-    data-active=""
-    data-headlessui-state="open active"
-    data-open=""
-    id="headlessui-listbox-button-:r43:"
-    type="button"
-  >
-    <span
-      class="text text--input"
-    >
-      Dogs
-    </span>
-    <svg
-      aria-hidden="true"
-      class="icon select-button__icon select-button__icon--reversed"
-      fill="currentColor"
-      height="24px"
-      style="--icon-size: 24px;"
-      viewBox="0 0 24 24"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-      />
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
-<div
-  class="select select--label-layout-vertical w-[384px]"
-  data-headlessui-state="open"
-  data-open=""
-  data-testid="dropdown"
->
-  <div
-    class="select__overline"
-  >
-    <label
-      class="label label--md select__label"
-      data-headlessui-state="open"
-      data-open=""
       for="headlessui-listbox-button-:r3p:"
       id="headlessui-label-:r3o:"
     >
@@ -507,7 +434,7 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
     <span
       class="text text--body-sm select__required-text"
     >
-      (Required)
+      (Optional)
     </span>
     <div
       class="select__subLabel"
@@ -554,6 +481,79 @@ exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Select /> Generated Snapshots Required story renders snapshot 1`] = `
+<div
+  class="select select--label-layout-vertical w-[384px]"
+  data-headlessui-state="open"
+  data-open=""
+  data-testid="dropdown"
+>
+  <div
+    class="select__overline"
+  >
+    <label
+      class="label label--md select__label"
+      data-headlessui-state="open"
+      data-open=""
+      for="headlessui-listbox-button-:r3f:"
+      id="headlessui-label-:r3e:"
+    >
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
+    </label>
+    <span
+      class="text text--body-sm select__required-text"
+    >
+      (Required)
+    </span>
+    <div
+      class="select__subLabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Some descriptive text
+      </span>
+    </div>
+  </div>
+  <button
+    aria-controls="headlessui-listbox-options-:r3g:"
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    aria-labelledby="headlessui-label-:r3e: headlessui-listbox-button-:r3f:"
+    class="select-button"
+    data-active=""
+    data-headlessui-state="open active"
+    data-open=""
+    id="headlessui-listbox-button-:r3f:"
+    type="button"
+  >
+    <span
+      class="text text--input"
+    >
+      Dogs
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon select-button__icon select-button__icon--reversed"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`<Select /> Generated Snapshots StyledUncontrolled story renders snapshot 1`] = `
 <div
   class="select select--label-layout-vertical"
@@ -562,14 +562,14 @@ exports[`<Select /> Generated Snapshots StyledUncontrolled story renders snapsho
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r2s:"
+    aria-controls="headlessui-listbox-options-:r2i:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="select-button"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r2r:"
+    id="headlessui-listbox-button-:r2h:"
     type="button"
   >
     <span
@@ -603,14 +603,14 @@ exports[`<Select /> Generated Snapshots UncontrolledHeadless story renders snaps
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-:r2j:"
+    aria-controls="headlessui-listbox-options-:r29:"
     aria-expanded="true"
     aria-haspopup="listbox"
     class="fpo"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r2i:"
+    id="headlessui-listbox-button-:r28:"
     type="button"
   >
     🐶🐕🐩
@@ -632,8 +632,8 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
       class="label label--md select__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-listbox-button-:r4n:"
-      id="headlessui-label-:r4m:"
+      for="headlessui-listbox-button-:r4d:"
+      id="headlessui-label-:r4c:"
     >
       <span
         class="text text--label-md"
@@ -657,15 +657,15 @@ exports[`<Select /> Generated Snapshots Warning story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    aria-controls="headlessui-listbox-options-:r4o:"
+    aria-controls="headlessui-listbox-options-:r4e:"
     aria-expanded="true"
     aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r4m: headlessui-listbox-button-:r4n:"
+    aria-labelledby="headlessui-label-:r4c: headlessui-listbox-button-:r4d:"
     class="select-button select-button--warning"
     data-active=""
     data-headlessui-state="open active"
     data-open=""
-    id="headlessui-listbox-button-:r4n:"
+    id="headlessui-listbox-button-:r4d:"
     type="button"
   >
     <span
@@ -976,65 +976,6 @@ exports[`<Select /> Generated Snapshots WithStandardButton story renders snapsho
       class="text text--input"
     >
       - Select Option -
-    </span>
-    <svg
-      aria-hidden="true"
-      class="icon select-button__icon select-button__icon--reversed"
-      fill="currentColor"
-      height="24px"
-      style="--icon-size: 24px;"
-      viewBox="0 0 24 24"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-      />
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`<Select /> Generated Snapshots WithSubLabels story renders snapshot 1`] = `
-<div
-  class="select select--has-fieldNote select--label-layout-vertical w-60"
-  data-headlessui-state="open"
-  data-open=""
-  data-testid="dropdown"
->
-  <div
-    class="select__overline"
-  >
-    <label
-      class="label label--md select__label"
-      data-headlessui-state="open"
-      data-open=""
-      for="headlessui-listbox-button-:r29:"
-      id="headlessui-label-:r28:"
-    >
-      <span
-        class="text text--label-md"
-      >
-        Favorite Animal
-      </span>
-    </label>
-  </div>
-  <button
-    aria-controls="headlessui-listbox-options-:r2a:"
-    aria-expanded="true"
-    aria-haspopup="listbox"
-    aria-labelledby="headlessui-label-:r28: headlessui-listbox-button-:r29:"
-    class="select-button"
-    data-active=""
-    data-headlessui-state="open active"
-    data-open=""
-    id="headlessui-listbox-button-:r29:"
-    type="button"
-  >
-    <span
-      class="text text--input"
-    >
-      Dogs
     </span>
     <svg
       aria-hidden="true"
