@@ -66,6 +66,6 @@ export const WithSublabel: StoryObj<Args> = {
 export const WithIconAndSubLabel: StoryObj<Args> = {
   args: {
     ...WithSublabel.args,
-    icon: 'comment-critical',
+    icon: 'bell',
   },
 };

@@ -27,7 +27,7 @@ export const Disabled: StoryObj<Args> = {
 export const WithIcon: StoryObj<Args> = {
   args: {
     ...Default.args,
-    leadingIcon: 'alarm-add',
+    leadingIcon: 'add',
   },
 };
 

@@ -1,4 +1,3 @@
-export const EdsColorBrandGrape400 = '#A6A3EE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorWhite = '#FFFFFF';
 export const EdsColorBlack = '#000000';
 export const EdsColorTransparent = 'rgba(255, 255, 255, 0.01)';
@@ -6,13 +5,10 @@ export const EdsColorNeutral100 = '#E6E2DE';
 export const EdsColorNeutral150 = '#D8D4D1';
 export const EdsColorNeutral200 = '#CCC9C6';
 export const EdsColorNeutral250 = '#BCB9B6';
-export const EdsColorNeutral300 = '#C0C4C8'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorNeutral350 = '#9B9997';
 export const EdsColorNeutral450 = '#83827E';
-export const EdsColorNeutral500 = '#878C90'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorNeutral550 = '#6B6A64';
 export const EdsColorNeutral650 = '#55554E';
-export const EdsColorNeutral700 = '#383C43'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorNeutral750 = '#3A3A37';
 export const EdsColorNeutral800 = '#30302E';
 export const EdsColorNeutral850 = '#242423';
@@ -20,7 +16,6 @@ export const EdsColorNeutral900 = '#181818';
 export const EdsColorNeutral950 = '#0E0E0E';
 export const EdsColorNeutral025 = '#FAF9F8';
 export const EdsColorNeutral050 = '#F4F1EF';
-export const EdsColorNeutralWhite = '#FFFFFF'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsColorRed100 = '#F9DFDF';
 export const EdsColorRed150 = '#F6CBCB';
 export const EdsColorRed200 = '#FCBDBD';
@@ -35,20 +30,20 @@ export const EdsColorRed850 = '#4A0703';
 export const EdsColorRed900 = '#330502';
 export const EdsColorRed950 = '#230301';
 export const EdsColorRed050 = '#FCF0F0';
-export const EdsColorOrange100 = '#FFDCCA'; // not used in base theme
-export const EdsColorOrange150 = '#FFC7AB'; // not used in base theme
-export const EdsColorOrange200 = '#FFB38D'; // not used in base theme
-export const EdsColorOrange250 = '#FFA070'; // not used in base theme
-export const EdsColorOrange350 = '#E87F4A'; // not used in base theme
-export const EdsColorOrange450 = '#D0622C'; // not used in base theme
-export const EdsColorOrange550 = '#B8470F'; // not used in base theme
-export const EdsColorOrange650 = '#92380C'; // not used in base theme
-export const EdsColorOrange750 = '#672808'; // not used in base theme
-export const EdsColorOrange800 = '#532006'; // not used in base theme
-export const EdsColorOrange850 = '#401805'; // not used in base theme
-export const EdsColorOrange900 = '#2B1003'; // not used in base theme
-export const EdsColorOrange950 = '#1B0A02'; // not used in base theme
-export const EdsColorOrange050 = '#FFEEE5'; // not used in base theme
+export const EdsColorOrange100 = '#FFDCCA';
+export const EdsColorOrange150 = '#FFC7AB';
+export const EdsColorOrange200 = '#FFB38D';
+export const EdsColorOrange250 = '#FFA070';
+export const EdsColorOrange350 = '#E87F4A';
+export const EdsColorOrange450 = '#D0622C';
+export const EdsColorOrange550 = '#B8470F';
+export const EdsColorOrange650 = '#92380C';
+export const EdsColorOrange750 = '#672808';
+export const EdsColorOrange800 = '#532006';
+export const EdsColorOrange850 = '#401805';
+export const EdsColorOrange900 = '#2B1003';
+export const EdsColorOrange950 = '#1B0A02';
+export const EdsColorOrange050 = '#FFEEE5';
 export const EdsColorYellow100 = '#F6EE65';
 export const EdsColorYellow150 = '#EDDE45';
 export const EdsColorYellow200 = '#DFCC32';
@@ -90,25 +85,25 @@ export const EdsColorBlue800 = '#232D5B';
 export const EdsColorBlue850 = '#1B2347';
 export const EdsColorBlue900 = '#12172F';
 export const EdsColorBlue950 = '#0B0D1B';
-export const EdsColorBlue025 = '#F5FAFF'; // not used in base theme
+export const EdsColorBlue025 = '#F5FAFF';
 export const EdsColorBlue050 = '#EEF7FF';
-export const EdsColorPink350 = '#E67EB0'; // not used in base theme
-export const EdsColorPink450 = '#DB458D'; // not used in base theme
-export const EdsColorPink550 = '#C62B73'; // not used in base theme
-export const EdsColorPurple100 = '#F3E5FA'; // not used in base theme
-export const EdsColorPurple150 = '#EAD1F6'; // not used in base theme
-export const EdsColorPurple200 = '#E0BAF2'; // not used in base theme
-export const EdsColorPurple250 = '#D5A2EE'; // not used in base theme
-export const EdsColorPurple350 = '#C580E7'; // not used in base theme
-export const EdsColorPurple450 = '#A765C7'; // not used in base theme
-export const EdsColorPurple550 = '#8A50A7'; // not used in base theme
-export const EdsColorPurple650 = '#6E3A88'; // not used in base theme
-export const EdsColorPurple750 = '#562D69'; // not used in base theme
-export const EdsColorPurple800 = '#452455'; // not used in base theme
-export const EdsColorPurple850 = '#311A3C'; // not used in base theme
-export const EdsColorPurple900 = '#25142E'; // not used in base theme
-export const EdsColorPurple950 = '#190D1E'; // not used in base theme
-export const EdsColorPurple050 = '#FBF5FD'; // not used in base theme
+export const EdsColorPink350 = '#E67EB0';
+export const EdsColorPink450 = '#DB458D';
+export const EdsColorPink550 = '#C62B73';
+export const EdsColorPurple100 = '#F3E5FA';
+export const EdsColorPurple150 = '#EAD1F6';
+export const EdsColorPurple200 = '#E0BAF2';
+export const EdsColorPurple250 = '#D5A2EE';
+export const EdsColorPurple350 = '#C580E7';
+export const EdsColorPurple450 = '#A765C7';
+export const EdsColorPurple550 = '#8A50A7';
+export const EdsColorPurple650 = '#6E3A88';
+export const EdsColorPurple750 = '#562D69';
+export const EdsColorPurple800 = '#452455';
+export const EdsColorPurple850 = '#311A3C';
+export const EdsColorPurple900 = '#25142E';
+export const EdsColorPurple950 = '#190D1E';
+export const EdsColorPurple050 = '#FBF5FD';
 export const EdsColorOpacity10 = '0.10';
 export const EdsColorOpacity20 = '0.20';
 export const EdsColorOpacity30 = '0.30';
@@ -117,15 +112,10 @@ export const EdsColorOpacity50 = '0.50';
 export const EdsColorOpacity60 = '0.60';
 export const EdsColorOpacity70 = '0.70';
 export const EdsColorOpacity80 = '0.80';
-export const EdsThemeColorBodyBackground = '#F4F6F8';
 export const EdsThemeColorBackgroundAppHeader = '#242423';
 export const EdsThemeColorBackgroundAppHeaderHover = '#30302E';
 export const EdsThemeColorBackgroundAppHeaderActive = '#3A3A37';
 export const EdsThemeColorBackgroundInput = '#FFFFFF';
-export const EdsThemeColorBackgroundNeutralSubtleHover = '#E7E8EA';
-export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
-export const EdsThemeColorBackgroundBrandPrimaryDefault = '#C4C1F3'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
-export const EdsThemeColorBackgroundBrandPrimaryStrong = '#A6A3EE'; // @deprecated This should not be used in code or design. It will be removed in a future version of EDS.
 export const EdsThemeColorBackgroundBrandRed = '#FF6962';
 export const EdsThemeColorBackgroundBrandRedLowEmphasis = '#FCF0F0';
 export const EdsThemeColorBackgroundBrandOrange = '#00FF00';
@@ -242,7 +232,6 @@ export const EdsThemeColorBackgroundUtilityInverseHighEmphasisActive =
   '#E6E2DE';
 export const EdsThemeColorBackgroundUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
-export const EdsThemeColorBorderNeutralSubtle = '#E7E8EA';
 export const EdsThemeColorBorderBrandRed = '#FF6962';
 export const EdsThemeColorBorderBrandOrange = '#00FF00';
 export const EdsThemeColorBorderBrandYellow = '#FFFC83';
@@ -285,18 +274,10 @@ export const EdsThemeColorBorderUtilityFocus = '#19955D';
 export const EdsThemeColorBorderUtilityInverse = '#FAF9F8';
 export const EdsThemeColorBorderUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
-export const EdsThemeColorButtonSecondaryNeutralBackgroundHover = '#E7E8EA';
-export const EdsThemeColorButtonIconNeutralBackgroundHover = '#E7E8EA';
-export const EdsThemeColorButtonIconNeutralBorderHover = '#E7E8EA';
-export const EdsThemeColorFormBorderHover = '#30302E';
-export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
-export const EdsThemeColorIconNeutralStrongHover = '#30302E';
-export const EdsThemeColorIconNeutralSubtle = '#878C90';
 export const EdsThemeColorIconBrandRed = '#9D1F18';
 export const EdsThemeColorIconBrandYellow = '#7E6701';
 export const EdsThemeColorIconBrandGreen = '#125B3A';
 export const EdsThemeColorIconBrandBlue = '#3C4D9D';
-export const EdsThemeColorIconDisabled = '#C0C4C8';
 export const EdsThemeColorIconUtilityDefaultPrimary = '#242423';
 export const EdsThemeColorIconUtilityDefaultPrimaryHover = '#3A3A37';
 export const EdsThemeColorIconUtilityDefaultPrimaryActive = '#55554E';
@@ -327,37 +308,11 @@ export const EdsThemeColorIconUtilityDisabledPrimary = '#BCB9B6';
 export const EdsThemeColorIconUtilityDisabledSecondary = '#BCB9B6';
 export const EdsThemeColorIconUtilityInverse = '#FAF9F8';
 export const EdsThemeColorIconUtilityInverseDisabled =
-  'rgba(250, 249, 248, 0.50)'; // Use with rgb()
+  'rgba(250, 249, 248, 0.50)';
 export const EdsThemeColorIconUtilityInverseInteractiveVisited = '#FAF9F8';
 export const EdsThemeColorIconUtilityPlaceholder = '#6B6A64';
 export const EdsThemeColorIconAppHeaderPrimary = '#FFFFFF';
 export const EdsThemeColorIconAppHeaderSecondary = '#BCB9B6';
-export const EdsThemeColorLinkBrandTextDecoration =
-  'var(--eds-theme-color-text-brand-default)';
-export const EdsThemeColorLinkBrandTextDecorationHover =
-  'var(--eds-theme-color-text-brand-default)';
-export const EdsThemeColorLinkBrandTextDecorationFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkBrandBackgroundFocus =
-  'var(--eds-theme-color-text-brand-default)';
-export const EdsThemeColorLinkNeutralText =
-  'var(--eds-theme-color-text-neutral-strong)';
-export const EdsThemeColorLinkNeutralTextHover =
-  'var(--eds-theme-color-text-brand-default)';
-export const EdsThemeColorLinkNeutralTextFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkNeutralTextDecoration =
-  'var(--eds-theme-color-text-neutral-default)';
-export const EdsThemeColorLinkNeutralTextDecorationHover =
-  'var(--eds-theme-color-text-brand-default)';
-export const EdsThemeColorLinkNeutralTextDecorationFocus =
-  'var(--eds-theme-color-text-neutral-default-inverse)';
-export const EdsThemeColorLinkNeutralBackgroundFocus =
-  'var(--eds-theme-color-text-neutral-default)';
-export const EdsThemeColorTextNeutralDefault = '#383C43';
-export const EdsThemeColorTextNeutralDefaultInverse = '#FFFFFF';
-export const EdsThemeColorTextNeutralStrong = '#30302E';
-export const EdsThemeColorTextDisabled = '#C0C4C8';
 export const EdsThemeColorTextUtilityDefaultPrimary = '#242423';
 export const EdsThemeColorTextUtilityDefaultPrimaryHover = '#3A3A37';
 export const EdsThemeColorTextUtilityDefaultPrimaryActive = '#55554E';
@@ -392,8 +347,6 @@ export const EdsThemeColorTextUtilityInverseDisabled =
 export const EdsThemeColorTextUtilityInverseInteractiveVisited = '#FAF9F8';
 export const EdsThemeColorTextUtilityInverseSecondary = '#BCB9B6';
 export const EdsThemeColorTextUtilityPlaceholder = '#6B6A64';
-export const EdsThemeColorTextBrandDefault =
-  'var(--eds-theme-color-text-brand-primary)';
 export const EdsThemeColorTextBrandRed = '#9D1F18';
 export const EdsThemeColorTextBrandYellow = '#7E6701';
 export const EdsThemeColorTextBrandGreen = '#125B3A';
@@ -401,15 +354,3 @@ export const EdsThemeColorTextBrandBlue = '#3C4D9D';
 export const EdsThemeColorTextAppHeaderPrimary = '#FFFFFF';
 export const EdsThemeColorTextAppHeaderSecondary = '#BCB9B6';
 export const EdsThemeColorTextHighlightForeground = '#30302E';
-export const EdsThemeColorToggleOnBackground =
-  'var(--eds-theme-color-background-brand-primary-strong)';
-export const EdsThemeColorToggleOffBackground =
-  'var(--eds-theme-color-icon-neutral-subtle)';
-export const EdsThemeColorToggleDisabledBackground =
-  'var(--eds-theme-color-icon-disabled)';
-export const EdsThemeColorToggleDisabledText =
-  'var(--eds-theme-color-text-disabled)';
-export const EdsThemeColorTogglePrimaryText =
-  'var(--eds-theme-color-text-neutral-default)';
-export const EdsThemeColorToggleThumb =
-  'var(--eds-theme-color-text-neutral-default-inverse)';

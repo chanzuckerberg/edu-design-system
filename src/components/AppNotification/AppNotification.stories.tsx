@@ -106,7 +106,7 @@ export const InverseVariant: Story = {
 export const WithDismissAndControls: Story = {
   args: {
     ...WithControls.args,
-    subTitle: 'Limited subtitle text',
+    subTitle: 'Limited subTitle text',
     onDismiss: () => {
       console.log('dismissing!');
     },

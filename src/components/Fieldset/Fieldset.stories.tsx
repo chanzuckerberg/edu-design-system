@@ -41,7 +41,7 @@ export const WithCriticalFootNote: StoryObj<Args> = {
     children: (
       <>
         <Fieldset.Legend
-          subtitle="Some extra descriptive text"
+          subTitle="Some extra descriptive text"
           title="Critical Fieldset"
         />
         <Fieldset.Items className="fpo flex-col">
@@ -81,7 +81,7 @@ export const FieldsetLegendRequired: StoryObj<LegendArgs> = {
 export const FieldsetLegendWithSubtitle: StoryObj<LegendArgs> = {
   args: {
     title: 'Legend',
-    subtitle: 'With additional Subtitle',
+    subTitle: 'With additional Subtitle',
   },
   render: FieldsetLegend.render,
 };
@@ -123,7 +123,7 @@ export const WithCheckboxes: StoryObj<Args> = {
     children: (
       <>
         <Fieldset.Legend
-          subtitle="Some extra descriptive text"
+          subTitle="Some extra descriptive text"
           title="Critical Fieldset"
         />
         <Fieldset.Items>
@@ -176,7 +176,7 @@ export const WithRadioButton: StoryObj<Args> = {
     children: (
       <>
         <Fieldset.Legend
-          subtitle="Some extra descriptive text"
+          subTitle="Some extra descriptive text"
           title="Critical Fieldset"
         />
         <Fieldset.Items>

@@ -52,12 +52,12 @@ export const Warning: StoryObj<Args> = {
   },
 };
 
-export const WarningWithSubtitle: StoryObj<Args> = {
+export const WarningWithSubTitle: StoryObj<Args> = {
   args: {
     status: 'warning',
-    subTitle: <span>Subtitle text</span>,
+    subTitle: <span>SubTitle text</span>,
     'aria-label':
-      'Warning title and subtitle which communicates info to the user',
+      'Warning title and subTitle which communicates info to the user',
   },
 };
 

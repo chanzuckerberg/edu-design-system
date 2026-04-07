@@ -60,7 +60,7 @@
   list-style: none;
   display: flex;
   gap: calc(var(--eds-spacing-size-1) * 1px);
-  border-bottom: calc(var(--eds-theme-border-width) * 1px) solid;
+  border-bottom: 1px solid;
 
   /* preset: tab-lg */
   font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);

@@ -96,13 +96,6 @@
   background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 }
 
-.modal-footer--sticky {
-  position: sticky;
-  bottom: 0;
-
-  box-shadow: var(--eds-box-shadow-xl);
-}
-
 /**
  * Modal transition animations.
  */
@@ -352,15 +345,6 @@
     max-height: 480px;
     max-width: 560px;
   }
-}
-
-/**
- * Allows scrolling of the modal content except for sticky footer.
- * This functionality is our intended scroll behavior but consuming teams can 
- * style the body content as they wish to handle overflow in various ways.
- */
-.modal__content--scrollable {
-  overflow: auto;
 }
 
 /**

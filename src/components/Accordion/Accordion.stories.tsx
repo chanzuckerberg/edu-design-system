@@ -54,7 +54,7 @@ export const TitleAndSubtitle: Story = {
       <Accordion.Row>
         <Accordion.Button
           data-testid="accordion-button"
-          subtitle={<span>"Quam lacus maecenas nibh malesuada."</span>}
+          subTitle={<span>"Quam lacus maecenas nibh malesuada."</span>}
           title="Massa quam egestas massa."
         ></Accordion.Button>
         <Accordion.Panel data-testid="accordion-panel">
@@ -78,7 +78,7 @@ export const HasLeadingIcon: Story = {
           leadingIcon={
             <Icon name="person-encircled" purpose="decorative" size="24px" />
           }
-          subtitle="Quam lacus maecenas nibh malesuada."
+          subTitle="Quam lacus maecenas nibh malesuada."
           title="Massa quam egestas massa."
         ></Accordion.Button>
         <Accordion.Panel data-testid="accordion-panel">
@@ -110,7 +110,7 @@ export const HasLeadingNumberIcon: Story = {
               status="default"
             />
           }
-          subtitle="Quam lacus maecenas nibh malesuada."
+          subTitle="Quam lacus maecenas nibh malesuada."
           title="Massa quam egestas massa."
         ></Accordion.Button>
         <Accordion.Panel data-testid="accordion-panel">

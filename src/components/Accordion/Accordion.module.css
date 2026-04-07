@@ -109,7 +109,7 @@
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
-.accordion-button__subtitle {
+.accordion-button__subTitle {
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 

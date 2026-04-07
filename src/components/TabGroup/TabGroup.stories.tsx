@@ -224,7 +224,7 @@ export const WithTabIcons: StoryObj<Args> = {
           </div>
         </TabGroup.Tab>
 
-        <TabGroup.Tab icon="alarm-add" title="Tab Title 2">
+        <TabGroup.Tab icon="add" title="Tab Title 2">
           <div className="max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
@@ -238,7 +238,7 @@ export const WithTabIcons: StoryObj<Args> = {
           </div>
         </TabGroup.Tab>
 
-        <TabGroup.Tab icon="alarm" title="Tab Title 3">
+        <TabGroup.Tab icon="add" title="Tab Title 3">
           <div className="max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 3

@@ -13,7 +13,7 @@
 
   padding: calc(var(--eds-spacing-size-3) * 1px);
   height: 100%;
-  border: calc(var(--eds-theme-border-width) * 1px) solid;
+  border: 1px solid;
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
   &:focus-visible {

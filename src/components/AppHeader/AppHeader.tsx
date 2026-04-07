@@ -305,8 +305,8 @@ export const AppHeader = ({
         ? createPortal(
             <div
               className={drawerComponentClassName}
-              id="popover"
-              // @ts-expect-error popover properly supported in React 19 ; useId to keep unique?
+              id={'popover'}
+              // @ts-expect-error popover properly supported in React 19
               popover="auto"
             >
               <div className={styles['app-header__drawer-button']}>
@@ -450,15 +450,8 @@ const AppHeaderNavGroup = ({
                             </Menu.Item>
                           );
                         case 'label':
-                          // TODO(next-major): Remove event handling from non-interactive labels
                           return (
-                            <Menu.Item
-                              __type="label"
-                              key={navItem.name}
-                              onClick={(ev) => {
-                                onButtonClick && onButtonClick(ev, navItem);
-                              }}
-                            >
+                            <Menu.Item __type="label" key={navItem.name}>
                               {navItem.name}
                             </Menu.Item>
                           );
@@ -803,7 +796,6 @@ const AppHeaderDrawerContent = ({
                               </Menu.Item>
                             );
                           case 'label':
-                            // TODO(next-major): Remove event handling from non-interactive labels
                             return (
                               <Menu.Item
                                 __type="label"
@@ -813,7 +805,6 @@ const AppHeaderDrawerContent = ({
                                     document
                                       .getElementById('popover')
                                       ?.hidePopover();
-                                  onButtonClick && onButtonClick(ev, navItem);
                                 }}
                               >
                                 {navItem.name}

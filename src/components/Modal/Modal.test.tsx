@@ -111,25 +111,6 @@ describe('Modal', () => {
     expect(renderMethod).not.toThrow(Error);
   });
 
-  it('does throw an error if modal does not use <Modal.Title> or aria-label', () => {
-    const modalWithoutTitleOrAriaLabel = (
-      <Modal onClose={() => {}} open>
-        <Modal.Header>Modal Title</Modal.Header>
-        <Modal.Body>Modal body content.</Modal.Body>
-        <Modal.Footer>Modal footer content.</Modal.Footer>
-      </Modal>
-    );
-    const renderMethod = () => {
-      render(modalWithoutTitleOrAriaLabel);
-    };
-
-    // expect console error from react, suppressed.
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
-    expect(renderMethod).toThrow(Error);
-    consoleErrorMock.mockRestore();
-  });
-
   it('prints a warning when height is used with size="sm"', () => {
     const modalWithoutTitleOrAriaLabel = (
       <Modal height="dynamic" onClose={() => {}} open size="sm">

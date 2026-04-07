@@ -1,9 +1,13 @@
 import clsx from 'clsx';
-import React, { forwardRef } from 'react';
+import React, {
+  forwardRef,
+  useEffect,
+  useRef,
+  type RefObject,
+  type ForwardedRef,
+} from 'react';
 import type { ReactNode } from 'react';
 
-import useForwardedRef from '../../util/useForwardedRef';
-import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
 import Label from '../Label';
@@ -16,7 +20,6 @@ type CheckboxHTMLElementProps = Omit<
   'checked' | 'id' | 'size'
 >;
 
-// TODO(next-major): rename sub-label props to be camelCase
 type CheckboxInputProps = CheckboxHTMLElementProps & {
   // Component API
   /**
@@ -70,6 +73,23 @@ type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
     }
   >;
 
+function useForwardedRef<T>(ref: ForwardedRef<T>): RefObject<T> {
+  const innerRef = useRef<T>(null);
+
+  // Keep the internal and forwarded refs in sync.
+  useEffect(() => {
+    if (!ref) {
+      return;
+    } else if (typeof ref === 'function') {
+      ref(innerRef.current);
+    } else {
+      ref.current = innerRef.current;
+    }
+  }, [ref]);
+
+  return innerRef;
+}
+
 /**
  * Checkbox input element, exported for greater flexibility.
  * You must provide an `id` prop and connect it to a visible label.
@@ -80,7 +100,7 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputProps>(
 
     // Make this checkbox indeterminate. Can only be done with JS for some reason.
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes.
-    React.useEffect(() => {
+    useEffect(() => {
       if (forwardedRef.current) {
         forwardedRef.current.indeterminate = !!indeterminate;
       }
@@ -113,7 +133,7 @@ export const Checkbox = Object.assign(
     const { className, id, isError, label, disabled, subLabel, ...other } =
       props;
 
-    const generatedId = useId();
+    const generatedId = React.useId();
     const checkboxId = id || generatedId;
 
     return (
