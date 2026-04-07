@@ -32,8 +32,8 @@
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --heading-font-size: var(--eds-typography-preset-1400-font-size);
-    --heading-line-height: var(--eds-typography-preset-1400-line-height);
+    --heading-font-size: var(--eds-typography-preset-1200-font-size);
+    --heading-line-height: var(--eds-typography-preset-1200-line-height);
   }
 }
 
@@ -64,11 +64,16 @@
 }
 
 .heading--headline-sm {
-  --heading-font-size: var(--eds-typography-preset-600-font-size);
-  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-size: var(--eds-typography-preset-300-font-size);
+  --heading-line-height: var(--eds-typography-preset-300-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-normal);
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+
+  @media screen and (min-width: $eds-bp-md) {
+    --heading-font-size: var(--eds-typography-preset-600-font-size);
+    --heading-line-height: var(--eds-typography-preset-600-line-height);
+  }
 }
 
 .heading--headline-decorative-inline-xl {
@@ -80,8 +85,8 @@
   --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   @media screen and (min-width: $eds-bp-md) {
-    --heading-font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset-2));
-    --heading-line-height: var(--eds-typography-preset-1400-line-height);
+    --heading-font-size: calc(var(--eds-typography-preset-1200-font-size) + var(--eds-typography-font-family-size-offset-2));
+    --heading-line-height: var(--eds-typography-preset-1200-line-height);
   }
 }
 
@@ -114,8 +119,8 @@
 }
 
 .heading--headline-decorative-inline-sm {
-  --heading-font-size: calc(var(--eds-typography-preset-600-font-size) + var(--eds-typography-font-family-size-offset-2));
-  --heading-line-height: var(--eds-typography-preset-600-line-height);
+  --heading-font-size: calc(var(--eds-typography-preset-300-font-size) + var(--eds-typography-font-family-size-offset-2));
+  --heading-line-height: var(--eds-typography-preset-300-line-height);
   --heading-font-family: var(--eds-typography-font-family-2);
   --heading-font-weight: var(--eds-typography-font-weight-light);
   --heading-font-style: var(--eds-theme-typography-font-style-headline-decorative-inline);

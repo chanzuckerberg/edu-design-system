@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.6.0...v17.7.0) (2026-04-07)
+
+
+### Features
+
+* **Select:** support showing subLabels on options ([#2442](https://github.com/chanzuckerberg/edu-design-system/issues/2442)) ([4e61b16](https://github.com/chanzuckerberg/edu-design-system/commit/4e61b16762160edff5765b4bda8dd6e5a2ee95cf))
+* **typography:** adjust sizing for headline xl/sm ([#2428](https://github.com/chanzuckerberg/edu-design-system/issues/2428)) ([7dc7ad7](https://github.com/chanzuckerberg/edu-design-system/commit/7dc7ad78f4b83413ab2d173d695c2b5dccc6ec6f))
+
 ## [17.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.5.0...v17.6.0) (2026-03-31)
 
 

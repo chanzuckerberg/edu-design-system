@@ -11,19 +11,12 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 mockResizeObserver();
 
 const {
-  OpenByDefault,
-  LongOptionList,
-  Disabled,
-  DisabledRequired,
-  OptionsRightAligned,
-  SeparateButtonAndMenuWidth,
   EventHandlingOnRenderProp,
   EventHandlingOnStandardButton,
-  Multiple,
   ...closedStories
 } = stories;
 
-const DisabledComponent = composeStory(Disabled, stories.default);
+const DisabledComponent = composeStory(closedStories.Disabled, stories.default);
 
 const exampleOptions = [
   {

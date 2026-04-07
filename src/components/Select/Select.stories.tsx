@@ -48,7 +48,7 @@ const meta: Meta<typeof Select> = {
         'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
-  tags: ['autodocs', 'version:3.1.1'],
+  tags: ['autodocs', 'version:3.2.0'],
 };
 
 export default meta;
@@ -56,20 +56,24 @@ export default meta;
 type SelectOption = {
   key: string;
   label: string;
+  subLabel?: string;
 };
 
 const exampleOptions: SelectOption[] = [
   {
     key: '1',
     label: 'Dogs',
+    subLabel: "Who's a good boy?",
   },
   {
     key: '2',
     label: 'Cats',
+    subLabel: 'Super independent.',
   },
   {
     key: '3',
     label: 'Birds',
+    subLabel: 'Living relics!',
   },
 ];
 
@@ -362,6 +366,46 @@ export const WithFieldNote: StoryObj = {
 };
 
 /**
+ * This demonstrates how select items can also have an optional subLabel attached to give more details about the option.
+ */
+export const WithSubLabels: StoryObj = {
+  args: {
+    ...Default.args,
+    fieldNote: 'Choose your beast',
+    optionsClassName: 'w-[384px]',
+    children: (
+      <>
+        <Select.Button>
+          {({ value, open, disabled }) => (
+            <Select.ButtonWrapper isOpen={open}>
+              {value.label}
+            </Select.ButtonWrapper>
+          )}
+        </Select.Button>
+        <Select.Options anchor={{ to: 'bottom end', gap: 12 }}>
+          {exampleOptions.map((option) => (
+            <Select.Option
+              key={option.key}
+              subLabel={option.subLabel}
+              value={option}
+            >
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </>
+    ),
+  },
+  parameters: {
+    ...Default.parameters,
+    snapshot: {
+      skip: true,
+    },
+  },
+  play: openMenu,
+};
+
+/**
  * You can implement a `Select.Button` with a render prop. This exposes several useful values to
  * control the appearance of the rendered button. The render prop case is "Headless", in that it has
  * no styling by default.
@@ -469,6 +513,11 @@ export const Multiple: StoryObj = {
       </>
     ),
   },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
@@ -560,6 +609,9 @@ export const LongOptionList: StoryObj = {
   parameters: {
     layout: 'centered',
     chromatic: { delay: 450 },
+    snapshot: {
+      skip: true,
+    },
   },
   decorators: [
     (Story) => (
@@ -585,6 +637,9 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
     },
     docs: {
       ...Default.parameters?.docs,
+    },
+    snapshot: {
+      skip: true,
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
@@ -614,6 +669,9 @@ export const Disabled: StoryObj = {
     },
     docs: {
       ...Default.parameters?.docs,
+    },
+    snapshot: {
+      skip: true,
     },
   },
 };
@@ -723,6 +781,9 @@ export const DisabledRequired: StoryObj = {
     docs: {
       ...Default.parameters?.docs,
     },
+    snapshot: {
+      skip: true,
+    },
   },
 };
 
@@ -760,6 +821,11 @@ export const OptionsRightAligned: StoryObj = {
       <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
     ),
   ],
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
@@ -772,6 +838,9 @@ export const OpenByDefault: StoryObj = {
     chromatic: { delay: 300, disableSnapshot: true },
     docs: {
       ...Default.parameters?.docs,
+    },
+    snapshot: {
+      skip: true,
     },
   },
   play: selectCat,
