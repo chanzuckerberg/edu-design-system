@@ -24,6 +24,7 @@ import Icon, { type IconName } from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
+import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
 import Text from '../Text';
 
 import styles from './Select.module.css';
@@ -105,10 +106,14 @@ type SelectLabelProps = ExtractProps<typeof Label> & {
    */
   subLabel?: ReactNode;
 };
+
 type SelectOptionsProps = ExtractProps<typeof ListboxOptions>;
-type SelectOptionProps = ExtractProps<typeof ListboxOption> & {
-  optionClassName?: string;
-};
+
+type SelectOptionProps = ExtractProps<typeof ListboxOption> &
+  Pick<PopoverListItemProps, 'subLabel'> & {
+    optionClassName?: string;
+  };
+
 type SelectButtonProps = ExtractProps<typeof ListboxButton> & {
   // Design API
   /**
@@ -415,7 +420,13 @@ const SelectOptions = function (props: SelectOptionsProps) {
  * Represents one of the available options for selection
  */
 const SelectOption = function (props: SelectOptionProps) {
-  const { children, className, optionClassName, ...other } = props;
+  const {
+    children,
+    className,
+    optionClassName,
+    subLabel: optionSubLabel,
+    ...other
+  } = props;
 
   const optionItemClassName = clsx(optionClassName, styles['select__option']);
 
@@ -437,6 +448,7 @@ const SelectOption = function (props: SelectOptionProps) {
                 icon={selected ? 'check' : undefined}
                 isDisabled={disabled}
                 isFocused={focus}
+                subLabel={optionSubLabel}
               >
                 <span className={styles['select__option-text']}>
                   {children}
