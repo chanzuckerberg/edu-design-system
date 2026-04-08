@@ -46,7 +46,6 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -131,7 +130,6 @@ exports[`Modal ContentLarge story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -216,7 +214,6 @@ exports[`Modal ContentLargeAuto story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -301,7 +298,6 @@ exports[`Modal ContentLargeMax story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -386,7 +382,6 @@ exports[`Modal ContentSmall story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -471,7 +466,6 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -556,7 +550,6 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -641,7 +634,6 @@ exports[`Modal Mobile story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -726,7 +718,6 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -811,7 +802,6 @@ exports[`Modal Tablet story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"
@@ -896,7 +886,6 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     <div
       class="fpo h-full w-full"

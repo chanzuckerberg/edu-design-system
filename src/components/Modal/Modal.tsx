@@ -159,13 +159,6 @@ type ModalBodyProps = {
   className?: string;
   // Design API
   /**
-   * Toggles focusable variant of the modal. Used to attach a tabIndex for keyboard scrolling
-   * and focus indicator outline.
-   * Scrolling functionality exists on Modal since the header also needs to scroll.
-   * Defaults to false since modal default is not scrollable.
-   */
-  isFocusable?: boolean;
-  /**
    * Determine how the height of the modal container is calculated when `size` is `"lg"`:
    * - `"fixed"` applies the fixed dimensions, which will not adjust
    * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
@@ -330,14 +323,12 @@ const ModalBody = ({
   children,
   className,
   height,
-  isFocusable,
   ...other
 }: ModalBodyProps) => (
   <div
     className={clsx(styles['modal-body'], className)}
     // This element is tabbable to allow keyboard users to scroll long content.
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-    tabIndex={isFocusable ? 0 : undefined}
+    tabIndex={height === 'dynamic' ? 0 : undefined}
     {...other}
   >
     {height === 'dynamic' ? (
@@ -411,7 +402,7 @@ const ModalSubTitle = ({
 
 const FocusableModalBody = (props: ModalBodyProps) => {
   const { height } = React.useContext(ModalContext);
-  return <ModalBody height={height} isFocusable {...props} />;
+  return <ModalBody height={height} {...props} />;
 };
 
 Modal.displayName = 'Modal';

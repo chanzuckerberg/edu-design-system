@@ -17,7 +17,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:2.2'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;

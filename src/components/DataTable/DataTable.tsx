@@ -237,7 +237,7 @@ export function DataTable<T>({
           >
             {(caption || subCaption) && (
               <caption className={styles['data-table__aria-caption']}>
-                {`${caption}${subCaption ? ': ' + subCaption : ''}`}
+                {`${caption ?? ''}${subCaption ? ': ' + subCaption : ''}`}
               </caption>
             )}
             <DataTableHeader>

@@ -156,7 +156,7 @@ const FieldsetLegend = ({
 
   assertEdsUsage(
     [!title && !!subTitle],
-    'When using "subTitle" you must also use "title',
+    'When using "subTitle" you must also use "title"',
   );
 
   return (

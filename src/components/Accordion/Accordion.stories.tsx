@@ -40,7 +40,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Accordion>;
 
 type Story = StoryObj<typeof Accordion>;
