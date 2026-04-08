@@ -13,6 +13,8 @@ declare module '*.module.css' {
   export default content;
 }
 
+declare module '*.css';
+
 declare module '*.md';
 
 // Reference https://github.com/tshelburne/react-children-by-type
