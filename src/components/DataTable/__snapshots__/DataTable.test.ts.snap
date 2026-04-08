@@ -2085,7 +2085,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
     <caption
       class="data-table__aria-caption"
     >
-      Types of Wine
+      Types of Wine: 
     </caption>
     <thead
       class="data-table__header-row"

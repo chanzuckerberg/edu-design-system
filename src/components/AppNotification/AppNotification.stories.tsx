@@ -24,16 +24,11 @@ export default {
     children: {
       control: false,
     },
-    color: {
-      table: {
-        disable: true,
-      },
-    },
     subTitle: {
       control: 'text',
     },
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof AppNotification>;
 
 type Story = StoryObj<typeof AppNotification>;

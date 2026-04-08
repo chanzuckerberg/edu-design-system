@@ -482,7 +482,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 
 exports[`<PageNotification /> WarningWithSubTitle story renders snapshot 1`] = `
 <aside
-  aria-label="Warning title and subTitle which communicates info to the user"
+  aria-label="Warning title and subtitle which communicates info to the user"
   class="page-notification page-notification--status-warning w-[384px]"
 >
   <svg

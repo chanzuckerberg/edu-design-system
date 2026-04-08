@@ -204,6 +204,32 @@ type Context = {
 const ModalContext = React.createContext<Context>({});
 
 /**
+ * Helper function to determine whether a set of children contain a `ModalTitle` or `Modal.Title` child
+ *
+ * @param children component children (ReactNode)
+ * @returns boolean representing whether the set of children (recursive) has a `ModalTitle` or `Modal.Title`
+ */
+function childrenHaveModalTitle(children?: ReactNode): boolean {
+  // TODO: this could be a common utility function for other use cases, or from a library
+  const childrenArray = React.Children.toArray(children);
+  return childrenArray.some((child) => {
+    if (typeof child === 'string' || typeof child === 'number') {
+      return false;
+    } else if (
+      'props' in child &&
+      child.type &&
+      typeof child.type !== 'string' &&
+      (child.type?.name === 'ModalTitle' || child.type?.name === 'Modal.Title')
+    ) {
+      return true;
+    } else if ('props' in child && child.props.children) {
+      return childrenHaveModalTitle(child.props.children);
+    }
+    return false;
+  });
+}
+
+/**
  * The actual modal, without the dark overlay behind it.
  *
  * This is only exported for testing purposes; please do not import and use this directly.
@@ -268,6 +294,12 @@ export const Modal = (props: ModalProps) => {
     overlayEmphasis = 'low',
     ...rest
   } = props;
+
+  assertEdsUsage(
+    [!childrenHaveModalTitle(rest.children) && !ariaLabel],
+    "You must use the Modal.Title helper component or pass in an aria-label when using the Modal. The Modal uses the Modal.Title to describe the modal to screen readers using aria-labelledby. If you're not using the Modal.Title component, you can pass in an aria-label instead.",
+    'error',
+  );
 
   // check to make sure folks aren't using size="lg" with "height"
   assertEdsUsage(

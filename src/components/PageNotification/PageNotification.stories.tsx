@@ -57,7 +57,7 @@ export const WarningWithSubTitle: StoryObj<Args> = {
     status: 'warning',
     subTitle: <span>SubTitle text</span>,
     'aria-label':
-      'Warning title and subTitle which communicates info to the user',
+      'Warning title and subtitle which communicates info to the user',
   },
 };
 
