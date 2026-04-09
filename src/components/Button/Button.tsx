@@ -102,7 +102,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className,
       context,
-      icon = 'circle',
+      icon = 'add-encircled',
       iconLayout = 'none',
       isDisabled,
       isFullWidth,

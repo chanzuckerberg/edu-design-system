@@ -17,7 +17,6 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { useId } from '../../util/useId';
 import type { RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
@@ -147,7 +146,7 @@ export const TabGroup = ({
   variant = 'default',
   ...other
 }: TabGroupProps) => {
-  const activeTabPanelId = useId();
+  const activeTabPanelId = React.useId();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
@@ -165,7 +164,7 @@ export const TabGroup = ({
     [tabs],
   );
 
-  const generatedId = useId();
+  const generatedId = React.useId();
   const tabIdPrefix = other.id || generatedId;
   const tabIds = useMemo(
     () =>

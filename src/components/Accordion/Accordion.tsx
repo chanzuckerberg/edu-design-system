@@ -72,7 +72,7 @@ type AccordionButtonProps = {
   /**
    * Secondary text used to describe the content in more detail
    */
-  subtitle?: ReactNode;
+  subTitle?: ReactNode;
   /**
    * The title/heading of the component
    */
@@ -165,7 +165,7 @@ const AccordionButton = ({
   leadingIcon,
   title,
   trailingIcon = 'chevron-down',
-  subtitle,
+  subTitle,
   onClose,
   onOpen,
   ...other
@@ -184,9 +184,9 @@ const AccordionButton = ({
   assertEdsUsage(
     [
       typeof children !== 'undefined' &&
-        (typeof title !== 'undefined' || typeof subtitle !== 'undefined'),
+        (typeof title !== 'undefined' || typeof subTitle !== 'undefined'),
     ],
-    'Cannot use `children` with `title`/`subtitle',
+    'Cannot use `children` with `title`/`subTitle',
   );
 
   return (
@@ -234,13 +234,13 @@ const AccordionButton = ({
                 {children}
               </Text>
             )}
-            {subtitle && (
+            {subTitle && (
               <Text
                 as="span"
-                className={styles['accordion-button__subtitle']}
+                className={styles['accordion-button__subTitle']}
                 preset={size === 'md' ? 'body-md' : 'body-sm'}
               >
-                {subtitle}
+                {subTitle}
               </Text>
             )}
           </Heading>

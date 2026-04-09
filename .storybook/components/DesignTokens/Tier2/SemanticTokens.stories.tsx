@@ -22,6 +22,10 @@ const meta = {
     size: 'md',
   },
   parameters: {
+    chromatic: {
+      diffThreshold: 0.75,
+      delay: 100,
+    },
     controls: {
       disable: true,
     },
@@ -100,7 +104,7 @@ export const BackgroundUtility: Story = {
 export const BackgroundBrand: Story = {
   args: {
     caption: 'Background Brand Tokens',
-    subcaption:
+    subCaption:
       'Note: any colors defined as lime green (#OOFFOO) do not exist in the current theme.',
     listItems: getTokenListItems(
       'eds-theme-color-background-brand',
@@ -144,7 +148,7 @@ export const BorderUtility: Story = {
 export const BorderBrand: Story = {
   args: {
     caption: 'Border Brand Tokens',
-    subcaption:
+    subCaption:
       'Note: any colors defined as lime green (#OOFFOO) do not exist in the current theme.',
     listItems: getTokenListItems(
       'eds-theme-color-border-brand',
@@ -168,7 +172,7 @@ export const BorderBrand: Story = {
 export const BorderRadii: Story = {
   args: {
     caption: 'Border Radius Tokens',
-    subcaption:
+    subCaption:
       'Border radii can be used internally in components, and with custom components, except for -tab- and -notification- tokens.',
     listItems: getTokenListItems(
       'eds-theme-border-radius',

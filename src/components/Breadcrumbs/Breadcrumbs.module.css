@@ -113,7 +113,8 @@
   }
 
   &:focus-visible {
-    @mixin focus;
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
   }
 
   @supports not selector(:focus-visible) {
@@ -124,7 +125,8 @@
     }
 
     &:focus {
-      @mixin focus;
+      outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+      outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
     }
   }
 }

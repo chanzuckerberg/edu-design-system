@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useState } from 'react';
 import { getMinValue } from '../../util/getMinValue';
-import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
   ForwardedRefComponent,
@@ -207,10 +206,10 @@ export const TextareaField: TextareaFieldType = forwardRef(
     );
 
     // Accessibility: attach the IDs of fieldnote and/or subLabel to the input
-    const generatedIdVar = useId();
+    const generatedIdVar = React.useId();
     const idVar = id || generatedIdVar;
-    const generatedFieldNoteId = useId();
-    const generatedSubLabelId = useId();
+    const generatedFieldNoteId = React.useId();
+    const generatedSubLabelId = React.useId();
 
     // set up the aria-describedby based on the following rules:
     // - describedby is blank if subLabel and fieldnote are not defined

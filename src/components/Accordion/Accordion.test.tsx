@@ -144,7 +144,7 @@ describe('<Accordion />', () => {
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });
 
-    it('warns when subtitle and children are used together', () => {
+    it('warns when subTitle and children are used together', () => {
       const consoleMock = jest.spyOn(console, 'warn');
       consoleMock.mockImplementation();
       render(
@@ -152,7 +152,7 @@ describe('<Accordion />', () => {
           <Accordion.Row>
             <Accordion.Button
               data-testid="accordion-button"
-              subtitle="Massa quam egestas massa."
+              subTitle="Massa quam egestas massa."
             >
               test
             </Accordion.Button>
@@ -169,7 +169,7 @@ describe('<Accordion />', () => {
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });
 
-    it('warns when title, subtitle and children are used together', () => {
+    it('warns when title, subTitle and children are used together', () => {
       const consoleMock = jest.spyOn(console, 'warn');
       consoleMock.mockImplementation();
       render(
@@ -177,7 +177,7 @@ describe('<Accordion />', () => {
           <Accordion.Row>
             <Accordion.Button
               data-testid="accordion-button"
-              subtitle="Massa quam egestas massa."
+              subTitle="Massa quam egestas massa."
               title="Massa quam egestas massa."
             >
               test
@@ -195,7 +195,7 @@ describe('<Accordion />', () => {
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });
 
-    it('does not warn when title & subtitle are used together', () => {
+    it('does not warn when title & subTitle are used together', () => {
       const consoleMock = jest.spyOn(console, 'warn');
       consoleMock.mockImplementation();
       render(
@@ -203,7 +203,7 @@ describe('<Accordion />', () => {
           <Accordion.Row>
             <Accordion.Button
               data-testid="accordion-button"
-              subtitle="Massa quam egestas massa."
+              subTitle="Massa quam egestas massa."
               title="Massa quam egestas massa."
             ></Accordion.Button>
             <Accordion.Panel data-testid="accordion-panel">

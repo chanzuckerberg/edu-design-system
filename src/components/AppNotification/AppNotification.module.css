@@ -8,16 +8,6 @@
 .app-notification {
     padding: calc(var(--eds-spacing-size-3) * 1px);
 
-    &.app-notification--color-dark {
-        color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
-        background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
-    }
-
-    &.app-notification--color-light {
-        color: light-dark(var(--eds-theme-color-text-utility-default-primary-active), var(--eds-dark-theme-color-text-utility-default-primary-active));
-        background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
-    }
-
     &.app-notification--variant-default {
         color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
         background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));

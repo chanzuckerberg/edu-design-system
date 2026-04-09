@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef, useState } from 'react';
 import { getMinValue } from '../../util/getMinValue';
-import { useId } from '../../util/useId';
 import type {
   EitherInclusive,
   ForwardedRefComponent,
@@ -243,12 +242,12 @@ export const InputField: InputFieldType = forwardRef(
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
-    const generatedIdVar = useId();
+    const generatedIdVar = React.useId();
     const idVar = id || generatedIdVar;
 
     // Accessibility: attach the IDs of fieldnote and/or subLabel to the input
-    const generatedFieldNoteId = useId();
-    const generatedSubLabelId = useId();
+    const generatedFieldNoteId = React.useId();
+    const generatedSubLabelId = React.useId();
 
     // set up the aria-describedby based on the following rules:
     // - describedby is blank if subLabel and fieldnote are not defined
