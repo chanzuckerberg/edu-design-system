@@ -263,7 +263,7 @@ export const CustomTopStripe: Story = {
     style: {
       '--card__top-stripe-bg':
         'var(--eds-theme-color-background-utility-critical-high-emphasis)',
-    } as React.CSSProperties,
+    },
     children: (
       <>
         <Card.Header
