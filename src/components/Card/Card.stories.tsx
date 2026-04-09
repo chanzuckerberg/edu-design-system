@@ -1,10 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import { userEvent } from '@storybook/testing-library';
-
 import React from 'react';
 
 import { Card } from './Card';
-
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
@@ -59,7 +57,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['autodocs', 'version:2.0.2'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
@@ -333,33 +331,6 @@ export const BackgroundCallout: Story = {
             </Button>
           </ButtonGroup>
         </Card.Footer>
-      </>
-    ),
-  },
-};
-
-/**
- * Cards have hierarchy, and can contain other cards with one level. When using a nested card, you can use `.ChildCard`,
- * which comes preconfigured with some settings and defaults applied. All the sub-components of card work within `.Childcard`.
- */
-export const ChildCards: Story = {
-  args: {
-    containerColor: 'call-out',
-    topStripe: 'high',
-    containerStyle: 'high',
-    children: (
-      <>
-        <Card.Header size="md" title="Card Group"></Card.Header>
-        <Card.Body>
-          <Card.ChildCard draggable="true" isInteractive>
-            <Card.Header
-              action={<CardMenu />}
-              eyebrow="Eyebrow Text"
-              subTitle="Sub-title text"
-              title="Title text"
-            />
-          </Card.ChildCard>
-        </Card.Body>
       </>
     ),
   },

@@ -291,18 +291,11 @@ const CardHeader = ({
   );
 };
 
-const ChildCard = ({ className, ...other }: CardProps) => {
-  const childClassName = clsx(className, styles['child-card']);
-  return <Card {...other} className={childClassName} containerStyle="high" />;
-};
-
 Card.displayName = 'Card';
 CardBody.displayName = 'Card.Body';
 CardFooter.displayName = 'Card.Footer';
 CardHeader.displayName = 'Card.Header';
-ChildCard.displayName = 'Card.ChildCard';
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;
 Card.Header = CardHeader;
-Card.ChildCard = ChildCard;
