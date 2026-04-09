@@ -181,22 +181,6 @@ export const Purples: Story = {
 };
 
 /**
- * Pink Brand Colors
- */
-export const Pinks: Story = {
-  args: {
-    caption: 'Pink Hues',
-    listItems: getTokenListItems('eds-color-pink', 'color', (name, column) => {
-      if (column === 'figma') {
-        return 'pink/' + name.slice(name.lastIndexOf('-') + 1);
-      } else {
-        return '';
-      }
-    }).sort(sortVarNames),
-  },
-};
-
-/**
  * Neutral Brand Colors
  */
 export const Neutrals: Story = {
