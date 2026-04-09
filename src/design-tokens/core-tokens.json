@@ -447,20 +447,6 @@
           "group": "color"
         }
       },
-      "pink": {
-        "350": {
-          "value": "#E67EB0",
-          "group": "color"
-        },
-        "450": {
-          "value": "#DB458D",
-          "group": "color"
-        },
-        "550": {
-          "value": "#C62B73",
-          "group": "color"
-        }
-      },
       "purple": {
         "050": {
           "value": "#FBF5FD",
