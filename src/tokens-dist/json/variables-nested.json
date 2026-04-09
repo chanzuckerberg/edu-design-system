@@ -712,17 +712,7 @@
       },
       "typography": {
         "fontFamily": {
-          "decorative": {
-            "inline": "'parabolica', Inter, Arial, sans-serif"
-          },
           "tab": "'JetBrains Mono', Consolas, monospace"
-        },
-        "fontStyle": {
-          "headline": {
-            "decorative": {
-              "inline": "light"
-            }
-          }
         }
       }
     }

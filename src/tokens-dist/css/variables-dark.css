@@ -1,5 +1,4 @@
 :root {
-  --eds-dark-theme-typography-font-style-headline-decorative-inline: light;
   --eds-dark-theme-color-text-utility-inverse-disabled: rgba(250, 249, 248, 0.50);
   --eds-dark-theme-color-icon-utility-inverse-disabled: rgba(250, 249, 248, 0.50);
   --eds-dark-theme-color-border-utility-inverse-disabled: rgba(250, 249, 248, 0.50);
@@ -241,7 +240,6 @@
   --eds-typography-font-family-2: 'kazimirtext', Lora, Georgia, serif;
   --eds-typography-font-family-1: 'parabolica', Inter, Arial, sans-serif;
   --eds-dark-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
-  --eds-dark-theme-typography-font-family-decorative-inline: var(--eds-typography-font-family-1);
   --eds-dark-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
   --eds-dark-theme-color-text-app-header-secondary: var(--eds-color-neutral-250);
   --eds-dark-theme-color-text-app-header-primary: var(--eds-color-white);

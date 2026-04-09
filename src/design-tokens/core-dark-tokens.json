@@ -1751,22 +1751,8 @@
         },
         "typography": {
           "fontFamily": {
-            "decorative": {
-              "inline": {
-                "value": "{eds.typography.fontFamily.1}"
-              }
-            },
             "tab": {
               "value": "{eds.typography.fontFamily.3}"
-            }
-          },
-          "fontStyle": {
-            "headline": {
-              "decorative": {
-                "inline": {
-                  "value": "light"
-                }
-              }
             }
           }
         }
