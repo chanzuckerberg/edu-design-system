@@ -166,7 +166,7 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
   >
     <label
       class="card__behavior-label"
-      for=":r1j:"
+      for=":r1b:"
     >
       <div
         class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
@@ -217,14 +217,14 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
         />
         <input
           class="card__behavior-input"
-          id=":r1j:"
+          id=":r1b:"
           type="checkbox"
         />
       </div>
     </label>
     <label
       class="card__behavior-label"
-      for=":r1k:"
+      for=":r1c:"
     >
       <div
         class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
@@ -275,107 +275,11 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
         />
         <input
           class="card__behavior-input"
-          id=":r1k:"
+          id=":r1c:"
           type="checkbox"
         />
       </div>
     </label>
-  </div>
-</div>
-`;
-
-exports[`<Card /> ChildCards story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="card card--container-style-high card--container-color-call-out w-[384px]"
-  >
-    <div
-      class="card__header header--size-md"
-    >
-      <div
-        class="header__text"
-      >
-        <h3
-          class="heading heading--headline-sm header__title header--size-md"
-        >
-          Card Group
-        </h3>
-      </div>
-    </div>
-    <div
-      class="card__body"
-    >
-      <div
-        class="card card--container-style-high card--container-color-default card--is-interactive child-card"
-        draggable="true"
-      >
-        <div
-          class="card__header header--size-md"
-        >
-          <div
-            class="header__text"
-          >
-            <div
-              class="text text--overline-md header__eyebrow header--size-md"
-            >
-              Eyebrow Text
-            </div>
-            <h3
-              class="heading heading--headline-sm header__title header--size-md"
-            >
-              Title text
-            </h3>
-            <div
-              class="text text--body-lg header__sub-title header--size-md"
-            >
-              Sub-title text
-            </div>
-          </div>
-          <div
-            class="header__action"
-          >
-            <div
-              class="menu"
-              data-headlessui-state=""
-            >
-              <button
-                aria-expanded="false"
-                aria-haspopup="menu"
-                data-headlessui-state=""
-                id="headlessui-menu-button-:r1d:"
-                type="button"
-              >
-                <svg
-                  class="icon"
-                  fill="currentColor"
-                  height="32px"
-                  role="img"
-                  style="--icon-size: 32px;"
-                  viewBox="0 0 24 24"
-                  width="32px"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>
-                    show more
-                  </title>
-                  <path
-                    d="M6.46143 13C6.18643 13 5.95101 12.9021 5.75518 12.7063C5.55934 12.5104 5.46143 12.275 5.46143 12C5.46143 11.725 5.55934 11.4896 5.75518 11.2938C5.95101 11.0979 6.18643 11 6.46143 11C6.73643 11 6.97184 11.0979 7.16768 11.2938C7.36351 11.4896 7.46143 11.725 7.46143 12C7.46143 12.275 7.36351 12.5104 7.16768 12.7063C6.97184 12.9021 6.73643 13 6.46143 13ZM11.9999 13C11.7249 13 11.4895 12.9021 11.2937 12.7063C11.0978 12.5104 10.9999 12.275 10.9999 12C10.9999 11.725 11.0978 11.4896 11.2937 11.2938C11.4895 11.0979 11.7249 11 11.9999 11C12.2749 11 12.5103 11.0979 12.7062 11.2938C12.902 11.4896 12.9999 11.725 12.9999 12C12.9999 12.275 12.902 12.5104 12.7062 12.7063C12.5103 12.9021 12.2749 13 11.9999 13ZM17.5384 13C17.2634 13 17.028 12.9021 16.8322 12.7063C16.6363 12.5104 16.5384 12.275 16.5384 12C16.5384 11.725 16.6363 11.4896 16.8322 11.2938C17.028 11.0979 17.2634 11 17.5384 11C17.8134 11 18.0488 11.0979 18.2447 11.2938C18.4405 11.4896 18.5384 11.725 18.5384 12C18.5384 12.275 18.4405 12.5104 18.2447 12.7063C18.0488 12.9021 17.8134 13 17.5384 13Z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card__top-stripe top-stripe--none"
-        />
-      </div>
-    </div>
-    <div
-      class="card__top-stripe top-stripe--high"
-    />
   </div>
 </div>
 `;
@@ -622,7 +526,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
   >
     <label
       class="card__behavior-label"
-      for=":r1h:"
+      for=":r19:"
     >
       <div
         class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
@@ -673,7 +577,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
         />
         <input
           class="card__behavior-input"
-          id=":r1h:"
+          id=":r19:"
           name="test"
           type="radio"
         />
@@ -681,7 +585,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
     </label>
     <label
       class="card__behavior-label"
-      for=":r1i:"
+      for=":r1a:"
     >
       <div
         class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
@@ -732,7 +636,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
         />
         <input
           class="card__behavior-input"
-          id=":r1i:"
+          id=":r1a:"
           name="test"
           type="radio"
         />
