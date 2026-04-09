@@ -8,7 +8,7 @@ import styles from './Text.module.css';
 
 export type TextProps = {
   /**
-   * Controls which component to use when rendering copy: `p` or `span`.
+   * Controls which component to use when rendering copy: e.g., `p` or `span`.
    *
    * **Default is `"p"`**.
    */
