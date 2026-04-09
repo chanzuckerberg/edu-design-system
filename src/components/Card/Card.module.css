@@ -109,8 +109,9 @@
   width: 100%;
 }
 
+/* allow for top stripe to be overridden */
 :where(.card__top-stripe) {
-  background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
+  background-color: var(--card__top-stripe-bg, light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis)));
 }
 
 .card__behavior-input {

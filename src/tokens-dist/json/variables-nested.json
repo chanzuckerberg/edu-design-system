@@ -319,35 +319,6 @@
             "active": "#3A3A37"
           },
           "input": "#FFFFFF",
-          "brand": {
-            "red": {
-              "@": "#FF6962",
-              "lowEmphasis": "#FCF0F0"
-            },
-            "orange": {
-              "@": "#00FF00",
-              "lowEmphasis": "#00FF00"
-            },
-            "yellow": {
-              "@": "#FFFC83",
-              "lowEmphasis": "#FFFC83"
-            },
-            "green": {
-              "@": "#1DB470",
-              "lowEmphasis": "#E0F5EC"
-            },
-            "blue": {
-              "1": "#98CDFF",
-              "2": "#5C76F3",
-              "3": "#00FF00",
-              "lowEmphasis": "#EEF7FF"
-            },
-            "purple": {
-              "@": "#00FF00",
-              "lowEmphasis": "#00FF00"
-            },
-            "pink": "#00FF00"
-          },
           "skeleton": {
             "@": "#E6E2DE",
             "stripe": "#F4F1EF"
@@ -486,19 +457,6 @@
           }
         },
         "border": {
-          "brand": {
-            "red": "#FF6962",
-            "orange": "#00FF00",
-            "yellow": "#FFFC83",
-            "green": "#19955D",
-            "blue": {
-              "1": "#98CDFF",
-              "2": "#5C76F3",
-              "3": "#00FF00"
-            },
-            "purple": "#00FF00",
-            "pink": "#00FF00"
-          },
           "appHeaderSeparator": "#55554E",
           "utility": {
             "default": {
@@ -557,12 +515,6 @@
           }
         },
         "icon": {
-          "brand": {
-            "red": "#9D1F18",
-            "yellow": "#7E6701",
-            "green": "#125B3A",
-            "blue": "#3C4D9D"
-          },
           "utility": {
             "default": {
               "primary": {
@@ -689,12 +641,6 @@
               "secondary": "#BCB9B6"
             },
             "placeholder": "#6B6A64"
-          },
-          "brand": {
-            "red": "#9D1F18",
-            "yellow": "#7E6701",
-            "green": "#125B3A",
-            "blue": "#3C4D9D"
           },
           "appHeader": {
             "primary": "#FFFFFF",
