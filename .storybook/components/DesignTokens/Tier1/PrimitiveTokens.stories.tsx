@@ -17,11 +17,15 @@ const meta = {
   component: TokenDataTable,
   args: {
     caption: 'Tokens',
-    subcaption:
+    subCaption:
       'These values are used in higher semantic and component tokens and should not be used in custom components directly.',
     size: 'md',
   },
   parameters: {
+    chromatic: {
+      diffThreshold: 0.75,
+      delay: 100,
+    },
     controls: {
       disable: true,
     },
@@ -229,7 +233,7 @@ export const Opacities: Story = {
 export const FadeAnimations: Story = {
   args: {
     caption: 'Fade Animations',
-    subcaption:
+    subCaption:
       'These constants define the time length for different opacity transitions in EDS. Use with `calc()` in CSS to add second units.',
     listItems: getTokenListItems('eds-anim-fade', 'size', () => ''),
   },
@@ -238,7 +242,7 @@ export const FadeAnimations: Story = {
 export const MovementAnimations: Story = {
   args: {
     caption: 'Movement Animations',
-    subcaption:
+    subCaption:
       'These constants define the time length for different transition animations in EDS. Use with `calc()` in CSS to add second units.',
     listItems: getTokenListItems('eds-anim-move', 'size', () => ''),
   },
@@ -254,14 +258,14 @@ export const BorderRadii: Story = {
 export const Sizes: Story = {
   args: {
     caption: 'Spacing',
-    subcaption:
+    subCaption:
       'Spacing sizes represent a core set of sizing units to match designs to code. Use with `calc()` in CSS to add second units.',
     listItems: getTokenListItems('eds-spacing-size', 'size', (name, column) => {
       if (column === 'figma') {
-        return 'spacing/size-' + name.slice(name.lastIndexOf('-') + 1);
+        return 'spacing/size-' + name.split('spacing-size-')[1];
       } else {
         // tailwind or some other value(s) as fallback
-        return '*-spacing-size-' + name.slice(name.lastIndexOf('-') + 1);
+        return '*-spacing-size-' + name.split('spacing-size-')[1];
       }
     }),
   },
@@ -271,7 +275,7 @@ export const Sizes: Story = {
 export const Shadows: Story = {
   args: {
     caption: 'Shadows',
-    subcaption:
+    subCaption:
       'Shadows are a set of reusable tokens for determining elevation.',
     listItems: getTokenListItems('eds-box-shadow', 'size'),
   },

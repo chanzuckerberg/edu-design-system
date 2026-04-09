@@ -6,7 +6,7 @@ import { SelectionChip } from './SelectionChip';
 export default {
   title: 'Components/SelectionChip',
   component: SelectionChip,
-  tags: ['autodocs', 'version:1.0.1'],
+  tags: ['autodocs', 'version:1.0.2'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SelectionChip>;
@@ -27,7 +27,7 @@ export const Disabled: StoryObj<Args> = {
 export const WithIcon: StoryObj<Args> = {
   args: {
     ...Default.args,
-    leadingIcon: 'alarm-add',
+    leadingIcon: 'add',
   },
 };
 

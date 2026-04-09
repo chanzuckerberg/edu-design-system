@@ -111,12 +111,6 @@
       }
     },
     "border": {
-      "width": {
-        "sm": "1",
-        "md": "2",
-        "lg": "4",
-        "xl": "8"
-      },
       "radius": {
         "50": "2",
         "100": "4",
@@ -131,11 +125,6 @@
       }
     },
     "color": {
-      "brand": {
-        "grape": {
-          "400": "#A6A3EE"
-        }
-      },
       "white": "#FFFFFF",
       "black": "#000000",
       "transparent": "rgba(255, 255, 255, 0.01)",
@@ -144,21 +133,17 @@
         "150": "#D8D4D1",
         "200": "#CCC9C6",
         "250": "#BCB9B6",
-        "300": "#C0C4C8",
         "350": "#9B9997",
         "450": "#83827E",
-        "500": "#878C90",
         "550": "#6B6A64",
         "650": "#55554E",
-        "700": "#383C43",
         "750": "#3A3A37",
         "800": "#30302E",
         "850": "#242423",
         "900": "#181818",
         "950": "#0E0E0E",
         "025": "#FAF9F8",
-        "050": "#F4F1EF",
-        "white": "#FFFFFF"
+        "050": "#F4F1EF"
       },
       "red": {
         "100": "#F9DFDF",
@@ -299,12 +284,12 @@
         "34": "272",
         "40": "320",
         "48": "384",
-        "4-and-half": "36",
-        "7-and-half": "60",
-        "half": "4",
         "quarter": "2",
+        "half": "4",
         "1-and-half": "12",
-        "2-and-half": "20"
+        "2-and-half": "20",
+        "4-and-half": "36",
+        "7-and-half": "60"
       }
     },
     "z-index": {
@@ -320,8 +305,8 @@
             "md": "6"
           },
           "objects": {
-            "md": "8",
-            "sm": "6",
+            "md": "6",
+            "sm": "4",
             "xs": "4"
           },
           "tabUnderline": {
@@ -329,20 +314,9 @@
             "sticky": "99999"
           },
           "notification": "12"
-        },
-        "width": "1"
-      },
-      "form": {
-        "border": {
-          "width": "1"
         }
       },
       "color": {
-        "body": {
-          "background": {
-            "@": "#F4F6F8"
-          }
-        },
         "background": {
           "appHeader": {
             "@": "#242423",
@@ -350,19 +324,7 @@
             "active": "#3A3A37"
           },
           "input": "#FFFFFF",
-          "neutral": {
-            "subtle": {
-              "hover": "#E7E8EA"
-            },
-            "medium": {
-              "@": "#E7E8EA"
-            }
-          },
           "brand": {
-            "primary": {
-              "default": "#C4C1F3",
-              "strong": "#A6A3EE"
-            },
             "red": {
               "@": "#FF6962",
               "lowEmphasis": "#FCF0F0"
@@ -529,11 +491,6 @@
           }
         },
         "border": {
-          "neutral": {
-            "subtle": {
-              "@": "#E7E8EA"
-            }
-          },
           "brand": {
             "red": "#FF6962",
             "orange": "#00FF00",
@@ -604,49 +561,13 @@
             }
           }
         },
-        "button": {
-          "secondary": {
-            "neutral": {
-              "background": {
-                "hover": "#E7E8EA"
-              }
-            }
-          },
-          "icon": {
-            "neutral": {
-              "background": {
-                "hover": "#E7E8EA"
-              },
-              "border": {
-                "hover": "#E7E8EA"
-              }
-            }
-          }
-        },
-        "form": {
-          "border": {
-            "hover": "#30302E"
-          },
-          "background": {
-            "hover": "#F4F6F8"
-          }
-        },
         "icon": {
-          "neutral": {
-            "strong": {
-              "hover": "#30302E"
-            },
-            "subtle": {
-              "@": "#878C90"
-            }
-          },
           "brand": {
             "red": "#9D1F18",
             "yellow": "#7E6701",
             "green": "#125B3A",
             "blue": "#3C4D9D"
           },
-          "disabled": "#C0C4C8",
           "utility": {
             "default": {
               "primary": {
@@ -712,42 +633,7 @@
             "secondary": "#BCB9B6"
           }
         },
-        "link": {
-          "brand": {
-            "text-decoration": {
-              "@": "var(--eds-theme-color-text-brand-default)",
-              "hover": "var(--eds-theme-color-text-brand-default)",
-              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
-            },
-            "background": {
-              "focus": "var(--eds-theme-color-text-brand-default)"
-            }
-          },
-          "neutral": {
-            "text": {
-              "@": "var(--eds-theme-color-text-neutral-strong)",
-              "hover": "var(--eds-theme-color-text-brand-default)",
-              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
-            },
-            "text-decoration": {
-              "@": "var(--eds-theme-color-text-neutral-default)",
-              "hover": "var(--eds-theme-color-text-brand-default)",
-              "focus": "var(--eds-theme-color-text-neutral-default-inverse)"
-            },
-            "background": {
-              "focus": "var(--eds-theme-color-text-neutral-default)"
-            }
-          }
-        },
         "text": {
-          "neutral": {
-            "default": {
-              "@": "#383C43",
-              "inverse": "#FFFFFF"
-            },
-            "strong": "#30302E"
-          },
-          "disabled": "#C0C4C8",
           "utility": {
             "default": {
               "primary": {
@@ -810,7 +696,6 @@
             "placeholder": "#6B6A64"
           },
           "brand": {
-            "default": "var(--eds-theme-color-text-brand-primary)",
             "red": "#9D1F18",
             "yellow": "#7E6701",
             "green": "#125B3A",
@@ -823,22 +708,6 @@
         },
         "text-highlight": {
           "foreground": "#30302E"
-        },
-        "toggle": {
-          "on": {
-            "background": "var(--eds-theme-color-background-brand-primary-strong)"
-          },
-          "off": {
-            "background": "var(--eds-theme-color-icon-neutral-subtle)"
-          },
-          "disabled": {
-            "background": "var(--eds-theme-color-icon-disabled)",
-            "text": "var(--eds-theme-color-text-disabled)"
-          },
-          "primary": {
-            "text": "var(--eds-theme-color-text-neutral-default)"
-          },
-          "thumb": "var(--eds-theme-color-text-neutral-default-inverse)"
         }
       },
       "typography": {

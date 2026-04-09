@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
-import { useId } from '../../util/useId';
 import type { Size } from '../../util/variant-types';
 
 import Heading from '../Heading';
@@ -146,7 +145,7 @@ export const Card = ({
     className,
   );
 
-  const behaviorId = useId();
+  const behaviorId = React.useId();
   const cardComponent = (
     <div className={componentClassName} {...other}>
       {children}

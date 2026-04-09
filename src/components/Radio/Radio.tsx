@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
 
-import { useId } from '../../util/useId';
 import type { EitherInclusive } from '../../util/utility-types';
 
 import Label from '../Label';
@@ -34,7 +33,6 @@ type RadioInputProps = RadioHTMLElementProps & {
   isError?: boolean;
 };
 
-// TODO(next-major): rename sub-label props to be camelCase
 type RadioProps = RadioInputProps & {
   // Component API
   /**
@@ -121,7 +119,7 @@ export const Radio = ({
   subLabel,
   ...other
 }: RadioProps) => {
-  const generatedId = useId();
+  const generatedId = React.useId();
   const radioId = id || generatedId;
 
   const componentClassName = clsx(

@@ -18,6 +18,10 @@ export default {
   title: 'Design Tokens/(3) Component',
   component: TokenDataTable,
   parameters: {
+    chromatic: {
+      diffThreshold: 0.75,
+      delay: 100,
+    },
     controls: {
       disable: true,
     },

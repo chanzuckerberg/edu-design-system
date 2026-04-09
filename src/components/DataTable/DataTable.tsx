@@ -72,7 +72,7 @@ export type DataTableProps<T = unknown> = EDSBase & {
    * Sub-caption text to use for the table. This text should be used with `caption` and is not
    * meant to be standalone.
    */
-  subcaption?: string;
+  subCaption?: string;
   /**
    * Controls the treatment of the table container.
    *
@@ -174,7 +174,7 @@ export function DataTable<T>({
   onSearchChange,
   rowStyle = 'striped',
   size = 'md',
-  subcaption,
+  subCaption,
   table,
   tableClassName,
   tableStyle = 'basic',
@@ -189,9 +189,9 @@ export function DataTable<T>({
   return (
     <DataTableContext.Provider value={{ size }}>
       <div className={componentClassName} {...rest}>
-        {(caption || subcaption || onSearchChange || actions) && (
+        {(caption || subCaption || onSearchChange || actions) && (
           <div className={styles['data-table__caption-container']}>
-            {(caption || subcaption) && (
+            {(caption || subCaption) && (
               <div className={styles['data-table__caption-text']}>
                 {caption && (
                   <Text
@@ -203,14 +203,14 @@ export function DataTable<T>({
                     {caption}
                   </Text>
                 )}
-                {subcaption && (
+                {subCaption && (
                   <Text
                     aria-hidden="true"
                     as="div"
-                    className={styles['data-table__subcaption']}
+                    className={styles['data-table__subCaption']}
                     preset="headline-sm"
                   >
-                    {subcaption}
+                    {subCaption}
                   </Text>
                 )}
               </div>
@@ -235,9 +235,9 @@ export function DataTable<T>({
             size={size}
             tableStyle={tableStyle}
           >
-            {(caption || subcaption) && (
+            {(caption || subCaption) && (
               <caption className={styles['data-table__aria-caption']}>
-                {`${caption}${subcaption ? ': ' + subcaption : ''}`}
+                {`${caption ? caption + ': ' : ''}${subCaption ?? ''}`}
               </caption>
             )}
             <DataTableHeader>

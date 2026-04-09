@@ -58,19 +58,6 @@ type ModalContentProps = {
    */
   initialFocus?: MutableRefObject<HTMLElement | null>;
   /**
-   * Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.
-   * Also adds border and shadow to the footer indicate sticky status and tabindex to body for keyboard scrolling.
-   * Prop should be dependent on whether content overflows at the mobile level.
-   * Tabindex for keyboard scroll is on the body, however, due to focus outline
-   * not having high contrast on the brand header and being overlapped by the footer.
-   *
-   *
-   * **Default is `false`**.
-   *
-   * @deprecated This will be removed in the next major version of EDS. Please use `height="dynamic"` for scrollable behavior.
-   */
-  isScrollable?: boolean;
-  /**
    * Method called when the close button is clicked. Use this to hide the modal.
    * This should be used to also reset the `open` state.
    *
@@ -172,13 +159,6 @@ type ModalBodyProps = {
   className?: string;
   // Design API
   /**
-   * Toggles focusable variant of the modal. Used to attach a tabIndex for keyboard scrolling
-   * and focus indicator outline.
-   * Scrolling functionality exists on Modal since the header also needs to scroll.
-   * Defaults to false since modal default is not scrollable.
-   */
-  isFocusable?: boolean;
-  /**
    * Determine how the height of the modal container is calculated when `size` is `"lg"`:
    * - `"fixed"` applies the fixed dimensions, which will not adjust
    * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
@@ -215,24 +195,22 @@ type ModalFooterProps = {
    */
   className?: string;
   // Design API
-  /**
-   * Toggles sticky variant of the footer. If modal is scrollable, footer is sticky.
-   * Also adds border and shadow to indicate sticky status.
-   * Defaults to false since modal default is not scrollable.
-   *
-   * @deprecated This will be removed in the next major version of EDS. Please use `height="dynamic"` for sticky footer behavior.
-   */
-  isSticky?: boolean;
 };
 
 type Context = {
-  isScrollable?: boolean;
   height?: ModalContentProps['height'];
 };
 
 const ModalContext = React.createContext<Context>({});
 
+/**
+ * Helper function to determine whether a set of children contain a `ModalTitle` or `Modal.Title` child
+ *
+ * @param children component children (ReactNode)
+ * @returns boolean representing whether the set of children (recursive) has a `ModalTitle` or `Modal.Title`
+ */
 function childrenHaveModalTitle(children?: ReactNode): boolean {
+  // TODO: this could be a common utility function for other use cases, or from a library
   const childrenArray = React.Children.toArray(children);
   return childrenArray.some((child) => {
     if (typeof child === 'string' || typeof child === 'number') {
@@ -262,7 +240,6 @@ const ModalContent = (props: ModalContentProps) => {
     className,
     height = 'fixed',
     hideCloseButton = false,
-    isScrollable,
     onClose,
     size = 'lg',
     ...other
@@ -271,13 +248,12 @@ const ModalContent = (props: ModalContentProps) => {
   const componentClassName = clsx(
     styles['modal__content'],
     height && styles[`modal__content--height-${height}`],
-    isScrollable && styles['modal__content--scrollable'],
     size && styles[`modal__content--${size}`],
     className,
   );
 
   return (
-    <ModalContext.Provider value={{ isScrollable, height }}>
+    <ModalContext.Provider value={{ height }}>
       <div className={componentClassName} {...other}>
         {!hideCloseButton && (
           <Button
@@ -318,16 +294,12 @@ export const Modal = (props: ModalProps) => {
     overlayEmphasis = 'low',
     ...rest
   } = props;
-  const { children } = rest;
 
-  if (process.env.NODE_ENV !== 'production') {
-    const hasModalTitle = childrenHaveModalTitle(children);
-    if (!hasModalTitle && !ariaLabel) {
-      throw new Error(
-        "You must use the Modal.Title helper component or pass in an aria-label when using the Modal. The Modal uses the Modal.Title to describe the modal to screen readers using aria-labelledby. If you're not using the Modal.Title component, you can pass in an aria-label instead.",
-      );
-    }
-  }
+  assertEdsUsage(
+    [!childrenHaveModalTitle(rest.children) && !ariaLabel],
+    "You must use the Modal.Title helper component or pass in an aria-label when using the Modal. The Modal uses the Modal.Title to describe the modal to screen readers using aria-labelledby. If you're not using the Modal.Title component, you can pass in an aria-label instead.",
+    'error',
+  );
 
   // check to make sure folks aren't using size="lg" with "height"
   assertEdsUsage(
@@ -339,12 +311,6 @@ export const Modal = (props: ModalProps) => {
   assertEdsUsage(
     [rest.height !== 'dynamic' && typeof rest.height !== 'undefined'],
     `Height value ${rest.height} is deprecated and will be removed in a future version of EDS`,
-  );
-
-  // Check to make sure we do not use `isScrollable` anymore. height=dynamic does everything we need
-  assertEdsUsage(
-    [!!rest.isScrollable],
-    'isScrollable is deprecated and will be removed in a future version of EDS. Use `height` set to `dynamic` instead',
   );
 
   const componentClassName = clsx(styles['modal'], modalContainerClassName);
@@ -389,14 +355,12 @@ const ModalBody = ({
   children,
   className,
   height,
-  isFocusable,
   ...other
 }: ModalBodyProps) => (
   <div
     className={clsx(styles['modal-body'], className)}
     // This element is tabbable to allow keyboard users to scroll long content.
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-    tabIndex={isFocusable ? 0 : undefined}
+    tabIndex={height === 'dynamic' ? 0 : undefined}
     {...other}
   >
     {height === 'dynamic' ? (
@@ -410,21 +374,9 @@ const ModalBody = ({
 /**
  * Component defines the Footer section of the modal.
  */
-const ModalFooter = ({
-  children,
-  className,
-  isSticky = false,
-  ...other
-}: ModalFooterProps) => {
+const ModalFooter = ({ children, className, ...other }: ModalFooterProps) => {
   return (
-    <div
-      className={clsx(
-        styles['modal-footer'],
-        isSticky && styles['modal-footer--sticky'],
-        className,
-      )}
-      {...other}
-    >
+    <div className={clsx(styles['modal-footer'], className)} {...other}>
       {children}
     </div>
   );
@@ -480,36 +432,20 @@ const ModalSubTitle = ({
   );
 };
 
-/**
- * Variations of the subcomponent to pass props from parent Modal component.
- * Same prop passed directly to subcomponent has priority over prop passed from Modal component.
- */
-const VariantModalHeader = (props: ModalHeaderProps) => {
-  return <ModalHeader {...props} />;
-};
-
-// TODO(next-major): remove focusable footer handling
 const FocusableModalBody = (props: ModalBodyProps) => {
-  const { isScrollable, height } = React.useContext(ModalContext);
-  return <ModalBody height={height} isFocusable={isScrollable} {...props} />;
-};
-
-// TODO(next-major): remove sticky footer handling
-const StickyModalFooter = (props: ModalFooterProps) => {
-  const { isScrollable } = React.useContext(ModalContext);
-  return <ModalFooter isSticky={isScrollable} {...props} />;
+  const { height } = React.useContext(ModalContext);
+  return <ModalBody height={height} {...props} />;
 };
 
 Modal.displayName = 'Modal';
-VariantModalHeader.displayName = 'Modal.Header';
 ModalTitle.displayName = 'Modal.Title';
 ModalSubTitle.displayName = 'Modal.SubTitle';
 FocusableModalBody.displayName = 'Modal.Body';
-StickyModalFooter.displayName = 'Modal.Footer';
+ModalFooter.displayName = 'Modal.Footer';
 
-Modal.Header = VariantModalHeader;
+Modal.Header = ModalHeader;
 Modal.Content = ModalContent;
 Modal.Title = ModalTitle;
 Modal.SubTitle = ModalSubTitle;
 Modal.Body = FocusableModalBody;
-Modal.Footer = StickyModalFooter;
+Modal.Footer = ModalFooter;

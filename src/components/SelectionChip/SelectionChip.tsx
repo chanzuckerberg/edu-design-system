@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 
-import { useId } from '../../util/useId';
 import type { ForwardedRefComponent } from '../../util/utility-types';
 
 import Icon, { type IconName } from '../Icon';
@@ -67,7 +66,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
       className,
     );
 
-    const generatedIdVar = useId();
+    const generatedIdVar = React.useId();
     const idVar = id || generatedIdVar;
 
     return (
