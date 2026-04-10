@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.7.0...v18.0.0) (2026-04-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tokens:** remove brand tokens (#2451)
+* **typography:** remove decorative presets (#2449)
+* **Card:** remove .ChildCard from Card Component (#2448)
+* **tokens:** remove pink primitive tokens (#2450)
+* remove deprecated patterns/props/values (#2447)
+* **Table:** remove deprecated Table component (#2446)
+
+### Features
+
+* **Card:** remove .ChildCard from Card Component ([#2448](https://github.com/chanzuckerberg/edu-design-system/issues/2448)) ([9ef7e11](https://github.com/chanzuckerberg/edu-design-system/commit/9ef7e11054ba0a4a86a82b623179e957b86ee6c8))
+* remove deprecated patterns/props/values ([#2447](https://github.com/chanzuckerberg/edu-design-system/issues/2447)) ([cb20237](https://github.com/chanzuckerberg/edu-design-system/commit/cb20237b44fe8aea9f648948d0eb1e33645c4266))
+* **Table:** remove deprecated Table component ([#2446](https://github.com/chanzuckerberg/edu-design-system/issues/2446)) ([3c9c61e](https://github.com/chanzuckerberg/edu-design-system/commit/3c9c61e76038403b463fdecc61cae86c9ff85257))
+* **tokens:** remove brand tokens ([#2451](https://github.com/chanzuckerberg/edu-design-system/issues/2451)) ([cc9c29e](https://github.com/chanzuckerberg/edu-design-system/commit/cc9c29e1b2f33df7636ebb651de26844c59646c2))
+* **tokens:** remove pink primitive tokens ([#2450](https://github.com/chanzuckerberg/edu-design-system/issues/2450)) ([41ae0e8](https://github.com/chanzuckerberg/edu-design-system/commit/41ae0e8f4e03867a9e7cf4ca51ad1b78f034ae7c))
+* **typography:** remove decorative presets ([#2449](https://github.com/chanzuckerberg/edu-design-system/issues/2449)) ([7de2f0e](https://github.com/chanzuckerberg/edu-design-system/commit/7de2f0eaf2e6832fd5f17ee4d8df9c393b8eb750))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2452](https://github.com/chanzuckerberg/edu-design-system/issues/2452)) ([e793cea](https://github.com/chanzuckerberg/edu-design-system/commit/e793ceaaea79047a697ec0c1a064b0a8c69ea1b2))
+
 ## [17.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.6.0...v17.7.0) (2026-04-07)
 
 
