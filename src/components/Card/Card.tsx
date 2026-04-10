@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
-import { useId } from '../../util/useId';
 import type { Size } from '../../util/variant-types';
 
 import Heading from '../Heading';
@@ -22,7 +21,13 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    */
   className?: string;
   /**
-   * When `isInteractive` and has a behavior set, this is used as the name of the hidden form field.
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--card__top-stripe-bg`
+   */
+  style?: CardCSSProperties;
+  /**
+   * When `isInteractive` and has a behavior set, name is used as the name of the hidden form field.
    */
   name?: string;
   // Design API
@@ -61,10 +66,6 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    * **Default is `"none"`**.
    */
   topStripe?: 'none' | 'medium' | 'high';
-  /**
-   * Class to adjust top stripe background color. Choose from brand-background tokens utility classes.
-   */
-  topStripeColor?: string;
 };
 export type CardSubComponentProps = {
   // Component API
@@ -115,6 +116,10 @@ export type CardHeaderProps = {
   title?: string;
 };
 
+export interface CardCSSProperties extends React.CSSProperties {
+  '--card__top-stripe-bg'?: string;
+}
+
 // TODO: needs useRef for input field (allow react to control things)?
 /**
  * `import {Card} from "@chanzuckerberg/eds";`
@@ -132,7 +137,6 @@ export const Card = ({
   isInteractive = false,
   name,
   topStripe = 'none',
-  topStripeColor = '',
   ...other
 }: CardProps) => {
   const componentClassName = clsx(
@@ -146,7 +150,7 @@ export const Card = ({
     className,
   );
 
-  const behaviorId = useId();
+  const behaviorId = React.useId();
   const cardComponent = (
     <div className={componentClassName} {...other}>
       {children}
@@ -155,7 +159,6 @@ export const Card = ({
           className={clsx(
             styles['card__top-stripe'],
             styles[`top-stripe--${topStripe}`],
-            topStripeColor,
           )}
         ></div>
       )}
@@ -292,18 +295,11 @@ const CardHeader = ({
   );
 };
 
-const ChildCard = ({ className, ...other }: CardProps) => {
-  const childClassName = clsx(className, styles['child-card']);
-  return <Card {...other} className={childClassName} containerStyle="high" />;
-};
-
 Card.displayName = 'Card';
 CardBody.displayName = 'Card.Body';
 CardFooter.displayName = 'Card.Footer';
 CardHeader.displayName = 'Card.Header';
-ChildCard.displayName = 'Card.ChildCard';
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;
 Card.Header = CardHeader;
-Card.ChildCard = ChildCard;

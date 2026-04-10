@@ -79,7 +79,7 @@ type FieldsetLegendProps = {
   /**
    * Secondary text used to describe the content in more detail
    */
-  subtitle?: string;
+  subTitle?: string;
   /**
    * The title/heading of the component
    */
@@ -142,7 +142,7 @@ const FieldsetLegend = ({
   isDisabled: _,
   required,
   showHint,
-  subtitle,
+  subTitle,
   title,
   ...other
 }: FieldsetLegendProps) => {
@@ -155,8 +155,8 @@ const FieldsetLegend = ({
   );
 
   assertEdsUsage(
-    [!title && !!subtitle],
-    'When using "subtitle" you must also use "title',
+    [!title && !!subTitle],
+    'When using "subTitle" you must also use "title"',
   );
 
   return (
@@ -194,7 +194,7 @@ const FieldsetLegend = ({
           )}
         </div>
       )}
-      {subtitle && <FieldNote disabled={isDisabled}>{subtitle}</FieldNote>}
+      {subTitle && <FieldNote disabled={isDisabled}>{subTitle}</FieldNote>}
     </legend>
   );
 };

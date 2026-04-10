@@ -56,7 +56,7 @@
   * background colors but makes borders 100% opacity black. Without this, the
   * modal would have no clear boundary. 
   */
-  border: calc(var(--eds-theme-form-border-width) * 1px) transparent light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+  border: 1px solid transparent;
 
   display: flex;
   flex-direction: column;
@@ -94,13 +94,6 @@
   padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
 
   background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
-}
-
-.modal-footer--sticky {
-  position: sticky;
-  bottom: 0;
-
-  box-shadow: var(--eds-box-shadow-xl);
 }
 
 /**
@@ -352,15 +345,6 @@
     max-height: 480px;
     max-width: 560px;
   }
-}
-
-/**
- * Allows scrolling of the modal content except for sticky footer.
- * This functionality is our intended scroll behavior but consuming teams can 
- * style the body content as they wish to handle overflow in various ways.
- */
-.modal__content--scrollable {
-  overflow: auto;
 }
 
 /**

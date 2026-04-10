@@ -168,7 +168,6 @@ export default {
     './src/components/**/*.stories.{ts,tsx}',
     './src/components/**/*Example.tsx',
     './.storybook/**/*.{js,jsx,ts,tsx}',
-    './src/components/Table/StackedCardsToTable.tsx',
   ],
   theme: { ...applyTailwindConfig(edsTokens) },
 } satisfies Config;

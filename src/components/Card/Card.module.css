@@ -13,7 +13,7 @@
 
   padding: calc(var(--eds-spacing-size-3) * 1px);
   height: 100%;
-  border: calc(var(--eds-theme-border-width) * 1px) solid;
+  border: 1px solid;
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
   &:focus-visible {
@@ -25,13 +25,6 @@
   &.card--is-interactive {
     cursor: pointer;
   }
-}
-
-.card.child-card {
-  margin-top: calc(var(--eds-spacing-size-2) * 1px);
-  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
-
-  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 }
 
 /**
@@ -116,8 +109,9 @@
   width: 100%;
 }
 
+/* allow for top stripe to be overridden */
 :where(.card__top-stripe) {
-  background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
+  background-color: var(--card__top-stripe-bg, light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis)));
 }
 
 .card__behavior-input {

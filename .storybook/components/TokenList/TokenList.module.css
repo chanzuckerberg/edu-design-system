@@ -1,8 +1,8 @@
 .token-list__input {
   width: 100%;
   height: calc(var(--eds-spacing-size-10) * 1px);
-  border: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)) solid calc(var(--eds-border-width-sm) * 1px);
-  outline: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)) solid calc(var(--eds-border-width-sm) * 1px);
+  border: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)) solid 1px;
+  outline: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)) solid 1px;
 }
 
 .token-list__value {

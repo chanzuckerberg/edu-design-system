@@ -24,14 +24,16 @@
 *:has(> .avatar--is-interactive):focus-visible {
   border-radius: calc(var(--eds-border-radius-full) * 1px);
 
-  @mixin focus;
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+  outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
 }
 
 @supports not selector(:focus-visible) {
   *:has(> .avatar--is-interactive):focus {
     border-radius: calc(var(--eds-border-radius-full) * 1px);
 
-    @mixin focus;
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
+    outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
   }
 }
 

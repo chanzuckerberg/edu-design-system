@@ -3,11 +3,6 @@ import './tokens-dist/css/variables.css';
 import './tokens-dist/css/variables-dark.css';
 
 /**
- * 1.x component theme exports
- */
-export { default as Table } from './components/Table';
-
-/**
  * 2.x component theme exports
  */
 export { default as AppFooter } from './components/AppFooter';

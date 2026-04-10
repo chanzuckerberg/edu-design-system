@@ -13,4 +13,11 @@
 
 ## Component Version Consistency
 
-- When there are any changes to component code (src/**/*.tsx), make sure that the version string specified in the "tags" block of the associated story is also update, following semver rules. For instance, if the commit message is "fix(Accordion): some change", the in the accordion's storybook file (for example Accordion.stories.tsx) should increment the patch version.
+- When there are any changes to component code (src/**/*.tsx), make sure that the version string specified in the "tags" block of the associated story is also updated, following semver rules. For instance, if the commit message is "fix(Accordion): some change", the in the accordion's storybook file (for example Accordion.stories.tsx) should increment the patch version.
+
+## Component API guidance
+
+### Providing extended types for any CSS Custom Properties
+
+- When a new or existing CSS custom property (CSS Variable) is added  to a component's CSS module code (src/**/*.module.css), make sure that this is also defined as part of that component's root node API. This should include the following: Extending the React.CSSProperties interface to include a list of any properties defined for this component, adding `style` to the props type of the component using this new interface, and at least one story demonstrating the use of each defined CSS custom property
+- The documentation for the `style` prop should include a list of the CSS custom properties defined in the CSS module for the component.

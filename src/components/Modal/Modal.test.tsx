@@ -79,75 +79,70 @@ describe('Modal', () => {
     });
   });
 
-  it('does not throw an error if modal uses <Modal.Title>', () => {
-    const modalWithTitle = (
+  it('does not print an error if modal uses <Modal.Title>', () => {
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
+
+    render(
       <Modal onClose={() => {}} open>
         <Modal.Header>
           <Modal.Title>Modal Title</Modal.Title>
         </Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>
-      </Modal>
+      </Modal>,
     );
-    const renderMethod = () => {
-      render(modalWithTitle);
-    };
 
-    expect(renderMethod).not.toThrow(Error);
+    expect(consoleErrorMock).toHaveBeenCalledTimes(0);
+    consoleErrorMock.mockRestore();
   });
 
-  it('does not throw an error if modal uses aria-label', () => {
-    const modalWithAriaLabel = (
+  it('does not print an error if modal uses aria-label', () => {
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
+
+    render(
       <Modal aria-label="aria label" onClose={() => {}} open>
         <Modal.Header>Modal Title</Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>
-      </Modal>
+      </Modal>,
     );
-    const renderMethod = () => {
-      render(modalWithAriaLabel);
-    };
 
-    expect(renderMethod).not.toThrow(Error);
+    expect(consoleErrorMock).toHaveBeenCalledTimes(0);
+    consoleErrorMock.mockRestore();
   });
 
-  it('does throw an error if modal does not use <Modal.Title> or aria-label', () => {
-    const modalWithoutTitleOrAriaLabel = (
+  it('does print an error if modal does not use <Modal.Title> or aria-label', () => {
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
+
+    render(
       <Modal onClose={() => {}} open>
         <Modal.Header>Modal Title</Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>
-      </Modal>
+      </Modal>,
     );
-    const renderMethod = () => {
-      render(modalWithoutTitleOrAriaLabel);
-    };
 
-    // expect console error from react, suppressed.
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
-    expect(renderMethod).toThrow(Error);
+    expect(consoleErrorMock).toHaveBeenCalledTimes(1);
     consoleErrorMock.mockRestore();
   });
 
   it('prints a warning when height is used with size="sm"', () => {
-    const modalWithoutTitleOrAriaLabel = (
+    const consoleWarningMock = jest.spyOn(console, 'warn');
+    consoleWarningMock.mockImplementation();
+
+    render(
       <Modal height="dynamic" onClose={() => {}} open size="sm">
         <Modal.Header>
           <Modal.Title>Modal Title</Modal.Title>
         </Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>
-      </Modal>
+      </Modal>,
     );
-    const renderMethod = () => {
-      render(modalWithoutTitleOrAriaLabel);
-    };
 
-    // expect console error from react, suppressed.
-    const consoleWarningMock = jest.spyOn(console, 'warn');
-    consoleWarningMock.mockImplementation();
-    expect(renderMethod).not.toThrow();
     expect(consoleWarningMock).toHaveBeenCalledTimes(1);
     consoleWarningMock.mockRestore();
   });
