@@ -17,9 +17,9 @@ export default create({
   colorSecondary: tokens.EdsThemeColorTextUtilityDefaultSecondary,
 
   // App Chrome
-  appBg: tokens.EdsThemeColorBodyBackground,
-  appContentBg: tokens.EdsThemeColorBodyBackground,
-  appPreviewBg: tokens.EdsThemeColorBodyBackground,
+  appBg: tokens.EdsThemeColorBackgroundUtilityBase1,
+  appContentBg: tokens.EdsThemeColorBackgroundUtilityBase1,
+  appPreviewBg: tokens.EdsThemeColorBackgroundUtilityBase1,
   appBorderColor: tokens.EdsThemeColorBorderUtilityDefaultLowEmphasis,
   appBorderRadius: 0,
 

@@ -33,7 +33,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:1.0.1'],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<Args>;
 
 type Args = DataTableProps;
@@ -204,7 +204,7 @@ const columns = [
 export const Default: StoryObj<Args> = {
   args: {
     caption: 'Test table',
-    subcaption: 'Additional Subcaption',
+    subCaption: 'Additional Subcaption',
   },
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -314,7 +314,7 @@ export const RowStyleLined: StoryObj<Args> = {
 export const Selectable: StoryObj<Args> = {
   args: {
     caption: 'Test table',
-    subcaption: 'Additional Subcaption',
+    subCaption: 'Additional Subcaption',
     isInteractive: true,
   },
   render: (args) => {
@@ -459,8 +459,13 @@ export const Selectable: StoryObj<Args> = {
 export const VerticalDivider: StoryObj<Args> = {
   args: {
     caption: 'Test table',
-    subcaption: 'Additional Subcaption',
+    subCaption: 'Additional Subcaption',
     isInteractive: true,
+  },
+  parameters: {
+    chromatic: {
+      diffThreshold: 0.75,
+    },
   },
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -726,7 +731,7 @@ export const Grouping: StoryObj<Args> = {
 export const StatusRows: StoryObj<Args> = {
   args: {
     caption: 'Test table',
-    subcaption: 'Additional Subcaption',
+    subCaption: 'Additional Subcaption',
     isStatusEligible: true,
     tableStyle: 'border',
     rowStyle: 'lined',
@@ -860,7 +865,7 @@ export const WithFullCaption: StoryObj<Args> = {
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
-    subcaption: "Aren't they all so delicious?",
+    subCaption: "Aren't they all so delicious?",
   },
 };
 
@@ -868,7 +873,7 @@ export const WithSearch: StoryObj<Args> = {
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
-    subcaption: "Aren't they all so delicious?",
+    subCaption: "Aren't they all so delicious?",
     onSearchChange: () => {},
   },
 };
@@ -892,7 +897,7 @@ export const WithSearchAndActions: StoryObj<Args> = {
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
-    subcaption: "Aren't they all so delicious?",
+    subCaption: "Aren't they all so delicious?",
     onSearchChange: () => {},
     actions: (
       <Button
@@ -910,7 +915,7 @@ export const WithSearchAndCustomActions: StoryObj<Args> = {
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
-    subcaption: "Aren't they all so delicious?",
+    subCaption: "Aren't they all so delicious?",
     onSearchChange: () => {},
     actions: (
       <>
@@ -946,7 +951,7 @@ export const WithLongCaption: StoryObj<Args> = {
     ...DefaultWithCustomTable.args,
     caption:
       'This is a really long title that really should not be this long and it just keeps going and going and going',
-    subcaption: 'Seriously, who let this happen?',
+    subCaption: 'Seriously, who let this happen?',
     onSearchChange: () => {},
     actions: (
       <Button

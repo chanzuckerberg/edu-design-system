@@ -20,11 +20,11 @@ describe('<Fieldset />', () => {
   generateSnapshots(stories as StoryFile);
 
   describe('emits warnings when misused', () => {
-    it('warns when using subtitle by itself', () => {
+    it('warns when using subTitle by itself', () => {
       const consoleMock = jest.spyOn(console, 'warn');
       consoleMock.mockImplementation();
 
-      render(<Fieldset.Legend subtitle="should generate warning" />);
+      render(<Fieldset.Legend subTitle="should generate warning" />);
 
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });

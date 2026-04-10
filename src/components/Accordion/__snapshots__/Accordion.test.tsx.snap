@@ -301,7 +301,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subtitle"
+            class="text text--body-md accordion-button__subTitle"
           >
             Quam lacus maecenas nibh malesuada.
           </span>
@@ -369,7 +369,7 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subtitle"
+            class="text text--body-md accordion-button__subTitle"
           >
             Quam lacus maecenas nibh malesuada.
           </span>
@@ -1304,7 +1304,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subtitle"
+            class="text text--body-md accordion-button__subTitle"
           >
             <span>
               "Quam lacus maecenas nibh malesuada."

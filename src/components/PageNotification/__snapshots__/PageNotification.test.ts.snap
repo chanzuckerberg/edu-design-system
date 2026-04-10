@@ -480,7 +480,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
+exports[`<PageNotification /> WarningWithSubTitle story renders snapshot 1`] = `
 <aside
   aria-label="Warning title and subtitle which communicates info to the user"
   class="page-notification page-notification--status-warning w-[384px]"
@@ -514,7 +514,7 @@ exports[`<PageNotification /> WarningWithSubtitle story renders snapshot 1`] = `
         class="text text--body-sm page-notification__sub-title"
       >
         <span>
-          Subtitle text
+          SubTitle text
         </span>
       </p>
     </div>

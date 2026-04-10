@@ -17,7 +17,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:2.2'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -173,7 +173,7 @@ export const LargeFixed: Story = {
 };
 
 /**
- * The dynzmic setting for height is the new default, which handles scrollable content areas in the `Modal` body content.
+ * The dynamic setting for height is the new default, which handles scrollable content areas in the `Modal` body content.
  * - When the content height is small, `Modal` is centered on the screen.
  * - When the content is taller and requires scroll, `Modal` will keep the header and footer on screen, but allow the content to scroll
  *
@@ -189,67 +189,6 @@ export const LargeDynamic: Story = {
     <InteractiveExample {...args}>
       <Modal.Header>
         <Modal.Title>Modal title</Modal.Title>
-        <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
-      </Modal.Header>
-      <Modal.Body>
-        <div className="h-[500px] w-full">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-          Suscipit dui, nunc sit dui tellus massa laoreet tellus. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nulla amet, massa
-          ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et
-          ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc
-          sit dui tellus massa laoreet tellus. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam
-          lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus
-          amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa
-          laoreet tellus. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh
-          malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet
-          tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </div>
-      </Modal.Body>
-      <Modal.Footer>
-        <ButtonGroup>
-          <Button onClick={() => {}} rank="primary">
-            Primary
-          </Button>
-          <Button onClick={() => {}} rank="secondary">
-            Secondary
-          </Button>
-        </ButtonGroup>
-      </Modal.Footer>
-    </InteractiveExample>
-  ),
-  play: Default.play,
-};
-
-/**
- * Small will always try to take up the least amount of space, and ignore the height property.
- */
-export const Small: Story = {
-  args: {
-    size: 'sm',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Modals can contain long, scrollable text. This is not recommended, however.
- */
-export const WithLongTextScrollable: Story = {
-  args: {
-    isScrollable: true,
-  },
-  parameters: Default.parameters,
-  play: Default.play,
-  render: (args) => (
-    <InteractiveExample {...args}>
-      <Modal.Header>
-        <Modal.Title>Modal Title</Modal.Title>
         <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
       </Modal.Header>
       <Modal.Body>
@@ -334,6 +273,19 @@ export const WithLongTextScrollable: Story = {
       </Modal.Footer>
     </InteractiveExample>
   ),
+  play: Default.play,
+};
+
+/**
+ * Small will always try to take up the least amount of space, and ignore the height property.
+ */
+export const Small: Story = {
+  args: {
+    size: 'sm',
+  },
+  parameters: Default.parameters,
+  render: Default.render,
+  play: Default.play,
 };
 
 /**

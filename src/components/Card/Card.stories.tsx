@@ -1,10 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import { userEvent } from '@storybook/testing-library';
-
 import React from 'react';
 
 import { Card } from './Card';
-
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
@@ -35,20 +33,6 @@ export default {
     ),
   },
   argTypes: {
-    topStripeColor: {
-      options: [
-        'bg-brand-blue-lowEmphasis',
-        'bg-brand-green-lowEmphasis',
-        'bg-brand-orange-lowEmphasis',
-        'bg-brand-pink-lowEmphasis',
-        'bg-brand-purple-lowEmphasis',
-        'bg-brand-red-lowEmphasis',
-        'bg-brand-yellow-lowEmphasis',
-      ],
-      control: {
-        type: 'select',
-      },
-    },
     children: {
       control: false,
     },
@@ -59,7 +43,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['autodocs', 'version:2.0.2'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
@@ -237,13 +221,6 @@ export const WithHorizontalPrimaryButton: Story = {
   },
 };
 
-export const CustomBrandCard: Story = {
-  args: {
-    containerColor: 'custom-brand',
-    className: 'border-brand-red bg-brand-red w-[384px]',
-  },
-};
-
 /**
  * You can add a stripe along the top of a card to enhance and emphasis its appearance
  */
@@ -276,12 +253,17 @@ export const TopStripe: Story = {
 };
 
 /**
- * Cards also allow for using custom top stripe colors. Use one of the low-emphasis brand colors (see the control above to test)
+ * Cards also allow for using custom top stripe colors. This is exposed by using the `--card__top-stripe-bg` CSS Custom Property.
+ *
+ * You can make use of this by providing any of the color tokens, CSS gradients, or anything you need as the value.
  */
 export const CustomTopStripe: Story = {
   args: {
     topStripe: 'high',
-    topStripeColor: 'bg-brand-purple-lowEmphasis',
+    style: {
+      '--card__top-stripe-bg':
+        'var(--eds-theme-color-background-utility-critical-high-emphasis)',
+    },
     children: (
       <>
         <Card.Header
@@ -333,33 +315,6 @@ export const BackgroundCallout: Story = {
             </Button>
           </ButtonGroup>
         </Card.Footer>
-      </>
-    ),
-  },
-};
-
-/**
- * Cards have hierarchy, and can contain other cards with one level. When using a nested card, you can use `.ChildCard`,
- * which comes preconfigured with some settings and defaults applied. All the sub-components of card work within `.Childcard`.
- */
-export const ChildCards: Story = {
-  args: {
-    containerColor: 'call-out',
-    topStripe: 'high',
-    containerStyle: 'high',
-    children: (
-      <>
-        <Card.Header size="md" title="Card Group"></Card.Header>
-        <Card.Body>
-          <Card.ChildCard draggable="true" isInteractive>
-            <Card.Header
-              action={<CardMenu />}
-              eyebrow="Eyebrow Text"
-              subTitle="Sub-title text"
-              title="Title text"
-            />
-          </Card.ChildCard>
-        </Card.Body>
       </>
     ),
   },

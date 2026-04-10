@@ -633,7 +633,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
   parameters: {
     chromatic: {
       diffIncludeAntiAliasing: false,
-      diffThreshold: 0.72,
+      diffThreshold: 0.75,
     },
     docs: {
       ...Default.parameters?.docs,

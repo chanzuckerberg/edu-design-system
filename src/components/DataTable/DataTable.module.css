@@ -34,7 +34,7 @@
   width: 100%;
 
   .data-table__caption+&,
-  .data-table__subcaption+& {
+  .data-table__subCaption+& {
     margin-top: calc(var(--eds-spacing-size-4) * 1px);
   }
 }
@@ -270,7 +270,7 @@
     color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   }
 
-  .data-table__subcaption {
+  .data-table__subCaption {
     color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   }
 
