@@ -99,28 +99,6 @@ export const BackgroundUtility: Story = {
 };
 
 /**
- * These general purpose tokens are used to add brand color to the background of custom elements.
- */
-export const BackgroundBrand: Story = {
-  args: {
-    caption: 'Background Brand Tokens',
-    subCaption:
-      'Note: any colors defined as lime green (#OOFFOO) do not exist in the current theme.',
-    listItems: getTokenListItems(
-      'eds-theme-color-background-brand',
-      'color',
-      (name, column, filterTerm) => {
-        if (column === 'figma') {
-          return '→ background/brand/' + getSpecifier(name, filterTerm);
-        } else {
-          return 'bg-brand-' + getSpecifier(name, filterTerm);
-        }
-      },
-    ),
-  },
-};
-
-/**
  * Border utility tokens can be used to add color to individual custom elements.
  *
  * - Do not use state tokens (e.g., ending with `-(hover|active|visited)`) for non-interactive elements
@@ -136,28 +114,6 @@ export const BorderUtility: Story = {
           return '→ border/utility/' + getSpecifier(name, filterTerm);
         } else {
           return 'border-utility-' + getSpecifier(name, filterTerm);
-        }
-      },
-    ),
-  },
-};
-
-/**
- * Border brand tokens can be used sparingly to add branded enhancements to internal or custom components.
- */
-export const BorderBrand: Story = {
-  args: {
-    caption: 'Border Brand Tokens',
-    subCaption:
-      'Note: any colors defined as lime green (#OOFFOO) do not exist in the current theme.',
-    listItems: getTokenListItems(
-      'eds-theme-color-border-brand',
-      'color',
-      (name, column, filterTerm) => {
-        if (column === 'figma') {
-          return '→ border/brand/' + getSpecifier(name, filterTerm);
-        } else {
-          return 'border-brand-' + getSpecifier(name, filterTerm);
         }
       },
     ),

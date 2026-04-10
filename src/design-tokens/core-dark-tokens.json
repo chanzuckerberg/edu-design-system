@@ -737,80 +737,6 @@
               "value": "{eds.color.white}",
               "group": "color"
             },
-            "brand": {
-              "red": {
-                "@": {
-                  "value": "{eds.color.red.350}",
-                  "group": "color"
-                },
-                "lowEmphasis": {
-                  "value": "{eds.color.red.050}",
-                  "group": "color"
-                }
-              },
-              "orange": {
-                "@": {
-                  "value": "#00FF00",
-                  "group": "color"
-                },
-                "lowEmphasis": {
-                  "value": "#00FF00",
-                  "group": "color"
-                }
-              },
-              "yellow": {
-                "@": {
-                  "value": "{eds.color.yellow.050}",
-                  "group": "color"
-                },
-                "lowEmphasis": {
-                  "value": "{eds.color.yellow.050}",
-                  "group": "color"
-                }
-              },
-              "green": {
-                "@": {
-                  "value": "{eds.color.green.350}",
-                  "group": "color"
-                },
-                "lowEmphasis": {
-                  "value": "{eds.color.green.050}",
-                  "group": "color"
-                }
-              },
-              "blue": {
-                "1": {
-                  "value": "{eds.color.blue.200}",
-                  "group": "color"
-                },
-                "2": {
-                  "value": "{eds.color.blue.450}",
-                  "group": "color"
-                },
-                "3": {
-                  "value": "#00FF00",
-                  "group": "color"
-                },
-                "lowEmphasis": {
-                  "value": "{eds.color.blue.050}",
-                  "group": "color"
-                }
-              },
-              "purple": {
-                "@": {
-                  "value": "#00FF00",
-                  "group": "color"
-                },
-                "lowEmphasis": {
-                  "value": "#00FF00",
-                  "group": "color"
-                }
-              },
-              "pink": {
-                "value": "#00FF00",
-                "group": "color"
-              }
-            },
             "skeleton": {
               "@": {
                 "value": "{eds.color.neutral.100}",
@@ -1159,46 +1085,6 @@
             }
           },
           "border": {
-            "brand": {
-              "red": {
-                "value": "{eds.color.red.350}",
-                "group": "color"
-              },
-              "orange": {
-                "value": "#00FF00",
-                "group": "color"
-              },
-              "yellow": {
-                "value": "{eds.color.yellow.050}",
-                "group": "color"
-              },
-              "green": {
-                "value": "{eds.color.green.450}",
-                "group": "color"
-              },
-              "blue": {
-                "1": {
-                  "value": "{eds.color.blue.200}",
-                  "group": "color"
-                },
-                "2": {
-                  "value": "{eds.color.blue.450}",
-                  "group": "color"
-                },
-                "3": {
-                  "value": "#00FF00",
-                  "group": "color"
-                }
-              },
-              "purple": {
-                "value": "#00FF00",
-                "group": "color"
-              },
-              "pink": {
-                "value": "#00FF00",
-                "group": "color"
-              }
-            },
             "appHeaderSeparator": {
               "value": "{eds.color.neutral.650}",
               "group": "color"
@@ -1353,24 +1239,6 @@
             }
           },
           "icon": {
-            "brand": {
-              "red": {
-                "value": "{eds.color.red.650}",
-                "group": "color"
-              },
-              "yellow": {
-                "value": "{eds.color.yellow.550}",
-                "group": "color"
-              },
-              "green": {
-                "value": "{eds.color.green.650}",
-                "group": "color"
-              },
-              "blue": {
-                "value": "{eds.color.blue.650}",
-                "group": "color"
-              }
-            },
             "utility": {
               "default": {
                 "primary": {
@@ -1696,24 +1564,6 @@
               },
               "placeholder": {
                 "value": "{eds.color.neutral.550}",
-                "group": "color"
-              }
-            },
-            "brand": {
-              "red": {
-                "value": "{eds.color.red.650}",
-                "group": "color"
-              },
-              "yellow": {
-                "value": "{eds.color.yellow.550}",
-                "group": "color"
-              },
-              "green": {
-                "value": "{eds.color.green.650}",
-                "group": "color"
-              },
-              "blue": {
-                "value": "{eds.color.blue.650}",
                 "group": "color"
               }
             },

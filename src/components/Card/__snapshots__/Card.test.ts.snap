@@ -40,7 +40,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r15:"
+            id="headlessui-menu-button-:r14:"
             type="button"
           >
             <svg
@@ -166,6 +166,64 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
   >
     <label
       class="card__behavior-label"
+      for=":r1a:"
+    >
+      <div
+        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+      >
+        <div
+          class="card__header header--size-md"
+        >
+          <div
+            class="header__text"
+          >
+            <div
+              class="text text--overline-md header__eyebrow header--size-md"
+            >
+              Recommended for you
+            </div>
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
+            >
+              Question of the day
+            </h3>
+            <div
+              class="text text--body-lg header__sub-title header--size-md"
+            >
+              Get to know your colleagues
+            </div>
+          </div>
+        </div>
+        <div
+          class="card__body"
+        >
+          <div
+            class="fpo"
+          >
+            Card Body
+          </div>
+        </div>
+        <div
+          class="card__footer"
+        >
+          <div
+            class="fpo"
+          >
+            Card Footer
+          </div>
+        </div>
+        <div
+          class="card__top-stripe top-stripe--none"
+        />
+        <input
+          class="card__behavior-input"
+          id=":r1a:"
+          type="checkbox"
+        />
+      </div>
+    </label>
+    <label
+      class="card__behavior-label"
       for=":r1b:"
     >
       <div
@@ -222,109 +280,6 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
         />
       </div>
     </label>
-    <label
-      class="card__behavior-label"
-      for=":r1c:"
-    >
-      <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
-      >
-        <div
-          class="card__header header--size-md"
-        >
-          <div
-            class="header__text"
-          >
-            <div
-              class="text text--overline-md header__eyebrow header--size-md"
-            >
-              Recommended for you
-            </div>
-            <h3
-              class="heading heading--headline-sm header__title header--size-md"
-            >
-              Question of the day
-            </h3>
-            <div
-              class="text text--body-lg header__sub-title header--size-md"
-            >
-              Get to know your colleagues
-            </div>
-          </div>
-        </div>
-        <div
-          class="card__body"
-        >
-          <div
-            class="fpo"
-          >
-            Card Body
-          </div>
-        </div>
-        <div
-          class="card__footer"
-        >
-          <div
-            class="fpo"
-          >
-            Card Footer
-          </div>
-        </div>
-        <div
-          class="card__top-stripe top-stripe--none"
-        />
-        <input
-          class="card__behavior-input"
-          id=":r1c:"
-          type="checkbox"
-        />
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`<Card /> CustomBrandCard story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="card card--container-style-low card--container-color-custom-brand border-brand-red bg-brand-red w-[384px]"
-  >
-    <div
-      class="card__header header--size-md"
-    >
-      <div
-        class="header__custom"
-      >
-        <div
-          class="fpo w-full"
-        >
-          Card Header
-        </div>
-      </div>
-    </div>
-    <div
-      class="card__body"
-    >
-      <div
-        class="fpo"
-      >
-        Card Body
-      </div>
-    </div>
-    <div
-      class="card__footer"
-    >
-      <div
-        class="fpo"
-      >
-        Card Footer
-      </div>
-    </div>
-    <div
-      class="card__top-stripe top-stripe--none"
-    />
   </div>
 </div>
 `;
@@ -335,6 +290,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
 >
   <div
     class="card card--container-style-low card--container-color-default w-[384px]"
+    style="--card__top-stripe-bg: var(--eds-theme-color-background-utility-critical-high-emphasis);"
   >
     <div
       class="card__header header--size-md"
@@ -369,7 +325,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:ru:"
+            id="headlessui-menu-button-:rt:"
             type="button"
           >
             <svg
@@ -421,7 +377,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--high bg-brand-purple-lowEmphasis"
+      class="card__top-stripe top-stripe--high"
     />
   </div>
 </div>
@@ -526,6 +482,65 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
   >
     <label
       class="card__behavior-label"
+      for=":r18:"
+    >
+      <div
+        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+      >
+        <div
+          class="card__header header--size-md"
+        >
+          <div
+            class="header__text"
+          >
+            <div
+              class="text text--overline-md header__eyebrow header--size-md"
+            >
+              Recommended for you
+            </div>
+            <h3
+              class="heading heading--headline-sm header__title header--size-md"
+            >
+              Question of the day
+            </h3>
+            <div
+              class="text text--body-lg header__sub-title header--size-md"
+            >
+              Get to know your colleagues
+            </div>
+          </div>
+        </div>
+        <div
+          class="card__body"
+        >
+          <div
+            class="fpo"
+          >
+            Card Body
+          </div>
+        </div>
+        <div
+          class="card__footer"
+        >
+          <div
+            class="fpo"
+          >
+            Card Footer
+          </div>
+        </div>
+        <div
+          class="card__top-stripe top-stripe--none"
+        />
+        <input
+          class="card__behavior-input"
+          id=":r18:"
+          name="test"
+          type="radio"
+        />
+      </div>
+    </label>
+    <label
+      class="card__behavior-label"
       for=":r19:"
     >
       <div
@@ -583,65 +598,6 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
         />
       </div>
     </label>
-    <label
-      class="card__behavior-label"
-      for=":r1a:"
-    >
-      <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
-      >
-        <div
-          class="card__header header--size-md"
-        >
-          <div
-            class="header__text"
-          >
-            <div
-              class="text text--overline-md header__eyebrow header--size-md"
-            >
-              Recommended for you
-            </div>
-            <h3
-              class="heading heading--headline-sm header__title header--size-md"
-            >
-              Question of the day
-            </h3>
-            <div
-              class="text text--body-lg header__sub-title header--size-md"
-            >
-              Get to know your colleagues
-            </div>
-          </div>
-        </div>
-        <div
-          class="card__body"
-        >
-          <div
-            class="fpo"
-          >
-            Card Body
-          </div>
-        </div>
-        <div
-          class="card__footer"
-        >
-          <div
-            class="fpo"
-          >
-            Card Footer
-          </div>
-        </div>
-        <div
-          class="card__top-stripe top-stripe--none"
-        />
-        <input
-          class="card__behavior-input"
-          id=":r1a:"
-          name="test"
-          type="radio"
-        />
-      </div>
-    </label>
   </div>
 </div>
 `;
@@ -686,7 +642,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rn:"
+            id="headlessui-menu-button-:rm:"
             type="button"
           >
             <svg
