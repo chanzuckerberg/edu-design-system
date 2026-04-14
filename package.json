@@ -74,7 +74,7 @@
     "react-dom": ">= 18"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.9",
+    "@headlessui/react": "^2.2.10",
     "@tanstack/react-table": "^8.21.3",
     "@tippyjs/react": "^4.2.6",
     "chalk": "^4.1.2",
@@ -148,7 +148,7 @@
     "jsdom-testing-mocks": "^1.16.0",
     "lint-staged": "^15.5.2",
     "plop": "^4.0.5",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.9",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
     "postcss-loader": "^8.2.1",
