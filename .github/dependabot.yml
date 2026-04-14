@@ -4,8 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    # dependabot does not work with yarn v2, disabling for now
+    # Disable dependabot in favor of renovate
     open-pull-requests-limit: 0
+    # Note: security updates will always apply (targeting `main`)
+    # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#target-branch-
     target-branch: "next"
     commit-message:
       prefix: chore
