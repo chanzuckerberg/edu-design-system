@@ -28,12 +28,11 @@
       matchDatasources: ['npm'],
       stabilityDays: 5,
     },
-    // Our peerDependencies for React are as low as 17.0.2, so we should support React v17
     // https://docs.renovatebot.com/configuration-options/#allowedversions
     {
       matchPackageNames: ['react', 'react-dom'],
       groupName: 'react',
-      allowedVersions: '<=17.0.0',
+      allowedVersions: '<=18.0.0',
     },
     // Handle patch updates under 0.1.0 as potentially breaking and group them separately.
     // Workaround for https://github.com/renovatebot/renovate/issues/3588
