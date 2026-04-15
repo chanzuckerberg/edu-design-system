@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.4.0'],
+  tags: ['autodocs', 'version:1.4.1'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -346,6 +346,22 @@ export const MobileFloatingVerticalOrientation: Story = {
   args: {
     ...FloatingVerticalOrientation.args,
     orientation: 'vertical',
+  },
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
+ * When empty, we do not render the menu button (there is nothing to show).
+ */
+export const MobileFloatingVerticalEmpty: Story = {
+  args: {
+    ...MobileFloatingVerticalOrientation.args,
+    navGroups: [],
   },
   globals: {
     viewport: {

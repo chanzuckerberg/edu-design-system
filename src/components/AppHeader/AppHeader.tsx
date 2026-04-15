@@ -277,18 +277,20 @@ export const AppHeader = ({
                     />
                   ))}
                 </div>
-                <div className={styles['app-header__menu']}>
-                  <AppHeaderButton
-                    aria-label="Show Menu"
-                    icon="menu"
-                    iconLayout="icon-only"
-                    name="hamburger-menu"
-                    onClick={() => {
-                      document.getElementById('popover')?.showPopover();
-                    }}
-                    type="button"
-                  />
-                </div>
+                {navGroups?.length && (
+                  <div className={styles['app-header__menu']}>
+                    <AppHeaderButton
+                      aria-label="Show Menu"
+                      icon="menu"
+                      iconLayout="icon-only"
+                      name="hamburger-menu"
+                      onClick={() => {
+                        document.getElementById('popover')?.showPopover();
+                      }}
+                      type="button"
+                    />
+                  </div>
+                )}
               </>
             )}
             {headerOrientation === 'vertical' && (
@@ -301,7 +303,7 @@ export const AppHeader = ({
           </div>
         </div>
       </header>
-      {headerOrientation === 'horizontal'
+      {headerOrientation === 'horizontal' && navGroups?.length
         ? createPortal(
             <div
               className={drawerComponentClassName}
