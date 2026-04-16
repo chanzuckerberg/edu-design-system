@@ -123,6 +123,7 @@ export const EdsThemeColorBackgroundVisualPageIndicator = '#BCB9B6';
 export const EdsThemeColorBackgroundVisualPageIndicatorCurrent = '#19955D';
 export const EdsThemeColorBackgroundUtilityBase1 = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityBase2 = 'rgba(255, 255, 255, 0.60)';
+export const EdsThemeColorBackgroundUtilityBase3 = '#FAF9F8';
 export const EdsThemeColorBackgroundUtilityContainer = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityContainerHover = '#FAF9F8';
 export const EdsThemeColorBackgroundUtilityContainerActive = '#F4F1EF';
@@ -198,6 +199,12 @@ export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisHover =
   '#C2ECD9';
 export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisActive =
   '#C2ECD9';
+export const EdsThemeColorBackgroundUtilityInformationalHighEmphasis =
+  '#177A4D';
+export const EdsThemeColorBackgroundUtilityInformationalHighEmphasisHover =
+  '#125B3A';
+export const EdsThemeColorBackgroundUtilityInformationalHighEmphasisActive =
+  '#0E442B';
 export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis =
   'rgba(250, 249, 248, 0.00)';
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#E6E2DE';
@@ -318,4 +325,5 @@ export const EdsThemeColorTextUtilityInverseSecondary = '#BCB9B6';
 export const EdsThemeColorTextUtilityPlaceholder = '#6B6A64';
 export const EdsThemeColorTextAppHeaderPrimary = '#FFFFFF';
 export const EdsThemeColorTextAppHeaderSecondary = '#BCB9B6';
+export const EdsThemeColorTextHeadline = '#242423';
 export const EdsThemeColorTextHighlightForeground = '#30302E';

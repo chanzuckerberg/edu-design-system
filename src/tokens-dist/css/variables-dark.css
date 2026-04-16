@@ -262,6 +262,7 @@
   --eds-dark-theme-color-text-utility-default-primary-active: var(--eds-color-neutral-650);
   --eds-dark-theme-color-text-utility-default-primary-hover: var(--eds-color-neutral-750);
   --eds-dark-theme-color-text-utility-default-primary: var(--eds-color-neutral-850);
+  --eds-dark-theme-color-icon-headline: var(--eds-color-neutral-850);
   --eds-dark-theme-color-icon-app-header-secondary: var(--eds-color-neutral-250);
   --eds-dark-theme-color-icon-app-header-primary: var(--eds-color-white);
   --eds-dark-theme-color-icon-utility-placeholder: var(--eds-color-neutral-550);
@@ -331,6 +332,9 @@
   --eds-dark-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-neutral-025);
   --eds-dark-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
   --eds-dark-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
+  --eds-dark-theme-color-background-utility-informational-high-emphasis-active: var(--eds-color-green-750);
+  --eds-dark-theme-color-background-utility-informational-high-emphasis-hover: var(--eds-color-green-650);
+  --eds-dark-theme-color-background-utility-informational-high-emphasis: var(--eds-color-green-550);
   --eds-dark-theme-color-background-utility-informational-low-emphasis-active: var(--eds-color-green-100);
   --eds-dark-theme-color-background-utility-informational-low-emphasis-hover: var(--eds-color-green-100);
   --eds-dark-theme-color-background-utility-informational-low-emphasis: var(--eds-color-green-050);
@@ -377,6 +381,7 @@
   --eds-dark-theme-color-background-utility-container-active: var(--eds-color-neutral-050);
   --eds-dark-theme-color-background-utility-container-hover: var(--eds-color-neutral-025);
   --eds-dark-theme-color-background-utility-container: var(--eds-color-white);
+  --eds-dark-theme-color-background-utility-base-3: var(--eds-color-neutral-025);
   --eds-dark-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-dark-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-dark-theme-color-background-visual-page-indicator: var(--eds-color-neutral-250);
