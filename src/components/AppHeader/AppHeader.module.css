@@ -56,6 +56,7 @@
 
   .app-header__content {
     flex-direction: row;
+    min-height: 40px;
     max-width: 1320px;
     /* add in a bit of left/right padding to prevent outline from being cut off */
     padding: 0 2px;

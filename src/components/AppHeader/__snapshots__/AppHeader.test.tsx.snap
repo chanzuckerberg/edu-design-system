@@ -1082,6 +1082,44 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
 </header>
 `;
 
+exports[`<AppHeader /> MobileFloatingVerticalEmpty story renders snapshot 1`] = `
+<header
+  class="app-header app-header--orientation-vertical app-header--style-floating"
+>
+  <div>
+    <div
+      class="app-header__content"
+    >
+      <div
+        class="app-header-title"
+      >
+        <div
+          class="app-header-title__title"
+        >
+          <span
+            class="text text--headline-sm"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="app-header-title__sub-title"
+        >
+          <span
+            class="text text--body-md"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="drawer-content"
+      />
+    </div>
+  </div>
+</header>
+`;
+
 exports[`<AppHeader /> MobileFloatingVerticalOrientation story renders snapshot 1`] = `
 <header
   class="app-header app-header--orientation-vertical app-header--style-floating"
