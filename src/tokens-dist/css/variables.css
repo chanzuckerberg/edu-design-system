@@ -228,6 +228,7 @@
   --eds-typography-font-family-1: 'parabolica', Inter, Arial, sans-serif;
   --eds-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
   --eds-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
+  --eds-theme-color-text-headline: var(--eds-color-neutral-850);
   --eds-theme-color-text-app-header-secondary: var(--eds-color-neutral-250);
   --eds-theme-color-text-app-header-primary: var(--eds-color-white);
   --eds-theme-color-text-utility-placeholder: var(--eds-color-neutral-550);
@@ -331,6 +332,9 @@
   --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
   --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-informational-high-emphasis-active: var(--eds-color-green-750);
+  --eds-theme-color-background-utility-informational-high-emphasis-hover: var(--eds-color-green-650);
+  --eds-theme-color-background-utility-informational-high-emphasis: var(--eds-color-green-550);
   --eds-theme-color-background-utility-informational-low-emphasis-active: var(--eds-color-green-100);
   --eds-theme-color-background-utility-informational-low-emphasis-hover: var(--eds-color-green-100);
   --eds-theme-color-background-utility-informational-low-emphasis: var(--eds-color-green-050);
@@ -377,6 +381,7 @@
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-container: var(--eds-color-white);
+  --eds-theme-color-background-utility-base-3: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-theme-color-background-visual-page-indicator: var(--eds-color-neutral-250);

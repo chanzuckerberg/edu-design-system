@@ -337,7 +337,8 @@
           "utility": {
             "base": {
               "1": "#FFFFFF",
-              "2": "rgba(255, 255, 255, 0.60)"
+              "2": "rgba(255, 255, 255, 0.60)",
+              "3": "#FAF9F8"
             },
             "container": {
               "@": "#FFFFFF",
@@ -434,6 +435,11 @@
                 "@": "#E0F5EC",
                 "hover": "#C2ECD9",
                 "active": "#C2ECD9"
+              },
+              "highEmphasis": {
+                "@": "#177A4D",
+                "hover": "#125B3A",
+                "active": "#0E442B"
               }
             },
             "disabled": {
@@ -645,7 +651,8 @@
           "appHeader": {
             "primary": "#FFFFFF",
             "secondary": "#BCB9B6"
-          }
+          },
+          "headline": "#242423"
         },
         "text-highlight": {
           "foreground": "#30302E"
