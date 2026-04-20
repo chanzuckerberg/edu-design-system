@@ -1,8 +1,11 @@
+import path from 'node:path';
 import { codecovRollupPlugin } from '@codecov/rollup-plugin';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
+
+const OUTPUT_DIR = 'lib';
 
 /**
  * @type {import('rollup').RollupOptions}
@@ -10,7 +13,7 @@ import postcss from 'rollup-plugin-postcss';
 export default {
   input: ['src/index.ts', 'src/tokens.ts'],
   output: {
-    dir: 'lib',
+    dir: OUTPUT_DIR,
     format: 'cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
@@ -26,8 +29,9 @@ export default {
   plugins: [
     nodeResolve(),
     postcss({
-      extract: true,
       modules: true,
+      // When having multiple input files, the *.css can be emitted to either file's name. extract and set the path
+      extract: path.resolve(`${OUTPUT_DIR}/index.css`),
     }),
     typescript({
       tsconfig: 'tsconfig.build.json',
