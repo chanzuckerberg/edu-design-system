@@ -3,7 +3,7 @@ import './tokens-dist/css/variables.css';
 import './tokens-dist/css/variables-dark.css';
 
 /**
- * 1.x component theme exports
+ * 1.x component theme exports - remove in 18.x
  */
 export { default as Table } from './components/Table';
 
