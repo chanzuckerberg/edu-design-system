@@ -1584,6 +1584,11 @@ exports[`<AppHeader /> MobileFloatingVerticalOrientationNavMenus story renders s
                       class="text text--label-md"
                     >
                       Profile
+                      <div
+                        class="text text--body-xs"
+                      >
+                        Lorem Ipsum, Inc.
+                      </div>
                     </span>
                     <svg
                       aria-hidden="true"
@@ -2599,6 +2604,11 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
                       class="text text--label-md"
                     >
                       Profile
+                      <div
+                        class="text text--body-xs"
+                      >
+                        Lorem Ipsum, Inc.
+                      </div>
                     </span>
                     <svg
                       aria-hidden="true"

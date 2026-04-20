@@ -52,6 +52,25 @@ export type RenderProps<RenderPropArgs> = {
   children: ReactNode | ((args: RenderPropArgs) => React.ReactElement);
 };
 
+export type UserData = {
+  /**
+   * The full name of the attached user (e.g., Jane Doe, David S. Pumpkins)
+   */
+  fullName: string;
+  /**
+   * User ID associated with the attached user
+   */
+  id?: string | number;
+  /**
+   * The display shortcut for the user name. Can be initials, emoji, or other text symbols (recommended max: 2)
+   */
+  displayName?: string;
+  /**
+   * Additional data for an attached user (email, etc.)
+   */
+  [k: string]: string | number | boolean | undefined;
+};
+
 /**
  * Navigation Utility Types
  */
@@ -81,7 +100,6 @@ export type NavItem = {
    * Icon from the set of defined EDS icon set, when `iconLayout` is used.
    */
   icon?: IconName;
-
   /**
    * Allows configuration of the icon's positioning within `AppHeader`.
    *
@@ -144,7 +162,17 @@ export type NavMenu = NavItem & {
   /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
-  navItems: (NavLink | NavButton | NavMenuLabel | NavSeparator)[];
+  navItems: (
+    | NavMenuLink
+    | NavMenuButton
+    | NavMenuLabel
+    | NavMenuCaption
+    | NavSeparator
+  )[];
+  /**
+   * Additional information abuot the named nav item
+   */
+  subLabel?: string;
 };
 
 /**
@@ -159,8 +187,33 @@ export type NavTree = NavItem & {
 };
 
 /**
- * Menus can have non-interactive labels
+ * Sub-menus can have non-interactive captions
+ */
+export type NavMenuCaption = NavItem & {
+  type: 'caption';
+};
+
+/**
+ * Sub-menus sections can have non-interactive labels
  */
 export type NavMenuLabel = NavItem & {
   type: 'label';
+};
+
+/**
+ * We extend the Button in menus to allow for leading and trailing content
+ */
+export type NavMenuButton = NavButton & {
+  leadingContent?: IconName | 'avatar';
+  trailingContent?: IconName;
+  user?: UserData;
+};
+
+/**
+ * We extend the Link in menus to allow for leading and trailing content
+ */
+export type NavMenuLink = NavLink & {
+  leadingContent?: IconName | 'avatar';
+  trailingContent?: IconName;
+  user?: UserData;
 };

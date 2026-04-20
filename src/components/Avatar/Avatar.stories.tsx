@@ -11,7 +11,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<typeof Avatar>;
 
 type Story = StoryObj<typeof Avatar>;
@@ -25,10 +25,24 @@ export const Small: Story = {
   },
 };
 
+export const SmallText: Story = {
+  args: {
+    ...Small.args,
+    variant: 'text',
+  },
+};
+
 export const Medium: Story = {
   args: {
     size: 'md',
     variant: 'icon',
+  },
+};
+
+export const MediumText: Story = {
+  args: {
+    ...Medium.args,
+    variant: 'text',
   },
 };
 
@@ -39,10 +53,24 @@ export const Large: Story = {
   },
 };
 
+export const LargeText: Story = {
+  args: {
+    ...Large.args,
+    variant: 'text',
+  },
+};
+
 export const ExtraLarge: Story = {
   args: {
     size: 'xl',
     variant: 'icon',
+  },
+};
+
+export const ExtraLargeText: Story = {
+  args: {
+    ...ExtraLarge.args,
+    variant: 'text',
   },
 };
 

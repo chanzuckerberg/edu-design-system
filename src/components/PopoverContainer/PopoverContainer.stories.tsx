@@ -16,19 +16,22 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<typeof PopoverContainer>;
 
+/**
+ * You can group list items with this generic container. See `PopoverListItem` for more information.
+ */
 export const Default: StoryObj<typeof PopoverContainer> = {
   args: {
     children: (
       <>
-        <div role="none">
+        <div role="group">
           <PopoverListItem icon="arrow-down">test 1</PopoverListItem>
           <PopoverListItem icon="arrow-left">test 2</PopoverListItem>
           <PopoverListItem icon="arrow-up">test 3</PopoverListItem>
         </div>
-        <div role="none">
+        <div role="group">
           <PopoverListItem icon="arrow-right" isDestructiveAction>
             test 4
           </PopoverListItem>

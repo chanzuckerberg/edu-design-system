@@ -11,6 +11,8 @@
   cursor: pointer;
   width: 100%;
   text-align: left;
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+  justify-content: space-between;
 
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
@@ -22,6 +24,8 @@
   &:active {
     background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
   }
+
+  min-width: 200px;
 }
 
 .popover-list-item--focused {
@@ -35,20 +39,21 @@
   background-color: light-dark(var(--eds-theme-color-background-utility-disabled-no-emphasis), var(--eds-dark-theme-color-background-utility-disabled-no-emphasis));
 }
 
-.popover-list-item--type-label {
+.popover-list-item--type-label,
+.popover-list-item--type-caption {
   pointer-events: none;
 }
 
 .popover-list-item--type-separator {
   pointer-events: none;
+  margin: calc(var(--eds-spacing-size-1) * 1px) 0;
   padding: 0;
   border-bottom: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
 }
 
-.popover-list-item__icon {
+.popover-list-item__leading-content {
   display: flex;
   align-items: center;
-  padding-right: calc(var(--eds-spacing-size-1) * 1px);
 
   /* if an icon container is adjacent to a container with a sub-label, don't use flex */
   &:has(+ div > .popover-list-item__sub-label) {
@@ -56,21 +61,38 @@
   }
 }
 
+.popover-list-item__menu-labels {
+  flex-grow: 2;
+}
+
+.popover-list-item__trailing-content {
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary) var(--eds-dark-theme-color-text-utility-default-secondary));
+  align-self: center;
+}
+
 .popover-list-item__no-icon {
   /* right padding applies space for the icon itself and the padding for that icon container */
   padding-right: calc(var(--eds-spacing-size-3) * 1px);
 
   .popover-list-item--type-listitem & {
-    padding-right: 0;
+    display: none;
   }
 
   .popover-list-item--type-label & {
-    padding-right: 0;
+    display: none;
   }
 
   .popover-list-item--type-separator & {
-    padding-right: 0;
+    display: none;
   }
+
+  .popover-list-item--type-caption & {
+    display: none;
+  }
+}
+
+.popover-list-item__label {
+  color: light-dark(var(--eds-theme-color-text-utility-placeholder), var(--eds-dark-theme-color-text-utility-placeholder));
 }
 
 .popover-list-item__sub-label {

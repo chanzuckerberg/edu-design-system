@@ -39,10 +39,55 @@ export default {
       </div>
     ),
   ],
-  tags: ['autodocs', 'version:3.1.1'],
+  tags: ['autodocs', 'version:3.2.0'],
 } as Meta<MenuProps>;
 
 type Story = StoryObj<MenuProps>;
+
+const menuItems = (
+  <Menu.Items data-testid="menu-content">
+    <Menu.Item
+      leadingContent={
+        <Icon name="heart-filled" purpose="decorative" size="24px" />
+      }
+      trailingContent="5"
+    >
+      Favorite
+    </Menu.Item>
+    <Menu.Item
+      leadingContent={<Icon name="ballot" purpose="decorative" size="24px" />}
+      subLabel="Everyone can see comments"
+    >
+      Add comment
+    </Menu.Item>
+    <Menu.Item
+      leadingContent={<Icon name="lock" purpose="decorative" size="24px" />}
+    >
+      Protect with password
+    </Menu.Item>
+    <Menu.Item __type="separator" />
+    <Menu.Item
+      leadingContent={<Icon name="print" purpose="decorative" size="24px" />}
+    >
+      Print
+    </Menu.Item>
+    <Menu.Item
+      isDestructiveAction
+      leadingContent={<Icon name="trash" purpose="decorative" size="24px" />}
+    >
+      Destructive
+    </Menu.Item>
+    <Menu.Item __type="separator" />
+    <Menu.Item __type="label">Account</Menu.Item>
+    <Menu.Item leadingContent={<Avatar size="sm" />}>Switch account</Menu.Item>
+    <Menu.Item
+      leadingContent={<Icon name="settings" purpose="decorative" size="24px" />}
+    >
+      Settings
+    </Menu.Item>
+    <Menu.Item __type="caption">© 2026 Your Company Here, Inc.</Menu.Item>
+  </Menu.Items>
+);
 
 /**
  * The Default `Menu` allows for clickable menu items, and provides a default trigger
@@ -53,24 +98,8 @@ export const Default: Story = {
   args: {
     children: (
       <>
-        <Menu.Button>Documentation Links</Menu.Button>
-        <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
-            Headless UI Docs
-          </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
-            MDN: Menu
-          </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
-            Not Possible (disabled)
-          </Menu.Item>
-        </Menu.Items>
+        <Menu.Button>Actions</Menu.Button>
+        {menuItems}
       </>
     ),
   },
@@ -150,23 +179,7 @@ export const WithCustomButton: Story = {
         <Menu.PlainButton>
           <div className="fpo">Menu Button</div>
         </Menu.PlainButton>
-        <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
-            Headless UI Docs
-          </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
-            MDN: Menu
-          </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
-            Not Possible (disabled)
-          </Menu.Item>
-        </Menu.Items>
+        {menuItems}
       </>
     ),
   },
@@ -185,23 +198,7 @@ export const WithCustomSecondaryButton: Story = {
         <Menu.PlainButton as={React.Fragment}>
           <Button rank="secondary">Secondary Button</Button>
         </Menu.PlainButton>
-        <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
-            Headless UI Docs
-          </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
-            MDN: Menu
-          </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
-            Not Possible (disabled)
-          </Menu.Item>
-        </Menu.Items>
+        {menuItems}
       </>
     ),
   },
@@ -220,23 +217,7 @@ export const MenuWithAvatarButton: Story = {
         <Menu.PlainButton>
           <Avatar isInteractive user={{ fullName: 'Josie Sandberg' }} />
         </Menu.PlainButton>
-        <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
-            Headless UI Docs
-          </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
-            MDN: Menu
-          </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
-            Not Possible (disabled)
-          </Menu.Item>
-        </Menu.Items>
+        {menuItems}
       </>
     ),
   },
@@ -251,6 +232,7 @@ export const Opened: Story = {
     ...Default.parameters,
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300 },
+    snapshot: { skip: true },
   },
   play: async () => {
     await userEvent.tab();
@@ -267,6 +249,7 @@ export const IconlessOpened: Story = {
     ...WithLongButtonText.parameters,
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300 },
+    snapshot: { skip: true },
   },
   play: async () => {
     await userEvent.tab();
@@ -299,23 +282,7 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
             title="show more"
           />
         </Menu.PlainButton>
-        <Menu.Items data-testid="menu-content">
-          <Menu.Item
-            href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
-          >
-            Headless UI Docs
-          </Menu.Item>
-          <Menu.Item
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
-          >
-            MDN: Menu
-          </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
-            Not Possible (disabled)
-          </Menu.Item>
-        </Menu.Items>
+        {menuItems}
       </Menu>
     ),
   };

@@ -17,8 +17,11 @@ import type {
   NavGroup,
   NavItem,
   NavLink,
+  NavMenuButton,
+  NavMenuLink,
 } from '../../util/utility-types';
 
+import Avatar from '../Avatar';
 import Button from '../Button';
 import Hr from '../Hr';
 import Icon from '../Icon';
@@ -32,6 +35,11 @@ export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
   navItem: NavItem,
 ) => void;
+
+/**
+ * - swap `icon` for leading/trailing content on navitems
+ * - add in avatar item type
+ */
 
 export type AppHeaderProps = {
   // Component API
@@ -178,6 +186,34 @@ const AppHeaderContext = createContext<
   href: '#',
 });
 
+function NavMenuItemLeadingContent(props: {
+  navItem: NavMenuButton | NavMenuLink;
+}): ReactNode {
+  const { navItem } = props;
+  let leadingContent: ReactNode;
+  if (navItem.leadingContent === 'avatar') {
+    leadingContent = <Avatar size="sm" user={navItem.user} />;
+  } else if (navItem.leadingContent) {
+    leadingContent = (
+      <Icon name={navItem.leadingContent} purpose="decorative" size="24px" />
+    );
+  }
+
+  return leadingContent;
+}
+function NavMenuItemTrailingContent(props: {
+  navItem: NavMenuButton | NavMenuLink;
+}): ReactNode {
+  const { navItem } = props;
+  let trailingContent: ReactNode;
+  if (navItem.trailingContent) {
+    trailingContent = (
+      <Icon name={navItem.trailingContent} purpose="decorative" size="24px" />
+    );
+  }
+
+  return trailingContent;
+}
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
@@ -432,10 +468,16 @@ const AppHeaderNavGroup = ({
                             <Menu.Item
                               href={navItem.href}
                               key={navItem.name}
+                              leadingContent={
+                                <NavMenuItemLeadingContent navItem={navItem} />
+                              }
                               onClick={(ev) => {
                                 onLinkClick && onLinkClick(ev, navItem);
                               }}
                               target={navItem.isExternal ? '_blank' : undefined}
+                              trailingContent={
+                                <NavMenuItemTrailingContent navItem={navItem} />
+                              }
                             >
                               {navItem.name}
                             </Menu.Item>
@@ -444,9 +486,15 @@ const AppHeaderNavGroup = ({
                           return (
                             <Menu.Item
                               key={navItem.name}
+                              leadingContent={
+                                <NavMenuItemLeadingContent navItem={navItem} />
+                              }
                               onClick={(ev) => {
                                 onButtonClick && onButtonClick(ev, navItem);
                               }}
+                              trailingContent={
+                                <NavMenuItemTrailingContent navItem={navItem} />
+                              }
                             >
                               {navItem.name}
                             </Menu.Item>
@@ -454,6 +502,12 @@ const AppHeaderNavGroup = ({
                         case 'label':
                           return (
                             <Menu.Item __type="label" key={navItem.name}>
+                              {navItem.name}
+                            </Menu.Item>
+                          );
+                        case 'caption':
+                          return (
+                            <Menu.Item __type="caption" key={navItem.name}>
                               {navItem.name}
                             </Menu.Item>
                           );
@@ -498,6 +552,7 @@ const AppHeaderNavGroup = ({
 const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
   (
     {
+      children,
       className,
       icon,
       iconLayout = 'none',
@@ -533,7 +588,7 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
         >
           {!(iconLayout === 'icon-only') && (
             <Text as="span" preset="label-md">
-              {name}
+              {children ?? name}
             </Text>
           )}
           {icon && iconLayout && (
@@ -557,6 +612,7 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
 const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
   (
     {
+      children,
       className,
       icon,
       iconLayout = 'none',
@@ -587,7 +643,7 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
         >
           {!(iconLayout === 'icon-only') && (
             <Text as="span" preset="label-md">
-              {name}
+              {children ?? name}
             </Text>
           )}
           {icon && iconLayout && (
@@ -745,6 +801,11 @@ const AppHeaderDrawerContent = ({
                         type="button"
                       >
                         {navItem.name}
+                        {navItem.type === 'menu' && navItem.subLabel && (
+                          <Text as="div" preset="body-xs">
+                            {navItem.subLabel}
+                          </Text>
+                        )}
                       </AppHeaderButton>
                     </Menu.PlainButton>
                     <HeadlessMenuItems
@@ -768,6 +829,11 @@ const AppHeaderDrawerContent = ({
                               <Menu.Item
                                 href={navItem.href}
                                 key={navItem.name}
+                                leadingContent={
+                                  <NavMenuItemLeadingContent
+                                    navItem={navItem}
+                                  />
+                                }
                                 onClick={(ev) => {
                                   mode === 'drawer' &&
                                     document
@@ -778,20 +844,51 @@ const AppHeaderDrawerContent = ({
                                 target={
                                   navItem.isExternal ? '_blank' : undefined
                                 }
+                                trailingContent={
+                                  <NavMenuItemTrailingContent
+                                    navItem={navItem}
+                                  />
+                                }
                               >
                                 {navItem.name}
                               </Menu.Item>
                             );
-                          case 'button':
+                          case 'button': {
                             return (
                               <Menu.Item
                                 key={navItem.name}
+                                leadingContent={
+                                  <NavMenuItemLeadingContent
+                                    navItem={navItem}
+                                  />
+                                }
                                 onClick={(ev) => {
                                   mode === 'drawer' &&
                                     document
                                       .getElementById('popover')
                                       ?.hidePopover();
                                   onButtonClick && onButtonClick(ev, navItem);
+                                }}
+                                trailingContent={
+                                  <NavMenuItemTrailingContent
+                                    navItem={navItem}
+                                  />
+                                }
+                              >
+                                {navItem.name}
+                              </Menu.Item>
+                            );
+                          }
+                          case 'caption':
+                            return (
+                              <Menu.Item
+                                __type="caption"
+                                key={navItem.name}
+                                onClick={(ev) => {
+                                  mode === 'drawer' &&
+                                    document
+                                      .getElementById('popover')
+                                      ?.hidePopover();
                                 }}
                               >
                                 {navItem.name}

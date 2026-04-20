@@ -44,19 +44,14 @@
               0 0 4px rgb(from #000000 r g b / 0.08);
 }
 
-.avatar--xs {
+.avatar--sm {
   height: calc(var(--eds-spacing-size-3) * 1px);
   width: calc(var(--eds-spacing-size-3) * 1px);
 }
 
-.avatar--sm {
+.avatar--md {
   height: calc(var(--eds-spacing-size-4) * 1px);
   width: calc(var(--eds-spacing-size-4) * 1px);
-}
-
-.avatar--md {
-  height: calc(var(--eds-spacing-size-5) * 1px);
-  width: calc(var(--eds-spacing-size-5) * 1px);
 }
 
 .avatar--lg {
