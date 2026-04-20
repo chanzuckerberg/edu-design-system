@@ -1,3 +1,4 @@
+import path from 'node:path';
 import { codecovRollupPlugin } from '@codecov/rollup-plugin';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
@@ -26,8 +27,9 @@ export default {
   plugins: [
     nodeResolve(),
     postcss({
-      extract: true,
       modules: true,
+      // When having multiple input files, the *.css can be emitted to either files' name. extract and set the path
+      extract: path.resolve('lib/index.css'),
     }),
     typescript({
       tsconfig: 'tsconfig.build.json',
