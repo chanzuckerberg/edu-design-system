@@ -3,9 +3,8 @@
 /* stylelint-disable no-invalid-position-declaration */
 
 @define-mixin inputStyles {
-  /* preset: input */
-  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
-  letter-spacing: var(--eds-typography-letter-spacing-normal);
+  /* preset: input-md */
+  font: 400 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
 
   appearance: none;
   -webkit-appearance: none;

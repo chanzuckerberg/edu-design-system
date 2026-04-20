@@ -34,7 +34,7 @@ exports[`Modal ContentDefault story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -118,7 +118,7 @@ exports[`Modal ContentLarge story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -202,7 +202,7 @@ exports[`Modal ContentLargeAuto story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -286,7 +286,7 @@ exports[`Modal ContentLargeMax story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -370,7 +370,7 @@ exports[`Modal ContentSmall story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -454,7 +454,7 @@ exports[`Modal LayoutVertical story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -538,7 +538,7 @@ exports[`Modal LayoutVerticalWithTertiary story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -622,7 +622,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -706,7 +706,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -790,7 +790,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>
@@ -874,7 +874,7 @@ exports[`Modal WithCriticalButton story renders snapshot 1`] = `
     class="modal-header"
   >
     <h2
-      class="heading heading--headline-md text-utility-default-primary"
+      class="text text--headline-md text-utility-default-primary"
     >
       Modal Title
     </h2>

@@ -100,14 +100,17 @@
 
   .data-table--size-sm & {
     /* preset: title-sm */
-    font: var(--eds-typography-font-weight-bold) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+    font: 500 var(--eds-typography-preset-100) var(--eds-typography-font-family-3);
+    letter-spacing: 2%;
+
     /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
     padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }
 
   .data-table--size-md & {
     /* preset: title-md */
-    font: var(--eds-typography-font-weight-bold) var(--eds-typography-preset-300) var(--eds-typography-font-family-1);
+    font: 500 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+    letter-spacing: 2%;
 
     padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px);
   }
@@ -152,8 +155,8 @@
 
   .data-table--size-sm & {
     /* preset: body-sm */
-    font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
-    letter-spacing: var(--eds-typography-letter-spacing-normal);
+    font: 400 var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
+    letter-spacing: normal;
 
     padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }

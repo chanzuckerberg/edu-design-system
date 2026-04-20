@@ -287,20 +287,3 @@ export const FontFamilies: Story = {
     ),
   },
 };
-
-export const FontWeights: Story = {
-  args: {
-    caption: 'Font Weights',
-    listItems: getTokenListItems(
-      'eds-typography-font-weight',
-      'size',
-      (name, column) => {
-        if (column === 'figma') {
-          return 'fontWeight/' + name.slice(name.lastIndexOf('-') + 1);
-        } else {
-          return '';
-        }
-      },
-    ),
-  },
-};
