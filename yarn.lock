@@ -2714,7 +2714,7 @@ __metadata:
     postcss-mixins: "npm:^12.1.2"
     postcss-nested: "npm:^7.0.2"
     postcss-simple-vars: "npm:^7.0.1"
-    prettier: "npm:^3.8.2"
+    prettier: "npm:^3.8.3"
     prettier-plugin-tailwindcss: "npm:^0.7.0"
     react: "npm:^18.2.0"
     react-children-by-type: "npm:^1.1.0"
@@ -17011,7 +17011,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.8.2":
+"prettier@npm:^3.8.3":
   version: 3.8.3
   resolution: "prettier@npm:3.8.3"
   bin:
