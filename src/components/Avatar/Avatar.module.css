@@ -8,6 +8,8 @@
  * Avatar
  */
 .avatar {
+  --avatar-border-radius: calc(var(--eds-border-radius-100) * 1px);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,12 +19,12 @@
 
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis), var(--eds-dark-theme-color-background-utility-default-low-emphasis));
-  border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+  border-radius: var(--avatar-border-radius);
 }
 
 /* use :has selector to put the focus ring on the container & apply the avatar's shape */
 *:has(> .avatar--is-interactive):focus-visible {
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
+  border-radius: var(--avatar-border-radius);
 
   outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
   outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
@@ -30,7 +32,7 @@
 
 @supports not selector(:focus-visible) {
   *:has(> .avatar--is-interactive):focus {
-    border-radius: calc(var(--eds-border-radius-full) * 1px);
+    border-radius: var(--avatar-border-radius);
 
     outline: calc(var(--eds-spacing-size-quarter) * 1px) solid var(--eds-theme-color-border-utility-focus);
     outline-offset: calc(var(--eds-spacing-size-quarter) * 1px);
@@ -62,10 +64,6 @@
 .avatar--xl {
   height: calc(var(--eds-spacing-size-8) * 1px);
   width: calc(var(--eds-spacing-size-8) * 1px);
-}
-
-.avatar--circle {
-  border-radius: calc(var(--eds-border-radius-full) * 1px);
 }
 
 .avatar__image {

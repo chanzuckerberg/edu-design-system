@@ -3,7 +3,7 @@
 exports[`<Avatar /> Default story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--md avatar--text"
+  class="avatar avatar--md avatar--text"
   role="img"
 >
   <span
@@ -17,7 +17,7 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
 exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--xl avatar--icon"
+  class="avatar avatar--xl avatar--icon"
   role="img"
 >
   <svg
@@ -40,7 +40,7 @@ exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
 exports[`<Avatar /> ExtraLargeText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--xl avatar--text"
+  class="avatar avatar--xl avatar--text"
   role="img"
 >
   <span
@@ -54,7 +54,7 @@ exports[`<Avatar /> ExtraLargeText story renders snapshot 1`] = `
 exports[`<Avatar /> Large story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--lg avatar--icon"
+  class="avatar avatar--lg avatar--icon"
   role="img"
 >
   <svg
@@ -77,7 +77,7 @@ exports[`<Avatar /> Large story renders snapshot 1`] = `
 exports[`<Avatar /> LargeText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--lg avatar--text"
+  class="avatar avatar--lg avatar--text"
   role="img"
 >
   <span
@@ -91,7 +91,7 @@ exports[`<Avatar /> LargeText story renders snapshot 1`] = `
 exports[`<Avatar /> Medium story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--md avatar--icon"
+  class="avatar avatar--md avatar--icon"
   role="img"
 >
   <svg
@@ -114,7 +114,7 @@ exports[`<Avatar /> Medium story renders snapshot 1`] = `
 exports[`<Avatar /> MediumText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--md avatar--text"
+  class="avatar avatar--md avatar--text"
   role="img"
 >
   <span
@@ -128,7 +128,7 @@ exports[`<Avatar /> MediumText story renders snapshot 1`] = `
 exports[`<Avatar /> Small story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--sm avatar--icon"
+  class="avatar avatar--sm avatar--icon"
   role="img"
 >
   <svg
@@ -151,7 +151,7 @@ exports[`<Avatar /> Small story renders snapshot 1`] = `
 exports[`<Avatar /> SmallText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--sm avatar--text"
+  class="avatar avatar--sm avatar--text"
   role="img"
 >
   <span
@@ -165,7 +165,7 @@ exports[`<Avatar /> SmallText story renders snapshot 1`] = `
 exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user Young Yarn Lad"
-  class="avatar avatar--circle avatar--lg avatar--text"
+  class="avatar avatar--lg avatar--text"
   role="img"
 >
   <span
@@ -179,7 +179,7 @@ exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
 exports[`<Avatar /> UsingImage story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--circle avatar--md avatar--image"
+  class="avatar avatar--md avatar--image"
   role="img"
 >
   <img
@@ -193,7 +193,7 @@ exports[`<Avatar /> UsingImage story renders snapshot 1`] = `
 exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user John Smith"
-  class="avatar avatar--circle avatar--md avatar--text"
+  class="avatar avatar--md avatar--text"
   role="img"
 >
   <span
@@ -207,7 +207,7 @@ exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
 exports[`<Avatar /> UsingMultibyteUnicode story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user 你好世界"
-  class="avatar avatar--circle avatar--lg avatar--image"
+  class="avatar avatar--lg avatar--image"
   role="img"
 >
   <span
@@ -222,7 +222,7 @@ exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
 <span>
   <div
     aria-label="Avatar for unknown user "
-    class="avatar avatar--circle avatar--is-interactive avatar--md avatar--text"
+    class="avatar avatar--is-interactive avatar--md avatar--text"
     role="img"
   >
     <span
@@ -237,7 +237,7 @@ exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
 exports[`<Avatar /> WhenImageVariantMissingSource story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user Young Yarn Lad"
-  class="avatar avatar--circle avatar--lg avatar--image"
+  class="avatar avatar--lg avatar--image"
   role="img"
 >
   <span
@@ -251,7 +251,7 @@ exports[`<Avatar /> WhenImageVariantMissingSource story renders snapshot 1`] = `
 exports[`<Avatar /> WithCustomIcon story renders snapshot 1`] = `
 <div
   aria-label="Custom label for avatar"
-  class="avatar avatar--circle avatar--md avatar--icon"
+  class="avatar avatar--md avatar--icon"
   role="img"
 >
   <svg

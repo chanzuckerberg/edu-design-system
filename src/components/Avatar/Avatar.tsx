@@ -104,7 +104,6 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ) => {
     const componentClassName = clsx(
       styles['avatar'],
-      styles[`avatar--circle`],
       isInteractive && styles['avatar--is-interactive'],
       size && styles[`avatar--${size}`],
       variant && styles[`avatar--${variant}`],
