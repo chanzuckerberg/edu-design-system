@@ -170,7 +170,7 @@ export type NavMenu = NavItem & {
     | NavSeparator
   )[];
   /**
-   * Additional information abuot the named nav item
+   * Additional information about the named nav item
    */
   subLabel?: string;
 };

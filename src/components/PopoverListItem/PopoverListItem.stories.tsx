@@ -72,7 +72,7 @@ export const Disabled: Story = {
 };
 
 /**
- * Popover list items can be marked as descructive, with support for all of the other options.
+ * Popover list items can be marked as destructive, with support for all of the other options.
  */
 export const Destructive: Story = {
   args: {

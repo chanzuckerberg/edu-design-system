@@ -124,7 +124,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
 
     // trim text to one character when size=sm
     if (size === 'sm') {
-      avatarDisplayName = avatarDisplayName.slice(0, 1);
+      avatarDisplayName = produceAbbreviation(avatarDisplayName);
     }
 
     const presetMap: Record<NonNullable<AvatarProps['size']>, Preset> = {

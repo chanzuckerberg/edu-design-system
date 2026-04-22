@@ -190,7 +190,7 @@ function NavMenuItemLeadingContent(props: {
   navItem: NavMenuButton | NavMenuLink;
 }): ReactNode {
   const { navItem } = props;
-  let leadingContent: ReactNode;
+  let leadingContent: ReactNode = null;
   if (navItem.leadingContent === 'avatar') {
     leadingContent = <Avatar size="sm" user={navItem.user} />;
   } else if (navItem.leadingContent) {
@@ -205,7 +205,7 @@ function NavMenuItemTrailingContent(props: {
   navItem: NavMenuButton | NavMenuLink;
 }): ReactNode {
   const { navItem } = props;
-  let trailingContent: ReactNode;
+  let trailingContent: ReactNode = null;
   if (navItem.trailingContent) {
     trailingContent = (
       <Icon name={navItem.trailingContent} purpose="decorative" size="24px" />
