@@ -67,7 +67,7 @@
 
 .popover-list-item__trailing-content {
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
-  align-self: center;
+  align-self: flex-end;
 }
 
 .popover-list-item__no-icon {
