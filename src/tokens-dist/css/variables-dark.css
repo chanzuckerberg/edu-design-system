@@ -223,7 +223,7 @@
   --eds-typography-font-family-size-offset-2: 0; /* pixels (px) font-specific offset adjustment to align heights between the root font face */
   --eds-typography-font-family-3: 'JetBrains Mono', Consolas, monospace;
   --eds-typography-font-family-2: 'parabolica', Inter, Arial, sans-serif;
-  --eds-typography-font-family-1: 'parabolica text', Inter, Arial, sans-serif;
+  --eds-typography-font-family-1: 'parabolica-text', Inter, Arial, sans-serif;
   --eds-dark-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
   --eds-dark-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
   --eds-dark-theme-color-text-headline: var(--eds-color-neutral-850);

@@ -3,7 +3,7 @@
     "typography": {
       "fontFamily": {
         "1": {
-          "value": "'parabolica text', Inter, Arial, sans-serif"
+          "value": "'parabolica-text', Inter, Arial, sans-serif"
         },
         "2": {
           "value": "'parabolica', Inter, Arial, sans-serif"

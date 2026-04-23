@@ -2,7 +2,7 @@
   "eds": {
     "typography": {
       "fontFamily": {
-        "1": "'parabolica text', Inter, Arial, sans-serif",
+        "1": "'parabolica-text', Inter, Arial, sans-serif",
         "2": "'parabolica', Inter, Arial, sans-serif",
         "3": "'JetBrains Mono', Consolas, monospace",
         "sizeOffset": {
