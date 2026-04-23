@@ -20,6 +20,10 @@
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis), var(--eds-dark-theme-color-background-utility-default-low-emphasis));
   border-radius: var(--avatar-border-radius);
+  border-width: 1px;
+  border-style: solid;
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+
 }
 
 /* use :has selector to put the focus ring on the container & apply the avatar's shape */
