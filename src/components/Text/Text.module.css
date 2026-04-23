@@ -11,7 +11,7 @@
   --text-font-family: var(--eds-typography-font-family-1);
 
   font: unset;
-  color: var(--text-fg, initial);
+  color: var(--text-fg, inherit);
   font-family: var(--text-font-family);
   font-size: calc(var(--text-font-size) * 1px);
   line-height: calc(var(--text-line-height) * 1px);
