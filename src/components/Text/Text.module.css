@@ -206,8 +206,8 @@
 }
 
 .text--label-xl {
-  --text-font-size: var(--eds-typography-preset-200-font-size);
-  --text-line-height: var(--eds-typography-preset-200-line-height);
+  --text-font-size: var(--eds-typography-preset-600-font-size);
+  --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-weight: 500;
 }
 
