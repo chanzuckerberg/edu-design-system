@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.0.0...v18.1.0) (2026-04-24)
+
+
+### Features
+
+* import new token values from design ([#2465](https://github.com/chanzuckerberg/edu-design-system/issues/2465)) ([f8b161b](https://github.com/chanzuckerberg/edu-design-system/commit/f8b161b73cd5538f1ed894c9d843546e65e16c36))
+* support advanced menu item types and formats ([#2468](https://github.com/chanzuckerberg/edu-design-system/issues/2468)) ([c837e91](https://github.com/chanzuckerberg/edu-design-system/commit/c837e91eb1c01d4111c0e3962f14d2d68c1b261a))
+* **tokens:** add new semantic tokens ([#2463](https://github.com/chanzuckerberg/edu-design-system/issues/2463)) ([24aa2e5](https://github.com/chanzuckerberg/edu-design-system/commit/24aa2e5f43a63b04bc0297a60aa8fa5e65b9a74e))
+
+
+### Bug Fixes
+
+* **AppHeader:** align bottom padding to designs ([#2460](https://github.com/chanzuckerberg/edu-design-system/issues/2460)) ([5f7cb14](https://github.com/chanzuckerberg/edu-design-system/commit/5f7cb14c08859df8de1c72b60f830f3eeaf1936d))
+* **AppHeader:** do not show menu when there are no nav groups ([#2461](https://github.com/chanzuckerberg/edu-design-system/issues/2461)) ([71a70a3](https://github.com/chanzuckerberg/edu-design-system/commit/71a70a31fe2ba321130e758ab9459ee5e1ef3c51))
+* **deps:** update all non-major dependencies ([#2457](https://github.com/chanzuckerberg/edu-design-system/issues/2457)) ([a68d3bc](https://github.com/chanzuckerberg/edu-design-system/commit/a68d3bcaa40be96356e25d945078283a4106fb47))
+* direct postcss rollup plugin to emit lib/index.css always ([#2466](https://github.com/chanzuckerberg/edu-design-system/issues/2466)) ([c085509](https://github.com/chanzuckerberg/edu-design-system/commit/c0855094d6405535b0fba7b6743a7a218e513422))
+
 ## [18.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v17.7.0...v18.0.0) (2026-04-10)
 
 
