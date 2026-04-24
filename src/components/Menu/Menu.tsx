@@ -53,38 +53,36 @@ export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenuButton>;
 
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenuItems>;
 
-export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> & {
-  // Component API
-  anchor?: AnchorProps;
-  /**
-   * Allow custom classes to be applied to the menu container.
-   */
-  className?: string;
-  /**
-   * Target URL for the menu item action
-   */
-  href?: string;
-  /**
-   * Icons are able to appear next to each Option in the Options list if it is relevant; before using any icons, please refer to the appropriate icon usage guidelines
-   */
-  icon?: IconName;
-  /**
-   * Configurable action for the menu item upon click
-   */
-  onClick?: MouseEventHandler<HTMLAnchorElement>;
-  __type?: PopoverListItemProps['__type'];
-  /**
-   * Specify the target of the link if present
-   */
-  target?: HTMLAttributeAnchorTarget;
-};
+export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
+  PopoverListItemProps & {
+    // Component API
+    anchor?: AnchorProps;
+    /**
+     * Target URL for the menu item action
+     */
+    href?: string;
+    /**
+     * Icons are able to appear next to each Option in the Options list if it is relevant; before using any icons, please refer to the appropriate icon usage guidelines. Deprecated in favor of `leadingContent`
+     * @deprecated
+     */
+    icon?: IconName;
+    /**
+     * Configurable action for the menu item upon click
+     */
+    onClick?: MouseEventHandler<HTMLAnchorElement>;
+    __type?: PopoverListItemProps['__type'];
+    /**
+     * Specify the target of the link if present
+     */
+    target?: HTMLAttributeAnchorTarget;
+  };
 
 // TODO: how to handle type for separator w/o using private API `__type`
 
 /**
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
- * A dropdown that reveals or hides a list of actions. Menu items can contain icons (all should contain one, or none should), labels, and sublabels.
+ * A popover that reveals or hides a list of actions. Menu items can contain icons (all should contain one, or none should), and other contents provided by `PopoverListItem`.
  */
 export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);
@@ -156,14 +154,33 @@ const MenuItem = ({
   children,
   className,
   href,
-  icon,
   onClick,
   target,
+  // Props from PopoverListItem
+  icon,
+  isDestructiveAction,
+  isFocused,
+  isDisabled,
+  leadingContent,
+  subLabel,
+  trailingContent,
   __type = 'listitem',
   ...other
 }: MenuItemProps) => {
-  return __type === 'separator' ? (
-    <PopoverListItem __type={__type}> </PopoverListItem>
+  return __type === 'separator' ||
+    __type === 'label' ||
+    __type === 'caption' ? (
+    <PopoverListItem
+      __type={__type}
+      isDestructiveAction={isDestructiveAction}
+      isDisabled={isDisabled}
+      isFocused={isFocused}
+      leadingContent={leadingContent}
+      subLabel={subLabel}
+      trailingContent={trailingContent}
+    >
+      {children}
+    </PopoverListItem>
   ) : (
     <HeadlessMenuItem {...other}>
       {({ focus, disabled }) => {
@@ -172,13 +189,17 @@ const MenuItem = ({
             __type={__type}
             className={className}
             icon={icon}
+            isDestructiveAction={isDestructiveAction}
             isDisabled={disabled}
             isFocused={focus}
+            leadingContent={leadingContent}
+            subLabel={subLabel}
+            trailingContent={trailingContent}
           >
             {children as ReactNode}
           </PopoverListItem>
         );
-        return disabled || __type === 'label' ? (
+        return disabled ? (
           listItemView
         ) : (
           <a

@@ -25,7 +25,7 @@
   }
 }
 
-.popover-container>*[role=none]+*[role=none] {
-  /* create dividers by looking for groups under the component that wrap using the "none" role */
+.popover-container>*[role=group]+*[role=group] {
+  /* create dividers by looking for groups under the component that wrap using the "group" role */
   border-top: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }

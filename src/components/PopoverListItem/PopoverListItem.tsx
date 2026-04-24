@@ -10,15 +10,16 @@ export type PopoverListItemProps = {
   /**
    * Child node(s) that can be nested inside component
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  __type?: 'selectitem' | 'listitem' | 'label' | 'separator';
+  __type?: 'selectitem' | 'listitem' | 'label' | 'separator' | 'caption';
   // Design API
   /**
-   * Icon from the set of defined EDS icon set
+   * Icon from the set of defined EDS icon set. This prop is deprecated in favor of `leadingContent`.
+   * @deprecated
    */
   icon?: IconName;
   /**
@@ -34,9 +35,17 @@ export type PopoverListItemProps = {
    */
   isDisabled?: boolean;
   /**
+   * Content (icon, text, other component) to appear at the start of the list item. Recommended maximum size of 24 pixels.
+   */
+  leadingContent?: ReactNode;
+  /**
    * Text below the main menu item call-to-action, briefly describing the menu item's function
    */
   subLabel?: ReactNode;
+  /**
+   * Content (icon, text, other component) to appear at the end of the list item. Recommended maximum size of 24 pixels.
+   */
+  trailingContent?: ReactNode;
 };
 
 /**
@@ -62,7 +71,9 @@ export const PopoverListItem = React.forwardRef<
       isFocused = false,
       children,
       icon,
+      leadingContent,
       subLabel,
+      trailingContent,
       __type,
       ...other
     },
@@ -90,27 +101,54 @@ export const PopoverListItem = React.forwardRef<
         {...ariaIsDisabled}
         ref={ref}
       >
-        {icon ? (
-          <div className={styles['popover-list-item__icon']}>
-            <Icon name={icon} purpose="decorative" size="16px" />
+        {icon || leadingContent ? (
+          <div className={styles['popover-list-item__leading-content']}>
+            {icon && <Icon name={icon} purpose="decorative" size="24px" />}
+            {leadingContent}
           </div>
         ) : (
           <div className={styles['popover-list-item__no-icon']}></div>
         )}
         <div className={styles['popover-list-item__menu-labels']}>
-          <Text as="div" preset={__type === 'label' ? 'body-xs' : 'body-md'}>
-            {children}
-          </Text>
-          {subLabel && (
+          {__type === 'label' ? (
             <Text
               as="div"
-              className={styles['popover-list-item__sub-label']}
-              preset="body-sm"
+              className={styles['popover-list-item__label']}
+              preset="overline-sm"
             >
-              {subLabel}
+              {children}
             </Text>
+          ) : (
+            <>
+              <Text
+                as="div"
+                preset={__type === 'caption' ? 'body-xs' : 'body-md'}
+              >
+                {children}
+              </Text>
+              {subLabel && (
+                <Text
+                  as="div"
+                  className={styles['popover-list-item__sub-label']}
+                  preset="body-sm"
+                >
+                  {subLabel}
+                </Text>
+              )}
+            </>
           )}
         </div>
+        {trailingContent && (
+          <div className={styles['popover-list-item__trailing-content']}>
+            {typeof trailingContent === 'string' ? (
+              <Text as="span" preset="body-xs">
+                {trailingContent}
+              </Text>
+            ) : (
+              trailingContent
+            )}
+          </div>
+        )}
       </div>
     );
   },

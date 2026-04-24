@@ -192,6 +192,7 @@
   gap: calc(var(--eds-spacing-size-1) * 1px);
   align-items: center;
   justify-content: space-between;
+  text-align: start;
 }
 
 .app-header__nav-items {
