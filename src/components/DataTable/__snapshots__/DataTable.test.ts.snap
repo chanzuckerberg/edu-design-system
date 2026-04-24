@@ -52,7 +52,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                First Name
+                <span
+                  class="text text--title-md"
+                >
+                  First Name
+                </span>
                 <span
                   class="text text--body-sm data-table__cell-subLabel"
                 >
@@ -71,7 +75,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                Last Name
+                <span
+                  class="text text--title-md"
+                >
+                  Last Name
+                </span>
                 <span
                   class="text text--body-sm data-table__cell-subLabel"
                 >
@@ -90,7 +98,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                Age
+                <span
+                  class="text text--title-md"
+                >
+                  Age
+                </span>
               </div>
             </div>
           </th>
@@ -104,7 +116,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                Visits
+                <span
+                  class="text text--title-md"
+                >
+                  Visits
+                </span>
               </div>
             </div>
           </th>
@@ -118,7 +134,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                Profile Progress
+                <span
+                  class="text text--title-md"
+                >
+                  Profile Progress
+                </span>
                 <span
                   class="text text--body-sm data-table__cell-subLabel"
                 >
@@ -1072,7 +1092,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-md"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -1091,7 +1115,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-md"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -1110,7 +1138,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-md"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -1124,7 +1156,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-md"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -1138,7 +1174,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-md"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -2103,7 +2143,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Name
+              <span
+                class="text text--title-md"
+              >
+                Name
+              </span>
             </div>
           </div>
         </th>
@@ -2117,7 +2161,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Country of Origin
+              <span
+                class="text text--title-md"
+              >
+                Country of Origin
+              </span>
             </div>
           </div>
         </th>
@@ -2131,7 +2179,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Year
+              <span
+                class="text text--title-md"
+              >
+                Year
+              </span>
             </div>
           </div>
         </th>
@@ -2504,7 +2556,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-sm"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -2523,7 +2579,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-sm"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -2542,7 +2602,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-sm"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -2556,7 +2620,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-sm"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -2570,7 +2638,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-sm"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -4410,7 +4482,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-md"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -4429,7 +4505,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-md"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -4448,7 +4528,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-md"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -4462,7 +4546,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-md"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -4476,7 +4564,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-md"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -5430,19 +5522,23 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <div
-                class="checkbox"
+              <span
+                class="text text--title-md"
               >
-                <input
-                  aria-label="check"
-                  class="checkbox__input"
-                  id=":r0:"
-                  type="checkbox"
-                />
                 <div
-                  class="checkbox__labels"
-                />
-              </div>
+                  class="checkbox"
+                >
+                  <input
+                    aria-label="check"
+                    class="checkbox__input"
+                    id=":r0:"
+                    type="checkbox"
+                  />
+                  <div
+                    class="checkbox__labels"
+                  />
+                </div>
+              </span>
             </div>
           </div>
         </th>
@@ -5470,7 +5566,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-md"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -5489,7 +5589,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-md"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -5508,7 +5612,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-md"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -5522,7 +5630,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-md"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -5536,7 +5648,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-md"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -6968,7 +7084,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-sm"
+              >
+                First Name
+              </span>
             </div>
           </div>
         </th>
@@ -6982,7 +7102,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-sm"
+              >
+                Last Name
+              </span>
             </div>
           </div>
         </th>
@@ -6996,7 +7120,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-sm"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -7010,7 +7138,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-sm"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -7024,7 +7156,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-sm"
+              >
+                Profile Progress
+              </span>
             </div>
           </div>
         </th>
@@ -8019,7 +8155,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-sm"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -8038,7 +8178,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-sm"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -8057,7 +8201,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-sm"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -8071,7 +8219,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-sm"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -8085,7 +8237,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-sm"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -9013,7 +9169,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-md"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -9032,7 +9192,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-md"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -9051,7 +9215,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-md"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -9065,7 +9233,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-md"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -9079,7 +9251,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-md"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -10033,19 +10209,23 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <div
-                class="checkbox"
+              <span
+                class="text text--title-md"
               >
-                <input
-                  aria-label="check"
-                  class="checkbox__input"
-                  id=":rd:"
-                  type="checkbox"
-                />
                 <div
-                  class="checkbox__labels"
-                />
-              </div>
+                  class="checkbox"
+                >
+                  <input
+                    aria-label="check"
+                    class="checkbox__input"
+                    id=":rd:"
+                    type="checkbox"
+                  />
+                  <div
+                    class="checkbox__labels"
+                  />
+                </div>
+              </span>
             </div>
           </div>
         </th>
@@ -10073,7 +10253,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              First Name
+              <span
+                class="text text--title-md"
+              >
+                First Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -10092,7 +10276,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Last Name
+              <span
+                class="text text--title-md"
+              >
+                Last Name
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >
@@ -10111,7 +10299,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Age
+              <span
+                class="text text--title-md"
+              >
+                Age
+              </span>
             </div>
           </div>
         </th>
@@ -10125,7 +10317,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Visits
+              <span
+                class="text text--title-md"
+              >
+                Visits
+              </span>
             </div>
           </div>
         </th>
@@ -10139,7 +10335,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              Profile Progress
+              <span
+                class="text text--title-md"
+              >
+                Profile Progress
+              </span>
               <span
                 class="text text--body-sm data-table__cell-subLabel"
               >

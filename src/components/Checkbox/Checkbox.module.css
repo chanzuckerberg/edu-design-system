@@ -27,8 +27,9 @@
   border-radius: calc(var(--eds-spacing-size-quarter) * 1px); /* using sized radius to have an outer rounded rect and inner square */
 
   /* preset: body-md */
-  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
-  letter-spacing: var(--eds-typography-letter-spacing-normal);
+  font: 400 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+  letter-spacing: normal;
+  
   transition: background-color ease-in-out calc(var(--eds-anim-fade-quick) * 1s);
 }
 

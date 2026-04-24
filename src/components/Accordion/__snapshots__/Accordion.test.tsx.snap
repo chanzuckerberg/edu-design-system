@@ -20,7 +20,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -73,7 +73,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -104,7 +104,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -158,7 +158,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -212,7 +212,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -293,7 +293,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
           </svg>
         </span>
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -361,7 +361,7 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </span>
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -417,7 +417,7 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -471,7 +471,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -524,7 +524,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -564,7 +564,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -604,7 +604,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -657,7 +657,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -711,7 +711,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -765,7 +765,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -819,7 +819,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -885,7 +885,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -938,7 +938,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -978,7 +978,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -1018,7 +1018,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -1071,7 +1071,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -1125,7 +1125,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -1179,7 +1179,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -1233,7 +1233,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-md accordion-button__heading"
+          class="text text--body-md accordion-button__heading"
         >
           <span
             class="text text--body-md accordion-button__title"
@@ -1296,7 +1296,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -1352,7 +1352,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"
@@ -1403,7 +1403,7 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--body-lg accordion-button__heading"
+          class="text text--body-lg accordion-button__heading"
         >
           <span
             class="text text--body-lg accordion-button__title"

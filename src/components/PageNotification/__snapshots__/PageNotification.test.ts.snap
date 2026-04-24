@@ -26,7 +26,7 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -80,7 +80,7 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -134,7 +134,7 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -188,7 +188,7 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -266,7 +266,7 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -320,7 +320,7 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -398,7 +398,7 @@ exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] =
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Test Critical Title
       </h3>
@@ -452,7 +452,7 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>
@@ -506,7 +506,7 @@ exports[`<PageNotification /> WarningWithSubTitle story renders snapshot 1`] = `
       class="page-notification__text"
     >
       <h3
-        class="heading heading--title-md"
+        class="text text--title-md"
       >
         Alert title which communicates info to the user
       </h3>

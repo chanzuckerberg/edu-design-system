@@ -126,6 +126,7 @@ export const LongTextMenu: Story = {
     chromatic: {
       viewports: [chromaticViewports.ipadMini],
       diffThreshold: 0.75,
+      delay: 100,
     },
 
     a11y: {

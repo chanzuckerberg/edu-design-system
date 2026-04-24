@@ -277,7 +277,7 @@ export const AppHeader = ({
                     />
                   ))}
                 </div>
-                {navGroups?.length && (
+                {navGroups?.length ? (
                   <div className={styles['app-header__menu']}>
                     <AppHeaderButton
                       aria-label="Show Menu"
@@ -290,7 +290,7 @@ export const AppHeader = ({
                       type="button"
                     />
                   </div>
-                )}
+                ) : null}
               </>
             )}
             {headerOrientation === 'vertical' && (

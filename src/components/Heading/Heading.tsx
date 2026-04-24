@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import type { ReactNode, HTMLAttributes } from 'react';
 import type { Preset } from '../../util/variant-types';
-import styles from './Heading.module.css';
+
+import styles from '../Text/Text.module.css';
 
 export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -62,9 +63,9 @@ export const Heading = forwardRef(
   ) => {
     const TagName = as;
     const componentClassName = clsx(
-      styles['heading'],
-      preset && styles[`heading--${preset}`],
-      !preset && styles[`heading--${headingPresetMap[as]}`],
+      styles['text'],
+      preset && styles[`text--${preset}`],
+      !preset && styles[`text--${headingPresetMap[as]}`],
       className,
     );
     return (

@@ -18,16 +18,19 @@ For each preset, we define a main class which include custom properties for each
 properties as needed.
 
 ```css
-.heading {
-  --heading-size-line-height: var(--eds-typography-preset-200);
-  --heading-font-weight: var(--eds-typography-font-weight-normal);
-  --heading-font-family: var(--eds-typography-font-family-1);
-  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
-  --heading-text-transform: ;
+.text {
+  --text-font-size: var(--eds-typography-preset-200-font-size);
+  --text-line-height: var(--eds-typography-preset-200-line-height);
+  --text-font-family: var(--eds-typography-font-family-1);
 
-  font: var(--heading-font-weight) var(--heading-size-line-height) var(--heading-font-family);
-  letter-spacing: var(--heading-letter-spacing);
-  text-transform: var(--heading-text-transform, none);
+  font: unset;
+  font-family: var(--text-font-family);
+  font-size: calc(var(--text-font-size) * 1px);
+  line-height: calc(var(--text-line-height) * 1px);
+  font-style: var(--text-font-style, initial);
+  font-weight: var(--text-font-weight, normal);
+  text-transform: var(--text-text-transform, none);
+  letter-spacing: var(--text-letter-spacing, normal);
 }
 ```
 
@@ -36,10 +39,17 @@ Here, we compose the values using the `font` shorthand property, and specify `le
 Then, for each preset, we reset the custom property to map to the design values:
 
 ```css
-.heading--headline-sm {
-  --heading-size-line-height: var(--eds-typography-preset-600);
-  --heading-font-weight: var(--eds-typography-font-weight-bold);
-  --heading-letter-spacing: var(--eds-typography-letter-spacing-normal);
+.text--headline-sm {
+  --text-font-size: var(--eds-typography-preset-300-font-size);
+  --text-line-height: var(--eds-typography-preset-300-line-height);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: 400;
+  --text-letter-spacing: 2%;
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-font-size: var(--eds-typography-preset-400-font-size);
+    --text-line-height: var(--eds-typography-preset-400-line-height);
+  }
 }
 ```
 
@@ -47,15 +57,19 @@ For cases where we need to handle responsive behavior, we can nest media queries
 overrides (note the use of the PostCSS variable since custom properties cannot be used in media queries):
 
 ```css
-.heading--headline-md {
-  --heading-size-line-height: var(--eds-typography-preset-600);
-  --heading-font-weight: var(--eds-typography-font-weight-bold);
-  --heading-letter-spacing: var(--eds-typography-letter-spacing-condensed);
+.text--headline-md {
+  --text-font-size: var(--eds-typography-preset-500-font-size);
+  --text-line-height: var(--eds-typography-preset-500-line-height);
+  --text-font-family: var(--eds-typography-font-family-2);
+  --text-font-weight: 400;
+  --text-letter-spacing: 2%;
 
   @media screen and (min-width: $eds-bp-md) {
-    --heading-size-line-height: var(--eds-typography-preset-800);
+    --text-font-size: var(--eds-typography-preset-700-font-size);
+    --text-line-height: var(--eds-typography-preset-700-line-height);
   }
 }
+
 ```
 
 In a future version of EDS, we will provide options to define per-theme values for each of these named presets.
@@ -63,7 +77,7 @@ In the interim, such overrides are possible by using `style` prop on any `Header
 an override for any of these custom properties:
 
 ```jsx
-<Heading preset="heading-md" style={{"--heading-font-weight": "var(--eds-typography-font-weight-bold)"}}>...</Heading>
+<Heading preset="heading-md" style={{"--text-font-weight": "500"}}>...</Heading>
 ```
 
 ## Using `Heading` and `Text`
@@ -74,18 +88,18 @@ in a comment to describe which preset the value maps to.
 
 ```css
 /* preset: body-md */
-font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
-letter-spacing: var(--eds-typography-letter-spacing-normal);
+font: 400 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+letter-spacing: 2%;
 ```
 
 In cases where you need to compose with an offset, you can use the piecemeal preset values (`-font-size` and `-line-height`)
 to declare a value for the `font` properties.
 
 ```css
-/* preset: headline-decorative-inline-xl */
+/* preset: preset name */
 font-family: var(--eds-typography-font-family-1);
 font-size: calc(var(--eds-typography-preset-1400-font-size) + var(--eds-typography-font-family-size-offset) * 1px);
 line-height: var(--eds-typography-preset-1400-line-height);
-font-weight: var(--eds-typography-font-weight-light);
+font-weight: 300;
 letter-spacing: var(--eds-typography-letter-spacing-normal);
 ```

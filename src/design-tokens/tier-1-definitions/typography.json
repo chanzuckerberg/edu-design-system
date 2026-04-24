@@ -3,10 +3,10 @@
     "typography": {
       "fontFamily": {
         "1": {
-          "value": "'parabolica', Inter, Arial, sans-serif"
+          "value": "'parabolica-text', Inter, Arial, sans-serif"
         },
         "2": {
-          "value": "'kazimirtext', Lora, Georgia, serif"
+          "value": "'parabolica', Inter, Arial, sans-serif"
         },
         "3": {
           "value": "'JetBrains Mono', Consolas, monospace"
@@ -20,27 +20,30 @@
       },
       "fontWeight": {
         "light": {
-          "value": "200"
+          "value": "200",
+          "comment": "@deprecated TODO(next-major): this will be removed in the next verseon of EDS"
         },
         "normal": {
-          "value": "400"
+          "value": "400",
+          "comment": "@deprecated TODO(next-major): this will be removed in the next verseon of EDS"
         },
         "bold": {
-          "value": "500"
+          "value": "500",
+          "comment": "@deprecated TODO(next-major): this will be removed in the next verseon of EDS"
         }
       },
       "letterSpacing": {
         "condensed": {
           "value": "-0.02rem",
-          "comment": "has units b/c letter spacing has values with and without units"
+          "comment": "@deprecated TODO(next-major): this will be removed in the next verseon of EDS"
         },
         "normal": {
           "value": "normal",
-          "comment": "unitless normal value"
+          "comment": "@deprecated TODO(next-major): this will be removed in the next verseon of EDS"
         },
         "extended": {
           "value": "0.03rem",
-          "comment": "has units b/c letter spacing has values with and without units"
+          "comment": "@deprecated TODO(next-major): this will be removed in the next verseon of EDS"
         }
       },
       "baseSize": {
@@ -70,11 +73,11 @@
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "lineHeight": {
-            "value": "22",
+            "value": "20",
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "@": {
-            "value": "14px/22px",
+            "value": "14px/20px",
             "comment": "values to use with the font shorthand property in CSS"
           }
         },
@@ -84,11 +87,11 @@
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "lineHeight": {
-            "value": "24",
+            "value": "22",
             "comment": "pixels (px) values to use with the font shorthand property in CSS"
           },
           "@": {
-            "value": "16px/24px",
+            "value": "16px/22px",
             "comment": "values to use with the font shorthand property in CSS"
           }
         },

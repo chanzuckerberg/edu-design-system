@@ -113,7 +113,7 @@ export const OverridingFontFamily: Story = {
     preset: 'body-md',
     children:
       'You can use utility classes to override the font family used for a given size',
-    className: '!font-2',
+    className: '!font-3',
   },
 };
 
