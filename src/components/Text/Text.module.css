@@ -11,7 +11,6 @@
   --text-font-family: var(--eds-typography-font-family-1);
 
   font: unset;
-  color: var(--text-fg, inherit);
   font-family: var(--text-font-family);
   font-size: calc(var(--text-font-size) * 1px);
   line-height: calc(var(--text-line-height) * 1px);
@@ -22,7 +21,6 @@
 }
 
 .text--headline-xl {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-800-font-size);
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
@@ -36,7 +34,6 @@
 }
 
 .text--headline-lg {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-800-font-size);
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
@@ -50,7 +47,6 @@
 }
 
 .text--headline-md {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-500-font-size);
   --text-line-height: var(--eds-typography-preset-500-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
@@ -64,7 +60,6 @@
 }
 
 .text--headline-sm {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-300-font-size);
   --text-line-height: var(--eds-typography-preset-300-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
@@ -78,7 +73,6 @@
 }
 
 .text--headline-decorative-md {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-500-font-size);
   --text-line-height: var(--eds-typography-preset-500-line-height);
   --text-font-family: var(--eds-typography-font-family-3);
@@ -93,7 +87,6 @@
 }
 
 .text--title-xl {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-500-font-size);
   --text-line-height: var(--eds-typography-preset-500-line-height);
   --text-font-family: var(--eds-typography-font-family-1);
@@ -107,7 +100,6 @@
 }
 
 .text--title-lg {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-300-font-size);
   --text-line-height: var(--eds-typography-preset-300-line-height);
   --text-font-weight: 500;
@@ -120,7 +112,6 @@
 }
 
 .text--title-md {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 500;
@@ -128,7 +119,6 @@
 }
 
 .text--title-sm {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-family: var(--eds-typography-font-family-3);
@@ -138,7 +128,6 @@
 }
 
 .text--title-xs {
-  --text-fg: var(--eds-theme-color-text-headline);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 500;
