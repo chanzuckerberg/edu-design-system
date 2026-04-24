@@ -1082,6 +1082,44 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
 </header>
 `;
 
+exports[`<AppHeader /> MobileFloatingVerticalEmpty story renders snapshot 1`] = `
+<header
+  class="app-header app-header--orientation-vertical app-header--style-floating"
+>
+  <div>
+    <div
+      class="app-header__content"
+    >
+      <div
+        class="app-header-title"
+      >
+        <div
+          class="app-header-title__title"
+        >
+          <span
+            class="text text--headline-sm"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="app-header-title__sub-title"
+        >
+          <span
+            class="text text--body-md"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="drawer-content"
+      />
+    </div>
+  </div>
+</header>
+`;
+
 exports[`<AppHeader /> MobileFloatingVerticalOrientation story renders snapshot 1`] = `
 <header
   class="app-header app-header--orientation-vertical app-header--style-floating"
@@ -1546,6 +1584,11 @@ exports[`<AppHeader /> MobileFloatingVerticalOrientationNavMenus story renders s
                       class="text text--label-md"
                     >
                       Profile
+                      <div
+                        class="text text--body-xs"
+                      >
+                        Lorem Ipsum, Inc.
+                      </div>
                     </span>
                     <svg
                       aria-hidden="true"
@@ -2561,6 +2604,11 @@ exports[`<AppHeader /> VerticalNavMenus story renders snapshot 1`] = `
                       class="text text--label-md"
                     >
                       Profile
+                      <div
+                        class="text text--body-xs"
+                      >
+                        Lorem Ipsum, Inc.
+                      </div>
                     </span>
                     <svg
                       aria-hidden="true"

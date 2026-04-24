@@ -63,11 +63,11 @@
   border-bottom: 1px solid;
 
   /* preset: tab-lg */
-  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
+  font: 400 var(--eds-typography-preset-100) var(--eds-typography-font-family-1);
 
   @media all and (max-width: $eds-bp-md) {
     /* preset: tab-sm */
-    font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
+    font: 400 var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
   }
 
   &:not(.tabs--has-divider) {
@@ -102,7 +102,7 @@
   overflow: hidden;
 
   &.eds-is-active {
-    font-weight: var(--eds-typography-font-weight-bold);
+    font-weight: bolder;
   }
 
   &.tabs--width-full {

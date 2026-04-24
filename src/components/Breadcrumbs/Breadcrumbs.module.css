@@ -94,8 +94,8 @@
  */
 .breadcrumbs__link {
   /* preset: body-xs */
-  font: var(--eds-typography-font-weight-normal) var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
-  letter-spacing: var(--eds-typography-letter-spacing-normal);
+  font: 400 var(--eds-typography-preset-075) var(--eds-typography-font-family-1);
+  letter-spacing: normal;
 
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   text-decoration: none;

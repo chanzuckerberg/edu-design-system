@@ -2,29 +2,11 @@ import clsx from 'clsx';
 import Graphemer from 'graphemer';
 
 import React from 'react';
+import { type UserData } from '../../util/utility-types';
 import type { Preset, Size } from '../../util/variant-types';
 import Icon, { type IconName } from '../Icon';
 import Text from '../Text';
 import styles from './Avatar.module.css';
-
-export type UserData = {
-  /**
-   * The full name of the attached user (e.g., Jane Doe, David S. Pumpkins)
-   */
-  fullName: string;
-  /**
-   * User ID associated with the attached user
-   */
-  id?: string | number;
-  /**
-   * The display shortcut for the user name. Can be initials, emoji, or other text symbols (recommended max: 2)
-   */
-  displayName?: string;
-  /**
-   * Additional data for an attached user (email, etc.)
-   */
-  [k: string]: string | number | boolean | undefined;
-};
 
 type AvatarProps = {
   // Component API
@@ -122,7 +104,6 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ) => {
     const componentClassName = clsx(
       styles['avatar'],
-      styles[`avatar--circle`],
       isInteractive && styles['avatar--is-interactive'],
       size && styles[`avatar--${size}`],
       variant && styles[`avatar--${variant}`],
@@ -140,11 +121,16 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       avatarDisplayName = user.displayName;
     }
 
+    // trim text to one character when size=sm
+    if (size === 'sm') {
+      avatarDisplayName = produceAbbreviation(avatarDisplayName);
+    }
+
     const presetMap: Record<NonNullable<AvatarProps['size']>, Preset> = {
       sm: 'title-sm',
       md: 'title-md',
       lg: 'title-md',
-      xl: 'headline-md',
+      xl: 'label-xl',
     };
 
     const iconSizeMap: Record<NonNullable<AvatarProps['size']>, number> = {

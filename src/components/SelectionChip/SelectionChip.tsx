@@ -70,7 +70,13 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
     const idVar = id || generatedIdVar;
 
     return (
-      <label className={componentClassName} htmlFor={idVar} {...other}>
+      <label
+        className={componentClassName}
+        htmlFor={idVar}
+        // TODO(next-major): use inert when using React 19+
+        // inert={isDisabled}
+        {...other}
+      >
         {leadingIcon && <Icon name={leadingIcon} purpose="decorative" />}
         <Text
           as="span"

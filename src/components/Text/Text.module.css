@@ -6,30 +6,26 @@
  * Map the component preset names to the defined typography tokens
  */
 .text {
-  /** 
-    */
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
   --text-font-family: var(--eds-typography-font-family-1);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   font: unset;
   font-family: var(--text-font-family);
   font-size: calc(var(--text-font-size) * 1px);
-  font-style: var(--text-font-style, initial);
   line-height: calc(var(--text-line-height) * 1px);
-  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style, initial);
+  font-weight: var(--text-font-weight, normal);
   text-transform: var(--text-text-transform, none);
-  letter-spacing: var(--text-letter-spacing);
+  letter-spacing: var(--text-letter-spacing, normal);
 }
 
 .text--headline-xl {
   --text-font-size: var(--eds-typography-preset-800-font-size);
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
+  --text-letter-spacing: 2%;
 
   @media screen and (min-width: $eds-bp-md) {
     --text-font-size: var(--eds-typography-preset-1200-font-size);
@@ -41,8 +37,8 @@
   --text-font-size: var(--eds-typography-preset-800-font-size);
   --text-line-height: var(--eds-typography-preset-800-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
+  --text-letter-spacing: 2%;
 
   @media screen and (min-width: $eds-bp-md) {
     --text-font-size: var(--eds-typography-preset-1000-font-size);
@@ -51,15 +47,15 @@
 }
 
 .text--headline-md {
-  --text-font-size: var(--eds-typography-preset-600-font-size);
-  --text-line-height: var(--eds-typography-preset-600-line-height);
+  --text-font-size: var(--eds-typography-preset-500-font-size);
+  --text-line-height: var(--eds-typography-preset-500-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
+  --text-letter-spacing: 2%;
 
   @media screen and (min-width: $eds-bp-md) {
-    --text-font-size: var(--eds-typography-preset-800-font-size);
-    --text-line-height: var(--eds-typography-preset-800-line-height);
+    --text-font-size: var(--eds-typography-preset-700-font-size);
+    --text-line-height: var(--eds-typography-preset-700-line-height);
   }
 }
 
@@ -67,154 +63,167 @@
   --text-font-size: var(--eds-typography-preset-300-font-size);
   --text-line-height: var(--eds-typography-preset-300-line-height);
   --text-font-family: var(--eds-typography-font-family-2);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
+  --text-letter-spacing: 2%;
 
   @media screen and (min-width: $eds-bp-md) {
-    --text-font-size: var(--eds-typography-preset-600-font-size);
-    --text-line-height: var(--eds-typography-preset-600-line-height);
+    --text-font-size: var(--eds-typography-preset-400-font-size);
+    --text-line-height: var(--eds-typography-preset-400-line-height);
+  }
+}
+
+.text--headline-decorative-md {
+  --text-font-size: var(--eds-typography-preset-500-font-size);
+  --text-line-height: var(--eds-typography-preset-500-line-height);
+  --text-font-family: var(--eds-typography-font-family-3);
+  --text-font-weight: 300;
+  --text-letter-spacing: 4%;
+  --text-text-transform: uppercase;
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-font-size: var(--eds-typography-preset-700-font-size);
+    --text-line-height: var(--eds-typography-preset-700-line-height);
   }
 }
 
 .text--title-xl {
-  --text-font-size: var(--eds-typography-preset-800-font-size);
-  --text-line-height: var(--eds-typography-preset-800-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-size: var(--eds-typography-preset-500-font-size);
+  --text-line-height: var(--eds-typography-preset-500-line-height);
+  --text-font-family: var(--eds-typography-font-family-1);
+  --text-font-weight: 500;
+  --text-letter-spacing: 2%;
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-font-size: var(--eds-typography-preset-700-font-size);
+    --text-line-height: var(--eds-typography-preset-700-line-height);
+  }
 }
 
 .text--title-lg {
-  --text-font-size: var(--eds-typography-preset-500-font-size);
-  --text-line-height: var(--eds-typography-preset-500-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-size: var(--eds-typography-preset-300-font-size);
+  --text-line-height: var(--eds-typography-preset-300-line-height);
+  --text-font-weight: 500;
+  --text-letter-spacing: 2%;
+
+  @media screen and (min-width: $eds-bp-md) {
+    --text-font-size: var(--eds-typography-preset-400-font-size);
+    --text-line-height: var(--eds-typography-preset-400-line-height);
+  }
 }
 
 .text--title-md {
-  --text-font-size: var(--eds-typography-preset-300-font-size);
-  --text-line-height: var(--eds-typography-preset-300-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-size: var(--eds-typography-preset-200-font-size);
+  --text-line-height: var(--eds-typography-preset-200-line-height);
+  --text-font-weight: 500;
+  --text-letter-spacing: 2%;
 }
 
 .text--title-sm {
-  --text-font-size: var(--eds-typography-preset-200-font-size);
-  --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-size: var(--eds-typography-preset-100-font-size);
+  --text-line-height: var(--eds-typography-preset-100-line-height);
+  --text-font-family: var(--eds-typography-font-family-3);
+  --text-font-weight: 500;
+  --text-letter-spacing: 2%;
+  --text-text-transform: uppercase;
 }
 
 .text--title-xs {
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 2%;
 }
 
 .text--body-xl {
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-light);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--body-xl-bold {
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 700;
 }
 
 .text--body-lg {
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-light);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--body-lg-bold {
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 700;
 }
 
 .text--body-md {
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-light);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--body-md-bold {
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 700;
 }
 
 .text--body-sm {
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-light);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--body-sm-bold {
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 700;
 }
 
 .text--body-xs {
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-light);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--body-xs-bold {
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 700;
 }
 
 .text--label-xl {
-  --text-font-size: var(--eds-typography-preset-200-font-size);
-  --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-size: var(--eds-typography-preset-600-font-size);
+  --text-line-height: var(--eds-typography-preset-600-line-height);
+  --text-font-weight: 500;
 }
 
 .text--label-lg {
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
 }
 
 .text--label-md {
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
 }
 
 .text--label-sm {
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
 }
 
 .text--overline-lg {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
   --text-text-transform: uppercase;
 }
 
@@ -222,8 +231,8 @@
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
   --text-text-transform: uppercase;
 }
 
@@ -231,100 +240,110 @@
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
   --text-text-transform: uppercase;
 }
 
 .text--caption-md {
+  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
 }
 
 .text--caption-sm {
+  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
+}
+
+.text--input-md {
+  --text-font-size: var(--eds-typography-preset-200-font-size);
+  --text-line-height: var(--eds-typography-preset-200-line-height);
+  --text-font-weight: 400;
 }
 
 .text--input {
+  /* TODO(next-major): consider removing */
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--tab-lg-active {
-  --text-font-family: var(--eds-typography-font-family-3);
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
 }
 
 .text--tab-lg {
-  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 400;
 }
 
 .text--tab-sm-active {
-  --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-bold);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
 }
 
 .text--tab-sm {
+  --text-font-size: var(--eds-typography-preset-075-font-size);
+  --text-line-height: var(--eds-typography-preset-075-line-height);
+  --text-font-weight: 400;
+}
+
+.text--tag {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
+  --text-text-transform: uppercase;
 }
 
 .text--code-xl {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-light);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
 }
 
 .text--code-lg {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
 }
 
 .text--code-md {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
 }
 
 .text--code-sm {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
 }
 
 .text--code-xs {
   --text-font-family: var(--eds-typography-font-family-3);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
-  --text-font-weight: var(--eds-typography-font-weight-normal);
-  --text-letter-spacing: var(--eds-typography-letter-spacing-normal);
+  --text-font-weight: 500;
+  --text-letter-spacing: 4%;
 }

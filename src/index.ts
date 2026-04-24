@@ -61,6 +61,9 @@ export type {
   NavLink,
   NavMenu,
   NavMenuLabel,
+  NavMenuCaption,
+  NavMenuButton,
+  NavMenuLink,
   NavSeparator,
   NavTree,
 } from './util/utility-types';

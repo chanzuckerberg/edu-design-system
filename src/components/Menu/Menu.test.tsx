@@ -13,14 +13,11 @@ mockResizeObserver();
 
 const { Default, WithLongButtonText } = composeStories(stories);
 
-// Remove the tests with `play` in, b/c it causes the test runner to be unhappy
-const { Opened, IconlessOpened, ...staticStories } = stories;
-
 describe('<Menu />', () => {
   afterEach(() => {
     jest.resetAllMocks();
   });
-  generateSnapshots(staticStories as StoryFile, {
+  generateSnapshots(stories as StoryFile, {
     getElement: async () => {
       const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');

@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.4.0'],
+  tags: ['autodocs', 'version:1.5.0'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -231,7 +231,29 @@ export const DefaultWithNavMenus: Story = {
             type: 'menu',
             icon: 'person-encircled',
             iconLayout: 'left',
+            subLabel: 'Lorem Ipsum, Inc.',
             navItems: [
+              {
+                type: 'button',
+                leadingContent: 'avatar',
+                name: 'Lorem Ipsum, Inc.',
+                user: { fullName: 'Lorem Ipsum' },
+                trailingContent: 'check',
+              },
+              {
+                type: 'button',
+                leadingContent: 'avatar',
+                name: 'Unknown Organization',
+              },
+              {
+                type: 'button',
+                leadingContent: 'add-encircled',
+                name: 'New organization',
+              },
+              {
+                type: 'separator',
+                name: 'line-0',
+              },
               {
                 type: 'button',
                 name: 'Settings',
@@ -252,7 +274,7 @@ export const DefaultWithNavMenus: Story = {
                 name: 'line',
               },
               {
-                type: 'label',
+                type: 'caption',
                 name: '© 2025 Your Company Name. All rights reserved.',
               },
             ],
@@ -346,6 +368,22 @@ export const MobileFloatingVerticalOrientation: Story = {
   args: {
     ...FloatingVerticalOrientation.args,
     orientation: 'vertical',
+  },
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
+      isRotated: false,
+    },
+  },
+};
+
+/**
+ * When empty, we do not render the menu button (there is nothing to show).
+ */
+export const MobileFloatingVerticalEmpty: Story = {
+  args: {
+    ...MobileFloatingVerticalOrientation.args,
+    navGroups: [],
   },
   globals: {
     viewport: {

@@ -405,6 +405,8 @@ export const DataTableHeaderCell = ({
   subLabel,
   ...rest
 }: DataTableHeaderCellProps) => {
+  const { size } = useContext(DataTableContext);
+
   const headerCellClassName = clsx(
     styles['data-table__header-cell'],
     alignment && styles[`data-table__cell--alignment-${alignment}`],
@@ -422,7 +424,9 @@ export const DataTableHeaderCell = ({
       )}
       {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
-          {children}
+          <Text as="span" preset={size === 'md' ? 'title-md' : 'title-sm'}>
+            {children}
+          </Text>
           {subLabel && (
             <Text
               as="span"
