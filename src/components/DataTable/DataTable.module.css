@@ -99,10 +99,6 @@
   }
 
   .data-table--size-sm & {
-    /* preset: title-sm */
-    font: 500 var(--eds-typography-preset-100) var(--eds-typography-font-family-3);
-    letter-spacing: 2%;
-
     /* TODO(bug): we want to use top-/bottom-padding of 5px (instead of 4px) to give overall height divisible by 8 (32px) */
     padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   }
