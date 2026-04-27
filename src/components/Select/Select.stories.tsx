@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 // Importing this here, since using @storybook/test below leads to superfluous act() warnings
 import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';

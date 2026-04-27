@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<ScrollWrapper /> ContainVertical story renders snapshot 1`] = `
+exports[`<ScrollWrapper /> > ContainVertical story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -8,10 +8,10 @@ exports[`<ScrollWrapper /> ContainVertical story renders snapshot 1`] = `
     class="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--orientation-vertical scroll-wrapper--shadow-type-contain"
+      class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-contain_583563"
     >
       <div
-        class="scroll-wrapper__inner"
+        class="_scroll-wrapper__inner_583563"
         tabindex="0"
       >
         <div
@@ -24,7 +24,7 @@ exports[`<ScrollWrapper /> ContainVertical story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ScrollWrapper /> Default story renders snapshot 1`] = `
+exports[`<ScrollWrapper /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -32,10 +32,10 @@ exports[`<ScrollWrapper /> Default story renders snapshot 1`] = `
     class="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover"
   >
     <div
-      class="scroll-wrapper scroll-wrapper--orientation-vertical scroll-wrapper--shadow-type-cover"
+      class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-cover_583563"
     >
       <div
-        class="scroll-wrapper__inner"
+        class="_scroll-wrapper__inner_583563"
         tabindex="0"
       >
         <div

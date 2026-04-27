@@ -1,74 +1,74 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<AppNotification /> Default story renders snapshot 1`] = `
+exports[`<AppNotification /> > Default story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--variant-default"
+  class="_app-notification_d1763b _app-notification--variant-default_d1763b"
   role="status"
 >
   <div
-    class="app-notification__content"
+    class="_app-notification__content_d1763b"
   >
     <section>
       <div
-        class="text text--headline-sm app-notification__title"
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
       >
         This is an AppNotification title
       </div>
       <span
-        class="text text--body-md app-notification__sub-title"
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
       <div
-        class="app-notification__actions"
+        class="_app-notification__actions_d1763b"
       />
     </section>
   </div>
 </div>
 `;
 
-exports[`<AppNotification /> InverseVariant story renders snapshot 1`] = `
+exports[`<AppNotification /> > InverseVariant story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--variant-inverse"
+  class="_app-notification_d1763b _app-notification--variant-inverse_d1763b"
   role="status"
 >
   <div
-    class="app-notification__content"
+    class="_app-notification__content_d1763b"
   >
     <section>
       <div
-        class="text text--headline-sm app-notification__title"
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
       >
         This is an AppNotification title
       </div>
       <span
-        class="text text--body-md app-notification__sub-title"
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
       <div
-        class="app-notification__actions"
+        class="_app-notification__actions_d1763b"
       >
          
         <div
-          class="button-group button-group--horizontal !flex-row"
+          class="_button-group_db62b8 _button-group--horizontal_db62b8 !flex-row"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Call To Action
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Other action
             </span>
@@ -80,48 +80,48 @@ exports[`<AppNotification /> InverseVariant story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<AppNotification /> InverseWithDismissAndControls story renders snapshot 1`] = `
+exports[`<AppNotification /> > InverseWithDismissAndControls story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--variant-inverse"
+  class="_app-notification_d1763b _app-notification--variant-inverse_d1763b"
   role="status"
 >
   <div
-    class="app-notification__content"
+    class="_app-notification__content_d1763b"
   >
     <section>
       <div
-        class="text text--headline-sm app-notification__title"
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
       >
         This is an AppNotification title
       </div>
       <span
-        class="text text--body-md app-notification__sub-title"
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
       <div
-        class="app-notification__actions"
+        class="_app-notification__actions_d1763b"
       >
          
         <div
-          class="button-group button-group--horizontal !flex-row"
+          class="_button-group_db62b8 _button-group--horizontal_db62b8 !flex-row"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Call To Action
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Other action
             </span>
@@ -131,15 +131,15 @@ exports[`<AppNotification /> InverseWithDismissAndControls story renders snapsho
     </section>
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral app-notification__close-btn"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _app-notification__close-btn_d1763b"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -157,48 +157,48 @@ exports[`<AppNotification /> InverseWithDismissAndControls story renders snapsho
 </div>
 `;
 
-exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
+exports[`<AppNotification /> > WithControls story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--variant-default"
+  class="_app-notification_d1763b _app-notification--variant-default_d1763b"
   role="status"
 >
   <div
-    class="app-notification__content"
+    class="_app-notification__content_d1763b"
   >
     <section>
       <div
-        class="text text--headline-sm app-notification__title"
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
       >
         This is an AppNotification title
       </div>
       <span
-        class="text text--body-md app-notification__sub-title"
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
       <div
-        class="app-notification__actions"
+        class="_app-notification__actions_d1763b"
       >
          
         <div
-          class="button-group button-group--horizontal !flex-row"
+          class="_button-group_db62b8 _button-group--horizontal_db62b8 !flex-row"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Call To Action
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-inverse"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Other action
             </span>
@@ -210,48 +210,48 @@ exports[`<AppNotification /> WithControls story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] = `
+exports[`<AppNotification /> > WithDismissAndControls story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--variant-default"
+  class="_app-notification_d1763b _app-notification--variant-default_d1763b"
   role="status"
 >
   <div
-    class="app-notification__content"
+    class="_app-notification__content_d1763b"
   >
     <section>
       <div
-        class="text text--headline-sm app-notification__title"
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
       >
         This is an AppNotification title
       </div>
       <span
-        class="text text--body-md app-notification__sub-title"
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
       >
         Limited subTitle text
       </span>
       <div
-        class="app-notification__actions"
+        class="_app-notification__actions_d1763b"
       >
          
         <div
-          class="button-group button-group--horizontal !flex-row"
+          class="_button-group_db62b8 _button-group--horizontal_db62b8 !flex-row"
         >
           <button
-            class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Call To Action
             </span>
           </button>
           <button
-            class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-inverse"
+            class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1"
             type="button"
           >
             <span
-              class="text text--label-lg button__text"
+              class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
             >
               Other action
             </span>
@@ -261,15 +261,15 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
     </section>
     <button
       aria-label="close"
-      class="button button--context-default button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-inverse app-notification__close-btn"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 _app-notification__close-btn_d1763b"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -287,30 +287,30 @@ exports[`<AppNotification /> WithDismissAndControls story renders snapshot 1`] =
 </div>
 `;
 
-exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
+exports[`<AppNotification /> > WithLinkInSubtitle story renders snapshot 1`] = `
 <div
-  class="app-notification app-notification--variant-default"
+  class="_app-notification_d1763b _app-notification--variant-default_d1763b"
   role="status"
 >
   <div
-    class="app-notification__content"
+    class="_app-notification__content_d1763b"
   >
     <section>
       <div
-        class="text text--headline-sm app-notification__title"
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
       >
         This is an AppNotification title
       </div>
       <span
-        class="text text--body-md app-notification__sub-title"
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Some text with a
            
           <a
-            class="link link--emphasis-default link--variant-inverse"
+            class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--variant-inverse_d78ce8"
             href="https://example.com/"
           >
             link
@@ -320,7 +320,7 @@ exports[`<AppNotification /> WithLinkInSubtitle story renders snapshot 1`] = `
         </span>
       </span>
       <div
-        class="app-notification__actions"
+        class="_app-notification__actions_d1763b"
       />
     </section>
   </div>

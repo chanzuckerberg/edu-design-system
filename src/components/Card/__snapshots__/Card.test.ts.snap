@@ -1,39 +1,39 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
+exports[`<Card /> > BackgroundCallout story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-call-out w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-call-out_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           Recommended for you
         </div>
         <h3
-          class="text text--headline-sm header__title header--size-md"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-lg header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
@@ -44,7 +44,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -65,7 +65,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo my-4"
@@ -74,17 +74,17 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary
           </span>
@@ -92,58 +92,58 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> CancelMembership story renders snapshot 1`] = `
+exports[`<Card /> > CancelMembership story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-sm"
+      class="_card__header_f66b11 _header--size-sm_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <h3
-          class="text text--title-sm header__title header--size-sm"
+          class="_text_b3eba3 _text--title-sm_b3eba3 _header__title_f66b11 _header--size-sm_f66b11"
         >
           Cancel membership?
         </h3>
         <div
-          class="text text--body-sm header__sub-title header--size-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3 _header__sub-title_f66b11 _header--size-sm_f66b11"
         >
           We're sad to see you go
         </div>
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <p
-        class="text text--body-sm py-4"
+        class="_text_b3eba3 _text--body-sm_b3eba3 py-4"
       >
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu
       </p>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--md button--size-md button--variant-critical"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-critical_0829c1"
           type="button"
         >
           <span
-            class="text text--label-md button__text"
+            class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
           >
             Confirm cancellation
           </span>
@@ -151,13 +151,13 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
+exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -165,37 +165,37 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
     class="flex gap-spacing-size-1"
   >
     <label
-      class="card__behavior-label"
+      class="_card__behavior-label_f66b11"
       for=":r1a:"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[384px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--headline-sm header__title header--size-md"
+              class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-lg header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -204,7 +204,7 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -213,47 +213,47 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--none"
+          class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
         />
         <input
-          class="card__behavior-input"
+          class="_card__behavior-input_f66b11"
           id=":r1a:"
           type="checkbox"
         />
       </div>
     </label>
     <label
-      class="card__behavior-label"
+      class="_card__behavior-label_f66b11"
       for=":r1b:"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[384px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--headline-sm header__title header--size-md"
+              class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-lg header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -262,7 +262,7 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -271,10 +271,10 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--none"
+          class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
         />
         <input
-          class="card__behavior-input"
+          class="_card__behavior-input_f66b11"
           id=":r1b:"
           type="checkbox"
         />
@@ -284,41 +284,41 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
+exports[`<Card /> > CustomTopStripe story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
     style="--card__top-stripe-bg: var(--eds-theme-color-background-utility-critical-high-emphasis);"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           Recommended for you
         </div>
         <h3
-          class="text text--headline-sm header__title header--size-md"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-lg header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
@@ -329,7 +329,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -350,7 +350,7 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo my-4"
@@ -359,17 +359,17 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary
           </span>
@@ -377,24 +377,24 @@ exports[`<Card /> CustomTopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--high"
+      class="_card__top-stripe_f66b11 _top-stripe--high_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> Default story renders snapshot 1`] = `
+exports[`<Card /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__custom"
+        class="_header__custom_f66b11"
       >
         <div
           class="fpo w-full"
@@ -404,7 +404,7 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -413,7 +413,7 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -422,24 +422,24 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> IsInteractive story renders snapshot 1`] = `
+exports[`<Card /> > IsInteractive story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default card--is-interactive w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__custom"
+        class="_header__custom_f66b11"
       >
         <div
           class="fpo w-full"
@@ -449,7 +449,7 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -458,7 +458,7 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -467,13 +467,13 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> RadioCards story renders snapshot 1`] = `
+exports[`<Card /> > RadioCards story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -481,37 +481,37 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
     class="flex gap-spacing-size-1"
   >
     <label
-      class="card__behavior-label"
+      class="_card__behavior-label_f66b11"
       for=":r18:"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[384px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--headline-sm header__title header--size-md"
+              class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-lg header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -520,7 +520,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -529,10 +529,10 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--none"
+          class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
         />
         <input
-          class="card__behavior-input"
+          class="_card__behavior-input_f66b11"
           id=":r18:"
           name="test"
           type="radio"
@@ -540,37 +540,37 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
       </div>
     </label>
     <label
-      class="card__behavior-label"
+      class="_card__behavior-label_f66b11"
       for=":r19:"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[384px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[384px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--headline-sm header__title header--size-md"
+              class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-lg header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -579,7 +579,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -588,10 +588,10 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--none"
+          class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
         />
         <input
-          class="card__behavior-input"
+          class="_card__behavior-input_f66b11"
           id=":r19:"
           name="test"
           type="radio"
@@ -602,40 +602,40 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Card /> TopStripe story renders snapshot 1`] = `
+exports[`<Card /> > TopStripe story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           Recommended for you
         </div>
         <h3
-          class="text text--headline-sm header__title header--size-md"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-lg header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
@@ -646,7 +646,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -667,7 +667,7 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo my-4"
@@ -676,17 +676,17 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary
           </span>
@@ -694,24 +694,24 @@ exports[`<Card /> TopStripe story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--medium"
+      class="_card__top-stripe_f66b11 _top-stripe--medium_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WhileDragging story renders snapshot 1`] = `
+exports[`<Card /> > WhileDragging story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default card--is-dragging-true w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-dragging-true_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__custom"
+        class="_header__custom_f66b11"
       >
         <div
           class="fpo w-full"
@@ -721,7 +721,7 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -730,7 +730,7 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -739,24 +739,24 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
+exports[`<Card /> > WithCustomizedHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md mb-spacing-size-2"
+      class="_card__header_f66b11 _header--size-md_f66b11 mb-spacing-size-2"
     >
       <div
-        class="header__custom"
+        class="_header__custom_f66b11"
       >
         Displaying 
         <strong>
@@ -770,7 +770,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -779,7 +779,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -788,44 +788,44 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
+exports[`<Card /> > WithFullHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           Recommended for you
         </div>
         <h3
-          class="text text--headline-sm header__title header--size-md"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-lg header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -834,7 +834,7 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -843,28 +843,28 @@ exports[`<Card /> WithFullHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
+exports[`<Card /> > WithFullHeaderAndIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__icon"
+        class="_header__icon_f66b11"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -878,15 +878,15 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <h3
-          class="text text--headline-sm header__title header--size-md"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-lg header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           <span>
             Get to know your colleagues
@@ -895,7 +895,7 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -904,7 +904,7 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -913,46 +913,46 @@ exports[`<Card /> WithFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
+exports[`<Card /> > WithHorizontalPrimaryButton story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           Recommended for you
         </div>
         <h3
-          class="text text--headline-sm header__title header--size-md"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-lg header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
@@ -963,7 +963,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -984,7 +984,7 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo my-4"
@@ -993,17 +993,17 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary
           </span>
@@ -1011,28 +1011,28 @@ exports[`<Card /> WithHorizontalPrimaryButton story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
+exports[`<Card /> > WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[384px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[384px]"
   >
     <div
-      class="card__header header--size-sm"
+      class="_card__header_f66b11 _header--size-sm_f66b11"
     >
       <div
-        class="header__icon"
+        class="_header__icon_f66b11"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -1046,24 +1046,24 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <h3
-          class="text text--title-sm header__title header--size-sm"
+          class="_text_b3eba3 _text--title-sm_b3eba3 _header__title_f66b11 _header--size-sm_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-sm header__sub-title header--size-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3 _header__sub-title_f66b11 _header--size-sm_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
@@ -1074,7 +1074,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -1095,7 +1095,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -1104,7 +1104,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -1113,7 +1113,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>

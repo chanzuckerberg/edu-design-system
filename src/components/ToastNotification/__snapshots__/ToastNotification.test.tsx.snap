@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<ToastNotification /> Critical story renders snapshot 1`] = `
+exports[`<ToastNotification /> > Critical story renders snapshot 1`] = `
 <div
-  class="toast toast--status-critical w-[384px]"
+  class="_toast_355ac2 _toast--status-critical_355ac2 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon toast__icon"
+    class="_icon_779da8 _toast__icon_355ac2"
     fill="currentColor"
     height="30px"
     style="--icon-size: 30px;"
@@ -19,10 +19,10 @@ exports[`<ToastNotification /> Critical story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="toast__body"
+    class="_toast__body_355ac2"
   >
     <span
-      class="text text--title-md toast__text"
+      class="_text_b3eba3 _text--title-md_b3eba3 _toast__text_355ac2"
     >
       You've got a temporary notification!
     </span>
@@ -30,13 +30,13 @@ exports[`<ToastNotification /> Critical story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ToastNotification /> Default story renders snapshot 1`] = `
+exports[`<ToastNotification /> > Default story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable w-[384px]"
+  class="_toast_355ac2 _toast--status-favorable_355ac2 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon toast__icon"
+    class="_icon_779da8 _toast__icon_355ac2"
     fill="currentColor"
     height="30px"
     style="--icon-size: 30px;"
@@ -49,10 +49,10 @@ exports[`<ToastNotification /> Default story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="toast__body"
+    class="_toast__body_355ac2"
   >
     <span
-      class="text text--title-md toast__text"
+      class="_text_b3eba3 _text--title-md_b3eba3 _toast__text_355ac2"
     >
       You've got a temporary notification!
     </span>
@@ -60,13 +60,13 @@ exports[`<ToastNotification /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ToastNotification /> Favorable story renders snapshot 1`] = `
+exports[`<ToastNotification /> > Favorable story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable w-[384px]"
+  class="_toast_355ac2 _toast--status-favorable_355ac2 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon toast__icon"
+    class="_icon_779da8 _toast__icon_355ac2"
     fill="currentColor"
     height="30px"
     style="--icon-size: 30px;"
@@ -79,10 +79,10 @@ exports[`<ToastNotification /> Favorable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="toast__body"
+    class="_toast__body_355ac2"
   >
     <span
-      class="text text--title-md toast__text"
+      class="_text_b3eba3 _text--title-md_b3eba3 _toast__text_355ac2"
     >
       You've got a temporary notification!
     </span>
@@ -90,13 +90,13 @@ exports[`<ToastNotification /> Favorable story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ToastNotification /> NotDismissable story renders snapshot 1`] = `
+exports[`<ToastNotification /> > NotDismissable story renders snapshot 1`] = `
 <div
-  class="toast toast--status-favorable w-[384px]"
+  class="_toast_355ac2 _toast--status-favorable_355ac2 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon toast__icon"
+    class="_icon_779da8 _toast__icon_355ac2"
     fill="currentColor"
     height="30px"
     style="--icon-size: 30px;"
@@ -109,10 +109,10 @@ exports[`<ToastNotification /> NotDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="toast__body"
+    class="_toast__body_355ac2"
   >
     <span
-      class="text text--title-md toast__text"
+      class="_text_b3eba3 _text--title-md_b3eba3 _toast__text_355ac2"
     >
       You've got a temporary notification!
     </span>

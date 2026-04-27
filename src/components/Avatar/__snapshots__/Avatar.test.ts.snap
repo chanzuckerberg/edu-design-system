@@ -1,28 +1,28 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Avatar /> Default story renders snapshot 1`] = `
+exports[`<Avatar /> > Default story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--text"
+  class="_avatar_814665 _avatar--md_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     ??
   </span>
 </div>
 `;
 
-exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
+exports[`<Avatar /> > ExtraLarge story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--xl avatar--icon"
+  class="_avatar_814665 _avatar--xl_814665 _avatar--icon_814665"
   role="img"
 >
   <svg
     aria-hidden="true"
-    class="icon"
+    class="_icon_779da8"
     fill="currentColor"
     height="40px"
     style="--icon-size: 40px;"
@@ -37,29 +37,29 @@ exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> ExtraLargeText story renders snapshot 1`] = `
+exports[`<Avatar /> > ExtraLargeText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--xl avatar--text"
+  class="_avatar_814665 _avatar--xl_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--label-xl"
+    class="_text_b3eba3 _text--label-xl_b3eba3"
   >
     ??
   </span>
 </div>
 `;
 
-exports[`<Avatar /> Large story renders snapshot 1`] = `
+exports[`<Avatar /> > Large story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--lg avatar--icon"
+  class="_avatar_814665 _avatar--lg_814665 _avatar--icon_814665"
   role="img"
 >
   <svg
     aria-hidden="true"
-    class="icon"
+    class="_icon_779da8"
     fill="currentColor"
     height="32px"
     style="--icon-size: 32px;"
@@ -74,29 +74,29 @@ exports[`<Avatar /> Large story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> LargeText story renders snapshot 1`] = `
+exports[`<Avatar /> > LargeText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--lg avatar--text"
+  class="_avatar_814665 _avatar--lg_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     ??
   </span>
 </div>
 `;
 
-exports[`<Avatar /> Medium story renders snapshot 1`] = `
+exports[`<Avatar /> > Medium story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--icon"
+  class="_avatar_814665 _avatar--md_814665 _avatar--icon_814665"
   role="img"
 >
   <svg
     aria-hidden="true"
-    class="icon"
+    class="_icon_779da8"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -111,29 +111,29 @@ exports[`<Avatar /> Medium story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> MediumText story renders snapshot 1`] = `
+exports[`<Avatar /> > MediumText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--text"
+  class="_avatar_814665 _avatar--md_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     ??
   </span>
 </div>
 `;
 
-exports[`<Avatar /> Small story renders snapshot 1`] = `
+exports[`<Avatar /> > Small story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--sm avatar--icon"
+  class="_avatar_814665 _avatar--sm_814665 _avatar--icon_814665"
   role="img"
 >
   <svg
     aria-hidden="true"
-    class="icon"
+    class="_icon_779da8"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -148,85 +148,85 @@ exports[`<Avatar /> Small story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> SmallText story renders snapshot 1`] = `
+exports[`<Avatar /> > SmallText story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--sm avatar--text"
+  class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--title-sm"
+    class="_text_b3eba3 _text--title-sm_b3eba3"
   >
     ?
   </span>
 </div>
 `;
 
-exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
+exports[`<Avatar /> > UsingEmoji story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user Young Yarn Lad"
-  class="avatar avatar--lg avatar--text"
+  class="_avatar_814665 _avatar--lg_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     🧶👦🏽
   </span>
 </div>
 `;
 
-exports[`<Avatar /> UsingImage story renders snapshot 1`] = `
+exports[`<Avatar /> > UsingImage story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--image"
+  class="_avatar_814665 _avatar--md_814665 _avatar--image_814665"
   role="img"
 >
   <img
     alt="user"
-    class="avatar__image"
+    class="_avatar__image_814665"
     src="data:image/svg+xml,%3csvg width='38' height='37' viewBox='0 0 38 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 17.9417C16.4333 17.9417 14.3333 17.125 12.7 15.4917C11.0667 13.8583 10.25 11.7583 10.25 9.19168C10.25 6.62502 11.0667 4.52501 12.7 2.89168C14.3333 1.25835 16.4333 0.441681 19 0.441681C21.5667 0.441681 23.6667 1.25835 25.3 2.89168C26.9333 4.52501 27.75 6.62502 27.75 9.19168C27.75 11.7583 26.9333 13.8583 25.3 15.4917C23.6667 17.125 21.5667 17.9417 19 17.9417ZM0.333344 36.6667V31.1833C0.333344 29.7056 0.702788 28.4417 1.44168 27.3917C2.18057 26.3417 3.13334 25.5445 4.30001 25C6.90557 23.8333 9.40418 22.9583 11.7958 22.375C14.1875 21.7917 16.5889 21.5 19 21.5C21.4111 21.5 23.8028 21.8014 26.175 22.4042C28.5472 23.007 31.0361 23.8722 33.6417 25C34.8472 25.5445 35.8195 26.3417 36.5583 27.3917C37.2972 28.4417 37.6667 29.7056 37.6667 31.1833V36.6667H0.333344Z' fill='%235D6369'/%3e%3c/svg%3e"
   />
 </div>
 `;
 
-exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
+exports[`<Avatar /> > UsingInitials story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user John Smith"
-  class="avatar avatar--md avatar--text"
+  class="_avatar_814665 _avatar--md_814665 _avatar--text_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     JS
   </span>
 </div>
 `;
 
-exports[`<Avatar /> UsingMultibyteUnicode story renders snapshot 1`] = `
+exports[`<Avatar /> > UsingMultibyteUnicode story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user 你好世界"
-  class="avatar avatar--lg avatar--image"
+  class="_avatar_814665 _avatar--lg_814665 _avatar--image_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     你
   </span>
 </div>
 `;
 
-exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
+exports[`<Avatar /> > UsingWithTooltip story renders snapshot 1`] = `
 <span>
   <div
     aria-label="Avatar for unknown user "
-    class="avatar avatar--is-interactive avatar--md avatar--text"
+    class="_avatar_814665 _avatar--is-interactive_814665 _avatar--md_814665 _avatar--text_814665"
     role="img"
   >
     <span
-      class="text text--title-md"
+      class="_text_b3eba3 _text--title-md_b3eba3"
     >
       ??
     </span>
@@ -234,29 +234,29 @@ exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
 </span>
 `;
 
-exports[`<Avatar /> WhenImageVariantMissingSource story renders snapshot 1`] = `
+exports[`<Avatar /> > WhenImageVariantMissingSource story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user Young Yarn Lad"
-  class="avatar avatar--lg avatar--image"
+  class="_avatar_814665 _avatar--lg_814665 _avatar--image_814665"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     YL
   </span>
 </div>
 `;
 
-exports[`<Avatar /> WithCustomIcon story renders snapshot 1`] = `
+exports[`<Avatar /> > WithCustomIcon story renders snapshot 1`] = `
 <div
   aria-label="Custom label for avatar"
-  class="avatar avatar--md avatar--icon"
+  class="_avatar_814665 _avatar--md_814665 _avatar--icon_814665"
   role="img"
 >
   <svg
     aria-hidden="true"
-    class="icon"
+    class="_icon_779da8"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"

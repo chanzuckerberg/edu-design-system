@@ -12,11 +12,7 @@ import '../src/tokens-dist/css/variables-dark.css';
 import './css/styleguide-only.css';
 
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
-import type {
-  Preview,
-  StoryFn,
-  ReactRenderer,
-} from '@storybook/react-webpack5';
+import type { Preview, StoryFn, ReactRenderer } from '@storybook/react-vite';
 import React from 'react';
 
 import Theme from './Theme';

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<InputField /> DateHandling story renders snapshot 1`] = `
+exports[`<InputField /> > DateHandling story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -8,26 +8,26 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r14:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Default input field
         </span>
       </label>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=""
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r14:"
         type="date"
       />
@@ -36,7 +36,7 @@ exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> Default story renders snapshot 1`] = `
+exports[`<InputField /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -44,26 +44,26 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r0:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Default input field
         </span>
       </label>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=""
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r0:"
         type="text"
       />
@@ -72,7 +72,7 @@ exports[`<InputField /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> Disabled story renders snapshot 1`] = `
+exports[`<InputField /> > Disabled story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -80,24 +80,24 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
         aria-disabled="true"
-        class="label label--md label--disabled input-field__label input-field__label--disabled"
+        class="_label_76755a _label--md_76755a _label--disabled_76755a _input-field__label_4d3b17 _input-field__label--disabled_4d3b17"
         for=":rl:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Disabled input field
         </span>
       </label>
       <div
-        class="input-field__subLabel input-field__label--disabled"
+        class="_input-field__subLabel_4d3b17 _input-field__label--disabled_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rn:"
         >
           Additional descriptive text for the field.
@@ -105,12 +105,12 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":rn: :rm:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         disabled=""
         id=":rl:"
         type="text"
@@ -118,15 +118,15 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
         aria-disabled="true"
-        class="field-note field-note--disabled"
+        class="_field-note_fd2e78 _field-note--disabled_fd2e78"
         id=":rm:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This InputField is disabled
         </span>
@@ -136,7 +136,7 @@ exports[`<InputField /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> Error story renders snapshot 1`] = `
+exports[`<InputField /> > Error story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -144,23 +144,23 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":rc:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Error input field
         </span>
       </label>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":re:"
         >
           Additional descriptive text for the field.
@@ -168,25 +168,25 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":re: :rd:"
         aria-invalid="true"
-        class="input error"
+        class="_input_0d9f86 _error_0d9f86"
         id=":rc:"
         type="text"
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note field-note--error"
+        class="_field-note_fd2e78 _field-note--error_fd2e78"
         id=":rd:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -203,7 +203,7 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This is a fieldnote with an error.
         </span>
@@ -213,44 +213,44 @@ exports[`<InputField /> Error story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> InputWithin story renders snapshot 1`] = `
+exports[`<InputField /> > InputWithin story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div>
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1d:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Input field with button inside
         </span>
       </label>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=""
         aria-invalid="false"
-        class="input input-field__input--input-within"
+        class="_input_0d9f86 _input-field__input--input-within_4d3b17"
         id=":r1d:"
         type="text"
       />
       <div
-        class="input-field__input-within"
+        class="_input-field__input-within_4d3b17"
       >
         <button
-          class="button button--layout-none button--secondary button--sm button--size-sm button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-sm button__text"
+            class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
           >
             Button
           </span>
@@ -261,7 +261,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
+exports[`<InputField /> > LeadingIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -269,23 +269,23 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=":rq:"
         aria-invalid="false"
         aria-label="search field"
-        class="input input-field__input--leading-icon"
+        class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
         id=":ro:"
         placeholder="Search..."
         type="text"
       />
       <div
-        class="input-field__leading-icon"
+        class="_input-field__leading-icon_4d3b17"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -303,48 +303,48 @@ exports[`<InputField /> LeadingIcon story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
+exports[`<InputField /> > LongInputWithin story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div>
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1g:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Input field with button inside
         </span>
       </label>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=""
         aria-invalid="false"
-        class="input input-field__input--input-within"
+        class="_input_0d9f86 _input-field__input--input-within_4d3b17"
         id=":r1g:"
         type="text"
       />
       <div
-        class="input-field__input-within"
+        class="_input-field__input-within_4d3b17"
       >
         <button
-          class="button button--layout-left button--secondary button--sm button--size-sm button--variant-default"
+          class="_button_0829c1 _button--layout-left_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-sm button__text"
+            class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
           >
             <svg
               aria-hidden="true"
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -365,7 +365,7 @@ exports[`<InputField /> LongInputWithin story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
+exports[`<InputField /> > NoFieldnote story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -373,23 +373,23 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r9:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Default input field
         </span>
       </label>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rb:"
         >
           Additional descriptive text for the field.
@@ -397,12 +397,12 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=":rb:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r9:"
         type="text"
       />
@@ -411,7 +411,7 @@ exports[`<InputField /> NoFieldnote story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
+exports[`<InputField /> > NoVisibleLabel story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -419,30 +419,30 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline input-field__overline--no-label"
+      class="_input-field__overline_4d3b17 _input-field__overline--no-label_4d3b17"
     />
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":r13: :r12:"
         aria-invalid="false"
         aria-label="Input for no visible label"
-        class="input"
+        class="_input_0d9f86"
         id=":r11:"
         required=""
         type="text"
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note"
+        class="_field-note_fd2e78"
         id=":r12:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This input field has no visible label
         </span>
@@ -452,7 +452,7 @@ exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
+exports[`<InputField /> > ReadOnly story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -460,23 +460,23 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":ri:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Read-only field
         </span>
       </label>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rk:"
         >
           Additional descriptive text for the field.
@@ -484,12 +484,12 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":rk: :rj:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":ri:"
         readonly=""
         type="text"
@@ -497,14 +497,14 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note"
+        class="_field-note_fd2e78"
         id=":rj:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This will show up like text, but not be interactive
         </span>
@@ -514,7 +514,7 @@ exports[`<InputField /> ReadOnly story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> Required story renders snapshot 1`] = `
+exports[`<InputField /> > Required story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -522,28 +522,28 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":rr:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Input field with fieldNote
         </span>
       </label>
       <span
-        class="text text--body-sm input-field__required-text"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__required-text_4d3b17"
       >
         (Required)
       </span>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rt:"
         >
           Additional descriptive text for the field.
@@ -551,26 +551,26 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":rt: :rs:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":rr:"
         required=""
         type="text"
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note"
+        class="_field-note_fd2e78"
         id=":rs:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This is a fieldnote for a required input field.
         </span>
@@ -580,7 +580,7 @@ exports[`<InputField /> Required story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
+exports[`<InputField /> > RequiredDisabled story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -588,30 +588,30 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
         aria-disabled="true"
-        class="label label--md label--disabled input-field__label input-field__label--disabled"
+        class="_label_76755a _label--md_76755a _label--disabled_76755a _input-field__label_4d3b17 _input-field__label--disabled_4d3b17"
         for=":ru:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Input field with fieldNote
         </span>
       </label>
       <span
         aria-disabled="true"
-        class="text text--body-sm input-field__required-text input-field__required-text--disabled"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__required-text_4d3b17 _input-field__required-text--disabled_4d3b17"
       >
         (Required)
       </span>
       <div
-        class="input-field__subLabel input-field__label--disabled"
+        class="_input-field__subLabel_4d3b17 _input-field__label--disabled_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r10:"
         >
           Additional descriptive text for the field.
@@ -619,12 +619,12 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":r10: :rv:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         disabled=""
         id=":ru:"
         required=""
@@ -632,15 +632,15 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
         aria-disabled="true"
-        class="field-note field-note--disabled"
+        class="_field-note_fd2e78 _field-note--disabled_fd2e78"
         id=":rv:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This is a fieldnote for a required input field.
         </span>
@@ -650,7 +650,7 @@ exports[`<InputField /> RequiredDisabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> ShowHint story renders snapshot 1`] = `
+exports[`<InputField /> > ShowHint story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -658,28 +658,28 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1a:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Field with Optional Hint
         </span>
       </label>
       <span
-        class="text text--body-sm input-field__required-text"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__required-text_4d3b17"
       >
         (Optional)
       </span>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r1c:"
         >
           Additional descriptive text for the field.
@@ -687,12 +687,12 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=":r1c:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r1a:"
         type="text"
       />
@@ -701,7 +701,7 @@ exports[`<InputField /> ShowHint story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
+exports[`<InputField /> > TimeHandling story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -709,26 +709,26 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r17:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Default input field
         </span>
       </label>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=""
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r17:"
         type="time"
       />
@@ -737,7 +737,7 @@ exports[`<InputField /> TimeHandling story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> Warning story renders snapshot 1`] = `
+exports[`<InputField /> > Warning story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -745,23 +745,23 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":rf:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Warning input field
         </span>
       </label>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rh:"
         >
           Additional descriptive text for the field.
@@ -769,25 +769,25 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":rh: :rg:"
         aria-invalid="false"
-        class="input warning"
+        class="_input_0d9f86 _warning_0d9f86"
         id=":rf:"
         type="text"
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note field-note--warning"
+        class="_field-note_fd2e78 _field-note--warning_fd2e78"
         id=":rg:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -804,7 +804,7 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This uses the warning treatment and also applies to the field note
         </span>
@@ -814,7 +814,7 @@ exports[`<InputField /> Warning story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
+exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -822,23 +822,23 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1j:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           test label
         </span>
       </label>
       <div
-        class="text text--body-sm input-field__character-counter"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
       >
         <span
-          class="input-field--invalid-length"
+          class="_input-field--invalid-length_4d3b17"
         >
           17
         </span>
@@ -847,10 +847,10 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         15
       </div>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r1l:"
         >
           Additional descriptive text for the field.
@@ -858,12 +858,12 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=":r1l:"
         aria-invalid="false"
-        class="input error"
+        class="_input_0d9f86 _error_0d9f86"
         id=":r1j:"
         maxlength="15"
         required=""
@@ -875,7 +875,7 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
+exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -883,23 +883,23 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1m:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Shortened Length Field
         </span>
       </label>
       <div
-        class="text text--body-sm input-field__character-counter"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
       >
         <span
-          class="input-field--invalid-length"
+          class="_input-field--invalid-length_4d3b17"
         >
           17
         </span>
@@ -908,10 +908,10 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         15
       </div>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r1o:"
         >
           Additional descriptive text for the field.
@@ -919,12 +919,12 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body"
+      class="_input-field__body_4d3b17"
     >
       <input
         aria-describedby=":r1o:"
         aria-invalid="false"
-        class="input error"
+        class="_input_0d9f86 _error_0d9f86"
         id=":r1m:"
         required=""
         type="text"
@@ -935,7 +935,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
+exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -943,23 +943,23 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1p:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           test label
         </span>
       </label>
       <div
-        class="text text--body-sm input-field__character-counter"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
       >
         <span
-          class="input-field--invalid-length"
+          class="_input-field--invalid-length_4d3b17"
         >
           17
         </span>
@@ -968,10 +968,10 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         15
       </div>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r1r:"
         >
           Additional descriptive text for the field.
@@ -979,12 +979,12 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":r1r: :r1q:"
         aria-invalid="false"
-        class="input error"
+        class="_input_0d9f86 _error_0d9f86"
         id=":r1p:"
         maxlength="20"
         required=""
@@ -993,14 +993,14 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note field-note--error"
+        class="_field-note_fd2e78 _field-note--error_fd2e78"
         id=":r1q:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -1017,7 +1017,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Longer Field Description
         </span>
@@ -1027,7 +1027,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
 </div>
 `;
 
-exports[`<InputField /> WithFullDescription story renders snapshot 1`] = `
+exports[`<InputField /> > WithFullDescription story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -1035,23 +1035,23 @@ exports[`<InputField /> WithFullDescription story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r3:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Default input field
         </span>
       </label>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r5:"
         >
           Additional descriptive text for the field.
@@ -1059,25 +1059,25 @@ exports[`<InputField /> WithFullDescription story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":r5: :r4:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r3:"
         type="text"
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note"
+        class="_field-note_fd2e78"
         id=":r4:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Field validation description.
         </span>
@@ -1087,7 +1087,7 @@ exports[`<InputField /> WithFullDescription story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithText story renders snapshot 1`] = `
+exports[`<InputField /> > WithText story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -1095,23 +1095,23 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="input-field__overline"
+      class="_input-field__overline_4d3b17"
     >
       <label
-        class="label label--md input-field__label"
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r6:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Default input field
         </span>
       </label>
       <div
-        class="input-field__subLabel"
+        class="_input-field__subLabel_4d3b17"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r8:"
         >
           Additional descriptive text for the field.
@@ -1119,26 +1119,26 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
         aria-describedby=":r8: :r7:"
         aria-invalid="false"
-        class="input"
+        class="_input_0d9f86"
         id=":r6:"
         type="text"
         value="Text value"
       />
     </div>
     <div
-      class="input-field__footer"
+      class="_input-field__footer_4d3b17"
     >
       <div
-        class="field-note"
+        class="_field-note_fd2e78"
         id=":r7:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           This is a fieldnote.
         </span>

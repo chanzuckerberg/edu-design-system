@@ -1,11 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Label /> Default story renders snapshot 1`] = `
+exports[`<Label /> > Default story renders snapshot 1`] = `
 <label
-  class="label"
+  class="_label_f9fc7e"
 >
   <span
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Label
   </span>
@@ -13,18 +13,18 @@ exports[`<Label /> Default story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<Label /> LabelAfter story renders snapshot 1`] = `
+exports[`<Label /> > LabelAfter story renders snapshot 1`] = `
 <label
-  class="label"
+  class="_label_f9fc7e"
 >
   <span
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Label
   </span>
    
   <span
-    class="text text--body-sm"
+    class="_text_b3eba3 _text--body-sm_b3eba3"
   >
     <span>
       *

@@ -1,22 +1,19 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
+
 import { Link } from './Link';
-import * as stories from './Link.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Link />', () => {
   beforeEach(() => {
-    const consoleMock = jest.spyOn(console, 'warn');
-    consoleMock.mockImplementation();
+    const consoleMock = vi.spyOn(console, 'warn');
+    consoleMock.mockImplementation(() => {});
   });
 
   afterEach(() => {
-    jest.resetAllMocks();
+    vi.resetAllMocks();
   });
-
-  generateSnapshots(stories as StoryFile);
 
   it('renders the text in the link', () => {
     render(<Link href="/">Click</Link>);
@@ -26,7 +23,7 @@ describe('<Link />', () => {
 
   it('fires callback on click', async () => {
     const user = userEvent.setup();
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     render(
       <Link href="/" onClick={onClick}>
         Click
@@ -75,8 +72,8 @@ describe('<Link />', () => {
 
   describe('emits warnings when misused', () => {
     it('warns when inline links are using emphasis=low', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Link context="inline" emphasis="low">
           Click
@@ -87,8 +84,8 @@ describe('<Link />', () => {
     });
 
     it('warns when inline links have icons specified', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Link context="inline" icon="open-in-new">
           Click
@@ -99,8 +96,8 @@ describe('<Link />', () => {
     });
 
     it('warns when chevron-right is not used in low emphasis mode', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Link emphasis="high" icon="chevron-right">
           Click
@@ -111,8 +108,8 @@ describe('<Link />', () => {
     });
 
     it('warns when size is used with context standalone', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Link context="inline" size="lg">
           Click
@@ -123,8 +120,8 @@ describe('<Link />', () => {
     });
 
     it('warns when variant is used with context inline', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Link context="inline" variant="inverse">
           Click

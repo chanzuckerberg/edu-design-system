@@ -2,6 +2,7 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render } from '@testing-library/react';
 
 import React from 'react';
+import { vi } from 'vitest';
 
 import { Fieldset } from './Fieldset';
 import * as stories from './Fieldset.stories';
@@ -9,20 +10,20 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Fieldset />', () => {
   beforeEach(() => {
-    const consoleMock = jest.spyOn(console, 'warn');
-    consoleMock.mockImplementation();
+    const consoleMock = vi.spyOn(console, 'warn');
+    consoleMock.mockImplementation(() => {});
   });
 
   afterEach(() => {
-    jest.resetAllMocks();
+    vi.resetAllMocks();
   });
 
   generateSnapshots(stories as StoryFile);
 
   describe('emits warnings when misused', () => {
     it('warns when using subTitle by itself', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
 
       render(<Fieldset.Legend subTitle="should generate warning" />);
 

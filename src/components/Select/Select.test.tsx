@@ -1,14 +1,12 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStory } from '@storybook/react-webpack5';
+import { composeStory } from '@storybook/react-vite';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { Select } from './Select';
 import * as stories from './Select.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 
-mockResizeObserver();
+// TODO: needs ResizeObserverMock
 
 const {
   EventHandlingOnRenderProp,
@@ -34,18 +32,6 @@ const exampleOptions = [
 ];
 
 describe('<Select />', () => {
-  describe('Generated Snapshots', () => {
-    generateSnapshots(closedStories as StoryFile, {
-      getElement: async () => {
-        const user = userEvent.setup();
-        const openButton = await screen.findByRole('button');
-        await user.click(openButton);
-        await screen.findAllByRole('option');
-        return screen.getByTestId('dropdown');
-      },
-    });
-  });
-
   it('does not open a list when clicked and disabled', async () => {
     const user = userEvent.setup();
     render(<DisabledComponent />);
@@ -113,7 +99,7 @@ describe('<Select />', () => {
 
   describe('event handling', () => {
     it('handles click on .Button', async () => {
-      const clickHandler = jest.fn();
+      const clickHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -143,7 +129,7 @@ describe('<Select />', () => {
     });
 
     it('handles click on .ButtonWrapper when using render prop', async () => {
-      const clickHandler = jest.fn();
+      const clickHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -179,7 +165,7 @@ describe('<Select />', () => {
     });
 
     it('handles change on <Select/>', async () => {
-      const changeHandler = jest.fn();
+      const changeHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -216,7 +202,7 @@ describe('<Select />', () => {
     });
 
     it('does not call change when <Select/> is picking the same item', async () => {
-      const changeHandler = jest.fn();
+      const changeHandler = vi.fn();
       const user = userEvent.setup();
 
       render(

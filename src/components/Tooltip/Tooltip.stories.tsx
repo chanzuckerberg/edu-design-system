@@ -1,4 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryObj } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { Tooltip } from './Tooltip';

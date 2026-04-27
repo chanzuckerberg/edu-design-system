@@ -1,4 +1,5 @@
 import { dedent } from 'ts-dedent';
+import { describe, expect, it } from 'vitest';
 
 import transform from './rename-jsx-import';
 import { createTestSourceFile } from '../helpers';

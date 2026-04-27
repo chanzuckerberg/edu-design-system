@@ -1,18 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Fieldset /> Default story renders snapshot 1`] = `
+exports[`<Fieldset /> > Default story renders snapshot 1`] = `
 <fieldset>
   <legend
-    class="fieldset-legend"
+    class="_fieldset-legend_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Legend
         </span>
@@ -20,7 +20,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     </div>
   </legend>
   <div
-    class="fieldset-items fpo"
+    class="_fieldset-items_0405d0 fpo"
   >
     <div>
       Fieldset Content (Radio Buttons or Checkboxes)
@@ -29,18 +29,18 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> FieldsetLegend story renders snapshot 1`] = `
+exports[`<Fieldset /> > FieldsetLegend story renders snapshot 1`] = `
 <legend
-  class="fieldset-legend"
+  class="_fieldset-legend_0405d0"
 >
   <div
-    class="fieldset-legend__overline"
+    class="_fieldset-legend__overline_0405d0"
   >
     <label
-      class="label label--md"
+      class="_label_76755a _label--md_76755a"
     >
       <span
-        class="text text--label-md"
+        class="_text_b3eba3 _text--label-md_b3eba3"
       >
         Legend
       </span>
@@ -49,24 +49,24 @@ exports[`<Fieldset /> FieldsetLegend story renders snapshot 1`] = `
 </legend>
 `;
 
-exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
+exports[`<Fieldset /> > FieldsetLegendOptional story renders snapshot 1`] = `
 <legend
-  class="fieldset-legend"
+  class="_fieldset-legend_0405d0"
 >
   <div
-    class="fieldset-legend__overline"
+    class="_fieldset-legend__overline_0405d0"
   >
     <label
-      class="label label--md"
+      class="_label_76755a _label--md_76755a"
     >
       <span
-        class="text text--label-md"
+        class="_text_b3eba3 _text--label-md_b3eba3"
       >
         Legend
       </span>
     </label>
     <span
-      class="text text--body-sm fieldset-legend__hint"
+      class="_text_b3eba3 _text--body-sm_b3eba3 _fieldset-legend__hint_0405d0"
     >
       (Optional)
     </span>
@@ -74,24 +74,24 @@ exports[`<Fieldset /> FieldsetLegendOptional story renders snapshot 1`] = `
 </legend>
 `;
 
-exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
+exports[`<Fieldset /> > FieldsetLegendRequired story renders snapshot 1`] = `
 <legend
-  class="fieldset-legend"
+  class="_fieldset-legend_0405d0"
 >
   <div
-    class="fieldset-legend__overline"
+    class="_fieldset-legend__overline_0405d0"
   >
     <label
-      class="label label--md"
+      class="_label_76755a _label--md_76755a"
     >
       <span
-        class="text text--label-md"
+        class="_text_b3eba3 _text--label-md_b3eba3"
       >
         Legend
       </span>
     </label>
     <span
-      class="text text--body-sm fieldset-legend__hint"
+      class="_text_b3eba3 _text--body-sm_b3eba3 _fieldset-legend__hint_0405d0"
     >
       (Required)
     </span>
@@ -99,28 +99,28 @@ exports[`<Fieldset /> FieldsetLegendRequired story renders snapshot 1`] = `
 </legend>
 `;
 
-exports[`<Fieldset /> FieldsetLegendWithSubtitle story renders snapshot 1`] = `
+exports[`<Fieldset /> > FieldsetLegendWithSubtitle story renders snapshot 1`] = `
 <legend
-  class="fieldset-legend"
+  class="_fieldset-legend_0405d0"
 >
   <div
-    class="fieldset-legend__overline"
+    class="_fieldset-legend__overline_0405d0"
   >
     <label
-      class="label label--md"
+      class="_label_76755a _label--md_76755a"
     >
       <span
-        class="text text--label-md"
+        class="_text_b3eba3 _text--label-md_b3eba3"
       >
         Legend
       </span>
     </label>
   </div>
   <div
-    class="field-note"
+    class="_field-note_fd2e78"
   >
     <span
-      class="text text--body-sm"
+      class="_text_b3eba3 _text--body-sm_b3eba3"
     >
       With additional Subtitle
     </span>
@@ -128,55 +128,55 @@ exports[`<Fieldset /> FieldsetLegendWithSubtitle story renders snapshot 1`] = `
 </legend>
 `;
 
-exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
 <fieldset>
   <legend
-    class="fieldset-legend"
+    class="_fieldset-legend_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
       </label>
     </div>
     <div
-      class="field-note"
+      class="_field-note_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items"
+    class="_fieldset-items_0405d0"
   >
     <div
-      class="checkbox"
+      class="_checkbox_2d475f"
     >
       <input
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         id=":r0:"
         name="test-checkbox"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r0:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -185,23 +185,23 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="checkbox"
+      class="_checkbox_2d475f"
     >
       <input
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         id=":r1:"
         name="test-checkbox"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r1:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -213,36 +213,36 @@ exports[`<Fieldset /> WithCheckboxes story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithCriticalFootNote story renders snapshot 1`] = `
 <fieldset>
   <legend
-    class="fieldset-legend"
+    class="_fieldset-legend_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
       </label>
     </div>
     <div
-      class="field-note"
+      class="_field-note_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items fpo flex-col"
+    class="_fieldset-items_0405d0 fpo flex-col"
   >
     <div>
       Fieldset Content (Radio Button or Checkbox)
@@ -257,21 +257,21 @@ exports[`<Fieldset /> WithCriticalFootNote story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
 <fieldset>
   <legend
     aria-disabled="true"
-    class="fieldset-legend fieldset-legend--disabled"
+    class="_fieldset-legend_0405d0 _fieldset-legend--disabled_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
         aria-disabled="true"
-        class="label label--md label--disabled"
+        class="_label_76755a _label--md_76755a _label--disabled_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
@@ -279,37 +279,37 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
     </div>
     <div
       aria-disabled="true"
-      class="field-note field-note--disabled"
+      class="_field-note_fd2e78 _field-note--disabled_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items"
+    class="_fieldset-items_0405d0"
   >
     <div
-      class="checkbox"
+      class="_checkbox_2d475f"
     >
       <input
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         disabled=""
         id=":r2:"
         name="test-checkbox"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label label--disabled"
+          class="_label_f9fc7e _label--disabled_f9fc7e"
           for=":r2:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -318,24 +318,24 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="checkbox"
+      class="_checkbox_2d475f"
     >
       <input
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         disabled=""
         id=":r3:"
         name="test-checkbox"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label label--disabled"
+          class="_label_f9fc7e _label--disabled_f9fc7e"
           for=":r3:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -347,21 +347,21 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
 <fieldset>
   <legend
     aria-disabled="true"
-    class="fieldset-legend fieldset-legend--disabled"
+    class="_fieldset-legend_0405d0 _fieldset-legend--disabled_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
         aria-disabled="true"
-        class="label label--md label--disabled"
+        class="_label_76755a _label--md_76755a _label--disabled_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
@@ -369,47 +369,47 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
     </div>
     <div
       aria-disabled="true"
-      class="field-note field-note--disabled"
+      class="_field-note_fd2e78 _field-note--disabled_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items"
+    class="_fieldset-items_0405d0"
   >
     <div
-      class="radio"
+      class="_radio_4c3e9c"
     >
       <span
-        class="input__wrapper input__wrapper--disabled"
+        class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
       >
         <input
-          class="radio__input"
+          class="_radio__input_4c3e9c"
           disabled=""
           id=":r8:"
           name="test-radio"
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label label--disabled"
+          class="_label_f9fc7e _label--disabled_f9fc7e"
           for=":r8:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Radio Button
           </span>
@@ -418,34 +418,34 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="radio"
+      class="_radio_4c3e9c"
     >
       <span
-        class="input__wrapper input__wrapper--disabled"
+        class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
       >
         <input
-          class="radio__input"
+          class="_radio__input_4c3e9c"
           disabled=""
           id=":r9:"
           name="test-radio"
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label label--disabled"
+          class="_label_f9fc7e _label--disabled_f9fc7e"
           for=":r9:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Radio Button
           </span>
@@ -457,55 +457,55 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
 <fieldset>
   <legend
-    class="fieldset-legend"
+    class="_fieldset-legend_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
       </label>
     </div>
     <div
-      class="field-note"
+      class="_field-note_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items"
+    class="_fieldset-items_0405d0"
   >
     <div
-      class="checkbox checkbox--error"
+      class="_checkbox_2d475f _checkbox--error_2d475f"
     >
       <input
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         id=":r4:"
         name="test-checkbox"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r4:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -514,23 +514,23 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="checkbox checkbox--error"
+      class="_checkbox_2d475f _checkbox--error_2d475f"
     >
       <input
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         id=":r5:"
         name="test-checkbox"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r5:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -542,65 +542,65 @@ exports[`<Fieldset /> WithErrorCheckboxes story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithErrorRadioButton story renders snapshot 1`] = `
 <fieldset>
   <legend
-    class="fieldset-legend"
+    class="_fieldset-legend_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
       </label>
     </div>
     <div
-      class="field-note"
+      class="_field-note_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items"
+    class="_fieldset-items_0405d0"
   >
     <div
-      class="radio radio--error"
+      class="_radio_4c3e9c _radio--error_4c3e9c"
     >
       <span
-        class="input__wrapper"
+        class="_input__wrapper_4c3e9c"
       >
         <input
-          class="radio--error radio__input"
+          class="_radio--error_4c3e9c _radio__input_4c3e9c"
           id=":ra:"
           name="test-radio"
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":ra:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Radio Button
           </span>
@@ -609,33 +609,33 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="radio radio--error"
+      class="_radio_4c3e9c _radio--error_4c3e9c"
     >
       <span
-        class="input__wrapper"
+        class="_input__wrapper_4c3e9c"
       >
         <input
-          class="radio--error radio__input"
+          class="_radio--error_4c3e9c _radio__input_4c3e9c"
           id=":rb:"
           name="test-radio"
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":rb:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Radio Button
           </span>
@@ -647,65 +647,65 @@ exports[`<Fieldset /> WithErrorRadioButton story renders snapshot 1`] = `
 </fieldset>
 `;
 
-exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
+exports[`<Fieldset /> > WithRadioButton story renders snapshot 1`] = `
 <fieldset>
   <legend
-    class="fieldset-legend"
+    class="_fieldset-legend_0405d0"
   >
     <div
-      class="fieldset-legend__overline"
+      class="_fieldset-legend__overline_0405d0"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Critical Fieldset
         </span>
       </label>
     </div>
     <div
-      class="field-note"
+      class="_field-note_fd2e78"
     >
       <span
-        class="text text--body-sm"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Some extra descriptive text
       </span>
     </div>
   </legend>
   <div
-    class="fieldset-items"
+    class="_fieldset-items_0405d0"
   >
     <div
-      class="radio"
+      class="_radio_4c3e9c"
     >
       <span
-        class="input__wrapper"
+        class="_input__wrapper_4c3e9c"
       >
         <input
-          class="radio__input"
+          class="_radio__input_4c3e9c"
           id=":r6:"
           name="test-radio"
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r6:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Radio Button
           </span>
@@ -714,33 +714,33 @@ exports[`<Fieldset /> WithRadioButton story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="radio"
+      class="_radio_4c3e9c"
     >
       <span
-        class="input__wrapper"
+        class="_input__wrapper_4c3e9c"
       >
         <input
-          class="radio__input"
+          class="_radio__input_4c3e9c"
           id=":r7:"
           name="test-radio"
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r7:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Radio Button
           </span>

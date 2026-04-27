@@ -1,23 +1,23 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<InputChip /> Default story renders snapshot 1`] = `
+exports[`<InputChip /> > Default story renders snapshot 1`] = `
 <div
-  class="input-chip"
+  class="_input-chip_f95fba"
 >
   <div
-    class="input-chip__label"
+    class="_input-chip__label_f95fba"
   >
     <span
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Chip Label
     </span>
   </div>
   <button
-    class="input-chip__action-button"
+    class="_input-chip__action-button_f95fba"
   >
     <svg
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       role="img"
       viewBox="0 0 24 24"
@@ -34,25 +34,25 @@ exports[`<InputChip /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputChip /> Disabled story renders snapshot 1`] = `
+exports[`<InputChip /> > Disabled story renders snapshot 1`] = `
 <div
-  class="input-chip input-chip--disabled"
+  class="_input-chip_f95fba _input-chip--disabled_f95fba"
 >
   <div
-    class="input-chip__label"
+    class="_input-chip__label_f95fba"
   >
     <span
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Chip Label
     </span>
   </div>
   <button
-    class="input-chip__action-button"
+    class="_input-chip__action-button_f95fba"
     disabled=""
   >
     <svg
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       role="img"
       viewBox="0 0 24 24"
@@ -69,16 +69,16 @@ exports[`<InputChip /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputChip /> WithLeadingIcon story renders snapshot 1`] = `
+exports[`<InputChip /> > WithLeadingIcon story renders snapshot 1`] = `
 <div
-  class="input-chip"
+  class="_input-chip_f95fba"
 >
   <div
-    class="input-chip__label"
+    class="_input-chip__label_f95fba"
   >
     <svg
       aria-hidden="true"
-      class="icon input-chip__leading-component"
+      class="_icon_779da8 _input-chip__leading-component_f95fba"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -88,16 +88,16 @@ exports[`<InputChip /> WithLeadingIcon story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Chip Label
     </span>
   </div>
   <button
-    class="input-chip__action-button"
+    class="_input-chip__action-button_f95fba"
   >
     <svg
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       role="img"
       viewBox="0 0 24 24"

@@ -82,13 +82,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: Build design tokens
         run: yarn build:tokens
-      - name: Build Storybook 📚
-        run: yarn build:storybook --webpack-stats-json
-      - name: Serve storybook and run accessibility tests
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-          "npx http-server storybook-static --port 6006 --silent" \
-          "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook"
+      - name: Run tests 🔬
+        run: yarn test:storybook
       - name: Publish to Chromatic 🦄
         run: |
           yarn run chromatic \

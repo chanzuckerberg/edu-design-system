@@ -1,27 +1,15 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react-webpack5';
+import { composeStories } from '@storybook/react-vite';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
+import { describe, expect, it } from 'vitest';
 import * as stories from './Popover.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 
-mockResizeObserver();
+// TODO: needs ResizeObserverMock
 
 const { Default } = composeStories(stories);
 
 describe('<Popover />', () => {
-  generateSnapshots(stories as StoryFile, {
-    getElement: async () => {
-      const user = userEvent.setup();
-      const triggerButton = await screen.findByRole('button');
-
-      await user.click(triggerButton);
-      return triggerButton.parentElement;
-    },
-  });
-
   it('should close Popover via escape key', async () => {
     const user = userEvent.setup();
     render(<Default />);

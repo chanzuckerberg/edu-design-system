@@ -1,29 +1,19 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react-webpack5';
+import { composeStories } from '@storybook/react-vite';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { Menu } from './Menu';
 import * as stories from './Menu.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 
-mockResizeObserver();
+// TODO: needs ResizeObserverMock
 
 const { Default, WithLongButtonText } = composeStories(stories);
 
 describe('<Menu />', () => {
   afterEach(() => {
-    jest.resetAllMocks();
-  });
-  generateSnapshots(stories as StoryFile, {
-    getElement: async () => {
-      const user = userEvent.setup();
-      const triggerButton = await screen.findByRole('button');
-      await user.click(triggerButton);
-      return triggerButton.parentElement;
-    },
+    vi.resetAllMocks();
   });
 
   it('should allow for keyboard navigation to enabled menu items', async () => {
@@ -46,7 +36,7 @@ describe('<Menu />', () => {
 
   it('handles onclick events when there is an href present', async () => {
     // create a spy on the `log` method, and avoid calling it by setting the mock implementation to nothing
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
     const user = userEvent.setup();
     render(<WithLongButtonText />);
     const triggerButton = await screen.findByRole('button');

@@ -1,5 +1,6 @@
+// eslint-disable-next-line import/default
 import getTestRule from 'jest-preset-stylelint/getTestRule';
-import { messages, ruleName } from './no-tier-1-color-variable.mjs';
+import { ruleName, messages } from './no-tier-1-color-variable.mjs';
 
 const testRule = getTestRule({ plugins: ['./scripts/stylelint/index.mjs'] });
 

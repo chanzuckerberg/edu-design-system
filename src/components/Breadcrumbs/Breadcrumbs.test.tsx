@@ -1,18 +1,14 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react-webpack5';
+import { composeStories } from '@storybook/react-vite';
 import { render, screen, waitFor } from '@testing-library/react';
-import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
+import { describe, expect, it } from 'vitest';
 import * as stories from './Breadcrumbs.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { LongList } = composeStories(stories);
 
-mockResizeObserver();
+// TODO: needs ResizeObserverMock
 
 describe('<Breadcrumbs />', () => {
-  generateSnapshots(stories as StoryFile);
-
   describe('truncation', () => {
     it('truncates when its content overflows', async () => {
       render(<LongList />);

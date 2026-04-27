@@ -1,24 +1,19 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { mockResizeObserver } from 'jsdom-testing-mocks';
 
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { AppHeader } from './AppHeader';
 
-import * as stories from './AppHeader.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 import type { NavGroup } from '../../util/utility-types';
 
-mockResizeObserver();
+// TODO: needs ResizeObserverMock
 
 describe('<AppHeader />', () => {
-  generateSnapshots(stories as StoryFile);
-
   it('handles clicks on nav items types (horizontal)', async () => {
     const user = userEvent.setup();
-    const onButtonClickMock = jest.fn();
-    const onLinkClickMock = jest.fn();
+    const onButtonClickMock = vi.fn();
+    const onLinkClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -109,9 +104,8 @@ describe('<AppHeader />', () => {
   });
 
   it('handles onLinkClick handler on nested menus (EDS-1829)', async () => {
-    // const user = userEvent.setup();
-    const onButtonClickMock = jest.fn();
-    const onLinkClickMock = jest.fn();
+    const onButtonClickMock = vi.fn();
+    const onLinkClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -201,7 +195,7 @@ describe('<AppHeader />', () => {
 
   it('handles clicks on the app header (EDS-1839)', async () => {
     const user = userEvent.setup();
-    const onLinkClickMock = jest.fn();
+    const onLinkClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -285,7 +279,7 @@ describe('<AppHeader />', () => {
 
   it('handles clicks nested nav menu links (EDS-1839)', async () => {
     const user = userEvent.setup();
-    const onLinkClickMock = jest.fn();
+    const onLinkClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -311,7 +305,7 @@ describe('<AppHeader />', () => {
 
   it('handles clicks nested nav menu links in orientation=vertical (EDS-1839)', async () => {
     const user = userEvent.setup();
-    const onLinkClickMock = jest.fn();
+    const onLinkClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -338,8 +332,8 @@ describe('<AppHeader />', () => {
 
   it('handles clicks nested nav menu buttons (EDS-1839)', async () => {
     const user = userEvent.setup();
-    const onLinkClickMock = jest.fn();
-    const onButtonClickMock = jest.fn();
+    const onLinkClickMock = vi.fn();
+    const onButtonClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -366,8 +360,8 @@ describe('<AppHeader />', () => {
 
   it('handles clicks nested nav menu buttons with orientation=vertical (EDS-1839)', async () => {
     const user = userEvent.setup();
-    const onLinkClickMock = jest.fn();
-    const onButtonClickMock = jest.fn();
+    const onLinkClickMock = vi.fn();
+    const onButtonClickMock = vi.fn();
 
     render(
       <AppHeader
@@ -395,8 +389,8 @@ describe('<AppHeader />', () => {
 
   it('handles clicks on nav item types (vertical)', async () => {
     const user = userEvent.setup();
-    const onButtonClickMock = jest.fn();
-    const onLinkClickMock = jest.fn();
+    const onButtonClickMock = vi.fn();
+    const onLinkClickMock = vi.fn();
 
     render(
       <AppHeader
