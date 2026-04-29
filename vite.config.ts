@@ -16,8 +16,19 @@ export default defineConfig({
       {
         extends: true,
         test: {
+          name: 'unit',
+          extends: true,
+          include: ['./src/components/**/*.test.{ts,tsx}'],
+          exclude: ['**/*.stories.{ts,tsx}'],
           globals: true,
           environment: 'happy-dom',
+          coverage: {
+            provider: 'v8',
+            include: ['./src/components/**'],
+            excludes: ['**/*.stories.{ts,tsx}, **/*.json'],
+            reporter: ['text', 'json', 'html'],
+          },
+          restoreMocks: true,
           setupFiles: 'jest/jest.setup.js',
         },
       },
