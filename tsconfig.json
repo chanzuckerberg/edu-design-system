@@ -1,5 +1,5 @@
 {
-  "include": ["src", ".storybook/**/*", "./jest/jest.setup.ts"],
+  "include": ["src", ".storybook/**/*", "test/test.setup.ts"],
   "exclude": ["src/bin"],
   "compilerOptions": {
     "allowJs": false,

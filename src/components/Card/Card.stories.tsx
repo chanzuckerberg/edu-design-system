@@ -334,7 +334,7 @@ export const RadioCards: Story = {
     name: 'test',
   },
   render: (args) => (
-    <div className="flex gap-spacing-size-1">
+    <div className="gap-spacing-size-1 flex">
       <Card {...args}>
         <Card.Header
           eyebrow="Recommended for you"
@@ -392,7 +392,7 @@ export const CheckboxCards: Story = {
     behavior: 'checkbox',
   },
   render: (args) => (
-    <div className="flex gap-spacing-size-1">
+    <div className="gap-spacing-size-1 flex">
       <Card {...args}>
         <Card.Header
           eyebrow="Recommended for you"

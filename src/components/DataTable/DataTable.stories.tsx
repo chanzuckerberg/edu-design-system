@@ -845,7 +845,7 @@ export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
     children: (
       <table>
-        <tbody className="border-2 border-utility-default-lowEmphasis-hover">
+        <tbody className="border-utility-default-lowEmphasis-hover border-2">
           <tr>
             <td>Custom or standard table rows/cells here</td>
           </tr>

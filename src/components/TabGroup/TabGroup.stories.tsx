@@ -107,7 +107,7 @@ export const InverseVariant: StoryObj<Args> = {
     children: (
       <>
         <TabGroup.Tab title="Tab Title 1">
-          <div className="max-w-[576px] text-utility-inverse">
+          <div className="text-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
@@ -121,7 +121,7 @@ export const InverseVariant: StoryObj<Args> = {
         </TabGroup.Tab>
 
         <TabGroup.Tab title="Tab Title 2">
-          <div className="max-w-[576px] text-utility-inverse">
+          <div className="text-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
@@ -135,7 +135,7 @@ export const InverseVariant: StoryObj<Args> = {
         </TabGroup.Tab>
 
         <TabGroup.Tab title="Tab Title 3">
-          <div className="max-w-[576px] text-utility-inverse">
+          <div className="text-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
@@ -149,7 +149,7 @@ export const InverseVariant: StoryObj<Args> = {
         </TabGroup.Tab>
 
         <TabGroup.Tab title="Tab Title 4">
-          <div className="max-w-[576px] text-utility-inverse">
+          <div className="text-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 4
             </Heading>

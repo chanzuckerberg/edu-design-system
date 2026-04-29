@@ -1,7 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { describe, expect, it, type Mock, vi } from 'vitest';
+import {
+  describe,
+  expect,
+  it,
+  type Mock,
+  vi,
+  beforeEach,
+  afterEach,
+} from 'vitest';
 import { Button } from './Button';
 
 describe('<Button />', () => {

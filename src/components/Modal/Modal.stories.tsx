@@ -303,7 +303,7 @@ export const Small: Story = {
 export const ContentDefault: Story = {
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-[100vh] w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -426,7 +426,7 @@ export const LayoutVertical: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -471,7 +471,7 @@ export const LayoutVerticalWithTertiary: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -512,7 +512,7 @@ export const WithCriticalButton: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"

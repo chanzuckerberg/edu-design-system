@@ -5,7 +5,7 @@ exports[`<ScrollWrapper /> > ContainVertical story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover"
+    class="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]"
   >
     <div
       class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-contain_583563"
@@ -29,7 +29,7 @@ exports[`<ScrollWrapper /> > Default story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover"
+    class="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]"
   >
     <div
       class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-cover_583563"
@@ -39,7 +39,7 @@ exports[`<ScrollWrapper /> > Default story renders snapshot 1`] = `
         tabindex="0"
       >
         <div
-          class="h-[300px] w-[300px] p-spacing-size-3"
+          class="p-spacing-size-3 h-[300px] w-[300px]"
           data-testid="scrollContent"
         />
       </div>

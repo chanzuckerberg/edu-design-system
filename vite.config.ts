@@ -29,7 +29,7 @@ export default defineConfig({
             reporter: ['text', 'json', 'html'],
           },
           restoreMocks: true,
-          setupFiles: 'jest/jest.setup.js',
+          setupFiles: 'test/test.setup.js',
         },
       },
       {
