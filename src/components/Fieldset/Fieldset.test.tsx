@@ -2,7 +2,7 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render } from '@testing-library/react';
 
 import React from 'react';
-import { vi } from 'vitest';
+import { vi, describe, beforeEach, afterEach, expect, it } from 'vitest';
 
 import { Fieldset } from './Fieldset';
 import * as stories from './Fieldset.stories';

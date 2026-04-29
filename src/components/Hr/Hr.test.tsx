@@ -1,7 +1,15 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render } from '@testing-library/react';
 import React from 'react';
-import { type Mock, vi } from 'vitest';
+import {
+  type Mock,
+  vi,
+  describe,
+  beforeEach,
+  afterEach,
+  it,
+  expect,
+} from 'vitest';
 
 import { Hr } from './Hr';
 

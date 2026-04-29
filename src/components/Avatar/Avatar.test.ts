@@ -1,4 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { describe, it, expect } from 'vitest';
 import { getInitials } from './Avatar';
 import * as stories from './Avatar.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';

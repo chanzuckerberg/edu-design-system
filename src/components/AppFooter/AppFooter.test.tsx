@@ -3,7 +3,15 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
-import { type Mock, vi } from 'vitest';
+import {
+  type Mock,
+  vi,
+  describe,
+  it,
+  expect,
+  beforeEach,
+  afterEach,
+} from 'vitest';
 import { AppFooter } from './AppFooter';
 
 import * as stories from './AppFooter.stories';
