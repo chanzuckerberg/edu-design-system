@@ -83,7 +83,7 @@ jobs:
       - name: Build design tokens
         run: yarn build:tokens
       - name: Build Storybook 📚
-        run: yarn build:storybook
+        run: yarn build:storybook --stats-json
       - name: Run tests 🔬
         run: yarn test:storybook
       - name: Publish to Chromatic 🦄
