@@ -26,6 +26,9 @@ jobs:
       - name: Type check 📋
         run: yarn run types
 
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
       - name: Run CI Tests ✅
         run: yarn run test:ci
         env:
