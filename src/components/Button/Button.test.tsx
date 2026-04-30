@@ -1,3 +1,4 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -12,6 +13,9 @@ import {
 } from 'vitest';
 import { Button } from './Button';
 
+import * as stories from './Button.stories';
+import type { StoryFile } from '../../../.storybook/utility-types';
+
 describe('<Button />', () => {
   beforeEach(() => {
     // Add in mocks for the calls that can occur in implementation to suppress logging in tests
@@ -24,6 +28,7 @@ describe('<Button />', () => {
   afterEach(() => {
     vi.resetAllMocks();
   });
+  generateSnapshots(stories as StoryFile);
 
   it('renders the text in the button', () => {
     render(<Button>Click</Button>);

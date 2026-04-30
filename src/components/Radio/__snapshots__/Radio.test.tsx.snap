@@ -1,0 +1,392 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Radio /> > Checked story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c"
+    >
+      <input
+        checked=""
+        class="_radio__input_4c3e9c"
+        id=":r1:"
+        name="option-checked"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r1:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > Default story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c"
+    >
+      <input
+        class="_radio__input_4c3e9c"
+        id=":r0:"
+        name="option-1"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r0:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > Disabled story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
+    >
+      <input
+        class="_radio__input_4c3e9c"
+        disabled=""
+        id=":r2:"
+        name="option-disabled"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e _label--disabled_f9fc7e"
+        for=":r2:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > DisabledAndChecked story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
+    >
+      <input
+        checked=""
+        class="_radio__input_4c3e9c"
+        disabled=""
+        id=":r3:"
+        name="option-disabled"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e _label--disabled_f9fc7e"
+        for=":r3:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > Error story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c _radio--error_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c"
+    >
+      <input
+        class="_radio--error_4c3e9c _radio__input_4c3e9c"
+        id=":r4:"
+        name="option-error"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r4:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > ErrorAndChecked story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c _radio--error_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c"
+    >
+      <input
+        checked=""
+        class="_radio--error_4c3e9c _radio__input_4c3e9c"
+        id=":r5:"
+        name="option-error"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r5:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > LongLabels story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    style="display: grid; width: 320px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;"
+  >
+    <div
+      class="_radio_4c3e9c"
+    >
+      <span
+        class="_input__wrapper_4c3e9c"
+      >
+        <input
+          checked=""
+          class="_radio__input_4c3e9c"
+          id=":r8:"
+          name="option-long-label"
+          readonly=""
+          type="radio"
+        />
+        <span
+          class="_radio__container_4c3e9c"
+        />
+        <span
+          class="_radio__selected_4c3e9c"
+        />
+      </span>
+      <div
+        class="_radio__labels_4c3e9c"
+      >
+        <label
+          class="_label_f9fc7e"
+          for=":r8:"
+        >
+          <span
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </span>
+           
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > WithSublabel story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c"
+    >
+      <input
+        class="_radio__input_4c3e9c"
+        id=":r6:"
+        name="option-1"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r6:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Option 1
+        </span>
+         
+      </label>
+      <span
+        class="_text_b3eba3 _text--body-sm_b3eba3 _radio__sub-label_4c3e9c"
+      >
+        Some additional label text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> > WithoutVisibleLabel story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_radio_4c3e9c"
+  >
+    <span
+      class="_input__wrapper_4c3e9c"
+    >
+      <input
+        aria-label="unchecked radio button"
+        class="_radio__input_4c3e9c"
+        id=":r7:"
+        name="option-1"
+        readonly=""
+        type="radio"
+      />
+      <span
+        class="_radio__container_4c3e9c"
+      />
+      <span
+        class="_radio__selected_4c3e9c"
+      />
+    </span>
+    <div
+      class="_radio__labels_4c3e9c"
+    />
+  </div>
+</div>
+`;

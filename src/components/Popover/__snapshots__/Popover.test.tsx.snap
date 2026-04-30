@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Popover /> > Default story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-5 p-spacing-size-4"
+>
+  <div
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      data-headlessui-state=""
+      data-testid="popover-trigger-button"
+      id="headlessui-popover-button-:r2:"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Open Popover
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Popover /> > FocusClickableElement story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-5 p-spacing-size-4"
+>
+  <div
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      data-headlessui-state=""
+      data-testid="popover-trigger-button"
+      id="headlessui-popover-button-:re:"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Open Popover
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Popover /> > Top story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-5 p-spacing-size-4"
+>
+  <div
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      data-headlessui-state=""
+      data-testid="popover-trigger-button"
+      id="headlessui-popover-button-:r8:"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Open Popover
+      </span>
+    </button>
+  </div>
+</div>
+`;

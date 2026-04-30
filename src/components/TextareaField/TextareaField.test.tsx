@@ -1,11 +1,17 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { TextareaField } from './TextareaField';
+import * as stories from './TextareaField.stories';
+
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<TextareaField />', () => {
+  generateSnapshots(stories as StoryFile);
+
   it('can handle custom events when there is content', async () => {
     const onChangeFn = vi.fn();
     const user = userEvent.setup();

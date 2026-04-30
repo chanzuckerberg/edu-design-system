@@ -1,25 +1,25 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Skeleton /> Circle story renders snapshot 1`] = `
+exports[`<Skeleton /> > Circle story renders snapshot 1`] = `
 <div
   aria-hidden="true"
-  class="skeleton skeleton-circle skeleton--is-animating"
+  class="_skeleton_8ca799 _skeleton-circle_8ca799 _skeleton--is-animating_8ca799"
   style="width: 100px; height: 100px;"
 />
 `;
 
-exports[`<Skeleton /> Default story renders snapshot 1`] = `
+exports[`<Skeleton /> > Default story renders snapshot 1`] = `
 <div
   aria-hidden="true"
-  class="skeleton skeleton--is-animating"
+  class="_skeleton_8ca799 _skeleton--is-animating_8ca799"
   style="width: 100px; height: 100px;"
 />
 `;
 
-exports[`<Skeleton /> Text story renders snapshot 1`] = `
+exports[`<Skeleton /> > Text story renders snapshot 1`] = `
 <div
   aria-hidden="true"
-  class="skeleton skeleton--is-animating"
+  class="_skeleton_8ca799 _skeleton--is-animating_8ca799"
   style="width: 30ch; height: 24px;"
 />
 `;

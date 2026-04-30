@@ -1,3 +1,4 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react-vite';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -6,12 +7,15 @@ import React from 'react';
 import { describe, expect, it, vi, afterEach } from 'vitest';
 import { Menu } from './Menu';
 import * as stories from './Menu.stories';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 // TODO: needs ResizeObserverMock
 
 const { Default, WithLongButtonText } = composeStories(stories);
 
 describe('<Menu />', () => {
+  generateSnapshots(stories as StoryFile);
+
   afterEach(() => {
     vi.resetAllMocks();
   });

@@ -1,5 +1,1049 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Button /> > CriticalRanks story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1 btn-primary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1 btn-secondary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1 btn-tertiary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > Default story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <button
+    class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+    type="button"
+  >
+    <span
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+    >
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> > DefaultRanks story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-primary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-secondary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-tertiary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > Disabled story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-primary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-secondary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-tertiary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > DisabledFullWidths story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Large
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        Medium
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        Small
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > FullWidths story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Large
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        Medium
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        Small
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > IconLayouts story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.0001 7.70775L6.06159 18.6463C5.96809 18.7398 5.85334 18.7898 5.71734 18.7963C5.5815 18.8026 5.46034 18.7526 5.35384 18.6463C5.2475 18.5398 5.19434 18.4218 5.19434 18.2923C5.19434 18.1628 5.2475 18.0448 5.35384 17.9385L16.2923 7H9.50009C9.35842 7 9.23967 6.952 9.14384 6.856C9.048 6.76 9.00009 6.64108 9.00009 6.49925C9.00009 6.35742 9.048 6.23875 9.14384 6.14325C9.23967 6.04775 9.35842 6 9.50009 6H17.1923C17.4212 6 17.613 6.07742 17.7678 6.23225C17.9227 6.38708 18.0001 6.57892 18.0001 6.80775V14.5C18.0001 14.6417 17.9521 14.7604 17.8561 14.8562C17.7601 14.9521 17.6412 15 17.4993 15C17.3575 15 17.2388 14.9521 17.1433 14.8562C17.0478 14.7604 17.0001 14.6417 17.0001 14.5V7.70775Z"
+          />
+        </svg>
+        Left
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Right
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.0001 7.70775L6.06159 18.6463C5.96809 18.7398 5.85334 18.7898 5.71734 18.7963C5.5815 18.8026 5.46034 18.7526 5.35384 18.6463C5.2475 18.5398 5.19434 18.4218 5.19434 18.2923C5.19434 18.1628 5.2475 18.0448 5.35384 17.9385L16.2923 7H9.50009C9.35842 7 9.23967 6.952 9.14384 6.856C9.048 6.76 9.00009 6.64108 9.00009 6.49925C9.00009 6.35742 9.048 6.23875 9.14384 6.14325C9.23967 6.04775 9.35842 6 9.50009 6H17.1923C17.4212 6 17.613 6.07742 17.7678 6.23225C17.9227 6.38708 18.0001 6.57892 18.0001 6.80775V14.5C18.0001 14.6417 17.9521 14.7604 17.8561 14.8562C17.7601 14.9521 17.6412 15 17.4993 15C17.3575 15 17.2388 14.9521 17.1433 14.8562C17.0478 14.7604 17.0001 14.6417 17.0001 14.5V7.70775Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      aria-label="Label must be applied with icon-only layout"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.0001 7.70775L6.06159 18.6463C5.96809 18.7398 5.85334 18.7898 5.71734 18.7963C5.5815 18.8026 5.46034 18.7526 5.35384 18.6463C5.2475 18.5398 5.19434 18.4218 5.19434 18.2923C5.19434 18.1628 5.2475 18.0448 5.35384 17.9385L16.2923 7H9.50009C9.35842 7 9.23967 6.952 9.14384 6.856C9.048 6.76 9.00009 6.64108 9.00009 6.49925C9.00009 6.35742 9.048 6.23875 9.14384 6.14325C9.23967 6.04775 9.35842 6 9.50009 6H17.1923C17.4212 6 17.613 6.07742 17.7678 6.23225C17.9227 6.38708 18.0001 6.57892 18.0001 6.80775V14.5C18.0001 14.6417 17.9521 14.7604 17.8561 14.8562C17.7601 14.9521 17.6412 15 17.4993 15C17.3575 15 17.2388 14.9521 17.1433 14.8562C17.0478 14.7604 17.0001 14.6417 17.0001 14.5V7.70775Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > IconOnlySizes story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > InverseDisabledRanks story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-primary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-secondary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-tertiary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > InverseRanks story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-primary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-secondary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-tertiary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > JustDisabledProp story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-primary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-secondary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-tertiary"
+      disabled=""
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > LeftIconSizes story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+        Large
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+        Medium
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+        Small
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > LoadingStates story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1 _button--is-loading_0829c1"
+      >
+        Large
+      </span>
+      <div
+        aria-busy="true"
+        aria-label="loading"
+        class="_loading-indicator_eac96c _button__loader_0829c1"
+        data-testid="oval-loading"
+        role="status"
+      >
+        <svg
+          data-testid="oval-svg"
+          height="16"
+          stroke="transparent"
+          viewBox="-22 -22 46 46"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              data-testid="oval-secondary-group"
+              stroke-width="4"
+              transform="translate(1 1)"
+            >
+              <circle
+                cx="0"
+                cy="0"
+                r="20"
+                stroke="transparent"
+                stroke-opacity=".5"
+                stroke-width="4"
+              />
+              <path
+                d="M20 0c0-9.94-8.06-20-20-20"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  from="0 0 0"
+                  repeatCount="indefinite"
+                  to="360 0 0"
+                  type="rotate"
+                />
+              </path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1 _button--is-loading_0829c1"
+      >
+        Medium
+      </span>
+      <div
+        aria-busy="true"
+        aria-label="loading"
+        class="_loading-indicator_eac96c _button__loader_0829c1"
+        data-testid="oval-loading"
+        role="status"
+      >
+        <svg
+          data-testid="oval-svg"
+          height="16"
+          stroke="transparent"
+          viewBox="-22 -22 46 46"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              data-testid="oval-secondary-group"
+              stroke-width="4"
+              transform="translate(1 1)"
+            >
+              <circle
+                cx="0"
+                cy="0"
+                r="20"
+                stroke="transparent"
+                stroke-opacity=".5"
+                stroke-width="4"
+              />
+              <path
+                d="M20 0c0-9.94-8.06-20-20-20"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  from="0 0 0"
+                  repeatCount="indefinite"
+                  to="360 0 0"
+                  type="rotate"
+                />
+              </path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1 _button--is-loading_0829c1"
+      >
+        Small
+      </span>
+      <div
+        aria-busy="true"
+        aria-label="loading"
+        class="_loading-indicator_eac96c _button__loader_0829c1"
+        data-testid="oval-loading"
+        role="status"
+      >
+        <svg
+          data-testid="oval-svg"
+          height="16"
+          stroke="transparent"
+          viewBox="-22 -22 46 46"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              data-testid="oval-secondary-group"
+              stroke-width="4"
+              transform="translate(1 1)"
+            >
+              <circle
+                cx="0"
+                cy="0"
+                r="20"
+                stroke="transparent"
+                stroke-opacity=".5"
+                stroke-width="4"
+              />
+              <path
+                d="M20 0c0-9.94-8.06-20-20-20"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  from="0 0 0"
+                  repeatCount="indefinite"
+                  to="360 0 0"
+                  type="rotate"
+                />
+              </path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > NeutralRanks story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex gap-1"
+  >
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 btn-primary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Primary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 btn-secondary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Secondary
+      </span>
+    </button>
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 btn-tertiary"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Tertiary
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > RightIconSizes story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Large
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        Medium
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        Small
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > Sizes story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Large
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        Medium
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        Small
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > Tertiary story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <button
+    class="_button_0829c1 _button--layout-left_0829c1 _button--tertiary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+    type="button"
+  >
+    <span
+      class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8"
+        fill="currentColor"
+        height="16px"
+        style="--icon-size: 16px;"
+        viewBox="0 0 24 24"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4.5 17.269C4.35833 17.269 4.23958 17.221 4.14375 17.125C4.04792 17.029 4 16.9101 4 16.7682C4 16.6264 4.04792 16.5077 4.14375 16.4122C4.23958 16.3167 4.35833 16.269 4.5 16.269H19.5C19.6417 16.269 19.7604 16.317 19.8563 16.413C19.9521 16.5088 20 16.6277 20 16.7697C20 16.9116 19.9521 17.0302 19.8563 17.1257C19.7604 17.2212 19.6417 17.269 19.5 17.269H4.5ZM4.5 12.4997C4.35833 12.4997 4.23958 12.4517 4.14375 12.3557C4.04792 12.2597 4 12.1408 4 11.999C4 11.8571 4.04792 11.7385 4.14375 11.643C4.23958 11.5475 4.35833 11.4997 4.5 11.4997H19.5C19.6417 11.4997 19.7604 11.5477 19.8563 11.6437C19.9521 11.7397 20 11.8586 20 12.0005C20 12.1423 19.9521 12.261 19.8563 12.3565C19.7604 12.452 19.6417 12.4997 19.5 12.4997H4.5ZM4.5 7.73047C4.35833 7.73047 4.23958 7.68247 4.14375 7.58647C4.04792 7.49064 4 7.37172 4 7.22972C4 7.08789 4.04792 6.96922 4.14375 6.87372C4.23958 6.77822 4.35833 6.73047 4.5 6.73047H19.5C19.6417 6.73047 19.7604 6.77847 19.8563 6.87447C19.9521 6.97047 20 7.08939 20 7.23122C20 7.37305 19.9521 7.49172 19.8563 7.58722C19.7604 7.68272 19.6417 7.73047 19.5 7.73047H4.5Z"
+        />
+      </svg>
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> > TertiaryStandalone story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <button
+    class="_button_0829c1 _button--context-standalone_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+    type="button"
+  >
+    <span
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+    >
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button /> > UsingExtendedLink story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div>
+    Lorem ipsum dolor sit amet, . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
+     
+    <button
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      to="test"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        consectetur adipiscing elit
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`<Button /> > passes class names down properly 1`] = `
 <button
   class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 exampleClassName"

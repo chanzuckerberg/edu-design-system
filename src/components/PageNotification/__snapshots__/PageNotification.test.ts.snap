@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<PageNotification /> Critical story renders snapshot 1`] = `
+exports[`<PageNotification /> > Critical story renders snapshot 1`] = `
 <aside
   aria-label="Critical title which communicates info to the user"
-  class="page-notification page-notification--status-critical w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -20,31 +20,31 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -54,14 +54,14 @@ exports[`<PageNotification /> Critical story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
+exports[`<PageNotification /> > CriticalHorizontal story renders snapshot 1`] = `
 <aside
   aria-label="Critical title with horizontal buttons"
-  class="page-notification page-notification--status-critical w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -74,31 +74,31 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-horizontal-cta"
+    class="_page-notification__body_e69030 _page-notification--has-horizontal-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -108,14 +108,14 @@ exports[`<PageNotification /> CriticalHorizontal story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> Default story renders snapshot 1`] = `
+exports[`<PageNotification /> > Default story renders snapshot 1`] = `
 <aside
   aria-label="Default alert title"
-  class="page-notification page-notification--status-informational w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-informational_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -128,31 +128,31 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -162,14 +162,14 @@ exports[`<PageNotification /> Default story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
+exports[`<PageNotification /> > Dismissable story renders snapshot 1`] = `
 <aside
   aria-label="Dismissable title which communicates info to the user"
-  class="page-notification page-notification--status-informational page-notification--dismissable w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-informational_e69030 _page-notification--dismissable_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -182,31 +182,31 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -215,15 +215,15 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
   </div>
   <button
     aria-label="Dismiss the notification"
-    class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral page-notification__close-button"
+    class="_button_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _page-notification__close-button_e69030"
     type="button"
   >
     <span
-      class="text text--label-lg button__text"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
     >
       <svg
         aria-hidden="true"
-        class="icon"
+        class="_icon_779da8"
         fill="currentColor"
         height="24px"
         style="--icon-size: 24px;"
@@ -240,14 +240,14 @@ exports[`<PageNotification /> Dismissable story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
+exports[`<PageNotification /> > Favorable story renders snapshot 1`] = `
 <aside
   aria-label="Favorable title which communicates info to the user"
-  class="page-notification page-notification--status-favorable w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-favorable_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -260,31 +260,31 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -294,14 +294,14 @@ exports[`<PageNotification /> Favorable story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] = `
+exports[`<PageNotification /> > HorizontalDismissable story renders snapshot 1`] = `
 <aside
   aria-label="Dismissable Horizontal Critical title"
-  class="page-notification page-notification--status-critical page-notification--dismissable w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 _page-notification--dismissable_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -314,31 +314,31 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-horizontal-cta"
+    class="_page-notification__body_e69030 _page-notification--has-horizontal-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -347,15 +347,15 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
   </div>
   <button
     aria-label="Dismiss the notification"
-    class="button button--layout-icon-only button--tertiary button--lg button--size-lg button--variant-neutral page-notification__close-button"
+    class="_button_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _page-notification__close-button_e69030"
     type="button"
   >
     <span
-      class="text text--label-lg button__text"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
     >
       <svg
         aria-hidden="true"
-        class="icon"
+        class="_icon_779da8"
         fill="currentColor"
         height="24px"
         style="--icon-size: 24px;"
@@ -372,14 +372,14 @@ exports[`<PageNotification /> HorizontalDismissable story renders snapshot 1`] =
 </aside>
 `;
 
-exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] = `
+exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`] = `
 <aside
   aria-label="Notification 1 of 2"
-  class="page-notification page-notification--status-critical w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -392,31 +392,31 @@ exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] =
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Test Critical Title
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
         Test SubTitle
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -426,14 +426,14 @@ exports[`<PageNotification /> MultipleNotifications story renders snapshot 1`] =
 </aside>
 `;
 
-exports[`<PageNotification /> Warning story renders snapshot 1`] = `
+exports[`<PageNotification /> > Warning story renders snapshot 1`] = `
 <aside
   aria-label="Warning title which communicates info to the user"
-  class="page-notification page-notification--status-warning w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-warning_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -446,31 +446,31 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
          Subtitle which provides additional detail
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>
@@ -480,14 +480,14 @@ exports[`<PageNotification /> Warning story renders snapshot 1`] = `
 </aside>
 `;
 
-exports[`<PageNotification /> WarningWithSubTitle story renders snapshot 1`] = `
+exports[`<PageNotification /> > WarningWithSubTitle story renders snapshot 1`] = `
 <aside
   aria-label="Warning title and subtitle which communicates info to the user"
-  class="page-notification page-notification--status-warning w-[384px]"
+  class="_page-notification_e69030 _page-notification--status-warning_e69030 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon page-notification__icon"
+    class="_icon_779da8 _page-notification__icon_e69030"
     fill="currentColor"
     height="24px"
     style="--icon-size: 24px;"
@@ -500,18 +500,18 @@ exports[`<PageNotification /> WarningWithSubTitle story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="page-notification__body page-notification--has-vertical-cta"
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
   >
     <div
-      class="page-notification__text"
+      class="_page-notification__text_e69030"
     >
       <h3
-        class="text text--title-md"
+        class="_text_b3eba3 _text--title-md_b3eba3"
       >
         Alert title which communicates info to the user
       </h3>
       <p
-        class="text text--body-sm page-notification__sub-title"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
       >
         <span>
           SubTitle text
@@ -519,14 +519,14 @@ exports[`<PageNotification /> WarningWithSubTitle story renders snapshot 1`] = `
       </p>
     </div>
     <div
-      class="page-notification__call-to-action"
+      class="_page-notification__call-to-action_e69030"
     >
       <button
-        class="button button--layout-none button--secondary button--sm button--size-sm button--variant-neutral"
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
         type="button"
       >
         <span
-          class="text text--label-sm button__text"
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
         >
           Call to Action
         </span>

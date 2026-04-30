@@ -1,11 +1,17 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
 
 import { Link } from './Link';
+import * as stories from './Link.stories';
+
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Link />', () => {
+  generateSnapshots(stories as StoryFile);
+
   beforeEach(() => {
     const consoleMock = vi.spyOn(console, 'warn');
     consoleMock.mockImplementation(() => {});

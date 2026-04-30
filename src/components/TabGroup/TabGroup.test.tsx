@@ -1,14 +1,18 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react-vite';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import * as stories from './TabGroup.stories';
+import type { StoryFile } from '../../../.storybook/utility-types';
 import TabGroup from '../TabGroup';
 
 const { Default } = composeStories(stories);
 
 describe('<TabGroup />', () => {
+  generateSnapshots(stories as StoryFile);
+
   it('should focus and select with keyboard controls', async () => {
     const user = userEvent.setup();
     render(<Default />);

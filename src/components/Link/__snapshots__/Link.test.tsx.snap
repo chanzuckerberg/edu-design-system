@@ -1,5 +1,256 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Link /> > Default story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <a
+    class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+    href="http://example.org/"
+  >
+    Link
+  </a>
+</div>
+`;
+
+exports[`<Link /> > Emphasis story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <div>
+    <a
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-md_d78ce8"
+      href="http://example.org/"
+    >
+      Default Emphasis
+    </a>
+    <br />
+    <a
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-high_d78ce8 _link--size-md_d78ce8"
+      href="http://example.org/"
+    >
+      High Emphasis
+    </a>
+    <br />
+    <a
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-md_d78ce8"
+      href="http://example.org/"
+    >
+      Low Emphasis
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<Link /> > InheritColor story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <div
+    class="text-utility-critical"
+  >
+    <div>
+      Lorem ipsum dolor sit amet,
+       
+      <a
+        class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+        href="https://example.com/"
+      >
+        consectetur adipiscing elit
+      </a>
+      . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
+       
+      <a
+        class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+        href="https://example.org"
+      >
+        Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est. Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non dui dignissim fermentum.
+      </a>
+       
+      Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas. Sed sed quam id nisl bibendum convallis. Proin suscipit, odio
+       
+      <a
+        class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+        href="https://example.edu"
+      >
+        vel pulvinar
+      </a>
+       
+      euismod, risus eros ullamcorper lectus, non blandit nulla dui eget massa.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Link /> > InverseVariant story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <div
+    class="p-spacing-size-half text-utility-inverse w-[384px] text-center"
+  >
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8 _link--variant-inverse_d78ce8"
+      href="http://example.org/"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<Link /> > LinkInParagraphContext story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <div>
+    Lorem ipsum dolor sit amet,
+     
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+      href="https://example.com/"
+    >
+      consectetur adipiscing elit
+    </a>
+    . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
+     
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+      href="https://example.org"
+    >
+      Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est. Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non dui dignissim fermentum.
+    </a>
+     
+    Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas. Sed sed quam id nisl bibendum convallis. Proin suscipit, odio
+     
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+      href="https://example.edu"
+    >
+      vel pulvinar
+    </a>
+     
+    euismod, risus eros ullamcorper lectus, non blandit nulla dui eget massa.
+  </div>
+</div>
+`;
+
+exports[`<Link /> > LinkWithChevron story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <a
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+    href="http://example.org/"
+  >
+    Default
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8 _link__icon_d78ce8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.2922 12.0002L9.04622 7.75397C8.95256 7.66047 8.90256 7.54572 8.89622 7.40972C8.88972 7.27389 8.93972 7.1528 9.04622 7.04647C9.15256 6.93997 9.27047 6.88672 9.39997 6.88672C9.52947 6.88672 9.64739 6.93997 9.75372 7.04647L14.1422 11.4347C14.2294 11.5221 14.2906 11.6112 14.326 11.7022C14.3611 11.7932 14.3787 11.8926 14.3787 12.0002C14.3787 12.1079 14.3611 12.2072 14.326 12.2982C14.2906 12.3892 14.2294 12.4784 14.1422 12.5657L9.75372 16.954C9.66022 17.0476 9.54547 17.0976 9.40947 17.104C9.27364 17.1105 9.15256 17.0605 9.04622 16.954C8.93972 16.8476 8.88647 16.7297 8.88647 16.6002C8.88647 16.4707 8.93972 16.3528 9.04622 16.2465L13.2922 12.0002Z"
+      />
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`<Link /> > LinkWithFormattedChildren story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <a
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+    href="http://example.org/"
+  >
+    <em>
+      emphasized link
+    </em>
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8 _link__icon_d78ce8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M17.0001 7.70775L6.06159 18.6463C5.96809 18.7398 5.85334 18.7898 5.71734 18.7963C5.5815 18.8026 5.46034 18.7526 5.35384 18.6463C5.2475 18.5398 5.19434 18.4218 5.19434 18.2923C5.19434 18.1628 5.2475 18.0448 5.35384 17.9385L16.2923 7H9.50009C9.35842 7 9.23967 6.952 9.14384 6.856C9.048 6.76 9.00009 6.64108 9.00009 6.49925C9.00009 6.35742 9.048 6.23875 9.14384 6.14325C9.23967 6.04775 9.35842 6 9.50009 6H17.1923C17.4212 6 17.613 6.07742 17.7678 6.23225C17.9227 6.38708 18.0001 6.57892 18.0001 6.80775V14.5C18.0001 14.6417 17.9521 14.7604 17.8561 14.8562C17.7601 14.9521 17.6412 15 17.4993 15C17.3575 15 17.2388 14.9521 17.1433 14.8562C17.0478 14.7604 17.0001 14.6417 17.0001 14.5V7.70775Z"
+      />
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`<Link /> > LinkWithOpenIcon story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <a
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+    href="http://example.org/"
+  >
+    Default
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8 _link__icon_d78ce8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M17.0001 7.70775L6.06159 18.6463C5.96809 18.7398 5.85334 18.7898 5.71734 18.7963C5.5815 18.8026 5.46034 18.7526 5.35384 18.6463C5.2475 18.5398 5.19434 18.4218 5.19434 18.2923C5.19434 18.1628 5.2475 18.0448 5.35384 17.9385L16.2923 7H9.50009C9.35842 7 9.23967 6.952 9.14384 6.856C9.048 6.76 9.00009 6.64108 9.00009 6.49925C9.00009 6.35742 9.048 6.23875 9.14384 6.14325C9.23967 6.04775 9.35842 6 9.50009 6H17.1923C17.4212 6 17.613 6.07742 17.7678 6.23225C17.9227 6.38708 18.0001 6.57892 18.0001 6.80775V14.5C18.0001 14.6417 17.9521 14.7604 17.8561 14.8562C17.7601 14.9521 17.6412 15 17.4993 15C17.3575 15 17.2388 14.9521 17.1433 14.8562C17.0478 14.7604 17.0001 14.6417 17.0001 14.5V7.70775Z"
+      />
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`<Link /> > StandaloneInverseVariant story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <a
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8 _link--variant-inverse_d78ce8"
+    href="http://example.org/"
+  >
+    Link
+  </a>
+</div>
+`;
+
+exports[`<Link /> > UsingExtendedLink story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <div>
+    Lorem ipsum dolor sit amet,
+     
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
+      href="https://example.org/extended-link/"
+      to="test"
+    >
+      consectetur adipiscing elit
+    </a>
+    . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
+     
+  </div>
+</div>
+`;
+
 exports[`<Link /> > passes class names down properly 1`] = `
 <a
   class="exampleClassName _link_d78ce8 _link--emphasis-default_d78ce8"

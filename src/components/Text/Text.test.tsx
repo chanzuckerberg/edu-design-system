@@ -1,11 +1,17 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { Text } from './Text';
+import * as stories from './Text.stories';
+
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Text />', () => {
+  generateSnapshots(stories as StoryFile);
+
   it('should add the passthrough className', () => {
     render(<Text className="passthrough">Some Text</Text>);
     expect(screen.getByText('Some Text').classList).toContain('passthrough');

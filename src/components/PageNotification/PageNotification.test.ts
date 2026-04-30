@@ -1,0 +1,8 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { describe } from 'vitest';
+import * as stories from './PageNotification.stories';
+import type { StoryFile } from '../../../.storybook/utility-types';
+
+describe('<PageNotification />', () => {
+  generateSnapshots(stories as StoryFile);
+});

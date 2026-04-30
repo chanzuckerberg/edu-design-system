@@ -1,13 +1,174 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Checkbox /> > Disabled story renders snapshot 1`] = `
+exports[`<Checkbox /> > Checked story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f"
+  >
+    <input
+      checked=""
+      class="_checkbox__input_2d475f"
+      id=":r3:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r3:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Checkbox
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > Default story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f"
+  >
+    <input
+      class="_checkbox__input_2d475f"
+      id=":r0:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r0:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Checkbox
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > Error story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f _checkbox--error_2d475f"
+  >
+    <input
+      class="_checkbox__input_2d475f"
+      id=":r2:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r2:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          In error state
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > GlyphIsConsistent story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    style="font-size: 10px;"
+  >
+    <div
+      class="_checkbox_2d475f"
+    >
+      <input
+        checked=""
+        class="_checkbox__input_2d475f"
+        id=":r4:"
+        type="checkbox"
+      />
+      <div
+        class="_checkbox__labels_2d475f"
+      >
+        <label
+          class="_label_f9fc7e"
+          for=":r4:"
+        >
+          <span
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            Checkbox
+          </span>
+           
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > Indeterminate story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f"
+  >
+    <input
+      class="_checkbox__input_2d475f"
+      id=":r5:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r5:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Checkbox
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > Inline Disabled story renders snapshot 1`] = `
 <div
   class="_checkbox_2d475f"
 >
   <input
     class="_checkbox__input_2d475f"
     disabled=""
-    id=":r0:"
+    id=":r8:"
     type="checkbox"
   />
   <div
@@ -15,7 +176,7 @@ exports[`<Checkbox /> > Disabled story renders snapshot 1`] = `
   >
     <label
       class="_label_f9fc7e _label--disabled_f9fc7e"
-      for=":r0:"
+      for=":r8:"
     >
       <span
         class="_text_b3eba3 _text--body-md_b3eba3"
@@ -24,6 +185,93 @@ exports[`<Checkbox /> > Disabled story renders snapshot 1`] = `
       </span>
        
     </label>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > LongLabels story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f"
+  >
+    <input
+      class="_checkbox__input_2d475f"
+      id=":r7:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r7:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </span>
+         
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > WithSublabel story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f"
+  >
+    <input
+      class="_checkbox__input_2d475f"
+      id=":r1:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    >
+      <label
+        class="_label_f9fc7e"
+        for=":r1:"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          Checkbox
+        </span>
+         
+      </label>
+      <span
+        class="_text_b3eba3 _text--body-sm_b3eba3 _checkbox__sub-label_2d475f"
+      >
+        Additional descriptive text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > WithoutVisibleLabel story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_checkbox_2d475f"
+  >
+    <input
+      aria-label="a checkbox has no name"
+      class="_checkbox__input_2d475f"
+      id=":r6:"
+      type="checkbox"
+    />
+    <div
+      class="_checkbox__labels_2d475f"
+    />
   </div>
 </div>
 `;

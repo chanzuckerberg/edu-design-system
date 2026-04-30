@@ -1,11 +1,17 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { Checkbox } from './Checkbox';
 
+import * as stories from './Checkbox.stories';
+import type { StoryFile } from '../../../.storybook/utility-types';
+
 describe('<Checkbox />', () => {
-  it('Disabled story renders snapshot', () => {
+  generateSnapshots(stories as StoryFile);
+
+  it('Inline Disabled story renders snapshot', () => {
     const { container } = render(<Checkbox disabled label="Disabled" />);
     expect(container.firstChild).toMatchSnapshot();
   });

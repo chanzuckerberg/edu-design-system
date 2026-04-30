@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<VisualPageIndicator /> > Default story renders snapshot 1`] = `
+<ul
+  class="_visual-page-indicator_9ed318"
+>
+  <li
+    class="_visual-page-indicator__item_9ed318 _visual-page-indicator--active_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+</ul>
+`;
+
+exports[`<VisualPageIndicator /> > FivePages story renders snapshot 1`] = `
+<ul
+  class="_visual-page-indicator_9ed318"
+>
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318 _visual-page-indicator--active_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+</ul>
+`;
+
+exports[`<VisualPageIndicator /> > MinimumPages story renders snapshot 1`] = `
+<ul
+  class="_visual-page-indicator_9ed318"
+>
+  <li
+    class="_visual-page-indicator__item_9ed318"
+  />
+  <li
+    class="_visual-page-indicator__item_9ed318 _visual-page-indicator--active_9ed318"
+  />
+</ul>
+`;

@@ -1,3 +1,4 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/react-vite';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -5,6 +6,8 @@ import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { Select } from './Select';
 import * as stories from './Select.stories';
+
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 // TODO: needs ResizeObserverMock
 
@@ -32,6 +35,8 @@ const exampleOptions = [
 ];
 
 describe('<Select />', () => {
+  generateSnapshots(stories as StoryFile);
+
   it('does not open a list when clicked and disabled', async () => {
     const user = userEvent.setup();
     render(<DisabledComponent />);

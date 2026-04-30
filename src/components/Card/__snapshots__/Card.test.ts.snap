@@ -162,7 +162,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="flex gap-spacing-size-1"
+    class="gap-spacing-size-1 flex"
   >
     <label
       class="_card__behavior-label_f66b11"
@@ -478,7 +478,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="flex gap-spacing-size-1"
+    class="gap-spacing-size-1 flex"
   >
     <label
       class="_card__behavior-label_f66b11"

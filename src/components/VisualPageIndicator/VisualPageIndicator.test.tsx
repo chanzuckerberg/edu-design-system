@@ -1,3 +1,4 @@
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render } from '@testing-library/react';
 
 import React from 'react';
@@ -11,8 +12,12 @@ import {
   type Mock,
 } from 'vitest';
 import { VisualPageIndicator } from './VisualPageIndicator';
+import * as stories from './VisualPageIndicator.stories';
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<VisualPageIndicator />', () => {
+  generateSnapshots(stories as StoryFile);
+
   beforeEach(() => {
     // Add in mocks for the calls that can occur in implementation to suppress logging in tests
     const consoleMock = vi.spyOn(console, 'error');

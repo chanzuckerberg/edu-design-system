@@ -1,0 +1,992 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Modal > ContentDefault story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > ContentLarge story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > ContentLargeAuto story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-auto_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > ContentLargeMax story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-max_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > ContentSmall story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--sm_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > LayoutVertical story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--vertical_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > LayoutVerticalWithTertiary story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--vertical_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Tertiary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > Mobile story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > MobileLandscape story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > Tablet story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Primary
+          </span>
+        </button>
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal > WithCriticalButton story renders snapshot 1`] = `
+<div
+  class="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center"
+>
+  <div
+    class="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50"
+  />
+  <div
+    class="_modal__content_7cc3ba _modal__content--height-fixed_7cc3ba _modal__content--lg_7cc3ba"
+    data-testid="non-interactive"
+    open=""
+  >
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _modal__close-button_7cc3ba"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 12.708L6.75372 17.954C6.66022 18.0476 6.54547 18.0976 6.40947 18.104C6.27364 18.1105 6.15256 18.0605 6.04622 17.954C5.93972 17.8476 5.88647 17.7297 5.88647 17.6002C5.88647 17.4707 5.93972 17.3528 6.04622 17.2465L11.2922 12.0002L6.04622 6.75397C5.95256 6.66047 5.90256 6.54572 5.89622 6.40972C5.88972 6.27388 5.93972 6.1528 6.04622 6.04647C6.15256 5.93997 6.27047 5.88672 6.39997 5.88672C6.52947 5.88672 6.64739 5.93997 6.75372 6.04647L12 11.2925L17.2462 6.04647C17.3397 5.9528 17.4545 5.9028 17.5905 5.89647C17.7263 5.88997 17.8474 5.93997 17.9537 6.04647C18.0602 6.1528 18.1135 6.27072 18.1135 6.40022C18.1135 6.52972 18.0602 6.64764 17.9537 6.75397L12.7077 12.0002L17.9537 17.2465C18.0474 17.34 18.0974 17.4547 18.1037 17.5907C18.1102 17.7266 18.0602 17.8476 17.9537 17.954C17.8474 18.0605 17.7295 18.1137 17.6 18.1137C17.4705 18.1137 17.3526 18.0605 17.2462 17.954L12 12.708Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      class="_modal-header_7cc3ba"
+    >
+      <h2
+        class="_text_b3eba3 _text--headline-md_b3eba3 text-utility-default-primary"
+      >
+        Modal Title
+      </h2>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _modal-sub-title_7cc3ba"
+      >
+        Modal Sub-title
+      </div>
+    </div>
+    <div
+      class="_modal-body_7cc3ba"
+    >
+      <div
+        class="fpo h-full w-full"
+      >
+        Modal Content
+      </div>
+    </div>
+    <div
+      class="_modal-footer_7cc3ba"
+    >
+      <div
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            Critical Action
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

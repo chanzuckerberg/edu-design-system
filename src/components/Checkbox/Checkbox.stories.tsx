@@ -79,6 +79,11 @@ export const Disabled: Story = {
       <Checkbox {...args} disabled indeterminate label="Disabled" />
     </div>
   ),
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**
