@@ -167,6 +167,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^4.60.2",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-webpack-stats": "^3.1.2",
     "standard-version": "^9.5.0",
     "storybook": "^10.3.5",
     "storybook-addon-tag-badges": "^3.1.0",

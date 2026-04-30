@@ -2741,6 +2741,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     rollup: "npm:^4.60.2"
     rollup-plugin-postcss: "npm:^4.0.2"
+    rollup-plugin-webpack-stats: "npm:^3.1.2"
     standard-version: "npm:^9.5.0"
     storybook: "npm:^10.3.5"
     storybook-addon-tag-badges: "npm:^3.1.0"
@@ -18795,6 +18796,44 @@ __metadata:
   peerDependencies:
     postcss: 8.x
   checksum: 10/ee9485265fe69fde54340d4a324c8de15185c730861176cfd947b34532dc63445da6788dc17f3c641708fa4a87fe832c534bfad678b413bb3b4e2b8bdd292850
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-stats@npm:2.1.2":
+  version: 2.1.2
+  resolution: "rollup-plugin-stats@npm:2.1.2"
+  peerDependencies:
+    rolldown: ^1.0.0-beta.0
+    rollup: ^3.0.0 || ^4.0.0
+    vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    rolldown:
+      optional: true
+    rollup:
+      optional: true
+    vite:
+      optional: true
+  checksum: 10/f6501eec9c175ba176198712d8ef05e1c91d861de3cf3f50cb370fe76cae51c10771cae4c5109d2d02e0e08d8e437c136d27db506e0fbb482f17a898afe3452e
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-webpack-stats@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "rollup-plugin-webpack-stats@npm:3.1.2"
+  dependencies:
+    rollup-plugin-stats: "npm:2.1.2"
+  peerDependencies:
+    rolldown: ^1.0.0-beta.0
+    rollup: ^3.0.0 || ^4.0.0
+    vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    rolldown:
+      optional: true
+    rollup:
+      optional: true
+    vite:
+      optional: true
+  checksum: 10/d26db9af1624610e3fb59985ced435b1e35dc079c47d245eca3b3a7603e6c11d8eb54ac2fd25586245bcf14276ca9f99acf9180b55a3a015f013d8d8dab19f7c
   languageName: node
   linkType: hard
 
