@@ -82,6 +82,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: Build design tokens
         run: yarn build:tokens
+      - name: Build Storybook 📚
+        run: yarn build:storybook
       - name: Run tests 🔬
         run: yarn test:storybook
       - name: Publish to Chromatic 🦄
