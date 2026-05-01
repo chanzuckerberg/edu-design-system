@@ -1,63 +1,62 @@
 /// <reference types="vitest/config" />
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-import { playwright } from '@vitest/browser-playwright';
+// import path from 'node:path';
+// import { fileURLToPath } from 'node:url';
+// import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+import react from '@vitejs/plugin-react'; // TODO: needed?
+// import { playwright } from '@vitest/browser-playwright';
 
 import webpackStats from 'rollup-plugin-webpack-stats';
 import { defineConfig } from 'vite';
 
-const dirname =
-  typeof __dirname !== 'undefined'
-    ? __dirname
-    : path.dirname(fileURLToPath(import.meta.url));
+// const dirname =
+//   typeof __dirname !== 'undefined'
+//     ? __dirname
+//     : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [webpackStats()],
+  plugins: [webpackStats(), react()],
   test: {
+    coverage: {
+      enabled: true,
+      provider: 'istanbul',
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: ['src/bin/migrate/**/*.ts'],
+    },
     projects: [
+      // { Re-enable once coverage reports aren't affected by this config : add --project=storybook to test:storybook in package.json
+      //   extends: true,
+      //   plugins: [
+      //     // The plugin will run tests for the stories defined in your Storybook config
+      //     // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
+      //     storybookTest({
+      //       configDir: path.join(dirname, '.storybook'),
+      //     }),
+      //   ],
+      //   test: {
+      //     name: 'storybook',
+      //     browser: {
+      //       enabled: true,
+      //       headless: true,
+      //       provider: playwright({}),
+      //       instances: [
+      //         {
+      //           browser: 'chromium',
+      //         },
+      //       ],
+      //     },
+      //   },
+      // },
       {
         extends: true,
         test: {
           name: 'unit',
-          extends: true,
-          coverage: {
-            provider: 'v8',
-            enabled: true,
-            include: ['src/components/**.{ts,tsx}'],
-            exclude: ['**/*.stories.{ts,tsx}, **/*.{json,css}'],
-            reporter: ['text', 'json', 'html'],
-          },
           include: ['src/**/*.test.{ts,tsx}'],
           exclude: ['**/*.stories.{ts,tsx}'],
           globals: true,
           environment: 'happy-dom',
           restoreMocks: true,
           setupFiles: 'test/test.setup.js',
-        },
-      },
-      {
-        extends: true,
-        plugins: [
-          // The plugin will run tests for the stories defined in your Storybook config
-          // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-          storybookTest({
-            configDir: path.join(dirname, '.storybook'),
-          }),
-        ],
-        test: {
-          name: 'storybook',
-          browser: {
-            enabled: true,
-            headless: true,
-            provider: playwright({}),
-            instances: [
-              {
-                browser: 'chromium',
-              },
-            ],
-          },
         },
       },
     ],

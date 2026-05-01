@@ -35,6 +35,13 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           CI: true
 
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/codecov-action@v5
+        with: 
+          report_type: test_results
+          token: ${{ secrets.CODECOV_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
     permissions:
