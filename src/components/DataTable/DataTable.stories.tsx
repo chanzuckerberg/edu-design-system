@@ -2,6 +2,8 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 
+// We import all of the utilities from tanstack here, and this can contain other custom utilities
+import * as DataTableUtils from '@tanstack/react-table';
 import React from 'react';
 
 import {
@@ -10,10 +12,10 @@ import {
   type DataTableWithStatus,
 } from './DataTable';
 
-// We import all of the utilities from tanstack here, and this can contain other custom utilities
-import { Button, Menu, Checkbox, DataTableUtils } from '../..';
-
 import { chromaticViewports } from '../../util/viewports';
+import Button from '../Button';
+import Checkbox from '../Checkbox';
+import Menu from '../Menu';
 
 export default {
   title: 'Components/DataTable',
