@@ -54,14 +54,6 @@
   },
   "overrides": [
     {
-      "files": ["*.test.{js,ts}", "*.test.tsx", "**/test/**"],
-      "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"],
-      "env": {
-        "jest/globals": true
-      }
-    },
-    {
       "files": [
         "config.js",
         "*.config.js",

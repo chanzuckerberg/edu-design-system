@@ -18,7 +18,7 @@ export default defineConfig({
   plugins: [webpackStats(), react()],
   test: {
     coverage: {
-      provider: 'v8',
+      provider: 'istanbul',
       include: [
         'src/**/*.{ts,tsx}',
         'scripts/**/*.{mjs,ts,tsx}',
