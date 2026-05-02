@@ -19,9 +19,13 @@ export default defineConfig({
   test: {
     coverage: {
       enabled: true,
-      provider: 'istanbul',
-      include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/bin/migrate/**/*.ts'],
+      provider: 'v8',
+      include: [
+        'src/**/*.{ts,tsx}',
+        'scripts/**/*.{mjs,ts,tsx}',
+        'bin/_util.{ts,js}',
+      ],
+      exclude: ['src/bin/', 'src/**/*.stories.{ts,tsx}'],
     },
     projects: [
       // { Re-enable once coverage reports aren't affected by this config : add --project=storybook to test:storybook in package.json
@@ -51,8 +55,13 @@ export default defineConfig({
         extends: true,
         test: {
           name: 'unit',
-          include: ['src/**/*.test.{ts,tsx}'],
-          exclude: ['**/*.stories.{ts,tsx}'],
+          include: [
+            'src/**/*.test.{ts,tsx}',
+            'bin/**/*.test.{ts,js}',
+            'scripts/**/*.test.{mjs}',
+            '**/*.test.{ts,tsx,js,jsx,mjs}',
+          ],
+          exclude: ['node_modules/', '**/*.stories.{ts,tsx}'],
           globals: true,
           environment: 'happy-dom',
           restoreMocks: true,

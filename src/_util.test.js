@@ -5,7 +5,7 @@ vi.mock('lilconfig');
 
 const lilconfig = require('lilconfig');
 const identity = require('lodash/identity');
-const utils = require('./_util');
+const utils = require('../bin/_util');
 
 describe('utils', function () {
   describe('style-dictionary tools', function () {
