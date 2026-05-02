@@ -18,7 +18,8 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-themes',
     'storybook-addon-test-codegen',
-    '@storybook/addon-vitest',
+    // Re-enable once vitest storybook config is working properly
+    // '@storybook/addon-vitest',
   ],
 
   docs: {
