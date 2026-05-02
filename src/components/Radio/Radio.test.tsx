@@ -10,6 +10,7 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Radio />', () => {
   generateSnapshots(stories as StoryFile);
+
   it('should toggle the radio with space', async () => {
     const user = userEvent.setup();
     const onChange = vi.fn();

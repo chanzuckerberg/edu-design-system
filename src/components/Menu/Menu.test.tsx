@@ -9,8 +9,6 @@ import { Menu } from './Menu';
 import * as stories from './Menu.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
-// TODO: needs ResizeObserverMock
-
 const { Default, WithLongButtonText } = composeStories(stories);
 
 describe('<Menu />', () => {

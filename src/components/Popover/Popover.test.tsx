@@ -7,8 +7,6 @@ import { describe, expect, it } from 'vitest';
 import * as stories from './Popover.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
-// TODO: needs ResizeObserverMock
-
 const { Default } = composeStories(stories);
 
 describe('<Popover />', () => {

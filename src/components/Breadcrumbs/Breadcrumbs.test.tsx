@@ -8,8 +8,6 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { LongList } = composeStories(stories);
 
-// TODO: needs ResizeObserverMock
-
 describe('<Breadcrumbs />', () => {
   generateSnapshots(stories as StoryFile);
 

@@ -28,6 +28,7 @@ describe('<Button />', () => {
   afterEach(() => {
     vi.resetAllMocks();
   });
+
   generateSnapshots(stories as StoryFile);
 
   it('renders the text in the button', () => {

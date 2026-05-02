@@ -16,6 +16,7 @@ mockAnimationsApi();
 
 describe('Modal', () => {
   generateSnapshots(stories as StoryFile);
+
   it('is initially closed', () => {
     render(<Default />);
     expect(screen.queryByRole('dialog')).toBeFalsy();

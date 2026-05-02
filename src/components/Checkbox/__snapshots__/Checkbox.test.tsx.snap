@@ -275,3 +275,31 @@ exports[`<Checkbox /> > WithoutVisibleLabel story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<Checkbox /> > inline Disabled story renders snapshot 1`] = `
+<div
+  class="_checkbox_2d475f"
+>
+  <input
+    class="_checkbox__input_2d475f"
+    disabled=""
+    id=":r8:"
+    type="checkbox"
+  />
+  <div
+    class="_checkbox__labels_2d475f"
+  >
+    <label
+      class="_label_f9fc7e _label--disabled_f9fc7e"
+      for=":r8:"
+    >
+      <span
+        class="_text_b3eba3 _text--body-md_b3eba3"
+      >
+        Disabled
+      </span>
+       
+    </label>
+  </div>
+</div>
+`;

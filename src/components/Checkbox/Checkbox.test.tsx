@@ -11,7 +11,7 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 describe('<Checkbox />', () => {
   generateSnapshots(stories as StoryFile);
 
-  it('Inline Disabled story renders snapshot', () => {
+  it('inline Disabled story renders snapshot', () => {
     const { container } = render(<Checkbox disabled label="Disabled" />);
     expect(container.firstChild).toMatchSnapshot();
   });

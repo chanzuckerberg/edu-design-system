@@ -10,8 +10,6 @@ import * as stories from './AppHeader.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 import type { NavGroup } from '../../util/utility-types';
 
-// TODO: needs ResizeObserverMock
-
 describe('<AppHeader />', () => {
   generateSnapshots(stories as StoryFile);
 

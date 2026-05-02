@@ -9,8 +9,6 @@ import * as stories from './Select.stories';
 
 import type { StoryFile } from '../../../.storybook/utility-types';
 
-// TODO: needs ResizeObserverMock
-
 const {
   EventHandlingOnRenderProp,
   EventHandlingOnStandardButton,
