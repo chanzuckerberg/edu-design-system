@@ -24,7 +24,11 @@ export default defineConfig({
         'scripts/**/*.{mjs,ts,tsx}',
         'bin/_util.{ts,js}',
       ],
-      exclude: ['src/bin/', 'src/**/*.stories.{ts,tsx}'],
+      exclude: [
+        'src/bin/migrate/migrations',
+        'src/bin/eds-migrate.ts',
+        'src/**/*.stories.{ts,tsx}',
+      ],
     },
     projects: [
       // { Re-enable once coverage reports aren't affected by this config : add --project=storybook to test:storybook in package.json
