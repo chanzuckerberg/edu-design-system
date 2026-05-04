@@ -440,6 +440,7 @@ __metadata:
     "@codecov/rollup-plugin": "npm:^1.9.1"
     "@commitlint/cli": "npm:^20.5.0"
     "@commitlint/config-conventional": "npm:^20.5.0"
+    "@github-ui/storybook-addon-performance-panel": "npm:^1.1.4"
     "@headlessui/react": "npm:^2.2.10"
     "@omlet/cli": "npm:^2.1.0"
     "@rollup/plugin-commonjs": "npm:^28.0.9"
@@ -1224,6 +1225,23 @@ __metadata:
   version: 0.2.9
   resolution: "@floating-ui/utils@npm:0.2.9"
   checksum: 10/0ca786347db3dd8d9034b86d1449fabb96642788e5900cc5f2aee433cd7b243efbcd7a165bead50b004ee3f20a90ddebb6a35296fc41d43cfd361b6f01b69ffb
+  languageName: node
+  linkType: hard
+
+"@github-ui/storybook-addon-performance-panel@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@github-ui/storybook-addon-performance-panel@npm:1.1.4"
+  peerDependencies:
+    "@storybook/icons": ^2.0.0
+    "@storybook/react": ^10.0.0
+    react: ^19
+    storybook: ^10
+  peerDependenciesMeta:
+    "@storybook/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 10/cd0fc201fb83a3e2998dbd965912a477eeb2471aeda124b3751e668cf762729069423d947d325848d9d7d65b1514f6476646a9750a238eeed6dbbc6a69182475
   languageName: node
   linkType: hard
 
