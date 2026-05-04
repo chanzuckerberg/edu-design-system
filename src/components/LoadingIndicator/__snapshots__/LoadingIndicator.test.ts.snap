@@ -1,10 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<LoadingIndicator /> Default story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > Default story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator"
+  class="_loading-indicator_eac96c"
   data-testid="oval-loading"
   role="status"
 >
@@ -51,11 +51,11 @@ exports[`<LoadingIndicator /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<LoadingIndicator /> ExtraSmall story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > ExtraSmall story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator"
+  class="_loading-indicator_eac96c"
   data-testid="oval-loading"
   role="status"
 >
@@ -102,11 +102,11 @@ exports[`<LoadingIndicator /> ExtraSmall story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<LoadingIndicator /> Invisible story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > Invisible story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator loading-indicator--invisible"
+  class="_loading-indicator_eac96c _loading-indicator--invisible_eac96c"
   data-testid="oval-loading"
   role="status"
 >
@@ -153,11 +153,11 @@ exports[`<LoadingIndicator /> Invisible story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<LoadingIndicator /> Large story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > Large story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator"
+  class="_loading-indicator_eac96c"
   data-testid="oval-loading"
   role="status"
 >
@@ -204,11 +204,11 @@ exports[`<LoadingIndicator /> Large story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<LoadingIndicator /> Medium story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > Medium story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator"
+  class="_loading-indicator_eac96c"
   data-testid="oval-loading"
   role="status"
 >
@@ -255,11 +255,11 @@ exports[`<LoadingIndicator /> Medium story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<LoadingIndicator /> Small story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > Small story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="loading"
-  class="loading-indicator"
+  class="_loading-indicator_eac96c"
   data-testid="oval-loading"
   role="status"
 >
@@ -306,11 +306,11 @@ exports[`<LoadingIndicator /> Small story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<LoadingIndicator /> WithAriaLabel story renders snapshot 1`] = `
+exports[`<LoadingIndicator /> > WithAriaLabel story renders snapshot 1`] = `
 <div
   aria-busy="true"
   aria-label="Loading, Please Wait"
-  class="loading-indicator"
+  class="_loading-indicator_eac96c"
   data-testid="oval-loading"
   role="status"
 >

@@ -4,7 +4,6 @@ import {
   MenuItem as HeadlessMenuItem,
   MenuItems as HeadlessMenuItems,
 } from '@headlessui/react';
-import type { AnchorProps } from '@headlessui/react/dist/internal/floating';
 
 import clsx from 'clsx';
 import type {
@@ -56,7 +55,7 @@ export type MenuItemsProps = ExtractProps<typeof HeadlessMenuItems>;
 export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
   PopoverListItemProps & {
     // Component API
-    anchor?: AnchorProps;
+    anchor?: MenuItemsProps['anchor'];
     /**
      * Target URL for the menu item action
      */

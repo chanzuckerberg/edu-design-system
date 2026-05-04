@@ -1,4 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { describe, expect, it } from 'vitest';
 import { setShadowStates } from './ScrollWrapper';
 
 import * as stories from './ScrollWrapper.stories';

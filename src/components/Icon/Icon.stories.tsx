@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import clsx from 'clsx';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';

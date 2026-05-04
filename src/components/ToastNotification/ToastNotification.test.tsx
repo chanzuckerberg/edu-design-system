@@ -1,8 +1,17 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react-webpack5';
+import { composeStories } from '@storybook/react-vite';
 import { render, waitFor } from '@testing-library/react';
 
 import React from 'react';
+import {
+  describe,
+  beforeEach,
+  afterEach,
+  expect,
+  it,
+  type Mock,
+  vi,
+} from 'vitest';
 import { ToastNotification } from './ToastNotification';
 import * as stories from './ToastNotification.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
@@ -13,13 +22,13 @@ const { AutoDismiss: skip, ...staticStories } = stories;
 
 describe('<ToastNotification />', () => {
   afterEach(() => {
-    jest.resetAllMocks();
+    vi.resetAllMocks();
   });
 
   generateSnapshots(staticStories as StoryFile);
 
   it('triggers the onDissmiss after a delay', async () => {
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
     render(<AutoDismiss />);
 
@@ -27,10 +36,10 @@ describe('<ToastNotification />', () => {
   });
 
   describe('emits messages when misused', () => {
-    let consoleErrorMock: jest.SpyInstance;
+    let consoleErrorMock: Mock;
     beforeEach(() => {
-      consoleErrorMock = jest.spyOn(console, 'error');
-      consoleErrorMock.mockImplementation();
+      consoleErrorMock = vi.spyOn(console, 'error');
+      consoleErrorMock.mockImplementation(() => {});
     });
 
     it('generates an error when onDismiss and type=auto are misused', async () => {

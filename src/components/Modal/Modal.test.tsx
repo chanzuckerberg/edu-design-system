@@ -1,12 +1,12 @@
-import { generateSnapshots, wait } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react-webpack5';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { composeStories } from '@storybook/react-vite';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mockAnimationsApi } from 'jsdom-testing-mocks';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { Modal } from './Modal';
 import * as stories from './Modal.stories';
-import '../../../jest/helpers/removeModalTransitionStylesJestSerializer';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { Default } = composeStories(stories);
@@ -15,24 +15,7 @@ const { Default } = composeStories(stories);
 mockAnimationsApi();
 
 describe('Modal', () => {
-  generateSnapshots(stories as StoryFile, {
-    getElement: async () => {
-      const user = userEvent.setup();
-      const nonInteractiveModal = screen.queryByTestId('non-interactive');
-      if (nonInteractiveModal) return nonInteractiveModal;
-
-      const openModalButton = await screen.findByRole('button', {
-        name: 'Open the modal',
-      });
-      await user.click(openModalButton);
-      const modal = await screen.findByRole('dialog');
-
-      // Give Headless UI's transition/style classes time to settle.
-      await wait(50);
-
-      return modal;
-    },
-  });
+  generateSnapshots(stories as StoryFile);
 
   it('is initially closed', () => {
     render(<Default />);
@@ -80,8 +63,8 @@ describe('Modal', () => {
   });
 
   it('does not print an error if modal uses <Modal.Title>', () => {
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
+    const consoleErrorMock = vi.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation(() => {});
 
     render(
       <Modal onClose={() => {}} open>
@@ -98,8 +81,8 @@ describe('Modal', () => {
   });
 
   it('does not print an error if modal uses aria-label', () => {
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
+    const consoleErrorMock = vi.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation(() => {});
 
     render(
       <Modal aria-label="aria label" onClose={() => {}} open>
@@ -114,8 +97,8 @@ describe('Modal', () => {
   });
 
   it('does print an error if modal does not use <Modal.Title> or aria-label', () => {
-    const consoleErrorMock = jest.spyOn(console, 'error');
-    consoleErrorMock.mockImplementation();
+    const consoleErrorMock = vi.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation(() => {});
 
     render(
       <Modal onClose={() => {}} open>
@@ -130,8 +113,8 @@ describe('Modal', () => {
   });
 
   it('prints a warning when height is used with size="sm"', () => {
-    const consoleWarningMock = jest.spyOn(console, 'warn');
-    consoleWarningMock.mockImplementation();
+    const consoleWarningMock = vi.spyOn(console, 'warn');
+    consoleWarningMock.mockImplementation(() => {});
 
     render(
       <Modal height="dynamic" onClose={() => {}} open size="sm">

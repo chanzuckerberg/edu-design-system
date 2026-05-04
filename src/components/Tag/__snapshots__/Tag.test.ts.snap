@@ -1,41 +1,41 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Tag /> Default story renders snapshot 1`] = `
+exports[`<Tag /> > Default story renders snapshot 1`] = `
 <div
-  class="flex gap-spacing-size-2"
+  class="gap-spacing-size-2 flex"
 >
   <span
-    class="text text--label-sm tag tag--status-informational"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-informational_f57044"
   >
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
   </span>
   <span
-    class="text text--label-sm tag tag--status-favorable"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-favorable_f57044"
   >
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
   </span>
   <span
-    class="text text--label-sm tag tag--status-warning"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-warning_f57044"
   >
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
   </span>
   <span
-    class="text text--label-sm tag tag--status-critical"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-critical_f57044"
   >
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
@@ -43,16 +43,16 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Tag /> WithIcon story renders snapshot 1`] = `
+exports[`<Tag /> > WithIcon story renders snapshot 1`] = `
 <div
-  class="flex gap-spacing-size-2"
+  class="gap-spacing-size-2 flex"
 >
   <span
-    class="text text--label-sm tag tag--status-informational"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-informational_f57044"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       height="16px"
       style="--icon-size: 16px;"
@@ -65,17 +65,17 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
   </span>
   <span
-    class="text text--label-sm tag tag--status-favorable"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-favorable_f57044"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       height="16px"
       style="--icon-size: 16px;"
@@ -88,17 +88,17 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
   </span>
   <span
-    class="text text--label-sm tag tag--status-warning"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-warning_f57044"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       height="16px"
       style="--icon-size: 16px;"
@@ -111,17 +111,17 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>
   </span>
   <span
-    class="text text--label-sm tag tag--status-critical"
+    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-critical_f57044"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       height="16px"
       style="--icon-size: 16px;"
@@ -134,7 +134,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="tag__body"
+      class="_tag__body_f57044"
     >
       Tag text
     </span>

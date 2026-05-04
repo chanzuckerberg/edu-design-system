@@ -10,7 +10,6 @@ import React, {
 } from 'react';
 
 import { createPortal } from 'react-dom';
-import breakpoints from '../../design-tokens/tier-1-definitions/breakpoints';
 import { assertEdsUsage } from '../../util/logging';
 import type {
   NavButton,
@@ -30,6 +29,16 @@ import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
 
 import styles from './AppHeader.module.css';
+
+// TODO-AH: Sync all the breakpoints across files
+const breakpoints = {
+  'eds-bp-xs': '0px',
+  'eds-bp-sm': '600px',
+  'eds-bp-md': '768px',
+  'eds-bp-lg': '1040px',
+  'eds-bp-xl': '1440px',
+  'eds-bp-xxl': '1920px',
+};
 
 export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,

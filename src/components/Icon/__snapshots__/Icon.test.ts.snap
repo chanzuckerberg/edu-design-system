@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Icon /> CustomColor story renders snapshot 1`] = `
+exports[`<Icon /> > CustomColor story renders snapshot 1`] = `
 <svg
   aria-hidden="true"
-  class="icon"
+  class="_icon_779da8"
   fill="var(--eds-theme-color-icon-utility-critical)"
   height="2em"
   style="--icon-size: 2em;"
@@ -17,10 +17,10 @@ exports[`<Icon /> CustomColor story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<Icon /> Default story renders snapshot 1`] = `
+exports[`<Icon /> > Default story renders snapshot 1`] = `
 <svg
   aria-hidden="true"
-  class="icon"
+  class="_icon_779da8"
   fill="currentColor"
   viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg"
@@ -31,17 +31,17 @@ exports[`<Icon /> Default story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<Icon /> IconGrid story renders snapshot 1`] = `
+exports[`<Icon /> > IconGrid story renders snapshot 1`] = `
 <div>
   <ul
-    class="icon-grid"
+    class="_icon-grid_36c0e6"
   >
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -51,17 +51,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         add
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -71,17 +71,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         add-encircled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -91,17 +91,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         arrow-down
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -111,17 +111,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         arrow-left
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -131,17 +131,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         arrow-right
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -151,17 +151,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         arrow-up
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -171,17 +171,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         arrows-circular
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -191,17 +191,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         attachment
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -211,17 +211,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         ballot
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -231,17 +231,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         bell
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -251,17 +251,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         book
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -271,17 +271,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         book-open
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -291,17 +291,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         bookmark
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -311,17 +311,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         business
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -331,17 +331,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         category
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -351,17 +351,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         center-focus
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -371,17 +371,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         check
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -391,17 +391,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         checkmark-encircled-filled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -411,17 +411,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         chevron-down
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -432,17 +432,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
          
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         chevron-down-double
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -452,17 +452,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         chevron-left
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -472,17 +472,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         chevron-right
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -492,17 +492,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         chevron-up
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -512,17 +512,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         chevron-up-double
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -532,17 +532,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         close
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -552,17 +552,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         cloud-favorable
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -572,17 +572,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         code
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -592,17 +592,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         copy
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -612,17 +612,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         critical
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -632,17 +632,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         critical-encircled-filled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -652,17 +652,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         dangerous
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -672,17 +672,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         data
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -692,17 +692,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         document
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -712,17 +712,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         document-blank
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -732,17 +732,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         dots-horizontal
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -752,17 +752,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         dots-vertical
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -772,17 +772,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         drag-indicator
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -792,17 +792,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         eye-closed
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -812,17 +812,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         eye-open
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -832,17 +832,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         face-very-happy
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -852,17 +852,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         filter-list
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -872,17 +872,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         flag
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -892,17 +892,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         folder
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -912,17 +912,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         folder-add
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -932,17 +932,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         graph
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -952,17 +952,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         heart-filled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -972,17 +972,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         home
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -992,17 +992,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         info-encircled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1012,17 +1012,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         info-encircled-filled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1032,17 +1032,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         joystick
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1052,17 +1052,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         key
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1072,17 +1072,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         librarian
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1092,17 +1092,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         link
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1112,17 +1112,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         lock
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1132,17 +1132,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         lock-open
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1154,17 +1154,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         logo-github
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1203,17 +1203,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         </defs>
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         logo-google-polychrome
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1236,17 +1236,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         logo-microsoft-polychrome
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1256,17 +1256,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         logout
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1276,17 +1276,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         mail
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1296,17 +1296,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         map
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1316,17 +1316,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         menu
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1336,17 +1336,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         mic
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1356,17 +1356,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         open-in-new
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1376,17 +1376,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         pencil
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1396,17 +1396,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         person
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1416,17 +1416,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         person-add
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1436,17 +1436,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         person-encircled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1456,17 +1456,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         person-sound
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1476,17 +1476,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         persons
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1496,17 +1496,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         persons-encircled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1516,17 +1516,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         play-arrow
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1536,17 +1536,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         print
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1556,17 +1556,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         question-mark-encircled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1576,17 +1576,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         redo
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1596,17 +1596,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         remove
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1616,17 +1616,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         search
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1636,17 +1636,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         send
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1656,17 +1656,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         settings
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1676,17 +1676,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         share
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1696,17 +1696,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         sparkles
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1716,17 +1716,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         star
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1736,17 +1736,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         star-filled
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1756,17 +1756,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         swap-vertical
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1776,17 +1776,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         text-long
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1796,17 +1796,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         text-short
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 25 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1816,17 +1816,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         thumb-down
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 25 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1836,17 +1836,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         thumb-up
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1856,17 +1856,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         thumb-up-and-down
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1876,17 +1876,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         trash
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1896,17 +1896,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         trend-up
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1916,17 +1916,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         undo
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1936,17 +1936,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         unfold-more
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1956,17 +1956,17 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         upload
       </p>
     </li>
     <li
-      class="icon-grid__item"
+      class="_icon-grid__item_36c0e6"
     >
       <svg
         aria-hidden="true"
-        class="icon icon-grid__icon"
+        class="_icon_779da8 _icon-grid__icon_36c0e6"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -1976,7 +1976,7 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
         />
       </svg>
       <p
-        class="text text--body-xs"
+        class="_text_b3eba3 _text--body-xs_b3eba3"
       >
         warning-filled
       </p>
@@ -1985,13 +1985,13 @@ exports[`<Icon /> IconGrid story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Icon /> InText story renders snapshot 1`] = `
+exports[`<Icon /> > InText story renders snapshot 1`] = `
 <p
-  class="text text--body-md"
+  class="_text_b3eba3 _text--body-md_b3eba3"
 >
   The svg icon defaults to the surrounding text size (
   <svg
-    class="icon"
+    class="_icon_779da8"
     fill="currentColor"
     role="img"
     viewBox="0 0 24 24"
@@ -2008,10 +2008,10 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
 </p>
 `;
 
-exports[`<Icon /> Large story renders snapshot 1`] = `
+exports[`<Icon /> > Large story renders snapshot 1`] = `
 <svg
   aria-hidden="true"
-  class="icon"
+  class="_icon_779da8"
   fill="currentColor"
   height="4em"
   style="--icon-size: 4em;"
@@ -2025,10 +2025,10 @@ exports[`<Icon /> Large story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<Icon /> Medium story renders snapshot 1`] = `
+exports[`<Icon /> > Medium story renders snapshot 1`] = `
 <svg
   aria-hidden="true"
-  class="icon"
+  class="_icon_779da8"
   fill="currentColor"
   height="2em"
   style="--icon-size: 2em;"
@@ -2042,10 +2042,10 @@ exports[`<Icon /> Medium story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<Icon /> WithChildrenSvg story renders snapshot 1`] = `
+exports[`<Icon /> > WithChildrenSvg story renders snapshot 1`] = `
 <svg
   aria-hidden="true"
-  class="icon"
+  class="_icon_779da8"
   fill="currentColor"
   viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg"

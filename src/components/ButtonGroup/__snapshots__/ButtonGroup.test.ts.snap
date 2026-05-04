@@ -1,28 +1,28 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
+exports[`<ButtonGroup /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="button-group button-group--horizontal"
+    class="_button-group_db62b8 _button-group--horizontal_db62b8"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Button 1
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Button 2
       </span>
@@ -31,29 +31,29 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
+exports[`<ButtonGroup /> > HorizontalProgressive story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="button-group button-group--horizontal-progressive flex w-[400px]"
+    class="_button-group_db62b8 _button-group--horizontal-progressive_db62b8 flex w-[400px]"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default flex-1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 flex-1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Confirm
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default flex-1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 flex-1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Cancel
       </span>
@@ -62,31 +62,31 @@ exports[`<ButtonGroup /> HorizontalProgressive story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ButtonGroup /> HorizontalProgressiveDisabled story renders snapshot 1`] = `
+exports[`<ButtonGroup /> > HorizontalProgressiveDisabled story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="button-group button-group--horizontal-progressive flex w-[400px]"
+    class="_button-group_db62b8 _button-group--horizontal-progressive_db62b8 flex w-[400px]"
   >
     <button
-      class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-default flex-1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 flex-1"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Confirm
       </span>
     </button>
     <button
-      class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-default flex-1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 flex-1"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Cancel
       </span>
@@ -95,29 +95,29 @@ exports[`<ButtonGroup /> HorizontalProgressiveDisabled story renders snapshot 1`
 </div>
 `;
 
-exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`] = `
+exports[`<ButtonGroup /> > HorizontalProgressiveTertiary story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="button-group button-group--horizontal-progressive"
+    class="_button-group_db62b8 _button-group--horizontal-progressive_db62b8"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary Button
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default -ml-spacing-size-2"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 -ml-spacing-size-2"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary Button
       </span>
@@ -126,29 +126,29 @@ exports[`<ButtonGroup /> HorizontalProgressiveTertiary story renders snapshot 1`
 </div>
 `;
 
-exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
+exports[`<ButtonGroup /> > Vertical story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="button-group button-group--vertical"
+    class="_button-group_db62b8 _button-group--vertical_db62b8"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Button 1
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Button 2
       </span>

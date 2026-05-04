@@ -1,25 +1,25 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
+exports[`<Breadcrumbs /> > Default story renders snapshot 1`] = `
 <div
   class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
-    class="breadcrumbs"
+    class="_breadcrumbs_325516"
   >
     <ul
-      class="breadcrumbs__list"
+      class="_breadcrumbs__list_325516"
     >
       <li
-        class="breadcrumbs__item breadcrumbs__item-back"
+        class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
-            class="icon breadcrumbs__back-icon"
+            class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -35,55 +35,55 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Home
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Child
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Grandchild
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
@@ -93,26 +93,26 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
+exports[`<Breadcrumbs /> > LongList story renders snapshot 1`] = `
 <div
   class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
-    class="breadcrumbs"
+    class="_breadcrumbs_325516"
   >
     <ul
-      class="breadcrumbs__list"
+      class="_breadcrumbs__list_325516"
     >
       <li
-        class="breadcrumbs__item breadcrumbs__item-back"
+        class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
-            class="icon breadcrumbs__back-icon"
+            class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -128,183 +128,183 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Parent
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 1
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 2
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 3
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 4
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 5
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 6
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 7
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 8
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 9
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 10
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
@@ -314,26 +314,26 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
+exports[`<Breadcrumbs /> > LongText story renders snapshot 1`] = `
 <div
   class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
-    class="breadcrumbs"
+    class="_breadcrumbs_325516"
   >
     <ul
-      class="breadcrumbs__list"
+      class="_breadcrumbs__list_325516"
     >
       <li
-        class="breadcrumbs__item breadcrumbs__item-back"
+        class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
-            class="icon breadcrumbs__back-icon"
+            class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -349,71 +349,71 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Home
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 1
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
@@ -423,26 +423,26 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
+exports[`<Breadcrumbs /> > LongTextCustomSeparator story renders snapshot 1`] = `
 <div
   class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
-    class="breadcrumbs"
+    class="_breadcrumbs_325516"
   >
     <ul
-      class="breadcrumbs__list"
+      class="_breadcrumbs__list_325516"
     >
       <li
-        class="breadcrumbs__item breadcrumbs__item-back"
+        class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
-            class="icon breadcrumbs__back-icon"
+            class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -458,71 +458,71 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           &gt;
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Home
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           &gt;
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 1
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           &gt;
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           &gt;
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           &gt;
         </span>
@@ -532,29 +532,29 @@ exports[`<Breadcrumbs /> LongTextCustomSeparator story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
+exports[`<Breadcrumbs /> > OneCrumb story renders snapshot 1`] = `
 <div
   class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
-    class="breadcrumbs"
+    class="_breadcrumbs_325516"
   >
     <ul
-      class="breadcrumbs__list"
+      class="_breadcrumbs__list_325516"
     >
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 1
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
@@ -564,26 +564,26 @@ exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
+exports[`<Breadcrumbs /> > TwoCrumbs story renders snapshot 1`] = `
 <div
   class="m-spacing-size-1"
 >
   <nav
     aria-label="breadcrumbs links"
-    class="breadcrumbs"
+    class="_breadcrumbs_325516"
   >
     <ul
-      class="breadcrumbs__list"
+      class="_breadcrumbs__list_325516"
     >
       <li
-        class="breadcrumbs__item breadcrumbs__item-back"
+        class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
-            class="icon breadcrumbs__back-icon"
+            class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -599,39 +599,39 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 1
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>
       </li>
       <li
-        class="breadcrumbs__item"
+        class="_breadcrumbs__item_325516"
       >
         <a
-          class="breadcrumbs__link"
+          class="_breadcrumbs__link_325516"
           href="#"
         >
           Breadcrumb 2
         </a>
         <span
           aria-hidden="true"
-          class="text text--body-md breadcrumbs__separator"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
         >
           /
         </span>

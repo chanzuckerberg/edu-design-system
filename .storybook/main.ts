@@ -1,4 +1,6 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 
 const config: StorybookConfig = {
   stories: [
@@ -12,44 +14,12 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     'storybook-addon-tag-badges',
-    {
-      name: '@storybook/addon-styling-webpack',
-      options: {
-        rules: [
-          {
-            test: /\.css$/,
-            // See: https://webpack.js.org/guides/tree-shaking/
-            sideEffects: true, // This must be true so that the emitted changes load in storybook
-            use: [
-              'style-loader',
-              {
-                // Configuration for handling CSS Modules
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  modules: {
-                    auto: true,
-                    localIdentName: '[name]__[local]--[hash:base64:5]',
-                  },
-                },
-              },
-              {
-                // Tailwind requires PostCSS to work
-                loader: 'postcss-loader',
-                options: {
-                  implementation: require.resolve('postcss'),
-                },
-              },
-            ],
-          },
-        ],
-      },
-    },
-    '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
     '@storybook/addon-themes',
     'storybook-addon-test-codegen',
+    // Re-enable once vitest storybook config is working properly
+    // '@storybook/addon-vitest',
   ],
 
   docs: {
@@ -62,17 +32,11 @@ const config: StorybookConfig = {
   // See: https://www.chromatic.com/docs/font-loading/#solution-a-preload-fonts
   // staticDirs: [...],
 
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {
-      builder: {
-        useSWC: true,
-      },
-    },
-  },
+  framework: '@storybook/react-vite',
 
   core: {
     disableTelemetry: true,
+    builder: '@storybook/builder-vite',
   },
 
   babel: () => {

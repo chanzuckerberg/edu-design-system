@@ -1,104 +1,104 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Text /> BodyLarge story renders snapshot 1`] = `
+exports[`<Text /> > BodyLarge story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-lg"
+    class="_text_b3eba3 _text--body-lg_b3eba3"
   >
     Body large
   </p>
 </div>
 `;
 
-exports[`<Text /> BodyMedium story renders snapshot 1`] = `
+exports[`<Text /> > BodyMedium story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Body medium
   </p>
 </div>
 `;
 
-exports[`<Text /> BodySmall story renders snapshot 1`] = `
+exports[`<Text /> > BodySmall story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-sm"
+    class="_text_b3eba3 _text--body-sm_b3eba3"
   >
     Body small
   </p>
 </div>
 `;
 
-exports[`<Text /> BodyXLarge story renders snapshot 1`] = `
+exports[`<Text /> > BodyXLarge story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-xl"
+    class="_text_b3eba3 _text--body-xl_b3eba3"
   >
     Body extra-large
   </p>
 </div>
 `;
 
-exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
+exports[`<Text /> > BodyXSmall story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-xs"
+    class="_text_b3eba3 _text--body-xs_b3eba3"
   >
     Body Xsmall
   </p>
 </div>
 `;
 
-exports[`<Text /> CaptionMedium story renders snapshot 1`] = `
+exports[`<Text /> > CaptionMedium story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--caption-md"
+    class="_text_b3eba3 _text--caption-md_b3eba3"
   >
     Caption medium
   </p>
 </div>
 `;
 
-exports[`<Text /> CodePresets story renders snapshot 1`] = `
+exports[`<Text /> > CodePresets story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <div>
     <p
-      class="text text--code-xl"
+      class="_text_b3eba3 _text--code-xl_b3eba3"
     >
       Code Extra Large
     </p>
     <p
-      class="text text--code-lg"
+      class="_text_b3eba3 _text--code-lg_b3eba3"
     >
       Code Large
     </p>
     <p
-      class="text text--code-md"
+      class="_text_b3eba3 _text--code-md_b3eba3"
     >
       Code Medium
     </p>
     <p
-      class="text text--code-sm"
+      class="_text_b3eba3 _text--code-sm_b3eba3"
     >
       Code Small
     </p>
     <p
-      class="text text--code-xs"
+      class="_text_b3eba3 _text--code-xs_b3eba3"
     >
       Code Extra Small
     </p>
@@ -106,61 +106,61 @@ exports[`<Text /> CodePresets story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> Default story renders snapshot 1`] = `
+exports[`<Text /> > Default story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Default &lt;Text /&gt; rendering
   </p>
 </div>
 `;
 
-exports[`<Text /> LabelXLarge story renders snapshot 1`] = `
+exports[`<Text /> > LabelXLarge story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--label-xl"
+    class="_text_b3eba3 _text--label-xl_b3eba3"
   >
     Label extra-large
   </p>
 </div>
 `;
 
-exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
+exports[`<Text /> > OverridingFontFamily story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--body-md !font-3"
+    class="_text_b3eba3 _text--body-md_b3eba3 !font-3"
   >
     You can use utility classes to override the font family used for a given size
   </p>
 </div>
 `;
 
-exports[`<Text /> TitleXLarge story renders snapshot 1`] = `
+exports[`<Text /> > TitleXLarge story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <p
-    class="text text--title-xl"
+    class="_text_b3eba3 _text--title-xl_b3eba3"
   >
     Title extra-large
   </p>
 </div>
 `;
 
-exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
+exports[`<Text /> > UsingColorTokens story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
 >
   <div>
     <p
-      class="text text--body-xl text-utility-warning"
+      class="_text_b3eba3 _text--body-xl_b3eba3 text-utility-warning"
     >
       using 
       <code>
@@ -169,7 +169,7 @@ exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
        utility class
     </p>
     <p
-      class="text text--body-lg text-utility-favorable"
+      class="_text_b3eba3 _text--body-lg_b3eba3 text-utility-favorable"
     >
       using 
       <code>
@@ -178,7 +178,7 @@ exports[`<Text /> UsingColorTokens story renders snapshot 1`] = `
        utility class
     </p>
     <p
-      class="text text--body-md text-utility-critical"
+      class="_text_b3eba3 _text--body-md_b3eba3 text-utility-critical"
     >
       using 
       <code>

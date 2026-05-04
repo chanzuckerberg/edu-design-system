@@ -3,6 +3,15 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
+import {
+  type Mock,
+  vi,
+  describe,
+  it,
+  expect,
+  beforeEach,
+  afterEach,
+} from 'vitest';
 import { AppFooter } from './AppFooter';
 
 import * as stories from './AppFooter.stories';
@@ -14,7 +23,7 @@ describe('<AppFooter />', () => {
   describe('event handling', () => {
     it('handles clicks on footer logo', async () => {
       const user = userEvent.setup();
-      const onLinkClickMock = jest.fn();
+      const onLinkClickMock = vi.fn();
 
       render(
         <AppFooter
@@ -69,7 +78,7 @@ describe('<AppFooter />', () => {
 
     it('handles clicks on footer fallback text logo', async () => {
       const user = userEvent.setup();
-      const onLinkClickMock = jest.fn();
+      const onLinkClickMock = vi.fn();
 
       render(
         <AppFooter
@@ -101,7 +110,7 @@ describe('<AppFooter />', () => {
 
     it('handles clicks on any nav items', async () => {
       const user = userEvent.setup();
-      const onLinkClickMock = jest.fn();
+      const onLinkClickMock = vi.fn();
 
       render(
         <AppFooter
@@ -160,10 +169,10 @@ describe('<AppFooter />', () => {
   });
 
   describe('emits warnings when misused', () => {
-    let consoleMock: jest.SpyInstance;
+    let consoleMock: Mock;
     beforeEach(() => {
-      consoleMock = jest.spyOn(console, 'error');
-      consoleMock.mockImplementation();
+      consoleMock = vi.spyOn(console, 'error');
+      consoleMock.mockImplementation(() => {});
     });
 
     afterEach(() => {

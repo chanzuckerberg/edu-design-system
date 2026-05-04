@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
+exports[`<Button /> > CriticalRanks story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -8,31 +8,31 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-critical btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1 btn-primary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-critical btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1 btn-secondary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-critical btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-critical_0829c1 btn-tertiary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -41,16 +41,16 @@ exports[`<Button /> CriticalRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Default story renders snapshot 1`] = `
+exports[`<Button /> > Default story renders snapshot 1`] = `
 <div
   class="p-1"
 >
   <button
-    class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+    class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
     type="button"
   >
     <span
-      class="text text--label-lg button__text"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
     >
       Button
     </span>
@@ -58,7 +58,7 @@ exports[`<Button /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
+exports[`<Button /> > DefaultRanks story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -66,31 +66,31 @@ exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-primary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-secondary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-tertiary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -99,7 +99,7 @@ exports[`<Button /> DefaultRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Disabled story renders snapshot 1`] = `
+exports[`<Button /> > Disabled story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -107,34 +107,34 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-default btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-primary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-default btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-secondary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-default btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-tertiary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -143,7 +143,7 @@ exports[`<Button /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
+exports[`<Button /> > DisabledFullWidths story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -152,36 +152,36 @@ exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-none button--disabled button--full-width button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Large
       </span>
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-none button--disabled button--full-width button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-md button__text"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
       >
         Medium
       </span>
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-none button--disabled button--full-width button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-sm button__text"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
       >
         Small
       </span>
@@ -190,7 +190,7 @@ exports[`<Button /> DisabledFullWidths story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> FullWidths story renders snapshot 1`] = `
+exports[`<Button /> > FullWidths story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -199,33 +199,33 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-none button--full-width button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Large
       </span>
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-none button--full-width button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-md button__text"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
       >
         Medium
       </span>
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-none button--full-width button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--full-width_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-sm button__text"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
       >
         Small
       </span>
@@ -234,7 +234,7 @@ exports[`<Button /> FullWidths story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> IconLayouts story renders snapshot 1`] = `
+exports[`<Button /> > IconLayouts story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -242,15 +242,15 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
     class="flex items-center gap-1"
   >
     <button
-      class="button button--layout-left button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -266,16 +266,16 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
       </span>
     </button>
     <button
-      class="button button--layout-right button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Right
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -291,15 +291,15 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Label must be applied with icon-only layout"
-      class="button button--layout-icon-only button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -317,7 +317,7 @@ exports[`<Button /> IconLayouts story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
+exports[`<Button /> > IconOnlySizes story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -326,15 +326,15 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-icon-only button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -350,15 +350,15 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-icon-only button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-md button__text"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -374,15 +374,15 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-icon-only button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-sm button__text"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -400,7 +400,7 @@ exports[`<Button /> IconOnlySizes story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
+exports[`<Button /> > InverseDisabledRanks story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -408,34 +408,34 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--disabled button--primary button--lg button--size-lg button--variant-inverse btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-primary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--disabled button--secondary button--lg button--size-lg button--variant-inverse btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-secondary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--disabled button--tertiary button--lg button--size-lg button--variant-inverse btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--disabled_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-tertiary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -444,7 +444,7 @@ exports[`<Button /> InverseDisabledRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> InverseRanks story renders snapshot 1`] = `
+exports[`<Button /> > InverseRanks story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -452,31 +452,31 @@ exports[`<Button /> InverseRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-inverse btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-primary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-secondary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-inverse btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 btn-tertiary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -485,7 +485,7 @@ exports[`<Button /> InverseRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> JustDisabledProp story renders snapshot 1`] = `
+exports[`<Button /> > JustDisabledProp story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -493,34 +493,34 @@ exports[`<Button /> JustDisabledProp story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-primary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-secondary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-default btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 btn-tertiary"
       disabled=""
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -529,7 +529,7 @@ exports[`<Button /> JustDisabledProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
+exports[`<Button /> > LeftIconSizes story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -538,15 +538,15 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-left button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -563,15 +563,15 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-left button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-md button__text"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -588,15 +588,15 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-left button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-sm button__text"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -615,7 +615,7 @@ exports[`<Button /> LeftIconSizes story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> LoadingStates story renders snapshot 1`] = `
+exports[`<Button /> > LoadingStates story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -624,18 +624,18 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-none button--loading button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text button--is-loading"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1 _button--is-loading_0829c1"
       >
         Large
       </span>
       <div
         aria-busy="true"
         aria-label="loading"
-        class="loading-indicator button__loader"
+        class="_loading-indicator_eac96c _button__loader_0829c1"
         data-testid="oval-loading"
         role="status"
       >
@@ -683,18 +683,18 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-none button--loading button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-md button__text button--is-loading"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1 _button--is-loading_0829c1"
       >
         Medium
       </span>
       <div
         aria-busy="true"
         aria-label="loading"
-        class="loading-indicator button__loader"
+        class="_loading-indicator_eac96c _button__loader_0829c1"
         data-testid="oval-loading"
         role="status"
       >
@@ -742,18 +742,18 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-none button--loading button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-sm button__text button--is-loading"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1 _button--is-loading_0829c1"
       >
         Small
       </span>
       <div
         aria-busy="true"
         aria-label="loading"
-        class="loading-indicator button__loader"
+        class="_loading-indicator_eac96c _button__loader_0829c1"
         data-testid="oval-loading"
         role="status"
       >
@@ -803,7 +803,7 @@ exports[`<Button /> LoadingStates story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> NeutralRanks story renders snapshot 1`] = `
+exports[`<Button /> > NeutralRanks story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -811,31 +811,31 @@ exports[`<Button /> NeutralRanks story renders snapshot 1`] = `
     class="flex gap-1"
   >
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-neutral btn-primary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 btn-primary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Primary
       </span>
     </button>
     <button
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-neutral btn-secondary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 btn-secondary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Secondary
       </span>
     </button>
     <button
-      class="button button--layout-none button--tertiary button--lg button--size-lg button--variant-neutral btn-tertiary"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 btn-tertiary"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Tertiary
       </span>
@@ -844,7 +844,7 @@ exports[`<Button /> NeutralRanks story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
+exports[`<Button /> > RightIconSizes story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -853,16 +853,16 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-right button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Large
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -878,16 +878,16 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-right button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-md button__text"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
       >
         Medium
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -903,16 +903,16 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-right button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-sm button__text"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
       >
         Small
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="16px"
           style="--icon-size: 16px;"
@@ -930,7 +930,7 @@ exports[`<Button /> RightIconSizes story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Sizes story renders snapshot 1`] = `
+exports[`<Button /> > Sizes story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -939,33 +939,33 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Large
       </span>
     </button>
     <button
       aria-label="Medium button"
-      class="button button--layout-none button--primary button--md button--size-md button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-md button__text"
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
       >
         Medium
       </span>
     </button>
     <button
       aria-label="Small button"
-      class="button button--layout-none button--primary button--sm button--size-sm button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
-        class="text text--label-sm button__text"
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
       >
         Small
       </span>
@@ -974,20 +974,20 @@ exports[`<Button /> Sizes story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> Tertiary story renders snapshot 1`] = `
+exports[`<Button /> > Tertiary story renders snapshot 1`] = `
 <div
   class="p-1"
 >
   <button
-    class="button button--layout-left button--tertiary button--sm button--size-sm button--variant-default"
+    class="_button_0829c1 _button--layout-left_0829c1 _button--tertiary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
     type="button"
   >
     <span
-      class="text text--label-sm button__text"
+      class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
     >
       <svg
         aria-hidden="true"
-        class="icon"
+        class="_icon_779da8"
         fill="currentColor"
         height="16px"
         style="--icon-size: 16px;"
@@ -1005,16 +1005,16 @@ exports[`<Button /> Tertiary story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> TertiaryStandalone story renders snapshot 1`] = `
+exports[`<Button /> > TertiaryStandalone story renders snapshot 1`] = `
 <div
   class="p-1"
 >
   <button
-    class="button button--context-standalone button--layout-none button--tertiary button--lg button--size-lg button--variant-default"
+    class="_button_0829c1 _button--context-standalone_0829c1 _button--layout-none_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
     type="button"
   >
     <span
-      class="text text--label-lg button__text"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
     >
       Button
     </span>
@@ -1022,7 +1022,7 @@ exports[`<Button /> TertiaryStandalone story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
+exports[`<Button /> > UsingExtendedLink story renders snapshot 1`] = `
 <div
   class="p-1"
 >
@@ -1030,12 +1030,12 @@ exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
     Lorem ipsum dolor sit amet, . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
      
     <button
-      class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       to="test"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         consectetur adipiscing elit
       </span>
@@ -1044,28 +1044,28 @@ exports[`<Button /> UsingExtendedLink story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Button /> passes class names down properly 1`] = `
+exports[`<Button /> > passes class names down properly 1`] = `
 <button
-  class="button button--layout-none button--primary button--lg button--size-lg button--variant-default exampleClassName"
+  class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 exampleClassName"
   data-testid="example-class-name"
   type="button"
 >
   <span
-    class="text text--label-lg button__text"
+    class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
   >
     Click
   </span>
 </button>
 `;
 
-exports[`<Button /> passes test ids down properly 1`] = `
+exports[`<Button /> > passes test ids down properly 1`] = `
 <button
-  class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+  class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
   data-testid="example-test-id"
   type="button"
 >
   <span
-    class="text text--label-lg button__text"
+    class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
   >
     Click
   </span>

@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<InlineNotification /> Critical story renders snapshot 1`] = `
+exports[`<InlineNotification /> > Critical story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-critical w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-critical_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -19,15 +19,15 @@ exports[`<InlineNotification /> Critical story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Inline notifications lorem ipsum text
     </div>
     <div
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Additional text which provides additional detail
     </div>
@@ -35,13 +35,13 @@ exports[`<InlineNotification /> Critical story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InlineNotification /> Default story renders snapshot 1`] = `
+exports[`<InlineNotification /> > Default story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-informational_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -54,10 +54,10 @@ exports[`<InlineNotification /> Default story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -65,13 +65,13 @@ exports[`<InlineNotification /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InlineNotification /> Favorable story renders snapshot 1`] = `
+exports[`<InlineNotification /> > Favorable story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-favorable w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-favorable_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -84,15 +84,15 @@ exports[`<InlineNotification /> Favorable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Inline notifications lorem ipsum text
     </div>
     <div
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Additional text which provides additional detail
     </div>
@@ -100,13 +100,13 @@ exports[`<InlineNotification /> Favorable story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
+exports[`<InlineNotification /> > LongText story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-informational_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -119,10 +119,10 @@ exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
@@ -130,13 +130,13 @@ exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InlineNotification /> Warning story renders snapshot 1`] = `
+exports[`<InlineNotification /> > Warning story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-warning w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-warning_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -149,15 +149,15 @@ exports[`<InlineNotification /> Warning story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Inline notifications lorem ipsum text
     </div>
     <div
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Additional text which provides additional detail
     </div>
@@ -165,13 +165,13 @@ exports[`<InlineNotification /> Warning story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InlineNotification /> WithFormattedSubTitle story renders snapshot 1`] = `
+exports[`<InlineNotification /> > WithFormattedSubTitle story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-informational_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -184,15 +184,15 @@ exports[`<InlineNotification /> WithFormattedSubTitle story renders snapshot 1`]
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Inline notifications lorem ipsum text
     </div>
     <div
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       <span>
         <em>
@@ -205,13 +205,13 @@ exports[`<InlineNotification /> WithFormattedSubTitle story renders snapshot 1`]
 </div>
 `;
 
-exports[`<InlineNotification /> WithSubTitle story renders snapshot 1`] = `
+exports[`<InlineNotification /> > WithSubTitle story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--status-informational w-[384px]"
+  class="_inline-notification_785732 _inline-notification--status-informational_785732 w-[384px]"
 >
   <svg
     aria-hidden="true"
-    class="icon inline-notification__icon"
+    class="_icon_779da8 _inline-notification__icon_785732"
     fill="currentColor"
     height="16px"
     style="--icon-size: 16px;"
@@ -224,15 +224,15 @@ exports[`<InlineNotification /> WithSubTitle story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="inline-notication__body"
+    class="_inline-notication__body_785732"
   >
     <div
-      class="text text--title-xs inline-notification__title"
+      class="_text_b3eba3 _text--title-xs_b3eba3 _inline-notification__title_785732"
     >
       Inline notifications lorem ipsum text
     </div>
     <div
-      class="text text--body-xs"
+      class="_text_b3eba3 _text--body-xs_b3eba3"
     >
       Additional text which provides additional detail
     </div>

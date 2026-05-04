@@ -4,7 +4,9 @@ import {
   Description,
   Stories,
 } from '@storybook/addon-docs/blocks';
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import upperFirst from 'lodash/upperFirst';
 import React from 'react';
 

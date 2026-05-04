@@ -1,5 +1,5 @@
 {
-  "include": ["src", ".storybook/**/*", "./jest/jest.setup.ts"],
+  "include": ["src", ".storybook/**/*", "test/test.setup.ts"],
   "exclude": ["src/bin"],
   "compilerOptions": {
     "allowJs": false,
@@ -10,12 +10,13 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["es5", "es6", "dom"],
-    "moduleResolution": "node10",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es2018",
-    "types": ["node"],
+    "types": ["node"]
   }
 }

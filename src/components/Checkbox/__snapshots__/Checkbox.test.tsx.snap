@@ -1,27 +1,27 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Checkbox /> Checked story renders snapshot 1`] = `
+exports[`<Checkbox /> > Checked story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="checkbox"
+    class="_checkbox_2d475f"
   >
     <input
       checked=""
-      class="checkbox__input"
+      class="_checkbox__input_2d475f"
       id=":r3:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r3:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Checkbox
         </span>
@@ -32,27 +32,27 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> Default story renders snapshot 1`] = `
+exports[`<Checkbox /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="checkbox"
+    class="_checkbox_2d475f"
   >
     <input
-      class="checkbox__input"
+      class="_checkbox__input_2d475f"
       id=":r0:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r0:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Checkbox
         </span>
@@ -63,142 +63,27 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
+exports[`<Checkbox /> > Error story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="p-0"
-  >
-    <div
-      class="checkbox"
-    >
-      <input
-        class="checkbox__input"
-        disabled=""
-        id=":r6:"
-        type="checkbox"
-      />
-      <div
-        class="checkbox__labels"
-      >
-        <label
-          class="label label--disabled"
-          for=":r6:"
-        >
-          <span
-            class="text text--body-md"
-          >
-            Disabled
-          </span>
-           
-        </label>
-      </div>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <input
-        checked=""
-        class="checkbox__input"
-        disabled=""
-        id=":r7:"
-        type="checkbox"
-      />
-      <div
-        class="checkbox__labels"
-      >
-        <label
-          class="label label--disabled"
-          for=":r7:"
-        >
-          <span
-            class="text text--body-md"
-          >
-            Disabled
-          </span>
-           
-        </label>
-      </div>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <input
-        class="checkbox__input"
-        disabled=""
-        id=":r8:"
-        type="checkbox"
-      />
-      <div
-        class="checkbox__labels"
-      >
-        <label
-          class="label label--disabled"
-          for=":r8:"
-        >
-          <span
-            class="text text--body-md"
-          >
-            Disabled
-          </span>
-           
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
-<div
-  class="checkbox"
->
-  <input
-    class="checkbox__input"
-    disabled=""
-    id=":rb:"
-    type="checkbox"
-  />
-  <div
-    class="checkbox__labels"
-  >
-    <label
-      class="label label--disabled"
-      for=":rb:"
-    >
-      <span
-        class="text text--body-md"
-      >
-        Disabled
-      </span>
-       
-    </label>
-  </div>
-</div>
-`;
-
-exports[`<Checkbox /> Error story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="checkbox checkbox--error"
+    class="_checkbox_2d475f _checkbox--error_2d475f"
   >
     <input
-      class="checkbox__input"
+      class="_checkbox__input_2d475f"
       id=":r2:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r2:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           In error state
         </span>
@@ -209,7 +94,7 @@ exports[`<Checkbox /> Error story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
+exports[`<Checkbox /> > GlyphIsConsistent story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -217,23 +102,23 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
     style="font-size: 10px;"
   >
     <div
-      class="checkbox"
+      class="_checkbox_2d475f"
     >
       <input
         checked=""
-        class="checkbox__input"
+        class="_checkbox__input_2d475f"
         id=":r4:"
         type="checkbox"
       />
       <div
-        class="checkbox__labels"
+        class="_checkbox__labels_2d475f"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r4:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Checkbox
           </span>
@@ -245,27 +130,27 @@ exports[`<Checkbox /> GlyphIsConsistent story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
+exports[`<Checkbox /> > Indeterminate story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="checkbox"
+    class="_checkbox_2d475f"
   >
     <input
-      class="checkbox__input"
+      class="_checkbox__input_2d475f"
       id=":r5:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r5:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Checkbox
         </span>
@@ -276,27 +161,27 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
+exports[`<Checkbox /> > LongLabels story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="checkbox"
+    class="_checkbox_2d475f"
   >
     <input
-      class="checkbox__input"
-      id=":ra:"
+      class="_checkbox__input_2d475f"
+      id=":r7:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     >
       <label
-        class="label"
-        for=":ra:"
+        class="_label_f9fc7e"
+        for=":r7:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </span>
@@ -307,34 +192,34 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
+exports[`<Checkbox /> > WithSublabel story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="checkbox"
+    class="_checkbox_2d475f"
   >
     <input
-      class="checkbox__input"
+      class="_checkbox__input_2d475f"
       id=":r1:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r1:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Checkbox
         </span>
          
       </label>
       <span
-        class="text text--body-sm checkbox__sub-label"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _checkbox__sub-label_2d475f"
       >
         Additional descriptive text
       </span>
@@ -343,22 +228,50 @@ exports[`<Checkbox /> WithSublabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
+exports[`<Checkbox /> > WithoutVisibleLabel story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="checkbox"
+    class="_checkbox_2d475f"
   >
     <input
       aria-label="a checkbox has no name"
-      class="checkbox__input"
-      id=":r9:"
+      class="_checkbox__input_2d475f"
+      id=":r6:"
       type="checkbox"
     />
     <div
-      class="checkbox__labels"
+      class="_checkbox__labels_2d475f"
     />
+  </div>
+</div>
+`;
+
+exports[`<Checkbox /> > inline Disabled story renders snapshot 1`] = `
+<div
+  class="_checkbox_2d475f"
+>
+  <input
+    class="_checkbox__input_2d475f"
+    disabled=""
+    id=":r8:"
+    type="checkbox"
+  />
+  <div
+    class="_checkbox__labels_2d475f"
+  >
+    <label
+      class="_label_f9fc7e _label--disabled_f9fc7e"
+      for=":r8:"
+    >
+      <span
+        class="_text_b3eba3 _text--body-md_b3eba3"
+      >
+        Disabled
+      </span>
+       
+    </label>
   </div>
 </div>
 `;

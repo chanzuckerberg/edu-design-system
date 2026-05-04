@@ -2,16 +2,18 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { Radio } from './Radio';
 import * as stories from './Radio.stories';
+
 import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<Radio />', () => {
   generateSnapshots(stories as StoryFile);
 
-  test('should toggle the radio with space', async () => {
+  it('should toggle the radio with space', async () => {
     const user = userEvent.setup();
-    const onChange = jest.fn();
+    const onChange = vi.fn();
 
     function ControlledRadio() {
       const [checked, setChecked] = React.useState(false);

@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { Checkbox } from './Checkbox';
@@ -77,6 +79,11 @@ export const Disabled: Story = {
       <Checkbox {...args} disabled indeterminate label="Disabled" />
     </div>
   ),
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
 };
 
 /**

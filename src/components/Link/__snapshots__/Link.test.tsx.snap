@@ -1,11 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Link /> Default story renders snapshot 1`] = `
+exports[`<Link /> > Default story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <a
-    class="link link--emphasis-default link--size-lg"
+    class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     Link
@@ -13,27 +13,27 @@ exports[`<Link /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> Emphasis story renders snapshot 1`] = `
+exports[`<Link /> > Emphasis story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <div>
     <a
-      class="link link--context-standalone link--emphasis-default link--size-md"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-md_d78ce8"
       href="http://example.org/"
     >
       Default Emphasis
     </a>
     <br />
     <a
-      class="link link--context-standalone link--emphasis-high link--size-md"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-high_d78ce8 _link--size-md_d78ce8"
       href="http://example.org/"
     >
       High Emphasis
     </a>
     <br />
     <a
-      class="link link--context-standalone link--emphasis-low link--size-md"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-md_d78ce8"
       href="http://example.org/"
     >
       Low Emphasis
@@ -42,7 +42,7 @@ exports[`<Link /> Emphasis story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> InheritColor story renders snapshot 1`] = `
+exports[`<Link /> > InheritColor story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
@@ -53,7 +53,7 @@ exports[`<Link /> InheritColor story renders snapshot 1`] = `
       Lorem ipsum dolor sit amet,
        
       <a
-        class="link link--emphasis-default link--size-lg"
+        class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
         href="https://example.com/"
       >
         consectetur adipiscing elit
@@ -61,7 +61,7 @@ exports[`<Link /> InheritColor story renders snapshot 1`] = `
       . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
        
       <a
-        class="link link--emphasis-default link--size-lg"
+        class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
         href="https://example.org"
       >
         Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est. Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non dui dignissim fermentum.
@@ -70,7 +70,7 @@ exports[`<Link /> InheritColor story renders snapshot 1`] = `
       Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas. Sed sed quam id nisl bibendum convallis. Proin suscipit, odio
        
       <a
-        class="link link--emphasis-default link--size-lg"
+        class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
         href="https://example.edu"
       >
         vel pulvinar
@@ -82,15 +82,15 @@ exports[`<Link /> InheritColor story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> InverseVariant story renders snapshot 1`] = `
+exports[`<Link /> > InverseVariant story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <div
-    class="w-[384px] p-spacing-size-half text-center text-utility-inverse"
+    class="p-spacing-size-half text-utility-inverse w-[384px] text-center"
   >
     <a
-      class="link link--emphasis-default link--size-lg link--variant-inverse"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8 _link--variant-inverse_d78ce8"
       href="http://example.org/"
     >
       Link
@@ -99,7 +99,7 @@ exports[`<Link /> InverseVariant story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
+exports[`<Link /> > LinkInParagraphContext story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
@@ -107,7 +107,7 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
     Lorem ipsum dolor sit amet,
      
     <a
-      class="link link--emphasis-default link--size-lg"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
       href="https://example.com/"
     >
       consectetur adipiscing elit
@@ -115,7 +115,7 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
     . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
      
     <a
-      class="link link--emphasis-default link--size-lg"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
       href="https://example.org"
     >
       Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est. Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non dui dignissim fermentum.
@@ -124,7 +124,7 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
     Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas. Sed sed quam id nisl bibendum convallis. Proin suscipit, odio
      
     <a
-      class="link link--emphasis-default link--size-lg"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
       href="https://example.edu"
     >
       vel pulvinar
@@ -135,18 +135,18 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> LinkWithChevron story renders snapshot 1`] = `
+exports[`<Link /> > LinkWithChevron story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <a
-    class="link link--context-standalone link--emphasis-low link--has-right-icon link--size-lg"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     Default
     <svg
       aria-hidden="true"
-      class="icon link__icon"
+      class="_icon_779da8 _link__icon_d78ce8"
       fill="currentColor"
       height="24px"
       style="--icon-size: 24px;"
@@ -162,12 +162,12 @@ exports[`<Link /> LinkWithChevron story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> LinkWithFormattedChildren story renders snapshot 1`] = `
+exports[`<Link /> > LinkWithFormattedChildren story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <a
-    class="link link--context-standalone link--emphasis-default link--has-right-icon link--size-lg"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     <em>
@@ -175,7 +175,7 @@ exports[`<Link /> LinkWithFormattedChildren story renders snapshot 1`] = `
     </em>
     <svg
       aria-hidden="true"
-      class="icon link__icon"
+      class="_icon_779da8 _link__icon_d78ce8"
       fill="currentColor"
       height="24px"
       style="--icon-size: 24px;"
@@ -191,18 +191,18 @@ exports[`<Link /> LinkWithFormattedChildren story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> LinkWithOpenIcon story renders snapshot 1`] = `
+exports[`<Link /> > LinkWithOpenIcon story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <a
-    class="link link--context-standalone link--emphasis-default link--has-right-icon link--size-lg"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     Default
     <svg
       aria-hidden="true"
-      class="icon link__icon"
+      class="_icon_779da8 _link__icon_d78ce8"
       fill="currentColor"
       height="24px"
       style="--icon-size: 24px;"
@@ -218,12 +218,12 @@ exports[`<Link /> LinkWithOpenIcon story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> StandaloneInverseVariant story renders snapshot 1`] = `
+exports[`<Link /> > StandaloneInverseVariant story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
   <a
-    class="link link--context-standalone link--emphasis-default link--size-lg link--variant-inverse"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8 _link--variant-inverse_d78ce8"
     href="http://example.org/"
   >
     Link
@@ -231,7 +231,7 @@ exports[`<Link /> StandaloneInverseVariant story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> UsingExtendedLink story renders snapshot 1`] = `
+exports[`<Link /> > UsingExtendedLink story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
 >
@@ -239,7 +239,7 @@ exports[`<Link /> UsingExtendedLink story renders snapshot 1`] = `
     Lorem ipsum dolor sit amet,
      
     <a
-      class="link link--emphasis-default link--size-lg"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
       href="https://example.org/extended-link/"
       to="test"
     >
@@ -251,9 +251,9 @@ exports[`<Link /> UsingExtendedLink story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Link /> passes class names down properly 1`] = `
+exports[`<Link /> > passes class names down properly 1`] = `
 <a
-  class="exampleClassName link link--emphasis-default"
+  class="exampleClassName _link_d78ce8 _link--emphasis-default_d78ce8"
   data-testid="example-class-name"
   href="/"
 >
@@ -261,9 +261,9 @@ exports[`<Link /> passes class names down properly 1`] = `
 </a>
 `;
 
-exports[`<Link /> passes test ids down properly 1`] = `
+exports[`<Link /> > passes test ids down properly 1`] = `
 <a
-  class="link link--emphasis-default"
+  class="_link_d78ce8 _link--emphasis-default_d78ce8"
   data-testid="example-test-id"
   href="/"
 >

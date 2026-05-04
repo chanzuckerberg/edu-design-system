@@ -1,61 +1,61 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<VisualPageIndicator /> Default story renders snapshot 1`] = `
+exports[`<VisualPageIndicator /> > Default story renders snapshot 1`] = `
 <ul
-  class="visual-page-indicator"
+  class="_visual-page-indicator_9ed318"
 >
   <li
-    class="visual-page-indicator__item visual-page-indicator--active"
+    class="_visual-page-indicator__item_9ed318 _visual-page-indicator--active_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
 </ul>
 `;
 
-exports[`<VisualPageIndicator /> FivePages story renders snapshot 1`] = `
+exports[`<VisualPageIndicator /> > FivePages story renders snapshot 1`] = `
 <ul
-  class="visual-page-indicator"
+  class="_visual-page-indicator_9ed318"
 >
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item visual-page-indicator--active"
+    class="_visual-page-indicator__item_9ed318 _visual-page-indicator--active_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
 </ul>
 `;
 
-exports[`<VisualPageIndicator /> MinimumPages story renders snapshot 1`] = `
+exports[`<VisualPageIndicator /> > MinimumPages story renders snapshot 1`] = `
 <ul
-  class="visual-page-indicator"
+  class="_visual-page-indicator_9ed318"
 >
   <li
-    class="visual-page-indicator__item"
+    class="_visual-page-indicator__item_9ed318"
   />
   <li
-    class="visual-page-indicator__item visual-page-indicator--active"
+    class="_visual-page-indicator__item_9ed318 _visual-page-indicator--active_9ed318"
   />
 </ul>
 `;

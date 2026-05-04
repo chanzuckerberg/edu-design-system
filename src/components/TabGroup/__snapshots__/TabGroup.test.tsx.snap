@@ -1,24 +1,24 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<TabGroup /> Centered story renders snapshot 1`] = `
+exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
 <div
-  class="tabs"
+  class="_tabs_5bfe90"
 >
   <div
-    class="tabs__header"
+    class="_tabs__header_5bfe90"
   >
     <ul
-      class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
+      class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
       role="tablist"
     >
       <li
-        class="tabs__item eds-is-active"
+        class="_tabs__item_5bfe90 _eds-is-active_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r4:"
           aria-selected="true"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r4:"
           id=":r5:-Tab-Title-1"
           role="tab"
@@ -27,18 +27,18 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
           Tab Title 1
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r4:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r4:"
           id=":r5:-Tab-Title-2"
           role="tab"
@@ -47,18 +47,18 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
           Tab Title 2
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r4:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r4:"
           id=":r5:-Tab-Title-3"
           role="tab"
@@ -67,18 +67,18 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
           Tab Title 3
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r4:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r4:"
           id=":r5:-Tab-Title-4"
           role="tab"
@@ -87,7 +87,7 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
           Tab Title 4
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
@@ -104,12 +104,12 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
         class="max-w-[576px]"
       >
         <h3
-          class="text text--headline-sm mb-spacing-size-3"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            
@@ -120,25 +120,25 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TabGroup /> Default story renders snapshot 1`] = `
+exports[`<TabGroup /> > Default story renders snapshot 1`] = `
 <div
-  class="tabs"
+  class="_tabs_5bfe90"
 >
   <div
-    class="tabs__header"
+    class="_tabs__header_5bfe90"
   >
     <ul
-      class="tabs__list tabs--has-divider tabs__list--variant-default"
+      class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--variant-default_5bfe90"
       role="tablist"
     >
       <li
-        class="tabs__item eds-is-active"
+        class="_tabs__item_5bfe90 _eds-is-active_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r0:"
           aria-selected="true"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r0:"
           id=":r1:-Tab-Title-1"
           role="tab"
@@ -147,18 +147,18 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
           Tab Title 1
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r0:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r0:"
           id=":r1:-Tab-Title-2"
           role="tab"
@@ -167,18 +167,18 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
           Tab Title 2
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r0:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r0:"
           id=":r1:-Tab-Title-3"
           role="tab"
@@ -187,18 +187,18 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
           Tab Title 3
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r0:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r0:"
           id=":r1:-Tab-Title-4"
           role="tab"
@@ -207,7 +207,7 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
           Tab Title 4
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
@@ -224,12 +224,12 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
         class="max-w-[576px]"
       >
         <h3
-          class="text text--headline-sm mb-spacing-size-3"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            
@@ -240,28 +240,28 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
+exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
 <div
   class="p-spacing-size-half"
 >
   <div
-    class="tabs"
+    class="_tabs_5bfe90"
   >
     <div
-      class="tabs__header"
+      class="_tabs__header_5bfe90"
     >
       <ul
-        class="tabs__list tabs--has-divider tabs__list--variant-inverse"
+        class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--variant-inverse_5bfe90"
         role="tablist"
       >
         <li
-          class="tabs__item eds-is-active"
+          class="_tabs__item_5bfe90 _eds-is-active_5bfe90"
           role="presentation"
         >
           <a
             aria-controls=":r2:"
             aria-selected="true"
-            class="tabs__link"
+            class="_tabs__link_5bfe90"
             href="#:r2:"
             id=":r3:-Tab-Title-1"
             role="tab"
@@ -270,18 +270,18 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
             Tab Title 1
             <div
               aria-hidden="true"
-              class="tab__highlight"
+              class="_tab__highlight_5bfe90"
             />
           </a>
         </li>
         <li
-          class="tabs__item"
+          class="_tabs__item_5bfe90"
           role="presentation"
         >
           <a
             aria-controls=":r2:"
             aria-selected="false"
-            class="tabs__link"
+            class="_tabs__link_5bfe90"
             href="#:r2:"
             id=":r3:-Tab-Title-2"
             role="tab"
@@ -290,18 +290,18 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
             Tab Title 2
             <div
               aria-hidden="true"
-              class="tab__highlight"
+              class="_tab__highlight_5bfe90"
             />
           </a>
         </li>
         <li
-          class="tabs__item"
+          class="_tabs__item_5bfe90"
           role="presentation"
         >
           <a
             aria-controls=":r2:"
             aria-selected="false"
-            class="tabs__link"
+            class="_tabs__link_5bfe90"
             href="#:r2:"
             id=":r3:-Tab-Title-3"
             role="tab"
@@ -310,18 +310,18 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
             Tab Title 3
             <div
               aria-hidden="true"
-              class="tab__highlight"
+              class="_tab__highlight_5bfe90"
             />
           </a>
         </li>
         <li
-          class="tabs__item"
+          class="_tabs__item_5bfe90"
           role="presentation"
         >
           <a
             aria-controls=":r2:"
             aria-selected="false"
-            class="tabs__link"
+            class="_tabs__link_5bfe90"
             href="#:r2:"
             id=":r3:-Tab-Title-4"
             role="tab"
@@ -330,7 +330,7 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
             Tab Title 4
             <div
               aria-hidden="true"
-              class="tab__highlight"
+              class="_tab__highlight_5bfe90"
             />
           </a>
         </li>
@@ -344,15 +344,15 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
         role="tabpanel"
       >
         <div
-          class="max-w-[576px] text-utility-inverse"
+          class="text-utility-inverse max-w-[576px]"
         >
           <h3
-            class="text text--headline-sm mb-spacing-size-3"
+            class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
           >
             Tab 1
           </h3>
           <p
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
              
@@ -364,25 +364,25 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
+exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
 <div
-  class="tabs"
+  class="_tabs_5bfe90"
 >
   <div
-    class="tabs__header"
+    class="_tabs__header_5bfe90"
   >
     <ul
-      class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
+      class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
       role="tablist"
     >
       <li
-        class="tabs__item eds-is-active tabs--width-full"
+        class="_tabs__item_5bfe90 _eds-is-active_5bfe90 _tabs--width-full_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r6:"
           aria-selected="true"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r6:"
           id=":r7:-Tab-Title-1"
           role="tab"
@@ -391,18 +391,18 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
           Tab Title 1
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item tabs--width-full"
+        class="_tabs__item_5bfe90 _tabs--width-full_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r6:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r6:"
           id=":r7:-Tab-Title-2"
           role="tab"
@@ -411,18 +411,18 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
           Tab Title 2
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item tabs--width-full"
+        class="_tabs__item_5bfe90 _tabs--width-full_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r6:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r6:"
           id=":r7:-Tab-Title-3"
           role="tab"
@@ -431,18 +431,18 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
           Tab Title 3
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item tabs--width-full"
+        class="_tabs__item_5bfe90 _tabs--width-full_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r6:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r6:"
           id=":r7:-Tab-Title-4"
           role="tab"
@@ -451,7 +451,7 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
           Tab Title 4
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
@@ -468,12 +468,12 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
         class="max-w-[576px]"
       >
         <h3
-          class="text text--headline-sm mb-spacing-size-3"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            
@@ -484,25 +484,25 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
+exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
 <div
-  class="tabs"
+  class="_tabs_5bfe90"
 >
   <div
-    class="tabs__header"
+    class="_tabs__header_5bfe90"
   >
     <ul
-      class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
+      class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
       role="tablist"
     >
       <li
-        class="tabs__item eds-is-active"
+        class="_tabs__item_5bfe90 _eds-is-active_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r8:"
           aria-selected="true"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r8:"
           id=":r9:-Tab-Title-1"
           role="tab"
@@ -510,7 +510,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon tab__icon"
+            class="_icon_779da8 _tab__icon_5bfe90"
             fill="currentColor"
             height="16px"
             style="--icon-size: 16px;"
@@ -525,18 +525,18 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
           Tab Title 1
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r8:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r8:"
           id=":r9:-Tab-Title-2"
           role="tab"
@@ -544,7 +544,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon tab__icon"
+            class="_icon_779da8 _tab__icon_5bfe90"
             fill="currentColor"
             height="16px"
             style="--icon-size: 16px;"
@@ -559,18 +559,18 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
           Tab Title 2
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":r8:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:r8:"
           id=":r9:-Tab-Title-3"
           role="tab"
@@ -578,7 +578,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon tab__icon"
+            class="_icon_779da8 _tab__icon_5bfe90"
             fill="currentColor"
             height="16px"
             style="--icon-size: 16px;"
@@ -593,7 +593,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
           Tab Title 3
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
@@ -610,12 +610,12 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
         class="max-w-[576px]"
       >
         <h3
-          class="text text--headline-sm mb-spacing-size-3"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            
@@ -626,32 +626,32 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
+exports[`<TabGroup /> > WithTabIllustrations story renders snapshot 1`] = `
 <div
-  class="tabs"
+  class="_tabs_5bfe90"
 >
   <div
-    class="tabs__header"
+    class="_tabs__header_5bfe90"
   >
     <ul
-      class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
+      class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
       role="tablist"
     >
       <li
-        class="tabs__item eds-is-active"
+        class="_tabs__item_5bfe90 _eds-is-active_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":ra:"
           aria-selected="true"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:ra:"
           id=":rb:-Tab-Title-1"
           role="tab"
           tabindex="0"
         >
           <div
-            class="tab__illustration"
+            class="_tab__illustration_5bfe90"
           >
             <div
               class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
@@ -660,25 +660,25 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
           Tab Title 1
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":ra:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:ra:"
           id=":rb:-Tab-Title-2"
           role="tab"
           tabindex="-1"
         >
           <div
-            class="tab__illustration"
+            class="_tab__illustration_5bfe90"
           >
             <div
               class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
@@ -687,25 +687,25 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
           Tab Title 2
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
       <li
-        class="tabs__item"
+        class="_tabs__item_5bfe90"
         role="presentation"
       >
         <a
           aria-controls=":ra:"
           aria-selected="false"
-          class="tabs__link"
+          class="_tabs__link_5bfe90"
           href="#:ra:"
           id=":rb:-Tab-Title-3"
           role="tab"
           tabindex="-1"
         >
           <div
-            class="tab__illustration"
+            class="_tab__illustration_5bfe90"
           >
             <div
               class="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"
@@ -714,7 +714,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
           Tab Title 3
           <div
             aria-hidden="true"
-            class="tab__highlight"
+            class="_tab__highlight_5bfe90"
           />
         </a>
       </li>
@@ -731,12 +731,12 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
         class="max-w-[576px]"
       >
         <h3
-          class="text text--headline-sm mb-spacing-size-3"
+          class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
         >
           Tab 1
         </h3>
         <p
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
            

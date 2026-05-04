@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { InputField } from './InputField';
 
 import * as stories from './InputField.stories';
@@ -13,7 +14,7 @@ describe('<InputField />', () => {
 
   it('handles changes to the text within the component', async () => {
     const user = userEvent.setup();
-    const onChange = jest.fn();
+    const onChange = vi.fn();
 
     render(
       <InputField
@@ -34,7 +35,7 @@ describe('<InputField />', () => {
 
   it('will not fire when maxLength is reached', async () => {
     const user = userEvent.setup();
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const testText = 'typing';
 
     render(
@@ -56,7 +57,7 @@ describe('<InputField />', () => {
 
   it('will fire when recommendedMaxLength is reached', async () => {
     const user = userEvent.setup();
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     const testText = 'typing';
 
     render(

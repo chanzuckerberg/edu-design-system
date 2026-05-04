@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Accordion /> Default story renders snapshot 1`] = `
+exports[`<Accordion /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -8,28 +8,28 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-:r0:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -51,7 +51,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
+exports[`<Accordion /> > EmptyStackedOpen story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -59,61 +59,61 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rr:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md accordion-button--empty"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df _accordion-button--empty_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:rq:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
       </button>
       <div
-        class="accordion-panel accordion-panel--hidden"
+        class="_accordion-panel_86d7df _accordion-panel--hidden_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:rr:"
       />
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rt:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:rs:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -131,43 +131,43 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:rt:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rv:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:ru:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -185,43 +185,43 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:rv:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r11:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r10:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -239,13 +239,13 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r11:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -255,7 +255,7 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
+exports[`<Accordion /> > HasLeadingIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -263,23 +263,23 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-:r4:"
         type="button"
       >
         <span
-          class="accordion-button__leading-icon"
+          class="_accordion-button__leading-icon_86d7df"
         >
           <svg
             aria-hidden="true"
-            class="icon"
+            class="_icon_779da8"
             fill="currentColor"
             height="24px"
             style="--icon-size: 24px;"
@@ -293,21 +293,21 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
           </svg>
         </span>
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subTitle"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__subTitle_86d7df"
           >
             Quam lacus maecenas nibh malesuada.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -329,7 +329,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
+exports[`<Accordion /> > HasLeadingNumberIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -337,23 +337,23 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-:r6:"
         type="button"
       >
         <span
-          class="accordion-button__leading-icon"
+          class="_accordion-button__leading-icon_86d7df"
         >
           <span
             aria-label="Numero uno"
-            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
             role="img"
             tabindex="-1"
           >
@@ -361,21 +361,21 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </span>
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subTitle"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__subTitle_86d7df"
           >
             Quam lacus maecenas nibh malesuada.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -397,7 +397,7 @@ exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> Small story renders snapshot 1`] = `
+exports[`<Accordion /> > Small story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -405,28 +405,28 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-:r8:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -448,7 +448,7 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> Stacked story renders snapshot 1`] = `
+exports[`<Accordion /> > Stacked story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -456,14 +456,14 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rb:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-button-1"
@@ -471,16 +471,16 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -498,42 +498,42 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-panel-1"
         id="headlessui-disclosure-panel-:rb:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button-2"
         id="headlessui-disclosure-button-:rc:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -552,28 +552,28 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button-3"
         id="headlessui-disclosure-button-:re:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -592,28 +592,28 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button-4"
         id="headlessui-disclosure-button-:rg:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -635,7 +635,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
+exports[`<Accordion /> > StackedOpen story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -643,30 +643,30 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r13:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r12:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -684,43 +684,43 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r13:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r15:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r14:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -738,43 +738,43 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r15:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r17:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r16:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -792,43 +792,43 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r17:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r19:"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r18:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -846,13 +846,13 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r19:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -862,7 +862,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
+exports[`<Accordion /> > StackedSmall story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -870,14 +870,14 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:rj:"
         aria-expanded="true"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-button-1"
@@ -885,16 +885,16 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -912,42 +912,42 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-panel-1"
         id="headlessui-disclosure-panel-:rj:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button-2"
         id="headlessui-disclosure-button-:rk:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -966,28 +966,28 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button-3"
         id="headlessui-disclosure-button-:rm:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1006,28 +1006,28 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button-4"
         id="headlessui-disclosure-button-:ro:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1049,7 +1049,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
+exports[`<Accordion /> > StackedSmallOpen story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -1057,30 +1057,30 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1b:"
         aria-expanded="true"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r1a:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1098,43 +1098,43 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1b:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1d:"
         aria-expanded="true"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r1c:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1152,43 +1152,43 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1d:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1f:"
         aria-expanded="true"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r1e:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1206,43 +1206,43 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1f:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
       </div>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
         aria-controls="headlessui-disclosure-panel-:r1h:"
         aria-expanded="true"
-        class="accordion-button accordion-button--sm"
+        class="_accordion-button_86d7df _accordion-button--sm_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-button-:r1g:"
         type="button"
       >
         <h2
-          class="text text--body-md accordion-button__heading"
+          class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-md accordion-button__title"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1260,13 +1260,13 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         id="headlessui-disclosure-panel-:r1h:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </span>
@@ -1276,7 +1276,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
+exports[`<Accordion /> > TitleAndSubtitle story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -1284,27 +1284,27 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-:r2:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subTitle"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__subTitle_86d7df"
           >
             <span>
               "Quam lacus maecenas nibh malesuada."
@@ -1312,7 +1312,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1334,35 +1334,35 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
+exports[`<Accordion /> > UsingRenderProp story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-:r1i:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion Button 
             closed
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -1384,7 +1384,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
+exports[`<Accordion /> > WithLargeHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -1392,27 +1392,27 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
     class="w-[384px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df _accordion-button--md_86d7df"
         data-headlessui-state=""
         id="headlessui-disclosure-button-:r1k:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="_text_b3eba3 _text--body-lg_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
           fill="currentColor"
           height="24px"
           role="img"

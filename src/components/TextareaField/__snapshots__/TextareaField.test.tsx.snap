@@ -1,21 +1,21 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<TextareaField /> Default story renders snapshot 1`] = `
+exports[`<TextareaField /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":r0:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
@@ -23,7 +23,7 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=""
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":r0:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -37,31 +37,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenDefaultStatus story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenDefaultStatus story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":rf:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rh:"
         >
           Additional descriptive text for the field.
@@ -70,7 +70,7 @@ exports[`<TextareaField /> WhenDefaultStatus story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":rh: :rg:"
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":rf:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -81,14 +81,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note textarea-field__field-note"
+        class="_field-note_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rg:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Text should be at least 100 characters
         </span>
@@ -98,31 +98,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenDisabled story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline textarea-field__overline--disabled"
+      class="_textarea-field__overline_7bfcbf _textarea-field__overline--disabled_7bfcbf"
     >
       <label
-        class="label label--md textarea-field__label--disabled"
+        class="_label_76755a _label--md_76755a _textarea-field__label--disabled_7bfcbf"
         for=":r9:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel textarea-field__label--disabled"
+        class="_textarea-field__subLabel_7bfcbf _textarea-field__label--disabled_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rb:"
         >
           Additional descriptive text for the field.
@@ -132,7 +132,7 @@ exports[`<TextareaField /> WhenDisabled story renders snapshot 1`] = `
     <textarea
       aria-describedby=":rb: :ra:"
       aria-disabled="true"
-      class="textarea textarea--disabled"
+      class="_textarea_7bfcbf _textarea--disabled_7bfcbf"
       disabled=""
       id=":r9:"
       placeholder="Enter long-form text here"
@@ -144,15 +144,15 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
         aria-disabled="true"
-        class="field-note field-note--disabled textarea-field__field-note"
+        class="_field-note_fd2e78 _field-note--disabled_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":ra:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -162,31 +162,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenError story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":ri:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rk:"
         >
           Additional descriptive text for the field.
@@ -195,7 +195,7 @@ exports[`<TextareaField /> WhenError story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":rk: :rj:"
-      class="textarea error"
+      class="_textarea_7bfcbf _error_7bfcbf"
       id=":ri:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -206,14 +206,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note field-note--error textarea-field__field-note"
+        class="_field-note_fd2e78 _field-note--error_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rj:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -230,7 +230,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Text should be at least 100 characters
         </span>
@@ -240,31 +240,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenNoDefaultValue story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenNoDefaultValue story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":r3:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r5:"
         >
           Additional descriptive text for the field.
@@ -273,7 +273,7 @@ exports[`<TextareaField /> WhenNoDefaultValue story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":r5:"
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":r3:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -283,36 +283,36 @@ exports[`<TextareaField /> WhenNoDefaultValue story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextareaField /> WhenOptional story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenOptional story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":rr:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <span
-        class="text text--body-sm textarea-field__hint"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__hint_7bfcbf"
       >
         (Optional)
       </span>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rt:"
         >
           Additional descriptive text for the field.
@@ -321,7 +321,7 @@ exports[`<TextareaField /> WhenOptional story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":rt: :rs:"
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":rr:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -332,14 +332,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note textarea-field__field-note"
+        class="_field-note_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rs:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -349,31 +349,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenReadOnly story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenReadOnly story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":rc:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":re:"
         >
           Additional descriptive text for the field.
@@ -382,7 +382,7 @@ exports[`<TextareaField /> WhenReadOnly story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":re: :rd:"
-      class="textarea textarea-field__textarea--read-only"
+      class="_textarea_7bfcbf _textarea-field__textarea--read-only_7bfcbf"
       id=":rc:"
       placeholder="Enter long-form text here"
       readonly=""
@@ -394,14 +394,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note textarea-field__field-note"
+        class="_field-note_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rd:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -411,36 +411,36 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenRequired story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":ro:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <span
-        class="text text--body-sm textarea-field__hint"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__hint_7bfcbf"
       >
         (Required)
       </span>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rq:"
         >
           Additional descriptive text for the field.
@@ -449,7 +449,7 @@ exports[`<TextareaField /> WhenRequired story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":rq: :rp:"
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":ro:"
       placeholder="Enter long-form text here"
       required=""
@@ -461,14 +461,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note textarea-field__field-note"
+        class="_field-note_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rp:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -478,31 +478,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenUsingValue story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenUsingValue story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":r6:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r8:"
         >
           Additional descriptive text for the field.
@@ -511,7 +511,7 @@ exports[`<TextareaField /> WhenUsingValue story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":r8:"
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":r6:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -525,31 +525,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WhenWarning story renders snapshot 1`] = `
+exports[`<TextareaField /> > WhenWarning story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":rl:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":rn:"
         >
           Additional descriptive text for the field.
@@ -558,7 +558,7 @@ exports[`<TextareaField /> WhenWarning story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":rn: :rm:"
-      class="textarea warning"
+      class="_textarea_7bfcbf _warning_7bfcbf"
       id=":rl:"
       placeholder="Enter long-form text here"
       rows="5"
@@ -569,14 +569,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note field-note--warning textarea-field__field-note"
+        class="_field-note_fd2e78 _field-note--warning_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rm:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -593,7 +593,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Text should be at least 100 characters
         </span>
@@ -603,31 +603,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
+exports[`<TextareaField /> > WithADifferentSize story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":ru:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r10:"
         >
           Additional descriptive text for the field.
@@ -636,7 +636,7 @@ exports[`<TextareaField /> WithADifferentSize story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":r10: :rv:"
-      class="textarea"
+      class="_textarea_7bfcbf"
       id=":ru:"
       placeholder="Enter long-form text here"
       rows="10"
@@ -647,14 +647,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note textarea-field__field-note"
+        class="_field-note_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":rv:"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -664,31 +664,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
+exports[`<TextareaField /> > WithAMaxLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":r11:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <p
-        class="text text--body-sm textarea-field__character-counter"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__character-counter_7bfcbf"
       >
         <span
-          class="textarea-field--invalid-length"
+          class="_textarea-field--invalid-length_7bfcbf"
         >
           202
         </span>
@@ -697,10 +697,10 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
         144
       </p>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r13:"
         >
           Additional descriptive text for the field.
@@ -709,7 +709,7 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":r13: :r12:"
-      class="textarea error"
+      class="_textarea_7bfcbf _error_7bfcbf"
       id=":r11:"
       maxlength="144"
       placeholder="Enter long-form text here"
@@ -722,14 +722,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note field-note--error textarea-field__field-note"
+        class="_field-note_fd2e78 _field-note--error_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":r12:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -746,7 +746,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -756,31 +756,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
+exports[`<TextareaField /> > WithARecommendedLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":r14:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <p
-        class="text text--body-sm textarea-field__character-counter"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__character-counter_7bfcbf"
       >
         <span
-          class="textarea-field--invalid-length"
+          class="_textarea-field--invalid-length_7bfcbf"
         >
           202
         </span>
@@ -789,10 +789,10 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
         144
       </p>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r16:"
         >
           Additional descriptive text for the field.
@@ -801,7 +801,7 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby=":r16: :r15:"
-      class="textarea error"
+      class="_textarea_7bfcbf _error_7bfcbf"
       id=":r14:"
       placeholder="Enter long-form text here"
       required=""
@@ -813,14 +813,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note field-note--error textarea-field__field-note"
+        class="_field-note_fd2e78 _field-note--error_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":r15:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -837,7 +837,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>
@@ -847,31 +847,31 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
 </div>
 `;
 
-exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapshot 1`] = `
+exports[`<TextareaField /> > WithBothRecommendedAndMaxLengths story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="textarea-field w-[384px]"
+    class="_textarea-field_7bfcbf w-[384px]"
   >
     <div
-      class="textarea-field__overline"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
-        class="label label--md"
+        class="_label_76755a _label--md_76755a"
         for=":r17:"
       >
         <span
-          class="text text--label-md"
+          class="_text_b3eba3 _text--label-md_b3eba3"
         >
           Textarea Field
         </span>
       </label>
       <p
-        class="text text--body-sm textarea-field__character-counter"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__character-counter_7bfcbf"
       >
         <span
-          class="textarea-field--invalid-length"
+          class="_textarea-field--invalid-length_7bfcbf"
         >
           202
         </span>
@@ -880,10 +880,10 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
         144
       </p>
       <div
-        class="textarea-field__subLabel"
+        class="_textarea-field__subLabel_7bfcbf"
       >
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
           id=":r19:"
         >
           Additional descriptive text for the field.
@@ -892,7 +892,7 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
     </div>
     <textarea
       aria-describedby=":r19: :r18:"
-      class="textarea error"
+      class="_textarea_7bfcbf _error_7bfcbf"
       id=":r17:"
       maxlength="256"
       placeholder="Enter long-form text here"
@@ -905,14 +905,14 @@ dicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo
 praesentium, commodi eligendi asperiores quis dolorum porro.
     </textarea>
     <div
-      class="textarea-field__footer"
+      class="_textarea-field__footer_7bfcbf"
     >
       <div
-        class="field-note field-note--error textarea-field__field-note"
+        class="_field-note_fd2e78 _field-note--error_fd2e78 _textarea-field__field-note_7bfcbf"
         id=":r18:"
       >
         <svg
-          class="icon field-note__icon"
+          class="_icon_779da8 _field-note__icon_fd2e78"
           fill="currentColor"
           height="16px"
           role="img"
@@ -929,7 +929,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.
           />
         </svg>
         <span
-          class="text text--body-sm"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Validation information or error details about the input.
         </span>

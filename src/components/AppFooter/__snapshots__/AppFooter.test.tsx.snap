@@ -1,17 +1,17 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<AppFooter /> Default story renders snapshot 1`] = `
+exports[`<AppFooter /> > Default story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-high"
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <div
-      class="app-footer__colophon"
+      class="_app-footer__colophon_693f0c"
     >
       <div
-        class="app-footer__title"
+        class="_app-footer__title_693f0c"
       >
         <svg
           fill="none"
@@ -38,43 +38,43 @@ exports[`<AppFooter /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#guidelines"
         >
           Community Guidelines
@@ -85,18 +85,18 @@ exports[`<AppFooter /> Default story renders snapshot 1`] = `
 </footer>
 `;
 
-exports[`<AppFooter /> HighEmphasis story renders snapshot 1`] = `
+exports[`<AppFooter /> > HighEmphasis story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-high"
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <div
-      class="app-footer__colophon"
+      class="_app-footer__colophon_693f0c"
     >
       <div
-        class="app-footer__title"
+        class="_app-footer__title_693f0c"
       >
         <svg
           fill="none"
@@ -122,49 +122,49 @@ exports[`<AppFooter /> HighEmphasis story renders snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="text text--body-xs app-footer__copyright"
+        class="_text_b3eba3 _text--body-xs_b3eba3 _app-footer__copyright_693f0c"
       >
         Copyright © 2026
       </div>
     </div>
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#guidelines"
         >
           Community Guidelines
@@ -175,51 +175,51 @@ exports[`<AppFooter /> HighEmphasis story renders snapshot 1`] = `
 </footer>
 `;
 
-exports[`<AppFooter /> LowEmphasis story renders snapshot 1`] = `
+exports[`<AppFooter /> > LowEmphasis story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-low"
+  class="_app-footer_693f0c _app-footer--emphasis-low_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8"
           href="#guidelines"
         >
           Community Guidelines
@@ -230,18 +230,18 @@ exports[`<AppFooter /> LowEmphasis story renders snapshot 1`] = `
 </footer>
 `;
 
-exports[`<AppFooter /> WithCopyright story renders snapshot 1`] = `
+exports[`<AppFooter /> > WithCopyright story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-high"
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <div
-      class="app-footer__colophon"
+      class="_app-footer__colophon_693f0c"
     >
       <div
-        class="app-footer__title"
+        class="_app-footer__title_693f0c"
       >
         <svg
           fill="none"
@@ -267,49 +267,49 @@ exports[`<AppFooter /> WithCopyright story renders snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="text text--body-xs app-footer__copyright"
+        class="_text_b3eba3 _text--body-xs_b3eba3 _app-footer__copyright_693f0c"
       >
         Copyright © 2026
       </div>
     </div>
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#guidelines"
         >
           Community Guidelines
@@ -320,23 +320,23 @@ exports[`<AppFooter /> WithCopyright story renders snapshot 1`] = `
 </footer>
 `;
 
-exports[`<AppFooter /> WithFooterLink story renders snapshot 1`] = `
+exports[`<AppFooter /> > WithFooterLink story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-high"
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <div
-      class="app-footer__colophon"
+      class="_app-footer__colophon_693f0c"
     >
       <a
         aria-label="homepage"
-        class="app-footer__home-link"
+        class="_app-footer__home-link_693f0c"
         href="http://example.org/"
       >
         <div
-          class="app-footer__title"
+          class="_app-footer__title_693f0c"
         >
           <svg
             fill="none"
@@ -363,49 +363,49 @@ exports[`<AppFooter /> WithFooterLink story renders snapshot 1`] = `
         </div>
       </a>
       <div
-        class="text text--body-xs app-footer__copyright"
+        class="_text_b3eba3 _text--body-xs_b3eba3 _app-footer__copyright_693f0c"
       >
         Copyright © 2026
       </div>
     </div>
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#guidelines"
         >
           Community Guidelines
@@ -416,60 +416,60 @@ exports[`<AppFooter /> WithFooterLink story renders snapshot 1`] = `
 </footer>
 `;
 
-exports[`<AppFooter /> WithTextLogo story renders snapshot 1`] = `
+exports[`<AppFooter /> > WithTextLogo story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-high"
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <div
-      class="app-footer__colophon"
+      class="_app-footer__colophon_693f0c"
     >
       <div
-        class="app-footer__title"
+        class="_app-footer__title_693f0c"
       >
         Logo Ipsum, Inc.
       </div>
     </div>
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#guidelines"
         >
           Community Guidelines
@@ -480,66 +480,66 @@ exports[`<AppFooter /> WithTextLogo story renders snapshot 1`] = `
 </footer>
 `;
 
-exports[`<AppFooter /> WithTextLogoAndCopyright story renders snapshot 1`] = `
+exports[`<AppFooter /> > WithTextLogoAndCopyright story renders snapshot 1`] = `
 <footer
-  class="app-footer app-footer--emphasis-high"
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
 >
   <div
-    class="app-footer__wrapper"
+    class="_app-footer__wrapper_693f0c"
   >
     <div
-      class="app-footer__colophon"
+      class="_app-footer__colophon_693f0c"
     >
       <a
-        class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+        class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
         href="http://example.org/"
       >
         Logo Ipsum, Inc.
       </a>
       <div
-        class="text text--body-xs app-footer__copyright"
+        class="_text_b3eba3 _text--body-xs_b3eba3 _app-footer__copyright_693f0c"
       >
         Copyright © 2026
       </div>
     </div>
     <menu
-      class="app-footer__nav-items"
+      class="_app-footer__nav-items_693f0c"
     >
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#support"
         >
           Support
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#tos"
         >
           Terms of Use
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#privacy"
         >
           Privacy Policy
         </a>
       </li>
       <li
-        class="app-footer__nav-item"
+        class="_app-footer__nav-item_693f0c"
       >
         <a
-          class="link link--context-standalone link--emphasis-low link--size-xs link--variant-inverse"
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
           href="#guidelines"
         >
           Community Guidelines

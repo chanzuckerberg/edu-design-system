@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 import { Tag } from './Tag';
 
@@ -36,7 +38,7 @@ type Story = StoryObj<Args>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="flex gap-spacing-size-2">
+    <div className="gap-spacing-size-2 flex">
       <Tag {...args} status="informational" />
       <Tag {...args} status="favorable" />
       <Tag {...args} status="warning" />

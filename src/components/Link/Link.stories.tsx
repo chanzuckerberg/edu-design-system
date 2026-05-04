@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 import { Link, type LinkProps } from './Link';
 
@@ -112,7 +114,7 @@ export const InverseVariant: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="w-[384px] p-spacing-size-half text-center text-utility-inverse">
+      <div className="p-spacing-size-half text-utility-inverse w-[384px] text-center">
         {Story()}
       </div>
     ),

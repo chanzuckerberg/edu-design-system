@@ -1,39 +1,39 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Radio /> Checked story renders snapshot 1`] = `
+exports[`<Radio /> > Checked story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio"
+    class="_radio_4c3e9c"
   >
     <span
-      class="input__wrapper"
+      class="_input__wrapper_4c3e9c"
     >
       <input
         checked=""
-        class="radio__input"
+        class="_radio__input_4c3e9c"
         id=":r1:"
         name="option-checked"
         readonly=""
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r1:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
@@ -44,39 +44,39 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> Default story renders snapshot 1`] = `
+exports[`<Radio /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio"
+    class="_radio_4c3e9c"
   >
     <span
-      class="input__wrapper"
+      class="_input__wrapper_4c3e9c"
     >
       <input
-        class="radio__input"
+        class="_radio__input_4c3e9c"
         id=":r0:"
         name="option-1"
         readonly=""
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r0:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
@@ -87,18 +87,18 @@ exports[`<Radio /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> Disabled story renders snapshot 1`] = `
+exports[`<Radio /> > Disabled story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio"
+    class="_radio_4c3e9c"
   >
     <span
-      class="input__wrapper input__wrapper--disabled"
+      class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
     >
       <input
-        class="radio__input"
+        class="_radio__input_4c3e9c"
         disabled=""
         id=":r2:"
         name="option-disabled"
@@ -106,21 +106,21 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label label--disabled"
+        class="_label_f9fc7e _label--disabled_f9fc7e"
         for=":r2:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
@@ -131,19 +131,19 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
+exports[`<Radio /> > DisabledAndChecked story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio"
+    class="_radio_4c3e9c"
   >
     <span
-      class="input__wrapper input__wrapper--disabled"
+      class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
     >
       <input
         checked=""
-        class="radio__input"
+        class="_radio__input_4c3e9c"
         disabled=""
         id=":r3:"
         name="option-disabled"
@@ -151,21 +151,21 @@ exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label label--disabled"
+        class="_label_f9fc7e _label--disabled_f9fc7e"
         for=":r3:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
@@ -176,39 +176,39 @@ exports[`<Radio /> DisabledAndChecked story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> Error story renders snapshot 1`] = `
+exports[`<Radio /> > Error story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio radio--error"
+    class="_radio_4c3e9c _radio--error_4c3e9c"
   >
     <span
-      class="input__wrapper"
+      class="_input__wrapper_4c3e9c"
     >
       <input
-        class="radio--error radio__input"
+        class="_radio--error_4c3e9c _radio__input_4c3e9c"
         id=":r4:"
         name="option-error"
         readonly=""
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r4:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
@@ -219,40 +219,40 @@ exports[`<Radio /> Error story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
+exports[`<Radio /> > ErrorAndChecked story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio radio--error"
+    class="_radio_4c3e9c _radio--error_4c3e9c"
   >
     <span
-      class="input__wrapper"
+      class="_input__wrapper_4c3e9c"
     >
       <input
         checked=""
-        class="radio--error radio__input"
+        class="_radio--error_4c3e9c _radio__input_4c3e9c"
         id=":r5:"
         name="option-error"
         readonly=""
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r5:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
@@ -263,7 +263,7 @@ exports[`<Radio /> ErrorAndChecked story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> LongLabels story renders snapshot 1`] = `
+exports[`<Radio /> > LongLabels story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -271,35 +271,35 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
     style="display: grid; width: 320px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;"
   >
     <div
-      class="radio"
+      class="_radio_4c3e9c"
     >
       <span
-        class="input__wrapper"
+        class="_input__wrapper_4c3e9c"
       >
         <input
           checked=""
-          class="radio__input"
+          class="_radio__input_4c3e9c"
           id=":r8:"
           name="option-long-label"
           readonly=""
           type="radio"
         />
         <span
-          class="radio__container"
+          class="_radio__container_4c3e9c"
         />
         <span
-          class="radio__selected"
+          class="_radio__selected_4c3e9c"
         />
       </span>
       <div
-        class="radio__labels"
+        class="_radio__labels_4c3e9c"
       >
         <label
-          class="label"
+          class="_label_f9fc7e"
           for=":r8:"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </span>
@@ -311,46 +311,46 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
+exports[`<Radio /> > WithSublabel story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio"
+    class="_radio_4c3e9c"
   >
     <span
-      class="input__wrapper"
+      class="_input__wrapper_4c3e9c"
     >
       <input
-        class="radio__input"
+        class="_radio__input_4c3e9c"
         id=":r6:"
         name="option-1"
         readonly=""
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     >
       <label
-        class="label"
+        class="_label_f9fc7e"
         for=":r6:"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Option 1
         </span>
          
       </label>
       <span
-        class="text text--body-sm radio__sub-label"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _radio__sub-label_4c3e9c"
       >
         Some additional label text
       </span>
@@ -359,33 +359,33 @@ exports[`<Radio /> WithSublabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
+exports[`<Radio /> > WithoutVisibleLabel story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="radio"
+    class="_radio_4c3e9c"
   >
     <span
-      class="input__wrapper"
+      class="_input__wrapper_4c3e9c"
     >
       <input
         aria-label="unchecked radio button"
-        class="radio__input"
+        class="_radio__input_4c3e9c"
         id=":r7:"
         name="option-1"
         readonly=""
         type="radio"
       />
       <span
-        class="radio__container"
+        class="_radio__container_4c3e9c"
       />
       <span
-        class="radio__selected"
+        class="_radio__selected_4c3e9c"
       />
     </span>
     <div
-      class="radio__labels"
+      class="_radio__labels_4c3e9c"
     />
   </div>
 </div>
