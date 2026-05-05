@@ -252,7 +252,7 @@ exports[`<InputField /> InputWithin story renders snapshot 1`] = `
           <span
             class="text text--label-sm button__text"
           >
-            Button
+            Copy
           </span>
         </button>
       </div>
