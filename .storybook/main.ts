@@ -20,6 +20,7 @@ const config: StorybookConfig = {
     // Re-enable once vitest storybook config is working properly
     // '@storybook/addon-vitest',
     'storybook-addon-test-codegen',
+    '@github-ui/storybook-addon-performance-panel',
     '@storybook/addon-mcp',
   ],
 
