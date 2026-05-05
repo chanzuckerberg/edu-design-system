@@ -17,9 +17,10 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
     '@storybook/addon-themes',
-    'storybook-addon-test-codegen',
     // Re-enable once vitest storybook config is working properly
     // '@storybook/addon-vitest',
+    'storybook-addon-test-codegen',
+    '@storybook/addon-mcp',
   ],
 
   docs: {
