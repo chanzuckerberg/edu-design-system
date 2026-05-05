@@ -21,6 +21,7 @@ const config: StorybookConfig = {
     // '@storybook/addon-vitest',
     'storybook-addon-test-codegen',
     '@github-ui/storybook-addon-performance-panel',
+    '@storybook/addon-mcp',
   ],
 
   docs: {
