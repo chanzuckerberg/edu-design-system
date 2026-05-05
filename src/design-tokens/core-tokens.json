@@ -91,6 +91,52 @@
         "value": "rgba(255, 255, 255, 0.01)",
         "group": "color"
       },
+      "brand": {
+        "LC-lightGreen": {
+          "value": "#1DB470",
+          "group": "color"
+        },
+        "LC-darkGreen": {
+          "value": "#125B3A",
+          "group": "color"
+        },
+        "LC-yellow": {
+          "value": "#FFFA55",
+          "group": "color"
+        },
+        "LC-red": {
+          "value": "#FF554C",
+          "group": "color"
+        },
+        "LC-lightBlue": {
+          "value": "#98CDFF",
+          "group": "color"
+        },
+        "LC-darkBlue": {
+          "value": "#5C76F3",
+          "group": "color"
+        },
+        "LC-orange": {
+          "value": "#F97248",
+          "group": "color"
+        },
+        "LC-pink": {
+          "value": "#FCBDBD",
+          "group": "color"
+        },
+        "LC-berry": {
+          "value": "#CF92EC",
+          "group": "color"
+        },
+        "LC-lightPurple": {
+          "value": "#B7B5FF",
+          "group": "color"
+        },
+        "LC-darkPurple": {
+          "value": "#8A80FF",
+          "group": "color"
+        }
+      },
       "neutral": {
         "100": {
           "value": "#E6E2DE",
