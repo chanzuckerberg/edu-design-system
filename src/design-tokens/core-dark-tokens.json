@@ -706,7 +706,7 @@
             },
             "tabUnderline": {
               "default": {
-                "value": "{eds.border.radius.full}"
+                "value": "{eds.border.radius.none}"
               },
               "sticky": {
                 "value": "{eds.border.radius.full}"
@@ -762,6 +762,10 @@
                 "value": "{eds.color.neutral.050}",
                 "group": "color"
               }
+            },
+            "tabUnderline": {
+              "value": "{eds.color.green.450}",
+              "group": "color"
             },
             "visualPageIndicator": {
               "@": {

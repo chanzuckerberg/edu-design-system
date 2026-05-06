@@ -118,6 +118,7 @@ export const EdsThemeColorBackgroundSkeletonStripe = '#F4F1EF';
 export const EdsThemeColorBackgroundTableRowStripe1 = '#FFFFFF';
 export const EdsThemeColorBackgroundTableRowStripe2 = '#FAF9F8';
 export const EdsThemeColorBackgroundTableRowSelected = '#F4F1EF';
+export const EdsThemeColorBackgroundTabUnderline = '#19955D';
 export const EdsThemeColorBackgroundVisualPageIndicator = '#CCC9C6';
 export const EdsThemeColorBackgroundVisualPageIndicatorCurrent = '#19955D';
 export const EdsThemeColorBackgroundUtilityBase1 = '#FFFFFF';

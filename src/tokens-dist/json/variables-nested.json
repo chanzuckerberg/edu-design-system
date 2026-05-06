@@ -305,7 +305,7 @@
             "xs": "4"
           },
           "tabUnderline": {
-            "default": "99999",
+            "default": "0",
             "sticky": "99999"
           },
           "notification": "4"
@@ -330,6 +330,7 @@
             },
             "selected": "#F4F1EF"
           },
+          "tabUnderline": "#19955D",
           "visualPageIndicator": {
             "@": "#CCC9C6",
             "current": "#19955D"
