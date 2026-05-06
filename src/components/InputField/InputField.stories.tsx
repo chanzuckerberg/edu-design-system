@@ -300,7 +300,7 @@ export const InputWithin: Story = {
     <InputField
       inputWithin={
         <Button rank="secondary" size="sm">
-          Button
+          Copy
         </Button>
       }
       label="Input field with button inside"
