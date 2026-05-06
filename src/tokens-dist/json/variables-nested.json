@@ -331,7 +331,17 @@
             "hover": "#F4F1EF",
             "active": "#E6E2DE"
           },
+          "checkbox": {
+            "@": "#19955D",
+            "hover": "#177A4D",
+            "active": "#125B3A"
+          },
           "input": "#FFFFFF",
+          "radioButton": {
+            "@": "#19955D",
+            "hover": "#177A4D",
+            "active": "#125B3A"
+          },
           "skeleton": {
             "@": "#E6E2DE",
             "stripe": "#F4F1EF"
