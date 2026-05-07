@@ -396,6 +396,7 @@
   --eds-dark-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-dark-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-dark-theme-color-background-visual-page-indicator: var(--eds-color-neutral-200);
+  --eds-dark-theme-color-background-tab-underline: var(--eds-color-green-450);
   --eds-dark-theme-color-background-table-row-selected: var(--eds-color-neutral-050);
   --eds-dark-theme-color-background-table-row-stripe-2: var(--eds-color-neutral-025);
   --eds-dark-theme-color-background-table-row-stripe-1: var(--eds-color-white);
@@ -407,7 +408,7 @@
   --eds-dark-theme-color-background-app-header: var(--eds-color-neutral-025);
   --eds-dark-theme-border-radius-notification: var(--eds-border-radius-100);
   --eds-dark-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
-  --eds-dark-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
+  --eds-dark-theme-border-radius-tab-underline-default: var(--eds-border-radius-none);
   --eds-dark-theme-border-radius-objects-xs: var(--eds-border-radius-100);
   --eds-dark-theme-border-radius-objects-sm: var(--eds-border-radius-100);
   --eds-dark-theme-border-radius-objects-md: var(--eds-border-radius-100);
