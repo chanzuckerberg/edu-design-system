@@ -743,10 +743,10 @@
               "value": "{eds.border.radius.100}"
             },
             "sm": {
-              "value": "{eds.border.radius.050}"
+              "value": "{eds.border.radius.100}"
             },
             "xs": {
-              "value": "{eds.border.radius.100}"
+              "value": "{eds.border.radius.050}"
             }
           },
           "tabUnderline": {
