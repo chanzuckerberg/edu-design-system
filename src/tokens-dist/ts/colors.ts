@@ -1,6 +1,17 @@
 export const EdsColorWhite = '#FFFFFF';
 export const EdsColorBlack = '#000000';
 export const EdsColorTransparent = 'rgba(255, 255, 255, 0.01)';
+export const EdsColorBrandLcLightGreen = '#1DB470';
+export const EdsColorBrandLcDarkGreen = '#125B3A';
+export const EdsColorBrandLcYellow = '#FFFA55';
+export const EdsColorBrandLcRed = '#FF554C';
+export const EdsColorBrandLcLightBlue = '#98CDFF';
+export const EdsColorBrandLcDarkBlue = '#5C76F3';
+export const EdsColorBrandLcOrange = '#F97248';
+export const EdsColorBrandLcPink = '#FCBDBD';
+export const EdsColorBrandLcBerry = '#CF92EC';
+export const EdsColorBrandLcLightPurple = '#B7B5FF';
+export const EdsColorBrandLcDarkPurple = '#8A80FF';
 export const EdsColorNeutral100 = '#E6E2DE';
 export const EdsColorNeutral150 = '#D8D4D1';
 export const EdsColorNeutral200 = '#CCC9C6';

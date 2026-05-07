@@ -128,6 +128,19 @@
       "white": "#FFFFFF",
       "black": "#000000",
       "transparent": "rgba(255, 255, 255, 0.01)",
+      "brand": {
+        "LC-lightGreen": "#1DB470",
+        "LC-darkGreen": "#125B3A",
+        "LC-yellow": "#FFFA55",
+        "LC-red": "#FF554C",
+        "LC-lightBlue": "#98CDFF",
+        "LC-darkBlue": "#5C76F3",
+        "LC-orange": "#F97248",
+        "LC-pink": "#FCBDBD",
+        "LC-berry": "#CF92EC",
+        "LC-lightPurple": "#B7B5FF",
+        "LC-darkPurple": "#8A80FF"
+      },
       "neutral": {
         "100": "#E6E2DE",
         "150": "#D8D4D1",
