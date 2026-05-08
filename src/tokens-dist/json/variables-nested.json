@@ -367,8 +367,8 @@
             "default": {
               "noEmphasis": {
                 "@": "rgba(255, 255, 255, 0.00)",
-                "hover": "#FAF9F8",
-                "active": "#F4F1EF"
+                "hover": "#F4F1EF",
+                "active": "#E6E2DE"
               },
               "lowEmphasis": {
                 "@": "#F4F1EF",
@@ -389,13 +389,13 @@
             "interactive": {
               "noEmphasis": {
                 "@": "rgba(250, 249, 248, 0.00)",
-                "hover": "#FAF9F8",
-                "active": "#F4F1EF"
+                "hover": "#F4F1EF",
+                "active": "#E6E2DE"
               },
               "lowEmphasis": {
-                "@": "#F4F1EF",
-                "hover": "#E6E2DE",
-                "active": "#D8D4D1"
+                "@": "#FAF9F8",
+                "hover": "#F4F1EF",
+                "active": "#E6E2DE"
               },
               "highEmphasis": {
                 "@": "#242423",
@@ -477,7 +477,7 @@
           }
         },
         "border": {
-          "appHeaderSeparator": "#BCB9B6",
+          "appHeaderSeparator": "#CCC9C6",
           "utility": {
             "default": {
               "lowEmphasis": {
@@ -497,9 +497,9 @@
               }
             },
             "interactive": {
-              "@": "#BCB9B6",
-              "hover": "#9B9997",
-              "active": "#83827E",
+              "@": "#CCC9C6",
+              "hover": "#BCB9B6",
+              "active": "#9B9997",
               "secondary": {
                 "@": "#177A4D",
                 "hover": "#125B3A",
