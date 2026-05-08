@@ -93,7 +93,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-env": "^7.29.3",
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
     "@chanzuckerberg/eslint-config-edu-js": "^1.1.0",
@@ -148,7 +148,7 @@
     "jsdom-testing-mocks": "^1.16.0",
     "lint-staged": "^15.5.2",
     "plop": "^4.0.5",
-    "postcss": "^8.5.12",
+    "postcss": "^8.5.13",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
     "postcss-loader": "^8.2.1",
