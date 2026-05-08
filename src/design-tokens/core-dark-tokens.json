@@ -873,11 +873,11 @@
                     "group": "color"
                   },
                   "hover": {
-                    "value": "{eds.color.neutral.025}",
+                    "value": "{eds.color.neutral.050}",
                     "group": "color"
                   },
                   "active": {
-                    "value": "{eds.color.neutral.050}",
+                    "value": "{eds.color.neutral.100}",
                     "group": "color"
                   }
                 },
@@ -931,25 +931,25 @@
                     "group": "color"
                   },
                   "hover": {
-                    "value": "{eds.color.neutral.025}",
+                    "value": "{eds.color.neutral.050}",
                     "group": "color"
                   },
                   "active": {
-                    "value": "{eds.color.neutral.050}",
+                    "value": "{eds.color.neutral.100}",
                     "group": "color"
                   }
                 },
                 "lowEmphasis": {
                   "@": {
-                    "value": "{eds.color.neutral.050}",
+                    "value": "{eds.color.neutral.025}",
                     "group": "color"
                   },
                   "hover": {
-                    "value": "{eds.color.neutral.100}",
+                    "value": "{eds.color.neutral.050}",
                     "group": "color"
                   },
                   "active": {
-                    "value": "{eds.color.neutral.150}",
+                    "value": "{eds.color.neutral.100}",
                     "group": "color"
                   }
                 },
@@ -1154,7 +1154,7 @@
           },
           "border": {
             "appHeaderSeparator": {
-              "value": "{eds.color.neutral.250}",
+              "value": "{eds.color.neutral.200}",
               "group": "color"
             },
             "utility": {
@@ -1204,15 +1204,15 @@
               },
               "interactive": {
                 "@": {
-                  "value": "{eds.color.neutral.250}",
+                  "value": "{eds.color.neutral.200}",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.350}",
+                  "value": "{eds.color.neutral.250}",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.neutral.450}",
+                  "value": "{eds.color.neutral.350}",
                   "group": "color"
                 },
                 "secondary": {
