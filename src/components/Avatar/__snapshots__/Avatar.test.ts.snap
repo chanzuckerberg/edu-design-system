@@ -3,11 +3,11 @@
 exports[`<Avatar /> Default story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--text"
+  class="avatar avatar--md avatar--text avatar--color-scheme-4"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
     ??
   </span>
@@ -16,8 +16,8 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
 
 exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--xl avatar--icon"
+  aria-label="Avatar for user Frank Herbert"
+  class="avatar avatar--xl avatar--icon avatar--color-scheme-4"
   role="img"
 >
   <svg
@@ -39,12 +39,26 @@ exports[`<Avatar /> ExtraLarge story renders snapshot 1`] = `
 
 exports[`<Avatar /> ExtraLargeText story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--xl avatar--text"
+  aria-label="Avatar for user Edward M. Forster"
+  class="avatar avatar--xl avatar--text avatar--color-scheme-3"
   role="img"
 >
   <span
     class="text text--label-xl"
+  >
+    EF
+  </span>
+</div>
+`;
+
+exports[`<Avatar /> Fixed story renders snapshot 1`] = `
+<div
+  aria-label="Avatar for unknown user "
+  class="avatar avatar--md avatar--text"
+  role="img"
+>
+  <span
+    class="text text--label-sm"
   >
     ??
   </span>
@@ -53,8 +67,8 @@ exports[`<Avatar /> ExtraLargeText story renders snapshot 1`] = `
 
 exports[`<Avatar /> Large story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--lg avatar--icon"
+  aria-label="Avatar for user Arthur C. Clarke"
+  class="avatar avatar--lg avatar--icon avatar--color-scheme-3"
   role="img"
 >
   <svg
@@ -76,22 +90,22 @@ exports[`<Avatar /> Large story renders snapshot 1`] = `
 
 exports[`<Avatar /> LargeText story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--lg avatar--text"
+  aria-label="Avatar for user Michael Crichton"
+  class="avatar avatar--lg avatar--text avatar--color-scheme-1"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
-    ??
+    MC
   </span>
 </div>
 `;
 
 exports[`<Avatar /> Medium story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--icon"
+  aria-label="Avatar for user Ray Bradbury"
+  class="avatar avatar--md avatar--icon avatar--color-scheme-1"
   role="img"
 >
   <svg
@@ -113,22 +127,22 @@ exports[`<Avatar /> Medium story renders snapshot 1`] = `
 
 exports[`<Avatar /> MediumText story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--text"
+  aria-label="Avatar for user Robert Heinlein"
+  class="avatar avatar--md avatar--text avatar--color-scheme-2"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
-    ??
+    RH
   </span>
 </div>
 `;
 
 exports[`<Avatar /> Small story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--sm avatar--icon"
+  aria-label="Avatar for user Douglas Adams"
+  class="avatar avatar--sm avatar--icon avatar--color-scheme-1"
   role="img"
 >
   <svg
@@ -150,14 +164,14 @@ exports[`<Avatar /> Small story renders snapshot 1`] = `
 
 exports[`<Avatar /> SmallText story renders snapshot 1`] = `
 <div
-  aria-label="Avatar for unknown user "
-  class="avatar avatar--sm avatar--text"
+  aria-label="Avatar for user Stephen Baxter"
+  class="avatar avatar--sm avatar--text avatar--color-scheme-5"
   role="img"
 >
   <span
-    class="text text--title-sm"
+    class="text text--label-sm"
   >
-    ?
+    S
   </span>
 </div>
 `;
@@ -165,11 +179,11 @@ exports[`<Avatar /> SmallText story renders snapshot 1`] = `
 exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user Young Yarn Lad"
-  class="avatar avatar--lg avatar--text"
+  class="avatar avatar--lg avatar--text avatar--color-scheme-5"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     🧶👦🏽
   </span>
@@ -179,7 +193,7 @@ exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
 exports[`<Avatar /> UsingImage story renders snapshot 1`] = `
 <div
   aria-label="Avatar for unknown user "
-  class="avatar avatar--md avatar--image"
+  class="avatar avatar--md avatar--image avatar--color-scheme-4"
   role="img"
 >
   <img
@@ -193,11 +207,11 @@ exports[`<Avatar /> UsingImage story renders snapshot 1`] = `
 exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user John Smith"
-  class="avatar avatar--md avatar--text"
+  class="avatar avatar--md avatar--text avatar--color-scheme-0"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
     JS
   </span>
@@ -207,11 +221,11 @@ exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
 exports[`<Avatar /> UsingMultibyteUnicode story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user 你好世界"
-  class="avatar avatar--lg avatar--image"
+  class="avatar avatar--lg avatar--image avatar--color-scheme-1"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     你
   </span>
@@ -222,11 +236,11 @@ exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
 <span>
   <div
     aria-label="Avatar for unknown user "
-    class="avatar avatar--is-interactive avatar--md avatar--text"
+    class="avatar avatar--is-interactive avatar--md avatar--text avatar--color-scheme-4"
     role="img"
   >
     <span
-      class="text text--title-md"
+      class="text text--label-sm"
     >
       ??
     </span>
@@ -237,11 +251,11 @@ exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
 exports[`<Avatar /> WhenImageVariantMissingSource story renders snapshot 1`] = `
 <div
   aria-label="Avatar for user Young Yarn Lad"
-  class="avatar avatar--lg avatar--image"
+  class="avatar avatar--lg avatar--image avatar--color-scheme-5"
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     YL
   </span>
@@ -251,7 +265,7 @@ exports[`<Avatar /> WhenImageVariantMissingSource story renders snapshot 1`] = `
 exports[`<Avatar /> WithCustomIcon story renders snapshot 1`] = `
 <div
   aria-label="Custom label for avatar"
-  class="avatar avatar--md avatar--icon"
+  class="avatar avatar--md avatar--icon avatar--color-scheme-4"
   role="img"
 >
   <svg
