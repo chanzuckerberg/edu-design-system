@@ -24,13 +24,11 @@
   display: grid;
   place-content: center;
 
-  border-radius: calc(var(--eds-spacing-size-quarter) * 1px); /* using sized radius to have an outer rounded rect and inner square */
+  border-radius: calc(var(--eds-theme-border-radius-objects-xs) * 1px); /* using sized radius to have an outer rounded rect and inner square */
 
   /* preset: body-md */
   font: 400 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
   letter-spacing: normal;
-  
-  transition: background-color ease-in-out calc(var(--eds-anim-fade-quick) * 1s);
 }
 
 .checkbox__input:checked::before {
@@ -45,8 +43,6 @@
 
   /* use the platform's font face, which defines the checkbox glyph to use */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-  transition: color ease-in-out calc(var(--eds-anim-fade-quick) * 1s);
 }
 
 .checkbox__input:checked {
@@ -115,14 +111,14 @@
 
 .checkbox__input:checked,
 .checkbox__input:indeterminate {
-  color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
+  color: light-dark(var(--eds-theme-color-background-checkbox), var(--eds-dark-theme-color-background-checkbox));
 
   &:not(:disabled):hover {
-    color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis-hover), var(--eds-dark-theme-color-border-utility-default-high-emphasis-hover));
+    color: light-dark(var(--eds-theme-color-background-checkbox-hover), var(--eds-dark-theme-color-background-checkbox-hover));
   }
 
   &:not(:disabled):active {
-    color: light-dark(var(--eds-theme-color-border-utility-default-high-emphasis-active), var(--eds-dark-theme-color-border-utility-default-high-emphasis-active));
+    color: light-dark(var(--eds-theme-color-background-checkbox-active), var(--eds-dark-theme-color-background-checkbox-active));
   }
 
   .checkbox--error & {

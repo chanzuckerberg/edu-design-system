@@ -28,7 +28,7 @@
     },
     "border": {
       "radius": {
-        "50": {
+        "050": {
           "value": "2",
           "comment": "pixels (px)",
           "group": "size"
@@ -747,7 +747,7 @@
                 "value": "{eds.border.radius.100}"
               },
               "xs": {
-                "value": "{eds.border.radius.100}"
+                "value": "{eds.border.radius.050}"
               }
             },
             "tabUnderline": {
@@ -779,9 +779,37 @@
                 "group": "color"
               }
             },
+            "checkbox": {
+              "@": {
+                "value": "{eds.color.green.450}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.green.550}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.green.650}",
+                "group": "color"
+              }
+            },
             "input": {
               "value": "{eds.color.white}",
               "group": "color"
+            },
+            "radioButton": {
+              "@": {
+                "value": "{eds.color.green.450}",
+                "group": "color"
+              },
+              "hover": {
+                "value": "{eds.color.green.550}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.green.650}",
+                "group": "color"
+              }
             },
             "skeleton": {
               "@": {

@@ -165,6 +165,7 @@
   --eds-color-white: #FFFFFF;
   --eds-border-radius-full: 99999; /* pixels (px) */
   --eds-border-radius-none: 0; /* pixels (px) */
+  --eds-border-radius-050: 2; /* pixels (px) */
   --eds-border-radius-1200: 48; /* pixels (px) */
   --eds-border-radius-500: 20; /* pixels (px) */
   --eds-border-radius-400: 16; /* pixels (px) */
@@ -172,7 +173,6 @@
   --eds-border-radius-200: 8; /* pixels (px) */
   --eds-border-radius-150: 6; /* pixels (px) */
   --eds-border-radius-100: 4; /* pixels (px) */
-  --eds-border-radius-50: 2; /* pixels (px) */
   --eds-anim-move-long: 0.4; /* Seconds (s) */
   --eds-anim-move-medium: 0.3; /* Seconds (s) */
   --eds-anim-move-quick: 0.15; /* Seconds (s) */
@@ -402,14 +402,20 @@
   --eds-theme-color-background-table-row-stripe-1: var(--eds-color-white);
   --eds-theme-color-background-skeleton-stripe: var(--eds-color-neutral-050);
   --eds-theme-color-background-skeleton: var(--eds-color-neutral-100);
+  --eds-theme-color-background-radio-button-active: var(--eds-color-green-650);
+  --eds-theme-color-background-radio-button-hover: var(--eds-color-green-550);
+  --eds-theme-color-background-radio-button: var(--eds-color-green-450);
   --eds-theme-color-background-input: var(--eds-color-white);
+  --eds-theme-color-background-checkbox-active: var(--eds-color-green-650);
+  --eds-theme-color-background-checkbox-hover: var(--eds-color-green-550);
+  --eds-theme-color-background-checkbox: var(--eds-color-green-450);
   --eds-theme-color-background-app-header-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-app-header-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-app-header: var(--eds-color-neutral-025);
   --eds-theme-border-radius-notification: var(--eds-border-radius-100);
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
   --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-none);
-  --eds-theme-border-radius-objects-xs: var(--eds-border-radius-100);
+  --eds-theme-border-radius-objects-xs: var(--eds-border-radius-050);
   --eds-theme-border-radius-objects-sm: var(--eds-border-radius-100);
   --eds-theme-border-radius-objects-md: var(--eds-border-radius-100);
   --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-100);

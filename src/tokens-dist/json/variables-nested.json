@@ -112,7 +112,6 @@
     },
     "border": {
       "radius": {
-        "50": "2",
         "100": "4",
         "150": "6",
         "200": "8",
@@ -120,6 +119,7 @@
         "400": "16",
         "500": "20",
         "1200": "48",
+        "050": "2",
         "none": "0",
         "full": "99999"
       }
@@ -315,7 +315,7 @@
           "objects": {
             "md": "4",
             "sm": "4",
-            "xs": "4"
+            "xs": "2"
           },
           "tabUnderline": {
             "default": "0",
@@ -331,7 +331,17 @@
             "hover": "#F4F1EF",
             "active": "#E6E2DE"
           },
+          "checkbox": {
+            "@": "#19955D",
+            "hover": "#177A4D",
+            "active": "#125B3A"
+          },
           "input": "#FFFFFF",
+          "radioButton": {
+            "@": "#19955D",
+            "hover": "#177A4D",
+            "active": "#125B3A"
+          },
           "skeleton": {
             "@": "#E6E2DE",
             "stripe": "#F4F1EF"
