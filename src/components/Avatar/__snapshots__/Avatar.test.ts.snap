@@ -7,7 +7,7 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
     ??
   </span>
@@ -58,7 +58,7 @@ exports[`<Avatar /> Fixed story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
     ??
   </span>
@@ -95,7 +95,7 @@ exports[`<Avatar /> LargeText story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     MC
   </span>
@@ -132,7 +132,7 @@ exports[`<Avatar /> MediumText story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
     RH
   </span>
@@ -169,7 +169,7 @@ exports[`<Avatar /> SmallText story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-sm"
+    class="text text--label-sm"
   >
     S
   </span>
@@ -183,7 +183,7 @@ exports[`<Avatar /> UsingEmoji story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     🧶👦🏽
   </span>
@@ -211,7 +211,7 @@ exports[`<Avatar /> UsingInitials story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-sm"
   >
     JS
   </span>
@@ -225,7 +225,7 @@ exports[`<Avatar /> UsingMultibyteUnicode story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     你
   </span>
@@ -240,7 +240,7 @@ exports[`<Avatar /> UsingWithTooltip story renders snapshot 1`] = `
     role="img"
   >
     <span
-      class="text text--title-md"
+      class="text text--label-sm"
     >
       ??
     </span>
@@ -255,7 +255,7 @@ exports[`<Avatar /> WhenImageVariantMissingSource story renders snapshot 1`] = `
   role="img"
 >
   <span
-    class="text text--title-md"
+    class="text text--label-lg"
   >
     YL
   </span>

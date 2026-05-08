@@ -161,9 +161,9 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     }
 
     const presetMap: Record<NonNullable<AvatarProps['size']>, Preset> = {
-      sm: 'title-sm',
-      md: 'title-md',
-      lg: 'title-md',
+      sm: 'label-sm',
+      md: 'label-sm',
+      lg: 'label-lg',
       xl: 'label-xl',
     };
 

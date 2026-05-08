@@ -62,7 +62,7 @@ exports[`<Menu /> MenuWithAvatarButton story renders snapshot 1`] = `
       role="img"
     >
       <span
-        class="text text--title-md"
+        class="text text--label-sm"
       >
         JS
       </span>
