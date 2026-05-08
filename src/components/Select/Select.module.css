@@ -51,7 +51,7 @@
  */
 .select-button {
   width: 100%;
-  padding: calc(var(--eds-spacing-size-1) * 1px);
+  padding: calc(var(--eds-spacing-size-1-and-half) * 1px);
 
   border: 1px solid;
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
