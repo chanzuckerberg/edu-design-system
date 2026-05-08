@@ -338,6 +338,19 @@ export const LongInputWithin: Story = {
 };
 
 /**
+ * Fields can show a counter displaying the maximum allowed character length. This will update as users enter more data. Once the
+ * maximum is reached, further input is not allowed.
+ */
+export const WithinMaxLenght: Story = {
+  args: {
+    defaultValue: 'Some initial text',
+    label: 'Test Label',
+    maxLength: 30,
+    required: true,
+  },
+};
+
+/**
  * You can lock the maximum length of the text content of `InputField`. When setting `maxLength`,
  * the field will reuse the browser's [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
  * behavior (e.g., prevent further text from being typed, prevent keydown events, etc.).
