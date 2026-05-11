@@ -1148,7 +1148,7 @@ exports[`<InputField /> WithText story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithinMaxLenght story renders snapshot 1`] = `
+exports[`<InputField /> WithinMaxLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
