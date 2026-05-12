@@ -321,7 +321,7 @@ exports[`<Fieldset /> WithDisabledCheckboxes story renders snapshot 1`] = `
            
         </label>
         <span
-          class="text text--body-sm checkbox__sub-label"
+          class="text text--body-sm checkbox__sub-label checkbox--is-disabled"
         >
           Supplementary text
         </span>
@@ -426,7 +426,7 @@ exports[`<Fieldset /> WithDisabledRadioButton story renders snapshot 1`] = `
            
         </label>
         <span
-          class="text text--body-sm radio__sub-label"
+          class="text text--body-sm radio__sub-label radio--is-disabled"
         >
           Supplementary text
         </span>

@@ -94,6 +94,10 @@
   display: block;
 
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+
+  &.radio--is-disabled {
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+  }
 }
 
 .radio__input:not(:checked) {

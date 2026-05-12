@@ -162,7 +162,10 @@ export const Checkbox = Object.assign(
           {subLabel && (
             <Text
               as="span"
-              className={styles['checkbox__sub-label']}
+              className={clsx(
+                styles['checkbox__sub-label'],
+                disabled && styles['checkbox--is-disabled'],
+              )}
               preset="body-sm"
             >
               {subLabel}
