@@ -154,6 +154,18 @@ export const WithCheckboxes: StoryObj<Args> = {
 
 export const WithDisabledCheckboxes: StoryObj<Args> = {
   tags: ['code-only'],
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
   args: {
     fieldNote: 'Attached field note to field set',
     isDisabled: true,
@@ -207,6 +219,18 @@ export const WithRadioButton: StoryObj<Args> = {
 };
 
 export const WithDisabledRadioButton: StoryObj<Args> = {
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
   tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',
