@@ -152,7 +152,12 @@ export const Checkbox = Object.assign(
         />
         <div className={styles['checkbox__labels']}>
           {label && (
-            <Label disabled={disabled} htmlFor={checkboxId} text={label} />
+            <Label
+              className={styles['checkbox__label']}
+              disabled={disabled}
+              htmlFor={checkboxId}
+              text={label}
+            />
           )}
           {subLabel && (
             <Text

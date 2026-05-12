@@ -135,6 +135,7 @@ export const WithCheckboxes: StoryObj<Args> = {
                   isError={status === 'critical'}
                   label="Checkbox"
                   name="test-checkbox"
+                  subLabel="Supplementary text"
                 />
                 <Checkbox
                   disabled={isDisabled}
@@ -188,6 +189,7 @@ export const WithRadioButton: StoryObj<Args> = {
                   isError={status === 'critical'}
                   label="Radio Button"
                   name="test-radio"
+                  subLabel="Supplementary text"
                 />
                 <Radio
                   disabled={isDisabled}
