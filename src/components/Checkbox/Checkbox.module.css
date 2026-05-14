@@ -69,10 +69,22 @@
   position: relative;
 }
 
+.checkbox__label {
+  /* slight offset to improve alignment next to checkbox */
+  transform: translateY(-1px);
+}
+
 .checkbox__sub-label {
   display: block;
 
+  /* slight offset to improve alignment next to checkbox */
+  transform: translateY(-1px);
+
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+
+  &.checkbox--is-disabled {
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+  }
 }
 
 .checkbox__input:not(:checked):not(:indeterminate) {
