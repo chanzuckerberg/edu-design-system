@@ -154,7 +154,12 @@ export const LeadingIcon: Story = {
 };
 
 /**
- * Fields can be marked as required.
+ * Fields can be marked as required. When required, consumers should implement error state handling on the associated `<form>` element. This should
+ * make use of the `status="critical"` and `fieldNote` properties to signal that the field requirement is unmet.
+ *
+ * Consumers must implement this to avoid the fallback tooltip which can show up in some browsers upon submit.
+ *
+ * See <https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/noValidate> for a possible method of suppressing this behavior.
  */
 export const Required: Story = {
   args: {
