@@ -34,10 +34,19 @@ function InteractiveExample(args: InteractiveArgs) {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)} rank="primary">
-        Open the modal
-      </Button>
+      <div className="fpo mb-spacing-size-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa,
+        quis iure eligendi voluptates delectus earum suscipit porro
+        exercitationem asperiores voluptatibus repellat saepe neque nisi quidem
+        repellendus temporibus accusamus ea officiis illo unde illum mollitia
+        eos consectetur. Possimus, eaque nihil?
+      </div>
 
+      <div className="flex justify-center">
+        <Button onClick={() => setOpen(true)} rank="primary">
+          Open the modal
+        </Button>
+      </div>
       <Modal {...args} onClose={() => setOpen(false)} open={open} />
     </>
   );

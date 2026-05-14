@@ -149,11 +149,23 @@
   --eds-color-neutral-200: #CCC9C6;
   --eds-color-neutral-150: #D8D4D1;
   --eds-color-neutral-100: #E6E2DE;
+  --eds-color-brand-lc-dark-purple: #8A80FF;
+  --eds-color-brand-lc-light-purple: #B7B5FF;
+  --eds-color-brand-lc-berry: #CF92EC;
+  --eds-color-brand-lc-pink: #FCBDBD;
+  --eds-color-brand-lc-orange: #F97248;
+  --eds-color-brand-lc-dark-blue: #5C76F3;
+  --eds-color-brand-lc-light-blue: #98CDFF;
+  --eds-color-brand-lc-red: #FF554C;
+  --eds-color-brand-lc-yellow: #FFFA55;
+  --eds-color-brand-lc-dark-green: #125B3A;
+  --eds-color-brand-lc-light-green: #1DB470;
   --eds-color-transparent: rgba(255, 255, 255, 0.01);
   --eds-color-black: #000000;
   --eds-color-white: #FFFFFF;
   --eds-border-radius-full: 99999; /* pixels (px) */
   --eds-border-radius-none: 0; /* pixels (px) */
+  --eds-border-radius-050: 2; /* pixels (px) */
   --eds-border-radius-1200: 48; /* pixels (px) */
   --eds-border-radius-500: 20; /* pixels (px) */
   --eds-border-radius-400: 16; /* pixels (px) */
@@ -161,7 +173,6 @@
   --eds-border-radius-200: 8; /* pixels (px) */
   --eds-border-radius-150: 6; /* pixels (px) */
   --eds-border-radius-100: 4; /* pixels (px) */
-  --eds-border-radius-50: 2; /* pixels (px) */
   --eds-anim-move-long: 0.4; /* Seconds (s) */
   --eds-anim-move-medium: 0.3; /* Seconds (s) */
   --eds-anim-move-quick: 0.15; /* Seconds (s) */
@@ -313,9 +324,9 @@
   --eds-theme-color-border-utility-interactive-secondary-active: var(--eds-color-green-750);
   --eds-theme-color-border-utility-interactive-secondary-hover: var(--eds-color-green-650);
   --eds-theme-color-border-utility-interactive-secondary: var(--eds-color-green-550);
-  --eds-theme-color-border-utility-interactive-active: var(--eds-color-neutral-450);
-  --eds-theme-color-border-utility-interactive-hover: var(--eds-color-neutral-350);
-  --eds-theme-color-border-utility-interactive: var(--eds-color-neutral-250);
+  --eds-theme-color-border-utility-interactive-active: var(--eds-color-neutral-350);
+  --eds-theme-color-border-utility-interactive-hover: var(--eds-color-neutral-250);
+  --eds-theme-color-border-utility-interactive: var(--eds-color-neutral-200);
   --eds-theme-color-border-utility-default-high-emphasis-active: var(--eds-color-neutral-650);
   --eds-theme-color-border-utility-default-high-emphasis-hover: var(--eds-color-neutral-750);
   --eds-theme-color-border-utility-default-high-emphasis: var(--eds-color-neutral-850);
@@ -325,7 +336,7 @@
   --eds-theme-color-border-utility-default-low-emphasis-active: var(--eds-color-neutral-350);
   --eds-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
   --eds-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
-  --eds-theme-color-border-app-header-separator: var(--eds-color-neutral-250);
+  --eds-theme-color-border-app-header-separator: var(--eds-color-neutral-200);
   --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-white);
@@ -360,11 +371,11 @@
   --eds-theme-color-background-utility-interactive-high-emphasis-active: var(--eds-color-neutral-650);
   --eds-theme-color-background-utility-interactive-high-emphasis-hover: var(--eds-color-neutral-750);
   --eds-theme-color-background-utility-interactive-high-emphasis: var(--eds-color-neutral-850);
-  --eds-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-neutral-150);
-  --eds-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-neutral-100);
-  --eds-theme-color-background-utility-interactive-low-emphasis: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-interactive-no-emphasis-active: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-interactive-no-emphasis-hover: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-interactive-low-emphasis-active: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-interactive-low-emphasis-hover: var(--eds-color-neutral-050);
+  --eds-theme-color-background-utility-interactive-low-emphasis: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-interactive-no-emphasis-active: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-interactive-no-emphasis-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-default-high-emphasis-active: var(--eds-color-neutral-750);
   --eds-theme-color-background-utility-default-high-emphasis-hover: var(--eds-color-neutral-800);
   --eds-theme-color-background-utility-default-high-emphasis: var(--eds-color-neutral-850);
@@ -374,8 +385,8 @@
   --eds-theme-color-background-utility-default-low-emphasis-active: var(--eds-color-neutral-150);
   --eds-theme-color-background-utility-default-low-emphasis-hover: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-025);
+  --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container-selected: var(--eds-color-white);
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-025);
@@ -385,19 +396,26 @@
   --eds-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
   --eds-theme-color-background-visual-page-indicator: var(--eds-color-neutral-200);
+  --eds-theme-color-background-tab-underline: var(--eds-color-green-450);
   --eds-theme-color-background-table-row-selected: var(--eds-color-neutral-050);
   --eds-theme-color-background-table-row-stripe-2: var(--eds-color-neutral-025);
   --eds-theme-color-background-table-row-stripe-1: var(--eds-color-white);
   --eds-theme-color-background-skeleton-stripe: var(--eds-color-neutral-050);
   --eds-theme-color-background-skeleton: var(--eds-color-neutral-100);
+  --eds-theme-color-background-radio-button-active: var(--eds-color-green-650);
+  --eds-theme-color-background-radio-button-hover: var(--eds-color-green-550);
+  --eds-theme-color-background-radio-button: var(--eds-color-green-450);
   --eds-theme-color-background-input: var(--eds-color-white);
+  --eds-theme-color-background-checkbox-active: var(--eds-color-green-650);
+  --eds-theme-color-background-checkbox-hover: var(--eds-color-green-550);
+  --eds-theme-color-background-checkbox: var(--eds-color-green-450);
   --eds-theme-color-background-app-header-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-app-header-hover: var(--eds-color-neutral-050);
   --eds-theme-color-background-app-header: var(--eds-color-neutral-025);
   --eds-theme-border-radius-notification: var(--eds-border-radius-100);
   --eds-theme-border-radius-tab-underline-sticky: var(--eds-border-radius-full);
-  --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-full);
-  --eds-theme-border-radius-objects-xs: var(--eds-border-radius-100);
+  --eds-theme-border-radius-tab-underline-default: var(--eds-border-radius-none);
+  --eds-theme-border-radius-objects-xs: var(--eds-border-radius-050);
   --eds-theme-border-radius-objects-sm: var(--eds-border-radius-100);
   --eds-theme-border-radius-objects-md: var(--eds-border-radius-100);
   --eds-theme-border-radius-surfaces-md: var(--eds-border-radius-100);

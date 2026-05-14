@@ -141,7 +141,10 @@ export const Radio = ({
         {subLabel && (
           <Text
             as="span"
-            className={styles['radio__sub-label']}
+            className={clsx(
+              styles['radio__sub-label'],
+              disabled && styles['radio--is-disabled'],
+            )}
             preset="body-sm"
           >
             {subLabel}

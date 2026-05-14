@@ -11,7 +11,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.1'],
 } as Meta<typeof Avatar>;
 
 type Story = StoryObj<typeof Avatar>;
@@ -22,6 +22,9 @@ export const Small: Story = {
   args: {
     size: 'sm',
     variant: 'icon',
+    user: {
+      fullName: 'Douglas Adams',
+    },
   },
 };
 
@@ -29,6 +32,9 @@ export const SmallText: Story = {
   args: {
     ...Small.args,
     variant: 'text',
+    user: {
+      fullName: 'Stephen Baxter',
+    },
   },
 };
 
@@ -36,6 +42,9 @@ export const Medium: Story = {
   args: {
     size: 'md',
     variant: 'icon',
+    user: {
+      fullName: 'Ray Bradbury',
+    },
   },
 };
 
@@ -43,6 +52,9 @@ export const MediumText: Story = {
   args: {
     ...Medium.args,
     variant: 'text',
+    user: {
+      fullName: 'Robert Heinlein',
+    },
   },
 };
 
@@ -50,6 +62,9 @@ export const Large: Story = {
   args: {
     size: 'lg',
     variant: 'icon',
+    user: {
+      fullName: 'Arthur C. Clarke',
+    },
   },
 };
 
@@ -57,6 +72,9 @@ export const LargeText: Story = {
   args: {
     ...Large.args,
     variant: 'text',
+    user: {
+      fullName: 'Michael Crichton',
+    },
   },
 };
 
@@ -64,6 +82,9 @@ export const ExtraLarge: Story = {
   args: {
     size: 'xl',
     variant: 'icon',
+    user: {
+      fullName: 'Frank Herbert',
+    },
   },
 };
 
@@ -71,6 +92,9 @@ export const ExtraLargeText: Story = {
   args: {
     ...ExtraLarge.args,
     variant: 'text',
+    user: {
+      fullName: 'Edward M. Forster',
+    },
   },
 };
 
@@ -183,4 +207,16 @@ export const UsingWithTooltip: Story = {
       </span>
     </Tooltip>
   ),
+};
+
+/**
+ * When using color = `fixed` `Avatar` will use a single, static color, which doesn't change based on the user data supplied.
+ *
+ * Colors can be changed by overriding the `--avatar__fg`, `--avatar__bg`, and `--avatar__border` CSS Properties.
+ */
+export const Fixed: Story = {
+  args: {
+    ...Default.args,
+    color: 'fixed',
+  },
 };

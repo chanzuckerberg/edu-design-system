@@ -135,6 +135,7 @@ export const WithCheckboxes: StoryObj<Args> = {
                   isError={status === 'critical'}
                   label="Checkbox"
                   name="test-checkbox"
+                  subLabel="Supplementary text"
                 />
                 <Checkbox
                   disabled={isDisabled}
@@ -153,6 +154,18 @@ export const WithCheckboxes: StoryObj<Args> = {
 
 export const WithDisabledCheckboxes: StoryObj<Args> = {
   tags: ['code-only'],
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
   args: {
     fieldNote: 'Attached field note to field set',
     isDisabled: true,
@@ -188,6 +201,7 @@ export const WithRadioButton: StoryObj<Args> = {
                   isError={status === 'critical'}
                   label="Radio Button"
                   name="test-radio"
+                  subLabel="Supplementary text"
                 />
                 <Radio
                   disabled={isDisabled}
@@ -205,6 +219,18 @@ export const WithRadioButton: StoryObj<Args> = {
 };
 
 export const WithDisabledRadioButton: StoryObj<Args> = {
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
   tags: ['code-only'],
   args: {
     fieldNote: 'Attached field note to field set',

@@ -120,7 +120,7 @@ type TooltipProps = {
   /**
    * The content of the tooltip bubble.
    */
-  text?: string;
+  text?: React.ReactNode;
   /**
    * The variant treatment for tooltips
    *
@@ -147,7 +147,7 @@ export const Tooltip = ({
   className,
   duration = 200,
   placement = 'auto',
-  text,
+  text, // TODO(next-major): change prop name to `content`
   variant = 'default',
   ...rest
 }: TooltipProps) => {
@@ -188,11 +188,14 @@ export const Tooltip = ({
     );
   }
 
-  const textContent = (
-    <Text as="span" data-testid="tooltip-content" preset="body-sm">
-      {text}
-    </Text>
-  );
+  const textContent =
+    typeof text === 'string' ? (
+      <Text as="span" data-testid="tooltip-content" preset="body-sm">
+        {text}
+      </Text>
+    ) : (
+      text
+    );
 
   const tooltipClassNames = clsx(
     styles['tooltip'],
