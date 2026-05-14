@@ -156,7 +156,12 @@ export const LeadingIcon: Story = {
 };
 
 /**
- * Fields can be marked as required.
+ * Fields can be marked as required. When required, consumers should implement error state handling on the associated `<form>` element. This should
+ * make use of the `status="critical"` and `fieldNote` properties to signal that the field requirement is unmet.
+ *
+ * Consumers must implement this to avoid the fallback tooltip which can show up in some browsers upon submit.
+ *
+ * See <https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/noValidate> for a possible method of suppressing this behavior.
  */
 export const Required: Story = {
   args: {
@@ -302,7 +307,7 @@ export const InputWithin: Story = {
     <InputField
       inputWithin={
         <Button rank="secondary" size="sm">
-          Button
+          Copy
         </Button>
       }
       label="Input field with button inside"
@@ -337,6 +342,19 @@ export const LongInputWithin: Story = {
       type="text"
     />
   ),
+};
+
+/**
+ * Fields can show a counter displaying the maximum allowed character length. This will update as users enter more data. Once the
+ * maximum is reached, further input is not allowed.
+ */
+export const WithinMaxLength: Story = {
+  args: {
+    defaultValue: 'Some initial text',
+    label: 'Test Label',
+    maxLength: 30,
+    required: true,
+  },
 };
 
 /**

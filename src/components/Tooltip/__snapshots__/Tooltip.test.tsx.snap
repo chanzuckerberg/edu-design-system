@@ -13,6 +13,19 @@ exports[`<Tooltip /> > BottomPlacement story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Tooltip /> > FormattedContent story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    aria-describedby="tippy-9"
+    class="fpo p-1"
+  >
+    Target Component
+  </div>
+</div>
+`;
+
 exports[`<Tooltip /> > Interactive story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"

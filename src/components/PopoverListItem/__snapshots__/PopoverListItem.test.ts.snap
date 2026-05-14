@@ -258,7 +258,7 @@ exports[`<PopoverListItem /> > WithLeadingAvatar story renders snapshot 1`] = `
   >
     <div
       aria-label="Avatar for unknown user "
-      class="_avatar_814665 _avatar--sm_814665 _avatar--icon_814665"
+      class="_avatar_814665 _avatar--sm_814665 _avatar--icon_814665 _avatar--color-scheme-4_814665"
       role="img"
     >
       <svg

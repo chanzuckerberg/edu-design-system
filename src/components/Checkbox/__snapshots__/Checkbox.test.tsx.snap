@@ -17,7 +17,7 @@ exports[`<Checkbox /> > Checked story renders snapshot 1`] = `
       class="_checkbox__labels_2d475f"
     >
       <label
-        class="_label_f9fc7e"
+        class="_label_f9fc7e _checkbox__label_2d475f"
         for=":r3:"
       >
         <span
@@ -48,7 +48,7 @@ exports[`<Checkbox /> > Default story renders snapshot 1`] = `
       class="_checkbox__labels_2d475f"
     >
       <label
-        class="_label_f9fc7e"
+        class="_label_f9fc7e _checkbox__label_2d475f"
         for=":r0:"
       >
         <span
@@ -79,7 +79,7 @@ exports[`<Checkbox /> > Error story renders snapshot 1`] = `
       class="_checkbox__labels_2d475f"
     >
       <label
-        class="_label_f9fc7e"
+        class="_label_f9fc7e _checkbox__label_2d475f"
         for=":r2:"
       >
         <span
@@ -114,7 +114,7 @@ exports[`<Checkbox /> > GlyphIsConsistent story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e"
+          class="_label_f9fc7e _checkbox__label_2d475f"
           for=":r4:"
         >
           <span
@@ -146,7 +146,7 @@ exports[`<Checkbox /> > Indeterminate story renders snapshot 1`] = `
       class="_checkbox__labels_2d475f"
     >
       <label
-        class="_label_f9fc7e"
+        class="_label_f9fc7e _checkbox__label_2d475f"
         for=":r5:"
       >
         <span
@@ -177,7 +177,7 @@ exports[`<Checkbox /> > LongLabels story renders snapshot 1`] = `
       class="_checkbox__labels_2d475f"
     >
       <label
-        class="_label_f9fc7e"
+        class="_label_f9fc7e _checkbox__label_2d475f"
         for=":r7:"
       >
         <span
@@ -208,7 +208,7 @@ exports[`<Checkbox /> > WithSublabel story renders snapshot 1`] = `
       class="_checkbox__labels_2d475f"
     >
       <label
-        class="_label_f9fc7e"
+        class="_label_f9fc7e _checkbox__label_2d475f"
         for=":r1:"
       >
         <span
@@ -262,7 +262,7 @@ exports[`<Checkbox /> > inline Disabled story renders snapshot 1`] = `
     class="_checkbox__labels_2d475f"
   >
     <label
-      class="_label_f9fc7e _label--disabled_f9fc7e"
+      class="_label_f9fc7e _label--disabled_f9fc7e _checkbox__label_2d475f"
       for=":r8:"
     >
       <span

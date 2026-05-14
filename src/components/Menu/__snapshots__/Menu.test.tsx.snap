@@ -57,11 +57,11 @@ exports[`<Menu /> > MenuWithAvatarButton story renders snapshot 1`] = `
     >
       <div
         aria-label="Avatar for user Josie Sandberg"
-        class="_avatar_814665 _avatar--is-interactive_814665 _avatar--md_814665 _avatar--text_814665"
+        class="_avatar_814665 _avatar--is-interactive_814665 _avatar--md_814665 _avatar--text_814665 _avatar--color-scheme-0_814665"
         role="img"
       >
         <span
-          class="_text_b3eba3 _text--title-md_b3eba3"
+          class="_text_b3eba3 _text--label-sm_b3eba3"
         >
           JS
         </span>

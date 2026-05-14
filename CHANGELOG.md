@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.1.0...v18.2.0) (2026-05-14)
+
+
+### Features
+
+* **Avatar:** support colors on avatar based on user data ([#2475](https://github.com/chanzuckerberg/edu-design-system/issues/2475)) ([3f4dacb](https://github.com/chanzuckerberg/edu-design-system/commit/3f4dacbf832deed9d1f8459d5d3181f72209231c))
+* **icons:** add new person-add account ([#2481](https://github.com/chanzuckerberg/edu-design-system/issues/2481)) ([c5074f7](https://github.com/chanzuckerberg/edu-design-system/commit/c5074f748aff82d81bfbbe2b957dc215f885383d))
+* **TabGroup:** update colors and tokens to match designs ([#2483](https://github.com/chanzuckerberg/edu-design-system/issues/2483)) ([0ede478](https://github.com/chanzuckerberg/edu-design-system/commit/0ede4788dd655a0dd1f9d8100f429df28f79049d))
+* **tokens:** add brand primitive tokens ([#2482](https://github.com/chanzuckerberg/edu-design-system/issues/2482)) ([2f6b3cf](https://github.com/chanzuckerberg/edu-design-system/commit/2f6b3cf173d832ec21074e018cf4866884648cb3))
+* **Tooltip:** allow formatted content to tooltip text ([#2474](https://github.com/chanzuckerberg/edu-design-system/issues/2474)) ([c99d055](https://github.com/chanzuckerberg/edu-design-system/commit/c99d055193b143aefab2fd168571c9f8604130ab))
+* update color styles for checkboxes and radio buttons ([#2484](https://github.com/chanzuckerberg/edu-design-system/issues/2484)) ([4e9921d](https://github.com/chanzuckerberg/edu-design-system/commit/4e9921d2126d8e6424fac73e50672896c6f61c21))
+* update styling of stage 1 components ([#2485](https://github.com/chanzuckerberg/edu-design-system/issues/2485)) ([ce69762](https://github.com/chanzuckerberg/edu-design-system/commit/ce697625068cab2f4c8cf1ec9b411888928a7ff5))
+
+
+### Bug Fixes
+
+* **Button:** change overflow on small buttons to show descenders ([#2480](https://github.com/chanzuckerberg/edu-design-system/issues/2480)) ([77aa466](https://github.com/chanzuckerberg/edu-design-system/commit/77aa4663da4d3062748fb05d97512a761a2bd26b))
+* **Checkbox:** adjust alignment of label with control ([#2491](https://github.com/chanzuckerberg/edu-design-system/issues/2491)) ([c60f709](https://github.com/chanzuckerberg/edu-design-system/commit/c60f7096a325cedd8bdec18406cfd9f55305c50a))
+* **deps:** update all non-major dependencies ([#2473](https://github.com/chanzuckerberg/edu-design-system/issues/2473)) ([13aa254](https://github.com/chanzuckerberg/edu-design-system/commit/13aa2541e48a9191455e3d91ece5bb90e1bcae23))
+* **typography:** use font-family-2 for caption presets ([#2479](https://github.com/chanzuckerberg/edu-design-system/issues/2479)) ([9f59b52](https://github.com/chanzuckerberg/edu-design-system/commit/9f59b52fb732822461da35e5a49c66e036dd3714))
+
 ## [18.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.0.0...v18.1.0) (2026-04-24)
 
 

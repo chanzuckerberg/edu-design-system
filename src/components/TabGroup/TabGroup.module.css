@@ -123,7 +123,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
+  padding: calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2-and-half) * 1px);
   text-align: center;
 
   text-decoration: none;
@@ -199,11 +199,15 @@
 
   /* add in handling of showing highlight on hover */
   .tabs__item:hover .tab__highlight {
-    background-color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
+    background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-hover));
+  }
+
+  .tabs__item:active .tab__highlight {
+    background-color: light-dark(var(--eds-theme-color-background-utility-interactive-no-emphasis-active), var(--eds-dark-theme-color-background-utility-interactive-no-emphasis-active));
   }
 
   .tabs__item.eds-is-active .tab__highlight {
-    background-color: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
+    background-color: light-dark(var(--eds-theme-color-background-tab-underline), var(--eds-dark-theme-color-background-tab-underline));
   }
 }
 

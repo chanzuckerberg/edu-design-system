@@ -108,7 +108,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   recommendedMaxLength?: number;
   /**
-   * Indicates that field is required for form to be successfully submitted
+   * Indicates that field is required for form to be successfully submitted. Consumers must implement handling for error states using `status="critical"`
    */
   required?: boolean;
   /**
@@ -118,7 +118,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   showHint?: boolean;
   /**
-   * Status for the field state
+   * Status for the field state. Use `"critical"` for an error state.
    *
    * **Default is `"default"`**.
    */

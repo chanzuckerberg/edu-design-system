@@ -246,7 +246,7 @@
 }
 
 .text--caption-md {
-  --text-font-family: var(--eds-typography-font-family-3);
+  --text-font-family: var(--eds-typography-font-family-2);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 500;
@@ -254,7 +254,7 @@
 }
 
 .text--caption-sm {
-  --text-font-family: var(--eds-typography-font-family-3);
+  --text-font-family: var(--eds-typography-font-family-2);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 500;

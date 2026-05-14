@@ -23,7 +23,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.5.0'],
+  tags: ['autodocs', 'version:1.5.1'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -433,11 +433,33 @@ export const VerticalDefaultWithImageLogo: Story = {
 };
 
 /**
- * Provided links are accessible
+ * Provided links are accessible in horizontal orientation
+ */
+export const ImageLogoFocus: Story = {
+  args: {
+    ...DefaultWithImageLogo.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
+/**
+ * Provided links are accessible in vertical orientation
  */
 export const VerticalImageLogoFocus: Story = {
   args: {
     ...VerticalDefaultWithImageLogo.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
   },
   play: async () => {
     await userEvent.tab();

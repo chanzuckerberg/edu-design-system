@@ -172,7 +172,7 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e"
+          class="_label_f9fc7e _checkbox__label_2d475f"
           for=":r0:"
         >
           <span
@@ -182,6 +182,11 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
           </span>
            
         </label>
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3 _checkbox__sub-label_2d475f"
+        >
+          Supplementary text
+        </span>
       </div>
     </div>
     <div
@@ -197,7 +202,7 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e"
+          class="_label_f9fc7e _checkbox__label_2d475f"
           for=":r1:"
         >
           <span
@@ -305,7 +310,7 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e _label--disabled_f9fc7e"
+          class="_label_f9fc7e _label--disabled_f9fc7e _checkbox__label_2d475f"
           for=":r2:"
         >
           <span
@@ -315,6 +320,11 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
           </span>
            
         </label>
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3 _checkbox__sub-label_2d475f _checkbox--is-disabled_2d475f"
+        >
+          Supplementary text
+        </span>
       </div>
     </div>
     <div
@@ -331,7 +341,7 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e _label--disabled_f9fc7e"
+          class="_label_f9fc7e _label--disabled_f9fc7e _checkbox__label_2d475f"
           for=":r3:"
         >
           <span
@@ -415,6 +425,11 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
           </span>
            
         </label>
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3 _radio__sub-label_4c3e9c _radio--is-disabled_4c3e9c"
+        >
+          Supplementary text
+        </span>
       </div>
     </div>
     <div
@@ -501,7 +516,7 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e"
+          class="_label_f9fc7e _checkbox__label_2d475f"
           for=":r4:"
         >
           <span
@@ -511,6 +526,11 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
           </span>
            
         </label>
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3 _checkbox__sub-label_2d475f"
+        >
+          Supplementary text
+        </span>
       </div>
     </div>
     <div
@@ -526,7 +546,7 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
         class="_checkbox__labels_2d475f"
       >
         <label
-          class="_label_f9fc7e"
+          class="_label_f9fc7e _checkbox__label_2d475f"
           for=":r5:"
         >
           <span
@@ -606,6 +626,11 @@ exports[`<Fieldset /> > WithErrorRadioButton story renders snapshot 1`] = `
           </span>
            
         </label>
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3 _radio__sub-label_4c3e9c"
+        >
+          Supplementary text
+        </span>
       </div>
     </div>
     <div
@@ -711,6 +736,11 @@ exports[`<Fieldset /> > WithRadioButton story renders snapshot 1`] = `
           </span>
            
         </label>
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3 _radio__sub-label_4c3e9c"
+        >
+          Supplementary text
+        </span>
       </div>
     </div>
     <div

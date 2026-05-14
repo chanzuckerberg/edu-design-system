@@ -112,7 +112,6 @@
     },
     "border": {
       "radius": {
-        "50": "2",
         "100": "4",
         "150": "6",
         "200": "8",
@@ -120,6 +119,7 @@
         "400": "16",
         "500": "20",
         "1200": "48",
+        "050": "2",
         "none": "0",
         "full": "99999"
       }
@@ -128,6 +128,19 @@
       "white": "#FFFFFF",
       "black": "#000000",
       "transparent": "rgba(255, 255, 255, 0.01)",
+      "brand": {
+        "LC-lightGreen": "#1DB470",
+        "LC-darkGreen": "#125B3A",
+        "LC-yellow": "#FFFA55",
+        "LC-red": "#FF554C",
+        "LC-lightBlue": "#98CDFF",
+        "LC-darkBlue": "#5C76F3",
+        "LC-orange": "#F97248",
+        "LC-pink": "#FCBDBD",
+        "LC-berry": "#CF92EC",
+        "LC-lightPurple": "#B7B5FF",
+        "LC-darkPurple": "#8A80FF"
+      },
       "neutral": {
         "100": "#E6E2DE",
         "150": "#D8D4D1",
@@ -302,10 +315,10 @@
           "objects": {
             "md": "4",
             "sm": "4",
-            "xs": "4"
+            "xs": "2"
           },
           "tabUnderline": {
-            "default": "99999",
+            "default": "0",
             "sticky": "99999"
           },
           "notification": "4"
@@ -318,7 +331,17 @@
             "hover": "#F4F1EF",
             "active": "#E6E2DE"
           },
+          "checkbox": {
+            "@": "#19955D",
+            "hover": "#177A4D",
+            "active": "#125B3A"
+          },
           "input": "#FFFFFF",
+          "radioButton": {
+            "@": "#19955D",
+            "hover": "#177A4D",
+            "active": "#125B3A"
+          },
           "skeleton": {
             "@": "#E6E2DE",
             "stripe": "#F4F1EF"
@@ -330,6 +353,7 @@
             },
             "selected": "#F4F1EF"
           },
+          "tabUnderline": "#19955D",
           "visualPageIndicator": {
             "@": "#CCC9C6",
             "current": "#19955D"
@@ -353,8 +377,8 @@
             "default": {
               "noEmphasis": {
                 "@": "rgba(255, 255, 255, 0.00)",
-                "hover": "#FAF9F8",
-                "active": "#F4F1EF"
+                "hover": "#F4F1EF",
+                "active": "#E6E2DE"
               },
               "lowEmphasis": {
                 "@": "#F4F1EF",
@@ -375,13 +399,13 @@
             "interactive": {
               "noEmphasis": {
                 "@": "rgba(250, 249, 248, 0.00)",
-                "hover": "#FAF9F8",
-                "active": "#F4F1EF"
+                "hover": "#F4F1EF",
+                "active": "#E6E2DE"
               },
               "lowEmphasis": {
-                "@": "#F4F1EF",
-                "hover": "#E6E2DE",
-                "active": "#D8D4D1"
+                "@": "#FAF9F8",
+                "hover": "#F4F1EF",
+                "active": "#E6E2DE"
               },
               "highEmphasis": {
                 "@": "#242423",
@@ -463,7 +487,7 @@
           }
         },
         "border": {
-          "appHeaderSeparator": "#BCB9B6",
+          "appHeaderSeparator": "#CCC9C6",
           "utility": {
             "default": {
               "lowEmphasis": {
@@ -483,9 +507,9 @@
               }
             },
             "interactive": {
-              "@": "#BCB9B6",
-              "hover": "#9B9997",
-              "active": "#83827E",
+              "@": "#CCC9C6",
+              "hover": "#BCB9B6",
+              "active": "#9B9997",
               "secondary": {
                 "@": "#177A4D",
                 "hover": "#125B3A",

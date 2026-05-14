@@ -252,7 +252,7 @@ exports[`<InputField /> > InputWithin story renders snapshot 1`] = `
           <span
             class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
           >
-            Button
+            Copy
           </span>
         </button>
       </div>
@@ -826,73 +826,12 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1j:"
-      >
-        <span
-          class="_text_b3eba3 _text--label-md_b3eba3"
-        >
-          test label
-        </span>
-      </label>
-      <div
-        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
-      >
-        <span
-          class="_input-field--invalid-length_4d3b17"
-        >
-          17
-        </span>
-         
-        / 
-        15
-      </div>
-      <div
-        class="_input-field__subLabel_4d3b17"
-      >
-        <span
-          class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1l:"
-        >
-          Additional descriptive text for the field.
-        </span>
-      </div>
-    </div>
-    <div
-      class="_input-field__body_4d3b17"
-    >
-      <input
-        aria-describedby=":r1l:"
-        aria-invalid="false"
-        class="_input_0d9f86 _error_0d9f86"
-        id=":r1j:"
-        maxlength="15"
-        required=""
-        type="text"
-        value="Some initial text"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="_input-field__overline_4d3b17"
-    >
-      <label
-        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
         for=":r1m:"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
         >
-          Shortened Length Field
+          test label
         </span>
       </label>
       <div
@@ -926,6 +865,7 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
         id=":r1m:"
+        maxlength="15"
         required=""
         type="text"
         value="Some initial text"
@@ -935,7 +875,7 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
+exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -952,7 +892,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
         >
-          test label
+          Shortened Length Field
         </span>
       </label>
       <div
@@ -979,13 +919,73 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
       </div>
     </div>
     <div
-      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
+      class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1r: :r1q:"
+        aria-describedby=":r1r:"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
         id=":r1p:"
+        required=""
+        type="text"
+        value="Some initial text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[384px]"
+  >
+    <div
+      class="_input-field__overline_4d3b17"
+    >
+      <label
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
+        for=":r1s:"
+      >
+        <span
+          class="_text_b3eba3 _text--label-md_b3eba3"
+        >
+          test label
+        </span>
+      </label>
+      <div
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+      >
+        <span
+          class="_input-field--invalid-length_4d3b17"
+        >
+          17
+        </span>
+         
+        / 
+        15
+      </div>
+      <div
+        class="_input-field__subLabel_4d3b17"
+      >
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3"
+          id=":r1u:"
+        >
+          Additional descriptive text for the field.
+        </span>
+      </div>
+    </div>
+    <div
+      class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
+    >
+      <input
+        aria-describedby=":r1u: :r1t:"
+        aria-invalid="false"
+        class="_input_0d9f86 _error_0d9f86"
+        id=":r1s:"
         maxlength="20"
         required=""
         type="text"
@@ -997,7 +997,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
     >
       <div
         class="_field-note_fd2e78 _field-note--error_fd2e78"
-        id=":r1q:"
+        id=":r1t:"
       >
         <svg
           class="_icon_779da8 _field-note__icon_fd2e78"
@@ -1143,6 +1143,67 @@ exports[`<InputField /> > WithText story renders snapshot 1`] = `
           This is a fieldnote.
         </span>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[384px]"
+  >
+    <div
+      class="_input-field__overline_4d3b17"
+    >
+      <label
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
+        for=":r1j:"
+      >
+        <span
+          class="_text_b3eba3 _text--label-md_b3eba3"
+        >
+          Test Label
+        </span>
+      </label>
+      <div
+        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+      >
+        <span
+          class=""
+        >
+          17
+        </span>
+         
+        / 
+        30
+      </div>
+      <div
+        class="_input-field__subLabel_4d3b17"
+      >
+        <span
+          class="_text_b3eba3 _text--body-sm_b3eba3"
+          id=":r1l:"
+        >
+          Additional descriptive text for the field.
+        </span>
+      </div>
+    </div>
+    <div
+      class="_input-field__body_4d3b17"
+    >
+      <input
+        aria-describedby=":r1l:"
+        aria-invalid="false"
+        class="_input_0d9f86"
+        id=":r1j:"
+        maxlength="30"
+        required=""
+        type="text"
+        value="Some initial text"
+      />
     </div>
   </div>
 </div>

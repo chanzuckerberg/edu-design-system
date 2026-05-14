@@ -4,6 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Tooltip } from './Tooltip';
+import Hr from '../Hr';
+import Text from '../Text';
 
 // diminishing the threshold of this component to avoid sub-pixel jittering
 // https://www.chromatic.com/docs/threshold
@@ -51,7 +53,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;
@@ -142,4 +144,24 @@ export const InteractiveDisabled: Story = {
       <div className="fpo p-1">Target Component</div>
     </Tooltip>
   ),
+};
+
+/**
+ * Tooltips can have formmatted content within the popover. Usage of standard HTML tags or EDS components allowed.
+ */
+export const FormattedContent: Story = {
+  args: {
+    text: (
+      <>
+        <Text as="p" preset="headline-md">
+          Formatted Tooltip
+        </Text>
+        <Hr />
+        <Text>
+          Here is a tooltip with <em>complex</em> formatting and{' '}
+          <strong>content</strong>
+        </Text>
+      </>
+    ),
+  },
 };
