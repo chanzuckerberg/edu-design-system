@@ -146,7 +146,7 @@ export const EdsThemeColorBackgroundUtilityContainerHover = '#FAF9F8';
 export const EdsThemeColorBackgroundUtilityContainerActive = '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityContainerSelected = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
-  'rgba(204, 201, 198, 0.80)';
+  'rgba(250, 249, 248, 0.60)';
 export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis =
   'rgba(36, 36, 35, 0.80)';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasis =
@@ -185,20 +185,20 @@ export const EdsThemeColorBackgroundUtilityCriticalNoEmphasis =
   'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisHover = '#FCF0F0';
 export const EdsThemeColorBackgroundUtilityCriticalNoEmphasisActive = '#F9DFDF';
-export const EdsThemeColorBackgroundUtilityCriticalLowEmphasis = '#FCF0F0';
-export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisHover = '#F9DFDF';
+export const EdsThemeColorBackgroundUtilityCriticalLowEmphasis = '#F9DFDF';
+export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisHover = '#F6CBCB';
 export const EdsThemeColorBackgroundUtilityCriticalLowEmphasisActive =
-  '#F6CBCB';
+  '#FCBDBD';
 export const EdsThemeColorBackgroundUtilityCriticalHighEmphasis = '#C4352D';
 export const EdsThemeColorBackgroundUtilityCriticalHighEmphasisHover =
   '#9D1F18';
 export const EdsThemeColorBackgroundUtilityCriticalHighEmphasisActive =
   '#760903';
-export const EdsThemeColorBackgroundUtilityFavorableLowEmphasis = '#E0F5EC';
+export const EdsThemeColorBackgroundUtilityFavorableLowEmphasis = '#C2ECD9';
 export const EdsThemeColorBackgroundUtilityFavorableLowEmphasisHover =
-  '#C2ECD9';
-export const EdsThemeColorBackgroundUtilityFavorableLowEmphasisActive =
   '#A1E1C4';
+export const EdsThemeColorBackgroundUtilityFavorableLowEmphasisActive =
+  '#7ED6AD';
 export const EdsThemeColorBackgroundUtilityFavorableHighEmphasis = '#177A4D';
 export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisHover =
   '#125B3A';
@@ -224,8 +224,8 @@ export const EdsThemeColorBackgroundUtilityInformationalHighEmphasisActive =
   '#0E442B';
 export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis =
   'rgba(250, 249, 248, 0.00)';
-export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#E6E2DE';
-export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#CCC9C6';
+export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#F4F1EF';
+export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#BCB9B6';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasis =
   'rgba(250, 249, 248, 0.00)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisHover =
@@ -297,8 +297,8 @@ export const EdsThemeColorIconUtilityWarningActive = '#463901';
 export const EdsThemeColorIconUtilityInformational = '#177A4D';
 export const EdsThemeColorIconUtilityInformationalHover = '#125B3A';
 export const EdsThemeColorIconUtilityInformationalActive = '#0E442B';
-export const EdsThemeColorIconUtilityDisabledPrimary = '#BCB9B6';
-export const EdsThemeColorIconUtilityDisabledSecondary = '#BCB9B6';
+export const EdsThemeColorIconUtilityDisabledPrimary = '#CCC9C6';
+export const EdsThemeColorIconUtilityDisabledSecondary = '#CCC9C6';
 export const EdsThemeColorIconUtilityInverse = '#FFFFFF';
 export const EdsThemeColorIconUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
@@ -332,8 +332,8 @@ export const EdsThemeColorTextUtilityWarningActive = '#463901';
 export const EdsThemeColorTextUtilityInformational = '#3A3A37';
 export const EdsThemeColorTextUtilityInformationalHover = '#242423';
 export const EdsThemeColorTextUtilityInformationalActive = '#0E0E0E';
-export const EdsThemeColorTextUtilityDisabledPrimary = '#BCB9B6';
-export const EdsThemeColorTextUtilityDisabledSecondary = '#BCB9B6';
+export const EdsThemeColorTextUtilityDisabledPrimary = '#CCC9C6';
+export const EdsThemeColorTextUtilityDisabledSecondary = '#CCC9C6';
 export const EdsThemeColorTextUtilityInverse = '#FFFFFF';
 export const EdsThemeColorTextUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';

@@ -28,11 +28,6 @@
     },
     "border": {
       "radius": {
-        "050": {
-          "value": "2",
-          "comment": "pixels (px)",
-          "group": "size"
-        },
         "100": {
           "value": "4",
           "comment": "pixels (px)",
@@ -65,6 +60,11 @@
         },
         "1200": {
           "value": "48",
+          "comment": "pixels (px)",
+          "group": "size"
+        },
+        "050": {
+          "value": "2",
           "comment": "pixels (px)",
           "group": "size"
         },
@@ -885,7 +885,7 @@
             },
             "overlay": {
               "lowEmphasis": {
-                "value": "rgba(204, 201, 198, 0.80)",
+                "value": "rgba(250, 249, 248, 0.60)",
                 "group": "color"
               },
               "highEmphasis": {
@@ -1012,15 +1012,15 @@
               },
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.red.050}",
-                  "group": "color"
-                },
-                "hover": {
                   "value": "{eds.color.red.100}",
                   "group": "color"
                 },
-                "active": {
+                "hover": {
                   "value": "{eds.color.red.150}",
+                  "group": "color"
+                },
+                "active": {
+                  "value": "{eds.color.red.200}",
                   "group": "color"
                 }
               },
@@ -1042,15 +1042,15 @@
             "favorable": {
               "lowEmphasis": {
                 "@": {
-                  "value": "{eds.color.green.050}",
-                  "group": "color"
-                },
-                "hover": {
                   "value": "{eds.color.green.100}",
                   "group": "color"
                 },
-                "active": {
+                "hover": {
                   "value": "{eds.color.green.150}",
+                  "group": "color"
+                },
+                "active": {
+                  "value": "{eds.color.green.200}",
                   "group": "color"
                 }
               },
@@ -1135,11 +1135,11 @@
                 "group": "color"
               },
               "lowEmphasis": {
-                "value": "{eds.color.neutral.100}",
+                "value": "{eds.color.neutral.050}",
                 "group": "color"
               },
               "mediumEmphasis": {
-                "value": "{eds.color.neutral.200}",
+                "value": "{eds.color.neutral.250}",
                 "group": "color"
               }
             },
@@ -1461,11 +1461,11 @@
             },
             "disabled": {
               "primary": {
-                "value": "{eds.color.neutral.250}",
+                "value": "{eds.color.neutral.200}",
                 "group": "color"
               },
               "secondary": {
-                "value": "{eds.color.neutral.250}",
+                "value": "{eds.color.neutral.200}",
                 "group": "color"
               }
             },
@@ -1629,11 +1629,11 @@
             },
             "disabled": {
               "primary": {
-                "value": "{eds.color.neutral.250}",
+                "value": "{eds.color.neutral.200}",
                 "group": "color"
               },
               "secondary": {
-                "value": "{eds.color.neutral.250}",
+                "value": "{eds.color.neutral.200}",
                 "group": "color"
               }
             },
