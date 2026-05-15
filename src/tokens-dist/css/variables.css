@@ -10,7 +10,7 @@
   --eds-theme-color-background-utility-interactive-no-emphasis: rgba(250, 249, 248, 0.00);
   --eds-theme-color-background-utility-default-no-emphasis: rgba(255, 255, 255, 0.00);
   --eds-theme-color-background-utility-overlay-high-emphasis: rgba(36, 36, 35, 0.80);
-  --eds-theme-color-background-utility-overlay-low-emphasis: rgba(204, 201, 198, 0.80);
+  --eds-theme-color-background-utility-overlay-low-emphasis: rgba(250, 249, 248, 0.60);
   --eds-z-index-bottom: -100;
   --eds-z-index-top: 99999;
   --eds-spacing-size-7-and-half: 60; /* Pixels (px) - can convert to Relative EMs (rem) */
@@ -244,8 +244,8 @@
   --eds-theme-color-text-utility-inverse-secondary: var(--eds-color-neutral-250);
   --eds-theme-color-text-utility-inverse-interactive-visited: var(--eds-color-white);
   --eds-theme-color-text-utility-inverse: var(--eds-color-white);
-  --eds-theme-color-text-utility-disabled-secondary: var(--eds-color-neutral-250);
-  --eds-theme-color-text-utility-disabled-primary: var(--eds-color-neutral-250);
+  --eds-theme-color-text-utility-disabled-secondary: var(--eds-color-neutral-200);
+  --eds-theme-color-text-utility-disabled-primary: var(--eds-color-neutral-200);
   --eds-theme-color-text-utility-informational-active: var(--eds-color-neutral-950);
   --eds-theme-color-text-utility-informational-hover: var(--eds-color-neutral-850);
   --eds-theme-color-text-utility-informational: var(--eds-color-neutral-750);
@@ -278,8 +278,8 @@
   --eds-theme-color-icon-utility-inverse-interactive-visited: var(--eds-color-white);
   --eds-theme-color-icon-utility-inverse-disabled: var(--eds-theme-color-text-utility-inverse-disabled);
   --eds-theme-color-icon-utility-inverse: var(--eds-color-white);
-  --eds-theme-color-icon-utility-disabled-secondary: var(--eds-color-neutral-250);
-  --eds-theme-color-icon-utility-disabled-primary: var(--eds-color-neutral-250);
+  --eds-theme-color-icon-utility-disabled-secondary: var(--eds-color-neutral-200);
+  --eds-theme-color-icon-utility-disabled-primary: var(--eds-color-neutral-200);
   --eds-theme-color-icon-utility-informational-active: var(--eds-color-green-750);
   --eds-theme-color-icon-utility-informational-hover: var(--eds-color-green-650);
   --eds-theme-color-icon-utility-informational: var(--eds-color-green-550);
@@ -340,8 +340,8 @@
   --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-white);
-  --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
-  --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-100);
+  --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-250);
+  --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-informational-high-emphasis-active: var(--eds-color-green-750);
   --eds-theme-color-background-utility-informational-high-emphasis-hover: var(--eds-color-green-650);
   --eds-theme-color-background-utility-informational-high-emphasis: var(--eds-color-green-550);
@@ -357,15 +357,15 @@
   --eds-theme-color-background-utility-favorable-high-emphasis-active: var(--eds-color-green-750);
   --eds-theme-color-background-utility-favorable-high-emphasis-hover: var(--eds-color-green-650);
   --eds-theme-color-background-utility-favorable-high-emphasis: var(--eds-color-green-550);
-  --eds-theme-color-background-utility-favorable-low-emphasis-active: var(--eds-color-green-150);
-  --eds-theme-color-background-utility-favorable-low-emphasis-hover: var(--eds-color-green-100);
-  --eds-theme-color-background-utility-favorable-low-emphasis: var(--eds-color-green-050);
+  --eds-theme-color-background-utility-favorable-low-emphasis-active: var(--eds-color-green-200);
+  --eds-theme-color-background-utility-favorable-low-emphasis-hover: var(--eds-color-green-150);
+  --eds-theme-color-background-utility-favorable-low-emphasis: var(--eds-color-green-100);
   --eds-theme-color-background-utility-critical-high-emphasis-active: var(--eds-color-red-750);
   --eds-theme-color-background-utility-critical-high-emphasis-hover: var(--eds-color-red-650);
   --eds-theme-color-background-utility-critical-high-emphasis: var(--eds-color-red-550);
-  --eds-theme-color-background-utility-critical-low-emphasis-active: var(--eds-color-red-150);
-  --eds-theme-color-background-utility-critical-low-emphasis-hover: var(--eds-color-red-100);
-  --eds-theme-color-background-utility-critical-low-emphasis: var(--eds-color-red-050);
+  --eds-theme-color-background-utility-critical-low-emphasis-active: var(--eds-color-red-200);
+  --eds-theme-color-background-utility-critical-low-emphasis-hover: var(--eds-color-red-150);
+  --eds-theme-color-background-utility-critical-low-emphasis: var(--eds-color-red-100);
   --eds-theme-color-background-utility-critical-no-emphasis-active: var(--eds-color-red-100);
   --eds-theme-color-background-utility-critical-no-emphasis-hover: var(--eds-color-red-050);
   --eds-theme-color-background-utility-interactive-high-emphasis-active: var(--eds-color-neutral-650);
