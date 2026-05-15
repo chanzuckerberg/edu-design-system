@@ -371,7 +371,7 @@
               "selected": "#FFFFFF"
             },
             "overlay": {
-              "lowEmphasis": "rgba(204, 201, 198, 0.80)",
+              "lowEmphasis": "rgba(250, 249, 248, 0.60)",
               "highEmphasis": "rgba(36, 36, 35, 0.80)"
             },
             "default": {
@@ -420,9 +420,9 @@
                 "active": "#F9DFDF"
               },
               "lowEmphasis": {
-                "@": "#FCF0F0",
-                "hover": "#F9DFDF",
-                "active": "#F6CBCB"
+                "@": "#F9DFDF",
+                "hover": "#F6CBCB",
+                "active": "#FCBDBD"
               },
               "highEmphasis": {
                 "@": "#C4352D",
@@ -432,9 +432,9 @@
             },
             "favorable": {
               "lowEmphasis": {
-                "@": "#E0F5EC",
-                "hover": "#C2ECD9",
-                "active": "#A1E1C4"
+                "@": "#C2ECD9",
+                "hover": "#A1E1C4",
+                "active": "#7ED6AD"
               },
               "highEmphasis": {
                 "@": "#177A4D",
@@ -468,8 +468,8 @@
             },
             "disabled": {
               "noEmphasis": "rgba(250, 249, 248, 0.00)",
-              "lowEmphasis": "#E6E2DE",
-              "mediumEmphasis": "#CCC9C6"
+              "lowEmphasis": "#F4F1EF",
+              "mediumEmphasis": "#BCB9B6"
             },
             "inverse": {
               "noEmphasis": {
@@ -593,8 +593,8 @@
               "active": "#0E442B"
             },
             "disabled": {
-              "primary": "#BCB9B6",
-              "secondary": "#BCB9B6"
+              "primary": "#CCC9C6",
+              "secondary": "#CCC9C6"
             },
             "inverse": {
               "@": "#FFFFFF",
@@ -659,8 +659,8 @@
               "active": "#0E0E0E"
             },
             "disabled": {
-              "primary": "#BCB9B6",
-              "secondary": "#BCB9B6"
+              "primary": "#CCC9C6",
+              "secondary": "#CCC9C6"
             },
             "inverse": {
               "@": "#FFFFFF",
