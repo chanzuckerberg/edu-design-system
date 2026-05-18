@@ -44,6 +44,17 @@ export const Default: Story = {
   },
 };
 
+export const DefaultWithTrailingContent: Story = {
+  args: {
+    children: 'Favorite',
+    leadingContent: (
+      <Icon name={'heart-filled'} purpose="decorative" size="24px" />
+    ),
+    trailingContent: '5',
+    subLabel: 'Save posts for later',
+  },
+};
+
 /**
  * Note: using `__type` list item b/c there is no icon to display. Other types preserve icon space for checkboxes.
  */
@@ -102,6 +113,19 @@ export const WithLeadingAndTrailingContent: Story = {
       <Icon name="document-blank" purpose="decorative" size="24px" />
     ),
     trailingContent: '5',
+  },
+};
+
+/**
+ * List items can also have trailing content. By default this is plain text, but can also function as a flexible slot.
+ */
+export const WithLeadingAndTrailingIcons: Story = {
+  args: {
+    children: 'Add comment',
+    leadingContent: (
+      <Icon name="document-blank" purpose="decorative" size="24px" />
+    ),
+    trailingContent: <Icon name="check" purpose="decorative" size="24px" />,
   },
 };
 
