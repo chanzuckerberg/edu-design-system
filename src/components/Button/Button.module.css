@@ -247,18 +247,18 @@
 }
 
 .button--tertiary.button--variant-neutral {
-  --button__fg: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+  --button__fg: light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary));
   --button__border: transparent;
   --button__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 
   &:hover {
-    --button__fg: var(--eds-theme-color-text-utility-default-secondary-hover);
+    --button__fg: light-dark(var(--eds-theme-color-text-utility-interactive-primary-hover), var(--eds-dark-theme-color-text-utility-interactive-primary-hover));
     --button__border: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-hover));
     --button__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
   }
 
   &:active {
-    --button__fg: light-dark(var(--eds-theme-color-text-utility-default-secondary-active), var(--eds-dark-theme-color-text-utility-default-secondary-active));
+    --button__fg: light-dark(var(--eds-theme-color-text-utility-interactive-primary-active), var(--eds-dark-theme-color-text-utility-interactive-primary-active));
     --button__border: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-active), var(--eds-dark-theme-color-background-utility-default-medium-emphasis-active));
     --button__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
   }
