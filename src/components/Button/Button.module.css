@@ -29,7 +29,7 @@
   width: 100%;
 
   .button--sm & {
-    /* Offset to better align text in small button */
+    /* Offset to better align text in button */
     transform: translateY(-1px);
     overflow: visible;
     gap: calc(var(--eds-spacing-size-half) * 1px);
@@ -37,6 +37,8 @@
 
   .button--md &,
   .button--lg & {
+    /* Offset to better align text in button */
+    transform: translateY(-1px);
     gap: calc(var(--eds-spacing-size-1) * 1px);
   }
 
