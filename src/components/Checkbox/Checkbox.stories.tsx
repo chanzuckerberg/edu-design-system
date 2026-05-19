@@ -12,8 +12,13 @@ const meta: Meta<typeof Checkbox> = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
+  },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1.1'],
+  tags: ['autodocs', 'version:2.2'],
 };
 
 export default meta;
