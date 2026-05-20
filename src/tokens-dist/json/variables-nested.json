@@ -601,7 +601,11 @@
               "disabled": "rgba(250, 249, 248, 0.50)",
               "interactive": {
                 "visited": "#FFFFFF"
-              }
+              },
+              "critical": "#FF6962",
+              "favorable": "#1DB470",
+              "warning": "#F6EE65",
+              "informational": "#FFFFFF"
             },
             "placeholder": "#6B6A64"
           },

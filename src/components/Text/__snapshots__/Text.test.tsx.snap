@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Text /> AppHeaderLabel story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <p
+    class="text text--appHeader-label"
+  >
+    Typography for 
+  </p>
+</div>
+`;
+
 exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"

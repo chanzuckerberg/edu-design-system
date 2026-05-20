@@ -275,6 +275,10 @@
   --eds-dark-theme-color-icon-app-header-secondary: var(--eds-color-neutral-550);
   --eds-dark-theme-color-icon-app-header-primary: var(--eds-color-neutral-750);
   --eds-dark-theme-color-icon-utility-placeholder: var(--eds-color-neutral-550);
+  --eds-dark-theme-color-icon-utility-inverse-informational: var(--eds-color-white);
+  --eds-dark-theme-color-icon-utility-inverse-warning: var(--eds-color-yellow-100);
+  --eds-dark-theme-color-icon-utility-inverse-favorable: var(--eds-color-green-350);
+  --eds-dark-theme-color-icon-utility-inverse-critical: var(--eds-color-red-350);
   --eds-dark-theme-color-icon-utility-inverse-interactive-visited: var(--eds-color-white);
   --eds-dark-theme-color-icon-utility-inverse-disabled: var(--eds-dark-theme-color-text-utility-inverse-disabled);
   --eds-dark-theme-color-icon-utility-inverse: var(--eds-color-white);
