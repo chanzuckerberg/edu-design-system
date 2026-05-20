@@ -303,6 +303,10 @@ export const EdsThemeColorIconUtilityInverse = '#FFFFFF';
 export const EdsThemeColorIconUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
 export const EdsThemeColorIconUtilityInverseInteractiveVisited = '#FFFFFF';
+export const EdsThemeColorIconUtilityInverseCritical = '#FF6962';
+export const EdsThemeColorIconUtilityInverseFavorable = '#1DB470';
+export const EdsThemeColorIconUtilityInverseWarning = '#F6EE65';
+export const EdsThemeColorIconUtilityInverseInformational = '#FFFFFF';
 export const EdsThemeColorIconUtilityPlaceholder = '#6B6A64';
 export const EdsThemeColorIconAppHeaderPrimary = '#3A3A37';
 export const EdsThemeColorIconAppHeaderSecondary = '#6B6A64';

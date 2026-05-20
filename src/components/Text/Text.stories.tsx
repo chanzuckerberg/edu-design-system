@@ -105,6 +105,13 @@ export const CodePresets: Story = {
   ),
 };
 
+export const AppHeaderLabel: Story = {
+  args: {
+    preset: 'appHeader-label',
+    children: 'Typography for ',
+  },
+};
+
 /**
  * If a design calls for a different font family to apply to a given preset, you can use a utility class or style to override the font family value.
  */
