@@ -1,8 +1,11 @@
 import {
   Menu as HeadlessMenu,
-  MenuButton as HeadlessMenuButton,
   MenuItem as HeadlessMenuItem,
   MenuItems as HeadlessMenuItems,
+  MenuButton as HeadlessMenuButton,
+  MenuSection as HeadlessMenuSection,
+  MenuHeading as HeadlessMenuHeading,
+  MenuSeparator as HeadlessMenuSeparator,
 } from '@headlessui/react';
 import type { AnchorProps } from '@headlessui/react/dist/internal/floating';
 
@@ -46,11 +49,13 @@ export type MenuButtonProps = {
   /**
    * Icon override for component. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'chevron-down'>;
+  icon?: Extract<IconName, 'chevron-down'>; // TODO(next-major): change to `leadingContent`
 };
 
+export type MenuSeparatorProps = ExtractProps<typeof HeadlessMenuSeparator>;
 export type MenuPlainButtonProps = ExtractProps<typeof HeadlessMenuButton>;
-
+export type MenuHeadingProps = ExtractProps<typeof HeadlessMenuHeading>;
+export type MenuSectionProps = ExtractProps<typeof HeadlessMenuSection>;
 export type MenuItemsProps = ExtractProps<typeof HeadlessMenuItems>;
 
 export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
@@ -77,8 +82,6 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
     target?: HTMLAttributeAnchorTarget;
   };
 
-// TODO: how to handle type for separator w/o using private API `__type`
-
 /**
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
@@ -91,6 +94,7 @@ export const Menu = ({ className, ...other }: MenuProps) => {
 
 /**
  * A styled button that when clicked, shows or hides the Options.
+ *
  * @see https://headlessui.com/react/menu#menu-button
  */
 const MenuButton = ({
@@ -117,10 +121,41 @@ const MenuButton = ({
 
 /**
  * A minimally styled button that when clicked, shows or hides the Options.
+ *
+ * @see https://headlessui.com/react/menu#menu-button
  */
-const MenuPlainButton = ({ className, ...other }: MenuPlainButtonProps) => {
-  return <HeadlessMenuButton className={className} {...other} />;
-};
+const MenuPlainButton = ({ className, ...other }: MenuPlainButtonProps) => (
+  <HeadlessMenuButton className={className} {...other} />
+);
+
+/**
+ * Divides a list of `Menu.Item` components into sections with proper accessibility semantics.
+ *
+ * @see https://headlessui.com/react/menu#menu-section
+ */
+const MenuSection = (props: MenuSectionProps) => (
+  <HeadlessMenuSection {...props} />
+);
+
+/**
+ * Separates two `Menu.Section` components, with proper accessibility semantics.
+ *
+ * @see https://headlessui.com/react/menu#menu-separator
+ */
+const MenuSeparator = (props: MenuSeparatorProps) => (
+  <HeadlessMenuSeparator __type="separator" as={PopoverListItem} />
+);
+
+/**
+ * Adds an accessible label to a `MenuSection`.
+ *
+ * @see https://headlessui.com/react/menu#menu-heading
+ */
+const MenuHeading = (props: MenuHeadingProps) => (
+  <HeadlessMenuHeading __type="label" as={PopoverListItem}>
+    {props.children as ReactNode}
+  </HeadlessMenuHeading>
+);
 
 /**
  * A list of actions that are revealed in the menu
@@ -216,13 +251,19 @@ const MenuItem = ({
   );
 };
 
-Menu.displayName = 'Menu';
-MenuButton.displayName = 'Menu.Button';
 MenuPlainButton.displayName = 'Menu.PlainButton';
+MenuSeparator.displayName = 'Menu.Separator';
+MenuSection.displayName = 'Menu.Section';
+MenuHeading.displayName = 'Menu.Heading';
+MenuButton.displayName = 'Menu.Button';
 MenuItems.displayName = 'Menu.Items';
 MenuItem.displayName = 'Menu.Item';
+Menu.displayName = 'Menu';
 
-Menu.Button = MenuButton;
 Menu.PlainButton = MenuPlainButton;
+Menu.Separator = MenuSeparator;
+Menu.Heading = MenuHeading;
+Menu.Section = MenuSection;
+Menu.Button = MenuButton;
 Menu.Items = MenuItems;
 Menu.Item = MenuItem;

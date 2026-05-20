@@ -207,6 +207,7 @@ export type NavMenuButton = NavButton & {
   leadingContent?: IconName | 'avatar';
   trailingContent?: IconName;
   user?: UserData;
+  shouldClose?: boolean;
 };
 
 /**
@@ -216,4 +217,5 @@ export type NavMenuLink = NavLink & {
   leadingContent?: IconName | 'avatar';
   trailingContent?: IconName;
   user?: UserData;
+  shouldClose?: boolean;
 };

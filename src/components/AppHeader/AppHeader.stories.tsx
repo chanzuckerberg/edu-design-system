@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.5.1'],
+  tags: ['autodocs', 'version:1.6.0'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -239,11 +239,13 @@ export const DefaultWithNavMenus: Story = {
                 name: 'Lorem Ipsum, Inc.',
                 user: { fullName: 'Lorem Ipsum' },
                 trailingContent: 'check',
+                shouldClose: false,
               },
               {
                 type: 'button',
                 leadingContent: 'avatar',
                 name: 'Unknown Organization',
+                shouldClose: false,
               },
               {
                 type: 'button',
@@ -253,6 +255,10 @@ export const DefaultWithNavMenus: Story = {
               {
                 type: 'separator',
                 name: 'line-0',
+              },
+              {
+                type: 'label',
+                name: 'test',
               },
               {
                 type: 'button',
