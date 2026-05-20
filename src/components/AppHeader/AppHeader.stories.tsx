@@ -257,10 +257,6 @@ export const DefaultWithNavMenus: Story = {
                 name: 'line-0',
               },
               {
-                type: 'label',
-                name: 'test',
-              },
-              {
                 type: 'button',
                 name: 'Settings',
               },
