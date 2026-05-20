@@ -143,7 +143,7 @@ const MenuSection = (props: MenuSectionProps) => (
  * @see https://headlessui.com/react/menu#menu-separator
  */
 const MenuSeparator = (props: MenuSeparatorProps) => (
-  <HeadlessMenuSeparator __type="separator" as={PopoverListItem} />
+  <HeadlessMenuSeparator {...props} __type="separator" as={PopoverListItem} />
 );
 
 /**
@@ -152,9 +152,7 @@ const MenuSeparator = (props: MenuSeparatorProps) => (
  * @see https://headlessui.com/react/menu#menu-heading
  */
 const MenuHeading = (props: MenuHeadingProps) => (
-  <HeadlessMenuHeading __type="label" as={PopoverListItem}>
-    {props.children as ReactNode}
-  </HeadlessMenuHeading>
+  <HeadlessMenuHeading {...props} __type="label" as={PopoverListItem} />
 );
 
 /**
