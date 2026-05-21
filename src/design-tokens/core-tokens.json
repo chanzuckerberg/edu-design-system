@@ -893,6 +893,12 @@
                 "group": "color"
               }
             },
+            "object": {
+              "selected": {
+                "value": "{eds.color.green.050}",
+                "group": "color"
+              }
+            },
             "default": {
               "noEmphasis": {
                 "@": {

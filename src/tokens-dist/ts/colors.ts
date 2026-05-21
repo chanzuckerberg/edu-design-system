@@ -149,6 +149,7 @@ export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
   'rgba(204, 201, 198, 0.80)';
 export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis =
   'rgba(36, 36, 35, 0.80)';
+export const EdsThemeColorBackgroundUtilityObjectSelected = '#E0F5EC';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasis =
   'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasisHover = '#F4F1EF';
