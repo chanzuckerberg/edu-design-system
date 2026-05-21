@@ -28,7 +28,7 @@ export default {
       control: 'text',
     },
   },
-  tags: ['autodocs', 'version:3.0'],
+  tags: ['autodocs', 'version:3.0.1'],
 } as Meta<typeof AppNotification>;
 
 type Story = StoryObj<typeof AppNotification>;
