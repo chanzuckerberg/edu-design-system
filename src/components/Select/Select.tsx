@@ -18,13 +18,15 @@ import React, {
 
 import type { ExtractProps } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
+
+import Checkbox from '../Checkbox';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
-
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
+import Radio from '../Radio';
 import Text from '../Text';
 
 import styles from './Select.module.css';
@@ -164,6 +166,7 @@ type SelectButtonWrapperProps = {
 type SelectContextType = {
   optionsClassName?: string;
   status?: SelectButtonWrapperProps['status'];
+  multiple?: boolean; // pulls from HeadlessUI
 };
 
 let showNameWarning = true;
@@ -232,9 +235,15 @@ export function Select({
     ...other,
   };
 
+  const context: SelectContextType = {
+    optionsClassName,
+    status,
+    multiple: other.multiple,
+  };
+
   if (typeof children === 'function') {
     return (
-      <SelectContext.Provider value={{ optionsClassName, status }}>
+      <SelectContext.Provider value={context}>
         <Listbox
           {...sharedProps}
           // We prefer to pass the aria-label in via an invisible SelectLabel, but we can't
@@ -249,7 +258,7 @@ export function Select({
   }
 
   return (
-    <SelectContext.Provider value={{ optionsClassName, status }}>
+    <SelectContext.Provider value={context}>
       <Listbox
         {...sharedProps}
         onChange={(changedValue) => {
@@ -429,6 +438,7 @@ const SelectOption = function (props: SelectOptionProps) {
   } = props;
 
   const optionItemClassName = clsx(optionClassName, styles['select__option']);
+  const { multiple } = useContext(SelectContext);
 
   return (
     <ListboxOption
@@ -445,9 +455,19 @@ const SelectOption = function (props: SelectOptionProps) {
               <PopoverListItem
                 __type="selectitem"
                 className={optionItemClassName}
-                icon={selected ? 'check' : undefined}
                 isDisabled={disabled}
                 isFocused={focus}
+                leadingContent={
+                  multiple ? (
+                    <Checkbox
+                      aria-label="checkbox"
+                      checked={selected}
+                      readOnly
+                    />
+                  ) : (
+                    <Radio aria-label="radio" checked={selected} readOnly />
+                  )
+                }
                 subLabel={optionSubLabel}
               >
                 <span className={styles['select__option-text']}>
