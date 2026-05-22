@@ -5534,9 +5534,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                     id=":r0:"
                     type="checkbox"
                   />
-                  <div
-                    class="checkbox__labels"
-                  />
                 </div>
               </span>
             </div>
@@ -5685,9 +5682,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   id=":r1:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -5797,9 +5791,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":r2:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -5911,9 +5902,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   id=":r3:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -6023,9 +6011,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":r4:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -6137,9 +6122,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   id=":r5:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -6249,9 +6231,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":r6:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -6363,9 +6342,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   id=":r7:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -6475,9 +6451,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":r8:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -6589,9 +6562,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   id=":r9:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -6701,9 +6671,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":ra:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -6815,9 +6782,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   id=":rb:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -6927,9 +6891,6 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rc:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -10221,9 +10182,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                     id=":rd:"
                     type="checkbox"
                   />
-                  <div
-                    class="checkbox__labels"
-                  />
                 </div>
               </span>
             </div>
@@ -10372,9 +10330,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   id=":re:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -10484,9 +10439,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rf:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -10598,9 +10550,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   id=":rg:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -10710,9 +10659,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rh:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -10824,9 +10770,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   id=":ri:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -10936,9 +10879,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rj:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -11050,9 +10990,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   id=":rk:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -11162,9 +11099,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rl:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -11276,9 +11210,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   id=":rm:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -11388,9 +11319,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rn:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
@@ -11502,9 +11430,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   id=":ro:"
                   type="checkbox"
                 />
-                <div
-                  class="checkbox__labels"
-                />
               </div>
             </div>
           </div>
@@ -11614,9 +11539,6 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                   class="checkbox__input"
                   id=":rp:"
                   type="checkbox"
-                />
-                <div
-                  class="checkbox__labels"
                 />
               </div>
             </div>
