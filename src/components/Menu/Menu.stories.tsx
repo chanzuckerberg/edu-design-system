@@ -39,52 +39,62 @@ export default {
       </div>
     ),
   ],
-  tags: ['autodocs', 'version:3.2.0'],
+  tags: ['autodocs', 'version:3.3.0'],
 } as Meta<MenuProps>;
 
 type Story = StoryObj<MenuProps>;
 
 const menuItems = (
   <Menu.Items data-testid="menu-content">
-    <Menu.Item
-      leadingContent={
-        <Icon name="heart-filled" purpose="decorative" size="24px" />
-      }
-      trailingContent="5"
-    >
-      Favorite
-    </Menu.Item>
-    <Menu.Item
-      leadingContent={<Icon name="ballot" purpose="decorative" size="24px" />}
-      subLabel="Everyone can see comments"
-    >
-      Add comment
-    </Menu.Item>
-    <Menu.Item
-      leadingContent={<Icon name="lock" purpose="decorative" size="24px" />}
-    >
-      Protect with password
-    </Menu.Item>
-    <Menu.Item __type="separator" />
-    <Menu.Item
-      leadingContent={<Icon name="print" purpose="decorative" size="24px" />}
-    >
-      Print
-    </Menu.Item>
-    <Menu.Item
-      isDestructiveAction
-      leadingContent={<Icon name="trash" purpose="decorative" size="24px" />}
-    >
-      Destructive
-    </Menu.Item>
-    <Menu.Item __type="separator" />
-    <Menu.Item __type="label">Account</Menu.Item>
-    <Menu.Item leadingContent={<Avatar size="sm" />}>Switch account</Menu.Item>
-    <Menu.Item
-      leadingContent={<Icon name="settings" purpose="decorative" size="24px" />}
-    >
-      Settings
-    </Menu.Item>
+    <Menu.Section>
+      <Menu.Item
+        leadingContent={
+          <Icon name="heart-filled" purpose="decorative" size="24px" />
+        }
+        trailingContent="5"
+      >
+        Favorite
+      </Menu.Item>
+      <Menu.Item
+        leadingContent={<Icon name="ballot" purpose="decorative" size="24px" />}
+        subLabel="Everyone can see comments"
+      >
+        Add comment
+      </Menu.Item>
+      <Menu.Item
+        leadingContent={<Icon name="lock" purpose="decorative" size="24px" />}
+      >
+        Protect with password
+      </Menu.Item>
+    </Menu.Section>
+    <Menu.Separator />
+    <Menu.Section>
+      <Menu.Item
+        leadingContent={<Icon name="print" purpose="decorative" size="24px" />}
+      >
+        Print
+      </Menu.Item>
+      <Menu.Item
+        isDestructiveAction
+        leadingContent={<Icon name="trash" purpose="decorative" size="24px" />}
+      >
+        Destructive
+      </Menu.Item>
+    </Menu.Section>
+    <Menu.Separator />
+    <Menu.Section>
+      <Menu.Heading>Account</Menu.Heading>
+      <Menu.Item leadingContent={<Avatar size="sm" />}>
+        Switch account
+      </Menu.Item>
+      <Menu.Item
+        leadingContent={
+          <Icon name="settings" purpose="decorative" size="24px" />
+        }
+      >
+        Settings
+      </Menu.Item>
+    </Menu.Section>
     <Menu.Item __type="caption">© 2026 Your Company Here, Inc.</Menu.Item>
   </Menu.Items>
 );
