@@ -520,6 +520,7 @@ export const Multiple: StoryObj = {
       skip: true,
     },
   },
+  play: openMenu,
 };
 
 /**
