@@ -460,12 +460,22 @@ const SelectOption = function (props: SelectOptionProps) {
                 leadingContent={
                   multiple ? (
                     <Checkbox
+                      aria-hidden="true"
                       aria-label="checkbox"
                       checked={selected}
+                      // @ts-expect-error inert properly supported in React 19
+                      inert="true"
                       readOnly
                     />
                   ) : (
-                    <Radio aria-label="radio" checked={selected} readOnly />
+                    <Radio
+                      aria-hidden="true"
+                      aria-label="radio"
+                      checked={selected}
+                      // @ts-expect-error inert properly supported in React 19
+                      inert="true"
+                      readOnly
+                    />
                   )
                 }
                 subLabel={optionSubLabel}
