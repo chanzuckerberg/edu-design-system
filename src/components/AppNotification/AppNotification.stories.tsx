@@ -28,7 +28,7 @@ export default {
       control: 'text',
     },
   },
-  tags: ['autodocs', 'version:3.0'],
+  tags: ['autodocs', 'version:3.0.1'],
 } as Meta<typeof AppNotification>;
 
 type Story = StoryObj<typeof AppNotification>;
@@ -37,10 +37,13 @@ export const Default: Story = {
   args: {},
 };
 
+/**
+ * `AppNotification`s can contain children that represent actions related to the notification.
+ * These should be composed in a `ButtonGroup` component, and put the primary `Button` / CTA on the left-hand side.
+ */
 export const WithControls: Story = {
   render: (args) => (
     <AppNotification {...args}>
-      {' '}
       <ButtonGroup buttonLayout="horizontal" className="!flex-row">
         <Button
           rank="secondary"
@@ -59,6 +62,9 @@ export const WithControls: Story = {
   ),
 };
 
+/**
+ * Subtitles in `AppNotification` can be formatted and also contain links. While light formatting is allowed, contents of subTitle should remain as prose.
+ */
 export const WithLinkInSubtitle: Story = {
   args: {
     subTitle: (
@@ -73,13 +79,15 @@ export const WithLinkInSubtitle: Story = {
   },
 };
 
+/**
+ * `AppNotification` components can have an inverse variant
+ */
 export const InverseVariant: Story = {
   args: {
     variant: 'inverse',
   },
   render: (args) => (
     <AppNotification {...args}>
-      {' '}
       <ButtonGroup buttonLayout="horizontal" className="!flex-row">
         <Button
           rank="secondary"
@@ -98,6 +106,9 @@ export const InverseVariant: Story = {
   ),
 };
 
+/**
+ * When dismissed, `AppNotification` can trigger an action on dismissal.
+ */
 export const WithDismissAndControls: Story = {
   args: {
     ...WithControls.args,
