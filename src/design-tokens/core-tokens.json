@@ -774,7 +774,7 @@
               "group": "color"
             },
             "active": {
-              "value": "{eds.color.neutral.100}",
+              "value": "{eds.color.neutral.050}",
               "group": "color"
             }
           },
@@ -1405,29 +1405,29 @@
             },
             "critical": {
               "@": {
-                "value": "{eds.color.red.550}",
-                "group": "color"
-              },
-              "hover": {
                 "value": "{eds.color.red.650}",
                 "group": "color"
               },
-              "active": {
+              "hover": {
                 "value": "{eds.color.red.750}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.red.850}",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
-                "value": "{eds.color.green.550}",
-                "group": "color"
-              },
-              "hover": {
                 "value": "{eds.color.green.650}",
                 "group": "color"
               },
-              "active": {
+              "hover": {
                 "value": "{eds.color.green.750}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.green.850}",
                 "group": "color"
               }
             },
@@ -1573,29 +1573,29 @@
             },
             "critical": {
               "@": {
-                "value": "{eds.color.red.550}",
-                "group": "color"
-              },
-              "hover": {
                 "value": "{eds.color.red.650}",
                 "group": "color"
               },
-              "active": {
+              "hover": {
                 "value": "{eds.color.red.750}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.red.850}",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
-                "value": "{eds.color.green.550}",
-                "group": "color"
-              },
-              "hover": {
                 "value": "{eds.color.green.650}",
                 "group": "color"
               },
-              "active": {
+              "hover": {
                 "value": "{eds.color.green.750}",
+                "group": "color"
+              },
+              "active": {
+                "value": "{eds.color.green.850}",
                 "group": "color"
               }
             },

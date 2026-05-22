@@ -329,7 +329,7 @@
           "appHeader": {
             "@": "#FAF9F8",
             "hover": "#F4F1EF",
-            "active": "#E6E2DE"
+            "active": "#F4F1EF"
           },
           "checkbox": {
             "@": "#19955D",
@@ -573,14 +573,14 @@
               }
             },
             "critical": {
-              "@": "#C4352D",
-              "hover": "#9D1F18",
-              "active": "#760903"
+              "@": "#9D1F18",
+              "hover": "#760903",
+              "active": "#4A0703"
             },
             "favorable": {
-              "@": "#177A4D",
-              "hover": "#125B3A",
-              "active": "#0E442B"
+              "@": "#125B3A",
+              "hover": "#0E442B",
+              "active": "#082719"
             },
             "warning": {
               "@": "#7E6701",
@@ -639,14 +639,14 @@
               }
             },
             "critical": {
-              "@": "#C4352D",
-              "hover": "#9D1F18",
-              "active": "#760903"
+              "@": "#9D1F18",
+              "hover": "#760903",
+              "active": "#4A0703"
             },
             "favorable": {
-              "@": "#177A4D",
-              "hover": "#125B3A",
-              "active": "#0E442B"
+              "@": "#125B3A",
+              "hover": "#0E442B",
+              "active": "#082719"
             },
             "warning": {
               "@": "#7E6701",
