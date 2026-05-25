@@ -8,23 +8,42 @@
  * Popover container
  */
 .popover-container {
-  --popover-container-width: var(--button-width, auto);
+  --popover-container__width: var(--button-width, auto);
+
   border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
   overflow: auto;
   padding: calc(var(--eds-spacing-size-half) * 1px) 0;
   z-index: 1150;
 
   box-shadow: var(--eds-box-shadow-md);
-  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+  background-color: var(--popover-container__bg, light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container)));
 
   /* set the min width using the CSS variable attached by HeadlessUI (default to auto) */
-  min-width: var(--popover-container-width);
+  min-width: var(--popover-container__width);
 
   &:focus-visible {
     outline: none;
   }
+
+  animation: calc(var(--eds-anim-fade-quick) * 1s) ease-out running forwards 1 fade-in;
+  transform-origin: top center;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
+@keyframes fade-in {
+  0% {
+    transform: translateY(-2px) scale(1, 0.98);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .popover-container>*[role=group]+*[role=group] {
   /* create dividers by looking for groups under the component that wrap using the "group" role */
   border-top: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
