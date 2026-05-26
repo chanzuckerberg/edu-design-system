@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 9
+  version: 10
   cacheKey: 10
 
 "@aashutoshrathi/word-wrap@npm:^1.2.3":
@@ -2691,8 +2691,8 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/jsonfile": "npm:^6.1.4"
     "@types/lodash": "npm:^4.17.24"
-    "@types/node": "npm:^25.8.0"
-    "@types/react": "npm:^18.3.28"
+    "@types/node": "npm:^25.9.1"
+    "@types/react": "npm:^18.3.29"
     "@types/react-dom": "npm:^18.3.7"
     "@types/yargs": "npm:^17.0.35"
     axe-core: "npm:4.11.4"
@@ -2720,7 +2720,7 @@ __metadata:
     lodash: "npm:^4.18.1"
     ora: "npm:5.4.1"
     plop: "npm:^4.0.5"
-    postcss: "npm:^8.5.14"
+    postcss: "npm:^8.5.15"
     postcss-cli: "npm:^11.0.1"
     postcss-import: "npm:^16.1.1"
     postcss-loader: "npm:^8.2.1"
@@ -2743,7 +2743,7 @@ __metadata:
     stylelint-config-recommended: "npm:^17.0.0"
     tailwindcss: "npm:^3.4.19"
     ts-dedent: "npm:^2.2.0"
-    ts-jest: "npm:^29.4.9"
+    ts-jest: "npm:^29.4.11"
     ts-morph: "npm:^27.0.2"
     typescript: "npm:^5.9.3"
     yargs: "npm:^17.7.2"
@@ -5957,7 +5957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.8.0":
+"@types/node@npm:^25.9.1":
   version: 25.9.1
   resolution: "@types/node@npm:25.9.1"
   dependencies:
@@ -6003,13 +6003,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.3.28":
-  version: 18.3.28
-  resolution: "@types/react@npm:18.3.28"
+"@types/react@npm:^18.3.29":
+  version: 18.3.29
+  resolution: "@types/react@npm:18.3.29"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.2.2"
-  checksum: 10/6db7bb7f19957ee9f530baa7d143527f8befedad1585b064eb80777be0d84621157de75aba4f499ff429b10c5ef0c7d13e89be6bca3296ef71c80472894ff0eb
+  checksum: 10/1630416dbca8097bc56bb2f7e51208a7d696ed704c58bb3f0470eb982852f1af6d95d5c658eec51d7a5adae6587679d7d81b531b676dfcb405164e32feee6b4b
   languageName: node
   linkType: hard
 
@@ -15242,6 +15242,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.12":
+  version: 3.3.12
+  resolution: "nanoid@npm:3.3.12"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10/6eec280694e2088d18fb802b1e3bfc4578e27b665b7ecfbe36c7356612fea2f814277056e671e2a1529dff551588a652efdc0bfa39f8a3185bc2247be311872e
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.7":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
@@ -16916,14 +16925,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.14":
-  version: 8.5.14
-  resolution: "postcss@npm:8.5.14"
+"postcss@npm:^8.5.15":
+  version: 8.5.15
+  resolution: "postcss@npm:8.5.15"
   dependencies:
-    nanoid: "npm:^3.3.11"
+    nanoid: "npm:^3.3.12"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10/2e3f4dea69692918fe9df5402beb0e54df84499995a094f2fbf63d1a9e38bc1b7a42854df47f09e02593213e01a5eb0627b1d1bd6d1b0ea90767b2e072f7167c
+  checksum: 10/d02ad19eb1e0fa53a1229ee6d53807eb88f903f2b9a8cac66993367f3ac7dd3b97238c783a54ccbf4145f82f6ca9a5cbd58f089846285d759c8a3259fbea8318
   languageName: node
   linkType: hard
 
@@ -18229,7 +18238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.5.2, semver@npm:^7.7.4":
+"semver@npm:^7.5.2":
   version: 7.7.4
   resolution: "semver@npm:7.7.4"
   bin:
@@ -18262,6 +18271,15 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10/8dbc3168e057a38fc322af909c7f5617483c50caddba135439ff09a754b20bdd6482a5123ff543dad4affa488ecf46ec5fb56d61312ad20bb140199b88dfaea9
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.8.0":
+  version: 7.8.1
+  resolution: "semver@npm:7.8.1"
+  bin:
+    semver: bin/semver.js
+  checksum: 10/3244f6c4cb3f8126fea0426d353829ed4967e41e1f4696337c6fdcad87426466fe2badaf49d7dc85849acfc496ea0599432a4aecc33802d2d774e723acfa30e6
   languageName: node
   linkType: hard
 
@@ -19632,9 +19650,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^29.4.9":
-  version: 29.4.9
-  resolution: "ts-jest@npm:29.4.9"
+"ts-jest@npm:^29.4.11":
+  version: 29.4.11
+  resolution: "ts-jest@npm:29.4.11"
   dependencies:
     bs-logger: "npm:^0.2.6"
     fast-json-stable-stringify: "npm:^2.1.0"
@@ -19642,7 +19660,7 @@ __metadata:
     json5: "npm:^2.2.3"
     lodash.memoize: "npm:^4.1.2"
     make-error: "npm:^1.3.6"
-    semver: "npm:^7.7.4"
+    semver: "npm:^7.8.0"
     type-fest: "npm:^4.41.0"
     yargs-parser: "npm:^21.1.1"
   peerDependencies:
@@ -19668,7 +19686,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 10/f5e81b1e13fff08da5b92d5a72f984f3393f40df73a1ae54473a780436b95dddb1452c78256e6d70a701c09ea427449657a5fbb3d142dc7e7a82eb192e80c3db
+  checksum: 10/8a76800cac1c102c789429a82655adde1d540d7ff025fc888006f4f458afe07ca4d3f73622a10a604edea06aa12c298605cd1a208a6380c0e3d591a3daed8af6
   languageName: node
   linkType: hard
 
