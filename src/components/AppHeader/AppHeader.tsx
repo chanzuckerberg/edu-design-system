@@ -19,12 +19,13 @@ import type {
   NavLink,
   NavMenuButton,
   NavMenuLink,
+  UserData,
 } from '../../util/utility-types';
 
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Hr from '../Hr';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';
 import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
@@ -147,11 +148,13 @@ type AppHeaderButtonProps = NavButton &
      * Handle the click event for any given button in the header
      */
     onButtonClick?: AppHeaderEventHandler;
+    // Design API
     /**
      * Whether it is appearing in a vertical orientation (like in a drawer)
      */
     isVertical?: boolean;
-    // Design API
+    leadingContent?: IconName | 'avatar';
+    user?: UserData;
   };
 
 type AppHeaderDrawerProps = {
@@ -461,12 +464,25 @@ const AppHeaderNavGroup = ({
                 <Menu>
                   {({ close }) => (
                     <>
+                      {/* Consolidate handling of <Menu> into one function with each type handled separatetly */}
                       <Menu.PlainButton as={React.Fragment}>
                         <AppHeaderButton
-                          icon={navItem.icon}
-                          iconLayout={navItem.iconLayout}
+                          iconLayout={
+                            navItem.type === 'menu' &&
+                            navItem.leadingContent === 'avatar'
+                              ? 'left'
+                              : navItem.iconLayout
+                          }
+                          leadingContent={
+                            navItem.type === 'menu'
+                              ? navItem.leadingContent
+                              : undefined
+                          }
                           name={navItem.name}
                           type="button"
+                          user={
+                            navItem.type === 'menu' ? navItem.user : undefined
+                          }
                         >
                           {navItem.name}
                         </AppHeaderButton>
@@ -643,9 +659,11 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
       icon,
       iconLayout = 'none',
       isVertical,
+      leadingContent,
       name,
       type,
       meta, // pulling out `meta` not to be spread on to other components
+      user,
       ...other
     },
     ref,
@@ -674,6 +692,9 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
           )}
           {icon && iconLayout && (
             <Icon name={icon} purpose="decorative" size="24px" />
+          )}
+          {!icon && leadingContent === 'avatar' && user && (
+            <Avatar size="sm" user={user} />
           )}
         </span>
       </button>
@@ -823,10 +844,16 @@ const AppHeaderDrawerContent = ({
                           <AppHeaderButton
                             className={styles['app-header__menu-trigger']}
                             icon={navItem.icon}
-                            iconLayout={navItem.iconLayout}
+                            iconLayout={
+                              navItem.leadingContent === 'avatar'
+                                ? 'left'
+                                : navItem.iconLayout
+                            }
                             isVertical
+                            leadingContent={navItem.leadingContent}
                             name={navItem.name}
                             type="button"
+                            user={navItem.user}
                           >
                             {navItem.name}
                             {navItem.type === 'menu' && navItem.subLabel && (
