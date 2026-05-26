@@ -14,6 +14,7 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
+    // Using this motion preference for components where they trigger animations on mount
     chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
     layout: 'fullscreen',
   },
