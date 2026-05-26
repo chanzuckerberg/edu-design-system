@@ -75,21 +75,23 @@
   position: relative;
   overflow: hidden;
 
-  /** 
-  * This transparent border is for Window High Contrast Mode, which removes all
-  * background colors but makes borders 100% opacity black. Without this, the
-  * modal would have no clear boundary. 
-  */
-  border: 1px solid var(--modal-content__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
+  /* mobile-first: no border or box-shadow */
+  border: none;
+  box-shadow: none;
 
   display: flex;
   flex-direction: column;
 
   background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
-  box-shadow: var(--eds-box-shadow-lg);
 
   transition: transform calc(var(--eds-anim-fade-quick) * 1s) ease-out;
   transform: scale(0.95);
+
+  /* add border and box shadow above smallest breakpoint */
+  @media all and (min-width: $eds-bp-sm) {
+    border: 1px solid var(--modal-content__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
+    box-shadow: var(--eds-box-shadow-lg);    
+  }
 }
 
 .modal__content--is-open {
