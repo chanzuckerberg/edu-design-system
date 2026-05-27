@@ -160,6 +160,10 @@ export type NavSeparator = NavItem & {
 export type NavMenu = NavItem & {
   type: 'menu';
   /**
+   * Content to position in the leading position of the menu item. Use in place of `icon`
+   */
+  leadingContent?: IconName | 'avatar';
+  /**
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
   navItems: (
@@ -173,6 +177,10 @@ export type NavMenu = NavItem & {
    * Additional information about the named nav item
    */
   subLabel?: string;
+  /**
+   * Data to associate with the nav item of type `menu` ONLY when `leadingContent` is set to `avatar`.
+   */
+  user?: UserData;
 };
 
 /**

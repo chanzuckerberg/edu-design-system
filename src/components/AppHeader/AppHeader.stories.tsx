@@ -21,7 +21,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.6.0'],
+  tags: ['autodocs', 'version:1.6.1'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -229,8 +229,8 @@ export const DefaultWithNavMenus: Story = {
           {
             name: 'Profile',
             type: 'menu',
-            icon: 'person-encircled',
-            iconLayout: 'left',
+            leadingContent: 'avatar',
+            user: { fullName: 'Lorem Ipsum' },
             subLabel: 'Lorem Ipsum, Inc.',
             navItems: [
               {
