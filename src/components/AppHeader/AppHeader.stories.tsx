@@ -14,7 +14,7 @@ export default {
   parameters: {
     chromatic: {
       // Using this motion preference for components where they trigger animations on mount
-      prefersReducedMmotion: 'reduce',
+      prefersReducedMotion: 'reduce',
       delay: 500,
       viewports: [
         chromaticViewports.googlePixel2,

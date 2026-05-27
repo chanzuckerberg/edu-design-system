@@ -17,7 +17,7 @@ export default {
   parameters: {
     layout: 'centered',
     // Using this motion preference for components where they trigger animations on mount
-    chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
+    chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
   },
   argTypes: {
     children: {

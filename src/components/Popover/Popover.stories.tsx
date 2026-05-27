@@ -17,7 +17,7 @@ export default {
       disableSnapshot: true,
     },
     // Using this motion preference for components where they trigger animations on mount
-    // chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
+    // chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
   },
   args: {
     children: (
