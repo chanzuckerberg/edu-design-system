@@ -464,7 +464,7 @@ const AppHeaderNavGroup = ({
                 <Menu>
                   {({ close }) => (
                     <>
-                      {/* Consolidate handling of <Menu> into one function with each type handled separatetly */}
+                      {/* Consolidate handling of <Menu> into one function with each type handled separately */}
                       <Menu.PlainButton as={React.Fragment}>
                         <AppHeaderButton
                           iconLayout={
