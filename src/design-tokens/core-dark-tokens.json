@@ -894,6 +894,12 @@
                   "group": "color"
                 }
               },
+              "object": {
+                "selected": {
+                  "value": "{eds.color.green.050}",
+                  "group": "color"
+                }
+              },
               "default": {
                 "noEmphasis": {
                   "@": {
@@ -1484,6 +1490,22 @@
                     "value": "{eds.color.white}",
                     "group": "color"
                   }
+                },
+                "critical": {
+                  "value": "{eds.color.red.350}",
+                  "group": "color"
+                },
+                "favorable": {
+                  "value": "{eds.color.green.350}",
+                  "group": "color"
+                },
+                "warning": {
+                  "value": "{eds.color.yellow.100}",
+                  "group": "color"
+                },
+                "informational": {
+                  "value": "{eds.color.white}",
+                  "group": "color"
                 }
               },
               "placeholder": {

@@ -374,6 +374,9 @@
               "lowEmphasis": "rgba(204, 201, 198, 0.80)",
               "highEmphasis": "rgba(36, 36, 35, 0.80)"
             },
+            "object": {
+              "selected": "#E0F5EC"
+            },
             "default": {
               "noEmphasis": {
                 "@": "rgba(255, 255, 255, 0.00)",
@@ -601,7 +604,11 @@
               "disabled": "rgba(250, 249, 248, 0.50)",
               "interactive": {
                 "visited": "#FFFFFF"
-              }
+              },
+              "critical": "#FF6962",
+              "favorable": "#1DB470",
+              "warning": "#F6EE65",
+              "informational": "#FFFFFF"
             },
             "placeholder": "#6B6A64"
           },

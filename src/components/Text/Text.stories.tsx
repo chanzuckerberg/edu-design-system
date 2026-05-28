@@ -106,6 +106,17 @@ export const CodePresets: Story = {
 };
 
 /**
+ * Some components include their own typography presets. These should only be used within the
+ * component. If a preset has a name matching a component, do not use in custom components.
+ */
+export const AppHeaderLabel: Story = {
+  args: {
+    preset: 'appHeader-label',
+    children: 'Typography for AppHeader component',
+  },
+};
+
+/**
  * If a design calls for a different font family to apply to a given preset, you can use a utility class or style to override the font family value.
  */
 export const OverridingFontFamily: Story = {
