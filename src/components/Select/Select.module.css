@@ -61,6 +61,9 @@
   align-items: center;
   gap: calc(var(--eds-spacing-size-1) * 1px);
 
+  /* add additional alignment space toward top for the current fonts in use */
+  transform: translateY(-1px);
+
   cursor: pointer;
 
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
