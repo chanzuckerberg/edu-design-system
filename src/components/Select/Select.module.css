@@ -53,7 +53,7 @@
   width: 100%;
   padding: calc(var(--eds-spacing-size-1-and-half) * 1px);
 
-  border: 1px solid;
+  border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   display: flex;
@@ -135,6 +135,10 @@
   color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
   border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
   background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
+}
+
+.select-button:hover {
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis-hover), var(--eds-dark-theme-color-border-utility-default-low-emphasis-hover))
 }
 
 .select-button:focus-visible {
