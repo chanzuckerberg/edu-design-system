@@ -86,6 +86,7 @@ type ModalContentProps = {
    * **Default is `"fixed"`**.
    */
   height?: 'fixed' | 'auto' | 'max' | 'dynamic';
+  open?: boolean;
   /**
    * Emphasis used on the backgound overlay (behind the modal)
    *
@@ -240,6 +241,7 @@ const ModalContent = (props: ModalContentProps) => {
     className,
     height = 'fixed',
     hideCloseButton = false,
+    open,
     onClose,
     size = 'lg',
     ...other
@@ -249,6 +251,7 @@ const ModalContent = (props: ModalContentProps) => {
     styles['modal__content'],
     height && styles[`modal__content--height-${height}`],
     size && styles[`modal__content--${size}`],
+    open && styles[`modal__content--is-open`],
     className,
   );
 
@@ -341,7 +344,7 @@ export const Modal = (props: ModalProps) => {
           )}
         />
         <DialogPanel className={styles['modal__panel']}>
-          <ModalContent onClose={onClose} {...rest} />
+          <ModalContent onClose={onClose} open={open} {...rest} />
         </DialogPanel>
       </Dialog>
     </Transition>
