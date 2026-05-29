@@ -2728,7 +2728,7 @@ __metadata:
     postcss-nested: "npm:^7.0.2"
     postcss-simple-vars: "npm:^7.0.1"
     prettier: "npm:^3.8.3"
-    prettier-plugin-tailwindcss: "npm:^0.7.0"
+    prettier-plugin-tailwindcss: "npm:^0.8.0"
     react: "npm:^18.2.0"
     react-children-by-type: "npm:^1.1.0"
     react-dom: "npm:^18.2.0"
@@ -16963,9 +16963,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.7.0":
-  version: 0.7.2
-  resolution: "prettier-plugin-tailwindcss@npm:0.7.2"
+"prettier-plugin-tailwindcss@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "prettier-plugin-tailwindcss@npm:0.8.0"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -17017,7 +17017,7 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10/c77253025d62555e761b0a76df6e5c73d48d96a259ac157de9c21f11a7851fd2b434c27b296b119530895a57fe87c8cf337b0df0bff97b2bc1a0d48a442b0d99
+  checksum: 10/438ee95cf8b93d52e388800586d5969a939803c38c56661465db1e5871cff55e94d92ea25b92f5a83f0c35064572734c30baa43a2306046e8b4def51abf47ffc
   languageName: node
   linkType: hard
 
