@@ -13,6 +13,9 @@ export default {
 
   parameters: {
     chromatic: {
+      // Using this motion preference for components where they trigger animations on mount
+      prefersReducedMotion: 'reduce',
+      delay: 500,
       viewports: [
         chromaticViewports.googlePixel2,
         chromaticViewports.ipadMini,
@@ -21,7 +24,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.5.0'],
+  tags: ['autodocs', 'version:1.6.1'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -229,8 +232,8 @@ export const DefaultWithNavMenus: Story = {
           {
             name: 'Profile',
             type: 'menu',
-            icon: 'person-encircled',
-            iconLayout: 'left',
+            leadingContent: 'avatar',
+            user: { fullName: 'Lorem Ipsum' },
             subLabel: 'Lorem Ipsum, Inc.',
             navItems: [
               {
@@ -239,11 +242,13 @@ export const DefaultWithNavMenus: Story = {
                 name: 'Lorem Ipsum, Inc.',
                 user: { fullName: 'Lorem Ipsum' },
                 trailingContent: 'check',
+                shouldClose: false,
               },
               {
                 type: 'button',
                 leadingContent: 'avatar',
                 name: 'Unknown Organization',
+                shouldClose: false,
               },
               {
                 type: 'button',
@@ -431,11 +436,33 @@ export const VerticalDefaultWithImageLogo: Story = {
 };
 
 /**
- * Provided links are accessible
+ * Provided links are accessible in horizontal orientation
+ */
+export const ImageLogoFocus: Story = {
+  args: {
+    ...DefaultWithImageLogo.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
+/**
+ * Provided links are accessible in vertical orientation
  */
 export const VerticalImageLogoFocus: Story = {
   args: {
     ...VerticalDefaultWithImageLogo.args,
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
   },
   play: async () => {
     await userEvent.tab();

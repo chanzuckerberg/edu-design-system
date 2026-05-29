@@ -95,6 +95,7 @@ export const presets = [
   'code-md',
   'code-sm',
   'code-xs',
+  'appHeader-label',
 ] as const;
 
 /**

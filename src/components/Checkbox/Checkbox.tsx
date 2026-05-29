@@ -150,28 +150,30 @@ export const Checkbox = Object.assign(
           ref={ref}
           {...other}
         />
-        <div className={styles['checkbox__labels']}>
-          {label && (
-            <Label
-              className={styles['checkbox__label']}
-              disabled={disabled}
-              htmlFor={checkboxId}
-              text={label}
-            />
-          )}
-          {subLabel && (
-            <Text
-              as="span"
-              className={clsx(
-                styles['checkbox__sub-label'],
-                disabled && styles['checkbox--is-disabled'],
-              )}
-              preset="body-sm"
-            >
-              {subLabel}
-            </Text>
-          )}
-        </div>
+        {(label || subLabel) && (
+          <div className={styles['checkbox__labels']}>
+            {label && (
+              <Label
+                className={styles['checkbox__label']}
+                disabled={disabled}
+                htmlFor={checkboxId}
+                text={label}
+              />
+            )}
+            {subLabel && (
+              <Text
+                as="span"
+                className={clsx(
+                  styles['checkbox__sub-label'],
+                  disabled && styles['checkbox--is-disabled'],
+                )}
+                preset="body-sm"
+              >
+                {subLabel}
+              </Text>
+            )}
+          </div>
+        )}
       </div>
     );
   }),

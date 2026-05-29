@@ -16,6 +16,8 @@ export default {
       // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
       disableSnapshot: true,
     },
+    // Using this motion preference for components where they trigger animations on mount
+    // chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
   },
   args: {
     children: (

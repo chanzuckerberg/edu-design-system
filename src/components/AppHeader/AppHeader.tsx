@@ -19,12 +19,13 @@ import type {
   NavLink,
   NavMenuButton,
   NavMenuLink,
+  UserData,
 } from '../../util/utility-types';
 
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Hr from '../Hr';
-import Icon from '../Icon';
+import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';
 import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
@@ -35,11 +36,6 @@ export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
   navItem: NavItem,
 ) => void;
-
-/**
- * - swap `icon` for leading/trailing content on navitems
- * - add in avatar item type
- */
 
 export type AppHeaderProps = {
   // Component API
@@ -152,11 +148,13 @@ type AppHeaderButtonProps = NavButton &
      * Handle the click event for any given button in the header
      */
     onButtonClick?: AppHeaderEventHandler;
+    // Design API
     /**
      * Whether it is appearing in a vertical orientation (like in a drawer)
      */
     isVertical?: boolean;
-    // Design API
+    leadingContent?: IconName | 'avatar';
+    user?: UserData;
   };
 
 type AppHeaderDrawerProps = {
@@ -201,6 +199,7 @@ function NavMenuItemLeadingContent(props: {
 
   return leadingContent;
 }
+
 function NavMenuItemTrailingContent(props: {
   navItem: NavMenuButton | NavMenuLink;
 }): ReactNode {
@@ -214,6 +213,22 @@ function NavMenuItemTrailingContent(props: {
 
   return trailingContent;
 }
+
+/**
+ * Handler for whether a click on the associated NavItem should close the `Menu`
+ * @param navItem NavItem associated with the nav menu (NavMenuLink or NavMenuButton)
+ * @param close function provided to trigger close on a clicked menu item
+ */
+function handleShouldClose(
+  ev: React.MouseEvent,
+  navItem: NavMenuButton | NavMenuLink,
+  close: () => void,
+) {
+  if (typeof navItem.shouldClose !== 'undefined') {
+    navItem.shouldClose ? close() : ev.preventDefault();
+  }
+}
+
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
@@ -447,91 +462,118 @@ const AppHeaderNavGroup = ({
               )}
               {(navItem.type === 'menu' || navItem.type === 'tree') && (
                 <Menu>
-                  <Menu.PlainButton as={React.Fragment}>
-                    <AppHeaderButton
-                      icon={navItem.icon}
-                      iconLayout={navItem.iconLayout}
-                      name={navItem.name}
-                      type="button"
-                    >
-                      {navItem.name}
-                    </AppHeaderButton>
-                  </Menu.PlainButton>
-                  <Menu.Items
-                    anchor={{ to: 'bottom end', gap: 12 }}
-                    className={styles['app-header__nav-items']}
-                  >
-                    {navItem.navItems?.map((navItem) => {
-                      switch (navItem.type) {
-                        case 'link':
-                          return (
-                            <Menu.Item
-                              href={navItem.href}
-                              key={navItem.name}
-                              leadingContent={
-                                <NavMenuItemLeadingContent navItem={navItem} />
-                              }
-                              onClick={(ev) => {
-                                onLinkClick && onLinkClick(ev, navItem);
-                              }}
-                              target={navItem.isExternal ? '_blank' : undefined}
-                              trailingContent={
-                                <NavMenuItemTrailingContent navItem={navItem} />
-                              }
-                            >
-                              {navItem.name}
-                            </Menu.Item>
-                          );
-                        case 'button':
-                          return (
-                            <Menu.Item
-                              key={navItem.name}
-                              leadingContent={
-                                <NavMenuItemLeadingContent navItem={navItem} />
-                              }
-                              onClick={(ev) => {
-                                onButtonClick && onButtonClick(ev, navItem);
-                              }}
-                              trailingContent={
-                                <NavMenuItemTrailingContent navItem={navItem} />
-                              }
-                            >
-                              {navItem.name}
-                            </Menu.Item>
-                          );
-                        case 'label':
-                          return (
-                            <Menu.Item __type="label" key={navItem.name}>
-                              {navItem.name}
-                            </Menu.Item>
-                          );
-                        case 'caption':
-                          return (
-                            <Menu.Item __type="caption" key={navItem.name}>
-                              {navItem.name}
-                            </Menu.Item>
-                          );
-                        case 'separator':
-                          return (
-                            <Menu.Item __type="separator" key={navItem.name} />
-                          );
-                        default:
-                          // This should not be reachable as types guard against it
-                          // however, in cases where data sent in is dynamic, this
-                          // protects the UI.
-                          assertEdsUsage(
-                            [typeof navItem === 'undefined'],
-                            `Problem with navItem data: ${navItem}`,
-                            'error',
-                          );
-                          return (
-                            <Menu.Item key="error-unknown-nav-item-type">
-                              N/A
-                            </Menu.Item>
-                          );
-                      }
-                    })}
-                  </Menu.Items>
+                  {({ close }) => (
+                    <>
+                      {/* Consolidate handling of <Menu> into one function with each type handled separately */}
+                      <Menu.PlainButton as={React.Fragment}>
+                        <AppHeaderButton
+                          iconLayout={
+                            navItem.type === 'menu' &&
+                            navItem.leadingContent === 'avatar'
+                              ? 'left'
+                              : navItem.iconLayout
+                          }
+                          leadingContent={
+                            navItem.type === 'menu'
+                              ? navItem.leadingContent
+                              : undefined
+                          }
+                          name={navItem.name}
+                          type="button"
+                          user={
+                            navItem.type === 'menu' ? navItem.user : undefined
+                          }
+                        >
+                          {navItem.name}
+                        </AppHeaderButton>
+                      </Menu.PlainButton>
+                      <Menu.Items
+                        anchor={{ to: 'bottom end', gap: 12 }}
+                        className={styles['app-header__nav-items']}
+                      >
+                        {navItem.navItems?.map((navItem) => {
+                          switch (navItem.type) {
+                            case 'link':
+                              return (
+                                <Menu.Item
+                                  href={navItem.href}
+                                  key={navItem.name}
+                                  leadingContent={
+                                    <NavMenuItemLeadingContent
+                                      navItem={navItem}
+                                    />
+                                  }
+                                  onClick={(ev) => {
+                                    onLinkClick && onLinkClick(ev, navItem);
+                                    handleShouldClose(ev, navItem, close);
+                                  }}
+                                  target={
+                                    navItem.isExternal ? '_blank' : undefined
+                                  }
+                                  trailingContent={
+                                    <NavMenuItemTrailingContent
+                                      navItem={navItem}
+                                    />
+                                  }
+                                >
+                                  {navItem.name}
+                                </Menu.Item>
+                              );
+                            case 'button':
+                              return (
+                                <Menu.Item
+                                  key={navItem.name}
+                                  leadingContent={
+                                    <NavMenuItemLeadingContent
+                                      navItem={navItem}
+                                    />
+                                  }
+                                  onClick={(ev) => {
+                                    onButtonClick && onButtonClick(ev, navItem);
+                                    handleShouldClose(ev, navItem, close);
+                                  }}
+                                  trailingContent={
+                                    <NavMenuItemTrailingContent
+                                      navItem={navItem}
+                                    />
+                                  }
+                                >
+                                  {navItem.name}
+                                </Menu.Item>
+                              );
+                            case 'label':
+                              return (
+                                <Menu.Item __type="label" key={navItem.name}>
+                                  {navItem.name}
+                                </Menu.Item>
+                              );
+                            case 'caption':
+                              return (
+                                <Menu.Item __type="caption" key={navItem.name}>
+                                  {navItem.name}
+                                </Menu.Item>
+                              );
+                            case 'separator':
+                              return <Menu.Separator key={navItem.name} />;
+                            default:
+                              // This should not be reachable as types guard against it
+                              // however, in cases where data sent in is dynamic, this
+                              // protects the UI.
+                              assertEdsUsage(
+                                [typeof navItem === 'undefined'],
+                                `Problem with navItem data: ${navItem}`,
+                                'error',
+                              );
+                              return (
+                                <Menu.Item key="error-unknown-nav-item-type">
+                                  N/A
+                                </Menu.Item>
+                              );
+                          }
+                        })}
+                      </Menu.Items>
+                    </>
+                  )}
                 </Menu>
               )}
               {/* In horizontal layouts, we never render the horizontal rule */}
@@ -617,9 +659,11 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
       icon,
       iconLayout = 'none',
       isVertical,
+      leadingContent,
       name,
       type,
       meta, // pulling out `meta` not to be spread on to other components
+      user,
       ...other
     },
     ref,
@@ -648,6 +692,9 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
           )}
           {icon && iconLayout && (
             <Icon name={icon} purpose="decorative" size="24px" />
+          )}
+          {!icon && leadingContent === 'avatar' && user && (
+            <Avatar size="sm" user={user} />
           )}
         </span>
       </button>
@@ -791,143 +838,137 @@ const AppHeaderDrawerContent = ({
                 )}
                 {navItem.type === 'menu' && (
                   <Menu>
-                    <Menu.PlainButton as={React.Fragment}>
-                      <AppHeaderButton
-                        className={styles['app-header__menu-trigger']}
-                        icon={navItem.icon}
-                        iconLayout={navItem.iconLayout}
-                        isVertical
-                        name={navItem.name}
-                        type="button"
-                      >
-                        {navItem.name}
-                        {navItem.type === 'menu' && navItem.subLabel && (
-                          <Text as="div" preset="body-xs">
-                            {navItem.subLabel}
-                          </Text>
-                        )}
-                      </AppHeaderButton>
-                    </Menu.PlainButton>
-                    <HeadlessMenuItems
-                      anchor={
-                        mode === 'default'
-                          ? { to: 'right end', gap: 24 }
-                          : undefined
-                      }
-                      as={PopoverContainer}
-                      className={clsx(
-                        styles['app-header__nav-items'],
-                        mode === 'drawer' &&
-                          styles['app-header__nav-items--absolute'],
-                      )}
-                      modal={false}
-                    >
-                      {navItem.navItems?.map((navItem) => {
-                        switch (navItem.type) {
-                          case 'link':
-                            return (
-                              <Menu.Item
-                                href={navItem.href}
-                                key={navItem.name}
-                                leadingContent={
-                                  <NavMenuItemLeadingContent
-                                    navItem={navItem}
-                                  />
-                                }
-                                onClick={(ev) => {
-                                  mode === 'drawer' &&
-                                    document
-                                      .getElementById('popover')
-                                      ?.hidePopover();
-                                  onLinkClick && onLinkClick(ev, navItem);
-                                }}
-                                target={
-                                  navItem.isExternal ? '_blank' : undefined
-                                }
-                                trailingContent={
-                                  <NavMenuItemTrailingContent
-                                    navItem={navItem}
-                                  />
-                                }
-                              >
-                                {navItem.name}
-                              </Menu.Item>
-                            );
-                          case 'button': {
-                            return (
-                              <Menu.Item
-                                key={navItem.name}
-                                leadingContent={
-                                  <NavMenuItemLeadingContent
-                                    navItem={navItem}
-                                  />
-                                }
-                                onClick={(ev) => {
-                                  mode === 'drawer' &&
-                                    document
-                                      .getElementById('popover')
-                                      ?.hidePopover();
-                                  onButtonClick && onButtonClick(ev, navItem);
-                                }}
-                                trailingContent={
-                                  <NavMenuItemTrailingContent
-                                    navItem={navItem}
-                                  />
-                                }
-                              >
-                                {navItem.name}
-                              </Menu.Item>
-                            );
+                    {({ close }) => (
+                      <>
+                        <Menu.PlainButton as={React.Fragment}>
+                          <AppHeaderButton
+                            className={styles['app-header__menu-trigger']}
+                            icon={navItem.icon}
+                            iconLayout={
+                              navItem.leadingContent === 'avatar'
+                                ? 'left'
+                                : navItem.iconLayout
+                            }
+                            isVertical
+                            leadingContent={navItem.leadingContent}
+                            name={navItem.name}
+                            type="button"
+                            user={navItem.user}
+                          >
+                            {navItem.name}
+                            {navItem.type === 'menu' && navItem.subLabel && (
+                              <Text as="div" preset="body-xs">
+                                {navItem.subLabel}
+                              </Text>
+                            )}
+                          </AppHeaderButton>
+                        </Menu.PlainButton>
+                        <HeadlessMenuItems
+                          anchor={
+                            mode === 'default'
+                              ? { to: 'right end', gap: 24 }
+                              : undefined
                           }
-                          case 'caption':
-                            return (
-                              <Menu.Item
-                                __type="caption"
-                                key={navItem.name}
-                                onClick={(ev) => {
-                                  mode === 'drawer' &&
-                                    document
-                                      .getElementById('popover')
-                                      ?.hidePopover();
-                                }}
-                              >
-                                {navItem.name}
-                              </Menu.Item>
-                            );
-                          case 'label':
-                            return (
-                              <Menu.Item
-                                __type="label"
-                                key={navItem.name}
-                                onClick={(ev) => {
-                                  mode === 'drawer' &&
-                                    document
-                                      .getElementById('popover')
-                                      ?.hidePopover();
-                                }}
-                              >
-                                {navItem.name}
-                              </Menu.Item>
-                            );
-                          case 'separator':
-                            return (
-                              <Menu.Item
-                                __type="separator"
-                                key={navItem.name}
-                              />
-                            );
-                          default:
-                            // This should not be reachable as types guard against it
-                            // however, in cases where data sent in is dynamic, this
-                            // protects the UI.
-                            return (
-                              <Menu.Item key="error-unknown-nav-item-type">
-                                N/A
-                              </Menu.Item>
-                            );
-                        }
-                      })}
-                    </HeadlessMenuItems>
+                          as={PopoverContainer}
+                          className={clsx(
+                            styles['app-header__nav-items'],
+                            mode === 'drawer' &&
+                              styles['app-header__nav-items--absolute'],
+                          )}
+                          modal={false}
+                        >
+                          {navItem.navItems?.map((navItem) => {
+                            switch (navItem.type) {
+                              case 'link':
+                                return (
+                                  <Menu.Item
+                                    href={navItem.href}
+                                    key={navItem.name}
+                                    leadingContent={
+                                      <NavMenuItemLeadingContent
+                                        navItem={navItem}
+                                      />
+                                    }
+                                    onClick={(ev) => {
+                                      mode === 'drawer' &&
+                                        document
+                                          .getElementById('popover')
+                                          ?.hidePopover();
+                                      onLinkClick && onLinkClick(ev, navItem);
+                                      handleShouldClose(ev, navItem, close);
+                                    }}
+                                    target={
+                                      navItem.isExternal ? '_blank' : undefined
+                                    }
+                                    trailingContent={
+                                      <NavMenuItemTrailingContent
+                                        navItem={navItem}
+                                      />
+                                    }
+                                  >
+                                    {navItem.name}
+                                  </Menu.Item>
+                                );
+                              case 'button': {
+                                return (
+                                  <Menu.Item
+                                    key={navItem.name}
+                                    leadingContent={
+                                      <NavMenuItemLeadingContent
+                                        navItem={navItem}
+                                      />
+                                    }
+                                    onClick={(ev) => {
+                                      mode === 'drawer' &&
+                                        document
+                                          .getElementById('popover')
+                                          ?.hidePopover();
+                                      onButtonClick &&
+                                        onButtonClick(ev, navItem);
+                                      handleShouldClose(ev, navItem, close);
+                                    }}
+                                    trailingContent={
+                                      <NavMenuItemTrailingContent
+                                        navItem={navItem}
+                                      />
+                                    }
+                                  >
+                                    {navItem.name}
+                                  </Menu.Item>
+                                );
+                              }
+                              case 'caption':
+                                return (
+                                  <Menu.Item
+                                    __type="caption"
+                                    key={navItem.name}
+                                  >
+                                    {navItem.name}
+                                  </Menu.Item>
+                                );
+                              case 'label':
+                                // TODO: change to Menu.Heading once Menu.Sections are used
+                                return (
+                                  <Menu.Item __type="label" key={navItem.name}>
+                                    {navItem.name}
+                                  </Menu.Item>
+                                );
+                              case 'separator':
+                                return <Menu.Separator key={navItem.name} />;
+                              default:
+                                // This should not be reachable as types guard against it
+                                // however, in cases where data sent in is dynamic, this
+                                // protects the UI.
+                                return (
+                                  <Menu.Item key="error-unknown-nav-item-type">
+                                    N/A
+                                  </Menu.Item>
+                                );
+                            }
+                          })}
+                        </HeadlessMenuItems>
+                      </>
+                    )}
                   </Menu>
                 )}
               </li>

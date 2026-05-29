@@ -22,7 +22,7 @@ export type AppNotificationProps = {
 
   // Component API
   /**
-   * Contents of the component below the title and sub-title (used mainly for `ButtonGroup`)
+   * Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked `Buttons`)
    */
   children?: ReactNode;
   /**
@@ -73,7 +73,11 @@ export const AppNotification = ({
           >
             {subTitle}
           </Text>
-          <div className={styles['app-notification__actions']}>{children}</div>
+          {children && (
+            <div className={styles['app-notification__actions']}>
+              {children}
+            </div>
+          )}
         </section>
         {onDismiss && (
           <Button

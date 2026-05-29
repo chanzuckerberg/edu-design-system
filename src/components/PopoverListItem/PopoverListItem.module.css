@@ -55,8 +55,8 @@
   display: flex;
   align-items: center;
 
-  /* if an icon container is adjacent to a container with a sub-label, don't use flex */
-  &:has(+ div > .popover-list-item__sub-label) {
+  /* if an content container is adjacent to a container with a sub-label, don't use flex */
+  &:has(~ div > .popover-list-item__sub-label) {
     display: revert;
   }
 }
@@ -66,8 +66,14 @@
 }
 
 .popover-list-item__trailing-content {
+  display: flex;
+  align-items: center;
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
-  align-self: flex-end;
+
+  /* if the predecessor has a sub label, don't use flex */
+  .popover-list-item--has-sub-label ~ & {
+    display: revert;
+  }
 }
 
 .popover-list-item__no-icon {
