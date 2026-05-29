@@ -13,6 +13,9 @@ export default {
 
   parameters: {
     chromatic: {
+      // Using this motion preference for components where they trigger animations on mount
+      prefersReducedMotion: 'reduce',
+      delay: 500,
       viewports: [
         chromaticViewports.googlePixel2,
         chromaticViewports.ipadMini,

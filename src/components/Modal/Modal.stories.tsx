@@ -14,7 +14,8 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
-    chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
+    // Using this motion preference for components where they trigger animations on mount
+    chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
   tags: ['autodocs', 'version:3.1'],

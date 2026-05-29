@@ -384,9 +384,6 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="radio__selected"
       />
     </span>
-    <div
-      class="radio__labels"
-    />
   </div>
 </div>
 `;

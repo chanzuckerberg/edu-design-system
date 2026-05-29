@@ -356,9 +356,6 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
       id=":r9:"
       type="checkbox"
     />
-    <div
-      class="checkbox__labels"
-    />
   </div>
 </div>
 `;
