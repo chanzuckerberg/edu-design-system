@@ -1,5 +1,17 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Text /> > AppHeaderLabel story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <p
+    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+  >
+    Typography for AppHeader component
+  </p>
+</div>
+`;
+
 exports[`<Text /> > BodyLarge story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"

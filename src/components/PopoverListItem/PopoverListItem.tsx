@@ -109,7 +109,12 @@ export const PopoverListItem = React.forwardRef<
         ) : (
           <div className={styles['popover-list-item__no-icon']}></div>
         )}
-        <div className={styles['popover-list-item__menu-labels']}>
+        <div
+          className={clsx(
+            styles['popover-list-item__menu-labels'],
+            subLabel && styles['popover-list-item--has-sub-label'],
+          )}
+        >
           {__type === 'label' ? (
             <Text
               as="div"

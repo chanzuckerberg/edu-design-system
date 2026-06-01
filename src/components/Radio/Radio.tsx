@@ -136,21 +136,25 @@ export const Radio = ({
         isError={isError}
         {...other}
       />
-      <div className={styles['radio__labels']}>
-        {label && <Label disabled={disabled} htmlFor={radioId} text={label} />}
-        {subLabel && (
-          <Text
-            as="span"
-            className={clsx(
-              styles['radio__sub-label'],
-              disabled && styles['radio--is-disabled'],
-            )}
-            preset="body-sm"
-          >
-            {subLabel}
-          </Text>
-        )}
-      </div>
+      {(label || subLabel) && (
+        <div className={styles['radio__labels']}>
+          {label && (
+            <Label disabled={disabled} htmlFor={radioId} text={label} />
+          )}
+          {subLabel && (
+            <Text
+              as="span"
+              className={clsx(
+                styles['radio__sub-label'],
+                disabled && styles['radio--is-disabled'],
+              )}
+              preset="body-sm"
+            >
+              {subLabel}
+            </Text>
+          )}
+        </div>
+      )}
     </div>
   );
 };

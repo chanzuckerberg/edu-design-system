@@ -29,7 +29,7 @@
   background-color: var(--eds-theme-color-background-input);
   
   &:hover {
-    border-color: var(--eds-theme-color-border-utility-default-medium-emphasis-hover);
+    border-color: var(--eds-theme-color-border-utility-default-low-emphasis-hover);
   }
 
   &:focus {

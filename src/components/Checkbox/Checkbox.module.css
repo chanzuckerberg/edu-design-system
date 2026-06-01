@@ -24,7 +24,8 @@
   display: grid;
   place-content: center;
 
-  border-radius: calc(var(--eds-theme-border-radius-objects-xs) * 1px); /* using sized radius to have an outer rounded rect and inner square */
+  border-radius: calc(var(--eds-theme-border-radius-objects-xs) * 1px);
+  /* using sized radius to have an outer rounded rect and inner square */
 
   /* preset: body-md */
   font: 400 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
@@ -84,6 +85,7 @@
 
   &.checkbox--is-disabled {
     color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+    cursor: not-allowed;
   }
 }
 
@@ -147,23 +149,23 @@
 }
 
 .checkbox__input:disabled {
-  color: light-dark(var(--eds-theme-color-background-utility-disabled-medium-emphasis), var(--eds-dark-theme-color-background-utility-disabled-medium-emphasis));
+
+  &::before {
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+  }
+
+  color: light-dark(var(--eds-theme-color-icon-utility-disabled-primary), var(--eds-dark-theme-color-icon-utility-disabled-primary));
+  border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
 
   cursor: not-allowed;
 
   &:not(:checked) {
-    color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
-    background-color: light-dark(var(--eds-theme-color-text-utility-disabled-secondary), var(--eds-dark-theme-color-text-utility-disabled-secondary));
+    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
   }
 
   &:checked,
   &:indeterminate {
-    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-medium-emphasis), var(--eds-dark-theme-color-background-utility-disabled-medium-emphasis));
-
-    &::before {
-      color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
-
-    }
+    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
   }
 }
 

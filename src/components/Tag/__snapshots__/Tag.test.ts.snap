@@ -5,7 +5,7 @@ exports[`<Tag /> > Default story renders snapshot 1`] = `
   class="gap-spacing-size-2 flex"
 >
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-informational_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-informational_f57044"
   >
     <span
       class="_tag__body_f57044"
@@ -14,7 +14,7 @@ exports[`<Tag /> > Default story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-favorable_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-favorable_f57044"
   >
     <span
       class="_tag__body_f57044"
@@ -23,7 +23,7 @@ exports[`<Tag /> > Default story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-warning_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-warning_f57044"
   >
     <span
       class="_tag__body_f57044"
@@ -32,7 +32,7 @@ exports[`<Tag /> > Default story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-critical_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-critical_f57044"
   >
     <span
       class="_tag__body_f57044"
@@ -43,12 +43,38 @@ exports[`<Tag /> > Default story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Tag /> > LowEmphasisInformational story renders snapshot 1`] = `
+<span
+  class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-low_f57044 _tag--status-informational_f57044"
+>
+  <svg
+    aria-hidden="true"
+    class="_icon_779da8"
+    fill="currentColor"
+    height="16px"
+    style="--icon-size: 16px;"
+    viewBox="0 0 24 24"
+    width="16px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8.8845 12.3078H15.1155C15.2572 12.3078 15.3759 12.2597 15.4718 12.1637C15.5676 12.0677 15.6155 11.9488 15.6155 11.807C15.6155 11.6652 15.5676 11.5465 15.4718 11.451C15.3759 11.3555 15.2572 11.3078 15.1155 11.3078H8.8845C8.74283 11.3078 8.62408 11.3558 8.52825 11.4518C8.43242 11.5476 8.3845 11.6664 8.3845 11.8082C8.3845 11.9502 8.43242 12.069 8.52825 12.1645C8.62408 12.26 8.74283 12.3078 8.8845 12.3078ZM8.8845 15.077H15.1155C15.2572 15.077 15.3759 15.029 15.4718 14.933C15.5676 14.837 15.6155 14.7181 15.6155 14.5762C15.6155 14.4344 15.5676 14.3158 15.4718 14.2203C15.3759 14.1248 15.2572 14.077 15.1155 14.077H8.8845C8.74283 14.077 8.62408 14.1249 8.52825 14.2207C8.43242 14.3167 8.3845 14.4357 8.3845 14.5775C8.3845 14.7195 8.43242 14.8383 8.52825 14.9338C8.62408 15.0293 8.74283 15.077 8.8845 15.077ZM8.8845 17.8462H12.1155C12.2572 17.8462 12.3759 17.7982 12.4717 17.7022C12.5676 17.6062 12.6155 17.4873 12.6155 17.3455C12.6155 17.2037 12.5676 17.085 12.4717 16.9895C12.3759 16.894 12.2572 16.8462 12.1155 16.8462H8.8845C8.74283 16.8462 8.62408 16.8942 8.52825 16.99C8.43242 17.086 8.3845 17.2049 8.3845 17.3468C8.3845 17.4886 8.43242 17.6073 8.52825 17.703C8.62408 17.7985 8.74283 17.8462 8.8845 17.8462ZM6.6155 21C6.15517 21 5.77083 20.8458 5.4625 20.5375C5.15417 20.2292 5 19.8448 5 19.3845V4.6155C5 4.15517 5.15417 3.77083 5.4625 3.4625C5.77083 3.15417 6.15517 3 6.6155 3H13.8288C14.0499 3 14.2607 3.04358 14.461 3.13075C14.6613 3.21792 14.8339 3.33392 14.9788 3.47875L18.5212 7.02125C18.6661 7.16608 18.7821 7.33867 18.8693 7.539C18.9564 7.73933 19 7.95008 19 8.17125V19.3845C19 19.8448 18.8458 20.2292 18.5375 20.5375C18.2292 20.8458 17.8448 21 17.3845 21H6.6155ZM18 8H15.2115C14.875 8 14.5889 7.88225 14.3533 7.64675C14.1178 7.41108 14 7.125 14 6.7885V4H6.6155C6.4615 4 6.32042 4.06408 6.19225 4.19225C6.06408 4.32042 6 4.4615 6 4.6155V19.3845C6 19.5385 6.06408 19.6796 6.19225 19.8078C6.32042 19.9359 6.4615 20 6.6155 20H17.3845C17.5385 20 17.6796 19.9359 17.8078 19.8078C17.9359 19.6796 18 19.5385 18 19.3845V8Z"
+    />
+  </svg>
+  <span
+    class="_tag__body_f57044"
+  >
+    API Docs
+  </span>
+</span>
+`;
+
 exports[`<Tag /> > WithIcon story renders snapshot 1`] = `
 <div
   class="gap-spacing-size-2 flex"
 >
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-informational_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-informational_f57044"
   >
     <svg
       aria-hidden="true"
@@ -71,7 +97,7 @@ exports[`<Tag /> > WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-favorable_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-favorable_f57044"
   >
     <svg
       aria-hidden="true"
@@ -94,7 +120,7 @@ exports[`<Tag /> > WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-warning_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-warning_f57044"
   >
     <svg
       aria-hidden="true"
@@ -117,7 +143,7 @@ exports[`<Tag /> > WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="_text_b3eba3 _text--label-sm_b3eba3 _tag_f57044 _tag--status-critical_f57044"
+    class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-critical_f57044"
   >
     <svg
       aria-hidden="true"

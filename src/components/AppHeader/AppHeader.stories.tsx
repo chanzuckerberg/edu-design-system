@@ -15,6 +15,9 @@ export default {
 
   parameters: {
     chromatic: {
+      // Using this motion preference for components where they trigger animations on mount
+      prefersReducedMotion: 'reduce',
+      delay: 500,
       viewports: [
         chromaticViewports.googlePixel2,
         chromaticViewports.ipadMini,
@@ -23,7 +26,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.5.1'],
+  tags: ['autodocs', 'version:1.6.1'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -231,8 +234,8 @@ export const DefaultWithNavMenus: Story = {
           {
             name: 'Profile',
             type: 'menu',
-            icon: 'person-encircled',
-            iconLayout: 'left',
+            leadingContent: 'avatar',
+            user: { fullName: 'Lorem Ipsum' },
             subLabel: 'Lorem Ipsum, Inc.',
             navItems: [
               {
@@ -241,11 +244,13 @@ export const DefaultWithNavMenus: Story = {
                 name: 'Lorem Ipsum, Inc.',
                 user: { fullName: 'Lorem Ipsum' },
                 trailingContent: 'check',
+                shouldClose: false,
               },
               {
                 type: 'button',
                 leadingContent: 'avatar',
                 name: 'Unknown Organization',
+                shouldClose: false,
               },
               {
                 type: 'button',

@@ -12,6 +12,8 @@ const meta: Meta<typeof Select> = {
   component: Select,
   parameters: {
     layout: 'centered',
+    // Using this motion preference for components where they trigger animations on mount
+    chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
   },
   argTypes: {
     multiple: {
@@ -486,6 +488,8 @@ export const StyledUncontrolled: StoryObj = {
  * Hidden form inputs are generated for each option selected and take the following form:
  * - `name[arrayIndex][key]`
  * - `name[arrayIndex][value]`
+ *
+ * You can add arbitrary content to `.ButtonWrapper`, to render selection for each option. `value` is an array and represents all selected values.
  */
 export const Multiple: StoryObj = {
   args: {
@@ -501,7 +505,7 @@ export const Multiple: StoryObj = {
         <Select.Button>
           {({ value, open, disabled }) => (
             <Select.ButtonWrapper isOpen={open}>
-              {value.length > 0 ? value.length : 'none'} selected
+              {value.length > 0 ? value.length : 'none'} selected{' '}
             </Select.ButtonWrapper>
           )}
         </Select.Button>
@@ -520,6 +524,7 @@ export const Multiple: StoryObj = {
       skip: true,
     },
   },
+  play: openMenu,
 };
 
 /**

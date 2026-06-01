@@ -30,7 +30,7 @@ export default {
       },
     },
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tag>;
@@ -54,5 +54,14 @@ export const WithIcon: Story = {
   ...Default,
   args: {
     icon: 'star-filled',
+  },
+};
+
+export const LowEmphasisInformational: Story = {
+  args: {
+    icon: 'document',
+    label: 'API Docs',
+    emphasis: 'low',
+    status: 'informational',
   },
 };

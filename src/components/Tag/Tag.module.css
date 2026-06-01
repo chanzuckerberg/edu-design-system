@@ -8,6 +8,8 @@
  * The rounded rectangle container that houses information.
  */
 .tag {
+  --tag__fg: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+
   width: max-content;
   height: calc(var(--eds-spacing-size-3) * 1px);
   padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
@@ -15,12 +17,12 @@
   display: inline-flex;
   align-items: center;
 
-  /* border color matches the background color, unless a color variant is applied */
-  border: 1px solid var(--tag-secondary-color);
+  /* border color is transparent, unless a emphasis variant is applied */
+  border: 1px solid var(--tag__border, transparent);
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
-  background-color: var(--tag-secondary-color);
-  color: var(--tag-primary-color);
+  background-color: var(--tag__bg);
+  color: var(--tag__fg);
 }
 
 /**
@@ -45,21 +47,22 @@
  * Status color treatments
  */
 :where(.tag--status-critical) {
-  --tag-primary-color: light-dark(var(--eds-theme-color-icon-utility-critical), var(--eds-dark-theme-color-icon-utility-critical));
-  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
+  --tag__bg: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
 }
 
 :where(.tag--status-favorable) {
-  --tag-primary-color: light-dark(var(--eds-theme-color-icon-utility-favorable), var(--eds-dark-theme-color-icon-utility-favorable));
-  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
+  --tag__bg: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
 }
 
 :where(.tag--status-warning) {
-  --tag-primary-color: light-dark(var(--eds-theme-color-icon-utility-warning), var(--eds-dark-theme-color-icon-utility-warning));
-  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
+  --tag__bg: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
 }
 
 :where(.tag--status-informational) {
-  --tag-primary-color: light-dark(var(--eds-theme-color-text-utility-informational), var(--eds-dark-theme-color-text-utility-informational));
-  --tag-secondary-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
+  --tag__bg: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
+
+  &.tag--emphasis-low {
+    --tag__border: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+    --tag__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
+  }
 }

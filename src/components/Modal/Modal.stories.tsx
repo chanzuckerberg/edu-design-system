@@ -16,10 +16,11 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
-    chromatic: { delay: 500, prefersReducedMmotion: 'reduce' },
+    // Using this motion preference for components where they trigger animations on mount
+    chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:3.0'],
+  tags: ['autodocs', 'version:3.1'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -350,6 +351,9 @@ export const ContentDefault: Story = {
   parameters: {
     // This story shows the modal content by default, for visual regression testing purposes.
     chromatic: { disableSnapshot: false },
+    snapshot: {
+      skip: true,
+    },
   },
 };
 

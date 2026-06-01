@@ -26,7 +26,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<typeof ButtonGroup>;
 
 type Story = StoryObj<typeof ButtonGroup>;

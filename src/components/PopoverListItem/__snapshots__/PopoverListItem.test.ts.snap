@@ -42,7 +42,7 @@ exports[`<PopoverListItem /> > Default story renders snapshot 1`] = `
     </svg>
   </div>
   <div
-    class="_popover-list-item__menu-labels_e0596d"
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
   >
     <div
       class="_text_b3eba3 _text--body-md_b3eba3"
@@ -54,6 +54,54 @@ exports[`<PopoverListItem /> > Default story renders snapshot 1`] = `
     >
       Save posts for later
     </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > DefaultWithTrailingContent story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.9808 19.0946C11.7859 19.0946 11.5933 19.0594 11.403 18.9889C11.2125 18.9184 11.0448 18.8107 10.9 18.6659L9.752 17.6291C7.9725 16.0125 6.40225 14.4404 5.04125 12.9129C3.68042 11.3854 3 9.79789 3 8.15039C3 6.87856 3.43208 5.81064 4.29625 4.94664C5.16025 4.08247 6.22817 3.65039 7.5 3.65039C8.2295 3.65039 8.98908 3.83472 9.77875 4.20339C10.5686 4.57189 11.309 5.26706 12 6.28889C12.691 5.26706 13.4314 4.57189 14.2212 4.20339C15.0109 3.83472 15.7705 3.65039 16.5 3.65039C17.7718 3.65039 18.8398 4.08247 19.7038 4.94664C20.5679 5.81064 21 6.87856 21 8.15039C21 9.83622 20.2917 11.4567 18.875 13.0119C17.4583 14.5671 15.9077 16.1081 14.223 17.6349L13.0807 18.6659C12.9359 18.8107 12.7651 18.9184 12.5683 18.9889C12.3714 19.0594 12.1756 19.0946 11.9808 19.0946Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Favorite
+    </div>
+    <div
+      class="_text_b3eba3 _text--body-sm_b3eba3 _popover-list-item__sub-label_e0596d"
+    >
+      Save posts for later
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <span
+      class="_text_b3eba3 _text--body-xs_b3eba3"
+    >
+      5
+    </span>
   </div>
 </div>
 `;
@@ -249,6 +297,58 @@ exports[`<PopoverListItem /> > WithLeadingAndTrailingContent story renders snaps
 </div>
 `;
 
+exports[`<PopoverListItem /> > WithLeadingAndTrailingIcons story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.6155 21C6.15517 21 5.77083 20.8458 5.4625 20.5375C5.15417 20.2292 5 19.8448 5 19.3845V4.6155C5 4.15517 5.15417 3.77083 5.4625 3.4625C5.77083 3.15417 6.15517 3 6.6155 3H13.8288C14.0443 3 14.2536 3.04358 14.4568 3.13075C14.6599 3.21792 14.8339 3.33392 14.9788 3.47875L18.5212 7.02125C18.6661 7.16608 18.7821 7.34008 18.8693 7.54325C18.9564 7.74642 19 7.95575 19 8.17125V19.3845C19 19.8448 18.8458 20.2292 18.5375 20.5375C18.2292 20.8458 17.8448 21 17.3845 21H6.6155ZM14 7.19225V4H6.6155C6.4615 4 6.32042 4.06408 6.19225 4.19225C6.06408 4.32042 6 4.4615 6 4.6155V19.3845C6 19.5385 6.06408 19.6796 6.19225 19.8078C6.32042 19.9359 6.4615 20 6.6155 20H17.3845C17.5385 20 17.6796 19.9359 17.8078 19.8078C17.9359 19.6796 18 19.5385 18 19.3845V8H14.8078C14.5756 8 14.3829 7.92342 14.2298 7.77025C14.0766 7.61708 14 7.42442 14 7.19225Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Add comment
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.55001 15.8811L18.352 7.07912C18.4493 6.98179 18.5641 6.92987 18.6963 6.92337C18.8283 6.91703 18.9493 6.96895 19.0595 7.07912C19.1698 7.18945 19.225 7.30837 19.225 7.43587C19.225 7.56353 19.1698 7.68245 19.0595 7.79262L10.1155 16.7426C9.95384 16.9041 9.76534 16.9849 9.55001 16.9849C9.33468 16.9849 9.14618 16.9041 8.98451 16.7426L4.93451 12.6926C4.83718 12.5953 4.78626 12.4796 4.78176 12.3456C4.77726 12.2116 4.83018 12.0895 4.94051 11.9791C5.05068 11.869 5.16951 11.8139 5.29701 11.8139C5.42468 11.8139 5.54359 11.869 5.65376 11.9791L9.55001 15.8811Z"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
 exports[`<PopoverListItem /> > WithLeadingAvatar story renders snapshot 1`] = `
 <div
   class="_popover-list-item_e0596d"
@@ -297,7 +397,7 @@ exports[`<PopoverListItem /> > WithNoIcon story renders snapshot 1`] = `
     class="_popover-list-item__no-icon_e0596d"
   />
   <div
-    class="_popover-list-item__menu-labels_e0596d"
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
   >
     <div
       class="_text_b3eba3 _text--body-md_b3eba3"

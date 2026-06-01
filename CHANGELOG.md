@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.2.0...v18.3.0) (2026-05-29)
+
+
+### Features
+
+* allow programmatic close on Menus and AppHeader ([#2503](https://github.com/chanzuckerberg/edu-design-system/issues/2503)) ([b2bcb99](https://github.com/chanzuckerberg/edu-design-system/commit/b2bcb99faa56bf09b75d5ea14f0d5ddd416eb440))
+* **Modal:** update styles and transitions to match latest designs ([#2509](https://github.com/chanzuckerberg/edu-design-system/issues/2509)) ([c4e8ec0](https://github.com/chanzuckerberg/edu-design-system/commit/c4e8ec05cb11f9bb9120c4197437dc0a9dbb0184))
+* **Select:** use controls to mark selection state ([#2508](https://github.com/chanzuckerberg/edu-design-system/issues/2508)) ([f0d7642](https://github.com/chanzuckerberg/edu-design-system/commit/f0d7642e706c021f63889fd2005bc2d774a34975))
+* **tokens:** add in icon-utility-inverse token set ([#2504](https://github.com/chanzuckerberg/edu-design-system/issues/2504)) ([31e1471](https://github.com/chanzuckerberg/edu-design-system/commit/31e14713e57d67036c93cd6e0b646aa60d170877))
+
+
+### Bug Fixes
+
+* **AppHeader:** add support for handling avatars in navMenu nav items ([#2510](https://github.com/chanzuckerberg/edu-design-system/issues/2510)) ([7f291e2](https://github.com/chanzuckerberg/edu-design-system/commit/7f291e2b98d13ca9ec3cd8728c1880a7f99b33b0))
+* **AppHeader:** apply proper size scoping to logo focus ring ([#2492](https://github.com/chanzuckerberg/edu-design-system/issues/2492)) ([acafe99](https://github.com/chanzuckerberg/edu-design-system/commit/acafe99eed765e0418d632fd2efd7011c4f86450))
+* **AppNotification:** remove children container when no children exist ([#2506](https://github.com/chanzuckerberg/edu-design-system/issues/2506)) ([3f88830](https://github.com/chanzuckerberg/edu-design-system/commit/3f8883034228528b8b7bbf6fd9e96e21ad1ea256))
+* **Button:** adjust the vertical positioning of the button content ([#2499](https://github.com/chanzuckerberg/edu-design-system/issues/2499)) ([c0f8f3d](https://github.com/chanzuckerberg/edu-design-system/commit/c0f8f3d53c6a0c9710031526bcae36efba8abc13))
+* **Checkbox:** update styling for disabled checkboxes ([#2502](https://github.com/chanzuckerberg/edu-design-system/issues/2502)) ([707c86a](https://github.com/chanzuckerberg/edu-design-system/commit/707c86a37c78ef5dcf0f10151a7eaaa78d4f15d8))
+* **PopoverListItem:** align sizing for leading and trailing content slots ([#2498](https://github.com/chanzuckerberg/edu-design-system/issues/2498)) ([e8d56c3](https://github.com/chanzuckerberg/edu-design-system/commit/e8d56c3453c1dcf4f6a4def66afff0f5fbc0d07e))
+
 ## [18.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.1.0...v18.2.0) (2026-05-14)
 
 
