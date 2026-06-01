@@ -153,8 +153,22 @@ type AppHeaderButtonProps = NavButton &
      * Whether it is appearing in a vertical orientation (like in a drawer)
      */
     isVertical?: boolean;
+    /**
+     * Mark whether the current button is the current button
+     */
+    isCurrent?: boolean;
+    /**
+     * Content to use in the leading position of an app header button (allows icons or an `"avatar"`).
+     */
     leadingContent?: IconName | 'avatar';
+    /**
+     * Data associated with the avatar. Only useful with `leadingContent` set to `"avatar"`
+     */
     user?: UserData;
+    /**
+     * Content to use in the trailing position of an app header button.
+     */
+    trailingContent?: IconName;
   };
 
 type AppHeaderDrawerProps = {
@@ -462,29 +476,41 @@ const AppHeaderNavGroup = ({
               )}
               {(navItem.type === 'menu' || navItem.type === 'tree') && (
                 <Menu>
-                  {({ close }) => (
+                  {({ close, open }) => (
                     <>
                       {/* Consolidate handling of <Menu> into one function with each type handled separately */}
                       <Menu.PlainButton as={React.Fragment}>
                         <AppHeaderButton
+                          icon={
+                            navItem.type === 'tree' ? 'chevron-down' : undefined
+                          }
                           iconLayout={
                             navItem.type === 'menu' &&
                             navItem.leadingContent === 'avatar'
                               ? 'left'
                               : navItem.iconLayout
                           }
+                          isCurrent={open}
                           leadingContent={
                             navItem.type === 'menu'
                               ? navItem.leadingContent
                               : undefined
                           }
                           name={navItem.name}
+                          trailingContent={
+                            navItem.type === 'menu' ? 'chevron-down' : undefined
+                          }
                           type="button"
                           user={
                             navItem.type === 'menu' ? navItem.user : undefined
                           }
                         >
                           {navItem.name}
+                          {navItem.type === 'menu' && navItem.subLabel && (
+                            <Text as="div" preset="body-xs">
+                              {navItem.subLabel}
+                            </Text>
+                          )}
                         </AppHeaderButton>
                       </Menu.PlainButton>
                       <Menu.Items
@@ -658,9 +684,11 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
       className,
       icon,
       iconLayout = 'none',
+      isCurrent,
       isVertical,
       leadingContent,
       name,
+      trailingContent,
       type,
       meta, // pulling out `meta` not to be spread on to other components
       user,
@@ -672,7 +700,10 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
       className,
       styles['app-header__nav-item'],
       styles[`app-header__nav-item--button`],
+      isCurrent && styles['app-header__nav-item--is-current'],
     );
+
+    // TODO(next-major): remove handling of icon, or simplify to composable subcomponents
     return (
       <button className={componentClassName} ref={ref} {...other}>
         {isVertical && (
@@ -697,6 +728,9 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
             <Avatar size="sm" user={user} />
           )}
         </span>
+        {trailingContent && (
+          <Icon name={trailingContent} purpose="decorative" size="24px" />
+        )}
       </button>
     );
   },
@@ -838,7 +872,7 @@ const AppHeaderDrawerContent = ({
                 )}
                 {navItem.type === 'menu' && (
                   <Menu>
-                    {({ close }) => (
+                    {({ open, close }) => (
                       <>
                         <Menu.PlainButton as={React.Fragment}>
                           <AppHeaderButton
@@ -849,6 +883,7 @@ const AppHeaderDrawerContent = ({
                                 ? 'left'
                                 : navItem.iconLayout
                             }
+                            isCurrent={open}
                             isVertical
                             leadingContent={navItem.leadingContent}
                             name={navItem.name}
