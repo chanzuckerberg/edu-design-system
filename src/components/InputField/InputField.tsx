@@ -182,7 +182,9 @@ export const InputField: InputFieldType = forwardRef(
     ref,
   ) => {
     const shouldRenderOverline = !!(label || required);
-    const [fieldText, setFieldText] = useState(other.defaultValue);
+    const [fieldText, setFieldText] = useState(
+      other.defaultValue || other.value,
+    );
 
     // Handling of behavior when field type is password. Show/hide button
     const revealShowHideButton = type === 'password';
