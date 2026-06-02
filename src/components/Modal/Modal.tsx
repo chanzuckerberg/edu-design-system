@@ -403,7 +403,7 @@ const ModalHeader = ({ children, className, ...other }: ModalHeaderProps) => {
 const ModalTitle = ({
   children,
   className,
-  preset = 'headline-md',
+  preset = 'title-lg',
   ...other
 }: ModalTitleProps) => {
   const componentClassName = clsx(styles['modal-title'], className);
@@ -424,7 +424,7 @@ const ModalTitle = ({
 const ModalSubTitle = ({
   children,
   className,
-  preset = 'headline-sm',
+  preset = 'body-md',
   ...other
 }: ModalSubTitleProps) => {
   const componentClassName = clsx(styles['modal-sub-title'], className);
