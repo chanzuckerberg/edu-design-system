@@ -19,10 +19,9 @@ export default {
     timeout: { table: { disable: true } },
   },
   args: {
-    title: "You've got a temporary notification!",
-    className: 'w-[384px]',
+    title: 'A toast should not exceed two lines of text.',
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.1'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;
@@ -30,6 +29,18 @@ type Story = StoryObj<Args>;
 
 export const Default: Story = {};
 
+/**
+ * Informational toasts indicate additional information for the user, and may be related to generic notifications or reminders.
+ */
+export const Informational: Story = {
+  args: {
+    status: 'informational',
+  },
+};
+
+/**
+ * Favorable toasts indicate a successful completion of an action.
+ */
 export const Favorable: Story = {
   args: {
     status: 'favorable',
@@ -37,7 +48,16 @@ export const Favorable: Story = {
 };
 
 /**
- * Notifications can have different status, to indicate errors or destructive actions have completed.
+ * Warning toasts indicate an action that may have undesirable consequences.
+ */
+export const Warning: Story = {
+  args: {
+    status: 'warning',
+  },
+};
+
+/**
+ * Critical toasts signal failuser to the user, where an action may not have completed fully/successfully.
  */
 export const Critical: Story = {
   args: {

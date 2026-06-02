@@ -11,22 +11,39 @@
   gap: calc(var(--eds-spacing-size-2) * 1px);
   padding: calc(var(--eds-spacing-size-2) * 1px);
   align-items: start;
-
   border-radius: calc(var(--eds-theme-border-radius-notification) * 1px);
+  box-shadow: var(--eds-box-shadow-lg);
 
-  &.toast--status-critical {
-    color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
-    background-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
-  }
+  background-color: var(--toast__bg, light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)));
+  color: var(--toast__fg, light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse)));
 
-  &.toast--status-favorable {
-    color: light-dark(var(--eds-theme-color-text-utility-favorable), var(--eds-dark-theme-color-text-utility-favorable));
-    background-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
+
+  .toast__icon {
+    color: var(--toast__icon, inherit);
   }
 }
 
 .toast__icon {
+  /* manual offset for alignment */
+  transform: translateY(1px);
+
   flex-shrink: 0;
+
+  .toast--status-critical & {
+    --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-critical), var(--eds-dark-theme-color-icon-utility-inverse-critical));
+  }
+
+  .toast--status-warning & {
+    --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-warning), var(--eds-dark-theme-color-icon-utility-inverse-warning));
+  }
+
+  .toast--status-favorable & {
+    --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-favorable), var(--eds-dark-theme-color-icon-utility-inverse-favorable));
+  }
+
+  .toast--status-informational & {
+    --toast__icon: inherit;
+  }
 }
 
 .toast__body {
@@ -37,4 +54,9 @@
   flex-shrink: 0;
   margin-top: calc(var(--eds-spacing-size-1) * -1px);
   margin-right: calc(var(--eds-spacing-size-1) * -1px);
+  color: inherit;
+
+  &:hover {
+    color: initial;
+  }
 }

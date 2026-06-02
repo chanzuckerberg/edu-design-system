@@ -35,7 +35,7 @@ export type ToastNotificationProps = {
   /**
    * Keyword to characterize the state of the notification
    */
-  status?: Extract<Status, 'favorable' | 'critical'>;
+  status?: Status;
   /**
    * The title/heading of the notification
    */
@@ -46,6 +46,18 @@ export type ToastNotificationProps = {
  * `import {ToastNotification} from "@chanzuckerberg/eds";`
  *
  * Toasts display brief, temporary notifications. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.
+ *
+ * ## Sizing
+ *
+ * Toast notifications use a fixed width of 384px and their height depends on the length of the notification message. As noted in the content guidelines, limit toast notifications to two lines of text.
+ *
+ * ## Dismissal
+ *
+ * Toast notifications can be manually dismissed or auto-dismissed using the dismissType prop. Auto toasts are automatically dismissed after 8 seconds.
+ *
+ * ## Placement and Behavior
+ *
+ * Toast notifications slide in and out from the borrom right of the screen. The toast should be placed 24 px away from the top and side of the viewport. The toast notification fades in with the token eds-anim-fade-long and fade out with token eds-animation-fade-quick.
  */
 export const ToastNotification = ({
   className,
@@ -85,10 +97,10 @@ export const ToastNotification = ({
         className={styles['toast__icon']}
         name={getIconNameFromStatus(status)}
         purpose="decorative"
-        size="30px"
+        size="24px"
       />
       <div className={styles['toast__body']}>
-        <Text as="span" className={styles['toast__text']} preset="title-md">
+        <Text as="span" className={styles['toast__text']} preset="body-md">
           {title}
         </Text>
       </div>
