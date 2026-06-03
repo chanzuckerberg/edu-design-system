@@ -49,11 +49,11 @@ export type ToastNotificationProps = {
  *
  * ## Sizing
  *
- * Toast notifications use a fixed width of 384px and their height depends on the length of the notification message. As noted in the content guidelines, limit toast notifications to two lines of text.
+ * Toast notifications use a fixed max width of 384px and their height depends on the length of the notification message. As noted in the content guidelines, limit toast notifications to two lines of text.
  *
  * ## Dismissal
  *
- * Toast notifications can be manually dismissed or auto-dismissed using the dismissType prop. Auto toasts are automatically dismissed after 8 seconds.
+ * Toast notifications can be manually dismissed or auto-dismissed using the dismissType prop. Auto toasts are automatically dismissed after 8 seconds by default.
  *
  * ## Placement and Behavior
  *

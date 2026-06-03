@@ -114,25 +114,24 @@ const ToastNotificationManager = (args: Args) => {
         Trigger A Toast Notification
       </Button>
       <div
-        className="absolute bottom-0 left-0 flex flex-col gap-spacing-size-2"
+        className="absolute bottom-0 right-0 m-spacing-size-1 flex flex-col gap-spacing-size-2"
         id="toast-container"
       >
         {toasts.map((toast) => (
           <Transition
             appear
             as="div"
-            enter="transition-all duration-medium"
-            enterFrom="opacity-0 transform-gpu scale-0"
-            enterTo="opacity-100 transform-gpu scale-100"
+            enter="transition-all duration-long"
+            enterFrom="opacity-0 transform-gpu translate-x-[100%]"
+            enterTo="opacity-100 transform-gpu translate-x-[0px]"
             key={toast.id}
-            leave="ease-in-out transition-all duration-medium"
+            leave="ease-in-out transition-all duration-quick"
             leaveFrom="opacity-100 transform-gpu translate-x-[0px]"
-            leaveTo="opacity-0 transform-gpu translate-x-[-100%]"
+            leaveTo="opacity-0 transform-gpu translate-x-[100%]"
             show={toast.show}
           >
             <ToastNotification
               {...args}
-              dismissType="auto"
               onDismiss={() => {
                 setToasts(
                   toasts.map((thisToast) => {
@@ -161,6 +160,9 @@ const ToastNotificationManager = (args: Args) => {
  * Here, we use `<Transition>` provided by [HeadlessUI](https://github.com/chanzuckerberg/edu-design-system/blob/main/package.json#L91-L93).
  */
 export const ExampleDismissingToasts: Story = {
+  args: {
+    dismissType: 'auto',
+  },
   render: (args) => <ToastNotificationManager {...args} />,
   parameters: {
     // For interactive use, low value in snap testing again since already covered in other stories.
