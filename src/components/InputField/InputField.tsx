@@ -182,8 +182,9 @@ export const InputField: InputFieldType = forwardRef(
     ref,
   ) => {
     const shouldRenderOverline = !!(label || required);
+    // Default to `.value` to match React's preference order
     const [fieldText, setFieldText] = useState(
-      other.defaultValue || other.value,
+      other.value || other.defaultValue,
     );
 
     // Handling of behavior when field type is password. Show/hide button
@@ -322,8 +323,13 @@ export const InputField: InputFieldType = forwardRef(
             id={idVar}
             maxLength={maxLength}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setFieldText(e.target.value);
-              onChange && onChange(e);
+              // when uncontrolled, update field text counter source
+              // when controlled, only update when onchange is specified
+              other.defaultValue && setFieldText(e.target.value);
+              if (onChange) {
+                setFieldText(e.target.value);
+                onChange(e);
+              }
             }}
             readOnly={readOnly}
             ref={ref}
