@@ -154,7 +154,7 @@ type AppHeaderButtonProps = NavButton &
      */
     isVertical?: boolean;
     /**
-     * Mark whether the current button is the current button
+     * Mark whether this `AppHeaderButton` is the current button, and apply the proper styling.
      */
     isCurrent?: boolean;
     /**
