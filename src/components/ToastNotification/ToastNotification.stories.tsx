@@ -114,7 +114,7 @@ const ToastNotificationManager = (args: Args) => {
         Trigger A Toast Notification
       </Button>
       <div
-        className="absolute bottom-0 right-0 m-spacing-size-1 flex flex-col gap-spacing-size-2"
+        className="absolute bottom-0 right-0 m-spacing-size-1 flex max-h-full flex-col gap-spacing-size-2 overflow-scroll"
         id="toast-container"
       >
         {toasts.map((toast) => (
@@ -122,12 +122,12 @@ const ToastNotificationManager = (args: Args) => {
             appear
             as="div"
             enter="transition-all duration-long"
-            enterFrom="opacity-0 transform-gpu translate-x-[100%]"
-            enterTo="opacity-100 transform-gpu translate-x-[0px]"
+            enterFrom="opacity-0 transform-gpu translate-x-[100%] h-0"
+            enterTo="opacity-100 transform-gpu translate-x-[0px] h-spacing-size-9"
             key={toast.id}
             leave="ease-in-out transition-all duration-quick"
-            leaveFrom="opacity-100 transform-gpu translate-x-[0px]"
-            leaveTo="opacity-0 transform-gpu translate-x-[100%]"
+            leaveFrom="opacity-100 transform-gpu translate-x-[0px] h-spacing-size-9"
+            leaveTo="opacity-0 transform-gpu translate-x-[100%] h-0"
             show={toast.show}
           >
             <ToastNotification
