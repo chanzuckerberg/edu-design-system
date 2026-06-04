@@ -102,14 +102,16 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
           ref={ref}
           type={type}
         />
-        {leadingIcon && <Icon name={leadingIcon} purpose="decorative" />}
-        <Text
-          as="span"
-          className={styles['selection-chip__label']}
-          preset="label-lg"
-        >
-          {label}
-        </Text>
+        <div className={styles['selection-chip__body']}>
+          {leadingIcon && <Icon name={leadingIcon} purpose="decorative" />}
+          <Text
+            as="span"
+            className={styles['selection-chip__label']}
+            preset="label-lg"
+          >
+            {label}
+          </Text>
+        </div>
       </label>
     );
   },
