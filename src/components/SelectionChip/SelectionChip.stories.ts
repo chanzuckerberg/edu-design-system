@@ -6,6 +6,9 @@ import { SelectionChip } from './SelectionChip';
 export default {
   title: 'Components/SelectionChip',
   component: SelectionChip,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs', 'version:1.1'],
 } as Meta<Args>;
 
