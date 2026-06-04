@@ -36,8 +36,7 @@
   width: 100%;
   
   & > div {    
-    padding: calc(var(--eds-spacing-size-2) * 1px)
-      calc(var(--eds-spacing-size-3) * 1px);
+    padding: calc(var(--eds-spacing-size-3) * 1px);
   }
 
   &.app-header--style-floating > div {
@@ -51,6 +50,8 @@
     
     @media (min-width: $eds-bp-md) {
       display: flex;
+      overflow: hidden;
+      overflow-x: auto;
     }
   }
 
@@ -95,11 +96,6 @@
   .app-header__nav-group ul {
     gap: 0;
   }
-
-  /* nav trees */
-  .drawer-content__header-container {
-    padding-top: calc(var(--eds-spacing-size-3) * 1px);
-  }
  }
 
 .app-header__home-link {
@@ -118,9 +114,10 @@
 .app-header__content {
   display: flex;
   
-  gap: calc(var(--eds-spacing-size-5) * 1px);
+  gap: calc(var(--eds-spacing-size-4) * 1px);
   align-items: center;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .app-header__menu {
@@ -219,8 +216,9 @@
 }
 
 .app-header__nav-groups {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   gap: calc(var(--eds-spacing-size-7) * 1px);
+  align-items: center;
 }
 
 .app-header__nav-group {
@@ -231,6 +229,7 @@
   ul {
     display: flex;
     gap: calc(var(--eds-spacing-size-1) * 1px);
+    align-items: center;
   }
 }
 
@@ -243,6 +242,10 @@
  */
 .app-header-title {
   flex: 1 0 auto;
+  top: 0;
+  position: sticky;
+
+  background-color: light-dark(var(--eds-theme-color-background-app-header), var(--eds-dark-theme-color-background-app-header));
 
   .app-header--orientation-vertical & {
     flex-grow: 0;
@@ -301,7 +304,7 @@
   font-family: var(--eds-typography-font-family-3);
   margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
   display: flex;
-  padding: 0 calc(var(--eds-spacing-size-1) * 1px);
+  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-1) * 1px) 0;
 }
 
 /**
@@ -323,7 +326,7 @@
 }
 
 .app-header__nav-item--is-current {
-  background-color: light-dark(var(--eds-theme-color-background-app-header-hover), var(--eds-dark-theme-color-background-app-header-hover));
+  background-color: light-dark(var(--eds-theme-color-background-app-header-active), var(--eds-dark-theme-color-background-app-header-active));
 }
 
 .app-header__nav-item:focus-visible {
