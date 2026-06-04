@@ -356,6 +356,19 @@ export const WithinMaxLength: Story = {
 };
 
 /**
+ * Character counting is also true when the field is controlled.
+ */
+export const ControlledWithinMaxLength: Story = {
+  args: {
+    value: 'Some initial text',
+    defaultValue: undefined,
+    label: 'Test Label',
+    maxLength: 30,
+    required: true,
+  },
+};
+
+/**
  * You can lock the maximum length of the text content of `InputField`. When setting `maxLength`,
  * the field will reuse the browser's [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
  * behavior (e.g., prevent further text from being typed, prevent keydown events, etc.).

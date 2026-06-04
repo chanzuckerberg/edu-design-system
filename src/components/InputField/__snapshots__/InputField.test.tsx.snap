@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<InputField /> ControlledWithinMaxLength story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[384px]"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--md input-field__label"
+        for=":r1m:"
+      >
+        <span
+          class="text text--label-md"
+        >
+          Test Label
+        </span>
+      </label>
+      <div
+        class="text text--body-sm input-field__character-counter"
+      >
+        <span
+          class=""
+        >
+          17
+        </span>
+         
+        / 
+        30
+      </div>
+      <div
+        class="input-field__subLabel"
+      >
+        <span
+          class="text text--body-sm"
+          id=":r1o:"
+        >
+          Additional descriptive text for the field.
+        </span>
+      </div>
+    </div>
+    <div
+      class="input-field__body"
+    >
+      <input
+        aria-describedby=":r1o:"
+        aria-invalid="false"
+        class="input"
+        id=":r1m:"
+        maxlength="30"
+        required=""
+        type="text"
+        value="Some initial text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> DateHandling story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
@@ -826,73 +887,12 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
     >
       <label
         class="label label--md input-field__label"
-        for=":r1m:"
-      >
-        <span
-          class="text text--label-md"
-        >
-          test label
-        </span>
-      </label>
-      <div
-        class="text text--body-sm input-field__character-counter"
-      >
-        <span
-          class="input-field--invalid-length"
-        >
-          17
-        </span>
-         
-        / 
-        15
-      </div>
-      <div
-        class="input-field__subLabel"
-      >
-        <span
-          class="text text--body-sm"
-          id=":r1o:"
-        >
-          Additional descriptive text for the field.
-        </span>
-      </div>
-    </div>
-    <div
-      class="input-field__body"
-    >
-      <input
-        aria-describedby=":r1o:"
-        aria-invalid="false"
-        class="input error"
-        id=":r1m:"
-        maxlength="15"
-        required=""
-        type="text"
-        value="Some initial text"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="input-field__overline"
-    >
-      <label
-        class="label label--md input-field__label"
         for=":r1p:"
       >
         <span
           class="text text--label-md"
         >
-          Shortened Length Field
+          test label
         </span>
       </label>
       <div
@@ -926,6 +926,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         aria-invalid="false"
         class="input error"
         id=":r1p:"
+        maxlength="15"
         required=""
         type="text"
         value="Some initial text"
@@ -935,7 +936,7 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
+exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -952,7 +953,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         <span
           class="text text--label-md"
         >
-          test label
+          Shortened Length Field
         </span>
       </label>
       <div
@@ -979,13 +980,73 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
       </div>
     </div>
     <div
-      class="input-field__body input-field--has-fieldNote"
+      class="input-field__body"
     >
       <input
-        aria-describedby=":r1u: :r1t:"
+        aria-describedby=":r1u:"
         aria-invalid="false"
         class="input error"
         id=":r1s:"
+        required=""
+        type="text"
+        value="Some initial text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[384px]"
+  >
+    <div
+      class="input-field__overline"
+    >
+      <label
+        class="label label--md input-field__label"
+        for=":r1v:"
+      >
+        <span
+          class="text text--label-md"
+        >
+          test label
+        </span>
+      </label>
+      <div
+        class="text text--body-sm input-field__character-counter"
+      >
+        <span
+          class="input-field--invalid-length"
+        >
+          17
+        </span>
+         
+        / 
+        15
+      </div>
+      <div
+        class="input-field__subLabel"
+      >
+        <span
+          class="text text--body-sm"
+          id=":r21:"
+        >
+          Additional descriptive text for the field.
+        </span>
+      </div>
+    </div>
+    <div
+      class="input-field__body input-field--has-fieldNote"
+    >
+      <input
+        aria-describedby=":r21: :r20:"
+        aria-invalid="false"
+        class="input error"
+        id=":r1v:"
         maxlength="20"
         required=""
         type="text"
@@ -997,7 +1058,7 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
     >
       <div
         class="field-note field-note--error"
-        id=":r1t:"
+        id=":r20:"
       >
         <svg
           class="icon field-note__icon"
