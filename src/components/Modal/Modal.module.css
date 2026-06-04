@@ -62,7 +62,7 @@
   0% {
     transform: perspective(80px) rotateX(0.5deg) translateY(-80px);
   }
-  
+
   100% {
     transform: perspective(80px) rotateX(0deg) translateY(0);
   }
@@ -90,7 +90,7 @@
   /* add border and box shadow above smallest breakpoint */
   @media all and (min-width: $eds-bp-sm) {
     border: 1px solid var(--modal-content__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
-    box-shadow: var(--eds-box-shadow-lg);    
+    box-shadow: var(--eds-box-shadow-lg);
   }
 }
 
@@ -109,6 +109,10 @@
 
 .modal-title {
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+}
+
+.modal-title:has(+ .modal-sub-title) {
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
 }
 
 /**
