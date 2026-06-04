@@ -113,7 +113,8 @@ export const ToastNotification = ({
           iconLayout="icon-only"
           onClick={onDismiss}
           rank="tertiary"
-          variant="neutral"
+          size="md"
+          variant="inverse"
         />
       )}
     </div>

@@ -52,11 +52,6 @@
 
 .toast__dismiss-button {
   flex-shrink: 0;
-  margin-top: calc(var(--eds-spacing-size-1) * -1px);
-  margin-right: calc(var(--eds-spacing-size-1) * -1px);
-  color: inherit;
-
-  &:hover {
-    color: initial;
-  }
+  margin-top: calc(var(--eds-spacing-size-half) * -1px);
+  margin-right: calc(var(--eds-spacing-size-half) * -1px);
 }
