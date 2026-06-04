@@ -114,7 +114,7 @@
 .app-header__content {
   display: flex;
   
-  gap: calc(var(--eds-spacing-size-5) * 1px);
+  gap: calc(var(--eds-spacing-size-4) * 1px);
   align-items: center;
   overflow: hidden;
   overflow-y: auto;
