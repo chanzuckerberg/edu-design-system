@@ -323,7 +323,11 @@ export const ContentDefault: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
@@ -414,7 +418,11 @@ export const LayoutVertical: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
@@ -459,7 +467,11 @@ export const LayoutVerticalWithTertiary: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
@@ -503,7 +515,11 @@ export const WithCriticalButton: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
