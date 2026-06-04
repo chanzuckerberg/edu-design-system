@@ -19,10 +19,9 @@ export default {
     timeout: { table: { disable: true } },
   },
   args: {
-    title: "You've got a temporary notification!",
-    className: 'w-[384px]',
+    title: 'A toast should not exceed two lines of text.',
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.1'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;
@@ -30,6 +29,18 @@ type Story = StoryObj<Args>;
 
 export const Default: Story = {};
 
+/**
+ * Informational toasts indicate additional information for the user, and may be related to generic notifications or reminders.
+ */
+export const Informational: Story = {
+  args: {
+    status: 'informational',
+  },
+};
+
+/**
+ * Favorable toasts indicate a successful completion of an action.
+ */
 export const Favorable: Story = {
   args: {
     status: 'favorable',
@@ -37,7 +48,16 @@ export const Favorable: Story = {
 };
 
 /**
- * Notifications can have different status, to indicate errors or destructive actions have completed.
+ * Warning toasts indicate an action that may have undesirable consequences.
+ */
+export const Warning: Story = {
+  args: {
+    status: 'warning',
+  },
+};
+
+/**
+ * Critical toasts signal failuser to the user, where an action may not have completed fully/successfully.
  */
 export const Critical: Story = {
   args: {
@@ -94,25 +114,24 @@ const ToastNotificationManager = (args: Args) => {
         Trigger A Toast Notification
       </Button>
       <div
-        className="absolute bottom-0 left-0 flex flex-col gap-spacing-size-2"
+        className="absolute bottom-0 right-0 m-spacing-size-1 flex max-h-full flex-col gap-spacing-size-2 overflow-scroll"
         id="toast-container"
       >
         {toasts.map((toast) => (
           <Transition
             appear
             as="div"
-            enter="transition-all duration-medium"
-            enterFrom="opacity-0 transform-gpu scale-0"
-            enterTo="opacity-100 transform-gpu scale-100"
+            enter="transition-all duration-long"
+            enterFrom="opacity-0 transform-gpu translate-x-[100%] h-0"
+            enterTo="opacity-100 transform-gpu translate-x-[0px] h-spacing-size-9"
             key={toast.id}
-            leave="ease-in-out transition-all duration-medium"
-            leaveFrom="opacity-100 transform-gpu translate-x-[0px]"
-            leaveTo="opacity-0 transform-gpu translate-x-[-100%]"
+            leave="ease-in-out transition-all duration-quick"
+            leaveFrom="opacity-100 transform-gpu translate-x-[0px] h-spacing-size-9"
+            leaveTo="opacity-0 transform-gpu translate-x-[100%] h-0"
             show={toast.show}
           >
             <ToastNotification
               {...args}
-              dismissType="auto"
               onDismiss={() => {
                 setToasts(
                   toasts.map((thisToast) => {
@@ -141,6 +160,9 @@ const ToastNotificationManager = (args: Args) => {
  * Here, we use `<Transition>` provided by [HeadlessUI](https://github.com/chanzuckerberg/edu-design-system/blob/main/package.json#L91-L93).
  */
 export const ExampleDismissingToasts: Story = {
+  args: {
+    dismissType: 'auto',
+  },
   render: (args) => <ToastNotificationManager {...args} />,
   parameters: {
     // For interactive use, low value in snap testing again since already covered in other stories.
