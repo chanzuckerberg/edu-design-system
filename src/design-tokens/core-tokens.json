@@ -842,7 +842,7 @@
           },
           "visualPageIndicator": {
             "@": {
-              "value": "{eds.color.neutral.200}",
+              "value": "{eds.color.neutral.100}",
               "group": "color"
             },
             "current": {
@@ -895,7 +895,7 @@
             },
             "object": {
               "selected": {
-                "value": "{eds.color.green.050}",
+                "value": "{eds.color.green.450}",
                 "group": "color"
               }
             },
@@ -1145,7 +1145,7 @@
                 "group": "color"
               },
               "mediumEmphasis": {
-                "value": "{eds.color.neutral.250}",
+                "value": "{eds.color.neutral.200}",
                 "group": "color"
               }
             },
@@ -1183,6 +1183,9 @@
                 "group": "color"
               }
             }
+          },
+          "progressBar": {
+            "value": "{eds.color.green.450}"
           }
         },
         "border": {

@@ -136,7 +136,7 @@ export const EdsThemeColorBackgroundTableRowStripe1 = '#FFFFFF';
 export const EdsThemeColorBackgroundTableRowStripe2 = '#FAF9F8';
 export const EdsThemeColorBackgroundTableRowSelected = '#F4F1EF';
 export const EdsThemeColorBackgroundTabUnderline = '#19955D';
-export const EdsThemeColorBackgroundVisualPageIndicator = '#CCC9C6';
+export const EdsThemeColorBackgroundVisualPageIndicator = '#E6E2DE';
 export const EdsThemeColorBackgroundVisualPageIndicatorCurrent = '#19955D';
 export const EdsThemeColorBackgroundUtilityBase1 = '#FFFFFF';
 export const EdsThemeColorBackgroundUtilityBase2 = '#FFFFFF';
@@ -149,7 +149,7 @@ export const EdsThemeColorBackgroundUtilityOverlayLowEmphasis =
   'rgba(250, 249, 248, 0.60)';
 export const EdsThemeColorBackgroundUtilityOverlayHighEmphasis =
   'rgba(36, 36, 35, 0.80)';
-export const EdsThemeColorBackgroundUtilityObjectSelected = '#E0F5EC';
+export const EdsThemeColorBackgroundUtilityObjectSelected = '#19955D';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasis =
   'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityDefaultNoEmphasisHover = '#F4F1EF';
@@ -226,7 +226,7 @@ export const EdsThemeColorBackgroundUtilityInformationalHighEmphasisActive =
 export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis =
   'rgba(250, 249, 248, 0.00)';
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#F4F1EF';
-export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#BCB9B6';
+export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#CCC9C6';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasis =
   'rgba(250, 249, 248, 0.00)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisHover =
@@ -239,6 +239,7 @@ export const EdsThemeColorBackgroundUtilityInverseHighEmphasisActive =
   '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
+export const EdsThemeColorBackgroundProgressBar = '#19955D';
 export const EdsThemeColorBorderAppHeaderSeparator = '#CCC9C6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasis = '#CCC9C6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasisHover = '#BCB9B6';
