@@ -7,26 +7,26 @@
  * AppHeader
  */
 .app-header {
-  --app-header-shadow: var(--eds-box-shadow-md);
+  --app-header__shadow: none;
 
   /* This component is hard-coded to use the light color scheme in all cases */
   color-scheme: light;
-  
+
   & > div {
-    box-shadow: var(--app-header-shadow);
+    box-shadow: var(--app-header__shadow);
     height: 100%;
   }
 }
 
 .app-header--style-docked {
-  & > div { 
+  & > div {
     margin: 0;
   }
 }
 
 .app-header--style-floating {
   & > div {
-    box-shadow: var(--app-header-shadow);
+    box-shadow: var(--app-header__shadow);
     border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
   }
 }
@@ -34,20 +34,21 @@
 .app-header--orientation-horizontal {
   min-height: calc(var(--eds-spacing-size-12) * 1px);
   width: 100%;
-  
-  & > div {    
+
+  & > div {
     padding: calc(var(--eds-spacing-size-3) * 1px);
+    border-bottom: 1px solid var(--app-header__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
   }
 
   &.app-header--style-floating > div {
     margin: calc(var(--eds-spacing-size-3) * 1px);
     margin-bottom: 0;
   }
-  
+
   /* Mobile first: hide nav groups unless at least minimum width */
   .app-header__nav-groups {
     display: none;
-    
+
     @media (min-width: $eds-bp-md) {
       display: flex;
       overflow: hidden;
@@ -61,7 +62,7 @@
     max-width: 1320px;
     /* add in a bit of left/right padding to prevent outline from being cut off */
     padding: 0 2px;
-    
+
     @media (min-width: $eds-bp-lg) {
       margin: 0 auto;
     }
@@ -72,13 +73,15 @@
   width: 240px;
   height: 100vh;
 
+  
   &.app-header--style-floating {
     /* remove the outer margins from the height when floating */
     height: calc(100vh - (calc(var(--eds-spacing-size-6) * 1px)));
   }
-
+  
   & > div {
     padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-4) * 1px) calc(var(--eds-spacing-size-1) * 1px);
+    border-right: 1px solid var(--app-header__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
   }
 
   &.app-header--style-floating > div {
@@ -96,7 +99,7 @@
   .app-header__nav-group ul {
     gap: 0;
   }
- }
+}
 
 .app-header__home-link {
   display: inline-block;
@@ -113,7 +116,7 @@
 
 .app-header__content {
   display: flex;
-  
+
   gap: calc(var(--eds-spacing-size-4) * 1px);
   align-items: center;
   overflow: hidden;
@@ -143,7 +146,7 @@
     top: 0;
     right: 0;
     margin: 0;
-    box-shadow: var(--app-header-shadow);
+    box-shadow: var(--app-header__shadow);
 
     /* Mobile-first: hide this at bigger viewports */
     padding-top: calc(var(--eds-spacing-size-3) * 1px);
@@ -175,8 +178,7 @@
   align-items: center;
   gap: calc(var(--eds-spacing-size-half) * 1px);
 
-  padding: calc(var(--eds-spacing-size-1) * 1px)
-    calc(var(--eds-spacing-size-1) * 1px);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
 
   .app-header--orientation-vertical & {
@@ -190,11 +192,17 @@
 
 .app-header__nav-item--link,
 .app-header__nav-item--button {
+  position: relative;
   display: flex;
   gap: calc(var(--eds-spacing-size-1) * 1px);
   align-items: center;
   justify-content: space-between;
   text-align: start;
+
+  & > span {
+    /* EaseInOutQuad - https://matthewlein.com/tools/ceaser */
+    transition: transform calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  }
 }
 
 .app-header__nav-items {
@@ -244,6 +252,7 @@
   flex: 1 0 auto;
   top: 0;
   position: sticky;
+  z-index: 2;
 
   background-color: light-dark(var(--eds-theme-color-background-app-header), var(--eds-dark-theme-color-background-app-header));
 
@@ -279,6 +288,51 @@
 
   .app-header__nav-item {
     width: 100%;
+  }
+
+  .app-header__nav-item--link:hover {
+    & > span {
+      transform: translateX(calc(var(--eds-spacing-size-2) * 1px));
+    }
+
+    &::before {
+      background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-low-emphasis-hover));
+      left: calc(var(--eds-spacing-size-1) * 1px);
+    }
+  }
+
+  .app-header__nav-item--link::before {
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+
+    transform: scale(0.75);
+    transform-origin: center;
+    left: calc(var(--eds-spacing-size-4) * 1px);
+
+    /* EaseInOutQuad - https://matthewlein.com/tools/ceaser */
+    transition: all calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  }
+
+  .app-header__nav-item--is-current.app-header__nav-item--link {
+    & > span {
+      transform: translateX(calc(var(--eds-spacing-size-2) * 1px));
+    }
+
+    &:hover::before {
+      transform: scale(1);
+    }
+
+    &::before {
+      background-color: light-dark(var(--eds-theme-color-background-visual-page-indicator-current), var(--eds-dark-theme-color-background-visual-page-indicator-current));
+      left: calc(var(--eds-spacing-size-1) * 1px);
+
+      /* EaseInOutBack - https://matthewlein.com/tools/ceaser */
+      transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    }
   }
 }
 
