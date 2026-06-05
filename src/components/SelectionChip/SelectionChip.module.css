@@ -117,8 +117,14 @@
   --selection-chip__bg: light-dark(var(--eds-theme-color-background-utility-interactive-low-emphasis), var(--eds-dark-theme-color-background-utility-interactive-low-emphasis));
   box-shadow: inset 0 0 0 1px var(--selection-chip__border);
 
+  &.selection-chip--disabled {
+    .selection-chip__input::before {
+      background-color: light-dark(var(--eds-theme-color-icon-utility-disabled-primary), var(--eds-dark-theme-color-icon-utility-disabled-primary));
+    }
+  }
+
   .selection-chip__input::before {
-    background-color: var(--eds-theme-color-background-visual-page-indicator-current);
+    background-color: light-dark(var(--eds-theme-color-background-visual-page-indicator-current), var(--eds-dark-theme-color-background-visual-page-indicator-current));
     left: calc(var(--eds-spacing-size-1-and-half) * 1px);
 
     /* EaseInOutBack - https://matthewlein.com/tools/ceaser */

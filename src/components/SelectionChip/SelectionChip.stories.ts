@@ -21,6 +21,19 @@ export const Default: Story = {
   },
 };
 
+/**
+ * We can indicate selected state like a checkbox.
+ */
+export const Selected: Story = {
+  args: {
+    label: 'Label',
+    defaultChecked: true,
+  },
+};
+
+/**
+ * Icons can be used with `SelectionChip`.
+ */
 export const WithIcon: Story = {
   args: {
     ...Default.args,
@@ -35,6 +48,17 @@ export const Disabled: Story = {
   args: {
     ...Default.args,
     isDisabled: true,
+  },
+};
+
+/**
+ * Selection chips can be marked as disabled while selected.
+ */
+export const DisabledSelected: Story = {
+  args: {
+    ...Default.args,
+    isDisabled: true,
+    defaultChecked: true,
   },
 };
 

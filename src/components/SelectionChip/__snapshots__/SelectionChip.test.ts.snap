@@ -3,12 +3,12 @@
 exports[`<SelectionChip /> ControlledChecked story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--has-icon"
-  for=":r3:"
+  for=":r5:"
 >
   <input
     checked=""
     class="selection-chip__input"
-    id=":r3:"
+    id=":r5:"
     type="checkbox"
   />
   <div
@@ -59,12 +59,59 @@ exports[`<SelectionChip /> Default story renders snapshot 1`] = `
 exports[`<SelectionChip /> Disabled story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--disabled"
-  for=":r2:"
+  for=":r3:"
 >
   <input
     class="selection-chip__input"
     disabled=""
-    id=":r2:"
+    id=":r3:"
+    type="checkbox"
+  />
+  <div
+    class="selection-chip__body"
+  >
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
+</label>
+`;
+
+exports[`<SelectionChip /> DisabledSelected story renders snapshot 1`] = `
+<label
+  class="selection-chip selection-chip--disabled"
+  for=":r4:"
+>
+  <input
+    checked=""
+    class="selection-chip__input"
+    disabled=""
+    id=":r4:"
+    type="checkbox"
+  />
+  <div
+    class="selection-chip__body"
+  >
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
+</label>
+`;
+
+exports[`<SelectionChip /> Selected story renders snapshot 1`] = `
+<label
+  class="selection-chip"
+  for=":r1:"
+>
+  <input
+    checked=""
+    class="selection-chip__input"
+    id=":r1:"
     type="checkbox"
   />
   <div
@@ -82,12 +129,12 @@ exports[`<SelectionChip /> Disabled story renders snapshot 1`] = `
 exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--has-icon"
-  for=":r4:"
+  for=":r6:"
 >
   <input
     checked=""
     class="selection-chip__input"
-    id=":r4:"
+    id=":r6:"
     type="checkbox"
   />
   <div
@@ -116,11 +163,11 @@ exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
 exports[`<SelectionChip /> WithIcon story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--has-icon"
-  for=":r1:"
+  for=":r2:"
 >
   <input
     class="selection-chip__input"
-    id=":r1:"
+    id=":r2:"
     type="checkbox"
   />
   <div
