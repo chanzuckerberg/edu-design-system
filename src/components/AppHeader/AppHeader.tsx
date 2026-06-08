@@ -655,7 +655,7 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="label-md">
+            <Text as="span" preset="appHeader-label">
               {children ?? name}
             </Text>
           )}

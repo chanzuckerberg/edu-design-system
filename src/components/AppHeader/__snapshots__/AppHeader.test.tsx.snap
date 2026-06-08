@@ -280,7 +280,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     Documentation
                   </span>
@@ -297,7 +297,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     GitHub
                   </span>
@@ -576,7 +576,7 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     Documentation
                   </span>
@@ -593,7 +593,7 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     GitHub
                   </span>
@@ -756,7 +756,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Lake Superior
                         </span>
@@ -772,7 +772,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Lake Tahoe
                         </span>
@@ -788,7 +788,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Crater Lake
                         </span>
@@ -827,7 +827,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Pacific Ocean
                         </span>
@@ -843,7 +843,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Atlantic Ocean
                         </span>
@@ -859,7 +859,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Arctic Ocean
                         </span>
@@ -898,7 +898,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Nile River
                         </span>
@@ -914,7 +914,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Amazon River
                         </span>
@@ -930,7 +930,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Danube River
                         </span>
@@ -959,7 +959,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     Documentation
                   </span>
@@ -992,7 +992,7 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     GitHub
                   </span>
@@ -1293,7 +1293,7 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     Documentation
                   </span>
@@ -1310,7 +1310,7 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     GitHub
                   </span>
@@ -1487,7 +1487,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Lake Superior
                         </span>
@@ -1503,7 +1503,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Lake Tahoe
                         </span>
@@ -1519,7 +1519,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Crater Lake
                         </span>
@@ -1558,7 +1558,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Pacific Ocean
                         </span>
@@ -1574,7 +1574,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Atlantic Ocean
                         </span>
@@ -1590,7 +1590,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Arctic Ocean
                         </span>
@@ -1629,7 +1629,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Nile River
                         </span>
@@ -1645,7 +1645,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Amazon River
                         </span>
@@ -1661,7 +1661,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Danube River
                         </span>
@@ -1690,7 +1690,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     Documentation
                   </span>
@@ -1723,7 +1723,7 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     GitHub
                   </span>
@@ -1884,7 +1884,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Lake Superior
                         </span>
@@ -1900,7 +1900,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Lake Tahoe
                         </span>
@@ -1916,7 +1916,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Crater Lake
                         </span>
@@ -1955,7 +1955,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Pacific Ocean
                         </span>
@@ -1971,7 +1971,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Atlantic Ocean
                         </span>
@@ -1987,7 +1987,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Arctic Ocean
                         </span>
@@ -2026,7 +2026,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Nile River
                         </span>
@@ -2042,7 +2042,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Amazon River
                         </span>
@@ -2058,7 +2058,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                         class="app-header__nav-item--icon-layout-none"
                       >
                         <span
-                          class="text text--label-md"
+                          class="text text--appHeader-label"
                         >
                           Danube River
                         </span>
@@ -2087,7 +2087,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     Documentation
                   </span>
@@ -2120,7 +2120,7 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   class="app-header__nav-item--icon-layout-none"
                 >
                   <span
-                    class="text text--label-md"
+                    class="text text--appHeader-label"
                   >
                     GitHub
                   </span>
