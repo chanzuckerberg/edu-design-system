@@ -488,7 +488,11 @@
               "disabled": "rgba(250, 249, 248, 0.50)"
             }
           },
-          "progressBar": "#19955D"
+          "progressBar": {
+            "@": "#19955D",
+            "content": "#19955D",
+            "track": "#E6E2DE"
+          }
         },
         "border": {
           "appHeaderSeparator": "#CCC9C6",

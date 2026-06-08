@@ -240,6 +240,8 @@ export const EdsThemeColorBackgroundUtilityInverseHighEmphasisActive =
 export const EdsThemeColorBackgroundUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
 export const EdsThemeColorBackgroundProgressBar = '#19955D';
+export const EdsThemeColorBackgroundProgressBarContent = '#19955D';
+export const EdsThemeColorBackgroundProgressBarTrack = '#E6E2DE';
 export const EdsThemeColorBorderAppHeaderSeparator = '#CCC9C6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasis = '#CCC9C6';
 export const EdsThemeColorBorderUtilityDefaultLowEmphasisHover = '#BCB9B6';

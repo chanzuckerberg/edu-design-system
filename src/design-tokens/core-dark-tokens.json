@@ -1186,7 +1186,18 @@
               }
             },
             "progressBar": {
-              "value": "{eds.color.green.450}"
+              "@": {
+                "value": "{eds.color.green.450}",
+                "group": "color"
+              },
+              "content": {
+                "value": "{eds.color.green.450}",
+                "group": "color"
+              },
+              "track": {
+                "value": "{eds.color.neutral.100}",
+                "group": "color"
+              }
             }
           },
           "border": {
