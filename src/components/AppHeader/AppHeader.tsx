@@ -31,7 +31,6 @@ import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
 
 import styles from './AppHeader.module.css';
-// import ScrollWrapper from '../ScrollWrapper';
 
 export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
