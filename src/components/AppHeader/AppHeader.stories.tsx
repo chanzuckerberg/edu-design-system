@@ -23,9 +23,8 @@ export default {
       ],
     },
   },
-  decorators: [(Story) => <div className="pb-spacing-size-2">{Story()}</div>],
 
-  tags: ['autodocs', 'version:1.6.2'],
+  tags: ['autodocs', 'version:1.7'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -61,6 +60,7 @@ export const Default: Story = {
                 name: 'Lake Superior',
                 type: 'link',
                 href: 'https://example.org',
+                isCurrent: true,
               },
               {
                 name: 'Lake Tahoe',
@@ -142,7 +142,7 @@ export const Default: Story = {
             type: 'menu',
             leadingContent: 'avatar',
             user: { fullName: 'Lorem Ipsum' },
-            subLabel: 'Lorem Ipsum, Inc.',
+            subLabel: 'sublabel',
             navItems: [
               {
                 type: 'button',

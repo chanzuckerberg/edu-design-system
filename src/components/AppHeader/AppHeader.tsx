@@ -507,7 +507,7 @@ const AppHeaderNavGroup = ({
                         >
                           {navItem.name}
                           {navItem.type === 'menu' && navItem.subLabel && (
-                            <Text as="div" preset="body-xs">
+                            <Text as="div" preset="appHeader-subLabel">
                               {navItem.subLabel}
                             </Text>
                           )}
@@ -649,13 +649,12 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       >
         <span
           className={clsx(
-            styles['app-header__nav-item--link'],
             iconLayout &&
               styles[`app-header__nav-item--icon-layout-${iconLayout}`],
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="label-md">
+            <Text as="span" preset="appHeader-label">
               {children ?? name}
             </Text>
           )}
@@ -717,7 +716,7 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="label-md">
+            <Text as="span" preset="appHeader-label">
               {children ?? name}
             </Text>
           )}
@@ -892,7 +891,7 @@ const AppHeaderDrawerContent = ({
                           >
                             {navItem.name}
                             {navItem.type === 'menu' && navItem.subLabel && (
-                              <Text as="div" preset="body-xs">
+                              <Text as="div" preset="appHeader-subLabel">
                                 {navItem.subLabel}
                               </Text>
                             )}
