@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.3.0...v18.4.0) (2026-06-09)
+
+
+### Features
+
+* **AppHeader:** update styling to match latest designs ([#2522](https://github.com/chanzuckerberg/edu-design-system/issues/2522)) ([b1e92ec](https://github.com/chanzuckerberg/edu-design-system/commit/b1e92ec5c61bcc3aa2df17cfdadce158aa981307))
+* **SelectionChip:** add in new designs and behaviors ([#2517](https://github.com/chanzuckerberg/edu-design-system/issues/2517)) ([81ae4ed](https://github.com/chanzuckerberg/edu-design-system/commit/81ae4ed3d607e6e835d09fcb5f997c191be0cc3f))
+* **ToastNotification:** update theming and presentation ([#2516](https://github.com/chanzuckerberg/edu-design-system/issues/2516)) ([e3a2d46](https://github.com/chanzuckerberg/edu-design-system/commit/e3a2d46db98df3582fe188e81475c5a9407fef59))
+
+
+### Bug Fixes
+
+* **AppHeader:** component adjustments to align with design behaviors ([#2514](https://github.com/chanzuckerberg/edu-design-system/issues/2514)) ([0f854d5](https://github.com/chanzuckerberg/edu-design-system/commit/0f854d5c6fb3ff776d0feb76acf21c2590c02a3b))
+* **InputField:** add check for value when calculating character length ([#2518](https://github.com/chanzuckerberg/edu-design-system/issues/2518)) ([48db62f](https://github.com/chanzuckerberg/edu-design-system/commit/48db62fad71b1dee9ddffdc273af8e955716c162))
+* **Modal:** adjust title/subtitle typography presets ([#2519](https://github.com/chanzuckerberg/edu-design-system/issues/2519)) ([20a0bea](https://github.com/chanzuckerberg/edu-design-system/commit/20a0beab4c3d56416b25fde8f8052b2cf6fadc16))
+
 ## [18.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.2.0...v18.3.0) (2026-05-29)
 
 
