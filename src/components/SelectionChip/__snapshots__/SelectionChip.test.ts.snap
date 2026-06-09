@@ -3,30 +3,34 @@
 exports[`<SelectionChip /> ControlledChecked story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--has-icon"
-  for=":r3:"
+  for=":r5:"
 >
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M11.5 12.5H6.5C6.35833 12.5 6.23958 12.452 6.14375 12.356C6.04792 12.26 6 12.1411 6 11.9993C6 11.8574 6.04792 11.7388 6.14375 11.6433C6.23958 11.5478 6.35833 11.5 6.5 11.5H11.5V6.5C11.5 6.35833 11.548 6.23958 11.644 6.14375C11.74 6.04792 11.8589 6 12.0008 6C12.1426 6 12.2612 6.04792 12.3567 6.14375C12.4522 6.23958 12.5 6.35833 12.5 6.5V11.5H17.5C17.6417 11.5 17.7604 11.548 17.8563 11.644C17.9521 11.74 18 11.8589 18 12.0008C18 12.1426 17.9521 12.2612 17.8563 12.3567C17.7604 12.4522 17.6417 12.5 17.5 12.5H12.5V17.5C12.5 17.6417 12.452 17.7604 12.356 17.8563C12.26 17.9521 12.1411 18 11.9993 18C11.8574 18 11.7388 17.9521 11.6433 17.8563C11.5478 17.7604 11.5 17.6417 11.5 17.5V12.5Z"
-    />
-  </svg>
-  <span
-    class="text text--label-lg selection-chip__label"
-  >
-    Label
-  </span>
   <input
     checked=""
     class="selection-chip__input"
-    id=":r3:"
+    id=":r5:"
     type="checkbox"
   />
+  <div
+    class="selection-chip__body"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.5 12.5H6.5C6.35833 12.5 6.23958 12.452 6.14375 12.356C6.04792 12.26 6 12.1411 6 11.9993C6 11.8574 6.04792 11.7388 6.14375 11.6433C6.23958 11.5478 6.35833 11.5 6.5 11.5H11.5V6.5C11.5 6.35833 11.548 6.23958 11.644 6.14375C11.74 6.04792 11.8589 6 12.0008 6C12.1426 6 12.2612 6.04792 12.3567 6.14375C12.4522 6.23958 12.5 6.35833 12.5 6.5V11.5H17.5C17.6417 11.5 17.7604 11.548 17.8563 11.644C17.9521 11.74 18 11.8589 18 12.0008C18 12.1426 17.9521 12.2612 17.8563 12.3567C17.7604 12.4522 17.6417 12.5 17.5 12.5H12.5V17.5C12.5 17.6417 12.452 17.7604 12.356 17.8563C12.26 17.9521 12.1411 18 11.9993 18C11.8574 18 11.7388 17.9521 11.6433 17.8563C11.5478 17.7604 11.5 17.6417 11.5 17.5V12.5Z"
+      />
+    </svg>
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
 </label>
 `;
 
@@ -35,65 +39,124 @@ exports[`<SelectionChip /> Default story renders snapshot 1`] = `
   class="selection-chip"
   for=":r0:"
 >
-  <span
-    class="text text--label-lg selection-chip__label"
-  >
-    Label
-  </span>
   <input
     class="selection-chip__input"
     id=":r0:"
     type="checkbox"
   />
+  <div
+    class="selection-chip__body"
+  >
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
 </label>
 `;
 
 exports[`<SelectionChip /> Disabled story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--disabled"
-  for=":r1:"
+  for=":r3:"
 >
-  <span
-    class="text text--label-lg selection-chip__label"
-  >
-    Label
-  </span>
   <input
     class="selection-chip__input"
     disabled=""
+    id=":r3:"
+    type="checkbox"
+  />
+  <div
+    class="selection-chip__body"
+  >
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
+</label>
+`;
+
+exports[`<SelectionChip /> DisabledSelected story renders snapshot 1`] = `
+<label
+  class="selection-chip selection-chip--disabled"
+  for=":r4:"
+>
+  <input
+    checked=""
+    class="selection-chip__input"
+    disabled=""
+    id=":r4:"
+    type="checkbox"
+  />
+  <div
+    class="selection-chip__body"
+  >
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
+</label>
+`;
+
+exports[`<SelectionChip /> Selected story renders snapshot 1`] = `
+<label
+  class="selection-chip"
+  for=":r1:"
+>
+  <input
+    checked=""
+    class="selection-chip__input"
     id=":r1:"
     type="checkbox"
   />
+  <div
+    class="selection-chip__body"
+  >
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
 </label>
 `;
 
 exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
 <label
   class="selection-chip selection-chip--has-icon"
-  for=":r4:"
+  for=":r6:"
 >
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M11.5 12.5H6.5C6.35833 12.5 6.23958 12.452 6.14375 12.356C6.04792 12.26 6 12.1411 6 11.9993C6 11.8574 6.04792 11.7388 6.14375 11.6433C6.23958 11.5478 6.35833 11.5 6.5 11.5H11.5V6.5C11.5 6.35833 11.548 6.23958 11.644 6.14375C11.74 6.04792 11.8589 6 12.0008 6C12.1426 6 12.2612 6.04792 12.3567 6.14375C12.4522 6.23958 12.5 6.35833 12.5 6.5V11.5H17.5C17.6417 11.5 17.7604 11.548 17.8563 11.644C17.9521 11.74 18 11.8589 18 12.0008C18 12.1426 17.9521 12.2612 17.8563 12.3567C17.7604 12.4522 17.6417 12.5 17.5 12.5H12.5V17.5C12.5 17.6417 12.452 17.7604 12.356 17.8563C12.26 17.9521 12.1411 18 11.9993 18C11.8574 18 11.7388 17.9521 11.6433 17.8563C11.5478 17.7604 11.5 17.6417 11.5 17.5V12.5Z"
-    />
-  </svg>
-  <span
-    class="text text--label-lg selection-chip__label"
-  >
-    Label
-  </span>
   <input
     checked=""
     class="selection-chip__input"
-    id=":r4:"
+    id=":r6:"
     type="checkbox"
   />
+  <div
+    class="selection-chip__body"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.5 12.5H6.5C6.35833 12.5 6.23958 12.452 6.14375 12.356C6.04792 12.26 6 12.1411 6 11.9993C6 11.8574 6.04792 11.7388 6.14375 11.6433C6.23958 11.5478 6.35833 11.5 6.5 11.5H11.5V6.5C11.5 6.35833 11.548 6.23958 11.644 6.14375C11.74 6.04792 11.8589 6 12.0008 6C12.1426 6 12.2612 6.04792 12.3567 6.14375C12.4522 6.23958 12.5 6.35833 12.5 6.5V11.5H17.5C17.6417 11.5 17.7604 11.548 17.8563 11.644C17.9521 11.74 18 11.8589 18 12.0008C18 12.1426 17.9521 12.2612 17.8563 12.3567C17.7604 12.4522 17.6417 12.5 17.5 12.5H12.5V17.5C12.5 17.6417 12.452 17.7604 12.356 17.8563C12.26 17.9521 12.1411 18 11.9993 18C11.8574 18 11.7388 17.9521 11.6433 17.8563C11.5478 17.7604 11.5 17.6417 11.5 17.5V12.5Z"
+      />
+    </svg>
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
 </label>
 `;
 
@@ -102,26 +165,30 @@ exports[`<SelectionChip /> WithIcon story renders snapshot 1`] = `
   class="selection-chip selection-chip--has-icon"
   for=":r2:"
 >
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M11.5 12.5H6.5C6.35833 12.5 6.23958 12.452 6.14375 12.356C6.04792 12.26 6 12.1411 6 11.9993C6 11.8574 6.04792 11.7388 6.14375 11.6433C6.23958 11.5478 6.35833 11.5 6.5 11.5H11.5V6.5C11.5 6.35833 11.548 6.23958 11.644 6.14375C11.74 6.04792 11.8589 6 12.0008 6C12.1426 6 12.2612 6.04792 12.3567 6.14375C12.4522 6.23958 12.5 6.35833 12.5 6.5V11.5H17.5C17.6417 11.5 17.7604 11.548 17.8563 11.644C17.9521 11.74 18 11.8589 18 12.0008C18 12.1426 17.9521 12.2612 17.8563 12.3567C17.7604 12.4522 17.6417 12.5 17.5 12.5H12.5V17.5C12.5 17.6417 12.452 17.7604 12.356 17.8563C12.26 17.9521 12.1411 18 11.9993 18C11.8574 18 11.7388 17.9521 11.6433 17.8563C11.5478 17.7604 11.5 17.6417 11.5 17.5V12.5Z"
-    />
-  </svg>
-  <span
-    class="text text--label-lg selection-chip__label"
-  >
-    Label
-  </span>
   <input
     class="selection-chip__input"
     id=":r2:"
     type="checkbox"
   />
+  <div
+    class="selection-chip__body"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.5 12.5H6.5C6.35833 12.5 6.23958 12.452 6.14375 12.356C6.04792 12.26 6 12.1411 6 11.9993C6 11.8574 6.04792 11.7388 6.14375 11.6433C6.23958 11.5478 6.35833 11.5 6.5 11.5H11.5V6.5C11.5 6.35833 11.548 6.23958 11.644 6.14375C11.74 6.04792 11.8589 6 12.0008 6C12.1426 6 12.2612 6.04792 12.3567 6.14375C12.4522 6.23958 12.5 6.35833 12.5 6.5V11.5H17.5C17.6417 11.5 17.7604 11.548 17.8563 11.644C17.9521 11.74 18 11.8589 18 12.0008C18 12.1426 17.9521 12.2612 17.8563 12.3567C17.7604 12.4522 17.6417 12.5 17.5 12.5H12.5V17.5C12.5 17.6417 12.452 17.7604 12.356 17.8563C12.26 17.9521 12.1411 18 11.9993 18C11.8574 18 11.7388 17.9521 11.6433 17.8563C11.5478 17.7604 11.5 17.6417 11.5 17.5V12.5Z"
+      />
+    </svg>
+    <span
+      class="text text--label-lg selection-chip__label"
+    >
+      Label
+    </span>
+  </div>
 </label>
 `;
