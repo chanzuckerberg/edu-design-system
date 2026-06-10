@@ -15,6 +15,10 @@ const EDSStyleDictionary = StyleDictionary.extend({
           format: 'json/flat',
           destination: '.storybook/data/tokens.json',
         },
+        {
+          format: 'json/flat-data',
+          destination: '.storybook/data/tokens-data.json',
+        },
       ],
     },
     css: {
@@ -70,6 +74,22 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
       ],
     },
+  },
+});
+
+EDSStyleDictionary.registerFormat({
+  name: 'json/flat-data',
+  formatter: function (dictionary) {
+    return (
+      '{\n' +
+      dictionary.allTokens
+        .map(function (token) {
+          return `  "${token.name}": ${JSON.stringify(token, null, 2)}`;
+        })
+        .join(',\n') +
+      '\n}' +
+      '\n'
+    );
   },
 });
 

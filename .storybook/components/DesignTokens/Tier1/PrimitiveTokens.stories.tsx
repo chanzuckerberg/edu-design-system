@@ -65,7 +65,7 @@ type ListItem = {
   value: string;
   figmaToken: string;
   tailwindClass: string;
-  type: 'size' | 'color';
+  type: 'size' | 'color' | 'typography';
 };
 
 function sortVarNames(a: ListItem, b: ListItem) {

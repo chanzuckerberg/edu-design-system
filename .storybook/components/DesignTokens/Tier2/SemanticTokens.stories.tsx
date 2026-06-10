@@ -64,8 +64,9 @@ export const TextUtility: Story = {
     caption: 'Text Utility Tokens',
     listItems: getTokenListItems(
       'eds-theme-color-text-utility',
-      'color',
+      'typography',
       (name, column, filterTerm) => {
+        // TODO-AH: handle description column, mapping token name to token definition. pull definition from param here
         if (column === 'figma') {
           return '→ text/utility/' + getSpecifier(name, filterTerm);
         } else {

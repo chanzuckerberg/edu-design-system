@@ -1,3 +1,4 @@
+import tokensData from '../data/tokens-data.json';
 import tokens from '../data/tokens.json';
 
 const recurseToPrimaryValue: (value: string) => string = (value) => {
@@ -10,10 +11,11 @@ const recurseToPrimaryValue: (value: string) => string = (value) => {
 };
 
 export default function filterTokens(prefix: string) {
-  return Object.entries(tokens)
+  return Object.entries(tokensData)
     .filter(([name]) => name.startsWith(prefix))
-    .map(([name, value]) => ({
+    .map(([name, valueObj]) => ({
       name: `--${name}`,
-      value: recurseToPrimaryValue(value),
+      value: recurseToPrimaryValue(valueObj.value),
+      data: valueObj,
     }));
 }

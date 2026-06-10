@@ -12,9 +12,10 @@ import styles from './TokenList.module.css';
 type ListItem = {
   name: string;
   value: string;
+  description: string;
   figmaToken?: string;
   tailwindClass?: string;
-  type: 'color' | 'size';
+  type: 'color' | 'size' | 'typography';
 };
 
 type Props = DataTableProps & {
@@ -36,6 +37,12 @@ const columns = [
         </Text>
       </DataTable.DataCell>
     ),
+  }),
+  columnHelper.accessor('description', {
+    header: () => (
+      <DataTable.HeaderCell>Token Description</DataTable.HeaderCell>
+    ),
+    cell: (li) => <DataTable.DataCell>{li.getValue()}</DataTable.DataCell>,
   }),
   columnHelper.accessor('figmaToken', {
     header: () => <DataTable.HeaderCell>Figma Token Name</DataTable.HeaderCell>,
@@ -66,6 +73,18 @@ const columns = [
             }}
           />
         )}
+        {li.row.original.type === 'typography' && (
+          <Text
+            preset="headline-lg"
+            style={{
+              color: li.renderValue() as string,
+              backgroundColor:
+                li.getValue().split('FF').length >= 3 ? 'black' : undefined, // simple inversion of bg
+            }}
+          >
+            AaBbCcDdEe
+          </Text>
+        )}
         <Text className="text-utility-critical" preset="code-md">
           {li.getValue()}
         </Text>
@@ -93,7 +112,7 @@ export type Renderer = (
 
 export const getTokenListItems = (
   filterTerm: string,
-  type: 'color' | 'size',
+  type: 'color' | 'size' | 'typography',
   renderer: Renderer = () => '',
 ) => {
   // Define data for the following columns:
@@ -102,9 +121,10 @@ export const getTokenListItems = (
   // - tailwind class name (if available, & use renderer)
   // - raw value (mapped to value)
 
-  return filterTokens(filterTerm).map(({ name, value }) => ({
+  return filterTokens(filterTerm).map(({ name, value, data }) => ({
     name,
     value,
+    description: (data.original.description as string) || '',
     figmaToken: renderer(name, 'figma', filterTerm),
     tailwindClass: renderer(name, 'tailwind', filterTerm),
     type,

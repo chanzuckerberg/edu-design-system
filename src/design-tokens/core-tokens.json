@@ -1543,29 +1543,35 @@
               "primary": {
                 "@": {
                   "value": "{eds.color.neutral.750}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "Default text such as headlines and body copy"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.850}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "active": {
                   "value": "{eds.color.neutral.950}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 }
               },
               "secondary": {
                 "@": {
                   "value": "{eds.color.neutral.550}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "Secondary text such as subtitles, helper text, character counters, and neutral buttons"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.650}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "Hover state for neutral button text"
                 },
                 "active": {
                   "value": "{eds.color.neutral.750}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 }
               }
             },
@@ -1573,150 +1579,181 @@
               "primary": {
                 "@": {
                   "value": "{eds.color.neutral.850}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.750}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "active": {
                   "value": "{eds.color.neutral.650}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "visited": {
                   "value": "{eds.color.neutral.850}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 }
               },
               "secondary": {
                 "@": {
                   "value": "{eds.color.green.550}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "hover": {
                   "value": "{eds.color.green.650}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "active": {
                   "value": "{eds.color.green.750}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 },
                 "visited": {
                   "value": "{eds.color.green.550}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 }
               }
             },
             "critical": {
               "@": {
                 "value": "{eds.color.red.650}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "hover": {
                 "value": "{eds.color.red.750}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "active": {
                 "value": "{eds.color.red.850}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               }
             },
             "favorable": {
               "@": {
                 "value": "{eds.color.green.650}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "hover": {
                 "value": "{eds.color.green.750}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "active": {
                 "value": "{eds.color.green.850}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               }
             },
             "warning": {
               "@": {
                 "value": "{eds.color.yellow.550}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "hover": {
                 "value": "{eds.color.yellow.650}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "active": {
                 "value": "{eds.color.yellow.750}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               }
             },
             "informational": {
               "@": {
                 "value": "{eds.color.neutral.750}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "hover": {
                 "value": "{eds.color.neutral.850}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "active": {
                 "value": "{eds.color.neutral.950}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               }
             },
             "disabled": {
               "primary": {
                 "value": "{eds.color.neutral.200}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "secondary": {
                 "value": "{eds.color.neutral.200}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               }
             },
             "inverse": {
               "@": {
                 "value": "{eds.color.white}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "disabled": {
                 "value": "rgba(250, 249, 248, 0.50)",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               },
               "interactive": {
                 "visited": {
                   "value": "{eds.color.white}",
-                  "group": "color"
+                  "group": "color",
+                  "description": "TBD"
                 }
               },
               "secondary": {
                 "value": "{eds.color.neutral.250}",
-                "group": "color"
+                "group": "color",
+                  "description": "TBD"
               }
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
-              "group": "color"
+              "group": "color",
+                  "description": "TBD"
             }
           },
           "appHeader": {
             "primary": {
               "value": "{eds.color.neutral.750}",
-              "group": "color"
+              "group": "color",
+                  "description": "TBD"
             },
             "secondary": {
               "value": "{eds.color.neutral.550}",
-              "group": "color"
+              "group": "color",
+                  "description": "TBD"
             }
           },
           "headline": {
             "value": "{eds.color.neutral.850}",
-            "group": "color"
+            "group": "color",
+                  "description": "TBD"
           }
         },
         "text-highlight": {
           "foreground": {
             "value": "{eds.color.neutral.800}",
-            "group": "color"
+            "group": "color",
+                  "description": "TBD"
           }
         }
       },
