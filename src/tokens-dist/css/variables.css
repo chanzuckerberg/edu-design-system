@@ -341,10 +341,13 @@
   --eds-theme-color-border-utility-default-low-emphasis-hover: var(--eds-color-neutral-250);
   --eds-theme-color-border-utility-default-low-emphasis: var(--eds-color-neutral-200);
   --eds-theme-color-border-app-header-separator: var(--eds-color-neutral-200);
+  --eds-theme-color-background-progress-bar-track: var(--eds-color-neutral-100);
+  --eds-theme-color-background-progress-bar-content: var(--eds-color-green-450);
+  --eds-theme-color-background-progress-bar: var(--eds-color-green-450);
   --eds-theme-color-background-utility-inverse-high-emphasis-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-inverse-high-emphasis-hover: var(--eds-color-neutral-025);
   --eds-theme-color-background-utility-inverse-high-emphasis: var(--eds-color-white);
-  --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-250);
+  --eds-theme-color-background-utility-disabled-medium-emphasis: var(--eds-color-neutral-200);
   --eds-theme-color-background-utility-disabled-low-emphasis: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-informational-high-emphasis-active: var(--eds-color-green-750);
   --eds-theme-color-background-utility-informational-high-emphasis-hover: var(--eds-color-green-650);
@@ -391,7 +394,7 @@
   --eds-theme-color-background-utility-default-low-emphasis: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-default-no-emphasis-active: var(--eds-color-neutral-100);
   --eds-theme-color-background-utility-default-no-emphasis-hover: var(--eds-color-neutral-050);
-  --eds-theme-color-background-utility-object-selected: var(--eds-color-green-050);
+  --eds-theme-color-background-utility-object-selected: var(--eds-color-green-450);
   --eds-theme-color-background-utility-container-selected: var(--eds-color-white);
   --eds-theme-color-background-utility-container-active: var(--eds-color-neutral-050);
   --eds-theme-color-background-utility-container-hover: var(--eds-color-neutral-025);
@@ -400,7 +403,7 @@
   --eds-theme-color-background-utility-base-2: var(--eds-color-white);
   --eds-theme-color-background-utility-base-1: var(--eds-color-white);
   --eds-theme-color-background-visual-page-indicator-current: var(--eds-color-green-450);
-  --eds-theme-color-background-visual-page-indicator: var(--eds-color-neutral-200);
+  --eds-theme-color-background-visual-page-indicator: var(--eds-color-neutral-100);
   --eds-theme-color-background-tab-underline: var(--eds-color-green-450);
   --eds-theme-color-background-table-row-selected: var(--eds-color-neutral-050);
   --eds-theme-color-background-table-row-stripe-2: var(--eds-color-neutral-025);

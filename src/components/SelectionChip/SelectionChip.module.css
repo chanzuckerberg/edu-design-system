@@ -12,7 +12,7 @@
   gap: calc(var(--eds-spacing-size-1) * 1px);
   overflow: hidden;
 
-  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2-and-half) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
 
   color: var(--selection-chip__fg, light-dark(var(--eds-theme-color-text-utility-interactive-primary), var(--eds-dark-theme-color-text-utility-interactive-primary)));
@@ -26,13 +26,38 @@
   -webkit-touch-callout: none;
 }
 
+.selection-chip__body {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+
+  /* EaseInOutQuad - https://matthewlein.com/tools/ceaser */
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
 .selection-chip__input {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: -1px;
   width: 1px;
   height: 1px;
   outline: none;
+}
+
+.selection-chip__input::before {
+  content: ' ';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 50%;
+
+  transform: translate(0, -50%) scale(0.75);
+  transform-origin: center;
+  left: 20px;
+
+  /* EaseInOutQuad - https://matthewlein.com/tools/ceaser */
+  transition: all calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .selection-chip--disabled {
@@ -41,7 +66,8 @@
   --selection-chip__fg: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 
   box-shadow: inset 0 0 0 1px var(--selection-chip__border);
-  pointer-events: none; /* TODO(next-major): remove when switching to use inert */
+  pointer-events: none;
+  /* TODO(next-major): remove when switching to use inert */
 }
 
 .selection-chip--has-icon {
@@ -66,21 +92,57 @@
 
 .selection-chip:hover {
   --selection-chip__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
+
+  .selection-chip__input::before {
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-low-emphasis-hover));
+    left: calc(var(--eds-spacing-size-1-and-half) * 1px);
+  }
+
+  .selection-chip__body {
+    transform: translateX(calc(var(--eds-spacing-size-1) * 1px));
+  }
 }
 
 .selection-chip:active {
   --selection-chip__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
+
+  .selection-chip__input::before {
+    background-color: calc(var(--eds-theme-color-background-utility-default-low-emphasis-active));
+  }
+
 }
 
 .selection-chip:has(.selection-chip__input:checked) {
   --selection-chip__border: light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
   --selection-chip__bg: light-dark(var(--eds-theme-color-background-utility-interactive-low-emphasis), var(--eds-dark-theme-color-background-utility-interactive-low-emphasis));
   box-shadow: inset 0 0 0 1px var(--selection-chip__border);
+
+  &.selection-chip--disabled {
+    .selection-chip__input::before {
+      background-color: light-dark(var(--eds-theme-color-icon-utility-disabled-primary), var(--eds-dark-theme-color-icon-utility-disabled-primary));
+    }
+  }
+
+  .selection-chip__input::before {
+    background-color: light-dark(var(--eds-theme-color-background-visual-page-indicator-current), var(--eds-dark-theme-color-background-visual-page-indicator-current));
+    left: calc(var(--eds-spacing-size-1-and-half) * 1px);
+
+    /* EaseInOutBack - https://matthewlein.com/tools/ceaser */
+    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  }
+
+  .selection-chip__body {
+    transform: translateX(calc(var(--eds-spacing-size-1) * 1px));
+  }
 }
 
 .selection-chip:has(.selection-chip__input:checked):hover {
   --selection-chip__border: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
   --selection-chip__bg: light-dark(var(--eds-theme-color-background-utility-interactive-low-emphasis-hover), var(--eds-dark-theme-color-background-utility-interactive-low-emphasis-hover));
+
+  .selection-chip__input::before {
+    transform: translate(0, -50%) scale(1);
+  }
 }
 
 .selection-chip:has(.selection-chip__input:checked):active {

@@ -16,7 +16,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:1.0'],
+  tags: ['autodocs', 'version:1.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof InputChip>;

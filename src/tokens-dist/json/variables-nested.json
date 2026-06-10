@@ -355,7 +355,7 @@
           },
           "tabUnderline": "#19955D",
           "visualPageIndicator": {
-            "@": "#CCC9C6",
+            "@": "#E6E2DE",
             "current": "#19955D"
           },
           "utility": {
@@ -375,7 +375,7 @@
               "highEmphasis": "rgba(36, 36, 35, 0.80)"
             },
             "object": {
-              "selected": "#E0F5EC"
+              "selected": "#19955D"
             },
             "default": {
               "noEmphasis": {
@@ -472,7 +472,7 @@
             "disabled": {
               "noEmphasis": "rgba(250, 249, 248, 0.00)",
               "lowEmphasis": "#F4F1EF",
-              "mediumEmphasis": "#BCB9B6"
+              "mediumEmphasis": "#CCC9C6"
             },
             "inverse": {
               "noEmphasis": {
@@ -487,6 +487,11 @@
               },
               "disabled": "rgba(250, 249, 248, 0.50)"
             }
+          },
+          "progressBar": {
+            "@": "#19955D",
+            "content": "#19955D",
+            "track": "#E6E2DE"
           }
         },
         "border": {

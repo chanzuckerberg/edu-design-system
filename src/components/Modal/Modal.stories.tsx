@@ -20,7 +20,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:3.1'],
+  tags: ['autodocs', 'version:3.1.1'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -325,7 +325,11 @@ export const ContentDefault: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
@@ -416,7 +420,11 @@ export const LayoutVertical: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
@@ -461,7 +469,11 @@ export const LayoutVerticalWithTertiary: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
@@ -505,7 +517,11 @@ export const WithCriticalButton: Story = {
     children: (
       <>
         <Modal.Header>
-          <Heading as="h2" className="text-utility-default-primary">
+          <Heading
+            as="h2"
+            className="text-utility-default-primary"
+            preset="title-lg"
+          >
             Modal Title
           </Heading>
           <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
