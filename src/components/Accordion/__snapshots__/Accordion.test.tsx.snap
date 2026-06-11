@@ -5,7 +5,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="w-[384px]"
+    class="w-[600px]"
   >
     <div
       class="accordion-row"
@@ -20,12 +20,12 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
-            Massa quam egestas massa.
+            Accordion title
           </span>
         </h2>
         <svg
@@ -47,101 +47,54 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
         </svg>
       </button>
     </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
     <div
       class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
+      data-headlessui-state=""
     >
       <button
-        aria-controls="headlessui-disclosure-panel-:rr:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md accordion-button--empty"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:rq:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--hidden"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:rr:"
-      />
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:rt:"
-        aria-expanded="true"
+        aria-expanded="false"
         class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:rs:"
+        data-headlessui-state=""
+        data-testid="accordion-button2"
+        id="headlessui-disclosure-button-:r2:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
-            Massa quam egestas massa.
+            Accordion title
           </span>
         </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:rt:"
-      >
         <span
-          class="text text--body-md"
+          class="text text--tag tag tag--emphasis-high tag--status-informational"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          <span
+            class="tag__body"
+          >
+            Tag Text
+          </span>
         </span>
-      </div>
+        <svg
+          class="icon accordion-button__trailing-icon"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
+          />
+        </svg>
+      </button>
     </div>
     <div
       class="accordion-row"
@@ -149,21 +102,22 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
       data-open=""
     >
       <button
-        aria-controls="headlessui-disclosure-panel-:rv:"
+        aria-controls="headlessui-disclosure-panel-:r5:"
         aria-expanded="true"
         class="accordion-button accordion-button--md"
         data-headlessui-state="open"
         data-open=""
-        id="headlessui-disclosure-button-:ru:"
+        data-testid="accordion-button3"
+        id="headlessui-disclosure-button-:r4:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
-            Massa quam egestas massa.
+            Accordion title
           </span>
         </h2>
         <svg
@@ -188,66 +142,17 @@ exports[`<Accordion /> EmptyStackedOpen story renders snapshot 1`] = `
         class="accordion-panel"
         data-headlessui-state="open"
         data-open=""
-        id="headlessui-disclosure-panel-:rv:"
+        data-testid="accordion-panel3"
+        id="headlessui-disclosure-panel-:r5:"
       >
         <span
           class="text text--body-md"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r11:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r10:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
+          <p
+            class="text text--body-md"
           >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r11:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+            Lorem ipsum dolor sit amet consectetur. Massa lacus id dictum id pharetra et semper cras. Ante aliquam nec urna amet. Ipsum viverra pharetra libero sit nam adipiscing quam erat. Ultricies lacinia malesuada ac eget convallis convallis semper purus purus.
+          </p>
         </span>
       </div>
     </div>
@@ -260,7 +165,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="w-[384px]"
+    class="w-[600px]"
   >
     <div
       class="accordion-row"
@@ -271,7 +176,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
         class="accordion-button accordion-button--md"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r4:"
+        id="headlessui-disclosure-button-:re:"
         type="button"
       >
         <span
@@ -293,10 +198,10 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
           </svg>
         </span>
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
             Massa quam egestas massa.
           </span>
@@ -324,953 +229,6 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
           />
         </svg>
       </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> HasLeadingNumberIcon story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state=""
-        data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r6:"
-        type="button"
-      >
-        <span
-          class="accordion-button__leading-icon"
-        >
-          <span
-            aria-label="Numero uno"
-            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
-            role="img"
-            tabindex="-1"
-          >
-            1
-          </span>
-        </span>
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-          <span
-            class="text text--body-md accordion-button__subTitle"
-          >
-            Quam lacus maecenas nibh malesuada.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> Small story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state=""
-        data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r8:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> Stacked story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:rb:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        data-testid="accordion-button-1"
-        id="headlessui-disclosure-button-:ra:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        data-testid="accordion-panel-1"
-        id="headlessui-disclosure-panel-:rb:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state=""
-        data-testid="accordion-button-2"
-        id="headlessui-disclosure-button-:rc:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state=""
-        data-testid="accordion-button-3"
-        id="headlessui-disclosure-button-:re:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state=""
-        data-testid="accordion-button-4"
-        id="headlessui-disclosure-button-:rg:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r13:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r12:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r13:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r15:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r14:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r15:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r17:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r16:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r17:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r19:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--md"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r18:"
-        type="button"
-      >
-        <h2
-          class="text text--body-lg accordion-button__heading"
-        >
-          <span
-            class="text text--body-lg accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r19:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:rj:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state="open"
-        data-open=""
-        data-testid="accordion-button-1"
-        id="headlessui-disclosure-button-:ri:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        data-testid="accordion-panel-1"
-        id="headlessui-disclosure-panel-:rj:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state=""
-        data-testid="accordion-button-2"
-        id="headlessui-disclosure-button-:rk:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state=""
-        data-testid="accordion-button-3"
-        id="headlessui-disclosure-button-:rm:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state=""
-        data-testid="accordion-button-4"
-        id="headlessui-disclosure-button-:ro:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[384px]"
-  >
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r1b:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r1a:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r1b:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r1d:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r1c:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r1d:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r1f:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r1e:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r1f:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-      data-headlessui-state="open"
-      data-open=""
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-:r1h:"
-        aria-expanded="true"
-        class="accordion-button accordion-button--sm"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-button-:r1g:"
-        type="button"
-      >
-        <h2
-          class="text text--body-md accordion-button__heading"
-        >
-          <span
-            class="text text--body-md accordion-button__title"
-          >
-            Massa quam egestas massa.
-          </span>
-        </h2>
-        <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            hide content
-          </title>
-          <path
-            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel"
-        data-headlessui-state="open"
-        data-open=""
-        id="headlessui-disclosure-panel-:r1h:"
-      >
-        <span
-          class="text text--body-md"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </span>
-      </div>
     </div>
   </div>
 </div>
@@ -1281,7 +239,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="w-[384px]"
+    class="w-[600px]"
   >
     <div
       class="accordion-row"
@@ -1292,14 +250,14 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
         class="accordion-button accordion-button--md"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r2:"
+        id="headlessui-disclosure-button-:rc:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
             Massa quam egestas massa.
           </span>
@@ -1338,7 +296,9 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
-  <div>
+  <div
+    class="w-[600px]"
+  >
     <div
       class="accordion-row"
       data-headlessui-state=""
@@ -1348,14 +308,14 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
         class="accordion-button accordion-button--md"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r1i:"
+        id="headlessui-disclosure-button-:rg:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
             Accordion Button 
             closed
@@ -1389,7 +349,7 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="w-[384px]"
+    class="w-[600px]"
   >
     <div
       class="accordion-row"
@@ -1399,16 +359,183 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
         aria-expanded="false"
         class="accordion-button accordion-button--md"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-:r1k:"
+        id="headlessui-disclosure-button-:ri:"
         type="button"
       >
         <h2
-          class="text text--body-lg accordion-button__heading"
+          class="text text--title-md accordion-button__heading"
         >
           <span
-            class="text text--body-lg accordion-button__title"
+            class="text text--title-md accordion-button__title"
           >
             Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa.
+          </span>
+        </h2>
+        <svg
+          class="icon accordion-button__trailing-icon"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[600px]"
+  >
+    <div
+      class="accordion-row"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="accordion-button accordion-button--md"
+        data-headlessui-state=""
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-:r6:"
+        type="button"
+      >
+        <span
+          class="accordion-button__leading-icon"
+        >
+          <span
+            aria-label="Numero uno"
+            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            role="img"
+            tabindex="-1"
+          >
+            1
+          </span>
+        </span>
+        <h2
+          class="text text--title-md accordion-button__heading"
+        >
+          <span
+            class="text text--title-md accordion-button__title"
+          >
+            Accordion title
+          </span>
+        </h2>
+        <svg
+          class="icon accordion-button__trailing-icon"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="accordion-button accordion-button--md"
+        data-headlessui-state=""
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-:r8:"
+        type="button"
+      >
+        <span
+          class="accordion-button__leading-icon"
+        >
+          <span
+            aria-label="Numero uno"
+            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            role="img"
+            tabindex="-1"
+          >
+            1
+          </span>
+        </span>
+        <h2
+          class="text text--title-md accordion-button__heading"
+        >
+          <span
+            class="text text--title-md accordion-button__title"
+          >
+            Accordion title
+          </span>
+        </h2>
+        <svg
+          class="icon accordion-button__trailing-icon"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 14.379C11.8923 14.379 11.7929 14.3614 11.7019 14.3262C11.6109 14.2909 11.5218 14.2296 11.4344 14.1425L7.04619 9.75397C6.95252 9.66047 6.90252 9.54572 6.89619 9.40972C6.88969 9.27388 6.93969 9.1528 7.04619 9.04647C7.15252 8.93997 7.27044 8.88672 7.39994 8.88672C7.52944 8.88672 7.64736 8.93997 7.75369 9.04647L11.9999 13.2925L16.2462 9.04647C16.3397 8.9528 16.4544 8.9028 16.5904 8.89647C16.7263 8.88997 16.8474 8.93997 16.9537 9.04647C17.0602 9.1528 17.1134 9.27072 17.1134 9.40022C17.1134 9.52972 17.0602 9.64764 16.9537 9.75397L12.5654 14.1425C12.4781 14.2296 12.3889 14.2909 12.2979 14.3262C12.2069 14.3614 12.1076 14.379 11.9999 14.379Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="accordion-button accordion-button--md"
+        data-headlessui-state=""
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-:ra:"
+        type="button"
+      >
+        <span
+          class="accordion-button__leading-icon"
+        >
+          <span
+            aria-label="Numero uno"
+            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            role="img"
+            tabindex="-1"
+          >
+            1
+          </span>
+        </span>
+        <h2
+          class="text text--title-md accordion-button__heading"
+        >
+          <span
+            class="text text--title-md accordion-button__title"
+          >
+            Accordion title
           </span>
         </h2>
         <svg
