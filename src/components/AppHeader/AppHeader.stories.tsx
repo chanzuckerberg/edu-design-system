@@ -211,7 +211,12 @@ export const Default: Story = {
 export const DefaultWithImageLogo: Story = {
   args: {
     ...Default.args,
-    title: <div className="fpo h-[40px] w-[175px]">Logo goes here</div>,
+    title: (
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      <div className="fpo h-[36px] w-[175px]" tabIndex={0}>
+        Logo goes here
+      </div>
+    ),
     href: 'https://example.org',
     subTitle: undefined,
   },

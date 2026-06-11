@@ -413,7 +413,8 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
             class="app-header-title__title app-header-title--has-logo"
           >
             <div
-              class="fpo h-[40px] w-[175px]"
+              class="fpo h-[36px] w-[175px]"
+              tabindex="0"
             >
               Logo goes here
             </div>
@@ -1409,7 +1410,8 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
             class="app-header-title__title app-header-title--has-logo"
           >
             <div
-              class="fpo h-[40px] w-[175px]"
+              class="fpo h-[36px] w-[175px]"
+              tabindex="0"
             >
               Logo goes here
             </div>
