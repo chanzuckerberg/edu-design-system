@@ -92,7 +92,8 @@ export const ProgressBar = ({
 
   // compute display values by checking ranges and normalizing outputs
   const computedValue = Math.max(Math.min(value, max), PROGRESS_BAR_MINIMUM);
-  const computedValueLabel = valueLabel ?? `${computedValue} / ${max}`;
+  const computedValueLabel =
+    valueLabel ?? `${Math.round((computedValue / max) * 100)}%`;
 
   const trackClassName = clsx(
     styles['progress-bar__track'],
@@ -119,7 +120,9 @@ export const ProgressBar = ({
       {context === 'standalone' && (descriptionLabel || computedValueLabel) && (
         <div className={styles['progress-bar__labels']}>
           {descriptionLabel && (
-            <FieldLabel id={progressBarId}>{descriptionLabel}</FieldLabel>
+            <FieldLabel id={progressBarId} size="md">
+              {descriptionLabel}
+            </FieldLabel>
           )}
           {computedValueLabel && (
             <Text
