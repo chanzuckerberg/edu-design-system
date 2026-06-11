@@ -24,9 +24,6 @@
 }
 
 .toast__icon {
-  /* manual offset for alignment */
-  transform: translateY(1px);
-
   flex-shrink: 0;
 
   .toast--status-critical & {

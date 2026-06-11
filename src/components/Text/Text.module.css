@@ -132,6 +132,8 @@
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 500;
   --text-letter-spacing: 2%;
+
+  transform: translateY(-1px);
 }
 
 .text--body-xl {
@@ -186,12 +188,16 @@
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--body-xs-bold {
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 700;
+
+  transform: translateY(-1px);
 }
 
 .text--label-xl {
@@ -216,6 +222,8 @@
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 500;
+
+  transform: translateY(-1px);
 }
 
 .text--overline-lg {
@@ -291,12 +299,16 @@
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 500;
+
+  transform: translateY(-1px);
 }
 
 .text--tab-sm {
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--tag {
@@ -353,6 +365,8 @@
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--appHeader-subLabel {
@@ -360,4 +374,6 @@
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }

@@ -65,11 +65,6 @@
 
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
   background-color: light-dark(var(--eds-theme-color-background-input), var(--eds-dark-theme-color-background-input));
-
-  & > span {
-    /* add additional alignment space toward top for the current fonts in use */
-    transform: translateY(-1px);
-  }
 }
 
 /**
