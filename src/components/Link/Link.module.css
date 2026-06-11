@@ -45,6 +45,9 @@
   --link-font-family: var(--eds-typography-font-family-1);
   --link-letter-spacing: var(--eds-typography-letter-spacing-normal);
 
+  /* shift up by one pixel b/c of the baseline of the font for font-family-1 */
+  transform: translateY(-1px);
+
   letter-spacing: var(--link-letter-spacing);
   font: var(--link-font-weight) var(--link-size-line-height) var(--link-font-family);
 

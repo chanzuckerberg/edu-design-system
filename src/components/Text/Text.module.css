@@ -87,11 +87,13 @@
 }
 
 .text--title-xl {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-500-font-size);
   --text-line-height: var(--eds-typography-preset-500-line-height);
-  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-weight: 500;
   --text-letter-spacing: 2%;
+
+  transform: translateY(-1px);
 
   @media screen and (min-width: $eds-bp-md) {
     --text-font-size: var(--eds-typography-preset-700-font-size);
@@ -100,10 +102,13 @@
 }
 
 .text--title-lg {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-300-font-size);
   --text-line-height: var(--eds-typography-preset-300-line-height);
   --text-font-weight: 500;
   --text-letter-spacing: 2%;
+
+  transform: translateY(-1px);
 
   @media screen and (min-width: $eds-bp-md) {
     --text-font-size: var(--eds-typography-preset-400-font-size);
@@ -112,10 +117,13 @@
 }
 
 .text--title-md {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 500;
   --text-letter-spacing: 2%;
+
+  transform: translateY(-1px);
 }
 
 .text--title-sm {
@@ -128,6 +136,7 @@
 }
 
 .text--title-xs {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 500;
@@ -137,51 +146,75 @@
 }
 
 .text--body-xl {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--body-xl-bold {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-weight: 700;
+
+  transform: translateY(-1px);
 }
 
 .text--body-lg {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--body-lg-bold {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-400-font-size);
   --text-line-height: var(--eds-typography-preset-400-line-height);
   --text-font-weight: 700;
+
+  transform: translateY(-1px);
 }
 
 .text--body-md {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--body-md-bold {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 700;
+
+  transform: translateY(-1px);
 }
 
 .text--body-sm {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--body-sm-bold {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 700;
+
+  transform: translateY(-1px);
 }
 
 .text--body-xs {
@@ -201,21 +234,30 @@
 }
 
 .text--label-xl {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-600-font-size);
   --text-line-height: var(--eds-typography-preset-600-line-height);
   --text-font-weight: 500;
+
+  transform: translateY(-1px);
 }
 
 .text--label-lg {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 500;
+
+  transform: translateY(-1px);
 }
 
 .text--label-md {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 500;
+
+  transform: translateY(-1px);
 }
 
 .text--label-sm {
@@ -270,16 +312,22 @@
 }
 
 .text--input-md {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--input {
   /* TODO(next-major): consider removing */
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-200-font-size);
   --text-line-height: var(--eds-typography-preset-200-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--tab-lg-active {
@@ -287,15 +335,21 @@
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 500;
+
+  transform: translateY(-1px);
 }
 
 .text--tab-lg {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-100-font-size);
   --text-line-height: var(--eds-typography-preset-100-line-height);
   --text-font-weight: 400;
+
+  transform: translateY(-1px);
 }
 
 .text--tab-sm-active {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 500;
@@ -304,6 +358,7 @@
 }
 
 .text--tab-sm {
+  --text-font-family: var(--eds-typography-font-family-1);
   --text-font-size: var(--eds-typography-preset-075-font-size);
   --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 400;
