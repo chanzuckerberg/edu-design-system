@@ -839,6 +839,61 @@ export const HorizontalScrolling: StoryObj<Args> = {
   },
 };
 
+/**
+ * ⚠️ Anti-pattern demo: `data` (and `columns`) passed to `useReactTable` must be
+ * a **stable reference**. Passing a brand-new array every render (e.g.
+ * `data={[...rows]}`) is harmless while a component is static, but becomes a
+ * runaway the moment that component re-renders repeatedly — for example when a
+ * consumer reacts to the table's row model.
+ *
+ * This story is inert until you click **Trigger runaway**, which arms a typical
+ * consumer effect keyed on `table.getRowModel().rows`. Because `data` is a new
+ * array each render, that `rows` reference also changes each render, so the
+ * effect re-runs every render → `setState` → re-render → loop, and React throws
+ * "Maximum update depth exceeded".
+ *
+ * Fix: give `data`/`columns` a stable identity via `useMemo`, `useState`, or a
+ * module-scope constant (as every other story here does).
+ */
+export const UnstableDataReRenderFootgun: StoryObj<Args> = {
+  parameters: {
+    // Intentionally triggers excessive re-renders on interaction — don't snapshot.
+    chromatic: { disableSnapshot: true },
+  },
+  args: {
+    tableStyle: 'border',
+    size: 'sm',
+  },
+  render: (args) => {
+    const Demo = () => {
+      const [armed, setArmed] = React.useState(false);
+
+      // UNSTABLE: a brand-new array identity on every render.
+      const table = DataTableUtils.useReactTable({
+        data: [],
+        columns,
+        getCoreRowModel: DataTableUtils.getCoreRowModel(),
+      });
+
+      // A realistic consumer effect that reacts to the row model. `rows` is a new
+      // reference every render (because `data` is unstable), so once armed this
+      // effect fires on every render and drives an infinite update loop.
+      return (
+        <div>
+          <div>
+            <Button disabled={armed} onClick={() => setArmed(true)}>
+              Trigger runaway
+            </Button>
+          </div>
+          <DataTable {...args} table={table} />
+        </div>
+      );
+    };
+
+    return <Demo />;
+  },
+};
+
 export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
     children: (
