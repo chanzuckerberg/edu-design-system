@@ -31,7 +31,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  border: calc(var(--eds-spacing-size-quarter) * 1px) solid currentColor;
+  border: calc(var(--eds-spacing-size-quarter) * 1px) solid transparent;
   border-radius: 50%;
   content: '';
 
@@ -41,9 +41,9 @@
 
 .radio__selected {
   position: absolute;
-  left: 25%;
-  width: calc(var(--eds-spacing-size-1-and-half) * 1px);
-  height: calc(var(--eds-spacing-size-1-and-half) * 1px);
+  left: 33.33%;
+  width: calc(var(--eds-spacing-size-1) * 1px);
+  height: calc(var(--eds-spacing-size-1) * 1px);
   border-radius: 50%;
   background-color: transparent;
 
@@ -51,8 +51,11 @@
   pointer-events: none;
 
   transform-origin: center;
-  transform: scale(0);
-  transition: calc(var(--eds-anim-fade-quick) * 1s) ease-in-out transform, background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
+  transform: scale(2);
+  transition: calc(var(--eds-anim-fade-quick) * 1s) transform;
+  
+  /* EaseInOutBack - https://matthewlein.com/tools/ceaser */
+  transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 }
 
 /**
@@ -129,42 +132,34 @@
 
 .radio__input:checked {
   &~.radio__container {
-    border-color: light-dark(var(--eds-theme-color-border-utility-interactive), var(--eds-dark-theme-color-border-utility-interactive));
+    background-color: light-dark(var(--eds-theme-color-background-radio-button), var(--eds-dark-theme-color-background-radio-button));
   }
 
   &~.radio__selected {
-    background-color: light-dark(var(--eds-theme-color-background-radio-button), var(--eds-dark-theme-color-background-radio-button));
+    background-color: light-dark(var(--eds-theme-color-background-utility-base-1), var(--eds-dark-theme-color-background-utility-base-1));
     transform: scale(1);
   }
 }
 
 .radio__input:checked:hover {
   &~.radio__container {
-    border-color: light-dark(var(--eds-theme-color-border-utility-interactive-hover), var(--eds-dark-theme-color-border-utility-interactive-hover));
-  }
-
-  &~.radio__selected {
     background-color: light-dark(var(--eds-theme-color-background-radio-button-hover), var(--eds-dark-theme-color-background-radio-button-hover));
   }
 }
 
 .radio__input:checked:active {
   &~.radio__container {
-    border-color: light-dark(var(--eds-theme-color-border-utility-interactive-active), var(--eds-dark-theme-color-border-utility-interactive-hover));
-  }
-
-  &~.radio__selected {
     background-color: light-dark(var(--eds-theme-color-background-radio-button-active), var(--eds-dark-theme-color-background-radio-button-active));
   }
 }
 
 .radio__input:checked:disabled {
   &~.radio__container {
-    border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
+    background-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
   }
 
   &~.radio__selected {
-    background-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
+    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
   }
 }
 
@@ -173,7 +168,7 @@
     border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
   }
 
-  &:checked~.radio__selected {
+  &:checked~.radio__container {
     background-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
   }
 }
@@ -183,7 +178,7 @@
     border-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
   }
 
-  &:checked~.radio__selected {
+  &:checked~.radio__container {
     background-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
   }
 }
@@ -193,7 +188,7 @@
     border-color: light-dark(var(--eds-theme-color-border-utility-critical-active), var(--eds-dark-theme-color-border-utility-critical-active));
   }
 
-  &:checked~.radio__selected {
+  &:checked~.radio__container {
     background-color: light-dark(var(--eds-theme-color-border-utility-critical-active), var(--eds-dark-theme-color-border-utility-critical-active));
   }
 }
