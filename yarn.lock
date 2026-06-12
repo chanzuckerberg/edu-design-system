@@ -2582,8 +2582,8 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/jsonfile": "npm:^6.1.4"
     "@types/lodash": "npm:^4.17.24"
-    "@types/node": "npm:^25.9.1"
-    "@types/react": "npm:^18.3.30"
+    "@types/node": "npm:^25.9.2"
+    "@types/react": "npm:^18.3.31"
     "@types/react-dom": "npm:^18.3.7"
     "@types/yargs": "npm:^17.0.35"
     axe-core: "npm:4.12.0"
@@ -5862,12 +5862,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.9.1":
-  version: 25.9.1
-  resolution: "@types/node@npm:25.9.1"
+"@types/node@npm:^25.9.2":
+  version: 25.9.3
+  resolution: "@types/node@npm:25.9.3"
   dependencies:
     undici-types: "npm:>=7.24.0 <7.24.7"
-  checksum: 10/8a1ccf60f0c0ca856d3324a690ee35776f26dfc1d51c3763aecdf246a3246a7971a0156bf6eb3239aa22dfa940eb361d048212f5c3204264d31ef4c41d17416a
+  checksum: 10/40c5f5c91450689b255dbf8cbd6cf0bb05e1013a353830b15eb9b5c9cda6448510be572d1ecadc38c8a4ac472e61381de9ae28df82094abece59f4c1eccffbc5
   languageName: node
   linkType: hard
 
@@ -5908,7 +5908,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.3.30":
+"@types/react@npm:^18.3.31":
   version: 18.3.31
   resolution: "@types/react@npm:18.3.31"
   dependencies:
