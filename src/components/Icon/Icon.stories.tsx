@@ -35,7 +35,7 @@ const meta: Meta<typeof Icon> = {
       ],
     },
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.1'],
 };
 
 export default meta;
