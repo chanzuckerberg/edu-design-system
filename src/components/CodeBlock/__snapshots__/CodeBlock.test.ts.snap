@@ -9,8 +9,8 @@ exports[`<CodeBlock /> Default story renders snapshot 1`] = `
       style="color: rgb(248, 248, 242); background: rgb(38, 62, 82); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em;"
     >
       <code
-        class="language-undefined"
-        style="white-space: pre; color: rgb(248, 248, 242); background: none; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none;"
+        class="code-block__block"
+        style="white-space: pre;"
       >
         <span>
           This is the code block without any syntax highlighting applied
@@ -30,8 +30,8 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
       style="color: rgb(248, 248, 242); background: rgb(38, 62, 82); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em;"
     >
       <code
-        class="language-python"
-        style="white-space: pre; color: rgb(248, 248, 242); background: none; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none;"
+        class="code-block__block"
+        style="white-space: pre;"
       >
         <span
           class="token triple-quoted-string"
@@ -524,8 +524,8 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
       style="color: rgb(248, 248, 242); background: rgb(38, 62, 82); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em;"
     >
       <code
-        class="language-ts"
-        style="white-space: pre; color: rgb(248, 248, 242); background: none; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none;"
+        class="code-block__block"
+        style="white-space: pre;"
       >
         <span
           class="token doc-comment"
@@ -1608,8 +1608,8 @@ exports[`<CodeBlock /> TypeScriptWithCopy story renders snapshot 1`] = `
       style="color: rgb(248, 248, 242); background: rgb(38, 62, 82); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em;"
     >
       <code
-        class="language-ts"
-        style="white-space: pre; color: rgb(248, 248, 242); background: none; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none;"
+        class="code-block__block"
+        style="white-space: pre;"
       >
         <span
           class="token doc-comment"
@@ -2720,8 +2720,8 @@ exports[`<CodeBlock /> TypeScriptWithText story renders snapshot 1`] = `
       style="color: rgb(248, 248, 242); background: rgb(38, 62, 82); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em;"
     >
       <code
-        class="language-ts"
-        style="white-space: pre; color: rgb(248, 248, 242); background: none; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace; text-align: left; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none;"
+        class="code-block__block"
+        style="white-space: pre;"
       >
         <span
           class="token doc-comment"

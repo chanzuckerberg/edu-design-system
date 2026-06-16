@@ -25,3 +25,7 @@
   transform: translateY(-8px);
   transition: all calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
 }
+
+.code-block__block {
+  font-family: var(--eds-typography-font-family-3);
+}

@@ -65,6 +65,9 @@ ${children}
               <SyntaxHighlighter
                 {...rest}
                 children={String(children).replace(/\n$/, '')}
+                codeTagProps={{
+                  className: styles['code-block__block'],
+                }}
                 language={match[1]}
                 PreTag="div"
                 style={theme}
