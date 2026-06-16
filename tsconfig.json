@@ -17,5 +17,6 @@
     "strict": true,
     "target": "es2018",
     "types": ["node"],
+    "outDir": "./lib",
   }
 }
