@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import delay from 'lodash/delay';
 import React from 'react';
 
 import Markdown from 'react-markdown';
@@ -6,6 +7,7 @@ import { Prism, type SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { lucario as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import Button from '../Button';
+import type { IconName } from '../Icon';
 
 import styles from './CodeBlock.module.css';
 
@@ -27,7 +29,7 @@ export type CodeBlockProps = {
   /**
    * The programming language to use for syntax highlighting
    */
-  language: string;
+  language: SyntaxHighlighterProps['language'];
   // Design API
 };
 
@@ -45,7 +47,13 @@ export const CodeBlock = ({
   language,
   ...other
 }: CodeBlockProps) => {
+  const [copyButtonIcon, setCopyButtonIcon] = React.useState<IconName>('copy');
+  const [copyButtonText, setCopyButtonText] = React.useState<string>('Copy');
+
   const componentClassName = clsx(styles['code-block']);
+  const composedCodeSnippet = `~~~${language}
+${children}
+~~~`;
   return (
     <div className={componentClassName}>
       <Markdown
@@ -69,27 +77,33 @@ export const CodeBlock = ({
           },
         }}
       >
-        {children}
+        {composedCodeSnippet}
       </Markdown>
       {copyStyle && (
         <div className={styles['code-block__copy']}>
           <Button
             aria-label="Copy this code block"
-            icon={copyStyle === 'icon' ? 'copy' : undefined}
+            icon={copyStyle === 'icon' ? copyButtonIcon : undefined}
             iconLayout={copyStyle === 'icon' ? 'icon-only' : undefined}
             onClick={async () => {
               try {
-                // TODO-AH: trim out markdown stuff around component
-                // or ... parameterize the content
-                // TODO-AH: change icon to check, or text to copied with a delay
                 await navigator.clipboard.writeText(children);
+                copyStyle === 'icon'
+                  ? setCopyButtonIcon('check')
+                  : setCopyButtonText('Copied!');
+
+                delay(() => {
+                  copyStyle === 'icon'
+                    ? setCopyButtonIcon('copy')
+                    : setCopyButtonText('Copy');
+                }, 3000);
               } catch (error) {
-                //console.error(error.message);
+                console.error(error);
               }
             }}
             rank="secondary"
           >
-            {copyStyle === 'text' ? 'Copy' : undefined}
+            {copyStyle === 'text' ? copyButtonText : undefined}
           </Button>
         </div>
       )}

@@ -25,9 +25,7 @@ type Args = React.ComponentProps<typeof CodeBlock>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    children: `~~~
-This is the code block without any syntax highlighting applied
-~~~`,
+    children: 'This is the code block without any syntax highlighting applied',
   },
 };
 
@@ -36,8 +34,8 @@ This is the code block without any syntax highlighting applied
  */
 export const TypeScript: StoryObj<Args> = {
   args: {
-    children: `~~~ts
-/**
+    language: 'ts',
+    children: `/**
  * Sorts an array of numbers using the Bubble Sort algorithm.
  * @param arr - The array of numbers to be sorted.
  * @returns A new sorted array of numbers.
@@ -68,7 +66,7 @@ export function bubbleSort(arr: number[]): number[] {
 
     return sortedArray;
 }
-~~~`,
+`,
   },
 };
 
@@ -79,13 +77,20 @@ export const TypeScriptWithCopy: StoryObj<Args> = {
   },
 };
 
+export const TypeScriptWithText: StoryObj<Args> = {
+  args: {
+    ...TypeScript.args,
+    copyStyle: 'text',
+  },
+};
+
 /**
  * Python is also supported.
  */
 export const Python: StoryObj<Args> = {
   args: {
-    children: `~~~python
-"""
+    language: 'python',
+    children: `"""
 Sorts an array of numbers using the Bubble Sort Algorithm.
 * @param arr - the array of numbers to be sorted.
 * @returns A new sorted array of numbers
@@ -97,6 +102,6 @@ def bubble_sort(arr):
           if arr[j] > arr[j + 1]:
               arr[j], arr[j + 1] = arr[j + 1], arr[j]
 return arr 
-~~~`,
+`,
   },
 };
