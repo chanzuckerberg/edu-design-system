@@ -24,6 +24,11 @@
 
   transform: translateY(-8px);
   transition: all calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
+
+  &:has(> button:focus-visible) {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .code-block__block {

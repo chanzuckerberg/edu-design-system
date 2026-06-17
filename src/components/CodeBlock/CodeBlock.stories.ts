@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import type React from 'react';
-import { userEvent, within } from 'storybook/test';
+import { userEvent } from 'storybook/test';
 
 import { CodeBlock } from './CodeBlock';
 
@@ -80,11 +80,8 @@ export const TypeScriptWithCopyIcon: StoryObj<Args> = {
     copyStyle: 'icon',
   },
 
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement.ownerDocument.body);
-    await userEvent.hover(
-      await canvas.findByRole('button', { name: 'Copy this code block' }),
-    );
+  play: async () => {
+    await userEvent.tab();
   },
 };
 
@@ -95,6 +92,10 @@ export const TypeScriptWithCopyText: StoryObj<Args> = {
   args: {
     ...TypeScript.args,
     copyStyle: 'text',
+  },
+
+  play: async () => {
+    await userEvent.tab();
   },
 };
 

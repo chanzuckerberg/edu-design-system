@@ -50,10 +50,11 @@ export const CodeBlock = ({
   const [copyButtonIcon, setCopyButtonIcon] = React.useState<IconName>('copy');
   const [copyButtonText, setCopyButtonText] = React.useState<string>('Copy');
 
-  const componentClassName = clsx(styles['code-block']);
+  const componentClassName = clsx(styles['code-block'], className);
   const composedCodeSnippet = `~~~${language}
 ${children}
 ~~~`;
+
   return (
     <div className={componentClassName}>
       <Markdown
@@ -73,9 +74,7 @@ ${children}
                 style={theme}
               />
             ) : (
-              <code {...rest} className={className}>
-                {children}
-              </code>
+              <code {...rest}>{children}</code>
             );
           },
         }}
