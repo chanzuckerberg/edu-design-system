@@ -4,7 +4,7 @@ import React from 'react';
 
 import Markdown from 'react-markdown';
 import { Prism, type SyntaxHighlighterProps } from 'react-syntax-highlighter';
-import { lucario as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { solarizedDarkAtom as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import Button from '../Button';
 import type { IconName } from '../Icon';
