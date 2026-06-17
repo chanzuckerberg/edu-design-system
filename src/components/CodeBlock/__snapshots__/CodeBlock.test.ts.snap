@@ -1599,7 +1599,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> TypeScriptWithCopy story renders snapshot 1`] = `
+exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
 <div
   class="code-block"
 >
@@ -2686,6 +2686,7 @@ exports[`<CodeBlock /> TypeScriptWithCopy story renders snapshot 1`] = `
     <button
       aria-label="Copy this code block"
       class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
+      data-testid="copy-button"
       type="button"
     >
       <span
@@ -2711,7 +2712,7 @@ exports[`<CodeBlock /> TypeScriptWithCopy story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> TypeScriptWithText story renders snapshot 1`] = `
+exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
 <div
   class="code-block"
 >
@@ -3798,6 +3799,7 @@ exports[`<CodeBlock /> TypeScriptWithText story renders snapshot 1`] = `
     <button
       aria-label="Copy this code block"
       class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+      data-testid="copy-button"
       type="button"
     >
       <span

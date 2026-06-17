@@ -1,5 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import type React from 'react';
+import { userEvent, within } from 'storybook/test';
 
 import { CodeBlock } from './CodeBlock';
 
@@ -70,14 +71,27 @@ export function bubbleSort(arr: number[]): number[] {
   },
 };
 
-export const TypeScriptWithCopy: StoryObj<Args> = {
+/**
+ * You can enable a copy button to show as an icon for the code block. It will copy the contents of the code block to the clipboard.
+ */
+export const TypeScriptWithCopyIcon: StoryObj<Args> = {
   args: {
     ...TypeScript.args,
     copyStyle: 'icon',
   },
+
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement.ownerDocument.body);
+    await userEvent.hover(
+      await canvas.findByRole('button', { name: 'Copy this code block' }),
+    );
+  },
 };
 
-export const TypeScriptWithText: StoryObj<Args> = {
+/**
+ * The copy button can also use standardized text instead of just an icon. In all cases, an accessible text marks the button to screen readers.
+ */
+export const TypeScriptWithCopyText: StoryObj<Args> = {
   args: {
     ...TypeScript.args,
     copyStyle: 'text',

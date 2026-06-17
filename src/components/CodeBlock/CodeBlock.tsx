@@ -86,6 +86,7 @@ ${children}
         <div className={styles['code-block__copy']}>
           <Button
             aria-label="Copy this code block"
+            data-testid="copy-button"
             icon={copyStyle === 'icon' ? copyButtonIcon : undefined}
             iconLayout={copyStyle === 'icon' ? 'icon-only' : undefined}
             onClick={async () => {
