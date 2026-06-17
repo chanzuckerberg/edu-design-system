@@ -89,3 +89,4 @@ export { Transition } from '@headlessui/react';
  * Export utility variant types for use in custom components
  */
 export type { Align, Emphasis, Size, Status } from './util/variant-types';
+export { default as ProgressBar } from './components/ProgressBar';
