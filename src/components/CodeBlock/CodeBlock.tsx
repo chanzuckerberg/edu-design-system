@@ -72,9 +72,12 @@ ${children}
                 language={match[1]}
                 PreTag="div"
                 style={theme}
+                wrapLongLines
               />
             ) : (
-              <code {...rest}>{children}</code>
+              <code {...rest} className={className}>
+                {children}
+              </code>
             );
           },
         }}
@@ -105,6 +108,7 @@ ${children}
               }
             }}
             rank="secondary"
+            variant="inverse"
           >
             {copyStyle === 'text' ? copyButtonText : undefined}
           </Button>

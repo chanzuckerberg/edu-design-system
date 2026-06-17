@@ -33,4 +33,5 @@
 
 .code-block__block {
   font-family: var(--eds-typography-font-family-3);
+  height: 100%;
 }

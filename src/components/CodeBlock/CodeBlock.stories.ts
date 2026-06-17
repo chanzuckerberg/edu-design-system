@@ -100,6 +100,26 @@ export const TypeScriptWithCopyText: StoryObj<Args> = {
 };
 
 /**
+ * When using
+ */
+export const CurlExample: StoryObj<Args> = {
+  args: {
+    children: `$ curl -X GET 'http://api.example.org/v1/testapikey' -H 'apikey: my_key'`,
+    language: 'bash',
+    className: 'w-[350px]',
+    copyStyle: 'icon',
+  },
+
+  tags: ['code-only'],
+
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
+// TODO-AH: Add code example showing when to use an external copy button instead of the built-in one
+
+/**
  * Python is also supported.
  */
 export const Python: StoryObj<Args> = {
