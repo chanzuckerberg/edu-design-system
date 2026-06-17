@@ -12,6 +12,10 @@ export type FieldLabelProps = {
    */
   children: ReactNode;
   /**
+   * ID of the element
+   */
+  id?: string;
+  /**
    * Additional classnames passed in for styling.
    */
   className?: string;
@@ -29,7 +33,7 @@ export type FieldLabelProps = {
    *
    * **Default is `"lg"`**.
    */
-  size?: Extract<Size, 'md' | 'lg'>;
+  size?: Extract<Size, 'sm' | 'md' | 'lg'>;
 };
 
 /**
@@ -53,7 +57,7 @@ export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
         ref={ref}
         {...other}
       >
-        <Text as="span" preset={size === 'lg' ? 'label-lg' : 'label-md'}>
+        <Text as="span" preset={`label-${size}`}>
           {children}
         </Text>
       </label>
