@@ -71,6 +71,8 @@ export function bubbleSort(arr: number[]): number[] {
   },
 };
 
+TypeScript.storyName = 'TypeScript';
+
 /**
  * You can enable a copy button to show as an icon for the code block. It will copy the contents of the code block to the clipboard.
  */
@@ -84,6 +86,8 @@ export const TypeScriptWithCopyIcon: StoryObj<Args> = {
     await userEvent.tab();
   },
 };
+
+TypeScriptWithCopyIcon.storyName = 'TypeScript With Copy Icon';
 
 /**
  * The copy button can also use standardized text instead of just an icon. In all cases, an accessible text marks the button to screen readers.
@@ -99,8 +103,10 @@ export const TypeScriptWithCopyText: StoryObj<Args> = {
   },
 };
 
+TypeScriptWithCopyText.storyName = 'TypeScript With Copy Text';
+
 /**
- * When using
+ * When using smaller code examples, you may resize the horizontal space of the container.
  */
 export const CurlExample: StoryObj<Args> = {
   args: {
@@ -117,7 +123,7 @@ export const CurlExample: StoryObj<Args> = {
   },
 };
 
-// TODO-AH: Add code example showing when to use an external copy button instead of the built-in one
+// TODO: Add code example showing when to use an external copy button instead of the built-in one
 
 /**
  * Python is also supported.
