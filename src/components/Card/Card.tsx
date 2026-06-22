@@ -64,6 +64,8 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    * corresponds to a specified emphasis level.
    *
    * **Default is `"none"`**.
+   *
+   * @deprecated
    */
   topStripe?: 'none' | 'medium' | 'high';
 };
@@ -154,13 +156,13 @@ export const Card = ({
   const cardComponent = (
     <div className={componentClassName} {...other}>
       {children}
-      {topStripe && (
+      {(topStripe || behavior) && (
         <div
           className={clsx(
             styles['card__top-stripe'],
-            styles[`top-stripe--${topStripe}`],
+            styles[`top-stripe--${behavior ? 'medium' : topStripe}`],
           )}
-        ></div>
+        />
       )}
       {behavior && isInteractive && (
         <input
@@ -275,7 +277,7 @@ const CardHeader = ({
           <Heading
             as="h3"
             className={headerTitleClassName}
-            preset={size === 'sm' ? 'title-sm' : 'headline-sm'}
+            preset={size === 'sm' ? 'title-sm' : 'title-lg'}
           >
             {title}
           </Heading>
@@ -284,7 +286,7 @@ const CardHeader = ({
           <Text
             as="div"
             className={headerSubTitleClassName}
-            preset={size === 'sm' ? 'body-sm' : 'body-lg'}
+            preset={size === 'sm' ? 'body-xs' : 'body-md'}
           >
             {subTitle}
           </Text>

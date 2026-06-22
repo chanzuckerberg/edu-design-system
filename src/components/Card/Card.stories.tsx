@@ -17,17 +17,31 @@ export default {
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
   args: {
-    className: 'w-[384px]',
+    className: 'w-[450px]',
     children: (
       <>
-        <Card.Header>
-          <div className="fpo w-full">Card Header</div>
-        </Card.Header>
-        <Card.Body>
-          <div className="fpo">Card Body</div>
+        <Card.Header
+          action={<CardMenu />}
+          eyebrow="New data set"
+          subTitle="Get to know your colleagues"
+          title="Text Complexity"
+        />
+        <Card.Body className="py-spacing-size-2">
+          <Text className="pb-spacing-size-half" preset="title-md">
+            Title text
+          </Text>
+          <Text preset="body-md">
+            Lorem ipsum dolor sit amet consectetur. Id pretium consequat
+            consequat aliquam arcu lacus semper lectus proin. Turpis dolor
+            tincidunt vehicula egestas suspendisse senectus enim. Quam euismod
+            orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar
+            aenean duis justo pretium aenean.
+          </Text>
         </Card.Body>
         <Card.Footer>
-          <div className="fpo">Card Footer</div>
+          <ButtonGroup>
+            <Button rank="primary">Primary action</Button>
+          </ButtonGroup>
         </Card.Footer>
       </>
     ),
@@ -43,7 +57,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['autodocs', 'version:3.0'],
+  tags: ['autodocs', 'version:3.1'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
@@ -60,52 +74,6 @@ export const IsInteractive: Story = {
   args: {
     ...Default.args,
     isInteractive: true,
-  },
-};
-
-/**
- * This demonstrates all that's possible with the header component
- */
-export const WithFullHeader: Story = {
-  args: {
-    children: (
-      <>
-        <Card.Header
-          eyebrow="Recommended for you"
-          subTitle="Get to know your colleagues"
-          title="Question of the day"
-        />
-        <Card.Body>
-          <div className="fpo">Card Body</div>
-        </Card.Body>
-        <Card.Footer>
-          <div className="fpo">Card Footer</div>
-        </Card.Footer>
-      </>
-    ),
-  },
-};
-
-/**
- * When using an icon in the header, we should not use `eyebrow` as it causes a noisy appearance. This is, however, technically possible.
- */
-export const WithFullHeaderAndIcon: Story = {
-  args: {
-    children: (
-      <>
-        <Card.Header
-          icon="person-encircled"
-          subTitle={<span>Get to know your colleagues</span>}
-          title="Question of the day"
-        />
-        <Card.Body>
-          <div className="fpo">Card Body</div>
-        </Card.Body>
-        <Card.Footer>
-          <div className="fpo">Card Footer</div>
-        </Card.Footer>
-      </>
-    ),
   },
 };
 
@@ -157,10 +125,10 @@ export const WithSmallFullHeaderAndIcon: Story = {
       <>
         <Card.Header
           action={<CardMenu />}
-          icon="person-encircled"
+          eyebrow="New data set"
           size="sm"
           subTitle="Get to know your colleagues"
-          title="Question of the day"
+          title="Text Complexity"
         />
         <Card.Body>
           <div className="fpo">Card Body</div>
@@ -188,101 +156,6 @@ export const WithCustomizedHeader: Story = {
         </Card.Body>
         <Card.Footer>
           <div className="fpo">Card Footer</div>
-        </Card.Footer>
-      </>
-    ),
-  },
-};
-
-export const WithHorizontalPrimaryButton: Story = {
-  args: {
-    children: (
-      <>
-        <Card.Header
-          action={<CardMenu />}
-          eyebrow="Recommended for you"
-          size="md"
-          subTitle="Get to know your colleagues"
-          title="Question of the day"
-        />
-        <Card.Body>
-          <div className="fpo my-4">Card Body</div>
-        </Card.Body>
-        <Card.Footer>
-          <ButtonGroup>
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Button onClick={() => {}} rank="primary">
-              Primary
-            </Button>
-          </ButtonGroup>
-        </Card.Footer>
-      </>
-    ),
-  },
-};
-
-/**
- * You can add a stripe along the top of a card to enhance and emphasis its appearance
- */
-export const TopStripe: Story = {
-  args: {
-    topStripe: 'medium',
-    children: (
-      <>
-        <Card.Header
-          action={<CardMenu />}
-          eyebrow="Recommended for you"
-          size="md"
-          subTitle="Get to know your colleagues"
-          title="Question of the day"
-        />
-        <Card.Body>
-          <div className="fpo my-4">Card Body</div>
-        </Card.Body>
-        <Card.Footer>
-          <ButtonGroup>
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Button onClick={() => {}} rank="primary">
-              Primary
-            </Button>
-          </ButtonGroup>
-        </Card.Footer>
-      </>
-    ),
-  },
-};
-
-/**
- * Cards also allow for using custom top stripe colors. This is exposed by using the `--card__top-stripe-bg` CSS Custom Property.
- *
- * You can make use of this by providing any of the color tokens, CSS gradients, or anything you need as the value.
- */
-export const CustomTopStripe: Story = {
-  args: {
-    topStripe: 'high',
-    style: {
-      '--card__top-stripe-bg':
-        'var(--eds-theme-color-background-utility-critical-high-emphasis)',
-    },
-    children: (
-      <>
-        <Card.Header
-          action={<CardMenu />}
-          eyebrow="Recommended for you"
-          size="md"
-          subTitle="Get to know your colleagues"
-          title="Question of the day"
-        />
-        <Card.Body>
-          <div className="fpo my-4">Card Body</div>
-        </Card.Body>
-        <Card.Footer>
-          <ButtonGroup>
-            {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
-            <Button onClick={() => {}} rank="primary">
-              Primary
-            </Button>
-          </ButtonGroup>
         </Card.Footer>
       </>
     ),
