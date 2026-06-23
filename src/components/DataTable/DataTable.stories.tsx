@@ -9,7 +9,10 @@ import {
 } from './DataTable';
 
 // We import all of the utilities from tanstack here, and this can contain other custom utilities
-import { Button, Menu, Checkbox, DataTableUtils } from '../..';
+import Button from '../../components/Button';
+import Checkbox from '../../components/Checkbox';
+import { utils as DataTableUtils } from '../../components/DataTable';
+import Menu from '../../components/Menu';
 
 import { chromaticViewports } from '../../util/viewports';
 

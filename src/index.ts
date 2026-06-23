@@ -15,6 +15,7 @@ export { default as Button } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
+export { default as CodeBlock } from './components/CodeBlock';
 export { default as DataTable } from './components/DataTable';
 export { utils as DataTableUtils } from './components/DataTable';
 export { default as FieldLabel } from './components/FieldLabel';
@@ -37,6 +38,7 @@ export { default as PageNotification } from './components/PageNotification';
 export { default as Popover } from './components/Popover';
 export { default as PopoverContainer } from './components/PopoverContainer';
 export { default as PopoverListItem } from './components/PopoverListItem';
+export { default as ProgressBar } from './components/ProgressBar';
 export { default as Radio } from './components/Radio';
 export { default as ScrollWrapper } from './components/ScrollWrapper';
 export { default as Select } from './components/Select';
@@ -89,4 +91,3 @@ export { Transition } from '@headlessui/react';
  * Export utility variant types for use in custom components
  */
 export type { Align, Emphasis, Size, Status } from './util/variant-types';
-export { default as ProgressBar } from './components/ProgressBar';
