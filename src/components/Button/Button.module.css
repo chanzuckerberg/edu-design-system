@@ -279,7 +279,7 @@
 .button--secondary.button--variant-inverse {
   --button__fg: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
   --button__border: light-dark(var(--eds-theme-color-border-utility-inverse), var(--eds-dark-theme-color-border-utility-inverse));
-  --button__bg: light-dark(var(--eds-theme-color-background-utility-interactive-high-emphasis), var(--eds-dark-theme-color-background-utility-interactive-high-emphasis));
+  --button__bg: light-dark(var(--eds-theme-color-background-utility-inverse-no-emphasis), var(--eds-dark-theme-color-background-utility-inverse-no-emphasis));
 }
 
 .button--tertiary.button--variant-inverse {

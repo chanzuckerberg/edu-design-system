@@ -2,7 +2,7 @@
   "include": ["src", ".storybook/**/*", "./jest/jest.setup.ts"],
   "exclude": ["src/bin"],
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "lib",
@@ -17,5 +17,6 @@
     "strict": true,
     "target": "es2018",
     "types": ["node"],
+    "outDir": "./lib",
   }
 }

@@ -1,0 +1,39 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # CODE BLOCK
+\*------------------------------------*/
+
+.code-block {
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+
+  &:hover .code-block__copy {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.code-block__copy {
+  opacity: 0;
+  position: absolute;
+  right: calc(var(--eds-spacing-size-2) * 1px);
+  top: calc(var(--eds-spacing-size-2) * 1px);
+
+  /* use blackdrop-filter to fuzz out the text or other colors, to match the themed bg color */
+  backdrop-filter: blur(100px);
+
+  transform: translateY(-8px);
+  transition: all calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
+
+  &:has(> button:focus-visible) {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.code-block__block {
+  font-family: var(--eds-typography-font-family-3);
+}
