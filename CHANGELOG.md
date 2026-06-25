@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.4.0...v18.5.0) (2026-06-23)
+
+
+### Features
+
+* **Accordion:** update styles for accordion panels ([#2529](https://github.com/chanzuckerberg/edu-design-system/issues/2529)) ([d1d375a](https://github.com/chanzuckerberg/edu-design-system/commit/d1d375aadaa84bc15793b84ae382c1838f53f99b))
+* **CodeBlock:** add 1.0 component ([#2533](https://github.com/chanzuckerberg/edu-design-system/issues/2533)) ([d2197a5](https://github.com/chanzuckerberg/edu-design-system/commit/d2197a5e06a591d78366b476f07ce2e5b3e78c5c))
+* **Icon:** update icons to match latest design ([#2532](https://github.com/chanzuckerberg/edu-design-system/issues/2532)) ([a5e3007](https://github.com/chanzuckerberg/edu-design-system/commit/a5e300727668f23717063cee5e1af24c4b87b4c4))
+* **ProgressBar:** add 1.0 component ([#2526](https://github.com/chanzuckerberg/edu-design-system/issues/2526)) ([5a3d035](https://github.com/chanzuckerberg/edu-design-system/commit/5a3d03591dc6344a31ec9b4eaeef7b2e2c2b1a1d))
+* **Radio:** update styling to match latest designs ([#2531](https://github.com/chanzuckerberg/edu-design-system/issues/2531)) ([90d85f6](https://github.com/chanzuckerberg/edu-design-system/commit/90d85f696b4fbbd91bb2b298958ecf8ac6518d52))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2537](https://github.com/chanzuckerberg/edu-design-system/issues/2537)) ([e05d7d5](https://github.com/chanzuckerberg/edu-design-system/commit/e05d7d51f2f4481b7fbc2fffbb052ee7da0c3f38))
+* **TextareaField:** use proper token for character counter ([#2527](https://github.com/chanzuckerberg/edu-design-system/issues/2527)) ([afb92b0](https://github.com/chanzuckerberg/edu-design-system/commit/afb92b0b75249d5e7672eb5ed028c2c8909bcf4a))
+
 ## [18.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.3.0...v18.4.0) (2026-06-09)
 
 

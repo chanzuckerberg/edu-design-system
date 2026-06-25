@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "18.4.0",
+  "version": "18.5.0",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -86,8 +86,10 @@
     "lodash": "^4.18.1",
     "ora": "5.4.1",
     "react-children-by-type": "^1.1.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.1",
     "style-dictionary": "^3.9.2",
-    "ts-dedent": "^2.2.0",
+    "ts-dedent": "^2.3.0",
     "ts-morph": "^27.0.2",
     "yargs": "^17.7.2"
   },
@@ -127,11 +129,12 @@
     "@types/jest": "^29.5.14",
     "@types/jsonfile": "^6.1.4",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^25.9.1",
-    "@types/react": "^18.3.30",
+    "@types/node": "^25.9.3",
+    "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@types/yargs": "^17.0.35",
-    "axe-core": "4.12.0",
+    "axe-core": "4.12.1",
     "chromatic": "^13.3.5",
     "codecov": "^3.8.3",
     "eslint": "^8.57.1",
@@ -155,11 +158,11 @@
     "postcss-mixins": "^12.1.2",
     "postcss-nested": "^7.0.2",
     "postcss-simple-vars": "^7.0.1",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^4.61.1",
+    "rollup": "^4.62.0",
     "rollup-plugin-postcss": "^4.0.2",
     "standard-version": "^9.5.0",
     "storybook": "^9.1.20",
@@ -181,5 +184,5 @@
       "stylelint --fix --allow-empty-input"
     ]
   },
-  "packageManager": "yarn@4.16.0"
+  "packageManager": "yarn@4.17.0"
 }

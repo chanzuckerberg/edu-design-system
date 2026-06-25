@@ -1,0 +1,4111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
+<div
+  class="code-block w-[350px]"
+>
+  <pre>
+    <div
+      style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+    >
+      <code
+        class="code-block__block"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span>
+            $ 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            curl
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token parameter"
+            style="color: rgb(38, 139, 210);"
+          >
+            -X
+          </span>
+          <span>
+             GET 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            'http://api.example.org/v1/testapikey'
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token parameter"
+            style="color: rgb(38, 139, 210);"
+          >
+            -H
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            'apikey: my_key'
+          </span>
+        </span>
+      </code>
+    </div>
+  </pre>
+  <div
+    class="code-block__copy"
+  >
+    <button
+      aria-label="Copy this code block"
+      class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-inverse"
+      data-testid="copy-button"
+      type="button"
+    >
+      <span
+        class="text text--label-lg button__text"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.05775 17.5C8.55258 17.5 8.125 17.325 7.775 16.975C7.425 16.625 7.25 16.1974 7.25 15.6923V4.30775C7.25 3.80258 7.425 3.375 7.775 3.025C8.125 2.675 8.55258 2.5 9.05775 2.5H17.4423C17.9474 2.5 18.375 2.675 18.725 3.025C19.075 3.375 19.25 3.80258 19.25 4.30775V15.6923C19.25 16.1974 19.075 16.625 18.725 16.975C18.375 17.325 17.9474 17.5 17.4423 17.5H9.05775ZM9.05775 16H17.4423C17.5193 16 17.5898 15.9679 17.6538 15.9038C17.7179 15.8398 17.75 15.7693 17.75 15.6923V4.30775C17.75 4.23075 17.7179 4.16025 17.6538 4.09625C17.5898 4.03208 17.5193 4 17.4423 4H9.05775C8.98075 4 8.91025 4.03208 8.84625 4.09625C8.78208 4.16025 8.75 4.23075 8.75 4.30775V15.6923C8.75 15.7693 8.78208 15.8398 8.84625 15.9038C8.91025 15.9679 8.98075 16 9.05775 16ZM5.55775 21C5.05258 21 4.625 20.825 4.275 20.475C3.925 20.125 3.75 19.6974 3.75 19.1923V6.30775H5.25V19.1923C5.25 19.2693 5.28208 19.3398 5.34625 19.4038C5.41025 19.4679 5.48075 19.5 5.55775 19.5H15.4423V21H5.55775Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<CodeBlock /> Default story renders snapshot 1`] = `
+<div
+  class="code-block"
+>
+  <pre>
+    <div
+      style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+    >
+      <code
+        class="code-block__block"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span>
+            This is the code block without any syntax highlighting applied
+          </span>
+        </span>
+      </code>
+    </div>
+  </pre>
+</div>
+`;
+
+exports[`<CodeBlock /> Python story renders snapshot 1`] = `
+<div
+  class="code-block"
+>
+  <pre>
+    <div
+      style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+    >
+      <code
+        class="code-block__block"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            class="token triple-quoted-string"
+            style="color: rgb(133, 153, 0);"
+          >
+            """
+
+          </span>
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color: rgb(133, 153, 0);"
+        >
+          Sorts an array of numbers using the Bubble Sort Algorithm.
+
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color: rgb(133, 153, 0);"
+        >
+          * @param arr - the array of numbers to be sorted.
+
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color: rgb(133, 153, 0);"
+        >
+          * @returns A new sorted array of numbers
+
+        </span>
+        <span>
+          <span
+            class="token triple-quoted-string"
+            style="color: rgb(133, 153, 0);"
+          >
+            """
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            def
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            bubble_sort
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            :
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+              n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            len
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+              
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            in
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            range
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            :
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                  
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            in
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            range
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            :
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                      
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &gt;
+          </span>
+          <span>
+             arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            :
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                          arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            return
+          </span>
+          <span>
+             arr 
+
+          </span>
+        </span>
+        <span />
+      </code>
+    </div>
+  </pre>
+</div>
+`;
+
+exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
+<div
+  class="code-block"
+>
+  <pre>
+    <div
+      style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+    >
+      <code
+        class="code-block__block"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+            /**
+
+          </span>
+        </span>
+        <span
+          class="token doc-comment"
+          style="color: rgb(88, 110, 117);"
+        >
+           * Sorts an array of numbers using the Bubble Sort algorithm.
+
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(38, 139, 210);"
+          >
+            @param
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             
+          </span>
+          <span
+            class="token doc-comment parameter"
+            style="color: rgb(88, 110, 117);"
+          >
+            arr
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             - The array of numbers to be sorted.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(38, 139, 210);"
+          >
+            @returns
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             A new sorted array of numbers.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             */
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            export
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            function
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            bubbleSort
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Create a shallow copy to keep the function pure and avoid mutating the input
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            const
+          </span>
+          <span>
+             sortedArray 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ...
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            const
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            .
+          </span>
+          <span>
+            length
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             swapped
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            boolean
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    swapped 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(181, 137, 0);"
+          >
+            false
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Inner loop shrinks because the largest elements "bubble" to the end
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &gt;
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Swap elements using destructuring assignment
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            swapped 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(181, 137, 0);"
+          >
+            true
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Optimization: If no elements were swapped, the array is already sorted
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            !
+          </span>
+          <span>
+            swapped
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            break
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            return
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span />
+      </code>
+    </div>
+  </pre>
+</div>
+`;
+
+exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
+<div
+  class="code-block"
+>
+  <pre>
+    <div
+      style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+    >
+      <code
+        class="code-block__block"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+            /**
+
+          </span>
+        </span>
+        <span
+          class="token doc-comment"
+          style="color: rgb(88, 110, 117);"
+        >
+           * Sorts an array of numbers using the Bubble Sort algorithm.
+
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(38, 139, 210);"
+          >
+            @param
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             
+          </span>
+          <span
+            class="token doc-comment parameter"
+            style="color: rgb(88, 110, 117);"
+          >
+            arr
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             - The array of numbers to be sorted.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(38, 139, 210);"
+          >
+            @returns
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             A new sorted array of numbers.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             */
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            export
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            function
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            bubbleSort
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Create a shallow copy to keep the function pure and avoid mutating the input
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            const
+          </span>
+          <span>
+             sortedArray 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ...
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            const
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            .
+          </span>
+          <span>
+            length
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             swapped
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            boolean
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    swapped 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(181, 137, 0);"
+          >
+            false
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Inner loop shrinks because the largest elements "bubble" to the end
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &gt;
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Swap elements using destructuring assignment
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            swapped 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(181, 137, 0);"
+          >
+            true
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Optimization: If no elements were swapped, the array is already sorted
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            !
+          </span>
+          <span>
+            swapped
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            break
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            return
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span />
+      </code>
+    </div>
+  </pre>
+  <div
+    class="code-block__copy"
+  >
+    <button
+      aria-label="Copy this code block"
+      class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-inverse"
+      data-testid="copy-button"
+      type="button"
+    >
+      <span
+        class="text text--label-lg button__text"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.05775 17.5C8.55258 17.5 8.125 17.325 7.775 16.975C7.425 16.625 7.25 16.1974 7.25 15.6923V4.30775C7.25 3.80258 7.425 3.375 7.775 3.025C8.125 2.675 8.55258 2.5 9.05775 2.5H17.4423C17.9474 2.5 18.375 2.675 18.725 3.025C19.075 3.375 19.25 3.80258 19.25 4.30775V15.6923C19.25 16.1974 19.075 16.625 18.725 16.975C18.375 17.325 17.9474 17.5 17.4423 17.5H9.05775ZM9.05775 16H17.4423C17.5193 16 17.5898 15.9679 17.6538 15.9038C17.7179 15.8398 17.75 15.7693 17.75 15.6923V4.30775C17.75 4.23075 17.7179 4.16025 17.6538 4.09625C17.5898 4.03208 17.5193 4 17.4423 4H9.05775C8.98075 4 8.91025 4.03208 8.84625 4.09625C8.78208 4.16025 8.75 4.23075 8.75 4.30775V15.6923C8.75 15.7693 8.78208 15.8398 8.84625 15.9038C8.91025 15.9679 8.98075 16 9.05775 16ZM5.55775 21C5.05258 21 4.625 20.825 4.275 20.475C3.925 20.125 3.75 19.6974 3.75 19.1923V6.30775H5.25V19.1923C5.25 19.2693 5.28208 19.3398 5.34625 19.4038C5.41025 19.4679 5.48075 19.5 5.55775 19.5H15.4423V21H5.55775Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
+<div
+  class="code-block"
+>
+  <pre>
+    <div
+      style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+    >
+      <code
+        class="code-block__block"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+            /**
+
+          </span>
+        </span>
+        <span
+          class="token doc-comment"
+          style="color: rgb(88, 110, 117);"
+        >
+           * Sorts an array of numbers using the Bubble Sort algorithm.
+
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(38, 139, 210);"
+          >
+            @param
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             
+          </span>
+          <span
+            class="token doc-comment parameter"
+            style="color: rgb(88, 110, 117);"
+          >
+            arr
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             - The array of numbers to be sorted.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(38, 139, 210);"
+          >
+            @returns
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             A new sorted array of numbers.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: rgb(88, 110, 117);"
+          >
+             */
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            export
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            function
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            bubbleSort
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Create a shallow copy to keep the function pure and avoid mutating the input
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            const
+          </span>
+          <span>
+             sortedArray 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ...
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            const
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            .
+          </span>
+          <span>
+            length
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             swapped
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            boolean
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    swapped 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(181, 137, 0);"
+          >
+            false
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Inner loop shrinks because the largest elements "bubble" to the end
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            let
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            -
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+             j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            &gt;
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Swap elements using destructuring assignment
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(133, 153, 0);"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            swapped 
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(181, 137, 0);"
+          >
+            true
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(88, 110, 117);"
+          >
+            // Optimization: If no elements were swapped, the array is already sorted
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: rgb(237, 237, 237);"
+          >
+            !
+          </span>
+          <span>
+            swapped
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            break
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: rgb(38, 139, 210);"
+          >
+            return
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: rgb(147, 161, 161);"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span />
+      </code>
+    </div>
+  </pre>
+  <div
+    class="code-block__copy"
+  >
+    <button
+      aria-label="Copy this code block"
+      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-inverse"
+      data-testid="copy-button"
+      type="button"
+    >
+      <span
+        class="text text--label-lg button__text"
+      >
+        Copy
+      </span>
+    </button>
+  </div>
+</div>
+`;

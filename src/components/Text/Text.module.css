@@ -213,8 +213,8 @@
 }
 
 .text--label-sm {
-  --text-font-size: var(--eds-typography-preset-100-font-size);
-  --text-line-height: var(--eds-typography-preset-100-line-height);
+  --text-font-size: var(--eds-typography-preset-075-font-size);
+  --text-line-height: var(--eds-typography-preset-075-line-height);
   --text-font-weight: 500;
 }
 

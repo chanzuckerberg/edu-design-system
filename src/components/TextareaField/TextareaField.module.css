@@ -49,7 +49,7 @@
 }
 
 .textarea-field__character-counter {
-  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 
   flex: 1 0 50%;
   text-align: right;

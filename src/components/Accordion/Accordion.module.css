@@ -9,10 +9,10 @@
  * Reveals itself below the associated Accordion Button.
  */
 .accordion-panel {
-  padding: 0 calc(var(--eds-spacing-size-7) * 1px) calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-2) * 1px);
+  padding: 0 0 calc(var(--eds-spacing-size-2) * 1px);
 
   &.accordion-panel--leading-icon {
-    padding-left: calc(var(--eds-spacing-size-7) * 1px);
+    padding-left: calc(var(--eds-spacing-size-5) * 1px);
   }
 
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
@@ -37,6 +37,14 @@
   &:active {
     background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
   }
+
+  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid;
+  outline-color: transparent;
+  transition: outline-color ease-in-out calc(var(--eds-anim-fade-quick) * 1s);
+
+  @media screen and (prefers-reduced-motion)  {
+    transition: none;
+  }
 }
 
 .accordion-button--empty {
@@ -48,7 +56,7 @@
  */
 .accordion-button--sm,
 .accordion-button--md {
-  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2) * 1px);
+  padding: calc(var(--eds-spacing-size-2) * 1px) 0;
 }
 
 /**
@@ -93,7 +101,8 @@
 }
 
 .accordion-button:focus-visible {
-  outline: calc(var(--eds-spacing-size-quarter) * 1px) solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  border-radius: calc(var(--eds-theme-border-radius-objects-xs) * 1px);
+  outline-color: light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
 .accordion-button__leading-icon {

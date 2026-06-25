@@ -5,7 +5,8 @@ import React from 'react';
 import { useState } from 'react';
 
 import { Modal } from './Modal';
-import { Heading, Text } from '../../';
+import Heading from '../../components/Heading';
+import Text from '../../components/Text';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
