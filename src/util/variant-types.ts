@@ -97,6 +97,7 @@ export const presets = [
   'code-xs',
   'appHeader-label',
   'appHeader-subLabel',
+  'dataTable-headerCell',
 ] as const;
 
 /**
