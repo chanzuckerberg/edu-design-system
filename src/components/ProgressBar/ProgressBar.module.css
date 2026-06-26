@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    # PROGRESS BAR
+\*------------------------------------*/
+
+/**
+ * ProgressBar
+ */
+
+.progress-bar {
+  user-select: none;
+  display: flex;
+}
+
+.progress-bar--labelLayout-horizontal {
+  flex-direction: row;
+  gap: calc(var(--eds-spacing-size-1-and-half) * 1px);
+
+  .progress-bar__labels {
+    flex-direction: column;
+    text-align: right;
+    max-width: calc(var(--eds-spacing-size-20) * 1px);
+  }
+
+  .progress-bar__track {
+    margin-top: calc(var(--eds-spacing-size-1) * 1px);
+  }
+}
+
+.progress-bar--labelLayout-vertical {
+  flex-direction: column;
+  gap: calc(var(--eds-spacing-size-quarter) * 1px);
+
+  .progress-bar__labels {
+    justify-content: space-between;
+    gap: calc(var(--eds-spacing-size-1-and-half) * 1px);
+  }
+
+  .progress-bar__valueLabel {
+    white-space: nowrap;
+    align-self: flex-end;
+  }
+}
+
+.progress-bar__track {
+  flex: 1 0 auto;
+  position: relative;
+  height: calc(var(--eds-spacing-size-1) * 1px);
+  background-color: var(--progress-bar__bg, light-dark(var(--eds-theme-color-background-progress-bar-track), var(--eds-dark-theme-color-background-progress-bar-track)));
+  overflow: hidden;
+}
+
+.progress-bar__track--context-embedded {
+  border-radius: calc(var(--eds-border-radius-none) * 1px);
+}
+
+.progress-bar__track--context-standalone {
+  border-radius: calc(var(--eds-border-radius-full) * 1px);
+}
+
+.progress-bar__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: calc(var(--eds-border-radius-none) * 1px);
+  height: 100%;
+  width: calc(var(--progress-bar__progress, 0) * 100%);
+
+  /* EaseInOutQuad - https://matthewlein.com/tools/ceaser */
+  transition: width calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+  background-color: var(--progress-bar__fg, light-dark(var(--eds-theme-color-background-progress-bar-content), var(--eds-dark-theme-color-background-progress-bar-content)));
+}
+
+.progress-bar__labels {
+  display: flex;
+}
+
+.progress-bar__valueLabel {
+  flex: 1 1;
+  text-align: right;
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+}

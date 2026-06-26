@@ -24,7 +24,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
     layout: 'centered',
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1.1'],
+  tags: ['autodocs', 'version:2.1.2'],
 };
 
 export default meta;

@@ -37,6 +37,7 @@ type AccordionProps = {
    * Various sizes supported by the `Accordion`.
    *
    * **Default is `"md"`**.
+   * @deprecated
    */
   size?: Extract<Size, 'sm' | 'md'>;
 };
@@ -78,9 +79,13 @@ type AccordionButtonProps = {
    */
   title?: string;
   /**
+   * Slot which follows the text in an accordion header
+   */
+  trailingContent?: ReactNode;
+  /**
    * Icon override for component's expand/collapse indicator.
    *
-   * **Default is `"expand-more"`**.
+   * **Default is `"chevron-down"`**.
    */
   trailingIcon?: Extract<IconName, 'chevron-down'>;
 };
@@ -114,9 +119,13 @@ type AccordionRowProps = {
    */
   isExpandable?: boolean;
   /**
-   * Whether the row has a leading icon on the row's trigger
+   * Whether the row has content on the row's trigger that leads in front of the title
    */
   hasLeadingIcon?: boolean;
+  /**
+   * Whether the row has a content on the row's trigger that trails the title
+   */
+  hasTrailingContent?: boolean;
 };
 
 const AccordionContext = createContext<{
@@ -127,10 +136,14 @@ const AccordionContext = createContext<{
 });
 
 const AccordionRowContext = createContext<
-  Pick<AccordionRowProps, 'isExpandable' | 'hasLeadingIcon'>
+  Pick<
+    AccordionRowProps,
+    'isExpandable' | 'hasLeadingIcon' | 'hasTrailingContent'
+  >
 >({
   isExpandable: true,
   hasLeadingIcon: false,
+  hasTrailingContent: false,
 });
 
 /**
@@ -162,9 +175,10 @@ const AccordionButton = ({
   children,
   className,
   headingAs,
-  leadingIcon,
+  leadingIcon, // TODO(next-major): rename to `leadingContent`
   title,
   trailingIcon = 'chevron-down',
+  trailingContent,
   subTitle,
   onClose,
   onOpen,
@@ -222,13 +236,13 @@ const AccordionButton = ({
           <Heading
             as={headingAs || contextHeadingAs}
             className={styles['accordion-button__heading']}
-            preset={size === 'md' ? 'body-lg' : 'body-md'}
+            preset={size === 'md' ? 'title-md' : 'title-sm'}
           >
             {(title || children) && (
               <Text
                 as="span"
                 className={styles['accordion-button__title']}
-                preset={size === 'md' ? 'body-lg' : 'body-md'}
+                preset={size === 'md' ? 'title-md' : 'title-sm'}
               >
                 {title}
                 {children}
@@ -244,6 +258,7 @@ const AccordionButton = ({
               </Text>
             )}
           </Heading>
+          {trailingContent}
           {isExpandable && (
             <Icon
               className={clsx(
@@ -293,6 +308,7 @@ const AccordionRow = ({
   children,
   isExpandable = true,
   hasLeadingIcon,
+  hasTrailingContent,
   ...other
 }: AccordionRowProps) => {
   const componentClassName = clsx(styles['accordion-row'], className);

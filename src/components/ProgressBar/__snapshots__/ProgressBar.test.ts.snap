@@ -1,0 +1,325 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<ProgressBar /> > Default story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      33%
+    </span>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r0:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.33;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > DescriptionLabelAndValueStringResizingBehavior story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[366px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r8:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        We should prevent labels from being this long, but if they do, they wrap
+      </span>
+    </label>
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      50% of 100%
+    </span>
+  </div>
+  <div
+    aria-labelledby=":r8:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.2;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > HorizontalLabelAndValueStringResizingBehavior story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-horizontal_2e61df w-[366px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r9:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        We should prevent labels from being this long, but if they do, they wrap
+      </span>
+    </label>
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      50% of 100%
+    </span>
+  </div>
+  <div
+    aria-labelledby=":r9:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.2;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithCustomHorizontalValueLabel story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-horizontal_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      Value
+    </span>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r5:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.5;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithDescriptionLabel story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r2:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        Label
+      </span>
+    </label>
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      33%
+    </span>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r2:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.33;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithDescriptionLabelAndValueLabel story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r6:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        Label
+      </span>
+    </label>
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      Value
+    </span>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r6:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.33;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithHorizontalDescriptionLabel story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-horizontal_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r4:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        Label
+      </span>
+    </label>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r4:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.33;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithLongDescriptionLabel story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r3:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        We should prevent labels from being this long, but if they do, they wrap
+      </span>
+    </label>
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      50%
+    </span>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r3:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.5;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithLongDescriptionLabelAndValueLabel story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[200px]"
+>
+  <div
+    class="_progress-bar__labels_2e61df"
+  >
+    <label
+      class="_label_76755a _label--md_76755a"
+      id=":r7:"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        If both labels are long, it looks really wack
+      </span>
+    </label>
+    <span
+      class="_text_b3eba3 _text--body-sm_b3eba3 _progress-bar__valueLabel_2e61df"
+    >
+      Fifty units of one hundred
+    </span>
+  </div>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r7:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.33;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > WithNoLabels story renders snapshot 1`] = `
+<div
+  class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df w-[200px]"
+>
+  <div
+    aria-label="33 percent"
+    aria-labelledby=":r1:"
+    class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
+    role="progressbar"
+    style="--progress-bar__progress: 0.33;"
+  >
+    <div
+      class="_progress-bar__content_2e61df"
+    />
+  </div>
+</div>
+`;

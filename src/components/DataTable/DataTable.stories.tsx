@@ -2,8 +2,6 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 
-// We import all of the utilities from tanstack here, and this can contain other custom utilities
-import * as DataTableUtils from '@tanstack/react-table';
 import React from 'react';
 
 import {
@@ -11,6 +9,9 @@ import {
   type DataTableProps,
   type DataTableWithStatus,
 } from './DataTable';
+
+// We import all of the utilities from tanstack here, and this can contain other custom utilities
+import { utils as DataTableUtils } from '../../components/DataTable';
 
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';

@@ -2,7 +2,7 @@
   "include": ["src", ".storybook/**/*", "test/test.setup.ts"],
   "exclude": ["src/bin"],
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "lib",
@@ -17,6 +17,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2018",
-    "types": ["node"]
+    "types": ["node"],
+    "outDir": "./lib",
   }
 }
