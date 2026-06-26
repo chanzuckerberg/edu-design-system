@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import type React from 'react';
 
 import { ProgressBar } from './ProgressBar';
