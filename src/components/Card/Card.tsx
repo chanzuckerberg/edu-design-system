@@ -128,6 +128,8 @@ export interface CardCSSProperties extends React.CSSProperties {
  *
  * Card component is the outer wrapper for the block that typically contains a title, image,
  * text, and/or calls to action.
+ *
+ * Card is pattern composed of subComponents. EDS provides subcomponents to help streamline the design and build of common cards. Designers can customize card contents to best fit their product needs.
  */
 export const Card = ({
   containerColor = 'default',

@@ -349,7 +349,7 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body py-spacing-size-2"
+      class="card__body pb-spacing-size-5 pt-spacing-size-2"
     >
       <p
         class="text text--title-md pb-spacing-size-half"
@@ -452,7 +452,7 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body py-spacing-size-2"
+      class="card__body pb-spacing-size-5 pt-spacing-size-2"
     >
       <p
         class="text text--title-md pb-spacing-size-half"
@@ -684,7 +684,7 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body py-spacing-size-2"
+      class="card__body pb-spacing-size-5 pt-spacing-size-2"
     >
       <p
         class="text text--title-md pb-spacing-size-half"

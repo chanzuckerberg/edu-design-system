@@ -16,6 +16,8 @@
   border: 1px solid;
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
+  overflow: clip;
+
   &:focus-visible {
     outline-offset: 1px;
     outline: calc(var(--eds-spacing-size-quarter) * 1px) solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
@@ -159,8 +161,8 @@
   background: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 
   /* use an outline on top of the border to get the correct width without changing the layout */
-  outline: 1px solid light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
-  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-secondary), var(--eds-dark-theme-color-border-utility-interactive-secondary));
+  /* outline: 1px solid light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)); */
+  /* border-color: light-dark(var(--eds-theme-color-border-utility-interactive-secondary), var(--eds-dark-theme-color-border-utility-interactive-secondary)); */
 }
 
 .card:has(.card__behavior-input:not(:checked)) {

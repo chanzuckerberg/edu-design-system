@@ -26,7 +26,7 @@ export default {
           subTitle="Get to know your colleagues"
           title="Text Complexity"
         />
-        <Card.Body className="py-spacing-size-2">
+        <Card.Body className="pb-spacing-size-5 pt-spacing-size-2">
           <Text className="pb-spacing-size-half" preset="title-md">
             Title text
           </Text>
@@ -63,7 +63,8 @@ export default {
 type Story = StoryObj<typeof Card>;
 
 /**
- * Cards come with structural containers for semantic grouping.
+ * Cards come with structural containers for semantic grouping. It is recommended to use `spacing-size-2` between the header and body of `Card`, and `spacing-size-5` betwwen
+ * the body and footer of `Card`.
  */
 export const Default: Story = {};
 
