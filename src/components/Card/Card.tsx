@@ -54,7 +54,7 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    */
   isDragging?: boolean;
   /**
-   * Whether `Card` itself is directly interactive (clicking will perform some navigation or action)
+   * Whether `Card` itself is directly interactive (code wrapping component so that clicking will perform some navigation or action)
    *
    * **Default is `false`**.
    */
@@ -129,7 +129,8 @@ export interface CardCSSProperties extends React.CSSProperties {
  * Card component is the outer wrapper for the block that typically contains a title, image,
  * text, and/or calls to action.
  *
- * Card is pattern composed of subComponents. EDS provides subcomponents to help streamline the design and build of common cards. Designers can customize card contents to best fit their product needs.
+ * Card is a pattern composed of subComponents. EDS provides subcomponents to help streamline
+ * the design and build of common cards. Designers can customize card contents to best fit their product needs.
  */
 export const Card = ({
   containerColor = 'default',

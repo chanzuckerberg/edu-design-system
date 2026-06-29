@@ -63,7 +63,7 @@ export default {
 type Story = StoryObj<typeof Card>;
 
 /**
- * Cards come with structural containers for semantic grouping. It is recommended to use `spacing-size-2` between the header and body of `Card`, and `spacing-size-5` betwwen
+ * Cards come with structural containers for semantic grouping. It is recommended to use `spacing-size-2` between the header and body of `Card`, and `spacing-size-5` between
  * the body and footer of `Card`.
  */
 export const Default: Story = {};

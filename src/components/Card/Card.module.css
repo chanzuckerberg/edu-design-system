@@ -112,7 +112,7 @@
 
 /* allow for top stripe to be overridden */
 :where(.card__top-stripe) {
-  background-color: var(--card__top-stripe-bg, transparent);
+  background-color: var(--card__top-stripe-bg, light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis)));
 }
 
 .card__behavior-input {
@@ -159,13 +159,13 @@
 */
 .card:has(.card__behavior-input:checked) {
   background: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
-
-  /* use an outline on top of the border to get the correct width without changing the layout */
-  /* outline: 1px solid light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)); */
-  /* border-color: light-dark(var(--eds-theme-color-border-utility-interactive-secondary), var(--eds-dark-theme-color-border-utility-interactive-secondary)); */
 }
 
 .card:has(.card__behavior-input:not(:checked)) {
+  .card__top-stripe {
+    background-color: transparent;
+  }
+  
   &:hover .card__top-stripe {
     background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
   }
