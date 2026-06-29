@@ -55,8 +55,6 @@ export type AppFooterEventHandler = (
 ) => void;
 
 /**
- * **BETA**: This component is still a work in progress and is subject to change.
- *
  * `import {AppFooter} from "@chanzuckerberg/eds";`
  *
  * A footer is a navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.
