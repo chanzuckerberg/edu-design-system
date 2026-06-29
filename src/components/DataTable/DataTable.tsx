@@ -190,7 +190,12 @@ export function DataTable<T>({
     <DataTableContext.Provider value={{ size }}>
       <div className={componentClassName} {...rest}>
         {(caption || subCaption || onSearchChange || actions) && (
-          <div className={styles['data-table__caption-container']}>
+          <div
+            className={clsx(
+              styles['data-table__caption-container'],
+              isStatusEligible && styles['data-table--status-eligible'],
+            )}
+          >
             {(caption || subCaption) && (
               <div className={styles['data-table__caption-text']}>
                 {caption && (
