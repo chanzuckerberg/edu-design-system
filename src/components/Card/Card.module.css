@@ -16,10 +16,11 @@
   border: 1px solid;
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
+  overflow: clip;
+
   &:focus-visible {
     outline-offset: 1px;
-    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid
-      light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+    outline: calc(var(--eds-spacing-size-quarter) * 1px) solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   }
 
   &.card--is-interactive {
@@ -43,7 +44,7 @@
 }
 
 .card--container-color-default {
-  background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 
   &.card--is-interactive {
     &:hover {
@@ -57,9 +58,7 @@
 }
 
 .card--container-color-call-out {
-  background-color: var(
-    --eds-theme-color-background-utility-informational-low-emphasis
-  );
+  background-color: var(--eds-theme-color-background-utility-informational-low-emphasis);
   border-color: transparent;
 
   &.card--is-interactive {
@@ -88,13 +87,17 @@
 
   &.header--size-sm {
     gap: calc(var(--eds-spacing-size-1) * 1px);
+
+    .header__icon {
+      margin-top: -2px;
+    }
   }
 
   &.header--size-md {
     gap: calc(var(--eds-spacing-size-2) * 1px);
 
     .header__icon {
-      padding-top: 4px;
+      margin-top: 2px;
     }
   }
 }
@@ -103,8 +106,6 @@
   position: absolute;
   top: 0;
   left: 0;
-
-  border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px) calc(var(--eds-theme-border-radius-surfaces-lg) * 1px) 0 0;
 
   width: 100%;
 }
@@ -120,9 +121,10 @@
   left: 0;
   z-index: -1;
   transform: scale(0);
-  
+
   /* remove focus ring and instead enable on the label */
-  &:focus, &:focus-visible {
+  &:focus,
+  &:focus-visible {
     outline: none;
   }
 }
@@ -133,7 +135,7 @@
   border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 }
 
-
+/* TODO(next-major): clean up unused top stripe implementation styles */
 .top-stripe--medium {
   height: calc(var(--eds-spacing-size-1) * 1px);
 }
@@ -156,16 +158,29 @@
 * Card colors
 */
 .card:has(.card__behavior-input:checked) {
-  background: light-dark(var(--eds-theme-color-background-utility-container-selected), var(--eds-dark-theme-color-background-utility-container-selected));
+  background: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+}
 
-  /* use an outline on top of the border to get the correct width without changing the layout */
-  outline: 1px solid light-dark(var(--eds-theme-color-border-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis));
-  border-color: light-dark(var(--eds-theme-color-border-utility-interactive-secondary), var(--eds-dark-theme-color-border-utility-interactive-secondary));
+.card:has(.card__behavior-input:not(:checked)) {
+  .card__top-stripe {
+    background-color: transparent;
+  }
+  
+  &:hover .card__top-stripe {
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
+  }
+
+  &:active .card__top-stripe {
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
+  }
+}
+
+.card__top-stripe:has(~.card__behavior-input:checked) {
+  background-color: light-dark(var(--eds-theme-color-background-utility-object-selected), var(--eds-dark-theme-color-background-utility-object-selected));
 }
 
 .card__body {
   flex-grow: 1;
-
   color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
