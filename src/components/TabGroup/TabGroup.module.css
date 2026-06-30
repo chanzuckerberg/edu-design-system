@@ -25,7 +25,6 @@
  *
  * The color "white" is arbitrary and any non transparent color can be used here.
  */
-/* TODO: use spacing units instead of rems */
 .tabs--scrollable-left {
   -webkit-mask-image: -webkit-linear-gradient(left,
       transparent,
@@ -59,7 +58,6 @@
 .tabs__list {
   list-style: none;
   display: flex;
-  gap: calc(var(--eds-spacing-size-1) * 1px);
   border-bottom: 1px solid;
 
   /* preset: tab-lg */
@@ -124,7 +122,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-2-and-half) * 1px);
+  padding: calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-2-and-half) * 1px);
   text-align: center;
 
   text-decoration: none;
