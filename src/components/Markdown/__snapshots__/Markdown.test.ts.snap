@@ -1,0 +1,4658 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Markdown /> Default story renders snapshot 1`] = `
+<div
+  class="markdown"
+>
+  <h1
+    class="text text--headline-lg"
+  >
+    Introduction
+  </h1>
+  
+
+  <p
+    class="text text--body-md"
+  >
+    Source for Testing Images: 
+    <a
+      class="link link--emphasis-default"
+      href="https://picsum.photos/200/300"
+    >
+      https://picsum.photos/200/300
+    </a>
+  </p>
+  
+
+  <p
+    class="text text--body-md"
+  >
+    This is an introductory block of text, with no additional formatting. 
+    <span
+      class="text text--body-md-bold"
+    >
+      <strong>
+        Strength
+      </strong>
+    </span>
+     can be added, as well as 
+    <em>
+      emphasis
+    </em>
+    .
+  </p>
+  
+
+  <h2
+    class="text text--headline-md"
+  >
+    Details
+  </h2>
+  
+
+  <h3
+    class="text text--headline-sm"
+  >
+    Lists
+  </h3>
+  
+
+  <h4
+    class="text text--title-lg"
+  >
+    Unordered
+  </h4>
+  
+
+  <p
+    class="text text--body-md"
+  >
+    Here are a list of items:
+  </p>
+  
+
+  <ul
+    class="list list--size-md list--markerType-default"
+  >
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Item One
+    </li>
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Item Two
+    </li>
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Item Three
+    </li>
+    
+
+  </ul>
+  
+
+  <hr
+    class="hr"
+  />
+  
+
+  <ul
+    class="list list--size-md list--markerType-default"
+  >
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Item A
+    </li>
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Item B
+    </li>
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Item C
+    </li>
+    
+
+  </ul>
+  
+
+  <h4
+    class="text text--title-lg"
+  >
+    Ordered
+  </h4>
+  
+
+  <ol
+    class="list list--size-md list--markerType-default"
+  >
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      First Item
+    </li>
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Second Item
+    </li>
+    
+
+    <li
+      class="list-item list-item--size-md"
+    >
+      Third Item
+    </li>
+    
+
+  </ol>
+  
+
+  <h3
+    class="text text--headline-sm"
+  >
+    Block Quotes
+  </h3>
+  
+
+  <blockquote
+    class="markdown__blockquote"
+  >
+    
+
+    <p
+      class="text text--body-md"
+    >
+      Including a block quote to demonstrate appearance.
+This should apply across multiple lines.
+    </p>
+    
+
+  </blockquote>
+  
+
+  <h3
+    class="text text--headline-sm"
+  >
+    Code
+  </h3>
+  
+
+  <h4
+    class="text text--title-lg"
+  >
+    Inline & Pre-formatted
+  </h4>
+  
+
+  <p
+    class="text text--body-md"
+  >
+    To run a command try the following: 
+    <code
+      class="markdown__code text text--code-md"
+    >
+      shell.py init
+    </code>
+     which prints:
+  </p>
+  
+
+  <pre
+    class="markdown__pre"
+  >
+    <code
+      class="markdown__code text text--code-md"
+    >
+      Some output from the above!
+When indented, it spans multiple lines.
+
+    </code>
+  </pre>
+  
+
+  <h4
+    class="text text--title-lg"
+  >
+    MultiLine
+  </h4>
+  
+
+  <pre
+    class="markdown__pre"
+  >
+    <div
+      class="code-block markdown--multiline"
+    >
+      <pre>
+        <div
+          style="color: rgb(131, 148, 150); text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: .5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(0, 43, 54);"
+        >
+          <code
+            class="code-block__block"
+            style="white-space: pre-wrap;"
+          >
+            <span>
+              <span
+                class="token macro directive-hash"
+                style="color: rgb(38, 139, 210);"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: rgb(38, 139, 210);"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(133, 153, 0);"
+              >
+                &lt;iostream.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: rgb(38, 139, 210);"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: rgb(38, 139, 210);"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(133, 153, 0);"
+              >
+                &lt;iomanip.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: rgb(38, 139, 210);"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: rgb(38, 139, 210);"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(133, 153, 0);"
+              >
+                &lt;fstream.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                	
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(88, 110, 117);"
+              >
+                // To send the data to a text file 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: rgb(38, 139, 210);"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: rgb(38, 139, 210);"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(133, 153, 0);"
+              >
+                &lt;conio.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                		
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(88, 110, 117);"
+              >
+                // For the getch() function 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: rgb(38, 139, 210);"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: rgb(38, 139, 210);"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(38, 139, 210);"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: rgb(133, 153, 0);"
+              >
+                &lt;stdlib.h&gt;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // This program calculates the cost of a gas fillup when the miles
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // travelled, the miles per gallon, and the price of a gallon of gas
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // is inputed. It also keeps track of the total transactions and sums
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // the total of all gas sales. This information is sent to a text file
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // on the desktop named dailyrpt.txt.
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                int
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                main
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                {
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Defining output function 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  ofstream trans_cash
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                int
+              </span>
+              <span>
+                 mpg
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Variables being initialized... 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    miles
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    month
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    day
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    year
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+               
+
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                char
+              </span>
+              <span>
+                 slash
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                	
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // character in the dates
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                double
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    gallons
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    avg_gallons
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    avg_cost
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    avg_price_gal
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cost
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ,
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                0.0
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // ...Variables initialized 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Open the output file for the total price and transaction output 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                .
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                open
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "C:\\windows\\desktop\\dailyrpt.txt"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Setting precision and value output style 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: rgb(147, 161, 161);"
+              >
+                ::
+              </span>
+              <span>
+                fixed 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                |
+              </span>
+              <span>
+                 ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: rgb(147, 161, 161);"
+              >
+                ::
+              </span>
+              <span>
+                showpoint
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Greeting and input... 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nWelcome to the Gas Register Cashier"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n-----------------------------------"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nTo begin, enter the date (i.e. 01/01/2001)"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cin 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 month 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 day 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 year
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                		
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                //Input the date
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nPlease input requested values. If you want to quit, simply type -1 in"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n 'Miles Travelled' Data to exit."
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Miles Travelled: "
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                	
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Input miles
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cin 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 miles
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Loop begin: Calculator 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                while
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                miles 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;=
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                {
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Miles per Gallon for Your Car: "
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cin 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 mpg
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Price Per Gallon You're Paying: "
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cin 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                ++
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Adds one to the counter, keeping control of transactions 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                miles
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                mpg
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Calculations... 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                *
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                +=
+              </span>
+              <span>
+                 cost
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                						
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Averaging calculations
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                +=
+              </span>
+              <span>
+                 gallons
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                +=
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // ...end 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Displaying data entry information 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: rgb(147, 161, 161);"
+              >
+                ::
+              </span>
+              <span>
+                fixed 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                |
+              </span>
+              <span>
+                 ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: rgb(147, 161, 161);"
+              >
+                ::
+              </span>
+              <span>
+                showpoint
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nMiles per Gallon:"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                9
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 mpg
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nMiles Travelled:"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                10
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 miles 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Number of Gallons: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                7
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 gallons
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                3
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Setting Precision for gas price 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nPrice per Gallon: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                8
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Re-setting precision for final total 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n--------------------------"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nCost of Fillup: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                10
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                15
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Transaction: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 trans
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\n--------------------------"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                system
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "cls"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                		
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // clears the screen
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nRe-enter values. Again, type -1 in 'Miles Travelled' to exit."
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Miles Travelled: "
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cin 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 miles
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                }
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Final Calculations
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  avg_cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  avg_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  avg_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                =
+              </span>
+              <span>
+                 total_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Final output 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: rgb(147, 161, 161);"
+              >
+                ::
+              </span>
+              <span>
+                fixed
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: rgb(147, 161, 161);"
+              >
+                ::
+              </span>
+              <span>
+                showpoint
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nDaily Report for "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 month 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 day 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 year
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "================================"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Number of Sales: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                15
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 trans 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Total Gallons Sold: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                12
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                3
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Average price per Gallon: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                6
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 avg_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Total Sales: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                19
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Average Gallons: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                15
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 avg_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Average Sale: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                18
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 avg_cost 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "--------------------------------"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Name Entry
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "\\nPrepared by:"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                20
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(237, 237, 237);"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                "Andrew Holloway"
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Output file located at C:\\windows\\desktop\\dailyrpt.txt
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Closing the generated file 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                .
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                close
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                getch
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                	
+              </span>
+              <span
+                class="token"
+                style="color: rgb(88, 110, 117);"
+              >
+                // Hit a key function
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: rgb(38, 139, 210);"
+              >
+                return
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: rgb(133, 153, 0);"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: rgb(147, 161, 161);"
+              >
+                }
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span />
+          </code>
+        </div>
+      </pre>
+      <div
+        class="code-block__copy"
+      >
+        <button
+          aria-label="Copy this code block"
+          class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-inverse"
+          data-testid="copy-button"
+          type="button"
+        >
+          <span
+            class="text text--label-lg button__text"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.05775 17.5C8.55258 17.5 8.125 17.325 7.775 16.975C7.425 16.625 7.25 16.1974 7.25 15.6923V4.30775C7.25 3.80258 7.425 3.375 7.775 3.025C8.125 2.675 8.55258 2.5 9.05775 2.5H17.4423C17.9474 2.5 18.375 2.675 18.725 3.025C19.075 3.375 19.25 3.80258 19.25 4.30775V15.6923C19.25 16.1974 19.075 16.625 18.725 16.975C18.375 17.325 17.9474 17.5 17.4423 17.5H9.05775ZM9.05775 16H17.4423C17.5193 16 17.5898 15.9679 17.6538 15.9038C17.7179 15.8398 17.75 15.7693 17.75 15.6923V4.30775C17.75 4.23075 17.7179 4.16025 17.6538 4.09625C17.5898 4.03208 17.5193 4 17.4423 4H9.05775C8.98075 4 8.91025 4.03208 8.84625 4.09625C8.78208 4.16025 8.75 4.23075 8.75 4.30775V15.6923C8.75 15.7693 8.78208 15.8398 8.84625 15.9038C8.91025 15.9679 8.98075 16 9.05775 16ZM5.55775 21C5.05258 21 4.625 20.825 4.275 20.475C3.925 20.125 3.75 19.6974 3.75 19.1923V6.30775H5.25V19.1923C5.25 19.2693 5.28208 19.3398 5.34625 19.4038C5.41025 19.4679 5.48075 19.5 5.55775 19.5H15.4423V21H5.55775Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </pre>
+  
+
+  <h5
+    class="text text--title-md"
+  >
+    Miscellaneous
+  </h5>
+  
+
+  <h6
+    class="text text--title-sm"
+  >
+    Links
+  </h6>
+  
+
+  <p
+    class="text text--body-md"
+  >
+    Here's a link to 
+    <a
+      class="link link--emphasis-default"
+      href="https://commonmark.org/"
+    >
+      CommonMark
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`<Markdown /> GithubFlavoredMarkdown story renders snapshot 1`] = `
+<div
+  class="markdown"
+>
+  <h1
+    class="text text--headline-lg"
+  >
+    GitHub-Flavored Markdown
+  </h1>
+  
+
+  <h2
+    class="text text--headline-md"
+  >
+    Tables
+  </h2>
+  
+
+  <table
+    class="data-table__table data-table--tableStyle-border"
+  >
+    <thead
+      class="data-table__header-row"
+    >
+      <tr
+        class="data-table__row"
+      >
+        <th
+          class="markdown__th"
+        >
+          <div>
+            a
+          </div>
+        </th>
+        <th
+          align="left"
+          class="markdown__th"
+        >
+          <div
+            style="text-align: left;"
+          >
+            b
+          </div>
+        </th>
+        <th
+          align="right"
+          class="markdown__th"
+        >
+          <div
+            style="text-align: right;"
+          >
+            c
+          </div>
+        </th>
+        <th
+          align="center"
+          class="markdown__th"
+        >
+          <div
+            style="text-align: center;"
+          >
+            d
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="data-table__row"
+      >
+        <td
+          class="markdown__td"
+        >
+          <div
+            class="data-table__cell data-table__cell--has-horizontal-divider"
+          >
+            1
+          </div>
+        </td>
+        <td
+          align="left"
+          class="markdown__td"
+        >
+          <div
+            class="data-table__cell data-table__cell--has-horizontal-divider"
+          >
+            2
+          </div>
+        </td>
+        <td
+          align="right"
+          class="markdown__td"
+        >
+          <div
+            class="data-table__cell data-table__cell--has-horizontal-divider"
+          >
+            3
+          </div>
+        </td>
+        <td
+          align="center"
+          class="markdown__td"
+        >
+          <div
+            class="data-table__cell data-table__cell--has-horizontal-divider"
+          >
+            4
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
