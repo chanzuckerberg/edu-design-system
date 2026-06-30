@@ -94,10 +94,10 @@
     "yargs": "^17.7.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@babel/preset-env": "^7.29.7",
-    "@babel/preset-react": "^7.29.7",
-    "@babel/preset-typescript": "^7.29.7",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
     "@chanzuckerberg/eslint-config-edu-js": "^1.1.0",
     "@chanzuckerberg/eslint-config-edu-ts": "^1.0.9",
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.9",
