@@ -414,6 +414,7 @@
   --eds-theme-color-background-radio-button-hover: var(--eds-color-green-550);
   --eds-theme-color-background-radio-button: var(--eds-color-green-450);
   --eds-theme-color-background-input: var(--eds-color-white);
+  --eds-theme-color-background-data-table-header-cell: var(--eds-color-neutral-050);
   --eds-theme-color-background-checkbox-active: var(--eds-color-green-650);
   --eds-theme-color-background-checkbox-hover: var(--eds-color-green-550);
   --eds-theme-color-background-checkbox: var(--eds-color-green-450);

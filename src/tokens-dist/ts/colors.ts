@@ -126,6 +126,7 @@ export const EdsThemeColorBackgroundAppHeaderActive = '#F4F1EF';
 export const EdsThemeColorBackgroundCheckbox = '#19955D';
 export const EdsThemeColorBackgroundCheckboxHover = '#177A4D';
 export const EdsThemeColorBackgroundCheckboxActive = '#125B3A';
+export const EdsThemeColorBackgroundDataTableHeaderCell = '#F4F1EF';
 export const EdsThemeColorBackgroundInput = '#FFFFFF';
 export const EdsThemeColorBackgroundRadioButton = '#19955D';
 export const EdsThemeColorBackgroundRadioButtonHover = '#177A4D';

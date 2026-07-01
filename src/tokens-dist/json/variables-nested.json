@@ -336,6 +336,9 @@
             "hover": "#177A4D",
             "active": "#125B3A"
           },
+          "dataTable": {
+            "headerCell": "#F4F1EF"
+          },
           "input": "#FFFFFF",
           "radioButton": {
             "@": "#19955D",

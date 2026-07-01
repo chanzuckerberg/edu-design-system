@@ -1,7 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import React from 'react';
-
 import { Text } from './Text';
+
+import { presets } from '../../util/variant-types';
 
 export default {
   title: 'Components/Text',
@@ -17,7 +18,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="m-spacing-size-2">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2'],
 } as Meta<typeof Text>;
 
 type Story = StoryObj<typeof Text>;
@@ -28,52 +29,16 @@ export const Default: Story = {
   },
 };
 
-export const TitleXLarge: Story = {
-  args: {
-    preset: 'title-xl',
-    children: 'Title extra-large',
-  },
-};
-
-export const LabelXLarge: Story = {
-  args: {
-    preset: 'label-xl',
-    children: 'Label extra-large',
-  },
-};
-
-export const BodyXLarge: Story = {
-  args: {
-    preset: 'body-xl',
-    children: 'Body extra-large',
-  },
-};
-
-export const BodyLarge: Story = {
-  args: {
-    preset: 'body-lg',
-    children: 'Body large',
-  },
-};
-
-export const BodyMedium: Story = {
-  args: {
-    preset: 'body-md',
-    children: 'Body medium',
-  },
-};
-export const BodySmall: Story = {
-  args: {
-    preset: 'body-sm',
-    children: 'Body small',
-  },
-};
-
-export const BodyXSmall: Story = {
-  args: {
-    preset: 'body-xs',
-    children: 'Body Xsmall',
-  },
+export const AllPresets: Story = {
+  render: (args) => (
+    <div>
+      {presets.map((preset) => (
+        <Text key={preset} preset={preset}>
+          {preset}
+        </Text>
+      ))}
+    </div>
+  ),
 };
 
 export const CaptionMedium: Story = {
