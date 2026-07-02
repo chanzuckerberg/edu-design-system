@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    # MARKDOWN
+\*------------------------------------*/
+
+/**
+ * Markdown
+ */
+.markdown {
+  margin: 0;
+  padding: 0;
+
+  > * + * {
+    margin-block-start: var(--markdown__flow-space, calc(var(--eds-spacing-size-2) * 1px));
+  }
+}
+
+.markdown__blockquote {
+  padding-left: calc(var(--eds-spacing-size-2) * 1px);
+  border-left: 2px solid var(--eds-theme-color-border-utility-default-low-emphasis-active);
+}
+
+.markdown__code {
+  border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
+  padding: 0 calc(var(--eds-spacing-size-1) * 1px);
+
+  background-color: var(--eds-theme-color-background-utility-default-low-emphasis);
+  color: var(--eds-theme-color-text-utility-default-secondary);
+}
+
+.markdown__pre {
+  border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
+  padding: 0 calc(var(--eds-spacing-size-1) * 1px);
+
+  background-color: var(--eds-theme-color-background-utility-default-low-emphasis);
+  color: var(--eds-theme-color-text-utility-default-secondary);
+
+  .markdown__code {
+    background-color: inherit;
+    color: inherit;
+
+    padding: revert;
+  }
+
+  &:has(.markdown--multiline) {
+    padding: 0;
+  }
+}
+
+/* TODO-AH: Add __th, __td and remove unused dependencies on DataTable */

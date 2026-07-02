@@ -21,7 +21,7 @@ export type TextProps = {
    * match those used across the design system.
    */
   preset?: Preset;
-} & React.HTMLAttributes<HTMLElement>;
+} & React.HTMLAttributes<HTMLElement>; // TODO-AH: add in each possible element and spread in <Markdown>
 
 /**
  * `import {Text} from "@chanzuckerberg/eds";`
@@ -40,7 +40,8 @@ export const Text = forwardRef(
       preset = 'body-md',
       ...other
     }: TextProps,
-    ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
+    ref: ForwardedRef<HTMLParagraphElement>,
+    // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
   ) => {
     const componentClassName = clsx(
       styles['text'],
