@@ -32,6 +32,8 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
   callToAction?: ReactNode;
   /**
    * Keyword to characterize the state of the notification
+   *
+   * **Default is `"informational"`**.
    */
   status?: Status;
   /**
@@ -83,7 +85,12 @@ export const PageNotification = ({
           buttonLayout && styles[`page-notification--has-${buttonLayout}-cta`],
         )}
       >
-        <div className={styles['page-notification__text']}>
+        <div
+          className={clsx(
+            styles['page-notification__text'],
+            subTitle && styles['page-notification--with-subTitle'],
+          )}
+        >
           {title && (
             <Heading as="h3" preset="title-md">
               {title}

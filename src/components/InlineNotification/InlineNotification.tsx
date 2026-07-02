@@ -18,6 +18,8 @@ type InlineNotificationProps = {
   // Design API
   /**
    * Keyword to characterize the state of the notification
+   *
+   * **Default is `"informational"`**.
    */
   status?: Status;
   /**
@@ -60,7 +62,7 @@ export const InlineNotification = ({
         <Text
           as="div"
           className={styles[`inline-notification__title`]}
-          preset="title-xs"
+          preset="title-sm"
         >
           {title}
         </Text>
