@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import clamp from 'lodash/clamp';
 import debounce from 'lodash/debounce';
 import React, {
   type ReactNode,
@@ -149,6 +150,9 @@ export const TabGroup = ({
   const activeTabPanelId = React.useId();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
+  const [previousIndexState, setPreviousIndexState] = useState<null | number>(
+    null,
+  );
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
   const [scrollableRight, setScrollableRight] = useState<boolean>(false);
 
@@ -178,10 +182,30 @@ export const TabGroup = ({
   const prevActiveIndex = usePrevious(activeIndex);
   useEffect(() => {
     if (prevActiveIndex != null && prevActiveIndex !== activeIndex) {
+      setPreviousIndexState(activeIndex);
       setActiveIndexState(activeIndex);
       tabRefs[activeIndex].current?.focus();
     }
   }, [prevActiveIndex, activeIndex, tabRefs]);
+
+  useEffect(() => {
+    // if previous is less than current, show the one after current
+    // if previous is more than current, show the one before current
+    // clamp to the max/min range of tabRefs
+    if (previousIndexState !== null) {
+      const desiredIndex = clamp(
+        previousIndexState > activeIndexState
+          ? activeIndexState - 1
+          : activeIndexState + 1,
+        0,
+        tabRefs.length - 1,
+      );
+
+      if (tabRefs[desiredIndex].current?.scrollIntoView) {
+        tabRefs[desiredIndex].current?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [tabRefs, previousIndexState, activeIndexState]);
 
   /**
    * Handles if scroll fade indicators should be displayed.
@@ -234,6 +258,7 @@ export const TabGroup = ({
   }, [handleTabsScroll]);
 
   function handleClick(index: number) {
+    setPreviousIndexState(activeIndexState);
     setActiveIndexState(index);
 
     if (onChange) {
@@ -273,6 +298,8 @@ export const TabGroup = ({
     styles['tabs__header'],
     scrollableLeft && styles['tabs--scrollable-left'],
     scrollableRight && styles['tabs--scrollable-right'],
+    hasDivider && styles['tabs--has-divider'],
+    variant && styles[`tabs__header--variant-${variant}`],
   );
 
   const activeTabPanel = React.cloneElement(tabs[activeIndexState], {
