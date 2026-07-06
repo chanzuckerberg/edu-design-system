@@ -192,7 +192,7 @@
   border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
 
-.tab__header--variant-inverse {
+.tabs__header--variant-inverse {
   border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
 }
 
