@@ -192,6 +192,7 @@ export const TabGroup = ({
     // if previous is less than current, show the one after current
     // if previous is more than current, show the one before current
     // clamp to the max/min range of tabRefs
+    // only apply when scrollable
     if (previousIndexState !== null) {
       const desiredIndex = clamp(
         previousIndexState > activeIndexState
@@ -201,11 +202,25 @@ export const TabGroup = ({
         tabRefs.length - 1,
       );
 
-      if (tabRefs[desiredIndex].current?.scrollIntoView) {
-        tabRefs[desiredIndex].current?.scrollIntoView({ behavior: 'smooth' });
+      if (
+        tabRefs[desiredIndex].current?.scrollIntoView &&
+        (scrollableLeft || scrollableRight)
+      ) {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+        tabRefs[desiredIndex].current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'nearest',
+        });
       }
     }
-  }, [tabRefs, previousIndexState, activeIndexState]);
+  }, [
+    tabRefs,
+    previousIndexState,
+    activeIndexState,
+    scrollableLeft,
+    scrollableRight,
+  ]);
 
   /**
    * Handles if scroll fade indicators should be displayed.
