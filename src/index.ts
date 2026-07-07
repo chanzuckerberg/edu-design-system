@@ -30,6 +30,7 @@ export { default as InputField } from './components/InputField';
 export { default as Label } from './components/Label';
 export { default as Link } from './components/Link';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
+export { default as Markdown } from './components/Markdown';
 export { default as Menu } from './components/Menu';
 export { default as Modal } from './components/Modal';
 export { default as NumberIcon } from './components/NumberIcon';

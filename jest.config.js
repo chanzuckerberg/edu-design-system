@@ -40,6 +40,14 @@ const esModules = [
   'is-alphanumerical',
   'is-alphabetical',
   'react-syntax-highlighter',
+  /* remark-gfm */
+  'remark-gfm',
+  'ccount',
+  'mdast-util-find-and-replace',
+  'escape-string-regexp',
+  'markdown-table',
+  'zwitch',
+  'longest-streak',
 ].join('|');
 
 module.exports = {
