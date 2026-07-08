@@ -39,12 +39,14 @@ export const Default: StoryObj<Args> = {
   args: {
     subTitle: 'Body text which provides additional detail',
     'aria-label': 'Default alert title',
+    onDismiss: undefined,
   },
 };
 
 export const Informational: StoryObj<Args> = {
   args: {
     'aria-label': 'Default alert title',
+    status: 'informational',
   },
 };
 
