@@ -275,7 +275,7 @@ exports[`<PageNotification /> > Informational story renders snapshot 1`] = `
 
 exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`] = `
 <div
-  class="flex flex-col gap-spacing-size-1"
+  class="gap-spacing-size-1 flex flex-col"
 >
   <aside
     aria-label="Notification 1 of 2"
