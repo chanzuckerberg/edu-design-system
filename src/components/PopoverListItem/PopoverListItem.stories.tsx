@@ -94,6 +94,16 @@ export const Destructive: Story = {
 };
 
 /**
+ * Popover list items can be marked as destructive while disabled. In such cases, it should appear as disabled.
+ */
+export const DisabledAndDestructive: Story = {
+  args: {
+    ...Disabled.args,
+    ...Destructive.args,
+  },
+};
+
+/**
  * Leading content is a flexible slot, and can contain many elements, including `Avatar`s.
  */
 export const WithLeadingAvatar: Story = {

@@ -37,6 +37,10 @@
 
   color: light-dark(var(--eds-theme-color-text-utility-disabled-secondary), var(--eds-dark-theme-color-text-utility-disabled-secondary));
   background-color: light-dark(var(--eds-theme-color-background-utility-disabled-no-emphasis), var(--eds-dark-theme-color-background-utility-disabled-no-emphasis));
+
+  .popover-list-item__sub-label {
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-secondary), var(--eds-dark-theme-color-text-utility-disabled-secondary));
+  }
 }
 
 .popover-list-item--type-label,
@@ -105,7 +109,7 @@
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
-.popover-list-item--destructive-action {
+.popover-list-item--destructive-action:not(.popover-list-item--disabled) {
   color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
 
   &:hover {
