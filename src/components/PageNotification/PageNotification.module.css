@@ -61,17 +61,18 @@
 
   &.page-notification--has-horizontal-cta {
     flex-direction: row;
+    gap: calc(var(--eds-spacing-size-1) * 1px);
   }
 }
 
 .page-notification__call-to-action {
   .page-notification--has-vertical-cta & {
-    margin-top: calc(var(--eds-spacing-size-1) * 1px);
+    margin-top: calc(var(--eds-spacing-size-1) * 1px); /* TODO: cosnider changing to use gap instead */
   }
 }
 
 .page-notification--has-vertical-cta .page-notification--with-subTitle~.page-notification__call-to-action {
-  margin-top: calc(var(--eds-spacing-size-2) * 1px);
+  margin-top: calc(var(--eds-spacing-size-2) * 1px); /* TODO: cosnider changing to use gap instead */
 }
 
 .page-notification__text {

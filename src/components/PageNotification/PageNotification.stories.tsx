@@ -99,7 +99,7 @@ export const WithHorizontalLayout: StoryObj<Args> = {
 };
 
 /**
- * When having multiple notifications on screen at once, make sure they are labeled uniquely, so that assisstive technologies can tell them apart.
+ * When having multiple notifications on screen at once, make sure they are labeled uniquely, so that assistive technologies can tell them apart.
  */
 export const MultipleNotifications: StoryObj<Args> = {
   render: (args) => (
