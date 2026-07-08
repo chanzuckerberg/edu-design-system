@@ -2544,7 +2544,7 @@ __metadata:
     "@types/yargs": "npm:^17.0.35"
     axe-core: "npm:4.12.1"
     chalk: "npm:^4.1.2"
-    chromatic: "npm:^13.3.5"
+    chromatic: "npm:^18.0.1"
     clsx: "npm:^2.1.1"
     codecov: "npm:^3.8.3"
     enquirer: "npm:^2.4.1"
@@ -8162,22 +8162,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^13.3.5":
-  version: 13.3.5
-  resolution: "chromatic@npm:13.3.5"
+"chromatic@npm:^18.0.1":
+  version: 18.0.1
+  resolution: "chromatic@npm:18.0.1"
+  dependencies:
+    semver: "npm:^7.3.5"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+    "@chromatic-com/vitest": ^0.*.* || ^1.0.0
   peerDependenciesMeta:
     "@chromatic-com/cypress":
       optional: true
     "@chromatic-com/playwright":
       optional: true
+    "@chromatic-com/vitest":
+      optional: true
   bin:
-    chroma: dist/bin.js
-    chromatic: dist/bin.js
-    chromatic-cli: dist/bin.js
-  checksum: 10/d660e926e2763158eb216c12fd443ac909235b62e0855d6485c5ec270cbde8ce6d5467fc9792a988f2cd4c32722efb9899982b26d4bd8265381846c7d7006c21
+    chroma: dist/bin.cjs
+    chromatic: dist/bin.cjs
+    chromatic-cli: dist/bin.cjs
+  checksum: 10/9002459279f13c431a0fa0b12dd2a02e799730ebcd9fcf263189482e0265bad1bb5142f12ac83d9b8996c000158a2e25b473912fbc32c11bf0042c91fe16efb3
   languageName: node
   linkType: hard
 
