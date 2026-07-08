@@ -14,7 +14,7 @@ exports[`<AppFooter /> Default story renders snapshot 1`] = `
         class="app-footer__title"
       >
         <div
-          class="fpo h-[40px] w-[175px]"
+          class="fpo h-[40px] w-[176px]"
         >
           Logo goes here
         </div>
@@ -82,7 +82,7 @@ exports[`<AppFooter /> HighEmphasis story renders snapshot 1`] = `
         class="app-footer__title"
       >
         <div
-          class="fpo h-[40px] w-[175px]"
+          class="fpo h-[40px] w-[176px]"
         >
           Logo goes here
         </div>
@@ -210,7 +210,7 @@ exports[`<AppFooter /> WithCopyright story renders snapshot 1`] = `
         class="app-footer__title"
       >
         <div
-          class="fpo h-[40px] w-[175px]"
+          class="fpo h-[40px] w-[176px]"
         >
           Logo goes here
         </div>
@@ -288,7 +288,7 @@ exports[`<AppFooter /> WithFooterLink story renders snapshot 1`] = `
           class="app-footer__title"
         >
           <div
-            class="fpo h-[40px] w-[175px]"
+            class="fpo h-[40px] w-[176px]"
           >
             Logo goes here
           </div>

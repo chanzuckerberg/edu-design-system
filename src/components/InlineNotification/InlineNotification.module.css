@@ -13,30 +13,43 @@
   padding: calc(var(--eds-spacing-size-1) * 1px);
   border-radius: calc(var(--eds-theme-border-radius-notification) * 1px);
 
-  /* NOTE: by specifying no default color for borders, they inherit from color below */
+  /* fallback color is the default status */
+  color: var(--inline-notification__fg, light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary)));
+  background-color: var(--inline-notification__bg, light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis)));
+
   &.inline-notification--status-informational {
-    color: light-dark(var(--eds-theme-color-text-utility-informational), var(--eds-dark-theme-color-text-utility-informational));
-    background-color: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
+    --inline-notification__bg: light-dark(var(--eds-theme-color-background-utility-informational-low-emphasis), var(--eds-dark-theme-color-background-utility-informational-low-emphasis));
   }
 
   &.inline-notification--status-critical {
-    color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
-    background-color: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
+    --inline-notification__bg: light-dark(var(--eds-theme-color-background-utility-critical-low-emphasis), var(--eds-dark-theme-color-background-utility-critical-low-emphasis));
   }
 
   &.inline-notification--status-favorable {
-    color: light-dark(var(--eds-theme-color-text-utility-favorable), var(--eds-dark-theme-color-text-utility-favorable));
-    background-color: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
+    --inline-notification__bg: light-dark(var(--eds-theme-color-background-utility-favorable-low-emphasis), var(--eds-dark-theme-color-background-utility-favorable-low-emphasis));
   }
 
   &.inline-notification--status-warning {
-    color: light-dark(var(--eds-theme-color-text-utility-warning), var(--eds-dark-theme-color-text-utility-warning));
-    background-color: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
+    --inline-notification__bg: light-dark(var(--eds-theme-color-background-utility-warning-low-emphasis), var(--eds-dark-theme-color-background-utility-warning-low-emphasis));
   }
 }
 
 .inline-notification__icon {
+  margin: 3px 0; /* spacing to match design hack */
+
   flex-shrink: 0;
+
+  .inline-notification--status-critical & {
+    color: light-dark(var(--eds-theme-color-icon-utility-critical), var(--eds-dark-theme-color-icon-utility-critical));
+  }
+
+  .inline-notification--status-favorable & {
+    color: light-dark(var(--eds-theme-color-icon-utility-favorable), var(--eds-dark-theme-color-icon-utility-favorable));
+  }
+
+  .inline-notification--status-warning & {
+    color: light-dark(var(--eds-theme-color-icon-utility-warning), var(--eds-dark-theme-color-icon-utility-warning));
+  }
 }
 
 .inline-notification__body {

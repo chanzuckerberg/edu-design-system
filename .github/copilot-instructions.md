@@ -21,3 +21,12 @@
 
 - When a new or existing CSS custom property (CSS Variable) is added  to a component's CSS module code (src/**/*.module.css), make sure that this is also defined as part of that component's root node API. This should include the following: Extending the React.CSSProperties interface to include a list of any properties defined for this component, adding `style` to the props type of the component using this new interface, and at least one story demonstrating the use of each defined CSS custom property
 - The documentation for the `style` prop should include a list of the CSS custom properties defined in the CSS module for the component.
+
+## Naming conventions
+
+### Matching BEM-style class name to prop names
+
+When checking naming of CSS classes note the two existing patterns:
+
+* Classes have names that will match both the prop, and the value (e.g., if there is a prop "variant" with value "strong" expect a class selector in the CSS with suffix "--variant-strong").
+* If the prop name or value has camelCase format, that should be preserved in the class name itself (e.g., if there is a prop named "subTitle", expect a class selector in the CSS for that component with "subTitle" in its text)

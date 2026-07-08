@@ -792,6 +792,12 @@
               "group": "color"
             }
           },
+          "dataTable": {
+            "headerCell": {
+              "value": "{eds.color.neutral.050}",
+              "group": "color"
+            }
+          },
           "input": {
             "value": "{eds.color.white}",
             "group": "color"
@@ -879,7 +885,7 @@
                 "group": "color"
               },
               "selected": {
-                "value": "{eds.color.white}",
+                "value": "{eds.color.neutral.025}",
                 "group": "color"
               }
             },
@@ -1425,29 +1431,29 @@
             },
             "critical": {
               "@": {
-                "value": "{eds.color.red.650}",
+                "value": "{eds.color.red.550}",
                 "group": "color"
               },
               "hover": {
-                "value": "{eds.color.red.750}",
+                "value": "{eds.color.red.650}",
                 "group": "color"
               },
               "active": {
-                "value": "{eds.color.red.850}",
+                "value": "{eds.color.red.750}",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
-                "value": "{eds.color.green.650}",
+                "value": "{eds.color.green.550}",
                 "group": "color"
               },
               "hover": {
-                "value": "{eds.color.green.750}",
+                "value": "{eds.color.green.650}",
                 "group": "color"
               },
               "active": {
-                "value": "{eds.color.green.850}",
+                "value": "{eds.color.green.750}",
                 "group": "color"
               }
             },
@@ -1467,15 +1473,15 @@
             },
             "informational": {
               "@": {
-                "value": "{eds.color.green.550}",
+                "value": "{eds.color.neutral.750}",
                 "group": "color"
               },
               "hover": {
-                "value": "{eds.color.green.650}",
+                "value": "{eds.color.neutral.850}",
                 "group": "color"
               },
               "active": {
-                "value": "{eds.color.green.750}",
+                "value": "{eds.color.neutral.950}",
                 "group": "color"
               }
             },
@@ -1609,29 +1615,29 @@
             },
             "critical": {
               "@": {
-                "value": "{eds.color.red.650}",
+                "value": "{eds.color.red.550}",
                 "group": "color"
               },
               "hover": {
-                "value": "{eds.color.red.750}",
+                "value": "{eds.color.red.650}",
                 "group": "color"
               },
               "active": {
-                "value": "{eds.color.red.850}",
+                "value": "{eds.color.red.750}",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
-                "value": "{eds.color.green.650}",
+                "value": "{eds.color.green.550}",
                 "group": "color"
               },
               "hover": {
-                "value": "{eds.color.green.750}",
+                "value": "{eds.color.green.650}",
                 "group": "color"
               },
               "active": {
-                "value": "{eds.color.green.850}",
+                "value": "{eds.color.green.750}",
                 "group": "color"
               }
             },

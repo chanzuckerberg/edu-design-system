@@ -12,7 +12,11 @@
   gap: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-6) * 1px);
 
   text-align: start;
-  margin: 0 calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
+  padding: 0 calc(var(--eds-spacing-size-1-and-half) * 1px) calc(var(--eds-spacing-size-4) * 1px);
+}
+
+.data-table--status-eligible {
+  padding-left: calc(var(--eds-spacing-size-5) * 1px);
 }
 
 .data-table__caption-text {
@@ -108,7 +112,7 @@
     font: 500 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
     letter-spacing: 2%;
 
-    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px);
+    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
   }
 
   .data-cell__cell--icon {
@@ -158,7 +162,7 @@
   }
 
   .data-table--size-md & {
-    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px);
+    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
   }
 
   .data-cell__cell--icon {

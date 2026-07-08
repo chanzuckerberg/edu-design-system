@@ -1,5 +1,234 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Text /> AllPresets story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <div>
+    <p
+      class="text text--headline-xl"
+    >
+      headline-xl
+    </p>
+    <p
+      class="text text--headline-lg"
+    >
+      headline-lg
+    </p>
+    <p
+      class="text text--headline-md"
+    >
+      headline-md
+    </p>
+    <p
+      class="text text--headline-sm"
+    >
+      headline-sm
+    </p>
+    <p
+      class="text text--headline-decorative-md"
+    >
+      headline-decorative-md
+    </p>
+    <p
+      class="text text--title-xl"
+    >
+      title-xl
+    </p>
+    <p
+      class="text text--title-lg"
+    >
+      title-lg
+    </p>
+    <p
+      class="text text--title-md"
+    >
+      title-md
+    </p>
+    <p
+      class="text text--title-sm"
+    >
+      title-sm
+    </p>
+    <p
+      class="text text--title-xs"
+    >
+      title-xs
+    </p>
+    <p
+      class="text text--body-xl"
+    >
+      body-xl
+    </p>
+    <p
+      class="text text--body-xl-bold"
+    >
+      body-xl-bold
+    </p>
+    <p
+      class="text text--body-lg"
+    >
+      body-lg
+    </p>
+    <p
+      class="text text--body-lg-bold"
+    >
+      body-lg-bold
+    </p>
+    <p
+      class="text text--body-md"
+    >
+      body-md
+    </p>
+    <p
+      class="text text--body-md-bold"
+    >
+      body-md-bold
+    </p>
+    <p
+      class="text text--body-sm"
+    >
+      body-sm
+    </p>
+    <p
+      class="text text--body-sm-bold"
+    >
+      body-sm-bold
+    </p>
+    <p
+      class="text text--body-xs"
+    >
+      body-xs
+    </p>
+    <p
+      class="text text--body-xs-bold"
+    >
+      body-xs-bold
+    </p>
+    <p
+      class="text text--label-xl"
+    >
+      label-xl
+    </p>
+    <p
+      class="text text--label-lg"
+    >
+      label-lg
+    </p>
+    <p
+      class="text text--label-md"
+    >
+      label-md
+    </p>
+    <p
+      class="text text--label-sm"
+    >
+      label-sm
+    </p>
+    <p
+      class="text text--overline-lg"
+    >
+      overline-lg
+    </p>
+    <p
+      class="text text--overline-md"
+    >
+      overline-md
+    </p>
+    <p
+      class="text text--overline-sm"
+    >
+      overline-sm
+    </p>
+    <p
+      class="text text--caption-md"
+    >
+      caption-md
+    </p>
+    <p
+      class="text text--caption-sm"
+    >
+      caption-sm
+    </p>
+    <p
+      class="text text--input-md"
+    >
+      input-md
+    </p>
+    <p
+      class="text text--input"
+    >
+      input
+    </p>
+    <p
+      class="text text--tab-lg-active"
+    >
+      tab-lg-active
+    </p>
+    <p
+      class="text text--tab-lg"
+    >
+      tab-lg
+    </p>
+    <p
+      class="text text--tab-sm-active"
+    >
+      tab-sm-active
+    </p>
+    <p
+      class="text text--tab-sm"
+    >
+      tab-sm
+    </p>
+    <p
+      class="text text--tag"
+    >
+      tag
+    </p>
+    <p
+      class="text text--code-xl"
+    >
+      code-xl
+    </p>
+    <p
+      class="text text--code-lg"
+    >
+      code-lg
+    </p>
+    <p
+      class="text text--code-md"
+    >
+      code-md
+    </p>
+    <p
+      class="text text--code-sm"
+    >
+      code-sm
+    </p>
+    <p
+      class="text text--code-xs"
+    >
+      code-xs
+    </p>
+    <p
+      class="text text--appHeader-label"
+    >
+      appHeader-label
+    </p>
+    <p
+      class="text text--appHeader-subLabel"
+    >
+      appHeader-subLabel
+    </p>
+    <p
+      class="text text--dataTable-headerCell"
+    >
+      dataTable-headerCell
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<Text /> AppHeaderLabel story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -8,66 +237,6 @@ exports[`<Text /> AppHeaderLabel story renders snapshot 1`] = `
     class="text text--appHeader-label"
   >
     Typography for AppHeader component
-  </p>
-</div>
-`;
-
-exports[`<Text /> BodyLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--body-lg"
-  >
-    Body large
-  </p>
-</div>
-`;
-
-exports[`<Text /> BodyMedium story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--body-md"
-  >
-    Body medium
-  </p>
-</div>
-`;
-
-exports[`<Text /> BodySmall story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--body-sm"
-  >
-    Body small
-  </p>
-</div>
-`;
-
-exports[`<Text /> BodyXLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--body-xl"
-  >
-    Body extra-large
-  </p>
-</div>
-`;
-
-exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--body-xs"
-  >
-    Body Xsmall
   </p>
 </div>
 `;
@@ -130,18 +299,6 @@ exports[`<Text /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> LabelXLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--label-xl"
-  >
-    Label extra-large
-  </p>
-</div>
-`;
-
 exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -150,18 +307,6 @@ exports[`<Text /> OverridingFontFamily story renders snapshot 1`] = `
     class="text text--body-md !font-3"
   >
     You can use utility classes to override the font family used for a given size
-  </p>
-</div>
-`;
-
-exports[`<Text /> TitleXLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="text text--title-xl"
-  >
-    Title extra-large
   </p>
 </div>
 `;

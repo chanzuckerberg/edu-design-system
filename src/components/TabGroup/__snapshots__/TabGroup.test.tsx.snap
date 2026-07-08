@@ -5,7 +5,7 @@ exports[`<TabGroup /> Centered story renders snapshot 1`] = `
   class="tabs"
 >
   <div
-    class="tabs__header"
+    class="tabs__header tabs--has-divider tabs__header--variant-default"
   >
     <ul
       class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
@@ -125,7 +125,7 @@ exports[`<TabGroup /> Default story renders snapshot 1`] = `
   class="tabs"
 >
   <div
-    class="tabs__header"
+    class="tabs__header tabs--has-divider tabs__header--variant-default"
   >
     <ul
       class="tabs__list tabs--has-divider tabs__list--variant-default"
@@ -248,7 +248,7 @@ exports[`<TabGroup /> InverseVariant story renders snapshot 1`] = `
     class="tabs"
   >
     <div
-      class="tabs__header"
+      class="tabs__header tabs--has-divider tabs__header--variant-inverse"
     >
       <ul
         class="tabs__list tabs--has-divider tabs__list--variant-inverse"
@@ -369,7 +369,7 @@ exports[`<TabGroup /> TabWidthFull story renders snapshot 1`] = `
   class="tabs"
 >
   <div
-    class="tabs__header"
+    class="tabs__header tabs--has-divider tabs__header--variant-default"
   >
     <ul
       class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
@@ -489,7 +489,7 @@ exports[`<TabGroup /> WithTabIcons story renders snapshot 1`] = `
   class="tabs"
 >
   <div
-    class="tabs__header"
+    class="tabs__header tabs--has-divider tabs__header--variant-default"
   >
     <ul
       class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
@@ -631,7 +631,7 @@ exports[`<TabGroup /> WithTabIllustrations story renders snapshot 1`] = `
   class="tabs"
 >
   <div
-    class="tabs__header"
+    class="tabs__header tabs--has-divider tabs__header--variant-default"
   >
     <ul
       class="tabs__list tabs--has-divider tabs__list--align-center tabs__list--variant-default"
