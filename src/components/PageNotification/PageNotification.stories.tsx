@@ -42,14 +42,6 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-// export const WithSubTitle: StoryObj<Args> = {
-//   args: {
-//     subTitle: 'Subtitle which provides additional detail',
-//     'aria-label':
-//       'Warning title and subtitle which communicates info to the user',
-//   },
-// };
-
 export const Informational: StoryObj<Args> = {
   args: {
     'aria-label': 'Default alert title',
