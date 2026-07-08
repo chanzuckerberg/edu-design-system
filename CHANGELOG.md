@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.4.0...v18.6.0) (2026-07-08)
+
+
+### Features
+
+* **Accordion:** update styles for accordion panels ([#2529](https://github.com/chanzuckerberg/edu-design-system/issues/2529)) ([12cd671](https://github.com/chanzuckerberg/edu-design-system/commit/12cd671d1e36c3883ac86ea87bf4532e43b52b46))
+* **Accordion:** update styles for accordion panels ([#2529](https://github.com/chanzuckerberg/edu-design-system/issues/2529)) ([d1d375a](https://github.com/chanzuckerberg/edu-design-system/commit/d1d375aadaa84bc15793b84ae382c1838f53f99b))
+* **Card:** update card to latest designs ([#2539](https://github.com/chanzuckerberg/edu-design-system/issues/2539)) ([17b7504](https://github.com/chanzuckerberg/edu-design-system/commit/17b7504f00916f66112a3e9f9b6150e0f948ef26))
+* **CodeBlock:** add 1.0 component ([#2533](https://github.com/chanzuckerberg/edu-design-system/issues/2533)) ([03aef30](https://github.com/chanzuckerberg/edu-design-system/commit/03aef30d290d08d69c22214880addde379e8d5be))
+* **CodeBlock:** add 1.0 component ([#2533](https://github.com/chanzuckerberg/edu-design-system/issues/2533)) ([d2197a5](https://github.com/chanzuckerberg/edu-design-system/commit/d2197a5e06a591d78366b476f07ce2e5b3e78c5c))
+* **Icon:** add download icon ([#2540](https://github.com/chanzuckerberg/edu-design-system/issues/2540)) ([41ea857](https://github.com/chanzuckerberg/edu-design-system/commit/41ea85754055794219a2a80518a9a9f9cb242b1a))
+* **Icon:** update icons to match latest design ([#2532](https://github.com/chanzuckerberg/edu-design-system/issues/2532)) ([d67ff08](https://github.com/chanzuckerberg/edu-design-system/commit/d67ff080e85c78a8ed66dfb349713fefb3c3bdd5))
+* **Icon:** update icons to match latest design ([#2532](https://github.com/chanzuckerberg/edu-design-system/issues/2532)) ([a5e3007](https://github.com/chanzuckerberg/edu-design-system/commit/a5e300727668f23717063cee5e1af24c4b87b4c4))
+* **Markdown:** introduce 1.0 component ([#2546](https://github.com/chanzuckerberg/edu-design-system/issues/2546)) ([41cc272](https://github.com/chanzuckerberg/edu-design-system/commit/41cc27268f13b970bb7f211e7dc78ed8fb1d4009))
+* **ProgressBar:** add 1.0 component ([#2526](https://github.com/chanzuckerberg/edu-design-system/issues/2526)) ([27e7128](https://github.com/chanzuckerberg/edu-design-system/commit/27e712865fb513dbe1235c2913df2ce427840ea9))
+* **ProgressBar:** add 1.0 component ([#2526](https://github.com/chanzuckerberg/edu-design-system/issues/2526)) ([5a3d035](https://github.com/chanzuckerberg/edu-design-system/commit/5a3d03591dc6344a31ec9b4eaeef7b2e2c2b1a1d))
+* **Radio:** update styling to match latest designs ([#2531](https://github.com/chanzuckerberg/edu-design-system/issues/2531)) ([72379c0](https://github.com/chanzuckerberg/edu-design-system/commit/72379c07e4b8596185a7c9b816e137bdb1aa252e))
+* **Radio:** update styling to match latest designs ([#2531](https://github.com/chanzuckerberg/edu-design-system/issues/2531)) ([90d85f6](https://github.com/chanzuckerberg/edu-design-system/commit/90d85f696b4fbbd91bb2b298958ecf8ac6518d52))
+* **TabGroup:** scroll tabs into view upon selection ([#2549](https://github.com/chanzuckerberg/edu-design-system/issues/2549)) ([f0bea66](https://github.com/chanzuckerberg/edu-design-system/commit/f0bea660f66223370c9a99e42c41d2addaeafcd7))
+* **Typography:** add and update new presets ([#2541](https://github.com/chanzuckerberg/edu-design-system/issues/2541)) ([1e79423](https://github.com/chanzuckerberg/edu-design-system/commit/1e79423a1c38dda422910616812f28e215a14019))
+* update notification components to use latest design ([#2548](https://github.com/chanzuckerberg/edu-design-system/issues/2548)) ([bf07102](https://github.com/chanzuckerberg/edu-design-system/commit/bf071021045eac0abf68c0eac56f85777a7dab5e))
+
+
+### Bug Fixes
+
+* adjust padding to match across components ([#2543](https://github.com/chanzuckerberg/edu-design-system/issues/2543)) ([d0bcc7b](https://github.com/chanzuckerberg/edu-design-system/commit/d0bcc7bb4435b0c41b7a5081ca368a11d6083d79))
+* **deps:** update all non-major dependencies ([#2537](https://github.com/chanzuckerberg/edu-design-system/issues/2537)) ([79b8f4a](https://github.com/chanzuckerberg/edu-design-system/commit/79b8f4afe4e4b189e2ded2db684ee7a8aa2fc572))
+* **deps:** update all non-major dependencies ([#2537](https://github.com/chanzuckerberg/edu-design-system/issues/2537)) ([e05d7d5](https://github.com/chanzuckerberg/edu-design-system/commit/e05d7d51f2f4481b7fbc2fffbb052ee7da0c3f38))
+* **deps:** update all non-major dependencies ([#2542](https://github.com/chanzuckerberg/edu-design-system/issues/2542)) ([d7da301](https://github.com/chanzuckerberg/edu-design-system/commit/d7da301280a66725314e1ad76af796a6823a8623))
+* **TextareaField:** use proper token for character counter ([#2527](https://github.com/chanzuckerberg/edu-design-system/issues/2527)) ([b9ff36f](https://github.com/chanzuckerberg/edu-design-system/commit/b9ff36f351c30f40f4a208a5daa219aafeb462a0))
+* **TextareaField:** use proper token for character counter ([#2527](https://github.com/chanzuckerberg/edu-design-system/issues/2527)) ([afb92b0](https://github.com/chanzuckerberg/edu-design-system/commit/afb92b0b75249d5e7672eb5ed028c2c8909bcf4a))
+
 ## [18.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.4.0...v18.5.0) (2026-06-23)
 
 

@@ -1,5 +1,234 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Text /> > AllPresets story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-2"
+>
+  <div>
+    <p
+      class="_text_b3eba3 _text--headline-xl_b3eba3"
+    >
+      headline-xl
+    </p>
+    <p
+      class="_text_b3eba3 _text--headline-lg_b3eba3"
+    >
+      headline-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--headline-md_b3eba3"
+    >
+      headline-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--headline-sm_b3eba3"
+    >
+      headline-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--headline-decorative-md_b3eba3"
+    >
+      headline-decorative-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--title-xl_b3eba3"
+    >
+      title-xl
+    </p>
+    <p
+      class="_text_b3eba3 _text--title-lg_b3eba3"
+    >
+      title-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--title-md_b3eba3"
+    >
+      title-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--title-sm_b3eba3"
+    >
+      title-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--title-xs_b3eba3"
+    >
+      title-xs
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-xl_b3eba3"
+    >
+      body-xl
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-xl-bold_b3eba3"
+    >
+      body-xl-bold
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-lg_b3eba3"
+    >
+      body-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-lg-bold_b3eba3"
+    >
+      body-lg-bold
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      body-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-md-bold_b3eba3"
+    >
+      body-md-bold
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-sm_b3eba3"
+    >
+      body-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-sm-bold_b3eba3"
+    >
+      body-sm-bold
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-xs_b3eba3"
+    >
+      body-xs
+    </p>
+    <p
+      class="_text_b3eba3 _text--body-xs-bold_b3eba3"
+    >
+      body-xs-bold
+    </p>
+    <p
+      class="_text_b3eba3 _text--label-xl_b3eba3"
+    >
+      label-xl
+    </p>
+    <p
+      class="_text_b3eba3 _text--label-lg_b3eba3"
+    >
+      label-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--label-md_b3eba3"
+    >
+      label-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--label-sm_b3eba3"
+    >
+      label-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--overline-lg_b3eba3"
+    >
+      overline-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--overline-md_b3eba3"
+    >
+      overline-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--overline-sm_b3eba3"
+    >
+      overline-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--caption-md_b3eba3"
+    >
+      caption-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--caption-sm_b3eba3"
+    >
+      caption-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--input-md_b3eba3"
+    >
+      input-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--input_b3eba3"
+    >
+      input
+    </p>
+    <p
+      class="_text_b3eba3 _text--tab-lg-active_b3eba3"
+    >
+      tab-lg-active
+    </p>
+    <p
+      class="_text_b3eba3 _text--tab-lg_b3eba3"
+    >
+      tab-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--tab-sm-active_b3eba3"
+    >
+      tab-sm-active
+    </p>
+    <p
+      class="_text_b3eba3 _text--tab-sm_b3eba3"
+    >
+      tab-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--tag_b3eba3"
+    >
+      tag
+    </p>
+    <p
+      class="_text_b3eba3 _text--code-xl_b3eba3"
+    >
+      code-xl
+    </p>
+    <p
+      class="_text_b3eba3 _text--code-lg_b3eba3"
+    >
+      code-lg
+    </p>
+    <p
+      class="_text_b3eba3 _text--code-md_b3eba3"
+    >
+      code-md
+    </p>
+    <p
+      class="_text_b3eba3 _text--code-sm_b3eba3"
+    >
+      code-sm
+    </p>
+    <p
+      class="_text_b3eba3 _text--code-xs_b3eba3"
+    >
+      code-xs
+    </p>
+    <p
+      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+    >
+      appHeader-label
+    </p>
+    <p
+      class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
+    >
+      appHeader-subLabel
+    </p>
+    <p
+      class="_text_b3eba3 _text--dataTable-headerCell_b3eba3"
+    >
+      dataTable-headerCell
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<Text /> > AppHeaderLabel story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -8,66 +237,6 @@ exports[`<Text /> > AppHeaderLabel story renders snapshot 1`] = `
     class="_text_b3eba3 _text--appHeader-label_b3eba3"
   >
     Typography for AppHeader component
-  </p>
-</div>
-`;
-
-exports[`<Text /> > BodyLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--body-lg_b3eba3"
-  >
-    Body large
-  </p>
-</div>
-`;
-
-exports[`<Text /> > BodyMedium story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--body-md_b3eba3"
-  >
-    Body medium
-  </p>
-</div>
-`;
-
-exports[`<Text /> > BodySmall story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--body-sm_b3eba3"
-  >
-    Body small
-  </p>
-</div>
-`;
-
-exports[`<Text /> > BodyXLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--body-xl_b3eba3"
-  >
-    Body extra-large
-  </p>
-</div>
-`;
-
-exports[`<Text /> > BodyXSmall story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--body-xs_b3eba3"
-  >
-    Body Xsmall
   </p>
 </div>
 `;
@@ -130,18 +299,6 @@ exports[`<Text /> > Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> > LabelXLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--label-xl_b3eba3"
-  >
-    Label extra-large
-  </p>
-</div>
-`;
-
 exports[`<Text /> > OverridingFontFamily story renders snapshot 1`] = `
 <div
   class="m-spacing-size-2"
@@ -150,18 +307,6 @@ exports[`<Text /> > OverridingFontFamily story renders snapshot 1`] = `
     class="_text_b3eba3 _text--body-md_b3eba3 !font-3"
   >
     You can use utility classes to override the font family used for a given size
-  </p>
-</div>
-`;
-
-exports[`<Text /> > TitleXLarge story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--title-xl_b3eba3"
-  >
-    Title extra-large
   </p>
 </div>
 `;

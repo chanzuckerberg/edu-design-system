@@ -6991,7 +6991,7 @@ exports[`<DataTable /> > StatusRows story renders snapshot 1`] = `
   class="_data-table_a06dc5"
 >
   <div
-    class="_data-table__caption-container_a06dc5"
+    class="_data-table__caption-container_a06dc5 _data-table--status-eligible_a06dc5"
   >
     <div
       class="_data-table__caption-text_a06dc5"

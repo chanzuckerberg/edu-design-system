@@ -5,7 +5,7 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
   class="_tabs_5bfe90"
 >
   <div
-    class="_tabs__header_5bfe90"
+    class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
     <ul
       class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
@@ -125,7 +125,7 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
   class="_tabs_5bfe90"
 >
   <div
-    class="_tabs__header_5bfe90"
+    class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
     <ul
       class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--variant-default_5bfe90"
@@ -248,7 +248,7 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
     class="_tabs_5bfe90"
   >
     <div
-      class="_tabs__header_5bfe90"
+      class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-inverse_5bfe90"
     >
       <ul
         class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--variant-inverse_5bfe90"
@@ -369,7 +369,7 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
   class="_tabs_5bfe90"
 >
   <div
-    class="_tabs__header_5bfe90"
+    class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
     <ul
       class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
@@ -489,7 +489,7 @@ exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
   class="_tabs_5bfe90"
 >
   <div
-    class="_tabs__header_5bfe90"
+    class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
     <ul
       class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"
@@ -631,7 +631,7 @@ exports[`<TabGroup /> > WithTabIllustrations story renders snapshot 1`] = `
   class="_tabs_5bfe90"
 >
   <div
-    class="_tabs__header_5bfe90"
+    class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
     <ul
       class="_tabs__list_5bfe90 _tabs--has-divider_5bfe90 _tabs__list--align-center_5bfe90 _tabs__list--variant-default_5bfe90"

@@ -54,7 +54,7 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    */
   isDragging?: boolean;
   /**
-   * Whether `Card` itself is directly interactive (clicking will perform some navigation or action)
+   * Whether `Card` itself is directly interactive (code wrapping component so that clicking will perform some navigation or action)
    *
    * **Default is `false`**.
    */
@@ -64,6 +64,8 @@ export type CardProps = HTMLAttributes<HTMLElement> & {
    * corresponds to a specified emphasis level.
    *
    * **Default is `"none"`**.
+   *
+   * @deprecated
    */
   topStripe?: 'none' | 'medium' | 'high';
 };
@@ -126,6 +128,9 @@ export interface CardCSSProperties extends React.CSSProperties {
  *
  * Card component is the outer wrapper for the block that typically contains a title, image,
  * text, and/or calls to action.
+ *
+ * Card is a pattern composed of subComponents. EDS provides subcomponents to help streamline
+ * the design and build of common cards. Designers can customize card contents to best fit their product needs.
  */
 export const Card = ({
   containerColor = 'default',
@@ -154,13 +159,13 @@ export const Card = ({
   const cardComponent = (
     <div className={componentClassName} {...other}>
       {children}
-      {topStripe && (
+      {(topStripe || behavior) && (
         <div
           className={clsx(
             styles['card__top-stripe'],
-            styles[`top-stripe--${topStripe}`],
+            styles[`top-stripe--${behavior ? 'medium' : topStripe}`],
           )}
-        ></div>
+        />
       )}
       {behavior && isInteractive && (
         <input
@@ -275,7 +280,7 @@ const CardHeader = ({
           <Heading
             as="h3"
             className={headerTitleClassName}
-            preset={size === 'sm' ? 'title-sm' : 'headline-sm'}
+            preset={size === 'sm' ? 'title-sm' : 'title-lg'}
           >
             {title}
           </Heading>
@@ -284,7 +289,7 @@ const CardHeader = ({
           <Text
             as="div"
             className={headerSubTitleClassName}
-            preset={size === 'sm' ? 'body-sm' : 'body-lg'}
+            preset={size === 'sm' ? 'body-xs' : 'body-md'}
           >
             {subTitle}
           </Text>

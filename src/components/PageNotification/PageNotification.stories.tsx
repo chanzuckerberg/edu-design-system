@@ -14,13 +14,13 @@ export default {
   },
   args: {
     title: 'Alert title which communicates info to the user',
-    subTitle: ' Subtitle which provides additional detail',
     callToAction: (
       <Button rank="secondary" size="sm" variant="neutral">
         Call to Action
       </Button>
     ),
-    className: 'w-[384px]',
+    className: 'w-[627px]',
+    onDismiss: () => {},
   },
   argTypes: {
     subTitle: {
@@ -32,18 +32,33 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.0.2'],
+  tags: ['autodocs', 'version:2.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageNotification>;
 
-const dismissMethod = () => {
-  console.log('dismissing~');
-};
-
 export const Default: StoryObj<Args> = {
   args: {
+    subTitle: 'Body text which provides additional detail',
     'aria-label': 'Default alert title',
+    onDismiss: undefined,
+  },
+};
+
+export const Informational: StoryObj<Args> = {
+  args: {
+    'aria-label': 'Default alert title',
+    status: 'informational',
+  },
+};
+
+/**
+ * When using critical, make sure `Button` has a matching variant specified.
+ */
+export const Critical: StoryObj<Args> = {
+  args: {
+    status: 'critical',
+    'aria-label': 'Critical title which communicates info to the user',
   },
 };
 
@@ -54,43 +69,6 @@ export const Warning: StoryObj<Args> = {
   },
 };
 
-export const WarningWithSubTitle: StoryObj<Args> = {
-  args: {
-    status: 'warning',
-    subTitle: <span>SubTitle text</span>,
-    'aria-label':
-      'Warning title and subtitle which communicates info to the user',
-  },
-};
-
-/**
- * When using critical, make sure `Button` has a matching variant specified.
- */
-export const Critical: StoryObj<Args> = {
-  args: {
-    callToAction: (
-      <Button rank="secondary" size="sm" variant="neutral">
-        Call to Action
-      </Button>
-    ),
-    status: 'critical',
-    'aria-label': 'Critical title which communicates info to the user',
-  },
-};
-
-export const CriticalHorizontal: StoryObj<Args> = {
-  args: {
-    buttonLayout: 'horizontal',
-    callToAction: (
-      <Button rank="secondary" size="sm" variant="neutral">
-        Call to Action
-      </Button>
-    ),
-    status: 'critical',
-    'aria-label': 'Critical title with horizontal buttons',
-  },
-};
-
 export const Favorable: StoryObj<Args> = {
   args: {
     status: 'favorable',
@@ -98,41 +76,52 @@ export const Favorable: StoryObj<Args> = {
   },
 };
 
-export const Dismissable: StoryObj<Args> = {
+export const WithTitleWrapping: StoryObj<Args> = {
   args: {
-    onDismiss: dismissMethod,
-    'aria-label': 'Dismissable title which communicates info to the user',
+    'aria-label': 'Default alert title',
+    title:
+      'Alert title which communicates info to the user that is kind of long and wraps to multiple lines',
+    subTitle: 'Body text which provides additional detail',
   },
 };
 
-export const HorizontalDismissable: StoryObj<Args> = {
+export const WithTitleWrappingAndNoSubTitle: StoryObj<Args> = {
   args: {
-    ...Dismissable.args,
-    ...CriticalHorizontal.args,
-    'aria-label': 'Dismissable Horizontal Critical title',
+    'aria-label': 'Default alert title',
+    title:
+      'Alert title which communicates info to the user that is kind of long and wraps to multiple lines',
+  },
+};
+
+export const WithHorizontalLayout: StoryObj<Args> = {
+  args: {
+    'aria-label': 'Default alert title',
+    title: 'Shorter alert title',
+    subTitle: 'Body text which provides additional detail',
+    buttonLayout: 'horizontal',
   },
 };
 
 /**
- * When having multiple notifications on screen at once, make sure they are labeled uniquely, so that assisstive technologies can tell them apart.
+ * When having multiple notifications on screen at once, make sure they are labeled uniquely, so that assistive technologies can tell them apart.
  */
 export const MultipleNotifications: StoryObj<Args> = {
   render: (args) => (
-    <>
+    <div className="gap-spacing-size-1 flex flex-col">
       <PageNotification
         {...args}
         aria-label="Notification 1 of 2"
         status="critical"
-        subTitle="Test SubTitle"
+        subTitle="Subtitle which provides additional detail"
         title="Test Critical Title"
       />
       <PageNotification
         {...args}
         aria-label="Notification 2 of 2"
         status="favorable"
-        subTitle="Test SubTitle"
+        subTitle="Subtitle which provides additional detail"
         title="Test Favorable Title"
       />
-    </>
+    </div>
   ),
 };

@@ -1,0 +1,4642 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Markdown /> > Default story renders snapshot 1`] = `
+<div
+  class="_markdown_7f0a4d"
+>
+  <h1
+    class="_text_b3eba3 _text--headline-lg_b3eba3"
+  >
+    Introduction
+  </h1>
+  
+
+  <p
+    class="_text_b3eba3 _text--body-md_b3eba3"
+  >
+    Source for Testing Images: 
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8"
+      href="https://picsum.photos/200/300"
+    >
+      https://picsum.photos/200/300
+    </a>
+  </p>
+  
+
+  <p
+    class="_text_b3eba3 _text--body-md_b3eba3"
+  >
+    This is an introductory block of text, with no additional formatting. 
+    <span
+      class="_text_b3eba3 _text--body-md-bold_b3eba3"
+    >
+      <strong>
+        Strength
+      </strong>
+    </span>
+     can be added, as well as 
+    <em>
+      emphasis
+    </em>
+    .
+  </p>
+  
+
+  <h2
+    class="_text_b3eba3 _text--headline-md_b3eba3"
+  >
+    Details
+  </h2>
+  
+
+  <h3
+    class="_text_b3eba3 _text--headline-sm_b3eba3"
+  >
+    Lists
+  </h3>
+  
+
+  <h4
+    class="_text_b3eba3 _text--title-lg_b3eba3"
+  >
+    Unordered
+  </h4>
+  
+
+  <p
+    class="_text_b3eba3 _text--body-md_b3eba3"
+  >
+    Here are a list of items:
+  </p>
+  
+
+  <ul
+    class="_list_3b68af _list--size-md_3b68af _list--markerType-default_3b68af"
+  >
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Item One
+    </li>
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Item Two
+    </li>
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Item Three
+    </li>
+    
+
+  </ul>
+  
+
+  <hr
+    class="_hr_8bd4b7"
+  />
+  
+
+  <ul
+    class="_list_3b68af _list--size-md_3b68af _list--markerType-default_3b68af"
+  >
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Item A
+    </li>
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Item B
+    </li>
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Item C
+    </li>
+    
+
+  </ul>
+  
+
+  <h4
+    class="_text_b3eba3 _text--title-lg_b3eba3"
+  >
+    Ordered
+  </h4>
+  
+
+  <ol
+    class="_list_3b68af _list--size-md_3b68af _list--markerType-default_3b68af"
+  >
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      First Item
+    </li>
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Second Item
+    </li>
+    
+
+    <li
+      class="_list-item_3b68af _list-item--size-md_3b68af"
+    >
+      Third Item
+    </li>
+    
+
+  </ol>
+  
+
+  <h3
+    class="_text_b3eba3 _text--headline-sm_b3eba3"
+  >
+    Block Quotes
+  </h3>
+  
+
+  <blockquote
+    class="_markdown__blockquote_7f0a4d"
+  >
+    
+
+    <p
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Including a block quote to demonstrate appearance.
+This should apply across multiple lines.
+    </p>
+    
+
+  </blockquote>
+  
+
+  <h3
+    class="_text_b3eba3 _text--headline-sm_b3eba3"
+  >
+    Code
+  </h3>
+  
+
+  <h4
+    class="_text_b3eba3 _text--title-lg_b3eba3"
+  >
+    Inline & Pre-formatted
+  </h4>
+  
+
+  <p
+    class="_text_b3eba3 _text--body-md_b3eba3"
+  >
+    To run a command try the following: 
+    <code
+      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-md_b3eba3"
+    >
+      shell.py init
+    </code>
+     which prints:
+  </p>
+  
+
+  <pre
+    class="_markdown__pre_7f0a4d"
+  >
+    <code
+      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-md_b3eba3"
+    >
+      Some output from the above!
+When indented, it spans multiple lines.
+
+    </code>
+  </pre>
+  
+
+  <h4
+    class="_text_b3eba3 _text--title-lg_b3eba3"
+  >
+    MultiLine
+  </h4>
+  
+
+  <pre
+    class="_markdown__pre_7f0a4d"
+  >
+    <div
+      class="_code-block_961fb8 _markdown--multiline_7f0a4d"
+    >
+      <pre>
+        <div
+          style="color: #839496; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: 0.5em 0px; overflow: auto; border-radius: 0.3em; background: #002b36;"
+        >
+          <code
+            class="_code-block__block_961fb8"
+            style="white-space: pre-wrap;"
+          >
+            <span>
+              <span
+                class="token macro directive-hash"
+                style="color: #268bd2;"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: #268bd2;"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: #859900;"
+              >
+                &lt;iostream.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: #268bd2;"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: #268bd2;"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: #859900;"
+              >
+                &lt;iomanip.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: #268bd2;"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: #268bd2;"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: #859900;"
+              >
+                &lt;fstream.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                	
+              </span>
+              <span
+                class="token macro"
+                style="color: #586e75;"
+              >
+                // To send the data to a text file 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: #268bd2;"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: #268bd2;"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: #859900;"
+              >
+                &lt;conio.h&gt;
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                		
+              </span>
+              <span
+                class="token macro"
+                style="color: #586e75;"
+              >
+                // For the getch() function 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token macro directive-hash"
+                style="color: #268bd2;"
+              >
+                #
+              </span>
+              <span
+                class="token macro directive"
+                style="color: #268bd2;"
+              >
+                include
+              </span>
+              <span
+                class="token macro"
+                style="color: #268bd2;"
+              >
+                 
+              </span>
+              <span
+                class="token macro"
+                style="color: #859900;"
+              >
+                &lt;stdlib.h&gt;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // This program calculates the cost of a gas fillup when the miles
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // travelled, the miles per gallon, and the price of a gallon of gas
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // is inputed. It also keeps track of the total transactions and sums
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // the total of all gas sales. This information is sent to a text file
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // on the desktop named dailyrpt.txt.
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                int
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                main
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                {
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Defining output function 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  ofstream trans_cash
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                int
+              </span>
+              <span>
+                 mpg
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Variables being initialized... 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    miles
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    month
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    day
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    year
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+               
+
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                char
+              </span>
+              <span>
+                 slash
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                	
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // character in the dates
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                double
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    gallons
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    avg_gallons
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    avg_cost
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    avg_price_gal
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cost
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ,
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                0.0
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // ...Variables initialized 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Open the output file for the total price and transaction output 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                .
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                open
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "C:\\windows\\desktop\\dailyrpt.txt"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Setting precision and value output style 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: #93a1a1;"
+              >
+                ::
+              </span>
+              <span>
+                fixed 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                |
+              </span>
+              <span>
+                 ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: #93a1a1;"
+              >
+                ::
+              </span>
+              <span>
+                showpoint
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Greeting and input... 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nWelcome to the Gas Register Cashier"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n-----------------------------------"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nTo begin, enter the date (i.e. 01/01/2001)"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cin 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 month 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 day 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 year
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                		
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                //Input the date
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nPlease input requested values. If you want to quit, simply type -1 in"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n 'Miles Travelled' Data to exit."
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Miles Travelled: "
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                	
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Input miles
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  cin 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 miles
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Loop begin: Calculator 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                while
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                miles 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;=
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                {
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Miles per Gallon for Your Car: "
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cin 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 mpg
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Price Per Gallon You're Paying: "
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cin 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                ++
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Adds one to the counter, keeping control of transactions 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                miles
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                mpg
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Calculations... 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                *
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                +=
+              </span>
+              <span>
+                 cost
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                						
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Averaging calculations
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                +=
+              </span>
+              <span>
+                 gallons
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    total_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                +=
+              </span>
+              <span>
+                 price_gal
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // ...end 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Displaying data entry information 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: #93a1a1;"
+              >
+                ::
+              </span>
+              <span>
+                fixed 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                |
+              </span>
+              <span>
+                 ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: #93a1a1;"
+              >
+                ::
+              </span>
+              <span>
+                showpoint
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nMiles per Gallon:"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                9
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 mpg
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nMiles Travelled:"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                10
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 miles 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Number of Gallons: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                7
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 gallons
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                3
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Setting Precision for gas price 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nPrice per Gallon: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                8
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Re-setting precision for final total 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n--------------------------"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nCost of Fillup: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                10
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                15
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Transaction: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 trans
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\n--------------------------"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                system
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "cls"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                		
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // clears the screen
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nRe-enter values. Again, type -1 in 'Miles Travelled' to exit."
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cout 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Miles Travelled: "
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                    cin 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &gt;&gt;
+              </span>
+              <span>
+                 miles
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                }
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Final Calculations
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  avg_cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  avg_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  avg_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                =
+              </span>
+              <span>
+                 total_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                /
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                double
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                trans
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Final output 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: #93a1a1;"
+              >
+                ::
+              </span>
+              <span>
+                fixed
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setiosflags
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span>
+                ios
+              </span>
+              <span
+                class="token double-colon"
+                style="color: #93a1a1;"
+              >
+                ::
+              </span>
+              <span>
+                showpoint
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nDaily Report for "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 month 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 day 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 slash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 year
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "================================"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Number of Sales: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                15
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 trans 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Total Gallons Sold: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                12
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 total_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                3
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Average price per Gallon: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                6
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 avg_price_gal 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setprecision
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                2
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Total Sales: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                19
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 total_cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Average Gallons: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                15
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 avg_gallons 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Average Sale: "
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                18
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 avg_cost 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 endl
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "--------------------------------"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+                
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Name Entry
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "\\nPrepared by:"
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                setw
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                20
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #EDEDED;"
+              >
+                &lt;&lt;
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                "Andrew Holloway"
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Output file located at C:\\windows\\desktop\\dailyrpt.txt
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Closing the generated file 
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              <span>
+                  trans_cash
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                .
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                close
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                getch
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                (
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                )
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                	
+              </span>
+              <span
+                class="token"
+                style="color: #586e75;"
+              >
+                // Hit a key function
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span>
+              
+
+            </span>
+            <span>
+              <span>
+                  
+              </span>
+              <span
+                class="token"
+                style="color: #268bd2;"
+              >
+                return
+              </span>
+              <span>
+                 
+              </span>
+              <span
+                class="token"
+                style="color: #859900;"
+              >
+                0
+              </span>
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                ;
+              </span>
+              <span>
+                 
+
+              </span>
+            </span>
+            <span>
+              <span />
+              <span
+                class="token"
+                style="color: #93a1a1;"
+              >
+                }
+              </span>
+              <span>
+                
+
+              </span>
+            </span>
+            <span />
+          </code>
+        </div>
+      </pre>
+      <div
+        class="_code-block__copy_961fb8"
+      >
+        <button
+          aria-label="Copy this code block"
+          class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1"
+          data-testid="copy-button"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.05775 17.5C8.55258 17.5 8.125 17.325 7.775 16.975C7.425 16.625 7.25 16.1974 7.25 15.6923V4.30775C7.25 3.80258 7.425 3.375 7.775 3.025C8.125 2.675 8.55258 2.5 9.05775 2.5H17.4423C17.9474 2.5 18.375 2.675 18.725 3.025C19.075 3.375 19.25 3.80258 19.25 4.30775V15.6923C19.25 16.1974 19.075 16.625 18.725 16.975C18.375 17.325 17.9474 17.5 17.4423 17.5H9.05775ZM9.05775 16H17.4423C17.5193 16 17.5898 15.9679 17.6538 15.9038C17.7179 15.8398 17.75 15.7693 17.75 15.6923V4.30775C17.75 4.23075 17.7179 4.16025 17.6538 4.09625C17.5898 4.03208 17.5193 4 17.4423 4H9.05775C8.98075 4 8.91025 4.03208 8.84625 4.09625C8.78208 4.16025 8.75 4.23075 8.75 4.30775V15.6923C8.75 15.7693 8.78208 15.8398 8.84625 15.9038C8.91025 15.9679 8.98075 16 9.05775 16ZM5.55775 21C5.05258 21 4.625 20.825 4.275 20.475C3.925 20.125 3.75 19.6974 3.75 19.1923V6.30775H5.25V19.1923C5.25 19.2693 5.28208 19.3398 5.34625 19.4038C5.41025 19.4679 5.48075 19.5 5.55775 19.5H15.4423V21H5.55775Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </pre>
+  
+
+  <h5
+    class="_text_b3eba3 _text--title-md_b3eba3"
+  >
+    Miscellaneous
+  </h5>
+  
+
+  <h6
+    class="_text_b3eba3 _text--title-sm_b3eba3"
+  >
+    Links
+  </h6>
+  
+
+  <p
+    class="_text_b3eba3 _text--body-md_b3eba3"
+  >
+    Here's a link to 
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8"
+      href="https://commonmark.org/"
+    >
+      CommonMark
+    </a>
+    .
+  </p>
+</div>
+`;
+
+exports[`<Markdown /> > GithubFlavoredMarkdown story renders snapshot 1`] = `
+<div
+  class="_markdown_7f0a4d"
+>
+  <h1
+    class="_text_b3eba3 _text--headline-lg_b3eba3"
+  >
+    GitHub-Flavored Markdown
+  </h1>
+  
+
+  <h2
+    class="_text_b3eba3 _text--headline-md_b3eba3"
+  >
+    Tables
+  </h2>
+  
+
+  <p
+    class="_text_b3eba3 _text--body-md_b3eba3"
+  >
+    GitHub-flavored markdown supports basic tables. Alignment can be controlled for each column. 
+    <a
+      class="_link_d78ce8 _link--emphasis-default_d78ce8"
+      href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables"
+    >
+      See doc.s
+    </a>
+    .
+  </p>
+  
+
+  <table
+    class="_markdown__table_7f0a4d"
+  >
+    <thead
+      class="_markdown__thead_7f0a4d"
+    >
+      <tr
+        class="_markdown__tr_7f0a4d"
+      >
+        <th
+          class="_markdown__th_7f0a4d"
+        >
+          a
+        </th>
+        <th
+          align="left"
+          class="_markdown__th_7f0a4d"
+        >
+          b
+        </th>
+        <th
+          align="right"
+          class="_markdown__th_7f0a4d"
+        >
+          c
+        </th>
+        <th
+          align="center"
+          class="_markdown__th_7f0a4d"
+        >
+          d
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="_markdown__tr_7f0a4d"
+      >
+        <td
+          class="_markdown__td_7f0a4d"
+        >
+          1
+        </td>
+        <td
+          align="left"
+          class="_markdown__td_7f0a4d"
+        >
+          2
+        </td>
+        <td
+          align="right"
+          class="_markdown__td_7f0a4d"
+        >
+          3
+        </td>
+        <td
+          align="center"
+          class="_markdown__td_7f0a4d"
+        >
+          4
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

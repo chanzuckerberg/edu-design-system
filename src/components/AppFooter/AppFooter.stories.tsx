@@ -22,7 +22,7 @@ export default {
   },
 
   args: {
-    title: <div className="fpo h-[40px] w-[175px]">Logo goes here</div>,
+    title: <div className="fpo h-[40px] w-[176px]">Logo goes here</div>,
     navItems: [
       {
         type: 'link',
@@ -47,7 +47,7 @@ export default {
     ],
   },
 
-  tags: ['autodocs', 'beta', 'version:1.0'],
+  tags: ['autodocs', 'beta', 'version:1.0.1'],
 } as Meta<typeof AppFooter>;
 
 type Story = StoryObj<typeof AppFooter>;
