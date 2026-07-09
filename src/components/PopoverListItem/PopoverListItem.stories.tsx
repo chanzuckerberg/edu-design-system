@@ -13,7 +13,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.1.0'],
+  tags: ['autodocs', 'version:2.1.1'],
   argTypes: {
     icon: {
       table: { disable: true },
@@ -100,6 +100,7 @@ export const DisabledAndDestructive: Story = {
   args: {
     ...Disabled.args,
     ...Destructive.args,
+    subLabel: 'Permanently remove this item',
   },
 };
 
