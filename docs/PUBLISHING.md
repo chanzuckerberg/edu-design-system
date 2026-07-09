@@ -8,7 +8,7 @@ EDS uses [SemVer](https://semver.org/) semantic versioning to keep track of ongo
 
 Look to [this helpful document](https://designsystem.morningstar.com/getting-started/versioning-and-breaking-changes/) from the Morning Star design system for detailed guidance on versioning.
 
-We currently use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log.
+We currently use [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log.
 
 ### A note about major releases
 
@@ -152,8 +152,8 @@ git checkout main && git pull origin main && git checkout next && git pull && gi
 
 For testing a release to build confidence.
 
-1. Run `yarn release:alpha` to use `standard-version` to create appropriate tags and updates.
-2. Run the last command output by `standard-version` as above. It will look something like:
+1. Run `yarn release:alpha` to use `commit-and-tag-version` to create appropriate tags and updates.
+2. Run the last command output by `commit-and-tag-version` as above. It will look something like:
 
 ```
 git push --follow-tags origin <branch> && npm publish --tag alpha
