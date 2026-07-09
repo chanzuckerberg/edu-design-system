@@ -136,7 +136,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/yargs": "^17.0.35",
     "axe-core": "4.12.1",
-    "chromatic": "^13.3.5",
+    "chromatic": "^18.0.1",
     "codecov": "^3.8.3",
     "commit-and-tag-version": "^12.7.3",
     "eslint": "^8.57.1",
