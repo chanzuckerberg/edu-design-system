@@ -1,76 +1,57 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-
-  baseBranches: ['next'],
-  enabledManagers: ['npm'],
-  extends: ['config:base', 'group:allNonMajor'],
-  fetchReleaseNotes: false, // Only fetch release notes for breaking changes
-  internalChecksFilter: 'strict', // PRs will be skipped unless a non-pending version is available (applies to "stabilityDays" check only)
-  labels: ['npm-dependencies'],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  baseBranchPatterns: ["next"],
+  enabledManagers: ["npm"],
+  extends: ["config:recommended", "group:allNonMajor"],
+  fetchChangeLogs: "off",
+  internalChecksFilter: "strict",
+  labels: ["npm-dependencies"],
   prConcurrentLimit: 1,
-  repositories: ['chanzuckerberg/edu-design-system'],
-  rangeStrategy: 'bump', // Always bump minor/patch to latest
-
-  // Required to prevent onboarding pr and generation of new config file https://github.com/renovatebot/github-action#configurationfile
+  repositories: ["chanzuckerberg/edu-design-system"],
+  rangeStrategy: "bump",
   onboarding: false,
-  requireConfig: false,
-
+  requireConfig: "optional",
   major: {
-    rangeStrategy: 'replace',
-    fetchReleaseNotes: true,
+    rangeStrategy: "replace",
+    fetchChangeLogs: "pr",
   },
-
   packageRules: [
     {
-      // Hold back from creating branches until 3 or more days have elapsed since the version
-      // was released. Note: this only works for packages that provide a release timestamp header
-      // and does not ensure all updates are "stable".
-      matchDatasources: ['npm'],
-      stabilityDays: 5,
+      matchDatasources: ["npm"],
+      minimumReleaseAge: "5 days",
     },
-    // https://docs.renovatebot.com/configuration-options/#allowedversions
     {
-      matchPackageNames: ['react', 'react-dom'],
-      groupName: 'react',
-      allowedVersions: '<=18.0.0',
+      matchPackageNames: ["react", "react-dom"],
+      groupName: "react",
+      allowedVersions: "<=18.0.0",
     },
-    // Handle patch updates under 0.1.0 as potentially breaking and group them separately.
-    // Workaround for https://github.com/renovatebot/renovate/issues/3588
     {
-      matchManagers: ['npm'],
-      matchCurrentVersion: '<0.1.0',
-      rangeStrategy: 'replace',
-      groupName: 'maybe breaking patch updates',
-      groupSlug: 'maybe-breaking-patch',
-      fetchReleaseNotes: true,
+      matchManagers: ["npm"],
+      matchCurrentVersion: "<0.1.0",
+      rangeStrategy: "replace",
+      groupName: "maybe breaking patch updates",
+      groupSlug: "maybe-breaking-patch",
+      fetchChangeLogs: "pr",
     },
-    // Handle minor updates under 1.0.0 as potentially breaking and group them separately.
-    // Workaround for https://github.com/renovatebot/renovate/issues/3588
     {
-      matchManagers: ['npm'],
-      matchCurrentVersion: '<1.0.0 >=0.1.0',
-      rangeStrategy: 'replace',
+      matchManagers: ["npm"],
+      matchCurrentVersion: "<1.0.0 >=0.1.0",
+      rangeStrategy: "replace",
       minor: {
-        groupName: 'maybe breaking minor updates',
-        groupSlug: 'maybe-breaking-minor',
-        fetchReleaseNotes: true,
+        groupName: "maybe breaking minor updates",
+        groupSlug: "maybe-breaking-minor",
+        fetchChangeLogs: "pr",
       },
     },
-    // Updating packages with 'prettier' separately because updates to these packages often
-    // require modifying code to satistfy the new formatting rules.
     {
-      matchPackagePatterns: ['prettier'],
-      groupName: 'prettier',
+      groupName: "prettier",
+      matchPackageNames: ["/prettier/"],
     },
-    // Update typescript separately because typescript updates can create new
-    // typescript errors that need to be manually resolved.
     {
-      matchPackageNames: ['typescript'],
-      groupName: 'typescript',
+      matchPackageNames: ["typescript"],
+      groupName: "typescript",
     },
   ],
-
-  // Customize how PRs are displayed
-  prBodyTemplate: '{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}',
-  prBodyColumns: ['Package', 'Type', 'Change'],
+  prBodyTemplate: "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
+  prBodyColumns: ["Package", "Type", "Change"],
 }
