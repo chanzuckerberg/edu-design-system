@@ -130,7 +130,7 @@
     "@types/jest": "^29.5.14",
     "@types/jsonfile": "^6.1.4",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^25.9.4",
+    "@types/node": "^25.9.5",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@types/react-syntax-highlighter": "^15.5.13",
@@ -185,5 +185,5 @@
       "stylelint --fix --allow-empty-input"
     ]
   },
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "yarn@4.17.1"
 }
