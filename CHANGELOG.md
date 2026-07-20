@@ -1,6 +1,15 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [18.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.0...v18.6.1) (2026-07-20)
+
+
+### Bug Fixes
+
+* **AppHeader:** change color transition to be faster than the motion ([#2556](https://github.com/chanzuckerberg/edu-design-system/issues/2556)) ([f2113cd](https://github.com/chanzuckerberg/edu-design-system/commit/f2113cd605a9537cb118b179d3b2b79cdaffb202))
+* **PopoverListItem:** appear as disabled when both disabled and destructive ([#2555](https://github.com/chanzuckerberg/edu-design-system/issues/2555)) ([b50c734](https://github.com/chanzuckerberg/edu-design-system/commit/b50c734ade01d71ef0a36239fdbf4d7ec0123236))
+* **SelectionChip:** change parent of pseudo element before ([#2559](https://github.com/chanzuckerberg/edu-design-system/issues/2559)) ([2eb58ee](https://github.com/chanzuckerberg/edu-design-system/commit/2eb58ee8d9ec47ed0bddc9d985466370a20e3ad8))
 
 ## [18.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.4.0...v18.6.0) (2026-07-08)
 

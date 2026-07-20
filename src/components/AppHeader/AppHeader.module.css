@@ -314,7 +314,7 @@
     left: calc(var(--eds-spacing-size-4) * 1px);
 
     /* EaseInOutQuad - https://matthewlein.com/tools/ceaser */
-    transition: all calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transition: all calc(var(--eds-anim-move-medium) * 1s) cubic-bezier(0.455, 0.030, 0.515, 0.955), background-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
   }
 
   .app-header__nav-item--is-current.app-header__nav-item--link {

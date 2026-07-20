@@ -167,11 +167,7 @@ export type NavMenu = NavItem & {
    * Sets of navigation targets in the header. Consider using 2-3 at maximum. Each NavGroup can contain many NavItems
    */
   navItems: (
-    | NavMenuLink
-    | NavMenuButton
-    | NavMenuLabel
-    | NavMenuCaption
-    | NavSeparator
+    NavMenuLink | NavMenuButton | NavMenuLabel | NavMenuCaption | NavSeparator
   )[];
   /**
    * Additional information about the named nav item
