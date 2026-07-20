@@ -107,8 +107,8 @@
 .selection-chip:active {
   --selection-chip__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-active), var(--eds-dark-theme-color-background-utility-default-no-emphasis-active));
 
-  .selection-chip__input::before {
-    background-color: calc(var(--eds-theme-color-background-utility-default-low-emphasis-active));
+  &::before {
+    background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis-active), var(--eds-dark-theme-color-background-utility-default-low-emphasis-active));
   }
 
 }
