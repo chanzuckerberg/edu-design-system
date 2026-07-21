@@ -66,8 +66,6 @@ const PROGRESS_BAR_MINIMUM = 0;
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {ProgressBar} from "@chanzuckerberg/eds";`
- *
  * Components used to visually represent user progress through a series of steps. Not to be confused with the `LoadingIndicator`.
  *
  * `ProgressBar` can be the child of a container like `Modal` or `Card`. When used in such a container, `context`=`embedded` should be used to ensure the left and right edges of the progressBar sit flush within the edges of the container.

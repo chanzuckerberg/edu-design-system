@@ -112,8 +112,6 @@ export function getInitials(fromName: string): string {
 }
 
 /**
- * `import {Avatar} from "@chanzuckerberg/eds";`
- *
  * Representation of a single, unique user, keyed by the user name
  */
 export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(

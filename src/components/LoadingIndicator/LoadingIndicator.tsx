@@ -52,11 +52,7 @@ const loaderViewportSize = {
 };
 
 /**
- * `import {LoadingIndicator} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Loading indicators inform users about the wait time, reason, and status of ongoing processes when the layout is unknown.
  *
  * * **Indeterminate loaders**: use when a process does not have a specific endpoint (e.g., loading a page or fetching a component's content); the ongoing animation creates the perception of better performance.
  * * **Spinners**: use as a secondary choice of loader to Skeleton states.

@@ -37,8 +37,6 @@ export type FieldLabelProps = {
 };
 
 /**
- * `import {FieldLabel} from "@chanzuckerberg/eds";`
- *
  * Label associated with an input element or field.
  */
 export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(

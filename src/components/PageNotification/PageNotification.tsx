@@ -47,11 +47,7 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 /**
- * `import {PageNotification} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A page notification communicates a message about the page it appears on.
  *
  * * Notifications related to a section of a page (like a card, popover, or modal) should use an Inline Notification.
  * * Page Notifications are intended to display short messages. Ideally, a max of 3 lines.

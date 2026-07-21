@@ -22,8 +22,6 @@ export type VisualPageIndicatorProps = {
 };
 
 /**
- * `import {VisualPageIndicator} from "@chanzuckerberg/eds";`
- *
  * Static visual cue to help users understand their current position within a series of content or pages.
  */
 export const VisualPageIndicator = ({

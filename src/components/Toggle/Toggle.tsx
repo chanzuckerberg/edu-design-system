@@ -96,11 +96,7 @@ const ToggleWrapper = (props: ExtractProps<typeof Field>) => (
 );
 
 /**
- * `import {Toggle} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A control that toggles between two binary states like on/off or yes/no.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

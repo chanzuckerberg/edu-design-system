@@ -38,11 +38,7 @@ type SelectionChipRefProps = ForwardedRefComponent<
 >;
 
 /**
- * `import {SelectionChip} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Compact, interactive UI elements used to make selections. Can have an optional icon.
  *
  * A selection chip is an interactive chip that can be selected, deselected, or toggled. Use it to represent user controls or selections outside the context of a form, in place of a checkbox group, radio button group, or toggle. Common uses include filtering content and selecting multiple items.
  *

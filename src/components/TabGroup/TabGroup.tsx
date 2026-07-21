@@ -127,11 +127,7 @@ export type TabContextArgs = {
 };
 
 /**
- * `import {TabGroup} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Tab groups provide navigation between subsections of a page. The content within a tab group should be related.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|
@@ -440,8 +436,6 @@ function usePrevious<T>(prop: T) {
 }
 
 /**
- * `import {Tab} from "@chanzuckerberg/eds";`
- *
  * Individual tab within the Tabs component.
  * - Use the `title` prop for text-only tab headers
  * - For more custom tab headers use `<Tab.Button>` which uses a render prop with state information

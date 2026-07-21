@@ -79,13 +79,7 @@ const ListItem = (props: ListItemProps) => {
 };
 
 /**
- * `import {UnorderedList, OrderedList} from "@chanzuckerberg/eds";`
- *
- * Control a list of text items that are semantically unordered.
- *
  * ## Usage
- *
- * Structures related content into a skimmable vertical layout.
  *
  * * **Unordered**: Used for content where the order is not important.
  * * **Ordered**: Used for content where the order is important.

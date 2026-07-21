@@ -43,11 +43,7 @@ export type ToastNotificationProps = {
 };
 
 /**
- * `import {ToastNotification} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A brief, temporary notification. Toasts are meant to be noticed without disrupting a user's experience or requiring an action to be taken.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

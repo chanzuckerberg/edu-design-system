@@ -36,11 +36,7 @@ type Props = {
 };
 
 /**
- * `import {Tag} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Status UI elements that visually represent metadata, attributes, or categorical information about an item. Tags usually represent system-generated information.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

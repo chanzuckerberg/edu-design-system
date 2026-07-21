@@ -89,8 +89,6 @@ type FieldsetLegendProps = {
 const FieldsetContext = createContext<FieldsetSharedProps>({});
 
 /**
- * `import {Fieldset} from "@chanzuckerberg/eds";`
- *
  * A reusable container for a fieldset that includes a legend and
  * one or more form inputs, like radio buttons or checkboxes.
  */

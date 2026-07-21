@@ -124,13 +124,7 @@ export interface CardCSSProperties extends React.CSSProperties {
 
 // TODO: needs useRef for input field (allow react to control things)?
 /**
- * `import {Card} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Cards are the outer wrapper for a block that typically contains a title, image, text, and/or
- * calls to action. EDS provides subcomponents to help streamline the design and build of common
- * cards, and designers can customize card contents to best fit their product needs.
  *
  * * **Static card**: Group related elements, including some combination of images, text, buttons, input fields, etc.
  * * **Interactive card**: A selectable or actionable card.

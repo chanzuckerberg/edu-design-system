@@ -36,11 +36,7 @@ export type AppNotificationProps = {
 };
 
 /**
- * `import {AppNotification} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A global alert that persists across pages.
  *
  * * Use app notifications sparingly for global messages that affect an entire system.
  * * Don't use them for engagement messaging, upselling a new feature, or feedback messaging. Use an inline notification or a toast notification instead.

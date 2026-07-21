@@ -244,11 +244,7 @@ function handleShouldClose(
 }
 
 /**
- * `import {AppHeader} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * The persistent navigation bar that appears at the top of an application provides brand identity, global navigation, and quick access to key actions. It anchors the user experience by ensuring consistent access to core functionality across all pages. It also serves as the `<header>` for accessibility landmarks.
  *
  * App headers have three distinct sections with different purposes.
  *

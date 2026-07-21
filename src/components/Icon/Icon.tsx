@@ -79,8 +79,6 @@ type SvgStyle = CSSProperties & {
 };
 
 /**
- * `import {Icon} from "@chanzuckerberg/eds";`
- *
  * Render arbitrary SVG path data while enforcing good accessibility practices.
  *
  * Icons are based on [Material Rounded](https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Rounded),

@@ -158,12 +158,7 @@ const DataTableContext = createContext<Pick<DataTableProps, 'size'>>({
 });
 
 /**
- * `import {DataTable} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Tables display and organize data in a structured format. They include customizations for size,
- * style, interactivity, and data presentation.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

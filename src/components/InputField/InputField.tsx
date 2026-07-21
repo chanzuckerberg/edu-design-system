@@ -151,11 +151,7 @@ type InputFieldType = ForwardedRefComponent<
 };
 
 /**
- * `import {InputField} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Input fields are used to gather text-based input. They are represented by a rectangular box where the user can enter and edit their input.
  *
  * **NOTE**: This component requires a `label` or `aria-label` prop.
  *

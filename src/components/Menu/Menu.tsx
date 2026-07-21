@@ -83,11 +83,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
   };
 
 /**
- * `import {Menu} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A dropdown that reveals or hides a list of actions.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

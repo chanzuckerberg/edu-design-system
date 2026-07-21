@@ -33,12 +33,7 @@ type InlineNotificationProps = {
 };
 
 /**
- * `import {InlineNotification} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * An alert placed within a section of a page to provide a contextual notification. For example, an
- * error that applies to multiple fields within a form.
  *
  * * To provide feedback to users about their actions, such as summarizing form-level errors after server-side validation.
  * * To give significant status updates about a task.

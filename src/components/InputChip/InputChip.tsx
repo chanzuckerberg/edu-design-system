@@ -36,11 +36,7 @@ export type InputChipProps = {
 };
 
 /**
- * `import {InputChip} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Compact, interactive UI elements used to make selections or display user-generated information.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

@@ -20,8 +20,6 @@ type SkeletonProps = BaseProps & {
 };
 
 /**
- * `import {Skeleton} from "@chanzuckerberg/eds";`
- *
  * Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout
  */
 export const Skeleton = ({

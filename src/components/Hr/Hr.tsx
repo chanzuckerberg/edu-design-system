@@ -27,8 +27,6 @@ export type HrProps = {
 };
 
 /**
- * `import {Hr} from "@chanzuckerberg/eds";`
- *
  * Horizontal rule component to present a horizontal line separating content.
  */
 export const Hr = ({ className, size, variant, ...other }: HrProps) => {

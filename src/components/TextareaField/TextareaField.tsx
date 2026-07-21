@@ -127,11 +127,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 );
 
 /**
- * `import {TextareaField} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A text area lets a user input more text than a standard text field.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

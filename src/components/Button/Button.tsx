@@ -87,12 +87,7 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
 } & ExtendedElement;
 
 /**
- * `import {Button} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Buttons are used to initialize an action. Button labels express what action will occur when the
- * user interacts with them. Also known as action, call to action, or CTA.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

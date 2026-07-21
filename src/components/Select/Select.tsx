@@ -174,11 +174,7 @@ let showNameWarning = true;
 const SelectContext = React.createContext<SelectContextType>({});
 
 /**
- * `import {Select} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A popover that reveals or hides a list of options. Depending on the component's configuration, the user may select one or more options.
  *
  * Supports controlled and uncontrolled behavior, using a render prop in the latter case.
  *

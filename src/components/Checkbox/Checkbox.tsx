@@ -120,12 +120,7 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputProps>(
 );
 
 /**
- * `import {Checkbox} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Checkboxes indicate if something is selected or unselected and allow users to choose one or
- * more options.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

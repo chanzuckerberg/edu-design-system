@@ -62,11 +62,7 @@ export type LinkProps<ExtendedElement = unknown> =
   } & ExtendedElement;
 
 /**
- * `import {Link} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Links take users to another place, and usually appear within or directly following a paragraph or sentence.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

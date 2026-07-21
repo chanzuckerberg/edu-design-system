@@ -135,11 +135,7 @@ type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;
 type Plugin = Plugins[number];
 
 /**
- * `import {Tooltip} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A tooltip is a floating, non-actionable label used to explain a user interface element or feature. It can be triggered by hovering over an element.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

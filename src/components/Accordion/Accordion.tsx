@@ -147,11 +147,7 @@ const AccordionRowContext = createContext<
 });
 
 /**
- * `import {Accordion} from "@chanzuckerberg/eds;`
- *
  * ## Usage
- *
- * Used to show and hide sections of related content, letting users expand only the parts they need. It's great for:
  *
  * * **Reducing visual clutter**: Especially when dealing with long pages or dense content.
  * * **FAQs**: Users can click to reveal answers one at a time.

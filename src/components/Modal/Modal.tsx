@@ -277,11 +277,7 @@ const ModalContent = (props: ModalContentProps) => {
 };
 
 /**
- * `import {Modal} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Modals display content on top of the page in a separate container, blocking the content underneath. They require user action and can be used to deliver a message or help a user complete a task.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|

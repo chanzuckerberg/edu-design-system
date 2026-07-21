@@ -51,11 +51,7 @@ export type PopoverButtonProps = {
 } & RenderProps<{ open: boolean }>;
 
 /**
- * `import {Popover} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A small, lightweight overlay or floating container that appears over other content to provide additional information, options, or actions without navigating away from the current screen.
  *
  * * Keeps information close to a button, etc., that triggers it.
  * * Typically used for showing contextual information or quick actions without taking focus away from the main page.

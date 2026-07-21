@@ -104,11 +104,7 @@ const RadioInput = ({
 };
 
 /**
- * `import {Radio} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * A radio button is a round control that allows users to choose one option from a set. Also known as Radio.
  *
  * NOTE: This component requires a `label` or `aria-label` prop.
  *

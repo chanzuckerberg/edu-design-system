@@ -39,11 +39,7 @@ export type NumberIconProps = {
 };
 
 /**
- * `import {NumberIcon} from "@chanzuckerberg/eds";`
- *
  * ## Usage
- *
- * Treats a numeral as an icon by wrapping it in a container and adding color/spacing.
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|
