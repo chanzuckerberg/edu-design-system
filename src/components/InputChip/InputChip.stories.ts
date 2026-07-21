@@ -6,6 +6,12 @@ import { InputChip } from './InputChip';
 export default {
   title: 'Components/InputChip',
   component: InputChip,
+  parameters: {
+    docs: {
+      subtitle:
+        'Compact, interactive UI elements used to make selections or display user-generated information.',
+    },
+  },
   argTypes: {
     onClick: {
       control: false,

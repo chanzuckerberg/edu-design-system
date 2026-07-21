@@ -38,7 +38,31 @@ export type InputChipProps = {
 /**
  * `import {InputChip} from "@chanzuckerberg/eds";`
  *
- * Compact, interactive elements used to display user-generated information.
+ * ## Usage
+ *
+ * Compact, interactive UI elements used to make selections or display user-generated information.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Selection | An interactive chip that can be selected, deselected, or toggled. | Filtering content, selecting multiple items, or representing user controls outside a form (in place of a checkbox, radio, or toggle group). |
+ * | Input | A chip that represents user-generated input and can be edited or removed. | Displaying selected tags, keywords, or values in a form or input field, or combining multiple pieces of data such as a name and avatar. |
+ *
+ * ### Best Practices
+ *
+ * * **Displaying multi-selection from a large list**: show selections already made without reopening a long select dropdown. Input chips are most helpful when the list of options exceeds 15 items.
+ * * **Representing search filters or criteria**: show active filters or search parameters to make complex filtering feel organized and easily editable.
+ * * **Handling user-generated or free-form data**: transform user-entered text (e.g., email addresses) into a discrete component that confirms the UI recognizes the input.
+ *
+ * ## Interaction
+ *
+ * Unless used as a toggle, chips should always be presented as a group. Depending on the use, groups can either wrap to multiple lines or scroll horizontally.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Keep labels to 1-2 words.
+ * * Represent one piece of information per chip (a discrete thing, grouping, or category).
  */
 export const InputChip = ({
   className,

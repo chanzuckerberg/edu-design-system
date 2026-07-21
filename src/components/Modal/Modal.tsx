@@ -279,13 +279,48 @@ const ModalContent = (props: ModalContentProps) => {
 /**
  * `import {Modal} from "@chanzuckerberg/eds";`
  *
- * EDS Wrapper for the HeadlessUI Dialog component
- * @see https://headlessui.dev/react/dialog
+ * ## Usage
  *
- * NOTE: You must have at least one focusable element in the modal contents, for keyboard
- * accessibility reasons. (The close button counts as a focusable element.) Use `initialFocus`
- * to choose a different element.
+ * Modals display content on top of the page in a separate container, blocking the content underneath. They require user action and can be used to deliver a message or help a user complete a task.
  *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standard | Central overlay with focus trap, used for focused tasks or messages. | Form entry; settings dialogs; confirmations. |
+ * | Confirmation | Asks the user to confirm or cancel a critical action. | Deletion prompts; submitting irreversible actions. |
+ * | Alert | Displays an important message, usually with a single dismiss button. | Error notifications; access denied messages. |
+ * | Full-screen | Takes up the entire viewport for complex or immersive tasks. | Onboarding; mobile workflows; media viewers. |
+ * | Success/Feedback | Provides positive feedback after a completed action. | Success confirmation; "Thanks for submitting" messages. |
+ *
+ * ### Best Practices
+ *
+ * * Modals are disruptive and should be used sparingly.
+ * * Use a modal to request minimal amounts of information from a user. Don't request large forms of information inside a modal.
+ * * Don't use a modal when a separate, designated URL is desired.
+ * * Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.
+ * * For important error notifications, use Inline Notification or Banner.
+ * * For short messaging confirming successful interactions, such as "Email sent", use Inline Notification or Toast.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use a primary title, body text, and a primary CTA. All other modal content is optional.
+ * * Use a verb-noun question or statement for the primary title.
+ * * Ensure people can scan the heading and CTAs and know what to do even if they skip the body text.
+ * * Keep primary titles and subtitles to a max of 2 lines each.
+ * * Use either a short phrase or a full sentence for subtitles.
+ * * Keep section titles to less than 1 line; preferably a short phrase.
+ * * Break up information with section titles for scanability.
+ * * Try to avoid scrolling text within a modal.
+ *
+ * ### Dont's
+ *
+ * * Include long headings or body text. The more words, the less likely people are to read any of it.
+ * * Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.
+ *
+ * ## Resources
+ *
+ * * https://headlessui.dev/react/dialog
  */
 export const Modal = (props: ModalProps) => {
   const {

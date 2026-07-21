@@ -126,11 +126,34 @@ export interface CardCSSProperties extends React.CSSProperties {
 /**
  * `import {Card} from "@chanzuckerberg/eds";`
  *
- * Card component is the outer wrapper for the block that typically contains a title, image,
- * text, and/or calls to action.
+ * ## Usage
  *
- * Card is a pattern composed of subComponents. EDS provides subcomponents to help streamline
- * the design and build of common cards. Designers can customize card contents to best fit their product needs.
+ * Cards are the outer wrapper for a block that typically contains a title, image, text, and/or
+ * calls to action. EDS provides subcomponents to help streamline the design and build of common
+ * cards, and designers can customize card contents to best fit their product needs.
+ *
+ * * **Static card**: Group related elements, including some combination of images, text, buttons, input fields, etc.
+ * * **Interactive card**: A selectable or actionable card.
+ *
+ * ### Best Practices
+ *
+ * * Display information so that what the user needs to know first is prioritized.
+ * * Limit call-to-action buttons and/or links, using only one primary call-to-action per card.
+ * * Do not use a card as an action.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Group related information within separate cards.
+ * * Use subheadings, paragraphs, and bullet lists to break up larger amounts of content.
+ * * Use headings that make the card's purpose clear.
+ * * Include essential, summarized information.
+ *
+ * ### Dont's
+ *
+ * * Don't overwhelm the card with too much content; keep it scannable.
+ * * Avoid too many call-to-action buttons or links within the same card.
  */
 export const Card = ({
   containerColor = 'default',

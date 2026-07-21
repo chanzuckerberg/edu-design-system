@@ -9,6 +9,10 @@ const meta: Meta<typeof InputField> = {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
+    docs: {
+      subtitle:
+        'Input fields are used to gather text-based input. They are represented by a rectangular box where the user can enter and edit their input.',
+    },
     layout: 'centered',
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',

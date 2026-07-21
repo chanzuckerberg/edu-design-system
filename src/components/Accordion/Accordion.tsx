@@ -149,11 +149,52 @@ const AccordionRowContext = createContext<
 /**
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
- * Displays one or more headers stacked on top of one another that can reveal or hide associated content.
- * This component is based on the [Disclosure](https://headlessui.com/react/disclosure) component, provided by HeadlessUI.
+ * ## Usage
  *
- * More Information: https://headlessui.com/react/disclosure
+ * Used to show and hide sections of related content, letting users expand only the parts they need. It's great for:
  *
+ * * **Reducing visual clutter**: Especially when dealing with long pages or dense content.
+ * * **FAQs**: Users can click to reveal answers one at a time.
+ * * **Grouped settings**: Like categories of options or configuration panels.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * |Standard|Expands/collapses content vertically when clicked.|FAQs. Lists with optional detail. Simple disclosure sections.|
+ * |Multi-expand|Allows multiple sections to be expanded at once.|Filter panels. Settings grouped by category. Multi-topic summaries.|
+ * |Single-Expand|Only one section can be open at a time (others collapse automatically).|Navigation menus. Step-by-step instructions. Content prioritization.|
+ * |Nested|Accordion items contain sub-accordions inside.|Complex data views. Multi-level navigation or documentation.|
+ * |Summary|Shows a brief summary even when collapsed.|Preview content like stats or status. Highlight key info without expanding.|
+ * |Disabled|Cannot be expanded; often used to show unavailable or locked content.|Permissions-based content. Progress-dependent sections.|
+ *
+ * ### Best Practices
+ *
+ * * Don't mix accordion sizes
+ * * Don't mix accordions where some have icons and others do not.
+ *
+ * ## Interaction
+ *
+ * ### Collapsed and Expanded Rows
+ *
+ * By default, clicking another row does not collapse the row that has already been expanded.
+ * Designers can customize this  to only allow 1 accordion row to be open at a time. However, beware that this interaction can cause the UI to “jump around” in an unpleasant way.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Order stacked accordions by priority and importance.
+ * * Use short, descriptive text for the accordion title.
+ * * Number the steps in the accordion section sequentially.
+ * * use paragraphs and subheads as needed within the accordion body.
+ * * Use sentence case for titles.
+ *
+ * ### Dont's
+ *
+ * * Don't use paragraphs of text in the accordion title.
+ *
+ * ## Resources
+ *
+ * * https://headlessui.com/react/disclosure
  */
 export const Accordion = ({
   children,

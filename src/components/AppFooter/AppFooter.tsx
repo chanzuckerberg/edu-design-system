@@ -57,6 +57,8 @@ export type AppFooterEventHandler = (
 /**
  * `import {AppFooter} from "@chanzuckerberg/eds";`
  *
+ * ## Usage
+ *
  * A footer is a navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.
  */
 export const AppFooter = ({

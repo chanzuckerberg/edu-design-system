@@ -153,9 +153,39 @@ type InputFieldType = ForwardedRefComponent<
 /**
  * `import {InputField} from "@chanzuckerberg/eds";`
  *
- * An input with optional labels and error messaging built-in.
+ * ## Usage
  *
- * **NOTE**: This component requires `label` or `aria-label` prop
+ * Input fields are used to gather text-based input. They are represented by a rectangular box where the user can enter and edit their input.
+ *
+ * **NOTE**: This component requires a `label` or `aria-label` prop.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Text | Standard single-line input for free-form text. | Name fields, search bars, tags. |
+ * | Search | Optimized for searching, often with a search icon or clear button. | Site/app search bars, filter queries. |
+ * | Date/Time | Opens a date/time picker depending on browser support. | Scheduling. |
+ * | Masked | Formats input while typing. | Passwords, phone numbers, credit card entries. |
+ * | Disabled/Read-Only | Prevents user interaction or editing. | Prefilled info, summary/review forms. |
+ * | Validation | Displays real-time validation (e.g., success, error states). | Required fields, format enforcement. |
+ *
+ * ## Interaction
+ *
+ * When the text exceeds the available space, it scrolls to show the end of the string. Once the user clicks out of the field, the text scrolls back to the beginning.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use short, precise labels in sentence case.
+ * * Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.
+ * * For errors, provide instructions for fixing the issue and explain what is happening.
+ * * Use `fieldNote` for examples or instructions explaining what should be entered.
+ *
+ * ### Dont's
+ *
+ * * Don't use colons or periods at the end of labels, and don't omit labels.
+ * * Don't use placeholder text within the field; it can cause accessibility issues.
+ * * Don't stack field notes on top of error messages.
  */
 export const InputField: InputFieldType = forwardRef(
   (

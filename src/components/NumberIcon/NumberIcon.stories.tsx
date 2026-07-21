@@ -7,6 +7,10 @@ export default {
   title: 'Components/NumberIcon',
   component: NumberIcon,
   parameters: {
+    docs: {
+      subtitle:
+        'Treats a numeral as an icon by wrapping it in a container and adding color/spacing.',
+    },
     layout: 'centered',
   },
   args: {

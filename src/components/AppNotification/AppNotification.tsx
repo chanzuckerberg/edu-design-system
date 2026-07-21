@@ -38,7 +38,40 @@ export type AppNotificationProps = {
 /**
  * `import {AppNotification} from "@chanzuckerberg/eds";`
  *
- * An alert placed at the top of an application which persists across pages.
+ * ## Usage
+ *
+ * A global alert that persists across pages.
+ *
+ * * Use app notifications sparingly for global messages that affect an entire system.
+ * * Don't use them for engagement messaging, upselling a new feature, or feedback messaging. Use an inline notification or a toast notification instead.
+ * * Don't use for quick confirmation messages. Use a toast component instead because they appear and disappear with little disruption.
+ *
+ * ### Best Practices
+ *
+ * * Do use for a global condition required for the website or app to function, for example, maintenance updates.
+ * * Don't use for quick confirmation messages.
+ *
+ * ## Interaction
+ *
+ * App notifications follow users from screen to screen and remain until dismissed or until the state that caused the notification is resolved. Designers can specify whether the notification is dismissable or persistent. When dismissable, an "X" appears in the top right corner.
+ *
+ * ## Content & Accessibility
+ *
+ * App notification titles should be concise, ideally no more than two lines long.
+ *
+ * ### Do's
+ *
+ * * Focus on a single message or piece of information.
+ * * Ensure users can get the basic message and take action by scanning just the heading and CTA(s).
+ * * Keep the title short and descriptive, communicating the main message in sentence case.
+ * * Keep the body to 1-2 sentences, using sentence case.
+ *
+ * ### Dont's
+ *
+ * * Don't rely on color to convey meaning.
+ * * Don't punctuate the end of the title.
+ * * Don't repeat or paraphrase information in the heading.
+ * * Don't truncate content; if more information is needed, link to it or consider a different component.
  */
 export const AppNotification = ({
   className,

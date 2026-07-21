@@ -129,10 +129,36 @@ export type TabContextArgs = {
 /**
  * `import {TabGroup} from "@chanzuckerberg/eds";`
  *
- * List of of links where each link toggles open associated information in a tab panel.
+ * ## Usage
  *
- * Individual tabs allow for a simple text tab header using the `title` prop on each `<Tab>` instance.
- * For a more custom tabs, you can use an additonal `<Tab.Button>` sub-component with a render prop exposing `active` and `title`.
+ * Tab groups provide navigation between subsections of a page. The content within a tab group should be related.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standard horizontal | A row of clickable labels that switch content panels below. | Settings pages, user profiles, simple content sections. |
+ * | Scrollable | Tabs that scroll horizontally if there are too many to fit. | Mobile views, multi-section tools. |
+ * | Disabled states | Tabs may be inactive or unavailable depending on state or permissions. | Conditional access, incomplete onboarding steps. |
+ * | Dynamic | Tabs added or removed based on user input or system state. | Custom workflows, data-driven interfaces. |
+ *
+ * The minimum number of tabs is 2, with no maximum, but use caution beyond 6 tabs as content can become buried.
+ *
+ * ## Interaction
+ *
+ * When there are too many tabs to fit, the tab group scrolls horizontally and shows a scrolling gradient at the edges. A divider can visually separate the tab group from the content it controls; if a tab group is sticky on scroll (`isSticky`), it must have a divider (`hasDivider`) to maintain visual separation as content moves underneath it.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Order tabs by priority or importance from left to right.
+ * * Ensure labels clearly communicate the contents of the tab.
+ * * Limit labels to 1 or 2 words.
+ * * Use sentence case for each label.
+ *
+ * ### Dont's
+ *
+ * * Don't repeat page-level information as part of the label (e.g. use "All" rather than "All groups").
+ * * Don't truncate tab labels; consider alternative labels before settling for truncation.
  */
 export const TabGroup = ({
   activeIndex = 0,

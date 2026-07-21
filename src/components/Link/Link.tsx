@@ -64,9 +64,42 @@ export type LinkProps<ExtendedElement = unknown> =
 /**
  * `import {Link} from "@chanzuckerberg/eds";`
  *
- * Component for making styled anchor tags. Links allow users to navigate within or between a web page(s) or app(s).
+ * ## Usage
  *
- * Inline links inherit the color of the surrounding container, while when using `context` set to `standalone`, links have specific colors.
+ * Links take users to another place, and usually appear within or directly following a paragraph or sentence.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Inline | Embedded in body text, styled with an underline. | Reference external docs, "Learn more" links, citing sources. |
+ * | Standalone | Appears on its own, often in navs or action areas. | Footer links, header navigation, CTA-style links (when not using a button). |
+ * | External | Opens to a different domain or website; often includes an icon or notice. | Links to external sites, third-party tools, privacy policy or support articles. |
+ * | Internal navigation | Navigates within the app or website (SPA routing or anchor-based). | Page-to-page navigation, in-page jump links. |
+ * | Breadcrumb | Represents a step in a navigation trail. | Hierarchical navigation, backtracking in nested pages. |
+ * | Disabled | Styled like a link but non-interactive. | Unavailable destinations, permission-based restrictions. |
+ *
+ * ### Best Practices
+ *
+ * * **Do** use links primarily to support navigation, directing users to another page or a different portion of the same page.
+ * * **Don't** use links as actions that change data or state, or that trigger a high-emphasis action; use `Button` instead.
+ * * **Do** display the external ("open-in-new") icon when the link text needs support to convey an external domain.
+ * * **Don't** use other icons to represent an external link.
+ * * **Do** display an underline on inline links to reinforce interactivity and accessibility.
+ * * **Don't** use the low emphasis variant in inline contexts, as it can fail to convey interactivity.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use a meaningful, descriptive label that clearly indicates the link's destination.
+ * * Make sure the link reflects the content people will find at the destination.
+ * * Use "Learn more" for links to more information, ensuring the preceding content provides context.
+ *
+ * ### Dont's
+ *
+ * * Don't use generic phrases like "click here".
+ * * Don't include leading spaces or end punctuation within the link.
+ * * Don't use the same link text for different destinations on the same page.
+ * * Don't use excessively long link text.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (

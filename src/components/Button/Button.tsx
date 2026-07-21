@@ -89,11 +89,39 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
 /**
  * `import {Button} from "@chanzuckerberg/eds";`
  *
- * Component for making buttons that do not navigate the user to another page. Use button to trigger actions, menus,
- * or other in-page activity.
+ * ## Usage
  *
- * - If you need to style a navigation anchor, please use the `Link` component.
- * - If you need the button to use some other tag or component, use the `as` prop.
+ * Buttons are used to initialize an action. Button labels express what action will occur when the
+ * user interacts with them. Also known as action, call to action, or CTA.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Primary default | Main call-to-action with highest visual prominence. | Submit form. Complete purchase. Save changes. |
+ * | Secondary default | Less prominent than primary, used for alternative actions. | Cancel. Edit. Learn more. Go back. |
+ * | Tertiary default | Minimal styling (often text-only); used for low-emphasis actions. | View details. Skip. Optional settings. |
+ * | Critical | Styled to indicate danger. | Delete. Remove. Reset. Sign out. |
+ * | Inverse | Transparent background; used on dark surfaces or inside modals. | De-emphasized actions on colored backgrounds. |
+ * | Icon | Icon-only or icon + tooltip; compact for toolbars or utility actions. | Favorite. Share. Settings. Search. Close. |
+ * | Loading | Temporarily disabled with a spinner or progress indicator. | "Saving…", "Loading…". |
+ *
+ * ### Best Practices
+ *
+ * * Use one primary button per action to highlight the action the user is most likely to take.
+ * * Use secondary buttons alongside a primary button; don't use a secondary button in isolation.
+ * * Use tertiary buttons alongside primary or secondary actions. To use a tertiary button alone, set its `context` to `"standalone"`.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use a label that indicates what will happen after the button is clicked.
+ * * Start with a verb that encourages action.
+ * * Use sentence case and try to stay to 3 or fewer words.
+ * * Use the *{verb} + {noun}* formula, except for common actions like "Done", "Close", "Cancel", "Add", or "Delete".
+ *
+ * ### Dont's
+ *
+ * * Use punctuation.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (

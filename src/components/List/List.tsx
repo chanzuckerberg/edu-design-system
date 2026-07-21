@@ -79,7 +79,44 @@ const ListItem = (props: ListItemProps) => {
 };
 
 /**
+ * `import {UnorderedList, OrderedList} from "@chanzuckerberg/eds";`
+ *
  * Control a list of text items that are semantically unordered.
+ *
+ * ## Usage
+ *
+ * Structures related content into a skimmable vertical layout.
+ *
+ * * **Unordered**: Used for content where the order is not important.
+ * * **Ordered**: Used for content where the order is important.
+ * * EDS supports 1 level of nesting because our current products don't require deeper nesting.
+ *
+ * ### Unordered Lists
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * |Data presentation|Presents grouped or related information in an organized manner.|A list of user names with their status or profile images.|
+ * |Hierarchical Data|Displays nested items or subcategories.|A file tree or nested comments in a discussion thread.|
+ *
+ * ### Ordered Lists
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * |Steps / Instructions|Lists steps in a specific order.|A step-by-step guide for setting up an account.|
+ * |Nested steps|Breaks a long list of steps into groups of steps that accomplish a discrete action or piece of the overall task.|Long, complex procedures.|
+ *
+ * ### Best Practices
+ *
+ * * Include headings for lists that use custom characters instead of standard bullets or numbering.
+ * * Don't rely on custom character bullets to convey meaning.
+ * * Don't use multiple custom characters for one list item.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Keep each list item short and to the point.
+ * * Use parallel structure in list items to aid understanding.
  *
  * @param props options for the list to control size and marker type
  * @returns ReactNode

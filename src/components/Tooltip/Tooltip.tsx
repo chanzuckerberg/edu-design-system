@@ -137,10 +137,50 @@ type Plugin = Plugins[number];
 /**
  * `import {Tooltip} from "@chanzuckerberg/eds";`
  *
- * A floating information box, attached to other components on the page. Used to display option, additional information.
+ * ## Usage
  *
- * @see https://atomiks.github.io/tippyjs/
- * @see https://github.com/atomiks/tippyjs-react
+ * A tooltip is a floating, non-actionable label used to explain a user interface element or feature. It can be triggered by hovering over an element.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standard | Brief text that appears on hover or focus, near a UI element. | Labeling icon-only buttons, explaining uncommon terms. |
+ * | Interactive | Includes styled content such as links, formatting, or icons. | Short instructions, embedded documentation, "Learn more" links. |
+ * | Disabled element | Visible even on elements that are not interactive. | Explaining why a button is disabled. |
+ * | Contextual | Shows information specific to the user's current context or state. | Explaining dynamic UI states, custom user guidance. |
+ *
+ * ### Best Practices
+ *
+ * * Don't put tooltips on actions except for icon-only buttons.
+ * * Don't style text inside a tooltip.
+ * * When an icon's meaning is not immediately obvious or universally recognized, use a tooltip as a hint or clarification.
+ * * Don't use tooltips to communicate critical information such as form errors; consider the Toast component instead.
+ * * Tooltips aren't meant for a first-time user experience; consider a NUX to guide onboarding.
+ * * Display one tooltip at a time.
+ *
+ * ## Interaction
+ *
+ * A tooltip is triggered by hovering over an element. The most common example of a trigger is an icon, but hovering over a text link can also trigger a tooltip.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Keep tooltips to 3 lines or less.
+ * * Keep icon label tooltips to 2-3 words with no end punctuation.
+ * * Use full sentences for definitions and instructive tooltips, with sentence case and end punctuation.
+ * * Start instructional tooltips with a verb.
+ *
+ * ### Dont's
+ *
+ * * Don't use tooltips to communicate error messages or other critical information.
+ * * Don't put essential task instructions in tooltips.
+ * * Don't use tooltips to restate text that is already on the screen.
+ * * Don't pair tooltips with disabled elements.
+ *
+ * ## Resources
+ *
+ * * https://atomiks.github.io/tippyjs/
+ * * https://github.com/atomiks/tippyjs-react
  */
 export const Tooltip = ({
   childNotInteractive,

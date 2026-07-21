@@ -98,9 +98,45 @@ const ToggleWrapper = (props: ExtractProps<typeof Field>) => (
 /**
  * `import {Toggle} from "@chanzuckerberg/eds";`
  *
- * Toggle wrapping the Headless UI Switch component https://headlessui.dev/react/switch, generally used as an input for controlling between two states.
+ * ## Usage
  *
- * **NOTE**: This component requires `label` or `aria-label` prop
+ * A control that toggles between two binary states like on/off or yes/no.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Enable/Disable a feature | Turns a feature on or off. | Dark mode toggle in a settings menu. |
+ * | Show/Hide content | Reveals or hides additional UI elements. | Show/hide advanced search filters. |
+ * | Activate notifications | Turns notifications on or off. | Push notifications toggle in a mobile app. |
+ * | Privacy & security settings | Adjusts user privacy or security preferences. | Allow/block location sharing. |
+ * | Subscription/opt-in settings | Lets users opt in or out of subscriptions. | Newsletter sign-up toggle. |
+ * | Account preferences | Changes user-specific account features. | Two-factor authentication toggle. |
+ * | Mode switching | Switches between different UI modes. | Toggle between grid view and list view. |
+ * | Accessibility options | Improves usability for accessibility. | High contrast mode toggle. |
+ *
+ * **NOTE**: This component requires a `label` or `aria-label` prop.
+ *
+ * ### Best Practices
+ *
+ * * Use only for binary yes/no or on/off options.
+ * * Don't use a toggle to perform a single action.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Write labels in sentence case.
+ * * Use punctuation in full-sentence secondary labels, and punctuate all secondary labels in a list the same way.
+ * * Ensure labels are clear without surrounding information for context.
+ * * Include alt text for toggles that don't have a label.
+ *
+ * ### Dont's
+ *
+ * * Don't add end punctuation to the primary label.
+ * * Don't mix full-sentence and partial-sentence secondary labels.
+ *
+ * ## Resources
+ *
+ * * https://headlessui.dev/react/switch
  */
 export const Toggle = ({ label, subLabel, ...other }: ToggleProps) => {
   const wrapperClassName = clsx(

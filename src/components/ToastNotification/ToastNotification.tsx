@@ -45,19 +45,34 @@ export type ToastNotificationProps = {
 /**
  * `import {ToastNotification} from "@chanzuckerberg/eds";`
  *
- * Toasts display brief, temporary notifications. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.
+ * ## Usage
  *
- * ## Sizing
+ * A brief, temporary notification. Toasts are meant to be noticed without disrupting a user's experience or requiring an action to be taken.
  *
- * Toast notifications use a fixed max width of 384px and their height depends on the length of the notification message. As noted in the content guidelines, limit toast notifications to two lines of text.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Success | Confirms a successful action. | Form submitted, settings saved, message sent. |
+ * | Error | Alerts the user to a failure or problem. | Failed save, API error, input validation failure. |
+ * | Warning | Warns about potential issues without blocking progress. | Unsaved changes, feature deprecation, connectivity issues. |
+ * | Info | Shares neutral or contextual information. | Tip or hint, background updates, non-critical status. |
  *
- * ## Dismissal
+ * ## Interaction
  *
- * Toast notifications can be manually dismissed or auto-dismissed using the dismissType prop. Auto toasts are automatically dismissed after 8 seconds by default.
+ * Toast notifications can be manually dismissed or auto-dismissed using the `dismissType` prop; auto toasts are automatically dismissed after 8 seconds. They slide in and out from the top right of the screen, placed 16px from the top and side of the viewport, fading in with the `eds-anim-fade-long` token and out with the `eds-animation-fade-quick` token.
  *
- * ## Placement and Behavior
+ * ## Content & Accessibility
  *
- * Toast notifications slide in and out from the borrom right of the screen. The toast should be placed 24 px away from the top and side of the viewport. The toast notification fades in with the token eds-anim-fade-long and fade out with token eds-animation-fade-quick.
+ * ### Do's
+ *
+ * * Keep the toast to a single, simple message such as a confirmation.
+ * * Use simple phrases or sentence fragments, in sentence case.
+ * * Aim for 1 line of text or less.
+ *
+ * ### Dont's
+ *
+ * * Don't use more than 2 lines of text; if more is required, find another way to provide the information.
+ * * Don't include any information in a toast that may be needed again.
+ * * Don't punctuate incomplete sentences, and don't rely on color to convey meaning.
  */
 export const ToastNotification = ({
   className,

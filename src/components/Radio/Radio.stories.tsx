@@ -7,6 +7,10 @@ export default {
   title: 'Components/Radio',
   component: Radio,
   parameters: {
+    docs: {
+      subtitle:
+        'A radio button is a round control that allows users to choose one option from a set. Also known as Radio.',
+    },
     layout: 'centered',
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],

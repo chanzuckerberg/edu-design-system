@@ -7,6 +7,10 @@ export default {
   title: 'Components/SelectionChip',
   component: SelectionChip,
   parameters: {
+    docs: {
+      subtitle:
+        'Compact, interactive UI elements used to make selections or display user-generated information.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:1.1'],

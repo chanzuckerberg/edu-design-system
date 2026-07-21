@@ -38,13 +38,37 @@ type Props = {
 /**
  * `import {Tag} from "@chanzuckerberg/eds";`
  *
+ * ## Usage
+ *
  * Status UI elements that visually represent metadata, attributes, or categorical information about an item. Tags usually represent system-generated information.
  *
- * Usage and content:
- * * As a best practice, keep labels to 1-2 words. Remember that tags represent discrete pieces of information Don’t overload users with excessive content, which will increase cognitive load.
- * * Use tag status variants which are appropriate for the tag’s content.
- * * Tags should not be used in a semantically incorrect way.Do not select tag status soley based on their color. If clients need color-coded tags which are not tied to a particular status, reach out the EDS.
- * * When using multiple tabs together, separate them with spacing-size-2. This provides sufficient white space for readability.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | State indicators | Shows the current status of an item or process. | A green "Active" tag for a user profile. |
+ * | Availability | Indicates if something is available or not. | "Available" or "Unavailable" tag for a product. |
+ * | Progress / Workflow | Marks the stage in a workflow or pipeline. | "In Review," "Draft," or "Completed" tags for a document. |
+ * | Urgency / Priority | Highlights critical items needing attention. | "High Priority" or "Urgent" tag in a task list. |
+ * | Validation status | Shows whether an item passed or failed validation. | "Valid" or "Error" status tags for form inputs. |
+ * | New or updated content | Marks new or recently changed items. | A "New" or "Updated" tag for an article or notification. |
+ *
+ * ### Best Practices
+ *
+ * * Use short labels, keeping them to 1-2 words since tags represent discrete pieces of information.
+ * * When using multiple tags together, separate them with 16px of space.
+ * * Use tag status variants that are appropriate for the tag's content.
+ * * Don't use tags solely for their colors or in a semantically incorrect way. If you need color-coded tags that are not tied to a particular status, reach out to EDS.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Keep labels to 1-2 words.
+ * * Remember that tags represent discrete pieces of information.
+ *
+ * ### Dont's
+ *
+ * * Don't overload users with excessive content, which increases cognitive load.
+ * * Don't rely on just color to communicate status—add text or icons.
  */
 export const Tag = ({
   className,

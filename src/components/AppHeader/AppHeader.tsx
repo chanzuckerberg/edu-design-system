@@ -246,7 +246,22 @@ function handleShouldClose(
 /**
  * `import {AppHeader} from "@chanzuckerberg/eds";`
  *
- * Provides app-level navigation and serves as the `<header>` element for accessibility landmarks
+ * ## Usage
+ *
+ * The persistent navigation bar that appears at the top of an application provides brand identity, global navigation, and quick access to key actions. It anchors the user experience by ensuring consistent access to core functionality across all pages. It also serves as the `<header>` for accessibility landmarks.
+ *
+ * App headers have three distinct sections with different purposes.
+ *
+ * | Type | Description | Uses |
+ * |------|-------------|------|
+ * | Branding | Displays the product name, logo, or identity elements. | Reinforces brand presence. Ensures users always know where they are. |
+ * | Navigation | Provides access to global navigation items such as menus, links, or search. | Helps users move between top-level sections or features quickly. |
+ * | Utility / Actions | Contains user profile. | Gives users immediate access to high-frequency or contextual actions. |
+ *
+ * ### Best Practices
+ *
+ * * Keep navigation concise and limited to high-level sections.
+ * * Don't overload the header with too many links or rarely used actions.
  */
 export const AppHeader = ({
   className,
