@@ -40,7 +40,6 @@ export type InputChipProps = {
  *
  * | Type/Use | Description | Example |
  * |----------|-------------|---------|
- * | Selection | An interactive chip that can be selected, deselected, or toggled. | Filtering content, selecting multiple items, or representing user controls outside a form (in place of a checkbox, radio, or toggle group). |
  * | Input | A chip that represents user-generated input and can be edited or removed. | Displaying selected tags, keywords, or values in a form or input field, or combining multiple pieces of data such as a name and avatar. |
  *
  * ### Best Practices

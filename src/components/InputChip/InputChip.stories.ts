@@ -9,7 +9,7 @@ export default {
   parameters: {
     docs: {
       subtitle:
-        'Compact, interactive UI elements used to make selections or display user-generated information.',
+        'Compact, interactive UI element used to display user-generated information.',
     },
   },
   argTypes: {

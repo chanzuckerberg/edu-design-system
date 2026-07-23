@@ -8,8 +8,7 @@ export default {
   component: SelectionChip,
   parameters: {
     docs: {
-      subtitle:
-        'Compact, interactive UI elements used to make selections or display user-generated information.',
+      subtitle: 'Compact, interactive UI element used to make selections.',
     },
     layout: 'centered',
   },

@@ -147,9 +147,9 @@ type Plugin = Plugins[number];
  * ### Best Practices
  *
  * * Don't put tooltips on actions except for icon-only buttons.
- * * Don't style text inside a tooltip.
+ * * Keep tooltip content simple; avoid complex/custom typography styling inside a tooltip.
  * * When an icon's meaning is not immediately obvious or universally recognized, use a tooltip as a hint or clarification.
- * * Don't use tooltips to communicate critical information such as form errors; consider the Toast component instead.
+ * * Don't use tooltips to communicate critical information such as form errors; consider `ToastNotification` instead.
  * * Tooltips aren't meant for a first-time user experience; consider a NUX to guide onboarding.
  * * Display one tooltip at a time.
  *
@@ -171,7 +171,7 @@ type Plugin = Plugins[number];
  * * Don't use tooltips to communicate error messages or other critical information.
  * * Don't put essential task instructions in tooltips.
  * * Don't use tooltips to restate text that is already on the screen.
- * * Don't pair tooltips with disabled elements.
+ * * Don't pair tooltips with disabled elements directly, as it may not receive pointer events. Attach to a wrapper element instead.
  *
  * ## Resources
  *

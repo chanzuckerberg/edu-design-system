@@ -54,7 +54,7 @@ export type ToastNotificationProps = {
  *
  * ## Interaction
  *
- * Toast notifications can be manually dismissed or auto-dismissed using the `dismissType` prop; auto toasts are automatically dismissed after 8 seconds. They slide in and out from the top right of the screen, placed 16px from the top and side of the viewport, fading in with the `eds-anim-fade-long` token and out with the `eds-anim-fade-quick` token.
+ * Toast notifications can be manually dismissed or auto-dismissed using the `dismissType` prop; auto toasts are automatically dismissed after 8 seconds. When building with `ToastNotification`, each should slide in and out from the top right of the screen, placed 16px from the bottom and right side of the viewport, fading in with the `eds-anim-fade-long` token and out with the `eds-anim-fade-quick` token.
  *
  * ## Content & Accessibility
  *

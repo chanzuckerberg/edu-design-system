@@ -164,7 +164,7 @@ const AccordionRowContext = createContext<
  *
  * ### Best Practices
  *
- * * Don't mix accordion sizes
+ * * Don't mix accordion sizes.
  * * Don't mix accordions where some have icons and others do not.
  *
  * ## Interaction
@@ -181,7 +181,7 @@ const AccordionRowContext = createContext<
  * * Order stacked accordions by priority and importance.
  * * Use short, descriptive text for the accordion title.
  * * Number the steps in the accordion section sequentially.
- * * use paragraphs and subheads as needed within the accordion body.
+ * * Use paragraphs and subheads as needed within the accordion body.
  * * Use sentence case for titles.
  *
  * ### Don'ts
