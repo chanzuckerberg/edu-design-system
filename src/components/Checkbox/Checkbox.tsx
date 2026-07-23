@@ -120,12 +120,46 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputProps>(
 );
 
 /**
- * `import {Checkbox} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Checkbox control indicating if something is selected or unselected. Uncontrolled by default,
- * it can be used in place of boolean-like form data.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standard | Basic binary control (checked/unchecked). | Accept terms and conditions. Enable/disable a setting. |
+ * | Multi-select | Used in a group to select multiple items independently. | Filter lists. Select options in forms. |
+ * | Tri-state | Supports three states: checked, unchecked, and indeterminate. | Parent checkbox for nested options. |
+ * | Nested | A parent checkbox controls its children; the parent reflects checked, unchecked, or indeterminate. | Selections within categories. |
+ * | Inline | Placed within text or small UI elements. | Inline acknowledgement text. Compact forms. |
+ * | Disabled | Non-interactive checkbox indicating a fixed or unavailable state. | Unavailable options. Permissions indicator. |
+ * | Table | Selects lines or entries in a table. | Rows to perform an action on. |
  *
- * **NOTE**: Requires either a visible `label` or `aria-label` prop.
+ * ### Best Practices
+ *
+ * * By default, checkboxes should have labels.
+ * * Checkboxes may have no visible label if they are part of another component, such as a table row.
+ * * Checkbox group labels can include an "optional" or "required" hint.
+ *
+ * ## Interaction
+ *
+ * Both the checkbox and its label(s) can trigger the interaction; do not limit the touch target to
+ * the checkbox alone. Checks work independently of one another—selecting one does not deselect the
+ * others unless they have a parent-child relationship. Consider using a radio button if checking one
+ * option should deselect all others.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use group labels to describe the action taken within a group of checkboxes.
+ * * Keep labels to a few words (ideally 3 or fewer) and use sentence case.
+ * * Use the first person when a checkbox indicates the user accepting something, e.g. "I agree to...".
+ * * Only use helper text when necessary to explain the action or its results.
+ * * In error messages, describe the issue and what to do about it.
+ *
+ * ### Don'ts
+ *
+ * * Use helper text by default; consider better group labels first.
+ * * Use end punctuation on group labels.
+ * * Truncate labels.
  */
 export const Checkbox = Object.assign(
   forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {

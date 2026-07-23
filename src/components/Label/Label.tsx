@@ -37,8 +37,6 @@ export type LabelProps = {
 };
 
 /**
- * `import {Label} from "@chanzuckerberg/eds";`
- *
  * Label component used as legends for field groups (e.g., radio/checkbox fields).
  */
 export const Label = ({

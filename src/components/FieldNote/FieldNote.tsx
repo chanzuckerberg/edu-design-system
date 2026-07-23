@@ -44,8 +44,6 @@ export type FieldNoteProps = {
 };
 
 /**
- * `import {FieldNote} from "@chanzuckerberg/eds";`
- *
  * Fieldnote component wraps text to describe other components.
  */
 export const FieldNote = ({

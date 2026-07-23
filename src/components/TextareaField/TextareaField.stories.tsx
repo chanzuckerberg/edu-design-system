@@ -19,6 +19,10 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
     spellCheck: false,
   },
   parameters: {
+    docs: {
+      subtitle:
+        'A text area lets a user input more text than a standard text field.',
+    },
     layout: 'centered',
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],

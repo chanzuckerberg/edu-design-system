@@ -12,6 +12,10 @@ export default {
   title: 'Components/ToastNotification',
   component: ToastNotification,
   parameters: {
+    docs: {
+      subtitle:
+        "A brief, temporary notification. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.",
+    },
     layout: 'centered',
   },
   argTypes: {

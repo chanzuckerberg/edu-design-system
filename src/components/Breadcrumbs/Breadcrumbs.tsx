@@ -55,8 +55,6 @@ type Context = {
 
 const BreadcrumbsContext = createContext<Context>({});
 /**
- * `import {Breadcrumbs} from "@chanzuckerberg/eds";`
- *
  * List of Breadcrumb components showing the user where they are in the system and allow them
  * to navigate to parent pages.
  */
@@ -237,8 +235,6 @@ type BreadcrumbItemProps = {
 };
 
 /**
- * `import {BreadcrumbsItem} from "@chanzuckerberg/eds";`
- *
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({

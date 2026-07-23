@@ -10,6 +10,10 @@ export default {
   component: AppFooter,
 
   parameters: {
+    docs: {
+      subtitle:
+        'A footer is a navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.',
+    },
     chromatic: {
       viewports: [
         chromaticViewports.googlePixel2,

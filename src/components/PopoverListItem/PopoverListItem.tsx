@@ -49,8 +49,6 @@ export type PopoverListItemProps = {
 };
 
 /**
- * `import {PopoverListItem} from "@chanzuckerberg/eds";`
- *
  * This abstracts the structure of an item in a popover, when the popover contains a
  * list of items (e.g., Menus and Selects)
  * - Contains styles for when active/disabled or not

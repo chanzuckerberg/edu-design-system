@@ -47,9 +47,30 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 /**
- * `import {PageNotification} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * An alert placed at the top of a page which impacts the entire experience on a screen.
+ * * Notifications related to a section of a page (like a card, popover, or modal) should use an Inline Notification.
+ * * Page Notifications are intended to display short messages. Ideally, a max of 3 lines.
+ *
+ * ## Interaction
+ *
+ * Designers can specify whether the notification is dismissible or not. A dismissible notification renders with a close icon in the top right.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Focus on a single message or piece of information.
+ * * Ensure users can get the basic message and take action by scanning just the heading and CTA(s).
+ * * Title: be short and descriptive, communicate the main message, and use sentence case.
+ * * Body: keep to 1-2 sentences and use sentence case.
+ *
+ * ### Don'ts
+ *
+ * * Don't rely on color to convey meaning.
+ * * Don't punctuate the end of the title.
+ * * Don't repeat or paraphrase information from the heading in the body.
+ * * Don't truncate content; if more information is needed, link to it or consider a different component.
  */
 export const PageNotification = ({
   buttonLayout = 'vertical',

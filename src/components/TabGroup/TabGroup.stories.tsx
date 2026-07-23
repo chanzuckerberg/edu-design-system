@@ -11,6 +11,10 @@ export default {
   title: 'Components/TabGroup',
   component: TabGroup,
   parameters: {
+    docs: {
+      subtitle:
+        'Tab groups provide navigation between subsections of a page. The content within a Tab group should be related.',
+    },
     layout: 'centered',
   },
   args: {

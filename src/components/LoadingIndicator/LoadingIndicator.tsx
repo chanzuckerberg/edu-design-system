@@ -52,11 +52,28 @@ const loaderViewportSize = {
 };
 
 /**
- * `import {LoadingIndicator} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Loading indicators inform users about the wait time, reason, and status of ongoing processes when the layout is unknown
+ * * **Indeterminate loaders**: use when a process does not have a specific endpoint (e.g., loading a page or fetching a component's content); the ongoing animation creates the perception of better performance.
+ * * **Spinners**: use as a secondary choice of loader to Skeleton states.
  *
- * For screen readers, add a custom `aria-label` to describe what is loading.
+ * | Type | Description | Example |
+ * |------|-------------|---------|
+ * | Spinner (Indeterminate) | Circular animation that loops while content loads without known duration. | Page transitions, unknown-length processes. |
+ * | Progress Bar (Determinate) | Horizontal bar that fills to show loading progress percentage. | File uploads, installers, long-running tasks with known duration. |
+ * | Progress Bar (Indeterminate) | Animated bar without a fixed percentage; shows ongoing activity. | Searching, connecting, polling data with unpredictable timing. |
+ * | Skeleton Loader | Placeholder UI shaped like content. | Content-heavy pages, feeds, dashboards. |
+ * | Dots/Bouncing loader | Animated dots or shapes to suggest activity. | Messaging input, minimal UIs. |
+ * | Inline loader | Small spinner or bar embedded within buttons, fields, or table rows. | "Saving..." or "Submitting..." buttons, table row actions. |
+ * | Fullscreen loader | Large spinner or blocking indicator over the entire screen. | Initial page loads, app boot-up sequences. |
+ * | Overlay loader | Semi-transparent spinner overlay on a section of the UI. | Panel refreshes, card-level async operations. |
+ * | Looping animation/GIF | Custom animated asset or branded loader. | Branded apps, unique user experiences. |
+ * | Success/Failure transition | Loader morphs into a checkmark or error icon. | Submission confirmation. |
+ *
+ * ### Best Practices
+ *
+ * * **Do** use other loaders before using the Spinner.
+ * * **Don't** overload the page with Spinners; minimize usage.
  */
 export const LoadingIndicator = ({
   ariaLabel = 'loading',

@@ -24,8 +24,6 @@ export type TextProps = {
 } & React.HTMLAttributes<HTMLElement>; // TODO-AH: add in each possible element and spread in <Markdown>
 
 /**
- * `import {Text} from "@chanzuckerberg/eds";`
- *
  * The Text component decorates `<p>` and `<span>` with typographic variants. Use
  * typography presets to style the text via `preset`.
  *

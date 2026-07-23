@@ -8,6 +8,10 @@ export default {
   title: 'Components/PageNotification',
   component: PageNotification,
   parameters: {
+    docs: {
+      subtitle:
+        'A page notification communicates a message about the page it appears on.',
+    },
     layout: 'centered',
   },
   args: {

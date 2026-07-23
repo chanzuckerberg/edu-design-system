@@ -36,8 +36,6 @@ export type CodeBlockProps = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {CodeBlock} from "@chanzuckerberg/eds";`
- *
  * Component used to render block of code for use alongside other components. Allows for copying code.
  */
 export const CodeBlock = ({

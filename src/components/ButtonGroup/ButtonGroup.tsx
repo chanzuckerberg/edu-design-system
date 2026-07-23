@@ -30,8 +30,6 @@ type ButtonGroupProps = {
 };
 
 /**
- * `import {ButtonGroup} from "@chanzuckerberg/eds";`
- *
  * A container for buttons grouped together horizontally or vertically.
  */
 export function ButtonGroup({

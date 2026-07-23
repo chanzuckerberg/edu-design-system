@@ -81,8 +81,6 @@ export const setShadowStates = (targetData: HTMLDivElement): ShadowStates => {
 };
 
 /**
- * `import {ScrollWrapper} from "@chanzuckerberg/eds";`
- *
  * This is a basic wrapper component that handles functionality to show/hide shadows along either the vertical or horizontal edges.
  * This kicks in once the container's size is smaller than the overall height of the content within. For this to work,
  * the element above the scroll wrapper must have a fixed height. The effect kicks in once the children of the scroll

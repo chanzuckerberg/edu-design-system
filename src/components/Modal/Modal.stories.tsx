@@ -15,6 +15,10 @@ export default {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
+    docs: {
+      subtitle:
+        'Modals display content on top of the page in a separate container, blocking the content underneath. They require user action and can be used to deliver a message or help a user complete a task.',
+    },
     // Using this motion preference for components where they trigger animations on mount
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',

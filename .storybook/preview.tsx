@@ -11,12 +11,21 @@ import '../src/tokens-dist/css/variables-dark.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
+import {
+  Title,
+  Subtitle,
+  Description,
+  Controls,
+  Primary,
+  Stories,
+} from '@storybook/addon-docs/blocks';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import type {
   Preview,
   StoryFn,
   ReactRenderer,
 } from '@storybook/react-webpack5';
+
 import React from 'react';
 
 import Theme from './Theme';
@@ -43,6 +52,18 @@ export const parameters: Preview['parameters'] = {
   docs: {
     theme: Theme,
     toc: true,
+    // https://storybook.js.org/docs/writing-docs/autodocs#write-a-custom-template
+    page: () => (
+      <>
+        <Title />
+        <Subtitle />
+        <Primary />
+        <h2>Properties</h2>
+        <Controls />
+        <Description />
+        <Stories />
+      </>
+    ),
   },
   backgrounds: {
     options: {
