@@ -54,7 +54,7 @@ export type ToastNotificationProps = {
  *
  * ## Interaction
  *
- * Toast notifications can be manually dismissed or auto-dismissed using the `dismissType` prop; auto toasts are automatically dismissed after 8 seconds. They slide in and out from the top right of the screen, placed 16px from the top and side of the viewport, fading in with the `eds-anim-fade-long` token and out with the `eds-animation-fade-quick` token.
+ * Toast notifications can be manually dismissed or auto-dismissed using the `dismissType` prop; auto toasts are automatically dismissed after 8 seconds. They slide in and out from the top right of the screen, placed 16px from the top and side of the viewport, fading in with the `eds-anim-fade-long` token and out with the `eds-anim-fade-quick` token.
  *
  * ## Content & Accessibility
  *
@@ -64,7 +64,7 @@ export type ToastNotificationProps = {
  * * Use simple phrases or sentence fragments, in sentence case.
  * * Aim for 1 line of text or less.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't use more than 2 lines of text; if more is required, find another way to provide the information.
  * * Don't include any information in a toast that may be needed again.

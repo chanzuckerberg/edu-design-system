@@ -62,7 +62,7 @@ export type AppNotificationProps = {
  * * Keep the title short and descriptive, communicating the main message in sentence case.
  * * Keep the body to 1-2 sentences, using sentence case.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't rely on color to convey meaning.
  * * Don't punctuate the end of the title.

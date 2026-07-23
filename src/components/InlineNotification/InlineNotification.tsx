@@ -60,7 +60,7 @@ type InlineNotificationProps = {
  * * In the body, explain how to resolve the issue in 1-2 sentences (no more than 2 lines) and include links to more info when necessary.
  * * Place the notification close to the relevant screen elements so it is understood in context.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Punctuate the end of the title.
  * * Repeat or summarize the title in the body.

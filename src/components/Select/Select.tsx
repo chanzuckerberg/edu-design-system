@@ -209,7 +209,7 @@ const SelectContext = React.createContext<SelectContextType>({});
  * * Use sentence case.
  * * Place the most common choices at the top of the list to assist visually impaired users.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Use periods at the end of labels.
  * * Place placeholder text within the field; it can cause accessibility issues with color contrast, inconsistent screen-reader behavior, and text disappearing as users type.

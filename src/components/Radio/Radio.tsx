@@ -134,7 +134,7 @@ const RadioInput = ({
  * * Keep labels to a few words (ideally 3 or less).
  * * In error messages, describe the issue and what to do about it.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Use helper text by default; consider better group labels first.
  * * Use end punctuation on group labels.

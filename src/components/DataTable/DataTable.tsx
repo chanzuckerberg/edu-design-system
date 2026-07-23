@@ -197,7 +197,7 @@ const DataTableContext = createContext<Pick<DataTableProps, 'size'>>({
  * * Wrap important content and truncate secondary information.
  * * Use clear, descriptive headers and a meaningful title so screen readers can navigate the table.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Use tables for layout.
  * * Include blank rows or columns; adjust row and column spacing instead.

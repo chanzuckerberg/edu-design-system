@@ -125,7 +125,7 @@ const ToggleWrapper = (props: ExtractProps<typeof Field>) => (
  * * Ensure labels are clear without surrounding information for context.
  * * Include alt text for toggles that don't have a label.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't add end punctuation to the primary label.
  * * Don't mix full-sentence and partial-sentence secondary labels.

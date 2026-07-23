@@ -184,7 +184,7 @@ const AccordionRowContext = createContext<
  * * use paragraphs and subheads as needed within the accordion body.
  * * Use sentence case for titles.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't use paragraphs of text in the accordion title.
  *

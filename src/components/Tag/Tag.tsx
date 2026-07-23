@@ -61,7 +61,7 @@ type Props = {
  * * Keep labels to 1-2 words.
  * * Remember that tags represent discrete pieces of information.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't overload users with excessive content, which increases cognitive load.
  * * Don't rely on just color to communicate status—add text or icons.

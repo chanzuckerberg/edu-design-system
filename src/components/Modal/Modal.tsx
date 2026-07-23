@@ -309,7 +309,7 @@ const ModalContent = (props: ModalContentProps) => {
  * * Break up information with section titles for scanability.
  * * Try to avoid scrolling text within a modal.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Include long headings or body text. The more words, the less likely people are to read any of it.
  * * Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.

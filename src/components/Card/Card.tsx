@@ -144,7 +144,7 @@ export interface CardCSSProperties extends React.CSSProperties {
  * * Use headings that make the card's purpose clear.
  * * Include essential, summarized information.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't overwhelm the card with too much content; keep it scannable.
  * * Avoid too many call-to-action buttons or links within the same card.

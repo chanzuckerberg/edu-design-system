@@ -90,7 +90,7 @@ export type LinkProps<ExtendedElement = unknown> =
  * * Make sure the link reflects the content people will find at the destination.
  * * Use "Learn more" for links to more information, ensuring the preceding content provides context.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't use generic phrases like "click here".
  * * Don't include leading spaces or end punctuation within the link.

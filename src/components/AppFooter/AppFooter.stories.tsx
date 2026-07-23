@@ -12,7 +12,7 @@ export default {
   parameters: {
     docs: {
       subtitle:
-        'A footer is an navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.',
+        'A footer is a navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.',
     },
     chromatic: {
       viewports: [

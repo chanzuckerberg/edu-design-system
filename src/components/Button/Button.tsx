@@ -114,7 +114,7 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
  * * Use sentence case and try to stay to 3 or fewer words.
  * * Use the *{verb} + {noun}* formula, except for common actions like "Done", "Close", "Cancel", "Add", or "Delete".
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Use punctuation.
  */

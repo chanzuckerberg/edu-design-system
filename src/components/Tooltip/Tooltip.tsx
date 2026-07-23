@@ -155,7 +155,7 @@ type Plugin = Plugins[number];
  *
  * ## Interaction
  *
- * A tooltip is triggered by hovering over an element. The most common example of a trigger is an icon, but hovering over a text link can also trigger a tooltip.
+ * A tooltip is triggered by hovering over or focusing an element. The most common example of a trigger is an icon, but hovering over a text link can also trigger a tooltip.
  *
  * ## Content & Accessibility
  *
@@ -166,7 +166,7 @@ type Plugin = Plugins[number];
  * * Use full sentences for definitions and instructive tooltips, with sentence case and end punctuation.
  * * Start instructional tooltips with a verb.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't use tooltips to communicate error messages or other critical information.
  * * Don't put essential task instructions in tooltips.

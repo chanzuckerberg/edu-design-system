@@ -166,7 +166,7 @@ type InputFieldType = ForwardedRefComponent<
  *
  * ## Interaction
  *
- * When the text exceeds the available space, it scrolls to show the end of the string. Once the user clicks out of the field, the text scrolls back to the beginning.
+ * When the text exceeds the available space, it scrolls to show the end of the string.
  *
  * ## Content & Accessibility
  *
@@ -177,7 +177,7 @@ type InputFieldType = ForwardedRefComponent<
  * * For errors, provide instructions for fixing the issue and explain what is happening.
  * * Use `fieldNote` for examples or instructions explaining what should be entered.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't use colons or periods at the end of labels, and don't omit labels.
  * * Don't use placeholder text within the field; it can cause accessibility issues.

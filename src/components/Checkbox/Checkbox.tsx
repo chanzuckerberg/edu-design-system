@@ -155,7 +155,7 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputProps>(
  * * Only use helper text when necessary to explain the action or its results.
  * * In error messages, describe the issue and what to do about it.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Use helper text by default; consider better group labels first.
  * * Use end punctuation on group labels.

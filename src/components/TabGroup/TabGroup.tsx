@@ -151,7 +151,7 @@ export type TabContextArgs = {
  * * Limit labels to 1 or 2 words.
  * * Use sentence case for each label.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't repeat page-level information as part of the label (e.g. use "All" rather than "All groups").
  * * Don't truncate tab labels; consider alternative labels before settling for truncation.

@@ -65,7 +65,7 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
  * * Title: be short and descriptive, communicate the main message, and use sentence case.
  * * Body: keep to 1-2 sentences and use sentence case.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't rely on color to convey meaning.
  * * Don't punctuate the end of the title.

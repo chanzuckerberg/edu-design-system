@@ -142,7 +142,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
  *
  * ## Interaction
  *
- * When the amount of text exceeds the available space, the text scrolls to show the end of the string. Once the user clicks out of the field, the text scrolls back up to the beginning.
+ * When the amount of text exceeds the available space, the text scrolls to show the end of the string.
  *
  * ## Content & Accessibility
  *
@@ -153,7 +153,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
  * * Use `fieldNote` helper text when necessary, favoring examples over instructions.
  * * For errors, provide instructions for fixing the issue and explain what is happening.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Don't use colons or periods at the end of labels, and don't omit labels.
  * * Don't force the use of helper text—there is frequently no need for it.

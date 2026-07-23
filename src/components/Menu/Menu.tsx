@@ -104,7 +104,7 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
  * * Place the most-used options at the top of the menu.
  * * Group similar commands, and order meaningfully in long menus using dividers between sections.
  *
- * ### Dont's
+ * ### Don'ts
  *
  * * Overload menus; try to stay below 12 options in a menu.
  * * Use helper text with menu options unless absolutely necessary.
