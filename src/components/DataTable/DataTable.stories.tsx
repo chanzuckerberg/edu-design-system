@@ -40,7 +40,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.1.0'],
 } as Meta<Args>;
 
 type Args = DataTableProps;
@@ -364,7 +364,7 @@ export const Selectable: StoryObj<Args> = {
           // Widths can be set on header cells (using pixels)
           // More information: https://tanstack.com/table/latest/docs/guide/column-sizing#column-widths
           // TODO(design): what is the column size for the selectable column
-          size: 32,
+          size: 40,
         },
         columnHelper.accessor('firstName', {
           header: () => (
@@ -514,7 +514,7 @@ export const VerticalDivider: StoryObj<Args> = {
           // Widths can be set on header cells (using pixels)
           // More information: https://tanstack.com/table/latest/docs/guide/column-sizing#column-widths
           // TODO(design): what is the column size for the selectable column
-          size: 32,
+          size: 40,
         },
         columnHelper.accessor('firstName', {
           header: () => (

@@ -232,6 +232,7 @@ export function DataTable<T>({
           <div
             className={clsx(
               styles['data-table__caption-container'],
+              size && styles[`data-table--size-${size}`],
               isStatusEligible && styles['data-table--status-eligible'],
             )}
           >
@@ -242,7 +243,7 @@ export function DataTable<T>({
                     aria-hidden="true"
                     as="div"
                     className={styles['data-table__caption']}
-                    preset="headline-md"
+                    preset={size === 'md' ? 'title-lg' : 'title-md'}
                   >
                     {caption}
                   </Text>
@@ -252,7 +253,7 @@ export function DataTable<T>({
                     aria-hidden="true"
                     as="div"
                     className={styles['data-table__subCaption']}
-                    preset="headline-sm"
+                    preset={size === 'md' ? 'body-md' : 'body-sm'}
                   >
                     {subCaption}
                   </Text>
@@ -457,7 +458,7 @@ export const DataTableHeaderCell = ({
     hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
   );
   return (
-    <Text as="div" className={headerCellClassName} {...rest} preset="title-md">
+    <Text as="div" className={headerCellClassName} {...rest} preset="title-xs">
       {leadingIcon && (
         <Icon
           className={styles['data-cell__cell--icon']}
@@ -468,14 +469,14 @@ export const DataTableHeaderCell = ({
       )}
       {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
-          <Text as="span" preset={size === 'md' ? 'title-md' : 'title-sm'}>
+          <Text as="span" preset={size === 'md' ? 'title-xs' : 'body-xs'}>
             {children}
           </Text>
           {subLabel && (
             <Text
               as="span"
               className={styles['data-table__cell-subLabel']}
-              preset="body-sm"
+              preset="body-xs"
             >
               {subLabel}
             </Text>
