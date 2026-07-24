@@ -176,6 +176,7 @@ const DataTableContext = createContext<Pick<DataTableProps, 'size'>>({
  * * Use section headers to organize data when there are 2 or more categories.
  * * Use column dividers only when they enhance clarity.
  * * When `isSortable`, sort by the leading (leftmost) column by default.
+ * * Make sure to only use stable data references for columns/data passed to `useReactTable`: see Resources below.
  *
  * ## Interaction
  *
@@ -202,6 +203,12 @@ const DataTableContext = createContext<Pick<DataTableProps, 'size'>>({
  * * Use tables for layout.
  * * Include blank rows or columns; adjust row and column spacing instead.
  * * Use color as the only means of conveying meaning.
+ *
+ * ### Resources
+ *
+ * * https://tanstack.com/table/latest
+ * * https://tanstack.com/table/latest/docs/faq
+ *
  */
 export function DataTable<T>({
   actions,

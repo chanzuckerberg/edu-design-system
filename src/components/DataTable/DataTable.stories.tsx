@@ -56,6 +56,7 @@ type Person = DataTableWithStatus<{
 }>;
 
 // Specifying the example (static) data for the table to use with tanstack primitives
+// Note: Only use stable data references to prevent infinite loops during render. See https://tanstack.com/table/latest/docs/faq
 const defaultData: Person[] = [
   {
     firstName: 'Joe',
