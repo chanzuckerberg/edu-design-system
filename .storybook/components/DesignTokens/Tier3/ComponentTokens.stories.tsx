@@ -87,7 +87,7 @@ export const BackgroundTable: Story = {
 
 export const BackgroundDataTable: Story = {
   args: {
-    caption: 'Background Table Tokens',
+    caption: 'Background DataTable Tokens',
     listItems: getTokenListItems(
       'eds-theme-color-background-data-table',
       'color',

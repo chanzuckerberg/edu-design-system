@@ -448,53 +448,51 @@ export const DataTableHeaderCell = ({
   sortDirection = 'default',
   onSortClick,
   subLabel,
-  ...rest
-}: DataTableHeaderCellProps) => {
-  const { size } = useContext(DataTableContext);
-
-  const headerCellClassName = clsx(
-    styles['data-table__header-cell'],
-    alignment && styles[`data-table__cell--alignment-${alignment}`],
-    hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
-  );
-  return (
-    <Text as="div" className={headerCellClassName} {...rest}>
-      {leadingIcon && (
-        <Icon
-          className={styles['data-cell__cell--icon']}
-          name={leadingIcon}
-          purpose="decorative"
-          size="16px"
-        />
-      )}
-      {(children || subLabel) && (
-        <div className={clsx(className, styles['data-table__cell-text'])}>
-          <Text as="span" preset={size === 'md' ? 'title-xs' : 'title-xs'}>
-            {children}
+}: DataTableHeaderCellProps) => (
+  <Text
+    as="div"
+    className={clsx(
+      styles['data-table__header-cell'],
+      alignment && styles[`data-table__cell--alignment-${alignment}`],
+      hasHorizontalDivider &&
+        styles['data-table__cell--has-horizontal-divider'],
+    )}
+  >
+    {leadingIcon && (
+      <Icon
+        className={styles['data-cell__cell--icon']}
+        name={leadingIcon}
+        purpose="decorative"
+        size="16px"
+      />
+    )}
+    {(children || subLabel) && (
+      <div className={clsx(className, styles['data-table__cell-text'])}>
+        <Text as="span" preset="title-xs">
+          {children}
+        </Text>
+        {subLabel && (
+          <Text
+            as="span"
+            className={styles['data-table__cell-subLabel']}
+            preset="body-xs"
+          >
+            {subLabel}
           </Text>
-          {subLabel && (
-            <Text
-              as="span"
-              className={styles['data-table__cell-subLabel']}
-              preset="body-xs"
-            >
-              {subLabel}
-            </Text>
-          )}
-        </div>
-      )}
-      {isSortable && sortDirection && (
-        <Button
-          iconLayout="icon-only"
-          onClick={onSortClick}
-          rank="tertiary"
-          size="md"
-          {...sortAttrs(sortDirection)}
-        />
-      )}
-    </Text>
-  );
-};
+        )}
+      </div>
+    )}
+    {isSortable && sortDirection && (
+      <Button
+        iconLayout="icon-only"
+        onClick={onSortClick}
+        rank="tertiary"
+        size="md"
+        {...sortAttrs(sortDirection)}
+      />
+    )}
+  </Text>
+);
 
 export const DataTableDataCell = ({
   alignment = 'leading',
