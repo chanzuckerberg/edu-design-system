@@ -793,6 +793,12 @@
                 "group": "color"
               }
             },
+            "dataTable": {
+              "headerCell": {
+                "value": "{eds.color.neutral.025}",
+                "group": "color"
+              }
+            },
             "input": {
               "value": "{eds.color.white}",
               "group": "color"

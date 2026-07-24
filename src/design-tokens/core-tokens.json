@@ -794,7 +794,7 @@
           },
           "dataTable": {
             "headerCell": {
-              "value": "{eds.color.neutral.050}",
+              "value": "{eds.color.neutral.025}",
               "group": "color"
             }
           },
