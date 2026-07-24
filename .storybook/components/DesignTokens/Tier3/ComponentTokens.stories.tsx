@@ -92,7 +92,7 @@ export const BackgroundDataTable: Story = {
       'eds-theme-color-background-data-table',
       'color',
       (name, column, filterTerm) => {
-        const varName = camelCase(name.split(filterTerm + '-')[1]);
+        const varName = camelCase(getSpecifier(name, filterTerm));
         if (column === 'figma') {
           return '→ background/dataTable-' + varName;
         } else {
