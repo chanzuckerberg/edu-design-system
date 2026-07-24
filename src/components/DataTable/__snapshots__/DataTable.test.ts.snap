@@ -2557,7 +2557,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 First Name
               </span>
@@ -2580,7 +2580,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Last Name
               </span>
@@ -2603,7 +2603,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Age
               </span>
@@ -2621,7 +2621,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Visits
               </span>
@@ -2639,7 +2639,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Profile Progress
               </span>
@@ -7046,7 +7046,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 First Name
               </span>
@@ -7064,7 +7064,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Last Name
               </span>
@@ -7082,7 +7082,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Age
               </span>
@@ -7100,7 +7100,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Visits
               </span>
@@ -7118,7 +7118,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Profile Progress
               </span>
@@ -8117,7 +8117,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 First Name
               </span>
@@ -8140,7 +8140,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Last Name
               </span>
@@ -8163,7 +8163,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Age
               </span>
@@ -8181,7 +8181,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Visits
               </span>
@@ -8199,7 +8199,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
               class="data-table__cell-text"
             >
               <span
-                class="text text--body-xs"
+                class="text text--title-xs"
               >
                 Profile Progress
               </span>
