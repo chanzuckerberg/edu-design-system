@@ -470,7 +470,7 @@ export const DataTableHeaderCell = ({
     )}
     {(children || subLabel) && (
       <div className={clsx(className, styles['data-table__cell-text'])}>
-        <Text as="span" preset="title-xs">
+        <Text as="div" preset="title-xs">
           {children}
         </Text>
         {subLabel && (

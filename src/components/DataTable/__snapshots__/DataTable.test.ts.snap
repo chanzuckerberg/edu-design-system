@@ -52,11 +52,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                <span
+                <div
                   class="text text--title-xs"
                 >
                   First Name
-                </span>
+                </div>
                 <span
                   class="text text--body-xs data-table__cell-subLabel"
                 >
@@ -75,11 +75,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                <span
+                <div
                   class="text text--title-xs"
                 >
                   Last Name
-                </span>
+                </div>
                 <span
                   class="text text--body-xs data-table__cell-subLabel"
                 >
@@ -98,11 +98,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                <span
+                <div
                   class="text text--title-xs"
                 >
                   Age
-                </span>
+                </div>
               </div>
             </div>
           </th>
@@ -116,11 +116,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                <span
+                <div
                   class="text text--title-xs"
                 >
                   Visits
-                </span>
+                </div>
               </div>
             </div>
           </th>
@@ -134,11 +134,11 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
               <div
                 class="data-table__cell-text"
               >
-                <span
+                <div
                   class="text text--title-xs"
                 >
                   Profile Progress
-                </span>
+                </div>
                 <span
                   class="text text--body-xs data-table__cell-subLabel"
                 >
@@ -1092,11 +1092,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -1115,11 +1115,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -1138,11 +1138,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -1156,11 +1156,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -1174,11 +1174,11 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -2143,11 +2143,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Name
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -2161,11 +2161,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Country of Origin
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -2179,11 +2179,11 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Year
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -2556,11 +2556,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -2579,11 +2579,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -2602,11 +2602,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -2620,11 +2620,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -2638,11 +2638,11 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -4482,11 +4482,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -4505,11 +4505,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -4528,11 +4528,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -4546,11 +4546,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -4564,11 +4564,11 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -5522,7 +5522,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 <div
@@ -5535,7 +5535,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
                     type="checkbox"
                   />
                 </div>
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -5563,11 +5563,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -5586,11 +5586,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -5609,11 +5609,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -5627,11 +5627,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -5645,11 +5645,11 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -7045,11 +7045,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -7063,11 +7063,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -7081,11 +7081,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -7099,11 +7099,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -7117,11 +7117,11 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -8116,11 +8116,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -8139,11 +8139,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -8162,11 +8162,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -8180,11 +8180,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -8198,11 +8198,11 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -9130,11 +9130,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -9153,11 +9153,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -9176,11 +9176,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -9194,11 +9194,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -9212,11 +9212,11 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -10170,7 +10170,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 <div
@@ -10183,7 +10183,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
                     type="checkbox"
                   />
                 </div>
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -10211,11 +10211,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 First Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -10234,11 +10234,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Last Name
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
@@ -10257,11 +10257,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Age
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -10275,11 +10275,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Visits
-              </span>
+              </div>
             </div>
           </div>
         </th>
@@ -10293,11 +10293,11 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
             <div
               class="data-table__cell-text"
             >
-              <span
+              <div
                 class="text text--title-xs"
               >
                 Profile Progress
-              </span>
+              </div>
               <span
                 class="text text--body-xs data-table__cell-subLabel"
               >
