@@ -448,6 +448,7 @@ export const DataTableHeaderCell = ({
   sortDirection = 'default',
   onSortClick,
   subLabel,
+  ...rest
 }: DataTableHeaderCellProps) => (
   <Text
     as="div"
@@ -457,6 +458,7 @@ export const DataTableHeaderCell = ({
       hasHorizontalDivider &&
         styles['data-table__cell--has-horizontal-divider'],
     )}
+    {...rest}
   >
     {leadingIcon && (
       <Icon
