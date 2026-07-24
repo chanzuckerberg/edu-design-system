@@ -47,7 +47,7 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
             colspan="1"
           >
             <div
-              class="text text--title-xs data-table__header-cell"
+              class="text text--body-md data-table__header-cell"
             >
               <div
                 class="data-table__cell-text"
@@ -70,7 +70,7 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
             colspan="1"
           >
             <div
-              class="text text--title-xs data-table__header-cell"
+              class="text text--body-md data-table__header-cell"
             >
               <div
                 class="data-table__cell-text"
@@ -93,7 +93,7 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
             colspan="1"
           >
             <div
-              class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+              class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
             >
               <div
                 class="data-table__cell-text"
@@ -111,7 +111,7 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
             colspan="1"
           >
             <div
-              class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+              class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
             >
               <div
                 class="data-table__cell-text"
@@ -129,7 +129,7 @@ exports[`<DataTable /> DataTableInFullContentBox story renders snapshot 1`] = `
             colspan="1"
           >
             <div
-              class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+              class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
             >
               <div
                 class="data-table__cell-text"
@@ -1087,7 +1087,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -1110,7 +1110,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -1133,7 +1133,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -1151,7 +1151,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -1169,7 +1169,7 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -2138,7 +2138,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -2156,7 +2156,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -2174,7 +2174,7 @@ exports[`<DataTable /> Grouping story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -2551,7 +2551,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           style="left: 0px;"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -2574,7 +2574,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -2597,7 +2597,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -2615,7 +2615,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -2633,7 +2633,7 @@ exports[`<DataTable /> HorizontalScrolling story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -4477,7 +4477,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -4500,7 +4500,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -4523,7 +4523,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -4541,7 +4541,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -4559,7 +4559,7 @@ exports[`<DataTable /> RowStyleLined story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -5517,7 +5517,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           style="width: 40px;"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -5544,7 +5544,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <svg
               aria-hidden="true"
@@ -5581,7 +5581,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -5604,7 +5604,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -5622,7 +5622,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -5640,7 +5640,7 @@ exports[`<DataTable /> Selectable story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -7040,7 +7040,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -7058,7 +7058,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -7076,7 +7076,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -7094,7 +7094,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -7112,7 +7112,7 @@ exports[`<DataTable /> StatusRows story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -8111,7 +8111,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -8134,7 +8134,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -8157,7 +8157,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -8175,7 +8175,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -8193,7 +8193,7 @@ exports[`<DataTable /> TableSizeSm story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -9125,7 +9125,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -9148,7 +9148,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -9171,7 +9171,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -9189,7 +9189,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -9207,7 +9207,7 @@ exports[`<DataTable /> TableStyleBorder story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing"
           >
             <div
               class="data-table__cell-text"
@@ -10165,7 +10165,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           style="width: 40px;"
         >
           <div
-            class="text text--title-xs data-table__header-cell"
+            class="text text--body-md data-table__header-cell"
           >
             <div
               class="data-table__cell-text"
@@ -10192,7 +10192,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--has-horizontal-divider"
+            class="text text--body-md data-table__header-cell data-table__cell--has-horizontal-divider"
           >
             <svg
               aria-hidden="true"
@@ -10229,7 +10229,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--has-horizontal-divider"
+            class="text text--body-md data-table__header-cell data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
@@ -10252,7 +10252,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
@@ -10270,7 +10270,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"
@@ -10288,7 +10288,7 @@ exports[`<DataTable /> VerticalDivider story renders snapshot 1`] = `
           colspan="1"
         >
           <div
-            class="text text--title-xs data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
+            class="text text--body-md data-table__header-cell data-table__cell--alignment-trailing data-table__cell--has-horizontal-divider"
           >
             <div
               class="data-table__cell-text"

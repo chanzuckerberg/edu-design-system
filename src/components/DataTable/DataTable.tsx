@@ -458,7 +458,7 @@ export const DataTableHeaderCell = ({
     hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
   );
   return (
-    <Text as="div" className={headerCellClassName} {...rest} preset="title-xs">
+    <Text as="div" className={headerCellClassName} {...rest}>
       {leadingIcon && (
         <Icon
           className={styles['data-cell__cell--icon']}
