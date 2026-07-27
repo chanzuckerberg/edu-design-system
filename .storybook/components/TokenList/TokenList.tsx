@@ -12,6 +12,7 @@ import styles from './TokenList.module.css';
 type ListItem = {
   name: string;
   value: string;
+  description?: string;
   figmaToken?: string;
   tailwindClass?: string;
   type: 'color' | 'size';
@@ -36,6 +37,10 @@ const columns = [
         </Text>
       </DataTable.DataCell>
     ),
+  }),
+  columnHelper.accessor('description', {
+    header: () => <DataTable.HeaderCell>Description</DataTable.HeaderCell>,
+    cell: (li) => <DataTable.DataCell>{li.getValue()}</DataTable.DataCell>,
   }),
   columnHelper.accessor('figmaToken', {
     header: () => <DataTable.HeaderCell>Figma Token Name</DataTable.HeaderCell>,
@@ -102,9 +107,10 @@ export const getTokenListItems = (
   // - tailwind class name (if available, & use renderer)
   // - raw value (mapped to value)
 
-  return filterTokens(filterTerm).map(({ name, value }) => ({
+  return filterTokens(filterTerm).map(({ name, value, description }) => ({
     name,
     value,
+    description,
     figmaToken: renderer(name, 'figma', filterTerm),
     tailwindClass: renderer(name, 'tailwind', filterTerm),
     type,
