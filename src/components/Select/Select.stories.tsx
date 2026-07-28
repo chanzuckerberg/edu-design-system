@@ -81,6 +81,11 @@ const exampleOptions: SelectOption[] = [
     label: 'Birds',
     subLabel: 'Living relics!',
   },
+  {
+    key: '4',
+    label: 'Rabbits',
+    subLabel: 'Langomorphs are rad.',
+  },
 ];
 
 /**
@@ -432,6 +437,7 @@ export const UncontrolledHeadless: StoryObj = {
                   Birds: '🐦🦆🦜',
                   Dogs: '🐶🐕🐩',
                   Cats: '🐈🐱🐈‍⬛',
+                  Rabbits: '🐇🐰',
                 }[value.label as string]
               }
             </button>

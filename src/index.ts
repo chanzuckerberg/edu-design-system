@@ -16,6 +16,7 @@ export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
 export { default as CodeBlock } from './components/CodeBlock';
+export { default as Combobox } from './components/Combobox';
 export { default as DataTable } from './components/DataTable';
 export { utils as DataTableUtils } from './components/DataTable';
 export { default as FieldLabel } from './components/FieldLabel';

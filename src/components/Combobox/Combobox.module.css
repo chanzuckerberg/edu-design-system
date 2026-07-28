@@ -1,0 +1,275 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # COMBOBOX
+\*------------------------------------*/
+
+/**
+ * Combobox field used to filter a list of options by typing, and select from the result.
+ */
+.combobox {
+  position: relative;
+}
+
+/**
+ * Wraps the Label and the optional/required hint.
+ */
+.combobox__overline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
+  gap: calc(var(--eds-spacing-size-half) * 1px);
+}
+
+.combobox__overline--no-label {
+  justify-content: flex-start;
+}
+
+/**
+ * The container for the individual combobox options.
+ */
+.combobox__options {
+  max-height: 25vh;
+  z-index: var(--eds-z-index-top);
+}
+
+.combobox--label-layout-vertical {
+  flex-direction: column;
+}
+
+.combobox--label-layout-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+}
+
+/**
+ * The bordered field holding the text input and the toggle button. Matches the appearance of
+ * the `Select` trigger button, but its states are driven by the nested input rather than by
+ * the wrapper itself.
+ */
+.combobox-input {
+  width: 100%;
+  padding: calc(var(--eds-spacing-size-1-and-half) * 1px);
+
+  border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  background-color: light-dark(var(--eds-theme-color-background-input), var(--eds-dark-theme-color-background-input));
+
+  transition: border-color calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  /* 
+  &:hover:not(:has(.combobox-input__field:disabled)) {
+    border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis-hover), var(--eds-dark-theme-color-border-utility-default-low-emphasis-hover));
+  } */
+
+  /**
+   * The focusable element is the nested input, so the field border reacts to focus within it.
+   */
+  &:focus-within {
+    border-color: light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+    outline: 1px solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+  }
+
+  &:has(.combobox-input__field:disabled) {
+    border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
+    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
+  }
+}
+
+/**
+ * Once the field holds selection chips, its contents wrap onto more than one line rather than
+ * squeezing the text field down to nothing.
+ */
+.combobox-input--has-chips {
+  flex-wrap: wrap;
+  row-gap: calc(var(--eds-spacing-size-1) * 1px);
+
+  & .combobox-input__field {
+    /* Wrap onto a new line rather than shrinking away once chips fill the row */
+    min-width: calc(var(--eds-spacing-size-8) * 1px);
+  }
+
+  /* Keep the toggle at the end of the field, whichever line it lands on */
+  & .combobox-input__button {
+    margin-left: auto;
+  }
+}
+
+/**
+ * The values picked so far, shown ahead of the text field when `multiple` is set.
+ */
+.combobox-input__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+/**
+ * The editable text field. It borrows the input typography but not the input border, since the
+ * wrapper draws that.
+ */
+.combobox-input__field {
+  /* preset: input-md */
+  font: 400 var(--eds-typography-preset-200) var(--eds-typography-font-family-1);
+
+  display: inline-block;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  flex: 1 1 auto;
+  min-width: 0;
+  width: var(--combobox__input-width, 1px);
+
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  /* add additional alignment space toward top for the current fonts in use */
+  transform: translateY(-1px);
+
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  background-color: transparent;
+
+  &:disabled {
+    cursor: not-allowed;
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+  }
+}
+
+.combobox-input__field--truncated {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/**
+ * The toggle that reveals the full, unfiltered option list.
+ */
+.combobox-input__button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+
+  color: inherit;
+  background: none;
+
+  &:disabled {
+    cursor: not-allowed;
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+  }
+}
+
+/**
+ * The caret icon to decorate the option list toggle, animated to rotate.
+ */
+.combobox-input__icon {
+  flex-shrink: 0;
+  transform: rotate(0);
+
+  transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-out;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.combobox-input__icon--reversed {
+  transform: rotate(180deg);
+}
+
+.combobox__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.combobox--has-fieldNote {
+  margin-bottom: calc(var(--eds-spacing-size-half) * 1px);
+}
+
+/**
+ * Label on top of the combobox field to label it.
+ */
+.combobox__label {
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+}
+
+.combobox__subLabel {
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+  flex: 1 0 100%;
+}
+
+.combobox__label--disabled {
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+}
+
+.combobox__option {
+  color: light-dark(var(--eds-theme-color-text-utility-interactive-secondary), var(--eds-dark-theme-color-text-utility-interactive-secondary));
+}
+
+.combobox__option-text {
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+}
+
+.combobox__required-text {
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+}
+
+.combobox__required-text--disabled {
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+}
+
+.combobox-input--error {
+  border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
+
+  &:hover:not(:has(.combobox-input__field:disabled)) {
+    border-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
+  }
+
+  &:focus-within {
+    border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
+    outline: 1px solid light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
+  }
+}
+
+.combobox-input--warning {
+  border-color: light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
+
+  &:hover:not(:has(.combobox-input__field:disabled)) {
+    border-color: light-dark(var(--eds-theme-color-border-utility-warning-hover), var(--eds-dark-theme-color-border-utility-warning-hover));
+  }
+
+  &:focus-within {
+    border-color: light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
+    outline: 1px solid light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
+  }
+}
