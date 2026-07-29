@@ -861,7 +861,7 @@ export const DisabledRequired: StoryObj<DemoProps> = {
  *
  * More information: https://headlessui.com/react/combobox#positioning-the-options
  */
-export const OptionsRightAligned: StoryObj<DemoProps> = {
+export const OptionsEndAligned: StoryObj<DemoProps> = {
   ...Default,
   args: {
     ...Default.args,

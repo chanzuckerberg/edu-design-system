@@ -1475,7 +1475,7 @@ exports[`<Combobox /> Generated Snapshots WithRenderProp story renders snapshot 
       data-open=""
       id="headlessui-combobox-input-:r53:"
       role="combobox"
-      style="--combobox__input-width: calc(Dogs * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />

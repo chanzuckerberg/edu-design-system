@@ -727,7 +727,7 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
         required={required}
         style={
           {
-            '--combobox__input-width': `calc(${inputRef.current?.value || 0} * 1ch)`,
+            '--combobox__input-width': `calc(${inputRef.current?.value.length || 0} * 1ch)`,
           } as CSSProperties
         }
         {...other}
@@ -777,7 +777,11 @@ const ComboboxOptionComponent = function (props: ComboboxOptionProps) {
     ...other
   } = props;
 
-  const optionItemClassName = clsx(optionClassName, styles['combobox__option']);
+  const optionItemClassName = clsx(
+    className,
+    optionClassName,
+    styles['combobox__option'],
+  );
   const { multiple } = useContext(ComboboxContext);
 
   return (
