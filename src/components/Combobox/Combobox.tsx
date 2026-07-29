@@ -15,6 +15,7 @@ import clsx from 'clsx';
 
 import React, {
   useContext,
+  useRef,
   useState,
   type ChangeEventHandler,
   type CSSProperties,
@@ -163,7 +164,7 @@ type ComboboxButtonProps = HeadlessComboboxButtonProps<'button'> & {
   'aria-label'?: string;
   // Design API
   /**
-   * Icon override for component. Default is 'chevron-down'
+   * Icon to use for combobox button, which is only allowed to be 'chevron-down'
    */
   icon?: Extract<IconName, 'chevron-down'>;
 };
@@ -217,7 +218,7 @@ type ComboboxInputProps = Omit<
    */
   chipLeadingComponent?: (item: ComboboxValue) => IconName | ReactNode;
   /**
-   * Icon override for the field's toggle button. Default is 'chevron-down'
+   * Icon to use for combobox button, which is only allowed to be 'chevron-down'
    */
   icon?: Extract<IconName, 'chevron-down'>;
   /**
@@ -251,7 +252,7 @@ type ComboboxInputWrapperProps = {
    */
   hasChips?: boolean;
   /**
-   * Icon override for the field's toggle button. Default is 'chevron-down'
+   * Icon to use for combobox button, which is only allowed to be 'chevron-down'
    */
   icon?: Extract<IconName, 'chevron-down'>;
   /**
@@ -663,6 +664,7 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
     inputClassName,
   );
 
+  const inputRef = useRef<HTMLInputElement>(null);
   const hasChips = Boolean(showChips && multiple && selectedValues.length > 0);
 
   /**
@@ -721,10 +723,11 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
         aria-label={ariaLabel ?? contextAriaLabel}
         className={fieldClassName}
         onKeyDown={handleKeyDown}
+        ref={inputRef}
         required={required}
         style={
           {
-            '--combobox__input-width': `calc(${other.displayValue?.length || 0} * 1ch)`,
+            '--combobox__input-width': `calc(${inputRef.current?.value || 0} * 1ch)`,
           } as CSSProperties
         }
         {...other}

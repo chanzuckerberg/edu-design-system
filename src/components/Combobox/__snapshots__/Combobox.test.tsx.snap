@@ -40,7 +40,7 @@ exports[`<Combobox /> Generated Snapshots AdjustedWidth story renders snapshot 1
       data-testid="input-button"
       id="headlessui-combobox-input-:r65:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -117,7 +117,7 @@ exports[`<Combobox /> Generated Snapshots Default story renders snapshot 1`] = `
       data-testid="input-button"
       id="headlessui-combobox-input-:r3:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -211,7 +211,7 @@ exports[`<Combobox /> Generated Snapshots Error story renders snapshot 1`] = `
       id="headlessui-combobox-input-:r7l:"
       required=""
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -289,7 +289,7 @@ exports[`<Combobox /> Generated Snapshots HorizontalLabel story renders snapshot
       data-testid="input-button"
       id="headlessui-combobox-input-:rj:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -808,7 +808,7 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabel story renders snapshot 
       data-testid="input-button"
       id="headlessui-combobox-input-:r8k:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -884,7 +884,7 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabelButRequired story render
       id="headlessui-combobox-input-:r94:"
       required=""
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -975,7 +975,7 @@ exports[`<Combobox /> Generated Snapshots Optional story renders snapshot 1`] = 
       data-testid="input-button"
       id="headlessui-combobox-input-:r75:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -1067,7 +1067,7 @@ exports[`<Combobox /> Generated Snapshots Required story renders snapshot 1`] = 
       id="headlessui-combobox-input-:r6l:"
       required=""
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -1158,7 +1158,7 @@ exports[`<Combobox /> Generated Snapshots Warning story renders snapshot 1`] = `
       data-testid="input-button"
       id="headlessui-combobox-input-:r85:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -1244,7 +1244,7 @@ exports[`<Combobox /> Generated Snapshots WithFieldName story renders snapshot 1
       data-testid="input-button"
       id="headlessui-combobox-input-:r23:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -1321,7 +1321,7 @@ exports[`<Combobox /> Generated Snapshots WithFieldNote story renders snapshot 1
       data-testid="input-button"
       id="headlessui-combobox-input-:r2j:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -1399,7 +1399,7 @@ exports[`<Combobox /> Generated Snapshots WithPlaceholder story renders snapshot
       id="headlessui-combobox-input-:r33:"
       placeholder="Search animals"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value=""
     />
@@ -1475,7 +1475,7 @@ exports[`<Combobox /> Generated Snapshots WithRenderProp story renders snapshot 
       data-open=""
       id="headlessui-combobox-input-:r53:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(Dogs * 1ch);"
       type="text"
       value="Dogs"
     />
@@ -1559,7 +1559,7 @@ exports[`<Combobox /> Generated Snapshots WithSelectedBy story renders snapshot 
       data-testid="input-button"
       id="headlessui-combobox-input-:r1j:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Cats"
     />
@@ -1636,7 +1636,7 @@ exports[`<Combobox /> Generated Snapshots WithSelectedOption story renders snaps
       data-testid="input-button"
       id="headlessui-combobox-input-:r13:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Cats"
     />
@@ -1713,7 +1713,7 @@ exports[`<Combobox /> Generated Snapshots WithTruncation story renders snapshot 
       data-testid="input-button"
       id="headlessui-combobox-input-:r5j:"
       role="combobox"
-      style="--combobox__input-width: calc(1 * 1ch);"
+      style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="A very long option label that will not fit"
     />
