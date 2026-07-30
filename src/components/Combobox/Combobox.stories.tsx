@@ -350,7 +350,6 @@ export const WithSubLabels: StoryObj<DemoProps> = {
   args: {
     ...Default.args,
     fieldNote: 'Choose your beast',
-    optionsClassName: 'w-[384px]',
     showSubLabels: true,
   },
   parameters: {
@@ -540,13 +539,14 @@ export const MultipleWithChipIcons: StoryObj<DemoProps> = {
 
 /**
  * Set `showChips` to false on `Combobox.Input` when you'd rather surface the selection yourself,
- * which is the behavior a plain HeadlessUI combobox gives you.
+ * which is the behavior a plain HeadlessUI combobox gives you. This can be used to display a summary
+ * or other text instead of selectable chips.
  */
 export const MultipleWithoutChips: StoryObj<DemoProps> = {
   render: (args) => <MultipleWithoutChipsDemo {...args} />,
   args: {
     ...Multiple.args,
-    className: 'w-[240px]',
+    className: 'w-[384px]',
   },
 };
 
@@ -561,8 +561,16 @@ const MultipleWithoutChipsDemo = ({
   return (
     <MultipleComboboxDemo
       {...other}
-      fieldNote={`${selected.length > 0 ? selected.length : 'none'} selected`}
-      inputProps={{ showChips: false }}
+      fieldNote={
+        'Selected: ' +
+        (selected.length < 1
+          ? 'None'
+          : selected.map((selection) => selection.label).join(', '))
+      }
+      inputProps={{
+        showChips: false,
+        placeholder: `${selected.length > 0 ? selected.length : 'none'} selected`,
+      }}
       onChange={(value) => setSelected(value as ComboboxOption[])}
       options={options}
     />
@@ -865,8 +873,7 @@ export const OptionsEndAligned: StoryObj<DemoProps> = {
   ...Default,
   args: {
     ...Default.args,
-    optionsClassName: 'w-[384px]',
-    optionsAnchor: { to: 'top end', gap: 20, offset: 44 },
+    optionsAnchor: { to: 'bottom end', gap: 20, offset: 44 },
   },
   play: openMenu,
   decorators: [

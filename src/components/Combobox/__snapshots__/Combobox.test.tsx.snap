@@ -710,7 +710,7 @@ exports[`<Combobox /> Generated Snapshots MultipleWithManySelected story renders
 
 exports[`<Combobox /> Generated Snapshots MultipleWithoutChips story renders snapshot 1`] = `
 <div
-  class="combobox combobox--has-fieldNote combobox--label-layout-vertical w-[240px]"
+  class="combobox combobox--has-fieldNote combobox--label-layout-vertical w-[384px]"
   data-headlessui-state="open"
   data-open=""
   data-testid="combobox"
@@ -747,6 +747,7 @@ exports[`<Combobox /> Generated Snapshots MultipleWithoutChips story renders sna
       data-open=""
       data-testid="input-button"
       id="headlessui-combobox-input-:r4j:"
+      placeholder="1 selected"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
