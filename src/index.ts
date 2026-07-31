@@ -3,7 +3,7 @@ import './tokens-dist/css/variables.css';
 import './tokens-dist/css/variables-dark.css';
 
 /**
- * 2.x component theme exports
+ * Component theme exports
  */
 export { default as AppFooter } from './components/AppFooter';
 export { default as AppHeader } from './components/AppHeader';
@@ -56,7 +56,7 @@ export { UnorderedList } from './components/List';
 export { default as VisualPageIndicator } from './components/VisualPageIndicator';
 
 /**
- * 2.x prop type exports
+ * Prop type exports
  */
 export type {
   NavGroup,
