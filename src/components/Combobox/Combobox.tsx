@@ -15,6 +15,7 @@ import clsx from 'clsx';
 
 import React, {
   useContext,
+  useEffect,
   useRef,
   useState,
   type ChangeEventHandler,
@@ -228,7 +229,7 @@ type ComboboxInputProps = Omit<
   /**
    * Whether selected values appear as removable chips inside the field, when `multiple` is set.
    * Turn it off to surface the selection yourself. Also governs whether backspace on an empty
-   * field removes the last chip.
+   * field removes the last chip, and whether adding a chip selects the query text.
    *
    * **Default is `"true"`**.
    */
@@ -327,7 +328,8 @@ const ComboboxRoot = HeadlessCombobox as React.ComponentType<ComboboxProps>;
  * The field is always editable, so users can either type to narrow the list or open the full
  * list with the toggle button. In single-select mode, only one selection can be made. In
  * multi-select mode, one or more selections can be made from the list, and each one shows in
- * the field as a chip. A chip goes away either through its own close button or by pressing
+ * the field as a chip. Adding a chip selects the query text that found it, so the next keystroke
+ * begins a new search. A chip goes away either through its own close button or by pressing
  * backspace in an empty field.
  *
  * ## Content & Accessibility
@@ -666,6 +668,34 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const hasChips = Boolean(showChips && multiple && selectedValues.length > 0);
+
+  /**
+   * Picking an option leaves the query that found it sitting in the field, since HeadlessUI only
+   * rewrites the text for a single-select value. Select that text once the chip appears, so the
+   * next keystroke starts a fresh search instead of appending to a query that's already been
+   * spent. The caret lands at the end for anyone who'd rather keep typing on it.
+   */
+  const chipCountRef = useRef(selectedValues.length);
+
+  useEffect(() => {
+    const previousChipCount = chipCountRef.current;
+    chipCountRef.current = selectedValues.length;
+
+    // Only on a chip being added. Removals (close button, backspace) leave the query alone.
+    if (!showChips || !multiple || selectedValues.length <= previousChipCount) {
+      return;
+    }
+
+    const input = inputRef.current;
+
+    // A selection can also change from outside the field. Reaching for the text then would pull
+    // the caret away from wherever the person actually is, so leave it be.
+    if (!input || input.ownerDocument.activeElement !== input) {
+      return;
+    }
+
+    input.select();
+  }, [multiple, selectedValues.length, showChips]);
 
   /**
    * Backspace on an empty field drops the last chip, which is what people expect from a field

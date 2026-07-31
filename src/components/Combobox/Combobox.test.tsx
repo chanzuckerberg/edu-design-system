@@ -255,6 +255,47 @@ describe('<Combobox />', () => {
       expect(options[2]).toHaveAttribute('aria-selected', 'true');
     });
 
+    it('selects the query text once a chip is added', async () => {
+      const user = userEvent.setup();
+
+      render(<TestMultipleCombobox />);
+
+      const input: HTMLInputElement = await screen.findByRole('combobox');
+      await user.type(input, 'Option 2');
+      await user.click(await screen.findByRole('option', { name: /Option 2/ }));
+
+      expect(input).toHaveValue('Option 2');
+      expect(input.selectionStart).toBe(0);
+      expect(input.selectionEnd).toBe('Option 2'.length);
+    });
+
+    it('replaces the spent query when typing continues after a chip is added', async () => {
+      const user = userEvent.setup();
+
+      render(<TestMultipleCombobox />);
+
+      const input: HTMLInputElement = await screen.findByRole('combobox');
+      await user.type(input, 'Option 2');
+      await user.click(await screen.findByRole('option', { name: /Option 2/ }));
+      await user.keyboard('Option 3');
+
+      expect(input).toHaveValue('Option 3');
+      expect(screen.getAllByRole('listitem')).toHaveLength(1);
+    });
+
+    it('does not select the query text when showChips is off', async () => {
+      const user = userEvent.setup();
+
+      render(<TestMultipleCombobox inputProps={{ showChips: false }} />);
+
+      const input: HTMLInputElement = await screen.findByRole('combobox');
+      await user.type(input, 'Option 2');
+      await user.click(await screen.findByRole('option', { name: /Option 2/ }));
+
+      expect(input.selectionStart).toBe('Option 2'.length);
+      expect(input.selectionEnd).toBe('Option 2'.length);
+    });
+
     it('does not open the option list when a chip is dismissed', async () => {
       const user = userEvent.setup();
 

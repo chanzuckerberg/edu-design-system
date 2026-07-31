@@ -447,7 +447,8 @@ const MultipleComboboxDemo = ({
  * Each selected value shows up in the field as a removable chip. Chip text comes from the value's
  * `label` by default; pass `chipLabel` to `Combobox.Input` when your values are shaped differently.
  * Chips come off via their close button or via backspace in an empty field (see
- * `MultipleRemoveWithBackspace`).
+ * `MultipleRemoveWithBackspace`). Picking an option selects the query that found it, so the next
+ * keystroke starts a new search (see `MultipleSelectsQueryOnAdd`).
  *
  * Hidden form inputs are generated for each option selected and take the following form:
  * - `name[arrayIndex][key]`
@@ -472,6 +473,39 @@ export const Multiple: StoryObj<DemoProps> = {
 };
 
 /**
+ * The query that found an option stays in the field once that option is picked, so we select it.
+ * Typing again starts a new search in place of the one already spent, and a single backspace
+ * clears it. Anyone who'd rather keep building on the query can press the right arrow first.
+ */
+export const MultipleSelectsQueryOnAdd: StoryObj<DemoProps> = {
+  render: (args) => <MultipleComboboxDemo {...args} />,
+  args: {
+    ...Multiple.args,
+    defaultValue: [],
+    className: 'w-[320px]',
+  },
+  play: async (playOptions) => {
+    const canvas = within(playOptions.canvasElement);
+    // The option list is portaled out of the story canvas, so look for options in the document
+    const body = within(playOptions.canvasElement.ownerDocument.body);
+
+    const input: HTMLInputElement = await canvas.findByRole('combobox');
+    await userEvent.type(input, 'Cats');
+    await userEvent.click(await body.findByRole('option', { name: /Cats/ }));
+
+    // The query is still in the field, but selected, so the next keystroke takes its place
+    await expect(input).toHaveValue('Cats');
+    await expect(input.selectionStart).toBe(0);
+    await expect(input.selectionEnd).toBe('Cats'.length);
+  },
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+};
+
+/**
  * Pressing backspace in an empty field removes the last chip, so a selection can be undone
  * without reaching for the mouse. Backspace edits the query first; only once the field is empty
  * does it start removing chips.
@@ -481,8 +515,6 @@ export const Multiple: StoryObj<DemoProps> = {
  * release could claim that key. We mark the event as handled to reduce the chance of both firing.
  * If you see a chip and something else both react to one backspace, this is the first place to
  * look. Pass your own `onKeyDown` to `Combobox.Input` and call `preventDefault()` to opt out.
- *
- * TODO-AH: remove typed text after selecting a value
  */
 export const MultipleRemoveWithBackspace: StoryObj<DemoProps> = {
   render: (args) => <MultipleComboboxDemo {...args} />,
