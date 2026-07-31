@@ -14,8 +14,8 @@ exports[`<Combobox /> Generated Snapshots AdjustedWidth story renders snapshot 1
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r65:"
-      id="headlessui-label-:r64:"
+      for="headlessui-combobox-input-:r6l:"
+      id="headlessui-label-:r6k:"
     >
       <span
         class="text text--label-md"
@@ -28,33 +28,33 @@ exports[`<Combobox /> Generated Snapshots AdjustedWidth story renders snapshot 1
     class="combobox-input"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r6a:"
+      aria-activedescendant="headlessui-combobox-option-:r6q:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r67:"
+      aria-controls="headlessui-combobox-options-:r6n:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r64:"
+      aria-labelledby="headlessui-label-:r6k:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r65:"
+      id="headlessui-combobox-input-:r6l:"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r67:"
+      aria-controls="headlessui-combobox-options-:r6n:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r64: headlessui-combobox-button-:r66:"
+      aria-labelledby="headlessui-label-:r6k: headlessui-combobox-button-:r6m:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r66:"
+      id="headlessui-combobox-button-:r6m:"
       tabindex="-1"
       type="button"
     >
@@ -169,8 +169,8 @@ exports[`<Combobox /> Generated Snapshots Error story renders snapshot 1`] = `
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r7l:"
-      id="headlessui-label-:r7k:"
+      for="headlessui-combobox-input-:r85:"
+      id="headlessui-label-:r84:"
     >
       <span
         class="text text--label-md"
@@ -197,18 +197,18 @@ exports[`<Combobox /> Generated Snapshots Error story renders snapshot 1`] = `
     class="combobox-input combobox-input--error"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r7q:"
+      aria-activedescendant="headlessui-combobox-option-:r8a:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r7n:"
+      aria-controls="headlessui-combobox-options-:r87:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r7k:"
+      aria-labelledby="headlessui-label-:r84:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open invalid focus"
       data-invalid=""
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r7l:"
+      id="headlessui-combobox-input-:r85:"
       required=""
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
@@ -216,17 +216,17 @@ exports[`<Combobox /> Generated Snapshots Error story renders snapshot 1`] = `
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r7n:"
+      aria-controls="headlessui-combobox-options-:r87:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r7k: headlessui-combobox-button-:r7m:"
+      aria-labelledby="headlessui-label-:r84: headlessui-combobox-button-:r86:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active invalid"
       data-invalid=""
       data-open=""
-      id="headlessui-combobox-button-:r7m:"
+      id="headlessui-combobox-button-:r86:"
       tabindex="-1"
       type="button"
     >
@@ -263,13 +263,90 @@ exports[`<Combobox /> Generated Snapshots HorizontalLabel story renders snapshot
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
+      for="headlessui-combobox-input-:r13:"
+      id="headlessui-label-:r12:"
+    >
+      <span
+        class="text text--label-md"
+      >
+        Animal?
+      </span>
+    </label>
+  </div>
+  <div
+    class="combobox-input"
+  >
+    <input
+      aria-activedescendant="headlessui-combobox-option-:r18:"
+      aria-autocomplete="list"
+      aria-controls="headlessui-combobox-options-:r15:"
+      aria-expanded="true"
+      aria-labelledby="headlessui-label-:r12:"
+      class="combobox-input__field"
+      data-focus=""
+      data-headlessui-state="open focus"
+      data-open=""
+      data-testid="input-button"
+      id="headlessui-combobox-input-:r13:"
+      role="combobox"
+      style="--combobox__input-width: calc(0 * 1ch);"
+      type="text"
+      value="Dogs"
+    />
+    <button
+      aria-controls="headlessui-combobox-options-:r15:"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-label="Show options"
+      aria-labelledby="headlessui-label-:r12: headlessui-combobox-button-:r14:"
+      class="combobox-input__button"
+      data-active=""
+      data-headlessui-state="open active"
+      data-open=""
+      id="headlessui-combobox-button-:r14:"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon combobox-input__icon combobox-input__icon--reversed"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Combobox /> Generated Snapshots Immediate story renders snapshot 1`] = `
+<div
+  class="combobox combobox--label-layout-vertical w-60"
+  data-headlessui-state="open"
+  data-open=""
+  data-testid="combobox"
+>
+  <div
+    class="combobox__overline"
+  >
+    <label
+      class="label label--md combobox__label"
+      data-headlessui-state="open"
+      data-open=""
       for="headlessui-combobox-input-:rj:"
       id="headlessui-label-:ri:"
     >
       <span
         class="text text--label-md"
       >
-        Animal?
+        Favorite Animal
       </span>
     </label>
   </div>
@@ -340,8 +417,8 @@ exports[`<Combobox /> Generated Snapshots MultipleWithChipIcons story renders sn
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r43:"
-      id="headlessui-label-:r42:"
+      for="headlessui-combobox-input-:r4j:"
+      id="headlessui-label-:r4i:"
     >
       <span
         class="text text--label-md"
@@ -446,33 +523,33 @@ exports[`<Combobox /> Generated Snapshots MultipleWithChipIcons story renders sn
       </li>
     </ul>
     <input
-      aria-activedescendant="headlessui-combobox-option-:r48:"
+      aria-activedescendant="headlessui-combobox-option-:r4o:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r45:"
+      aria-controls="headlessui-combobox-options-:r4l:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r42:"
+      aria-labelledby="headlessui-label-:r4i:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r43:"
+      id="headlessui-combobox-input-:r4j:"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value=""
     />
     <button
-      aria-controls="headlessui-combobox-options-:r45:"
+      aria-controls="headlessui-combobox-options-:r4l:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r42: headlessui-combobox-button-:r44:"
+      aria-labelledby="headlessui-label-:r4i: headlessui-combobox-button-:r4k:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r44:"
+      id="headlessui-combobox-button-:r4k:"
       tabindex="-1"
       type="button"
     >
@@ -509,8 +586,8 @@ exports[`<Combobox /> Generated Snapshots MultipleWithManySelected story renders
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r3j:"
-      id="headlessui-label-:r3i:"
+      for="headlessui-combobox-input-:r43:"
+      id="headlessui-label-:r42:"
     >
       <span
         class="text text--label-md"
@@ -659,33 +736,33 @@ exports[`<Combobox /> Generated Snapshots MultipleWithManySelected story renders
       </li>
     </ul>
     <input
-      aria-activedescendant="headlessui-combobox-option-:r3o:"
+      aria-activedescendant="headlessui-combobox-option-:r48:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r3l:"
+      aria-controls="headlessui-combobox-options-:r45:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r3i:"
+      aria-labelledby="headlessui-label-:r42:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r3j:"
+      id="headlessui-combobox-input-:r43:"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value=""
     />
     <button
-      aria-controls="headlessui-combobox-options-:r3l:"
+      aria-controls="headlessui-combobox-options-:r45:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r3i: headlessui-combobox-button-:r3k:"
+      aria-labelledby="headlessui-label-:r42: headlessui-combobox-button-:r44:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r3k:"
+      id="headlessui-combobox-button-:r44:"
       tabindex="-1"
       type="button"
     >
@@ -722,8 +799,8 @@ exports[`<Combobox /> Generated Snapshots MultipleWithoutChips story renders sna
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r4j:"
-      id="headlessui-label-:r4i:"
+      for="headlessui-combobox-input-:r53:"
+      id="headlessui-label-:r52:"
     >
       <span
         class="text text--label-md"
@@ -736,17 +813,17 @@ exports[`<Combobox /> Generated Snapshots MultipleWithoutChips story renders sna
     class="combobox-input"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r4o:"
+      aria-activedescendant="headlessui-combobox-option-:r58:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r4l:"
+      aria-controls="headlessui-combobox-options-:r55:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r4i:"
+      aria-labelledby="headlessui-label-:r52:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r4j:"
+      id="headlessui-combobox-input-:r53:"
       placeholder="1 selected"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
@@ -754,16 +831,16 @@ exports[`<Combobox /> Generated Snapshots MultipleWithoutChips story renders sna
       value=""
     />
     <button
-      aria-controls="headlessui-combobox-options-:r4l:"
+      aria-controls="headlessui-combobox-options-:r55:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r4i: headlessui-combobox-button-:r4k:"
+      aria-labelledby="headlessui-label-:r52: headlessui-combobox-button-:r54:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r4k:"
+      id="headlessui-combobox-button-:r54:"
       tabindex="-1"
       type="button"
     >
@@ -797,9 +874,9 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabel story renders snapshot 
     class="combobox-input"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r8p:"
+      aria-activedescendant="headlessui-combobox-option-:r99:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r8m:"
+      aria-controls="headlessui-combobox-options-:r96:"
       aria-expanded="true"
       aria-label="hidden label"
       class="combobox-input__field"
@@ -807,14 +884,14 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabel story renders snapshot 
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r8k:"
+      id="headlessui-combobox-input-:r94:"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r8m:"
+      aria-controls="headlessui-combobox-options-:r96:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
@@ -822,7 +899,7 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabel story renders snapshot 
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r8l:"
+      id="headlessui-combobox-button-:r95:"
       tabindex="-1"
       type="button"
     >
@@ -859,8 +936,8 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabelButRequired story render
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r94:"
-      id="headlessui-label-:r93:"
+      for="headlessui-combobox-input-:r9k:"
+      id="headlessui-label-:r9j:"
     >
       <span
         class="text text--label-md"
@@ -871,18 +948,18 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabelButRequired story render
     class="combobox-input"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r99:"
+      aria-activedescendant="headlessui-combobox-option-:r9p:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r96:"
+      aria-controls="headlessui-combobox-options-:r9m:"
       aria-expanded="true"
       aria-label="hidden label"
-      aria-labelledby="headlessui-label-:r93:"
+      aria-labelledby="headlessui-label-:r9j:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r94:"
+      id="headlessui-combobox-input-:r9k:"
       required=""
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
@@ -890,16 +967,16 @@ exports[`<Combobox /> Generated Snapshots NoVisibleLabelButRequired story render
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r96:"
+      aria-controls="headlessui-combobox-options-:r9m:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r93: headlessui-combobox-button-:r95:"
+      aria-labelledby="headlessui-label-:r9j: headlessui-combobox-button-:r9l:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r95:"
+      id="headlessui-combobox-button-:r9l:"
       tabindex="-1"
       type="button"
     >
@@ -936,8 +1013,8 @@ exports[`<Combobox /> Generated Snapshots Optional story renders snapshot 1`] = 
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r75:"
-      id="headlessui-label-:r74:"
+      for="headlessui-combobox-input-:r7l:"
+      id="headlessui-label-:r7k:"
     >
       <span
         class="text text--label-md"
@@ -964,6 +1041,97 @@ exports[`<Combobox /> Generated Snapshots Optional story renders snapshot 1`] = 
     class="combobox-input"
   >
     <input
+      aria-activedescendant="headlessui-combobox-option-:r7q:"
+      aria-autocomplete="list"
+      aria-controls="headlessui-combobox-options-:r7n:"
+      aria-expanded="true"
+      aria-labelledby="headlessui-label-:r7k:"
+      class="combobox-input__field"
+      data-focus=""
+      data-headlessui-state="open focus"
+      data-open=""
+      data-testid="input-button"
+      id="headlessui-combobox-input-:r7l:"
+      role="combobox"
+      style="--combobox__input-width: calc(0 * 1ch);"
+      type="text"
+      value="Dogs"
+    />
+    <button
+      aria-controls="headlessui-combobox-options-:r7n:"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-label="Show options"
+      aria-labelledby="headlessui-label-:r7k: headlessui-combobox-button-:r7m:"
+      class="combobox-input__button"
+      data-active=""
+      data-headlessui-state="open active"
+      data-open=""
+      id="headlessui-combobox-button-:r7m:"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon combobox-input__icon combobox-input__icon--reversed"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Combobox /> Generated Snapshots Required story renders snapshot 1`] = `
+<div
+  class="combobox combobox--label-layout-vertical w-[384px]"
+  data-headlessui-state="open"
+  data-open=""
+  data-testid="combobox"
+>
+  <div
+    class="combobox__overline"
+  >
+    <label
+      class="label label--md combobox__label"
+      data-headlessui-state="open"
+      data-open=""
+      for="headlessui-combobox-input-:r75:"
+      id="headlessui-label-:r74:"
+    >
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
+    </label>
+    <span
+      class="text text--body-sm combobox__required-text"
+    >
+      (Required)
+    </span>
+    <div
+      class="combobox__subLabel"
+    >
+      <span
+        class="text text--body-sm"
+      >
+        Some descriptive text
+      </span>
+    </div>
+  </div>
+  <div
+    class="combobox-input"
+  >
+    <input
       aria-activedescendant="headlessui-combobox-option-:r7a:"
       aria-autocomplete="list"
       aria-controls="headlessui-combobox-options-:r77:"
@@ -975,6 +1143,7 @@ exports[`<Combobox /> Generated Snapshots Optional story renders snapshot 1`] = 
       data-open=""
       data-testid="input-button"
       id="headlessui-combobox-input-:r75:"
+      required=""
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
@@ -1013,98 +1182,6 @@ exports[`<Combobox /> Generated Snapshots Optional story renders snapshot 1`] = 
 </div>
 `;
 
-exports[`<Combobox /> Generated Snapshots Required story renders snapshot 1`] = `
-<div
-  class="combobox combobox--label-layout-vertical w-[384px]"
-  data-headlessui-state="open"
-  data-open=""
-  data-testid="combobox"
->
-  <div
-    class="combobox__overline"
-  >
-    <label
-      class="label label--md combobox__label"
-      data-headlessui-state="open"
-      data-open=""
-      for="headlessui-combobox-input-:r6l:"
-      id="headlessui-label-:r6k:"
-    >
-      <span
-        class="text text--label-md"
-      >
-        Favorite Animal
-      </span>
-    </label>
-    <span
-      class="text text--body-sm combobox__required-text"
-    >
-      (Required)
-    </span>
-    <div
-      class="combobox__subLabel"
-    >
-      <span
-        class="text text--body-sm"
-      >
-        Some descriptive text
-      </span>
-    </div>
-  </div>
-  <div
-    class="combobox-input"
-  >
-    <input
-      aria-activedescendant="headlessui-combobox-option-:r6q:"
-      aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r6n:"
-      aria-expanded="true"
-      aria-labelledby="headlessui-label-:r6k:"
-      class="combobox-input__field"
-      data-focus=""
-      data-headlessui-state="open focus"
-      data-open=""
-      data-testid="input-button"
-      id="headlessui-combobox-input-:r6l:"
-      required=""
-      role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
-      type="text"
-      value="Dogs"
-    />
-    <button
-      aria-controls="headlessui-combobox-options-:r6n:"
-      aria-expanded="true"
-      aria-haspopup="listbox"
-      aria-label="Show options"
-      aria-labelledby="headlessui-label-:r6k: headlessui-combobox-button-:r6m:"
-      class="combobox-input__button"
-      data-active=""
-      data-headlessui-state="open active"
-      data-open=""
-      id="headlessui-combobox-button-:r6m:"
-      tabindex="-1"
-      type="button"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon combobox-input__icon combobox-input__icon--reversed"
-        fill="currentColor"
-        height="24px"
-        style="--icon-size: 24px;"
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
-        />
-      </svg>
-    </button>
-  </div>
-</div>
-`;
-
 exports[`<Combobox /> Generated Snapshots Warning story renders snapshot 1`] = `
 <div
   class="combobox combobox--has-fieldNote combobox--label-layout-vertical w-[384px]"
@@ -1119,8 +1196,8 @@ exports[`<Combobox /> Generated Snapshots Warning story renders snapshot 1`] = `
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r85:"
-      id="headlessui-label-:r84:"
+      for="headlessui-combobox-input-:r8l:"
+      id="headlessui-label-:r8k:"
     >
       <span
         class="text text--label-md"
@@ -1147,33 +1224,33 @@ exports[`<Combobox /> Generated Snapshots Warning story renders snapshot 1`] = `
     class="combobox-input combobox-input--warning"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r8a:"
+      aria-activedescendant="headlessui-combobox-option-:r8q:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r87:"
+      aria-controls="headlessui-combobox-options-:r8n:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r84:"
+      aria-labelledby="headlessui-label-:r8k:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r85:"
+      id="headlessui-combobox-input-:r8l:"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r87:"
+      aria-controls="headlessui-combobox-options-:r8n:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r84: headlessui-combobox-button-:r86:"
+      aria-labelledby="headlessui-label-:r8k: headlessui-combobox-button-:r8m:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r86:"
+      id="headlessui-combobox-button-:r8m:"
       tabindex="-1"
       type="button"
     >
@@ -1210,8 +1287,8 @@ exports[`<Combobox /> Generated Snapshots WithFieldName story renders snapshot 1
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r23:"
-      id="headlessui-label-:r22:"
+      for="headlessui-combobox-input-:r2j:"
+      id="headlessui-label-:r2i:"
     >
       <span
         class="text text--label-md"
@@ -1228,83 +1305,6 @@ exports[`<Combobox /> Generated Snapshots WithFieldName story renders snapshot 1
         Additional descriptive text
       </span>
     </div>
-  </div>
-  <div
-    class="combobox-input"
-  >
-    <input
-      aria-activedescendant="headlessui-combobox-option-:r28:"
-      aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r25:"
-      aria-expanded="true"
-      aria-labelledby="headlessui-label-:r22:"
-      class="combobox-input__field"
-      data-focus=""
-      data-headlessui-state="open focus"
-      data-open=""
-      data-testid="input-button"
-      id="headlessui-combobox-input-:r23:"
-      role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
-      type="text"
-      value="Dogs"
-    />
-    <button
-      aria-controls="headlessui-combobox-options-:r25:"
-      aria-expanded="true"
-      aria-haspopup="listbox"
-      aria-label="Show options"
-      aria-labelledby="headlessui-label-:r22: headlessui-combobox-button-:r24:"
-      class="combobox-input__button"
-      data-active=""
-      data-headlessui-state="open active"
-      data-open=""
-      id="headlessui-combobox-button-:r24:"
-      tabindex="-1"
-      type="button"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon combobox-input__icon combobox-input__icon--reversed"
-        fill="currentColor"
-        height="24px"
-        style="--icon-size: 24px;"
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
-        />
-      </svg>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`<Combobox /> Generated Snapshots WithFieldNote story renders snapshot 1`] = `
-<div
-  class="combobox combobox--has-fieldNote combobox--label-layout-vertical w-60"
-  data-headlessui-state="open"
-  data-open=""
-  data-testid="combobox"
->
-  <div
-    class="combobox__overline"
-  >
-    <label
-      class="label label--md combobox__label"
-      data-headlessui-state="open"
-      data-open=""
-      for="headlessui-combobox-input-:r2j:"
-      id="headlessui-label-:r2i:"
-    >
-      <span
-        class="text text--label-md"
-      >
-        Favorite Animal
-      </span>
-    </label>
   </div>
   <div
     class="combobox-input"
@@ -1359,9 +1359,9 @@ exports[`<Combobox /> Generated Snapshots WithFieldNote story renders snapshot 1
 </div>
 `;
 
-exports[`<Combobox /> Generated Snapshots WithPlaceholder story renders snapshot 1`] = `
+exports[`<Combobox /> Generated Snapshots WithFieldNote story renders snapshot 1`] = `
 <div
-  class="combobox combobox--label-layout-vertical w-60"
+  class="combobox combobox--has-fieldNote combobox--label-layout-vertical w-60"
   data-headlessui-state="open"
   data-open=""
   data-testid="combobox"
@@ -1398,11 +1398,10 @@ exports[`<Combobox /> Generated Snapshots WithPlaceholder story renders snapshot
       data-open=""
       data-testid="input-button"
       id="headlessui-combobox-input-:r33:"
-      placeholder="Search animals"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
-      value=""
+      value="Dogs"
     />
     <button
       aria-controls="headlessui-combobox-options-:r35:"
@@ -1415,6 +1414,84 @@ exports[`<Combobox /> Generated Snapshots WithPlaceholder story renders snapshot
       data-headlessui-state="open active"
       data-open=""
       id="headlessui-combobox-button-:r34:"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon combobox-input__icon combobox-input__icon--reversed"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Combobox /> Generated Snapshots WithPlaceholder story renders snapshot 1`] = `
+<div
+  class="combobox combobox--label-layout-vertical w-60"
+  data-headlessui-state="open"
+  data-open=""
+  data-testid="combobox"
+>
+  <div
+    class="combobox__overline"
+  >
+    <label
+      class="label label--md combobox__label"
+      data-headlessui-state="open"
+      data-open=""
+      for="headlessui-combobox-input-:r3j:"
+      id="headlessui-label-:r3i:"
+    >
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
+    </label>
+  </div>
+  <div
+    class="combobox-input"
+  >
+    <input
+      aria-activedescendant="headlessui-combobox-option-:r3o:"
+      aria-autocomplete="list"
+      aria-controls="headlessui-combobox-options-:r3l:"
+      aria-expanded="true"
+      aria-labelledby="headlessui-label-:r3i:"
+      class="combobox-input__field"
+      data-focus=""
+      data-headlessui-state="open focus"
+      data-open=""
+      data-testid="input-button"
+      id="headlessui-combobox-input-:r3j:"
+      placeholder="Search animals"
+      role="combobox"
+      style="--combobox__input-width: calc(0 * 1ch);"
+      type="text"
+      value=""
+    />
+    <button
+      aria-controls="headlessui-combobox-options-:r3l:"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-label="Show options"
+      aria-labelledby="headlessui-label-:r3i: headlessui-combobox-button-:r3k:"
+      class="combobox-input__button"
+      data-active=""
+      data-headlessui-state="open active"
+      data-open=""
+      id="headlessui-combobox-button-:r3k:"
       tabindex="-1"
       type="button"
     >
@@ -1451,8 +1528,8 @@ exports[`<Combobox /> Generated Snapshots WithRenderProp story renders snapshot 
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r53:"
-      id="headlessui-label-:r52:"
+      for="headlessui-combobox-input-:r5j:"
+      id="headlessui-label-:r5i:"
     >
       <span
         class="text text--label-md"
@@ -1465,32 +1542,32 @@ exports[`<Combobox /> Generated Snapshots WithRenderProp story renders snapshot 
     class="combobox-input"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r58:"
+      aria-activedescendant="headlessui-combobox-option-:r5o:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r55:"
+      aria-controls="headlessui-combobox-options-:r5l:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r52:"
+      aria-labelledby="headlessui-label-:r5i:"
       class="combobox-input__field"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
-      id="headlessui-combobox-input-:r53:"
+      id="headlessui-combobox-input-:r5j:"
       role="combobox"
       style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r55:"
+      aria-controls="headlessui-combobox-options-:r5l:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r52: headlessui-combobox-button-:r54:"
+      aria-labelledby="headlessui-label-:r5i: headlessui-combobox-button-:r5k:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r54:"
+      id="headlessui-combobox-button-:r5k:"
       tabindex="-1"
       type="button"
     >
@@ -1521,6 +1598,83 @@ exports[`<Combobox /> Generated Snapshots WithRenderProp story renders snapshot 
 `;
 
 exports[`<Combobox /> Generated Snapshots WithSelectedBy story renders snapshot 1`] = `
+<div
+  class="combobox combobox--label-layout-vertical w-60"
+  data-headlessui-state="open"
+  data-open=""
+  data-testid="combobox"
+>
+  <div
+    class="combobox__overline"
+  >
+    <label
+      class="label label--md combobox__label"
+      data-headlessui-state="open"
+      data-open=""
+      for="headlessui-combobox-input-:r23:"
+      id="headlessui-label-:r22:"
+    >
+      <span
+        class="text text--label-md"
+      >
+        Favorite Animal
+      </span>
+    </label>
+  </div>
+  <div
+    class="combobox-input"
+  >
+    <input
+      aria-activedescendant="headlessui-combobox-option-:r2a:"
+      aria-autocomplete="list"
+      aria-controls="headlessui-combobox-options-:r25:"
+      aria-expanded="true"
+      aria-labelledby="headlessui-label-:r22:"
+      class="combobox-input__field"
+      data-focus=""
+      data-headlessui-state="open focus"
+      data-open=""
+      data-testid="input-button"
+      id="headlessui-combobox-input-:r23:"
+      role="combobox"
+      style="--combobox__input-width: calc(0 * 1ch);"
+      type="text"
+      value="Cats"
+    />
+    <button
+      aria-controls="headlessui-combobox-options-:r25:"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-label="Show options"
+      aria-labelledby="headlessui-label-:r22: headlessui-combobox-button-:r24:"
+      class="combobox-input__button"
+      data-active=""
+      data-headlessui-state="open active"
+      data-open=""
+      id="headlessui-combobox-button-:r24:"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon combobox-input__icon combobox-input__icon--reversed"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Combobox /> Generated Snapshots WithSelectedOption story renders snapshot 1`] = `
 <div
   class="combobox combobox--label-layout-vertical w-60"
   data-headlessui-state="open"
@@ -1597,83 +1751,6 @@ exports[`<Combobox /> Generated Snapshots WithSelectedBy story renders snapshot 
 </div>
 `;
 
-exports[`<Combobox /> Generated Snapshots WithSelectedOption story renders snapshot 1`] = `
-<div
-  class="combobox combobox--label-layout-vertical w-60"
-  data-headlessui-state="open"
-  data-open=""
-  data-testid="combobox"
->
-  <div
-    class="combobox__overline"
-  >
-    <label
-      class="label label--md combobox__label"
-      data-headlessui-state="open"
-      data-open=""
-      for="headlessui-combobox-input-:r13:"
-      id="headlessui-label-:r12:"
-    >
-      <span
-        class="text text--label-md"
-      >
-        Favorite Animal
-      </span>
-    </label>
-  </div>
-  <div
-    class="combobox-input"
-  >
-    <input
-      aria-activedescendant="headlessui-combobox-option-:r1a:"
-      aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r15:"
-      aria-expanded="true"
-      aria-labelledby="headlessui-label-:r12:"
-      class="combobox-input__field"
-      data-focus=""
-      data-headlessui-state="open focus"
-      data-open=""
-      data-testid="input-button"
-      id="headlessui-combobox-input-:r13:"
-      role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
-      type="text"
-      value="Cats"
-    />
-    <button
-      aria-controls="headlessui-combobox-options-:r15:"
-      aria-expanded="true"
-      aria-haspopup="listbox"
-      aria-label="Show options"
-      aria-labelledby="headlessui-label-:r12: headlessui-combobox-button-:r14:"
-      class="combobox-input__button"
-      data-active=""
-      data-headlessui-state="open active"
-      data-open=""
-      id="headlessui-combobox-button-:r14:"
-      tabindex="-1"
-      type="button"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon combobox-input__icon combobox-input__icon--reversed"
-        fill="currentColor"
-        height="24px"
-        style="--icon-size: 24px;"
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
-        />
-      </svg>
-    </button>
-  </div>
-</div>
-`;
-
 exports[`<Combobox /> Generated Snapshots WithTruncation story renders snapshot 1`] = `
 <div
   class="combobox combobox--label-layout-vertical w-[160px]"
@@ -1688,8 +1765,8 @@ exports[`<Combobox /> Generated Snapshots WithTruncation story renders snapshot 
       class="label label--md combobox__label"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-:r5j:"
-      id="headlessui-label-:r5i:"
+      for="headlessui-combobox-input-:r63:"
+      id="headlessui-label-:r62:"
     >
       <span
         class="text text--label-md"
@@ -1702,33 +1779,33 @@ exports[`<Combobox /> Generated Snapshots WithTruncation story renders snapshot 
     class="combobox-input"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-:r5o:"
+      aria-activedescendant="headlessui-combobox-option-:r68:"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-:r5l:"
+      aria-controls="headlessui-combobox-options-:r65:"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-:r5i:"
+      aria-labelledby="headlessui-label-:r62:"
       class="combobox-input__field combobox-input__field--truncated"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-:r5j:"
+      id="headlessui-combobox-input-:r63:"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
       value="A very long option label that will not fit"
     />
     <button
-      aria-controls="headlessui-combobox-options-:r5l:"
+      aria-controls="headlessui-combobox-options-:r65:"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-:r5i: headlessui-combobox-button-:r5k:"
+      aria-labelledby="headlessui-label-:r62: headlessui-combobox-button-:r64:"
       class="combobox-input__button"
       data-active=""
       data-headlessui-state="open active"
       data-open=""
-      id="headlessui-combobox-button-:r5k:"
+      id="headlessui-combobox-button-:r64:"
       tabindex="-1"
       type="button"
     >

@@ -224,6 +224,22 @@ export const Default: StoryObj<DemoProps> = {
   },
 };
 
+/**
+ * Use the `immediate` prop to make it so that the options are shown to the user once the cursor
+ * enters the input.
+ */
+export const Immediate: StoryObj<DemoProps> = {
+  render: (args) => <ComboboxDemo {...args} />,
+  args: {
+    label: 'Favorite Animal',
+    'data-testid': 'combobox',
+    defaultValue: exampleOptions[0],
+    name: 'combobox',
+    className: 'w-60',
+    immediate: true,
+  },
+};
+
 export const HorizontalLabel: StoryObj<DemoProps> = {
   ...Default,
   args: {
