@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [18.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.1...v18.7.0) (2026-08-03)
+
+
+### Features
+
+* **Combobox:** add beta Combobox component ([#2576](https://github.com/chanzuckerberg/edu-design-system/issues/2576)) ([0179adb](https://github.com/chanzuckerberg/edu-design-system/commit/0179adb05efca9c2509a0b4ef3d7ba2e1d24015e))
+* **DataTable:** update to match latest designs ([#2569](https://github.com/chanzuckerberg/edu-design-system/issues/2569)) ([2f0ca26](https://github.com/chanzuckerberg/edu-design-system/commit/2f0ca26b168a24852012360c305600b50c3afa05))
+
+
+### Bug Fixes
+
+* **tokens:** update yellow-050 to FFFC93 ([#2568](https://github.com/chanzuckerberg/edu-design-system/issues/2568)) ([401207a](https://github.com/chanzuckerberg/edu-design-system/commit/401207aa47af45771d1721d1665d600db3b7846c))
+
 ## [18.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.0...v18.6.1) (2026-07-20)
 
 
