@@ -239,13 +239,6 @@ export const InputField: InputFieldType = forwardRef(
     // The slot renders for caller-provided content and for the password show/hide button
     const shouldRenderInputWithin = !!(inputWithin || revealShowHideButton);
 
-    // The show/hide button only appears once there is text to reveal, so an otherwise empty slot
-    // should not reserve any space
-    const hasInputWithinContent = !!(
-      inputWithin ||
-      (revealShowHideButton && fieldText)
-    );
-
     // Measure the slot so the input's trailing padding can track the width of whatever is rendered
     // in it, rather than constraining that content to a fixed size.
     const inputWithinRef = useRef<HTMLDivElement>(null);
@@ -301,7 +294,7 @@ export const InputField: InputFieldType = forwardRef(
     // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
     const inputOverlayClassName = clsx(
       leadingIcon && styles['input-field__input--leading-icon'],
-      hasInputWithinContent && styles['input-field__input--input-within'],
+      shouldRenderInputWithin && styles['input-field__input--input-within'],
     );
 
     // Publish the measured slot width for the input's trailing padding to consume. Left unset until
@@ -435,7 +428,7 @@ export const InputField: InputFieldType = forwardRef(
               ref={inputWithinRef}
             >
               {inputWithin}
-              {revealShowHideButton && fieldText && (
+              {revealShowHideButton && (
                 <Button
                   aria-label={`${isPasswordVisible ? 'Hide' : 'Show'} password`}
                   icon={isPasswordVisible ? 'eye-closed' : 'eye-open'}

@@ -110,26 +110,4 @@ describe('<InputField />', () => {
       inputBody.style.getPropertyValue('--input-field__input-within-width'),
     ).toBe('140px');
   });
-
-  it('only reserves trailing space for the password button once there is text to reveal', async () => {
-    const user = userEvent.setup();
-
-    render(
-      <InputField
-        aria-label="label"
-        data-testid="test-input"
-        onChange={jest.fn()}
-        type="password"
-      />,
-    );
-
-    const input = screen.getByTestId('test-input');
-
-    expect(input).not.toHaveClass('input-field__input--input-within');
-
-    input.focus();
-    await user.keyboard('hunter2');
-
-    expect(input).toHaveClass('input-field__input--input-within');
-  });
 });
