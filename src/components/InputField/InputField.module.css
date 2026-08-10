@@ -25,25 +25,34 @@
 /**
  * Input Field Within
  *
- * A slot to put arbitrary content that appears within the input field border to the right. 
+ * A slot to put arbitrary content that appears within the input field border, at the trailing edge.
  *
  * Typically used for buttons and icon buttons to enable things like show/hide password buttons .
- */
+ *
+ * The trailing padding is derived from the measured width of the slot, so content of any width
+ * clears the text area rather than being clamped to a fixed size. The component sets
+ * `--input-field__input-within-width` from that measurement; the fallback reserves the same
+ * space the previous fixed treatment did, and is what renders before measurement (during SSR,
+ * or when ResizeObserver is unavailable).
+ */
 .input-field__input--input-within {
-  padding-right: calc(var(--eds-spacing-size-12) * 1px);
+  padding-inline-end: calc(
+    var(--input-field__input-within-width, calc(var(--eds-spacing-size-9) * 1px)) +
+      (var(--eds-spacing-size-1-and-half) * 2px)
+  );
 }
 
 .input-field__input-within {
   position: absolute;
-  right: calc(var(--eds-spacing-size-1-and-half) * 1px);
+  inset-inline-end: calc(var(--eds-spacing-size-1-and-half) * 1px);
   top: 0;
   bottom: 0;
   display: grid;
   align-items: center;
   justify-content: center;
 
-  /* max width is padding size minus right position size */
-  max-width: calc(var(--eds-spacing-size-11) * 1px);
+  /* Keep a usable text area, so wide content can never take over the whole field */
+  max-width: calc(100% - (var(--eds-spacing-size-9) * 1px));
 }
 
 .input-field__leading-icon {
