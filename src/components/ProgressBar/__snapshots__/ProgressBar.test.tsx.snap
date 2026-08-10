@@ -7,11 +7,16 @@ exports[`<ProgressBar /> Default story renders snapshot 1`] = `
   <div
     class="progress-bar__labels"
   >
-    <span
-      class="text text--body-sm progress-bar__valueLabel"
+    <div
+      class="text text--body-sm character-counter progress-bar__valueLabel"
     >
-      33%
-    </span>
+      <span
+        class="character-counter__count"
+      >
+        33
+        %
+      </span>
+    </div>
   </div>
   <div
     aria-label="33 percent"
@@ -143,11 +148,16 @@ exports[`<ProgressBar /> WithDescriptionLabel story renders snapshot 1`] = `
         Label
       </span>
     </label>
-    <span
-      class="text text--body-sm progress-bar__valueLabel"
+    <div
+      class="text text--body-sm character-counter progress-bar__valueLabel"
     >
-      33%
-    </span>
+      <span
+        class="character-counter__count"
+      >
+        33
+        %
+      </span>
+    </div>
   </div>
   <div
     aria-label="33 percent"
@@ -249,11 +259,16 @@ exports[`<ProgressBar /> WithLongDescriptionLabel story renders snapshot 1`] = `
         We should prevent labels from being this long, but if they do, they wrap
       </span>
     </label>
-    <span
-      class="text text--body-sm progress-bar__valueLabel"
+    <div
+      class="text text--body-sm character-counter progress-bar__valueLabel"
     >
-      50%
-    </span>
+      <span
+        class="character-counter__count"
+      >
+        50
+        %
+      </span>
+    </div>
   </div>
   <div
     aria-label="33 percent"

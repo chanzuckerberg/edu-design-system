@@ -15,18 +15,18 @@ export type CharacterCounterProps = {
   className?: string;
   // Design API
   /**
-   * The number of characters entered so far (the numerator).
+   * The current count (the numerator), e.g., the characters entered so far or the progress made.
    */
   count: number;
   /**
-   * The number of characters allowed (the denominator). When `count` exceeds this, the count
-   * takes on the critical treatment.
+   * What the count is measured against (the denominator), e.g., the characters allowed. When
+   * `count` exceeds this, the count takes on the critical treatment.
    */
   total: number;
   /**
-   * How the count is written out. `"fraction"` reads as `"3 / 10"`; `"percentage"` reads as
-   * `"30%"`, rounded to a whole number to match `ProgressBar`. The percentage variant requires
-   * `total` to be greater than zero.
+   * How the count is written out. `"fraction"` reads as `"3 / 10"`, for counts of discrete
+   * things. `"percentage"` reads as `"30%"`, rounded to a whole number, for a share of a whole;
+   * it requires `total` to be greater than zero.
    *
    * **Default is `"fraction"`**.
    */
@@ -34,13 +34,14 @@ export type CharacterCounterProps = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * An internal count of entered characters against the total allowed, written either as a
- * fraction (`"3 / 10"`) or as a percentage (`"30%"`).
+ * An internal count of a current value against its total, written either as a fraction
+ * (`"3 / 10"`) or as a percentage (`"30%"`).
  *
- * This is shared by the field components that limit text length (e.g., `InputField`,
- * `TextareaField`) so the counting construction and its error treatment stay consistent. It is
- * deliberately not exported from the package: it carries no field semantics of its own and is
- * only meaningful next to the control it counts.
+ * This is shared by the components that show a counting construction, so the construction and
+ * its error treatment stay consistent: the fields that limit text length (`InputField`,
+ * `TextareaField`) use the fraction variant, and `ProgressBar` uses the percentage variant. It
+ * is deliberately not exported from the package: it carries no semantics of its own and is only
+ * meaningful next to the control it counts.
  *
  * Example usage:
  *

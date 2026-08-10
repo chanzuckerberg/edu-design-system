@@ -3,6 +3,7 @@ import React from 'react';
 
 import { assertEdsUsage } from '../../util/logging';
 import type { EitherInclusive } from '../../util/utility-types';
+import CharacterCounter from '../CharacterCounter';
 import FieldLabel from '../FieldLabel';
 import Text from '../Text';
 
@@ -90,8 +91,17 @@ export const ProgressBar = ({
 
   // compute display values by checking ranges and normalizing outputs
   const computedValue = Math.max(Math.min(value, max), PROGRESS_BAR_MINIMUM);
-  const computedValueLabel =
-    valueLabel ?? `${Math.round((computedValue / max) * 100)}%`;
+
+  // A caller-supplied `valueLabel` replaces the computed percentage outright, including an empty
+  // string used to suppress the value entirely
+  const shouldRenderPercentage =
+    valueLabel === undefined || valueLabel === null;
+
+  const shouldRenderLabels = !!(
+    descriptionLabel ||
+    shouldRenderPercentage ||
+    valueLabel
+  );
 
   const trackClassName = clsx(
     styles['progress-bar__track'],
@@ -115,20 +125,33 @@ export const ProgressBar = ({
   // TODO: use <progress> component instead, and override appearance?
   return (
     <div className={componentClassName}>
-      {context === 'standalone' && (descriptionLabel || computedValueLabel) && (
+      {context === 'standalone' && shouldRenderLabels && (
         <div className={styles['progress-bar__labels']}>
           {descriptionLabel && (
             <FieldLabel id={progressBarId} size="md">
               {descriptionLabel}
             </FieldLabel>
           )}
-          {computedValueLabel && (
+          {/*
+            Always the percentage variant here: progress is a share of the whole, never a count
+            of discrete items. `computedValue` is already clamped to `max`, so the counter's
+            over-total treatment cannot trigger.
+          */}
+          {shouldRenderPercentage && (
+            <CharacterCounter
+              className={styles['progress-bar__valueLabel']}
+              count={computedValue}
+              total={max}
+              variant="percentage"
+            />
+          )}
+          {valueLabel && (
             <Text
               as="span"
               className={styles['progress-bar__valueLabel']}
               preset="body-sm"
             >
-              {computedValueLabel}
+              {valueLabel}
             </Text>
           )}
         </div>
