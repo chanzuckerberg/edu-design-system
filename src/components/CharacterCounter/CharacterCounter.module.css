@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    # CHARACTER COUNTER
+\*------------------------------------*/
+
+/**
+ * Character counter
+ *
+ * The count of entered characters against the total allowed, e.g., "3 / 10". Layout and
+ * placement belong to the consuming component, passed in via `className`.
+ */
+.character-counter {
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+}
+
+/**
+ * The number of characters entered so far, which follows the counter's treatment until it goes
+ * over the total.
+ */
+.character-counter__count {
+  color: inherit;
+}
+
+/**
+ * Treatment for a count that has gone over the total allowed
+ */
+.character-counter__count--invalid {
+  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
+}
