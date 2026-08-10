@@ -101,7 +101,7 @@
 }
 
 /**
- * Placement only. Color and the over-length treatment belong to `CharacterCounter`.
+ * Placement only. Color and the over-length treatment belong to `Counter`.
  */
 .input-field__character-counter {
   text-align: right;

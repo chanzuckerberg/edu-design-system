@@ -8,10 +8,10 @@ exports[`<ProgressBar /> Default story renders snapshot 1`] = `
     class="progress-bar__labels"
   >
     <div
-      class="text text--body-sm character-counter progress-bar__valueLabel"
+      class="text text--body-sm counter progress-bar__valueLabel"
     >
       <span
-        class="character-counter__count"
+        class="counter__count"
       >
         33
         %
@@ -149,10 +149,10 @@ exports[`<ProgressBar /> WithDescriptionLabel story renders snapshot 1`] = `
       </span>
     </label>
     <div
-      class="text text--body-sm character-counter progress-bar__valueLabel"
+      class="text text--body-sm counter progress-bar__valueLabel"
     >
       <span
-        class="character-counter__count"
+        class="counter__count"
       >
         33
         %
@@ -260,10 +260,10 @@ exports[`<ProgressBar /> WithLongDescriptionLabel story renders snapshot 1`] = `
       </span>
     </label>
     <div
-      class="text text--body-sm character-counter progress-bar__valueLabel"
+      class="text text--body-sm counter progress-bar__valueLabel"
     >
       <span
-        class="character-counter__count"
+        class="counter__count"
       >
         50
         %

@@ -8,7 +8,7 @@ import type {
 } from '../../util/utility-types';
 
 import type { Status } from '../../util/variant-types';
-import CharacterCounter from '../CharacterCounter';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Text from '../Text';
@@ -271,7 +271,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <CharacterCounter
+              <Counter
                 className={styles['textarea-field__character-counter']}
                 count={fieldLength}
                 total={maxLengthShown}

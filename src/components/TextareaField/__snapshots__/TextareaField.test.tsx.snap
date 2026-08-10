@@ -685,10 +685,10 @@ exports[`<TextareaField /> WithAMaxLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter textarea-field__character-counter"
+        class="text text--body-sm counter textarea-field__character-counter"
       >
         <span
-          class="character-counter__count character-counter__count--invalid"
+          class="counter__count counter__count--invalid"
         >
           202
         </span>
@@ -776,10 +776,10 @@ exports[`<TextareaField /> WithARecommendedLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter textarea-field__character-counter"
+        class="text text--body-sm counter textarea-field__character-counter"
       >
         <span
-          class="character-counter__count character-counter__count--invalid"
+          class="counter__count counter__count--invalid"
         >
           202
         </span>
@@ -866,10 +866,10 @@ exports[`<TextareaField /> WithBothRecommendedAndMaxLengths story renders snapsh
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter textarea-field__character-counter"
+        class="text text--body-sm counter textarea-field__character-counter"
       >
         <span
-          class="character-counter__count character-counter__count--invalid"
+          class="counter__count counter__count--invalid"
         >
           202
         </span>

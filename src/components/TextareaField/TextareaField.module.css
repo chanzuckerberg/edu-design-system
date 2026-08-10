@@ -45,7 +45,7 @@
 }
 
 /**
- * Placement only. Color and the over-length treatment belong to `CharacterCounter`.
+ * Placement only. Color and the over-length treatment belong to `Counter`.
  */
 .textarea-field__character-counter {
   flex: 1 0 50%;

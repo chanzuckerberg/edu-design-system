@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react-webpack5';
 import React, { useState } from 'react';
 
-import { CharacterCounter } from './CharacterCounter';
+import { Counter } from './Counter';
 import Input from '../Input';
 
 /**
@@ -9,7 +9,7 @@ import Input from '../Input';
  * watched as it changes and crosses its total. `count` comes from the field rather than the
  * story args here.
  */
-const InteractiveCharacterCounter = ({ count, ...other }: Args) => {
+const InteractiveCounter = ({ count, ...other }: Args) => {
   const [value, setValue] = useState('Some initial text');
 
   return (
@@ -19,18 +19,18 @@ const InteractiveCharacterCounter = ({ count, ...other }: Args) => {
         onChange={(event) => setValue(event.target.value)}
         value={value}
       />
-      <CharacterCounter count={value.length} {...other} />
+      <Counter count={value.length} {...other} />
     </div>
   );
 };
 
-const meta: Meta<typeof CharacterCounter> = {
-  title: 'Components/CharacterCounter',
-  component: CharacterCounter,
+const meta: Meta<typeof Counter> = {
+  title: 'Components/Counter',
+  component: Counter,
   parameters: {
     docs: {
       subtitle:
-        'The count of entered characters against the total allowed, as a fraction or a percentage. Internal to the field components; not exported from the package.',
+        'A current count against its total, as a fraction or a percentage. Internal to the components that show a counting construction; not exported from the package.',
     },
     layout: 'centered',
   },
@@ -43,8 +43,8 @@ const meta: Meta<typeof CharacterCounter> = {
 
 export default meta;
 
-type Args = React.ComponentProps<typeof CharacterCounter>;
-type Story = StoryObj<typeof CharacterCounter>;
+type Args = React.ComponentProps<typeof Counter>;
+type Story = StoryObj<typeof Counter>;
 
 export const Default: Story = {};
 
@@ -104,7 +104,7 @@ export const NegativeTotal: Story = {
  * the total.
  */
 export const CountChanging: Story = {
-  render: (args) => <InteractiveCharacterCounter {...args} />,
+  render: (args) => <InteractiveCounter {...args} />,
   args: {
     total: 20,
   },
@@ -160,7 +160,7 @@ export const PercentageZeroTotal: Story = {
  * goes over its total.
  */
 export const PercentageChanging: Story = {
-  render: (args) => <InteractiveCharacterCounter {...args} />,
+  render: (args) => <InteractiveCounter {...args} />,
   args: {
     total: 20,
     variant: 'percentage',

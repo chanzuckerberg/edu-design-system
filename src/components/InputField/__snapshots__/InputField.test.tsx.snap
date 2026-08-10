@@ -21,10 +21,10 @@ exports[`<InputField /> ControlledWithinMaxLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter input-field__character-counter"
+        class="text text--body-sm counter input-field__character-counter"
       >
         <span
-          class="character-counter__count"
+          class="counter__count"
         >
           17
         </span>
@@ -946,10 +946,10 @@ exports[`<InputField /> WithAMaxLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter input-field__character-counter"
+        class="text text--body-sm counter input-field__character-counter"
       >
         <span
-          class="character-counter__count character-counter__count--invalid"
+          class="counter__count counter__count--invalid"
         >
           17
         </span>
@@ -1006,10 +1006,10 @@ exports[`<InputField /> WithARecommendedLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter input-field__character-counter"
+        class="text text--body-sm counter input-field__character-counter"
       >
         <span
-          class="character-counter__count character-counter__count--invalid"
+          class="counter__count counter__count--invalid"
         >
           17
         </span>
@@ -1065,10 +1065,10 @@ exports[`<InputField /> WithBothMaxAndRecommendedLength story renders snapshot 1
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter input-field__character-counter"
+        class="text text--body-sm counter input-field__character-counter"
       >
         <span
-          class="character-counter__count character-counter__count--invalid"
+          class="counter__count counter__count--invalid"
         >
           17
         </span>
@@ -1277,10 +1277,10 @@ exports[`<InputField /> WithinMaxLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="text text--body-sm character-counter input-field__character-counter"
+        class="text text--body-sm counter input-field__character-counter"
       >
         <span
-          class="character-counter__count"
+          class="counter__count"
         >
           17
         </span>

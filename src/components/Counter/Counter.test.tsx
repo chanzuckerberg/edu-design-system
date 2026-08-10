@@ -2,11 +2,11 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import { CharacterCounter } from './CharacterCounter';
-import * as stories from './CharacterCounter.stories';
+import { Counter } from './Counter';
+import * as stories from './Counter.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
-describe('<CharacterCounter />', () => {
+describe('<Counter />', () => {
   beforeEach(() => {
     // Add in mocks for the calls that can occur in implementation to suppress logging in tests
     const consoleMock = jest.spyOn(console, 'error');
@@ -22,30 +22,30 @@ describe('<CharacterCounter />', () => {
   generateSnapshots(stories as StoryFile);
 
   it('formats the count and total as "x / y"', () => {
-    render(<CharacterCounter count={3} data-testid="counter" total={10} />);
+    render(<Counter count={3} data-testid="counter" total={10} />);
 
     expect(screen.getByTestId('counter')).toHaveTextContent(/^3 \/ 10$/);
   });
 
   it('leaves the count in the default treatment when it is within the total', () => {
-    render(<CharacterCounter count={10} data-testid="counter" total={10} />);
+    render(<Counter count={10} data-testid="counter" total={10} />);
 
     expect(screen.getByTestId('counter').firstElementChild).not.toHaveClass(
-      'character-counter__count--invalid',
+      'counter__count--invalid',
     );
   });
 
   it('marks the count invalid when it exceeds the total', () => {
-    render(<CharacterCounter count={11} data-testid="counter" total={10} />);
+    render(<Counter count={11} data-testid="counter" total={10} />);
 
     expect(screen.getByTestId('counter').firstElementChild).toHaveClass(
-      'character-counter__count--invalid',
+      'counter__count--invalid',
     );
   });
 
   it('formats the count as a whole percentage of the total', () => {
     render(
-      <CharacterCounter
+      <Counter
         count={3}
         data-testid="counter"
         total={10}
@@ -58,7 +58,7 @@ describe('<CharacterCounter />', () => {
 
   it('rounds a percentage that does not divide evenly', () => {
     render(
-      <CharacterCounter
+      <Counter
         count={1}
         data-testid="counter"
         total={3}
@@ -71,7 +71,7 @@ describe('<CharacterCounter />', () => {
 
   it('reports a percentage over 100 when the count exceeds the total', () => {
     render(
-      <CharacterCounter
+      <Counter
         count={12}
         data-testid="counter"
         total={10}
@@ -82,14 +82,12 @@ describe('<CharacterCounter />', () => {
     const counter = screen.getByTestId('counter');
 
     expect(counter).toHaveTextContent(/^120%$/);
-    expect(counter.firstElementChild).toHaveClass(
-      'character-counter__count--invalid',
-    );
+    expect(counter.firstElementChild).toHaveClass('counter__count--invalid');
   });
 
   it('reports zero percent rather than a non-finite value against a total of zero', () => {
     render(
-      <CharacterCounter
+      <Counter
         count={3}
         data-testid="counter"
         total={0}
@@ -110,33 +108,33 @@ describe('<CharacterCounter />', () => {
     });
 
     it('warns when given a negative value', () => {
-      render(<CharacterCounter count={3} total={-10} />);
+      render(<Counter count={3} total={-10} />);
 
       expect(consoleErrorMock).toHaveBeenCalledTimes(0);
       expect(consoleWarnMock).toHaveBeenCalledWith(
-        'Character counter values must not be negative (received 3 / -10)',
+        'Counter values must not be negative (received 3 / -10)',
       );
     });
 
     it('errors when asked for a percentage of a total of zero', () => {
-      render(<CharacterCounter count={3} total={0} variant="percentage" />);
+      render(<Counter count={3} total={0} variant="percentage" />);
 
       expect(consoleWarnMock).toHaveBeenCalledTimes(0);
       expect(consoleErrorMock).toHaveBeenCalledWith(
-        'Character counter cannot report 3 as a percentage of 0; the percentage variant requires a total greater than zero',
+        'Counter cannot report 3 as a percentage of 0; the percentage variant requires a total greater than zero',
       );
     });
 
     it('errors when asked for a percentage of a negative total', () => {
-      render(<CharacterCounter count={3} total={-10} variant="percentage" />);
+      render(<Counter count={3} total={-10} variant="percentage" />);
 
       expect(consoleErrorMock).toHaveBeenCalledWith(
-        'Character counter cannot report 3 as a percentage of -10; the percentage variant requires a total greater than zero',
+        'Counter cannot report 3 as a percentage of -10; the percentage variant requires a total greater than zero',
       );
     });
 
     it('stays quiet about a total of zero in the fraction variant', () => {
-      render(<CharacterCounter count={3} data-testid="counter" total={0} />);
+      render(<Counter count={3} data-testid="counter" total={0} />);
 
       expect(screen.getByTestId('counter')).toHaveTextContent(/^3 \/ 0$/);
       expect(consoleErrorMock).toHaveBeenCalledTimes(0);

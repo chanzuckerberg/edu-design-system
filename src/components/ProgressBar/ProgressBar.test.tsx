@@ -49,7 +49,7 @@ describe('<ProgressBar />', () => {
 
       expect(screen.getByText('100%')).toBeInTheDocument();
       expect(screen.getByText('100%')).not.toHaveClass(
-        'character-counter__count--invalid',
+        'counter__count--invalid',
       );
     });
 

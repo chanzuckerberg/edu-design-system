@@ -3,7 +3,7 @@ import React from 'react';
 
 import { assertEdsUsage } from '../../util/logging';
 import type { EitherInclusive } from '../../util/utility-types';
-import CharacterCounter from '../CharacterCounter';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import Text from '../Text';
 
@@ -138,7 +138,7 @@ export const ProgressBar = ({
             over-total treatment cannot trigger.
           */}
           {shouldRenderPercentage && (
-            <CharacterCounter
+            <Counter
               className={styles['progress-bar__valueLabel']}
               count={computedValue}
               total={max}

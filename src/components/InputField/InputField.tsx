@@ -8,7 +8,7 @@ import type {
 } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
-import CharacterCounter from '../CharacterCounter';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
@@ -375,7 +375,7 @@ export const InputField: InputFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <CharacterCounter
+              <Counter
                 className={styles['input-field__character-counter']}
                 count={fieldLength}
                 total={maxLengthShown}

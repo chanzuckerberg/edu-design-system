@@ -4,9 +4,9 @@ import React from 'react';
 import { assertEdsUsage } from '../../util/logging';
 import Text from '../Text';
 
-import styles from './CharacterCounter.module.css';
+import styles from './Counter.module.css';
 
-export type CharacterCounterProps = {
+export type CounterProps = {
   // Component API
   /**
    * CSS class names that can be appended to the component. Use this to position the counter
@@ -46,45 +46,45 @@ export type CharacterCounterProps = {
  * Example usage:
  *
  * ```
- * <CharacterCounter
+ * <Counter
  *   className={styles['input-field__character-counter']}
  *   count={fieldLength}
  *   total={maxLengthShown}
  * />
  * ```
  */
-export const CharacterCounter = ({
+export const Counter = ({
   className,
   count,
   total,
   variant = 'fraction',
   ...other
-}: CharacterCounterProps) => {
-  const componentClassName = clsx(styles['character-counter'], className);
+}: CounterProps) => {
+  const componentClassName = clsx(styles['counter'], className);
 
   // The count is over its limit. In the fraction variant the total stays in the default
   // treatment, since it is the limit being violated rather than the thing in error.
   const isOverTotal = count > total;
 
   const countClassName = clsx(
-    styles['character-counter__count'],
-    isOverTotal && styles['character-counter__count--invalid'],
+    styles['counter__count'],
+    isOverTotal && styles['counter__count--invalid'],
   );
 
-  // Whole percentages only, matching how `ProgressBar` reports progress. A total that isn't
-  // positive has no percentage to report, so it reads as zero rather than as a non-finite value.
+  // Whole percentages only. A total that isn't positive has no percentage to report, so it reads
+  // as zero rather than as a non-finite value.
   const percentage = total > 0 ? Math.round((count / total) * 100) : 0;
 
   assertEdsUsage(
     [count < 0, total < 0],
-    `Character counter values must not be negative (received ${count} / ${total})`,
+    `Counter values must not be negative (received ${count} / ${total})`,
   );
 
   // Dividing by a total of zero (or less) yields no usable percentage, so the fallback above is
   // covering for a caller that cannot get the answer it asked for
   assertEdsUsage(
     [variant === 'percentage' && total <= 0],
-    `Character counter cannot report ${count} as a percentage of ${total}; the percentage variant requires a total greater than zero`,
+    `Counter cannot report ${count} as a percentage of ${total}; the percentage variant requires a total greater than zero`,
     'error',
   );
 
@@ -104,4 +104,4 @@ export const CharacterCounter = ({
   );
 };
 
-CharacterCounter.displayName = 'CharacterCounter';
+Counter.displayName = 'Counter';
