@@ -7,7 +7,6 @@
 /coverage
 
 # logging
-omlet-cli.log
 
 # production
 /build

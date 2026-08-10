@@ -13,7 +13,7 @@ jobs:
       - name: Checkout ⬇️
         uses: actions/checkout@v6
         with:
-          # Omlet uses git history for analysis; disable shallow clone
+          # disable shallow clone
           fetch-depth: 0
 
       - name: Setup node 😻
@@ -46,11 +46,3 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      # TODO(2025-04-25): Disabling until we valide why the current automation fails with bad request
-      # Once resolved, remove the manual analysis instructions from PUBLISHING.md
-      # - name: Update Omlet Analysis 🍳
-      #   run: npx @omlet/cli analyze
-      #   env:
-      #     OMLET_TOKEN: ${{ secrets.OMLET_TOKEN }}
-      
