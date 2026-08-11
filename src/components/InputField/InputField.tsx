@@ -8,6 +8,7 @@ import type {
 } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Icon, { type IconName } from '../Icon';
@@ -321,11 +322,6 @@ export const InputField: InputFieldType = forwardRef(
     const shouldRenderError =
       textExceedsMaxLength || textExceedsRecommendedLength;
 
-    const fieldLengthCountClassName = clsx(
-      (textExceedsMaxLength || textExceedsRecommendedLength) &&
-        styles['input-field--invalid-length'],
-    );
-
     // Pick the smallest of the lengths to set as the maximum value allowed
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
@@ -379,14 +375,11 @@ export const InputField: InputFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <Text
-                as="div"
+              <Counter
                 className={styles['input-field__character-counter']}
-                preset="body-sm"
-              >
-                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLengthShown}
-              </Text>
+                count={fieldLength}
+                total={maxLengthShown}
+              />
             )}
             {label && subLabel && (
               <div className={subLabelClassName}>

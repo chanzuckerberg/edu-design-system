@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> AtTotal story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count"
+  >
+    10
+  </span>
+   / 
+  10
+</div>
+`;
+
+exports[`<Counter /> CountChanging story renders snapshot 1`] = `
+<div
+  class="flex w-[384px] flex-col gap-spacing-size-1"
+>
+  <input
+    aria-label="Type to change the count"
+    class="input"
+    value="Some initial text"
+  />
+  <div
+    class="text text--body-sm counter"
+  >
+    <span
+      class="counter__count"
+    >
+      17
+    </span>
+     / 
+    20
+  </div>
+</div>
+`;
+
+exports[`<Counter /> Default story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count"
+  >
+    3
+  </span>
+   / 
+  10
+</div>
+`;
+
+exports[`<Counter /> EmptyCount story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count"
+  >
+    0
+  </span>
+   / 
+  10
+</div>
+`;
+
+exports[`<Counter /> NegativeTotal story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count counter__count--invalid"
+  >
+    3
+  </span>
+   / 
+  -10
+</div>
+`;
+
+exports[`<Counter /> OverTotal story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count counter__count--invalid"
+  >
+    12
+  </span>
+   / 
+  10
+</div>
+`;
+
+exports[`<Counter /> Percentage story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count"
+  >
+    30
+    %
+  </span>
+</div>
+`;
+
+exports[`<Counter /> PercentageChanging story renders snapshot 1`] = `
+<div
+  class="flex w-[384px] flex-col gap-spacing-size-1"
+>
+  <input
+    aria-label="Type to change the count"
+    class="input"
+    value="Some initial text"
+  />
+  <div
+    class="text text--body-sm counter"
+  >
+    <span
+      class="counter__count"
+    >
+      85
+      %
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Counter /> PercentageOverTotal story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count counter__count--invalid"
+  >
+    120
+    %
+  </span>
+</div>
+`;
+
+exports[`<Counter /> PercentageRounded story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count"
+  >
+    33
+    %
+  </span>
+</div>
+`;
+
+exports[`<Counter /> PercentageZeroTotal story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count counter__count--invalid"
+  >
+    0
+    %
+  </span>
+</div>
+`;
+
+exports[`<Counter /> ZeroTotal story renders snapshot 1`] = `
+<div
+  class="text text--body-sm counter"
+>
+  <span
+    class="counter__count counter__count--invalid"
+  >
+    3
+  </span>
+   / 
+  0
+</div>
+`;

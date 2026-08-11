@@ -8,6 +8,7 @@ import type {
 } from '../../util/utility-types';
 
 import type { Status } from '../../util/variant-types';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Text from '../Text';
@@ -220,10 +221,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
       styles['textarea-field__hint'],
       disabled && styles['textarea-field__required-text--disabled'],
     );
-    const fieldLengthCountClassName = clsx(
-      (textExceedsMaxLength || textExceedsRecommendedLength) &&
-        styles['textarea-field--invalid-length'],
-    );
 
     const textareaClassName = clsx(
       readOnly && styles['textarea-field__textarea--read-only'],
@@ -274,13 +271,11 @@ export const TextareaField: TextareaFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <Text
+              <Counter
                 className={styles['textarea-field__character-counter']}
-                preset="body-sm"
-              >
-                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLengthShown}
-              </Text>
+                count={fieldLength}
+                total={maxLengthShown}
+              />
             )}
             {label && subLabel && (
               <div className={subLabelClassName}>

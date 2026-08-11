@@ -100,15 +100,12 @@
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
+/**
+ * Placement only. Color and the over-length treatment belong to `Counter`.
+ */
 .input-field__character-counter {
   text-align: right;
   flex: 1 0 50%;
-
-  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
-}
-
-.input-field--invalid-length {
-  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
 }
 
 .input-field__required-text--disabled {
