@@ -9,7 +9,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['beta', 'version:1.0'],
+  tags: ['beta', 'version:1.0.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ProgressBar>;
