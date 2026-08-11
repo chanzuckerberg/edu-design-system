@@ -38,7 +38,7 @@ const meta: Meta<typeof Counter> = {
     count: 3,
     total: 10,
   },
-  tags: ['autodocs', 'beta', 'version:1.0.0'],
+  tags: ['autodocs', 'beta', 'ai', 'version:1.0.0'],
 };
 
 export default meta;

@@ -31,7 +31,7 @@ export type CounterProps = {
    * **Default is `"fraction"`**.
    */
   variant?: 'fraction' | 'percentage';
-} & React.HTMLAttributes<HTMLElement>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
 
 /**
  * An internal count of a current value against its total, written either as a fraction
