@@ -67,9 +67,37 @@ const PROGRESS_BAR_MINIMUM = 0;
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * Components used to visually represent user progress through a series of steps. Not to be confused with the `LoadingIndicator`.
+ * ## Usage
  *
- * `ProgressBar` can be the child of a container like `Modal` or `Card`. When used in such a container, `context`=`embedded` should be used to ensure the left and right edges of the progressBar sit flush within the edges of the container.
+ * Show the level of completeness for a given task or process. Indicate the percentage of
+ * completion for a discrete number of steps. Not to be confused with the `LoadingIndicator`, which
+ * covers waiting rather than measured progress.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standalone | The default. Shows the bar with its labels above or beside it, set by `labelLayout`. | Page-level progress after a user action. |
+ * | Embedded | `context="embedded"` drops the labels and lets the bar sit flush with its container's edges. | A bar along the edge of a `Modal` or `Card`. |
+ *
+ * `ProgressBar` can be the child of a container like `Modal` or `Card`. When used in such a
+ * container, `context`=`embedded` should be used to ensure the left and right edges of the
+ * progressBar sit flush within the edges of the container.
+ *
+ * `value` is read against `max` (default `1`) and clamped to that range, so the bar cannot report
+ * below zero or above 100%. Supply `valueLabel` to replace the computed percentage with your own
+ * text, or pass an empty string to suppress it.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `ProgressBar` when content can be progressively completed and is triggered by user action (e.g., a click of a button) at the page level.
+ * * Use `ProgressBar` to show a measure within a form or other display, where the bar is static and reflects useful details.
+ * * Give every bar a name. The type requires either a visible `descriptionLabel` or an `aria-label`, which matters most for `context="embedded"`, where no visible label renders.
+ *
+ * ### Don'ts
+ *
+ * * Avoid using `ProgressBar` when you have a wizard like experience. Use `VisualPageIndicator` instead.
+ * * Avoid `ProgressBar` without labels for user feedback.
  */
 export const ProgressBar = ({
   className,
