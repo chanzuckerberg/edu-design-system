@@ -151,12 +151,13 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
  *
  * * Always have a visible label when adding a hint.
  * * Use short, instructional labels when necessary and use sentence case.
- * * Use `fieldNote` helper text when necessary, favoring examples over instructions.
+ * * Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).
  * * For errors, provide instructions for fixing the issue and explain what is happening.
  *
  * ### Don'ts
  *
  * * Don't use colons or periods at the end of labels, and don't omit labels.
+ * * Don't have a hint without a visible label.
  * * Don't force the use of helper text—there is frequently no need for it.
  * * Don't place placeholder text within the field, as it can cause accessibility issues.
  */
