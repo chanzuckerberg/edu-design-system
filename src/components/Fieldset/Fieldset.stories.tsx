@@ -8,6 +8,10 @@ export default {
   title: 'Components/Fieldset',
   component: Fieldset,
   parameters: {
+    docs: {
+      subtitle:
+        'A reusable container for a fieldset that includes a legend and one or more form inputs, like radio buttons or checkboxes.',
+    },
     layout: 'centered',
   },
   argTypes: {
