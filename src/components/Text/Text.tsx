@@ -24,10 +24,32 @@ export type TextProps = {
 } & React.HTMLAttributes<HTMLElement>; // TODO-AH: add in each possible element and spread in <Markdown>
 
 /**
- * The Text component decorates `<p>` and `<span>` with typographic variants. Use
- * typography presets to style the text via `preset`.
+ * ## Usage
  *
- * For headers, please use `Heading`.
+ * `Text` is strictly used to style non-heading tags used in a page. Typography presets cover body
+ * copy, labels, captions, overlines, code, and other treatments.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Paragraph | The default. `as="p"` for a standalone block of copy. | Body text, descriptions, help text. |
+ * | Span | `as="span"` for text that sits inline within a larger block. | A label beside an icon, inline emphasis. |
+ * | Div | `as="div"` when the text needs to wrap other block content. | Text composed alongside nested layout. |
+ *
+ * Set the treatment with `preset`, which defaults to `body-md`. The preset scale is shared across
+ * the design system, so heading-level values appear in it too. Reach for `Heading` when you need
+ * heading semantics; `Text` only renders `p`, `span`, and `div`.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `Text` for all typographical treatments, and specify a block (`<div>` / `<p>`) tag, or `<span>` as desired.
+ *
+ * ### Don'ts
+ *
+ * * Never use any utility classes on raw HTML tags.
+ * * Never use TailwindCSS or other styles on raw HTML tags.
+ * * Don't use a heading preset on `Text` to imitate a heading. It changes the look without adding the semantics, so the document outline stays wrong. Use `Heading` instead.
  */
 export const Text = forwardRef(
   (
