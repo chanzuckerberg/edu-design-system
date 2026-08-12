@@ -37,7 +37,18 @@ export type FieldLabelProps = {
 };
 
 /**
- * Label associated with an input element or field.
+ * ## Usage
+ *
+ * `FieldLabel` is used to add a label to EDS's controls (e.g., `InputField`, `TextareaField`,
+ * `Select`, `Combobox`). This component should not be used in isolation, but can be used to label
+ * any custom input controls.
+ *
+ * Pair `htmlFor` with the control's `id` so the label and the control are associated. The EDS
+ * controls that render a label for you also expose it as a subcomponent, so `InputField.Label` and
+ * `TextareaField.Label` are this component.
+ *
+ * For guidance on how to word a label, see the do's and don'ts on the control itself (for example,
+ * `InputField`).
  */
 export const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
   ({ children, className, htmlFor, size = 'lg', disabled, ...other }, ref) => {
