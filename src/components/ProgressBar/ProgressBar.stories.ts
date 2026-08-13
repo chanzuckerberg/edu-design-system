@@ -9,7 +9,7 @@ export default {
   parameters: {
     docs: {
       subtitle:
-        'Component used to visually represent user progress through a series of steps.',
+        'Component used to visually represent user progress through a series of discrete portions, or a percentage.',
     },
     layout: 'centered',
   },
