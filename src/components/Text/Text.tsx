@@ -47,8 +47,7 @@ export type TextProps = {
  *
  * ### Don'ts
  *
- * * Never use any utility classes on raw HTML tags.
- * * Never use TailwindCSS or other styles on raw HTML tags.
+ * * Never use TailwindCSS or other styles on raw HTML tags to style/format typography.
  * * Don't use a heading preset on `Text` to imitate a heading. It changes the look without adding the semantics, so the document outline stays wrong. Use `Heading` instead.
  */
 export const Text = forwardRef(
