@@ -11,6 +11,10 @@ export default {
   title: 'Components/PopoverListItem',
   component: PopoverListItem,
   parameters: {
+    docs: {
+      subtitle:
+        'Structure and styles for an individual item in a popover that contains a list of items.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.1.1'],
