@@ -96,7 +96,7 @@ const PROGRESS_BAR_MINIMUM = 0;
  *
  * ### Don'ts
  *
- * * Avoid using `ProgressBar` when you have a wizard like experience. Use `VisualPageIndicator` instead.
+ * * Avoid using `ProgressBar` when you have a wizard-like, paginated experience. Use `VisualPageIndicator` instead.
  * * Avoid `ProgressBar` without labels for user feedback.
  */
 export const ProgressBar = ({
