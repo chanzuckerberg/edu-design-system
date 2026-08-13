@@ -146,8 +146,8 @@ export function getInitials(fromName: string): string {
  *
  * ### Don'ts
  *
- * * Rely on the icon or text as the only indication of which user is being represented. Use adjacent text, or `aria-*` tags for screen-reader support.
- * * Use very large image files for user profiles in `Avatar`. Save a specific, low-resolution file for user avatar images.
+ * * Avoid relying on the icon or text as the only indication of which user is being represented. Use adjacent text, or `aria-*` tags for screen-reader support.
+ * * Avoid using very large image files for user profiles in `Avatar`. Save a specific, low-resolution file for user avatar images.
  *
  * ## Resources
  *
