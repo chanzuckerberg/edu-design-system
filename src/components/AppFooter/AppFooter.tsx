@@ -79,6 +79,8 @@ export type AppFooterEventHandler = (
  *
  * * Don't use overly verbose text for any link; keep them to 1-3 words each.
  * * Don't use the AppFooter when working on a Single-page Application (SPA).
+ * * Don't use a logo for any logged-in experience. Logos in `AppFooter` are just for
+ *   landing/marketing pages.
  *
  * ## Resources
  *
