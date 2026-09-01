@@ -20,6 +20,10 @@ export default {
     ),
   },
   parameters: {
+    docs: {
+      subtitle:
+        'List of links showing the user where they are in the system and allowing them to navigate to parent pages.',
+    },
     layout: 'centered',
   },
   argTypes: {
