@@ -6,6 +6,10 @@ export default {
   title: 'Components/Hr',
   component: Hr,
   parameters: {
+    docs: {
+      subtitle:
+        'Horizontal rule component to present a horizontal line separating content.',
+    },
     layout: 'centered',
   },
   args: {
