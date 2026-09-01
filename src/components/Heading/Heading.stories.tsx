@@ -7,6 +7,9 @@ export default {
   title: 'Components/Heading',
   component: Heading,
   parameters: {
+    docs: {
+      subtitle: 'A component for styling heading text (`<h1>`-`<h6>`).',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0'],
