@@ -8,6 +8,10 @@ export default {
   component: Skeleton,
 
   parameters: {
+    docs: {
+      subtitle:
+        'Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout.',
+    },
     layout: 'centered',
   },
 

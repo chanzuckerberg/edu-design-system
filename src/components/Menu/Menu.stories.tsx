@@ -15,6 +15,9 @@ export default {
   title: 'Components/Menu',
   component: Menu,
   parameters: {
+    docs: {
+      subtitle: 'A dropdown that reveals or hides a list of actions.',
+    },
     layout: 'centered',
     // Using this motion preference for components where they trigger animations on mount
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },

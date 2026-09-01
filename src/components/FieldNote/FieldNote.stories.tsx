@@ -9,6 +9,9 @@ export default {
   title: 'Components/FieldNote',
   component: FieldNote,
   parameters: {
+    docs: {
+      subtitle: 'Fieldnote component wraps text to describe other components.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0'],

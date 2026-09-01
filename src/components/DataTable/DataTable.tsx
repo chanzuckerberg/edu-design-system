@@ -158,11 +158,57 @@ const DataTableContext = createContext<Pick<DataTableProps, 'size'>>({
 });
 
 /**
- * `import {DataTable} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * DataTable represents a full-featured data view for controlling and sorting. It:
- * - handles responsive behaviors
- * - sort behavior on individual columns
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Basic | Simple table layout with rows and columns; no interactivity. | Static reports. Read-only data display. |
+ * | Selectable rows | Allows row selection via checkboxes or row click. | Bulk actions. Item management. |
+ * | Editable | Inline cell or row editing capabilities. | Spreadsheet-like tools. Admin controls. |
+ * | Expandable rows | Rows can expand to show nested or detailed data. | Order summaries. Transaction breakdowns. |
+ * | Column customization | Users can show/hide or reorder columns. | Power-user features. Data-heavy interfaces. |
+ * | Loading & empty states | Shows skeletons or messaging when data is loading or unavailable. | Dynamic data tables. |
+ *
+ * ### Best Practices
+ *
+ * * Use small tables for compact density or size-constrained containers like modals; use medium tables to balance density and whitespace.
+ * * Use lined tables for static data and striped tables for data entered by users.
+ * * Use section headers to organize data when there are 2 or more categories.
+ * * Use column dividers only when they enhance clarity.
+ * * When `isSortable`, sort by the leading (leftmost) column by default.
+ * * Make sure to only use stable data references for columns/data passed to `useReactTable`: see Resources below.
+ *
+ * ## Interaction
+ *
+ * Tables scroll horizontally when their width exceeds the available space, and vertically when a
+ * height is set; the first column is sticky by default. Sortable column headers reveal a sort
+ * indicator on hover and toggle between ascending and descending on click, with only one column
+ * sorted at a time. When selectable, a leading column of checkboxes is added; the header checkbox
+ * selects or deselects all rows and shows an indeterminate state for partial selections. Action
+ * cells sit on the trailing edge, contain no more than three (typically tertiary, icon-only)
+ * buttons, and are shown on hover by default.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Write headers that are informative, descriptive, concise, and scannable.
+ * * Include units of measurement in headers so they aren't repeated throughout the columns.
+ * * Use sentence case for headers and columns, and be consistent with decimals.
+ * * Wrap important content and truncate secondary information.
+ * * Use clear, descriptive headers and a meaningful title so screen readers can navigate the table.
+ *
+ * ### Don'ts
+ *
+ * * Use tables for layout.
+ * * Include blank rows or columns; adjust row and column spacing instead.
+ * * Use color as the only means of conveying meaning.
+ *
+ * ### Resources
+ *
+ * * https://tanstack.com/table/latest
+ * * https://tanstack.com/table/latest/docs/faq
+ *
  */
 export function DataTable<T>({
   actions,
@@ -193,6 +239,7 @@ export function DataTable<T>({
           <div
             className={clsx(
               styles['data-table__caption-container'],
+              size && styles[`data-table--size-${size}`],
               isStatusEligible && styles['data-table--status-eligible'],
             )}
           >
@@ -203,7 +250,7 @@ export function DataTable<T>({
                     aria-hidden="true"
                     as="div"
                     className={styles['data-table__caption']}
-                    preset="headline-md"
+                    preset={size === 'md' ? 'title-lg' : 'title-md'}
                   >
                     {caption}
                   </Text>
@@ -213,7 +260,7 @@ export function DataTable<T>({
                     aria-hidden="true"
                     as="div"
                     className={styles['data-table__subCaption']}
-                    preset="headline-sm"
+                    preset={size === 'md' ? 'body-md' : 'body-sm'}
                   >
                     {subCaption}
                   </Text>
@@ -409,52 +456,52 @@ export const DataTableHeaderCell = ({
   onSortClick,
   subLabel,
   ...rest
-}: DataTableHeaderCellProps) => {
-  const { size } = useContext(DataTableContext);
-
-  const headerCellClassName = clsx(
-    styles['data-table__header-cell'],
-    alignment && styles[`data-table__cell--alignment-${alignment}`],
-    hasHorizontalDivider && styles['data-table__cell--has-horizontal-divider'],
-  );
-  return (
-    <Text as="div" className={headerCellClassName} {...rest} preset="title-md">
-      {leadingIcon && (
-        <Icon
-          className={styles['data-cell__cell--icon']}
-          name={leadingIcon}
-          purpose="decorative"
-          size="16px"
-        />
-      )}
-      {(children || subLabel) && (
-        <div className={clsx(className, styles['data-table__cell-text'])}>
-          <Text as="span" preset={size === 'md' ? 'title-md' : 'title-sm'}>
-            {children}
+}: DataTableHeaderCellProps) => (
+  <Text
+    as="div"
+    className={clsx(
+      styles['data-table__header-cell'],
+      alignment && styles[`data-table__cell--alignment-${alignment}`],
+      hasHorizontalDivider &&
+        styles['data-table__cell--has-horizontal-divider'],
+    )}
+    {...rest}
+  >
+    {leadingIcon && (
+      <Icon
+        className={styles['data-cell__cell--icon']}
+        name={leadingIcon}
+        purpose="decorative"
+        size="16px"
+      />
+    )}
+    {(children || subLabel) && (
+      <div className={clsx(className, styles['data-table__cell-text'])}>
+        <Text as="div" preset="title-xs">
+          {children}
+        </Text>
+        {subLabel && (
+          <Text
+            as="span"
+            className={styles['data-table__cell-subLabel']}
+            preset="body-xs"
+          >
+            {subLabel}
           </Text>
-          {subLabel && (
-            <Text
-              as="span"
-              className={styles['data-table__cell-subLabel']}
-              preset="body-sm"
-            >
-              {subLabel}
-            </Text>
-          )}
-        </div>
-      )}
-      {isSortable && sortDirection && (
-        <Button
-          iconLayout="icon-only"
-          onClick={onSortClick}
-          rank="tertiary"
-          size="md"
-          {...sortAttrs(sortDirection)}
-        />
-      )}
-    </Text>
-  );
-};
+        )}
+      </div>
+    )}
+    {isSortable && sortDirection && (
+      <Button
+        iconLayout="icon-only"
+        onClick={onSortClick}
+        rank="tertiary"
+        size="md"
+        {...sortAttrs(sortDirection)}
+      />
+    )}
+  </Text>
+);
 
 export const DataTableDataCell = ({
   alignment = 'leading',

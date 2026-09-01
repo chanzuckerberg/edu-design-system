@@ -9,6 +9,10 @@ export default {
   component: CodeBlock,
   tags: ['beta', 'version:1.0'],
   parameters: {
+    docs: {
+      subtitle:
+        'Component used to render a block of code for use alongside other components. Allows for copying code.',
+    },
     a11y: {
       config: {
         rules: [

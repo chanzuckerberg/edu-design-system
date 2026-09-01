@@ -3,6 +3,7 @@ import React from 'react';
 
 import { assertEdsUsage } from '../../util/logging';
 import type { EitherInclusive } from '../../util/utility-types';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import Text from '../Text';
 
@@ -66,11 +67,37 @@ const PROGRESS_BAR_MINIMUM = 0;
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {ProgressBar} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Components used to visually represent user progress through a series of steps. Not to be confused with the `LoadingIndicator`.
+ * Show the level of completeness for a given task or process. Indicate the percentage of
+ * completion for a discrete number of steps. Not to be confused with the `LoadingIndicator`, which
+ * covers waiting rather than measured progress.
  *
- * `ProgressBar` can be the child of a container like `Modal` or `Card`. When used in such a container, `context`=`embedded` should be used to ensure the left and right edges of the progressBar sit flush within the edges of the container.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standalone | The default. Shows the bar with its labels above or beside it, set by `labelLayout`. | Page-level progress after a user action. |
+ * | Embedded | `context="embedded"` drops the labels and lets the bar sit flush with its container's edges. | A bar along the edge of a `Modal` or `Card`. |
+ *
+ * `ProgressBar` can be the child of a container like `Modal` or `Card`. When used in such a
+ * container, `context`=`embedded` should be used to ensure the left and right edges of the
+ * progressBar sit flush within the edges of the container.
+ *
+ * `value` is read against `max` (default `1`) and clamped to that range, so the bar cannot report
+ * below zero or above 100%. Supply `valueLabel` to replace the computed percentage with your own
+ * text, or pass an empty string to suppress it.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `ProgressBar` when content can be progressively completed and is triggered by user action (e.g., a click of a button) at the page level.
+ * * Use `ProgressBar` to show a measure within a form or other display, where the bar is static and reflects useful details.
+ * * Give every bar a name. The type requires either a visible `descriptionLabel` or an `aria-label`, which matters most for `context="embedded"`, where no visible label renders.
+ *
+ * ### Don'ts
+ *
+ * * Avoid using `ProgressBar` when you have a wizard-like, paginated experience. Use `VisualPageIndicator` instead.
+ * * Avoid `ProgressBar` without labels for user feedback.
  */
 export const ProgressBar = ({
   className,
@@ -92,8 +119,17 @@ export const ProgressBar = ({
 
   // compute display values by checking ranges and normalizing outputs
   const computedValue = Math.max(Math.min(value, max), PROGRESS_BAR_MINIMUM);
-  const computedValueLabel =
-    valueLabel ?? `${Math.round((computedValue / max) * 100)}%`;
+
+  // A caller-supplied `valueLabel` replaces the computed percentage outright, including an empty
+  // string used to suppress the value entirely
+  const shouldRenderPercentage =
+    valueLabel === undefined || valueLabel === null;
+
+  const shouldRenderLabels = !!(
+    descriptionLabel ||
+    shouldRenderPercentage ||
+    valueLabel
+  );
 
   const trackClassName = clsx(
     styles['progress-bar__track'],
@@ -117,20 +153,33 @@ export const ProgressBar = ({
   // TODO: use <progress> component instead, and override appearance?
   return (
     <div className={componentClassName}>
-      {context === 'standalone' && (descriptionLabel || computedValueLabel) && (
+      {context === 'standalone' && shouldRenderLabels && (
         <div className={styles['progress-bar__labels']}>
           {descriptionLabel && (
             <FieldLabel id={progressBarId} size="md">
               {descriptionLabel}
             </FieldLabel>
           )}
-          {computedValueLabel && (
+          {/*
+            Always the percentage variant here: progress is a share of the whole, never a count
+            of discrete items. `computedValue` is already clamped to `max`, so the counter's
+            over-total treatment cannot trigger.
+          */}
+          {shouldRenderPercentage && (
+            <Counter
+              className={styles['progress-bar__valueLabel']}
+              count={computedValue}
+              total={max}
+              variant="percentage"
+            />
+          )}
+          {valueLabel && (
             <Text
               as="span"
               className={styles['progress-bar__valueLabel']}
               preset="body-sm"
             >
-              {computedValueLabel}
+              {valueLabel}
             </Text>
           )}
         </div>

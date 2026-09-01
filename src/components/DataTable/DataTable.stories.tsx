@@ -20,6 +20,10 @@ export default {
   title: 'Components/DataTable',
   component: DataTable,
   parameters: {
+    docs: {
+      subtitle:
+        'Tables display and organize data in a structured format. They include customizations for size, style, interactivity, and data presentation.',
+    },
     chromatic: {
       viewports: [
         chromaticViewports.ipadMini,
@@ -36,7 +40,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.1.0'],
 } as Meta<Args>;
 
 type Args = DataTableProps;
@@ -52,6 +56,7 @@ type Person = DataTableWithStatus<{
 }>;
 
 // Specifying the example (static) data for the table to use with tanstack primitives
+// Note: Only use stable data references to prevent infinite loops during render. See https://tanstack.com/table/latest/docs/faq
 const defaultData: Person[] = [
   {
     firstName: 'Joe',
@@ -360,7 +365,7 @@ export const Selectable: StoryObj<Args> = {
           // Widths can be set on header cells (using pixels)
           // More information: https://tanstack.com/table/latest/docs/guide/column-sizing#column-widths
           // TODO(design): what is the column size for the selectable column
-          size: 32,
+          size: 40,
         },
         columnHelper.accessor('firstName', {
           header: () => (
@@ -510,7 +515,7 @@ export const VerticalDivider: StoryObj<Args> = {
           // Widths can be set on header cells (using pixels)
           // More information: https://tanstack.com/table/latest/docs/guide/column-sizing#column-widths
           // TODO(design): what is the column size for the selectable column
-          size: 32,
+          size: 40,
         },
         columnHelper.accessor('firstName', {
           header: () => (

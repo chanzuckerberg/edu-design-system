@@ -39,10 +39,18 @@ export type NumberIconProps = {
 };
 
 /**
- * `import {NumberIcon} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Treats a numeral as an icon by wrapping it in a container and adding color/spacing.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Progress indicator | Shows where you are in a process that contains multiple distinct steps. | Filter selectors; user profile actions; navigation inside buttons. |
+ * | Steps | Emphasizes steps in a procedure that is outlined on screen. | Process steps. |
  *
+ * ### Best Practices
+ *
+ * * Be sure the number icon size is consistent throughout your application.
+ * * When used next to text, the number icon should be center-aligned.
+ * * Adding adequate space around the icon allows for legibility and touch. A minimum touch target area of 48px is recommended.
  */
 export const NumberIcon = ({
   className,

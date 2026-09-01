@@ -9,6 +9,10 @@ const meta: Meta<typeof InputField> = {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
+    docs: {
+      subtitle:
+        'Input fields are used to gather text-based input. They are represented by a rectangular box where the user can enter and edit their input.',
+    },
     layout: 'centered',
     backgrounds: {
       default: 'background-utility-inverse-high-emphasis',
@@ -38,7 +42,7 @@ const meta: Meta<typeof InputField> = {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1.1'],
+  tags: ['autodocs', 'version:2.1.3'],
 };
 
 export default meta;
@@ -288,9 +292,10 @@ export const ShowHint: Story = {
 /**
  * You can render certain components **within** an `InputField`, such as a button, icon, or other
  * small component. This facility is used to implement controls that should appear visibly nested
- * within the button, to the right-hand side.
+ * within the field, at the trailing edge.
  *
- * Please keep the text of the button brief (button width < 96px)
+ * The field measures the content you pass and reserves matching space, so the text area always
+ * clears it.
  */
 export const InputWithin: Story = {
   parameters: {
@@ -315,10 +320,10 @@ export const InputWithin: Story = {
 };
 
 /**
- * The button has a maximum width, so if more text is placed in the button than this width can handle, it
- * will be trimmed.
+ * Content in the slot is free to be as wide as it needs. The text area shrinks to match, so a
+ * longer button label is not trimmed.
  *
- * Please keep the text of the button brief (button width < 96px)
+ * Very wide content is still bounded, so that some usable text area always remains.
  */
 export const LongInputWithin: Story = {
   parameters: {
@@ -331,12 +336,42 @@ export const LongInputWithin: Story = {
   },
   render: () => (
     <InputField
+      defaultValue="Text that runs up against the button"
       inputWithin={
         <Button icon="open-in-new" iconLayout="left" rank="secondary" size="sm">
           Button with extra text
         </Button>
       }
       label="Input field with button inside"
+      type="text"
+    />
+  ),
+};
+
+/**
+ * The measured width can be overridden with the `--input-field__input-within-width` CSS custom
+ * property, for cases where a fixed reservation is preferred (for instance, to keep a set of fields
+ * aligned when their embedded buttons have differing labels).
+ */
+export const InputWithinFixedWidth: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+  },
+  render: () => (
+    <InputField
+      defaultValue="Text that stops at the reserved space"
+      inputWithin={
+        <Button rank="secondary" size="sm">
+          Copy
+        </Button>
+      }
+      label="Input field with a fixed reservation"
+      style={{ '--input-field__input-within-width': '120px' }}
       type="text"
     />
   ),

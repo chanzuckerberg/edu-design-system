@@ -174,14 +174,49 @@ let showNameWarning = true;
 const SelectContext = React.createContext<SelectContextType>({});
 
 /**
- * `import {Select} from "@chanzuckerberg/eds";`
- *
- * A popover component that reveals or hides a list of options from which to select.
+ * ## Usage
  *
  * Supports controlled and uncontrolled behavior, using a render prop in the latter case.
  *
- * See more at <https://headlessui.com/react/menu>
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standard | A dropdown list that reveals a set of options; one can be selected. | Country selector. Sort order. Single-choice forms. |
+ * | Searchable | Includes a text input for filtering options in real time. | Long lists (e.g., cities, tags). Large datasets. |
+ * | Multi-select | Allows multiple options to be selected from the list. | Filter panels. Role or permission assignments. |
+ * | Disabled | Non-interactive; used to show unavailable or inactive states. | Feature-gated selections. Incomplete forms. |
+ * | Preselected | Default selection appears before user interacts. | Recommended settings. "Most common" default. |
+ * | Inline | Embedded within table rows or compact UIs. | Editable data tables. Quick action cells. |
  *
+ * ### Best Practices
+ *
+ * * Select can be used in forms and is meant to pick a value from a list of values, whereas Menus can be used for things like commands.
+ * * Order the menu options logically to make it easier for users to find the option they want. Default to alphabetical order.
+ * * Use a Select input for longer lists of options. A Select should never have only 2 options; 3 selections can be acceptable, but consider a Checkbox group or Radio button group instead so users can see all options at once.
+ * * Keep the select menu the same width as the select field that triggered it.
+ *
+ * ## Interaction
+ *
+ * In single-select mode, only one selection can be made. In multi-select mode, one or more selections can be made from the list.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use short, precise labels whenever possible.
+ * * Avoid truncated items.
+ * * In short lists, order from most common to least common choices.
+ * * In longer lists use alphabetical order, but if there are 2 or 3 very common selections, consider repeating them at the top of the list.
+ * * Use sentence case.
+ * * Place the most common choices at the top of the list to assist visually impaired users.
+ *
+ * ### Don'ts
+ *
+ * * Use periods at the end of labels.
+ * * Place placeholder text within the field; it can cause accessibility issues with color contrast, inconsistent screen-reader behavior, and text disappearing as users type.
+ *
+ * ## Resources
+ *
+ * * https://headlessui.com/react/menu
  */
 export function Select({
   'aria-label': ariaLabel,

@@ -49,15 +49,18 @@ export type PopoverListItemProps = {
 };
 
 /**
- * `import {PopoverListItem} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * This abstracts the structure of an item in a popover, when the popover contains a
- * list of items (e.g., Menus and Selects)
- * - Contains styles for when active/disabled or not
- * - contains styles for when there is an icon on the left
+ * Styles and containers for individual elements in internal Popover-like components (e.g., `Menu`,
+ * `Select`). This should not be used directly by consumers.
  *
- * Given headless implements listbox options as a renderProp, this can work for both
- * Listbox and Menu examples, in the latter case not specifying an icon
+ * Each item lays out four optional slots: `leadingContent` at the start, the `children` label,
+ * `subLabel` beneath the label, and `trailingContent` at the end.
+ *
+ * `Menu`, `Select`, and `Combobox` compose this for you and drive the `isFocused`, `isDisabled`,
+ * and `isDestructiveAction` states from their own render props. Because HeadlessUI implements
+ * listbox options as a render prop, the same item works for both listbox and menu shapes. Reach
+ * for those components rather than this one.
  */
 export const PopoverListItem = React.forwardRef<
   HTMLDivElement,

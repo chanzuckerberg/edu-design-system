@@ -83,9 +83,32 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
   };
 
 /**
- * `import {Menu} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * A popover that reveals or hides a list of actions. Menu items can contain icons (all should contain one, or none should), and other contents provided by `PopoverListItem`.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Dropdown | A list of actions or links that appears when a button or label is clicked. | Filter selectors; user profile actions; navigation inside buttons. |
+ * | Context | Appears on right-click or long-press; offers contextual options. | File actions; custom user interactions. |
+ * | Hamburger | Collapsible navigation menu, often hidden behind an icon. | Mobile nav; space-constrained UIs. |
+ * | Overflow/More | Compact menu for additional actions, often shown as "⋮" or "...". | Table row actions; toolbar options. |
+ *
+ * ## Interaction
+ *
+ * The most common trigger for a Menu is a button with a chevron. An icon-only button might also trigger a Menu, and designers can define a custom trigger.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use short, precise labels.
+ * * Place the most-used options at the top of the menu.
+ * * Group similar commands, and order meaningfully in long menus using dividers between sections.
+ *
+ * ### Don'ts
+ *
+ * * Overload menus; try to stay below 12 options in a menu.
+ * * Use helper text with menu options unless absolutely necessary.
+ * * Truncate menu items unless absolutely necessary. If truncation is required, use a tooltip to reveal the full text on hover.
  */
 export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);

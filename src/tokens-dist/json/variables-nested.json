@@ -204,7 +204,7 @@
         "850": "#2C2400",
         "900": "#1D1800",
         "950": "#100D01",
-        "050": "#FFFC83"
+        "050": "#FFFC93"
       },
       "green": {
         "100": "#C2ECD9",
@@ -337,7 +337,7 @@
             "active": "#125B3A"
           },
           "dataTable": {
-            "headerCell": "#F4F1EF"
+            "headerCell": "#FAF9F8"
           },
           "input": "#FFFFFF",
           "radioButton": {
@@ -450,7 +450,7 @@
             },
             "warning": {
               "lowEmphasis": {
-                "@": "#FFFC83",
+                "@": "#FFFC93",
                 "hover": "#F6EE65",
                 "active": "#EDDE45"
               },

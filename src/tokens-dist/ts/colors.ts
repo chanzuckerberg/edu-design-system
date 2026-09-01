@@ -68,7 +68,7 @@ export const EdsColorYellow800 = '#392F01';
 export const EdsColorYellow850 = '#2C2400';
 export const EdsColorYellow900 = '#1D1800';
 export const EdsColorYellow950 = '#100D01';
-export const EdsColorYellow050 = '#FFFC83';
+export const EdsColorYellow050 = '#FFFC93';
 export const EdsColorGreen100 = '#C2ECD9';
 export const EdsColorGreen150 = '#A1E1C4';
 export const EdsColorGreen200 = '#7ED6AD';
@@ -126,7 +126,7 @@ export const EdsThemeColorBackgroundAppHeaderActive = '#F4F1EF';
 export const EdsThemeColorBackgroundCheckbox = '#19955D';
 export const EdsThemeColorBackgroundCheckboxHover = '#177A4D';
 export const EdsThemeColorBackgroundCheckboxActive = '#125B3A';
-export const EdsThemeColorBackgroundDataTableHeaderCell = '#F4F1EF';
+export const EdsThemeColorBackgroundDataTableHeaderCell = '#FAF9F8';
 export const EdsThemeColorBackgroundInput = '#FFFFFF';
 export const EdsThemeColorBackgroundRadioButton = '#19955D';
 export const EdsThemeColorBackgroundRadioButtonHover = '#177A4D';
@@ -206,7 +206,7 @@ export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisHover =
   '#125B3A';
 export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisActive =
   '#0E442B';
-export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FFFC83';
+export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FFFC93';
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasisHover = '#F6EE65';
 export const EdsThemeColorBackgroundUtilityWarningLowEmphasisActive = '#EDDE45';
 export const EdsThemeColorBackgroundUtilityWarningHighEmphasis = '#CDB825';

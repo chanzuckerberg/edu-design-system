@@ -9,6 +9,10 @@ const meta: Meta<typeof Select> = {
   title: 'Components/Select',
   component: Select,
   parameters: {
+    docs: {
+      subtitle:
+        "A popover that reveals or hides a list of options. Depending on the component's configuration, the user may select one or more options.",
+    },
     layout: 'centered',
     // Using this motion preference for components where they trigger animations on mount
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
@@ -76,6 +80,11 @@ const exampleOptions: SelectOption[] = [
     key: '3',
     label: 'Birds',
     subLabel: 'Living relics!',
+  },
+  {
+    key: '4',
+    label: 'Rabbits',
+    subLabel: 'Langomorphs are rad.',
   },
 ];
 
@@ -428,6 +437,7 @@ export const UncontrolledHeadless: StoryObj = {
                   Birds: '🐦🦆🦜',
                   Dogs: '🐶🐕🐩',
                   Cats: '🐈🐱🐈‍⬛',
+                  Rabbits: '🐇🐰',
                 }[value.label as string]
               }
             </button>

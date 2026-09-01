@@ -369,7 +369,7 @@
           "group": "color"
         },
         "050": {
-          "value": "#FFFC83",
+          "value": "#FFFC93",
           "group": "color"
         }
       },
@@ -794,12 +794,13 @@
           },
           "dataTable": {
             "headerCell": {
-              "value": "{eds.color.neutral.050}",
+              "value": "{eds.color.neutral.025}",
               "group": "color"
             }
           },
           "input": {
             "value": "{eds.color.white}",
+            "description": "For input fields like text input and text area which have a static background color regardless of the base color they sit on.",
             "group": "color"
           },
           "radioButton": {
@@ -860,10 +861,12 @@
             "base": {
               "1": {
                 "value": "{eds.color.white}",
+                "description": "Default color for screen backgrounds.",
                 "group": "color"
               },
               "2": {
                 "value": "{eds.color.white}",
+                "description": "Alternate color for screen backgrounds.",
                 "group": "color"
               },
               "3": {
@@ -874,14 +877,17 @@
             "container": {
               "@": {
                 "value": "{eds.color.white}",
+                "description": "Default color for large container backgrounds, like cards and modals.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.neutral.025}",
+                "description": "Hover state for large container backgrounds, like cards and modals.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.neutral.050}",
+                "description": "Active state for large container backgrounds, like cards and modals.",
                 "group": "color"
               },
               "selected": {
@@ -892,10 +898,12 @@
             "overlay": {
               "lowEmphasis": {
                 "value": "rgba(250, 249, 248, 0.60)",
+                "description": "Overlay for less-disruptive modal experiences, such as on a marketing website.",
                 "group": "color"
               },
               "highEmphasis": {
                 "value": "rgba(36, 36, 35, 0.80)",
+                "description": "Overlay for more-disruptive modal experiences, such as when confirming an irreversible action.",
                 "group": "color"
               }
             },
@@ -909,56 +917,68 @@
               "noEmphasis": {
                 "@": {
                   "value": "rgba(255, 255, 255, 0.00)",
+                  "description": "Neutral objects with a transparent background, like neutral secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.050}",
+                  "description": "Hover state for neutral objects with a transparent background, like neutral secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.100}",
+                  "description": "Active state for neutral objects with a transparent background, like neutral secondary and tertiary buttons.",
                   "group": "color"
                 }
               },
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.050}",
+                  "description": "Neutral objects with a low-emphasis background, like neutral alerts and tags.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.100}",
+                  "description": "Hover state for neutral objects with a low-emphasis background, like neutral alerts and tags.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.150}",
+                  "description": "Active state for neutral objects with a low-emphasis background, like neutral alerts and tags.",
                   "group": "color"
                 }
               },
               "mediumEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.550}",
+                  "description": "Neutral objects with a medium-emphasis background, like neutral alerts and tags.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Hover state for neutral objects with a medium-emphasis background, like neutral alerts and tags.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Active state for neutral objects with a medium-emphasis background, like neutral alerts and tags.",
                   "group": "color"
                 }
               },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "Neutral objects with a high-emphasis background, like toggle tracks.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.800}",
+                  "description": "Hover state for neutral objects with a high emphasis background, like toggle tracks.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Active state for neutral objects with a high emphasis background, like toggle tracks.",
                   "group": "color"
                 }
               }
@@ -967,42 +987,51 @@
               "noEmphasis": {
                 "@": {
                   "value": "rgba(250, 249, 248, 0.00)",
+                  "description": "Interactive objects with a transparent background, like interactive secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.050}",
+                  "description": "Hover state for interactive objects with a transparent background, like interactive secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.100}",
+                  "description": "Active state for interactive objects with a transparent background, like interactive secondary and tertiary buttons.",
                   "group": "color"
                 }
               },
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.025}",
+                  "description": "Interactive objects with a low-emphasis background, like interactive alerts and tags.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.050}",
+                  "description": "Hover state for interactive objects with a low-emphasis background, like interactive alerts and tags.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.100}",
+                  "description": "Active state for interactive objects with a low-emphasis background, like interactive alerts and tags.",
                   "group": "color"
                 }
               },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "Interactive objects with a high-emphasis background, like default primary buttons and selected toggles.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Hover state for objects with a high-emphasis background, like default primary buttons and selected toggles.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Active state for objects with a high-emphasis background, like default primary buttons and selected toggles.",
                   "group": "color"
                 }
               }
@@ -1011,42 +1040,51 @@
               "noEmphasis": {
                 "@": {
                   "value": "rgba(255, 255, 255, 0.00)",
+                  "description": "Critical objects with a transparent background, like critical secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.red.050}",
+                  "description": "Hover state for critical objects with a transparent background, like critical secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.red.100}",
+                  "description": "Active state for critical objects with a transparent background, like critical secondary and tertiary buttons.",
                   "group": "color"
                 }
               },
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.red.100}",
+                  "description": "Critical objects with a low-emphasis background, like error alerts.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.red.150}",
+                  "description": "Hover state for critical objects with a low-emphasis background, like error alerts.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.red.200}",
+                  "description": "Active state for critical objects with a low-emphasis background, like error alerts.",
                   "group": "color"
                 }
               },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.red.550}",
+                  "description": "Critical objects with a high-emphasis background, like destructive primary buttons and controls with an error.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.red.650}",
+                  "description": "Hover state for critical objects with a high-emphasis background, like destructive primary buttons and controls with an error.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.red.750}",
+                  "description": "Active state for critical objects with a high-emphasis background, like destructive primary buttons and controls with an error.",
                   "group": "color"
                 }
               }
@@ -1055,28 +1093,34 @@
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.green.100}",
+                  "description": "Favorable objects with a low-emphasis background, like success alerts.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.green.150}",
+                  "description": "Hover state for favorable objects with a low-emphasis background, like success alerts.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.green.200}",
+                  "description": "Active state for favorable objects with a low-emphasis background, like success alerts.",
                   "group": "color"
                 }
               },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.green.550}",
+                  "description": "Favorable objects with a high-emphasis background, like favorable numberIcons.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.green.650}",
+                  "description": "Hover state for favorable objects with a high-emphasis background, like favorable numberIcons.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.green.750}",
+                  "description": "Active state for favorable objects with a high-emphasis background, like favorable numberIcons.",
                   "group": "color"
                 }
               }
@@ -1085,14 +1129,17 @@
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.yellow.050}",
+                  "description": "Warning objects with a low-emphasis background, like cautionary alerts.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.yellow.100}",
+                  "description": "Hover state for warning objects with a low-emphasis background, like cautionary alerts.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.yellow.150}",
+                  "description": "Active state for warning objects with a low-emphasis background, like cautionary alerts.",
                   "group": "color"
                 }
               },
@@ -1115,14 +1162,17 @@
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.050}",
+                  "description": "Informational objects with a low-emphasis background, like informational alerts.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.100}",
+                  "description": "Informational objects with a low-emphasis background, like informational alerts.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.150}",
+                  "description": "Active state for informational objects with a low-emphasis background, like informational alerts.",
                   "group": "color"
                 }
               },
@@ -1144,14 +1194,17 @@
             "disabled": {
               "noEmphasis": {
                 "value": "rgba(250, 249, 248, 0.00)",
+                "description": "Transparent disabled objects, like disabled menu rows.",
                 "group": "color"
               },
               "lowEmphasis": {
                 "value": "{eds.color.neutral.050}",
+                "description": "Lower-contrast disabled objects, like disabled text inputs. These objects typically rely on a disabled border, or are placed on inverted objects to have perceivable bounds.",
                 "group": "color"
               },
               "mediumEmphasis": {
                 "value": "{eds.color.neutral.200}",
+                "description": "Higher-contrast disabled objects, like disabled buttons. These objects typically rely on their fill to have perceivable bounds.",
                 "group": "color"
               }
             },
@@ -1159,33 +1212,40 @@
               "noEmphasis": {
                 "@": {
                   "value": "rgba(250, 249, 248, 0.00)",
+                  "description": "Objects with a transparent background on an inverted layout, like inverse secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "rgba(250, 249, 248, 0.10)",
+                  "description": "Hover state for objects with a transparent background on an inverted layout, like inverse secondary and tertiary buttons.",
                   "group": "color"
                 },
                 "active": {
                   "value": "rgba(250, 249, 248, 0.20)",
+                  "description": "Active state for objects with a transparent background on an inverted layout, like inverse secondary and tertiary buttons.",
                   "group": "color"
                 }
               },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.white}",
+                  "description": "Objects on inverted backgrounds like inverse buttons and toggle switches.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.025}",
+                  "description": "Hover state for objects on inverted backgrounds like inverse buttons and toggle switches.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.050}",
+                  "description": "Active state for objects on inverted backgrounds like inverse buttons and toggle switches.",
                   "group": "color"
                 }
               },
               "disabled": {
                 "value": "rgba(250, 249, 248, 0.50)",
+                "description": "Disabled objects on an inverted layout, like inverse primary buttons.",
                 "group": "color"
               }
             }
@@ -1215,42 +1275,51 @@
               "lowEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.200}",
+                  "description": "Decorative low-emphasis borders, like between accordion or table rows.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.250}",
+                  "description": "Hover state for decorative low-emphasis borders.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.350}",
+                  "description": "Active state for decorative low-emphasis borders.",
                   "group": "color"
                 }
               },
               "mediumEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.450}",
+                  "description": "Medium-emphasis borders for objects or containers which rely on the border to have accessible perceivable bounds; like cards.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.550}",
+                  "description": "Hover state for medium-emphasis borders for objects or containers which rely on the border to have accessible perceivable bounds; like cards.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Active state for medium-emphasis borders for objects or containers which rely on the border to have accessible perceivable bounds; like cards.",
                   "group": "color"
                 }
               },
               "highEmphasis": {
                 "@": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "High-emphasis borders for objects or containers which rely on the border to have accessible perceivable bounds; like text inputs.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Hover state for high-emphasis borders for objects or containers which rely on the border to have accessible perceivable bounds; like text inputs.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Active state for high-emphasis borders for objects or containers which rely on the border to have accessible perceivable bounds; like text inputs.",
                   "group": "color"
                 }
               }
@@ -1258,27 +1327,33 @@
             "interactive": {
               "@": {
                 "value": "{eds.color.neutral.200}",
+                "description": "Borders for interactive objects like secondary buttons.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.neutral.250}",
+                "description": "Hover state for borders for interactive objects like secondary buttons.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.neutral.350}",
+                "description": "Active state for borders for interactive objects like secondary buttons.",
                 "group": "color"
               },
               "secondary": {
                 "@": {
                   "value": "{eds.color.green.550}",
+                  "description": "Borders for interactive objects like standalone tertiary buttons.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.green.650}",
+                  "description": "Hover state for borders for interactive objects like standalone tertiary buttons.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.green.750}",
+                  "description": "Active state for borders for interactive objects like standalone tertiary buttons.",
                   "group": "color"
                 }
               }
@@ -1286,74 +1361,90 @@
             "critical": {
               "@": {
                 "value": "{eds.color.red.550}",
+                "description": "Borders for critical objects like secondary buttons.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.red.650}",
+                "description": "Hover state for borders for critical objects like secondary buttons.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.red.750}",
+                "description": "Active state for borders for critical objects like secondary buttons.",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
                 "value": "{eds.color.green.550}",
+                "description": "Borders for favorable objects like success alerts and tags.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.green.650}",
+                "description": "Hover state for borders for favorable objects like tags.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.green.750}",
+                "description": "Active state for borders for favorable objects like tags.",
                 "group": "color"
               }
             },
             "warning": {
               "@": {
                 "value": "{eds.color.yellow.550}",
+                "description": "Borders for warning objects like cautionary alerts and tags.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.yellow.650}",
+                "description": "Hover state for borders for warning objects like cautionary alerts and tags.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.yellow.750}",
+                "description": "Active state for borders for warning objects like cautionary alerts and tags.",
                 "group": "color"
               }
             },
             "informational": {
               "@": {
                 "value": "{eds.color.neutral.750}",
+                "description": "Borders for informational objects like informational alerts.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.neutral.850}",
+                "description": "Hover state for borders for informational objects like informational alerts.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.neutral.950}",
+                "description": "Active state for borders for informational objects like informational alerts.",
                 "group": "color"
               }
             },
             "disabled": {
               "value": "{eds.color.neutral.200}",
+              "description": "Borders for disabled objects like disabled text inputs.",
               "group": "color"
             },
             "focus": {
               "value": "{eds.color.green.450}",
+              "description": "Used for focus rings.",
               "group": "color"
             },
             "inverse": {
               "@": {
                 "value": "{eds.color.white}",
+                "description": "Border for inverse objects like inverse secondary buttons.",
                 "group": "color"
               },
               "disabled": {
                 "value": "rgba(250, 249, 248, 0.50)",
+                "description": "Disabled border for inverse objects like inverse secondary buttons.",
                 "group": "color"
               }
             }
@@ -1365,6 +1456,7 @@
               "primary": {
                 "@": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Default icon such as headlines and body copy.",
                   "group": "color"
                 },
                 "hover": {
@@ -1379,6 +1471,7 @@
               "secondary": {
                 "@": {
                   "value": "{eds.color.neutral.550}",
+                  "description": "Secondary icon such as subtitles, helper icon, and character counters.",
                   "group": "color"
                 },
                 "hover": {
@@ -1395,36 +1488,44 @@
               "primary": {
                 "@": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "Prominent interactive icon such as secondary button labels.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Hover state for prominent interactive icon such as secondary button labels.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Active state for prominent interactive icon such as secondary button labels.",
                   "group": "color"
                 },
                 "visited": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "Default emphasis links which have been visited by the user.",
                   "group": "color"
                 }
               },
               "secondary": {
                 "@": {
                   "value": "{eds.color.green.550}",
+                  "description": "Secondary interactive icon such as standalone tertiary buttons, standalone icon buttons, and inline links.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.green.650}",
+                  "description": "Hover state for secondary interactive icon such as standalone tertiary buttons, standalone icon buttons, and inline links.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.green.750}",
+                  "description": "Active state for secondary interactive icon such as standalone tertiary buttons, standalone icon buttons, and inline links.",
                   "group": "color"
                 },
                 "visited": {
                   "value": "{eds.color.green.550}",
+                  "description": "High emphasis links which have been visited by the user.",
                   "group": "color"
                 }
               }
@@ -1432,76 +1533,92 @@
             "critical": {
               "@": {
                 "value": "{eds.color.red.550}",
+                "description": "Critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.red.650}",
+                "description": "Hover state for critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.red.750}",
+                "description": "Active state for critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
                 "value": "{eds.color.green.550}",
+                "description": "Favorable icon such as success messages.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.green.650}",
+                "description": "Hover state for favorable icon such as success messages.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.green.750}",
+                "description": "Active state for favorable icon such as headlines for successful banner alerts.",
                 "group": "color"
               }
             },
             "warning": {
               "@": {
                 "value": "{eds.color.yellow.550}",
+                "description": "Warning icon such as headlines for caution banner alerts.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.yellow.650}",
+                "description": "Hover state for warning icon such as headlines for caution banner alerts.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.yellow.750}",
+                "description": "Active state for warning icon such as headlines for caution banner alerts.",
                 "group": "color"
               }
             },
             "informational": {
               "@": {
                 "value": "{eds.color.neutral.750}",
+                "description": "Informational icon such as headlines for info banner alerts.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.neutral.850}",
+                "description": "Hover state for informational icon such as headlines for info banner alerts.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.neutral.950}",
+                "description": "Active state for informational icon such as headlines for info banner alerts.",
                 "group": "color"
               }
             },
             "disabled": {
               "primary": {
                 "value": "{eds.color.neutral.200}",
+                "description": "Disabled icon which sits on a low- or mediumEmphasis background, such as disabled button labels.",
                 "group": "color"
               },
               "secondary": {
                 "value": "{eds.color.neutral.200}",
+                "description": "Disabled icon which sits on a noEmphasis background such as disabled menu rows.",
                 "group": "color"
               }
             },
             "inverse": {
               "@": {
                 "value": "{eds.color.white}",
+                "description": "Inverse icon on inverted backgrounds such as labels on primary buttons.",
                 "group": "color"
               },
               "disabled": {
                 "value": "{eds.theme.color.text.utility.inverse.disabled}",
+                "description": "Disabled inverse icon on inverted backgrounds such as labels on primary buttons.",
                 "group": "color"
               },
               "interactive": {
@@ -1529,6 +1646,7 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
+              "description": "Placeholder icon such as “Search for…” instructions in a search bar.",
               "group": "color"
             }
           },
@@ -1549,6 +1667,7 @@
               "primary": {
                 "@": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Default text such as headlines and body copy.",
                   "group": "color"
                 },
                 "hover": {
@@ -1563,14 +1682,17 @@
               "secondary": {
                 "@": {
                   "value": "{eds.color.neutral.550}",
+                  "description": "Secondary text such as subtitles, helper text, character counters.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Hover state for secondary text.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Active state for secondary text.",
                   "group": "color"
                 }
               }
@@ -1579,36 +1701,44 @@
               "primary": {
                 "@": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "Prominent interactive text such as secondary button labels.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.neutral.750}",
+                  "description": "Hover state for prominent interactive text such as secondary button labels.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.neutral.650}",
+                  "description": "Active state for prominent interactive text such as secondary button labels.",
                   "group": "color"
                 },
                 "visited": {
                   "value": "{eds.color.neutral.850}",
+                  "description": "Default emphasis links which have been visited by the user.",
                   "group": "color"
                 }
               },
               "secondary": {
                 "@": {
                   "value": "{eds.color.green.550}",
+                  "description": "Secondary interactive text such as standalone tertiary buttons, standalone icon buttons, and inline links.",
                   "group": "color"
                 },
                 "hover": {
                   "value": "{eds.color.green.650}",
+                  "description": "Hover state for secondary interactive text such as standalone tertiary buttons, standalone icon buttons, and inline links.",
                   "group": "color"
                 },
                 "active": {
                   "value": "{eds.color.green.750}",
+                  "description": "Active state for secondary interactive text such as standalone tertiary buttons, standalone icon buttons, and inline links.",
                   "group": "color"
                 },
                 "visited": {
                   "value": "{eds.color.green.550}",
+                  "description": "High emphasis links which have been visited by the user.",
                   "group": "color"
                 }
               }
@@ -1616,81 +1746,98 @@
             "critical": {
               "@": {
                 "value": "{eds.color.red.550}",
+                "description": "Critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.red.650}",
+                "description": "Hover state for critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.red.750}",
+                "description": "Active state for critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                 "group": "color"
               }
             },
             "favorable": {
               "@": {
                 "value": "{eds.color.green.550}",
+                "description": "Favorable text such as success messages.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.green.650}",
+                "description": "Hover state for favorable text such as success messages.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.green.750}",
+                "description": "Active state for favorable text such as headlines for successful banner alerts.",
                 "group": "color"
               }
             },
             "warning": {
               "@": {
                 "value": "{eds.color.yellow.550}",
+                "description": "Warning text such as headlines for caution banner alerts.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.yellow.650}",
+                "description": "Hover state for warning text such as headlines for caution banner alerts.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.yellow.750}",
+                "description": "Active state for warning text such as headlines for caution banner alerts.",
                 "group": "color"
               }
             },
             "informational": {
               "@": {
                 "value": "{eds.color.neutral.750}",
+                "description": "Informational text such as headlines for info banner alerts.",
                 "group": "color"
               },
               "hover": {
                 "value": "{eds.color.neutral.850}",
+                "description": "Hover state for informational text such as headlines for info banner alerts.",
                 "group": "color"
               },
               "active": {
                 "value": "{eds.color.neutral.950}",
+                "description": "Active state for informational text such as headlines for info banner alerts.",
                 "group": "color"
               }
             },
             "disabled": {
               "primary": {
                 "value": "{eds.color.neutral.200}",
+                "description": "Disabled text which sits on a low- or mediumEmphasis background, such as disabled button labels.",
                 "group": "color"
               },
               "secondary": {
                 "value": "{eds.color.neutral.200}",
+                "description": "Disabled text which sits on a noEmphasis background such as disabled menu rows.",
                 "group": "color"
               }
             },
             "inverse": {
               "@": {
                 "value": "{eds.color.white}",
+                "description": "Inverse text on inverted backgrounds such as labels on primary buttons.",
                 "group": "color"
               },
               "disabled": {
                 "value": "rgba(250, 249, 248, 0.50)",
+                "description": "Disabled inverse text on inverted backgrounds such as labels on primary buttons.",
                 "group": "color"
               },
               "interactive": {
                 "visited": {
                   "value": "{eds.color.white}",
+                  "description": "Links which have been visited by the user on inverted backgrounds.",
                   "group": "color"
                 }
               },
@@ -1701,6 +1848,7 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
+              "description": "Placeholder text such as “Search for…” instructions in a search bar.",
               "group": "color"
             }
           },

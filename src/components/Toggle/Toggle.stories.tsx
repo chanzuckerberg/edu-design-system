@@ -25,6 +25,10 @@ const meta: Meta<typeof Toggle> = {
     checked: false,
   },
   parameters: {
+    docs: {
+      subtitle:
+        'A control that toggles between two binary states like on/off or yes/no.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:1.4'],
