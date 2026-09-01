@@ -79,10 +79,37 @@ type SvgStyle = CSSProperties & {
 };
 
 /**
- * Render arbitrary SVG path data while enforcing good accessibility practices.
+ * ## Usage
  *
- * Icons are based on [Material Rounded](https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Rounded),
- * and are encoded in a spritemap in `src/icons`.
+ * Small illustrations to highlight and emphasize text and screen elements with visual detail.
+ * Icons align with adjacent text, and will inherit the text's color. Icons can also be embedded
+ * in other components.
+ *
+ * Icons come from a spritemap in `src/icons`; pick one with `name`. To render your own SVG
+ * instead, pass the path data as `children` along with a `viewBox`.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Informative | `purpose="informative"` renders `role="img"` and requires a `title`, so the icon is announced. | A status icon that is the only thing conveying the status. |
+ * | Decorative | `purpose="decorative"` renders `aria-hidden`, so assistive tech skips the icon entirely. | A plus icon next to the word "Add". |
+ *
+ * `color` defaults to `currentColor` so the icon picks up the surrounding text color. Prefer `em`
+ * for `size` so the icon scales with the text it sits beside.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `Icon` to add clarity and character to any buttons, especially those which are closely associated with user actions (e.g., an "add" button may use a plus icon).
+ * * Use decorative icons when paired with adjacent, descriptive text.
+ *
+ * ### Don'ts
+ *
+ * * Never use decorative `Icon` elements in isolation. Icons must have an associated accessible purpose, so when the icon is the only thing carrying the meaning, use `purpose="informative"` and give it a `title`.
+ *
+ * ## Resources
+ *
+ * * https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Rounded
  */
 export const Icon = (props: IconProps) => {
   const {
