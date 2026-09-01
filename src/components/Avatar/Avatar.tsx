@@ -112,7 +112,46 @@ export function getInitials(fromName: string): string {
 }
 
 /**
- * Representation of a single, unique user, keyed by the user name
+ * ## Usage
+ *
+ * Avatars represent a single user in the system. The representation can be generated (using a color derived from the
+ * user data), or include an image for each user. `Avatar` supports text, images, and multi-byte characters (e.g., emoji),
+ * and can reference flexible metadata for the associated user.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Text | Initials generated from `user.fullName`, or a `displayName` you supply directly. | Comment authors. Member lists. Emoji stand-ins. |
+ * | Image | A profile photo loaded from `src`, falling back to text when no source is set. | Account menus. Profile pages. |
+ * | Icon | A named EDS icon instead of user-specific content. | Unidentified users. "Add a person" affordances. |
+ *
+ * ### Best Practices
+ *
+ * * Use avatars in places where we want to show a user as identified and logged in.
+ * * Avatars can be used in place of regular `Button`s for triggers in certain components (e.g., `Menu`, `Tooltip`).
+ *
+ * ## Interaction
+ *
+ * Avatars support focus rings and can exist in the tab order when used as a trigger. Set `isInteractive` to get focus
+ * and hover states.
+ *
+ * `Avatar` instances in a collection can overlap by 50% for efficient use of space. A hover state on the container
+ * holding multiple instances can then remove the overlap and show every `Avatar` in full.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `Avatar` to represent users in `AppHeader` when logged in.
+ * * Use the large size `Avatar` when the component is shown in the main page area. For menus and navigation, use a smaller `Avatar`.
+ *
+ * ### Don'ts
+ *
+ * * Avoid relying on the icon or text as the only indication of which user is being represented. Use adjacent text, or `aria-*` tags for screen-reader support.
+ * * Avoid using very large image files for user profiles in `Avatar`. Save a specific, low-resolution file for user avatar images.
+ *
+ * ## Resources
+ *
+ * * https://github.com/flmnt/graphemer
  */
 export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   (
