@@ -58,6 +58,34 @@ export type AppFooterEventHandler = (
  * ## Usage
  *
  * A footer is a navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.
+ *
+ * ### Best Practices
+ *
+ * * Provide 3-5 important links, along with copyright information, for the footer content.
+ * * Logos should be no wider than ~300px, and no taller than ~150px.
+ *
+ * ## Interaction
+ *
+ * The links and content can guide users to other pages within the application, or to the marketing pages for the organization.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Include links with brief text.
+ * * Include at most one logo, pointing to either the home page for the organization, or the application.
+ *
+ * ### Don'ts
+ *
+ * * Don't use overly verbose text for any link; keep them to 1-3 words each.
+ * * Don't use the AppFooter when working on a Single-page Application (SPA).
+ * * Don't use a logo for any logged-in experience. Logos in `AppFooter` are just for
+ *   landing/marketing pages.
+ *
+ * ## Resources
+ *
+ * * https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer
+ * * https://www.nngroup.com/articles/footers/
  */
 export const AppFooter = ({
   className,
