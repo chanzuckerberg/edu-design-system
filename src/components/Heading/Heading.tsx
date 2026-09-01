@@ -50,11 +50,31 @@ const headingPresetMap: Record<HeadingElement, Preset> = {
 };
 
 /**
- * `import {Heading} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * A component for styling heading text (`<h1>`-`<h6>`).
+ * Heading is strictly used to style heading tags used in a page. Typography presets are defined
+ * for each heading level (h1-h6) and can be overridden.
  *
- * Be careful to pass the correct heading element via the `as` prop to avoid skipping heading levels because [heading levels increasing by only one level at a time is important for screen reader users.](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Semantic level | `as` picks which tag renders, and brings the default preset for that level with it. | `h1` for the page title, `h2` for a section within it. |
+ * | Restyled | `preset` overrides the default typography without changing which tag renders. | A section heading that needs to read smaller than its level implies. |
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `Heading` in place of any `h1`-`h6` HTML tag.
+ * * Pass the correct heading element via `as` to avoid skipping heading levels, because heading levels increasing by only one level at a time is important for screen reader users.
+ *
+ * ### Don'ts
+ *
+ * * Avoid all direct usage of `h1`-`h6` tags. Render them through `Heading` and its `as` prop instead.
+ * * Don't reach for `preset` to change the heading level. Change `as` so the visual order and the document outline stay in step.
+ *
+ * ## Resources
+ *
+ * * https://www.w3.org/WAI/tutorials/page-structure/headings/
  */
 export const Heading = forwardRef(
   (

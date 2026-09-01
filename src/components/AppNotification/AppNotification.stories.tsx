@@ -15,6 +15,9 @@ export default {
   title: 'Components/AppNotification',
   component: AppNotification,
   parameters: {
+    docs: {
+      subtitle: 'A global alert that persists across pages.',
+    },
     layout: 'centered',
   },
   args: {

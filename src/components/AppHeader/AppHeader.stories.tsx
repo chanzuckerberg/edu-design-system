@@ -14,6 +14,10 @@ export default {
   component: AppHeader,
 
   parameters: {
+    docs: {
+      subtitle:
+        'The persistent navigation bar that appears at the top or left of an application provides brand identity, global navigation, and quick access to key actions. It anchors the user experience by ensuring consistent access to core functionality across all pages. It also serves as the <header> for accessibility landmarks.',
+    },
     chromatic: {
       // Using this motion preference for components where they trigger animations on mount
       prefersReducedMotion: 'reduce',
@@ -26,7 +30,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.7'],
+  tags: ['autodocs', 'version:1.7.1'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;

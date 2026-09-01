@@ -15,6 +15,10 @@ const EDSStyleDictionary = StyleDictionary.extend({
           format: 'json/flat',
           destination: '.storybook/data/tokens.json',
         },
+        {
+          format: 'json/flat-descriptions',
+          destination: '.storybook/data/token-descriptions.json',
+        },
       ],
     },
     css: {
@@ -70,6 +74,24 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
       ],
     },
+  },
+});
+
+/**
+ * Emit a flat map of token name => description, for tokens that declare a
+ * "description" in the source. Consumed by the Storybook token tables
+ * (see .storybook/util/filterTokens.ts) to render a Description column.
+ */
+EDSStyleDictionary.registerFormat({
+  name: 'json/flat-descriptions',
+  formatter: function (dictionary) {
+    const out = {};
+    dictionary.allProperties.forEach((token) => {
+      if (token.description) {
+        out[token.name] = token.description;
+      }
+    });
+    return JSON.stringify(out, null, 2);
   },
 });
 

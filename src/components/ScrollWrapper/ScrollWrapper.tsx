@@ -81,12 +81,48 @@ export const setShadowStates = (targetData: HTMLDivElement): ShadowStates => {
 };
 
 /**
- * `import {ScrollWrapper} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * This is a basic wrapper component that handles functionality to show/hide shadows along either the vertical or horizontal edges.
- * This kicks in once the container's size is smaller than the overall height of the content within. For this to work,
- * the element above the scroll wrapper must have a fixed height. The effect kicks in once the children of the scroll
- * wrapper expand height above that fixed height.
+ * Wrap content that has a fixed height but is scrollable, so that users have an indication that
+ * more content is available. Subtle shadows come in several variants.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Vertical | The default. Scrolls on the y axis and shades the top and bottom edges. | Long dialog bodies. Tall option lists. |
+ * | Horizontal | `orientation="horizontal"` scrolls on the x axis and shades the start and end edges. | Wide tables. Toolbars that overflow. |
+ *
+ * `orientation` picks one axis at a time, so a single wrapper shades either the vertical or the
+ * horizontal edges, not both.
+ *
+ * `shadowType` controls the treatment: `cover` (the default) spans the full width of the wrapper,
+ * while `contain` keeps the shadow's edges inside it.
+ *
+ * The effect depends on the container being shorter than its content, so the element above the
+ * scroll wrapper must have a fixed height. Without that, nothing overflows and no shadow appears.
+ *
+ * ## Interaction
+ *
+ * When vertical, scrolling will enable both shadows when there is more content above and below the
+ * current position. When there is only content above the current position (scrolled to the end of
+ * the container), only the top shadow is shown. When scrolled to the very top of the container,
+ * only the bottom shadow is shown. The same logic applies to the horizontal scrolling scenario,
+ * against the start and end edges.
+ *
+ * `Modal` renders a `ScrollWrapper` around its body for you, so its content scrolls without any
+ * extra setup.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `ScrollWrapper` in any overlay components that need to exceed the available screen real estate. This is not for ones that definitely will, but ones that have variable content which could grow to be either too tall or too wide.
+ * * Use `cover` for the shadow type to emphasize and make clear that more content is available.
+ * * Leave the scrollable region in the tab order. It carries `tabIndex={0}` so that people navigating by keyboard can scroll it.
+ *
+ * ### Don'ts
+ *
+ * * Avoid wrapping entire pages with `ScrollWrapper`.
+ * * Never use multiple, adjacent `ScrollWrapper` instances.
  */
 export const ScrollWrapper = ({
   children,

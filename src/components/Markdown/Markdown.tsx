@@ -30,8 +30,6 @@ export type MarkdownProps = Options & {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {Markdown} from "@chanzuckerberg/eds";`
- *
  * Generic Markdown component to wrap convert convent into EDS-compliant represenations. Includes all the base
  * components, plus tables from GitHub-Flavored Markdown. Other features available by using Remark Plugins.
  *

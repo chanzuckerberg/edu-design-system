@@ -36,9 +36,36 @@ export type CodeBlockProps = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {CodeBlock} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Component used to render block of code for use alongside other components. Allows for copying code.
+ * Show a block of formatted code, with syntax highlighting, in a block container.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Read-only | The snippet is displayed on its own, with no copy affordance. | Illustrating syntax inline with surrounding prose. |
+ * | Icon copy | `copyStyle="icon"` adds an icon-only button that copies the snippet. | Dense layouts where a labeled button would crowd the block. |
+ * | Text copy | `copyStyle="text"` adds a labeled button that copies the snippet. | Snippets the reader is expected to run, like install commands. |
+ *
+ * ## Interaction
+ *
+ * `CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the
+ * ability to show a copy button which, when clicked, will copy the code block to the user's
+ * clipboard.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `CodeBlock` when you want to format and display any multi-line code to the user.
+ * * Use `CodeBlock` when a single-line code block applies to command line snippets, or other code which has complex, lengthy text.
+ *
+ * ### Don'ts
+ *
+ * * Avoid using `CodeBlock` for single-word code snippets. Instead use the `Text` component with one of the `code-*` presets.
+ *
+ * ## Resources
+ *
+ * * https://github.com/react-syntax-highlighter/react-syntax-highlighter
  */
 export const CodeBlock = ({
   children,

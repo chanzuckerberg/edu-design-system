@@ -45,6 +45,10 @@ export default {
     },
   },
   parameters: {
+    docs: {
+      subtitle:
+        'A tooltip is a floating, non-actionable label used to explain a user interface element or feature. It can be triggered by hovering over an element.',
+    },
     layout: 'centered',
     chromatic: {
       delay: 750,

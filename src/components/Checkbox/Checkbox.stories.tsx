@@ -12,6 +12,10 @@ const meta: Meta<typeof Checkbox> = {
     label: 'Checkbox',
   },
   parameters: {
+    docs: {
+      subtitle:
+        'Checkboxes indicate if something is selected or unselected and allow users to choose one or more options.',
+    },
     layout: 'centered',
   },
   argTypes: {

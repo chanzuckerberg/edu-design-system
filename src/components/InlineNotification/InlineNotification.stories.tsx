@@ -9,6 +9,10 @@ export default {
   title: 'Components/InlineNotification',
   component: InlineNotification,
   parameters: {
+    docs: {
+      subtitle:
+        'An alert is placed within a page section to provide a contextual notification. For example, an error that applies to multiple fields within a form.',
+    },
     layout: 'centered',
   },
   args: {

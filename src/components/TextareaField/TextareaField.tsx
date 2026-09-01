@@ -8,6 +8,7 @@ import type {
 } from '../../util/utility-types';
 
 import type { Status } from '../../util/variant-types';
+import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
 import Text from '../Text';
@@ -127,13 +128,38 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 );
 
 /**
- * `import {TextareaField} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Multi-line text input field with built-in labeling and accessory text to describe
- * the content. When a maximum text count is specified, component also shows relevant
- * text up to the maximum.
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Standard | Multi-line input field for entering extended text. | Comments, descriptions, notes fields. |
+ * | Auto-resizing | Expands vertically as the user types. | Messaging apps, forms with flexible input length. |
+ * | Fixed-size | Has a set number of rows and does not resize. | Forms with a consistent layout, limited-screen environments. |
+ * | Read-only | Displays pre-filled content that cannot be edited. | Code blocks, audit logs, view-only mode. |
+ * | Disabled | Grayed out and non-editable; indicates inaccessibility. | Conditional logic states, feature restrictions. |
+ * | Monospaced | Uses a monospaced font, often for structured text or code. | Code snippets, JSON input, command editors. |
  *
- * **NOTE**: This component requires `label` or `aria-label` prop to support accessibility.
+ * **NOTE**: This component requires a `label` or `aria-label` prop to support accessibility.
+ *
+ * ## Interaction
+ *
+ * When the amount of text exceeds the available space, the text scrolls to show the end of the string.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Always have a visible label when adding a hint.
+ * * Use short, instructional labels when necessary and use sentence case.
+ * * Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).
+ * * For errors, provide instructions for fixing the issue and explain what is happening.
+ *
+ * ### Don'ts
+ *
+ * * Don't use colons or periods at the end of labels, and don't omit labels.
+ * * Don't have a hint without a visible label.
+ * * Don't force the use of helper text—there is frequently no need for it.
+ * * Don't place placeholder text within the field, as it can cause accessibility issues.
  */
 export const TextareaField: TextareaFieldType = forwardRef(
   (
@@ -196,10 +222,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
       styles['textarea-field__hint'],
       disabled && styles['textarea-field__required-text--disabled'],
     );
-    const fieldLengthCountClassName = clsx(
-      (textExceedsMaxLength || textExceedsRecommendedLength) &&
-        styles['textarea-field--invalid-length'],
-    );
 
     const textareaClassName = clsx(
       readOnly && styles['textarea-field__textarea--read-only'],
@@ -250,13 +272,11 @@ export const TextareaField: TextareaFieldType = forwardRef(
               </Text>
             )}
             {maxLengthShown && (
-              <Text
+              <Counter
                 className={styles['textarea-field__character-counter']}
-                preset="body-sm"
-              >
-                <span className={fieldLengthCountClassName}>{fieldLength}</span>{' '}
-                / {maxLengthShown}
-              </Text>
+                count={fieldLength}
+                total={maxLengthShown}
+              />
             )}
             {label && subLabel && (
               <div className={subLabelClassName}>

@@ -51,11 +51,28 @@ export type PopoverButtonProps = {
 } & RenderProps<{ open: boolean }>;
 
 /**
- * `import {Popover} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * General-purpose floating containers that appear proximal to a trigger point.
+ * * Keeps information close to a button, etc., that triggers it.
+ * * Typically used for showing contextual information or quick actions without taking focus away from the main page.
+ * * Doesn't block interaction with the rest of the page.
  *
- * @see https://headlessui.com/react/popover
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Show additional info | Displays extra details or hints related to a UI element. | Showing help text when hovering over an info icon. |
+ * | Form fields / Input | Embeds lightweight form elements in a contextual way. | A popover with a color picker or emoji selector. |
+ *
+ * ### Best Practices
+ *
+ * * Don't use popovers for popup menus. Use a Menu instead.
+ *
+ * ## Interaction
+ *
+ * Popovers open in response to user interaction—click, tap, or hover. They close when clicking outside the popover, pressing `Esc`, selecting an item within the popover, or interacting with the trigger again (for toggling popovers).
+ *
+ * ## Resources
+ *
+ * * https://headlessui.com/react/popover
  */
 export const Popover = ({ ...other }: PopoverProps) => {
   return <HeadlessPopover {...other} />;

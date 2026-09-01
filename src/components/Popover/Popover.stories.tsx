@@ -12,6 +12,10 @@ export default {
   title: 'Components/Popover',
   component: Popover,
   parameters: {
+    docs: {
+      subtitle:
+        'A small, lightweight overlay or floating container that appears over other content to provide additional information, options, or actions without navigating away from the current screen.',
+    },
     layout: 'centered',
     chromatic: {
       // These stories are very flaky, though we're not sure why.

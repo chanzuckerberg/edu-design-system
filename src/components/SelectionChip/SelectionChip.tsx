@@ -38,23 +38,30 @@ type SelectionChipRefProps = ForwardedRefComponent<
 >;
 
 /**
- * `import {SelectionChip} from "@chanzuckerberg/eds";`
- *
- * Compact, interactive UI elements used to make selections. Can have optional icon.
- *
  * ## Usage
  *
- * `SelectionChip` is used to represent user controls or selections outside the context of a form. `SelectionChip` can be used in place of a checkbox group, radioButton group, or toggle.
- * Unless used as a toggle, `SelectionChip` should always be presented as a group.
+ * A selection chip is an interactive chip that can be selected, deselected, or toggled. Use it to represent user controls or selections outside the context of a form, in place of a checkbox group, radio button group, or toggle. Common uses include filtering content and selecting multiple items.
  *
- * `SelectionChip` helps users make quick choices that lead to an immediate action. Unlike form inputs that collect information for later use, selection chips support decisions that happen right away. A common example is choosing a clothing size before clicking "Add to Cart" - the size selection directly enables the main action of adding the item to your cart.
+ * ### Best Practices
  *
- * There are a few benefits to using selectionChips over form-based selection, like checkbox or radio button groups:
- * * **Enable Quick Selection**: Use them when you want users to choose from a limited set of related, easily digestible options. For example, selection chips work well for selecting filters or tags in search and content filtering.
- * * **Show Multi-Select Options**: They’re ideal when users need the option to select multiple items at once, especially when toggling on/off multiple states or filters.
- * * **Enhance Readability in Tight Spaces**: Selection chips help maintain readability while maximizing the available screen space, especially on mobile.
- * * **Improve Visual Clarity**: They work best when there’s a need to show clear boundaries around items. Chips with subtle visual indicators like icons or colors can also convey context.
- * * **Replace Dropdowns or Radio Buttons**: When dropdowns or radio buttons feel too clunky or take up too much space, selection chips are a sleek alternative that’s easier to scan.
+ * * **Enable quick selection**: When you want users to choose from a limited set of related, easily digestible options, such as selecting filters or tags in search and content filtering.
+ * * **Show multi-select options**: When users need the option to select multiple items at once, especially when toggling on/off multiple states or filters.
+ * * **Enhance readability in tight spaces**: Selection chips help maintain readability while maximizing available screen space, especially on mobile.
+ * * **Improve visual clarity**: When you need to show clear boundaries around items. Chips with subtle visual indicators like icons or colors can also convey context.
+ * * **Replace dropdowns or radio buttons**: When dropdowns or radio buttons are too clunky or take up too much space.
+ *
+ * ## Interaction
+ *
+ * Unless used as a toggle, chips should always be presented as a group.
+ *
+ * Selection chips don't have built-in error handling. To show that something went wrong with a selection, pair the chips with an `InlineNotification` or `FieldNote` component to display the error message.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Keep labels to 1-2 words.
+ * * Represent one piece of info per chip. This could be a discrete thing, a grouping, category, etc.
  */
 export const SelectionChip: SelectionChipRefProps = forwardRef(
   (

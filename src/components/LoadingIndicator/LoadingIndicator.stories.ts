@@ -9,6 +9,10 @@ export default {
   title: 'Components/LoadingIndicator',
   component: LoadingIndicator,
   parameters: {
+    docs: {
+      subtitle:
+        'Loading indicators inform users about the wait time, reason, and status of ongoing processes when the layout is unknown.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0'],

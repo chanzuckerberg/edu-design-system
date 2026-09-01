@@ -684,18 +684,17 @@ exports[`<TextareaField /> > WithAMaxLength story renders snapshot 1`] = `
           Textarea Field
         </span>
       </label>
-      <p
-        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__character-counter_7bfcbf"
+      <div
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _textarea-field__character-counter_7bfcbf"
       >
         <span
-          class="_textarea-field--invalid-length_7bfcbf"
+          class="_counter__count_172002 _counter__count--invalid_172002"
         >
           202
         </span>
-         
-        / 
+         / 
         144
-      </p>
+      </div>
       <div
         class="_textarea-field__subLabel_7bfcbf"
       >
@@ -776,18 +775,17 @@ exports[`<TextareaField /> > WithARecommendedLength story renders snapshot 1`] =
           Textarea Field
         </span>
       </label>
-      <p
-        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__character-counter_7bfcbf"
+      <div
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _textarea-field__character-counter_7bfcbf"
       >
         <span
-          class="_textarea-field--invalid-length_7bfcbf"
+          class="_counter__count_172002 _counter__count--invalid_172002"
         >
           202
         </span>
-         
-        / 
+         / 
         144
-      </p>
+      </div>
       <div
         class="_textarea-field__subLabel_7bfcbf"
       >
@@ -867,18 +865,17 @@ exports[`<TextareaField /> > WithBothRecommendedAndMaxLengths story renders snap
           Textarea Field
         </span>
       </label>
-      <p
-        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__character-counter_7bfcbf"
+      <div
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _textarea-field__character-counter_7bfcbf"
       >
         <span
-          class="_textarea-field--invalid-length_7bfcbf"
+          class="_counter__count_172002 _counter__count--invalid_172002"
         >
           202
         </span>
-         
-        / 
+         / 
         144
-      </p>
+      </div>
       <div
         class="_textarea-field__subLabel_7bfcbf"
       >

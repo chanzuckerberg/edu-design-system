@@ -1,8 +1,0 @@
-{
-  "ignore": ["lib/**", ".storybook/**"],
-  "include": ["src/components/**/*.{tsx,ts}", "src/index.ts"],
-  "tsconfigPath": "tsconfig.json",
-  "exports": {
-    ".": "./src/index.ts"
-  }
-}

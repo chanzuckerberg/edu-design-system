@@ -9,6 +9,9 @@ export default {
   title: 'Components/OrderedList',
   component: OrderedList,
   parameters: {
+    docs: {
+      subtitle: 'Structures related content into a skimmable vertical layout.',
+    },
     layout: 'centered',
   },
   args: {

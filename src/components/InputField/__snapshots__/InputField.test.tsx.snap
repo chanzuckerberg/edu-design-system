@@ -12,7 +12,7 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1m:"
+        for=":r1p:"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -21,15 +21,14 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
         </span>
       </label>
       <div
-        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _input-field__character-counter_4d3b17"
       >
         <span
-          class=""
+          class="_counter__count_172002"
         >
           17
         </span>
-         
-        / 
+         / 
         30
       </div>
       <div
@@ -37,7 +36,7 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1o:"
+          id=":r1r:"
         >
           Additional descriptive text for the field.
         </span>
@@ -47,10 +46,10 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1o:"
+        aria-describedby=":r1r:"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r1m:"
+        id=":r1p:"
         maxlength="30"
         required=""
         type="text"
@@ -322,6 +321,56 @@ exports[`<InputField /> > InputWithin story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<InputField /> > InputWithinFixedWidth story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div>
+    <div
+      class="_input-field__overline_4d3b17"
+    >
+      <label
+        class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
+        for=":r1j:"
+      >
+        <span
+          class="_text_b3eba3 _text--label-md_b3eba3"
+        >
+          Input field with a fixed reservation
+        </span>
+      </label>
+    </div>
+    <div
+      class="_input-field__body_4d3b17"
+    >
+      <input
+        aria-describedby=""
+        aria-invalid="false"
+        class="_input_0d9f86 _input-field__input--input-within_4d3b17"
+        id=":r1j:"
+        style="--input-field__input-within-width: 120px;"
+        type="text"
+        value="Text that stops at the reserved space"
+      />
+      <div
+        class="_input-field__input-within_4d3b17"
+      >
+        <button
+          class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+          type="button"
+        >
+          <span
+            class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+          >
+            Copy
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> > LeadingIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
@@ -392,6 +441,7 @@ exports[`<InputField /> > LongInputWithin story renders snapshot 1`] = `
         class="_input_0d9f86 _input-field__input--input-within_4d3b17"
         id=":r1g:"
         type="text"
+        value="Text that runs up against the button"
       />
       <div
         class="_input-field__input-within_4d3b17"
@@ -887,7 +937,7 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1p:"
+        for=":r1s:"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -896,15 +946,14 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _input-field__character-counter_4d3b17"
       >
         <span
-          class="_input-field--invalid-length_4d3b17"
+          class="_counter__count_172002 _counter__count--invalid_172002"
         >
           17
         </span>
-         
-        / 
+         / 
         15
       </div>
       <div
@@ -912,7 +961,7 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1r:"
+          id=":r1u:"
         >
           Additional descriptive text for the field.
         </span>
@@ -922,10 +971,10 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1r:"
+        aria-describedby=":r1u:"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
-        id=":r1p:"
+        id=":r1s:"
         maxlength="15"
         required=""
         type="text"
@@ -948,7 +997,7 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1s:"
+        for=":r1v:"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -957,15 +1006,14 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _input-field__character-counter_4d3b17"
       >
         <span
-          class="_input-field--invalid-length_4d3b17"
+          class="_counter__count_172002 _counter__count--invalid_172002"
         >
           17
         </span>
-         
-        / 
+         / 
         15
       </div>
       <div
@@ -973,7 +1021,7 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1u:"
+          id=":r21:"
         >
           Additional descriptive text for the field.
         </span>
@@ -983,10 +1031,10 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1u:"
+        aria-describedby=":r21:"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
-        id=":r1s:"
+        id=":r1v:"
         required=""
         type="text"
         value="Some initial text"
@@ -1008,7 +1056,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1v:"
+        for=":r22:"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1017,15 +1065,14 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
         </span>
       </label>
       <div
-        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _input-field__character-counter_4d3b17"
       >
         <span
-          class="_input-field--invalid-length_4d3b17"
+          class="_counter__count_172002 _counter__count--invalid_172002"
         >
           17
         </span>
-         
-        / 
+         / 
         15
       </div>
       <div
@@ -1033,7 +1080,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r21:"
+          id=":r24:"
         >
           Additional descriptive text for the field.
         </span>
@@ -1043,10 +1090,10 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":r21: :r20:"
+        aria-describedby=":r24: :r23:"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
-        id=":r1v:"
+        id=":r22:"
         maxlength="20"
         required=""
         type="text"
@@ -1058,7 +1105,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
     >
       <div
         class="_field-note_fd2e78 _field-note--error_fd2e78"
-        id=":r20:"
+        id=":r23:"
       >
         <svg
           class="_icon_779da8 _field-note__icon_fd2e78"
@@ -1221,7 +1268,7 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1j:"
+        for=":r1m:"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1230,15 +1277,14 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
         </span>
       </label>
       <div
-        class="_text_b3eba3 _text--body-sm_b3eba3 _input-field__character-counter_4d3b17"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002 _input-field__character-counter_4d3b17"
       >
         <span
-          class=""
+          class="_counter__count_172002"
         >
           17
         </span>
-         
-        / 
+         / 
         30
       </div>
       <div
@@ -1246,7 +1292,7 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1l:"
+          id=":r1o:"
         >
           Additional descriptive text for the field.
         </span>
@@ -1256,10 +1302,10 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1l:"
+        aria-describedby=":r1o:"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r1j:"
+        id=":r1m:"
         maxlength="30"
         required=""
         type="text"

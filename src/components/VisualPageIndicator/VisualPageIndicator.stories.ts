@@ -8,6 +8,12 @@ import { VisualPageIndicator } from './VisualPageIndicator';
 export default {
   title: 'Components/VisualPageIndicator',
   component: VisualPageIndicator,
+  parameters: {
+    docs: {
+      subtitle:
+        'Static visual cue to help users understand their current position within a series of content or pages.',
+    },
+  },
   tags: ['autodocs', 'version:1.0'],
 } as Meta<Args>;
 

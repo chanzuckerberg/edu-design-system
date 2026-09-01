@@ -10,6 +10,10 @@ export default {
   title: 'Components/PopoverContainer',
   component: PopoverContainer,
   parameters: {
+    docs: {
+      subtitle:
+        'A standardized container for the content shown by popover components.',
+    },
     layout: 'centered',
   },
   argTypes: {

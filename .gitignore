@@ -8,7 +8,6 @@
 test-report.junit.xml
 
 # logging
-omlet-cli.log
 
 # production
 /build

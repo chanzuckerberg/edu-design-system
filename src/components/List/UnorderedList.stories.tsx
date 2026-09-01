@@ -9,6 +9,9 @@ export default {
   title: 'Components/UnorderedList',
   component: UnorderedList,
   parameters: {
+    docs: {
+      subtitle: 'Structures related content into a skimmable vertical layout.',
+    },
     layout: 'centered',
   },
   args: {

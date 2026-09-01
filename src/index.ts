@@ -3,7 +3,7 @@ import './tokens-dist/css/variables.css';
 import './tokens-dist/css/variables-dark.css';
 
 /**
- * 2.x component theme exports
+ * Component theme exports
  */
 export { default as AppFooter } from './components/AppFooter';
 export { default as AppHeader } from './components/AppHeader';
@@ -16,6 +16,7 @@ export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
 export { default as CodeBlock } from './components/CodeBlock';
+export { default as Combobox } from './components/Combobox';
 export { default as DataTable } from './components/DataTable';
 export { utils as DataTableUtils } from './components/DataTable';
 export { default as FieldLabel } from './components/FieldLabel';
@@ -56,7 +57,7 @@ export { UnorderedList } from './components/List';
 export { default as VisualPageIndicator } from './components/VisualPageIndicator';
 
 /**
- * 2.x prop type exports
+ * Prop type exports
  */
 export type {
   NavGroup,

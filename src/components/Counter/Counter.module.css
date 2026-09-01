@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    # COUNTER
+\*------------------------------------*/
+
+/**
+ * Counter
+ *
+ * A current count against its total, e.g., "3 / 10" or "30%". Layout and placement belong to
+ * the consuming component, passed in via `className`.
+ */
+.counter {
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+}
+
+/**
+ * The current count, which follows the counter's treatment until it goes over the total.
+ */
+.counter__count {
+  color: inherit;
+}
+
+/**
+ * Treatment for a count that has gone over the total allowed
+ */
+.counter__count--invalid {
+  color: light-dark(var(--eds-theme-color-text-utility-critical), var(--eds-dark-theme-color-text-utility-critical));
+}

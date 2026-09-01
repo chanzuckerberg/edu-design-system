@@ -44,9 +44,24 @@ export type FieldNoteProps = {
 };
 
 /**
- * `import {FieldNote} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Fieldnote component wraps text to describe other components.
+ * `FieldNote` is used to add additional context to the attached input control (e.g., `InputField`,
+ * `TextareaField`, `Select`, `Combobox`, etc.). `FieldNote` should not be used in isolation, but
+ * can be used when building a custom input control.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Default | Neutral helper text sitting below the control. | Format hints. Examples of valid input. |
+ * | Warning | `status="warning"` adds a warning icon and treatment. | Input that is accepted but likely not what the user meant. |
+ * | Critical | `status="critical"` adds an error icon and treatment. | Validation failures that block submission. |
+ *
+ * When building a custom control, give the note an `id` and add that `id` to the control's
+ * `aria-describedby` so the note is announced with the control. The EDS controls that render a
+ * `FieldNote` for you already wire this up.
+ *
+ * For guidance on what to put in a note, see the do's and don'ts on the control itself (for
+ * example, `InputField`).
  */
 export const FieldNote = ({
   children,

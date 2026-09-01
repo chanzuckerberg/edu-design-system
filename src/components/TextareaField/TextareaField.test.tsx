@@ -74,7 +74,7 @@ describe('<TextareaField />', () => {
 
     expect(field).toHaveFocus();
 
-    await user.keyboard('abc');
+    await user.type(field, 'abc');
 
     expect(onChangeFn).not.toHaveBeenCalled();
   });
@@ -99,8 +99,8 @@ describe('<TextareaField />', () => {
 
     expect(field).toHaveFocus();
 
-    await user.keyboard('abc');
+    await user.type(field, 'abc');
 
-    expect(onChangeFn).toHaveBeenCalled();
+    expect(onChangeFn).toHaveBeenCalledTimes(3);
   });
 });

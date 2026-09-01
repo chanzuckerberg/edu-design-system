@@ -24,6 +24,10 @@ export default {
     },
   },
   parameters: {
+    docs: {
+      subtitle:
+        'Buttons are used to initialize an action. Button labels express what action will occur when the user interacts with it. Also known as action, call to action or CTA.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0.5'],

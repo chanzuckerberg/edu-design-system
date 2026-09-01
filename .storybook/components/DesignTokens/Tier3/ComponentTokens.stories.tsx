@@ -7,6 +7,7 @@ import {
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
+import camelCase from 'lodash/camelCase';
 import upperFirst from 'lodash/upperFirst';
 import React from 'react';
 
@@ -80,6 +81,24 @@ export const BackgroundTable: Story = {
           );
         } else {
           return 'bg-table-' + getSpecifier(name, filterTerm);
+        }
+      },
+    ),
+  },
+};
+
+export const BackgroundDataTable: Story = {
+  args: {
+    caption: 'Background DataTable Tokens',
+    listItems: getTokenListItems(
+      'eds-theme-color-background-data-table',
+      'color',
+      (name, column, filterTerm) => {
+        const varName = camelCase(getSpecifier(name, filterTerm));
+        if (column === 'figma') {
+          return '→ background/dataTable-' + varName;
+        } else {
+          return 'bg-dataTable-' + varName;
         }
       },
     ),

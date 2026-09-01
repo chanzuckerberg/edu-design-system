@@ -54,13 +54,44 @@ type Context = {
 };
 
 const BreadcrumbsContext = createContext<Context>({});
-/**
- * `import {Breadcrumbs} from "@chanzuckerberg/eds";`
- *
- * List of Breadcrumb components showing the user where they are in the system and allow them
- * to navigate to parent pages.
- */
 
+/**
+ * ## Usage
+ *
+ * Navigation component used to show hierarchical position and depth of content in a webpage or
+ * application. Can show all available links in the hierarchy, or collapse the links into a menu
+ * as needed.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Full trail | Every ancestor is shown as its own link, separated by `separator`. | Shallow hierarchies that fit the available width. |
+ * | Collapsed | Middle items move into a `Menu` behind an ellipsis when the trail would overflow. | Deep hierarchies. Narrow containers. |
+ * | Back | The parent page is shown as a single back arrow at small breakpoints. | Mobile and other narrow viewports. |
+ *
+ * ### Best Practices
+ *
+ * * Use brief text for breadcrumb item text descriptions.
+ *
+ * ## Interaction
+ *
+ * Each item in `Breadcrumbs` represents one anchor which leads to a parent page in the hierarchy.
+ * Adjacent pages in the information architecture will have the same exact ancestors.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use `Breadcrumbs` when pages have a tree structure resulting in 1-3 topmost parent pages, and many children per parent.
+ *
+ * ### Don'ts
+ *
+ * * Avoid having breadcrumbs with hierarchies greater than 10 ancestors. Consider a custom sub-navigation, more top-level links in `AppHeader`, or other grouping to avoid such deep hierarchies.
+ * * Don't go beyond 1-3 words for the text of each breadcrumb.
+ *
+ * ## Resources
+ *
+ * * https://www.nngroup.com/articles/breadcrumbs/
+ */
 export const Breadcrumbs = ({
   'aria-label': ariaLabel = 'breadcrumbs links',
   className,
@@ -237,8 +268,6 @@ type BreadcrumbItemProps = {
 };
 
 /**
- * `import {BreadcrumbsItem} from "@chanzuckerberg/eds";`
- *
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({

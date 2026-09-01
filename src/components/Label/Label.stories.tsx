@@ -10,6 +10,10 @@ export default {
   title: 'Components/Label',
   component: Label,
   parameters: {
+    docs: {
+      subtitle:
+        'Label component used with selection controls (e.g., radio/checkbox fields).',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0'],

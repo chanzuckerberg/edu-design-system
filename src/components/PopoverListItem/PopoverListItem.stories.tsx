@@ -13,9 +13,13 @@ export default {
   title: 'Components/PopoverListItem',
   component: PopoverListItem,
   parameters: {
+    docs: {
+      subtitle:
+        'Structure and styles for an individual item in a popover that contains a list of items.',
+    },
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.1.0'],
+  tags: ['autodocs', 'version:2.1.1'],
   argTypes: {
     icon: {
       table: { disable: true },
@@ -92,6 +96,17 @@ export const Destructive: Story = {
     children: 'Delete',
     leadingContent: <Icon name="trash" purpose="decorative" size="24px" />,
     isDestructiveAction: true,
+  },
+};
+
+/**
+ * Popover list items can be marked as destructive while disabled. In such cases, it should appear as disabled.
+ */
+export const DisabledAndDestructive: Story = {
+  args: {
+    ...Disabled.args,
+    ...Destructive.args,
+    subLabel: 'Permanently remove this item',
   },
 };
 

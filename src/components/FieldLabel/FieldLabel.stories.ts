@@ -11,6 +11,9 @@ export default {
     children: 'Label',
   },
   parameters: {
+    docs: {
+      subtitle: 'Label associated with an input element or field.',
+    },
     layout: 'centered',
   },
   tags: ['autodocs', 'version:2.0.1'],

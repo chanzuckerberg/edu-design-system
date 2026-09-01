@@ -15,6 +15,10 @@ export default {
   title: 'Components/Card',
   component: Card,
   parameters: {
+    docs: {
+      subtitle:
+        'Cards are the outer wrapper for a block that typically contains a title, image, text, and/or calls to action. EDS provides subcomponents to help streamline the design and build of common cards. Designers can customize card contents to best fit their product needs.',
+    },
     layout: 'centered',
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],

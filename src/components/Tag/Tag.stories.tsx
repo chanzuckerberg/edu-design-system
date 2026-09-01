@@ -8,6 +8,10 @@ export default {
   title: 'Components/Tag',
   component: Tag,
   parameters: {
+    docs: {
+      subtitle:
+        'Status UI elements that visually represent metadata, attributes, or categorical information about an item. Tags usually represent system-generated information.',
+    },
     layout: 'centered',
   },
   args: {

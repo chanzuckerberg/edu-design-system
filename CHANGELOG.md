@@ -1,6 +1,29 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [18.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.1...v18.7.0) (2026-09-01)
+
+
+### Features
+
+* **Combobox:** add beta Combobox component ([#2576](https://github.com/chanzuckerberg/edu-design-system/issues/2576)) ([0179adb](https://github.com/chanzuckerberg/edu-design-system/commit/0179adb05efca9c2509a0b4ef3d7ba2e1d24015e))
+* **DataTable:** update to match latest designs ([#2569](https://github.com/chanzuckerberg/edu-design-system/issues/2569)) ([2f0ca26](https://github.com/chanzuckerberg/edu-design-system/commit/2f0ca26b168a24852012360c305600b50c3afa05))
+
+
+### Bug Fixes
+
+* **InputField:** allow embedded input buttons to have flexible widths ([#2582](https://github.com/chanzuckerberg/edu-design-system/issues/2582)) ([6582ef1](https://github.com/chanzuckerberg/edu-design-system/commit/6582ef1527c96d636e40c3e5aa1868b3a40d302d))
+* **tokens:** update yellow-050 to FFFC93 ([#2568](https://github.com/chanzuckerberg/edu-design-system/issues/2568)) ([401207a](https://github.com/chanzuckerberg/edu-design-system/commit/401207aa47af45771d1721d1665d600db3b7846c))
+
+## [18.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.0...v18.6.1) (2026-07-20)
+
+
+### Bug Fixes
+
+* **AppHeader:** change color transition to be faster than the motion ([#2556](https://github.com/chanzuckerberg/edu-design-system/issues/2556)) ([f2113cd](https://github.com/chanzuckerberg/edu-design-system/commit/f2113cd605a9537cb118b179d3b2b79cdaffb202))
+* **PopoverListItem:** appear as disabled when both disabled and destructive ([#2555](https://github.com/chanzuckerberg/edu-design-system/issues/2555)) ([b50c734](https://github.com/chanzuckerberg/edu-design-system/commit/b50c734ade01d71ef0a36239fdbf4d7ec0123236))
+* **SelectionChip:** change parent of pseudo element before ([#2559](https://github.com/chanzuckerberg/edu-design-system/issues/2559)) ([2eb58ee](https://github.com/chanzuckerberg/edu-design-system/commit/2eb58ee8d9ec47ed0bddc9d985466370a20e3ad8))
 
 ## [18.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.4.0...v18.6.0) (2026-07-08)
 

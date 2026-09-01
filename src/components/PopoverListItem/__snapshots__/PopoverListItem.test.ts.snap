@@ -175,6 +175,46 @@ exports[`<PopoverListItem /> > Disabled story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<PopoverListItem /> > DisabledAndDestructive story renders snapshot 1`] = `
+<div
+  aria-disabled="true"
+  class="_popover-list-item_e0596d _popover-list-item--disabled_e0596d _popover-list-item--destructive-action_e0596d _popover-list-item--type-listitem_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.30775 20.4997C6.80908 20.4997 6.38308 20.3232 6.02975 19.97C5.67658 19.6167 5.5 19.1907 5.5 18.692V5.99973H4.5V4.49973H9V3.61523H15V4.49973H19.5V5.99973H18.5V18.692C18.5 19.1972 18.325 19.6247 17.975 19.9747C17.625 20.3247 17.1974 20.4997 16.6923 20.4997H7.30775ZM17 5.99973H7V18.692C7 18.7818 7.02883 18.8556 7.0865 18.9132C7.14417 18.9709 7.21792 18.9997 7.30775 18.9997H16.6923C16.7693 18.9997 16.8398 18.9677 16.9038 18.9035C16.9679 18.8395 17 18.769 17 18.692V5.99973ZM9.404 16.9997H10.9037V7.99973H9.404V16.9997ZM13.0962 16.9997H14.596V7.99973H13.0962V16.9997Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Delete
+    </div>
+    <div
+      class="_text_b3eba3 _text--body-sm_b3eba3 _popover-list-item__sub-label_e0596d"
+    >
+      Permanently remove this item
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<PopoverListItem /> > Label story renders snapshot 1`] = `
 <div
   class="_popover-list-item_e0596d _popover-list-item--type-label_e0596d"

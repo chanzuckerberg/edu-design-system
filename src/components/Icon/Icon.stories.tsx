@@ -15,6 +15,10 @@ const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
   component: Icon,
   parameters: {
+    docs: {
+      subtitle:
+        'Render arbitrary SVG path data while enforcing good accessibility practices.',
+    },
     layout: 'centered',
   },
   argTypes: {

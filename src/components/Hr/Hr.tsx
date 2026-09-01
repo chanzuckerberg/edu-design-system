@@ -27,9 +27,22 @@ export type HrProps = {
 };
 
 /**
- * `import {Hr} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Horizontal rule component to present a horizontal line separating content.
+ * Horizontal rules allow for separating vertically adjacent content in a layout.
+ *
+ * `Hr` renders one consistent rule with no supported variations. When a separator needs a
+ * different weight or color, reach for spacing or a border on the surrounding block instead.
+ *
+ * ## Content & Accessibility
+ *
+ * ### Do's
+ *
+ * * Use when trying to separate content in adjacent elements in a page instead of applying a bottom border and padding.
+ *
+ * ### Don'ts
+ *
+ * * Never have adjacent `Hr` in a page or layout. Instead, consider using a top and bottom border to a block element.
  */
 export const Hr = ({ className, size, variant, ...other }: HrProps) => {
   const componentClassName = clsx(

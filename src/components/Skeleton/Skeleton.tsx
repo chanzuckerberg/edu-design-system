@@ -20,9 +20,41 @@ type SkeletonProps = BaseProps & {
 };
 
 /**
- * `import {Skeleton} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout
+ * Placeholder containers that are used for dynamic pages, to represent a proxy of the page layout
+ * when content finishes loading. Sizing and shape of the skeletons can be styled and adjusted, and
+ * the components can show an animation while on screen.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Block | The default. A rectangle sized by `width` and `height`. | Cards, images, and other blocks of layout. |
+ * | Text | `Skeleton.Text` stands in for a line or paragraph of copy. | Headings, body copy, list rows. |
+ * | Circle | `Skeleton.Circle` takes a single `width` and uses it for both dimensions. | Avatars and other round elements. |
+ *
+ * The shimmer runs by default and can be turned off per instance with `isAnimating={false}`. It is
+ * also disabled automatically for anyone who has asked for reduced motion.
+ *
+ * ## Content & Accessibility
+ *
+ * Every skeleton renders `aria-hidden`, so assistive tech skips the placeholders entirely. Announce
+ * the loading state separately, rather than relying on the skeletons to convey that something is
+ * on its way.
+ *
+ * ### Do's
+ *
+ * * Use `Skeleton` when you have content that may take some time to load, but you know the general shape and positioning of the content.
+ * * For `Skeleton`s using text, it's preferred to use the `ch` size in CSS with an approximate character count similar to the eventual content, so that it scales with the adjacent typography preset used.
+ * * All other `Skeleton` components should prefer using relative size units (`rem`, `em`, `%`) so that they adapt to user zoom settings.
+ *
+ * ### Don'ts
+ *
+ * * Avoid excessive use of `Skeleton`, especially in cases where the page has static content that isn't fetched asynchronously. Only use `Skeleton` for specific chunks of content that may need more time to load.
+ * * Avoid very large `Skeleton` instances (e.g., greater than `25vh` / `25vw`). Consider using multiple smaller `Skeleton` instances, or a background color and centered `LoadingIndicator`.
+ *
+ * ## Resources
+ *
+ * * https://www.lukew.com/ff/entry.asp?1797
  */
 export const Skeleton = ({
   className,

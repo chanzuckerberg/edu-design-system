@@ -8,6 +8,10 @@ export default {
   title: 'Components/Link',
   component: Link,
   parameters: {
+    docs: {
+      subtitle:
+        'Links take users to another place, and usually appear within or directly following a paragraph or sentence.',
+    },
     layout: 'centered',
   },
   args: {

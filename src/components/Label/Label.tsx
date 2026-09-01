@@ -37,9 +37,15 @@ export type LabelProps = {
 };
 
 /**
- * `import {Label} from "@chanzuckerberg/eds";`
+ * ## Usage
  *
- * Label component used as legends for field groups (e.g., radio/checkbox fields).
+ * Text styling used for selection controls like `Radio` and `Checkbox`. This component should not
+ * generally be used, except on custom radio or checkbox components.
+ *
+ * Pair `htmlFor` with the control's `id` so the label and the control are associated. `Radio.Label`
+ * is this component, and `Checkbox` and `Toggle` render it for you.
+ *
+ * `labelAfter` is a trailing slot beside the label text, typically used for a `Tooltip`.
  */
 export const Label = ({
   className,

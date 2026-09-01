@@ -10,6 +10,10 @@ export default {
   title: 'Components/Text',
   component: Text,
   parameters: {
+    docs: {
+      subtitle:
+        'The Text component decorates `<p>`, `<span>`, and `<div>` with typographic variants.',
+    },
     layout: 'centered',
   },
   argTypes: {
