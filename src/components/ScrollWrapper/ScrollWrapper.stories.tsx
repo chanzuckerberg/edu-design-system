@@ -8,6 +8,12 @@ import { ScrollWrapper } from './ScrollWrapper';
 export default {
   title: 'Components/ScrollWrapper',
   component: ScrollWrapper,
+  parameters: {
+    docs: {
+      subtitle:
+        'A wrapper that shows and hides shadows along the edges of scrollable content.',
+    },
+  },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
   tags: ['version:1.1'],
 } as Meta<Args>;
