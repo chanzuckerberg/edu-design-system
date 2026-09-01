@@ -7,6 +7,10 @@ export default {
   title: 'Components/ProgressBar',
   component: ProgressBar,
   parameters: {
+    docs: {
+      subtitle:
+        'Component used to visually represent user progress through a series of discrete portions, or a percentage.',
+    },
     layout: 'centered',
   },
   tags: ['beta', 'version:1.0.1'],
