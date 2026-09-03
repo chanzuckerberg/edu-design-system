@@ -16,11 +16,11 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r4:"
+          aria-controls="_r_4_"
           aria-selected="true"
           class="_tabs__link_5bfe90"
-          href="#:r4:"
-          id=":r5:-Tab-Title-1"
+          href="#_r_4_"
+          id="_r_5_-Tab-Title-1"
           role="tab"
           tabindex="0"
         >
@@ -36,11 +36,11 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r4:"
+          aria-controls="_r_4_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r4:"
-          id=":r5:-Tab-Title-2"
+          href="#_r_4_"
+          id="_r_5_-Tab-Title-2"
           role="tab"
           tabindex="-1"
         >
@@ -56,11 +56,11 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r4:"
+          aria-controls="_r_4_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r4:"
-          id=":r5:-Tab-Title-3"
+          href="#_r_4_"
+          id="_r_5_-Tab-Title-3"
           role="tab"
           tabindex="-1"
         >
@@ -76,11 +76,11 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r4:"
+          aria-controls="_r_4_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r4:"
-          id=":r5:-Tab-Title-4"
+          href="#_r_4_"
+          id="_r_5_-Tab-Title-4"
           role="tab"
           tabindex="-1"
         >
@@ -96,8 +96,8 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
   <div>
     <div
       aria-hidden="false"
-      aria-labelledby=":r5:-Tab-Title-1"
-      id=":r4:"
+      aria-labelledby="_r_5_-Tab-Title-1"
+      id="_r_4_"
       role="tabpanel"
     >
       <div
@@ -136,11 +136,11 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r0:"
+          aria-controls="_r_0_"
           aria-selected="true"
           class="_tabs__link_5bfe90"
-          href="#:r0:"
-          id=":r1:-Tab-Title-1"
+          href="#_r_0_"
+          id="_r_1_-Tab-Title-1"
           role="tab"
           tabindex="0"
         >
@@ -156,11 +156,11 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r0:"
+          aria-controls="_r_0_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r0:"
-          id=":r1:-Tab-Title-2"
+          href="#_r_0_"
+          id="_r_1_-Tab-Title-2"
           role="tab"
           tabindex="-1"
         >
@@ -176,11 +176,11 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r0:"
+          aria-controls="_r_0_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r0:"
-          id=":r1:-Tab-Title-3"
+          href="#_r_0_"
+          id="_r_1_-Tab-Title-3"
           role="tab"
           tabindex="-1"
         >
@@ -196,11 +196,11 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r0:"
+          aria-controls="_r_0_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r0:"
-          id=":r1:-Tab-Title-4"
+          href="#_r_0_"
+          id="_r_1_-Tab-Title-4"
           role="tab"
           tabindex="-1"
         >
@@ -216,8 +216,8 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
   <div>
     <div
       aria-hidden="false"
-      aria-labelledby=":r1:-Tab-Title-1"
-      id=":r0:"
+      aria-labelledby="_r_1_-Tab-Title-1"
+      id="_r_0_"
       role="tabpanel"
     >
       <div
@@ -259,11 +259,11 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls="_r_2_"
             aria-selected="true"
             class="_tabs__link_5bfe90"
-            href="#:r2:"
-            id=":r3:-Tab-Title-1"
+            href="#_r_2_"
+            id="_r_3_-Tab-Title-1"
             role="tab"
             tabindex="0"
           >
@@ -279,11 +279,11 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls="_r_2_"
             aria-selected="false"
             class="_tabs__link_5bfe90"
-            href="#:r2:"
-            id=":r3:-Tab-Title-2"
+            href="#_r_2_"
+            id="_r_3_-Tab-Title-2"
             role="tab"
             tabindex="-1"
           >
@@ -299,11 +299,11 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls="_r_2_"
             aria-selected="false"
             class="_tabs__link_5bfe90"
-            href="#:r2:"
-            id=":r3:-Tab-Title-3"
+            href="#_r_2_"
+            id="_r_3_-Tab-Title-3"
             role="tab"
             tabindex="-1"
           >
@@ -319,11 +319,11 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls=":r2:"
+            aria-controls="_r_2_"
             aria-selected="false"
             class="_tabs__link_5bfe90"
-            href="#:r2:"
-            id=":r3:-Tab-Title-4"
+            href="#_r_2_"
+            id="_r_3_-Tab-Title-4"
             role="tab"
             tabindex="-1"
           >
@@ -339,8 +339,8 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
     <div>
       <div
         aria-hidden="false"
-        aria-labelledby=":r3:-Tab-Title-1"
-        id=":r2:"
+        aria-labelledby="_r_3_-Tab-Title-1"
+        id="_r_2_"
         role="tabpanel"
       >
         <div
@@ -380,11 +380,11 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r6:"
+          aria-controls="_r_6_"
           aria-selected="true"
           class="_tabs__link_5bfe90"
-          href="#:r6:"
-          id=":r7:-Tab-Title-1"
+          href="#_r_6_"
+          id="_r_7_-Tab-Title-1"
           role="tab"
           tabindex="0"
         >
@@ -400,11 +400,11 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r6:"
+          aria-controls="_r_6_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r6:"
-          id=":r7:-Tab-Title-2"
+          href="#_r_6_"
+          id="_r_7_-Tab-Title-2"
           role="tab"
           tabindex="-1"
         >
@@ -420,11 +420,11 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r6:"
+          aria-controls="_r_6_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r6:"
-          id=":r7:-Tab-Title-3"
+          href="#_r_6_"
+          id="_r_7_-Tab-Title-3"
           role="tab"
           tabindex="-1"
         >
@@ -440,11 +440,11 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r6:"
+          aria-controls="_r_6_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r6:"
-          id=":r7:-Tab-Title-4"
+          href="#_r_6_"
+          id="_r_7_-Tab-Title-4"
           role="tab"
           tabindex="-1"
         >
@@ -460,8 +460,8 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
   <div>
     <div
       aria-hidden="false"
-      aria-labelledby=":r7:-Tab-Title-1"
-      id=":r6:"
+      aria-labelledby="_r_7_-Tab-Title-1"
+      id="_r_6_"
       role="tabpanel"
     >
       <div
@@ -500,11 +500,11 @@ exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r8:"
+          aria-controls="_r_8_"
           aria-selected="true"
           class="_tabs__link_5bfe90"
-          href="#:r8:"
-          id=":r9:-Tab-Title-1"
+          href="#_r_8_"
+          id="_r_9_-Tab-Title-1"
           role="tab"
           tabindex="0"
         >
@@ -534,11 +534,11 @@ exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r8:"
+          aria-controls="_r_8_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r8:"
-          id=":r9:-Tab-Title-2"
+          href="#_r_8_"
+          id="_r_9_-Tab-Title-2"
           role="tab"
           tabindex="-1"
         >
@@ -568,11 +568,11 @@ exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":r8:"
+          aria-controls="_r_8_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:r8:"
-          id=":r9:-Tab-Title-3"
+          href="#_r_8_"
+          id="_r_9_-Tab-Title-3"
           role="tab"
           tabindex="-1"
         >
@@ -602,8 +602,8 @@ exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
   <div>
     <div
       aria-hidden="false"
-      aria-labelledby=":r9:-Tab-Title-1"
-      id=":r8:"
+      aria-labelledby="_r_9_-Tab-Title-1"
+      id="_r_8_"
       role="tabpanel"
     >
       <div
@@ -642,11 +642,11 @@ exports[`<TabGroup /> > WithTabIllustrations story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":ra:"
+          aria-controls="_r_a_"
           aria-selected="true"
           class="_tabs__link_5bfe90"
-          href="#:ra:"
-          id=":rb:-Tab-Title-1"
+          href="#_r_a_"
+          id="_r_b_-Tab-Title-1"
           role="tab"
           tabindex="0"
         >
@@ -669,11 +669,11 @@ exports[`<TabGroup /> > WithTabIllustrations story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":ra:"
+          aria-controls="_r_a_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:ra:"
-          id=":rb:-Tab-Title-2"
+          href="#_r_a_"
+          id="_r_b_-Tab-Title-2"
           role="tab"
           tabindex="-1"
         >
@@ -696,11 +696,11 @@ exports[`<TabGroup /> > WithTabIllustrations story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls=":ra:"
+          aria-controls="_r_a_"
           aria-selected="false"
           class="_tabs__link_5bfe90"
-          href="#:ra:"
-          id=":rb:-Tab-Title-3"
+          href="#_r_a_"
+          id="_r_b_-Tab-Title-3"
           role="tab"
           tabindex="-1"
         >
@@ -723,8 +723,8 @@ exports[`<TabGroup /> > WithTabIllustrations story renders snapshot 1`] = `
   <div>
     <div
       aria-hidden="false"
-      aria-labelledby=":rb:-Tab-Title-1"
-      id=":ra:"
+      aria-labelledby="_r_b_-Tab-Title-1"
+      id="_r_a_"
       role="tabpanel"
     >
       <div

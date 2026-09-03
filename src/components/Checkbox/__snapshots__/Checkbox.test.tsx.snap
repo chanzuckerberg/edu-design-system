@@ -10,7 +10,7 @@ exports[`<Checkbox /> > Checked story renders snapshot 1`] = `
     <input
       checked=""
       class="_checkbox__input_2d475f"
-      id=":r3:"
+      id="_r_3_"
       type="checkbox"
     />
     <div
@@ -18,7 +18,7 @@ exports[`<Checkbox /> > Checked story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _checkbox__label_2d475f"
-        for=":r3:"
+        for="_r_3_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -41,7 +41,7 @@ exports[`<Checkbox /> > Default story renders snapshot 1`] = `
   >
     <input
       class="_checkbox__input_2d475f"
-      id=":r0:"
+      id="_r_0_"
       type="checkbox"
     />
     <div
@@ -49,7 +49,7 @@ exports[`<Checkbox /> > Default story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _checkbox__label_2d475f"
-        for=":r0:"
+        for="_r_0_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -72,7 +72,7 @@ exports[`<Checkbox /> > Error story renders snapshot 1`] = `
   >
     <input
       class="_checkbox__input_2d475f"
-      id=":r2:"
+      id="_r_2_"
       type="checkbox"
     />
     <div
@@ -80,7 +80,7 @@ exports[`<Checkbox /> > Error story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _checkbox__label_2d475f"
-        for=":r2:"
+        for="_r_2_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -107,7 +107,7 @@ exports[`<Checkbox /> > GlyphIsConsistent story renders snapshot 1`] = `
       <input
         checked=""
         class="_checkbox__input_2d475f"
-        id=":r4:"
+        id="_r_4_"
         type="checkbox"
       />
       <div
@@ -115,7 +115,7 @@ exports[`<Checkbox /> > GlyphIsConsistent story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _checkbox__label_2d475f"
-          for=":r4:"
+          for="_r_4_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -139,7 +139,7 @@ exports[`<Checkbox /> > Indeterminate story renders snapshot 1`] = `
   >
     <input
       class="_checkbox__input_2d475f"
-      id=":r5:"
+      id="_r_5_"
       type="checkbox"
     />
     <div
@@ -147,7 +147,7 @@ exports[`<Checkbox /> > Indeterminate story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _checkbox__label_2d475f"
-        for=":r5:"
+        for="_r_5_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -170,7 +170,7 @@ exports[`<Checkbox /> > LongLabels story renders snapshot 1`] = `
   >
     <input
       class="_checkbox__input_2d475f"
-      id=":r7:"
+      id="_r_7_"
       type="checkbox"
     />
     <div
@@ -178,7 +178,7 @@ exports[`<Checkbox /> > LongLabels story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _checkbox__label_2d475f"
-        for=":r7:"
+        for="_r_7_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -201,7 +201,7 @@ exports[`<Checkbox /> > WithSublabel story renders snapshot 1`] = `
   >
     <input
       class="_checkbox__input_2d475f"
-      id=":r1:"
+      id="_r_1_"
       type="checkbox"
     />
     <div
@@ -209,7 +209,7 @@ exports[`<Checkbox /> > WithSublabel story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _checkbox__label_2d475f"
-        for=":r1:"
+        for="_r_1_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -238,7 +238,7 @@ exports[`<Checkbox /> > WithoutVisibleLabel story renders snapshot 1`] = `
     <input
       aria-label="a checkbox has no name"
       class="_checkbox__input_2d475f"
-      id=":r6:"
+      id="_r_6_"
       type="checkbox"
     />
   </div>
@@ -252,7 +252,7 @@ exports[`<Checkbox /> > inline Disabled story renders snapshot 1`] = `
   <input
     class="_checkbox__input_2d475f"
     disabled=""
-    id=":r8:"
+    id="_r_8_"
     type="checkbox"
   />
   <div
@@ -260,7 +260,7 @@ exports[`<Checkbox /> > inline Disabled story renders snapshot 1`] = `
   >
     <label
       class="_label_f9fc7e _label--disabled_f9fc7e _checkbox__label_2d475f"
-      for=":r8:"
+      for="_r_8_"
     >
       <span
         class="_text_b3eba3 _text--body-md_b3eba3"

@@ -67,8 +67,6 @@
   --selection-chip__fg: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 
   box-shadow: inset 0 0 0 1px var(--selection-chip__border);
-  pointer-events: none;
-  /* TODO(next-major): remove when switching to use inert */
 }
 
 .selection-chip--has-icon {

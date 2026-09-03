@@ -3,12 +3,12 @@
 exports[`<SelectionChip /> > ControlledChecked story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
-  for=":r5:"
+  for="_r_5_"
 >
   <input
     checked=""
     class="_selection-chip__input_b63b89"
-    id=":r5:"
+    id="_r_5_"
     type="checkbox"
   />
   <div
@@ -37,11 +37,11 @@ exports[`<SelectionChip /> > ControlledChecked story renders snapshot 1`] = `
 exports[`<SelectionChip /> > Default story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89"
-  for=":r0:"
+  for="_r_0_"
 >
   <input
     class="_selection-chip__input_b63b89"
-    id=":r0:"
+    id="_r_0_"
     type="checkbox"
   />
   <div
@@ -59,12 +59,13 @@ exports[`<SelectionChip /> > Default story renders snapshot 1`] = `
 exports[`<SelectionChip /> > Disabled story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89 _selection-chip--disabled_b63b89"
-  for=":r3:"
+  for="_r_3_"
+  inert=""
 >
   <input
     class="_selection-chip__input_b63b89"
     disabled=""
-    id=":r3:"
+    id="_r_3_"
     type="checkbox"
   />
   <div
@@ -82,13 +83,14 @@ exports[`<SelectionChip /> > Disabled story renders snapshot 1`] = `
 exports[`<SelectionChip /> > DisabledSelected story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89 _selection-chip--disabled_b63b89"
-  for=":r4:"
+  for="_r_4_"
+  inert=""
 >
   <input
     checked=""
     class="_selection-chip__input_b63b89"
     disabled=""
-    id=":r4:"
+    id="_r_4_"
     type="checkbox"
   />
   <div
@@ -106,12 +108,12 @@ exports[`<SelectionChip /> > DisabledSelected story renders snapshot 1`] = `
 exports[`<SelectionChip /> > Selected story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89"
-  for=":r1:"
+  for="_r_1_"
 >
   <input
     checked=""
     class="_selection-chip__input_b63b89"
-    id=":r1:"
+    id="_r_1_"
     type="checkbox"
   />
   <div
@@ -129,12 +131,12 @@ exports[`<SelectionChip /> > Selected story renders snapshot 1`] = `
 exports[`<SelectionChip /> > UncontrolledChecked story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
-  for=":r6:"
+  for="_r_6_"
 >
   <input
     checked=""
     class="_selection-chip__input_b63b89"
-    id=":r6:"
+    id="_r_6_"
     type="checkbox"
   />
   <div
@@ -163,11 +165,11 @@ exports[`<SelectionChip /> > UncontrolledChecked story renders snapshot 1`] = `
 exports[`<SelectionChip /> > WithIcon story renders snapshot 1`] = `
 <label
   class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
-  for=":r2:"
+  for="_r_2_"
 >
   <input
     class="_selection-chip__input_b63b89"
-    id=":r2:"
+    id="_r_2_"
     type="checkbox"
   />
   <div

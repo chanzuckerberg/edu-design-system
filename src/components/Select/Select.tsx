@@ -499,8 +499,7 @@ const SelectOption = function (props: SelectOptionProps) {
                       aria-hidden="true"
                       aria-label="checkbox"
                       checked={selected}
-                      // @ts-expect-error inert properly supported in React 19
-                      inert="true"
+                      inert
                       readOnly
                     />
                   ) : (
@@ -508,8 +507,7 @@ const SelectOption = function (props: SelectOptionProps) {
                       aria-hidden="true"
                       aria-label="radio"
                       checked={selected}
-                      // @ts-expect-error inert properly supported in React 19
-                      inert="true"
+                      inert
                       readOnly
                     />
                   )

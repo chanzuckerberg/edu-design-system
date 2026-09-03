@@ -164,7 +164,7 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
     >
       <input
         class="_checkbox__input_2d475f"
-        id=":r0:"
+        id="_r_0_"
         name="test-checkbox"
         type="checkbox"
       />
@@ -173,7 +173,7 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _checkbox__label_2d475f"
-          for=":r0:"
+          for="_r_0_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -194,7 +194,7 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
     >
       <input
         class="_checkbox__input_2d475f"
-        id=":r1:"
+        id="_r_1_"
         name="test-checkbox"
         type="checkbox"
       />
@@ -203,7 +203,7 @@ exports[`<Fieldset /> > WithCheckboxes story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _checkbox__label_2d475f"
-          for=":r1:"
+          for="_r_1_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -302,7 +302,7 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
       <input
         class="_checkbox__input_2d475f"
         disabled=""
-        id=":r2:"
+        id="_r_2_"
         name="test-checkbox"
         type="checkbox"
       />
@@ -311,7 +311,7 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _label--disabled_f9fc7e _checkbox__label_2d475f"
-          for=":r2:"
+          for="_r_2_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -333,7 +333,7 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
       <input
         class="_checkbox__input_2d475f"
         disabled=""
-        id=":r3:"
+        id="_r_3_"
         name="test-checkbox"
         type="checkbox"
       />
@@ -342,7 +342,7 @@ exports[`<Fieldset /> > WithDisabledCheckboxes story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _label--disabled_f9fc7e _checkbox__label_2d475f"
-          for=":r3:"
+          for="_r_3_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -400,7 +400,7 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
         <input
           class="_radio__input_4c3e9c"
           disabled=""
-          id=":r8:"
+          id="_r_8_"
           name="test-radio"
           type="radio"
         />
@@ -416,7 +416,7 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _label--disabled_f9fc7e"
-          for=":r8:"
+          for="_r_8_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -441,7 +441,7 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
         <input
           class="_radio__input_4c3e9c"
           disabled=""
-          id=":r9:"
+          id="_r_9_"
           name="test-radio"
           type="radio"
         />
@@ -457,7 +457,7 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _label--disabled_f9fc7e"
-          for=":r9:"
+          for="_r_9_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -508,7 +508,7 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
     >
       <input
         class="_checkbox__input_2d475f"
-        id=":r4:"
+        id="_r_4_"
         name="test-checkbox"
         type="checkbox"
       />
@@ -517,7 +517,7 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _checkbox__label_2d475f"
-          for=":r4:"
+          for="_r_4_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -538,7 +538,7 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
     >
       <input
         class="_checkbox__input_2d475f"
-        id=":r5:"
+        id="_r_5_"
         name="test-checkbox"
         type="checkbox"
       />
@@ -547,7 +547,7 @@ exports[`<Fieldset /> > WithErrorCheckboxes story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e _checkbox__label_2d475f"
-          for=":r5:"
+          for="_r_5_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -601,7 +601,7 @@ exports[`<Fieldset /> > WithErrorRadioButton story renders snapshot 1`] = `
       >
         <input
           class="_radio--error_4c3e9c _radio__input_4c3e9c"
-          id=":ra:"
+          id="_r_a_"
           name="test-radio"
           type="radio"
         />
@@ -617,7 +617,7 @@ exports[`<Fieldset /> > WithErrorRadioButton story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e"
-          for=":ra:"
+          for="_r_a_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -641,7 +641,7 @@ exports[`<Fieldset /> > WithErrorRadioButton story renders snapshot 1`] = `
       >
         <input
           class="_radio--error_4c3e9c _radio__input_4c3e9c"
-          id=":rb:"
+          id="_r_b_"
           name="test-radio"
           type="radio"
         />
@@ -657,7 +657,7 @@ exports[`<Fieldset /> > WithErrorRadioButton story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e"
-          for=":rb:"
+          for="_r_b_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -711,7 +711,7 @@ exports[`<Fieldset /> > WithRadioButton story renders snapshot 1`] = `
       >
         <input
           class="_radio__input_4c3e9c"
-          id=":r6:"
+          id="_r_6_"
           name="test-radio"
           type="radio"
         />
@@ -727,7 +727,7 @@ exports[`<Fieldset /> > WithRadioButton story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e"
-          for=":r6:"
+          for="_r_6_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -751,7 +751,7 @@ exports[`<Fieldset /> > WithRadioButton story renders snapshot 1`] = `
       >
         <input
           class="_radio__input_4c3e9c"
-          id=":r7:"
+          id="_r_7_"
           name="test-radio"
           type="radio"
         />
@@ -767,7 +767,7 @@ exports[`<Fieldset /> > WithRadioButton story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e"
-          for=":r7:"
+          for="_r_7_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"

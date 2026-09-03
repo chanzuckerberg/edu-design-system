@@ -40,7 +40,7 @@ exports[`<Card /> > BackgroundCallout story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rp:"
+            id="headlessui-menu-button-_r_p_"
             type="button"
           >
             <svg
@@ -166,7 +166,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
   >
     <label
       class="_card__behavior-label_f66b11"
-      for=":rv:"
+      for="_r_v_"
     >
       <div
         class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
@@ -217,14 +217,14 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
         />
         <input
           class="_card__behavior-input_f66b11"
-          id=":rv:"
+          id="_r_v_"
           type="checkbox"
         />
       </div>
     </label>
     <label
       class="_card__behavior-label_f66b11"
-      for=":r10:"
+      for="_r_10_"
     >
       <div
         class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
@@ -275,7 +275,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
         />
         <input
           class="_card__behavior-input_f66b11"
-          id=":r10:"
+          id="_r_10_"
           type="checkbox"
         />
       </div>
@@ -324,7 +324,7 @@ exports[`<Card /> > Default story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r3:"
+            id="headlessui-menu-button-_r_3_"
             type="button"
           >
             <svg
@@ -427,7 +427,7 @@ exports[`<Card /> > IsInteractive story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:ra:"
+            id="headlessui-menu-button-_r_a_"
             type="button"
           >
             <svg
@@ -499,7 +499,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
   >
     <label
       class="_card__behavior-label_f66b11"
-      for=":rt:"
+      for="_r_t_"
     >
       <div
         class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
@@ -550,7 +550,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
         />
         <input
           class="_card__behavior-input_f66b11"
-          id=":rt:"
+          id="_r_t_"
           name="test"
           type="radio"
         />
@@ -558,7 +558,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
     </label>
     <label
       class="_card__behavior-label_f66b11"
-      for=":ru:"
+      for="_r_u_"
     >
       <div
         class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
@@ -609,7 +609,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
         />
         <input
           class="_card__behavior-input_f66b11"
-          id=":ru:"
+          id="_r_u_"
           name="test"
           type="radio"
         />
@@ -659,7 +659,7 @@ exports[`<Card /> > WhileDragging story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r14:"
+            id="headlessui-menu-button-_r_14_"
             type="button"
           >
             <svg
@@ -811,7 +811,7 @@ exports[`<Card /> > WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rh:"
+            id="headlessui-menu-button-_r_h_"
             type="button"
           >
             <svg

@@ -148,7 +148,7 @@ export const Breadcrumbs = ({
   const menuItems = breadcrumbsItems
     .slice(1, breadcrumbsItems.length - 1)
     .map((breadcrumbItem, index) => {
-      const menuItem = breadcrumbItem as JSX.Element;
+      const menuItem = breadcrumbItem as React.JSX.Element;
       return (
         <Menu.Item
           href={menuItem.props.href}
@@ -207,7 +207,7 @@ const flattenBreadcrumbsItems = (children: ReactNode) => {
   /**
    * Throws error if children are not BreadcrumbsItems
    */
-  const shouldThrowError = (flattenedChildren as JSX.Element[]).some(
+  const shouldThrowError = (flattenedChildren as React.JSX.Element[]).some(
     (child) => {
       if (child.type === BreadcrumbsItem || child.type === Breadcrumbs.Item) {
         return false;

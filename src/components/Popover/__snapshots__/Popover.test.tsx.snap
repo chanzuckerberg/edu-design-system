@@ -12,7 +12,7 @@ exports[`<Popover /> > Default story renders snapshot 1`] = `
       class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       data-testid="popover-trigger-button"
-      id="headlessui-popover-button-:r2:"
+      id="headlessui-popover-button-_r_2_"
       type="button"
     >
       <span
@@ -37,7 +37,7 @@ exports[`<Popover /> > FocusClickableElement story renders snapshot 1`] = `
       class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       data-testid="popover-trigger-button"
-      id="headlessui-popover-button-:re:"
+      id="headlessui-popover-button-_r_e_"
       type="button"
     >
       <span
@@ -62,7 +62,7 @@ exports[`<Popover /> > Top story renders snapshot 1`] = `
       class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       data-testid="popover-trigger-button"
-      id="headlessui-popover-button-:r8:"
+      id="headlessui-popover-button-_r_8_"
       type="button"
     >
       <span

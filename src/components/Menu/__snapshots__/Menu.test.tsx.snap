@@ -13,7 +13,7 @@ exports[`<Menu /> > Default story renders snapshot 1`] = `
       aria-haspopup="menu"
       class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
       data-headlessui-state=""
-      id="headlessui-menu-button-:r2:"
+      id="headlessui-menu-button-_r_2_"
       type="button"
     >
       <span
@@ -52,7 +52,7 @@ exports[`<Menu /> > MenuWithAvatarButton story renders snapshot 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       data-headlessui-state=""
-      id="headlessui-menu-button-:r10:"
+      id="headlessui-menu-button-_r_10_"
       type="button"
     >
       <div
@@ -83,7 +83,7 @@ exports[`<Menu /> > MenuWithIconButton story renders snapshot 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       data-headlessui-state=""
-      id="headlessui-menu-button-:r16:"
+      id="headlessui-menu-button-_r_16_"
       type="button"
     >
       <svg
@@ -120,7 +120,7 @@ exports[`<Menu /> > WithCustomButton story renders snapshot 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       data-headlessui-state=""
-      id="headlessui-menu-button-:rk:"
+      id="headlessui-menu-button-_r_k_"
       type="button"
     >
       <div
@@ -146,7 +146,7 @@ exports[`<Menu /> > WithCustomSecondaryButton story renders snapshot 1`] = `
       aria-haspopup="menu"
       class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
-      id="headlessui-menu-button-:rq:"
+      id="headlessui-menu-button-_r_q_"
       type="button"
     >
       <span
@@ -172,7 +172,7 @@ exports[`<Menu /> > WithLongButtonText story renders snapshot 1`] = `
       aria-haspopup="menu"
       class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
       data-headlessui-state=""
-      id="headlessui-menu-button-:r8:"
+      id="headlessui-menu-button-_r_8_"
       type="button"
     >
       <span
@@ -212,7 +212,7 @@ exports[`<Menu /> > WithShortButtonText story renders snapshot 1`] = `
       aria-haspopup="menu"
       class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
       data-headlessui-state=""
-      id="headlessui-menu-button-:re:"
+      id="headlessui-menu-button-_r_e_"
       type="button"
     >
       <span

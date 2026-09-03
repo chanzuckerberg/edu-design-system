@@ -48,7 +48,7 @@ exports[`<AppHeader /> > CanHandleFallbackNavMenus story renders snapshot 1`] = 
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r3e:"
+                  id="headlessui-menu-button-_r_3e_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -159,7 +159,7 @@ exports[`<AppHeader /> > Default story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2:"
+                  id="headlessui-menu-button-_r_2_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -197,7 +197,7 @@ exports[`<AppHeader /> > Default story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r8:"
+                  id="headlessui-menu-button-_r_8_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -235,7 +235,7 @@ exports[`<AppHeader /> > Default story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:re:"
+                  id="headlessui-menu-button-_r_e_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -314,7 +314,7 @@ exports[`<AppHeader /> > Default story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:rk:"
+                  id="headlessui-menu-button-_r_k_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
@@ -439,7 +439,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r10:"
+                  id="headlessui-menu-button-_r_10_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -477,7 +477,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r16:"
+                  id="headlessui-menu-button-_r_16_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -515,7 +515,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r1c:"
+                  id="headlessui-menu-button-_r_1c_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -594,7 +594,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r1i:"
+                  id="headlessui-menu-button-_r_1i_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
@@ -1018,7 +1018,7 @@ exports[`<AppHeader /> > FloatingVerticalOrientation story renders snapshot 1`] 
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r32:"
+                  id="headlessui-menu-button-_r_32_"
                 >
                   <svg
                     aria-hidden="true"
@@ -1156,7 +1156,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r1u:"
+                  id="headlessui-menu-button-_r_1u_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -1194,7 +1194,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r24:"
+                  id="headlessui-menu-button-_r_24_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -1232,7 +1232,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2a:"
+                  id="headlessui-menu-button-_r_2a_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -1311,7 +1311,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2g:"
+                  id="headlessui-menu-button-_r_2g_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
@@ -1733,7 +1733,7 @@ exports[`<AppHeader /> > VerticalDefaultWithImageLogo story renders snapshot 1`]
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r38:"
+                  id="headlessui-menu-button-_r_38_"
                 >
                   <svg
                     aria-hidden="true"
@@ -2130,7 +2130,7 @@ exports[`<AppHeader /> > VerticalOrientation story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2s:"
+                  id="headlessui-menu-button-_r_2s_"
                 >
                   <svg
                     aria-hidden="true"

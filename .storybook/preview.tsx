@@ -20,7 +20,7 @@ import {
   Stories,
 } from '@storybook/addon-docs/blocks';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
-import type { Preview, StoryFn, ReactRenderer } from '@storybook/react-vite';
+import type { Decorator, Preview, ReactRenderer } from '@storybook/react-vite';
 import React from 'react';
 
 import Theme from './Theme';
@@ -28,8 +28,8 @@ import * as tokens from '../src/tokens-dist/ts/colors';
 import { storybookViewports } from '../src/util/viewports';
 
 // TODO: where is this imported?
-export const decorators = [
-  (Story: StoryFn) => (
+export const decorators: Decorator[] = [
+  (Story) => (
     <div dir="ltr">
       <Story />
     </div>
@@ -80,7 +80,7 @@ export const tags = ['autodocs'];
 
 const preview: Preview = {
   decorators: [
-    (Story: StoryFn) => (
+    (Story) => (
       <div dir="ltr">
         <Story />
       </div>

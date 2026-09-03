@@ -394,7 +394,6 @@ export const AppHeader = ({
             <div
               className={drawerComponentClassName}
               id={'popover'}
-              // @ts-expect-error popover properly supported in React 19
               popover="auto"
             >
               <div className={styles['app-header__drawer-button']}>
