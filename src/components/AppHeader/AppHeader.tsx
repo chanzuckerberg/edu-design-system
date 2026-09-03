@@ -28,6 +28,7 @@ import Icon, { type IconName } from '../Icon';
 import Menu from '../Menu';
 import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
+import { InternalText } from '../Text/Text';
 
 import styles from './AppHeader.module.css';
 
@@ -527,9 +528,9 @@ const AppHeaderNavGroup = ({
                         >
                           {navItem.name}
                           {navItem.type === 'menu' && navItem.subLabel && (
-                            <Text as="div" preset="appHeader-subLabel">
+                            <InternalText as="div" preset="appHeader-subLabel">
                               {navItem.subLabel}
-                            </Text>
+                            </InternalText>
                           )}
                         </AppHeaderButton>
                       </Menu.PlainButton>
@@ -674,9 +675,9 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="appHeader-label">
+            <InternalText as="span" preset="appHeader-label">
               {children ?? name}
-            </Text>
+            </InternalText>
           )}
           {icon && iconLayout && (
             <Icon name={icon} purpose="decorative" size="24px" />
@@ -736,9 +737,9 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="appHeader-label">
+            <InternalText as="span" preset="appHeader-label">
               {children ?? name}
-            </Text>
+            </InternalText>
           )}
           {icon && iconLayout && (
             <Icon name={icon} purpose="decorative" size="24px" />
@@ -911,9 +912,12 @@ const AppHeaderDrawerContent = ({
                           >
                             {navItem.name}
                             {navItem.type === 'menu' && navItem.subLabel && (
-                              <Text as="div" preset="appHeader-subLabel">
+                              <InternalText
+                                as="div"
+                                preset="appHeader-subLabel"
+                              >
                                 {navItem.subLabel}
-                              </Text>
+                              </InternalText>
                             )}
                           </AppHeaderButton>
                         </Menu.PlainButton>

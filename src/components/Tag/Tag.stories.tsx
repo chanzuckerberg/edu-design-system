@@ -34,7 +34,7 @@ export default {
       },
     },
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.1.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tag>;

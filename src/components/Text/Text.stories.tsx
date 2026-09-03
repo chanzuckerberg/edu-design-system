@@ -24,7 +24,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="m-spacing-size-2">{Story()}</div>],
-  tags: ['autodocs', 'version:2.2'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Text>;
 
 type Story = StoryObj<typeof Text>;
@@ -35,6 +35,11 @@ export const Default: Story = {
   },
 };
 
+/**
+ * Every preset `Text` accepts. Presets that belong to a single component are not in this
+ * list, and not available on `Text`: they carry that component's own treatment, so they
+ * can change when the component does.
+ */
 export const AllPresets: Story = {
   render: (args) => (
     <div>
@@ -74,17 +79,6 @@ export const CodePresets: Story = {
       </Text>
     </div>
   ),
-};
-
-/**
- * Some components include their own typography presets. These should only be used within the
- * component. If a preset has a name matching a component, do not use in custom components.
- */
-export const AppHeaderLabel: Story = {
-  args: {
-    preset: 'appHeader-label',
-    children: 'Typography for AppHeader component',
-  },
 };
 
 /**
