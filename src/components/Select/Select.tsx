@@ -28,6 +28,7 @@ import PopoverListItem from '../PopoverListItem';
 import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
 import Radio from '../Radio';
 import Text from '../Text';
+import { InternalText } from '../Text/Text';
 
 import styles from './Select.module.css';
 
@@ -573,9 +574,9 @@ export const SelectButtonWrapper = React.forwardRef<
       >
         {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-        <Text as="span" className={textClassName} preset="input">
+        <InternalText as="span" className={textClassName} preset="input">
           {children}
-        </Text>
+        </InternalText>
         <Icon
           className={iconClassName}
           name={icon}

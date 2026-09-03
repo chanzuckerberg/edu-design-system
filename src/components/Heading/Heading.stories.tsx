@@ -14,7 +14,7 @@ export default {
     },
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Heading>;

@@ -1,7 +1,12 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
-import type { ReactNode, HTMLAttributes } from 'react';
-import type { Preset } from '../../util/variant-types';
+import type {
+  ReactNode,
+  HTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
+import type { AnyPreset, Preset } from '../../util/variant-types';
 
 import styles from '../Text/Text.module.css';
 
@@ -35,6 +40,13 @@ type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
    * For details, see https://chanzuckerberg.github.io/edu-design-system/?path=/story/design-tokens-tier-2-usage--typography
    */
   preset?: Preset;
+};
+
+/**
+ * `HeadingProps`, widened to also accept the presets a component reserves for its own use.
+ */
+export type InternalHeadingProps = Omit<HeadingProps, 'preset'> & {
+  preset?: AnyPreset;
 };
 
 /**
@@ -72,6 +84,12 @@ const headingPresetMap: Record<HeadingElement, Preset> = {
  * * Avoid all direct usage of `h1`-`h6` tags. Render them through `Heading` and its `as` prop instead.
  * * Don't reach for `preset` to change the heading level. Change `as` so the visual order and the document outline stay in step.
  *
+ * ## Presets
+ *
+ * `preset` only takes the reusable presets. A handful of presets belong to one component
+ * (`tag`, `appHeader-label`, and friends) and are not available here, since they carry
+ * that component's own treatment and can change with it.
+ *
  * ## Resources
  *
  * * https://www.w3.org/WAI/tutorials/page-structure/headings/
@@ -97,3 +115,16 @@ export const Heading = forwardRef(
 );
 
 Heading.displayName = 'Heading';
+
+/**
+ * `Heading`, typed to also accept the presets components reserve for their own use.
+ *
+ * For use inside EDS components only. This is deliberately absent from the package
+ * exports, so consumers get `Heading` and its reusable presets instead.
+ *
+ * The cast widens the `preset` type; nothing changes at runtime, since the component
+ * only ever interpolates `preset` into a class name.
+ */
+export const InternalHeading = Heading as ForwardRefExoticComponent<
+  InternalHeadingProps & RefAttributes<HTMLHeadingElement>
+>;

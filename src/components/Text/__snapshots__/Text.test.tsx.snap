@@ -151,41 +151,6 @@ exports[`<Text /> > AllPresets story renders snapshot 1`] = `
       caption-sm
     </p>
     <p
-      class="_text_b3eba3 _text--input-md_b3eba3"
-    >
-      input-md
-    </p>
-    <p
-      class="_text_b3eba3 _text--input_b3eba3"
-    >
-      input
-    </p>
-    <p
-      class="_text_b3eba3 _text--tab-lg-active_b3eba3"
-    >
-      tab-lg-active
-    </p>
-    <p
-      class="_text_b3eba3 _text--tab-lg_b3eba3"
-    >
-      tab-lg
-    </p>
-    <p
-      class="_text_b3eba3 _text--tab-sm-active_b3eba3"
-    >
-      tab-sm-active
-    </p>
-    <p
-      class="_text_b3eba3 _text--tab-sm_b3eba3"
-    >
-      tab-sm
-    </p>
-    <p
-      class="_text_b3eba3 _text--tag_b3eba3"
-    >
-      tag
-    </p>
-    <p
       class="_text_b3eba3 _text--code-xl_b3eba3"
     >
       code-xl
@@ -210,34 +175,7 @@ exports[`<Text /> > AllPresets story renders snapshot 1`] = `
     >
       code-xs
     </p>
-    <p
-      class="_text_b3eba3 _text--appHeader-label_b3eba3"
-    >
-      appHeader-label
-    </p>
-    <p
-      class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
-    >
-      appHeader-subLabel
-    </p>
-    <p
-      class="_text_b3eba3 _text--dataTable-headerCell_b3eba3"
-    >
-      dataTable-headerCell
-    </p>
   </div>
-</div>
-`;
-
-exports[`<Text /> > AppHeaderLabel story renders snapshot 1`] = `
-<div
-  class="m-spacing-size-2"
->
-  <p
-    class="_text_b3eba3 _text--appHeader-label_b3eba3"
-  >
-    Typography for AppHeader component
-  </p>
 </div>
 `;
 

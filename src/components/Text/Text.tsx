@@ -1,8 +1,13 @@
 import clsx from 'clsx';
-import type { ReactNode, ForwardedRef } from 'react';
+import type {
+  ReactNode,
+  ForwardedRef,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 import React, { forwardRef } from 'react';
 
-import type { Preset } from '../../util/variant-types';
+import type { AnyPreset, Preset } from '../../util/variant-types';
 
 import styles from './Text.module.css';
 
@@ -22,6 +27,13 @@ export type TextProps = {
    */
   preset?: Preset;
 } & React.HTMLAttributes<HTMLElement>; // TODO-AH: add in each possible element and spread in <Markdown>
+
+/**
+ * `TextProps`, widened to also accept the presets a component reserves for its own use.
+ */
+export type InternalTextProps = Omit<TextProps, 'preset'> & {
+  preset?: AnyPreset;
+};
 
 /**
  * ## Usage
@@ -49,6 +61,12 @@ export type TextProps = {
  *
  * * Never use TailwindCSS or other styles on raw HTML tags to style/format typography.
  * * Don't use a heading preset on `Text` to imitate a heading. It changes the look without adding the semantics, so the document outline stays wrong. Use `Heading` instead.
+ *
+ * ## Presets
+ *
+ * `preset` only takes the reusable presets. A handful of presets belong to one component
+ * (`tag`, `appHeader-label`, and friends) and are not available here, since they carry
+ * that component's own treatment and can change with it.
  */
 export const Text = forwardRef(
   (
@@ -76,3 +94,16 @@ export const Text = forwardRef(
 );
 
 Text.displayName = 'Text';
+
+/**
+ * `Text`, typed to also accept the presets components reserve for their own use.
+ *
+ * For use inside EDS components only. This is deliberately absent from the package
+ * exports, so consumers get `Text` and its reusable presets instead.
+ *
+ * The cast widens the `preset` type; nothing changes at runtime, since the component
+ * only ever interpolates `preset` into a class name.
+ */
+export const InternalText = Text as ForwardRefExoticComponent<
+  InternalTextProps & RefAttributes<HTMLParagraphElement>
+>;

@@ -4,7 +4,7 @@ import { assertEdsUsage } from '../../util/logging';
 import type { Emphasis, Status } from '../../util/variant-types';
 
 import Icon, { type IconName } from '../Icon';
-import Text from '../Text';
+import { InternalText } from '../Text/Text';
 
 import styles from './Tag.module.css';
 
@@ -86,9 +86,9 @@ export const Tag = ({
   );
 
   return (
-    <Text as="span" className={componentClassName} preset="tag">
+    <InternalText as="span" className={componentClassName} preset="tag">
       {icon && <Icon name={icon} purpose="decorative" size="16px" />}
       {label && <span className={styles['tag__body']}>{label}</span>}
-    </Text>
+    </InternalText>
   );
 };
