@@ -214,17 +214,22 @@ function childrenHaveModalTitle(children?: ReactNode): boolean {
   // TODO: this could be a common utility function for other use cases, or from a library
   const childrenArray = React.Children.toArray(children);
   return childrenArray.some((child) => {
-    if (typeof child === 'string' || typeof child === 'number') {
+    // `ReactNode` covers strings, numbers, bigints and promises as of React 19,
+    // none of which carry `props`.
+    if (typeof child !== 'object' || !('props' in child)) {
       return false;
-    } else if (
-      'props' in child &&
+    }
+    const { children: grandchildren } = child.props as {
+      children?: ReactNode;
+    };
+    if (
       child.type &&
       typeof child.type !== 'string' &&
       (child.type?.name === 'ModalTitle' || child.type?.name === 'Modal.Title')
     ) {
       return true;
-    } else if ('props' in child && child.props.children) {
-      return childrenHaveModalTitle(child.props.children);
+    } else if (grandchildren) {
+      return childrenHaveModalTitle(grandchildren);
     }
     return false;
   });

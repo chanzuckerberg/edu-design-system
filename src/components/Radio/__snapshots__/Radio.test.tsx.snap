@@ -13,7 +13,7 @@ exports[`<Radio /> > Checked story renders snapshot 1`] = `
       <input
         checked=""
         class="_radio__input_4c3e9c"
-        id=":r1:"
+        id="_r_1_"
         name="option-checked"
         readonly=""
         type="radio"
@@ -30,7 +30,7 @@ exports[`<Radio /> > Checked story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e"
-        for=":r1:"
+        for="_r_1_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -56,7 +56,7 @@ exports[`<Radio /> > Default story renders snapshot 1`] = `
     >
       <input
         class="_radio__input_4c3e9c"
-        id=":r0:"
+        id="_r_0_"
         name="option-1"
         readonly=""
         type="radio"
@@ -73,7 +73,7 @@ exports[`<Radio /> > Default story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e"
-        for=":r0:"
+        for="_r_0_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -100,7 +100,7 @@ exports[`<Radio /> > Disabled story renders snapshot 1`] = `
       <input
         class="_radio__input_4c3e9c"
         disabled=""
-        id=":r2:"
+        id="_r_2_"
         name="option-disabled"
         readonly=""
         type="radio"
@@ -117,7 +117,7 @@ exports[`<Radio /> > Disabled story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _label--disabled_f9fc7e"
-        for=":r2:"
+        for="_r_2_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -145,7 +145,7 @@ exports[`<Radio /> > DisabledAndChecked story renders snapshot 1`] = `
         checked=""
         class="_radio__input_4c3e9c"
         disabled=""
-        id=":r3:"
+        id="_r_3_"
         name="option-disabled"
         readonly=""
         type="radio"
@@ -162,7 +162,7 @@ exports[`<Radio /> > DisabledAndChecked story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e _label--disabled_f9fc7e"
-        for=":r3:"
+        for="_r_3_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -188,7 +188,7 @@ exports[`<Radio /> > Error story renders snapshot 1`] = `
     >
       <input
         class="_radio--error_4c3e9c _radio__input_4c3e9c"
-        id=":r4:"
+        id="_r_4_"
         name="option-error"
         readonly=""
         type="radio"
@@ -205,7 +205,7 @@ exports[`<Radio /> > Error story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e"
-        for=":r4:"
+        for="_r_4_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -232,7 +232,7 @@ exports[`<Radio /> > ErrorAndChecked story renders snapshot 1`] = `
       <input
         checked=""
         class="_radio--error_4c3e9c _radio__input_4c3e9c"
-        id=":r5:"
+        id="_r_5_"
         name="option-error"
         readonly=""
         type="radio"
@@ -249,7 +249,7 @@ exports[`<Radio /> > ErrorAndChecked story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e"
-        for=":r5:"
+        for="_r_5_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -279,7 +279,7 @@ exports[`<Radio /> > LongLabels story renders snapshot 1`] = `
         <input
           checked=""
           class="_radio__input_4c3e9c"
-          id=":r8:"
+          id="_r_8_"
           name="option-long-label"
           readonly=""
           type="radio"
@@ -296,7 +296,7 @@ exports[`<Radio /> > LongLabels story renders snapshot 1`] = `
       >
         <label
           class="_label_f9fc7e"
-          for=":r8:"
+          for="_r_8_"
         >
           <span
             class="_text_b3eba3 _text--body-md_b3eba3"
@@ -323,7 +323,7 @@ exports[`<Radio /> > WithSublabel story renders snapshot 1`] = `
     >
       <input
         class="_radio__input_4c3e9c"
-        id=":r6:"
+        id="_r_6_"
         name="option-1"
         readonly=""
         type="radio"
@@ -340,7 +340,7 @@ exports[`<Radio /> > WithSublabel story renders snapshot 1`] = `
     >
       <label
         class="_label_f9fc7e"
-        for=":r6:"
+        for="_r_6_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -372,7 +372,7 @@ exports[`<Radio /> > WithoutVisibleLabel story renders snapshot 1`] = `
       <input
         aria-label="unchecked radio button"
         class="_radio__input_4c3e9c"
-        id=":r7:"
+        id="_r_7_"
         name="option-1"
         readonly=""
         type="radio"

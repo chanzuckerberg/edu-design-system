@@ -7,10 +7,10 @@ exports[`<Toggle /> > Default story renders snapshot 1`] = `
 >
   <button
     aria-checked="false"
-    aria-labelledby="headlessui-label-:r2:"
+    aria-labelledby="headlessui-label-_r_2_"
     class="_toggle__button_76a0f7 _toggle__button--unchecked_76a0f7"
     data-headlessui-state=""
-    id="headlessui-control-:r0:"
+    id="headlessui-control-_r_0_"
     role="switch"
     tabindex="0"
     type="button"
@@ -22,8 +22,8 @@ exports[`<Toggle /> > Default story renders snapshot 1`] = `
   <label
     class="_label_f9fc7e _toggle__label_76a0f7"
     data-headlessui-state=""
-    for="headlessui-control-:r0:"
-    id="headlessui-label-:r2:"
+    for="headlessui-control-_r_0_"
+    id="headlessui-label-_r_2_"
   >
     <span
       class="_text_b3eba3 _text--body-md_b3eba3"
@@ -46,12 +46,12 @@ exports[`<Toggle /> > Disabled story renders snapshot 1`] = `
 >
   <button
     aria-checked="false"
-    aria-labelledby="headlessui-label-:rc:"
+    aria-labelledby="headlessui-label-_r_c_"
     class="_toggle__button_76a0f7 _toggle__button--unchecked_76a0f7"
     data-disabled=""
     data-headlessui-state="disabled"
     disabled=""
-    id="headlessui-control-:ra:"
+    id="headlessui-control-_r_a_"
     role="switch"
     tabindex="0"
     type="button"
@@ -63,8 +63,8 @@ exports[`<Toggle /> > Disabled story renders snapshot 1`] = `
   <label
     class="_label_f9fc7e _toggle__label_76a0f7"
     data-headlessui-state=""
-    for="headlessui-control-:ra:"
-    id="headlessui-label-:rc:"
+    for="headlessui-control-_r_a_"
+    id="headlessui-label-_r_c_"
   >
     <span
       class="_text_b3eba3 _text--body-md_b3eba3"
@@ -87,11 +87,11 @@ exports[`<Toggle /> > WhenChecked story renders snapshot 1`] = `
 >
   <button
     aria-checked="true"
-    aria-labelledby="headlessui-label-:r5:"
+    aria-labelledby="headlessui-label-_r_5_"
     class="_toggle__button_76a0f7 _toggle__button--checked_76a0f7"
     data-checked=""
     data-headlessui-state="checked"
-    id="headlessui-control-:r3:"
+    id="headlessui-control-_r_3_"
     role="switch"
     tabindex="0"
     type="button"
@@ -103,8 +103,8 @@ exports[`<Toggle /> > WhenChecked story renders snapshot 1`] = `
   <label
     class="_label_f9fc7e _toggle__label_76a0f7"
     data-headlessui-state=""
-    for="headlessui-control-:r3:"
-    id="headlessui-label-:r5:"
+    for="headlessui-control-_r_3_"
+    id="headlessui-label-_r_5_"
   >
     <span
       class="_text_b3eba3 _text--body-md_b3eba3"
@@ -127,11 +127,11 @@ exports[`<Toggle /> > WithSubLabel story renders snapshot 1`] = `
 >
   <button
     aria-checked="false"
-    aria-describedby="headlessui-description-:r9:"
-    aria-labelledby="headlessui-label-:r8:"
+    aria-describedby="headlessui-description-_r_9_"
+    aria-labelledby="headlessui-label-_r_8_"
     class="_toggle__button_76a0f7 _toggle__button--unchecked_76a0f7"
     data-headlessui-state=""
-    id="headlessui-control-:r6:"
+    id="headlessui-control-_r_6_"
     role="switch"
     tabindex="0"
     type="button"
@@ -143,8 +143,8 @@ exports[`<Toggle /> > WithSubLabel story renders snapshot 1`] = `
   <label
     class="_label_f9fc7e _toggle__label_76a0f7"
     data-headlessui-state=""
-    for="headlessui-control-:r6:"
-    id="headlessui-label-:r8:"
+    for="headlessui-control-_r_6_"
+    id="headlessui-label-_r_8_"
   >
     <span
       class="_text_b3eba3 _text--body-md_b3eba3"
@@ -153,7 +153,7 @@ exports[`<Toggle /> > WithSubLabel story renders snapshot 1`] = `
       <span
         class="_toggle__subLabel_76a0f7"
         data-headlessui-state=""
-        id="headlessui-description-:r9:"
+        id="headlessui-description-_r_9_"
       >
         subLabel text description here
       </span>
@@ -173,7 +173,7 @@ exports[`<Toggle /> > WithoutLabel story renders snapshot 1`] = `
   aria-label="Lorem ipsum"
   class="_toggle__button_76a0f7 _toggle__button--unchecked_76a0f7"
   data-headlessui-state=""
-  id="headlessui-switch-:rd:"
+  id="headlessui-switch-_r_d_"
   role="switch"
   tabindex="0"
   type="button"

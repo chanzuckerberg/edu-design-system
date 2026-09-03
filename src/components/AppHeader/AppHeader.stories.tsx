@@ -412,7 +412,7 @@ export const CanFocusMenuItem: Story = {
   },
 
   // Select the menu then expand it with the keyboard. set up for snapshotting
-  play: async () => {
+  play: async ({ canvasElement }) => {
     await userEvent.tab();
     await userEvent.tab();
   },

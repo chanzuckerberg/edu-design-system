@@ -94,8 +94,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
       <label
         className={componentClassName}
         htmlFor={idVar}
-        // TODO(next-major): use inert when using React 19+
-        // inert={isDisabled}
+        inert={isDisabled}
         {...other}
       >
         <input

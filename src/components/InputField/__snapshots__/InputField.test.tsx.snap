@@ -12,7 +12,7 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1p:"
+        for="_r_1p_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -36,7 +36,7 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1r:"
+          id="_r_1r_"
         >
           Additional descriptive text for the field.
         </span>
@@ -46,10 +46,10 @@ exports[`<InputField /> > ControlledWithinMaxLength story renders snapshot 1`] =
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1r:"
+        aria-describedby="_r_1r_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r1p:"
+        id="_r_1p_"
         maxlength="30"
         required=""
         type="text"
@@ -72,7 +72,7 @@ exports[`<InputField /> > DateHandling story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r14:"
+        for="_r_14_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -88,7 +88,7 @@ exports[`<InputField /> > DateHandling story renders snapshot 1`] = `
         aria-describedby=""
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r14:"
+        id="_r_14_"
         type="date"
       />
     </div>
@@ -108,7 +108,7 @@ exports[`<InputField /> > Default story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r0:"
+        for="_r_0_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -124,7 +124,7 @@ exports[`<InputField /> > Default story renders snapshot 1`] = `
         aria-describedby=""
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r0:"
+        id="_r_0_"
         type="text"
       />
     </div>
@@ -145,7 +145,7 @@ exports[`<InputField /> > Disabled story renders snapshot 1`] = `
       <label
         aria-disabled="true"
         class="_label_76755a _label--md_76755a _label--disabled_76755a _input-field__label_4d3b17 _input-field__label--disabled_4d3b17"
-        for=":rl:"
+        for="_r_l_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -158,7 +158,7 @@ exports[`<InputField /> > Disabled story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":rn:"
+          id="_r_n_"
         >
           Additional descriptive text for the field.
         </span>
@@ -168,11 +168,11 @@ exports[`<InputField /> > Disabled story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":rn: :rm:"
+        aria-describedby="_r_n_ _r_m_"
         aria-invalid="false"
         class="_input_0d9f86"
         disabled=""
-        id=":rl:"
+        id="_r_l_"
         type="text"
         value="Text in disabled field"
       />
@@ -183,7 +183,7 @@ exports[`<InputField /> > Disabled story renders snapshot 1`] = `
       <div
         aria-disabled="true"
         class="_field-note_fd2e78 _field-note--disabled_fd2e78"
-        id=":rm:"
+        id="_r_m_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -208,7 +208,7 @@ exports[`<InputField /> > Error story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":rc:"
+        for="_r_c_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -221,7 +221,7 @@ exports[`<InputField /> > Error story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":re:"
+          id="_r_e_"
         >
           Additional descriptive text for the field.
         </span>
@@ -231,10 +231,10 @@ exports[`<InputField /> > Error story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":re: :rd:"
+        aria-describedby="_r_e_ _r_d_"
         aria-invalid="true"
         class="_input_0d9f86 _error_0d9f86"
-        id=":rc:"
+        id="_r_c_"
         type="text"
       />
     </div>
@@ -243,7 +243,7 @@ exports[`<InputField /> > Error story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78 _field-note--error_fd2e78"
-        id=":rd:"
+        id="_r_d_"
       >
         <svg
           class="_icon_779da8 _field-note__icon_fd2e78"
@@ -283,7 +283,7 @@ exports[`<InputField /> > InputWithin story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1d:"
+        for="_r_1d_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -299,7 +299,7 @@ exports[`<InputField /> > InputWithin story renders snapshot 1`] = `
         aria-describedby=""
         aria-invalid="false"
         class="_input_0d9f86 _input-field__input--input-within_4d3b17"
-        id=":r1d:"
+        id="_r_1d_"
         type="text"
       />
       <div
@@ -331,7 +331,7 @@ exports[`<InputField /> > InputWithinFixedWidth story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1j:"
+        for="_r_1j_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -347,7 +347,7 @@ exports[`<InputField /> > InputWithinFixedWidth story renders snapshot 1`] = `
         aria-describedby=""
         aria-invalid="false"
         class="_input_0d9f86 _input-field__input--input-within_4d3b17"
-        id=":r1j:"
+        id="_r_1j_"
         style="--input-field__input-within-width: 120px;"
         type="text"
         value="Text that stops at the reserved space"
@@ -382,11 +382,11 @@ exports[`<InputField /> > LeadingIcon story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":rq:"
+        aria-describedby="_r_q_"
         aria-invalid="false"
         aria-label="search field"
         class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
-        id=":ro:"
+        id="_r_o_"
         placeholder="Search..."
         type="text"
       />
@@ -423,7 +423,7 @@ exports[`<InputField /> > LongInputWithin story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1g:"
+        for="_r_1g_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -439,7 +439,7 @@ exports[`<InputField /> > LongInputWithin story renders snapshot 1`] = `
         aria-describedby=""
         aria-invalid="false"
         class="_input_0d9f86 _input-field__input--input-within_4d3b17"
-        id=":r1g:"
+        id="_r_1g_"
         type="text"
         value="Text that runs up against the button"
       />
@@ -488,7 +488,7 @@ exports[`<InputField /> > NoFieldnote story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r9:"
+        for="_r_9_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -501,7 +501,7 @@ exports[`<InputField /> > NoFieldnote story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":rb:"
+          id="_r_b_"
         >
           Additional descriptive text for the field.
         </span>
@@ -511,10 +511,10 @@ exports[`<InputField /> > NoFieldnote story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":rb:"
+        aria-describedby="_r_b_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r9:"
+        id="_r_9_"
         type="text"
       />
     </div>
@@ -536,11 +536,11 @@ exports[`<InputField /> > NoVisibleLabel story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":r13: :r12:"
+        aria-describedby="_r_13_ _r_12_"
         aria-invalid="false"
         aria-label="Input for no visible label"
         class="_input_0d9f86"
-        id=":r11:"
+        id="_r_11_"
         required=""
         type="text"
       />
@@ -550,7 +550,7 @@ exports[`<InputField /> > NoVisibleLabel story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78"
-        id=":r12:"
+        id="_r_12_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -575,7 +575,7 @@ exports[`<InputField /> > ReadOnly story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":ri:"
+        for="_r_i_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -588,7 +588,7 @@ exports[`<InputField /> > ReadOnly story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":rk:"
+          id="_r_k_"
         >
           Additional descriptive text for the field.
         </span>
@@ -598,10 +598,10 @@ exports[`<InputField /> > ReadOnly story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":rk: :rj:"
+        aria-describedby="_r_k_ _r_j_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":ri:"
+        id="_r_i_"
         readonly=""
         type="text"
         value="some read-only information"
@@ -612,7 +612,7 @@ exports[`<InputField /> > ReadOnly story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78"
-        id=":rj:"
+        id="_r_j_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -637,7 +637,7 @@ exports[`<InputField /> > Required story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":rr:"
+        for="_r_r_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -655,7 +655,7 @@ exports[`<InputField /> > Required story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":rt:"
+          id="_r_t_"
         >
           Additional descriptive text for the field.
         </span>
@@ -665,10 +665,10 @@ exports[`<InputField /> > Required story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":rt: :rs:"
+        aria-describedby="_r_t_ _r_s_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":rr:"
+        id="_r_r_"
         required=""
         type="text"
       />
@@ -678,7 +678,7 @@ exports[`<InputField /> > Required story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78"
-        id=":rs:"
+        id="_r_s_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -704,7 +704,7 @@ exports[`<InputField /> > RequiredDisabled story renders snapshot 1`] = `
       <label
         aria-disabled="true"
         class="_label_76755a _label--md_76755a _label--disabled_76755a _input-field__label_4d3b17 _input-field__label--disabled_4d3b17"
-        for=":ru:"
+        for="_r_u_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -723,7 +723,7 @@ exports[`<InputField /> > RequiredDisabled story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r10:"
+          id="_r_10_"
         >
           Additional descriptive text for the field.
         </span>
@@ -733,11 +733,11 @@ exports[`<InputField /> > RequiredDisabled story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":r10: :rv:"
+        aria-describedby="_r_10_ _r_v_"
         aria-invalid="false"
         class="_input_0d9f86"
         disabled=""
-        id=":ru:"
+        id="_r_u_"
         required=""
         type="text"
       />
@@ -748,7 +748,7 @@ exports[`<InputField /> > RequiredDisabled story renders snapshot 1`] = `
       <div
         aria-disabled="true"
         class="_field-note_fd2e78 _field-note--disabled_fd2e78"
-        id=":rv:"
+        id="_r_v_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -773,7 +773,7 @@ exports[`<InputField /> > ShowHint story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1a:"
+        for="_r_1a_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -791,7 +791,7 @@ exports[`<InputField /> > ShowHint story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1c:"
+          id="_r_1c_"
         >
           Additional descriptive text for the field.
         </span>
@@ -801,10 +801,10 @@ exports[`<InputField /> > ShowHint story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1c:"
+        aria-describedby="_r_1c_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r1a:"
+        id="_r_1a_"
         type="text"
       />
     </div>
@@ -824,7 +824,7 @@ exports[`<InputField /> > TimeHandling story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r17:"
+        for="_r_17_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -840,7 +840,7 @@ exports[`<InputField /> > TimeHandling story renders snapshot 1`] = `
         aria-describedby=""
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r17:"
+        id="_r_17_"
         type="time"
       />
     </div>
@@ -860,7 +860,7 @@ exports[`<InputField /> > Warning story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":rf:"
+        for="_r_f_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -873,7 +873,7 @@ exports[`<InputField /> > Warning story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":rh:"
+          id="_r_h_"
         >
           Additional descriptive text for the field.
         </span>
@@ -883,10 +883,10 @@ exports[`<InputField /> > Warning story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":rh: :rg:"
+        aria-describedby="_r_h_ _r_g_"
         aria-invalid="false"
         class="_input_0d9f86 _warning_0d9f86"
-        id=":rf:"
+        id="_r_f_"
         type="text"
       />
     </div>
@@ -895,7 +895,7 @@ exports[`<InputField /> > Warning story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78 _field-note--warning_fd2e78"
-        id=":rg:"
+        id="_r_g_"
       >
         <svg
           class="_icon_779da8 _field-note__icon_fd2e78"
@@ -937,7 +937,7 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1s:"
+        for="_r_1s_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -961,7 +961,7 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1u:"
+          id="_r_1u_"
         >
           Additional descriptive text for the field.
         </span>
@@ -971,10 +971,10 @@ exports[`<InputField /> > WithAMaxLength story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1u:"
+        aria-describedby="_r_1u_"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
-        id=":r1s:"
+        id="_r_1s_"
         maxlength="15"
         required=""
         type="text"
@@ -997,7 +997,7 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1v:"
+        for="_r_1v_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1021,7 +1021,7 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r21:"
+          id="_r_21_"
         >
           Additional descriptive text for the field.
         </span>
@@ -1031,10 +1031,10 @@ exports[`<InputField /> > WithARecommendedLength story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r21:"
+        aria-describedby="_r_21_"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
-        id=":r1v:"
+        id="_r_1v_"
         required=""
         type="text"
         value="Some initial text"
@@ -1056,7 +1056,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r22:"
+        for="_r_22_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1080,7 +1080,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r24:"
+          id="_r_24_"
         >
           Additional descriptive text for the field.
         </span>
@@ -1090,10 +1090,10 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":r24: :r23:"
+        aria-describedby="_r_24_ _r_23_"
         aria-invalid="false"
         class="_input_0d9f86 _error_0d9f86"
-        id=":r22:"
+        id="_r_22_"
         maxlength="20"
         required=""
         type="text"
@@ -1105,7 +1105,7 @@ exports[`<InputField /> > WithBothMaxAndRecommendedLength story renders snapshot
     >
       <div
         class="_field-note_fd2e78 _field-note--error_fd2e78"
-        id=":r23:"
+        id="_r_23_"
       >
         <svg
           class="_icon_779da8 _field-note__icon_fd2e78"
@@ -1147,7 +1147,7 @@ exports[`<InputField /> > WithFullDescription story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r3:"
+        for="_r_3_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1160,7 +1160,7 @@ exports[`<InputField /> > WithFullDescription story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r5:"
+          id="_r_5_"
         >
           Additional descriptive text for the field.
         </span>
@@ -1170,10 +1170,10 @@ exports[`<InputField /> > WithFullDescription story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":r5: :r4:"
+        aria-describedby="_r_5_ _r_4_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r3:"
+        id="_r_3_"
         type="text"
       />
     </div>
@@ -1182,7 +1182,7 @@ exports[`<InputField /> > WithFullDescription story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78"
-        id=":r4:"
+        id="_r_4_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -1207,7 +1207,7 @@ exports[`<InputField /> > WithText story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r6:"
+        for="_r_6_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1220,7 +1220,7 @@ exports[`<InputField /> > WithText story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r8:"
+          id="_r_8_"
         >
           Additional descriptive text for the field.
         </span>
@@ -1230,10 +1230,10 @@ exports[`<InputField /> > WithText story renders snapshot 1`] = `
       class="_input-field__body_4d3b17 _input-field--has-fieldNote_4d3b17"
     >
       <input
-        aria-describedby=":r8: :r7:"
+        aria-describedby="_r_8_ _r_7_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r6:"
+        id="_r_6_"
         type="text"
         value="Text value"
       />
@@ -1243,7 +1243,7 @@ exports[`<InputField /> > WithText story renders snapshot 1`] = `
     >
       <div
         class="_field-note_fd2e78"
-        id=":r7:"
+        id="_r_7_"
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
@@ -1268,7 +1268,7 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
     >
       <label
         class="_label_76755a _label--md_76755a _input-field__label_4d3b17"
-        for=":r1m:"
+        for="_r_1m_"
       >
         <span
           class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1292,7 +1292,7 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
       >
         <span
           class="_text_b3eba3 _text--body-sm_b3eba3"
-          id=":r1o:"
+          id="_r_1o_"
         >
           Additional descriptive text for the field.
         </span>
@@ -1302,10 +1302,10 @@ exports[`<InputField /> > WithinMaxLength story renders snapshot 1`] = `
       class="_input-field__body_4d3b17"
     >
       <input
-        aria-describedby=":r1o:"
+        aria-describedby="_r_1o_"
         aria-invalid="false"
         class="_input_0d9f86"
-        id=":r1m:"
+        id="_r_1m_"
         maxlength="30"
         required=""
         type="text"

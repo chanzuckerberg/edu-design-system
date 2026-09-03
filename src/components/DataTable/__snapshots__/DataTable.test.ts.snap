@@ -5531,7 +5531,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                   <input
                     aria-label="check"
                     class="_checkbox__input_2d475f"
-                    id=":r0:"
+                    id="_r_0_"
                     type="checkbox"
                   />
                 </div>
@@ -5679,7 +5679,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r1:"
+                  id="_r_1_"
                   type="checkbox"
                 />
               </div>
@@ -5789,7 +5789,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r2:"
+                  id="_r_2_"
                   type="checkbox"
                 />
               </div>
@@ -5899,7 +5899,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r3:"
+                  id="_r_3_"
                   type="checkbox"
                 />
               </div>
@@ -6009,7 +6009,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r4:"
+                  id="_r_4_"
                   type="checkbox"
                 />
               </div>
@@ -6119,7 +6119,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r5:"
+                  id="_r_5_"
                   type="checkbox"
                 />
               </div>
@@ -6229,7 +6229,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r6:"
+                  id="_r_6_"
                   type="checkbox"
                 />
               </div>
@@ -6339,7 +6339,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r7:"
+                  id="_r_7_"
                   type="checkbox"
                 />
               </div>
@@ -6449,7 +6449,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r8:"
+                  id="_r_8_"
                   type="checkbox"
                 />
               </div>
@@ -6559,7 +6559,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":r9:"
+                  id="_r_9_"
                   type="checkbox"
                 />
               </div>
@@ -6669,7 +6669,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":ra:"
+                  id="_r_a_"
                   type="checkbox"
                 />
               </div>
@@ -6779,7 +6779,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rb:"
+                  id="_r_b_"
                   type="checkbox"
                 />
               </div>
@@ -6889,7 +6889,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rc:"
+                  id="_r_c_"
                   type="checkbox"
                 />
               </div>
@@ -10179,7 +10179,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                   <input
                     aria-label="check"
                     class="_checkbox__input_2d475f"
-                    id=":rd:"
+                    id="_r_d_"
                     type="checkbox"
                   />
                 </div>
@@ -10327,7 +10327,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":re:"
+                  id="_r_e_"
                   type="checkbox"
                 />
               </div>
@@ -10437,7 +10437,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rf:"
+                  id="_r_f_"
                   type="checkbox"
                 />
               </div>
@@ -10547,7 +10547,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rg:"
+                  id="_r_g_"
                   type="checkbox"
                 />
               </div>
@@ -10657,7 +10657,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rh:"
+                  id="_r_h_"
                   type="checkbox"
                 />
               </div>
@@ -10767,7 +10767,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":ri:"
+                  id="_r_i_"
                   type="checkbox"
                 />
               </div>
@@ -10877,7 +10877,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rj:"
+                  id="_r_j_"
                   type="checkbox"
                 />
               </div>
@@ -10987,7 +10987,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rk:"
+                  id="_r_k_"
                   type="checkbox"
                 />
               </div>
@@ -11097,7 +11097,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rl:"
+                  id="_r_l_"
                   type="checkbox"
                 />
               </div>
@@ -11207,7 +11207,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rm:"
+                  id="_r_m_"
                   type="checkbox"
                 />
               </div>
@@ -11317,7 +11317,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rn:"
+                  id="_r_n_"
                   type="checkbox"
                 />
               </div>
@@ -11427,7 +11427,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":ro:"
+                  id="_r_o_"
                   type="checkbox"
                 />
               </div>
@@ -11537,7 +11537,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
                 <input
                   aria-label="check"
                   class="_checkbox__input_2d475f"
-                  id=":rp:"
+                  id="_r_p_"
                   type="checkbox"
                 />
               </div>
@@ -11740,7 +11740,7 @@ exports[`<DataTable /> > WithLongCaption story renders snapshot 1`] = `
             aria-label="search"
             class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
             disabled=""
-            id=":r19:"
+            id="_r_19_"
             placeholder="Search..."
             type="search"
           />
@@ -11904,7 +11904,7 @@ exports[`<DataTable /> > WithSearch story renders snapshot 1`] = `
             aria-label="search"
             class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
             disabled=""
-            id=":rq:"
+            id="_r_q_"
             placeholder="Search..."
             type="search"
           />
@@ -11980,7 +11980,7 @@ exports[`<DataTable /> > WithSearchAndActions story renders snapshot 1`] = `
             aria-label="search"
             class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
             disabled=""
-            id=":rt:"
+            id="_r_t_"
             placeholder="Search..."
             type="search"
           />
@@ -12089,7 +12089,7 @@ exports[`<DataTable /> > WithSearchAndCustomActions story renders snapshot 1`] =
             aria-label="search"
             class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
             disabled=""
-            id=":r10:"
+            id="_r_10_"
             placeholder="Search..."
             type="search"
           />
@@ -12186,7 +12186,7 @@ exports[`<DataTable /> > WithSearchAndCustomActions story renders snapshot 1`] =
             aria-label="show more actions"
             class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r15:"
+            id="headlessui-menu-button-_r_15_"
             type="button"
           >
             <span

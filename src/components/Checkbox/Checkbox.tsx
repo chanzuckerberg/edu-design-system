@@ -73,7 +73,7 @@ type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
     }
   >;
 
-function useForwardedRef<T>(ref: ForwardedRef<T>): RefObject<T> {
+function useForwardedRef<T>(ref: ForwardedRef<T>): RefObject<T | null> {
   const innerRef = useRef<T>(null);
 
   // Keep the internal and forwarded refs in sync.
