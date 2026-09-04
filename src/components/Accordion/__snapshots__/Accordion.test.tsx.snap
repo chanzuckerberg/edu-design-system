@@ -13,7 +13,7 @@ exports[`<Accordion /> > Default story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_0_"
@@ -53,7 +53,7 @@ exports[`<Accordion /> > Default story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button2"
         id="headlessui-disclosure-button-_r_2_"
@@ -104,7 +104,7 @@ exports[`<Accordion /> > Default story renders snapshot 1`] = `
       <button
         aria-controls="headlessui-disclosure-panel-_r_5_"
         aria-expanded="true"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-button3"
@@ -173,7 +173,7 @@ exports[`<Accordion /> > HasLeadingIcon story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_e_"
@@ -247,7 +247,7 @@ exports[`<Accordion /> > TitleAndSubtitle story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_c_"
@@ -305,7 +305,7 @@ exports[`<Accordion /> > UsingRenderProp story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_g_"
@@ -357,7 +357,7 @@ exports[`<Accordion /> > WithLargeHeader story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         id="headlessui-disclosure-button-_r_i_"
         type="button"
@@ -407,7 +407,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_6_"
@@ -459,7 +459,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_8_"
@@ -511,7 +511,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
-        class="_accordion-button_86d7df _accordion-button--md_86d7df"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
         id="headlessui-disclosure-button-_r_a_"
