@@ -81,6 +81,18 @@ export interface ProgressBarCSSProperties extends React.CSSProperties {
   '--progress-bar__fg'?: string;
 }
 
+/**
+ * The properties actually applied to the track, which is `ProgressBarCSSProperties` plus the one
+ * the component sets for itself. Deliberately not exported and not part of the public interface,
+ * so a caller cannot set the fill directly.
+ */
+interface ProgressBarTrackCSSProperties extends ProgressBarCSSProperties {
+  /**
+   * The filled share of the track, derived from `value` and `max`.
+   */
+  '--progress-bar__progress'?: number;
+}
+
 const PROGRESS_BAR_MINIMUM = 0;
 
 /**
@@ -156,6 +168,13 @@ export const ProgressBar = ({
     context && styles[`progress-bar__track--context-${context}`],
   );
 
+  const trackStyle: ProgressBarTrackCSSProperties = {
+    ...style,
+    // Set after the caller's styles: the fill is derived from `value`, so it is not a
+    // caller-facing custom property.
+    '--progress-bar__progress': computedValue / max,
+  };
+
   assertEdsUsage(
     [
       context === 'embedded' && !!descriptionLabel,
@@ -208,14 +227,7 @@ export const ProgressBar = ({
         aria-labelledby={progressBarId}
         className={trackClassName}
         role="progressbar"
-        style={
-          {
-            ...style,
-            // Set after the caller's styles: the fill is derived from `value` and is not
-            // a caller-facing custom property.
-            '--progress-bar__progress': computedValue / max,
-          } as ProgressBarCSSProperties
-        }
+        style={trackStyle}
         {...other}
       >
         <div className={styles['progress-bar__content']} />
