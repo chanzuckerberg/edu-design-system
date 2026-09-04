@@ -19,15 +19,10 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 const { AutoDismiss } = composeStories(stories);
 
 /**
- * A deliberately unmistakable value, so there is no chance of it matching a status color by
- * coincidence.
- *
- * Note that a gradient is not a valid `<color>`, so this overrides the status value but does not
- * paint a rainbow: `color: var(--toast__icon)` ends up invalid at computed-value time and falls
- * back to the inherited color. Use a color value to actually recolor the icon.
+ * A valid color that none of the statuses use, so the assertions cannot pass on a status color by
+ * coincidence and the override is what actually paints the icon.
  */
-const RAINBOW =
-  'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
+const CUSTOM_ICON_COLOR = 'rebeccapurple';
 
 const STATUSES = ['informational', 'favorable', 'warning', 'critical'] as const;
 
@@ -65,7 +60,7 @@ describe('<ToastNotification />', () => {
         const { container } = render(
           <ToastNotification
             status={status}
-            style={{ '--toast__icon': RAINBOW }}
+            style={{ '--toast__icon': CUSTOM_ICON_COLOR }}
             title="test"
           />,
         );
@@ -77,7 +72,7 @@ describe('<ToastNotification />', () => {
         // the inline value's favor is covered by the Chromatic snapshots, since jsdom does not
         // apply the stylesheet.
         expect(toast.className).toContain(`toast--status-${status}`);
-        expect(toast).toHaveStyle({ '--toast__icon': RAINBOW });
+        expect(toast).toHaveStyle({ '--toast__icon': CUSTOM_ICON_COLOR });
       },
     );
 
@@ -88,7 +83,7 @@ describe('<ToastNotification />', () => {
           style={{
             '--toast__bg': 'black',
             '--toast__fg': 'white',
-            '--toast__icon': RAINBOW,
+            '--toast__icon': CUSTOM_ICON_COLOR,
           }}
           title="test"
         />,
@@ -97,7 +92,7 @@ describe('<ToastNotification />', () => {
       expect(container.firstElementChild).toHaveStyle({
         '--toast__bg': 'black',
         '--toast__fg': 'white',
-        '--toast__icon': RAINBOW,
+        '--toast__icon': CUSTOM_ICON_COLOR,
       });
     });
   });
