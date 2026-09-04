@@ -27,7 +27,7 @@ export default {
   args: {
     title: 'A toast should not exceed two lines of text.',
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;
