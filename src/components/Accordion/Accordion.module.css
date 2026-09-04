@@ -29,6 +29,7 @@
 
   border: 0;
   text-align: left;
+  padding: calc(var(--eds-spacing-size-2) * 1px) 0;
 
   &:hover {
     background-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-no-emphasis-hover));
@@ -49,14 +50,6 @@
 
 .accordion-button--empty {
   pointer-events: none;
-}
-
-/**
- * Size variants
- */
-.accordion-button--sm,
-.accordion-button--md {
-  padding: calc(var(--eds-spacing-size-2) * 1px) 0;
 }
 
 /**

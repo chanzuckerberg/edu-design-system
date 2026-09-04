@@ -8,7 +8,6 @@ import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import { assertEdsUsage } from '../../util/logging';
-import type { Size } from '../../util/variant-types';
 
 import Heading, { type HeadingElement } from '../Heading';
 import Icon, { type IconName } from '../Icon';
@@ -33,13 +32,6 @@ type AccordionProps = {
    * **Default is `"h2"`**.
    */
   headingAs: HeadingElement;
-  /**
-   * Various sizes supported by the `Accordion`.
-   *
-   * **Default is `"md"`**.
-   * @deprecated
-   */
-  size?: Extract<Size, 'sm' | 'md'>;
 };
 
 type AccordionButtonProps = {
@@ -130,7 +122,6 @@ type AccordionRowProps = {
 
 const AccordionContext = createContext<{
   headingAs: HeadingElement;
-  size?: AccordionProps['size'];
 }>({
   headingAs: 'h2',
 });
@@ -164,7 +155,6 @@ const AccordionRowContext = createContext<
  *
  * ### Best Practices
  *
- * * Don't mix accordion sizes.
  * * Don't mix accordions where some have icons and others do not.
  *
  * ## Interaction
@@ -196,11 +186,10 @@ export const Accordion = ({
   children,
   className,
   headingAs,
-  size = 'md',
   ...other
 }: AccordionProps) => {
   return (
-    <AccordionContext.Provider value={{ headingAs, size }}>
+    <AccordionContext.Provider value={{ headingAs }}>
       <div className={className} {...other}>
         {children}
       </div>
@@ -221,13 +210,12 @@ const AccordionButton = ({
   onOpen,
   ...other
 }: AccordionButtonProps) => {
-  const { headingAs: contextHeadingAs, size } = useContext(AccordionContext);
+  const { headingAs: contextHeadingAs } = useContext(AccordionContext);
 
   const { isExpandable } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-button'],
-    size && styles[`accordion-button--${size}`],
     !isExpandable && styles['accordion-button--empty'],
     className,
   );
@@ -273,13 +261,13 @@ const AccordionButton = ({
           <Heading
             as={headingAs || contextHeadingAs}
             className={styles['accordion-button__heading']}
-            preset={size === 'md' ? 'title-md' : 'title-sm'}
+            preset="title-md"
           >
             {(title || children) && (
               <Text
                 as="span"
                 className={styles['accordion-button__title']}
-                preset={size === 'md' ? 'title-md' : 'title-sm'}
+                preset="title-md"
               >
                 {title}
                 {children}
@@ -289,7 +277,7 @@ const AccordionButton = ({
               <Text
                 as="span"
                 className={styles['accordion-button__subTitle']}
-                preset={size === 'md' ? 'body-md' : 'body-sm'}
+                preset="body-md"
               >
                 {subTitle}
               </Text>
