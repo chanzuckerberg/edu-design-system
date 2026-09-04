@@ -27,7 +27,7 @@ export default {
   args: {
     title: 'A toast should not exceed two lines of text.',
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;
@@ -92,6 +92,32 @@ export const AutoDismiss: Story = {
     timeout: 500,
     onDismiss: () => console.log('trigger onDismiss'),
   },
+};
+
+const STATUSES = ['informational', 'favorable', 'warning', 'critical'] as const;
+
+/**
+ * Each status sets its own icon color, and `--toast__icon` overrides that for any of them. Pass it
+ * through the `style` prop, alongside `--toast__bg` and `--toast__fg`.
+ *
+ * Reach for a theme token in real usage. The literal color here is only to make the point
+ * unmistakable: none of the four statuses use it, so every icon below is coming from the override
+ * rather than from its status.
+ */
+export const CustomIconColor: Story = {
+  render: (args) => (
+    <div className="gap-spacing-size-2 flex flex-col">
+      {STATUSES.map((status) => (
+        <ToastNotification
+          {...args}
+          key={status}
+          status={status}
+          style={{ '--toast__icon': 'rebeccapurple' }}
+          title={`The ${status} icon, recolored by --toast__icon.`}
+        />
+      ))}
+    </div>
+  ),
 };
 
 let toastId = 0;

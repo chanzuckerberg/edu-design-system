@@ -20,7 +20,6 @@ exports[`<ProgressBar /> > Default story renders snapshot 1`] = `
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_0_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.33;"
@@ -119,7 +118,6 @@ exports[`<ProgressBar /> > WithCustomHorizontalValueLabel story renders snapshot
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_5_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.5;"
@@ -327,7 +325,6 @@ exports[`<ProgressBar /> > WithNoLabels story renders snapshot 1`] = `
 >
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_1_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.33;"

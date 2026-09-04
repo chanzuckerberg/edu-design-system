@@ -51,7 +51,7 @@ export default {
     ],
   },
 
-  tags: ['autodocs', 'beta', 'version:1.0.1'],
+  tags: ['autodocs', 'beta', 'version:1.1.0'],
 } as Meta<typeof AppFooter>;
 
 type Story = StoryObj<typeof AppFooter>;
