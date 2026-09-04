@@ -224,7 +224,11 @@ export const ProgressBar = ({
         </div>
       )}
       <div
-        aria-labelledby={descriptionLabel ? progressBarId : undefined}
+        aria-labelledby={
+          descriptionLabel && context === 'standalone'
+            ? progressBarId
+            : undefined
+        }
         className={trackClassName}
         role="progressbar"
         style={trackStyle}
