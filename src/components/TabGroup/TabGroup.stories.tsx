@@ -85,7 +85,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.1.1'],
+  tags: ['autodocs', 'version:3.0.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof TabGroup>;
@@ -245,68 +245,6 @@ export const WithTabIcons: StoryObj<Args> = {
         </TabGroup.Tab>
 
         <TabGroup.Tab icon="add" title="Tab Title 3">
-          <div className="max-w-[576px]">
-            <Heading as="h3" className="mb-spacing-size-3">
-              Tab 3
-            </Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </Text>
-          </div>
-        </TabGroup.Tab>
-      </>
-    ),
-  },
-};
-
-const TabIllustration = () => {
-  return (
-    <div className="h-spacing-size-6 w-spacing-size-6 bg-utility-warning-lowEmphasis"></div>
-  );
-};
-
-/**
- * Individual tabs can also have illustrations of a few specific sizes:
- *
- * - 3rem, 3.5rem, 4rem, 4.5rem, 5rem (specified in the designs)
- */
-export const WithTabIllustrations: StoryObj<Args> = {
-  args: {
-    ...Centered.args,
-    children: (
-      <>
-        <TabGroup.Tab illustration={<TabIllustration />} title="Tab Title 1">
-          <div className="max-w-[576px]">
-            <Heading as="h3" className="mb-spacing-size-3">
-              Tab 1
-            </Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </Text>
-          </div>
-        </TabGroup.Tab>
-
-        <TabGroup.Tab illustration={<TabIllustration />} title="Tab Title 2">
-          <div className="max-w-[576px]">
-            <Heading as="h3" className="mb-spacing-size-3">
-              Tab 2
-            </Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </Text>
-          </div>
-        </TabGroup.Tab>
-
-        <TabGroup.Tab illustration={<TabIllustration />} title="Tab Title 3">
           <div className="max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 3

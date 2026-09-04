@@ -21,7 +21,6 @@
 
   border-bottom: 1px solid;
 
-
   &:not(.tabs--has-divider) {
     border-bottom-color: transparent;
   }
@@ -150,14 +149,6 @@
 
 .tab__icon {
   margin-right: calc(var(--eds-spacing-size-half) * 1px);
-}
-
-.tab__illustration {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  margin: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 .tab__highlight {

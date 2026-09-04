@@ -108,16 +108,8 @@ export type TabProps = {
   title: string;
   /**
    * Icon name from the defined set of EDS icons
-   *
-   * **NOTE**: this cannot be used with `illustration`.
    */
   icon?: IconName;
-  /**
-   * Illustration to appear above the tab text
-   *
-   * **NOTE**: this cannot be used with `icon`
-   */
-  illustration?: ReactNode;
 };
 
 type TabButtonProps = RenderProps<TabContextArgs>;
@@ -389,11 +381,6 @@ export const TabGroup = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
-                  {tab.props.illustration && (
-                    <div className={styles['tab__illustration']}>
-                      {tab.props.illustration}
-                    </div>
-                  )}
                   {tab.props.icon && (
                     <Icon
                       className={styles['tab__icon']}
@@ -446,7 +433,6 @@ export const Tab = ({
   className,
   icon,
   id,
-  illustration,
   // Destructure `title` so it is not applied to the rendered element
   title,
   ...other
