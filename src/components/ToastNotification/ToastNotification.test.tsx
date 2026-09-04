@@ -18,6 +18,19 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 
 const { AutoDismiss } = composeStories(stories);
 
+/**
+ * A deliberately unmistakable value, so there is no chance of it matching a status color by
+ * coincidence.
+ *
+ * Note that a gradient is not a valid `<color>`, so this overrides the status value but does not
+ * paint a rainbow: `color: var(--toast__icon)` ends up invalid at computed-value time and falls
+ * back to the inherited color. Use a color value to actually recolor the icon.
+ */
+const RAINBOW =
+  'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
+
+const STATUSES = ['informational', 'favorable', 'warning', 'critical'] as const;
+
 const { AutoDismiss: skip, ...staticStories } = stories;
 
 describe('<ToastNotification />', () => {
@@ -33,6 +46,60 @@ describe('<ToastNotification />', () => {
     render(<AutoDismiss />);
 
     await waitFor(() => expect(consoleSpy).toHaveBeenCalledTimes(1));
+  });
+
+  describe('the icon custom property', () => {
+    it('is left alone when the caller does not set it, so the status color applies', () => {
+      const { container } = render(
+        <ToastNotification status="critical" title="test" />,
+      );
+
+      const toast = container.firstElementChild as HTMLElement;
+
+      expect(toast.style.getPropertyValue('--toast__icon')).toBe('');
+    });
+
+    it.each(STATUSES)(
+      'takes a caller value over the %s status color',
+      (status) => {
+        const { container } = render(
+          <ToastNotification
+            status={status}
+            style={{ '--toast__icon': RAINBOW }}
+            title="test"
+          />,
+        );
+
+        const toast = container.firstElementChild as HTMLElement;
+
+        // The status class and the caller's inline value land on the same element, which is what
+        // lets the inline value win. This asserts the two coexist; that the cascade resolves in
+        // the inline value's favor is covered by the Chromatic snapshots, since jsdom does not
+        // apply the stylesheet.
+        expect(toast.className).toContain(`toast--status-${status}`);
+        expect(toast).toHaveStyle({ '--toast__icon': RAINBOW });
+      },
+    );
+
+    it('keeps the caller value alongside the other toast custom properties', () => {
+      const { container } = render(
+        <ToastNotification
+          status="critical"
+          style={{
+            '--toast__bg': 'black',
+            '--toast__fg': 'white',
+            '--toast__icon': RAINBOW,
+          }}
+          title="test"
+        />,
+      );
+
+      expect(container.firstElementChild).toHaveStyle({
+        '--toast__bg': 'black',
+        '--toast__fg': 'white',
+        '--toast__icon': RAINBOW,
+      });
+    });
   });
 
   describe('emits messages when misused', () => {
