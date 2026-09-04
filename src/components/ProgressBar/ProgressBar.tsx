@@ -224,7 +224,7 @@ export const ProgressBar = ({
         </div>
       )}
       <div
-        aria-labelledby={progressBarId}
+        aria-labelledby={descriptionLabel ? progressBarId : undefined}
         className={trackClassName}
         role="progressbar"
         style={trackStyle}
