@@ -25,6 +25,7 @@ export type ToastNotificationProps = {
    *
    * - `--toast__bg`
    * - `--toast__fg`
+   * - `--toast__icon`
    */
   style?: ToastNotificationCSSProperties;
   /**
@@ -59,6 +60,11 @@ export interface ToastNotificationCSSProperties extends React.CSSProperties {
    * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
    */
   '--toast__fg'?: string;
+
+  /**
+   * Custom property to customize the icon color of this component (e.g., the status icon)
+   */
+  '--toast__icon'?: string;
 }
 
 /**
