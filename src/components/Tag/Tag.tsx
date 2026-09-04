@@ -14,6 +14,14 @@ type Props = {
    * CSS class names that can be appended to the component for styling.
    */
   className?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--tag__bg`
+   * - `--tag__border`
+   * - `--tag__fg`
+   */
+  style?: TagCSSProperties;
   // Design API
   /**
    * Controls how much the tag stands out. **NOTE**: emphasis can only be set to "low" when status is "informational".
@@ -34,6 +42,23 @@ type Props = {
    */
   status?: Status;
 };
+
+export interface TagCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--tag__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--tag__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--tag__fg'?: string;
+}
 
 /**
  * ## Usage
@@ -72,6 +97,7 @@ export const Tag = ({
   icon,
   label,
   status = 'informational',
+  style,
 }: Props) => {
   const componentClassName = clsx(
     styles['tag'],
@@ -86,7 +112,12 @@ export const Tag = ({
   );
 
   return (
-    <InternalText as="span" className={componentClassName} preset="tag">
+    <InternalText
+      as="span"
+      className={componentClassName}
+      preset="tag"
+      style={style}
+    >
       {icon && <Icon name={icon} purpose="decorative" size="16px" />}
       {label && <span className={styles['tag__body']}>{label}</span>}
     </InternalText>

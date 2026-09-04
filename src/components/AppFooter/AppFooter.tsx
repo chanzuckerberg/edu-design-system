@@ -12,7 +12,7 @@ import styles from './AppFooter.module.css';
 
 export type AppFooterProps = Omit<
   React.HTMLAttributes<HTMLElement>,
-  'title'
+  'style' | 'title'
 > & {
   // Component API
   /**
@@ -32,6 +32,13 @@ export type AppFooterProps = Omit<
    * (e.g., attaching events, tracking, etc.)
    */
   onLinkClick?: AppFooterEventHandler;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--app-footer__bg-color`
+   * - `--app-footer__fg-color`
+   */
+  style?: AppFooterCSSProperties;
   // Design API
   /**
    * Text slot for specifying the copyright information (e.g., "Copyright © ${YEAR}")
@@ -48,6 +55,18 @@ export type AppFooterProps = Omit<
    */
   title: ReactNode;
 };
+
+export interface AppFooterCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--app-footer__bg-color'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--app-footer__fg-color'?: string;
+}
 
 export type AppFooterEventHandler = (
   event: React.SyntheticEvent,

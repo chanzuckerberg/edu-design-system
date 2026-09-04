@@ -75,6 +75,12 @@ type ModalContentProps = {
    * ```
    */
   onClose: () => void;
+  /**
+   * CSS properties defined for the modal's content element. Includes the component's CSS Custom Properties:
+   *
+   * - `--modal-content__border`
+   */
+  style?: ModalContentCSSProperties;
   // Design API
   /**
    * Determine how the height of the modal container is calculated when `size` is `"lg"`:
@@ -100,6 +106,13 @@ type ModalContentProps = {
    */
   size?: Extract<Size, 'sm' | 'lg'> | 'full';
 };
+
+export interface ModalContentCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--modal-content__border'?: string;
+}
 
 type ModalProps = ModalContentProps & {
   /**

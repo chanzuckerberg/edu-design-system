@@ -16,6 +16,13 @@ export type ProgressBarProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * CSS properties defined for the progress bar track. Includes the component's CSS Custom Properties:
+   *
+   * - `--progress-bar__bg`
+   * - `--progress-bar__fg`
+   */
+  style?: ProgressBarCSSProperties;
   // Design API
   /**
    * Determines the usage context of the progress bar.
@@ -62,6 +69,18 @@ export type ProgressBarProps = {
   }
 >;
 
+export interface ProgressBarCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--progress-bar__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--progress-bar__fg'?: string;
+}
+
 const PROGRESS_BAR_MINIMUM = 0;
 
 /**
@@ -105,6 +124,7 @@ export const ProgressBar = ({
   descriptionLabel,
   labelLayout = 'vertical',
   max = 1,
+  style,
   value,
   valueLabel,
   ...other
@@ -190,8 +210,11 @@ export const ProgressBar = ({
         role="progressbar"
         style={
           {
+            ...style,
+            // Set after the caller's styles: the fill is derived from `value` and is not
+            // a caller-facing custom property.
             '--progress-bar__progress': computedValue / max,
-          } as React.CSSProperties
+          } as ProgressBarCSSProperties
         }
         {...other}
       >

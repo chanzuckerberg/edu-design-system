@@ -86,4 +86,37 @@ describe('<ProgressBar />', () => {
       expect(container).not.toHaveTextContent('33%');
     });
   });
+
+  describe('the custom properties', () => {
+    it('applies the caller-supplied colors alongside the computed progress', () => {
+      render(
+        <ProgressBar
+          aria-label="progress"
+          style={{ '--progress-bar__bg': 'gray', '--progress-bar__fg': 'gold' }}
+          value={0.5}
+        />,
+      );
+
+      expect(screen.getByRole('progressbar')).toHaveStyle({
+        '--progress-bar__bg': 'gray',
+        '--progress-bar__fg': 'gold',
+        '--progress-bar__progress': '0.5',
+      });
+    });
+
+    it('keeps the computed progress when a caller tries to set it directly', () => {
+      render(
+        <ProgressBar
+          aria-label="progress"
+          // @ts-expect-error -- the fill is derived from `value`, so it is not a caller-facing custom property
+          style={{ '--progress-bar__progress': '9' }}
+          value={0.25}
+        />,
+      );
+
+      expect(screen.getByRole('progressbar')).toHaveStyle({
+        '--progress-bar__progress': '0.25',
+      });
+    });
+  });
 });

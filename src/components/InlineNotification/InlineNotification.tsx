@@ -15,6 +15,13 @@ type InlineNotificationProps = {
    * CSS class names that can be appended to the component for styling.
    */
   className?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--inline-notification__bg`
+   * - `--inline-notification__fg`
+   */
+  style?: InlineNotificationCSSProperties;
   // Design API
   /**
    * Keyword to characterize the state of the notification
@@ -31,6 +38,18 @@ type InlineNotificationProps = {
    */
   title: string;
 };
+
+export interface InlineNotificationCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--inline-notification__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--inline-notification__fg'?: string;
+}
 
 /**
  * ## Usage
