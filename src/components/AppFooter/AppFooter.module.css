@@ -6,18 +6,18 @@
  * AppFooter
  */
 .app-footer {
-  background-color: var(--app-footer__bg-color);
-  color: var(--app-footer__fg-color);
+  background-color: var(--app-footer__bg);
+  color: var(--app-footer__fg);
 }
 
 .app-footer--emphasis-low {
-  --app-footer__fg-color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
-  --app-footer__bg-color: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
+  --app-footer__fg: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  --app-footer__bg: light-dark(var(--eds-theme-color-background-utility-default-no-emphasis), var(--eds-dark-theme-color-background-utility-default-no-emphasis));
 }
 
 .app-footer--emphasis-high {
-  --app-footer__fg-color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
-  --app-footer__bg-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
+  --app-footer__fg: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
+  --app-footer__bg: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
 }
 
 .app-footer__home-link {

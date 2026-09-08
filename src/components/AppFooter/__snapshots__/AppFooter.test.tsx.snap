@@ -1,5 +1,79 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<AppFooter /> > CustomColors story renders snapshot 1`] = `
+<footer
+  class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"
+  style="--app-footer__bg: rebeccapurple; --app-footer__fg: papayawhip;"
+>
+  <div
+    class="_app-footer__wrapper_693f0c"
+  >
+    <div
+      class="_app-footer__colophon_693f0c"
+    >
+      <div
+        class="_app-footer__title_693f0c"
+      >
+        <div
+          class="fpo h-[40px] w-[176px]"
+        >
+          Logo goes here
+        </div>
+      </div>
+      <div
+        class="_text_b3eba3 _text--body-xs_b3eba3 _app-footer__copyright_693f0c"
+      >
+        Copyright © 2026
+      </div>
+    </div>
+    <menu
+      class="_app-footer__nav-items_693f0c"
+    >
+      <li
+        class="_app-footer__nav-item_693f0c"
+      >
+        <a
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
+          href="#support"
+        >
+          Support
+        </a>
+      </li>
+      <li
+        class="_app-footer__nav-item_693f0c"
+      >
+        <a
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
+          href="#tos"
+        >
+          Terms of Use
+        </a>
+      </li>
+      <li
+        class="_app-footer__nav-item_693f0c"
+      >
+        <a
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
+          href="#privacy"
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li
+        class="_app-footer__nav-item_693f0c"
+      >
+        <a
+          class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8 _link--variant-inverse_d78ce8"
+          href="#guidelines"
+        >
+          Community Guidelines
+        </a>
+      </li>
+    </menu>
+  </div>
+</footer>
+`;
+
 exports[`<AppFooter /> > Default story renders snapshot 1`] = `
 <footer
   class="_app-footer_693f0c _app-footer--emphasis-high_693f0c"

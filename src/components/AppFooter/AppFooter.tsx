@@ -35,8 +35,8 @@ export type AppFooterProps = Omit<
   /**
    * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
    *
-   * - `--app-footer__bg-color`
-   * - `--app-footer__fg-color`
+   * - `--app-footer__bg`
+   * - `--app-footer__fg`
    */
   style?: AppFooterCSSProperties;
   // Design API
@@ -60,12 +60,12 @@ export interface AppFooterCSSProperties extends React.CSSProperties {
   /**
    * Custom property to customize the background color of this component (e.g., background color)
    */
-  '--app-footer__bg-color'?: string;
+  '--app-footer__bg'?: string;
 
   /**
    * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
    */
-  '--app-footer__fg-color'?: string;
+  '--app-footer__fg'?: string;
 }
 
 export type AppFooterEventHandler = (
