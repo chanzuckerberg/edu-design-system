@@ -36,7 +36,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageNotification>;

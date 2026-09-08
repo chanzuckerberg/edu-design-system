@@ -23,6 +23,14 @@ type AvatarProps = {
    */
   src?: string;
   /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--avatar__bg`
+   * - `--avatar__border`
+   * - `--avatar__fg`
+   */
+  style?: AvatarCSSProperties;
+  /**
    * The user associated with this avatar
    *
    * `UserData` takes the format (`[]` key-values are optional):
@@ -62,6 +70,23 @@ type AvatarProps = {
    */
   variant?: 'icon' | 'text' | 'image';
 };
+
+export interface AvatarCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--avatar__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--avatar__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--avatar__fg'?: string;
+}
 
 const NUM_COLORS = 6; // this count should match the zero-indexed color schemes in the CSS Module
 

@@ -10,6 +10,14 @@ import styles from './SelectionChip.module.css';
 
 export type SelectionChipProps = {
   // Component API
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--selection-chip__bg`
+   * - `--selection-chip__border`
+   * - `--selection-chip__fg`
+   */
+  style?: SelectionChipCSSProperties;
   // Design API
   /**
    * Whether the chip is disabled or not
@@ -31,6 +39,23 @@ export type SelectionChipProps = {
   React.InputHTMLAttributes<HTMLInputElement>,
   'id' | 'name' | 'className' | 'checked' | 'defaultChecked' | 'onChange'
 >;
+
+export interface SelectionChipCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--selection-chip__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--selection-chip__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--selection-chip__fg'?: string;
+}
 
 type SelectionChipRefProps = ForwardedRefComponent<
   HTMLInputElement,

@@ -23,27 +23,32 @@
   }
 }
 
+/**
+ * Per-status icon colors, set on the root so that `--toast__icon` passed in through the `style`
+ * prop overrides them. Declaring them on `.toast__icon` itself would win over the value inherited
+ * from the root, which would make the custom property impossible to override.
+ */
+.toast--status-critical {
+  --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-critical), var(--eds-dark-theme-color-icon-utility-inverse-critical));
+}
+
+.toast--status-warning {
+  --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-warning), var(--eds-dark-theme-color-icon-utility-inverse-warning));
+}
+
+.toast--status-favorable {
+  --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-favorable), var(--eds-dark-theme-color-icon-utility-inverse-favorable));
+}
+
+.toast--status-informational {
+  --toast__icon: inherit;
+}
+
 .toast__icon {
   /* manual offset for alignment */
   transform: translateY(1px);
 
   flex-shrink: 0;
-
-  .toast--status-critical & {
-    --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-critical), var(--eds-dark-theme-color-icon-utility-inverse-critical));
-  }
-
-  .toast--status-warning & {
-    --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-warning), var(--eds-dark-theme-color-icon-utility-inverse-warning));
-  }
-
-  .toast--status-favorable & {
-    --toast__icon: light-dark(var(--eds-theme-color-icon-utility-inverse-favorable), var(--eds-dark-theme-color-icon-utility-inverse-favorable));
-  }
-
-  .toast--status-informational & {
-    --toast__icon: inherit;
-  }
 }
 
 .toast__body {

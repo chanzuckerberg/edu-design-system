@@ -13,7 +13,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<typeof Avatar>;
 
 type Story = StoryObj<typeof Avatar>;

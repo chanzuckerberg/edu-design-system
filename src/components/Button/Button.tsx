@@ -10,7 +10,10 @@ import styles from './Button.module.css';
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
+export type ButtonProps<ExtendedElement = unknown> = Omit<
+  ButtonHTMLElementProps,
+  'style'
+> & {
   // Component API
   /**
    * Component used to render the element. Meant to support interaction with framework navigation libraries.
@@ -22,6 +25,14 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
    * `Button` contents or label.
    */
   children?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--button__bg`
+   * - `--button__border`
+   * - `--button__fg`
+   */
+  style?: ButtonCSSProperties;
   /**
    * Determine the behavior of the button upon click:
    * - **button** `Button` is a clickable button with no default behavior
@@ -85,6 +96,23 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
    */
   isLoading?: boolean;
 } & ExtendedElement;
+
+export interface ButtonCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--button__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--button__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--button__fg'?: string;
+}
 
 /**
  * ## Usage

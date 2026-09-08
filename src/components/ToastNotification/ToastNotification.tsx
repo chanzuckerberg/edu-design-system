@@ -21,6 +21,14 @@ export type ToastNotificationProps = {
    */
   onDismiss?: () => void;
   /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--toast__bg`
+   * - `--toast__fg`
+   * - `--toast__icon`
+   */
+  style?: ToastNotificationCSSProperties;
+  /**
    * Length of time to wait until `onDismiss` is called
    */
   timeout?: number;
@@ -41,6 +49,23 @@ export type ToastNotificationProps = {
    */
   title: string;
 };
+
+export interface ToastNotificationCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--toast__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--toast__fg'?: string;
+
+  /**
+   * Custom property to customize the icon color of this component (e.g., the status icon)
+   */
+  '--toast__icon'?: string;
+}
 
 /**
  * ## Usage

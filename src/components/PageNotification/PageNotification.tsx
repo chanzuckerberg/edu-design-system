@@ -11,7 +11,10 @@ import Text from '../Text';
 
 import styles from './PageNotification.module.css';
 
-export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
+export type PageNotificationProps = Omit<
+  React.HTMLAttributes<HTMLElement>,
+  'style'
+> & {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -21,6 +24,13 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
    * Callback when notification is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--page-notification__bg`
+   * - `--page-notification__fg`
+   */
+  style?: PageNotificationCSSProperties;
   // Design API
   /**
    * Whether the button layout for the call to action is vertical or horizontal.
@@ -45,6 +55,18 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
    */
   title?: string;
 };
+
+export interface PageNotificationCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--page-notification__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--page-notification__fg'?: string;
+}
 
 /**
  * ## Usage

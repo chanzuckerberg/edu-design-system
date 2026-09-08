@@ -14,7 +14,7 @@ export default {
     },
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:1.1'],
+  tags: ['autodocs', 'version:1.2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SelectionChip>;

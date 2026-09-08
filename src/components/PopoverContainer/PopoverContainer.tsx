@@ -13,7 +13,20 @@ export type PopoverContainerProps = {
    * Child node(s) that can be nested inside component.
    */
   children: ReactNode;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--popover-container__bg`
+   */
+  style?: PopoverContainerCSSProperties;
 };
+
+export interface PopoverContainerCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--popover-container__bg'?: string;
+}
 
 /**
  * ## Usage

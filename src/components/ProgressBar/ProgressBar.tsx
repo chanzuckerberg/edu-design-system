@@ -16,6 +16,13 @@ export type ProgressBarProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * CSS properties defined for the progress bar track. Includes the component's CSS Custom Properties:
+   *
+   * - `--progress-bar__bg`
+   * - `--progress-bar__fg`
+   */
+  style?: ProgressBarCSSProperties;
   // Design API
   /**
    * Determines the usage context of the progress bar.
@@ -62,6 +69,30 @@ export type ProgressBarProps = {
   }
 >;
 
+export interface ProgressBarCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--progress-bar__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--progress-bar__fg'?: string;
+}
+
+/**
+ * The properties actually applied to the track, which is `ProgressBarCSSProperties` plus the one
+ * the component sets for itself. Deliberately not exported and not part of the public interface,
+ * so a caller cannot set the fill directly.
+ */
+interface ProgressBarTrackCSSProperties extends ProgressBarCSSProperties {
+  /**
+   * The filled share of the track, derived from `value` and `max`.
+   */
+  '--progress-bar__progress'?: number;
+}
+
 const PROGRESS_BAR_MINIMUM = 0;
 
 /**
@@ -105,6 +136,7 @@ export const ProgressBar = ({
   descriptionLabel,
   labelLayout = 'vertical',
   max = 1,
+  style,
   value,
   valueLabel,
   ...other
@@ -135,6 +167,13 @@ export const ProgressBar = ({
     styles['progress-bar__track'],
     context && styles[`progress-bar__track--context-${context}`],
   );
+
+  const trackStyle: ProgressBarTrackCSSProperties = {
+    ...style,
+    // Set after the caller's styles: the fill is derived from `value`, so it is not a
+    // caller-facing custom property.
+    '--progress-bar__progress': computedValue / max,
+  };
 
   assertEdsUsage(
     [
@@ -185,14 +224,14 @@ export const ProgressBar = ({
         </div>
       )}
       <div
-        aria-labelledby={progressBarId}
+        aria-labelledby={
+          descriptionLabel && context === 'standalone'
+            ? progressBarId
+            : undefined
+        }
         className={trackClassName}
         role="progressbar"
-        style={
-          {
-            '--progress-bar__progress': computedValue / max,
-          } as React.CSSProperties
-        }
+        style={trackStyle}
         {...other}
       >
         <div className={styles['progress-bar__content']} />
