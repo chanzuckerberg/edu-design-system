@@ -368,7 +368,7 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
           <span
             class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
-            Icon name
+            Chevron down (the default)
           </span>
         </h2>
         <svg
@@ -385,7 +385,7 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
             show content
           </title>
           <path
-            d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
           />
         </svg>
       </button>
@@ -399,6 +399,45 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
         class="_accordion-button_86d7df"
         data-headlessui-state=""
         id="headlessui-disclosure-button-_r_m_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Chevron up
+          </span>
+        </h2>
+        <svg
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 10.4542L7.39994 15.0542L6.34619 14.0004L11.9999 8.34668L17.6537 14.0004L16.5999 15.0542L11.9999 10.4542Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_o_"
         type="button"
       >
         <h2

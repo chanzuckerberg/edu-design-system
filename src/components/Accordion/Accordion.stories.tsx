@@ -293,13 +293,22 @@ export const WithCustomIndicator: Story = {
       <>
         <Accordion.Row>
           <Accordion.Button
-            indicatorContent="chevron-down-double"
-            title="Icon name"
+            indicatorContent="chevron-down"
+            title="Chevron down (the default)"
           />
           <Accordion.Panel>
             <Text preset="body-md">
               Passing an icon name renders it through `Icon`, announced as
               show/hide content.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button indicatorContent="chevron-up" title="Chevron up" />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Starting from the other orientation flips which way the indicator
+              rotates.
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
