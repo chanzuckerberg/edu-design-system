@@ -12,7 +12,7 @@ import {
   beforeEach,
   afterEach,
 } from 'vitest';
-import { AppFooter } from './AppFooter';
+import { AppFooter, type AppFooterCSSProperties } from './AppFooter';
 
 import * as stories from './AppFooter.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
@@ -26,6 +26,30 @@ const CUSTOM_BG = 'rebeccapurple';
 const CUSTOM_FG = 'papayawhip';
 
 const EMPHASES = ['low', 'high'] as const;
+
+/**
+ * The two properties, each paired with the other one, so every case runs against both and a
+ * property set on its own cannot quietly leak into the other.
+ */
+const CUSTOM_PROPERTIES: {
+  name: string;
+  value: string;
+  style: AppFooterCSSProperties;
+  otherName: string;
+}[] = [
+  {
+    name: '--app-footer__bg',
+    value: CUSTOM_BG,
+    style: { '--app-footer__bg': CUSTOM_BG },
+    otherName: '--app-footer__fg',
+  },
+  {
+    name: '--app-footer__fg',
+    value: CUSTOM_FG,
+    style: { '--app-footer__fg': CUSTOM_FG },
+    otherName: '--app-footer__bg',
+  },
+];
 
 const NAV_ITEMS: NavLink[] = [
   {
@@ -79,20 +103,19 @@ describe('<AppFooter />', () => {
       },
     );
 
-    it('accepts either one on its own', () => {
-      const { container } = render(
-        <AppFooter
-          navItems={NAV_ITEMS}
-          style={{ '--app-footer__bg': CUSTOM_BG }}
-          title="text"
-        />,
-      );
+    it.each(CUSTOM_PROPERTIES)(
+      'accepts $name on its own, leaving $otherName to its default',
+      ({ name, value, style, otherName }) => {
+        const { container } = render(
+          <AppFooter navItems={NAV_ITEMS} style={style} title="text" />,
+        );
 
-      const footer = container.firstElementChild as HTMLElement;
+        const footer = container.firstElementChild as HTMLElement;
 
-      expect(footer).toHaveStyle({ '--app-footer__bg': CUSTOM_BG });
-      expect(footer.style.getPropertyValue('--app-footer__fg')).toBe('');
-    });
+        expect(footer.style.getPropertyValue(name)).toBe(value);
+        expect(footer.style.getPropertyValue(otherName)).toBe('');
+      },
+    );
 
     it('keeps them alongside the regular CSS properties on the style prop', () => {
       const { container } = render(
@@ -115,7 +138,7 @@ describe('<AppFooter />', () => {
     });
 
     it('does not accept the pre-v19 `-color` suffixed names', () => {
-      const { container } = render(
+      const { container: bgContainer } = render(
         <AppFooter
           navItems={NAV_ITEMS}
           // @ts-expect-error renamed in v19; `-color` was dropped to match the other components
@@ -123,12 +146,28 @@ describe('<AppFooter />', () => {
           title="text"
         />,
       );
+      const { container: fgContainer } = render(
+        <AppFooter
+          navItems={NAV_ITEMS}
+          // @ts-expect-error renamed in v19; `-color` was dropped to match the other components
+          style={{ '--app-footer__fg-color': CUSTOM_FG }}
+          title="text"
+        />,
+      );
 
-      expect(
-        (container.firstElementChild as HTMLElement).style.getPropertyValue(
-          '--app-footer__bg',
-        ),
-      ).toBe('');
+      const bgFooter = bgContainer.firstElementChild as HTMLElement;
+      const fgFooter = fgContainer.firstElementChild as HTMLElement;
+
+      // React passes any `--` prefixed key straight through, so the old names still reach the
+      // DOM. They just no longer drive anything, which is what these assert.
+      expect(bgFooter.style.getPropertyValue('--app-footer__bg')).toBe('');
+      expect(bgFooter.style.getPropertyValue('--app-footer__bg-color')).toBe(
+        CUSTOM_BG,
+      );
+      expect(fgFooter.style.getPropertyValue('--app-footer__fg')).toBe('');
+      expect(fgFooter.style.getPropertyValue('--app-footer__fg-color')).toBe(
+        CUSTOM_FG,
+      );
     });
   });
 
