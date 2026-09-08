@@ -3,7 +3,7 @@ import { Icon } from './Icon';
 import type { IconName } from './Icon';
 import type { IconOrContent } from '../../util/utility-types';
 
-export type IconSlotProps = {
+type IconSlotPropsBase = {
   /**
    * CSS class names applied to the rendered icon, or to the wrapper around custom
    * content so both branches sit the same way in the layout.
@@ -20,6 +20,22 @@ export type IconSlotProps = {
   size?: string;
 };
 
+export type IconSlotProps = IconSlotPropsBase &
+  (
+    | {
+        /**
+         * Mirrors `Icon`'s `purpose`, and applies only when rendering an icon name.
+         * Custom content carries its own accessible treatment.
+         */
+        purpose?: 'decorative';
+        title?: never;
+      }
+    | {
+        purpose: 'informative';
+        title: string;
+      }
+  );
+
 /**
  * Renders a leading/trailing slot that accepts either an EDS icon name or arbitrary
  * content.
@@ -30,9 +46,14 @@ export type IconSlotProps = {
  * renders through `Icon` with that component's own sizing. Everything else is content
  * and renders untouched.
  *
+ * `purpose` and `title` describe the icon branch only. When a consumer supplies their
+ * own content, they own its accessible treatment.
+ *
  * Not exported from the package. Consumers use the slot props on each component.
  */
-export const IconSlot = ({ className, content, size }: IconSlotProps) => {
+export const IconSlot = (props: IconSlotProps) => {
+  const { className, content, size } = props;
+
   if (content === null || content === undefined || content === false) {
     return null;
   }
@@ -40,10 +61,20 @@ export const IconSlot = ({ className, content, size }: IconSlotProps) => {
   if (typeof content === 'string') {
     // Safe because a string in this slot is an icon name by convention. The union
     // collapses to `ReactNode`, so TypeScript cannot narrow to `IconName` on its own.
-    return (
+    const name = content as IconName;
+
+    return props.purpose === 'informative' ? (
       <Icon
         className={className}
-        name={content as IconName}
+        name={name}
+        purpose="informative"
+        size={size}
+        title={props.title}
+      />
+    ) : (
+      <Icon
+        className={className}
+        name={name}
         purpose="decorative"
         size={size}
       />

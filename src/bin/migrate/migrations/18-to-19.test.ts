@@ -141,13 +141,37 @@ describe('18-to-19', () => {
     `);
   });
 
-  it('leaves the Accordion expand indicator override alone', () => {
-    const sourceFileText = dedent`
+  it('renames the Accordion expand indicator override', () => {
+    const sourceFile = createTestSourceFile(dedent`
       import {Accordion} from '@chanzuckerberg/eds';
 
       export default function Component() {
         return (
           <Accordion.Button title="Row" trailingIcon="chevron-down" />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" indicatorContent="chevron-down" />
+        )
+      }
+    `);
+  });
+
+  it('leaves the Accordion trailing slot alone', () => {
+    const sourceFileText = dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" trailingContent={<Tag>New</Tag>} />
         )
       }
     `;

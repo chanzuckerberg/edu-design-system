@@ -67,9 +67,9 @@ const presetEdits = presetReplacements.map(
  * icon name, and also takes a node. Only the prop name changed, so passing the same
  * icon name under the new name renders exactly what it did before.
  *
- * `Accordion.Button` keeps its `trailingIcon`, which overrides the expand/collapse
- * chevron. That component already has a separate `trailingContent` slot, so there is
- * no `trailingIcon` to rename onto it.
+ * `Accordion.Button`'s `trailingIcon` overrides the expand/collapse chevron rather than
+ * filling a trailing slot, and the component already has a separate `trailingContent`
+ * slot. It becomes `indicatorContent`, which names what it actually controls.
  */
 /**
  * Known prop changes for updated components from EDS v18 to v19
@@ -119,7 +119,14 @@ export const PropChanges: EditJsxPropChange[] = [
   },
   {
     componentName: 'Accordion.Button',
-    edits: leadingIconToContent,
+    edits: [
+      ...leadingIconToContent,
+      {
+        type: 'update_name',
+        oldPropName: 'trailingIcon',
+        newPropName: 'indicatorContent',
+      },
+    ],
   },
   {
     componentName: 'DataTable.DataCell',

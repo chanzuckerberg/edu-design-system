@@ -8,9 +8,10 @@ import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import { assertEdsUsage } from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 
 import Heading, { type HeadingElement } from '../Heading';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './Accordion.module.css';
@@ -75,11 +76,16 @@ type AccordionButtonProps = {
    */
   trailingContent?: ReactNode;
   /**
-   * Icon override for component's expand/collapse indicator.
+   * Override for the component's expand/collapse indicator. Pass an EDS icon name to
+   * render an icon, or a node to render it as-is.
+   *
+   * The indicator rotates when the row opens, and an icon name is announced as
+   * "show content"/"hide content". Custom content carries its own accessible
+   * treatment.
    *
    * **Default is `"chevron-down"`**.
    */
-  trailingIcon?: Extract<IconName, 'chevron-down'>;
+  indicatorContent?: IconOrContent;
 };
 
 type AccordionPanelProps = {
@@ -203,7 +209,7 @@ const AccordionButton = ({
   headingAs,
   leadingContent,
   title,
-  trailingIcon = 'chevron-down',
+  indicatorContent = 'chevron-down',
   trailingContent,
   subTitle,
   onClose,
@@ -285,12 +291,12 @@ const AccordionButton = ({
           </Heading>
           {trailingContent}
           {isExpandable && (
-            <Icon
+            <IconSlot
               className={clsx(
                 styles['accordion-button__trailing-icon'],
                 open && styles['accordion-button__trailing-icon--open'],
               )}
-              name={trailingIcon}
+              content={indicatorContent}
               purpose="informative"
               size="24px"
               title={open ? 'hide content' : 'show content'}

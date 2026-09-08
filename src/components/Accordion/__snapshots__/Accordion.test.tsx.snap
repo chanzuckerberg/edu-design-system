@@ -344,6 +344,91 @@ exports[`<Accordion /> > UsingRenderProp story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[600px]"
+  >
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_k_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Icon name
+          </span>
+        </h2>
+        <svg
+          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_m_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Custom content
+          </span>
+        </h2>
+        <span
+          class="_accordion-button__trailing-icon_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-favorable_f57044"
+          >
+            <span
+              class="_tag__body_f57044"
+            >
+              3 new
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Accordion /> > WithLargeHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"

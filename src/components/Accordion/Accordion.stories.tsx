@@ -281,3 +281,41 @@ export const WithLargeHeader: Story = {
     ),
   },
 };
+
+/**
+ * The expand/collapse indicator can be overridden with another EDS icon, or with custom
+ * content. Either way it rotates when the row opens, so pick something that reads well
+ * upside down.
+ */
+export const WithCustomIndicator: Story = {
+  args: {
+    children: (
+      <>
+        <Accordion.Row>
+          <Accordion.Button
+            indicatorContent="chevron-down-double"
+            title="Icon name"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Passing an icon name renders it through `Icon`, announced as
+              show/hide content.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button
+            indicatorContent={<Tag label="3 new" status="favorable" />}
+            title="Custom content"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Passing a node renders it as-is. The node carries its own
+              accessible treatment.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
+  },
+};
