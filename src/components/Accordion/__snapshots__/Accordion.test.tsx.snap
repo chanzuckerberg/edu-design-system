@@ -29,7 +29,7 @@ exports[`<Accordion /> > Default story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -78,7 +78,7 @@ exports[`<Accordion /> > Default story renders snapshot 1`] = `
           </span>
         </span>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -121,7 +121,7 @@ exports[`<Accordion /> > Default story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df _accordion-button__trailing-icon--open_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -180,7 +180,7 @@ exports[`<Accordion /> > HasLeadingIcon story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="_accordion-button__leading-icon_86d7df"
+          class="_accordion-button__leading-content_86d7df"
         >
           <svg
             aria-hidden="true"
@@ -212,7 +212,7 @@ exports[`<Accordion /> > HasLeadingIcon story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -270,7 +270,7 @@ exports[`<Accordion /> > TitleAndSubtitle story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -322,7 +322,7 @@ exports[`<Accordion /> > UsingRenderProp story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -372,7 +372,7 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -411,7 +411,7 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -450,7 +450,7 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
           </span>
         </h2>
         <span
-          class="_accordion-button__trailing-icon_86d7df"
+          class="_accordion-button__indicator_86d7df"
         >
           <span
             class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-favorable_f57044"
@@ -496,7 +496,7 @@ exports[`<Accordion /> > WithLargeHeader story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -538,7 +538,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="_accordion-button__leading-icon_86d7df"
+          class="_accordion-button__leading-content_86d7df"
         >
           <span
             aria-label="Numero uno"
@@ -559,7 +559,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -590,7 +590,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="_accordion-button__leading-icon_86d7df"
+          class="_accordion-button__leading-content_86d7df"
         >
           <span
             aria-label="Numero uno"
@@ -611,7 +611,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -642,7 +642,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
         type="button"
       >
         <span
-          class="_accordion-button__leading-icon_86d7df"
+          class="_accordion-button__leading-content_86d7df"
         >
           <span
             aria-label="Numero uno"
@@ -663,7 +663,7 @@ exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="_icon_779da8 _accordion-button__trailing-icon_86d7df"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"

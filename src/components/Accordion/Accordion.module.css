@@ -11,7 +11,7 @@
 .accordion-panel {
   padding: 0 0 calc(var(--eds-spacing-size-2) * 1px);
 
-  &.accordion-panel--leading-icon {
+  &.accordion-panel--leading-content {
     padding-left: calc(var(--eds-spacing-size-5) * 1px);
   }
 
@@ -57,7 +57,7 @@
  *
  * This non-rotated icon points down and represents closed status.
  */
-.accordion-button__trailing-icon {
+.accordion-button__indicator {
   flex: 0 0 content;
   transform: rotate(0);
   color: light-dark(var(--eds-theme-color-icon-utility-default-secondary), var(--eds-dark-theme-color-icon-utility-default-secondary));
@@ -66,14 +66,14 @@
 /**
  * This rotated icon points up and represents open status.
  */
-.accordion-button__trailing-icon--open {
+.accordion-button__indicator--open {
   transform: rotate(-180deg);
 }
 
 /**
  * Animates the icon rotation when opening and closing.
  */
-.accordion-button>.accordion-button__trailing-icon {
+.accordion-button>.accordion-button__indicator {
   transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-in-out;
 
   @media screen and (prefers-reduced-motion) {
@@ -98,7 +98,7 @@
   outline-color: light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
 }
 
-.accordion-button__leading-icon {
+.accordion-button__leading-content {
   color: light-dark(var(--eds-theme-color-icon-utility-default-secondary), var(--eds-dark-theme-color-icon-utility-default-secondary));
 
   /* Targeting NumberIcons and other images used in this specific context */

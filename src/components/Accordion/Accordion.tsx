@@ -260,7 +260,7 @@ const AccordionButton = ({
           {...other}
         >
           {hasSlotContent(leadingContent) && (
-            <span className={styles['accordion-button__leading-icon']}>
+            <span className={styles['accordion-button__leading-content']}>
               {leadingContent}
             </span>
           )}
@@ -293,8 +293,8 @@ const AccordionButton = ({
           {isExpandable && (
             <IconSlot
               className={clsx(
-                styles['accordion-button__trailing-icon'],
-                open && styles['accordion-button__trailing-icon--open'],
+                styles['accordion-button__indicator'],
+                open && styles['accordion-button__indicator--open'],
               )}
               content={indicatorContent}
               purpose="informative"
@@ -318,7 +318,7 @@ const AccordionPanel = ({
   const componentClassName = clsx(
     styles['accordion-panel'],
     !isExpandable && styles['accordion-panel--hidden'],
-    hasLeadingContent && styles['accordion-panel--leading-icon'],
+    hasLeadingContent && styles['accordion-panel--leading-content'],
     className,
   );
 

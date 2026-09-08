@@ -111,7 +111,8 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
   ) => {
     const componentClassName = clsx(
       styles['selection-chip'],
-      hasSlotContent(leadingContent) && styles['selection-chip--has-icon'],
+      hasSlotContent(leadingContent) &&
+        styles['selection-chip--has-leading-content'],
       isDisabled && styles['selection-chip--disabled'],
       className,
     );

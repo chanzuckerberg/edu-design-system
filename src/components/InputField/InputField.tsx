@@ -297,7 +297,7 @@ export const InputField: InputFieldType = forwardRef(
     // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
     const inputOverlayClassName = clsx(
       hasSlotContent(leadingContent) &&
-        styles['input-field__input--leading-icon'],
+        styles['input-field__input--leading-content'],
       shouldRenderInputWithin && styles['input-field__input--input-within'],
     );
 
@@ -439,7 +439,7 @@ export const InputField: InputFieldType = forwardRef(
             </div>
           )}
           {hasSlotContent(leadingContent) && (
-            <div className={styles['input-field__leading-icon']}>
+            <div className={styles['input-field__leading-content']}>
               <IconSlot content={leadingContent} size="24px" />
             </div>
           )}
