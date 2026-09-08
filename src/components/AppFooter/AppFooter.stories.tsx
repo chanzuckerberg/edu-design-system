@@ -51,7 +51,7 @@ export default {
     ],
   },
 
-  tags: ['autodocs', 'beta', 'version:1.1.0'],
+  tags: ['autodocs', 'beta', 'version:2.0.0'],
 } as Meta<typeof AppFooter>;
 
 type Story = StoryObj<typeof AppFooter>;
@@ -104,5 +104,23 @@ export const HighEmphasis: Story = {
   args: {
     ...WithCopyright.args,
     emphasis: 'high',
+  },
+};
+
+/**
+ * Each emphasis sets its own colors, and `--app-footer__bg` / `--app-footer__fg` override those
+ * for either one. Pass them through the `style` prop.
+ *
+ * Reach for a theme token in real usage. The literal colors here are only to make the point
+ * unmistakable: neither emphasis uses them, so the footer below is colored by the override
+ * rather than by its emphasis.
+ */
+export const CustomColors: Story = {
+  args: {
+    ...WithCopyright.args,
+    style: {
+      '--app-footer__bg': 'rebeccapurple',
+      '--app-footer__fg': 'papayawhip',
+    },
   },
 };
