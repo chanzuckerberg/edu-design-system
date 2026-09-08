@@ -60,6 +60,7 @@ export { default as VisualPageIndicator } from './components/VisualPageIndicator
  * Prop type exports
  */
 export type {
+  IconOrContent,
   NavGroup,
   NavButton,
   NavLink,

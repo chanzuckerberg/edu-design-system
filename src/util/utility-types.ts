@@ -52,6 +52,19 @@ export type RenderProps<RenderPropArgs> = {
   children: ReactNode | ((args: RenderPropArgs) => React.ReactElement);
 };
 
+/**
+ * A leading or trailing slot that takes either the name of an EDS icon or arbitrary
+ * content.
+ *
+ * When given a string, the component renders it as a decorative `<Icon>` sized and
+ * positioned for that component. Anything else renders as-is, so consumers can supply
+ * an avatar, a badge, or any other node in the same slot.
+ *
+ * Note that TypeScript reduces this union to `ReactNode`, since `IconName` is a subset
+ * of `string`. Icon names are documented per prop rather than autocompleted.
+ */
+export type IconOrContent = IconName | ReactNode;
+
 export type UserData = {
   /**
    * The full name of the attached user (e.g., Jane Doe, David S. Pumpkins)

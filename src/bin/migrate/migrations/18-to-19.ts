@@ -63,6 +63,15 @@ const presetEdits = presetReplacements.map(
 );
 
 /**
+ * The leading slot on these components is now a content slot: it still takes an EDS
+ * icon name, and also takes a node. Only the prop name changed, so passing the same
+ * icon name under the new name renders exactly what it did before.
+ *
+ * `Accordion.Button` keeps its `trailingIcon`, which overrides the expand/collapse
+ * chevron. That component already has a separate `trailingContent` slot, so there is
+ * no `trailingIcon` to rename onto it.
+ */
+/**
  * Known prop changes for updated components from EDS v18 to v19
  *
  * Given a component, list out the changes of props and values.
@@ -91,6 +100,14 @@ const presetEdits = presetReplacements.map(
  * <ComponentName propName="valueB" />
  * ```
  */
+const leadingIconToContent = [
+  {
+    type: 'update_name' as const,
+    oldPropName: 'leadingIcon',
+    newPropName: 'leadingContent',
+  },
+];
+
 export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Text',
@@ -99,6 +116,26 @@ export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Heading',
     edits: presetEdits,
+  },
+  {
+    componentName: 'Accordion.Button',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'DataTable.DataCell',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'DataTable.HeaderCell',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'InputField',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'SelectionChip',
+    edits: leadingIconToContent,
   },
 ];
 

@@ -194,3 +194,36 @@ exports[`<SelectionChip /> > WithIcon story renders snapshot 1`] = `
   </div>
 </label>
 `;
+
+exports[`<SelectionChip /> > WithLeadingContent story renders snapshot 1`] = `
+<label
+  class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
+  for="_r_7_"
+>
+  <input
+    class="_selection-chip__input_b63b89"
+    id="_r_7_"
+    type="checkbox"
+  />
+  <div
+    class="_selection-chip__body_b63b89"
+  >
+    <div
+      aria-label="Avatar for user Ada Lovelace"
+      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
+      role="img"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3"
+      >
+        A
+      </span>
+    </div>
+    <span
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
+    >
+      Label
+    </span>
+  </div>
+</label>
+`;

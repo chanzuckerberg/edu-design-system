@@ -372,7 +372,7 @@ export const Selectable: StoryObj<Args> = {
         columnHelper.accessor('firstName', {
           header: () => (
             <DataTable.HeaderCell
-              leadingIcon="person-add"
+              leadingContent="person-add"
               sortDirection="ascending"
               subLabel="Given Name"
             >
@@ -380,7 +380,7 @@ export const Selectable: StoryObj<Args> = {
             </DataTable.HeaderCell>
           ),
           cell: (info) => (
-            <DataTable.DataCell leadingIcon="person-add">
+            <DataTable.DataCell leadingContent="person-add">
               {info.getValue()}
             </DataTable.DataCell>
           ),
@@ -523,7 +523,7 @@ export const VerticalDivider: StoryObj<Args> = {
           header: () => (
             <DataTable.HeaderCell
               hasHorizontalDivider
-              leadingIcon="person-add"
+              leadingContent="person-add"
               sortDirection="ascending"
               subLabel="Given Name"
             >
@@ -531,7 +531,10 @@ export const VerticalDivider: StoryObj<Args> = {
             </DataTable.HeaderCell>
           ),
           cell: (info) => (
-            <DataTable.DataCell hasHorizontalDivider leadingIcon="person-add">
+            <DataTable.DataCell
+              hasHorizontalDivider
+              leadingContent="person-add"
+            >
               {info.getValue()}
             </DataTable.DataCell>
           ),

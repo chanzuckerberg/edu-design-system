@@ -59,9 +59,9 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   * Icon to preceed the text in an accordion header
+   * Slot which precedes the text in an accordion header
    */
-  leadingIcon?: ReactNode;
+  leadingContent?: ReactNode;
   /**
    * Secondary text used to describe the content in more detail
    */
@@ -201,7 +201,7 @@ const AccordionButton = ({
   children,
   className,
   headingAs,
-  leadingIcon, // TODO(next-major): rename to `leadingContent`
+  leadingContent,
   title,
   trailingIcon = 'chevron-down',
   trailingContent,
@@ -253,9 +253,9 @@ const AccordionButton = ({
           }}
           {...other}
         >
-          {leadingIcon && (
+          {leadingContent && (
             <span className={styles['accordion-button__leading-icon']}>
-              {leadingIcon}
+              {leadingContent}
             </span>
           )}
           <Heading

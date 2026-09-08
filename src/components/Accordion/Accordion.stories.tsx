@@ -104,7 +104,7 @@ export const WithLeadingNumberIcon: Story = {
         <Accordion.Row hasLeadingIcon>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -126,7 +126,7 @@ export const WithLeadingNumberIcon: Story = {
         <Accordion.Row hasLeadingIcon>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -148,7 +148,7 @@ export const WithLeadingNumberIcon: Story = {
         <Accordion.Row hasLeadingIcon>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -200,7 +200,7 @@ export const HasLeadingIcon: Story = {
       <Accordion.Row hasLeadingIcon>
         <Accordion.Button
           data-testid="accordion-button"
-          leadingIcon={
+          leadingContent={
             <Icon name="person-encircled" purpose="decorative" size="24px" />
           }
           subTitle="Quam lacus maecenas nibh malesuada."

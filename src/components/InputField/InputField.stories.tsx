@@ -5,6 +5,7 @@ import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 
 import { InputField } from './InputField';
+import Avatar from '../Avatar';
 import Button from '../Button';
 
 const meta: Meta<typeof InputField> = {
@@ -153,7 +154,7 @@ export const Disabled: Story = {
  */
 export const LeadingIcon: Story = {
   args: {
-    leadingIcon: 'search',
+    leadingContent: 'search',
     'aria-label': 'search field',
     placeholder: 'Search...',
   },
@@ -449,4 +450,15 @@ export const WithBothMaxAndRecommendedLength: Story = {
     required: true,
   },
   render: (args) => <InputField {...args} />,
+};
+
+/**
+ * The leading slot also takes arbitrary content, for cases an EDS icon does not cover.
+ */
+export const LeadingContent: Story = {
+  args: {
+    leadingContent: <Avatar size="sm" user={{ fullName: 'Ada Lovelace' }} />,
+    'aria-label': 'assignee field',
+    placeholder: 'Assign to...',
+  },
 };

@@ -371,6 +371,45 @@ exports[`<InputField /> > InputWithinFixedWidth story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<InputField /> > LeadingContent story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[384px]"
+  >
+    <div
+      class="_input-field__body_4d3b17"
+    >
+      <input
+        aria-describedby="_r_27_"
+        aria-invalid="false"
+        aria-label="assignee field"
+        class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+        id="_r_25_"
+        placeholder="Assign to..."
+        type="text"
+      />
+      <div
+        class="_input-field__leading-icon_4d3b17"
+      >
+        <div
+          aria-label="Avatar for user Ada Lovelace"
+          class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
+          role="img"
+        >
+          <span
+            class="_text_b3eba3 _text--label-sm_b3eba3"
+          >
+            A
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<InputField /> > LeadingIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
