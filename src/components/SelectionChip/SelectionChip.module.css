@@ -69,7 +69,7 @@
   box-shadow: inset 0 0 0 1px var(--selection-chip__border);
 }
 
-.selection-chip--has-icon {
+.selection-chip--has-leading-content {
   padding-right: calc(var(--eds-spacing-size-2-and-half) * 1px);
 }
 

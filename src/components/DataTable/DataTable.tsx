@@ -472,7 +472,7 @@ export const DataTableHeaderCell = ({
   >
     <IconSlot
       as="div"
-      className={styles['data-cell__cell--icon']}
+      className={styles['data-cell__cell--leading-content']}
       content={leadingContent}
       size="16px"
     />
@@ -522,7 +522,7 @@ export const DataTableDataCell = ({
     <div className={dataCellClassName} {...rest}>
       <IconSlot
         as="div"
-        className={styles['data-cell__cell--icon']}
+        className={styles['data-cell__cell--leading-content']}
         content={leadingContent}
         size="16px"
       />

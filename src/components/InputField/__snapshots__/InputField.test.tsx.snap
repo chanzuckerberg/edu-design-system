@@ -385,13 +385,13 @@ exports[`<InputField /> > LeadingContent story renders snapshot 1`] = `
         aria-describedby="_r_27_"
         aria-invalid="false"
         aria-label="assignee field"
-        class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+        class="_input_0d9f86 _input-field__input--leading-content_4d3b17"
         id="_r_25_"
         placeholder="Assign to..."
         type="text"
       />
       <div
-        class="_input-field__leading-icon_4d3b17"
+        class="_input-field__leading-content_4d3b17"
       >
         <div
           aria-label="Avatar for user Ada Lovelace"
@@ -424,13 +424,13 @@ exports[`<InputField /> > LeadingIcon story renders snapshot 1`] = `
         aria-describedby="_r_q_"
         aria-invalid="false"
         aria-label="search field"
-        class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+        class="_input_0d9f86 _input-field__input--leading-content_4d3b17"
         id="_r_o_"
         placeholder="Search..."
         type="text"
       />
       <div
-        class="_input-field__leading-icon_4d3b17"
+        class="_input-field__leading-content_4d3b17"
       >
         <svg
           aria-hidden="true"

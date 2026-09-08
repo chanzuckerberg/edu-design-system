@@ -2,7 +2,7 @@
 
 exports[`<SelectionChip /> > ControlledChecked story renders snapshot 1`] = `
 <label
-  class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
   for="_r_5_"
 >
   <input
@@ -130,7 +130,7 @@ exports[`<SelectionChip /> > Selected story renders snapshot 1`] = `
 
 exports[`<SelectionChip /> > UncontrolledChecked story renders snapshot 1`] = `
 <label
-  class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
   for="_r_6_"
 >
   <input
@@ -164,7 +164,7 @@ exports[`<SelectionChip /> > UncontrolledChecked story renders snapshot 1`] = `
 
 exports[`<SelectionChip /> > WithIcon story renders snapshot 1`] = `
 <label
-  class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
   for="_r_2_"
 >
   <input
@@ -197,7 +197,7 @@ exports[`<SelectionChip /> > WithIcon story renders snapshot 1`] = `
 
 exports[`<SelectionChip /> > WithLeadingContent story renders snapshot 1`] = `
 <label
-  class="_selection-chip_b63b89 _selection-chip--has-icon_b63b89"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
   for="_r_7_"
 >
   <input

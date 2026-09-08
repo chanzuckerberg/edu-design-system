@@ -5548,7 +5548,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -5694,7 +5694,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -5804,7 +5804,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -5914,7 +5914,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6024,7 +6024,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6134,7 +6134,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6244,7 +6244,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6354,7 +6354,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6464,7 +6464,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6574,7 +6574,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6684,7 +6684,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6794,7 +6794,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -6904,7 +6904,7 @@ exports[`<DataTable /> > Selectable story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10196,7 +10196,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10342,7 +10342,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10452,7 +10452,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10562,7 +10562,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10672,7 +10672,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10782,7 +10782,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -10892,7 +10892,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11002,7 +11002,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11112,7 +11112,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11222,7 +11222,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11332,7 +11332,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11442,7 +11442,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11552,7 +11552,7 @@ exports[`<DataTable /> > VerticalDivider story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _data-cell__cell--icon_a06dc5"
+              class="_icon_779da8 _data-cell__cell--leading-content_a06dc5"
               fill="currentColor"
               height="16px"
               style="--icon-size: 16px;"
@@ -11738,14 +11738,14 @@ exports[`<DataTable /> > WithLongCaption story renders snapshot 1`] = `
             aria-describedby=""
             aria-invalid="false"
             aria-label="search"
-            class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+            class="_input_0d9f86 _input-field__input--leading-content_4d3b17"
             disabled=""
             id="_r_19_"
             placeholder="Search..."
             type="search"
           />
           <div
-            class="_input-field__leading-icon_4d3b17"
+            class="_input-field__leading-content_4d3b17"
           >
             <svg
               aria-hidden="true"
@@ -11902,14 +11902,14 @@ exports[`<DataTable /> > WithSearch story renders snapshot 1`] = `
             aria-describedby=""
             aria-invalid="false"
             aria-label="search"
-            class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+            class="_input_0d9f86 _input-field__input--leading-content_4d3b17"
             disabled=""
             id="_r_q_"
             placeholder="Search..."
             type="search"
           />
           <div
-            class="_input-field__leading-icon_4d3b17"
+            class="_input-field__leading-content_4d3b17"
           >
             <svg
               aria-hidden="true"
@@ -11978,14 +11978,14 @@ exports[`<DataTable /> > WithSearchAndActions story renders snapshot 1`] = `
             aria-describedby=""
             aria-invalid="false"
             aria-label="search"
-            class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+            class="_input_0d9f86 _input-field__input--leading-content_4d3b17"
             disabled=""
             id="_r_t_"
             placeholder="Search..."
             type="search"
           />
           <div
-            class="_input-field__leading-icon_4d3b17"
+            class="_input-field__leading-content_4d3b17"
           >
             <svg
               aria-hidden="true"
@@ -12087,14 +12087,14 @@ exports[`<DataTable /> > WithSearchAndCustomActions story renders snapshot 1`] =
             aria-describedby=""
             aria-invalid="false"
             aria-label="search"
-            class="_input_0d9f86 _input-field__input--leading-icon_4d3b17"
+            class="_input_0d9f86 _input-field__input--leading-content_4d3b17"
             disabled=""
             id="_r_10_"
             placeholder="Search..."
             type="search"
           />
           <div
-            class="_input-field__leading-icon_4d3b17"
+            class="_input-field__leading-content_4d3b17"
           >
             <svg
               aria-hidden="true"
