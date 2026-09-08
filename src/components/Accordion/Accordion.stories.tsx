@@ -101,10 +101,10 @@ export const WithLeadingNumberIcon: Story = {
     ...Default.args,
     children: (
       <>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -123,10 +123,10 @@ export const WithLeadingNumberIcon: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -145,10 +145,10 @@ export const WithLeadingNumberIcon: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -197,10 +197,10 @@ export const HasLeadingIcon: Story = {
   args: {
     ...Default.args,
     children: (
-      <Accordion.Row hasLeadingIcon>
+      <Accordion.Row hasLeadingContent>
         <Accordion.Button
           data-testid="accordion-button"
-          leadingIcon={
+          leadingContent={
             <Icon name="person-encircled" purpose="decorative" size="24px" />
           }
           subTitle="Quam lacus maecenas nibh malesuada."
@@ -278,6 +278,53 @@ export const WithLargeHeader: Story = {
           Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </Accordion.Panel>
       </Accordion.Row>
+    ),
+  },
+};
+
+/**
+ * The expand/collapse indicator can be overridden with another EDS icon, or with custom
+ * content. Either way it rotates when the row opens, so pick something that reads well
+ * upside down.
+ */
+export const WithCustomIndicator: Story = {
+  args: {
+    children: (
+      <>
+        <Accordion.Row>
+          <Accordion.Button
+            indicatorContent="chevron-down"
+            title="Chevron down (the default)"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Passing an icon name renders it through `Icon`, announced as
+              show/hide content.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button indicatorContent="chevron-up" title="Chevron up" />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Starting from the other orientation flips which way the indicator
+              rotates.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button
+            indicatorContent={<Tag label="3 new" status="favorable" />}
+            title="Custom content"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Passing a node renders it as-is. The node carries its own
+              accessible treatment.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
     ),
   },
 };

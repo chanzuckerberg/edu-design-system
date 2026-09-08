@@ -1,9 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import type React from 'react';
+import React from 'react';
 
 import { SelectionChip } from './SelectionChip';
+import Avatar from '../Avatar';
 
 export default {
   title: 'Components/SelectionChip',
@@ -14,7 +15,7 @@ export default {
     },
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:1.2.0'],
+  tags: ['autodocs', 'version:2.0.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SelectionChip>;
@@ -42,7 +43,7 @@ export const Selected: Story = {
 export const WithIcon: Story = {
   args: {
     ...Default.args,
-    leadingIcon: 'add',
+    leadingContent: 'add',
   },
 };
 
@@ -85,5 +86,15 @@ export const UncontrolledChecked: Story = {
   args: {
     ...WithIcon.args,
     defaultChecked: true,
+  },
+};
+
+/**
+ * The leading slot also takes arbitrary content, for cases an EDS icon does not cover.
+ */
+export const WithLeadingContent: Story = {
+  args: {
+    ...Default.args,
+    leadingContent: <Avatar size="sm" user={{ fullName: 'Ada Lovelace' }} />,
   },
 };

@@ -1,0 +1,113 @@
+import React from 'react';
+import { Icon } from './Icon';
+import type { IconName } from './Icon';
+import type { IconOrContent } from '../../util/utility-types';
+
+/**
+ * Whether a slot value will render anything.
+ *
+ * These slots take any `ReactNode`, so a plain truthiness check is wrong twice over: it
+ * treats `0` as absent, and `{0 && <El />}` leaks a stray "0" into the markup. Only the
+ * values React itself renders as nothing count as empty here.
+ */
+export function hasSlotContent(content: IconOrContent) {
+  return (
+    content !== null &&
+    content !== undefined &&
+    typeof content !== 'boolean' &&
+    content !== ''
+  );
+}
+
+type IconSlotPropsBase = {
+  /**
+   * Element used to wrap custom content so it can carry `className`.
+   *
+   * Defaults to `span`, which is valid wherever the slot itself is, including inside a
+   * `button`. Use `div` when the slot sits in a flow-content container, so consumers
+   * passing block-level content do not produce a `span` wrapping a `div`.
+   */
+  as?: 'div' | 'span';
+  /**
+   * CSS class names applied to the rendered icon, or to the wrapper around custom
+   * content so both branches sit the same way in the layout.
+   */
+  className?: string;
+  /**
+   * The slot's value. A string is treated as an EDS icon name; anything else renders
+   * as-is.
+   */
+  content: IconOrContent;
+  /**
+   * Width/height passed through to `Icon` when rendering an icon name.
+   */
+  size?: string;
+};
+
+export type IconSlotProps = IconSlotPropsBase &
+  (
+    | {
+        /**
+         * Mirrors `Icon`'s `purpose`, and applies only when rendering an icon name.
+         * Custom content carries its own accessible treatment.
+         */
+        purpose?: 'decorative';
+        title?: never;
+      }
+    | {
+        purpose: 'informative';
+        title: string;
+      }
+  );
+
+/**
+ * Renders a leading/trailing slot that accepts either an EDS icon name or arbitrary
+ * content.
+ *
+ * Components that used to take an `IconName` now take `IconOrContent`, so they need to
+ * decide at runtime which of the two they were handed. A string is the only thing a
+ * consumer can pass that is ambiguous, and by convention it means an icon name, so it
+ * renders through `Icon` with that component's own sizing. Everything else is content
+ * and renders untouched.
+ *
+ * `purpose` and `title` describe the icon branch only. When a consumer supplies their
+ * own content, they own its accessible treatment.
+ *
+ * Not exported from the package. Consumers use the slot props on each component.
+ */
+export const IconSlot = (props: IconSlotProps) => {
+  const { as: Wrapper = 'span', className, content, size } = props;
+
+  if (!hasSlotContent(content)) {
+    return null;
+  }
+
+  if (typeof content === 'string') {
+    // Safe because a string in this slot is an icon name by convention. The union
+    // collapses to `ReactNode`, so TypeScript cannot narrow to `IconName` on its own.
+    const name = content as IconName;
+
+    return props.purpose === 'informative' ? (
+      <Icon
+        className={className}
+        name={name}
+        purpose="informative"
+        size={size}
+        title={props.title}
+      />
+    ) : (
+      <Icon
+        className={className}
+        name={name}
+        purpose="decorative"
+        size={size}
+      />
+    );
+  }
+
+  return className ? (
+    <Wrapper className={className}>{content}</Wrapper>
+  ) : (
+    <>{content}</>
+  );
+};

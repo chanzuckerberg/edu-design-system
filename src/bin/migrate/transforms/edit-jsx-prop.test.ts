@@ -493,6 +493,108 @@ describe('transform', () => {
     `);
   });
 
+  it('edits props on a subcomponent reached through its root import', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable.DataCell leadingIcon="person-add">Ada</DataTable.DataCell>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'DataTable.DataCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable.DataCell leadingContent="person-add">Ada</DataTable.DataCell>
+        )
+      }
+    `);
+  });
+
+  it('applies every change that shares one root import', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable subcaption="By team">
+            <DataTable.HeaderCell leadingIcon="person-add">Name</DataTable.HeaderCell>
+            <DataTable.DataCell leadingIcon="person-add">Ada</DataTable.DataCell>
+          </DataTable>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'DataTable',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'subcaption',
+              newPropName: 'subCaption',
+            },
+          ],
+        },
+        {
+          componentName: 'DataTable.HeaderCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+        {
+          componentName: 'DataTable.DataCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable subCaption="By team">
+            <DataTable.HeaderCell leadingContent="person-add">Name</DataTable.HeaderCell>
+            <DataTable.DataCell leadingContent="person-add">Ada</DataTable.DataCell>
+          </DataTable>
+        )
+      }
+    `);
+  });
+
   it('does not modify props from Non-EDS components', () => {
     const sourceFileText = dedent`
     import {Link} from '~/components/Link';

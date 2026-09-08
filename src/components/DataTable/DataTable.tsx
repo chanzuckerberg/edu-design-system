@@ -8,11 +8,13 @@ import React, {
 } from 'react';
 
 import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import type { IconOrContent } from '../../util/utility-types';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { Icon, type IconName } from '../Icon/Icon';
+import { Icon } from '../Icon/Icon';
+import { IconSlot } from '../Icon/IconSlot';
 import InputField from '../InputField';
 import Text from '../Text';
 
@@ -111,9 +113,10 @@ export type DataTableHeaderCellProps = EDSBase & {
    */
   isSortable?: boolean;
   /**
-   * An icon that prefixes the field input.
+   * Content that prefixes the cell text. Pass an EDS icon name to render a decorative
+   * icon, or a node to render it as-is.
    */
-  leadingIcon?: IconName;
+  leadingContent?: IconOrContent;
   /**
    * SubLabel to use next to table cell text content
    *
@@ -451,7 +454,7 @@ export const DataTableHeaderCell = ({
   className,
   hasHorizontalDivider,
   isSortable,
-  leadingIcon,
+  leadingContent,
   sortDirection = 'default',
   onSortClick,
   subLabel,
@@ -467,14 +470,12 @@ export const DataTableHeaderCell = ({
     )}
     {...rest}
   >
-    {leadingIcon && (
-      <Icon
-        className={styles['data-cell__cell--icon']}
-        name={leadingIcon}
-        purpose="decorative"
-        size="16px"
-      />
-    )}
+    <IconSlot
+      as="div"
+      className={styles['data-cell__cell--icon']}
+      content={leadingContent}
+      size="16px"
+    />
     {(children || subLabel) && (
       <div className={clsx(className, styles['data-table__cell-text'])}>
         <Text as="div" preset="title-xs">
@@ -508,7 +509,7 @@ export const DataTableDataCell = ({
   children,
   className,
   hasHorizontalDivider,
-  leadingIcon,
+  leadingContent,
   subLabel,
   ...rest
 }: DataTableDataCellProps) => {
@@ -519,14 +520,12 @@ export const DataTableDataCell = ({
   );
   return (
     <div className={dataCellClassName} {...rest}>
-      {leadingIcon && (
-        <Icon
-          className={styles['data-cell__cell--icon']}
-          name={leadingIcon}
-          purpose="decorative"
-          size="16px"
-        />
-      )}
+      <IconSlot
+        as="div"
+        className={styles['data-cell__cell--icon']}
+        content={leadingContent}
+        size="16px"
+      />
       {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
@@ -702,7 +701,7 @@ const DataTableSearch = () => {
     <InputField
       aria-label="search"
       disabled
-      leadingIcon="search"
+      leadingContent="search"
       placeholder="Search..."
       type="search"
     />

@@ -79,6 +79,138 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
+  it('renames the leading icon prop to a content prop', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {InputField, SelectionChip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <div>
+            <InputField leadingIcon="search" placeholder="Search..." />
+            <SelectionChip label="Add" leadingIcon="add" />
+          </div>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {InputField, SelectionChip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <div>
+            <InputField leadingContent="search" placeholder="Search..." />
+            <SelectionChip label="Add" leadingContent="add" />
+          </div>
+        )
+      }
+    `);
+  });
+
+  it('renames the leading icon prop on subcomponents', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Accordion, DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <div>
+            <Accordion.Button leadingIcon={<Icon name="star" purpose="decorative" />} title="Row" />
+            <DataTable.HeaderCell leadingIcon="person-add">Name</DataTable.HeaderCell>
+            <DataTable.DataCell leadingIcon="person-add">Ada</DataTable.DataCell>
+          </div>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion, DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <div>
+            <Accordion.Button leadingContent={<Icon name="star" purpose="decorative" />} title="Row" />
+            <DataTable.HeaderCell leadingContent="person-add">Name</DataTable.HeaderCell>
+            <DataTable.DataCell leadingContent="person-add">Ada</DataTable.DataCell>
+          </div>
+        )
+      }
+    `);
+  });
+
+  it('renames the Accordion expand indicator override', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" trailingIcon="chevron-down" />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" indicatorContent="chevron-down" />
+        )
+      }
+    `);
+  });
+
+  it('renames the Accordion row leading content flag', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Row hasLeadingIcon>
+            <Accordion.Button title="Row" />
+          </Accordion.Row>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Row hasLeadingContent>
+            <Accordion.Button title="Row" />
+          </Accordion.Row>
+        )
+      }
+    `);
+  });
+
+  it('leaves the Accordion trailing slot alone', () => {
+    const sourceFileText = dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" trailingContent={<Tag>New</Tag>} />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('leaves a same-named component from another package alone', () => {
     const sourceFileText = dedent`
       import {Text} from 'some-other-library';

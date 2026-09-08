@@ -8,9 +8,10 @@ import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import { assertEdsUsage } from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 
 import Heading, { type HeadingElement } from '../Heading';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './Accordion.module.css';
@@ -59,9 +60,9 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   * Icon to preceed the text in an accordion header
+   * Slot which precedes the text in an accordion header
    */
-  leadingIcon?: ReactNode;
+  leadingContent?: ReactNode;
   /**
    * Secondary text used to describe the content in more detail
    */
@@ -75,11 +76,16 @@ type AccordionButtonProps = {
    */
   trailingContent?: ReactNode;
   /**
-   * Icon override for component's expand/collapse indicator.
+   * Override for the component's expand/collapse indicator. Pass an EDS icon name to
+   * render an icon, or a node to render it as-is.
+   *
+   * The indicator rotates when the row opens, and an icon name is announced as
+   * "show content"/"hide content". Custom content carries its own accessible
+   * treatment.
    *
    * **Default is `"chevron-down"`**.
    */
-  trailingIcon?: Extract<IconName, 'chevron-down'>;
+  indicatorContent?: IconOrContent;
 };
 
 type AccordionPanelProps = {
@@ -113,7 +119,7 @@ type AccordionRowProps = {
   /**
    * Whether the row has content on the row's trigger that leads in front of the title
    */
-  hasLeadingIcon?: boolean;
+  hasLeadingContent?: boolean;
   /**
    * Whether the row has a content on the row's trigger that trails the title
    */
@@ -129,11 +135,11 @@ const AccordionContext = createContext<{
 const AccordionRowContext = createContext<
   Pick<
     AccordionRowProps,
-    'isExpandable' | 'hasLeadingIcon' | 'hasTrailingContent'
+    'isExpandable' | 'hasLeadingContent' | 'hasTrailingContent'
   >
 >({
   isExpandable: true,
-  hasLeadingIcon: false,
+  hasLeadingContent: false,
   hasTrailingContent: false,
 });
 
@@ -201,9 +207,9 @@ const AccordionButton = ({
   children,
   className,
   headingAs,
-  leadingIcon, // TODO(next-major): rename to `leadingContent`
+  leadingContent,
   title,
-  trailingIcon = 'chevron-down',
+  indicatorContent = 'chevron-down',
   trailingContent,
   subTitle,
   onClose,
@@ -253,9 +259,9 @@ const AccordionButton = ({
           }}
           {...other}
         >
-          {leadingIcon && (
+          {hasSlotContent(leadingContent) && (
             <span className={styles['accordion-button__leading-icon']}>
-              {leadingIcon}
+              {leadingContent}
             </span>
           )}
           <Heading
@@ -285,12 +291,12 @@ const AccordionButton = ({
           </Heading>
           {trailingContent}
           {isExpandable && (
-            <Icon
+            <IconSlot
               className={clsx(
                 styles['accordion-button__trailing-icon'],
                 open && styles['accordion-button__trailing-icon--open'],
               )}
-              name={trailingIcon}
+              content={indicatorContent}
               purpose="informative"
               size="24px"
               title={open ? 'hide content' : 'show content'}
@@ -307,12 +313,12 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { isExpandable, hasLeadingIcon } = useContext(AccordionRowContext);
+  const { isExpandable, hasLeadingContent } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
     !isExpandable && styles['accordion-panel--hidden'],
-    hasLeadingIcon && styles['accordion-panel--leading-icon'],
+    hasLeadingContent && styles['accordion-panel--leading-icon'],
     className,
   );
 
@@ -332,13 +338,13 @@ const AccordionRow = ({
   defaultOpen,
   children,
   isExpandable = true,
-  hasLeadingIcon,
+  hasLeadingContent,
   hasTrailingContent,
   ...other
 }: AccordionRowProps) => {
   const componentClassName = clsx(styles['accordion-row'], className);
   return (
-    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingIcon }}>
+    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingContent }}>
       <Disclosure defaultOpen={defaultOpen}>
         {({ open }) => (
           <div className={componentClassName} {...other}>

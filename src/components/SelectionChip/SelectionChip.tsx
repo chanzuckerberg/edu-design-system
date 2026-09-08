@@ -1,9 +1,12 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 
-import type { ForwardedRefComponent } from '../../util/utility-types';
+import type {
+  ForwardedRefComponent,
+  IconOrContent,
+} from '../../util/utility-types';
 
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './SelectionChip.module.css';
@@ -28,9 +31,10 @@ export type SelectionChipProps = {
    */
   label: string;
   /**
-   * Leading icon for the chip
+   * Content that precedes the label. Pass an EDS icon name to render a decorative
+   * icon, or a node to render it as-is.
    */
-  leadingIcon?: IconName;
+  leadingContent?: IconOrContent;
   /**
    * Chip types (correspond to the equivalent input types)
    */
@@ -97,7 +101,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
       id,
       isDisabled,
       label,
-      leadingIcon,
+      leadingContent,
       name,
       onChange,
       type = 'checkbox',
@@ -107,7 +111,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
   ) => {
     const componentClassName = clsx(
       styles['selection-chip'],
-      leadingIcon && styles['selection-chip--has-icon'],
+      hasSlotContent(leadingContent) && styles['selection-chip--has-icon'],
       isDisabled && styles['selection-chip--disabled'],
       className,
     );
@@ -134,7 +138,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
           type={type}
         />
         <div className={styles['selection-chip__body']}>
-          {leadingIcon && <Icon name={leadingIcon} purpose="decorative" />}
+          <IconSlot content={leadingContent} />
           <Text
             as="span"
             className={styles['selection-chip__label']}

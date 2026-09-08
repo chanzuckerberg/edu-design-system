@@ -108,6 +108,14 @@ function updatePropValue(
   }
 }
 
+/**
+ * The imported identifier a component name hangs off of. `DataTable.DataCell` is
+ * reached through the `DataTable` import, and `Button` through its own.
+ */
+function getRootName(componentName: string) {
+  return componentName.split('.')[0];
+}
+
 export type Change = {
   componentName: string;
   edits: Edit[];
@@ -129,18 +137,20 @@ export default function transform({ file, changes }: TransformOptions) {
 
   // Only apply changes to EDS Imported components because EDS consumers may have
   // their own components with the same names as our components.
+  //
+  // A change can name a subcomponent, as in `DataTable.DataCell`. Only the root of
+  // that name is imported, so match on the root and let the tag name check below
+  // pick the specific subcomponent.
   const changesToApply: Change[] = [];
   importDeclarations.forEach((importDeclaration) => {
     const namedImports = importDeclaration.getNamedImports();
     namedImports.forEach((namedImport) => {
-      const change = changes.find(
+      const matches = changes.filter(
         (change) =>
-          change.componentName.toLowerCase() ===
+          getRootName(change.componentName).toLowerCase() ===
           namedImport.getName().toLowerCase(),
       );
-      if (change) {
-        changesToApply.push(change);
-      }
+      changesToApply.push(...matches);
     });
   });
 
