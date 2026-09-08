@@ -67,6 +67,12 @@
       }
     },
     {
+      "files": ["src/storyUtils/**/*.{ts,tsx}"],
+      "rules": {
+        "@chanzuckerberg/stories/no-components-without-story": "off"
+      }
+    },
+    {
       "files": ["src/**/*.stories.{ts,tsx}"],
       "rules": {
         "no-restricted-imports": [

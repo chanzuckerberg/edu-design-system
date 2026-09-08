@@ -6,6 +6,7 @@ import React from 'react';
 
 import { PopoverListItem } from './PopoverListItem';
 
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 
@@ -188,5 +189,18 @@ export const Label: Story = {
   args: {
     __type: 'label',
     children: 'Account',
+  },
+};
+
+/**
+ * Both slots take arbitrary content, not only an icon. The blocks below stand in for
+ * whatever you supply, so the slot itself is the subject rather than the icon that
+ * happened to be picked.
+ */
+export const WithFpoContentSlots: Story = {
+  args: {
+    ...WithLeadingAndTrailingIcons.args,
+    leadingContent: <FpoBlock size={24} />,
+    trailingContent: <FpoBlock size={24} />,
   },
 };

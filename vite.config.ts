@@ -28,6 +28,8 @@ export default defineConfig({
         'src/bin/migrate/migrations',
         'src/bin/eds-migrate.ts',
         'src/**/*.stories.{ts,tsx}',
+        // Storybook-only helpers, exercised through stories rather than tested directly
+        'src/storyUtils/**',
       ],
     },
     projects: [

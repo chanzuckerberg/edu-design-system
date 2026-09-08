@@ -208,17 +208,10 @@ exports[`<SelectionChip /> > WithLeadingContent story renders snapshot 1`] = `
   <div
     class="_selection-chip__body_b63b89"
   >
-    <div
-      aria-label="Avatar for user Ada Lovelace"
-      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
-      role="img"
-    >
-      <span
-        class="_text_b3eba3 _text--label-sm_b3eba3"
-      >
-        A
-      </span>
-    </div>
+    <span
+      class="fpo"
+      style="height: 14px; width: 14px; font-size: 5px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    />
     <span
       class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
