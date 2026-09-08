@@ -165,6 +165,34 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('renames the Accordion row leading content flag', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Row hasLeadingIcon>
+            <Accordion.Button title="Row" />
+          </Accordion.Row>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Row hasLeadingContent>
+            <Accordion.Button title="Row" />
+          </Accordion.Row>
+        )
+      }
+    `);
+  });
+
   it('leaves the Accordion trailing slot alone', () => {
     const sourceFileText = dedent`
       import {Accordion} from '@chanzuckerberg/eds';

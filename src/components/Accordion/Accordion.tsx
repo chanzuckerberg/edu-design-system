@@ -119,7 +119,7 @@ type AccordionRowProps = {
   /**
    * Whether the row has content on the row's trigger that leads in front of the title
    */
-  hasLeadingIcon?: boolean;
+  hasLeadingContent?: boolean;
   /**
    * Whether the row has a content on the row's trigger that trails the title
    */
@@ -135,11 +135,11 @@ const AccordionContext = createContext<{
 const AccordionRowContext = createContext<
   Pick<
     AccordionRowProps,
-    'isExpandable' | 'hasLeadingIcon' | 'hasTrailingContent'
+    'isExpandable' | 'hasLeadingContent' | 'hasTrailingContent'
   >
 >({
   isExpandable: true,
-  hasLeadingIcon: false,
+  hasLeadingContent: false,
   hasTrailingContent: false,
 });
 
@@ -313,12 +313,12 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { isExpandable, hasLeadingIcon } = useContext(AccordionRowContext);
+  const { isExpandable, hasLeadingContent } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
     !isExpandable && styles['accordion-panel--hidden'],
-    hasLeadingIcon && styles['accordion-panel--leading-icon'],
+    hasLeadingContent && styles['accordion-panel--leading-icon'],
     className,
   );
 
@@ -338,13 +338,13 @@ const AccordionRow = ({
   defaultOpen,
   children,
   isExpandable = true,
-  hasLeadingIcon,
+  hasLeadingContent,
   hasTrailingContent,
   ...other
 }: AccordionRowProps) => {
   const componentClassName = clsx(styles['accordion-row'], className);
   return (
-    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingIcon }}>
+    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingContent }}>
       <Disclosure defaultOpen={defaultOpen}>
         {({ open }) => (
           <div className={componentClassName} {...other}>

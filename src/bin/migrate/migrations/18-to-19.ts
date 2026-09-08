@@ -70,6 +70,9 @@ const presetEdits = presetReplacements.map(
  * `Accordion.Button`'s `trailingIcon` overrides the expand/collapse chevron rather than
  * filling a trailing slot, and the component already has a separate `trailingContent`
  * slot. It becomes `indicatorContent`, which names what it actually controls.
+ *
+ * `Accordion.Row`'s `hasLeadingIcon` is the boolean companion to the renamed slot, and
+ * sits beside an existing `hasTrailingContent`, so it follows to `hasLeadingContent`.
  */
 /**
  * Known prop changes for updated components from EDS v18 to v19
@@ -125,6 +128,16 @@ export const PropChanges: EditJsxPropChange[] = [
         type: 'update_name',
         oldPropName: 'trailingIcon',
         newPropName: 'indicatorContent',
+      },
+    ],
+  },
+  {
+    componentName: 'Accordion.Row',
+    edits: [
+      {
+        type: 'update_name',
+        oldPropName: 'hasLeadingIcon',
+        newPropName: 'hasLeadingContent',
       },
     ],
   },

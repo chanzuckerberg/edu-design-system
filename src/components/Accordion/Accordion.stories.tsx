@@ -101,7 +101,7 @@ export const WithLeadingNumberIcon: Story = {
     ...Default.args,
     children: (
       <>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
             leadingContent={
@@ -123,7 +123,7 @@ export const WithLeadingNumberIcon: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
             leadingContent={
@@ -145,7 +145,7 @@ export const WithLeadingNumberIcon: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
             leadingContent={
@@ -197,7 +197,7 @@ export const HasLeadingIcon: Story = {
   args: {
     ...Default.args,
     children: (
-      <Accordion.Row hasLeadingIcon>
+      <Accordion.Row hasLeadingContent>
         <Accordion.Button
           data-testid="accordion-button"
           leadingContent={
