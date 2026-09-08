@@ -294,7 +294,7 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote && styles['input-field--has-fieldNote'],
     );
 
-    // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
+    // Modify the padding of `Input` to account for trailing/leading content and trailing buttons
     const inputOverlayClassName = clsx(
       hasSlotContent(leadingContent) &&
         styles['input-field__input--leading-content'],

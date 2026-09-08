@@ -19,7 +19,7 @@
 }
 
 /**
- * Accordion Button, wraps the heading and open indicator icon.
+ * Accordion Button, wraps the heading and open indicator.
  */
 .accordion-button {
   display: flex;
@@ -53,9 +53,9 @@
 }
 
 /**
- * Expand more (chevron) icon indicates open or closed status.
+ * Open/closed indicator, a chevron by default.
  *
- * This non-rotated icon points down and represents closed status.
+ * Unrotated, it points down and represents closed status.
  */
 .accordion-button__indicator {
   flex: 0 0 content;
@@ -64,14 +64,14 @@
 }
 
 /**
- * This rotated icon points up and represents open status.
+ * Rotated, it points up and represents open status.
  */
 .accordion-button__indicator--open {
   transform: rotate(-180deg);
 }
 
 /**
- * Animates the icon rotation when opening and closing.
+ * Animates the indicator rotation when opening and closing.
  */
 .accordion-button>.accordion-button__indicator {
   transition: transform calc(var(--eds-anim-move-medium) * 1s) ease-in-out;
