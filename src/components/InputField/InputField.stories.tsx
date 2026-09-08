@@ -45,7 +45,7 @@ const meta: Meta<typeof InputField> = {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1.3'],
+  tags: ['autodocs', 'version:3.0.0'],
 };
 
 export default meta;

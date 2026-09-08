@@ -470,13 +470,12 @@ export const DataTableHeaderCell = ({
     )}
     {...rest}
   >
-    {leadingContent && (
-      <IconSlot
-        className={styles['data-cell__cell--icon']}
-        content={leadingContent}
-        size="16px"
-      />
-    )}
+    <IconSlot
+      as="div"
+      className={styles['data-cell__cell--icon']}
+      content={leadingContent}
+      size="16px"
+    />
     {(children || subLabel) && (
       <div className={clsx(className, styles['data-table__cell-text'])}>
         <Text as="div" preset="title-xs">
@@ -521,13 +520,12 @@ export const DataTableDataCell = ({
   );
   return (
     <div className={dataCellClassName} {...rest}>
-      {leadingContent && (
-        <IconSlot
-          className={styles['data-cell__cell--icon']}
-          content={leadingContent}
-          size="16px"
-        />
-      )}
+      <IconSlot
+        as="div"
+        className={styles['data-cell__cell--icon']}
+        content={leadingContent}
+        size="16px"
+      />
       {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}

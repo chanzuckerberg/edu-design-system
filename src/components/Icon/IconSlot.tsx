@@ -3,7 +3,31 @@ import { Icon } from './Icon';
 import type { IconName } from './Icon';
 import type { IconOrContent } from '../../util/utility-types';
 
+/**
+ * Whether a slot value will render anything.
+ *
+ * These slots take any `ReactNode`, so a plain truthiness check is wrong twice over: it
+ * treats `0` as absent, and `{0 && <El />}` leaks a stray "0" into the markup. Only the
+ * values React itself renders as nothing count as empty here.
+ */
+export function hasSlotContent(content: IconOrContent) {
+  return (
+    content !== null &&
+    content !== undefined &&
+    typeof content !== 'boolean' &&
+    content !== ''
+  );
+}
+
 type IconSlotPropsBase = {
+  /**
+   * Element used to wrap custom content so it can carry `className`.
+   *
+   * Defaults to `span`, which is valid wherever the slot itself is, including inside a
+   * `button`. Use `div` when the slot sits in a flow-content container, so consumers
+   * passing block-level content do not produce a `span` wrapping a `div`.
+   */
+  as?: 'div' | 'span';
   /**
    * CSS class names applied to the rendered icon, or to the wrapper around custom
    * content so both branches sit the same way in the layout.
@@ -52,9 +76,9 @@ export type IconSlotProps = IconSlotPropsBase &
  * Not exported from the package. Consumers use the slot props on each component.
  */
 export const IconSlot = (props: IconSlotProps) => {
-  const { className, content, size } = props;
+  const { as: Wrapper = 'span', className, content, size } = props;
 
-  if (content === null || content === undefined || content === false) {
+  if (!hasSlotContent(content)) {
     return null;
   }
 
@@ -82,7 +106,7 @@ export const IconSlot = (props: IconSlotProps) => {
   }
 
   return className ? (
-    <span className={className}>{content}</span>
+    <Wrapper className={className}>{content}</Wrapper>
   ) : (
     <>{content}</>
   );

@@ -11,7 +11,7 @@ import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 
 import Heading, { type HeadingElement } from '../Heading';
-import { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './Accordion.module.css';
@@ -259,7 +259,7 @@ const AccordionButton = ({
           }}
           {...other}
         >
-          {leadingContent && (
+          {hasSlotContent(leadingContent) && (
             <span className={styles['accordion-button__leading-icon']}>
               {leadingContent}
             </span>

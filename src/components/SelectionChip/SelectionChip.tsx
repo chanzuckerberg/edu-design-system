@@ -6,7 +6,7 @@ import type {
   IconOrContent,
 } from '../../util/utility-types';
 
-import { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './SelectionChip.module.css';
@@ -111,7 +111,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
   ) => {
     const componentClassName = clsx(
       styles['selection-chip'],
-      leadingContent && styles['selection-chip--has-icon'],
+      hasSlotContent(leadingContent) && styles['selection-chip--has-icon'],
       isDisabled && styles['selection-chip--disabled'],
       className,
     );
@@ -138,7 +138,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
           type={type}
         />
         <div className={styles['selection-chip__body']}>
-          {leadingContent && <IconSlot content={leadingContent} />}
+          <IconSlot content={leadingContent} />
           <Text
             as="span"
             className={styles['selection-chip__label']}

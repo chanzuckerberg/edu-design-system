@@ -12,7 +12,7 @@ import Button from '../Button';
 import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Input from '../Input';
 import Text from '../Text';
 import styles from './InputField.module.css';
@@ -296,7 +296,8 @@ export const InputField: InputFieldType = forwardRef(
 
     // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
     const inputOverlayClassName = clsx(
-      leadingContent && styles['input-field__input--leading-icon'],
+      hasSlotContent(leadingContent) &&
+        styles['input-field__input--leading-icon'],
       shouldRenderInputWithin && styles['input-field__input--input-within'],
     );
 
@@ -437,7 +438,7 @@ export const InputField: InputFieldType = forwardRef(
               )}
             </div>
           )}
-          {leadingContent && (
+          {hasSlotContent(leadingContent) && (
             <div className={styles['input-field__leading-icon']}>
               <IconSlot content={leadingContent} size="24px" />
             </div>
