@@ -1044,6 +1044,125 @@ exports[`<Button /> > UsingExtendedLink story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Button /> > WithFpoIconContent story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+        Large
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        />
+        Medium
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-left_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        />
+        Small
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Button /> > WithFpoIconOnlyContent story renders snapshot 1`] = `
+<div
+  class="p-1"
+>
+  <div
+    class="flex items-center gap-1"
+  >
+    <button
+      aria-label="Large button"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+      </span>
+    </button>
+    <button
+      aria-label="Medium button"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        />
+      </span>
+    </button>
+    <button
+      aria-label="Small button"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`<Button /> > passes class names down properly 1`] = `
 <button
   class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 exampleClassName"

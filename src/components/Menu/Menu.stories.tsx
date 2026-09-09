@@ -9,6 +9,7 @@ import type { MenuProps } from './Menu';
 import icons from '../../icons/spritemap';
 
 import type { IconName } from '../../icons/spritemap';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import { Avatar } from '../Avatar/Avatar';
 import Button from '../Button';
 import { Icon } from '../Icon/Icon';
@@ -108,8 +109,9 @@ const menuItems = (
 
 /**
  * The Default `Menu` allows for clickable menu items, and provides a default trigger
- * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`, `icon`
- * either missing, or set to `"chevron-down"`, and a configurable text label.
+ * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`,
+ * `trailingContent` either missing, or set to `"chevron-down"`, and a configurable text
+ * label.
  */
 export const Default: Story = {
   args: {
@@ -163,17 +165,21 @@ export const WithShortButtonText: Story = {
         <Menu.Items data-testid="menu-content">
           <Menu.Item
             href="https://headlessui.com/react/menu#menu-button"
-            icon="link"
+            leadingContent="link"
           >
             Headless UI Docs
           </Menu.Item>
           <Menu.Item
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-            icon="link"
+            leadingContent="link"
           >
             MDN: Menu
           </Menu.Item>
-          <Menu.Item disabled href="https://example.org/" icon="warning-filled">
+          <Menu.Item
+            disabled
+            href="https://example.org/"
+            leadingContent="warning-filled"
+          >
             Not Possible (disabled)
           </Menu.Item>
         </Menu.Items>
@@ -258,7 +264,7 @@ export const Opened: Story = {
 };
 
 /**
- * For testing purposes: This triggers an open menu that has no icons.
+ * For testing purposes: This triggers an open menu with the leading slot left empty.
  */
 export const IconlessOpened: Story = {
   ...WithLongButtonText,
@@ -303,3 +309,23 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
       </Menu>
     ),
   };
+
+/**
+ * `Menu.Button`'s trailing slot takes arbitrary content, not only an EDS icon name. The
+ * block below stands in for whatever you supply, so the slot itself is the subject rather
+ * than the chevron that would otherwise fill it.
+ *
+ * The slot renders through `Button` at its default `size="lg"`, so the block is 24px.
+ */
+export const WithFpoButtonTrailingContent: Story = {
+  args: {
+    children: (
+      <>
+        <Menu.Button trailingContent={<FpoBlock size={24} />}>
+          Actions
+        </Menu.Button>
+        {menuItems}
+      </>
+    ),
+  },
+};

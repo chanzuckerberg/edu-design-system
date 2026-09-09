@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
 import { assertEdsUsage } from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 import type { Emphasis, Status } from '../../util/variant-types';
 
-import Icon, { type IconName } from '../Icon';
+import { IconSlot } from '../Icon';
 import { InternalText } from '../Text/Text';
 
 import styles from './Tag.module.css';
@@ -30,9 +31,10 @@ type Props = {
    */
   emphasis?: Emphasis;
   /**
-   * Icon name from the defined set of EDS icons
+   * Leading slot for the tag. Takes an EDS icon name, or any content to render in its
+   * place at 16px.
    */
-  icon?: IconName;
+  icon?: IconOrContent;
   /**
    * The text contents of the tag, nested inside the component.
    */
@@ -118,7 +120,7 @@ export const Tag = ({
       preset="tag"
       style={style}
     >
-      {icon && <Icon name={icon} purpose="decorative" size="16px" />}
+      <IconSlot content={icon} purpose="decorative" size="16px" />
       {label && <span className={styles['tag__body']}>{label}</span>}
     </InternalText>
   );

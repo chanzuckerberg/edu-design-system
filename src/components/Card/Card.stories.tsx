@@ -5,6 +5,7 @@ import { userEvent } from '@storybook/testing-library';
 import React from 'react';
 
 import { Card } from './Card';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
@@ -102,20 +103,24 @@ function CardMenu() {
       <Menu.Items data-testid="menu-content">
         <Menu.Item
           href="https://headlessui.com/react/menu#menu-button"
-          icon="link"
+          leadingContent="link"
         >
           Headless UI Docs
         </Menu.Item>
         <Menu.Item
           href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-          icon="link"
+          leadingContent="link"
         >
           MDN: Menu
         </Menu.Item>
         <Menu.Item href="#index" onClick={() => console.log('Item clicked')}>
           Trigger Action
         </Menu.Item>
-        <Menu.Item disabled href="https://example.org/" icon="warning-filled">
+        <Menu.Item
+          disabled
+          href="https://example.org/"
+          leadingContent="warning-filled"
+        >
           Not Possible (disabled)
         </Menu.Item>
       </Menu.Items>
@@ -360,6 +365,35 @@ export const CancelMembership: Story = {
             </Button>
           </ButtonGroup>
         </Card.Footer>
+      </>
+    ),
+  },
+};
+
+/**
+ * The header's icon slot takes arbitrary content, not only an EDS icon name. The blocks
+ * below stand in for whatever you supply, so the slot itself is the subject rather than the
+ * icon that happened to be picked.
+ *
+ * `Card.Header` renders a 16px icon at `size="sm"` and 24px otherwise, so each block
+ * matches its own header.
+ */
+export const WithFpoHeaderIconContent: Story = {
+  args: {
+    children: (
+      <>
+        <Card.Header
+          icon={<FpoBlock size={16} />}
+          size="sm"
+          subTitle="Small header, 16px slot"
+          title="Text Complexity"
+        />
+        <Card.Header
+          icon={<FpoBlock size={24} />}
+          size="md"
+          subTitle="Medium header, 24px slot"
+          title="Text Complexity"
+        />
       </>
     ),
   },

@@ -4,6 +4,7 @@ import { userEvent, within } from '@storybook/testing-library';
 import React, { useState } from 'react';
 import { expect } from 'storybook/test';
 import { Combobox } from './Combobox';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 const meta: Meta<typeof Combobox> = {
   title: 'Components/Combobox',
@@ -952,4 +953,22 @@ export const OpenByDefault: StoryObj<DemoProps> = {
     },
   },
   play: selectCat,
+};
+
+/**
+ * `chipLeadingComponent` passes straight through to the chip's own leading slot, so it takes
+ * arbitrary content and not only an EDS icon name. The block below stands in for whatever
+ * you supply.
+ *
+ * The chip's slot carries no explicit icon size, so it resolves to 14px against the chip's
+ * own type, and the block matches that.
+ */
+export const MultipleWithFpoChipContent: StoryObj<DemoProps> = {
+  render: (args) => <MultipleComboboxDemo {...args} />,
+  args: {
+    ...MultipleWithChipIcons.args,
+    inputProps: {
+      chipLeadingComponent: () => <FpoBlock size={14} />,
+    },
+  },
 };

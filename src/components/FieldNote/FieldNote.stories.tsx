@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { FieldNote } from './FieldNote';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Link from '../Link';
 import Text from '../Text';
 
@@ -32,7 +33,6 @@ export const WithErrorIcon: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'warning-filled',
     status: 'critical',
   },
 };
@@ -49,7 +49,6 @@ export const WithWarningIcon: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'warning-filled',
     status: 'warning',
   },
 };
@@ -69,5 +68,29 @@ export const WithText: Story = {
       </div>
     ),
     id: 'field-1',
+  },
+};
+
+/**
+ * The leading slot takes arbitrary content, not only an EDS icon name. The block below
+ * stands in for whatever you supply, so the slot itself is the subject rather than the icon
+ * that happened to be picked.
+ */
+export const WithFpoIconContent: Story = {
+  args: {
+    ...Default.args,
+    icon: <FpoBlock size={16} />,
+  },
+};
+
+/**
+ * `status` supplies this slot's default rather than overriding it, so a note can carry the
+ * critical treatment and still show your own content. The status is announced from the
+ * note's own treatment; content you pass carries its own accessible treatment.
+ */
+export const WithFpoIconContentAndStatus: Story = {
+  args: {
+    ...WithFpoIconContent.args,
+    status: 'critical',
   },
 };

@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot } from '../Icon';
 import LoadingIndicator from '../LoadingIndicator';
 import Text from '../Text';
 
@@ -60,9 +61,14 @@ export type ButtonProps<ExtendedElement = unknown> = Omit<
   context?: 'default' | 'standalone';
 
   /**
-   * Icon from the set of defined EDS icon set, when `iconLayout` is used.
+   * Content for the icon slot, used when `iconLayout` is set. Takes an EDS icon name, or
+   * any content to render in its place, sized to match `size`.
+   *
+   * Custom content is rendered as-is, so it carries its own accessible treatment. With
+   * `iconLayout="icon-only"` the button still takes its accessible name from `aria-label`,
+   * the same as it does for an icon name.
    */
-  icon?: IconName;
+  icon?: IconOrContent;
 
   /**
    * Allows configuation of the icon's positioning within `Button`.
@@ -213,23 +219,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           preset={`label-${size}`}
         >
           {iconLayout === 'icon-only' && (
-            <Icon
-              name={icon}
+            <IconSlot
+              content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />
           )}
           {iconLayout === 'left' && (
-            <Icon
-              name={icon}
+            <IconSlot
+              content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />
           )}
           {iconLayout !== 'icon-only' && children}
           {iconLayout === 'right' && (
-            <Icon
-              name={icon}
+            <IconSlot
+              content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />

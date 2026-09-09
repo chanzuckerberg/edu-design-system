@@ -1,7 +1,9 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import Icon, { type IconName } from '../Icon';
+import type { IconOrContent } from '../../util/utility-types';
+
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 import styles from './PopoverListItem.module.css';
 
@@ -18,11 +20,6 @@ export type PopoverListItemProps = {
   __type?: 'selectitem' | 'listitem' | 'label' | 'separator' | 'caption';
   // Design API
   /**
-   * Icon from the set of defined EDS icon set. This prop is deprecated in favor of `leadingContent`.
-   * @deprecated
-   */
-  icon?: IconName;
-  /**
    * Handling behavior for whether the marked menu item is destructive or not (deletes, removes, etc.)
    */
   isDestructiveAction?: boolean;
@@ -35,9 +32,10 @@ export type PopoverListItemProps = {
    */
   isDisabled?: boolean;
   /**
-   * Content (icon, text, other component) to appear at the start of the list item. Recommended maximum size of 24 pixels.
+   * Content to appear at the start of the list item. Takes an EDS icon name, or any content
+   * to render in its place at 24px.
    */
-  leadingContent?: ReactNode;
+  leadingContent?: IconOrContent;
   /**
    * Text below the main menu item call-to-action, briefly describing the menu item's function
    */
@@ -73,7 +71,6 @@ export const PopoverListItem = React.forwardRef<
       isDisabled = false,
       isFocused = false,
       children,
-      icon,
       leadingContent,
       subLabel,
       trailingContent,
@@ -104,10 +101,13 @@ export const PopoverListItem = React.forwardRef<
         {...ariaIsDisabled}
         ref={ref}
       >
-        {icon || leadingContent ? (
+        {hasSlotContent(leadingContent) ? (
           <div className={styles['popover-list-item__leading-content']}>
-            {icon && <Icon name={icon} purpose="decorative" size="24px" />}
-            {leadingContent}
+            <IconSlot
+              content={leadingContent}
+              purpose="decorative"
+              size="24px"
+            />
           </div>
         ) : (
           <div className={styles['popover-list-item__no-icon']}></div>

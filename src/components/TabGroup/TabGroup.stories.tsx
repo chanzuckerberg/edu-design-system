@@ -5,6 +5,7 @@ import React from 'react';
 import { within } from 'storybook/test';
 
 import { TabGroup } from './TabGroup';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import { chromaticViewports } from '../../util/viewports';
 import Heading from '../Heading';
 import Text from '../Text';
@@ -418,5 +419,43 @@ export const ScrollMiddle: StoryObj<Args> = {
       value: 'googlePixel2',
       isRotated: false,
     },
+  },
+};
+
+/**
+ * A tab's leading slot takes arbitrary content, not only an EDS icon name. The blocks below
+ * stand in for whatever you supply, so the slot itself is the subject rather than the icon
+ * that happened to be picked.
+ */
+export const WithFpoTabContent: StoryObj<Args> = {
+  args: {
+    ...Centered.args,
+    children: (
+      <>
+        <TabGroup.Tab icon={<FpoBlock size={16} />} title="Tab Title 1">
+          <div className="max-w-[576px]">
+            <Heading as="h3" className="mb-spacing-size-3">
+              Tab 1
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </div>
+        </TabGroup.Tab>
+
+        <TabGroup.Tab icon={<FpoBlock size={16} />} title="Tab Title 2">
+          <div className="max-w-[576px]">
+            <Heading as="h3" className="mb-spacing-size-3">
+              Tab 2
+            </Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </div>
+        </TabGroup.Tab>
+      </>
+    ),
   },
 };

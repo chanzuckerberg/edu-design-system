@@ -2,10 +2,11 @@ import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
+import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
 import Heading from '../Heading';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './Card.module.css';
@@ -101,9 +102,10 @@ export type CardHeaderProps = {
    */
   eyebrow?: string;
   /**
-   * Card slot for an icon sitting in front of the card header text
+   * Card slot sitting in front of the card header text. Takes an EDS icon name, or any
+   * content to render in its place, sized to match `size`.
    */
-  icon?: IconName;
+  icon?: IconOrContent;
   /**
    * Overall size treatment of the Card header
    */
@@ -274,10 +276,10 @@ const CardHeader = ({
     </div>
   ) : (
     <div className={componentClassName} {...other}>
-      {icon && (
+      {hasSlotContent(icon) && (
         <div className={styles['header__icon']}>
-          <Icon
-            name={icon}
+          <IconSlot
+            content={icon}
             purpose="decorative"
             size={size === 'sm' ? '16px' : '24px'}
           />

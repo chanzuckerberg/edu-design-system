@@ -5,6 +5,7 @@ import { userEvent } from '@storybook/testing-library';
 
 import React from 'react';
 import { Button, type ButtonProps } from './Button';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 export default {
   title: 'Components/Button',
@@ -342,4 +343,59 @@ export const UsingExtendedLink: StoryObj<ExtendArgs> = {
       </ExtendedButton>
     </div>
   ),
+};
+
+/**
+ * The icon slot takes arbitrary content, not only an EDS icon name. The blocks below stand
+ * in for whatever you supply, so the slot itself is the subject rather than the icon that
+ * happened to be picked.
+ *
+ * `Button` renders a 24px icon at `size="lg"` and 16px below it, so each block matches its
+ * own button.
+ */
+export const WithFpoIconContent: Story = {
+  args: {
+    ...Sizes.args,
+    iconLayout: 'left',
+  },
+  render: (args) => (
+    <div className="flex items-center gap-1">
+      <Button
+        {...args}
+        aria-label="Large button"
+        icon={<FpoBlock size={24} />}
+        size="lg"
+      >
+        Large
+      </Button>
+      <Button
+        {...args}
+        aria-label="Medium button"
+        icon={<FpoBlock size={16} />}
+        size="md"
+      >
+        Medium
+      </Button>
+      <Button
+        {...args}
+        aria-label="Small button"
+        icon={<FpoBlock size={16} />}
+        size="sm"
+      >
+        Small
+      </Button>
+    </div>
+  ),
+};
+
+/**
+ * `iconLayout="icon-only"` takes content the same way. The button still gets its accessible
+ * name from `aria-label`, since the slot is decorative either way.
+ */
+export const WithFpoIconOnlyContent: Story = {
+  args: {
+    ...WithFpoIconContent.args,
+    iconLayout: 'icon-only',
+  },
+  render: WithFpoIconContent.render,
 };

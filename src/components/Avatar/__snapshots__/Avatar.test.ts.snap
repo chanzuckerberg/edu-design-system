@@ -284,3 +284,60 @@ exports[`<Avatar /> > WithCustomIcon story renders snapshot 1`] = `
   </svg>
 </div>
 `;
+
+exports[`<Avatar /> > WithFpoIconContent story renders snapshot 1`] = `
+<div
+  class="flex items-center gap-2"
+>
+  <div
+    aria-label="Avatar for unknown user "
+    class="_avatar_814665 _avatar--sm_814665 _avatar--icon_814665 _avatar--color-scheme-4_814665"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    />
+  </div>
+  <div
+    aria-label="Avatar for unknown user "
+    class="_avatar_814665 _avatar--md_814665 _avatar--icon_814665 _avatar--color-scheme-4_814665"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+  <div
+    aria-label="Avatar for unknown user "
+    class="_avatar_814665 _avatar--lg_814665 _avatar--icon_814665 _avatar--color-scheme-4_814665"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 32px; width: 32px; font-size: 12px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+  <div
+    aria-label="Avatar for unknown user "
+    class="_avatar_814665 _avatar--xl_814665 _avatar--icon_814665 _avatar--color-scheme-4_814665"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 40px; width: 40px; font-size: 15px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+</div>
+`;

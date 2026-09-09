@@ -25,7 +25,7 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import type { ExtractProps } from '../../util/utility-types';
+import type { ExtractProps, IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 
 import Checkbox from '../Checkbox';
@@ -217,7 +217,7 @@ type ComboboxInputProps = Omit<
   /**
    * Leading glyph (icon) or content for a selected value's chip, when `multiple` is set.
    */
-  chipLeadingComponent?: (item: ComboboxValue) => IconName | ReactNode;
+  chipLeadingComponent?: (item: ComboboxValue) => IconOrContent;
   /**
    * Icon to use for combobox button, which is only allowed to be 'chevron-down'
    */

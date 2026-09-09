@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React, { type MouseEventHandler } from 'react';
+import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import Icon, { IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './InputChip.module.css';
@@ -22,9 +23,10 @@ export type InputChipProps = {
    */
   label: string;
   /**
-   * Leading glyph (icon) for the chip
+   * Leading slot for the chip. Takes an EDS icon name, or any content to render in its
+   * place at the chip's own type size.
    */
-  leadingComponent: IconName | React.ReactNode;
+  leadingComponent?: IconOrContent;
   /**
    * click handler for the action button on the chip (ex: to dismiss or remove the chip from the screen)
    */
@@ -77,13 +79,11 @@ export const InputChip = ({
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['input-chip__label']}>
-        {leadingComponent && typeof leadingComponent === 'string' && (
-          <Icon
-            className={styles['input-chip__leading-component']}
-            name={leadingComponent as IconName}
-            purpose="decorative"
-          />
-        )}
+        <IconSlot
+          className={styles['input-chip__leading-component']}
+          content={leadingComponent}
+          purpose="decorative"
+        />
         <Text as="span" preset="body-xs">
           {label}
         </Text>
