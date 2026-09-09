@@ -11666,6 +11666,749 @@ exports[`<DataTable /> > WithBasicCaption story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<DataTable /> > WithFpoLeadingContent story renders snapshot 1`] = `
+<div
+  class="_data-table_a06dc5"
+>
+  <div
+    class="_data-table__caption-container_a06dc5 _data-table--size-md_a06dc5"
+  >
+    <div
+      class="_data-table__caption-text_a06dc5"
+    >
+      <div
+        aria-hidden="true"
+        class="_text_b3eba3 _text--title-lg_b3eba3 _data-table__caption_a06dc5"
+      >
+        Leading content slot
+      </div>
+      <div
+        aria-hidden="true"
+        class="_text_b3eba3 _text--body-md_b3eba3 _data-table__subCaption_a06dc5"
+      >
+        Header cell and data cell both take arbitrary content
+      </div>
+    </div>
+  </div>
+  <table
+    class="_data-table__table_a06dc5 _data-table--tableStyle-basic_a06dc5 _data-table--rowStyle-striped_a06dc5 _data-table--size-md_a06dc5"
+  >
+    <caption
+      class="_data-table__aria-caption_a06dc5"
+    >
+      Leading content slot: Header cell and data cell both take arbitrary content
+    </caption>
+    <thead
+      class="_data-table__header-row_a06dc5"
+    >
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                First Name
+              </div>
+              <span
+                class="_text_b3eba3 _text--body-xs_b3eba3 _data-table__cell-subLabel_a06dc5"
+              >
+                Given Name
+              </span>
+            </div>
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                Last Name
+              </div>
+              <span
+                class="_text_b3eba3 _text--body-xs_b3eba3 _data-table__cell-subLabel_a06dc5"
+              >
+                Surname
+              </span>
+            </div>
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                Age
+              </div>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-cell__cell--leading-content_a06dc5"
+            >
+              <span
+                aria-hidden="true"
+                class="fpo"
+                style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+              />
+            </div>
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`<DataTable /> > WithFullCaption story renders snapshot 1`] = `
 <div
   class="_data-table_a06dc5"

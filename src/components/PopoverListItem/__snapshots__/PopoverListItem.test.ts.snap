@@ -251,6 +251,44 @@ exports[`<PopoverListItem /> > Separator story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<PopoverListItem /> > WithFpoContentSlots story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Add comment
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+</div>
+`;
+
 exports[`<PopoverListItem /> > WithKeyboardShortcut story renders snapshot 1`] = `
 <div
   class="_popover-list-item_e0596d"

@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Accordion } from './Accordion';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import { chromaticViewports } from '../../util/viewports';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
@@ -321,6 +322,70 @@ export const WithCustomIndicator: Story = {
             <Text preset="body-md">
               Passing a node renders it as-is. The node carries its own
               accessible treatment.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
+  },
+};
+
+/**
+ * All three content slots on `Accordion.Button` take arbitrary content, not only an icon
+ * name. The blocks below stand in for whatever you supply: `leadingContent` and
+ * `trailingContent` flank the title, and `indicatorContent` replaces the expand/collapse
+ * caret, so it rotates with the row.
+ */
+export const WithFpoContentSlots: Story = {
+  args: {
+    children: (
+      <>
+        <Accordion.Row hasLeadingContent>
+          <Accordion.Button
+            leadingContent={<FpoBlock size={24} />}
+            title="Leading content"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              `leadingContent` sits before the title, in the space reserved by
+              `hasLeadingContent` on the row.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button
+            title="Trailing content"
+            trailingContent={<FpoBlock size={24} />}
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              `trailingContent` sits after the title and before the indicator.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button
+            indicatorContent={<FpoBlock size={24} />}
+            title="Indicator content"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              `indicatorContent` replaces the caret and rotates when the row
+              opens, so pick something that reads well upside down.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen hasLeadingContent>
+          <Accordion.Button
+            indicatorContent={<FpoBlock size={24} />}
+            leadingContent={<FpoBlock size={24} />}
+            title="All three at once"
+            trailingContent={<FpoBlock size={24} />}
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Shown open, to check the slots still line up once the indicator
+              has rotated.
             </Text>
           </Accordion.Panel>
         </Accordion.Row>

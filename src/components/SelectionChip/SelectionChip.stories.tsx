@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { SelectionChip } from './SelectionChip';
-import Avatar from '../Avatar';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 export default {
   title: 'Components/SelectionChip',
@@ -91,10 +91,12 @@ export const UncontrolledChecked: Story = {
 
 /**
  * The leading slot also takes arbitrary content, for cases an EDS icon does not cover.
+ * The block below stands in for whatever you supply, so the slot itself is the subject
+ * rather than the component that happened to be picked.
  */
 export const WithLeadingContent: Story = {
   args: {
     ...Default.args,
-    leadingContent: <Avatar size="sm" user={{ fullName: 'Ada Lovelace' }} />,
+    leadingContent: <FpoBlock size={14} />,
   },
 };

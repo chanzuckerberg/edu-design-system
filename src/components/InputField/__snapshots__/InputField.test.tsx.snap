@@ -393,17 +393,13 @@ exports[`<InputField /> > LeadingContent story renders snapshot 1`] = `
       <div
         class="_input-field__leading-content_4d3b17"
       >
-        <div
-          aria-label="Avatar for user Ada Lovelace"
-          class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
-          role="img"
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
         >
-          <span
-            class="_text_b3eba3 _text--label-sm_b3eba3"
-          >
-            A
-          </span>
-        </div>
+          FPO
+        </span>
       </div>
     </div>
   </div>

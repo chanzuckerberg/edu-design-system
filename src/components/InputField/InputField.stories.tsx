@@ -5,7 +5,7 @@ import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 
 import { InputField } from './InputField';
-import Avatar from '../Avatar';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Button from '../Button';
 
 const meta: Meta<typeof InputField> = {
@@ -454,10 +454,12 @@ export const WithBothMaxAndRecommendedLength: Story = {
 
 /**
  * The leading slot also takes arbitrary content, for cases an EDS icon does not cover.
+ * The block below stands in for whatever you supply, so the slot itself is the subject
+ * rather than the component that happened to be picked.
  */
 export const LeadingContent: Story = {
   args: {
-    leadingContent: <Avatar size="sm" user={{ fullName: 'Ada Lovelace' }} />,
+    leadingContent: <FpoBlock size={24} />,
     'aria-label': 'assignee field',
     placeholder: 'Assign to...',
   },

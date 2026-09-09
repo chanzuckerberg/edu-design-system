@@ -468,6 +468,216 @@ exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[600px]"
+  >
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_q_"
+        type="button"
+      >
+        <span
+          class="_accordion-button__leading-content_86d7df"
+        >
+          <span
+            aria-hidden="true"
+            class="fpo"
+            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+          >
+            FPO
+          </span>
+        </span>
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Leading content
+          </span>
+        </h2>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_s_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Trailing content
+          </span>
+        </h2>
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_u_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Indicator content
+          </span>
+        </h2>
+        <span
+          class="_accordion-button__indicator_86d7df"
+        >
+          <span
+            aria-hidden="true"
+            class="fpo"
+            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+          >
+            FPO
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state="open"
+      data-open=""
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-_r_11_"
+        aria-expanded="true"
+        class="_accordion-button_86d7df"
+        data-headlessui-state="open"
+        data-open=""
+        id="headlessui-disclosure-button-_r_10_"
+        type="button"
+      >
+        <span
+          class="_accordion-button__leading-content_86d7df"
+        >
+          <span
+            aria-hidden="true"
+            class="fpo"
+            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+          >
+            FPO
+          </span>
+        </span>
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            All three at once
+          </span>
+        </h2>
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+        <span
+          class="_accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
+        >
+          <span
+            aria-hidden="true"
+            class="fpo"
+            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+          >
+            FPO
+          </span>
+        </span>
+      </button>
+      <div
+        class="_accordion-panel_86d7df _accordion-panel--leading-content_86d7df"
+        data-headlessui-state="open"
+        data-open=""
+        id="headlessui-disclosure-panel-_r_11_"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          <p
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            Shown open, to check the slots still line up once the indicator has rotated.
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Accordion /> > WithLargeHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"

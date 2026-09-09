@@ -13,6 +13,7 @@ import {
 // We import all of the utilities from tanstack here, and this can contain other custom utilities
 import { utils as DataTableUtils } from '../../components/DataTable';
 
+import FpoBlock from '../../storyUtils/FpoBlock';
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
@@ -975,5 +976,64 @@ export const WithLongCaption: StoryObj<Args> = {
         rank="secondary"
       />
     ),
+  },
+};
+
+// A cell's `leadingContent` renders its icon at 16px, so the FPO blocks below match
+// that rather than pushing the row height out.
+const fpoColumns = [
+  columnHelper.accessor('firstName', {
+    header: () => (
+      <DataTable.HeaderCell
+        leadingContent={<FpoBlock size={16} />}
+        subLabel="Given Name"
+      >
+        First Name
+      </DataTable.HeaderCell>
+    ),
+    cell: (info) => (
+      <DataTable.DataCell leadingContent={<FpoBlock size={16} />}>
+        {info.getValue()}
+      </DataTable.DataCell>
+    ),
+  }),
+  columnHelper.accessor((row) => row.lastName, {
+    id: 'lastName',
+    header: () => (
+      <DataTable.HeaderCell subLabel="Surname">Last Name</DataTable.HeaderCell>
+    ),
+    cell: (info) => <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>,
+  }),
+  columnHelper.accessor('age', {
+    header: () => (
+      <DataTable.HeaderCell alignment="trailing">Age</DataTable.HeaderCell>
+    ),
+    cell: (info) => (
+      <DataTable.DataCell alignment="trailing">
+        {info.renderValue()}
+      </DataTable.DataCell>
+    ),
+  }),
+];
+
+/**
+ * `leadingContent` on `DataTable.HeaderCell` and `DataTable.DataCell` takes arbitrary
+ * content, not only an icon name. The blocks below stand in for whatever you supply, so
+ * the slot itself is the subject rather than the icon that happened to be picked.
+ */
+export const WithFpoLeadingContent: StoryObj<Args> = {
+  args: {
+    caption: 'Leading content slot',
+    subCaption: 'Header cell and data cell both take arbitrary content',
+  },
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: defaultData,
+      columns: fpoColumns,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
+    });
+
+    return <DataTable {...args} table={table} />;
   },
 };
