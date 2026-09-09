@@ -771,6 +771,76 @@ exports[`<Card /> > WithCustomizedHeader story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Card /> > WithFpoHeaderIconContent story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
+  >
+    <div
+      class="_card__header_f66b11 _header--size-sm_f66b11"
+    >
+      <div
+        class="_header__icon_f66b11"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        />
+      </div>
+      <div
+        class="_header__text_f66b11"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-sm_b3eba3 _header__title_f66b11 _header--size-sm_f66b11"
+        >
+          Text Complexity
+        </h3>
+        <div
+          class="_text_b3eba3 _text--body-xs_b3eba3 _header__sub-title_f66b11 _header--size-sm_f66b11"
+        >
+          Small header, 16px slot
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__header_f66b11 _header--size-md_f66b11"
+    >
+      <div
+        class="_header__icon_f66b11"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+      </div>
+      <div
+        class="_header__text_f66b11"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+        >
+          Text Complexity
+        </h3>
+        <div
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+        >
+          Medium header, 24px slot
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
+    />
+  </div>
+</div>
+`;
+
 exports[`<Card /> > WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"

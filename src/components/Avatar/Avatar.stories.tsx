@@ -5,6 +5,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Avatar } from './Avatar';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Tooltip from '../Tooltip';
 
 export default {
@@ -221,4 +222,26 @@ export const Fixed: Story = {
     ...Default.args,
     color: 'fixed',
   },
+};
+
+/**
+ * The icon slot takes arbitrary content, not only an EDS icon name. The blocks below stand
+ * in for whatever you supply, so the slot itself is the subject rather than the icon that
+ * happened to be picked.
+ *
+ * `Avatar` sizes its icon from `size`, so each block matches that size's own icon: 16px at
+ * `sm`, 24px at `md`, 32px at `lg`, and 40px at `xl`.
+ */
+export const WithFpoIconContent: Story = {
+  args: {
+    variant: 'icon',
+  },
+  render: (args) => (
+    <div className="flex items-center gap-2">
+      <Avatar {...args} icon={<FpoBlock size={16} />} size="sm" />
+      <Avatar {...args} icon={<FpoBlock size={24} />} size="md" />
+      <Avatar {...args} icon={<FpoBlock size={32} />} size="lg" />
+      <Avatar {...args} icon={<FpoBlock size={40} />} size="xl" />
+    </div>
+  ),
 };

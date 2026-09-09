@@ -152,10 +152,10 @@ export const Breadcrumbs = ({
       return (
         <Menu.Item
           href={menuItem.props.href}
-          icon="link"
           // FIXME
           // eslint-disable-next-line react/no-array-index-key
           key={`breadcrumb-menu-item-${index}`}
+          leadingContent="link"
         >
           {menuItem.props.text}
         </Menu.Item>

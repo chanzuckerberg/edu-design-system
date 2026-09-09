@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
+import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import type { IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
-import Icon from '../Icon';
-import type { IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 import styles from './FieldNote.module.css';
 
@@ -27,14 +28,17 @@ export type FieldNoteProps = {
    */
   disabled?: boolean;
   /**
-   * Icon to use when an "icon" variant of the avatar.
+   * Leading slot for the note. Takes an EDS icon name, or any content to render in its
+   * place at 16px.
    *
-   * **Default is `"critical"`**.
+   * `status` supplies this slot's default, so setting `status` alone renders that status's
+   * icon. An explicit value here wins over that default, and the status treatment (colour,
+   * and the announced "error"/"warning") still applies.
+   *
+   * Custom content is rendered as-is and carries its own accessible treatment, so it does
+   * not receive the status title an icon name would.
    */
-  icon?: Extract<
-    IconName,
-    'critical-encircled-filled' | 'dangerous' | 'warning-filled'
-  >;
+  icon?: IconOrContent;
   /**
    * Status for the field state
    *
@@ -80,15 +84,25 @@ export const FieldNote = ({
     className,
   );
 
-  let iconToUse = icon;
-  let title = 'fieldnote status icon';
-  if (status === 'critical') {
-    iconToUse = 'critical-encircled-filled';
-    title = 'error';
-  } else if (status === 'warning') {
-    iconToUse = 'warning-filled';
-    title = 'warning';
-  }
+  const hasStatusIcon = status === 'critical' || status === 'warning';
+
+  // `status` is a default for the slot, not an override of it. An explicitly passed value
+  // losing to an inferred one is the surprising direction, and it would silently drop a
+  // consumer's own content the moment a status was set.
+  const iconToUse = hasSlotContent(icon)
+    ? icon
+    : hasStatusIcon
+      ? getIconNameFromStatus(status)
+      : undefined;
+
+  // Describes the status rather than whichever icon renders, so it stays correct when a
+  // consumer swaps the icon out. `IconSlot` applies it to an icon name only.
+  const title =
+    status === 'critical'
+      ? 'error'
+      : status === 'warning'
+        ? 'warning'
+        : 'fieldnote status icon';
 
   return (
     <div
@@ -97,15 +111,13 @@ export const FieldNote = ({
       id={id}
       {...other}
     >
-      {(status === 'critical' || status === 'warning' || iconToUse) && (
-        <Icon
-          className={styles['field-note__icon']}
-          name={iconToUse}
-          purpose="informative"
-          size="16px"
-          title={title}
-        />
-      )}
+      <IconSlot
+        className={styles['field-note__icon']}
+        content={iconToUse}
+        purpose="informative"
+        size="16px"
+        title={title}
+      />
       <Text as="span" preset="body-sm">
         {children}
       </Text>

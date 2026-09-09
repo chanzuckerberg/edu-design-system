@@ -43,6 +43,50 @@ exports[`<FieldNote /> > WithErrorIcon story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<FieldNote /> > WithFpoIconContent story renders snapshot 1`] = `
+<div
+  class="_field-note_fd2e78"
+  id="field-1"
+>
+  <span
+    class="_field-note__icon_fd2e78"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    />
+  </span>
+  <span
+    class="_text_b3eba3 _text--body-sm_b3eba3"
+  >
+    This is a fieldnote.
+  </span>
+</div>
+`;
+
+exports[`<FieldNote /> > WithFpoIconContentAndStatus story renders snapshot 1`] = `
+<div
+  class="_field-note_fd2e78 _field-note--error_fd2e78"
+  id="field-1"
+>
+  <span
+    class="_field-note__icon_fd2e78"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    />
+  </span>
+  <span
+    class="_text_b3eba3 _text--body-sm_b3eba3"
+  >
+    This is a fieldnote.
+  </span>
+</div>
+`;
+
 exports[`<FieldNote /> > WithLongText story renders snapshot 1`] = `
 <div
   class="_field-note_fd2e78 _field-note--error_fd2e78"

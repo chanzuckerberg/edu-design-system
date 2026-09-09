@@ -211,6 +211,64 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
+  it('moves the deprecated icon prop onto the leading slot', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Menu, PopoverListItem} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Menu>
+            <Menu.Button icon="chevron-down">Actions</Menu.Button>
+            <Menu.Items>
+              <Menu.Item icon="link" href="/docs">Docs</Menu.Item>
+            </Menu.Items>
+            <PopoverListItem icon="arrow-down">Sort</PopoverListItem>
+          </Menu>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Menu, PopoverListItem} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Menu>
+            <Menu.Button trailingContent="chevron-down">Actions</Menu.Button>
+            <Menu.Items>
+              <Menu.Item leadingContent="link" href="/docs">Docs</Menu.Item>
+            </Menu.Items>
+            <PopoverListItem leadingContent="arrow-down">Sort</PopoverListItem>
+          </Menu>
+        )
+      }
+    `);
+  });
+
+  it('leaves the icon prop on components that kept it alone', () => {
+    const sourceFileText = dedent`
+      import {Button, Card, Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Card>
+            <Card.Header icon="star" title="Saved" />
+            <Button icon="add" iconLayout="left">Add</Button>
+            <Icon name="close" purpose="decorative" />
+          </Card>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('leaves a same-named component from another package alone', () => {
     const sourceFileText = dedent`
       import {Text} from 'some-other-library';

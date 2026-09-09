@@ -111,6 +111,20 @@ const leadingIconToContent = [
   },
 ];
 
+/**
+ * `PopoverListItem` and `Menu.Item` each had a deprecated `icon` alongside
+ * `leadingContent`, and both rendered into the same slot. `leadingContent` now routes a
+ * string through `IconSlot` at the same 24px the `icon` prop used, so moving the icon name
+ * across renders exactly what it did before.
+ */
+const iconToLeadingContent = [
+  {
+    type: 'update_name' as const,
+    oldPropName: 'icon',
+    newPropName: 'leadingContent',
+  },
+];
+
 export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Text',
@@ -156,6 +170,29 @@ export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'SelectionChip',
     edits: leadingIconToContent,
+  },
+  {
+    componentName: 'PopoverListItem',
+    edits: iconToLeadingContent,
+  },
+  {
+    componentName: 'Menu.Item',
+    edits: iconToLeadingContent,
+  },
+  {
+    /**
+     * `Menu.Button`'s icon renders through `Button` with `iconLayout="right"`, so it fills
+     * the trailing slot. The prop carried a `TODO(next-major)` naming it `leadingContent`,
+     * which describes the wrong side.
+     */
+    componentName: 'Menu.Button',
+    edits: [
+      {
+        type: 'update_name',
+        oldPropName: 'icon',
+        newPropName: 'trailingContent',
+      },
+    ],
   },
 ];
 

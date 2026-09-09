@@ -18,9 +18,9 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import type { RenderProps } from '../../util/utility-types';
+import type { IconOrContent, RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot } from '../Icon';
 
 import styles from './TabGroup.module.css';
 
@@ -107,9 +107,10 @@ export type TabProps = {
    */
   title: string;
   /**
-   * Icon name from the defined set of EDS icons
+   * Leading slot for the tab. Takes an EDS icon name, or any content to render in its
+   * place at 16px.
    */
-  icon?: IconName;
+  icon?: IconOrContent;
 };
 
 type TabButtonProps = RenderProps<TabContextArgs>;
@@ -381,14 +382,12 @@ export const TabGroup = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
-                  {tab.props.icon && (
-                    <Icon
-                      className={styles['tab__icon']}
-                      name={tab.props.icon}
-                      purpose="decorative"
-                      size="16px"
-                    />
-                  )}
+                  <IconSlot
+                    className={styles['tab__icon']}
+                    content={tab.props.icon}
+                    purpose="decorative"
+                    size="16px"
+                  />
                   {typeof tabButton?.props.children === 'function'
                     ? tabButton.props.children({
                         isActive,

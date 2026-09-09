@@ -18,11 +18,11 @@ type FpoBlockProps = {
    *
    * Always pass the size of the icon the slot itself renders, so the block occupies the
    * same space the icon did and the story's layout does not change. Those sizes are set
-   * per component, not shared: `IconSlot` is given `24px` in `Accordion` and
-   * `InputField`, `16px` in `DataTable`, and no size at all in `SelectionChip`, where
-   * `Icon` falls back to `1em` and resolves to 14px against the chip's own type. Slots
-   * that take a bare `ReactNode` with no `IconSlot`, like `PopoverListItem`, document a
-   * recommended maximum of 24px.
+   * per component, not shared: `IconSlot` is given `24px` in `Accordion`, `InputField`,
+   * and `PopoverListItem`, `16px` in `DataTable`, and no size at all in `SelectionChip`
+   * and `InputChip`, where `Icon` falls back to `1em` and resolves to 14px against the
+   * chip's own type. `Avatar`, `Button`, and `Card` size their slot from the component's
+   * own `size` prop, so those need a block per size.
    */
   size?: number;
 };

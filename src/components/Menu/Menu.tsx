@@ -16,10 +16,9 @@ import type {
 } from 'react';
 import React from 'react';
 
-import type { ExtractProps } from '../../util/utility-types';
+import type { ExtractProps, IconOrContent } from '../../util/utility-types';
 
 import Button from '../Button';
-import { type IconName } from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 
@@ -46,9 +45,10 @@ export type MenuButtonProps = {
    */
   className?: string;
   /**
-   * Icon override for component. Default is 'chevron-down'
+   * Trailing slot for the button, sitting after `children`. Takes an EDS icon name, or any
+   * content to render in its place. Default is 'chevron-down'
    */
-  icon?: Extract<IconName, 'chevron-down'>; // TODO(next-major): change to `leadingContent`
+  trailingContent?: IconOrContent;
 };
 
 export type MenuSeparatorProps = ExtractProps<typeof HeadlessMenuSeparator>;
@@ -65,11 +65,6 @@ export type MenuItemProps = ExtractProps<typeof HeadlessMenuItem> &
      * Target URL for the menu item action
      */
     href?: string;
-    /**
-     * Icons are able to appear next to each Option in the Options list if it is relevant; before using any icons, please refer to the appropriate icon usage guidelines. Deprecated in favor of `leadingContent`
-     * @deprecated
-     */
-    icon?: IconName;
     /**
      * Configurable action for the menu item upon click
      */
@@ -122,7 +117,7 @@ export const Menu = ({ className, ...other }: MenuProps) => {
 const MenuButton = ({
   children,
   className,
-  icon = 'chevron-down',
+  trailingContent = 'chevron-down',
   ...other
 }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
@@ -130,7 +125,7 @@ const MenuButton = ({
     <HeadlessMenuButton as={React.Fragment}>
       <Button
         className={buttonClassNames}
-        icon={icon}
+        icon={trailingContent}
         iconLayout="right"
         rank="primary"
         {...other}
@@ -199,9 +194,9 @@ const MenuItems = ({
 };
 
 /**
- * An individual option that represent an action in the menu. Can contain an icon, label, sublabel, and action (onClick).
+ * An individual option that represent an action in the menu. Can contain leading content, label, sublabel, and action (onClick).
  *
- * NOTE: for menus, all menu items should have an icon, or no icon; mixing icon state is discouraged.
+ * NOTE: for menus, all menu items should fill the leading slot, or none should; mixing the two is discouraged.
  *
  * @see https://headlessui.com/react/menu#menu-item
  */
@@ -212,7 +207,6 @@ const MenuItem = ({
   onClick,
   target,
   // Props from PopoverListItem
-  icon,
   isDestructiveAction,
   isFocused,
   isDisabled,
@@ -243,7 +237,6 @@ const MenuItem = ({
           <PopoverListItem
             __type={__type}
             className={className}
-            icon={icon}
             isDestructiveAction={isDestructiveAction}
             isDisabled={disabled}
             isFocused={focus}

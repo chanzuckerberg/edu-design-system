@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 import React from 'react';
 import { Tag } from './Tag';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 export default {
   title: 'Components/Tag',
@@ -67,5 +68,17 @@ export const LowEmphasisInformational: Story = {
     label: 'API Docs',
     emphasis: 'low',
     status: 'informational',
+  },
+};
+
+/**
+ * The leading slot takes arbitrary content, not only an EDS icon name. The block below
+ * stands in for whatever you supply, so the slot itself is the subject rather than the icon
+ * that happened to be picked.
+ */
+export const WithFpoIconContent: Story = {
+  ...Default,
+  args: {
+    icon: <FpoBlock size={16} />,
   },
 };

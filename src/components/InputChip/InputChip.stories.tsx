@@ -1,9 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import type React from 'react';
+import React from 'react';
 
 import { InputChip } from './InputChip';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 export default {
   title: 'Components/InputChip',
@@ -45,5 +46,20 @@ export const Disabled: StoryObj<Args> = {
   args: {
     ...Default.args,
     isDisabled: true,
+  },
+};
+
+/**
+ * The leading slot takes arbitrary content, not only an EDS icon name. The block below
+ * stands in for whatever you supply, so the slot itself is the subject rather than the icon
+ * that happened to be picked.
+ *
+ * The slot's icon carries no explicit size, so it falls back to `1em` and resolves to 14px
+ * against the chip's own type. The block matches that.
+ */
+export const WithFpoLeadingContent: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    leadingComponent: <FpoBlock size={14} />,
   },
 };
