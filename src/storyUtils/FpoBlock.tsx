@@ -46,6 +46,14 @@ type FpoBlockProps = {
  * Renders a `span` rather than a `div` because several of these slots sit inside a
  * `button` or a `label`, which only accept phrasing content. `.fpo` already sets
  * `display: flex`, so the span still lays out as a box.
+ *
+ * Marked `aria-hidden` because it stands in for a decorative icon, which `IconSlot`
+ * renders `aria-hidden` too. It matters most where a control takes its accessible name
+ * from its own contents: without it, the Accordion row carrying all three slots
+ * announces as "FPO All three at once FPO FPO", and a `PopoverListItem` as
+ * "FPO Add comment FPO". Blocks below the label threshold render no text and so leak
+ * nothing, but they are hidden too, since an empty decorative box is not worth a node in
+ * the accessibility tree either.
  */
 export default function FpoBlock({
   children = 'FPO',
@@ -58,6 +66,7 @@ export default function FpoBlock({
 
   return (
     <span
+      aria-hidden="true"
       className={clsx('fpo', className)}
       style={{
         height: size,

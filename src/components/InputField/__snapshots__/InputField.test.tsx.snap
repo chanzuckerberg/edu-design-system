@@ -394,6 +394,7 @@ exports[`<InputField /> > LeadingContent story renders snapshot 1`] = `
         class="_input-field__leading-content_4d3b17"
       >
         <span
+          aria-hidden="true"
           class="fpo"
           style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
         >
