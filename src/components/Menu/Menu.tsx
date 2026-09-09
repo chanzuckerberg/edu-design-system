@@ -194,7 +194,7 @@ const MenuItems = ({
 };
 
 /**
- * An individual option that represent an action in the menu. Can contain leading content, label, sublabel, and action (onClick).
+ * An individual option that represents an action in the menu. Can contain leading content, label, sublabel, and action (onClick).
  *
  * NOTE: for menus, all menu items should fill the leading slot, or none should; mixing the two is discouraged.
  *
