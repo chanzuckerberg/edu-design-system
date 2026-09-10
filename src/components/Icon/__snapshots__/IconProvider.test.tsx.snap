@@ -159,11 +159,20 @@ exports[`<IconProvider /> > WithCustomContent story renders snapshot 1`] = `
         class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Actions
-        <span
+        <svg
           aria-hidden="true"
+          class="_icon_779da8"
+          fill="var(--eds-theme-color-icon-utility-interactive-primary)"
+          height="20px"
+          style="--icon-size: 20px;"
+          viewBox="0 0 24 24"
+          width="20px"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          more
-        </span>
+          <path
+            d="M12 20.6343L7.82703 16.4613L8.91153 15.3768L12 18.4653L15.0885 15.3768L16.173 16.4613L12 20.6343ZM8.91153 8.68426L7.82703 7.59976L12 3.42676L16.173 7.59976L15.0885 8.68426L12 5.59576L8.91153 8.68426Z"
+          />
+        </svg>
       </span>
     </button>
   </div>
@@ -191,11 +200,20 @@ exports[`<IconProvider /> > WithCustomContent story renders snapshot 1`] = `
         <span
           class="_accordion-button__indicator_86d7df"
         >
-          <span
+          <svg
             aria-hidden="true"
+            class="_icon_779da8"
+            fill="var(--eds-theme-color-icon-utility-interactive-primary)"
+            height="20px"
+            style="--icon-size: 20px;"
+            viewBox="0 0 24 24"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            more
-          </span>
+            <path
+              d="M12 20.6343L7.82703 16.4613L8.91153 15.3768L12 18.4653L15.0885 15.3768L16.173 16.4613L12 20.6343ZM8.91153 8.68426L7.82703 7.59976L12 3.42676L16.173 7.59976L15.0885 8.68426L12 5.59576L8.91153 8.68426Z"
+            />
+          </svg>
         </span>
       </button>
     </div>

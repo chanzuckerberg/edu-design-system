@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 import React from 'react';
 
+import { Icon } from './Icon';
 import { IconProvider } from './IconProvider';
 import type { SemanticIconMap } from './IconProvider';
 import Accordion from '../Accordion';
@@ -87,13 +88,30 @@ export const WithOverriddenIcons: Story = {
 
 /**
  * A role takes a node as readily as an icon name, on the same terms as any other content
- * slot in the system. Content passed this way carries its own accessible treatment.
+ * slot in the system.
+ *
+ * An `Icon` instance is the usual reason to reach for one. Passing a name leaves the icon's
+ * own props to whichever component draws it, which is what keeps a role consistent; passing
+ * the component sets them yourself, so a role can carry a fixed size or a colour that does
+ * not follow the surrounding text. Below, `expand` stays put at 20px on both the menu button
+ * and the accordion row, where a name would have been sized 24px by each of them.
+ *
+ * Content passed this way carries its own accessible treatment. `purpose="decorative"` is
+ * right for this one: both controls it lands in already have a text label, and an
+ * informative icon would have them announce twice.
  */
 export const WithCustomContent: Story = {
   args: {
     children: sampleTree,
     icons: {
-      expand: <span aria-hidden>more</span>,
+      expand: (
+        <Icon
+          color="var(--eds-theme-color-icon-utility-interactive-primary)"
+          name="unfold-more"
+          purpose="decorative"
+          size="20px"
+        />
+      ),
     },
   },
 };
