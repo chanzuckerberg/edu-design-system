@@ -36,7 +36,7 @@ export type FieldNoteProps = {
    *
    * `status` supplies this slot's default, and the icon it picks comes from
    * `IconProvider`, so an app changes every status icon in one place. An explicit value
-   * here wins over that default for this one note, and the status treatment (colour, and
+   * here wins over that default for this one note, and the status treatment (color, and
    * the announced "error"/"warning") still applies.
    *
    * Custom content is rendered as-is and carries its own accessible treatment, so it does
@@ -92,7 +92,7 @@ export const FieldNote = ({
 
   assertEdsUsage(
     [!hasStatusIcon && hasSlotContent(icon)],
-    'FieldNote can only show an icon when `status` is "warning" or "critical". Without a status the icon reports a state the note does not have.',
+    'FieldNote can only show an icon when `status` is "warning" or "critical". Otherwise the icon reports a state the note does not have.',
   );
 
   // The status icon is semantic, so which glyph a status draws is set app-wide through

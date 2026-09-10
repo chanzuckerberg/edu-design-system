@@ -92,7 +92,7 @@ export const WithOverriddenIcons: Story = {
  *
  * An `Icon` instance is the usual reason to reach for one. Passing a name leaves the icon's
  * own props to whichever component draws it, which is what keeps a role consistent; passing
- * the component sets them yourself, so a role can carry a fixed size or a colour that does
+ * the component sets them yourself, so a role can carry a fixed size or a color that does
  * not follow the surrounding text. Below, `expand` stays put at 20px on both the menu button
  * and the accordion row, where a name would have been sized 24px by each of them.
  *

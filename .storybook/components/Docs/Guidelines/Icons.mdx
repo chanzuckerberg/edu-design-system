@@ -17,13 +17,17 @@ structure to avoid unnecessary differences in the naming, separated by hyphens. 
 
 Some icons are not the consumer's to choose. A close button, an expand chevron, a copy affordance, a status icon: each marks one well-defined role, and a role only reads as itself if it looks the same everywhere it appears. Those come from `IconProvider`, which holds a map of semantic name to icon name or node for the tree below it, and falls back to the set EDS ships when an app does not wrap anything.
 
-When building a component that needs one, read it with `useSemanticIcon` and hand the result to `IconSlot`, rather than taking a prop for it:
+The rest of this section is for contributors working inside EDS. If you are building an app _with_ EDS, `IconProvider` is the whole API: wrap your tree in one and set the roles you want to change. See its page in Storybook.
+
+When you add or change an EDS component that draws one of these icons, read it with `useSemanticIcon` and hand the result to `IconSlot`, rather than giving the component a prop for it:
 
 ```tsx
 const closeIcon = useSemanticIcon('close');
 
 return <IconSlot content={closeIcon} purpose="informative" title="close" />;
 ```
+
+`useSemanticIcon` is deliberately not exported from the package root. It is how EDS components resolve a role internally, and giving consumers a second way to read the map would invite reading it in one place and setting it in another.
 
 Add a new semantic name only when a role genuinely recurs across components. A one-off icon belongs in a content slot on the component that draws it.
 
