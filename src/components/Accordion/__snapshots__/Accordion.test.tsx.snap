@@ -344,130 +344,6 @@ exports[`<Accordion /> > UsingRenderProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> > WithCustomIndicator story renders snapshot 1`] = `
-<div
-  class="p-spacing-size-4"
->
-  <div
-    class="w-[600px]"
-  >
-    <div
-      class="_accordion-row_86d7df"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="_accordion-button_86d7df"
-        data-headlessui-state=""
-        id="headlessui-disclosure-button-_r_k_"
-        type="button"
-      >
-        <h2
-          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
-        >
-          <span
-            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
-          >
-            Chevron down (the default)
-          </span>
-        </h2>
-        <svg
-          class="_icon_779da8 _accordion-button__indicator_86d7df"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="_accordion-row_86d7df"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="_accordion-button_86d7df"
-        data-headlessui-state=""
-        id="headlessui-disclosure-button-_r_m_"
-        type="button"
-      >
-        <h2
-          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
-        >
-          <span
-            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
-          >
-            Chevron up
-          </span>
-        </h2>
-        <svg
-          class="_icon_779da8 _accordion-button__indicator_86d7df"
-          fill="currentColor"
-          height="24px"
-          role="img"
-          style="--icon-size: 24px;"
-          viewBox="0 0 24 24"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            show content
-          </title>
-          <path
-            d="M11.9999 10.4542L7.39994 15.0542L6.34619 14.0004L11.9999 8.34668L17.6537 14.0004L16.5999 15.0542L11.9999 10.4542Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="_accordion-row_86d7df"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="_accordion-button_86d7df"
-        data-headlessui-state=""
-        id="headlessui-disclosure-button-_r_o_"
-        type="button"
-      >
-        <h2
-          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
-        >
-          <span
-            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
-          >
-            Custom content
-          </span>
-        </h2>
-        <span
-          class="_accordion-button__indicator_86d7df"
-        >
-          <span
-            class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-favorable_f57044"
-          >
-            <span
-              class="_tag__body_f57044"
-            >
-              3 new
-            </span>
-          </span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
@@ -483,7 +359,7 @@ exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
         aria-expanded="false"
         class="_accordion-button_86d7df"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-_r_q_"
+        id="headlessui-disclosure-button-_r_k_"
         type="button"
       >
         <span
@@ -533,7 +409,7 @@ exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
         aria-expanded="false"
         class="_accordion-button_86d7df"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-_r_s_"
+        id="headlessui-disclosure-button-_r_m_"
         type="button"
       >
         <h2
@@ -573,49 +449,16 @@ exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
     </div>
     <div
       class="_accordion-row_86d7df"
-      data-headlessui-state=""
-    >
-      <button
-        aria-expanded="false"
-        class="_accordion-button_86d7df"
-        data-headlessui-state=""
-        id="headlessui-disclosure-button-_r_u_"
-        type="button"
-      >
-        <h2
-          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
-        >
-          <span
-            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
-          >
-            Indicator content
-          </span>
-        </h2>
-        <span
-          class="_accordion-button__indicator_86d7df"
-        >
-          <span
-            aria-hidden="true"
-            class="fpo"
-            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
-          >
-            FPO
-          </span>
-        </span>
-      </button>
-    </div>
-    <div
-      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
-        aria-controls="headlessui-disclosure-panel-_r_11_"
+        aria-controls="headlessui-disclosure-panel-_r_p_"
         aria-expanded="true"
         class="_accordion-button_86d7df"
         data-headlessui-state="open"
         data-open=""
-        id="headlessui-disclosure-button-_r_10_"
+        id="headlessui-disclosure-button-_r_o_"
         type="button"
       >
         <span
@@ -635,7 +478,7 @@ exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
           <span
             class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
-            All three at once
+            Both at once
           </span>
         </h2>
         <span
@@ -645,23 +488,29 @@ exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
         >
           FPO
         </span>
-        <span
-          class="_accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <span
-            aria-hidden="true"
-            class="fpo"
-            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
-          >
-            FPO
-          </span>
-        </span>
+          <title>
+            hide content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
       </button>
       <div
         class="_accordion-panel_86d7df _accordion-panel--leading-content_86d7df"
         data-headlessui-state="open"
         data-open=""
-        id="headlessui-disclosure-panel-_r_11_"
+        id="headlessui-disclosure-panel-_r_p_"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"

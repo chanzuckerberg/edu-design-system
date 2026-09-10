@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import debounce from 'lodash/debounce';
 import React, { createContext, useContext, type ReactNode } from 'react';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import Menu from '../Menu';
 import Text from '../Text';
 
@@ -242,10 +242,6 @@ type BreadcrumbItemProps = {
    */
   href: string | null;
   /**
-   * Icon override for component. Default is 'chevron-left'
-   */
-  icon?: Extract<IconName, 'chevron-left'>;
-  /**
    * URLs for the collapsed breadcrumbs variant.
    * Should be <Menu.Item href={href}>{text}</Menu.Item>.
    */
@@ -273,13 +269,16 @@ type BreadcrumbItemProps = {
 export const BreadcrumbsItem = ({
   className,
   href,
-  icon = 'chevron-left',
   menuItems,
   separator = '/',
   text,
   variant,
   ...other
 }: BreadcrumbItemProps) => {
+  // The back arrow is semantic: it is the same "up one level" mark used elsewhere in the
+  // app, so it comes from `IconProvider` rather than from a prop on this item.
+  const backIcon = useSemanticIcon('back');
+
   const componentClassName = clsx(
     styles['breadcrumbs__item'],
     variant === 'back' && styles['breadcrumbs__item-back'],
@@ -309,9 +308,9 @@ export const BreadcrumbsItem = ({
       /* The back variant is a left pointing icon that usually links to the second last breadcrumb href. */
       return (
         <a className={styles['breadcrumbs__link']} href={href as string}>
-          <Icon
+          <IconSlot
             className={styles['breadcrumbs__back-icon']}
-            name={icon}
+            content={backIcon}
             purpose="informative"
             title={text as string}
           />

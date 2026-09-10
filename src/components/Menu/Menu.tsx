@@ -16,9 +16,11 @@ import type {
 } from 'react';
 import React from 'react';
 
-import type { ExtractProps, IconOrContent } from '../../util/utility-types';
+import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
+
+import { useSemanticIcon } from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 
@@ -44,11 +46,6 @@ export type MenuButtonProps = {
    * Allow custom classes to be applied to the menu button.
    */
   className?: string;
-  /**
-   * Trailing slot for the button, sitting after `children`. Takes an EDS icon name, or any
-   * content to render in its place. Default is 'chevron-down'
-   */
-  trailingContent?: IconOrContent;
 };
 
 export type MenuSeparatorProps = ExtractProps<typeof HeadlessMenuSeparator>;
@@ -114,18 +111,19 @@ export const Menu = ({ className, ...other }: MenuProps) => {
  *
  * @see https://headlessui.com/react/menu#menu-button
  */
-const MenuButton = ({
-  children,
-  className,
-  trailingContent = 'chevron-down',
-  ...other
-}: MenuButtonProps) => {
+const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
+
+  // The chevron is semantic: it marks the button as the thing that expands the menu, and
+  // reads as that role only if it looks the same on every menu in the app. It comes from
+  // `IconProvider` for that reason, and not from a prop on this button.
+  const expandIcon = useSemanticIcon('expand');
+
   return (
     <HeadlessMenuButton as={React.Fragment}>
       <Button
         className={buttonClassNames}
-        icon={trailingContent}
+        icon={expandIcon}
         iconLayout="right"
         rank="primary"
         {...other}

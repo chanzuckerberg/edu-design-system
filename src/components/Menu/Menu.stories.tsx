@@ -9,7 +9,6 @@ import type { MenuProps } from './Menu';
 import icons from '../../icons/spritemap';
 
 import type { IconName } from '../../icons/spritemap';
-import FpoBlock from '../../storyUtils/FpoBlock';
 import { Avatar } from '../Avatar/Avatar';
 import Button from '../Button';
 import { Icon } from '../Icon/Icon';
@@ -109,9 +108,8 @@ const menuItems = (
 
 /**
  * The Default `Menu` allows for clickable menu items, and provides a default trigger
- * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`,
- * `trailingContent` either missing, or set to `"chevron-down"`, and a configurable text
- * label.
+ * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`, the
+ * `expand` semantic icon, and a configurable text label.
  */
 export const Default: Story = {
   args: {
@@ -309,23 +307,3 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
       </Menu>
     ),
   };
-
-/**
- * `Menu.Button`'s trailing slot takes arbitrary content, not only an EDS icon name. The
- * block below stands in for whatever you supply, so the slot itself is the subject rather
- * than the chevron that would otherwise fill it.
- *
- * The slot renders through `Button` at its default `size="lg"`, so the block is 24px.
- */
-export const WithFpoButtonTrailingContent: Story = {
-  args: {
-    children: (
-      <>
-        <Menu.Button trailingContent={<FpoBlock size={24} />}>
-          Actions
-        </Menu.Button>
-        {menuItems}
-      </>
-    ),
-  },
-};

@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
 import type { Emphasis, Size } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot, useSemanticIcon, type IconName } from '../Icon';
 
 import styles from './Link.module.css';
 
@@ -35,6 +35,11 @@ export type LinkProps<ExtendedElement = unknown> =
     context?: 'inline' | 'standalone';
     /**
      * (trailing) icon to use with the link (when `context` is `"standalone"`)
+     *
+     * This names which of two roles the link is filling, rather than picking a glyph:
+     * `"open-in-new"` marks a link that leaves the site, and `"chevron-right"` a
+     * low-emphasis link that continues in place. The glyph `"open-in-new"` draws is
+     * semantic and comes from `IconProvider`, so an app changes it everywhere at once.
      */
     icon?: Extract<IconName, 'chevron-right' | 'open-in-new'>;
     /**
@@ -124,6 +129,12 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     const iconSize = size && (['xl', 'lg'].includes(size) ? '24px' : '16px');
 
+    // Only the external-link mark is semantic. `chevron-right` is this component's own
+    // continuation affordance and has no equivalent role elsewhere in the system, so it
+    // is not in the semantic set and renders as named.
+    const openInNewIcon = useSemanticIcon('open-in-new');
+    const iconToUse = icon === 'open-in-new' ? openInNewIcon : icon;
+
     assertEdsUsage(
       [context === 'inline' && emphasis === 'low'],
       'Inline links cannot be lowEmphasis',
@@ -153,9 +164,9 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       <Component className={componentClassName} ref={ref} {...other}>
         {children}
         {icon && context === 'standalone' && (
-          <Icon
+          <IconSlot
             className={styles['link__icon']}
-            name={icon}
+            content={iconToUse}
             purpose="decorative"
             size={iconSize}
           />

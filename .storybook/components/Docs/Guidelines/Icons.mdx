@@ -13,6 +13,20 @@ EDS provides utilitarian UI icons (e.g. magnifying glass, menu, triangles, caret
 Icons are provided thru the `<Icon />` component, and use names that map to what the icon is (and not what it may be used for). Icons also have a naming
 structure to avoid unnecessary differences in the naming, separated by hyphens. See the icon component in storybook for examples.
 
+### Semantic icons
+
+Some icons are not the consumer's to choose. A close button, an expand chevron, a copy affordance, a status icon: each marks one well-defined role, and a role only reads as itself if it looks the same everywhere it appears. Those come from `IconProvider`, which holds a map of semantic name to icon name or node for the tree below it, and falls back to the set EDS ships when an app does not wrap anything.
+
+When building a component that needs one, read it with `useSemanticIcon` and hand the result to `IconSlot`, rather than taking a prop for it:
+
+```tsx
+const closeIcon = useSemanticIcon('close');
+
+return <IconSlot content={closeIcon} purpose="informative" title="close" />;
+```
+
+Add a new semantic name only when a role genuinely recurs across components. A one-off icon belongs in a content slot on the component that draws it.
+
 ### Adding a new icon
 
 - Retrieve the icons from a design partner (e.g., from Figma, or from file sharing service like Google drive)

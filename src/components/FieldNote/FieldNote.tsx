@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
-import { hasSlotContent, IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 import styles from './FieldNote.module.css';
 
@@ -31,9 +31,13 @@ export type FieldNoteProps = {
    * Leading slot for the note. Takes an EDS icon name, or any content to render in its
    * place at 16px.
    *
-   * `status` supplies this slot's default, so setting `status` alone renders that status's
-   * icon. An explicit value here wins over that default, and the status treatment (colour,
-   * and the announced "error"/"warning") still applies.
+   * Only set this alongside a `status`. A note with no status has nothing for an icon to
+   * report, and the icon reads as a status the note does not have; EDS warns in that case.
+   *
+   * `status` supplies this slot's default, and the icon it picks comes from
+   * `IconProvider`, so an app changes every status icon in one place. An explicit value
+   * here wins over that default for this one note, and the status treatment (colour, and
+   * the announced "error"/"warning") still applies.
    *
    * Custom content is rendered as-is and carries its own accessible treatment, so it does
    * not receive the status title an icon name would.
@@ -86,14 +90,19 @@ export const FieldNote = ({
 
   const hasStatusIcon = status === 'critical' || status === 'warning';
 
+  assertEdsUsage(
+    [!hasStatusIcon && hasSlotContent(icon)],
+    'FieldNote can only show an icon when `status` is "warning" or "critical". Without a status the icon reports a state the note does not have.',
+  );
+
+  // The status icon is semantic, so which glyph a status draws is set app-wide through
+  // `IconProvider`.
+  const statusIcon = useSemanticIcon(hasStatusIcon ? status : undefined);
+
   // `status` is a default for the slot, not an override of it. An explicitly passed value
   // losing to an inferred one is the surprising direction, and it would silently drop a
   // consumer's own content the moment a status was set.
-  const iconToUse = hasSlotContent(icon)
-    ? icon
-    : hasStatusIcon
-      ? getIconNameFromStatus(status)
-      : undefined;
+  const iconToUse = hasSlotContent(icon) ? icon : statusIcon;
 
   // Describes the status rather than whichever icon renders, so it stays correct when a
   // consumer swaps the icon out. `IconSlot` applies it to an icon name only.

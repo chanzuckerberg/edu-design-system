@@ -141,7 +141,7 @@ describe('18-to-19', () => {
     `);
   });
 
-  it('renames the Accordion expand indicator override', () => {
+  it('drops the Accordion expand indicator override', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Accordion} from '@chanzuckerberg/eds';
 
@@ -159,7 +159,55 @@ describe('18-to-19', () => {
 
       export default function Component() {
         return (
-          <Accordion.Button title="Row" indicatorContent="chevron-down" />
+          <Accordion.Button title="Row" />
+        )
+      }
+    `);
+  });
+
+  it('drops the Accordion indicator under the name it carried in v19 prereleases', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" indicatorContent="chevron-up" />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" />
+        )
+      }
+    `);
+  });
+
+  it('drops the Breadcrumbs back icon override', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Breadcrumbs} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Breadcrumbs.Item href="/" icon="chevron-left" text="Home" />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Breadcrumbs} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Breadcrumbs.Item href="/" text="Home" />
         )
       }
     `);
@@ -211,7 +259,7 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
-  it('moves the deprecated icon prop onto the leading slot', () => {
+  it('moves the deprecated icon prop onto the leading slot, and drops the semantic one', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Menu, PopoverListItem} from '@chanzuckerberg/eds';
 
@@ -236,11 +284,39 @@ describe('18-to-19', () => {
       export default function Component() {
         return (
           <Menu>
-            <Menu.Button trailingContent="chevron-down">Actions</Menu.Button>
+            <Menu.Button>Actions</Menu.Button>
             <Menu.Items>
               <Menu.Item leadingContent="link" href="/docs">Docs</Menu.Item>
             </Menu.Items>
             <PopoverListItem leadingContent="arrow-down">Sort</PopoverListItem>
+          </Menu>
+        )
+      }
+    `);
+  });
+
+  it('drops the Menu.Button chevron under the name it carried in v19 prereleases', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Menu} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Menu>
+            <Menu.Button trailingContent="chevron-down">Actions</Menu.Button>
+          </Menu>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Menu} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Menu>
+            <Menu.Button>Actions</Menu.Button>
           </Menu>
         )
       }

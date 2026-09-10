@@ -67,10 +67,6 @@ const presetEdits = presetReplacements.map(
  * icon name, and also takes a node. Only the prop name changed, so passing the same
  * icon name under the new name renders exactly what it did before.
  *
- * `Accordion.Button`'s `trailingIcon` overrides the expand/collapse chevron rather than
- * filling a trailing slot, and the component already has a separate `trailingContent`
- * slot. It becomes `indicatorContent`, which names what it actually controls.
- *
  * `Accordion.Row`'s `hasLeadingIcon` is the boolean companion to the renamed slot, and
  * sits beside an existing `hasTrailingContent`, so it follows to `hasLeadingContent`.
  */
@@ -125,6 +121,28 @@ const iconToLeadingContent = [
   },
 ];
 
+/**
+ * The icons these props set are semantic: each marks one well-defined role (expand,
+ * back), and a role only reads as itself if it looks the same everywhere it appears. They
+ * are now set app-wide through `IconProvider` and no longer taken per instance, so the
+ * prop is dropped rather than renamed.
+ *
+ * Dropping it is safe for every value it could hold. `Accordion.Button`'s and
+ * `Menu.Button`'s only did anything if it was a chevron, and `Breadcrumbs.Item`'s was
+ * typed to the single value `'chevron-left'`, so all three rendered what the default
+ * `IconProvider` renders now. Consumers who set one to something else get the default
+ * back, and move the override into an `IconProvider`.
+ *
+ * Each removal covers both the v18 name and the name it briefly carried during v19
+ * prereleases, so a consumer who already ran an earlier copy of this migration lands in
+ * the same place.
+ */
+const removeSemanticIconProps = (propNames: string[]) =>
+  propNames.map((propName) => ({
+    type: 'remove' as const,
+    propName,
+  }));
+
 export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Text',
@@ -138,11 +156,7 @@ export const PropChanges: EditJsxPropChange[] = [
     componentName: 'Accordion.Button',
     edits: [
       ...leadingIconToContent,
-      {
-        type: 'update_name',
-        oldPropName: 'trailingIcon',
-        newPropName: 'indicatorContent',
-      },
+      ...removeSemanticIconProps(['trailingIcon', 'indicatorContent']),
     ],
   },
   {
@@ -180,19 +194,12 @@ export const PropChanges: EditJsxPropChange[] = [
     edits: iconToLeadingContent,
   },
   {
-    /**
-     * `Menu.Button`'s icon renders through `Button` with `iconLayout="right"`, so it fills
-     * the trailing slot. The prop carried a `TODO(next-major)` naming it `leadingContent`,
-     * which describes the wrong side.
-     */
     componentName: 'Menu.Button',
-    edits: [
-      {
-        type: 'update_name',
-        oldPropName: 'icon',
-        newPropName: 'trailingContent',
-      },
-    ],
+    edits: removeSemanticIconProps(['icon', 'trailingContent']),
+  },
+  {
+    componentName: 'Breadcrumbs.Item',
+    edits: removeSemanticIconProps(['icon']),
   },
 ];
 

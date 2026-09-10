@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 
-import Icon from '../Icon';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './InlineNotification.module.css';
@@ -98,11 +97,15 @@ export const InlineNotification = ({
     className,
   );
 
+  // The status icon is semantic: it is the notification's whole signal of severity, so
+  // the app sets it once through `IconProvider` rather than per notification.
+  const statusIcon = useSemanticIcon(status);
+
   return (
     <div className={componentClassName} {...other}>
-      <Icon
+      <IconSlot
         className={styles['inline-notification__icon']}
-        name={getIconNameFromStatus(status)}
+        content={statusIcon}
         purpose="decorative"
         size="16px"
       />

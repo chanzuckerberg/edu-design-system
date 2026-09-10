@@ -1,12 +1,11 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 
 import Button from '../Button';
 import Heading from '../Heading';
-import Icon from '../Icon';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './PageNotification.module.css';
@@ -113,11 +112,17 @@ export const PageNotification = ({
     className,
   );
 
+  // Both icons here are semantic: the status icon carries the notification's severity,
+  // and the dismiss button is the same close affordance used everywhere else. The app
+  // sets either one through `IconProvider`, not per notification.
+  const statusIcon = useSemanticIcon(status);
+  const closeIcon = useSemanticIcon('close');
+
   return (
     <aside className={componentClassName} {...other}>
-      <Icon
+      <IconSlot
         className={styles['page-notification__icon']}
-        name={getIconNameFromStatus(status)}
+        content={statusIcon}
         purpose="decorative"
         size="24px"
       />
@@ -159,7 +164,7 @@ export const PageNotification = ({
         <Button
           aria-label="Dismiss the notification"
           className={styles['page-notification__close-button']}
-          icon="close"
+          icon={closeIcon}
           iconLayout="icon-only"
           onClick={onDismiss}
           rank="tertiary"
