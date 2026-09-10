@@ -36,7 +36,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="m-spacing-size-1">{Story()}</div>],
-  tags: ['autodocs', 'version:1.3'],
+  tags: ['autodocs', 'version:2.0'],
 } as Meta<typeof Breadcrumbs>;
 
 type Story = StoryObj<typeof Breadcrumbs>;

@@ -12,6 +12,7 @@ import Accordion from '../Accordion';
 import InlineNotification from '../InlineNotification';
 import InputChip from '../InputChip';
 import Menu from '../Menu';
+import { Select } from '../Select/Select';
 
 /* eslint-disable testing-library/no-container */
 
@@ -87,10 +88,17 @@ describe('<IconProvider />', () => {
             <Accordion.Panel>Panel</Accordion.Panel>
           </Accordion.Row>
         </Accordion>
+        {/*
+         * `Select`'s indicator is here rather than in that component's own stories because
+         * every `Select` story snapshots as a single hidden input: HeadlessUI's listbox does
+         * not render its button in this environment, so a snapshot cannot show the glyph.
+         * `Select.ButtonWrapper` draws it directly.
+         */}
+        <Select.ButtonWrapper>Pick one</Select.ButtonWrapper>
       </IconProvider>,
     );
 
-    expect(countGlyph(container, 'chevron-right')).toBe(2);
+    expect(countGlyph(container, 'chevron-right')).toBe(3);
   });
 
   it('leaves the roles it was not given alone', () => {

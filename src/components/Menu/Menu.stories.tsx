@@ -48,7 +48,7 @@ export default {
       </div>
     ),
   ],
-  tags: ['autodocs', 'version:3.3.0'],
+  tags: ['autodocs', 'version:4.0.0'],
 } as Meta<MenuProps>;
 
 type Story = StoryObj<MenuProps>;

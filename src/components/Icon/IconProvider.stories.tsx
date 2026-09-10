@@ -65,7 +65,7 @@ export const Default: Story = {
 };
 
 /**
- * Three roles out of the eleven, to show that a provider only has to name what it changes.
+ * Three roles out of the twelve, to show that a provider only has to name what it changes.
  * The story on each component's own page uses a full set instead, from
  * `storyUtils/semanticIconOverrides`.
  *

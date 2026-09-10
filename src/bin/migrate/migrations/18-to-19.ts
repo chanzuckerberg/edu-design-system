@@ -127,11 +127,11 @@ const iconToLeadingContent = [
  * are now set app-wide through `IconProvider` and no longer taken per instance, so the
  * prop is dropped rather than renamed.
  *
- * Dropping it is safe for every value it could hold. `Accordion.Button`'s and
- * `Menu.Button`'s only did anything if it was a chevron, and `Breadcrumbs.Item`'s was
- * typed to the single value `'chevron-left'`, so all three rendered what the default
- * `IconProvider` renders now. Consumers who set one to something else get the default
- * back, and move the override into an `IconProvider`.
+ * Dropping it is safe for every value it could hold. Each was typed to a single icon
+ * name (`'chevron-left'` on `Breadcrumbs.Item`, `'chevron-down'` on the `Select` and
+ * `Combobox` indicators) or only did anything when given a chevron, so every one of them
+ * rendered what the default `IconProvider` renders now. Consumers who set one to something
+ * else get the default back, and move the override into an `IconProvider`.
  *
  * Each removal covers both the v18 name and the name it briefly carried during v19
  * prereleases, so a consumer who already ran an earlier copy of this migration lands in
@@ -199,6 +199,26 @@ export const PropChanges: EditJsxPropChange[] = [
   },
   {
     componentName: 'Breadcrumbs.Item',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Select.Button',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Select.ButtonWrapper',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.Button',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.Input',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.InputWrapper',
     edits: removeSemanticIconProps(['icon']),
   },
   {

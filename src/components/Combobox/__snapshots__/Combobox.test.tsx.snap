@@ -1691,6 +1691,84 @@ exports[`<Combobox /> > Generated Snapshots > WithPlaceholder story renders snap
 </div>
 `;
 
+exports[`<Combobox /> > Generated Snapshots > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="_combobox_ff8210 _combobox--label-layout-vertical_ff8210 w-60"
+  data-headlessui-state="open"
+  data-open=""
+  data-testid="combobox"
+>
+  <div
+    class="_combobox__overline_ff8210"
+  >
+    <label
+      class="_label_76755a _label--md_76755a _combobox__label_ff8210"
+      data-headlessui-state="open"
+      data-open=""
+      for="headlessui-combobox-input-_r_ak_"
+      id="headlessui-label-_r_aj_"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        Favorite Animal
+      </span>
+    </label>
+  </div>
+  <div
+    class="_combobox-input_ff8210"
+  >
+    <input
+      aria-activedescendant="headlessui-combobox-option-_r_ap_"
+      aria-autocomplete="list"
+      aria-controls="headlessui-combobox-options-_r_am_"
+      aria-expanded="true"
+      aria-labelledby="headlessui-label-_r_aj_"
+      class="_combobox-input__field_ff8210"
+      data-focus=""
+      data-headlessui-state="open focus"
+      data-open=""
+      data-testid="input-button"
+      id="headlessui-combobox-input-_r_ak_"
+      role="combobox"
+      style="--combobox__input-width: calc(0 * 1ch);"
+      type="text"
+      value="Dogs"
+    />
+    <button
+      aria-controls="headlessui-combobox-options-_r_am_"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-label="Show options"
+      aria-labelledby="headlessui-label-_r_aj_ headlessui-combobox-button-_r_al_"
+      class="_combobox-input__button_ff8210"
+      data-active=""
+      data-headlessui-state="open active hover"
+      data-hover=""
+      data-open=""
+      id="headlessui-combobox-button-_r_al_"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8 _combobox-input__icon_ff8210 _combobox-input__icon--reversed_ff8210"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`<Combobox /> > Generated Snapshots > WithRenderProp story renders snapshot 1`] = `
 <div
   class="_combobox_ff8210 _combobox--label-layout-vertical_ff8210 w-60"

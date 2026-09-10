@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
-import { statusIconNames } from '../../util/getIconNameFromStatus';
+import type { IconName } from '../../icons/spritemap';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 
@@ -38,6 +38,19 @@ export type SemanticIconMap = Record<SemanticIconName, IconOrContent>;
  * Exported so a consumer can build a partial override on top of the set EDS ships, and
  * so they can point at a single role's default without hard-coding the glyph.
  */
+/**
+ * The glyph each status is drawn with, kept as its own map because `Status` is a union
+ * these four have to cover exactly. Spread into the defaults below rather than written out
+ * there, so a status added to `Status` fails to compile here instead of silently having no
+ * icon.
+ */
+const statusIcons: Record<Status, IconName> = {
+  informational: 'info-encircled-filled',
+  critical: 'critical-encircled-filled',
+  warning: 'warning-filled',
+  favorable: 'checkmark-encircled-filled',
+};
+
 export const defaultSemanticIcons: SemanticIconMap = {
   back: 'chevron-left',
   close: 'close',
@@ -47,9 +60,7 @@ export const defaultSemanticIcons: SemanticIconMap = {
   forward: 'chevron-right',
   menu: 'menu',
   'open-in-new': 'open-in-new',
-  // The status glyphs live in one place, so the icon a status renders here and the one
-  // `getIconNameFromStatus` returns cannot drift apart.
-  ...statusIconNames,
+  ...statusIcons,
 };
 
 /**
@@ -122,7 +133,7 @@ IconProvider.displayName = 'IconProvider';
  * Reads the icon in effect for one semantic role.
  *
  * For EDS components' own use. Consumers change what this returns with `IconProvider`
- * rather than calling it themselves, so it is not exported from the package.
+ * rather than calling it themselves, so it is not exported from the package root.
  *
  * Takes `undefined` for the components whose role depends on runtime state and is
  * sometimes no role at all, so they can resolve the icon in one unconditional call

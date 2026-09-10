@@ -22,7 +22,7 @@ import type { Status } from '../../util/variant-types';
 import Checkbox from '../Checkbox';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
@@ -120,10 +120,6 @@ type SelectOptionProps = ExtractProps<typeof ListboxOption> &
 type SelectButtonProps = ExtractProps<typeof ListboxButton> & {
   // Design API
   /**
-   * Icon override for component. Default is 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
-  /**
    * Indicates state of the select, used to style the button.
    */
   isOpen?: boolean;
@@ -140,10 +136,6 @@ type SelectButtonWrapperProps = {
    */
   className?: string;
   // Design API
-  /**
-   * Icon override for component. Default is 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Indicates state of the select, used to style the button.
    */
@@ -536,7 +528,6 @@ export const SelectButtonWrapper = React.forwardRef<
     {
       children,
       className,
-      icon = 'chevron-down',
       isOpen,
       onClick: theirOnClick,
       shouldTruncate = false,
@@ -545,6 +536,11 @@ export const SelectButtonWrapper = React.forwardRef<
     ref,
   ) => {
     const { status } = useContext(SelectContext);
+
+    // The indicator marks the button as the thing that opens the options, so it is the
+    // same semantic `expand` icon a `Menu.Button` or an `Accordion` row carries. The CSS
+    // flips it when the listbox is open rather than swapping to `collapse`.
+    const expandIcon = useSemanticIcon('expand');
 
     const componentClassName = clsx(
       styles['select-button'],
@@ -575,9 +571,9 @@ export const SelectButtonWrapper = React.forwardRef<
         <InternalText as="span" className={textClassName} preset="input">
           {children}
         </InternalText>
-        <Icon
+        <IconSlot
           className={iconClassName}
-          name={icon}
+          content={expandIcon}
           purpose="decorative"
           size="24px"
         />

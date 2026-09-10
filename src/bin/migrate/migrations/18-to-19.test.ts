@@ -323,6 +323,36 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('drops the Select and Combobox expand indicator overrides', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Combobox, Select} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Select.ButtonWrapper icon="chevron-down">Pick one</Select.ButtonWrapper>
+            <Combobox.Input icon="chevron-down" />
+          </>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Combobox, Select} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Select.ButtonWrapper>Pick one</Select.ButtonWrapper>
+            <Combobox.Input />
+          </>
+        )
+      }
+    `);
+  });
+
   it('renames the Link continuation icon to its role', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Link} from '@chanzuckerberg/eds';

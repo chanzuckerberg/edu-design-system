@@ -26,7 +26,7 @@ export default {
   decorators: [
     (Story) => <div className="text-utility-default-primary">{Story()}</div>,
   ],
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Link>;
 
 type Story = StoryObj<typeof Link>;
