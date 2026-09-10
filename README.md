@@ -116,19 +116,14 @@ Instead, if you want to report an issue, you can [open an issue][gh-issue].
 This project is governed under the [Contributor Covenant][contribution-covenant] code of conduct.
 
 [contributing]: ./docs/CONTRIBUTING.md
-[guidelines]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-code-guidelines--docs
+[guidelines]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-contributor-guidelines-code-guidelines--summary-docs
 [gh-issue]: https://github.com/chanzuckerberg/edu-design-system/issues
 [contribution-covenant]: https://www.contributor-covenant.org/
+[theming-docs]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming-using-eds-theming--summary-docs
 
 ## Reporting Security Issues
 
 See our [Security Readme](https://github.com/chanzuckerberg/edu-design-system/blob/main/SECURITY.md).
-
-## FAQ, More Information, and Support
-
-Please review our Education Design System Site (SSO Required) [here](https://eds.czi.design/0843bc428/p/581284-education-design-system).
-
-[theming-docs]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming--docs
 
 ## Code of Conduct
 
