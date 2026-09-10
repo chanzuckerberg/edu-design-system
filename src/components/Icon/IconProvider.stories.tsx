@@ -65,10 +65,14 @@ export const Default: Story = {
 };
 
 /**
+ * Three roles out of the eleven, to show that a provider only has to name what it changes.
+ * The story on each component's own page uses a full set instead, from
+ * `storyUtils/semanticIconOverrides`.
+ *
  * Hoisted out of render on purpose. A map defined inline is a new object every render,
  * which re-renders every component reading from the provider.
  */
-const alternativeIcons: Partial<SemanticIconMap> = {
+const partialOverride: Partial<SemanticIconMap> = {
   close: 'remove',
   critical: 'critical',
   expand: 'unfold-more',
@@ -82,7 +86,7 @@ const alternativeIcons: Partial<SemanticIconMap> = {
 export const WithOverriddenIcons: Story = {
   args: {
     children: sampleTree,
-    icons: alternativeIcons,
+    icons: partialOverride,
   },
 };
 

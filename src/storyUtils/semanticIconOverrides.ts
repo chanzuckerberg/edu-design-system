@@ -10,8 +10,8 @@ import type { SemanticIconMap } from '../components/Icon';
  * roles a given component draws change on its page; the rest of the map does nothing there.
  *
  * Each alternative still reads as its role, which is the constraint on picking one at all.
- * The outline statuses pair with the filled defaults, `arrow-left` points the same way
- * `chevron-left` does, the doubled chevrons still mean expand and collapse, and
+ * The outline statuses pair with the filled defaults, the full arrows point the same way
+ * their chevrons do, the doubled chevrons still mean expand and collapse, and
  * `dots-horizontal` is the other conventional mark for a menu. `close` becomes `remove`
  * because the spritemap has exactly one X glyph, and a minus is the nearest thing to
  * "dismiss this" left in the set. It also matches the label `InputChip` already gives its
@@ -28,6 +28,7 @@ export const alternativeSemanticIcons: Partial<SemanticIconMap> = {
   critical: 'critical',
   expand: 'chevron-down-double',
   favorable: 'check',
+  forward: 'arrow-right',
   informational: 'info-encircled',
   menu: 'dots-horizontal',
   'open-in-new': 'link',

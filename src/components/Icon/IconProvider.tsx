@@ -22,6 +22,7 @@ export type SemanticIconName =
   | 'collapse'
   | 'copy'
   | 'expand'
+  | 'forward'
   | 'menu'
   | 'open-in-new';
 
@@ -43,6 +44,7 @@ export const defaultSemanticIcons: SemanticIconMap = {
   collapse: 'chevron-up',
   copy: 'copy',
   expand: 'chevron-down',
+  forward: 'chevron-right',
   menu: 'menu',
   'open-in-new': 'open-in-new',
   // The status glyphs live in one place, so the icon a status renders here and the one

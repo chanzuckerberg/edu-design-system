@@ -323,6 +323,36 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('renames the Link continuation icon to its role', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Link} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Link context="standalone" emphasis="low" icon="chevron-right">Next</Link>
+            <Link context="standalone" icon="open-in-new">Docs</Link>
+          </>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Link} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Link context="standalone" emphasis="low" icon="forward">Next</Link>
+            <Link context="standalone" icon="open-in-new">Docs</Link>
+          </>
+        )
+      }
+    `);
+  });
+
   it('leaves the icon prop on components that kept it alone', () => {
     const sourceFileText = dedent`
       import {Button, Card, Icon} from '@chanzuckerberg/eds';

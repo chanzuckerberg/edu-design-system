@@ -36,14 +36,15 @@ export const Default: Story = {};
 /**
  * When using standalone context, you can specify a trailing icon for the link.
  *
- * **NOTE**: support for applying the chevron only works when `emphasis` is set to "low".
+ * **NOTE**: support for applying the `forward` icon only works when `emphasis` is set to
+ * "low".
  */
 export const LinkWithChevron: Story = {
   args: {
     children: 'Default',
     context: 'standalone',
     emphasis: 'low',
-    icon: 'chevron-right',
+    icon: 'forward',
   },
 };
 
@@ -247,17 +248,28 @@ export const UsingExtendedLink: StoryObj<ExtendArgs> = {
 };
 
 /**
- * `icon` names which role the link is filling rather than picking a glyph, and the glyph
- * `"open-in-new"` draws comes from `IconProvider`. So a link marked as leaving the site
- * matches the one `AppHeader` renders for the same thing.
+ * `icon` names which role the link is filling rather than picking a glyph, and both roles
+ * come from `IconProvider`. So a link marked as leaving the site matches the one `AppHeader`
+ * renders for the same thing, and the two icons a standalone link can carry are set from one
+ * place rather than per link.
  *
- * `"chevron-right"` is Link's own continuation mark, has no equivalent role elsewhere in the
- * system, and so is not something the provider sets.
+ * Below, `open-in-new` becomes a chain and `forward` a full arrow.
  */
 export const WithProvidedIcons: Story = {
   args: {
-    ...LinkWithOpenIcon.args,
+    context: 'standalone',
   },
+  render: (args) => (
+    <div>
+      <Link {...args} icon="open-in-new">
+        Leaves the site
+      </Link>
+      <br />
+      <Link {...args} emphasis="low" icon="forward">
+        Carries the reader onward
+      </Link>
+    </div>
+  ),
   decorators: [
     (Story) => (
       <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>

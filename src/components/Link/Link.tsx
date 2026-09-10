@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
 import type { Emphasis, Size } from '../../util/variant-types';
-import { IconSlot, useSemanticIcon, type IconName } from '../Icon';
+import { IconSlot, useSemanticIcon, type SemanticIconName } from '../Icon';
 
 import styles from './Link.module.css';
 
@@ -34,14 +34,14 @@ export type LinkProps<ExtendedElement = unknown> =
      */
     context?: 'inline' | 'standalone';
     /**
-     * (trailing) icon to use with the link (when `context` is `"standalone"`)
+     * The role of the trailing icon on the link (when `context` is `"standalone"`)
      *
-     * This names which of two roles the link is filling, rather than picking a glyph:
-     * `"open-in-new"` marks a link that leaves the site, and `"chevron-right"` a
-     * low-emphasis link that continues in place. The glyph `"open-in-new"` draws is
-     * semantic and comes from `IconProvider`, so an app changes it everywhere at once.
+     * This names which of two roles the link is filling rather than picking a glyph:
+     * `"open-in-new"` marks a link that leaves the site, and `"forward"` a low-emphasis
+     * link that carries the reader onward. Both glyphs come from `IconProvider`, so an app
+     * changes either one everywhere at once.
      */
-    icon?: Extract<IconName, 'chevron-right' | 'open-in-new'>;
+    icon?: Extract<SemanticIconName, 'forward' | 'open-in-new'>;
     /**
      * Extra or lowered colors added to a link
      */
@@ -129,11 +129,9 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     const iconSize = size && (['xl', 'lg'].includes(size) ? '24px' : '16px');
 
-    // Only the external-link mark is semantic. `chevron-right` is this component's own
-    // continuation affordance and has no equivalent role elsewhere in the system, so it
-    // is not in the semantic set and renders as named.
-    const openInNewIcon = useSemanticIcon('open-in-new');
-    const iconToUse = icon === 'open-in-new' ? openInNewIcon : icon;
+    // `icon` already names a role rather than a glyph, so it doubles as the key to look
+    // the glyph up under.
+    const iconToUse = useSemanticIcon(icon);
 
     assertEdsUsage(
       [context === 'inline' && emphasis === 'low'],
@@ -156,8 +154,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     );
 
     assertEdsUsage(
-      [icon === 'chevron-right' && emphasis !== 'low'],
-      'Icon "chevron-right" only allowed when lowEmphasis is used',
+      [icon === 'forward' && emphasis !== 'low'],
+      'Icon "forward" only allowed when lowEmphasis is used',
     );
 
     return (

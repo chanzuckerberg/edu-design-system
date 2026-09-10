@@ -201,6 +201,23 @@ export const PropChanges: EditJsxPropChange[] = [
     componentName: 'Breadcrumbs.Item',
     edits: removeSemanticIconProps(['icon']),
   },
+  {
+    /**
+     * `Link.icon` never took an arbitrary icon: it picked one of two roles, or none. Both
+     * are now named as roles and resolved through `IconProvider`, so the value that was
+     * already a role name (`open-in-new`) is unchanged, and the one that named a glyph
+     * becomes `forward`.
+     */
+    componentName: 'Link',
+    edits: [
+      {
+        type: 'update_value',
+        propName: 'icon',
+        oldPropValue: 'chevron-right',
+        newPropValue: 'forward',
+      },
+    ],
+  },
 ];
 
 /**
