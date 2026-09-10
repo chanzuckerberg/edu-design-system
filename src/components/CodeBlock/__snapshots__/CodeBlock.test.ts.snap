@@ -4109,3 +4109,1177 @@ exports[`<CodeBlock /> > TypeScriptWithCopyText story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<CodeBlock /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="_code-block_961fb8"
+>
+  <pre>
+    <div
+      style="color: #839496; text-shadow: 0 1px rgba(0, 0, 0, 0.3); font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: 0.5em 0px; overflow: auto; border-radius: 0.3em; background: #002b36;"
+    >
+      <code
+        class="_code-block__block_961fb8"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+            /**
+
+          </span>
+        </span>
+        <span
+          class="token doc-comment"
+          style="color: #586e75;"
+        >
+           * Sorts an array of numbers using the Bubble Sort algorithm.
+
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: #268bd2;"
+          >
+            @param
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+             
+          </span>
+          <span
+            class="token doc-comment parameter"
+            style="color: #586e75;"
+          >
+            arr
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+             - The array of numbers to be sorted.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+             * 
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: #268bd2;"
+          >
+            @returns
+          </span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+             A new sorted array of numbers.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token doc-comment"
+            style="color: #586e75;"
+          >
+             */
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            export
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            function
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            bubbleSort
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            )
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            number
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #586e75;"
+          >
+            // Create a shallow copy to keep the function pure and avoid mutating the input
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            const
+          </span>
+          <span>
+             sortedArray 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            ...
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            const
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            .
+          </span>
+          <span>
+            length
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            let
+          </span>
+          <span>
+             swapped
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            boolean
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            let
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    swapped 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #b58900;"
+          >
+            false
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: #586e75;"
+          >
+            // Inner loop shrinks because the largest elements "bubble" to the end
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            let
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            0
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            1
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            -
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+             j
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            ++
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            (
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            &gt;
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: #586e75;"
+          >
+            // Swap elements using destructuring assignment
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #859900;"
+          >
+            1
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ]
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            swapped 
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #b58900;"
+          >
+            true
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: #586e75;"
+          >
+            // Optimization: If no elements were swapped, the array is already sorted
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            (
+          </span>
+          <span
+            class="token"
+            style="color: #EDEDED;"
+          >
+            !
+          </span>
+          <span>
+            swapped
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            break
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token"
+            style="color: #268bd2;"
+          >
+            return
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token"
+            style="color: #93a1a1;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span />
+      </code>
+    </div>
+  </pre>
+  <div
+    class="_code-block__copy_961fb8"
+  >
+    <button
+      aria-label="Copy this code block"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1"
+      data-testid="copy-button"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.30775 21.5C6.80258 21.5 6.375 21.325 6.025 20.975C5.675 20.625 5.5 20.1974 5.5 19.6923V4.30775C5.5 3.80258 5.675 3.375 6.025 3.025C6.375 2.675 6.80258 2.5 7.30775 2.5H13.0788C13.3198 2.5 13.5515 2.54517 13.774 2.6355C13.9965 2.726 14.1898 2.8565 14.3538 3.027L17.9828 6.7135C18.1468 6.87767 18.274 7.06775 18.3645 7.28375C18.4548 7.49975 18.5 7.72825 18.5 7.96925V19.6923C18.5 20.1974 18.325 20.625 17.975 20.975C17.625 21.325 17.1974 21.5 16.6923 21.5H7.30775ZM11.25 4H7.30775C7.21792 4 7.14417 4.03042 7.0865 4.09125C7.02883 4.15225 7 4.22442 7 4.30775V19.6923C7 19.7821 7.02883 19.8558 7.0865 19.9135C7.14417 19.9712 7.21792 20 7.30775 20H16.6923C16.7756 20 16.8477 19.9712 16.9087 19.9135C16.9696 19.8558 17 19.7821 17 19.6923V9.8365H13.9135C13.1763 9.8365 12.5481 9.57367 12.0287 9.048C11.5096 8.52233 11.25 7.88458 11.25 7.13475V4ZM12.75 4V7.13475C12.75 7.46925 12.8602 7.75317 13.0807 7.9865C13.3012 8.21983 13.5788 8.3365 13.9135 8.3365H17V7.85375L13.2135 4H12.75ZM10.077 18.5865C9.86417 18.5865 9.68592 18.5147 9.54225 18.3712C9.39875 18.2276 9.327 18.0493 9.327 17.8365C9.327 17.6237 9.39875 17.4455 9.54225 17.302C9.68592 17.1583 9.86417 17.0865 10.077 17.0865H12C12.2128 17.0865 12.391 17.1583 12.5345 17.302C12.6782 17.4455 12.75 17.6237 12.75 17.8365C12.75 18.0493 12.6782 18.2276 12.5345 18.3712C12.391 18.5147 12.2128 18.5865 12 18.5865H10.077ZM10.077 14.6923C9.86417 14.6923 9.68592 14.6205 9.54225 14.477C9.39875 14.3333 9.327 14.1551 9.327 13.9423C9.327 13.7294 9.39875 13.5513 9.54225 13.4078C9.68592 13.2641 9.86417 13.1923 10.077 13.1923H13.9135C14.1263 13.1923 14.3045 13.2641 14.448 13.4078C14.5917 13.5513 14.6635 13.7294 14.6635 13.9423C14.6635 14.1551 14.5917 14.3333 14.448 14.477C14.3045 14.6205 14.1263 14.6923 13.9135 14.6923H10.077Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;

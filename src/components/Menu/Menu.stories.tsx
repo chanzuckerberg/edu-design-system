@@ -9,8 +9,10 @@ import type { MenuProps } from './Menu';
 import icons from '../../icons/spritemap';
 
 import type { IconName } from '../../icons/spritemap';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { Avatar } from '../Avatar/Avatar';
 import Button from '../Button';
+import { IconProvider } from '../Icon';
 import { Icon } from '../Icon/Icon';
 
 export default {
@@ -307,3 +309,22 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
       </Menu>
     ),
   };
+
+/**
+ * The chevron on `Menu.Button` marks it as the thing that opens the menu, which is a role
+ * rather than a decoration, so it comes from `IconProvider` and not from a prop on the
+ * button. An `Accordion` row expanding carries the same mark.
+ *
+ * A trigger built with `Menu.PlainButton` renders whatever you put in it, so it is yours to
+ * set and the provider leaves it alone.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...Default.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
+};

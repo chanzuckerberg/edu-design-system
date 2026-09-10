@@ -7,7 +7,9 @@ import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/Breadcrumbs',
@@ -157,6 +159,28 @@ export const LongTextMenu: Story = {
   globals: {
     viewport: {
       value: 'ipadMini',
+      isRotated: false,
+    },
+  },
+};
+
+/**
+ * The back arrow replaces the trail below the `md` breakpoint, so this one is shown at a
+ * phone width where it is visible. It marks "up one level", which is a role, so it comes from
+ * `IconProvider` rather than from a prop on the item.
+ *
+ * Here it becomes a full arrow instead of a chevron.
+ */
+export const WithProvidedIcons: Story = {
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
+
+  globals: {
+    viewport: {
+      value: 'googlePixel2',
       isRotated: false,
     },
   },

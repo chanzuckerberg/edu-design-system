@@ -199,6 +199,46 @@ exports[`<Menu /> > WithLongButtonText story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Menu /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_menu_33ee5b"
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="menu"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      data-headlessui-state=""
+      id="headlessui-menu-button-_r_1c_"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Actions
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`<Menu /> > WithShortButtonText story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"

@@ -5,6 +5,8 @@ import React from 'react';
 
 import { InputChip } from './InputChip';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/InputChip',
@@ -62,4 +64,22 @@ export const WithFpoLeadingContent: StoryObj<Args> = {
     ...Default.args,
     leadingComponent: <FpoBlock size={14} />,
   },
+};
+
+/**
+ * The chip's action button comes from `IconProvider`, so it carries the same mark as the
+ * close button on a `Modal` or a notification.
+ *
+ * The leading slot is not part of that. It is the consumer's to fill, per chip, and the
+ * provider says nothing about it.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  args: {
+    ...WithLeadingIcon.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

@@ -640,3 +640,96 @@ exports[`<Breadcrumbs /> > TwoCrumbs story renders snapshot 1`] = `
   </nav>
 </div>
 `;
+
+exports[`<Breadcrumbs /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="m-spacing-size-1"
+>
+  <nav
+    aria-label="breadcrumbs links"
+    class="_breadcrumbs_325516"
+  >
+    <ul
+      class="_breadcrumbs__list_325516"
+    >
+      <li
+        class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
+      >
+        <a
+          class="_breadcrumbs__link_325516"
+          href="#"
+        >
+          <svg
+            class="_icon_779da8 _breadcrumbs__back-icon_325516"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Child
+            </title>
+            <path
+              d="M9.95197 17.6542L4.29797 12.0004L9.95197 6.34668L11.0057 7.43118L7.18647 11.2504H19.702V12.7504H7.18647L11.0057 16.5697L9.95197 17.6542Z"
+            />
+          </svg>
+        </a>
+        <span
+          aria-hidden="true"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="_breadcrumbs__item_325516"
+      >
+        <a
+          class="_breadcrumbs__link_325516"
+          href="#"
+        >
+          Home
+        </a>
+        <span
+          aria-hidden="true"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="_breadcrumbs__item_325516"
+      >
+        <a
+          class="_breadcrumbs__link_325516"
+          href="#"
+        >
+          Child
+        </a>
+        <span
+          aria-hidden="true"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="_breadcrumbs__item_325516"
+      >
+        <a
+          class="_breadcrumbs__link_325516"
+          href="#"
+        >
+          Grandchild
+        </a>
+        <span
+          aria-hidden="true"
+          class="_text_b3eba3 _text--body-md_b3eba3 _breadcrumbs__separator_325516"
+        >
+          /
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

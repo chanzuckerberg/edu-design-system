@@ -9,9 +9,11 @@ import { useState } from 'react';
 import { Modal } from './Modal';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/Modal',
@@ -617,4 +619,19 @@ export const Tablet: Story = {
       viewports: [chromaticViewports.ipadMini],
     },
   },
+};
+
+/**
+ * The close button comes from `IconProvider`, so it is the same affordance as every other
+ * close in the app rather than something set per modal.
+ *
+ * Shown non-interactive, like the other `Modal.Content` stories.
+ */
+export const WithProvidedIcons: Story = {
+  ...ContentDefault,
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

@@ -3,6 +3,8 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 import React from 'react';
 import { Link, type LinkProps } from './Link';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/Link',
@@ -242,4 +244,23 @@ export const UsingExtendedLink: StoryObj<ExtendArgs> = {
       Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
     </div>
   ),
+};
+
+/**
+ * `icon` names which role the link is filling rather than picking a glyph, and the glyph
+ * `"open-in-new"` draws comes from `IconProvider`. So a link marked as leaving the site
+ * matches the one `AppHeader` renders for the same thing.
+ *
+ * `"chevron-right"` is Link's own continuation mark, has no equivalent role elsewhere in the
+ * system, and so is not something the provider sets.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...LinkWithOpenIcon.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

@@ -4,6 +4,8 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { FieldNote } from './FieldNote';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 import Link from '../Link';
 import Text from '../Text';
 
@@ -68,4 +70,21 @@ export const WithText: Story = {
     ),
     id: 'field-1',
   },
+};
+
+/**
+ * A note's icon reports its status, so which glyph each status draws comes from
+ * `IconProvider` and matches what the notification components show for the same status.
+ *
+ * Here `critical` becomes the outline version of the icon.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...WithErrorIcon.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

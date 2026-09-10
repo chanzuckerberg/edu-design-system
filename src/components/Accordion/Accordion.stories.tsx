@@ -5,8 +5,9 @@ import React from 'react';
 
 import { Accordion } from './Accordion';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
-import Icon from '../Icon';
+import Icon, { IconProvider } from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Tag from '../Tag';
 import Text from '../Text';
@@ -333,4 +334,19 @@ export const WithFpoContentSlots: Story = {
       </>
     ),
   },
+};
+
+/**
+ * The expand indicator is not a prop on the row. It marks the row as expandable, which is a
+ * role rather than a decoration, so it is set once for the whole app through `IconProvider`
+ * and every expandable thing changes with it.
+ *
+ * Here it becomes a doubled chevron. It still rotates when the row opens.
+ */
+export const WithProvidedIcons: Story = {
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };
