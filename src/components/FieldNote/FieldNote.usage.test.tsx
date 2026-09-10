@@ -40,10 +40,22 @@ describe('<FieldNote /> usage warnings', () => {
     },
   );
 
-  it('stays quiet for a status with no icon of its own', () => {
+  it('stays quiet when a status is set on its own', () => {
     render(<FieldNote status="critical">A note</FieldNote>);
 
     expect(warn).not.toHaveBeenCalled();
+  });
+
+  it('warns when an icon is set alongside an explicit default status', () => {
+    render(
+      <FieldNote icon="info-encircled" status="default">
+        A note
+      </FieldNote>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('FieldNote can only show an icon'),
+    );
   });
 
   it('stays quiet when neither is set', () => {
