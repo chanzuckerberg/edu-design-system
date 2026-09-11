@@ -25,6 +25,10 @@ import React, {
   type ReactNode,
 } from 'react';
 
+import {
+  assertNoRemovedIconProp,
+  type WithRemovedIconProp,
+} from '../../util/logging';
 import type { ExtractProps, IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 
@@ -578,8 +582,13 @@ const ComboboxButtonComponent = function (props: ComboboxButtonProps) {
     'aria-label': ariaLabel = 'Show options',
     children,
     className,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
     ...other
-  } = props;
+  } = props as WithRemovedIconProp<ComboboxButtonProps>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Combobox.Button', 'expand', removedIcon);
 
   const componentClassName = clsx(styles['combobox-input__button'], className);
 
@@ -639,8 +648,13 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
     onKeyDown: theirOnKeyDown,
     shouldTruncate = false,
     showChips = true,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
     ...other
-  } = props;
+  } = props as WithRemovedIconProp<ComboboxInputProps>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Combobox.Input', 'expand', removedIcon);
   const {
     ariaLabel: contextAriaLabel,
     disabled,
@@ -860,7 +874,20 @@ const ComboboxOptionComponent = function (props: ComboboxOptionProps) {
 export const ComboboxInputWrapper = React.forwardRef<
   HTMLDivElement,
   ComboboxInputWrapperProps
->(({ children, className, hasChips, status: theirStatus, ...other }, ref) => {
+>((props, ref) => {
+  const {
+    children,
+    className,
+    hasChips,
+    status: theirStatus,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProp<typeof props>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Combobox.InputWrapper', 'expand', removedIcon);
+
   const { status: contextStatus } = useContext(ComboboxContext);
   const status = theirStatus ?? contextStatus;
 

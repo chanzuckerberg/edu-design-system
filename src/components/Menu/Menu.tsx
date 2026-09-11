@@ -16,6 +16,10 @@ import type {
 } from 'react';
 import React from 'react';
 
+import {
+  assertNoRemovedIconProp,
+  type WithRemovedIconProp,
+} from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
@@ -111,7 +115,18 @@ export const Menu = ({ className, ...other }: MenuProps) => {
  *
  * @see https://headlessui.com/react/menu#menu-button
  */
-const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
+const MenuButton = (props: MenuButtonProps) => {
+  const {
+    children,
+    className,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProp<MenuButtonProps>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Menu.Button', 'expand', removedIcon);
+
   const buttonClassNames = clsx(styles['menu__button'], className);
 
   // The chevron is semantic: it marks the button as the thing that expands the menu, and

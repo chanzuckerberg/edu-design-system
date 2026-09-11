@@ -1,6 +1,10 @@
 import clsx from 'clsx';
 import debounce from 'lodash/debounce';
 import React, { createContext, useContext, type ReactNode } from 'react';
+import {
+  assertNoRemovedIconProp,
+  type WithRemovedIconProp,
+} from '../../util/logging';
 import { IconSlot, useSemanticIcon } from '../Icon';
 import Menu from '../Menu';
 import Text from '../Text';
@@ -266,15 +270,22 @@ type BreadcrumbItemProps = {
 /**
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
-export const BreadcrumbsItem = ({
-  className,
-  href,
-  menuItems,
-  separator = '/',
-  text,
-  variant,
-  ...other
-}: BreadcrumbItemProps) => {
+export const BreadcrumbsItem = (props: BreadcrumbItemProps) => {
+  const {
+    className,
+    href,
+    menuItems,
+    separator = '/',
+    text,
+    variant,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProp<BreadcrumbItemProps>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Breadcrumbs.Item', 'back', removedIcon);
+
   // The back arrow is semantic: it is the same "up one level" mark used elsewhere in the
   // app, so it comes from `IconProvider` rather than from a prop on this item.
   const backIcon = useSemanticIcon('back');
