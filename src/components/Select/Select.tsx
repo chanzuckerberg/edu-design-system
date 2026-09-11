@@ -18,7 +18,7 @@ import React, {
 
 import {
   assertNoRemovedIconProp,
-  type WithRemovedIconProp,
+  type WithRemovedIconProps,
 } from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
@@ -406,10 +406,10 @@ const SelectButton = function (props: SelectButtonProps) {
     // TODO(next-major): remove, with the assert below.
     icon: removedIcon,
     ...other
-  } = props as WithRemovedIconProp<SelectButtonProps>;
+  } = props as WithRemovedIconProps<SelectButtonProps, 'icon'>;
 
   // TODO(next-major): remove.
-  assertNoRemovedIconProp('Select.Button', 'expand', removedIcon);
+  assertNoRemovedIconProp('Select.Button', 'icon', 'expand', removedIcon);
 
   const { status } = useContext(SelectContext);
   return (
@@ -548,10 +548,15 @@ export const SelectButtonWrapper = React.forwardRef<
     // TODO(next-major): remove, with the assert below.
     icon: removedIcon,
     ...other
-  } = props as WithRemovedIconProp<typeof props>;
+  } = props as WithRemovedIconProps<typeof props, 'icon'>;
 
   // TODO(next-major): remove.
-  assertNoRemovedIconProp('Select.ButtonWrapper', 'expand', removedIcon);
+  assertNoRemovedIconProp(
+    'Select.ButtonWrapper',
+    'icon',
+    'expand',
+    removedIcon,
+  );
 
   const { status } = useContext(SelectContext);
 

@@ -27,7 +27,7 @@ import React, {
 
 import {
   assertNoRemovedIconProp,
-  type WithRemovedIconProp,
+  type WithRemovedIconProps,
 } from '../../util/logging';
 import type { ExtractProps, IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
@@ -585,10 +585,10 @@ const ComboboxButtonComponent = function (props: ComboboxButtonProps) {
     // TODO(next-major): remove, with the assert below.
     icon: removedIcon,
     ...other
-  } = props as WithRemovedIconProp<ComboboxButtonProps>;
+  } = props as WithRemovedIconProps<ComboboxButtonProps, 'icon'>;
 
   // TODO(next-major): remove.
-  assertNoRemovedIconProp('Combobox.Button', 'expand', removedIcon);
+  assertNoRemovedIconProp('Combobox.Button', 'icon', 'expand', removedIcon);
 
   const componentClassName = clsx(styles['combobox-input__button'], className);
 
@@ -651,10 +651,10 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
     // TODO(next-major): remove, with the assert below.
     icon: removedIcon,
     ...other
-  } = props as WithRemovedIconProp<ComboboxInputProps>;
+  } = props as WithRemovedIconProps<ComboboxInputProps, 'icon'>;
 
   // TODO(next-major): remove.
-  assertNoRemovedIconProp('Combobox.Input', 'expand', removedIcon);
+  assertNoRemovedIconProp('Combobox.Input', 'icon', 'expand', removedIcon);
   const {
     ariaLabel: contextAriaLabel,
     disabled,
@@ -883,10 +883,15 @@ export const ComboboxInputWrapper = React.forwardRef<
     // TODO(next-major): remove, with the assert below.
     icon: removedIcon,
     ...other
-  } = props as WithRemovedIconProp<typeof props>;
+  } = props as WithRemovedIconProps<typeof props, 'icon'>;
 
   // TODO(next-major): remove.
-  assertNoRemovedIconProp('Combobox.InputWrapper', 'expand', removedIcon);
+  assertNoRemovedIconProp(
+    'Combobox.InputWrapper',
+    'icon',
+    'expand',
+    removedIcon,
+  );
 
   const { status: contextStatus } = useContext(ComboboxContext);
   const status = theirStatus ?? contextStatus;

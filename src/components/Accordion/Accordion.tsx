@@ -7,7 +7,11 @@ import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
-import { assertEdsUsage } from '../../util/logging';
+import {
+  assertEdsUsage,
+  assertNoRemovedIconProp,
+  type WithRemovedIconProps,
+} from '../../util/logging';
 
 import Heading, { type HeadingElement } from '../Heading';
 import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
@@ -191,18 +195,41 @@ export const Accordion = ({
   );
 };
 
-const AccordionButton = ({
-  children,
-  className,
-  headingAs,
-  leadingContent,
-  title,
-  trailingContent,
-  subTitle,
-  onClose,
-  onOpen,
-  ...other
-}: AccordionButtonProps) => {
+const AccordionButton = (props: AccordionButtonProps) => {
+  const {
+    children,
+    className,
+    headingAs,
+    leadingContent,
+    title,
+    trailingContent,
+    subTitle,
+    onClose,
+    onOpen,
+    // TODO(next-major): remove these two, with the asserts below.
+    indicatorContent: removedIndicatorContent,
+    trailingIcon: removedTrailingIcon,
+    ...other
+  } = props as WithRemovedIconProps<
+    AccordionButtonProps,
+    'indicatorContent' | 'trailingIcon'
+  >;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Accordion.Button',
+    'indicatorContent',
+    'expand',
+    removedIndicatorContent,
+  );
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Accordion.Button',
+    'trailingIcon',
+    'expand',
+    removedTrailingIcon,
+  );
+
   const { headingAs: contextHeadingAs } = useContext(AccordionContext);
 
   const { isExpandable } = useContext(AccordionRowContext);

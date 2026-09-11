@@ -22,39 +22,44 @@ export function assertEdsUsage(
 }
 
 /**
- * The `icon` prop v19 replaced with `IconProvider`, so an implementation can read one that
- * arrives anyway without putting it back into a public API.
+ * Props that v19 removed in favor of `IconProvider`, so an implementation can read one
+ * that arrives anyway without putting it back into a public API.
  *
- * TODO(next-major): remove, with `assertNoRemovedIconProp` and every `icon` destructure
- * that feeds it.
+ * TODO(next-major): remove, with `assertNoRemovedIconProp` and every destructure that
+ * feeds it.
  */
-export type WithRemovedIconProp<T> = T & { icon?: unknown };
+export type WithRemovedIconProps<T, PropName extends string> = T &
+  Partial<Record<PropName, unknown>>;
 
 /**
- * Warns a consumer still passing the `icon` prop that v19 replaced with `IconProvider`.
+ * Warns a consumer still passing one of the icon props that v19 removed in favor of
+ * `IconProvider`.
  *
- * These props need this and the ones removed alongside them do not, because of their names.
- * React forwards an unknown *lowercase* attribute to the DOM without comment, so `icon`
- * lands there as a stray attribute and a consumer who skipped `eds-migrate` gets no signal
- * at all: no type error, since untyped code never sees one, and nothing in the console. The
- * camelCase props removed at the same time (`indicatorContent`, `trailingContent`,
- * `trailingIcon`) are already reported by React itself.
+ * Worth a check of our own because neither route reaches untyped code. A typed consumer
+ * gets TS2322 at the call site, but JavaScript never sees that, and what happens next
+ * depends on the prop's name: React reports an unknown *camelCase* prop but forwards an
+ * unknown *lowercase* one to the DOM in silence. So `icon` produced a stray attribute and
+ * nothing else, while `indicatorContent` and friends produced a warning about React rather
+ * than about EDS — nothing in either case saying the prop was removed, or what to do now.
+ * Reading the prop here also keeps it off the DOM.
  *
  * TODO(next-major): remove. By then `eds-migrate 18-to-19` is far enough back that code
- * still passing `icon` is not worth carrying a runtime check for, and the destructures that
+ * still passing these is not worth carrying a runtime check for, and the destructures that
  * call this should go with it.
  *
  * @param componentName the component as a consumer writes it, e.g. `Breadcrumbs.Item`
- * @param role the semantic icon role that now supplies the icon
- * @param icon whatever arrived under `icon`
+ * @param propName the prop that was removed, e.g. `indicatorContent`
+ * @param role the semantic icon role that supplies the icon now
+ * @param value whatever arrived under that prop
  */
 export function assertNoRemovedIconProp(
   componentName: string,
+  propName: string,
   role: string,
-  icon: unknown,
+  value: unknown,
 ): void {
   assertEdsUsage(
-    [typeof icon !== 'undefined'],
-    `${componentName} no longer takes an \`icon\` prop, and the one passed is ignored. It draws the \`${role}\` icon from \`IconProvider\` instead, so every component filling that role matches. Run \`npx eds-migrate 18-to-19\` to remove the prop, and set \`${role}\` on an \`IconProvider\` to change the icon.`,
+    [typeof value !== 'undefined'],
+    `${componentName} no longer takes \`${propName}\`, and the one passed is ignored. It draws the \`${role}\` icon from \`IconProvider\` instead, so every component filling that role matches. Run \`npx eds-migrate 18-to-19\` to remove the prop, and set \`${role}\` on an \`IconProvider\` to change the icon.`,
   );
 }

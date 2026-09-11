@@ -18,7 +18,7 @@ import React from 'react';
 
 import {
   assertNoRemovedIconProp,
-  type WithRemovedIconProp,
+  type WithRemovedIconProps,
 } from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 
@@ -119,13 +119,24 @@ const MenuButton = (props: MenuButtonProps) => {
   const {
     children,
     className,
-    // TODO(next-major): remove, with the assert below.
+    // TODO(next-major): remove these two, with the asserts below.
     icon: removedIcon,
+    trailingContent: removedTrailingContent,
     ...other
-  } = props as WithRemovedIconProp<MenuButtonProps>;
+  } = props as WithRemovedIconProps<
+    MenuButtonProps,
+    'icon' | 'trailingContent'
+  >;
 
   // TODO(next-major): remove.
-  assertNoRemovedIconProp('Menu.Button', 'expand', removedIcon);
+  assertNoRemovedIconProp('Menu.Button', 'icon', 'expand', removedIcon);
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Menu.Button',
+    'trailingContent',
+    'expand',
+    removedTrailingContent,
+  );
 
   const buttonClassNames = clsx(styles['menu__button'], className);
 
