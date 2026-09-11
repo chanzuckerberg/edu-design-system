@@ -189,6 +189,50 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('drops a chevron written as a braced literal, like the quoted form', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" indicatorContent={'chevron-down'} />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" />
+        )
+      }
+    `);
+  });
+
+  it('leaves a chevron inside a larger expression alone', () => {
+    // The value has to be the whole expression, not part of one. Matching on a branch here
+    // would remove the attribute and take the other branch with it.
+    const sourceFileText = dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" indicatorContent={isOpen ? 'chevron-down' : <Tag>x</Tag>} />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('leaves a custom Accordion indicator in place rather than deleting it', () => {
     // Widened to `IconOrContent` in a v19 prerelease, so this could be real content. The
     // migration cannot rehome it, and dropping it silently would lose it, so it stays and
