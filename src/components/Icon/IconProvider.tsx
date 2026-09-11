@@ -123,7 +123,26 @@ export type IconProviderProps = {
 export const IconProvider = ({ children, icons }: IconProviderProps) => {
   const inherited = useContext(IconProviderContext);
 
-  const value = useMemo(() => ({ ...inherited, ...icons }), [inherited, icons]);
+  const value = useMemo(() => {
+    const merged = { ...inherited };
+
+    // A role set to `undefined` means the same as a role left out: inherit it. Spreading
+    // `icons` wholesale would instead write the `undefined` over the inherited value, so a
+    // conditional map like `{ close: isDismissible ? <X /> : undefined }` would blank every
+    // close affordance in the tree rather than falling back.
+    //
+    // `null` and `false` are left alone. Those are how `IconSlot` spells "render nothing",
+    // so an app can still use them to turn a role off deliberately.
+    for (const role of Object.keys(icons ?? {}) as SemanticIconName[]) {
+      const icon = icons?.[role];
+
+      if (icon !== undefined) {
+        merged[role] = icon;
+      }
+    }
+
+    return merged;
+  }, [inherited, icons]);
 
   return (
     <IconProviderContext.Provider value={value}>

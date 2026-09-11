@@ -484,3 +484,22 @@ export const WithProvidedIcons: Story = {
     ),
   ],
 };
+
+/**
+ * The mark on a link that leaves the site only renders in the vertical orientation, so it
+ * needs a story of its own. Here it becomes a chain rather than the usual box-and-arrow.
+ *
+ * The fourth icon `AppHeader` resolves, the close button on the drawer, cannot be shown in a
+ * story at all: it renders through a portal, outside the tree a story snapshots. It is
+ * covered in `IconProvider`'s own tests instead.
+ */
+export const WithProvidedIconsVertical: Story = {
+  args: {
+    ...VerticalOrientation.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
+};

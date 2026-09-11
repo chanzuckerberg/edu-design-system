@@ -137,7 +137,10 @@ export const Icon = (props: IconProps) => {
   // `Object.hasOwn` rather than `in`: the spritemap inherits from `Object.prototype`, so
   // `'toString' in icons` is true and the lookups below would read a function's missing
   // `viewBox` and `content`, rendering an empty `<svg>` instead of warning.
-  const isKnownName = !name || Object.hasOwn(icons, name);
+  // `name === undefined` rather than `!name`: an absent name is the custom-SVG case, which
+  // renders `children` against the given `viewBox`, but `''` is just an invalid name and
+  // should be reported like any other.
+  const isKnownName = name === undefined || Object.hasOwn(icons, name);
 
   assertEdsUsage(
     [!isKnownName],

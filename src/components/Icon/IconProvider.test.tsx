@@ -9,6 +9,7 @@ import { defaultSemanticIcons, IconProvider } from './IconProvider';
 import * as stories from './IconProvider.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 import Accordion from '../Accordion';
+import AppHeader from '../AppHeader';
 import Breadcrumbs from '../Breadcrumbs';
 import InlineNotification from '../InlineNotification';
 import InputChip from '../InputChip';
@@ -161,7 +162,7 @@ describe('<IconProvider />', () => {
     expect(container.querySelector('svg')).toBeNull();
   });
 
-  it('warns for a name that only exists on the spritemap prototype', () => {
+  it('warns for names the spritemap does not own', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     // `'toString' in icons` is true, so an `in` check let this through and then read a
@@ -177,6 +178,20 @@ describe('<IconProvider />', () => {
       expect.stringContaining('is not an EDS icon'),
     );
     expect(container.querySelector('svg')).toBeNull();
+
+    // The empty string is the other shape an invalid name takes. It cannot arrive through a
+    // slot, since `hasSlotContent` treats it as no content at all, so it is checked against
+    // `Icon` directly. It matters because an absent name is meaningful — that is the
+    // custom-SVG case — and a check for falsiness would wave this through as one.
+    warn.mockClear();
+    const { container: direct } = render(
+      <Icon name={'' as IconName} purpose="decorative" />,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('is not an EDS icon'),
+    );
+    expect(direct.querySelector('svg')).toBeNull();
   });
 
   it('keeps controls named when a role is overridden with a node', () => {
@@ -198,6 +213,55 @@ describe('<IconProvider />', () => {
     // Two, because the back crumb is a clone of the second-to-last item, shown only at
     // narrow widths. Before, that clone was the one link with no accessible name at all.
     expect(screen.getAllByRole('link', { name: 'Home' })).toHaveLength(2);
+  });
+
+  it('inherits a role set to undefined rather than blanking it', () => {
+    const maybeClose = undefined;
+
+    const { container } = render(
+      // The shape a conditional override takes: `{ close: cond ? <X /> : undefined }`.
+      // Spreading that over the defaults used to write the `undefined` through and leave
+      // every close affordance in the tree with no icon at all.
+      <IconProvider icons={{ close: maybeClose }}>
+        <InputChip label="Tag" />
+      </IconProvider>,
+    );
+
+    expect(hasGlyph(container, 'close')).toBe(true);
+  });
+
+  it('honors a role turned off with null', () => {
+    const { container } = render(
+      <IconProvider icons={{ close: null }}>
+        <InputChip label="Tag" />
+      </IconProvider>,
+    );
+
+    // `null` is how `IconSlot` spells "render nothing", so unlike `undefined` it is a
+    // deliberate choice and is kept.
+    expect(container.querySelector('svg')).toBeNull();
+  });
+
+  it('reaches the close button AppHeader renders through a portal', () => {
+    render(
+      <IconProvider icons={{ close: 'remove' }}>
+        <AppHeader
+          navGroups={[
+            {
+              name: 'group',
+              navItems: [{ name: 'Item', type: 'button' }],
+            },
+          ]}
+          title="Title"
+        />
+      </IconProvider>,
+    );
+
+    // That button renders outside the component's own tree, so no story snapshot can show
+    // it. `screen` queries the document, which is the only way to assert on it.
+    const close = screen.getByLabelText('Close popover menu');
+
+    expect(close.innerHTML).toContain(glyphOf('remove'));
   });
 
   it('ships a default for every semantic role', () => {

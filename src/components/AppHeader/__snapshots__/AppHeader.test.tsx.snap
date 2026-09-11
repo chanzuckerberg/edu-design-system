@@ -2463,3 +2463,400 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
   </div>
 </header>
 `;
+
+exports[`<AppHeader /> > WithProvidedIconsVertical story renders snapshot 1`] = `
+<header
+  class="_app-header_7b1fec _app-header--orientation-vertical_7b1fec _app-header--style-docked_7b1fec"
+>
+  <div>
+    <div
+      class="_app-header__content_7b1fec"
+    >
+      <div
+        class="_app-header-title_7b1fec"
+      >
+        <div
+          class="_app-header-title__title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="_app-header-title__sub-title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="_drawer-content_7b1fec"
+      >
+        <nav
+          aria-label="lakes"
+          class="_drawer-content__nav-group_7b1fec"
+        >
+          <ul>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
+            >
+              <menu>
+                <div
+                  class="_drawer-content__header-container_7b1fec"
+                >
+                  <div>
+                    <span
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
+                      >
+                        Lakes
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-current_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Lake Superior
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Lake Tahoe
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Crater Lake
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </menu>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
+            >
+              <menu>
+                <div
+                  class="_drawer-content__header-container_7b1fec"
+                >
+                  <div>
+                    <span
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
+                      >
+                        Oceans
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Pacific Ocean
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Atlantic Ocean
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Arctic Ocean
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </menu>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
+            >
+              <menu>
+                <div
+                  class="_drawer-content__header-container_7b1fec"
+                >
+                  <div>
+                    <span
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
+                      >
+                        Rivers
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Nile River
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Amazon River
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Danube River
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </menu>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          aria-label="group-2"
+          class="_drawer-content__nav-group_7b1fec"
+        >
+          <ul>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
+            >
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    Documentation
+                  </span>
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="_icon_779da8"
+                  fill="currentColor"
+                  height="24px"
+                  style="--icon-size: 24px;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8078 16.5389H7.0385C5.78283 16.5389 4.7125 16.0964 3.8275 15.2114C2.9425 14.3266 2.5 13.2564 2.5 12.0009C2.5 10.7454 2.9425 9.67508 3.8275 8.78991C4.7125 7.90458 5.78283 7.46191 7.0385 7.46191H10.8078V8.96191H7.0385C6.19867 8.96191 5.48233 9.25841 4.8895 9.85141C4.2965 10.4444 4 11.1607 4 12.0004C4 12.8401 4.2965 13.5564 4.8895 14.1494C5.48233 14.7424 6.19867 15.0389 7.0385 15.0389H10.8078V16.5389ZM8.25 12.7504V11.2504H15.75V12.7504H8.25ZM13.1923 16.5389V15.0389H16.9615C17.8013 15.0389 18.5177 14.7424 19.1105 14.1494C19.7035 13.5564 20 12.8401 20 12.0004C20 11.1607 19.7035 10.4444 19.1105 9.85141C18.5177 9.25841 17.8013 8.96191 16.9615 8.96191H13.1923V7.46191H16.9615C18.2172 7.46191 19.2875 7.90441 20.1725 8.78941C21.0575 9.67425 21.5 10.7444 21.5 11.9999C21.5 13.2554 21.0575 14.3257 20.1725 15.2109C19.2875 16.0962 18.2172 16.5389 16.9615 16.5389H13.1923Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
+            >
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    GitHub
+                  </span>
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="_icon_779da8"
+                  fill="currentColor"
+                  height="24px"
+                  style="--icon-size: 24px;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8078 16.5389H7.0385C5.78283 16.5389 4.7125 16.0964 3.8275 15.2114C2.9425 14.3266 2.5 13.2564 2.5 12.0009C2.5 10.7454 2.9425 9.67508 3.8275 8.78991C4.7125 7.90458 5.78283 7.46191 7.0385 7.46191H10.8078V8.96191H7.0385C6.19867 8.96191 5.48233 9.25841 4.8895 9.85141C4.2965 10.4444 4 11.1607 4 12.0004C4 12.8401 4.2965 13.5564 4.8895 14.1494C5.48233 14.7424 6.19867 15.0389 7.0385 15.0389H10.8078V16.5389ZM8.25 12.7504V11.2504H15.75V12.7504H8.25ZM13.1923 16.5389V15.0389H16.9615C17.8013 15.0389 18.5177 14.7424 19.1105 14.1494C19.7035 13.5564 20 12.8401 20 12.0004C20 11.1607 19.7035 10.4444 19.1105 9.85141C18.5177 9.25841 17.8013 8.96191 16.9615 8.96191H13.1923V7.46191H16.9615C18.2172 7.46191 19.2875 7.90441 20.1725 8.78941C21.0575 9.67425 21.5 10.7444 21.5 11.9999C21.5 13.2554 21.0575 14.3257 20.1725 15.2109C19.2875 16.0962 18.2172 16.5389 16.9615 16.5389H13.1923Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-separator_7b1fec"
+            >
+              <hr
+                class="_hr_8bd4b7 _app-header__nav-item--separator_7b1fec"
+                name="line-0"
+                type="separator"
+              />
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-menu_7b1fec"
+            >
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_4o_"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="_icon_779da8"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+                    />
+                  </svg>
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Profile
+                      <div
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
+                      >
+                        sublabel
+                      </div>
+                    </span>
+                    <div
+                      aria-label="Avatar for user Lorem Ipsum"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
+                      role="img"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
+                      >
+                        L
+                      </span>
+                    </div>
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+`;
