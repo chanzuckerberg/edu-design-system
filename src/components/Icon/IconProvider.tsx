@@ -38,10 +38,12 @@ export type SemanticIconName =
 export type SemanticIconMap = Record<SemanticIconName, IconOrContent>;
 
 /**
- * The glyph each status is drawn with, kept as its own map because `Status` is a union
- * these four have to cover exactly. Spread into the defaults below rather than written out
- * there, so a status added to `Status` fails to compile here instead of silently having no
- * icon.
+ * The glyph each status is drawn with.
+ *
+ * Kept as its own map, typed `Record<Status, IconName>`, so it has to name every member of
+ * `Status` — no more and no fewer. Spread into the defaults below rather than written out
+ * among them, because a status added to `Status` then fails to compile here until it is
+ * given an icon, instead of quietly having none.
  */
 const statusIcons: Record<Status, IconName> = {
   informational: 'info-encircled-filled',
