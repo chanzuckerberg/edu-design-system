@@ -47,13 +47,20 @@ export type ToastNotificationProps = {
 
 /**
  * Color overrides a toast still honors, kept out of the component's documented API on
- * purpose.
+ * purpose. All three are held back: `--toast__bg`, `--toast__fg`, and `--toast__icon`.
  *
- * `--toast__icon` recolors the status icon, which is the one part of a toast a reader
- * uses to tell severity apart at a glance, and recoloring it away from its status is how
- * a favorable toast ends up looking critical. The other two travel with it. They are not
- * advertised, so nothing points a consumer at them, and the toasts already relying on
- * them keep working.
+ * `--toast__icon` is the reason. It recolors the status icon, which is the one part of a
+ * toast a reader uses to tell severity apart at a glance, and recoloring it away from its
+ * status is how a favorable toast ends up looking critical. The background and foreground go
+ * with it, since a toast recolored past its status reads the same way whichever property did
+ * it.
+ *
+ * Held back rather than removed: they keep working, and the toasts already relying on them
+ * keep rendering. They are simply not advertised, so nothing points a new consumer at them.
+ * The declarations stay here so existing usage keeps type-checking, and
+ * `ToastNotification.test.tsx` covers all three still taking effect, since no story does.
+ *
+ * See "Properties held back from the documented API" in `.github/copilot-instructions.md`.
  */
 export interface ToastNotificationCSSProperties extends React.CSSProperties {
   '--toast__bg'?: string;

@@ -89,6 +89,14 @@ export type IconProviderProps = {
    * Each value takes an EDS icon name or a node, matching the content slots elsewhere in
    * the system.
    *
+   * Two values mean something particular, which is what lets a map be built conditionally:
+   *
+   * - `undefined` reads the same as leaving the role out, so it inherits. A conditional
+   *   entry like `{ close: isDismissible ? <Custom /> : undefined }` falls back to the icon
+   *   from above rather than blanking the role.
+   * - `null` and `false` draw nothing, matching how the content slots read them. Use one to
+   *   turn a role off deliberately.
+   *
    * @example
    * ```tsx
    * <IconProvider icons={{ expand: 'chevron-down', close: <CustomGlyph /> }}>
