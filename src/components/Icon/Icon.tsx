@@ -134,13 +134,20 @@ export const Icon = (props: IconProps) => {
   // collapses to `ReactNode` and so admits any string, and `IconProvider` raises the stakes
   // by letting one bad entry reach every component drawing that role at once. Warn and draw
   // nothing instead, so a typo costs an icon rather than the render.
-  // `Object.hasOwn` rather than `in`: the spritemap inherits from `Object.prototype`, so
+  // An own-property check, not `in`: the spritemap inherits from `Object.prototype`, so
   // `'toString' in icons` is true and the lookups below would read a function's missing
   // `viewBox` and `content`, rendering an empty `<svg>` instead of warning.
+  //
+  // Spelled the long way rather than with `Object.hasOwn`, which is ES2022. This package
+  // compiles to ES2018 and ships no polyfill, and `hasOwn` only type-checks here because
+  // `@types/node` declares it, so it would pass the build and then throw in any environment
+  // the target says is supported.
+  //
   // `name === undefined` rather than `!name`: an absent name is the custom-SVG case, which
   // renders `children` against the given `viewBox`, but `''` is just an invalid name and
   // should be reported like any other.
-  const isKnownName = name === undefined || Object.hasOwn(icons, name);
+  const isKnownName =
+    name === undefined || Object.prototype.hasOwnProperty.call(icons, name);
 
   assertEdsUsage(
     [!isKnownName],
