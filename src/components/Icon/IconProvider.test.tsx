@@ -264,6 +264,39 @@ describe('<IconProvider />', () => {
     expect(close.innerHTML).toContain(glyphOf('remove'));
   });
 
+  it('stays authoritative against a prop that arrives from unmigrated code', () => {
+    // `Menu.Button` no longer declares `icon`, but `Button` still takes one, so an `icon`
+    // reaching it from JavaScript that skipped the codemod used to be spread in after the
+    // resolved one and win — putting the button back to a per-instance icon and defeating
+    // the point of the provider.
+    const unmigrated = { icon: 'add' } as Record<string, unknown>;
+
+    const { container } = render(
+      <Menu>
+        <Menu.Button {...unmigrated}>Actions</Menu.Button>
+      </Menu>,
+    );
+
+    expect(hasGlyph(container, 'chevron-down')).toBe(true);
+    expect(hasGlyph(container, 'add')).toBe(false);
+  });
+
+  it('drops the icon layout when a role is turned off', () => {
+    const { container } = render(
+      <IconProvider icons={{ expand: null }}>
+        <Menu>
+          <Menu.Button>Actions</Menu.Button>
+        </Menu>
+      </IconProvider>,
+    );
+
+    // Nothing renders in the slot, so the button should not keep reserving space for it.
+    expect(container.querySelector('svg')).toBeNull();
+    expect(container.querySelector('button')?.className).not.toContain(
+      'layout-right',
+    );
+  });
+
   it('ships a default for every semantic role', () => {
     expect(Object.values(defaultSemanticIcons).every(Boolean)).toBe(true);
   });

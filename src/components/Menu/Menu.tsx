@@ -20,7 +20,7 @@ import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
 
-import { useSemanticIcon } from '../Icon';
+import { hasSlotContent, useSemanticIcon } from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 
@@ -122,11 +122,18 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
   return (
     <HeadlessMenuButton as={React.Fragment}>
       <Button
+        // Spread first, so nothing reaching this component can displace the props below it.
+        // `Button` still takes an `icon`, so an `icon` arriving here — from JavaScript that
+        // has not run the codemod, or a dynamic spread — used to land after this one and win,
+        // quietly putting the button back to a per-instance icon.
+        {...other}
         className={buttonClassNames}
         icon={expandIcon}
-        iconLayout="right"
+        // A provider can turn the role off with `null`. The icon then renders nothing, but
+        // the right-hand layout would still reserve its padding and leave a gap, so the
+        // layout follows whether there is anything to lay out.
+        iconLayout={hasSlotContent(expandIcon) ? 'right' : 'none'}
         rank="primary"
-        {...other}
       >
         {children}
       </Button>
