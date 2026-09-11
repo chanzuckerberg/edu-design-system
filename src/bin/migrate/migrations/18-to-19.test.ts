@@ -171,7 +171,7 @@ describe('18-to-19', () => {
 
       export default function Component() {
         return (
-          <Accordion.Button title="Row" indicatorContent="chevron-up" />
+          <Accordion.Button title="Row" indicatorContent="chevron-down" />
         )
       }
     `);
@@ -211,6 +211,30 @@ describe('18-to-19', () => {
         )
       }
     `);
+  });
+
+  it.each([
+    ['Accordion.Button', 'indicatorContent'],
+    ['Menu.Button', 'trailingContent'],
+  ])('leaves a non-default chevron on %s alone', (component, propName) => {
+    // `chevron-up` is a deliberate override, not the role's default, so removing it would
+    // flip the indicator to point down. It stays and becomes a type error the consumer
+    // answers. The removed `WithCustomIndicator` story used exactly this value.
+    const sourceFileText = dedent`
+      import {Accordion, Menu} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <${component} title="Row" ${propName}="chevron-up" />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
   it('leaves a chevron inside a larger expression alone', () => {
